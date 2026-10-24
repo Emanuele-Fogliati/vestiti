@@ -1,0 +1,364 @@
+/* Design tokens. Generated from the round-2 design system (variants A, B, C).
+   Swap the whole look by changing THEME in the backend env (or data-theme on <html>).
+   To add a theme: copy one block, rename it, change the values. Components only use var(--*). */
+
+/* Signal yellow on black (default). Layout: poster. Yellow hero band, black rules 2px, square corners, uppercase expanded headlines; yellow marks only the thing you act on. */
+:root,
+[data-theme="yellow-black"]{
+  color-scheme:light;
+  --bg:#F7F7F4;
+  --bg-2:#EEEEE9;
+  --surface:#FFFFFF;
+  --surface-2:#F1F1EC;
+  --ink:#0D0D0D;
+  --ink-2:#55554F;
+  --ink-3:#9A9A92;
+  --rule:#D9D9D2;
+  --rule-strong:#0D0D0D;
+  --focus:#2457C5;
+  --top-bg:#0D0D0D;
+  --top-ink:#FFFFFF;
+  --top-ink-2:#C4C4BC;
+  --chip-bg:#FFD60A;
+  --chip-ink:#0D0D0D;
+  --hl-bg:#0D0D0D;
+  --hl-ink:#FFD60A;
+  --accent:#FFD60A;
+  --accent-border:#0D0D0D;
+  --accent-ink:#0D0D0D;
+  --sh-k:#0D0D0D;
+  --el-sel:#FFF6C7;
+  --el-fill:#FFD60A;
+  --el-line:#0D0D0D;
+  --el-dot:#0D0D0D;
+  --el-dot-ring:#FFD60A;
+  --el-label:#0D0D0D;
+  --stop-gap:0px;
+  --stop-pad:26px 12px;
+  --stop-bg:transparent;
+  --stop-radius:0px;
+  --stop-hover:#FFFBE3;
+  --stop-sel:inset 0 0 0 2px #0D0D0D;
+  --days-ink:#0D0D0D;
+  --thumb-border:2px solid #0D0D0D;
+  --hot:#0D0D0D;
+  --il-sky:#EDEDE6;
+  --il-far:#C6C6BD;
+  --il-mid:#6B6B63;
+  --il-ice:#FFFFFF;
+  --il-water:#9AA6AB;
+  --il-near:#141414;
+  --il-sun:#FFD60A;
+  --seg-on:#0D0D0D;
+  --seg-on-ink:#FFD60A;
+  --ok:#0D0D0D;
+  --ok-ink:#FFD60A;
+  --ok-text:#1D6B37;
+  --warn:#2457C5;
+  --warn-ink:#FFFFFF;
+  --warn-text:#1F4FB5;
+  --lc-bg:#0D0D0D;
+  --lc-ink:#FFD60A;
+  --photo-bg:#F1F1EE;
+  --colsel:#FFF6C7;
+  --cell-sel:#0D0D0D;
+  --dot:#0D0D0D;
+  --why-bg:#FFD60A;
+  --why-border:2px solid #0D0D0D;
+  --why-k:#0D0D0D;
+  --tag-bg:#0D0D0D;
+  --tag-ink:#FFFFFF;
+  --own:#FFFFFF;
+  --own-ink:#0D0D0D;
+  --star:#0D0D0D;
+  --check:#0D0D0D;
+  --total-bg:#0D0D0D;
+  --total-ink:#FFFFFF;
+  --total-ink-2:#C4C4BC;
+  --total-border:#0D0D0D;
+  --total-track:#2C2C29;
+  --total-fill:#FFD60A;
+  --total-fill-dim:#77776F;
+  --vapor:#77776F;
+  --vapor-text:#55554F;
+  --heat:#0D0D0D;
+  --heat-text:#0D0D0D;
+  --cold:#2457C5;
+  --ly-shell:#0D0D0D;
+  --ly-shell-ink:#FFD60A;
+  --ly-ins:#FFE36B;
+  --ly-fleece:#FFF3B0;
+  --ly-base:#ECECE5;
+  --ly-skin:#E5DFD4;
+  --ly-pattern:rgba(13,13,13,.35);
+  --f-display:"Archivo","Arial Black",Arial,sans-serif;
+  --f-body:"Archivo",Arial,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --d-weight:800;
+  --d-stretch:125%;
+  --d-transform:uppercase;
+  --d-tracking:-0.01em;
+  --radius:0px;
+  --radius-sm:0px;
+  --radius-btn:0px;
+  --radius-pill:2px;
+  --bw:2px;
+  --shadow:none;
+}
+
+[data-theme="yellow-black"] .hero{background:var(--accent);border-bottom:2px solid var(--ink)}
+[data-theme="yellow-black"] .hero .kicker,[data-theme="yellow-black"] .hero .lede{color:#2B2A22}
+[data-theme="yellow-black"] .hero h1{font-size:clamp(40px,5.4vw,76px);line-height:.9}
+[data-theme="yellow-black"] .hero h1 .hl{padding:0 .1em}
+[data-theme="yellow-black"] .brief .btn.primary{background:var(--ink);color:var(--accent);border-color:var(--ink);text-transform:uppercase;letter-spacing:.08em;font-stretch:115%}
+[data-theme="yellow-black"] .btn.primary,[data-theme="yellow-black"] .apply{text-transform:uppercase;letter-spacing:.06em}
+[data-theme="yellow-black"] .sh-k{justify-self:start;background:var(--accent);color:var(--ink);padding:4px 8px;font-weight:700;border:2px solid var(--ink)}
+[data-theme="yellow-black"] .stops{border-top:2px solid var(--ink)}
+[data-theme="yellow-black"] .stop{border-bottom:2px solid var(--ink)}
+[data-theme="yellow-black"] .cond dd.hot{background:var(--accent);padding:0 5px;justify-self:start}
+[data-theme="yellow-black"] .chip.own{box-shadow:inset 0 0 0 1.5px var(--ink)}
+[data-theme="yellow-black"] .src.own{box-shadow:inset 0 0 0 1px var(--ink)}
+[data-theme="yellow-black"] .toolbar{background:var(--surface)}
+[data-theme="yellow-black"] .card h3{font-size:16px}
+[data-theme="yellow-black"] .days b{font-size:34px}
+[data-theme="yellow-black"] .free{font-weight:700}
+
+/* Cobalt on white. Layout: calm product. White ground, one cobalt blue, soft rounded panels, pill controls; illustrations in duotone blue with a warm sun. */
+[data-theme="cobalt"]{
+  color-scheme:light;
+  --bg:#FFFFFF;
+  --bg-2:#F5F7FC;
+  --surface:#FFFFFF;
+  --surface-2:#F1F4FA;
+  --ink:#121826;
+  --ink-2:#4D5870;
+  --ink-3:#9AA3B5;
+  --rule:#E2E7F0;
+  --rule-strong:#D3DAE6;
+  --focus:#2340D9;
+  --top-bg:#FFFFFF;
+  --top-ink:#121826;
+  --top-ink-2:#4D5870;
+  --chip-bg:#EAF0FF;
+  --chip-ink:#1D35B8;
+  --hl-bg:transparent;
+  --hl-ink:#2340D9;
+  --accent:#2340D9;
+  --accent-border:#2340D9;
+  --accent-ink:#FFFFFF;
+  --sh-k:#2340D9;
+  --el-sel:#EEF2FF;
+  --el-fill:#DDE5FF;
+  --el-line:#2340D9;
+  --el-dot:#2340D9;
+  --el-dot-ring:#FFFFFF;
+  --el-label:#121826;
+  --stop-gap:14px;
+  --stop-pad:18px;
+  --stop-bg:#FFFFFF;
+  --stop-radius:20px;
+  --stop-hover:#F8FAFF;
+  --stop-sel:0 0 0 2px #2340D9;
+  --days-ink:#2340D9;
+  --thumb-border:0;
+  --hot:#1D35B8;
+  --il-sky:#E4EBFF;
+  --il-far:#B5C4F4;
+  --il-mid:#5770D6;
+  --il-ice:#FFFFFF;
+  --il-water:#2340D9;
+  --il-near:#17215A;
+  --il-sun:#FFB070;
+  --seg-on:#2340D9;
+  --seg-on-ink:#FFFFFF;
+  --ok:#0E7A55;
+  --ok-ink:#FFFFFF;
+  --ok-text:#0B6B4A;
+  --warn:#C2410C;
+  --warn-ink:#FFFFFF;
+  --warn-text:#B23B0B;
+  --lc-bg:#EAF0FF;
+  --lc-ink:#1D35B8;
+  --photo-bg:#F2F3F5;
+  --colsel:#F4F7FF;
+  --cell-sel:#2340D9;
+  --dot:#2340D9;
+  --why-bg:#F3F6FF;
+  --why-border:1px solid #D6E0FF;
+  --why-k:#1D35B8;
+  --tag-bg:rgba(255,255,255,.92);
+  --tag-ink:#121826;
+  --own:#121826;
+  --own-ink:#FFFFFF;
+  --star:#2340D9;
+  --check:#2340D9;
+  --total-bg:#2340D9;
+  --total-ink:#FFFFFF;
+  --total-ink-2:#D0DAFF;
+  --total-border:#2340D9;
+  --total-track:rgba(255,255,255,.2);
+  --total-fill:#FFFFFF;
+  --total-fill-dim:rgba(255,255,255,.45);
+  --vapor:#5770D6;
+  --vapor-text:#2340D9;
+  --heat:#E0662B;
+  --heat-text:#B23B0B;
+  --cold:#2340D9;
+  --ly-shell:#2340D9;
+  --ly-shell-ink:#FFFFFF;
+  --ly-ins:#C6D2FF;
+  --ly-fleece:#E2E9FF;
+  --ly-base:#F1F4FA;
+  --ly-skin:#FCE4D5;
+  --ly-pattern:rgba(35,64,217,.35);
+  --f-display:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --d-weight:750;
+  --d-stretch:normal;
+  --d-transform:none;
+  --d-tracking:-0.03em;
+  --radius:20px;
+  --radius-sm:12px;
+  --radius-btn:999px;
+  --radius-pill:999px;
+  --bw:1px;
+  --shadow:0 1px 2px rgba(18,24,38,.05),0 12px 32px rgba(18,24,38,.07);
+}
+
+[data-theme="cobalt"] .hero{background:#EBF0FF}
+[data-theme="cobalt"] .hero h1{font-size:clamp(40px,5.8vw,78px);line-height:.98}
+[data-theme="cobalt"] .facts{border:0;box-shadow:var(--shadow)}
+[data-theme="cobalt"] .fact b{color:var(--accent)}
+[data-theme="cobalt"] .brief{border:0}
+[data-theme="cobalt"] .band.alt{background:var(--bg-2)}
+[data-theme="cobalt"] .stop{border-bottom:0;box-shadow:0 1px 2px rgba(18,24,38,.05),0 6px 18px rgba(18,24,38,.04)}
+[data-theme="cobalt"] .stop.sel{box-shadow:0 0 0 2px #2340D9,0 10px 28px rgba(35,64,217,.14)}
+[data-theme="cobalt"] .thumb{border-radius:14px}
+[data-theme="cobalt"] .elev,[data-theme="cobalt"] .panel,[data-theme="cobalt"] .mx-box,[data-theme="cobalt"] .lt-box,[data-theme="cobalt"] .card{border-color:var(--rule);box-shadow:0 1px 2px rgba(18,24,38,.04)}
+[data-theme="cobalt"] .seg{padding:3px;gap:3px;border-color:var(--rule-strong)}
+[data-theme="cobalt"] .seg button{border-right:0;border-radius:999px}
+[data-theme="cobalt"] .toolbar{border-color:var(--rule);background:rgba(255,255,255,.96)}
+[data-theme="cobalt"] .sh h2{font-weight:750}
+[data-theme="cobalt"] .card{border-radius:18px}
+[data-theme="cobalt"] .hero h1 .hl{padding:0}
+[data-theme="cobalt"] .days b{font-size:40px}
+
+/* Ember and sky on off-white. Layout: friendly field guide. Off-white ground, slate ink, one bright orange and a sky blue; big expressive headlines, rounded photos, underlined selection. */
+[data-theme="ember"]{
+  color-scheme:light;
+  --bg:#FAFAF8;
+  --bg-2:#F1F2F0;
+  --surface:#FFFFFF;
+  --surface-2:#F5F5F2;
+  --ink:#1B2330;
+  --ink-2:#536072;
+  --ink-3:#A3ABB8;
+  --rule:#E4E4DF;
+  --rule-strong:#D2D3CC;
+  --focus:#C2410C;
+  --top-bg:#FAFAF8;
+  --top-ink:#1B2330;
+  --top-ink-2:#536072;
+  --chip-bg:#1B2330;
+  --chip-ink:#FFFFFF;
+  --hl-bg:#FFD8C6;
+  --hl-ink:#1B2330;
+  --accent:#FF6B3D;
+  --accent-border:#FF6B3D;
+  --accent-ink:#1B2330;
+  --sh-k:#C2410C;
+  --el-sel:#FFF1EA;
+  --el-fill:#FFDCCB;
+  --el-line:#1B2330;
+  --el-dot:#FF6B3D;
+  --el-dot-ring:#FFFFFF;
+  --el-label:#1B2330;
+  --stop-gap:0px;
+  --stop-pad:28px 8px;
+  --stop-bg:transparent;
+  --stop-radius:0px;
+  --stop-hover:#FFF7F2;
+  --stop-sel:inset 0 -4px 0 #FF6B3D;
+  --days-ink:#C2410C;
+  --thumb-border:0;
+  --hot:#C2410C;
+  --il-sky:#D9E8F5;
+  --il-far:#A7BDD0;
+  --il-mid:#4E6278;
+  --il-ice:#FFFFFF;
+  --il-water:#79AED8;
+  --il-near:#1B2330;
+  --il-sun:#FF6B3D;
+  --seg-on:#1B2330;
+  --seg-on-ink:#FFFFFF;
+  --ok:#1F7A4D;
+  --ok-ink:#FFFFFF;
+  --ok-text:#1A6B43;
+  --warn:#2457C5;
+  --warn-ink:#FFFFFF;
+  --warn-text:#1F4FB5;
+  --lc-bg:#FFE3D6;
+  --lc-ink:#9A3412;
+  --photo-bg:#F2F2F0;
+  --colsel:#FFF5EF;
+  --cell-sel:#FF6B3D;
+  --dot:#1B2330;
+  --why-bg:#FFF1EA;
+  --why-border:1.5px solid #FFD2BF;
+  --why-k:#C2410C;
+  --tag-bg:#FFFFFF;
+  --tag-ink:#1B2330;
+  --own:#1B2330;
+  --own-ink:#FFFFFF;
+  --star:#FF6B3D;
+  --check:#E8552A;
+  --total-bg:#1B2330;
+  --total-ink:#FFFFFF;
+  --total-ink-2:#B7C0CD;
+  --total-border:#1B2330;
+  --total-track:#2E3846;
+  --total-fill:#FF6B3D;
+  --total-fill-dim:#5B6676;
+  --vapor:#79AED8;
+  --vapor-text:#2B6A9E;
+  --heat:#FF6B3D;
+  --heat-text:#C2410C;
+  --cold:#2B6A9E;
+  --ly-shell:#1B2330;
+  --ly-shell-ink:#FFFFFF;
+  --ly-ins:#FFC6A9;
+  --ly-fleece:#FFE4D5;
+  --ly-base:#EBF2F8;
+  --ly-skin:#F8DCCB;
+  --ly-pattern:rgba(27,35,48,.28);
+  --f-display:"Bricolage Grotesque","Avenir Next",Arial,sans-serif;
+  --f-body:"Figtree","Avenir Next",Arial,sans-serif;
+  --f-mono:"Martian Mono",ui-monospace,Menlo,monospace;
+  --d-weight:800;
+  --d-stretch:normal;
+  --d-transform:none;
+  --d-tracking:-0.035em;
+  --radius:22px;
+  --radius-sm:16px;
+  --radius-btn:999px;
+  --radius-pill:999px;
+  --bw:1.5px;
+  --shadow:none;
+}
+
+[data-theme="ember"] .hero h1{font-size:clamp(44px,7vw,100px);line-height:.92}
+[data-theme="ember"] .hero h1 .hl{border-radius:.18em;padding:0 .14em}
+[data-theme="ember"] .label,[data-theme="ember"] .kicker,[data-theme="ember"] .sh-k,[data-theme="ember"] .cond dt,[data-theme="ember"] .days,[data-theme="ember"] .field label{letter-spacing:.06em}
+[data-theme="ember"] .label{font-size:10px}
+[data-theme="ember"] .brief{background:var(--surface)}
+[data-theme="ember"] .brief .btn.primary{font-weight:700;font-size:17px}
+[data-theme="ember"] .stops{border-top:1.5px solid var(--ink)}
+[data-theme="ember"] .stop{border-bottom:1.5px solid var(--rule)}
+[data-theme="ember"] .days b{font-size:44px;font-weight:800}
+[data-theme="ember"] .thumb{border-radius:22px}
+[data-theme="ember"] .fact b{font-size:32px}
+[data-theme="ember"] .sh h2{font-size:clamp(34px,4.6vw,60px)}
+[data-theme="ember"] .card{border-radius:22px}
+[data-theme="ember"] .fig{border-radius:18px;margin:6px 6px 0;border-bottom:0}
+[data-theme="ember"] .why-t{font-size:24px}

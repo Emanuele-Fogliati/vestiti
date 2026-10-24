@@ -1,0 +1,716 @@
+{
+ "_note": "Offline fallback for place search when the geocoding API is unreachable. Coordinates approximate.",
+ "places": [
+  {
+   "name": "Reykjavik",
+   "admin": "Capital Region",
+   "country": "Iceland",
+   "country_code": "IS",
+   "latitude": 64.1355,
+   "longitude": -21.8954,
+   "elevation_m": 40.0
+  },
+  {
+   "name": "Landmannalaugar",
+   "admin": "South",
+   "country": "Iceland",
+   "country_code": "IS",
+   "latitude": 63.9833,
+   "longitude": -19.0667,
+   "elevation_m": 590.0
+  },
+  {
+   "name": "Tromsø",
+   "admin": "Troms",
+   "country": "Norway",
+   "country_code": "NO",
+   "latitude": 69.6496,
+   "longitude": 18.956,
+   "elevation_m": 10.0
+  },
+  {
+   "name": "Oslo",
+   "admin": "Oslo",
+   "country": "Norway",
+   "country_code": "NO",
+   "latitude": 59.9139,
+   "longitude": 10.7522,
+   "elevation_m": 20.0
+  },
+  {
+   "name": "Stockholm",
+   "admin": "Stockholm",
+   "country": "Sweden",
+   "country_code": "SE",
+   "latitude": 59.3293,
+   "longitude": 18.0686,
+   "elevation_m": 28.0
+  },
+  {
+   "name": "Rovaniemi",
+   "admin": "Lapland",
+   "country": "Finland",
+   "country_code": "FI",
+   "latitude": 66.5039,
+   "longitude": 25.7294,
+   "elevation_m": 80.0
+  },
+  {
+   "name": "London",
+   "admin": "England",
+   "country": "United Kingdom",
+   "country_code": "GB",
+   "latitude": 51.5074,
+   "longitude": -0.1278,
+   "elevation_m": 11.0
+  },
+  {
+   "name": "Edinburgh",
+   "admin": "Scotland",
+   "country": "United Kingdom",
+   "country_code": "GB",
+   "latitude": 55.9533,
+   "longitude": -3.1883,
+   "elevation_m": 47.0
+  },
+  {
+   "name": "Fort William",
+   "admin": "Scotland",
+   "country": "United Kingdom",
+   "country_code": "GB",
+   "latitude": 56.8198,
+   "longitude": -5.1052,
+   "elevation_m": 20.0
+  },
+  {
+   "name": "Dublin",
+   "admin": "Leinster",
+   "country": "Ireland",
+   "country_code": "IE",
+   "latitude": 53.3498,
+   "longitude": -6.2603,
+   "elevation_m": 20.0
+  },
+  {
+   "name": "Paris",
+   "admin": "Île-de-France",
+   "country": "France",
+   "country_code": "FR",
+   "latitude": 48.8566,
+   "longitude": 2.3522,
+   "elevation_m": 35.0
+  },
+  {
+   "name": "Chamonix",
+   "admin": "Auvergne-Rhône-Alpes",
+   "country": "France",
+   "country_code": "FR",
+   "latitude": 45.9237,
+   "longitude": 6.8694,
+   "elevation_m": 1035.0
+  },
+  {
+   "name": "Nice",
+   "admin": "Provence-Alpes-Côte d'Azur",
+   "country": "France",
+   "country_code": "FR",
+   "latitude": 43.7102,
+   "longitude": 7.262,
+   "elevation_m": 10.0
+  },
+  {
+   "name": "Barcelona",
+   "admin": "Catalonia",
+   "country": "Spain",
+   "country_code": "ES",
+   "latitude": 41.3874,
+   "longitude": 2.1686,
+   "elevation_m": 12.0
+  },
+  {
+   "name": "Madrid",
+   "admin": "Madrid",
+   "country": "Spain",
+   "country_code": "ES",
+   "latitude": 40.4168,
+   "longitude": -3.7038,
+   "elevation_m": 657.0
+  },
+  {
+   "name": "Lisbon",
+   "admin": "Lisbon",
+   "country": "Portugal",
+   "country_code": "PT",
+   "latitude": 38.7223,
+   "longitude": -9.1393,
+   "elevation_m": 50.0
+  },
+  {
+   "name": "Funchal",
+   "admin": "Madeira",
+   "country": "Portugal",
+   "country_code": "PT",
+   "latitude": 32.6669,
+   "longitude": -16.9241,
+   "elevation_m": 50.0
+  },
+  {
+   "name": "Rome",
+   "admin": "Lazio",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 41.9028,
+   "longitude": 12.4964,
+   "elevation_m": 21.0
+  },
+  {
+   "name": "Milan",
+   "admin": "Lombardy",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 45.4642,
+   "longitude": 9.19,
+   "elevation_m": 120.0
+  },
+  {
+   "name": "Florence",
+   "admin": "Tuscany",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 43.7696,
+   "longitude": 11.2558,
+   "elevation_m": 50.0
+  },
+  {
+   "name": "Venice",
+   "admin": "Veneto",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 45.4408,
+   "longitude": 12.3155,
+   "elevation_m": 1.0
+  },
+  {
+   "name": "Cortina d'Ampezzo",
+   "admin": "Veneto",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 46.5405,
+   "longitude": 12.1357,
+   "elevation_m": 1224.0
+  },
+  {
+   "name": "Bolzano",
+   "admin": "Trentino-Alto Adige",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 46.4983,
+   "longitude": 11.3548,
+   "elevation_m": 262.0
+  },
+  {
+   "name": "Naples",
+   "admin": "Campania",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 40.8518,
+   "longitude": 14.2681,
+   "elevation_m": 17.0
+  },
+  {
+   "name": "Palermo",
+   "admin": "Sicily",
+   "country": "Italy",
+   "country_code": "IT",
+   "latitude": 38.1157,
+   "longitude": 13.3615,
+   "elevation_m": 14.0
+  },
+  {
+   "name": "Zermatt",
+   "admin": "Valais",
+   "country": "Switzerland",
+   "country_code": "CH",
+   "latitude": 46.0207,
+   "longitude": 7.7491,
+   "elevation_m": 1608.0
+  },
+  {
+   "name": "Interlaken",
+   "admin": "Bern",
+   "country": "Switzerland",
+   "country_code": "CH",
+   "latitude": 46.6863,
+   "longitude": 7.8632,
+   "elevation_m": 568.0
+  },
+  {
+   "name": "Zurich",
+   "admin": "Zurich",
+   "country": "Switzerland",
+   "country_code": "CH",
+   "latitude": 47.3769,
+   "longitude": 8.5417,
+   "elevation_m": 408.0
+  },
+  {
+   "name": "Innsbruck",
+   "admin": "Tyrol",
+   "country": "Austria",
+   "country_code": "AT",
+   "latitude": 47.2692,
+   "longitude": 11.4041,
+   "elevation_m": 574.0
+  },
+  {
+   "name": "Vienna",
+   "admin": "Vienna",
+   "country": "Austria",
+   "country_code": "AT",
+   "latitude": 48.2082,
+   "longitude": 16.3738,
+   "elevation_m": 190.0
+  },
+  {
+   "name": "Munich",
+   "admin": "Bavaria",
+   "country": "Germany",
+   "country_code": "DE",
+   "latitude": 48.1351,
+   "longitude": 11.582,
+   "elevation_m": 520.0
+  },
+  {
+   "name": "Berlin",
+   "admin": "Berlin",
+   "country": "Germany",
+   "country_code": "DE",
+   "latitude": 52.52,
+   "longitude": 13.405,
+   "elevation_m": 34.0
+  },
+  {
+   "name": "Amsterdam",
+   "admin": "North Holland",
+   "country": "Netherlands",
+   "country_code": "NL",
+   "latitude": 52.3676,
+   "longitude": 4.9041,
+   "elevation_m": 0.0
+  },
+  {
+   "name": "Prague",
+   "admin": "Prague",
+   "country": "Czechia",
+   "country_code": "CZ",
+   "latitude": 50.0755,
+   "longitude": 14.4378,
+   "elevation_m": 235.0
+  },
+  {
+   "name": "Athens",
+   "admin": "Attica",
+   "country": "Greece",
+   "country_code": "GR",
+   "latitude": 37.9838,
+   "longitude": 23.7275,
+   "elevation_m": 70.0
+  },
+  {
+   "name": "Istanbul",
+   "admin": "Istanbul",
+   "country": "Turkey",
+   "country_code": "TR",
+   "latitude": 41.0082,
+   "longitude": 28.9784,
+   "elevation_m": 39.0
+  },
+  {
+   "name": "Marrakech",
+   "admin": "Marrakesh-Safi",
+   "country": "Morocco",
+   "country_code": "MA",
+   "latitude": 31.6295,
+   "longitude": -7.9811,
+   "elevation_m": 466.0
+  },
+  {
+   "name": "Imlil",
+   "admin": "Marrakesh-Safi",
+   "country": "Morocco",
+   "country_code": "MA",
+   "latitude": 31.1364,
+   "longitude": -7.9195,
+   "elevation_m": 1740.0
+  },
+  {
+   "name": "Cairo",
+   "admin": "Cairo",
+   "country": "Egypt",
+   "country_code": "EG",
+   "latitude": 30.0444,
+   "longitude": 31.2357,
+   "elevation_m": 23.0
+  },
+  {
+   "name": "Cape Town",
+   "admin": "Western Cape",
+   "country": "South Africa",
+   "country_code": "ZA",
+   "latitude": -33.9249,
+   "longitude": 18.4241,
+   "elevation_m": 25.0
+  },
+  {
+   "name": "Nairobi",
+   "admin": "Nairobi",
+   "country": "Kenya",
+   "country_code": "KE",
+   "latitude": -1.2921,
+   "longitude": 36.8219,
+   "elevation_m": 1795.0
+  },
+  {
+   "name": "Moshi",
+   "admin": "Kilimanjaro",
+   "country": "Tanzania",
+   "country_code": "TZ",
+   "latitude": -3.3349,
+   "longitude": 37.3404,
+   "elevation_m": 890.0
+  },
+  {
+   "name": "Kathmandu",
+   "admin": "Bagmati",
+   "country": "Nepal",
+   "country_code": "NP",
+   "latitude": 27.7172,
+   "longitude": 85.324,
+   "elevation_m": 1400.0
+  },
+  {
+   "name": "Lukla",
+   "admin": "Koshi",
+   "country": "Nepal",
+   "country_code": "NP",
+   "latitude": 27.6869,
+   "longitude": 86.7314,
+   "elevation_m": 2860.0
+  },
+  {
+   "name": "Pokhara",
+   "admin": "Gandaki",
+   "country": "Nepal",
+   "country_code": "NP",
+   "latitude": 28.2096,
+   "longitude": 83.9856,
+   "elevation_m": 822.0
+  },
+  {
+   "name": "Delhi",
+   "admin": "Delhi",
+   "country": "India",
+   "country_code": "IN",
+   "latitude": 28.6139,
+   "longitude": 77.209,
+   "elevation_m": 216.0
+  },
+  {
+   "name": "Bangkok",
+   "admin": "Bangkok",
+   "country": "Thailand",
+   "country_code": "TH",
+   "latitude": 13.7563,
+   "longitude": 100.5018,
+   "elevation_m": 2.0
+  },
+  {
+   "name": "Chiang Mai",
+   "admin": "Chiang Mai",
+   "country": "Thailand",
+   "country_code": "TH",
+   "latitude": 18.7883,
+   "longitude": 98.9853,
+   "elevation_m": 310.0
+  },
+  {
+   "name": "Bali (Denpasar)",
+   "admin": "Bali",
+   "country": "Indonesia",
+   "country_code": "ID",
+   "latitude": -8.6705,
+   "longitude": 115.2126,
+   "elevation_m": 4.0
+  },
+  {
+   "name": "Singapore",
+   "admin": "Singapore",
+   "country": "Singapore",
+   "country_code": "SG",
+   "latitude": 1.3521,
+   "longitude": 103.8198,
+   "elevation_m": 15.0
+  },
+  {
+   "name": "Tokyo",
+   "admin": "Tokyo",
+   "country": "Japan",
+   "country_code": "JP",
+   "latitude": 35.6762,
+   "longitude": 139.6503,
+   "elevation_m": 40.0
+  },
+  {
+   "name": "Kyoto",
+   "admin": "Kyoto",
+   "country": "Japan",
+   "country_code": "JP",
+   "latitude": 35.0116,
+   "longitude": 135.7681,
+   "elevation_m": 50.0
+  },
+  {
+   "name": "Sapporo",
+   "admin": "Hokkaido",
+   "country": "Japan",
+   "country_code": "JP",
+   "latitude": 43.0618,
+   "longitude": 141.3545,
+   "elevation_m": 29.0
+  },
+  {
+   "name": "Seoul",
+   "admin": "Seoul",
+   "country": "South Korea",
+   "country_code": "KR",
+   "latitude": 37.5665,
+   "longitude": 126.978,
+   "elevation_m": 38.0
+  },
+  {
+   "name": "Hanoi",
+   "admin": "Hanoi",
+   "country": "Vietnam",
+   "country_code": "VN",
+   "latitude": 21.0278,
+   "longitude": 105.8342,
+   "elevation_m": 10.0
+  },
+  {
+   "name": "Sydney",
+   "admin": "New South Wales",
+   "country": "Australia",
+   "country_code": "AU",
+   "latitude": -33.8688,
+   "longitude": 151.2093,
+   "elevation_m": 58.0
+  },
+  {
+   "name": "Queenstown",
+   "admin": "Otago",
+   "country": "New Zealand",
+   "country_code": "NZ",
+   "latitude": -45.0312,
+   "longitude": 168.6626,
+   "elevation_m": 330.0
+  },
+  {
+   "name": "Auckland",
+   "admin": "Auckland",
+   "country": "New Zealand",
+   "country_code": "NZ",
+   "latitude": -36.8485,
+   "longitude": 174.7633,
+   "elevation_m": 20.0
+  },
+  {
+   "name": "New York",
+   "admin": "New York",
+   "country": "United States",
+   "country_code": "US",
+   "latitude": 40.7128,
+   "longitude": -74.006,
+   "elevation_m": 10.0
+  },
+  {
+   "name": "San Francisco",
+   "admin": "California",
+   "country": "United States",
+   "country_code": "US",
+   "latitude": 37.7749,
+   "longitude": -122.4194,
+   "elevation_m": 16.0
+  },
+  {
+   "name": "Los Angeles",
+   "admin": "California",
+   "country": "United States",
+   "country_code": "US",
+   "latitude": 34.0522,
+   "longitude": -118.2437,
+   "elevation_m": 90.0
+  },
+  {
+   "name": "Denver",
+   "admin": "Colorado",
+   "country": "United States",
+   "country_code": "US",
+   "latitude": 39.7392,
+   "longitude": -104.9903,
+   "elevation_m": 1609.0
+  },
+  {
+   "name": "Yosemite Valley",
+   "admin": "California",
+   "country": "United States",
+   "country_code": "US",
+   "latitude": 37.7456,
+   "longitude": -119.5936,
+   "elevation_m": 1200.0
+  },
+  {
+   "name": "Moab",
+   "admin": "Utah",
+   "country": "United States",
+   "country_code": "US",
+   "latitude": 38.5733,
+   "longitude": -109.5498,
+   "elevation_m": 1227.0
+  },
+  {
+   "name": "Banff",
+   "admin": "Alberta",
+   "country": "Canada",
+   "country_code": "CA",
+   "latitude": 51.1784,
+   "longitude": -115.5708,
+   "elevation_m": 1383.0
+  },
+  {
+   "name": "Vancouver",
+   "admin": "British Columbia",
+   "country": "Canada",
+   "country_code": "CA",
+   "latitude": 49.2827,
+   "longitude": -123.1207,
+   "elevation_m": 70.0
+  },
+  {
+   "name": "Mexico City",
+   "admin": "Mexico City",
+   "country": "Mexico",
+   "country_code": "MX",
+   "latitude": 19.4326,
+   "longitude": -99.1332,
+   "elevation_m": 2240.0
+  },
+  {
+   "name": "Cusco",
+   "admin": "Cusco",
+   "country": "Peru",
+   "country_code": "PE",
+   "latitude": -13.532,
+   "longitude": -71.9675,
+   "elevation_m": 3399.0
+  },
+  {
+   "name": "Lima",
+   "admin": "Lima",
+   "country": "Peru",
+   "country_code": "PE",
+   "latitude": -12.0464,
+   "longitude": -77.0428,
+   "elevation_m": 154.0
+  },
+  {
+   "name": "La Paz",
+   "admin": "La Paz",
+   "country": "Bolivia",
+   "country_code": "BO",
+   "latitude": -16.4897,
+   "longitude": -68.1193,
+   "elevation_m": 3640.0
+  },
+  {
+   "name": "Rio de Janeiro",
+   "admin": "Rio de Janeiro",
+   "country": "Brazil",
+   "country_code": "BR",
+   "latitude": -22.9068,
+   "longitude": -43.1729,
+   "elevation_m": 5.0
+  },
+  {
+   "name": "Buenos Aires",
+   "admin": "Buenos Aires",
+   "country": "Argentina",
+   "country_code": "AR",
+   "latitude": -34.6037,
+   "longitude": -58.3816,
+   "elevation_m": 25.0
+  },
+  {
+   "name": "El Chaltén",
+   "admin": "Santa Cruz",
+   "country": "Argentina",
+   "country_code": "AR",
+   "latitude": -49.3315,
+   "longitude": -72.8863,
+   "elevation_m": 400.0
+  },
+  {
+   "name": "El Calafate",
+   "admin": "Santa Cruz",
+   "country": "Argentina",
+   "country_code": "AR",
+   "latitude": -50.3379,
+   "longitude": -72.2648,
+   "elevation_m": 200.0
+  },
+  {
+   "name": "Ushuaia",
+   "admin": "Tierra del Fuego",
+   "country": "Argentina",
+   "country_code": "AR",
+   "latitude": -54.8019,
+   "longitude": -68.303,
+   "elevation_m": 20.0
+  },
+  {
+   "name": "Puerto Natales",
+   "admin": "Magallanes",
+   "country": "Chile",
+   "country_code": "CL",
+   "latitude": -51.7236,
+   "longitude": -72.5064,
+   "elevation_m": 10.0
+  },
+  {
+   "name": "Torres del Paine",
+   "admin": "Magallanes",
+   "country": "Chile",
+   "country_code": "CL",
+   "latitude": -50.9423,
+   "longitude": -73.4068,
+   "elevation_m": 100.0
+  },
+  {
+   "name": "Santiago",
+   "admin": "Santiago Metropolitan",
+   "country": "Chile",
+   "country_code": "CL",
+   "latitude": -33.4489,
+   "longitude": -70.6693,
+   "elevation_m": 570.0
+  },
+  {
+   "name": "San Pedro de Atacama",
+   "admin": "Antofagasta",
+   "country": "Chile",
+   "country_code": "CL",
+   "latitude": -22.9087,
+   "longitude": -68.1997,
+   "elevation_m": 2407.0
+  }
+ ]
+}
