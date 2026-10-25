@@ -21,8 +21,13 @@ recognises. We draw real places, so there is always one. Draw from it, then styl
    behind; Valle de la Luna from the top of the ridge, looking down at the saw-tooth salt crests;
    Fitz Roy from the road into El Chaltén, the skyline of the Patagonia logo.
 2. **Always exactly 4 photos** (Manu): never fewer.
-   - Photo 1 is the classic view. Photos 2-4 show the **same place from other points of view and
-     distances**, so you understand the whole place and can combine elements seen from slightly
+   - **Photo 1 is always the iconic postcard view**, the one everybody knows (Torres del Paine =
+     the three towers above the lagoon from the Mirador Base; Fitz Roy = the skyline from the road
+     into El Chaltén). Never swap it for another viewpoint just to get a clearer sky: if no
+     cloudless shot of that view exists, take the clearest one and crop the clouds out. The
+     drawing follows photo 1.
+   - Photos 2-4 show the **same place from other points of view and distances** (not three crops
+     of one spot), so you understand the whole place and can combine elements seen from slightly
      different spots into one scene.
    - Prefer photos **taken from far away**, which show the whole place and what is around it, over
      close-ups.
@@ -306,6 +311,7 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Machu Picchu | ruins much wider than the mountain; not the view everyone knows | 0: start from the classic photo, keep its proportions |
 | Valle de la Luna | generic dunes instead of the saw-tooth crests seen from above | 0: the classic view |
 | Fitz Roy | a row of mountain shapes, not the Patagonia-logo skyline | 0 + 4c: profile from the photo |
+| Torres del Paine (round 4) | redrawn from Laguna Amarga to get a clear sky: not the view everyone knows | 0: photo 1 is always the iconic view; crop clouds, never change viewpoint |
 | Patagonia redraws (round 2) | snow and ice drawn as blocks that look like flying glaciers; too few photos, cloudy and snowy ones | 0: 4 photos, clear sky, summer, from far away; 4d |
 
 ## 10. Reference scenes
