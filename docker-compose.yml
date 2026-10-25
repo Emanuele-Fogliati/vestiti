@@ -31,6 +31,8 @@ services:
       # Ollama running natively on your PC (default). If you use the ollama profile,
       # set LLM_BASE_URL=http://ollama:11434/v1 in .env instead.
       LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434/v1}
+      # ComfyUI running natively on your PC (docs/STOP_ART.md); off unless ART_IMAGE_ENABLED=true
+      ART_IMAGE_URL: ${ART_IMAGE_URL:-http://host.docker.internal:8188}
     extra_hosts:
       - "host.docker.internal:host-gateway"
     ports:

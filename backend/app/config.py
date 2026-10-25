@@ -51,6 +51,16 @@ class Settings(BaseSettings):
     llm_num_ctx_max: int = 32768  # largest context window we ask Ollama for (long itineraries)
     llm_long_timeout_s: float = 600.0  # cap for reading very long trip descriptions
 
+    # --- Place illustrations made by an image model (ComfyUI + FLUX.1-schnell on a local GPU) ---
+    # Off by default: production has no GPU and only serves images already in the database
+    # (pre-generated with `python -m app.cli art-pregen`, moved with art-export / art-import).
+    art_image_enabled: bool = False
+    art_image_url: str = "http://localhost:8188"  # ComfyUI HTTP API
+    art_image_checkpoint: str = "flux1-schnell-fp8.safetensors"
+    art_image_steps: int = 4
+    art_image_timeout_s: float = 300.0  # the first image also loads the model into VRAM
+    art_rate_limit_per_minute: int = 30
+
     # --- Affiliate networks (empty = link goes out untracked, click still logged) ---
     amazon_associate_tag: str = ""
     amazon_domain: str = "www.amazon.com"

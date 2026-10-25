@@ -10,6 +10,7 @@ from sqlalchemy import (
     Float,
     ForeignKey,
     Integer,
+    LargeBinary,
     String,
     Text,
     UniqueConstraint,
@@ -233,3 +234,22 @@ class FeedImport(Base):
     skipped: Mapped[int] = mapped_column(Integer, default=0)
     deactivated: Mapped[int] = mapped_column(Integer, default=0)
     errors: Mapped[list] = mapped_column(JSON, default=list)
+
+
+class PlaceArt(Base):
+    """An illustration of a place made by the image model, generated once and reused by every trip."""
+    __tablename__ = "place_art"
+
+    key: Mapped[str] = mapped_column(String(40), primary_key=True)  # hash of name + country + rounded coords
+    name: Mapped[str] = mapped_column(String(200))
+    country_code: Mapped[str | None] = mapped_column(String(2))
+    latitude: Mapped[float] = mapped_column(Float)
+    longitude: Mapped[float] = mapped_column(Float)
+    subject: Mapped[str | None] = mapped_column(String(200))  # what the picture shows, e.g. "Hallgrimskirkja"
+    prompt: Mapped[str | None] = mapped_column(Text)
+    status: Mapped[str] = mapped_column(String(20), default="pending")  # pending | ready | failed
+    image: Mapped[bytes | None] = mapped_column(LargeBinary)  # raw model output (WebP); toned when served
+    attempts: Mapped[int] = mapped_column(Integer, default=0)
+    error: Mapped[str | None] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow, onupdate=utcnow)

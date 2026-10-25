@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { api } from "../lib/api";
+import { useApp } from "../lib/app-context";
 import type { Terrain } from "../lib/terrain";
-import type { StopArt } from "../lib/types";
+import type { Stop, StopArt } from "../lib/types";
 
 // Flat vector scenes drawn only with --il-* tokens, so they recolour with the theme.
 // The first four come from the round-2 design (Patagonia stops); the rest follow the same style.
@@ -49,9 +51,51 @@ function useLandmark(id?: string): string | null {
   return svg;
 }
 
-/** A stop's scene: its landmark when we have one, otherwise (and while it loads) the generic terrain. */
-export function Illustration({ terrain, art, label }: { terrain: Terrain; art?: StopArt | null; label?: string }) {
+type PlaceRef = Pick<Stop, "name" | "country_code" | "latitude" | "longitude">;
+
+// Places outside the library: the server draws them once with the image model and caches them.
+// While one is being drawn we keep the generic scene and ask again every few seconds.
+const POLL_MS = 5000, POLL_MAX = 60;
+
+function usePlaceImage(place?: PlaceRef | null): { url: string; label?: string | null } | null {
+  const [img, setImg] = useState<{ url: string; label?: string | null } | null>(null);
+  const key = place ? `${place.name}|${place.country_code}|${place.latitude}|${place.longitude}` : "";
+  useEffect(() => {
+    setImg(null);
+    if (!place) return;
+    let live = true, tries = 0, timer: number | undefined;
+    const ask = () => {
+      api.placeArt({ name: place.name, country_code: place.country_code, latitude: place.latitude, longitude: place.longitude })
+        .then((r) => {
+          if (!live) return;
+          if (r.status === "ready" && r.url) setImg({ url: r.url, label: r.label });
+          else if (r.status === "pending" && ++tries < POLL_MAX) timer = window.setTimeout(ask, POLL_MS);
+        })
+        .catch(() => undefined);
+    };
+    ask();
+    return () => { live = false; window.clearTimeout(timer); };
+  }, [key]);
+  return img;
+}
+
+/** A stop's scene: its hand-drawn landmark, else a model-made picture of the place (when `place` is
+ *  given), else the generic terrain. The generic one also shows while the others load. */
+export function Illustration({ terrain, art, place, label }: {
+  terrain: Terrain; art?: StopArt | null; place?: PlaceRef | null; label?: string;
+}) {
+  const { theme } = useApp();
   const landmark = useLandmark(art?.kind === "landmark" ? art.id : undefined);
+  const photo = usePlaceImage(!art && place ? place : null);
+  if (photo && !landmark) {
+    const name = label ?? photo.label ?? undefined;
+    return (
+      <figure className="thumb">
+        <img src={`${photo.url}&theme=${encodeURIComponent(theme)}`} alt={name ?? ""} loading="lazy"
+          style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
+      </figure>
+    );
+  }
   const name = label ?? (landmark ? art?.label : undefined);
   return (
     <figure className="thumb">
