@@ -1,21 +1,32 @@
 <rect width="300" height="200" fill="var(--il-sky)"/>
-<defs><clipPath id="il-pe-rainbow-mountain-clip"><path d="M-10 200V150L40 120L86 72L104 66L126 86L170 108L230 130L310 150V200Z"/></clipPath></defs>
-<circle cx="44" cy="40" r="13" fill="var(--il-sun)"/>
-<path d="M120 112L176 58L196 70L220 36L250 66L268 60L310 104V140H120Z" fill="var(--il-far)"/>
-<path d="M176 58L188 66L182 76L168 70ZM220 36L238 54L226 62L214 50ZM268 60L282 74L272 78Z" fill="var(--il-ice)"/>
+<defs><clipPath id="il-pe-rainbow-mountain-clip"><path d="M-10 200V150L40 122L84 80L104 74L124 88L172 110L232 132L310 150V200Z"/></clipPath></defs>
+<circle cx="40" cy="34" r="12" fill="var(--il-sun)"/>
+<path d="M120 112L168 60L188 70L212 30L240 50L262 44L310 96V140H120Z" fill="var(--il-far)"/>
+<path d="M168 60L188 70L212 30L240 50L262 44L284 66L270 70L258 60L246 70L232 58L220 66L210 52L198 72L186 78L176 70Z" fill="var(--il-ice)"/>
+<path d="M200 60L196 80M224 56L230 84M262 52L268 74" stroke="var(--il-far)" stroke-width="1" fill="none"/>
 <g clip-path="url(#il-pe-rainbow-mountain-clip)">
-<rect x="-10" y="40" width="330" height="170" fill="var(--il-mid)"/>
-<path d="M58 40L96 40L170 210L120 210Z" fill="var(--il-sun)"/>
-<path d="M96 40L114 40L200 210L170 210Z" fill="var(--il-ice)"/>
-<path d="M114 40L140 40L236 210L200 210Z" fill="var(--il-water)"/>
-<path d="M140 40L160 40L262 210L236 210Z" fill="var(--il-near)"/>
-<path d="M160 40L190 40L300 210L262 210Z" fill="var(--il-sun)"/>
-<path d="M30 40L58 40L120 210L80 210Z" fill="var(--il-far)"/>
-<path d="M-10 40L30 40L80 210L-10 210Z" fill="var(--il-mid)"/>
+<rect x="-10" y="60" width="330" height="150" fill="var(--il-mid)"/>
+<path d="M-10 60H18Q30 120 60 210H-10Z" fill="var(--il-far)"/>
+<path d="M18 60H40Q54 120 86 210H60Q30 120 18 60Z" fill="var(--il-mid)"/>
+<path d="M40 60H64Q78 120 112 210H86Q54 120 40 60Z" fill="var(--il-sun)"/>
+<path d="M64 60H80Q96 120 132 210H112Q78 120 64 60Z" fill="var(--il-ice)"/>
+<path d="M80 60H100Q118 120 156 210H132Q96 120 80 60Z" fill="var(--il-water)"/>
+<path d="M100 60H116Q136 120 176 210H156Q118 120 100 60Z" fill="var(--il-acc)"/>
+<path d="M116 60H134Q156 120 200 210H176Q136 120 116 60Z" fill="var(--il-mid)"/>
+<path d="M134 60H150Q174 120 222 210H200Q156 120 134 60Z" fill="var(--il-sun)"/>
+<path d="M150 60H168Q194 120 246 210H222Q174 120 150 60Z" fill="var(--il-water)"/>
+<path d="M168 60H190Q218 120 274 210H246Q194 120 168 60Z" fill="var(--il-near)"/>
+<path d="M190 60H330V210H274Q218 120 190 60Z" fill="var(--il-mid)"/>
 </g>
-<path d="M0 200V172Q70 154 150 170T300 162V200Z" fill="var(--il-near)"/>
-<path d="M30 192Q80 180 106 164Q114 150 104 66" stroke="var(--il-ice)" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
-<path d="M210 178Q210 172 218 172H232Q238 172 238 178Q238 182 234 182H214Q210 182 210 178Z" fill="var(--il-mid)"/>
-<path d="M232 176L234 158H239L237 176Z" fill="var(--il-mid)"/>
-<path d="M233 159Q236 154 242 156L247 159Q246 162 241 162H234Z" fill="var(--il-mid)"/>
-<path d="M214 181V192M219 181V192M229 181V192M234 181V192" stroke="var(--il-mid)" stroke-width="2.5"/>
+<path d="M0 200V170Q70 152 150 166T300 158V200Z" fill="var(--il-near)"/>
+<path d="M30 192Q80 180 98 160Q108 140 98 78" stroke="var(--il-ice)" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+<path d="M210 178Q210 172 218 172H232Q238 172 238 178Q238 182 234 182H214Q210 182 210 178Z" fill="var(--il-ice)"/>
+<path d="M232 176L234 158H239L237 176Z" fill="var(--il-ice)"/>
+<path d="M233 159Q236 154 242 156L247 159Q246 162 241 162H234Z" fill="var(--il-ice)"/>
+<path d="M235 156L234 151L237 155ZM238 155L239 150L240 155Z" fill="var(--il-ice)"/>
+<path d="M214 181V192M219 181V192M229 181V192M234 181V192" stroke="var(--il-ice)" stroke-width="2.5"/>
+<path d="M226 172H232V176H226Z" fill="var(--il-acc)"/>
+<path d="M252 182Q252 178 257 178H266Q270 178 270 182Q270 185 267 185H255Q252 185 252 182Z" fill="var(--il-far)"/>
+<path d="M266 181L267 169H270L269 181Z" fill="var(--il-far)"/>
+<path d="M266 170Q268 166 272 168L275 170Q274 172 271 172H267Z" fill="var(--il-far)"/>
+<path d="M255 185V193M259 185V193M265 185V193M268 185V193" stroke="var(--il-far)" stroke-width="2"/>

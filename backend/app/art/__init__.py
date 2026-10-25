@@ -1,8 +1,10 @@
 """Stop illustrations that show the place itself (Machu Picchu, Cusco cathedral, ...).
 
 A library of hand-drawn landmark scenes, organised by country:
-  catalog/<cc>.json          the places of one country (slug, label, coordinates, radius, aliases)
-  landmarks/<cc>/<slug>.svg  one SVG fragment per place, drawn to docs/LANDMARK_STYLE.md
+  catalog/<cc>.json          the places of one country (slug, label, coordinates, radius, aliases,
+                             palette = the place's real colours for the --il-* tokens)
+  landmarks/<cc>/<slug>.svg  one flat SVG fragment per place, drawn to docs/LANDMARK_STYLE.md
+render.py gives a scene the official look (palette, comic outline, paper shadow) when it is served.
 A place's id is "<cc>-<slug>" (e.g. "pe-machu-picchu"). A place is drawn once and reused by
 every trip that visits it. Stops with no landmark nearby get no art here and the frontend
 falls back to the generic terrain scene.
@@ -30,6 +32,7 @@ class Landmark:
     lon: float
     radius_km: float
     aliases: tuple[str, ...]
+    palette: tuple[tuple[str, str], ...] = ()
 
 
 def _norm(s: str) -> str:
@@ -49,7 +52,8 @@ def landmarks() -> tuple[Landmark, ...]:
         for d in data["places"]:
             out.append(Landmark(id=f"{cc.lower()}-{d['slug']}", label=d["label"], country=cc, lat=d["lat"],
                                 lon=d["lon"], radius_km=d["radius_km"],
-                                aliases=tuple(_norm(a) for a in d["aliases"])))
+                                aliases=tuple(_norm(a) for a in d["aliases"]),
+                                palette=tuple(d.get("palette", {}).items())))
     return tuple(out)
 
 
@@ -62,6 +66,16 @@ def svg_path(landmark_id: str) -> Path | None:
 def svg(landmark_id: str) -> str | None:
     f = svg_path(landmark_id)
     return f.read_text(encoding="utf-8") if f is not None and f.is_file() else None
+
+
+def rendered(landmark_id: str) -> str | None:
+    """The scene with the official look, as the app shows it (see render.py)."""
+    body = svg(landmark_id)
+    if body is None:
+        return None
+    from app.art.render import render
+    lm = next((x for x in landmarks() if x.id == landmark_id), None)
+    return render(landmark_id, body, dict(lm.palette) if lm else None)
 
 
 def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:

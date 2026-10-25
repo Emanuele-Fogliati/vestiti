@@ -1,7 +1,7 @@
 """Checks that a landmark SVG follows docs/LANDMARK_STYLE.md, and that the catalog is consistent.
 
     python -m app.art.lint                       # the whole library (catalog + every SVG)
-    python -m app.art.lint path/to/out/          # a batch: every <cc>-<slug>.svg in the folder
+    python -m app.art.lint path/to/out/          # a batch: every <cc>-<slug>.svg (+ .palette.json) in the folder
     python -m app.art.lint pe-colca-canyon.svg   # one file
 
 Exit code 1 when anything fails. The same rules run in tests/test_art.py.
@@ -14,15 +14,18 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-TOKENS = ("sky", "far", "mid", "ice", "water", "near", "sun")
+TOKENS = ("sky", "far", "mid", "ice", "water", "near", "sun", "leaf", "acc", "obj")
 COLOUR = re.compile(r"var\(--il-(%s)\)" % "|".join(TOKENS))
 ELEMENTS = {"rect", "circle", "ellipse", "path", "polygon", "polyline", "line", "g", "defs", "clipPath"}
 ATTRS = {"d", "x", "y", "width", "height", "rx", "ry", "cx", "cy", "r", "points", "x1", "y1", "x2", "y2",
          "fill", "stroke", "stroke-width", "stroke-linecap", "stroke-linejoin", "stroke-dasharray",
-         "fill-rule", "clip-rule", "clip-path", "id", "transform"}
+         "fill-rule", "clip-rule", "clip-path", "id", "transform", "opacity", "fill-opacity", "vector-effect"}
 MAX_BYTES = 6144
 MAX_ELEMENTS = 90
 ID_RE = re.compile(r"[a-z]{2}-[a-z0-9]+(?:-[a-z0-9]+)*")
+_STEP = r"(?:translate\(-?[\d.]+[ ,]+-?[\d.]+\)|scale\([\d.]+(?:[ ,]+[\d.]+)?\))"
+TRANSFORM = re.compile(rf"{_STEP}(?: {_STEP})*")
+HEX = re.compile(r"#[0-9A-F]{6}")
 
 
 def lint_svg(landmark_id: str, body: str) -> list[str]:
@@ -58,12 +61,20 @@ def lint_svg(landmark_id: str, body: str) -> list[str]:
                     used.add(m[1])
             elif k == "stroke-width":
                 try:
-                    if not 0.8 <= float(v) <= 5:
-                        p.append(f"stroke-width {v} outside 0.8-5")
+                    if not 0.5 <= float(v) <= 5:
+                        p.append(f"stroke-width {v} outside 0.5-5")
                 except ValueError:
                     p.append(f"stroke-width '{v}' is not a number")
-            elif k == "transform" and not re.fullmatch(r"translate\(-?[\d.]+[ ,]+-?[\d.]+\)", v):
-                p.append(f"transform '{v}': only translate(x y)")
+            elif k == "transform" and not TRANSFORM.fullmatch(v):
+                p.append(f"transform '{v}': only translate(x y) and scale(k)")
+            elif k in ("opacity", "fill-opacity"):
+                try:
+                    if not 0.3 <= float(v) <= 1:
+                        p.append(f"{k} {v} outside 0.3-1")
+                except ValueError:
+                    p.append(f"{k} '{v}' is not a number")
+            elif k == "vector-effect" and v != "non-scaling-stroke":
+                p.append(f"vector-effect '{v}': only non-scaling-stroke")
             elif k == "id" and not v.startswith(f"il-{landmark_id}-"):
                 p.append(f"id '{v}' must start with 'il-{landmark_id}-' (ids are shared by the whole page)")
             elif k == "clip-path" and not re.fullmatch(r"url\(#il-%s-[a-z0-9-]+\)" % re.escape(landmark_id), v):
@@ -82,6 +93,38 @@ def lint_svg(landmark_id: str, body: str) -> list[str]:
     if len(used) < 4:
         p.append(f"only {len(used)} colour tokens used ({', '.join(sorted(used))}): use at least 4")
     return p
+
+
+def palette_problems(pal) -> list[str]:
+    """Problems with a place's palette: exactly the TOKENS, each '#RRGGBB'."""
+    if not isinstance(pal, dict) or set(pal) != set(TOKENS):
+        return [f"palette must set exactly {', '.join(TOKENS)}"]
+    bad = [f"{k}={v}" for k, v in pal.items() if not HEX.fullmatch(str(v))]
+    if bad:
+        return [f"palette colours must be #RRGGBB uppercase ({', '.join(bad)})"]
+    p = []
+    if luminance(pal["near"]) > 0.1:
+        p.append(f"near {pal['near']} too light: it is also the outline colour, keep it near black")
+    if luminance(pal["sky"]) < 0.5:
+        p.append(f"sky {pal['sky']} too dark: day scenes have a light sky")
+    return p
+
+
+def luminance(c: str) -> float:
+    """Relative luminance (WCAG) of '#RRGGBB', 0 = black, 1 = white."""
+    lin = [(v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4)
+           for v in (int(c[i:i + 2], 16) / 255 for i in (1, 3, 5))]
+    return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
+
+
+def lint_palette(f: Path) -> list[str]:
+    """A batch scene's palette file <cc>-<slug>.palette.json, next to its SVG."""
+    if not f.is_file():
+        return [f"{f.name} missing: every scene needs its palette"]
+    try:
+        return palette_problems(json.loads(f.read_text(encoding="utf-8")))
+    except ValueError as e:
+        return [f"{f.name}: not valid JSON ({e})"]
 
 
 def lint_catalog(art_dir: Path | None = None) -> list[str]:
@@ -109,6 +152,7 @@ def lint_catalog(art_dir: Path | None = None) -> list[str]:
                 p.append(f"{lid}: radius_km must be 1-80")
             if not pl.get("label"):
                 p.append(f"{lid}: label missing")
+            p += [f"{lid}: {x}" for x in palette_problems(pl.get("palette"))]
             for a in pl.get("aliases", []):
                 if a != a.lower() or re.search(r"[^a-z0-9 ]", a):
                     p.append(f"{lid}: alias '{a}' must be lowercase ascii letters, digits, spaces")
@@ -131,8 +175,10 @@ def _lint_files(paths: list[Path]) -> int:
     for f in paths:
         lid = f"{f.parent.name}-{f.stem}" if f.parent.parent.name == "landmarks" else f.stem
         probs = lint_svg(lid, f.read_text(encoding="utf-8"))
-        if f.parent.parent.name != "landmarks" and lid in existing:
-            probs.append("already in the library: do not redraw")
+        if f.parent.parent.name != "landmarks":
+            if lid in existing:
+                probs.append("already in the library: do not redraw")
+            probs += lint_palette(f.with_name(f.stem + ".palette.json"))
         print(("FAIL " if probs else "ok   ") + str(f))
         for x in probs:
             print("     - " + x)

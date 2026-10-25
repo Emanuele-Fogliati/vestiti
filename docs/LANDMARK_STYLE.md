@@ -1,178 +1,192 @@
 # Landmark illustration style
 
-Every stop card shows a small flat illustration of the place itself: Machu Picchu, the Uros reed
-islands, the Colca condors. This guide is the one style all of them follow, whoever draws them.
+Every stop card shows a small illustration of the place itself: Machu Picchu, the Uros reed
+islands, the Colca condor. This guide is the one style all of them follow, whoever draws them.
 `python -m app.art.lint` (run from `backend/`) checks the hard rules automatically; the rest is
 judged by eye at review.
 
-## 1. What a scene is
+The official look is **"58, la 17 pulita"**, chosen by Manu on 2026-10-25 after six rounds of
+style tests. It is **"Fumetto in carta"**: flat shapes in the real colours of the place, a dark
+comic outline, and a soft paper-cut shadow under every shape. Picking it ruled out frames,
+panoramas, zoom crops, symbol-only versions, grain, gradients and generic theme colours.
 
-- A **fragment of SVG** (no `<svg>` wrapper) drawn on a **300 × 200** canvas. The app wraps it in
-  `<svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice">`, so anything outside the
-  canvas is cropped and the edges may be cut a little on narrow cards: keep the landmark inside
-  x 30-270, y 20-185.
-- **Flat shapes, no outlines by default.** Depth comes from the layer colours, not from strokes,
-  gradients or shadows.
-- **Colours are theme tokens only.** The app has three themes and each one recolours every scene,
-  so a scene never names a colour. Allowed: `fill`/`stroke` = `var(--il-<token>)` or `none`.
+## 1. What you draw and what the app adds
 
-| Token | Role | Yellow/black theme |
+You draw a **flat scene**. The app adds the look on top when it serves the scene
+(`backend/app/art/render.py`):
+
+| You draw | The app adds |
+|---|---|
+| Flat shapes, coloured only with the 10 `--il-*` tokens | The place's **palette**: the real colour of each token |
+| A palette file with the real colours of the place | A **1 px outline** in `--il-near` on every filled shape (not the sky) |
+| | A **paper drop shadow** under every filled shape (not the sky) |
+
+So **never draw outlines or shadows yourself**, and never write a colour in the SVG. Draw shapes
+with fills, set the palette, and preview with the renderer (section 7).
+
+- The scene is an **SVG fragment** (no `<svg>` wrapper) on a **300 × 200** canvas. The app crops
+  the edges a little on narrow cards, so keep the landmark inside x 30-270, y 20-185.
+- `fill`/`stroke` are only `var(--il-<token>)` or `none`.
+
+## 2. The tokens and the palette
+
+Each place has its own palette: the **real colours** of that place (sand-coloured dunes, a green
+Huayna Picchu, ochre Lima cliffs, a grey Lima sky). The same token means the same role everywhere:
+
+| Token | Role | Example (Huacachina) |
 |---|---|---|
-| `--il-sky` | sky background, always the first shape | light grey |
-| `--il-far` | far mountains, distant land, light details on dark shapes | grey |
-| `--il-mid` | the landmark body, middle ground terrain, buildings | dark grey |
-| `--il-ice` | snow caps, white walls, highlights, foam | white |
-| `--il-water` | lakes, sea, rivers, glass | blue grey |
-| `--il-near` | the darkest accents: doors, windows, people, boats, birds, foreground silhouettes | near black |
-| `--il-sun` | the sun, plus at most one small accent (reed boats, a flag, lit windows) | yellow |
+| `sky` | the sky, always the first shape | `#DDEEF6` pale blue |
+| `far` | far terrain, distant land, light details | `#EBCF98` light sand |
+| `mid` | the landmark body, middle ground | `#CF9E5C` dune sand |
+| `ice` | snow, white walls, foam, highlights | `#FFFFFF` |
+| `water` | lakes, sea, rivers | `#3E9C93` green lagoon |
+| `near` | the darkest details **and the outline colour** | `#2E3B26` near black |
+| `sun` | the sun, plus at most one small warm accent | `#F6C431` |
+| `leaf` | vegetation: palms, trees, grass, terraces | `#4F8A3E` |
+| `acc` | one local accent: a red lighthouse stripe, red tile roofs, reed boats | `#F1DFA8` |
+| `obj` | one local object: a sandboard, a boat, a flag | `#2F7FB5` |
 
-## 2. Layer order (back to front)
+Palette rules (the linter checks the first three):
+- All 10 tokens, each written `#RRGGBB` in uppercase.
+- `near` stays near black (luminance ≤ 0.1), because it is also the outline.
+- `sky` is light (luminance ≥ 0.5). Scenes are by day.
+- Colours are **realistic** for the place, not decorative. Take them from what the place really
+  looks like. If you are not sure (is the stone grey or ochre?), look it up before choosing.
+- `acc` and `obj` are small touches. If the place has no local accent or object, set them to a
+  sensible colour and do not use them.
+
+## 3. Content rules (from Manu)
+
+1. **No people.** The only exception is **one small figure that explains the activity** of the
+   place: the Lima surfer and paraglider, the Huacachina sandboarder. Never a crowd.
+2. **No clouds**, unless clouds or mist are what the place is known for.
+3. **Animals are welcome** when they belong to the place (llama, condor, sea lions, penguins).
+   Never add one just to fill space.
+4. **Never half-cut background shapes.** A mountain partly hidden by a foreground object must still
+   read as a whole mountain. The bad example was the old Colca trapezoid behind the condor.
+5. **One clear scene** from the postcard viewpoint. No frames, no panoramas, no zoom crops, no
+   symbol-only versions.
+6. **The sun is always there**: exactly one `<circle fill="var(--il-sun)">`, radius 10-22, in the
+   top quarter, away from the landmark's tallest point.
+
+## 4. Recognisable, not generic
+
+The point of the library is that someone who has been there says "that's it". Before drawing,
+write down the **2-4 signature features** of the place and draw those, big and with enough detail
+to read on their own:
+
+- Lima: the Miraflores cliffs, the red-and-white lighthouse, the towers on top, a paraglider.
+- Arequipa: the white sillar cathedral with its two towers, El Misti behind.
+- Machu Picchu: Huayna Picchu's sugar-loaf peak, the terraces, the stone houses.
+- Uros: the yellow reed boats with the puma head, the reed huts, the lake.
+
+Rules:
+- One landmark per scene, seen from its most famous viewpoint.
+- Real proportions (number of towers, arches, domes, peaks). Never invent: look it up if unsure.
+- No text, no letters, no flags with emblems, no logos, no faces.
+- Only real places. Never copy a photo or another illustration: draw from what the place is.
+- Cities: the one view that stands for the city (Lima = the Miraflores cliffs and lighthouse,
+  Cusco = the cathedral and Inca walls), not a generic skyline.
+- Nature: the shape only that place has (the canyon profile, the striped mountain).
+- The detail level is the 10 Peru references: usually **20-40 elements, 2-4 KB**.
+
+## 5. Layer order (back to front)
 
 1. `<rect width="300" height="200" fill="var(--il-sky)"/>`, always the very first element.
-2. The sun: exactly one `<circle fill="var(--il-sun)">`, radius 10-22, in the top quarter, on the
-   side away from the landmark's tallest point.
-3. Far terrain in `--il-far` (horizon line roughly y 90-125), with `--il-ice` snow caps if the
-   place has snowy peaks.
-4. The landmark in `--il-mid`, with details in `--il-near`, `--il-ice` and `--il-far`.
-5. Foreground in `--il-mid`/`--il-near`: ground, water, one local touch (a llama, a reed boat, a
-   condor, a tuk-tuk). The foreground band is y 160-200.
+2. The sun.
+3. Far terrain in `far` (horizon roughly y 90-125), with `ice` snow caps if the place has them.
+4. The landmark in `mid`, with details in `near`, `ice`, `far`, `leaf`, `acc`.
+5. Foreground (y 160-200): ground, water, the animal or the activity figure if any.
 
 `<defs>`/`<clipPath>` may come anywhere after the sky rect.
 
-## 3. Recognisable, not generic
-
-The point of the library is that someone who has been there says "that's it". Before drawing,
-write down the **2-3 signature features** of the place and draw only those, big:
-
-- Machu Picchu: Huayna Picchu's sugar-loaf peak behind, the terraces, the little stone houses.
-- Uros: the yellow reed boats with the puma head, the reed huts, the lake.
-- Colca: the steep canyon walls with terraces, the condor with white neck and wing bands.
-
-Rules:
-- One landmark per scene, seen from its most famous viewpoint (the postcard angle).
-- Proportions of the real thing (number of towers, arches, domes, peaks). Never invent: if you are
-  not sure how many towers the cathedral has, look it up before drawing.
-- No text, no letters, no flags with emblems, no logos, no people's faces. Small people as
-  silhouettes are fine.
-- Only real places. Never copy a photo or another illustration: draw from what the place is.
-- Cities: draw the single monument that stands for the city (Cusco = the cathedral and Inca
-  walls), not a generic skyline.
-- Nature: draw the shape that only that place has (the canyon profile, the striped mountain).
-
-## 4. Drawing rules
+## 6. Drawing rules
 
 - Elements: `rect circle ellipse path polygon polyline line g defs clipPath`. Nothing else: no
   `text`, `image`, `use`, `filter`, gradients, `style` or `class`.
-- Strokes only for thin details (cables, ropes, terrace lines, birds' wings): `stroke-width`
-  0.8-5, `stroke-linecap="round"` for open lines, `fill="none"` on stroked paths.
+- Strokes only for thin details (cables, terrace lines, wings, stripes): `stroke-width` 0.5-5,
+  `stroke-linecap="round"` for open lines, `fill="none"` on stroked paths. A shape with its own
+  `stroke` keeps it and gets no extra outline.
+- `opacity`/`fill-opacity` 0.3-1 only for a reflection or a faint far detail.
+- `transform` only `translate(x y)` and `scale(k)`; with `scale`, add
+  `vector-effect="non-scaling-stroke"` to stroked shapes.
 - Integer coordinates where possible; at most one decimal.
-- `transform` only as `translate(x y)`.
-- Size: ≤ 6 KB and ≤ 90 elements. Most good scenes are 1.3-2.5 KB and 15-25 elements. Merge
-  shapes of the same colour into one `path` (`M...Z M...Z`).
+- Size: ≤ 6 KB and ≤ 90 elements. Merge shapes of the same colour into one `path` (`M...Z M...Z`).
 - Ids are shared by the whole page: any `id` must start with `il-<cc>-<slug>-` (e.g.
   `il-pe-rainbow-mountain-clip`).
-- Use at least 4 tokens, always including `--il-near`. Yellow (`--il-sun`) covers at most about a
-  tenth of the canvas: it is the accent, not the fill.
+- Use at least 4 tokens, always including `near`.
 
-## 5. Names, files, catalog
+## 7. Names, files, preview
 
-- A place id is `<cc>-<slug>`: ISO 3166 alpha-2 country code in lowercase + a short English slug
-  (`pe-machu-picchu`, `it-colosseum`, `jp-fushimi-inari`). One place belongs to one country, the
-  one it is physically in, whatever the trip title says.
-- In a batch thread: save each scene as `<cc>-<slug>.svg` in the batch's `out/` folder, with the
-  exact id the batch file gives you. Do not rename, do not add places that are not in your batch.
-- In the library (organizer only): `backend/app/art/landmarks/<cc>/<slug>.svg` plus an entry in
+- A place id is `<cc>-<slug>`: ISO 3166 alpha-2 country code in lowercase + a short English ascii
+  slug (`pe-machu-picchu`, `is-godafoss`, `ar-iguazu-falls`). One place belongs to one country,
+  the one it is physically in. Border places get one entry per side.
+- **In a batch:** save two files per place in the batch's `out/` folder, with the exact id the
+  batch file gives you:
+  - `<cc>-<slug>.svg`: the flat scene;
+  - `<cc>-<slug>.palette.json`: `{"sky": "#…", "far": "#…", … all 10 tokens}`.
+  Do not rename, and do not add places that are not in your batch.
+- **Preview** what the app will show:
+  `cd backend && python -m app.art.render out/<cc>-<slug>.svg > /tmp/<cc>-<slug>.preview.svg`
+  then open it in a browser or screenshot it with Playwright. Look at it at card size too (about
+  180 × 120 px).
+- **In the library** (organizer only): `backend/app/art/landmarks/<cc>/<slug>.svg` plus an entry in
   `backend/app/art/catalog/<cc>.json`:
-  `{"slug", "label", "lat", "lon", "radius_km", "aliases"}`.
-  - `label`: what the scene shows, in English ("Cusco Cathedral and Inca walls").
+  `{"slug", "label", "lat", "lon", "radius_km", "aliases", "palette"}`.
+  - `label`: what the scene shows, in English ("Lima's Costa Verde cliffs").
   - `radius_km`: how far a stop can be and still get this scene (a city 15-30, a single site 5-15,
     a big park or canyon 30-60).
-  - `aliases`: lowercase ascii names that agencies write in a stop's name, including local and
-    Italian spellings and the sub-places that should show this scene (`cuzco`, `qosqo`). Each
-    alias belongs to one place only.
+  - `aliases`: lowercase ascii names agencies write for this place (local and Italian spellings).
+    Only other names of the **same** place. Each alias belongs to one place.
 - A place already in the catalog is never redrawn. `python -m app.art.lint <folder>` flags it.
+- The API serves the rendered scene at `/api/art/landmarks/<id>.svg` and the flat drawing at
+  `?flat=1`.
 
-## 6. Checklist before handing in
+## 8. Checklist before handing in
 
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
-- [ ] Rendered preview looked at in at least the yellow/black theme (see below): the landmark reads
-      at card size (about 180 × 120 px).
-- [ ] 2-3 signature features present, proportions right, nothing invented.
-- [ ] Sun on the opposite side of the tallest point, horizon in the same band as the references.
+- [ ] Rendered preview looked at, full size and at card size: the place is recognisable.
+- [ ] 2-4 signature features present, proportions right, nothing invented.
+- [ ] Palette = the real colours of the place; `near` near black; light sky.
+- [ ] No people except one activity figure; no clouds unless they are the place's trait; animals
+      only if they belong; no half-cut background shapes; one clear scene; one sun.
 - [ ] No two scenes in the batch look like the same generic mountain.
 
-Preview: wrap the fragment in `<svg viewBox="0 0 300 200">`, add the token values for a theme
-(`frontend/src/theme/tokens.css`), open it in a browser or render it with Playwright.
+## 9. Reference scenes
 
-## 7. Reference scenes
+The ten Peru scenes in `backend/app/art/landmarks/pe/` (palettes in `catalog/pe.json`) are the
+approved references. Read at least three before drawing. One in full:
 
-The ten Peru scenes in `backend/app/art/landmarks/pe/` are the approved references. Three of them
-in full:
+### pe-lima-costa-verde (cliffs + lighthouse + towers + paraglider + surfer)
 
-### pe-machu-picchu (mountain + ruins + terraces + llama)
-
-```svg
-<rect width="300" height="200" fill="var(--il-sky)"/>
-<circle cx="48" cy="38" r="13" fill="var(--il-sun)"/>
-<path d="M0 116L30 86L60 104L96 70L130 100L160 90L300 96V200H0Z" fill="var(--il-far)"/>
-<path d="M232 200L236 84L246 62L262 76L280 112L300 124V200Z" fill="var(--il-far)"/>
-<path d="M118 200L128 128Q136 112 146 120L156 134L166 92Q176 48 200 42Q220 40 228 70Q236 104 246 128L262 200Z" fill="var(--il-mid)"/>
-<path d="M190 50Q200 44 208 48M180 70Q192 64 202 70M216 64Q224 64 228 74" stroke="var(--il-far)" stroke-width="1.4" fill="none"/>
-<path d="M0 200V150L70 144L150 146L230 142L300 146V200Z" fill="var(--il-far)"/>
-<path d="M96 146V136L104 128L112 136V140H136V146ZM150 146V138H186V130L194 122L202 130V138H222V146ZM240 144V134L248 126L256 134V144Z" fill="var(--il-ice)"/>
-<path d="M102 142L103 137H107L108 142ZM120 144L121 141H125L126 144ZM158 144L159 140H163L164 144ZM172 144L173 140H177L178 144ZM192 136L193 131H197L198 136ZM210 144L211 140H215L216 144ZM246 140L247 135H251L252 140Z" fill="var(--il-near)"/>
-<path d="M0 200V156H58V162H76V170H92V178H106V188H118V200Z" fill="var(--il-mid)"/>
-<path d="M0 156H58M58 162H76M76 170H92M92 178H106M106 188H118" stroke="var(--il-ice)" stroke-width="2"/>
-<path d="M0 166H62M0 176H80M0 186H98M0 196H112" stroke="var(--il-far)" stroke-width="1.2"/>
-<path d="M226 176Q226 168 236 168H254Q262 168 262 176Q262 182 256 182H232Q226 182 226 176Z" fill="var(--il-near)"/>
-<path d="M252 172L254 146H261L259 172Z" fill="var(--il-near)"/>
-<path d="M253 147Q257 140 265 142L272 147Q270 151 264 151H254Z" fill="var(--il-near)"/>
-<path d="M256 143L255 136L259 142ZM260 142L261 135L263 142Z" fill="var(--il-near)"/>
-<path d="M230 180V196M237 180V196M250 180V196M257 180V196" stroke="var(--il-near)" stroke-width="3"/>
-<path d="M227 172Q221 172 222 179" stroke="var(--il-near)" stroke-width="3" fill="none"/>
-```
-
-### pe-uros-titicaca (water + reed boats + yellow accent)
+Palette: `{"sky": "#DCE3E8", "far": "#BFC5CA", "mid": "#B9945F", "ice": "#FFFFFF", "water": "#4A88AD", "near": "#26292C", "sun": "#F6C431", "leaf": "#6E9A4E", "acc": "#C63A32", "obj": "#E8833A"}`
 
 ```svg
 <rect width="300" height="200" fill="var(--il-sky)"/>
-<circle cx="250" cy="36" r="13" fill="var(--il-sun)"/>
-<path d="M0 112L30 100L56 106L90 82L104 92L124 74L150 98L190 92L220 104L300 98V122H0Z" fill="var(--il-far)"/>
-<path d="M90 82L98 90L94 92L86 88ZM124 74L134 84L128 86L118 82Z" fill="var(--il-ice)"/>
-<rect y="120" width="300" height="80" fill="var(--il-water)"/>
-<path d="M150 140H292L298 148H144Z" fill="var(--il-sun)"/>
-<path d="M150 140H292" stroke="var(--il-near)" stroke-width="1.4"/>
-<path d="M166 140L182 112L198 140ZM206 140L224 106L242 140ZM252 140L266 116L280 140Z" fill="var(--il-sun)" stroke="var(--il-near)" stroke-width="1.4" stroke-linejoin="round"/>
-<path d="M182 112V140M174 126L190 126M224 106V140M214 124L234 124M266 116V140M259 128L273 128" stroke="var(--il-near)" stroke-width="1"/>
-<path d="M178 140V130H186V140ZM220 140V128H228V140ZM262 140V131H270V140Z" fill="var(--il-near)"/>
-<path d="M238 140V96" stroke="var(--il-near)" stroke-width="1.6"/>
-<path d="M238 96L252 101L238 106Z" fill="var(--il-near)"/>
-<path d="M28 166Q20 146 32 132Q34 148 46 156H134Q148 148 150 130Q166 148 152 168Q92 180 28 166Z" fill="var(--il-sun)" stroke="var(--il-near)" stroke-width="1.6" stroke-linejoin="round"/>
-<path d="M48 156Q46 146 56 144H124Q132 146 130 156" fill="var(--il-sun)" stroke="var(--il-near)" stroke-width="1.6"/>
-<path d="M44 158V168M60 156V172M78 156V173M96 156V173M114 156V172M132 157V170M70 146V156M90 145V156M110 146V156" stroke="var(--il-near)" stroke-width="1.4"/>
-<path d="M150 130Q148 120 156 118L162 122L158 126Q154 126 154 132Z" fill="var(--il-near)"/>
-<path d="M156 119L158 114L160 120Z" fill="var(--il-near)"/>
-<path d="M32 132Q28 124 22 124L20 128L26 129Q28 132 28 138Z" fill="var(--il-near)"/>
-<path d="M40 182H140M70 190H170M190 172H260M210 182H290" stroke="var(--il-ice)" stroke-width="1.5" stroke-linecap="round"/>
-```
-
-### pe-colca-canyon (canyon walls + condor)
-
-```svg
-<rect width="300" height="200" fill="var(--il-sky)"/>
-<circle cx="250" cy="34" r="12" fill="var(--il-sun)"/>
-<path d="M100 104L150 70L162 74L176 66L220 104Z" fill="var(--il-far)"/>
-<path d="M150 70L162 74L176 66L186 76L170 82L158 78L142 80Z" fill="var(--il-ice)"/>
-<path d="M162 62Q156 50 164 42Q172 34 166 24" stroke="var(--il-far)" stroke-width="5" stroke-linecap="round" fill="none"/>
-<path d="M0 200V92L36 96L72 118L104 160L124 200Z" fill="var(--il-mid)"/>
-<path d="M300 200V86L262 94L222 122L196 164L184 200Z" fill="var(--il-mid)"/>
-<path d="M0 108L30 112M0 124L50 128M0 140L66 146M0 156L80 164M0 172L92 180M300 104L260 110M300 120L240 128M300 136L226 146M300 152L212 164M300 168L202 180" stroke="var(--il-far)" stroke-width="1.6"/>
-<path d="M124 200L120 186Q150 176 186 186L184 200Z" fill="var(--il-far)"/>
-<path d="M128 200Q150 188 176 200Z" fill="var(--il-water)"/>
-<path d="M150 74L120 60Q96 54 66 60L58 56L62 63L52 62L58 68L48 69L58 74Q100 80 146 82Z" fill="var(--il-near)"/>
-<path d="M150 74L180 60Q204 54 234 60L242 56L238 63L248 62L242 68L252 69L242 74Q200 80 154 82Z" fill="var(--il-near)"/>
-<path d="M118 66Q96 62 72 66M182 66Q204 62 228 66" stroke="var(--il-ice)" stroke-width="3" stroke-linecap="round" fill="none"/>
-<path d="M142 72Q150 64 158 72L156 88L150 96L144 88Z" fill="var(--il-near)"/>
-<path d="M144 72Q150 68 156 72" stroke="var(--il-ice)" stroke-width="3" fill="none"/>
-<circle cx="150" cy="66" r="4" fill="var(--il-mid)"/>
+<circle cx="40" cy="32" r="12" fill="var(--il-sun)"/>
+<path d="M150 92V60H162V92ZM166 92V48H180V92ZM186 92V56H196V92ZM204 86V36H218V86ZM250 80V44H264V80ZM270 78V54H284V78ZM286 76V40H300V76Z" fill="var(--il-far)"/>
+<path d="M170 54V88M210 42V82M256 50V76M292 46V72" stroke="var(--il-sky)" stroke-width="2" stroke-dasharray="3 3"/>
+<rect y="112" width="300" height="88" fill="var(--il-water)"/>
+<path d="M30 114L120 96L200 80L300 66V174L52 122Z" fill="var(--il-mid)"/>
+<path d="M70 114L300 82M96 118L300 98M130 124L300 116M170 134L300 134M210 146L300 150" stroke="var(--il-far)" stroke-width="1.2"/>
+<path d="M120 100L118 112M160 92L156 116M200 84L194 124M240 78L236 136M276 72L272 150" stroke="var(--il-far)" stroke-width="1" stroke-linecap="round"/>
+<path d="M26 113L120 94L200 78L300 63V70L200 84L120 99L30 117Z" fill="var(--il-leaf)"/>
+<path d="M52 122L300 174V186L44 126Z" fill="var(--il-near)"/>
+<path d="M58 124L300 180" stroke="var(--il-ice)" stroke-width="0.8" stroke-dasharray="4 4"/>
+<path d="M44 126L300 186V194L38 130Z" fill="var(--il-far)"/>
+<path d="M38 132L300 198M0 150Q20 146 40 150T80 150M10 170Q34 165 58 170T106 170M60 186Q86 181 112 186T164 186" stroke="var(--il-ice)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M227 77L231 30H241L245 77Z" fill="var(--il-ice)"/>
+<path d="M230.2 40H241.8L242.5 49H229.5ZM228.9 58H243.1L243.8 67H228.2Z" fill="var(--il-acc)"/>
+<path d="M226 30H246V26H226Z" fill="var(--il-near)"/>
+<rect x="230" y="15" width="12" height="11" fill="var(--il-sun)" stroke="var(--il-near)" stroke-width="1"/>
+<path d="M229 15Q236 5 243 15Z" fill="var(--il-acc)"/>
+<path d="M236 8V3" stroke="var(--il-near)" stroke-width="1.2"/>
+<path d="M262 70Q263 58 260 48M274 68Q274 60 276 52" stroke="var(--il-near)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<path d="M260 48Q252 46 248 52Q254 48 260 50ZM260 48Q268 44 272 50Q266 47 260 50ZM260 48Q256 40 250 40Q256 43 260 49ZM276 52Q270 49 266 54Q271 51 276 54ZM276 52Q283 48 287 53Q282 51 276 54Z" fill="var(--il-leaf)" stroke="var(--il-leaf)" stroke-width="1"/>
+<path d="M86 50Q110 32 134 50Q110 42 86 50Z" fill="var(--il-sun)" stroke="var(--il-near)" stroke-width="1"/>
+<path d="M88 50L108 72M132 50L112 72M100 44L109 72M120 44L111 72" stroke="var(--il-near)" stroke-width="0.6"/>
+<path d="M107 71H113V77H107Z" fill="var(--il-near)"/>
+<path d="M62 166L82 163" stroke="var(--il-near)" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M70 163L71 155M71 156L66 159M71 156L76 158" stroke="var(--il-near)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+<circle cx="71" cy="153" r="2" fill="var(--il-near)"/>
 ```
