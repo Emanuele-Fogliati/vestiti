@@ -153,7 +153,11 @@ def pick_for_tier(cands: list[CatalogItem], tier: str) -> CatalogItem | None:
     if tier == "medium":
         band = [c for c in ok if lo <= c.price <= hi] or ok
         mid = prices[len(prices) // 2]
-        return max(band, key=lambda c: (round(c.fit.score, 2), -abs(c.price - mid)))
+        # a good-enough fit at a middle price, not the best fit at the top of the band:
+        # "medium" has to stay a medium budget
+        top = max(c.fit.score for c in band)
+        good = [c for c in band if c.fit.score >= top - 0.05]
+        return min(good, key=lambda c: (abs(c.price - mid), -c.fit.score))
     band = [c for c in ok if c.price >= hi] or ok
     return max(band, key=lambda c: (round(c.fit.score, 2), c.rating or 0, c.price))
 
@@ -221,17 +225,21 @@ def _margin_for(conds, kit, cond: Condition) -> float:
 
 def cheapest_upgrade(
     stages, conds, choices: dict[str, Choice], reqs, candidates: dict[str, list[CatalogItem]],
-    stage_index: int, mode: str,
+    stage_index: int, mode: str, ceiling: dict[str, float] | None = None,
+    max_cost: float | None = None, min_value: float = 0.0,
 ) -> dict | None:
-    """The cheapest single swap that removes (or most reduces) the warmth gap. When no swap
-    helps any more, the cheapest extra layer the kit does not have yet (e.g. rain trousers
-    for a cold boat ride): the gap is then closed instead of only reported."""
+    """The swap that buys the most warmth per euro for the gap (a fleece before a €400
+    shell). When no swap helps any more, the cheapest extra layer the kit does not have
+    yet (e.g. rain trousers for a cold boat ride). ceiling caps the price per slot, so a
+    budget tier is not quietly turned into the premium one."""
     kit = _kit(choices, reqs)
     cond, margin = _worst(stages, conds, kit, stage_index, mode)
     if cond is None or margin >= 0:
         return None
-    best = _best_change(conds, choices, reqs, candidates, kit, cond, margin, add=False) \
-        or _best_change(conds, choices, reqs, candidates, kit, cond, margin, add=True)
+    best = _best_change(conds, choices, reqs, candidates, kit, cond, margin, False, ceiling, max_cost,
+                        min_value) \
+        or _best_change(conds, choices, reqs, candidates, kit, cond, margin, True, ceiling, max_cost,
+                        min_value)
     if best is None:
         return None
     return {
@@ -245,8 +253,10 @@ def cheapest_upgrade(
     }
 
 
-def _best_change(conds, choices, reqs, candidates, kit, cond, margin, add: bool) -> dict | None:
-    best = None
+def _best_change(conds, choices, reqs, candidates, kit, cond, margin, add: bool,
+                 ceiling: dict[str, float] | None = None,
+                 max_cost: float | None = None, min_value: float = 0.0) -> dict | None:
+    best, best_value = None, -1.0
     for slot in UPGRADE_SLOTS:
         if slot not in reqs:
             continue
@@ -260,6 +270,8 @@ def _best_change(conds, choices, reqs, candidates, kit, cond, margin, add: bool)
         for c in candidates.get(slot, []):
             if not c.fit or not c.fit.passes or c.source != "product":
                 continue
+            if ceiling and c.price > ceiling.get(slot, float("inf")) + 1e-6:
+                continue
             if float(c.specs.get("clo", 0)) <= current_clo + 1e-6:
                 continue
             trial = dict(kit)
@@ -269,16 +281,18 @@ def _best_change(conds, choices, reqs, candidates, kit, cond, margin, add: bool)
             if gain <= 0.005:
                 continue
             cost = round(c.price - current_cost, 2)
+            if max_cost is not None and cost > max_cost + 1e-6:
+                continue
             closes = thermal.warmth_status(new_margin + cond.required, cond.required) != "cold"
             cand = {"slot": slot, "item": c, "gain": round(gain, 2), "cost": cost,
                     "closes": closes, "new_margin": round(new_margin, 2), "added": add}
-            if best is None:
-                best = cand
-            elif closes and (not best["closes"] or cost < best["cost"]):
-                best = cand
-            elif not closes and not best["closes"]:
-                if gain / max(cost, 1) > best["gain"] / max(best["cost"], 1):
-                    best = cand
+            # warmth per euro, counting only the part of the gain that the gap needs:
+            # overshooting by 0.8 clo is not worth paying for
+            value = min(gain, -margin) / (max(cost, 0.0) + 5.0)
+            if value < min_value:
+                continue
+            if value > best_value + 1e-9 or (abs(value - best_value) <= 1e-9 and cost < best["cost"]):
+                best, best_value = cand, value
     return best
 
 
@@ -335,19 +349,42 @@ def build_tier(
         choices[slot] = Choice(slot, "product", pick) if pick else Choice(
             slot, "none", note="No product in the catalog fits this yet.")
 
-    # warmth optimisation: cheapest upgrade until no stage is "cold"
+    # warmth optimisation: best warmth per euro until no stage is "cold", never above the
+    # next tier's pick for that piece
+    nxt = {"cheap": "medium", "medium": "premium"}.get(tier)
+    ceiling = None
+    if nxt:
+        ceiling = {}
+        for slot, cs in candidates.items():
+            top = pick_for_tier(cs, nxt)
+            if top:
+                ceiling[slot] = top.price
     steps = []
     original = {k: (c.item.as_dict() if c.item else None, c.cost()) for k, c in choices.items()}
-    for _ in range(max_auto_upgrades):
-        ev = evaluate(stages, conds, _kit(choices, reqs))
-        cold = [(s["modes"][m]["margin"], s["index"], m) for s in ev["stages"]
-                for m in ("moving", "rest") if s["modes"][m]["status"] == "cold"]
+    # an evening outside in town is partly the traveller's choice: spend a little on it,
+    # not €250 (the rest is explained in the shortfall)
+    evening_budget = round(AVOIDABLE_BUDGET * sum(c.cost() for c in choices.values()), 2)
+    done: set[tuple[int, str]] = set()
+    for _ in range(max_auto_upgrades + 2 * len(stages)):
+        if len(steps) >= max_auto_upgrades:
+            break
+        kit_now = _kit(choices, reqs)
+        ev = evaluate(stages, conds, kit_now)
+        cold = sorted((s["modes"][m]["margin"], s["index"], m) for s in ev["stages"]
+                      for m in ("moving", "rest")
+                      if s["modes"][m]["status"] == "cold" and (s["index"], m) not in done)
         if not cold:
             break
-        _, si, mode = min(cold)
-        up = cheapest_upgrade(stages, conds, choices, reqs, candidates, si, mode)
+        _, si, mode = cold[0]
+        soft = avoidable(_worst(stages, conds, kit_now, si, mode)[0])
+        up = cheapest_upgrade(stages, conds, choices, reqs, candidates, si, mode, ceiling,
+                              max_cost=evening_budget if soft else None,
+                              min_value=AVOIDABLE_MIN_VALUE if soft else 0.0)
         if not up:
-            break
+            done.add((si, mode))
+            continue
+        if soft:
+            evening_budget -= max(up["extra_cost"], 0.0)
         slot = up["slot"]
         new_item = next(c for c in candidates[slot] if c.id == up["item"]["id"])
         steps.append({**up, "stage_name": stages_name(stages, si)})
@@ -460,17 +497,40 @@ def _merge_upgrades(steps: list[dict], original: dict, choices: dict[str, Choice
     return result
 
 
+AVOIDABLE_REST = {"city", "beach", "boat", "desert"}
+AVOIDABLE_BUDGET = 0.15  # share of the tier's cost that may go to town evenings
+AVOIDABLE_MIN_VALUE = 0.0004  # clo per euro: 0.1 clo for €250 is the least worth paying
+
+
+def avoidable(cond: Condition | None) -> bool:
+    """A cold moment the traveller can simply walk away from (an evening outdoors in town),
+    unlike a summit break, a camp night or an early game drive."""
+    return bool(cond and cond.mode == "rest" and cond.activity.key in AVOIDABLE_REST
+                and cond.where == "evening outdoors")
+
+
 def shortfall(stages, conds, kit, ev, tier: str) -> dict | None:
     """When even the upgrades leave a stop cold: where, how much, and what would close it."""
-    cold = [(s["modes"][m]["margin"], s["index"], m) for s in ev["stages"]
-            for m in ("moving", "rest") if s["modes"][m]["status"] == "cold"]
+    cold = sorted((s["modes"][m]["margin"], s["index"], m) for s in ev["stages"]
+                  for m in ("moving", "rest") if s["modes"][m]["status"] == "cold")
     if not cold:
         return None
-    margin, si, mode = min(cold)
-    cond, _ = _worst(stages, conds, kit, si, mode)
+    rows = [(m, si, mode, _worst(stages, conds, kit, si, mode)[0]) for m, si, mode in cold]
+    hard = [r for r in rows if not avoidable(r[3])]
+    margin, si, mode, cond = (hard or rows)[0]
     name = stages_name(stages, si)
     gap = -margin
     feels = cond.feels_like_c if cond else None
+    if not hard:
+        return {
+            "stage_index": si, "stage": name, "mode": mode, "gap_clo": round(gap, 2),
+            "feels_like_c": feels, "missing": [], "avoidable": True,
+            "message": f"Only if you stay outside in the evening at {name}"
+                       + (f" (feels like {feels:.0f} °C)" if feels is not None else "")
+                       + f": {gap:.2f} clo short standing still. Head indoors, keep walking or "
+                       "add a layer you already own; closing it fully would mean a much pricier "
+                       "jacket for a few evenings.",
+        }
     when = "at rest" if mode == "rest" else "on the move"
     missing = [SLOT_BY_KEY[k].name.lower() for k in ("insulation_top", "mid_top", "base_bottom",
                                                       "shell_bottom", "headwear", "gloves")
@@ -486,7 +546,7 @@ def shortfall(stages, conds, kit, ev, tier: str) -> dict | None:
     feels_txt = f", feels like {feels:.0f} °C" if feels is not None else ""
     return {
         "stage_index": si, "stage": name, "mode": mode, "gap_clo": round(gap, 2),
-        "feels_like_c": feels, "missing": missing,
+        "feels_like_c": feels, "missing": missing, "avoidable": False,
         "message": f"Still {gap:.2f} clo short at {name} {when}{feels_txt}: the catalog has no "
                    f"warmer swap that fits this tier. To close it: " + "; ".join(tips) + ".",
     }

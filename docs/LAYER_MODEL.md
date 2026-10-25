@@ -91,8 +91,14 @@ fill type and weight (`catalog/classify.py`) and mark it "estimated".
    precaution: e.g. above 2,000 m always an emergency warm layer) / not needed. Days that
    differ from the usual day are listed as exceptions.
 4. **Warmth check and upgrade**: for the worst moment of each stop, if the kit is short,
-   we try every single-item swap in the catalog and offer the one with the lowest extra
-   cost that closes (or most reduces) the gap.
+   we try every single-item swap in the catalog and take the one with the most warmth per
+   euro (counting only the warmth the gap needs), repeating until no stop is "too cold".
+   A tier never upgrades a piece above the next tier's pick for it. When no swap helps, the
+   cheapest missing layer is added (e.g. rain trousers). An evening outside in town, on a
+   beach, a boat or in the desert is partly the traveller's choice: at most 15% of the
+   kit's price goes to it, and only at ≥ 0.1 clo per €250; what is left is explained
+   ("head indoors"), not bought. If a tier ends up within 15% of the next one's price,
+   the app suggests the next tier. Above 2,500 m a sun hat is always in the kit (UV).
 
 ## 5. Products: stars and tiers
 

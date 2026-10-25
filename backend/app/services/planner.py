@@ -131,6 +131,7 @@ class Planner:
         tiers = data["tiers"]
         for t in tiers.values():
             t.pop("_choices", None)
+        tier_advice(tiers)
         return {
             "empty": False,
             "tiers": tiers,
@@ -217,3 +218,26 @@ class Planner:
             return ("Sample catalog: real product names, indicative prices and approximate "
                     "specs. Check the retailer page before you buy.")
         return None
+
+
+_RANK = {"covered": 2, "marginal": 1, "cold": 0}
+
+
+def tier_advice(tiers: dict) -> None:
+    """When upgrades push a tier close to the next one's price, say so: paying 90% of
+    Premium for a patched Medium kit is a bad deal."""
+    for low, high in (("cheap", "medium"), ("medium", "premium")):
+        a, b = tiers[low], tiers[high]
+        ta, tb = a["totals"]["total"], b["totals"]["total"]
+        a["advice"] = None
+        if tb <= 0 or ta < 0.85 * tb:
+            continue
+        if _RANK[b["warmth"]["status"]] < _RANK[a["warmth"]["status"]]:
+            continue
+        gap = round(tb - ta, 2)
+        name = high.capitalize()
+        a["advice"] = {"tier": high, "extra_cost": gap,
+                       "message": f"With the warmth upgrades this kit costs almost as much as "
+                                  f"{name}: {name} is only €{gap:,.0f} more and its pieces are "
+                                  f"better. Consider {name}."}
+    tiers["premium"]["advice"] = None

@@ -175,7 +175,8 @@ export interface TierPlan {
     stages: { index: number; name: string; moving: MarginRow; rest: MarginRow }[] };
   auto_upgrades: { slot: string; reason: string; extra_cost: number; to: Item; from: Item | null; added: boolean }[];
   shortfall: { stage: string; mode: "moving" | "rest"; gap_clo: number; feels_like_c: number | null;
-    missing: string[]; message: string } | null;
+    missing: string[]; message: string; avoidable: boolean } | null;
+  advice: { tier: Tier; extra_cost: number; message: string } | null;
   owned_notes: { slot: string; verdict: string; message: string; item: Item }[];
   owned_fine_count: number;
 }

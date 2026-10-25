@@ -27,10 +27,17 @@ def test_upgrades_are_one_line_per_piece_and_cold_is_explained(client):
             before = u["from"]["price"] if u["from"] else 0
             assert round(u["to"]["price"] - before, 2) == u["extra_cost"]
         if tp["warmth"]["status"] == "cold":
-            assert tp["shortfall"] and "To close it" in tp["shortfall"]["message"]
+            assert tp["shortfall"] and tp["shortfall"]["message"]
         else:
             assert tp["shortfall"] is None
-    assert plans["tiers"]["medium"]["warmth"]["status"] != "cold"
+        # a sun hat at 3,400-5,200 m, even on days too cool for "strong sun"
+        assert any(i["slot"] == "sun_hat" for i in tp["items"]), tier
+    medium = plans["tiers"]["medium"]
+    # what is left cold is the Taquile evening outdoors, which the app explains instead of
+    # buying a €400 jacket for it
+    assert medium["warmth"]["status"] != "cold" or medium["shortfall"]["avoidable"]
+    totals = [plans["tiers"][t]["totals"]["total"] for t in ("cheap", "medium", "premium")]
+    assert totals == sorted(totals) and totals[1] < 0.75 * totals[2]
 
 
 def test_mens_kit_has_no_womens_cuts(client):
@@ -39,3 +46,15 @@ def test_mens_kit_has_no_womens_cuts(client):
     plans = _plans(client)
     for tp in plans["tiers"].values():
         assert all(i["item"]["gender"] != "women" for i in tp["items"] if i["item"])
+
+
+def test_tier_close_to_the_next_one_suggests_it():
+    from app.services.planner import tier_advice
+
+    def t(total, status):
+        return {"totals": {"total": total}, "warmth": {"status": status}}
+    tiers = {"cheap": t(500, "cold"), "medium": t(2254, "cold"), "premium": t(2322, "marginal")}
+    tier_advice(tiers)
+    assert tiers["medium"]["advice"]["tier"] == "premium"
+    assert tiers["medium"]["advice"]["extra_cost"] == 68
+    assert tiers["cheap"]["advice"] is None and tiers["premium"]["advice"] is None

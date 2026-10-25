@@ -163,8 +163,14 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
                 <span className="muted">({a.extra_cost > 0 ? "+" : a.extra_cost < 0 ? "−" : "±"}{money(Math.abs(a.extra_cost))})</span>
                 <br /><span className="small">{a.reason}</span></li>))}</ul></div>
         )}
+        {tp.advice && (
+          <div className="banner info"><b>{TIER_LABEL[tp.advice.tier]} is only {money(tp.advice.extra_cost)} more</b>
+            <p>{tp.advice.message}{" "}
+              <button type="button" className="link" onClick={() => setTier(tp.advice!.tier)}>See {TIER_LABEL[tp.advice.tier]}</button></p></div>
+        )}
         {tp.shortfall && (
-          <div className="banner warn"><b>Warmth check: still too cold at {tp.shortfall.stage}</b>
+          <div className={`banner ${tp.shortfall.avoidable ? "info" : "warn"}`}>
+            <b>{tp.shortfall.avoidable ? `Cold evenings outside at ${tp.shortfall.stage}` : `Warmth check: still too cold at ${tp.shortfall.stage}`}</b>
             <p>{tp.shortfall.message}</p></div>
         )}
         {plans.catalog_note && <p className="small muted">{plans.catalog_note}</p>}
@@ -210,7 +216,7 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
                 ))}
               </div>
               <div className="tfacts">
-                <div><div className="label">Warmth check</div><div className="v">{statusText[tp.warmth.status]}</div>
+                <div><div className="label">Warmth check</div><div className="v">{tp.warmth.status === "cold" && tp.shortfall?.avoidable ? "OK, cold evenings" : statusText[tp.warmth.status]}</div>
                   {tp.shortfall && <div className="small muted">{tp.shortfall.gap_clo.toFixed(2)} clo short at {tp.shortfall.stage} {tp.shortfall.mode === "rest" ? "at rest" : "on the move"}</div>}</div>
                 <div><div className="label">Saved by owning</div><div className="v">{money(tp.totals.owned_value_saved)}</div></div>
                 <div><div className="label">Rentals</div><div className="v">{money(tp.totals.rent)}</div></div>

@@ -101,6 +101,9 @@ def _activity_altitude(stage: StageInput, activity: dict, profile: ActivityProfi
     return base
 
 
+HIGH_UV_M = 2500.0
+
+
 def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0) -> list[Condition]:
     out: list[Condition] = []
     acts = stage.activities or [{"type": "city"}]
@@ -133,7 +136,9 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0) -> lis
                     rest_where = "evening outdoors"
                     rest_wind = day.wind_kmh
                 wet = day.precip_mm >= 1.0 and day.precip_prob >= 50
-                hot_sun = day.tmax >= 26 or (day.uv or 0) >= 7
+                # UV rises ~10% per 1000 m: above 2500 m it is strong even on a cool day,
+                # and climate averages carry no UV index, so altitude has to stand in for it
+                hot_sun = day.tmax >= 26 or (day.uv or 0) >= 7 or max(base, alt) >= HIGH_UV_M
                 for mode, temp, wind, where, alt_here in (
                     ("moving", t_move, wind_alt,
                      f"{profile.label.lower()} at {alt:.0f} m" if alt > base + 50 else profile.label.lower(),
@@ -353,6 +358,14 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
                 why = (f"{SLOT_BY_KEY[slot].name}: {d.reasons.get(slot, '')} "
                        f"({c.date:%d %b}, {c.where})")
             bump(slot, kit[slot].level or "medium", c.stage_index, c.date, why)
+
+    # the sun hat does not depend on warmth: a cold, high day still needs one
+    for c in conds:
+        if c.hot_sun:
+            why = (f"strong UV at {c.altitude_m:,.0f} m" if c.altitude_m >= HIGH_UV_M
+                   else "strong sun")
+            bump("sun_hat", "light", c.stage_index, c.date,
+                 f"{SLOT_BY_KEY['sun_hat'].name}: {why} ({c.date:%d %b}, {c.where})")
 
     for stage in stages:
         sc = [c for c in conds if c.stage_index == stage.index]
