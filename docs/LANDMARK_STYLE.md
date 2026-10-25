@@ -84,15 +84,17 @@ The details of each step:
    elements change. Do not trace pixels: redraw the shapes you measured, in the official style.
    **But the scene stays one connected landscape, never pieces pasted together** (Manu): "voglio
    in centro la parte principale, ma il resto deve essere comunque tutto attaccato per bene".
-   - Peaks and spires **grow out of the mass below them**: the rock continues down into the
-     base, under any snow. A white band or a gap must never cut the subject off from what holds
+   - Peaks and spires **grow out of the mass below them** (or out of a glacier lying over their
+     foot): the rock continues down into the base, under any snow. A white band or a gap must never cut the subject off from what holds
      it up (Torres del Paine and Cerro Torre looked "nel vuoto", just set down on top).
    - The frame physically connects to the subject and to the rest: slopes run into the base of
      the mountain, walls meet the ground, water meets the shore.
-   - The **foreground stays small**: grass, scree and fields are a thin strip, not filler that
-     makes the subject secondary (Fitz Roy had too much green and brown in front).
+   - The **foreground stays small**: a thin strip that helps recognise the place (the road to
+     Fitz Roy through the steppe), never generic grass, scree or fields that compete with the
+     subject (Fitz Roy had too much green and brown in front).
    - **Water**: never squiggle "wave" strokes or lines on the water. Rapids are white foam
-     shapes pouring over and around rocks; calm water is a flat colour, at most one reflection.
+     shapes pouring over and around rocks, a fall is one clean fall shape; calm water is a flat
+     colour, at most one reflection.
 5. **Snow: only where permanent, attached to the rock** (4d), never a loose block, never fresh
    seasonal snow. Then the other content rules (section 3), which win over the photo: remove
    people, cars, clouds and signs; **add the typical animal even if the photo has none** (a llama
