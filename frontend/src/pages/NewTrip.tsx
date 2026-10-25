@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ActivityEditor } from "../components/ActivityEditor";
 import { EstimateForm } from "../components/Estimate";
+import { PlaceQuestion } from "../components/PlaceQuestion";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { api, type StopInput } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, nights } from "../lib/format";
 import { redate } from "../lib/spread";
-import type { DraftStop, TripEstimate } from "../lib/types";
+import type { DraftStop, Place, TripEstimate } from "../lib/types";
 
 const MAX_TEXT = 50_000; // same limit as the API (ParseIn.text)
 const LONG_TEXT = 5_000;
@@ -28,6 +29,8 @@ export default function NewTrip() {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
   const [editing, setEditing] = useState<number | null>(null);
+  // the trip's countries as read from the text and the stops: a stop outside them is asked about
+  const [countries, setCountries] = useState<string[]>([]);
 
   async function parse(t = text) {
     if (t.trim().length < 3) return;
@@ -40,6 +43,7 @@ export default function NewTrip() {
       setQuestions(r.questions);
       setParser(r.parser);
       setEstimate(r.estimate);
+      setCountries(r.countries ?? []);
       setAskDates(!!r.estimate);
       if (r.trip_name && !name) setName(r.trip_name);
       if (!r.stops.length) setErr("I couldn't find any stops. Try 'Rome 3 days, then 4 days hiking in Chamonix'.");
@@ -60,9 +64,10 @@ export default function NewTrip() {
         end_date: s.end_date, activities: s.activities, notes: null,
         visits: (s.visits ?? []).map((v) => ({ name: v.name, date: v.date ?? null })),
         days_estimated: !!(estimate?.days && s.days_estimated),
+        place_confirmed: s.check?.status === "confirmed",
       })) : [];
       const t = await api.createTrip(name.trim() || (stops.map((s) => s.name).slice(0, 3).join(" · ") || "My trip"), stops,
-        !!(withStops && estimate?.start));
+        !!(withStops && estimate?.start), withStops ? countries : []);
       const dropped = withStops && draft ? draft.length - stops.length : 0;
       if (dropped) toast(`${dropped} stop(s) without a map match were left out. Add them on the trip page.`);
       nav(`/trips/${t.id}`);
@@ -85,6 +90,10 @@ export default function NewTrip() {
     setAskDates(false);
   }
   const ai = config?.ai;
+  const unsure = draft?.filter((s) => s.place && s.check?.status === "check").length ?? 0;
+  const confirm = (i: number, place?: Place) => setDraft((d) => d && d.map((s, j) => j !== i ? s : {
+    ...s, place: place ?? s.place, check: { status: "confirmed", codes: [], issues: [] },
+  }));
 
   return (
     <main className="page">
@@ -124,7 +133,7 @@ export default function NewTrip() {
                   <div key={i} className="stack" style={{ gap: 8 }}>
                     <div className="drow">
                       <div>
-                        <PlaceSearch value={s.place} onPick={(p) => set(i, { place: p })} />
+                        <PlaceSearch id={`place-${i}`} value={s.place} countries={countries} onPick={(p) => set(i, { place: p, check: null })} />
                         {!s.place && <p className="err small">No map match for "{s.name}". Search for it.</p>}
                       </div>
                       <input type="date" value={s.start_date} aria-label="Start date" onChange={(e) => set(i, { start_date: e.target.value, end_date: e.target.value > s.end_date ? e.target.value : s.end_date, days_estimated: false })} />
@@ -134,6 +143,13 @@ export default function NewTrip() {
                       </button>
                       <button type="button" className="btn sm ghost" aria-label="Remove stop" onClick={() => setDraft(draft.filter((_, j) => j !== i))}>✕</button>
                     </div>
+                    {s.place && s.check?.status === "check" && (
+                      <PlaceQuestion place={s.place} issues={s.check.issues}
+                        alternatives={s.matches.filter((m) => m !== s.place && m.latitude !== s.place!.latitude
+                          && (!countries.length || countries.includes(m.country_code ?? "")))}
+                        onYes={() => confirm(i)} onPick={(p) => confirm(i, p)}
+                        onSearch={() => document.getElementById(`place-${i}`)?.focus()} />
+                    )}
                     {s.visits?.length > 0 && (
                       <p className="small dvisits"><span className="muted">Also visiting:</span> {s.visits.map((v) => v.name).join(" · ")}
                         {" "}<button type="button" className="link small" onClick={() => set(i, { visits: [] })} aria-label={`Remove the places visited from ${s.name}`}>clear</button></p>
@@ -146,6 +162,7 @@ export default function NewTrip() {
                 )}
                 <div className="field"><label htmlFor="tname">Trip name</label>
                   <input id="tname" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Patagonia, May 2027" /></div>
+                {unsure > 0 && <p className="small muted">{unsure === 1 ? "One place needs" : `${unsure} places need`} a yes or a fix above. If you skip it, the trip page asks again.</p>}
                 <button className="btn primary" type="button" disabled={busy} onClick={() => create(true)}>Create trip and dress it</button>
               </div>
             )}

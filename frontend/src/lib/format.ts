@@ -47,3 +47,13 @@ export const SOURCE_LABEL: Record<string, string> = {
   observed: "Observed",
   estimate: "Rough estimate",
 };
+
+let regionNames: Intl.DisplayNames | null = null;
+/** "PE" -> "Peru" (the browser knows every country's name). */
+export const countryName = (cc?: string | null) => {
+  if (!cc) return null;
+  try {
+    regionNames ??= new Intl.DisplayNames(["en"], { type: "region" });
+    return regionNames.of(cc.toUpperCase()) ?? cc;
+  } catch { return cc; }
+};

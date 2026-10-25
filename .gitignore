@@ -25,3 +25,5 @@ backend/feeds/
 # Copyrighted placeholder images must never be committed
 **/tnf-images/
 docker/.sandbox-ca.crt
+# place audit cache (app.places.audit)
+.cache/

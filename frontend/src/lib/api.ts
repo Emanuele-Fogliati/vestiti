@@ -75,8 +75,8 @@ export const api = {
 
   trips: () => req<TripSummary[]>("GET", "/api/trips"),
   trip: (id: string) => req<Trip>("GET", `/api/trips/${id}`),
-  createTrip: (name: string, stops: StopInput[] = [], start_estimated = false) =>
-    req<Trip>("POST", "/api/trips", { name, stops, start_estimated }),
+  createTrip: (name: string, stops: StopInput[] = [], start_estimated = false, countries: string[] = []) =>
+    req<Trip>("POST", "/api/trips", { name, stops, start_estimated, countries }),
   /** Firm up guessed dates: a start date moves the trip, a length spreads the guessed stops. */
   setDates: (id: string, body: { start_date?: string; total_days?: number; confirm?: boolean }) =>
     req<Trip>("POST", `/api/trips/${id}/dates`, body),
@@ -102,9 +102,11 @@ export const api = {
   resetSelections: (id: string, tier?: Tier) =>
     req<{ ok: boolean }>("DELETE", `/api/trips/${id}/selections${tier ? `?tier=${tier}` : ""}`),
 
-  geocode: (q: string) => req<{ results: Place[] }>("GET", `/api/geocode?q=${encodeURIComponent(q)}`),
+  /** countries: the trip's ISO codes, listed first. */
+  geocode: (q: string, countries?: string[]) => req<{ results: Place[] }>("GET",
+    `/api/geocode?q=${encodeURIComponent(q)}${countries?.length ? `&countries=${countries.join(",")}` : ""}`),
   parseItinerary: (text: string) =>
-    req<{ trip_name: string | null; stops: DraftStop[]; questions: string[]; parser: string; estimate: TripEstimate | null }>(
+    req<{ trip_name: string | null; stops: DraftStop[]; questions: string[]; parser: string; estimate: TripEstimate | null; countries: string[] }>(
       "POST", "/api/ai/parse-itinerary", { text }),
   explain: (id: string, body: { topic: string; stage_index?: number; slot?: string; tier: Tier }) =>
     req<{ text: string; source: string; model: string | null }>("POST", `/api/trips/${id}/explain`, body),

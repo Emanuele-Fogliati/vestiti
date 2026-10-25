@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { activityText, addDays, dayMonth, daysBetween, minus, nights, SOURCE_LABEL } from "../lib/format";
+import { activityText, addDays, countryName, dayMonth, daysBetween, minus, nights, SOURCE_LABEL } from "../lib/format";
 import { terrainFor, type Terrain } from "../lib/terrain";
 import type { Activity, Place, Stage, Stop, Visit } from "../lib/types";
 import { ActivityEditor } from "./ActivityEditor";
 import { Illustration } from "./Illustration";
+import { PlaceQuestion } from "./PlaceQuestion";
 import { PlaceSearch } from "./PlaceSearch";
 
 function Conditions({ stage }: { stage?: Stage }) {
@@ -58,9 +59,11 @@ export function Visits({ stop, dayFrom, terrain }: { stop: Stop; dayFrom: number
   );
 }
 
-export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelect, onEdit, onDelete, onMove }: {
+export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelect, onEdit, onDelete, onMove, onConfirm }: {
   stop: Stop; stage?: Stage; index: number; count: number; selected: boolean; dayFrom: number;
   onSelect: () => void; onEdit: () => void; onDelete: () => void; onMove: (dir: -1 | 1) => void;
+  /** "Yes, this is the place" for a stop the server is not sure about. */
+  onConfirm?: () => void;
 }) {
   const n = nights(stop.start_date, stop.end_date);
   const terrain = terrainFor(stop, index);
@@ -75,7 +78,11 @@ export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelec
       <Illustration terrain={terrain} art={stop.art} />
       <div className="info">
         <h3>{stop.name}</h3>
+        {stop.place_status === "check" && onConfirm && (
+          <PlaceQuestion place={stop} issues={stop.place_note ? [stop.place_note] : []} onYes={onConfirm} onSearch={onEdit} />
+        )}
         <div className="acts">{stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}
+          {stop.country_code && <span className="tag" title="Country">{countryName(stop.country_code)}</span>}
           <span className="tag">{Math.round(stop.elevation_m)} m</span></div>
         {stop.notes && <p className="act">{stop.notes}</p>}
         <Visits stop={stop} dayFrom={dayFrom} terrain={terrain} />
@@ -102,8 +109,10 @@ export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelec
   );
 }
 
-export function StopForm({ tripId, stop, defaultStart, onDone, onCancel }: {
+export function StopForm({ tripId, stop, defaultStart, onDone, onCancel, countries }: {
   tripId: string; stop?: Stop; defaultStart: string; onDone: () => void; onCancel: () => void;
+  /** The trip's countries: the place search lists places there first. */
+  countries?: string[];
 }) {
   const { toast } = useApp();
   const [place, setPlace] = useState<Place | null>(stop ? {
@@ -142,7 +151,7 @@ export function StopForm({ tripId, stop, defaultStart, onDone, onCancel }: {
     <form className="stopform form" onSubmit={submit}>
       <h3 style={{ fontSize: 18 }}>{stop ? `Edit ${stop.name}` : "Add a stop"}</h3>
       <div className="field"><label>Place</label>
-        <PlaceSearch value={place} autoFocus={!stop} onPick={(p) => { setPlace(p); setElev(Math.round(p.elevation_m ?? 0)); }} /></div>
+        <PlaceSearch value={place} autoFocus={!stop} countries={countries} onPick={(p) => { setPlace(p); setElev(Math.round(p.elevation_m ?? 0)); }} /></div>
       <div className="grid3">
         <div className="field"><label>From</label><input type="date" value={start} onChange={(e) => { setStart(e.target.value); if (e.target.value > end) setEnd(e.target.value); }} /></div>
         <div className="field"><label>To</label><input type="date" value={end} min={start} onChange={(e) => setEnd(e.target.value)} /></div>

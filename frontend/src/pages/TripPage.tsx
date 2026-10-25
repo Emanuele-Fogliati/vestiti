@@ -178,17 +178,18 @@ export default function TripPage() {
           <ElevationProfile stops={stops} selected={stageIdx} onSelect={(i) => { setStageIdx(i); document.getElementById("layers")?.scrollIntoView({ behavior: "smooth" }); }} />
           <ol className="stops">
             {stops.map((s, i) => editing === s.id ? (
-              <li key={s.id} style={{ padding: "16px 0" }}><StopForm tripId={id} stop={s} defaultStart={s.start_date}
+              <li key={s.id} style={{ padding: "16px 0" }}><StopForm tripId={id} stop={s} defaultStart={s.start_date} countries={trip.countries}
                 onDone={() => { setEditing(null); loadAll(); }} onCancel={() => setEditing(null)} /></li>
             ) : (
               <StopCard key={s.id} stop={s} index={i} count={stops.length} stage={strategy?.stages.find((x) => x.stop_id === s.id)}
                 selected={i === stageIdx} dayFrom={t0 ? daysBetween(t0, s.start_date) + 1 : 1}
-                onSelect={() => setStageIdx(i)} onEdit={() => setEditing(s.id)} onDelete={() => removeStop(s.id)} onMove={(d) => move(i, d)} />
+                onSelect={() => setStageIdx(i)} onEdit={() => setEditing(s.id)} onDelete={() => removeStop(s.id)} onMove={(d) => move(i, d)}
+                onConfirm={async () => { await api.patchStop(id, s.id, { place_confirmed: true }); toast(`${s.name} confirmed.`); loadAll(); }} />
             ))}
           </ol>
           <div className="addstop">
             {editing === "new" ? (
-              <StopForm tripId={id} defaultStart={nextStart} onDone={() => { setEditing(null); loadAll(); }} onCancel={() => setEditing(null)} />
+              <StopForm tripId={id} defaultStart={nextStart} countries={trip.countries} onDone={() => { setEditing(null); loadAll(); }} onCancel={() => setEditing(null)} />
             ) : <button type="button" className="btn primary" onClick={() => setEditing("new")}>+ Add a stop</button>}
           </div>
           {strategy && strategy.questions.length > 0 && (

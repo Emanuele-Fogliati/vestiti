@@ -138,5 +138,6 @@ def seed_rental_partners(db: Session) -> int:
 def seed_all(db: Session) -> dict:
     job = seed_products(db)
     partners = seed_rental_partners(db)
+    from app.places.registry import seed_db as seed_places
     return {"products_created": job.created, "products_updated": job.updated,
-            "rental_partners_created": partners}
+            "rental_partners_created": partners, **seed_places(db)}

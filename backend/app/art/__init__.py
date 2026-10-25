@@ -79,16 +79,19 @@ def _nearest(lat: float, lon: float) -> Landmark | None:
 
 
 def match(name: str, lat: float | None, lon: float | None, notes: str | None = None,
-          taken: set[str] | frozenset[str] = frozenset()) -> Landmark | None:
+          taken: set[str] | frozenset[str] = frozenset(), country: str | None = None) -> Landmark | None:
     """The landmark for one stop: named in the stop's name, else the nearest one within its radius.
 
     When that landmark is already used by an earlier stop of the trip (Cusco twice), a different
-    landmark named in the stop's notes wins (the second Cusco stop is the Rainbow Mountain day)."""
-    own = next(iter(_named(name)), None)
+    landmark named in the stop's notes wins (the second Cusco stop is the Rainbow Mountain day).
+    A stop in a known country never gets another country's landmark (Aguas Calientes, Mexico
+    is not Machu Picchu)."""
+    cc = (country or "").upper()
+    own = next((lm for lm in _named(name) if not cc or lm.country == cc), None)
     if own is None and lat is not None and lon is not None:
         own = _nearest(lat, lon)
     if own is not None and own.id in taken and notes:
-        other = next((lm for lm in _named(notes) if lm.id not in taken), None)
+        other = next((lm for lm in _named(notes) if lm.id not in taken and (not cc or lm.country == cc)), None)
         if other is not None:
             return other
     return own
@@ -100,7 +103,7 @@ def assign(stops) -> list[Landmark | None]:
     out = []
     for s in stops:
         lm = match(s.name, getattr(s, "latitude", None), getattr(s, "longitude", None),
-                   getattr(s, "notes", None), taken)
+                   getattr(s, "notes", None), taken, getattr(s, "country_code", None))
         if lm is not None:
             taken.add(lm.id)
         out.append(lm)

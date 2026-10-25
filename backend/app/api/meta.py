@@ -41,8 +41,14 @@ def config():
 
 
 @router.get("/geocode")
-def geocode_search(q: str = Query(min_length=2, max_length=120)):
-    return {"results": geocode.search(q)}
+def geocode_search(q: str = Query(min_length=2, max_length=120),
+                   countries: str | None = Query(default=None, max_length=200)):
+    """countries: the trip's ISO codes ("PE,BO"); places there are listed first."""
+    res = geocode.search(q)
+    if countries:
+        want = {c.strip().upper() for c in countries.split(",") if c.strip()}
+        res.sort(key=lambda r: r.get("country_code") not in want)
+    return {"results": res}
 
 
 @router.get("/catalog/products")

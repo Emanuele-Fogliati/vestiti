@@ -43,7 +43,7 @@ def test_trip_country_and_neighbours_pick_the_right_place(online):
     with httpx.Client(transport=_transport(seen)) as c:
         out = geocode.resolve_trip(["Lima", "Cuzco", "Aguas Calientes", "Puno"], client=c)
     picks = [m[0] for m in out]
-    assert ("Cusco", None) in seen  # alias: GeoNames has no city called "Cuzco"
+    assert picks[1]["place_id"] == "pe-cusco"  # GeoNames has no city called "Cuzco": the registry does
     assert [p["country_code"] for p in picks] == ["PE"] * 4
     assert picks[2]["admin"] == "Cuzco Department"  # the one next to Cusco, not Arequipa's
     assert picks[0]["admin"] == "Lima"

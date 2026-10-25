@@ -116,6 +116,7 @@ class StopIn(BaseModel):
     position: int | None = None
     visits: list[VisitIn] = Field(default_factory=list, max_length=30)
     days_estimated: bool = False  # the traveller did not say how long: the days are a guess
+    place_confirmed: bool = False  # the traveller said "yes, this is the place"
 
     @model_validator(mode="after")
     def _dates(self):
@@ -137,6 +138,7 @@ class StopPatch(BaseModel):
     activities: list[ActivityIn] | None = None
     notes: str | None = None
     visits: list[VisitIn] | None = Field(default=None, max_length=30)
+    place_confirmed: bool | None = None  # true: "yes, this is the place"
 
 
 class StopArt(BaseModel):
@@ -173,6 +175,9 @@ class StopOut(ORM):
     visits: list[VisitOut] = Field(default_factory=list)
     days_estimated: bool = False
     art: StopArt | None = None
+    # ok | check (ask "Is this the place?", place_note says why) | confirmed | null (older stop)
+    place_status: str | None = None
+    place_note: str | None = None
 
     @field_validator("visits", mode="before")
     @classmethod
@@ -189,10 +194,10 @@ class StopOut(ORM):
         from app.art import match
         for v in self.visits:  # by name only: a visit has no coordinates of its own
             if v.art is None:
-                lm = match(v.name, None, None)
+                lm = match(v.name, None, None, country=self.country_code)
                 v.art = StopArt(id=lm.id, label=lm.label) if lm else None
         if self.art is None:
-            lm = match(self.name, self.latitude, self.longitude)
+            lm = match(self.name, self.latitude, self.longitude, country=self.country_code)
             self.art = StopArt(id=lm.id, label=lm.label) if lm else _first_visit_art(self)
         return self
 
@@ -207,6 +212,13 @@ class TripIn(BaseModel):
     notes: str | None = Field(default=None, max_length=4000)
     stops: list[StopIn] = Field(default_factory=list)
     start_estimated: bool = False  # no start date was given: the plan shows it as a guess
+    countries: list[str] = Field(default_factory=list, max_length=30)  # ISO codes, from the parse
+
+    @field_validator("countries")
+    @classmethod
+    def _cc(cls, v):
+        from app.places.countries import is_code
+        return sorted({c.upper() for c in v if is_code(c)})
 
 
 class TripPatch(BaseModel):
@@ -223,6 +235,12 @@ class TripOut(ORM):
     stops: list[StopOut]
     start_estimated: bool = False
     estimate: TripEstimate | None = None
+    countries: list[str] = Field(default_factory=list)
+
+    @field_validator("countries", mode="before")
+    @classmethod
+    def _cs(cls, v):
+        return v or []
 
     @field_validator("start_estimated", mode="before")
     @classmethod
@@ -237,6 +255,7 @@ class TripOut(ORM):
         from app.art import assign
         # visits count as notes: the second Cusco stop shows the Rainbow Mountain it visits
         view = [SimpleNamespace(name=s.name, latitude=s.latitude, longitude=s.longitude,
+                                country_code=s.country_code,
                                 notes=" · ".join([s.notes or ""] + [v.name for v in s.visits]))
                 for s in self.stops]
         for s, lm in zip(self.stops, assign(view)):
