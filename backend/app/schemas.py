@@ -55,6 +55,7 @@ class ActivityIn(BaseModel):
     type: str = "city"
     difficulty: str | None = None
     max_altitude_m: float | None = Field(default=None, ge=-500, le=9000)
+    glacier: bool = False  # walking on ice with crampons
 
     @field_validator("type")
     @classmethod

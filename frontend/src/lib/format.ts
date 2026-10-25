@@ -30,11 +30,12 @@ export const ACTIVITY_LABEL: Record<string, string> = {
   unknown: "Don't know yet",
 };
 
-export const activityText = (a: { type: string; difficulty?: string | null; max_altitude_m?: number | null }) => {
+export const activityText = (a: { type: string; difficulty?: string | null; max_altitude_m?: number | null; glacier?: boolean }) => {
   let s = ACTIVITY_LABEL[a.type] ?? a.type;
   if ((a.type === "hiking" || a.type === "trek_multiday") && a.difficulty)
     s += a.difficulty === "unknown" ? " · difficulty?" : ` · ${a.difficulty}`;
   if (a.max_altitude_m) s += ` · ${Math.round(a.max_altitude_m).toLocaleString("en-US")} m`;
+  if (a.glacier) s += " · glacier";
   return s;
 };
 

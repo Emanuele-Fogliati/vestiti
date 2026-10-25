@@ -86,3 +86,12 @@ def test_altitude_with_thousands_separator():
     d = parse_itinerary("Dal 3 agosto 2027: 4 giorni di trekking impegnativo a Zermatt fino a 3.100 m", TODAY, use_llm=False)
     a = d.stops[0].activities[0]
     assert a.type == "hiking" and a.difficulty == "hard" and a.max_altitude_m == 3100
+
+
+def test_notes_drop_packing_advice_and_cut_on_a_boundary():
+    from app.llm.itinerary import clean_note
+    assert clean_note("Si consiglia abbigliamento a strati e scarponi impermeabili.") is None
+    long = "Trekking alla Laguna de los Tres con vista sul Fitz Roy " * 5
+    out = clean_note(long)
+    assert len(out) <= 161 and out.endswith("…") and not out[:-1].endswith(" ")
+    assert long.startswith(out[:-1])

@@ -72,3 +72,12 @@ def test_cold_boat_trip_needs_wind_and_waterproof_shell():
     _, reqs, _, _ = plan(s)
     assert reqs["shell_top"].needed and reqs["shell_top"].waterproof
     assert "insulation_top" in needed(reqs)
+
+
+def test_glacier_walk_needs_boots_and_gloves_even_when_mild():
+    s = stage(name="El Calafate", activities=[{"type": "hiking", "difficulty": "easy", "glacier": True}],
+              tmax=14, tmin=6, prob=10, wind=10)
+    _, reqs, _, _ = plan(s)
+    fw = reqs["footwear"]
+    assert fw.footwear_type == "hiking_boot" and fw.ankle_support and fw.waterproof
+    assert reqs["gloves"].needed

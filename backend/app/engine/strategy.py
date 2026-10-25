@@ -241,6 +241,8 @@ def precaution(slot: str, conds: list[Condition]) -> str | None:
     max_prob = max((c.precip_prob for c in conds), default=0)
     max_wind = max((c.wind_kmh for c in conds), default=0)
     max_alt = max((c.altitude_m for c in conds), default=0)
+    if slot == "gloves" and any(c.activity.glacier for c in conds):
+        return "on the glacier: hands on ice, ropes and crampon straps"
     if slot == "shell_top":
         if mountain:
             return "mountain weather turns fast: always carry a shell"
@@ -385,12 +387,15 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
                            default="sneaker")
     fw.ankle_support = any(p.ankle_support for p in profiles)
     hiking_wet = [c for c in wet if c.activity.mountain] or [c for c in conds if c.snow]
-    fw.waterproof = bool(hiking_wet)
+    glacier = any(p.glacier for p in profiles)
+    fw.waterproof = bool(hiking_wet) or glacier
     fw.insulated = any(c.temp_c < -5 and c.activity.mountain for c in conds)
     fw.reasons.append(f"activities need at least: {fw.footwear_type.replace('_', ' ')}")
     if fw.ankle_support:
         fw.reasons.append("hard or technical terrain: ankle support")
-    if fw.waterproof:
+    if glacier:
+        fw.reasons.append("glacier with crampons: stiff, waterproof boots that take crampons")
+    elif fw.waterproof:
         fw.reasons.append("wet or snowy trail days: waterproof")
     high = any(p.high_intensity for p in profiles)
     multi = len(stages) >= 3 or any(p.key == "trek_multiday" for p in profiles)

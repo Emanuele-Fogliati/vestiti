@@ -21,6 +21,7 @@ class DraftActivity(BaseModel):
     type: str = "city"
     difficulty: str | None = None
     max_altitude_m: float | None = None
+    glacier: bool = False
 
     @field_validator("type")
     @classmethod
@@ -62,7 +63,7 @@ SYSTEM = """You turn a traveller's description of a trip into JSON. Output ONLY 
 {"trip_name": str, "stops": [{"name": str, "start_date": "YYYY-MM-DD", "end_date": "YYYY-MM-DD",
 "activities": [{"type": one of ["city","hiking","trek_multiday","beach","ski","cycling","safari","boat","unknown"],
 "difficulty": one of ["easy","moderate","hard","technical","unknown"] or null,
-"max_altitude_m": number or null}], "notes": str or null}], "questions": [str]}
+"max_altitude_m": number or null, "glacier": true or false}], "notes": str or null}], "questions": [str]}
 Rules:
 - "name" is a real place name that a map search can find (a town, park or region).
 - Consecutive stops: the next stop starts the day after the previous one ends, unless dates are given.
@@ -71,11 +72,16 @@ Rules:
 - "trek_multiday" only when the text says the walk lasts several days with nights in huts or tents. A day hike is "hiking".
 - "boat" is for boat trips, navigation, kayak and rafting. "safari" only for wildlife game drives.
 - A travel or transfer day, or a free/reserve day, adds no activity beyond "city".
+- Difficulty: a hike of 7 hours or more is "hard". "glacier": true only for walking on ice with crampons.
+- Read only each day's own description. General sections (what is included, clothing and gear
+  advice, insurance, documents) say nothing about where or what the traveller does.
 - max_altitude_m: only a number the text gives, or the well-known highest point of a famous
   named trek (Laugavegur 1100, Tour du Mont Blanc 2665, W Trek 900, Inca Trail 4215). Otherwise null. Never guess.
-- Ask at most 3 short questions, only for information that changes what clothes to pack.
-- "notes": at most 15 words about that stop that matter for clothes (e.g. "glacier walk with crampons"), else null.
-  Never copy the agency's general text (insurance, prices, what is included) into notes.
+- Ask at most 3 short questions, only for information that changes what clothes to pack and
+  that the text does not already give. Never ask for dates the text gives.
+- "notes": at most 15 words about what happens at that stop that matters for clothes
+  (e.g. "8-hour hike to Laguna de los Tres"), else null. Never copy general advice
+  ("layered clothing, waterproof boots, sun cream") or the agency's general text into notes.
 - Write trip_name, notes and questions in the language of the trip description.
 - Never invent dates the traveller gave differently. Never add stops they did not mention.
 - The text may be a long day-by-day itinerary from a travel agency ("Day 1", "Giorno 2", ...).
@@ -170,7 +176,7 @@ def parse_with_llm(text: str, today: date, client: LLMClient | None = None) -> D
     draft.parser = "llm"
     draft.stops = merge_consecutive(draft.stops)
     refine_activities(draft.stops, text)
-    return _sanitize(draft, today)
+    return _sanitize(draft, today, text)
 
 
 # ---------------------------------------------------------------- deterministic clean-up
@@ -212,6 +218,7 @@ def _merge_activities(acts: list[DraftActivity]) -> list[DraftActivity]:
             cur.difficulty = a.difficulty
         if a.max_altitude_m and (not cur.max_altitude_m or a.max_altitude_m > cur.max_altitude_m):
             cur.max_altitude_m = a.max_altitude_m
+        cur.glacier = cur.glacier or a.glacier
     out = list(by.values())
     if len(out) > 1:  # "city" adds nothing next to a real activity... except it is the evening
         out = [a for a in out if a.type != "unknown"] or out
@@ -256,33 +263,72 @@ def day_blocks(text: str) -> list[tuple[int, str, str]]:
         title = h[2].strip()
         if not title:
             title, _, body = body.partition("\n")
-        out.append((int(h[1]), title.strip(), body.strip()))
+        cut = SECTION.search(body)
+        if cut:
+            body = body[:cut.start()]
+        out.append((int(h[1]), title.strip(), strip_advice(body).strip()))
     return out
 
 
+# general sections of an agency program that follow (or interrupt) the days
+SECTION = re.compile(r"^\s*(?:la\s+)?(?:quota|prezzo|price|tariff|the price|il prezzo|cost)\w*\s+(?:non\s+)?(?:comprend|includ|inclu)"
+                     r"|^\s*(?:non\s+)?(?:compres|inclus|included|not included|what'?s included|incluye|no incluye)\w*\s*:"
+                     r"|^\s*(?:note|notes|informazioni|info utili|cosa portare|abbigliamento|equipaggiamento|attrezzatura"
+                     r"|documenti|assicurazion|condizioni|termini|packing|what to bring|clothing|equipment|gear"
+                     r"|qu[eé] llevar|ropa|equipo|documentos|seguro)\b[^\n]{0,40}(?::|$)", re.I | re.M)
+ADVICE = re.compile(r"abbigliament|scarpon|scarpe|zaino|bastoncin|giacca|giacche|guanti|berrett|cappell|"
+                    r"crema solare|protezione solare|occhiali|a strati|a cipolla|si consiglia|consigliat|"
+                    r"raccomand|portare con|equipaggiament|attrezzatur|clothing|clothes|boots|backpack|"
+                    r"layers|sunscreen|sun cream|recommend|bring |ropa|botas|mochila|recomend", re.I)
+
+
+def strip_advice(text: str) -> str:
+    """Drop sentences that are packing advice: they mention trails and boots on every day."""
+    parts = re.split(r"(?<=[.!?;])\s+|\n", text or "")
+    return " ".join(p for p in parts if p.strip() and not ADVICE.search(p))
+
+
 def _evidence(stops: list[DraftStop], text: str) -> list[str | None]:
-    """Text of the days that belong to each stop, found by place names in the day titles."""
+    """Text of the days that belong to each stop: by place names in the day titles, and by
+    date for stops whose name never appears (the model may spell or translate it)."""
     blocks = day_blocks(text)
     if not blocks or not stops:
         return [None] * len(stops)
     toks = [_name_tokens(s.name) for s in stops]
-    got: list[list[str]] = [[] for _ in stops]
-    cur, matched = 0, False
-    for _, title, body in blocks:
+    days: list[list[int]] = [[] for _ in stops]
+    cur, matched = 0, set()
+    for k, (_, title, body) in enumerate(blocks):
         tt = set(_fold(title).split())
         cand = [j for j in range(cur, min(cur + 4, len(stops))) if toks[j] & tt]
         if not cand:  # title says nothing ("Giornata libera"): look at the start of the body
             bt = set(_fold(body[:300]).split())
             cand = [j for j in range(cur + 1, min(cur + 2, len(stops))) if toks[j] & bt]
         if cand:
-            cur, matched = max(cand), True
-        got[cur].append(f"{title}\n{body}")
-    return ["\n".join(g) if g and matched else None for g in got]
+            cur = max(cand)
+            matched.add(cur)
+        days[cur].append(k)
+    # date of block 0, learned from the stops whose names matched
+    offsets = sorted((stops[j].start_date - timedelta(days=days[j][0])) for j in matched if days[j])
+    day0 = offsets[len(offsets) // 2] if offsets else None
+    out: list[str | None] = []
+    for j, s in enumerate(stops):
+        ks = days[j] if j in matched else []
+        if not ks and day0 is not None:
+            ks = [k for k in range(len(blocks))
+                  if s.start_date <= day0 + timedelta(days=k) <= s.end_date]
+        out.append("\n".join(f"{blocks[k][1]}\n{blocks[k][2]}" for k in ks) if ks else "")
+    return out
 
 
 MULTIDAY = re.compile(r"multi.?day|hut to hut|più giorni|piu giorni|rifugi|campeggio|in tenda|"
                       r"\btenda\b|campamento|refugio|camping|\bcamp\b|bivacco|\bw trek\b|circuito o\b", re.I)
-HIKE = re.compile(r"trek|hik|escursion|camminat|sentier|walk|caminata|senderismo|randonn|wander", re.I)
+HIKE = re.compile(r"trek|hik|escursion|camminat|sentier|caminata|senderismo|randonn|wander", re.I)
+GLACIER = re.compile(r"rampon|crampon|grampon|minitrek|mini.trek|big ice|ice.?trek|sul ghiaccio|on the ice|"
+                     r"sobre el hielo|glacier walk|camminata sul ghiacciaio|trekking sul ghiacciaio", re.I)
+HOURS = re.compile(r"(\d{1,2})(?:[.,]\d)?\s*(?:(?:-|–|/|a|to|e)\s*(\d{1,2})(?:[.,]\d)?\s*)?"
+                   r"(?:ore|ora|h|hrs?|hours?|horas|heures|stunden)\b", re.I)
+TRANSPORT = re.compile(r"\bvol[oi]\b|flight|\bbus\b|pullman|trasferiment|transfer|navigazion|"
+                       r"\bauto\b|\bdrive\b|\btreno\b|train", re.I)
 BOAT = re.compile(r"rafting|kayak|canoa|canoe|navigazion|navegaci|\bbarca\b|battello|catamaran|"
                   r"gommone|\bboat\b|cruise|crociera|motonave|traghetto|ferry|lancha|zodiac", re.I)
 BOAT_EXCURSION = re.compile(r"(escursion\w*|excursi\w*|gita|tour)\s+(in|con|en|by)\s+"
@@ -307,7 +353,27 @@ def _altitude_ok(alt: float, ev: str) -> bool:
     return any(k in low and abs(alt - v) <= 0.05 * v for k, v in KNOWN_TREKS.items())
 
 
+def _hike_hours(ev: str) -> float:
+    """Longest walking time mentioned in sentences about walking (not flights or buses)."""
+    best = 0.0
+    for sent in re.split(r"(?<=[.!?;])\s+|\n", ev):
+        if not HIKE.search(sent) or TRANSPORT.search(sent):
+            continue
+        for m in HOURS.finditer(sent):
+            best = max(best, float(m[2] or m[1]))
+    return best
+
+
 def _difficulty_in(ev: str) -> str | None:
+    """Hardest of what the words say and what the walking time says (7 h or more is hard)."""
+    word = _difficulty_word(ev)
+    h = _hike_hours(ev)
+    by_time = "hard" if h >= 7 else "moderate" if h >= 4 else "easy" if h > 0 else None
+    cands = [d for d in (word, by_time) if d]
+    return max(cands, key=lambda d: _DIFF_RANK[d]) if cands else None
+
+
+def _difficulty_word(ev: str) -> str | None:
     low = ev.lower()
     for word, d in (("technical", "technical"), ("alpinistic", "technical"), ("alpinistic", "technical"),
                     ("impegnativ", "hard"), ("difficile", "hard"), ("difficult", "hard"),
@@ -334,7 +400,9 @@ def refine_activities(stops: list[DraftStop], text: str) -> None:
                     continue
                 if a.type == "trek_multiday" and not MULTIDAY.search(scope):
                     a.type = "hiking"
-                d = _difficulty_in(scope) if ev is not None else None
+                d = _difficulty_in(hike_text) if ev is not None else None
+                if ev is not None:
+                    a.glacier = bool(GLACIER.search(hike_text))
                 if d:
                     a.difficulty = d
                 elif ev is not None and a.difficulty in ("hard", "technical"):
@@ -353,6 +421,7 @@ def refine_activities(stops: list[DraftStop], text: str) -> None:
                 a.max_altitude_m = None
             if a.type not in ("hiking", "trek_multiday", "unknown"):
                 a.difficulty = None
+                a.glacier = False
             kept.append(a)
         if ev is not None:  # add what the days clearly say and the model missed
             have = {a.type for a in kept}
@@ -365,7 +434,21 @@ def refine_activities(stops: list[DraftStop], text: str) -> None:
         s.activities = _merge_activities(kept) or [DraftActivity(type="city")]
 
 
-def _sanitize(d: DraftItinerary, today: date) -> DraftItinerary:
+def clean_note(note: str | None, limit: int = 160) -> str | None:
+    """No packing advice, and cut on a sentence or word boundary, never mid-word."""
+    note = strip_advice(note or "").strip(" ,;")
+    if len(note) > limit:
+        cut = note[:limit]
+        end = max(cut.rfind(". "), cut.rfind("; "))
+        note = cut[:end + 1] if end >= 40 else cut[:cut.rfind(" ")].rstrip(" ,;:") + "…"
+    return note or None
+
+
+DATE_Q = re.compile(r"\b(date|dates|data|fecha|fechas|quando parti|when do you leave|when are you leaving|"
+                    r"departure date|giorno di partenza|quale anno|which year)\b", re.I)
+
+
+def _sanitize(d: DraftItinerary, today: date, text: str | None = None) -> DraftItinerary:
     fixed = []
     for s in d.stops[:MAX_STOPS]:
         if s.end_date < s.start_date:
@@ -374,8 +457,7 @@ def _sanitize(d: DraftItinerary, today: date) -> DraftItinerary:
             s.end_date = s.start_date + timedelta(days=90)
         if not s.activities:
             s.activities = [DraftActivity(type="city")]
-        if s.notes:
-            s.notes = s.notes.strip()[:200] or None
+        s.notes = clean_note(s.notes)
         fixed.append(s)
     # the same note on several stops is agency boilerplate, not about the place
     counts: dict[str, int] = {}
@@ -387,6 +469,8 @@ def _sanitize(d: DraftItinerary, today: date) -> DraftItinerary:
             if s.notes and counts[_fold(s.notes)] >= 2:
                 s.notes = None
     d.stops = fixed
+    if text is not None and _find_date(text, today) is not None:
+        d.questions = [q for q in d.questions if not DATE_Q.search(_fold(q))]
     d.questions = d.questions[:3]
     return d
 
@@ -448,19 +532,20 @@ def _activities(seg: str) -> list[DraftActivity]:
     acts: list[DraftActivity] = []
     alts = _numbers_m(seg)
     altitude = max(alts) if alts else None
-    difficulty = _difficulty_in(seg)
     hike_s = BOAT_EXCURSION.sub(" ", s)
+    difficulty = _difficulty_in(hike_s)
+    glacier = bool(GLACIER.search(hike_s))
     unknown = any(w in s for w in ("don't know", "dont know", "not sure", "boh", "non so",
                                    "maybe", "forse", "not decided"))
     if unknown:
         difficulty = "unknown"
     if HIKE.search(hike_s) and MULTIDAY.search(s):
         acts.append(DraftActivity(type="trek_multiday", difficulty=difficulty,
-                                  max_altitude_m=altitude))
+                                  max_altitude_m=altitude, glacier=glacier))
     elif HIKE.search(hike_s) or "montagn" in s or "mountain" in s:
         acts.append(DraftActivity(type="hiking",
                                   difficulty=difficulty or ("unknown" if unknown else "moderate"),
-                                  max_altitude_m=altitude))
+                                  max_altitude_m=altitude, glacier=glacier))
     if SKI.search(s):
         acts.append(DraftActivity(type="ski", max_altitude_m=altitude))
     if BEACH.search(s) or "coast" in s:
@@ -598,4 +683,4 @@ def parse_itinerary(text: str, today: date | None = None, client: LLMClient | No
             log.info("LLM itinerary parse failed, using rules: %s", e)
     d = parse_with_rules(text, today)
     d.stops = merge_consecutive(d.stops)
-    return _sanitize(d, today)
+    return _sanitize(d, today, text)

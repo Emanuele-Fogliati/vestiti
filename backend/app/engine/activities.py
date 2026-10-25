@@ -4,7 +4,7 @@ MET values from the Compendium of Physical Activities, rounded.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 
 @dataclass(frozen=True)
@@ -21,6 +21,7 @@ class ActivityProfile:
     short_stops: bool = False  # rest = short breaks on the trail (transient tolerance)
     high_intensity: bool = False  # breathability matters
     spray: bool = False  # splashed by water (boats, rafting): needs a waterproof shell
+    glacier: bool = False  # on ice with crampons: stiff waterproof boots and gloves
 
 
 ACTIVITIES: dict[str, ActivityProfile] = {
@@ -73,6 +74,17 @@ DIFFICULTIES = ["easy", "moderate", "hard", "technical", "unknown"]
 
 
 def resolve(activity: dict) -> list[ActivityProfile]:
+    profiles = _resolve(activity)
+    if (activity or {}).get("glacier"):
+        from app.engine.garments import FOOTWEAR_TYPES
+
+        def boot(p: ActivityProfile) -> str:
+            return max(p.footwear, "hiking_boot", key=FOOTWEAR_TYPES.index)
+        profiles = [replace(p, glacier=True, footwear=boot(p), ankle_support=True) for p in profiles]
+    return profiles
+
+
+def _resolve(activity: dict) -> list[ActivityProfile]:
     """Turn a stored activity into one or more profiles.
 
     "Don't know yet" (type unknown, or hiking with unknown difficulty) returns both an
@@ -97,5 +109,7 @@ def activity_label(activity: dict) -> str:
         return "Not decided yet (covering easy and technical)"
     if kind == "hiking":
         d = activity.get("difficulty") or "moderate"
-        return "Hike (difficulty not decided)" if d == "unknown" else f"{d.capitalize()} hike"
-    return ACTIVITIES.get(kind, ACTIVITIES["city"]).label
+        label = "Hike (difficulty not decided)" if d == "unknown" else f"{d.capitalize()} hike"
+    else:
+        label = ACTIVITIES.get(kind, ACTIVITIES["city"]).label
+    return label + (" on a glacier" if activity.get("glacier") else "")

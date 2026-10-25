@@ -17,6 +17,7 @@ export interface Activity {
   type: string;
   difficulty?: string | null;
   max_altitude_m?: number | null;
+  glacier?: boolean;
 }
 
 export interface Stop {

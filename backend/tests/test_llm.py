@@ -115,3 +115,12 @@ def test_one_stop_per_day_from_the_model_is_merged_and_checked_against_the_text(
     assert "safari" not in {a.type for a in acts}
     assert all(s.notes is None for s in d.stops)  # the same boilerplate on every stop
     assert "in Italian" in seen[0]["messages"][1]["content"]
+    # packing advice ("scarpe comode per i sentieri") is not a hike
+    assert [a.type for a in by["Buenos Aires"].activities] == ["city"]
+    assert [a.type for a in by["Puerto Natales"].activities] == ["city"]
+    hikes = {s.name: next(a for a in s.activities if a.type == "hiking") for s in d.stops
+             if any(a.type == "hiking" for a in s.activities)}
+    assert {n: h.difficulty for n, h in hikes.items()} == {
+        "El Calafate": "easy", "El Chaltén": "hard", "Torres del Paine": "hard", "Ushuaia": "hard"}
+    assert {n for n, h in hikes.items() if h.glacier} == {"El Calafate", "Ushuaia"}
+    assert d.questions == ["Che taglia porti?"]  # dates are in the text: no date question

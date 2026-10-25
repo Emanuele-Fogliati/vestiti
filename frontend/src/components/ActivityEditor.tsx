@@ -33,6 +33,10 @@ export function ActivityEditor({ value, onChange }: { value: Activity[]; onChang
                 placeholder={mountain ? "e.g. 2400" : "—"}
                 onChange={(e) => set(i, { max_altitude_m: e.target.value ? Number(e.target.value) : null })} />
             </div>
+            <label className="check small" title="Walking on ice with crampons: changes boots and gloves">
+              <input type="checkbox" checked={!!a.glacier} disabled={!mountain}
+                onChange={(e) => set(i, { glacier: e.target.checked })} /> On a glacier
+            </label>
             <button type="button" className="btn sm ghost" aria-label="Remove activity"
               disabled={value.length <= 1} onClick={() => onChange(value.filter((_, j) => j !== i))}>✕</button>
           </div>
