@@ -15,8 +15,10 @@ Ordered by how badly it would hurt.
 - [ ] **Legal pages** (privacy, terms, affiliate disclosure) are drafts, not reviewed by
       a lawyer. Cookie banner not needed today (one essential cookie, no trackers) but
       must be revisited if you add analytics.
-- [ ] **Brand, name, domain, design.** Placeholders. `BRAND_NAME`, `THEME` and
-      `frontend/src/theme/tokens.css` are where they change.
+- [x] **Name.** Thruwear, tagline "Wear it thru." (`BRAND_NAME`, `BRAND_TAGLINE`).
+- [ ] **Domain and trademark.** thruwear.com was unregistered on 2026-10-24: buy it, set
+      `BRAND_DOMAIN`, and run a trademark search (EUIPO/USPTO) before launch.
+- [ ] **Design.** `THEME` and `frontend/src/theme/tokens.css` are where it changes.
 - [ ] **Images from the design concepts** (photos from another brand's site) are internal
       placeholders and must never ship. They are not in this repo and `.gitignore`
       blocks the folder.

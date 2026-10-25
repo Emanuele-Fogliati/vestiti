@@ -85,5 +85,5 @@ export function useApp(): Ctx {
 }
 
 export function brandName(config: AppConfig | null) {
-  return config?.brand.name ?? "Layerkit";
+  return config?.brand.name ?? "Thruwear";
 }
