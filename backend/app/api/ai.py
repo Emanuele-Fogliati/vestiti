@@ -27,8 +27,8 @@ def parse(body: ParseIn, user: User = Depends(current_user)):
     """Free text -> draft stops with map matches. Nothing is saved: the UI confirms."""
     draft = parse_itinerary(body.text, today=date.today())
     stops = []
-    for s in draft.stops:
-        matches = geocode.search(s.name, limit=3)
+    found = geocode.resolve_trip([s.name for s in draft.stops], limit=3)
+    for s, matches in zip(draft.stops, found):
         place = dict(matches[0]) if matches else None
         if place and s.elevation_m:
             # the program says where you sleep and how high ("Quota 3827 mt"): nights at

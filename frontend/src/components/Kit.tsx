@@ -87,11 +87,34 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
   );
 }
 
+function tp_genders(items: KitLine[]): string[] {
+  return items.map((l) => l.item?.gender ?? "unisex").filter((g) => g === "men" || g === "women");
+}
+
+function upgradeTitle(ups: { added: boolean }[]): string {
+  const added = ups.filter((u) => u.added).length;
+  const swapped = ups.length - added;
+  const parts = [swapped ? `upgraded ${swapped} piece${swapped > 1 ? "s" : ""}` : "",
+    added ? `added ${added} layer${added > 1 ? "s" : ""}` : ""].filter(Boolean);
+  return `We ${parts.join(" and ")} so this budget keeps you warm`;
+}
+
 export function Kit({ tripId, plans, tier, setTier, onChanged }: {
   tripId: string; plans: Plans; tier: Tier; setTier: (t: Tier) => void; onChanged: () => void;
 }) {
-  const { config } = useApp();
+  const { config, user, refreshUser, toast } = useApp();
   const [swap, setSwap] = useState<KitLine | null>(null);
+  const pref = user?.gender_pref ?? "any";
+  const genders = new Set(tp_genders(plans.tiers[tier].items));
+  const mixed = pref === "any" && genders.has("men") && genders.has("women");
+
+  async function setCut(g: "men" | "women" | "any") {
+    if (g === pref) return;
+    await api.updateMe({ gender_pref: g });
+    await refreshUser();
+    toast(g === "any" ? "Showing all cuts." : `Showing ${g}'s cuts and unisex pieces.`);
+    onChanged();
+  }
   const tp = plans.tiers[tier];
   const fine = tp.owned_notes.filter((n) => n.verdict === "fine");
   const bad = tp.owned_notes.filter((n) => n.verdict !== "fine");
@@ -105,6 +128,13 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
           <div className="tb-l"><span className="label">Budget</span>
             <div className="seg" role="group" aria-label="Budget">
               {TIERS.map((t) => <button key={t} type="button" aria-pressed={t === tier} onClick={() => setTier(t)}>{TIER_LABEL[t]}</button>)}
+            </div>
+          </div>
+          <div className="tb-l"><span className="label">Cut</span>
+            <div className="seg" role="group" aria-label="Cut">
+              {(["men", "women", "any"] as const).map((g) => (
+                <button key={g} type="button" aria-pressed={g === pref} onClick={() => setCut(g)}>
+                  {g === "men" ? "Men" : g === "women" ? "Women" : "Any"}</button>))}
             </div>
           </div>
           <div className="tsum" aria-live="polite"><span className="label">Kit total</span>
@@ -121,9 +151,21 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
         {bad.length > 0 && (
           <div className="banner warn"><b>Honest check on your wardrobe</b><ul>{bad.map((n) => <li key={n.slot + n.item.id}>{n.message}</li>)}</ul></div>
         )}
+        {mixed && (
+          <div className="banner warn"><b>This kit mixes men's and women's cuts.</b> Pick yours so every piece fits:{" "}
+            <button type="button" className="link" onClick={() => setCut("men")}>Men</button>{" · "}
+            <button type="button" className="link" onClick={() => setCut("women")}>Women</button></div>
+        )}
         {tp.auto_upgrades.length > 0 && (
-          <div className="banner info"><b>We upgraded {tp.auto_upgrades.length} piece(s) so this budget keeps you warm</b>
-            <ul>{tp.auto_upgrades.map((a, i) => <li key={i}>{a.reason}</li>)}</ul></div>
+          <div className="banner info"><b>{upgradeTitle(tp.auto_upgrades)}</b>
+            <ul>{tp.auto_upgrades.map((a) => (
+              <li key={a.slot}><b>{a.from ? `${a.from.name} → ${a.to.name}` : `+ ${a.to.name}`}</b>{" "}
+                <span className="muted">({a.extra_cost > 0 ? "+" : a.extra_cost < 0 ? "−" : "±"}{money(Math.abs(a.extra_cost))})</span>
+                <br /><span className="small">{a.reason}</span></li>))}</ul></div>
+        )}
+        {tp.shortfall && (
+          <div className="banner warn"><b>Warmth check: still too cold at {tp.shortfall.stage}</b>
+            <p>{tp.shortfall.message}</p></div>
         )}
         {plans.catalog_note && <p className="small muted">{plans.catalog_note}</p>}
         <div className="grid">
@@ -168,7 +210,8 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
                 ))}
               </div>
               <div className="tfacts">
-                <div><div className="label">Warmth check</div><div className="v">{statusText[tp.warmth.status]}</div></div>
+                <div><div className="label">Warmth check</div><div className="v">{statusText[tp.warmth.status]}</div>
+                  {tp.shortfall && <div className="small muted">{tp.shortfall.gap_clo.toFixed(2)} clo short at {tp.shortfall.stage} {tp.shortfall.mode === "rest" ? "at rest" : "on the move"}</div>}</div>
                 <div><div className="label">Saved by owning</div><div className="v">{money(tp.totals.owned_value_saved)}</div></div>
                 <div><div className="label">Rentals</div><div className="v">{money(tp.totals.rent)}</div></div>
                 <div><div className="label">Pack weight</div><div className="v">{(tp.totals.weight_g / 1000).toFixed(1)} kg</div></div>

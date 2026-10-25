@@ -13,6 +13,7 @@ from __future__ import annotations
 import logging
 import math
 import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from statistics import mean
 
@@ -38,6 +39,7 @@ def _daterange(a: date, b: date):
 # stop of every request wait for a timeout. Process-local, which is fine for one API node.
 _NETWORK_DOWN_UNTIL = 0.0
 _NETWORK_BACKOFF_S = 120.0
+_RETRY_429_S = 1.5
 
 
 class WeatherService:
@@ -82,12 +84,20 @@ class WeatherService:
             raise RuntimeError("weather network marked down, using fallback")
         client = self.client or httpx.Client(timeout=self.s.weather_timeout_s)
         try:
-            try:
-                r = client.get(url, params=params)
-            except (httpx.TimeoutException, httpx.NetworkError):
-                if self.client is None:
-                    _NETWORK_DOWN_UNTIL = time.monotonic() + _NETWORK_BACKOFF_S
-                raise
+            for attempt in range(2):
+                try:
+                    r = client.get(url, params=params)
+                except (httpx.ConnectError, httpx.ConnectTimeout):
+                    # no route or DNS: the network is down, stop trying for a while. A slow
+                    # answer (read timeout) is not: the next, smaller request may work.
+                    if self.client is None:
+                        _NETWORK_DOWN_UNTIL = time.monotonic() + _NETWORK_BACKOFF_S
+                    raise
+                if r.status_code == 429 and attempt == 0:
+                    # Open-Meteo's free tier rate-limits bursts: wait a moment, try once more
+                    time.sleep(_RETRY_429_S)
+                    continue
+                break
             r.raise_for_status()
             data = r.json()
             if data.get("error"):
@@ -189,18 +199,62 @@ class WeatherService:
                                   round(daily["wind_speed_10m_max"][i] or 0), source="observed"))
         return out
 
+    def _archive_years(self, lat, lon, elev, windows: list[tuple[date, date]]) -> dict:
+        """Several small archive windows, fetched in parallel and cached one by one.
+        One multi-year request is heavy for Open-Meteo's rate limit (it counts days):
+        that is what made the PC fall back to the rough estimate."""
+        params = {"latitude": lat, "longitude": lon, "elevation": elev,
+                  "daily": "temperature_2m_max,temperature_2m_min,precipitation_sum,wind_speed_10m_max",
+                  "timezone": "auto", "wind_speed_unit": "kmh"}
+        keys = [f"ar:{lat:.2f}:{lon:.2f}:{elev:.0f}:{a}:{b}" for a, b in windows]
+        parts: dict[int, dict] = {}
+        todo = []
+        for i, k in enumerate(keys):
+            hit = self._cache_get(k)
+            if hit is not None:
+                parts[i] = hit
+            else:
+                todo.append(i)
+
+        def fetch(i):
+            a, b = windows[i]
+            return i, self._get_json(self.s.openmeteo_archive_url,
+                                     {**params, "start_date": a.isoformat(), "end_date": b.isoformat()})
+
+        errors = []
+        if todo:
+            with ThreadPoolExecutor(max_workers=min(4, len(todo))) as pool:
+                futures = [pool.submit(fetch, i) for i in todo]
+                for f in futures:
+                    try:
+                        i, data = f.result()
+                    except Exception as e:  # one missing year still leaves an average
+                        errors.append(e)
+                        continue
+                    parts[i] = data["daily"]
+                    self._cache_put(keys[i], "archive", data["daily"], 24 * 30)
+        if not parts:
+            raise errors[0] if errors else RuntimeError("no archive data")
+        merged: dict[str, list] = {}
+        for i in sorted(parts):
+            for k, v in parts[i].items():
+                if isinstance(v, list):
+                    merged.setdefault(k, []).extend(v)
+        return merged
+
     def _climate(self, lat, lon, elev, start, end) -> list[DayWeather]:
         """Average of the same calendar window (+-3 days) over the last N full years."""
-        years = self.s.climate_years
-        last_year = self.today.year - 1
-        first_year = last_year - years + 1
-        w0 = _safe_date(first_year, start.month, start.day) - timedelta(days=3)
         span = (end - start).days
-        w1 = _safe_date(last_year, start.month, start.day) + timedelta(days=span + 3)
-        if w1 >= self.today - timedelta(days=6):
-            w1 = self.today - timedelta(days=6)
+        edge = self.today - timedelta(days=6)
+        windows = []
+        for y in range(self.today.year - self.s.climate_years, self.today.year + 1):
+            a = _safe_date(y, start.month, start.day) - timedelta(days=3)
+            b = a + timedelta(days=span + 6)
+            if b <= edge:
+                windows.append((a, b))
+        windows = windows[-self.s.climate_years:]
         try:
-            daily = self._archive(lat, lon, elev, w0, w1)
+            daily = self._archive_years(lat, lon, elev, windows)
         except Exception as e:
             log.warning("climate archive failed, using estimate: %s", e)
             return [estimate_day(lat, elev, d) for d in _daterange(start, end)]
@@ -241,7 +295,9 @@ def _safe_date(y: int, m: int, d: int) -> date:
 
 def estimate_day(lat: float, elev: float, d: date) -> DayWeather:
     """Very rough climate guess (no network). Clearly labelled as an estimate."""
-    annual = 27.0 - 0.0066 * lat * lat - 0.0065 * (elev or 0)
+    # 4.5 C/km, not the free-air 6.5: towns on high plateaus are warmer than the free air
+    # at the same height (Cusco 3400 m averages ~12 C, La Paz ~9 C)
+    annual = 27.0 - 0.0066 * lat * lat - 0.0045 * (elev or 0)
     amp = 0.22 * abs(lat)
     peak = 200 if lat >= 0 else 17  # day of year of the warmest period
     doy = d.timetuple().tm_yday

@@ -223,14 +223,34 @@ def cheapest_upgrade(
     stages, conds, choices: dict[str, Choice], reqs, candidates: dict[str, list[CatalogItem]],
     stage_index: int, mode: str,
 ) -> dict | None:
-    """The cheapest single swap that removes (or most reduces) the warmth gap."""
+    """The cheapest single swap that removes (or most reduces) the warmth gap. When no swap
+    helps any more, the cheapest extra layer the kit does not have yet (e.g. rain trousers
+    for a cold boat ride): the gap is then closed instead of only reported."""
     kit = _kit(choices, reqs)
     cond, margin = _worst(stages, conds, kit, stage_index, mode)
     if cond is None or margin >= 0:
         return None
+    best = _best_change(conds, choices, reqs, candidates, kit, cond, margin, add=False) \
+        or _best_change(conds, choices, reqs, candidates, kit, cond, margin, add=True)
+    if best is None:
+        return None
+    return {
+        "stage_index": stage_index, "mode": mode, "slot": best["slot"],
+        "slot_name": SLOT_BY_KEY[best["slot"]].name, "item": best["item"].as_dict(),
+        "gain_clo": best["gain"], "extra_cost": best["cost"], "closes": best["closes"],
+        "added": best["added"],
+        "margin_before": round(margin, 2), "margin_after": best["new_margin"],
+        "condition": {"date": cond.date.isoformat(), "where": cond.where,
+                      "feels_like_c": cond.feels_like_c},
+    }
+
+
+def _best_change(conds, choices, reqs, candidates, kit, cond, margin, add: bool) -> dict | None:
     best = None
     for slot in UPGRADE_SLOTS:
-        if slot not in reqs or not reqs[slot].needed:
+        if slot not in reqs:
+            continue
+        if add != (not reqs[slot].needed and slot not in choices):
             continue
         ch = choices.get(slot)
         if ch and ch.locked:
@@ -251,7 +271,7 @@ def cheapest_upgrade(
             cost = round(c.price - current_cost, 2)
             closes = thermal.warmth_status(new_margin + cond.required, cond.required) != "cold"
             cand = {"slot": slot, "item": c, "gain": round(gain, 2), "cost": cost,
-                    "closes": closes, "new_margin": round(new_margin, 2)}
+                    "closes": closes, "new_margin": round(new_margin, 2), "added": add}
             if best is None:
                 best = cand
             elif closes and (not best["closes"] or cost < best["cost"]):
@@ -259,16 +279,7 @@ def cheapest_upgrade(
             elif not closes and not best["closes"]:
                 if gain / max(cost, 1) > best["gain"] / max(best["cost"], 1):
                     best = cand
-    if best is None:
-        return None
-    return {
-        "stage_index": stage_index, "mode": mode, "slot": best["slot"],
-        "slot_name": SLOT_BY_KEY[best["slot"]].name, "item": best["item"].as_dict(),
-        "gain_clo": best["gain"], "extra_cost": best["cost"], "closes": best["closes"],
-        "margin_before": round(margin, 2), "margin_after": best["new_margin"],
-        "condition": {"date": cond.date.isoformat(), "where": cond.where,
-                      "feels_like_c": cond.feels_like_c},
-    }
+    return best
 
 
 def build_tier(
@@ -280,7 +291,7 @@ def build_tier(
     owned: dict[str, list[CatalogItem]],
     selections: dict[tuple[str, str], dict],
     partners: list[RentalPartnerData],
-    max_auto_upgrades: int = 6,
+    max_auto_upgrades: int = 12,
 ) -> dict:
     choices: dict[str, Choice] = {}
     owned_notes: list[dict] = []
@@ -325,7 +336,8 @@ def build_tier(
             slot, "none", note="No product in the catalog fits this yet.")
 
     # warmth optimisation: cheapest upgrade until no stage is "cold"
-    auto = []
+    steps = []
+    original = {k: (c.item.as_dict() if c.item else None, c.cost()) for k, c in choices.items()}
     for _ in range(max_auto_upgrades):
         ev = evaluate(stages, conds, _kit(choices, reqs))
         cold = [(s["modes"][m]["margin"], s["index"], m) for s in ev["stages"]
@@ -337,18 +349,11 @@ def build_tier(
         if not up:
             break
         slot = up["slot"]
-        old = choices.get(slot)
         new_item = next(c for c in candidates[slot] if c.id == up["item"]["id"])
-        auto.append({
-            "slot": slot, "from": old.item.as_dict() if old and old.item else None,
-            "to": up["item"], "extra_cost": up["extra_cost"], "gain_clo": up["gain_clo"],
-            "reason": f"{SLOT_BY_KEY[slot].name}: the {tier} pick left you "
-                      f"{-up['margin_before']:.2f} clo short at {stages_name(stages, si)} "
-                      f"({'moving' if mode == 'moving' else 'at rest'}, "
-                      f"{up['condition']['feels_like_c']:.0f} °C feels-like). Upgraded for "
-                      f"{_money(up['extra_cost'])}.",
-        })
-        choices[slot] = Choice(slot, "product", new_item, note="auto-upgraded for warmth")
+        steps.append({**up, "stage_name": stages_name(stages, si)})
+        choices[slot] = Choice(slot, "product", new_item,
+                               note="added for warmth" if up["added"] else "auto-upgraded for warmth")
+    auto = _merge_upgrades(steps, original, choices, tier)
 
     kit = _kit(choices, reqs)
     ev = evaluate(stages, conds, kit)
@@ -414,9 +419,76 @@ def build_tier(
                                "rest": {k: s["modes"]["rest"][k] for k in ("required", "provided", "margin", "status")}}
                               for s in ev["stages"]]},
         "auto_upgrades": auto,
+        "shortfall": shortfall(stages, conds, kit, ev, tier),
         "owned_notes": owned_notes,
         "owned_fine_count": owned_fine,
         "_choices": choices,
+    }
+
+
+def _merge_upgrades(steps: list[dict], original: dict, choices: dict[str, Choice], tier: str) -> list[dict]:
+    """One line per slot: the tier's first pick, the item the kit ends with, the net cost.
+    A slot can be upgraded several times while the gap moves between stops."""
+    out: dict[str, dict] = {}
+    for st in steps:
+        slot = st["slot"]
+        line = out.setdefault(slot, {"slot": slot, "from": original.get(slot, (None, 0.0))[0],
+                                     "gain_clo": 0.0, "steps": 0, "worst": st})
+        line["gain_clo"] = round(line["gain_clo"] + st["gain_clo"], 2)
+        line["steps"] += 1
+        if st["margin_before"] < line["worst"]["margin_before"]:
+            line["worst"] = st
+    result = []
+    for slot, line in out.items():
+        ch = choices[slot]
+        before = original.get(slot, (None, 0.0))[1]
+        net = round(ch.cost() - before, 2)
+        w = line.pop("worst")
+        added = line["from"] is None
+        what = (f"added a {SLOT_BY_KEY[slot].name.lower()}" if added else
+                f"swapped the {tier} pick for a warmer one")
+        line.update({
+            "to": ch.item.as_dict() if ch.item else None, "extra_cost": net, "added": added,
+            "reason": f"{SLOT_BY_KEY[slot].name}: {what}. Without it you were "
+                      f"{-w['margin_before']:.2f} clo short at {w['stage_name']} "
+                      f"({'moving' if w['mode'] == 'moving' else 'at rest'}, "
+                      f"{w['condition']['feels_like_c']:.0f} °C feels-like). "
+                      + ("Costs " + _money(net) if net > 0 else
+                         "Saves " + _money(-net) if net < 0 else "Same price") + ".",
+        })
+        result.append(line)
+    return result
+
+
+def shortfall(stages, conds, kit, ev, tier: str) -> dict | None:
+    """When even the upgrades leave a stop cold: where, how much, and what would close it."""
+    cold = [(s["modes"][m]["margin"], s["index"], m) for s in ev["stages"]
+            for m in ("moving", "rest") if s["modes"][m]["status"] == "cold"]
+    if not cold:
+        return None
+    margin, si, mode = min(cold)
+    cond, _ = _worst(stages, conds, kit, si, mode)
+    name = stages_name(stages, si)
+    gap = -margin
+    feels = cond.feels_like_c if cond else None
+    when = "at rest" if mode == "rest" else "on the move"
+    missing = [SLOT_BY_KEY[k].name.lower() for k in ("insulation_top", "mid_top", "base_bottom",
+                                                      "shell_bottom", "headwear", "gloves")
+               if k not in kit]
+    tips = []
+    if missing:
+        tips.append("add " + " and ".join(missing[:2]))
+    if mode == "rest":
+        tips.append("keep the down jacket for the stops, and sit out of the wind or indoors"
+                    if "insulation_top" in kit else "bring an insulated jacket for the stops")
+    if tier != "premium":
+        tips.append("the premium tier has warmer pieces")
+    feels_txt = f", feels like {feels:.0f} °C" if feels is not None else ""
+    return {
+        "stage_index": si, "stage": name, "mode": mode, "gap_clo": round(gap, 2),
+        "feels_like_c": feels, "missing": missing,
+        "message": f"Still {gap:.2f} clo short at {name} {when}{feels_txt}: the catalog has no "
+                   f"warmer swap that fits this tier. To close it: " + "; ".join(tips) + ".",
     }
 
 

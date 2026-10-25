@@ -216,6 +216,17 @@ ADVICE = re.compile(r"abbigliament|scarpon|scarpe|zaino|bastoncin|giacca|giacche
                     r"raccomand|portare con|equipaggiament|attrezzatur|clothing|clothes|boots|backpack|"
                     r"layers|sunscreen|sun cream|recommend|bring |ropa|botas|mochila|recomend", re.I)
 HIKE = re.compile(r"trek|hik|escursion|cammin|sentier|caminata|senderismo|randonn|wander", re.I)
+# "potremo scegliere se esplorare i sentieri ... oppure relax alle terme": not a plan
+OPTIONAL = re.compile(r"potremo scegliere|potrete scegliere|a scelta|facoltativ|opzional|optional|"
+                      r"chi (?:lo )?desidera|chi vuole|if you wish|possibilità di|se si desidera|"
+                      r"\boppure\b|\bor relax", re.I)
+
+
+def _firm(text: str) -> str:
+    """The text without optional activities."""
+    return "\n".join(s for s in _sentences(text) if not OPTIONAL.search(s))
+
+
 STRONG_HIKE = re.compile(r"trek|hik|cammin|sentier|caminata|senderismo|randonn|wander", re.I)
 MULTIDAY = re.compile(r"multi.?day|hut to hut|più giorni|piu giorni|rifugi|campeggio|in tenda|"
                       r"\btenda\b|campamento|refugio|camping|\bcamp\b|bivacco|\bw trek\b|circuito o\b", re.I)
@@ -412,14 +423,17 @@ def _hike_hours(ev: str) -> float:
     return best
 
 
+_DIFF_WORDS = [(re.compile(rx, re.I), d) for rx, d in (
+    (r"\btechnical\b|\balpinistic", "technical"),
+    (r"\bimpegnativ\w*|\bdifficil[ei]\b|\bdifficult\b|\bhard\b|\bexigente\b|\bduro\b", "hard"),
+    (r"\bmedia difficolt|\bmoderat\w*|\bmedium\b", "moderate"),
+    # whole words only: "non facilitano la respirazione" is not an easy walk
+    (r"\bfacil[ei]\b|\beasy\b|\bsemplic[ei]\b|\bfácil\b", "easy"))]
+
+
 def _difficulty_word(ev: str) -> str | None:
-    low = ev.lower()
-    for word, d in (("technical", "technical"), ("alpinistic", "technical"),
-                    ("impegnativ", "hard"), ("difficile", "hard"), ("difficult", "hard"),
-                    ("hard", "hard"), ("exigente", "hard"), ("media difficolt", "moderate"),
-                    ("moderat", "moderate"), ("medium", "moderate"), ("facile", "easy"),
-                    ("easy", "easy"), ("semplice", "easy"), ("fácil", "easy"), ("facil", "easy")):
-        if word in low:
+    for rx, d in _DIFF_WORDS:
+        if rx.search(ev):
             return d
     return None
 
@@ -487,6 +501,8 @@ def clean_note(note: str | None, limit: int = 160) -> str | None:
 # ---------------------------------------------------------------- activities from text
 
 def _activities(seg: str, allow_unknown: bool = True) -> list[DraftActivity]:
+    if not allow_unknown:  # day-by-day programs: optional extras are not the plan
+        seg = _firm(seg)
     s = seg.lower()
     acts: list[DraftActivity] = []
     hike_s = BOAT_EXCURSION.sub(" ", s)
@@ -549,6 +565,8 @@ def refine_activities(stops: list[DraftStop], evs: list[str | None], text: str) 
     day as a hard 2,500 m trek. `evs` is the text of each stop's own days (None when the
     input is not day-by-day: then only the whole text can be checked)."""
     for s, ev in zip(stops, evs):
+        if ev is not None:
+            ev = _firm(ev)
         scope = ev if ev is not None else text
         hike_text = BOAT_EXCURSION.sub(" ", scope)
         kept: list[DraftActivity] = []
@@ -566,9 +584,9 @@ def refine_activities(stops: list[DraftStop], evs: list[str | None], text: str) 
             if a.type in ("hiking", "trek_multiday", "ski"):
                 if a.max_altitude_m and not _altitude_ok(a.max_altitude_m, scope):
                     a.max_altitude_m = None  # invented: the plan asks for it instead
-                if not a.max_altitude_m and ev is not None:
-                    stated = _hike_numbers(ev)
-                    a.max_altitude_m = max(stated) if stated else None
+                stated = _hike_numbers(ev) if ev is not None else []
+                if stated:  # the model may take the hotel's altitude for the hike's top
+                    a.max_altitude_m = max(stated)
             else:
                 a.max_altitude_m = None
             if a.type in ("hiking", "trek_multiday") and ev is not None:

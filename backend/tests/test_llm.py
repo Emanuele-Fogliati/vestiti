@@ -185,3 +185,14 @@ def test_peru_program_from_an_agency_page():
         assert by["Cuzco"].notes is None  # the overnight line is the altitude, not a note
         notes = " ".join(s.notes or "" for s in d.stops)
         assert "Dune buggy e sandboarding Arriviamo" not in notes  # taglines are not sentences
+
+
+def test_peru_round4_model_answer_is_corrected_by_the_text():
+    from datetime import date
+
+    from tests.fixtures_peru import PERU, PERU_PC_LLM
+    d = parse_itinerary(PERU, today=date(2026, 10, 25), client=_llm(PERU_PC_LLM))
+    by = {s.name: s for s in d.stops}
+    hike = next(a for a in by["Puno"].activities if a.type == "hiking")
+    assert (hike.difficulty, hike.max_altitude_m) == ("hard", 5200)  # "non facilitano" is not "facile"
+    assert "hiking" not in {a.type for a in by["Cusco"].activities}  # "potremo scegliere se ..."

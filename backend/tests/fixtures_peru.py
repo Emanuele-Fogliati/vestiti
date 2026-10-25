@@ -5,7 +5,8 @@ PERU = (Path(__file__).parent / "fixtures" / "peru.txt").read_text(encoding="utf
 
 
 def _s(name, a, b, acts, notes=None):
-    return {"name": name, "start_date": f"2026-11-{a:02d}", "end_date": f"2026-11-{b:02d}",
+    ma, mb = (11 if a > 20 else 12), (11 if b > 20 else 12)
+    return {"name": name, "start_date": f"2026-{ma}-{a:02d}", "end_date": f"2026-{mb}-{b:02d}",
             "activities": acts, "notes": notes}
 
 
@@ -20,4 +21,15 @@ PERU_BAD_LLM = {"trip_name": "Perù", "questions": ["Che tempo farà a Machu Pic
     _s("Valle del Colca", 29, 29, _HARD), _s("Arequipa", 30, 30, _CITY),
     _s("Huacachina", 30, 30, [{"type": "beach"}, {"type": "hiking", "difficulty": "hard"}]),
     _s("Paracas", 30, 30, _CITY), _s("Isole Ballestas", 30, 30, _CITY), _s("Lima", 30, 30, _CITY),
+]}
+
+# what the PC model answered on round 4: stops by overnight place, the Rainbow hike as
+# "easy" at the hotel's 3,827 m, and the optional Mandor trails as a hike in Cusco
+PERU_PC_LLM = {"trip_name": "Perù", "stops": [
+    _s("Cuzco", 25, 26, _CITY), _s("Aguas Calientes", 27, 28, _CITY),
+    _s("Cusco", 29, 29, [{"type": "city"}, {"type": "hiking", "difficulty": "moderate"}]),
+    _s("Puno", 30, 30, [{"type": "hiking", "difficulty": "easy", "max_altitude_m": 3827}]),
+    _s("Taquile", 1, 1, [{"type": "boat"}]), _s("Chivay", 2, 2, _CITY),
+    _s("Arequipa", 3, 4, _CITY), _s("Paracas", 5, 5, [{"type": "desert"}]),
+    _s("Lima", 6, 6, [{"type": "boat"}]),
 ]}
