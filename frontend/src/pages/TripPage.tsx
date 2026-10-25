@@ -3,16 +3,30 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { Kit } from "../components/Kit";
 import { LayerStrategy } from "../components/LayerStrategy";
+import { PlanChange } from "../components/PlanChange";
+import { ProfileQuiz } from "../components/ProfileQuiz";
+import { TailorChat } from "../components/TailorChat";
 import { StopCard, StopForm } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { addDays, dayMonth, daysBetween, minus, money, today } from "../lib/format";
-import type { Plans, Strategy, Tier, Trip } from "../lib/types";
+import type { Plans, QuizResult, Strategy, Tier, Trip, User } from "../lib/types";
+
+const COLD_TXT: [number, string][] = [[0.3, "always cold"], [0.15, "a bit cold"], [0, "average with cold"], [-0.3, "rarely cold"]];
+const PACE_TXT = { relaxed: "slow pace", average: "average pace", brisk: "fast pace" };
+const EVE_TXT = { early: "inside after dinner", sometimes: "out some evenings", late: "out late" };
+
+function profileText(u: User): string {
+  const cold = COLD_TXT.reduce((b, c) => (Math.abs(c[0] - u.thermal_offset) < Math.abs(b[0] - u.thermal_offset) ? c : b))[1];
+  return [cold, PACE_TXT[u.pace] ?? "average pace", EVE_TXT[u.evenings] ?? "out some evenings"].join(" · ");
+}
 
 export default function TripPage() {
   const { id = "" } = useParams();
   const nav = useNavigate();
-  const { toast } = useApp();
+  const { toast, user, refreshUser } = useApp();
+  const [quizOpen, setQuizOpen] = useState(false);
+  const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
   const [trip, setTrip] = useState<Trip | null>(null);
   const [strategy, setStrategy] = useState<Strategy | null>(null);
   const [plans, setPlans] = useState<Plans | null>(null);
@@ -21,9 +35,6 @@ export default function TripPage() {
   const [editing, setEditing] = useState<string | "new" | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [planning, setPlanning] = useState(false);
-  const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState<{ text: string; source: string } | null>(null);
-  const [asking, setAsking] = useState(false);
 
   const loadPlans = useCallback(async (t: Tier) => {
     setPlanning(true);
@@ -44,6 +55,23 @@ export default function TripPage() {
   }, [id, tier, loadPlans]);
 
   useEffect(() => { loadAll(); }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // the quiz comes before the plan, once per traveller (answered or skipped)
+  useEffect(() => {
+    if (trip && trip.stops.length && user && !user.profile_done_at) setQuizOpen(true);
+  }, [trip, user]);
+
+  async function quizDone(r: QuizResult) {
+    setQuizOpen(false);
+    setQuizResult(r.changes.length ? r : null);
+    await refreshUser();
+    if (trip?.stops.length) loadPlans(tier);
+  }
+
+  function profileChanged() {
+    refreshUser();
+    loadPlans(tier);
+  }
 
   function changeTier(t: Tier) {
     setTier(t);
@@ -77,13 +105,6 @@ export default function TripPage() {
     loadPlans(tier);
   }
 
-  async function ask(e: React.FormEvent) {
-    e.preventDefault();
-    if (question.trim().length < 3) return;
-    setAsking(true);
-    try { setAnswer(await api.ask(id, question.trim(), tier)); } finally { setAsking(false); }
-  }
-
   const last = stops[stops.length - 1];
   const nextStart = last ? addDays(last.end_date, 1) : addDays(today(), 30);
   const totalDays = stops.length && t0 ? daysBetween(t0, stops.reduce((m, s) => (s.end_date > m ? s.end_date : m), stops[0].end_date)) + 1 : 0;
@@ -99,7 +120,7 @@ export default function TripPage() {
       <nav className="secnav" aria-label="Trip sections">
         <div className="wrap">
           <span className="tname">{trip.name}</span>
-          <a href="#trip">Trip</a><a href="#layers">Layers</a><a href="#kit">Kit</a><a href="#total">Total</a><a href="#ask">Ask</a>
+          <a href="#trip">Trip</a><a href="#layers">Layers</a><a href="#kit">Kit</a><a href="#total">Total</a><a href="#ask">Chat</a>
           {planning && <span className="spin" aria-label="Updating plan" />}
         </div>
       </nav>
@@ -114,6 +135,21 @@ export default function TripPage() {
             <div className="fact"><b>{tp ? `${tp.totals.items_owned} of ${tp.items.length}` : "—"}</b><span>Pieces you own</span></div>
             <div className="fact"><b>{tp ? money(tp.totals.total) : "—"}</b><span>{tier} kit total</span></div>
           </div>
+          {user && (
+            <div className="tailored">
+              <span className="kicker">Tailored to you</span>
+              <span>{user.profile_done_at ? profileText(user) : "not yet: answer 4 quick questions"}</span>
+              <button type="button" className="link small" onClick={() => setQuizOpen(true)}>{user.profile_done_at ? "Change" : "Start"}</button>
+              <a className="link small" href="#ask">or tell us in the chat</a>
+            </div>
+          )}
+          {quizResult && (
+            <div className="banner ok quizres">
+              <div className="row"><b>{quizResult.plan.pieces.length || quizResult.plan.status ? "Your answers changed the kit" : "Saved. Your kit already fit you"}</b><span className="spacer" />
+                <button type="button" className="btn sm ghost" aria-label="Close" onClick={() => setQuizResult(null)}>✕</button></div>
+              <PlanChange changes={quizResult.changes} plan={quizResult.plan} />
+            </div>
+          )}
           <div className="row" style={{ marginTop: 18 }}>
             <button type="button" className="btn sm" onClick={async () => { const c = await api.duplicateTrip(id); nav(`/trips/${c.id}`); }}>Duplicate</button>
             <button type="button" className="btn sm danger" onClick={async () => { if (window.confirm("Delete this trip?")) { await api.deleteTrip(id); nav("/trips"); } }}>Delete trip</button>
@@ -179,15 +215,12 @@ export default function TripPage() {
 
       <section className="band alt" id="ask">
         <div className="wrap">
-          <header className="sh"><p className="sh-k">Ask</p><h2>Questions about your kit</h2>
-            <p>Answered by the local AI model from this plan's numbers. If the model is offline you get the plan's own notes.</p></header>
-          <form className="ask" onSubmit={ask} style={{ maxWidth: 720 }}>
-            <input type="text" value={question} onChange={(e) => setQuestion(e.target.value)} placeholder="Do I really need shell pants in Rome?" aria-label="Your question" />
-            <div><button className="btn primary" type="submit" disabled={asking}>{asking ? <span className="spin" /> : "Ask"}</button></div>
-            {answer && <div className="ans"><span className="ai-src">{answer.source === "llm" ? "Local AI" : "AI offline"}</span><br />{answer.text}</div>}
-          </form>
+          <header className="sh"><p className="sh-k">Chat</p><h2>Tell us about you, or ask</h2>
+            <p>"I'm always cold", "I have an old Decathlon fleece", "I walk slowly": the kit is recomputed for you and you see exactly what changed. Questions about the plan are answered from its numbers.</p></header>
+          <TailorChat tripId={id} tier={tier} onChanged={profileChanged} />
         </div>
       </section>
+      {quizOpen && <ProfileQuiz tripId={id} tier={tier} onDone={quizDone} />}
     </main>
   );
 }

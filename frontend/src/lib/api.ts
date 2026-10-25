@@ -1,5 +1,5 @@
 import type {
-  AppConfig, DraftStop, Place, Plans, Stop, Strategy, Tier, Trip, TripSummary, User, WardrobeItem,
+  AppConfig, ChatReply, DraftStop, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripSummary, User, WardrobeItem,
 } from "./types";
 
 export class ApiError extends Error {
@@ -59,8 +59,17 @@ export const api = {
     req<User>("POST", "/api/auth/register", { email, password, display_name }),
   login: (email: string, password: string) => req<User>("POST", "/api/auth/login", { email, password }),
   logout: () => req<void>("POST", "/api/auth/logout"),
-  updateMe: (patch: Partial<Pick<User, "display_name" | "gender_pref" | "thermal_offset">>) =>
+  updateMe: (patch: Partial<Pick<User, "display_name" | "gender_pref" | "thermal_offset" | "pace" | "evenings">>) =>
     req<User>("PATCH", "/api/me", patch),
+  profile: () => req<Profile>("GET", "/api/me/profile"),
+  quiz: (answers: { cold?: string | null; pace?: string | null; evenings?: string | null; owned?: string[] | null }, tripId?: string, tier?: Tier) => {
+    const q = new URLSearchParams();
+    if (tripId) q.set("trip_id", tripId);
+    if (tier) q.set("tier", tier);
+    return req<QuizResult>("POST", `/api/me/quiz?${q}`, answers);
+  },
+  chat: (tripId: string, message: string, tier: Tier) =>
+    req<ChatReply>("POST", `/api/trips/${tripId}/chat`, { message, tier }),
   exportMe: () => req<unknown>("GET", "/api/me/export"),
   deleteMe: () => req<void>("DELETE", "/api/me"),
 

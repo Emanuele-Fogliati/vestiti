@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from app.api import admin, ai, art, auth, go, meta, plans, trips, wardrobe
+from app.api import admin, ai, art, auth, go, meta, plans, profile, trips, wardrobe
 from app.config import get_settings
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
@@ -46,7 +46,7 @@ async def csrf_and_headers(request: Request, call_next):
 
 
 for r in (meta.router, auth.router, trips.router, wardrobe.router, plans.router, ai.router,
-          go.router, admin.router, art.router):
+          go.router, admin.router, art.router, profile.router):
     app.include_router(r)
 
 # Optional: serve the built frontend from the same process (single-container deploys).

@@ -104,8 +104,15 @@ def _activity_altitude(stage: StageInput, activity: dict, profile: ActivityProfi
 HIGH_UV_M = 2500.0
 
 
-def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0) -> list[Condition]:
+# Pace changes the heat a body makes on the move (not at rest): a slow walker with photo
+# stops makes ~15% less than average, a fast one ~15% more.
+PACE_MET = {"relaxed": 0.85, "average": 1.0, "brisk": 1.15}
+
+
+def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
+                         pace: str = "average") -> list[Condition]:
     out: list[Condition] = []
+    met_factor = PACE_MET.get(pace, 1.0)
     acts = stage.activities or [{"type": "city"}]
     for day in stage.days:
         span = day.tmax - day.tmin
@@ -145,7 +152,7 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0) -> lis
                      alt),
                     ("rest", t_rest, rest_wind, rest_where, alt if "break" in rest_where else base),
                 ):
-                    met = profile.met_moving if mode == "moving" else profile.met_rest
+                    met = profile.met_moving * met_factor if mode == "moving" else profile.met_rest
                     air = profile.extra_air_ms if mode == "moving" else (
                         2.0 if profile.key == "ski" else 0.0  # chairlift
                     )
