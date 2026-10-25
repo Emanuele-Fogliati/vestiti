@@ -6,15 +6,15 @@
 :root,
 [data-theme="yellow-black"]{
   color-scheme:light;
-  --bg:#F7F7F4;
-  --bg-2:#EEEEE9;
+  --bg:#FFFFFF;
+  --bg-2:#FFFFFF;
   --surface:#FFFFFF;
-  --surface-2:#F1F1EC;
+  --surface-2:#F6F5F0;
   --ink:#0D0D0D;
   --ink-2:#55554F;
   --ink-3:#9A9A92;
-  --rule:#D9D9D2;
-  --rule-strong:#DEDCD1;
+  --rule:#ECEBE4;
+  --rule-strong:#E2E0D6;
   --focus:#2457C5;
   --top-bg:#0D0D0D;
   --top-ink:#FFFFFF;
@@ -35,10 +35,10 @@
   --el-label:#0D0D0D;
   --stop-gap:12px;
   --stop-pad:20px;
-  --stop-bg:#FFFFFF;
+  --stop-bg:transparent;
   --stop-radius:22px;
-  --stop-hover:#FFFBE3;
-  --stop-sel:0 0 0 2px #0D0D0D,0 10px 28px rgba(13,13,13,.10);
+  --stop-hover:#FFFCEB;
+  --stop-sel:none;
   --days-ink:#0D0D0D;
   --thumb-border:0;
   --hot:#0D0D0D;
@@ -59,11 +59,11 @@
   --warn-text:#1F4FB5;
   --lc-bg:#0D0D0D;
   --lc-ink:#FFD60A;
-  --photo-bg:#F1F1EE;
+  --photo-bg:#F6F5F0;
   --colsel:#FFF6C7;
   --cell-sel:#0D0D0D;
   --dot:#0D0D0D;
-  --why-bg:#FFD60A;
+  --why-bg:#FFF6C7;
   --why-border:0;
   --why-k:#0D0D0D;
   --tag-bg:#0D0D0D;
@@ -72,13 +72,13 @@
   --own-ink:#0D0D0D;
   --star:#0D0D0D;
   --check:#0D0D0D;
-  --total-bg:#0D0D0D;
-  --total-ink:#FFFFFF;
-  --total-ink-2:#C4C4BC;
+  --total-bg:#FFF6C7;
+  --total-ink:#0D0D0D;
+  --total-ink-2:#5F5B45;
   --total-border:transparent;
-  --total-track:#2C2C29;
-  --total-fill:#FFD60A;
-  --total-fill-dim:#77776F;
+  --total-track:#F2E7A6;
+  --total-fill:#0D0D0D;
+  --total-fill-dim:#B9B391;
   --vapor:#77776F;
   --vapor-text:#55554F;
   --heat:#0D0D0D;
@@ -141,6 +141,44 @@
 [data-theme="yellow-black"] :is(.fig .lt,.chip,.brandline,.stars){font-family:var(--f-body);letter-spacing:.04em}
 [data-theme="yellow-black"] .fig .lt{max-width:calc(100% - 76px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:4px 10px}
 [data-theme="yellow-black"] .chip{padding:4px 10px}
+/* Light layout: open sections, no outlined boxes. Grouping comes from spacing,
+   hairlines and an occasional soft tint, not from borders and shadows. */
+[data-theme="yellow-black"] :is(.elev,.mx-box,.lt-box,.card,.witem,.tcard,.kpi,.panel.worn){border:0;box-shadow:none;background:transparent}
+[data-theme="yellow-black"] .elev{padding:0}
+[data-theme="yellow-black"] .panel{border:0;box-shadow:none;background:var(--surface-2)}
+[data-theme="yellow-black"] .panel.worn{padding:0;border-radius:0}
+[data-theme="yellow-black"] :is(.stopform,.banner,.ask .ans,.qs li,.places){border:0;box-shadow:none;background:var(--surface-2)}
+[data-theme="yellow-black"] .banner.warn{background:#EEF2FC;box-shadow:none}
+[data-theme="yellow-black"] .banner.ok{background:#EEF6F0;box-shadow:none}
+[data-theme="yellow-black"] .empty{border:0;background:var(--surface-2)}
+[data-theme="yellow-black"] :is(.facts,.thero .facts){border:0;box-shadow:none;background:transparent;border-radius:0;margin-top:28px}
+[data-theme="yellow-black"] .fact{border-right:0;padding:0 28px 0 0}
+[data-theme="yellow-black"] .fact span{color:#3D3B2E}
+[data-theme="yellow-black"] .brief{box-shadow:0 12px 40px rgba(13,13,13,.10)}
+[data-theme="yellow-black"] .stop{box-shadow:none;border-bottom:1px solid var(--rule);border-radius:0;padding:24px 0}
+[data-theme="yellow-black"] .stop:last-child{border-bottom:0}
+[data-theme="yellow-black"] .stop.sel{background:#FFF9DB;border-radius:22px;border-bottom-color:transparent;padding-inline:20px}
+[data-theme="yellow-black"] .stop:hover{border-radius:22px}
+[data-theme="yellow-black"] .card .fig{border-radius:20px;border-bottom:0}
+[data-theme="yellow-black"] .card .body{padding-inline:4px}
+[data-theme="yellow-black"] .card{overflow:visible}
+[data-theme="yellow-black"] .tcard .thumb{border-bottom:0;border-radius:20px}
+[data-theme="yellow-black"] .seg{border:0;background:var(--surface-2)}
+[data-theme="yellow-black"] :is(.toolbar,.secnav){border-color:var(--rule);background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px)}
+[data-theme="yellow-black"] .toolbar{border-top:0}
+[data-theme="yellow-black"] .thero{border-bottom:0;border-radius:0 0 36px 36px}
+[data-theme="yellow-black"] .mx tfoot :is(th,td),[data-theme="yellow-black"] .lt tfoot td{background:transparent;border-top:1px solid var(--rule-strong)}
+[data-theme="yellow-black"] .totalp{border:0}
+[data-theme="yellow-black"] .exc li{border-left:3px solid var(--accent);background:transparent}
+[data-theme="yellow-black"] .drawer header{border-bottom:1px solid var(--rule)}
+[data-theme="yellow-black"] footer{border-top:1px solid var(--rule)}
+[data-theme="yellow-black"] .fact{border-bottom:0!important;padding-block:6px}
+[data-theme="yellow-black"] .tag{font-family:var(--f-body);font-size:12px;font-weight:600;letter-spacing:.02em;text-transform:none;border:0;background:var(--surface-2);padding:4px 10px}
+[data-theme="yellow-black"] .stop.sel .tag{background:#FFFFFF}
+[data-theme="yellow-black"] .tfacts{background:transparent;gap:14px 24px}
+[data-theme="yellow-black"] .tfacts div{background:transparent;padding:0}
+[data-theme="yellow-black"] .tfacts .v{font-family:var(--f-display);font-size:22px;font-weight:700}
+[data-theme="yellow-black"] .lt tfoot td{font-family:var(--f-display);font-size:17px}
 
 /* Cobalt on white. Layout: calm product. White ground, one cobalt blue, soft rounded panels, pill controls; illustrations in duotone blue with a warm sun. */
 [data-theme="cobalt"]{
