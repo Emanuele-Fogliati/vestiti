@@ -1,3 +1,5 @@
+from datetime import date
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -162,6 +164,18 @@ def reorder(body: ReorderIn, trip: Trip = Depends(own_trip), db: Session = Depen
     return trip
 
 
+def _move_visits(stop: Stop, old_start, new_start, new_end) -> None:
+    """A visit keeps its day within the stop ('day 2 of Cusco'), never past the stop's end."""
+    out = []
+    for v in stop.visits or []:
+        v = dict(v)
+        if v.get("date"):
+            d = new_start + (date.fromisoformat(v["date"]) - old_start)
+            v["date"] = min(max(d, new_start), new_end).isoformat()
+        out.append(v)
+    stop.visits = out
+
+
 @router.post("/{trip_id}/dates", response_model=TripOut)
 def set_dates(body: TripDatesIn, trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
     """Firm up guessed dates: a start date moves the whole trip, a total length spreads the
@@ -175,10 +189,12 @@ def set_dates(body: TripDatesIn, trip: Trip = Depends(own_trip), db: Session = D
             raise HTTPException(422, "Every stop already has its own days: change them one by one")
         known = [None if s.days_estimated else (s.end_date - s.start_date).days + 1 for s in stops]
         for s, (a, b) in zip(stops, lay_out(spread(known, body.total_days), start)):
+            _move_visits(s, s.start_date, a, b)
             s.start_date, s.end_date, s.days_estimated = a, b, False
     elif body.start_date is not None:
         shift = start - min(s.start_date for s in stops)
         for s in stops:
+            _move_visits(s, s.start_date, s.start_date + shift, s.end_date + shift)
             s.start_date, s.end_date = s.start_date + shift, s.end_date + shift
     if body.start_date is not None or body.confirm:
         trip.start_estimated = False

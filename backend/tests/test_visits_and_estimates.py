@@ -205,6 +205,7 @@ def test_setting_the_start_and_length_firms_up_the_dates(client):
     assert [(s["start_date"], s["end_date"]) for s in r["stops"]] == [
         ("2027-06-10", "2027-06-11"), ("2027-06-12", "2027-06-14"), ("2027-06-15", "2027-06-16")]
     assert r["estimate"] == {"start": False, "days": True, "total_days": 7}
+    assert r["stops"][1]["visits"][0]["date"] == "2027-06-13"  # still Cusco's second day
     # 11 days: Cusco keeps its 3, Lima and Puno share the other 8
     r = client.post(f"/api/trips/{tid}/dates", json={"total_days": 11}).json()
     days = [(date.fromisoformat(s["end_date"]) - date.fromisoformat(s["start_date"])).days + 1 for s in r["stops"]]

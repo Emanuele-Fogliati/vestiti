@@ -34,6 +34,23 @@ export interface Stop {
   notes: string | null;
   /** The place's own landmark scene, when the library has one near this stop. */
   art?: StopArt | null;
+  /** Other places seen during the stop's days (Moray, Maras... on a Cusco day), in order. */
+  visits?: Visit[];
+  /** The traveller did not say how long: the days are a guess. */
+  days_estimated?: boolean;
+}
+
+export interface Visit {
+  name: string;
+  date?: string | null;
+  art?: StopArt | null;
+}
+
+/** What of a trip's dates is a guess. */
+export interface TripEstimate {
+  start: boolean;
+  days: boolean;
+  total_days: number | null;
 }
 
 export interface StopArt {
@@ -49,6 +66,8 @@ export interface Trip {
   created_at: string;
   updated_at: string;
   stops: Stop[];
+  start_estimated?: boolean;
+  estimate?: TripEstimate | null;
 }
 
 export interface TripSummary {
@@ -61,6 +80,7 @@ export interface TripSummary {
   updated_at: string;
   /** The first landmark of the trip, for the card. */
   art?: StopArt | null;
+  estimated?: boolean;
 }
 
 export interface Place {
@@ -296,4 +316,6 @@ export interface DraftStop {
   activities: Activity[];
   matches: Place[];
   place: Place | null;
+  visits: Visit[];
+  days_estimated: boolean;
 }

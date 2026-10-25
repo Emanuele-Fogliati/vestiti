@@ -3,6 +3,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { Kit } from "../components/Kit";
 import { LayerStrategy } from "../components/LayerStrategy";
+import { EstimateForm } from "../components/Estimate";
 import { StopCard, StopForm } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
@@ -105,7 +106,7 @@ export default function TripPage() {
       </nav>
       <section className="thero">
         <div className="wrap">
-          <p className="kicker">{t0 ? `${dayMonth(t0)} · ${totalDays} days · ${stops.length} stops` : "No stops yet"}</p>
+          <p className="kicker">{t0 ? `${trip.estimate ? "≈ " : ""}${dayMonth(t0)} · ${totalDays} days · ${stops.length} stops${trip.estimate ? " · estimate" : ""}` : "No stops yet"}</p>
           <h1><textarea className="titleedit" rows={1} defaultValue={trip.name} aria-label="Trip name" onBlur={(e) => rename(e.target.value.replace(/\s+/g, " ").trim())}
             onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); (e.target as HTMLTextAreaElement).blur(); } }} /></h1>
           <div className="facts">
@@ -128,6 +129,13 @@ export default function TripPage() {
               <div className="banner warn" style={{ margin: "12px 0" }}>
                 The weather service could not be reached, so some stops use a <b>rough estimate</b> from latitude and season.
                 Reload later for real data before you trust the kit.
+              </div>
+            )}
+            {trip.estimate && t0 && (
+              <div style={{ margin: "12px 0" }}>
+                <EstimateForm start={trip.estimate.start} days={trip.estimate.days} firstDay={t0} totalDays={totalDays}
+                  onApply={async (v) => { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated. The plan is recalculated."); loadPlans(tier); }}
+                  onKeep={async () => { setTrip(await api.setDates(id, { confirm: true })); }} />
               </div>
             )}
             <p>Each stop sets its own conditions. One kit has to cover all of them, so we size it to the hardest hour of the whole trip. Edit, add or remove stops any time: the plan follows.</p></header>

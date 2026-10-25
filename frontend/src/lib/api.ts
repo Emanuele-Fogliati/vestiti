@@ -1,5 +1,5 @@
 import type {
-  AppConfig, DraftStop, Place, Plans, Stop, Strategy, Tier, Trip, TripSummary, User, WardrobeItem,
+  AppConfig, DraftStop, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem,
 } from "./types";
 
 export class ApiError extends Error {
@@ -66,7 +66,11 @@ export const api = {
 
   trips: () => req<TripSummary[]>("GET", "/api/trips"),
   trip: (id: string) => req<Trip>("GET", `/api/trips/${id}`),
-  createTrip: (name: string, stops: StopInput[] = []) => req<Trip>("POST", "/api/trips", { name, stops }),
+  createTrip: (name: string, stops: StopInput[] = [], start_estimated = false) =>
+    req<Trip>("POST", "/api/trips", { name, stops, start_estimated }),
+  /** Firm up guessed dates: a start date moves the trip, a length spreads the guessed stops. */
+  setDates: (id: string, body: { start_date?: string; total_days?: number; confirm?: boolean }) =>
+    req<Trip>("POST", `/api/trips/${id}/dates`, body),
   patchTrip: (id: string, patch: { name?: string; notes?: string }) => req<Trip>("PATCH", `/api/trips/${id}`, patch),
   deleteTrip: (id: string) => req<void>("DELETE", `/api/trips/${id}`),
   duplicateTrip: (id: string) => req<Trip>("POST", `/api/trips/${id}/duplicate`),
@@ -91,7 +95,7 @@ export const api = {
 
   geocode: (q: string) => req<{ results: Place[] }>("GET", `/api/geocode?q=${encodeURIComponent(q)}`),
   parseItinerary: (text: string) =>
-    req<{ trip_name: string | null; stops: DraftStop[]; questions: string[]; parser: string }>(
+    req<{ trip_name: string | null; stops: DraftStop[]; questions: string[]; parser: string; estimate: TripEstimate | null }>(
       "POST", "/api/ai/parse-itinerary", { text }),
   explain: (id: string, body: { topic: string; stage_index?: number; slot?: string; tier: Tier }) =>
     req<{ text: string; source: string; model: string | null }>("POST", `/api/trips/${id}/explain`, body),

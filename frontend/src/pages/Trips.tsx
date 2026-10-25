@@ -39,7 +39,7 @@ export default function Trips() {
                 <Illustration terrain={TERR[i % TERR.length]} art={t.art} />
                 <div className="b">
                   <h3>{t.name}</h3>
-                  <span className="small muted">{t.start_date ? `${dayMonth(t.start_date)} – ${dayMonth(t.end_date!)}` : "No dates"} · {t.stop_count} stops</span>
+                  <span className="small muted">{t.start_date ? `${t.estimated ? "≈ " : ""}${dayMonth(t.start_date)} – ${dayMonth(t.end_date!)}` : "No dates"} · {t.stop_count} stops{t.estimated ? " · dates are a guess" : ""}</span>
                   <span className="small">{t.places.join(" → ")}</span>
                 </div>
               </Link>
