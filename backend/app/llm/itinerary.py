@@ -69,12 +69,55 @@ Rules:
 - If the traveller does not know what they will do, use type "unknown". If a hike's difficulty is unclear, use "unknown".
 - Put a famous trek's highest point in max_altitude_m when you know it (e.g. Laugavegur 1100, Tour du Mont Blanc 2665, W Trek 900, Inca Trail 4215).
 - Ask at most 3 short questions, only for information that changes what clothes to pack.
-- Never invent dates the traveller gave differently. Never add stops they did not mention."""
+- Never invent dates the traveller gave differently. Never add stops they did not mention.
+- The text may be a long day-by-day itinerary from a travel agency ("Day 1", "Giorno 2", ...).
+  Then make ONE stop per place, not per day: merge consecutive days spent in or around the
+  same place. Ignore flights, transfers, hotels, meals, prices and booking terms. A day that is
+  only travel belongs to the stop where the traveller sleeps. At most 40 stops."""
+
+MAX_STOPS = 40
+_DAY_LABEL = r"(?:day|giorno|gg|día|dia|jour|tag)"
+
+
+def normalize_text(text: str) -> str:
+    """Shrink a pasted itinerary without losing meaning: trim spaces, drop empty lines and
+    re-join 'Giorno\n2\nLima' style headings that web pages split across lines."""
+    text = text.replace("\r\n", "\n").replace("\r", "\n").replace("\u00a0", " ")
+    lines = [re.sub(r"[ \t]+", " ", ln).strip() for ln in text.split("\n")]
+    lines = [ln for ln in lines if ln]
+    out: list[str] = []
+    i = 0
+    while i < len(lines):
+        ln = lines[i]
+        if re.fullmatch(_DAY_LABEL, ln, re.I) and i + 1 < len(lines) and re.fullmatch(r"\d{1,3}", lines[i + 1]):
+            ln = f"{ln} {lines[i + 1]}"
+            i += 1
+            if i + 1 < len(lines) and len(lines[i + 1]) <= 60:
+                ln = f"{ln}: {lines[i + 1]}"
+                i += 1
+        out.append(ln)
+        i += 1
+    return "\n".join(out)
+
+
+def _budget(n_chars: int, max_ctx: int) -> tuple[int, int]:
+    """(max_tokens, num_ctx) for a text of n_chars. ~3 chars per token is a safe estimate
+    for Italian/Spanish; the system prompt is ~700 tokens."""
+    max_tokens = 4096 if n_chars > 3000 else 1500
+    need = n_chars // 3 + 900 + max_tokens
+    for ctx in (4096, 8192, 16384, 32768, 65536):
+        if ctx >= need:
+            return max_tokens, min(ctx, max_ctx)
+    return max_tokens, max_ctx
 
 
 def parse_with_llm(text: str, today: date, client: LLMClient | None = None) -> DraftItinerary:
     client = client or LLMClient()
-    data = client.chat_json(SYSTEM, f"TODAY is {today.isoformat()}.\nTrip description:\n{text}")
+    s = client.s
+    max_tokens, num_ctx = _budget(len(text), s.llm_num_ctx_max)
+    timeout = max(s.llm_timeout_s, min(s.llm_long_timeout_s, 60 + len(text) / 80))
+    data = client.chat_json(SYSTEM, f"TODAY is {today.isoformat()}.\nTrip description:\n{text}",
+                            max_tokens=max_tokens, num_ctx=num_ctx, timeout=timeout)
     draft = DraftItinerary(**data)
     draft.parser = "llm"
     return _sanitize(draft, today)
@@ -82,7 +125,7 @@ def parse_with_llm(text: str, today: date, client: LLMClient | None = None) -> D
 
 def _sanitize(d: DraftItinerary, today: date) -> DraftItinerary:
     fixed = []
-    for s in d.stops[:20]:
+    for s in d.stops[:MAX_STOPS]:
         if s.end_date < s.start_date:
             s.end_date = s.start_date
         if (s.end_date - s.start_date).days > 90:
@@ -201,7 +244,49 @@ def _place(seg: str) -> str | None:
     return " ".join(words[:3]).title() if words else None
 
 
+DAY_HEAD = re.compile(rf"^{_DAY_LABEL}\s*(\d{{1,3}})\b[\s:.\-–]*(.*)$", re.I | re.M)
+
+
+def _day_by_day(text: str, today: date) -> DraftItinerary | None:
+    """Agency format: 'Giorno 2: Lima ...'. One stop per run of days in the same place."""
+    heads = list(DAY_HEAD.finditer(text))
+    if len(heads) < 3:
+        return None
+    questions: list[str] = []
+    start = _find_date(text, today)
+    if start is None:
+        start = today + timedelta(days=30)
+        questions.append("When do you leave? Dates were not clear, so the draft starts in 30 days.")
+    runs: list[list] = []  # [place, first_day, last_day, body]
+    for i, h in enumerate(heads):
+        body = text[h.end():heads[i + 1].start() if i + 1 < len(heads) else len(text)]
+        title = h[2].strip() or body.strip().split("\n", 1)[0]
+        # "Lima - Cusco" or "Lima / Cusco": the traveller sleeps at the last place
+        parts = [p for p in re.split(r"\s+-\s+|\s*[–—/>→]\s*", title) if p.strip()]
+        title = parts[-1] if parts else title
+        place = _place(title) or _place(title.title())
+        if not place:
+            continue
+        day = int(h[1])
+        if runs and runs[-1][0].lower() == place.lower():
+            runs[-1][2] = day
+            runs[-1][3] += " " + title + " " + body
+        else:
+            runs.append([place, day, day, title + " " + body])
+    if not runs:
+        return None
+    first = runs[0][1]
+    stops = [DraftStop(name=p, start_date=start + timedelta(days=a - first),
+                       end_date=start + timedelta(days=max(b, a) - first),
+                       activities=_activities(body[:2000])) for p, a, b, body in runs]
+    name = " · ".join(s.name for s in stops[:3])
+    return DraftItinerary(trip_name=name, stops=stops, questions=questions, parser="rules")
+
+
 def parse_with_rules(text: str, today: date) -> DraftItinerary:
+    dbd = _day_by_day(text, today)
+    if dbd is not None:
+        return dbd
     questions: list[str] = []
     start = _find_date(text, today)
     if start is None:
@@ -244,6 +329,7 @@ def parse_with_rules(text: str, today: date) -> DraftItinerary:
 def parse_itinerary(text: str, today: date | None = None, client: LLMClient | None = None,
                     use_llm: bool = True) -> DraftItinerary:
     today = today or date.today()
+    text = normalize_text(text)
     if use_llm:
         try:
             d = parse_with_llm(text, today, client)

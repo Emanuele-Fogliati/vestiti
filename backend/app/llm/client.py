@@ -69,26 +69,59 @@ class LLMClient:
         return {"enabled": True, "available": ok, "model": self.s.llm_model,
                 "base_url": self.s.llm_base_url, "detail": detail}
 
+    def _root(self) -> str:
+        return re.sub(r"/v1/?$", "", self.s.llm_base_url.rstrip("/"))
+
+    _ollama_cache: dict[str, bool] = {}
+
+    def is_ollama(self) -> bool:
+        """True when the server is Ollama (its native API lets us set the context window)."""
+        if self.s.llm_api in ("ollama", "openai"):
+            return self.s.llm_api == "ollama"
+        root = self._root()
+        if root not in self._ollama_cache:
+            try:
+                with httpx.Client(timeout=3.0, transport=self.transport, trust_env=False) as c:
+                    r = c.get(root + "/api/version")
+                    self._ollama_cache[root] = r.status_code == 200 and "version" in r.json()
+            except Exception:
+                self._ollama_cache[root] = False
+        return self._ollama_cache[root]
+
     def chat(self, system: str, user: str, json_mode: bool = False, temperature: float = 0.2,
-             max_tokens: int = 1200) -> str:
+             max_tokens: int = 1200, num_ctx: int | None = None,
+             timeout: float | None = None) -> str:
+        """One chat completion. num_ctx asks for a bigger context window (Ollama only;
+        other servers use the context size they were started with)."""
         if not self.s.llm_enabled:
             raise LLMUnavailable("LLM disabled")
-        if self.s.llm_disable_thinking and "qwen3" in self.s.llm_model.lower():
+        qwen3 = "qwen3" in self.s.llm_model.lower()
+        if self.s.llm_disable_thinking and qwen3:
             user = user + "\n/no_think"
-        body = {
-            "model": self.s.llm_model,
-            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-            "stream": False,
-        }
-        if json_mode:
-            body["response_format"] = {"type": "json_object"}
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+        timeout = timeout or self.s.llm_timeout_s
         try:
-            with self._client(self.s.llm_timeout_s) as c:
-                r = c.post("/chat/completions", json=body)
-                r.raise_for_status()
-                text = r.json()["choices"][0]["message"]["content"] or ""
+            if num_ctx and self.is_ollama():
+                body = {"model": self.s.llm_model, "messages": messages, "stream": False,
+                        "options": {"temperature": temperature, "num_predict": max_tokens,
+                                    "num_ctx": min(num_ctx, self.s.llm_num_ctx_max)}}
+                if json_mode:
+                    body["format"] = "json"
+                if self.s.llm_disable_thinking and qwen3:
+                    body["think"] = False
+                with httpx.Client(timeout=timeout, transport=self.transport, trust_env=False) as c:
+                    r = c.post(self._root() + "/api/chat", json=body)
+                    r.raise_for_status()
+                    text = (r.json().get("message") or {}).get("content") or ""
+            else:
+                body = {"model": self.s.llm_model, "messages": messages,
+                        "temperature": temperature, "max_tokens": max_tokens, "stream": False}
+                if json_mode:
+                    body["response_format"] = {"type": "json_object"}
+                with self._client(timeout) as c:
+                    r = c.post("/chat/completions", json=body)
+                    r.raise_for_status()
+                    text = r.json()["choices"][0]["message"]["content"] or ""
         except Exception as e:
             log.info("LLM call failed: %s", e)
             raise LLMUnavailable(str(e)) from e

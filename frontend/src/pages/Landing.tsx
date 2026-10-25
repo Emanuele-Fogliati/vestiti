@@ -39,7 +39,7 @@ export default function Landing() {
             <div className="row"><h2>Your trip</h2><span className="spacer" /><span className="label">Plain words are fine</span></div>
             <div className="field">
               <label htmlFor="trip-text">Where, when, what you'll do</label>
-              <textarea id="trip-text" value={text} onChange={(e) => setText(e.target.value)} placeholder={EXAMPLE} rows={5} />
+              <textarea id="trip-text" value={text} maxLength={50_000} onChange={(e) => setText(e.target.value)} placeholder={EXAMPLE} rows={5} />
             </div>
             <p className="small muted">Not sure what you'll do somewhere? Write "don't know yet" and we cover both easy and technical days.</p>
             <button className="btn primary" type="submit">Dress this trip</button>

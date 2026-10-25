@@ -10,6 +10,22 @@ export class ApiError extends Error {
   }
 }
 
+type FieldError = { type?: string; msg?: string; loc?: (string | number)[]; ctx?: Record<string, unknown> };
+
+/** Turn FastAPI/pydantic validation errors into sentences a traveller understands. */
+export function friendlyError(d: FieldError): string {
+  const field = String(d.loc?.[d.loc.length - 1] ?? "");
+  const what = field === "text" ? "Your trip description" : field ? field.replace(/_/g, " ") : "This field";
+  const n = (k: string) => Number(d.ctx?.[k] ?? 0).toLocaleString("en-US");
+  switch (d.type) {
+    case "string_too_long": return `${what} is too long: the limit is ${n("max_length")} characters.`;
+    case "string_too_short": return `${what} is too short: write at least ${n("min_length")} characters.`;
+    case "missing": return `${what} is missing.`;
+    case "value_error": return (d.msg ?? "").replace(/^Value error, /, "");
+    default: return d.msg ? `${what}: ${d.msg.charAt(0).toLowerCase()}${d.msg.slice(1)}.` : "Something in the form is not valid.";
+  }
+}
+
 async function req<T>(method: string, path: string, body?: unknown): Promise<T> {
   const res = await fetch(path, {
     method,
@@ -26,7 +42,7 @@ async function req<T>(method: string, path: string, body?: unknown): Promise<T> 
   if (!res.ok) {
     const detail = data?.detail;
     const msg = typeof detail === "string" ? detail
-      : Array.isArray(detail) ? detail.map((d: { msg: string }) => d.msg).join("; ")
+      : Array.isArray(detail) ? detail.map(friendlyError).join(" ")
       : `Request failed (${res.status})`;
     throw new ApiError(res.status, msg);
   }

@@ -45,6 +45,11 @@ class Settings(BaseSettings):
     llm_api_key: str = "local"  # local servers ignore it; never commit a real key
     llm_timeout_s: float = 60.0
     llm_disable_thinking: bool = True  # Qwen3: append /no_think for fast JSON answers
+    # "auto" talks to Ollama's native API when the server is Ollama (needed to raise the
+    # context window per request), otherwise to the OpenAI-compatible /v1 API.
+    llm_api: str = "auto"  # auto | ollama | openai
+    llm_num_ctx_max: int = 32768  # largest context window we ask Ollama for (long itineraries)
+    llm_long_timeout_s: float = 600.0  # cap for reading very long trip descriptions
 
     # --- Affiliate networks (empty = link goes out untracked, click still logged) ---
     amazon_associate_tag: str = ""

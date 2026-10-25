@@ -53,6 +53,22 @@ Private repos need your Hugging Face token configured in Ollama
 | `hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M` | ~6 GB | Default. Fast on a GPU, 20–60 s per trip on CPU. |
 | `hf.co/unsloth/Qwen3-4B-GGUF:Q4_K_M` | ~3 GB | For laptops without a GPU. Slightly worse parsing. |
 
+### Long itineraries (up to 50,000 characters)
+
+You can paste a whole day-by-day program from a travel agency. 50,000 characters is about
+15,000 tokens, more than the 4,096-token window Ollama uses by default, so the app talks to
+Ollama's native API (`/api/chat`) and asks for a bigger window per request (`num_ctx`):
+8k, 16k or 32k depending on the text length, capped by `LLM_NUM_CTX_MAX`.
+
+- Memory: the 8B model at a 32k window needs about 10 GB of VRAM (or RAM on CPU). If it does
+  not fit, Ollama splits the work with the CPU: it still works, just slower. On a small GPU
+  set `LLM_NUM_CTX_MAX=16384` (about 7 GB); very long texts are then partly cut off.
+- Time: a 50k-character text takes roughly 30–90 s on a GPU and several minutes on CPU.
+  The app waits up to `LLM_LONG_TIMEOUT_S` (600 s), then falls back to the rule-based reader,
+  which understands "Day 1 / Giorno 1" programs too.
+- llama.cpp, vLLM and LM Studio cannot change the window per request: start them with a big
+  one (`llama-server ... -c 32768`) and set `LLM_API=openai`.
+
 Qwen3 "thinks" before answering by default. The app appends `/no_think` and strips any
 `<think>` block (set `LLM_DISABLE_THINKING=false` to turn that off).
 
@@ -84,6 +100,9 @@ CPU only unless you uncomment the GPU block in `docker-compose.yml`
 | `LLM_MODEL` | `hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M` | model name as the server knows it |
 | `LLM_API_KEY` | `local` | sent as Bearer token (hosted providers need a real key) |
 | `LLM_TIMEOUT_S` | `60` | per request |
+| `LLM_API` | `auto` | `auto` detects Ollama; `ollama` or `openai` forces one API |
+| `LLM_NUM_CTX_MAX` | `32768` | largest context window asked from Ollama (long itineraries) |
+| `LLM_LONG_TIMEOUT_S` | `600` | longest wait for a very long trip description |
 | `LLM_DISABLE_THINKING` | `true` | adds `/no_think` for Qwen3 |
 
 ## Production

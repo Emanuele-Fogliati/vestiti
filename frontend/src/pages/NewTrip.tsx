@@ -7,6 +7,9 @@ import { useApp } from "../lib/app-context";
 import { activityText } from "../lib/format";
 import type { DraftStop } from "../lib/types";
 
+const MAX_TEXT = 50_000; // same limit as the API (ParseIn.text)
+const LONG_TEXT = 5_000;
+
 export default function NewTrip() {
   const { config, ensureUser, toast } = useApp();
   const loc = useLocation();
@@ -23,6 +26,7 @@ export default function NewTrip() {
 
   async function parse(t = text) {
     if (t.trim().length < 3) return;
+    if (t.length > MAX_TEXT) { setErr(`Your trip description is too long: the limit is ${MAX_TEXT.toLocaleString("en-US")} characters.`); return; }
     setBusy(true); setErr(null);
     try {
       await ensureUser();
@@ -70,11 +74,15 @@ export default function NewTrip() {
         <div className="cols">
           <div className="stack">
             <div className="field"><label htmlFor="desc">Stops, dates, activities. Any language.</label>
-              <textarea id="desc" rows={5} value={text} onChange={(e) => setText(e.target.value)}
-                placeholder="From 12 June 2027: 3 days in Reykjavik, then 4 days hard trekking in Landmannalaugar up to 1100 m, then 2 days in Rome" />
+              <textarea id="desc" rows={5} value={text} maxLength={MAX_TEXT} onChange={(e) => setText(e.target.value)}
+                placeholder="From 12 June 2027: 3 days in Reykjavik, then 4 days hard trekking in Landmannalaugar up to 1100 m, then 2 days in Rome. Or paste the full day-by-day program from your travel agency." />
+              <p className="small muted" aria-live="polite">
+                {text.length.toLocaleString("en-US")} / {MAX_TEXT.toLocaleString("en-US")} characters
+                {text.length > LONG_TEXT && " · long itinerary: the AI can take a minute or two to read it"}
+              </p>
             </div>
             <div className="row">
-              <button className="btn primary" type="button" disabled={busy} onClick={() => parse()}>{busy ? <span className="spin" /> : "Read my trip"}</button>
+              <button className="btn primary" type="button" disabled={busy} onClick={() => parse()}>{busy ? <><span className="spin" />{text.length > LONG_TEXT ? " Reading, this can take a minute" : ""}</> : "Read my trip"}</button>
               <button className="btn" type="button" disabled={busy} onClick={() => create(false)}>Skip, add stops by hand</button>
             </div>
             {err && <p className="err">{err}</p>}

@@ -127,3 +127,12 @@ def test_parse_itinerary_endpoint(client):
     assert r.status_code == 200
     d = r.json()
     assert [s["name"] for s in d["stops"]] == ["Rome", "Chamonix"]
+
+
+def test_parse_itinerary_accepts_long_text_up_to_50k(client):
+    client.post("/api/auth/guest")
+    long = "From 3 May 2027: 2 days in Rome. " + "Free afternoon walking around the old town. " * 1000
+    assert 40_000 < len(long) <= 50_000
+    assert client.post("/api/ai/parse-itinerary", json={"text": long}).status_code == 200
+    r = client.post("/api/ai/parse-itinerary", json={"text": "x" * 50_001})
+    assert r.status_code == 422

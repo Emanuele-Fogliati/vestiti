@@ -9,7 +9,9 @@ from app.llm.itinerary import parse_itinerary
 
 
 def settings(**kw):
-    return Settings(llm_enabled=True, llm_base_url="http://llm.test/v1", llm_model="hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M", **kw)
+    kw.setdefault("llm_api", "openai")
+    kw.setdefault("llm_base_url", "http://llm.test/v1")
+    return Settings(llm_enabled=True, llm_model="hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M", **kw)
 
 
 def transport(reply: str, seen: list):
@@ -57,3 +59,38 @@ def test_bad_llm_output_falls_back_to_rules():
     c = LLMClient(settings(), transport("I cannot do that", []))
     d = parse_itinerary("From 1 May 2027: 2 days in Paris", client=c)
     assert d.parser == "rules" and d.stops[0].name == "Paris"
+
+
+def test_long_text_uses_ollama_native_api_with_big_context():
+    seen, paths = [], []
+
+    def handler(req: httpx.Request):
+        paths.append(req.url.path)
+        body = json.loads(req.content)
+        seen.append(body)
+        reply = {"trip_name": "Peru", "stops": [{"name": "Lima", "start_date": "2027-05-01",
+                 "end_date": "2027-05-02", "activities": [{"type": "city"}]}]}
+        return httpx.Response(200, json={"message": {"content": json.dumps(reply)}})
+
+    c = LLMClient(settings(llm_api="ollama"), httpx.MockTransport(handler))
+    text = "Giorno 1: Lima. Visita del centro storico e dei musei. " * 700  # ~40k chars
+    d = parse_itinerary(text, client=c)
+    assert d.parser == "llm" and paths == ["/api/chat"]
+    opts = seen[0]["options"]
+    assert opts["num_ctx"] >= 16384 and opts["num_ctx"] <= 32768
+    assert opts["num_predict"] == 4096 and seen[0]["format"] == "json" and seen[0]["think"] is False
+
+
+def test_auto_detects_ollama_and_short_text_keeps_openai_path():
+    paths = []
+
+    def handler(req: httpx.Request):
+        paths.append(req.url.path)
+        if req.url.path == "/api/version":
+            return httpx.Response(404)
+        return httpx.Response(200, json={"choices": [{"message": {"content": "ok"}}]})
+
+    LLMClient._ollama_cache.clear()
+    c = LLMClient(settings(llm_api="auto", llm_base_url="http://other.test/v1"), httpx.MockTransport(handler))
+    assert c.chat("s", "u", num_ctx=8192) == "ok"
+    assert paths == ["/api/version", "/v1/chat/completions"]

@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { friendlyError } from "../api";
 import { buildProfile, monoPath, niceMax } from "../elevation";
 import { activityText, addDays, minus, nights, signed } from "../format";
 import { terrainFor } from "../terrain";
@@ -52,5 +53,16 @@ describe("terrain", () => {
     expect(terrainFor(stop({ activities: [{ type: "city" }] }))).toBe("city");
     expect(["alpine", "glacier", "snow", "hills"]).toContain(
       terrainFor(stop({ elevation_m: 1500, activities: [{ type: "hiking", difficulty: "hard", max_altitude_m: 3500 }] })));
+  });
+});
+
+
+describe("friendlyError", () => {
+  it("explains the trip description limit", () => {
+    expect(friendlyError({ type: "string_too_long", loc: ["body", "text"], msg: "String should have at most 50000 characters", ctx: { max_length: 50000 } }))
+      .toBe("Your trip description is too long: the limit is 50,000 characters.");
+  });
+  it("falls back to the raw message", () => {
+    expect(friendlyError({ type: "x", loc: ["body", "email"], msg: "Not an email" })).toBe("email: not an email.");
   });
 });

@@ -245,7 +245,7 @@ class WardrobeOut(ORM):
 # ---------------------------------------------------------------- AI
 
 class ParseIn(BaseModel):
-    text: str = Field(min_length=3, max_length=4000)
+    text: str = Field(min_length=3, max_length=50000)
 
 
 class ExplainIn(BaseModel):
