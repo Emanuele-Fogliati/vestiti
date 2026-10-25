@@ -80,7 +80,7 @@ export default function Globe() {
     map.setPadding({ left: leftPad(el), top: 0, right: 0, bottom: 0 });
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
 
-    const markers: { m: maplibregl.Marker; z: number; on: boolean }[] = [];
+    const markers: { m: maplibregl.Marker; at: [number, number]; on: boolean }[] = [];
     map.on("load", () => {
       // small screens: credits behind the (i) button, so they don't cover the globe
       if (el.clientWidth < 600) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
@@ -93,15 +93,24 @@ export default function Globe() {
       for (const p of data.places) {
         if (!p.art || drawn.has(p.art)) continue;
         drawn.add(p.art);
-        markers.push({ m: artMarker(p, () => pick(p)), z: 2.2, on: false });
+        markers.push({ m: artMarker(p, () => pick(p)), at: [p.lon, p.lat], on: false });
       }
       showMarkers();
     });
 
+    // pictures from zoom 2.2, never on top of each other: where two would overlap, the
+    // more visited place keeps its picture (markers are in that order)
+    const MARKER_ZOOM = 2.2, GAP_PX = 54;
     function showMarkers() {
-      const z = map.getZoom();
+      const far = map.getZoom() < MARKER_ZOOM;
+      const kept: { x: number; y: number }[] = [];
       for (const k of markers) {
-        const want = z >= k.z;
+        let want = !far;
+        if (want) {
+          const pt = map.project(k.at);
+          want = !kept.some((o) => Math.abs(o.x - pt.x) < GAP_PX && Math.abs(o.y - pt.y) < GAP_PX);
+          if (want) kept.push(pt);
+        }
         if (want !== k.on) { if (want) k.m.addTo(map); else k.m.remove(); k.on = want; }
       }
     }
@@ -134,7 +143,8 @@ export default function Globe() {
     spin.current = { hold, resume: () => { busyUntil = performance.now() + RESUME_AFTER_MS; } };
     map.on("mousedown", hold); map.on("touchstart", hold); map.on("wheel", hold);
     map.on("moveend", (e) => { if ((e as { originalEvent?: Event }).originalEvent || busyUntil === Infinity) release(); });
-    map.on("zoom", () => { setClose(map.getZoom() >= SPIN_UNTIL_ZOOM); showMarkers(); });
+    map.on("zoom", () => setClose(map.getZoom() >= SPIN_UNTIL_ZOOM));
+    map.on("zoomend", showMarkers);
     const io = new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; });
     io.observe(el);
 
