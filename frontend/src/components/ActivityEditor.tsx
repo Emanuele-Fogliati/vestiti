@@ -1,7 +1,7 @@
 import { ACTIVITY_LABEL } from "../lib/format";
 import type { Activity } from "../lib/types";
 
-const TYPES = ["city", "hiking", "trek_multiday", "beach", "ski", "cycling", "safari", "unknown"];
+const TYPES = ["city", "hiking", "trek_multiday", "beach", "ski", "cycling", "safari", "boat", "unknown"];
 const DIFFS = ["easy", "moderate", "hard", "technical", "unknown"];
 const DIFF_LABEL: Record<string, string> = { easy: "Easy", moderate: "Moderate", hard: "Hard", technical: "Technical", unknown: "Don't know yet" };
 

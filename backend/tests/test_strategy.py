@@ -65,3 +65,10 @@ def test_clarifying_questions_for_unknown_altitude():
     s = stage(activities=[{"type": "hiking", "difficulty": "unknown"}])
     qs = clarifying_questions([s])
     assert qs and all("question" in q or "text" in q or isinstance(q, dict) for q in qs)
+
+
+def test_cold_boat_trip_needs_wind_and_waterproof_shell():
+    s = stage(name="Ushuaia", activities=[{"type": "boat"}], tmax=6, tmin=0, prob=20, wind=30)
+    _, reqs, _, _ = plan(s)
+    assert reqs["shell_top"].needed and reqs["shell_top"].waterproof
+    assert "insulation_top" in needed(reqs)

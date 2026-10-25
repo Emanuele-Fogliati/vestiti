@@ -368,7 +368,8 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
     if reqs["shell_top"].needed:
         r = reqs["shell_top"]
         r.windproof = True
-        if wet or any(c.precip_prob >= 30 for c in conds) or any(p.mountain for p in profiles):
+        if wet or any(c.precip_prob >= 30 for c in conds) or any(
+                p.mountain or p.spray for p in profiles):
             r.waterproof = True
             heavy = max((c.precip_mm for c in conds), default=0) >= 10 or len(
                 {c.date for c in wet}) >= 3

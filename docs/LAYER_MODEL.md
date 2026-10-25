@@ -20,7 +20,7 @@ For every stop, day and activity we build two moments: **moving** and **at rest*
 - Wind at altitude: `+15 % per 500 m` of climb, capped at 2×.
 - Feels-like: NWS / Environment Canada wind chill (only below 10 °C and above 4.8 km/h).
 - Activity profiles (`activities.py`): metabolic rate while moving / resting, extra air
-  speed (cycling, skiing, safari jeeps), mountain flag, footwear type and ankle support.
+  speed (cycling, skiing, safari jeeps, boats), mountain flag, spray (boats and rafting need a waterproof shell), footwear type and ankle support.
   "Don't know yet" = both the easy and the hard version are planned.
 
 | Activity | MET moving | MET rest | Footwear |

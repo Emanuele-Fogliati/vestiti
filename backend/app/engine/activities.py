@@ -20,6 +20,7 @@ class ActivityProfile:
     extra_air_ms: float = 1.0  # own movement through the air (walking ~1 m/s)
     short_stops: bool = False  # rest = short breaks on the trail (transient tolerance)
     high_intensity: bool = False  # breathability matters
+    spray: bool = False  # splashed by water (boats, rafting): needs a waterproof shell
 
 
 ACTIVITIES: dict[str, ActivityProfile] = {
@@ -54,6 +55,9 @@ ACTIVITIES: dict[str, ActivityProfile] = {
     ),
     "safari": ActivityProfile("safari", "Safari / game drives", 1.8, 1.5, 6, "sneaker",
                               extra_air_ms=4.0),
+    # boat trips, kayak, rafting: little effort, a lot of wind from the boat, wet
+    "boat": ActivityProfile("boat", "Boat, kayak & rafting", 2.5, 1.5, 4, "sneaker",
+                            extra_air_ms=6.0, spray=True),
 }
 
 HIKING_BY_DIFFICULTY = {
@@ -63,7 +67,8 @@ HIKING_BY_DIFFICULTY = {
     "technical": "hiking_technical",
 }
 
-ACTIVITY_TYPES = ["city", "hiking", "trek_multiday", "beach", "ski", "cycling", "safari", "unknown"]
+ACTIVITY_TYPES = ["city", "hiking", "trek_multiday", "beach", "ski", "cycling", "safari", "boat",
+                  "unknown"]
 DIFFICULTIES = ["easy", "moderate", "hard", "technical", "unknown"]
 
 

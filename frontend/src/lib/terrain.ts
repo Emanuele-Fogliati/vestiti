@@ -9,7 +9,7 @@ export function terrainFor(stop: Pick<Stop, "activities" | "elevation_m" | "lati
   const lat = Math.abs(stop.latitude);
   if (types.includes("ski")) return "snow";
   if (types.includes("safari")) return "savanna";
-  if (types.includes("beach")) return "coast";
+  if (types.includes("beach") || types.includes("boat")) return "coast";
   if (types.some((t) => t === "hiking" || t === "trek_multiday" || t === "unknown")) {
     if (top >= 2500) return lat > 45 ? "glacier" : "alpine";
     return top >= 1200 ? "alpine" : "hills";

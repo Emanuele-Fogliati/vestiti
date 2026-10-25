@@ -94,3 +94,24 @@ def test_auto_detects_ollama_and_short_text_keeps_openai_path():
     c = LLMClient(settings(llm_api="auto", llm_base_url="http://other.test/v1"), httpx.MockTransport(handler))
     assert c.chat("s", "u", num_ctx=8192) == "ok"
     assert paths == ["/api/version", "/v1/chat/completions"]
+
+
+def test_one_stop_per_day_from_the_model_is_merged_and_checked_against_the_text():
+    from tests.fixtures_patagonia import BAD_LLM, PATAGONIA
+    seen = []
+    c = LLMClient(settings(), transport(json.dumps(BAD_LLM), seen))
+    d = parse_itinerary(PATAGONIA, client=c)
+    assert d.parser == "llm"
+    assert [s.name for s in d.stops] == ["Buenos Aires", "El Calafate", "El Chaltén",
+                                         "Puerto Natales", "Torres del Paine", "Ushuaia"]
+    by = {s.name: s for s in d.stops}
+    assert (by["Ushuaia"].start_date.day, by["El Chaltén"].end_date.day) == (27, 23)
+    acts = [a for s in d.stops for a in s.activities]
+    assert all(a.type != "trek_multiday" for a in acts)  # nothing says huts or tents
+    assert all(a.max_altitude_m in (None, 1200) for a in acts)  # 2,500 m was invented
+    assert by["El Chaltén"].activities[0].max_altitude_m == 1200
+    assert by["Buenos Aires"].activities == [type(acts[0])(type="city")]
+    assert {"boat", "hiking"} <= {a.type for a in by["Torres del Paine"].activities}
+    assert "safari" not in {a.type for a in acts}
+    assert all(s.notes is None for s in d.stops)  # the same boilerplate on every stop
+    assert "in Italian" in seen[0]["messages"][1]["content"]

@@ -59,3 +59,30 @@ def test_agency_day_by_day_merges_days_per_place():
     assert d.stops[0].start_date == date(2027, 5, 5) and d.stops[0].end_date == date(2027, 5, 6)
     assert d.stops[1].start_date == date(2027, 5, 7) and d.stops[1].end_date == date(2027, 5, 8)
     assert d.stops[2].activities[0].type == "hiking"
+
+
+def test_agency_program_skips_home_and_reads_activities():
+    from tests.fixtures_patagonia import PATAGONIA
+    d = parse_itinerary(PATAGONIA, TODAY, use_llm=False)
+    names = [s.name for s in d.stops]
+    assert names == ["Buenos Aires", "El Calafate", "El Chaltén", "Puerto Natales",
+                     "Torres del Paine", "Ushuaia"]
+    by = {s.name: s for s in d.stops}
+    assert by["El Chaltén"].start_date == date(2027, 5, 20) and by["El Chaltén"].end_date == date(2027, 5, 22)
+    chalten = by["El Chaltén"].activities[0]
+    assert chalten.type == "hiking" and chalten.difficulty == "hard" and chalten.max_altitude_m == 1200
+    assert {a.type for a in by["Torres del Paine"].activities} == {"hiking", "boat"}
+    assert all(a.type != "trek_multiday" for s in d.stops for a in s.activities)
+    assert by["El Calafate"].activities[0].max_altitude_m is None  # glacier minitrek: no number given
+
+
+def test_questions_follow_the_language_of_the_text():
+    d = parse_itinerary("3 giorni a Roma poi escursioni a Chamonix", TODAY, use_llm=False)
+    assert d.questions and all("?" in q for q in d.questions)
+    assert any(q.startswith("Quando parti") for q in d.questions)
+
+
+def test_altitude_with_thousands_separator():
+    d = parse_itinerary("Dal 3 agosto 2027: 4 giorni di trekking impegnativo a Zermatt fino a 3.100 m", TODAY, use_llm=False)
+    a = d.stops[0].activities[0]
+    assert a.type == "hiking" and a.difficulty == "hard" and a.max_altitude_m == 3100
