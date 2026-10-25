@@ -51,6 +51,8 @@ class User(Base):
     last_login_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     # bumped on "sign out everywhere" and on a password change: older session cookies stop working
     session_version: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    # set when the traveller proved they own the email (opened a link we sent there)
+    email_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
     trips: Mapped[list["Trip"]] = relationship(back_populates="user", cascade="all, delete-orphan")
     wardrobe: Mapped[list["WardrobeItem"]] = relationship(

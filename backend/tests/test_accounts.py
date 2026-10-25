@@ -11,10 +11,20 @@ from tests.conftest import H
 from tests.test_api import guest_with_trip
 
 
-def _new_client() -> TestClient:
-    c = TestClient(app)
+import pytest
+
+
+def _new_client(base_url: str = "http://localhost") -> TestClient:
+    c = TestClient(app, base_url=base_url)
     c.headers.update(H)
     return c
+
+
+@pytest.fixture()
+def client():
+    # requests addressed to localhost, like a local Docker run (dev links need it)
+    with _new_client() as c:
+        yield c
 
 
 def _register(client, email, pw="correct horse 1"):
@@ -177,6 +187,9 @@ def test_guest_cannot_set_password(client):
 
 def test_no_dev_links_on_a_public_address(monkeypatch):
     s = get_settings()
+    monkeypatch.setattr(s, "dev_email_links", False)
+    assert s.show_dev_links is False  # off unless asked for
+    monkeypatch.setattr(s, "dev_email_links", True)
     monkeypatch.setattr(s, "public_base_url", "https://thruwear.com")
     assert s.show_dev_links is False
     monkeypatch.setattr(s, "public_base_url", "http://localhost:8000")
@@ -231,3 +244,38 @@ def test_own_trip_stop_gets_a_guide_when_we_know_the_place(client):
          "start_date": "2027-06-04", "end_date": "2027-06-05", "activities": [{"type": "city"}]}]}).json()
     assert t["source_itinerary"] is None
     assert "Inca" in t["stops"][0]["guide"]["blurb"] and t["stops"][1]["guide"] is None
+
+
+def test_no_dev_link_through_a_lan_ip_or_tunnel(client):
+    _register(client, "tunnel@example.com")
+    for base in ("http://192.168.1.20:8000", "https://abc123.ngrok-free.app"):
+        r = _new_client(base).post("/api/auth/password/forgot", json={"email": "tunnel@example.com"})
+        assert r.status_code == 202 and "dev_link" not in r.json(), base
+        r = _new_client(base).post("/api/auth/email-link", json={"email": "tunnel@example.com"})
+        assert "dev_link" not in r.json(), base
+
+
+def test_no_dev_link_for_an_admin(client, db):
+    from app.models import User
+    u = _register(client, "boss@example.com")
+    db.get(User, u["id"]).is_admin = True
+    db.commit()
+    assert "dev_link" not in client.post("/api/auth/password/forgot", json={"email": "boss@example.com"}).json()
+    assert "dev_link" not in client.post("/api/auth/email-link", json={"email": "boss@example.com"}).json()
+
+
+def test_pre_registered_account_is_taken_back_by_the_email_owner(client):
+    # an attacker registers the victim's email with their own password
+    attacker = _new_client()
+    _register(attacker, "victim@example.com", "attacker pass 1")
+    # the real owner signs in with a link sent to their inbox
+    r = client.post("/api/auth/email-link", json={"email": "victim@example.com"})
+    assert client.post("/api/auth/email-link/verify", json={"token": _token(r.json())}).status_code == 200
+    assert attacker.get("/api/me").status_code == 401  # the attacker's session ended
+    fresh = _new_client()
+    assert fresh.post("/api/auth/login", json={"email": "victim@example.com", "password": "attacker pass 1"}).status_code == 401
+    # once proven, a later link does not wipe the owner's own password
+    assert client.post("/api/me/password", json={"new_password": "owner pass 22"}).status_code == 200
+    r = client.post("/api/auth/email-link", json={"email": "victim@example.com"})
+    client.post("/api/auth/email-link/verify", json={"token": _token(r.json())})
+    assert fresh.post("/api/auth/login", json={"email": "victim@example.com", "password": "owner pass 22"}).status_code == 200

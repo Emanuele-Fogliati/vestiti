@@ -11,6 +11,7 @@ os.environ.update({
     "AUTH_RATE_LIMIT_PER_MINUTE": "1000",
     "AI_RATE_LIMIT_PER_MINUTE": "1000",
     "ENVIRONMENT": "test",
+    "DEV_EMAIL_LINKS": "true",  # tests read the links from the API reply (on localhost only)
 })
 
 import pytest  # noqa: E402

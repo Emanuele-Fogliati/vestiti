@@ -31,8 +31,10 @@ Per avere un account admin (statistiche click, import feed), metti in `.env`
 Registrarsi con quella email non basta: i diritti admin vengono solo da questo comando.
 
 Login: email + password, oppure un link via email senza password. Senza server email
-(`SMTP_HOST` vuoto) il link per il reset password e per l'accesso compare direttamente sullo
-schermo, ma solo se l'app gira su `localhost`.
+(`SMTP_HOST` vuoto) nessuna email parte; per provarlo sul PC metti `DEV_EMAIL_LINKS=true`:
+il link compare sullo schermo, solo aprendo http://localhost:8000 (non dalla rete o da un
+tunnel) e mai per l'account admin. Un account registrato con password ma mai verificato perde
+quella password quando il vero proprietario dell'email entra con un link.
 
 ## What's in it
 

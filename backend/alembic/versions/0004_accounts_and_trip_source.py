@@ -1,4 +1,4 @@
-"""accounts: session version, email links; trips remember their recommended itinerary
+"""accounts: session version, verified email, email links; trips remember their recommended itinerary
 
 Revision ID: 0004
 Revises: 0003
@@ -17,6 +17,7 @@ depends_on = None
 def upgrade():
     with op.batch_alter_table('users') as b:
         b.add_column(sa.Column('session_version', sa.Integer(), nullable=False, server_default='0'))
+        b.add_column(sa.Column('email_verified_at', sa.DateTime(timezone=True), nullable=True))
     with op.batch_alter_table('trips') as b:
         b.add_column(sa.Column('source_itinerary', sa.String(80), nullable=True))
     op.create_table(
@@ -43,4 +44,5 @@ def downgrade():
     with op.batch_alter_table('trips') as b:
         b.drop_column('source_itinerary')
     with op.batch_alter_table('users') as b:
+        b.drop_column('email_verified_at')
         b.drop_column('session_version')

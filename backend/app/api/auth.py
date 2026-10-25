@@ -6,7 +6,7 @@ bumping it (sign out everywhere, new password) ends every other session at once.
 """
 from datetime import datetime, timedelta, timezone
 
-from fastapi import APIRouter, Depends, HTTPException, Response, status
+from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from pydantic import BaseModel, EmailStr, Field
 from sqlalchemy import delete, select, update
 from sqlalchemy.orm import Session
@@ -193,16 +193,33 @@ def _consume(db: Session, raw: str, purpose: str) -> AuthToken:
     return row
 
 
-def _link_reply(path: str, raw: str | None) -> dict:
+def _local_request(request: Request) -> bool:
+    """Addressed to this machine itself: a LAN IP or a tunnel (ngrok...) has another Host."""
+    host = (request.headers.get("host") or "").rsplit(":", 1)[0].strip("[]").lower()
+    return host in ("localhost", "127.0.0.1", "::1")
+
+
+def _link_reply(request: Request, path: str, raw: str | None, user: User | None) -> dict:
     s = get_settings()
     out = {"detail": LINK_SENT, "email_enabled": s.email_enabled}
-    if raw and s.show_dev_links:
-        out["dev_link"] = f"{path}?token={raw}"  # local machine without a mail server only
+    if raw and s.show_dev_links and _local_request(request) and not (user and user.is_admin):
+        out["dev_link"] = f"{path}?token={raw}"  # local testing without a mail server only
     return out
 
 
+def _email_proven(user: User) -> None:
+    """The traveller just opened a link sent to this address. If the account was never
+    proven before, whoever registered it may not own the email (they could have set up
+    the account to spy on the real owner later): their password and sessions end here."""
+    if user.email_verified_at is None:
+        if user.password_hash:
+            user.password_hash = None
+            user.session_version = (user.session_version or 0) + 1
+        user.email_verified_at = _now()
+
+
 @router.post("/auth/password/forgot", status_code=202, dependencies=[auth_limit])
-def forgot_password(body: EmailIn, db: Session = Depends(get_db)):
+def forgot_password(body: EmailIn, request: Request, db: Session = Depends(get_db)):
     s = get_settings()
     email = body.email.lower()
     _limit_email("mail", email, 3)
@@ -215,7 +232,7 @@ def forgot_password(body: EmailIn, db: Session = Depends(get_db)):
                     f"Someone (hopefully you) asked to reset the password of your {s.brand_name} account.\n\n"
                     f"Choose a new password here (the link works once, for {s.reset_link_minutes} minutes):\n"
                     f"{link}\n\nDidn't ask? Ignore this email: your password stays the same.\n")
-    return _link_reply("/reset-password", raw)
+    return _link_reply(request, "/reset-password", raw, user)
 
 
 @router.post("/auth/password/reset", response_model=UserOut, dependencies=[auth_limit])
@@ -225,13 +242,14 @@ def reset_password(body: ResetIn, resp: Response, db: Session = Depends(get_db),
     user = db.get(User, row.user_id) if row.user_id else None
     if user is None:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "This link has expired or was already used. Ask for a new one.")
+    _email_proven(user)
     user.password_hash = hash_password(body.password)
     user.session_version = (user.session_version or 0) + 1  # every old session ends
     return _signed_in(db, resp, user, current)
 
 
 @router.post("/auth/email-link", status_code=202, dependencies=[auth_limit])
-def email_link(body: EmailIn, db: Session = Depends(get_db)):
+def email_link(body: EmailIn, request: Request, db: Session = Depends(get_db)):
     """Sign in without a password: we email a one-use link. A new email gets an account
     when the link is opened (so the address is proven before the account exists)."""
     s = get_settings()
@@ -243,7 +261,7 @@ def email_link(body: EmailIn, db: Session = Depends(get_db)):
     mailer.send(email, f"Your {s.brand_name} sign-in link",
                 f"Open this link to sign in to {s.brand_name} (it works once, for {s.login_link_minutes} minutes):\n"
                 f"{link}\n\nDidn't ask? Ignore this email: nobody can sign in without the link.\n")
-    return _link_reply("/sign-in-link", raw)
+    return _link_reply(request, "/sign-in-link", raw, user)
 
 
 @router.post("/auth/email-link/verify", response_model=UserOut, dependencies=[auth_limit])
@@ -259,6 +277,7 @@ def email_link_verify(body: TokenIn, resp: Response, db: Session = Depends(get_d
             user = User(email=row.email)
             db.add(user)
             db.flush()
+    _email_proven(user)
     return _signed_in(db, resp, user, current)
 
 
