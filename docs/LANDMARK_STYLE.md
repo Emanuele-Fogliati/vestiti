@@ -82,6 +82,17 @@ The details of each step:
    drawing the three towers fill the centre and the wall is a thin frame. Keep the proportions
    *within* the subject (tower to tower, peak to ruins); only the crop and the size of the side
    elements change. Do not trace pixels: redraw the shapes you measured, in the official style.
+   **But the scene stays one connected landscape, never pieces pasted together** (Manu): "voglio
+   in centro la parte principale, ma il resto deve essere comunque tutto attaccato per bene".
+   - Peaks and spires **grow out of the mass below them**: the rock continues down into the
+     base, under any snow. A white band or a gap must never cut the subject off from what holds
+     it up (Torres del Paine and Cerro Torre looked "nel vuoto", just set down on top).
+   - The frame physically connects to the subject and to the rest: slopes run into the base of
+     the mountain, walls meet the ground, water meets the shore.
+   - The **foreground stays small**: grass, scree and fields are a thin strip, not filler that
+     makes the subject secondary (Fitz Roy had too much green and brown in front).
+   - **Water**: never squiggle "wave" strokes or lines on the water. Rapids are white foam
+     shapes pouring over and around rocks; calm water is a flat colour, at most one reflection.
 5. **Snow: only where permanent, attached to the rock** (4d), never a loose block, never fresh
    seasonal snow. Then the other content rules (section 3), which win over the photo: remove
    people, cars, clouds and signs; **add the typical animal even if the photo has none** (a llama
@@ -338,6 +349,9 @@ glaciers**. So:
 - [ ] No small objects that can be misread (flowers that look like people, posts in water).
 - [ ] **Composition:** the subject the place is famous for is large and centred; shaded walls
       and slopes are a narrow frame at the edges, never the biggest shape (section 0, step 4).
+- [ ] **One connected landscape:** peaks grow out of their base (no white band or gap under
+      them), the frame touches the subject, the foreground is a thin strip, no wave squiggles
+      on water (section 0, step 4).
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
 - [ ] `node tools/art/floatcheck.js <your out/ folder>` prints only `ok`.
 - [ ] Rendered preview looked at, full size and at card size: the place is recognisable.
@@ -372,6 +386,7 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Torres del Paine (round 4) | redrawn from Laguna Amarga to get a clear sky: not the view everyone knows | 0: photo 1 is always the iconic view; crop clouds, never change viewpoint |
 | Torres del Paine (round 5) | liked, but the dark Peineta wall took a third of the scene and the towers sat small at the back: the photo's framing copied literally | 0.4: recompose, subject large and centred, side walls a narrow frame |
 | Osorno (round 3) | approved earlier, then rejected: straight-sided cone (the real one is concave and pointed), lupins that look like little people, a jetty in the water and white lines nobody understands, "could be any mountain in the world" | 0.3 curvature, 0.5 no misreadable objects, 0.6 critical pass: add what only this place has |
+| Torres, Cerro Torre, Fitz Roy, Osorno (2026-10-25 22:14) | towers "nel vuoto", set on top of the base; Fitz Roy's green and brown foreground made the peaks secondary; Osorno's wave squiggles "tremende" | 0.4: subject central but one connected landscape; thin foreground; rapids as foam, no wave strokes |
 | Patagonia redraws (round 2) | snow and ice drawn as blocks that look like flying glaciers; too few photos, cloudy and snowy ones | 0: 4 photos, clear sky, summer, from far away; 4d |
 
 ## 10. Reference scenes
