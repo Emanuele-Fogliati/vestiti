@@ -1,0 +1,73 @@
+{
+  "slug": "patagonia-fitz-roy-torres-del-paine",
+  "title": "Patagonia: Buenos Aires, Fitz Roy and the W Trek",
+  "countries": ["AR", "CL"],
+  "summary": "Tango in Buenos Aires, then the far south: the Perito Moreno glacier, the trails under Fitz Roy and four days on the W Trek in Torres del Paine, across the border in Chile.",
+  "best_months": [11, 12, 1, 2, 3],
+  "season_note": "November to March is the southern summer: long days, around 15 °C at best, and wind that often blows above 60 km/h. Weather changes in minutes.",
+  "stops": [
+    {
+      "name": "Buenos Aires", "country_code": "AR", "lat": -34.6037, "lon": -58.3816, "elevation_m": 25, "days": 3,
+      "activities": [{"type": "city"}],
+      "visits": [{"name": "San Telmo", "day": 1}, {"name": "La Boca", "day": 2}, {"name": "Recoleta Cemetery", "day": 3}],
+      "plan": ["Arrive. Plaza de Mayo and San Telmo.", "La Boca and the riverside docks of Puerto Madero.", "Recoleta Cemetery and Palermo. A milonga at night."],
+      "do": ["San Telmo on a Sunday, for its street market.", "A milonga, a local tango dance hall, instead of a dinner show."],
+      "skip": ["Tango dinner shows aimed at tourists: expensive and staged."],
+      "excursions": [{"title": "Buenos Aires walking tour", "query": "Buenos Aires walking tour"}, {"title": "Tango class", "query": "Buenos Aires tango class"}],
+      "programs": 81
+    },
+    {
+      "name": "El Calafate", "country_code": "AR", "lat": -50.3379, "lon": -72.2648, "elevation_m": 200, "days": 2,
+      "activities": [{"type": "hiking", "difficulty": "easy", "max_altitude_m": 300}, {"type": "boat"}],
+      "visits": [{"name": "Perito Moreno Glacier", "day": 2}],
+      "plan": ["Fly south to El Calafate. Walk along Lago Argentino.", "Perito Moreno Glacier: the walkways in front of the ice and a boat to its face."],
+      "do": ["Stay at least two hours on the walkways: chunks of ice fall off the front every few minutes.", "Minitrekking on the glacier with crampons: book ahead, age limits apply."],
+      "skip": ["A third night in town: it is a base for the glacier, not much else."],
+      "excursions": [{"title": "Perito Moreno Glacier tour", "query": "Perito Moreno Glacier"}, {"title": "Glacier minitrekking", "query": "Perito Moreno minitrekking"}],
+      "programs": 27
+    },
+    {
+      "name": "El Chaltén", "country_code": "AR", "lat": -49.3315, "lon": -72.8863, "elevation_m": 400, "days": 3,
+      "activities": [{"type": "hiking", "difficulty": "hard", "max_altitude_m": 1200}],
+      "visits": [{"name": "Laguna de los Tres", "day": 2}, {"name": "Laguna Torre", "day": 3}],
+      "plan": ["Three hours by bus to El Chaltén. Short walk to the Mirador de los Cóndores.", "Laguna de los Tres under Fitz Roy: 20 km and more return, the last hour is steep.", "Laguna Torre and Cerro Torre, or a rest day if the cloud is down."],
+      "do": ["Keep the clearest day for Laguna de los Tres: Fitz Roy can hide in cloud for days.", "Start early: the wind usually gets stronger in the afternoon."],
+      "skip": ["Booking only one night here: one bad-weather day and you never see the mountain."],
+      "excursions": [{"title": "Guided hike to Fitz Roy", "query": "El Chalten Fitz Roy hike"}],
+      "programs": 20
+    },
+    {
+      "name": "Puerto Natales", "country_code": "CL", "lat": -51.7236, "lon": -72.4875, "elevation_m": 10, "days": 1,
+      "activities": [{"type": "city"}],
+      "plan": ["Long travel day: back through El Calafate and over the border into Chile (5 to 6 hours on the bus from El Calafate). Last gear shopping."],
+      "do": ["Book the W Trek refugios or campsites months ahead: you cannot sleep in the park without a reservation.", "Rent or buy anything missing here: the gear shops are in town."],
+      "skip": ["Arriving without a park booking hoping to find space."],
+      "excursions": [{"title": "Torres del Paine day tour", "query": "Torres del Paine"}],
+      "programs": 23
+    },
+    {
+      "name": "Torres del Paine (W Trek)", "country_code": "CL", "lat": -51.0000, "lon": -73.0000, "elevation_m": 150, "days": 4,
+      "activities": [{"type": "trek_multiday", "difficulty": "hard", "max_altitude_m": 900}],
+      "visits": [{"name": "Base Torres", "day": 1}, {"name": "French Valley", "day": 3}, {"name": "Grey Glacier", "day": 4}],
+      "plan": ["Climb to the Base Torres lookout and back to the refugio.", "Along Lake Nordenskjöld to the Los Cuernos refugio.", "Up the French Valley and on to Paine Grande.", "Walk to Grey Glacier, then the catamaran out and the bus to Punta Arenas or Natales."],
+      "do": ["Keep the Base Torres climb for the clearest morning if you can swap days.", "Pack for four seasons in a day: gusts above 100 km/h are normal."],
+      "skip": ["Cotton clothes: once wet in the wind they stay cold."],
+      "excursions": [{"title": "Guided W Trek", "query": "W Trek Torres del Paine"}],
+      "programs": 26
+    },
+    {
+      "name": "Punta Arenas", "country_code": "CL", "lat": -53.1638, "lon": -70.9171, "elevation_m": 30, "days": 1,
+      "activities": [{"type": "city"}, {"type": "boat"}],
+      "visits": [{"name": "Magdalena Island", "day": 1}],
+      "plan": ["Boat to the Magdalena Island penguin colony on the Strait of Magellan, then fly home."],
+      "do": ["The Magdalena Island penguins, roughly October to March."],
+      "skip": ["An extra night here if the penguin boats are not running."],
+      "excursions": [{"title": "Magdalena Island penguins", "query": "Magdalena Island penguins Punta Arenas"}],
+      "programs": 20
+    }
+  ],
+  "group_trips": [
+    {"operator": "Intrepid Travel", "title": "Classic Hikes of Patagonia", "days": 15, "url": "https://www.intrepidtravel.com/en/argentina/classic-hikes-patagonia-174310", "network": "direct"},
+    {"operator": "Exodus Adventure Travels", "title": "Discover Patagonia", "days": 14, "url": "https://www.exodustravels.com/trips/argentina-holidays/culture/discover-patagonia/aah", "network": "direct"}
+  ]
+}

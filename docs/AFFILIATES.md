@@ -31,6 +31,24 @@ mapping in `backend/app/catalog/feeds.py`.
 The click id passed as sub-id lets you reconcile commissions with clicks later. There is
 no automatic commission import yet (see the launch checklist).
 
+## Tours, excursions and group trips (ready-made itineraries)
+
+The "Ideas" pages (`/ideas`, data in `backend/app/inspire/itineraries/*.json`) earn from
+two kinds of links, both logged in `affiliate_clicks` like the clothes:
+
+| Link | Endpoint | Network | Env vars | Typical commission (check when you sign up) |
+|---|---|---|---|---|
+| A tour at one stop | `/api/go/excursion/{itinerary}/{stop}/{n}?provider=getyourguide\|viator` | `getyourguide`, `viator` | `GETYOURGUIDE_PARTNER_ID`; `VIATOR_PID` + `VIATOR_MCID` | about 8% (GetYourGuide), 4-8% (Viator), 30-day cookie |
+| A whole organised trip | `/api/go/tour/{itinerary}/{n}` | per trip in the JSON (`network`, `program_id`) | the network's own var (e.g. `CJ_PUBLISHER_ID`, `AWIN_PUBLISHER_ID`) | about 4-6% of a ~2,500 € trip (Intrepid, G Adventures) |
+
+- Excursion links open the marketplace's search for the words in the itinerary file
+  (`excursions[].query`). GetYourGuide gets `partner_id` + `cmp=<click id>`; Viator gets
+  `pid`, `mcid`, `medium=link`, `campaign=<click id>`.
+- Group trips start as `"network": "direct"` (untracked). When a tour operator accepts you,
+  set its `network` and `program_id` in the JSON; nothing else changes.
+- Commissions are paid after the tour has taken place and was not cancelled.
+- The tips ("Worth it" / "Skip") never depend on what pays: same honesty rule as the kit.
+
 ## Product feeds
 
 Import from the admin page, or:

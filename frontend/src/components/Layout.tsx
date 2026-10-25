@@ -23,6 +23,7 @@ export function Layout() {
   const nav = useNavigate();
   const name = brandName(config);
   const links = [
+    ["/ideas", "Ideas"],
     ["/trips", "My trips"],
     ["/wardrobe", "Wardrobe"],
     ["/how-it-works", "How it works"],

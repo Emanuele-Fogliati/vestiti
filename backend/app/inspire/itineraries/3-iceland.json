@@ -1,0 +1,64 @@
+{
+  "slug": "iceland-golden-circle-south-coast",
+  "title": "Iceland: the Golden Circle and the south coast",
+  "countries": ["IS"],
+  "summary": "Eight days by car on the route almost every trip to Iceland takes: geysers and waterfalls of the Golden Circle, black-sand beaches near Vík and a glacier walk by the Jökulsárlón lagoon.",
+  "best_months": [6, 7, 8],
+  "season_note": "June to August: 18 to 24 hours of daylight and 10 to 15 °C, with rain and wind on many days. Waterproofs are the most important thing in the bag.",
+  "stops": [
+    {
+      "name": "Reykjavík", "country_code": "IS", "lat": 64.1466, "lon": -21.9426, "elevation_m": 20, "days": 2,
+      "activities": [{"type": "city"}],
+      "visits": [{"name": "Hallgrimskirkja", "day": 2}],
+      "plan": ["Arrive. The old harbour and the Harpa concert hall.", "Hallgrímskirkja tower, the city centre and a local swimming pool."],
+      "do": ["A local geothermal pool, such as Sundhöllin or Vesturbæjarlaug, for a fraction of the Blue Lagoon's price.", "Shop at the supermarkets (Bónus, Krónan): eating out every night is very expensive."],
+      "skip": ["Booking every meal in restaurants: prices are among the highest in Europe."],
+      "excursions": [{"title": "Reykjavík food walk", "query": "Reykjavik food walk"}],
+      "programs": 86
+    },
+    {
+      "name": "Golden Circle (Laugarvatn)", "country_code": "IS", "lat": 64.2153, "lon": -20.7310, "elevation_m": 70, "days": 1,
+      "activities": [{"type": "city"}, {"type": "hiking", "difficulty": "easy", "max_altitude_m": 200}],
+      "visits": [{"name": "Thingvellir", "day": 1}, {"name": "Geysir", "day": 1}, {"name": "Gullfoss", "day": 1}],
+      "plan": ["Pick up the car. Thingvellir's rift valley, the Strokkur geyser and Gullfoss. Sleep near Laugarvatn."],
+      "do": ["Be at Geysir early or late: Strokkur erupts every few minutes and the tour buses come at midday.", "Snorkel the Silfra fissure in Thingvellir, in a dry suit (book ahead)."],
+      "skip": ["Driving the Golden Circle as a day trip and back to Reykjavík: sleep on the route and start the south coast fresh."],
+      "excursions": [{"title": "Silfra snorkelling", "query": "Silfra snorkeling"}, {"title": "Golden Circle tour", "query": "Golden Circle"}],
+      "programs": 61
+    },
+    {
+      "name": "Vík", "country_code": "IS", "lat": 63.4186, "lon": -19.0060, "elevation_m": 30, "days": 2,
+      "activities": [{"type": "hiking", "difficulty": "easy", "max_altitude_m": 150}],
+      "visits": [{"name": "Seljalandsfoss", "day": 1}, {"name": "Skogafoss", "day": 1}, {"name": "Reynisfjara", "day": 2}, {"name": "Dyrholaey", "day": 2}],
+      "plan": ["South coast waterfalls: walk behind Seljalandsfoss, then climb the stairs above Skógafoss.", "Reynisfjara's black beach and basalt columns, the arch of Dyrhólaey."],
+      "do": ["Walk behind Seljalandsfoss in a waterproof jacket and shoes: you get soaked.", "Puffins nest on Dyrhólaey from May to August."],
+      "skip": ["Turning your back to the sea at Reynisfjara: sneaker waves have killed people there. Stay far from the water's edge."],
+      "excursions": [{"title": "Sólheimajökull glacier walk", "query": "Solheimajokull glacier hike"}],
+      "programs": 42
+    },
+    {
+      "name": "Skaftafell", "country_code": "IS", "lat": 64.0160, "lon": -16.9660, "elevation_m": 100, "days": 2,
+      "activities": [{"type": "hiking", "difficulty": "moderate", "max_altitude_m": 400, "glacier": true}, {"type": "boat"}],
+      "visits": [{"name": "Svartifoss", "day": 1}, {"name": "Jokulsarlon", "day": 2}, {"name": "Diamond Beach", "day": 2}],
+      "plan": ["Drive across the lava fields. Hike to Svartifoss, then a guided glacier walk with crampons.", "Jökulsárlón glacier lagoon by boat, and Diamond Beach across the road."],
+      "do": ["A guided glacier walk on Falljökull or Svínafellsjökull: crampons and helmet included.", "Jökulsárlón early or late, when the light is low on the icebergs."],
+      "skip": ["Walking on a glacier without a certified guide: the cracks are hidden under snow."],
+      "excursions": [{"title": "Skaftafell glacier hike", "query": "Skaftafell glacier hike"}, {"title": "Jökulsárlón boat tour", "query": "Jokulsarlon boat tour"}],
+      "programs": 55
+    },
+    {
+      "name": "Reykjavík", "country_code": "IS", "lat": 64.1466, "lon": -21.9426, "elevation_m": 20, "days": 1,
+      "activities": [{"type": "city"}],
+      "visits": [{"name": "Blue Lagoon", "day": 1}],
+      "plan": ["About four hours back west. The Blue Lagoon on the way to the airport, if you want it."],
+      "do": ["The Blue Lagoon is 20 minutes from Keflavík airport: do it on the way out, and book a slot ahead."],
+      "skip": [],
+      "excursions": [{"title": "Blue Lagoon entry", "query": "Blue Lagoon"}],
+      "programs": null
+    }
+  ],
+  "group_trips": [
+    {"operator": "Intrepid Travel", "title": "Discover Iceland", "days": 8, "url": "https://www.intrepidtravel.com/en/iceland/iceland-discovery-174424", "network": "direct"},
+    {"operator": "Exodus Adventure Travels", "title": "Iceland Explorer", "days": 8, "url": "https://www.exodustravels.com/trips/iceland-holidays/culture/iceland-explorer/avw4", "network": "direct"}
+  ]
+}

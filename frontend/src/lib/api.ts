@@ -1,5 +1,5 @@
 import type {
-  AppConfig, ChatReply, DraftStop, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem,
+  AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem,
 } from "./types";
 
 export class ApiError extends Error {
@@ -101,6 +101,13 @@ export const api = {
     req<{ ok: boolean }>("PUT", `/api/trips/${id}/selections`, body),
   resetSelections: (id: string, tier?: Tier) =>
     req<{ ok: boolean }>("DELETE", `/api/trips/${id}/selections${tier ? `?tier=${tier}` : ""}`),
+
+  itineraries: () => req<ItineraryCard[]>("GET", "/api/inspire"),
+  itinerary: (slug: string, start?: string) =>
+    req<Itinerary>("GET", `/api/inspire/${encodeURIComponent(slug)}${start ? `?start=${start}` : ""}`),
+  /** "Pack my bag for this": the itinerary becomes the user's trip. No date = next good month, a guess. */
+  packItinerary: (slug: string, start_date?: string) =>
+    req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null }),
 
   geocode: (q: string) => req<{ results: Place[] }>("GET", `/api/geocode?q=${encodeURIComponent(q)}`),
   parseItinerary: (text: string) =>

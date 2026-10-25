@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Illustration } from "../components/Illustration";
+import { ItineraryCards } from "../components/ItineraryCards";
 import { brandName, useApp } from "../lib/app-context";
 
 const EXAMPLE =
@@ -44,7 +45,17 @@ export default function Landing() {
             <p className="small muted">Not sure what you'll do somewhere? Write "don't know yet" and we cover both easy and technical days.</p>
             <button className="btn primary" type="submit">Dress this trip</button>
             <Link className="btn" to="/trips/new">Or add stops one by one</Link>
+            <p className="small muted">No trip yet? <Link to="/ideas">Browse ready-made itineraries</Link> and we pack your bag for one.</p>
           </form>
+        </div>
+      </section>
+
+      <section className="band">
+        <div className="wrap">
+          <header className="sh"><p className="sh-k">Looking for ideas?</p><h2>Pick a trip, we pack the bag</h2>
+            <p>Day-by-day routes built from the places organised trips visit most, with what is worth it and what to skip at every stop.</p></header>
+          <ItineraryCards />
+          <p style={{ marginTop: 20 }}><Link className="btn" to="/ideas">All itineraries</Link></p>
         </div>
       </section>
 
