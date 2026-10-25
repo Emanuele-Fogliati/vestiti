@@ -10,26 +10,48 @@ style tests. It is **"Fumetto in carta"**: flat shapes in the real colours of th
 comic outline, and a soft paper-cut shadow under every shape. Picking it ruled out frames,
 panoramas, zoom crops, symbol-only versions, grain, gradients and generic theme colours.
 
-## 0. Always start from the reference photo (Manu, permanent rule)
+## 0. How to make an image: the official procedure (Manu, permanent rule)
 
-Every scene starts from **the classic photo of the place**: the view everyone takes and everyone
-recognises. We draw real places, so there is always one. Draw from it, then stylise.
+Manu wrote and confirmed these six steps on 2026-10-25. They are the procedure for every image,
+in this order, none optional (his words, unchanged):
 
-Manu reviewed the first set of places (Patagonia, Peru, the showcase) only to tune this guide.
-The other places are drawn and checked **without him**, so every correction he gave is written
-here as a general rule. Drawers and reviewers apply his eye: if a scene would make him say
-"Da rifare", it is not done.
+> 1. **Simbolo.** Decido io qual è la vista simbolo del posto, quella che lo fa riconoscere.
+> 2. **Foto.** Uso 4 foto con il sole e senza nuvole. La foto 1 è la cartolina, le altre 3 sono
+>    da altri punti e da lontano.
+> 3. **Forma vera.** Dalla foto 1 prendo le forme del soggetto: profilo, curve, proporzioni.
+> 4. **Composizione.** Il soggetto sta grande e al centro, il resto è solo contorno ai lati.
+> 5. **Neve.** Solo dove è permanente, attaccata alla roccia.
+> 6. **Controllo critico**, dopo averla fatta:
+>    - Coprendo il nome, si capisce subito che posto è? Il soggetto è davvero il protagonista?
+>    - Il contorno accompagna senza rubare la scena?
+>    - Ogni oggetto si capisce cos'è? Se c'è un dubbio, lo tolgo.
+>    - È fisicamente sensato, cioè appoggiato a terra e niente che galleggia?
+>    - Se qualcosa non va, la rifaccio prima di consegnarla.
 
-These are the steps to make every image (Manu, 2026-10-25). Follow them in order; none is optional.
+In English: (1) **Symbol**: you decide the place's symbol view, the one that makes it
+recognisable. (2) **Photos**: 4 photos with sun and no clouds; photo 1 is the postcard, the other
+3 from other points of view and from far away. (3) **True shape**: from photo 1 take the
+subject's shapes: profile, curves, proportions. (4) **Composition**: the subject large and
+centred, the rest only a frame at the sides. (5) **Snow**: only where permanent, attached to the
+rock. (6) **Critical check** after drawing: with the name covered, is the place obvious at once,
+and is the subject really the protagonist? Does the frame support without stealing the scene? Can
+every object be named (if in doubt, remove it)? Is it physically sensible, grounded, nothing
+floating? If anything fails, redo it before handing it in.
 
-1. **Decide the place's symbol first.** Before searching any photo, decide what makes this place
+Manu tuned this procedure on the first set of places (Patagonia, Peru, the showcase). The other
+places are drawn **without him reviewing each one**, so every correction he gives becomes a
+general rule in this guide. If a scene would make him say "Da rifare", it is not done.
+
+The details of each step:
+
+1. **Symbol: decide it first.** Before searching any photo, decide what makes this place
    recognisable: the view everyone takes, the one on the postcard. Look at several photos (web
    search for the place and "viewpoint", the Wikipedia article, postcards) and pick the framing
    that keeps coming back: Machu Picchu from the Guardhouse above the ruins, terraces in front and
    Huayna Picchu towering behind; Valle de la Luna from the top of the ridge, looking down at the
    saw-tooth salt crests; Fitz Roy from the road into El Chaltén, the skyline of the Patagonia
    logo; Osorno's cone above the Petrohué rapids. Then search only for that view.
-2. **Collect exactly 4 sunny photos**, never fewer.
+2. **Photos: exactly 4, sunny, no clouds**, never fewer.
    - **Photo 1 is always the symbol view**, the postcard everybody knows (Torres del Paine = the
      three towers above the lagoon from the Mirador Base). Never swap it for another viewpoint
      just to get a clearer sky: if no cloudless shot of that view exists, take the clearest one
@@ -46,13 +68,12 @@ These are the steps to make every image (Manu, 2026-10-25). Follow them in order
    `python tools/art/ref.py <id> "<Wikipedia title>"` saves the article's lead image as
    `refs/<id>-1.jpg`; run it with `--url` (and `--page`) for each other photo. Write in
    `refs/<id>.json` a "took" for each photo (what you used it for) and overall "notes".
-   `tools/art/review_docs.py` refuses a place without 4.
-3. **Take the subject's true shapes from photo 1.** Write down the exact **profile** of every
+3. **True shape: take it from photo 1.** Write down the exact **profile** of every
    mountain and building (section 4c), its **curvature** (a volcano like Osorno has concave
    flanks that sweep out at the foot: it is never a straight-sided triangle), the
    **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on
    a saddle, below the peak), what is in front, middle and back, and the colours.
-4. **Compose: the subject large and centred, the rest only a frame** ("contorno"). The framing is
+4. **Composition: the subject large and centred, the rest only a frame** ("contorno"). The framing is
    yours, not the photo's. The subject the place is famous for is the main thing in the scene,
    big and in the middle. Side walls, slopes, foreground rocks, water and anything in shadow are
    a **narrow frame** at the edges (about a fifth of the width each side at most): they give
@@ -61,16 +82,11 @@ These are the steps to make every image (Manu, 2026-10-25). Follow them in order
    drawing the three towers fill the centre and the wall is a thin frame. Keep the proportions
    *within* the subject (tower to tower, peak to ruins); only the crop and the size of the side
    elements change. Do not trace pixels: redraw the shapes you measured, in the official style.
-5. **Apply the content rules**, which win over the photo:
-   - **Snow and ice only where permanent, attached to the rock** (4d), never a loose block.
-   - Remove people, cars, clouds and signs (section 3).
-   - **Add the typical animal even if the photo has none** (a llama at Machu Picchu, guanacos at
-     Torres del Paine), standing on the ground (4b).
-   - **No small objects that can be misread.** Every object must be identifiable at a glance;
-     if in doubt, leave it out. Manu's examples from Osorno: purple and white lupin spikes that
-     read as little people, a jetty standing in the middle of the water, white lines on the
-     water that mean nothing.
-6. **Critical pass, mandatory, after drawing.** Render the scene (`node tools/art/compare.js
+5. **Snow: only where permanent, attached to the rock** (4d), never a loose block, never fresh
+   seasonal snow. Then the other content rules (section 3), which win over the photo: remove
+   people, cars, clouds and signs; **add the typical animal even if the photo has none** (a llama
+   at Machu Picchu, guanacos at Torres del Paine), standing on the ground (4b).
+6. **Critical check, mandatory, after drawing.** Render the scene (`node tools/art/compare.js
    <batch folder>` writes `compare/<id>.png`, the photos next to the scene) and answer honestly:
    - **Cover the name: do I know where I am at first glance?** If the scene could be any
      mountain, lake or city in the world (a cone over a lake could be anywhere), add the
@@ -78,17 +94,19 @@ These are the steps to make every image (Manu, 2026-10-25). Follow them in order
    - **Is the subject really the protagonist?** Large, centred, the first thing the eye sees,
      its profile and curvature as in photo 1.
    - **Is the rest only a frame?** It supports the subject and takes nothing away from it.
-   - **Can every object be named?** If not, remove it.
+   - **Can every object be named?** If in doubt, remove it. Manu's examples from Osorno: purple
+     and white lupin spikes that read as little people, a jetty standing in the middle of the
+     water, white lines on the water that mean nothing.
    - **Is everything physically sensible?** Grounded, nothing floating, water falls into
      something (4b).
    If any answer is no, redo the scene before handing it in. Do not hand in and wait for Manu
    to find it.
-7. **Review.** A second Claude runs the same critical pass and the checklist (section 8) on the
-   compare sheet and sends the scene back if any item fails. Manu looks at **samples** in the
-   review page (photos, notes and drawing side by side, "Va bene" / "Da rifare" and a comment
-   that reaches Claude), not at every place; each "Da rifare" becomes a new rule in this guide.
-   How to load a batch there: `/mnt/project-files/app-build/landmark-art/review/README.md` and
-   `tools/art/review_docs.py`.
+
+**Then hand it in.** Lint and floatcheck (section 8) must print `ok`. A second Claude runs the
+same critical check and the checklist (section 8) on the compare sheet and sends the scene back if
+anything fails. Finished images go to Manu directly in the drawing thread, each with **the place
+name in its title**; there is no separate review tool any more (Manu, 2026-10-25). Each of his
+corrections becomes a new rule here.
 
 ## 1. What you draw and what the app adds
 
@@ -314,7 +332,7 @@ glaciers**. So:
 - [ ] Snow and ice only where permanent, attached to the rock, never a loose block (4d).
 - [ ] Started from the classic reference photo (section 0); `compare/<id>.png` shows the same
       viewpoint, proportions and skyline.
-- [ ] **Critical pass done** (section 0, step 6): name covered, the place is recognisable at
+- [ ] **Critical check done** (section 0, step 6): name covered, the place is recognisable at
       first glance; the subject is the protagonist; every object can be named; nothing floats.
 - [ ] Mountain curvature as in photo 1 (a concave volcano is never a straight triangle).
 - [ ] No small objects that can be misread (flowers that look like people, posts in water).
