@@ -1,12 +1,15 @@
-# Layerkit (working name)
+# Thruwear
+
+*Wear it thru.*
 
 Free travel outfit planner. You describe a trip; it reads the weather at every stop,
 works out the layers you need (worn, at stops, in the pack), and shows the exact pieces
 at three budgets, reusing what you already own. Shop links are affiliate links; the
 user never pays.
 
-> The name, domain and design are placeholders. Brand name, tagline and theme are
-> environment variables (`BRAND_NAME`, `THEME`), so changing them needs no code change.
+> Brand name and tagline are set (Thruwear, "Wear it thru."); the domain is not bought yet
+> (`BRAND_DOMAIN`). Name, tagline and theme are environment variables (`BRAND_NAME`,
+> `BRAND_TAGLINE`, `THEME`), so changing them needs no code change.
 
 ## Avvio rapido (Windows + Docker Desktop)
 

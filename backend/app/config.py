@@ -13,8 +13,8 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     # --- Brand (placeholder until the name is chosen) ---
-    brand_name: str = "Layerkit"
-    brand_tagline: str = "Pack the right layers for every stop."
+    brand_name: str = "Thruwear"
+    brand_tagline: str = "Wear it thru."
     brand_domain: str = "localhost"
     support_email: str = "hello@example.com"
     theme: str = "yellow-black"

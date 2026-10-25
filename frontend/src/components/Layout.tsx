@@ -78,7 +78,7 @@ export function Layout() {
           </nav>
           <p>{config?.disclosure}</p>
           <div className="row">
-            <span>{name} is a working name. Weather: Open-Meteo. Product data: sample catalog until affiliate feeds are connected.</span>
+            <span>Weather: Open-Meteo. Product data: sample catalog until affiliate feeds are connected.</span>
             <span className="spacer" />
             <label className="themepick">Theme
               <select value={theme} onChange={(e) => setTheme(e.target.value)}>

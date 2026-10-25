@@ -22,7 +22,7 @@ def guest_with_trip(client):
 def test_health_and_config(client):
     assert client.get("/api/health").json()["ok"] is True
     cfg = client.get("/api/config").json()
-    assert cfg["brand"]["name"] and cfg["disclosure"] and len(cfg["slots"]) == 12
+    assert cfg["brand"]["name"] == "Thruwear" and cfg["brand"]["tagline"] == "Wear it thru." and cfg["disclosure"] and len(cfg["slots"]) == 12
 
 
 def test_csrf_header_required():
