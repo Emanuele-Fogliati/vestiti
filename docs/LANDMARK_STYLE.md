@@ -38,6 +38,8 @@ and is the subject really the protagonist? Does the frame support without steali
 every object be named (if in doubt, remove it)? Is it physically sensible, grounded, nothing
 floating? If anything fails, redo it before handing it in.
 
+Every decision Manu takes is recorded in this guide and dated in section 11.
+
 Manu tuned this procedure on the first set of places (Patagonia, Peru, the showcase). The other
 places are drawn **without him reviewing each one**, so every correction he gives becomes a
 general rule in this guide. If a scene would make him say "Da rifare", it is not done.
@@ -443,3 +445,32 @@ Palette: `{"sky": "#DCE3E8", "far": "#BFC5CA", "mid": "#B9945F", "ice": "#FFFFFF
 <path d="M70 163L71 155M71 156L66 159M71 156L76 158" stroke="var(--il-near)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
 <circle cx="71" cy="153" r="2" fill="var(--il-near)"/>
 ```
+
+## 11. Decision log (registro decisioni)
+
+Every rule Manu decided, in order. Each new decision is added here **and** written into the
+section it changes, in the same commit. Times are CET on the date shown.
+
+| Date and time | Decision (Manu) | Where |
+|---|---|---|
+| 2026-10-25 18:26 | Official style "58, la 17 pulita" ("Fumetto in carta"): flat shapes, real colours per place, comic outline, paper shadow | top, 1, 2 |
+| 2026-10-25 | No people (one activity figure at most), no clouds unless they are the trait, animals OK, no half-cut shapes, one clear scene | 3 |
+| 2026-10-25 19:12 | Physics: everything rests on something, nothing floats; no rainbows; no ambiguous animals | 4b, 3 |
+| 2026-10-25 19:33 | A famous mountain must be recognisable from its own profile | 4c |
+| 2026-10-25 19:46 | Always start from the classic reference photo, keep its proportions; add the typical animal even if the photo has none | 0.1, 0.3, 0.5 |
+| 2026-10-25 20:42 | Exactly 4 photos, sunny, no clouds, mountains in summer with little snow, from other viewpoints and from far away | 0.2 |
+| 2026-10-25 20:42 | Snow and ice only where permanent, attached to the rock, never a "flying glacier" | 4d, 0.5 |
+| 2026-10-25 20:46 | Redo all the first 45 places with 4 photos each | - |
+| 2026-10-25 21:41 | Photo 1 is always the iconic postcard view; crop clouds, never change viewpoint | 0.2 |
+| 2026-10-25 21:56 | Recompose: the subject large and centred; don't copy the photo's framing | 0.4 |
+| 2026-10-25 21:56 | Any photo from the web is fine as a reference (never shipped) | 0.2 |
+| 2026-10-25 21:58 | The first places only tune the method; Manu won't review every image, so each correction becomes a general rule here | 0 |
+| 2026-10-25 22:01 | Copy the subject's curvature (a concave volcano is never a triangle); no small objects that can be misread; mandatory critical check: cover the name, do I know where I am? | 0.3, 0.6 |
+| 2026-10-25 22:06 | Review tool retired: finished images go to Manu in the drawing thread with the place name in the title | 0 (hand in) |
+| 2026-10-25 22:06 | The six steps (Simbolo, Foto, Forma vera, Composizione, Neve, Controllo critico) are the official procedure, in his words | 0 |
+| 2026-10-25 22:14 | Subject central but one connected landscape: peaks grow out of their base, no white band or gap under them; frame attached, not pasted; foreground a thin strip that helps recognise the place | 0.4 |
+| 2026-10-25 22:32 | Never waves on water, in any style: water is flat colour (a waterfall that is the place is one clean shape) | 0.4 |
+| 2026-10-25 22:32 | One photo, one scene: draw from photo 1, no montage, above all for a mountain; neighbours drawn as in reality, connected and in harmony | 0.4 |
+| 2026-10-25 22:32 | One rock colour and one season across the scene; near-black mountains are only shadow: real colour or leave out | 0.4 |
+| 2026-10-25 22:34 | Remember animals: always ask which animal lives here and add it where it belongs | 0.5, 0.6 |
+| 2026-10-25 22:42 | Every decision is recorded in this guide, with this log | 11 |
