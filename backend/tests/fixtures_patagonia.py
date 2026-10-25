@@ -95,3 +95,54 @@ BAD_LLM = {"trip_name": "Patagonia Express",
 
 BAD_LLM["stops"][-2]["notes"] = GEAR
 BAD_LLM["stops"][5]["notes"] = GEAR
+
+
+# The generator used for the PC tests: the same 15 days, with or without agency filler
+GEN_DAYS = [
+    ("Buenos Aires", "Arrivo all'aeroporto di Ezeiza, trasferimento in hotel e visita a piedi del quartiere di San Telmo e della Plaza de Mayo."),
+    ("Buenos Aires", "Giornata dedicata alla città: La Boca, Caminito, Recoleta e serata di tango a Palermo."),
+    ("El Chaltén", "Volo per El Calafate e trasferimento in bus a El Chaltén, la capitale del trekking argentino."),
+    ("El Chaltén", "Trekking alla Laguna de los Tres, 8-10 ore con l'ultimo tratto molto ripido sotto il Fitz Roy."),
+    ("El Chaltén", "Giornata di riserva meteo, breve escursione al Mirador de los Cóndores."),
+    ("El Calafate", "Rientro a El Calafate e pomeriggio di rafting sul fiume."),
+    ("El Calafate", "Minitrekking sul ghiacciaio Perito Moreno con ramponi, poi passerelle panoramiche."),
+    ("Puerto Natales", "Attraversamento della frontiera con il Cile e arrivo a Puerto Natales."),
+    ("Torres del Paine", "Trekking al Mirador Base Torres, 7-9 ore, vento forte e possibile neve in quota."),
+    ("Torres del Paine", "Giro in barca sul lago Grey e sentieri panoramici del parco."),
+    ("Ushuaia", "Volo per Ushuaia, Terra del Fuoco, passeggiata sul lungomare."),
+    ("Ushuaia", "Escursione in barca sul Canale di Beagle con l'isola dei leoni marini e il faro Les Eclaireurs."),
+    ("Ushuaia", "Trekking alla Laguna Esmeralda e all'Ojo del Albino con ramponi sul ghiaccio, circa 8 ore."),
+    ("Ushuaia", "Mattina libera, poi volo di rientro verso Buenos Aires."),
+    ("Buenos Aires", "Ultima giornata a Buenos Aires e volo intercontinentale di ritorno."),
+]
+GEN_FILLER = (" Il programma comprende guida locale in italiano, pranzo al sacco, assicurazione, "
+              "trasferimenti privati e assistenza 24 ore su 24. Si consiglia abbigliamento a strati, "
+              "scarponi impermeabili e protezione solare. Gli orari possono cambiare in base al meteo "
+              "e alle condizioni dei sentieri; la guida decide sul posto eventuali variazioni.")
+
+
+def generated(filler_times: int) -> str:
+    parts = ["Programma di viaggio Patagonia dal 16 al 30 maggio 2027, proposto dall'agenzia.\n"]
+    for i, (place, desc) in enumerate(GEN_DAYS, start=1):
+        parts.append(f"Giorno {i} - {place}: {desc}" + GEN_FILLER * filler_times + "\n")
+    return "\n".join(parts)
+
+
+GEN_EXPECTED = [("Buenos Aires", 16, 17), ("El Chaltén", 18, 20), ("El Calafate", 21, 22),
+                ("Puerto Natales", 23, 23), ("Torres del Paine", 24, 25), ("Ushuaia", 26, 29),
+                ("Buenos Aires", 30, 30)]
+
+
+def _stop(name, a, b, acts):
+    return {"name": name, "start_date": f"2027-05-{a:02d}", "end_date": f"2027-05-{b:02d}",
+            "activities": acts, "notes": None}
+
+
+_H = [{"type": "hiking", "difficulty": "moderate", "max_altitude_m": None}]
+# what the PC model returned on the short version: right stops, compressed dates,
+# a hike on every stop, an invented question
+GEN_BAD_LLM = {"trip_name": "Patagonia", "questions": ["Farai la gita in barca con lezioni di navigazione?"],
+               "stops": [_stop("Buenos Aires", 16, 16, _H), _stop("El Chaltén", 16, 17, _H),
+                         _stop("El Calafate", 18, 19, _H), _stop("Puerto Natales", 20, 20, _H),
+                         _stop("Torres del Paine", 21, 22, _H), _stop("Ushuaia", 23, 25, _H),
+                         _stop("Buenos Aires", 26, 26, _H)]}

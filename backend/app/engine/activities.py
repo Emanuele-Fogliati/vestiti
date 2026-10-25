@@ -59,6 +59,9 @@ ACTIVITIES: dict[str, ActivityProfile] = {
     # boat trips, kayak, rafting: little effort, a lot of wind from the boat, wet
     "boat": ActivityProfile("boat", "Boat, kayak & rafting", 2.5, 1.5, 4, "sneaker",
                             extra_air_ms=6.0, spray=True),
+    # dunes, sandboarding, desert outings: sun and hot sand by day, cold after sunset
+    "desert": ActivityProfile("desert", "Desert & dunes", 3.5, 1.6, 6, "sneaker",
+                              extra_air_ms=2.0),
 }
 
 HIKING_BY_DIFFICULTY = {
@@ -69,7 +72,7 @@ HIKING_BY_DIFFICULTY = {
 }
 
 ACTIVITY_TYPES = ["city", "hiking", "trek_multiday", "beach", "ski", "cycling", "safari", "boat",
-                  "unknown"]
+                  "desert", "unknown"]
 DIFFICULTIES = ["easy", "moderate", "hard", "technical", "unknown"]
 
 

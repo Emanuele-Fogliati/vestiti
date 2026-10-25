@@ -105,7 +105,8 @@ def test_one_stop_per_day_from_the_model_is_merged_and_checked_against_the_text(
     assert [s.name for s in d.stops] == ["Buenos Aires", "El Calafate", "El Chaltén",
                                          "Puerto Natales", "Torres del Paine", "Ushuaia"]
     by = {s.name: s for s in d.stops}
-    assert (by["Ushuaia"].start_date.day, by["El Chaltén"].end_date.day) == (27, 23)
+    # dates come from the "Giorno N" numbers, not from the model
+    assert (by["Ushuaia"].start_date.day, by["El Chaltén"].end_date.day) == (26, 22)
     acts = [a for s in d.stops for a in s.activities]
     assert all(a.type != "trek_multiday" for a in acts)  # nothing says huts or tents
     assert all(a.max_altitude_m in (None, 1200) for a in acts)  # 2,500 m was invented
@@ -113,7 +114,9 @@ def test_one_stop_per_day_from_the_model_is_merged_and_checked_against_the_text(
     assert by["Buenos Aires"].activities == [type(acts[0])(type="city")]
     assert {"boat", "hiking"} <= {a.type for a in by["Torres del Paine"].activities}
     assert "safari" not in {a.type for a in acts}
-    assert all(s.notes is None for s in d.stops)  # the same boilerplate on every stop
+    notes = " ".join(s.notes or "" for s in d.stops)
+    assert "comprende" not in notes and "abbigliamento" not in notes.lower()  # boilerplate
+    assert "ramponi" in (by["Ushuaia"].notes or "")  # facts of the stop stay
     assert "in Italian" in seen[0]["messages"][1]["content"]
     # packing advice ("scarpe comode per i sentieri") is not a hike
     assert [a.type for a in by["Buenos Aires"].activities] == ["city"]
@@ -123,4 +126,68 @@ def test_one_stop_per_day_from_the_model_is_merged_and_checked_against_the_text(
     assert {n: h.difficulty for n, h in hikes.items()} == {
         "El Calafate": "easy", "El Chaltén": "hard", "Torres del Paine": "hard", "Ushuaia": "hard"}
     assert {n for n, h in hikes.items() if h.glacier} == {"El Calafate", "Ushuaia"}
-    assert d.questions == ["Che taglia porti?"]  # dates are in the text: no date question
+    assert d.questions == []  # dates are in the text; the model's own questions are dropped
+
+
+def _llm(reply):
+    return LLMClient(settings(), transport(json.dumps(reply), []))
+
+
+@pytest.mark.parametrize("filler", [0, 6])
+def test_generated_patagonia_dates_come_from_day_numbers(filler):
+    from datetime import date
+
+    from tests.fixtures_patagonia import GEN_BAD_LLM, GEN_EXPECTED, generated
+    text = generated(filler)
+    for d in (parse_itinerary(text, today=date(2026, 10, 25), client=_llm(GEN_BAD_LLM)),
+              parse_itinerary(text, today=date(2026, 10, 25), use_llm=False)):
+        assert [(s.name, s.start_date.day, s.end_date.day) for s in d.stops] == GEN_EXPECTED
+        by = {(s.name, s.start_date.day): s for s in d.stops}
+        for key in (("Buenos Aires", 16), ("Puerto Natales", 23), ("Buenos Aires", 30)):
+            assert [a.type for a in by[key].activities] == ["city"], key  # filler mentions "sentieri"
+        hike = {s.name: a for s in d.stops for a in s.activities if a.type == "hiking"}
+        assert hike["El Chaltén"].difficulty == hike["Torres del Paine"].difficulty == "hard"
+        assert hike["Ushuaia"].difficulty == "hard" and hike["Ushuaia"].glacier
+        assert hike["El Calafate"].glacier
+        assert "neve" in by[("Torres del Paine", 24)].notes and "ramponi" in by[("Ushuaia", 26)].notes
+        assert d.questions == []
+        assert all("abbigliamento" not in (s.notes or "").lower() for s in d.stops)
+
+
+def test_peru_program_from_an_agency_page():
+    from datetime import date
+
+    from tests.fixtures_peru import PERU, PERU_BAD_LLM
+    today = date(2026, 10, 25)
+    d = parse_itinerary(PERU, today=today, client=_llm(PERU_BAD_LLM))
+    names = [s.name for s in d.stops]
+    assert names == ["Lima", "Cusco", "Valle Sacra", "Machu Picchu", "Aguas Calientes",
+                     "Rainbow Mountain", "Lago Titicaca", "Chivay", "Valle del Colca", "Arequipa",
+                     "Huacachina", "Isole Ballestas"]  # no Italy days, no invented Paracas/Lima stops
+    # no dates in the text: one day per program day from 30 days ahead, and only that question
+    assert [(s.start_date - today).days for s in d.stops] == list(range(30, 42))
+    assert len(d.questions) == 1 and d.questions[0].startswith("Quando parti")
+    by = {s.name: s for s in d.stops}
+    rainbow = by["Rainbow Mountain"].activities[0]
+    assert (rainbow.type, rainbow.difficulty, rainbow.max_altitude_m) == ("hiking", "hard", 5200)
+    assert [a.type for a in by["Machu Picchu"].activities] == ["city"]  # a visit, not a 2,500 m trek
+    assert "boat" in {a.type for a in by["Lago Titicaca"].activities}
+    assert "boat" in {a.type for a in by["Isole Ballestas"].activities}
+    assert [a.type for a in by["Huacachina"].activities] == ["desert"]
+    assert "4072" in by["Lago Titicaca"].notes
+    acts = [a for s in d.stops for a in s.activities]
+    assert all(a.max_altitude_m in (None, 5200) for a in acts)
+    assert by["Lima"].notes is None  # "Pernottamento a Cuzco" belongs to Cusco, not Lima
+
+
+def test_peru_program_without_the_model():
+    from datetime import date
+
+    from tests.fixtures_peru import PERU
+    d = parse_itinerary(PERU, today=date(2026, 10, 25), use_llm=False)
+    names = [s.name for s in d.stops]
+    assert names[0] == "Lima" and names[-1] == "Isole Ballestas" and "Italia" not in names
+    assert len(d.stops) == 12 and len(d.questions) == 1
+    high = [a for s in d.stops for a in s.activities if a.max_altitude_m]
+    assert [(a.type, a.difficulty, a.max_altitude_m) for a in high] == [("hiking", "hard", 5200)]
+    assert any(a.type == "desert" for s in d.stops for a in s.activities)

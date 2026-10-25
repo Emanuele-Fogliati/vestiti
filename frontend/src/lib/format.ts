@@ -27,6 +27,7 @@ export const ACTIVITY_LABEL: Record<string, string> = {
   cycling: "Cycling",
   safari: "Safari",
   boat: "Boat, kayak & rafting",
+  desert: "Desert & dunes",
   unknown: "Don't know yet",
 };
 

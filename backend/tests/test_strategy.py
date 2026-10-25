@@ -81,3 +81,9 @@ def test_glacier_walk_needs_boots_and_gloves_even_when_mild():
     fw = reqs["footwear"]
     assert fw.footwear_type == "hiking_boot" and fw.ankle_support and fw.waterproof
     assert reqs["gloves"].needed
+
+
+def test_desert_day_plans_sun_and_cold_evening():
+    s = stage(name="Huacachina", activities=[{"type": "desert"}], tmax=30, tmin=12, prob=0, wind=15)
+    _, reqs, _, _ = plan(s)
+    assert "sun_hat" in needed(reqs)
