@@ -211,7 +211,7 @@ class AffiliateClick(Base):
     rental_partner_id: Mapped[str | None] = mapped_column(
         ForeignKey("rental_partners.id", ondelete="SET NULL")
     )
-    kind: Mapped[str] = mapped_column(String(10), default="buy")  # buy | rent
+    kind: Mapped[str] = mapped_column(String(10), default="buy")  # buy | rent | excursion | tour
     network: Mapped[str] = mapped_column(String(40))
     tracked: Mapped[bool] = mapped_column(Boolean, default=False)
     tier: Mapped[str | None] = mapped_column(String(10))

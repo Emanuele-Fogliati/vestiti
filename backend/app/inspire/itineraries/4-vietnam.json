@@ -1,0 +1,74 @@
+{
+  "slug": "vietnam-north-to-south",
+  "title": "Vietnam from north to south",
+  "countries": ["VN"],
+  "summary": "Two weeks down the whole country: Hanoi's old quarter, a night among the limestone islands of Lan Ha Bay, rice fields and caves in Ninh Binh, the imperial city of Hue, lantern-lit Hoi An and Ho Chi Minh City.",
+  "best_months": [2, 3, 4],
+  "season_note": "February to April is the best compromise for the whole country: mild in the north (around 20 °C in Hanoi), dry in the centre, hot in the south. The centre is rainy from September to December.",
+  "stops": [
+    {
+      "name": "Hanoi", "country_code": "VN", "lat": 21.0285, "lon": 105.8542, "elevation_m": 15, "days": 3,
+      "activities": [{"type": "city"}],
+      "visits": [{"name": "Hanoi Old Quarter", "day": 1}, {"name": "Hoan Kiem Lake", "day": 2}, {"name": "Temple of Literature", "day": 3}],
+      "plan": ["Arrive. Old Quarter street food.", "Hoan Kiem Lake and the Ngoc Son temple, a water puppet show.", "Temple of Literature and the Ho Chi Minh Mausoleum area."],
+      "do": ["Old Quarter street food: phở for breakfast, bún chả for lunch.", "Hoan Kiem Lake on a weekend evening, when the streets around it close to traffic."],
+      "skip": ["The cheapest Ha Long Bay deals sold in Old Quarter agencies: you pay for them in crowded boats and rushed schedules."],
+      "excursions": [{"title": "Hanoi street food tour", "query": "Hanoi street food tour"}],
+      "programs": 121
+    },
+    {
+      "name": "Ha Long and Lan Ha Bay", "country_code": "VN", "lat": 20.7276, "lon": 107.0480, "elevation_m": 0, "days": 2,
+      "activities": [{"type": "boat"}],
+      "visits": [{"name": "Ha Long Bay", "day": 1}, {"name": "Lan Ha Bay", "day": 2}],
+      "plan": ["Road to the coast, on board by midday, kayaking among the islands.", "Sunrise on deck, a cave visit, back to land and on to Ninh Binh."],
+      "do": ["One night on a boat that goes into Lan Ha Bay: the same limestone islands, far fewer boats.", "Kayak through the caves and lagoons."],
+      "skip": ["A day trip from Hanoi: about two and a half hours each way for a few hours on the water."],
+      "excursions": [{"title": "Lan Ha Bay overnight cruise", "query": "Lan Ha Bay overnight cruise"}],
+      "programs": 94
+    },
+    {
+      "name": "Ninh Binh (Tam Coc)", "country_code": "VN", "lat": 20.2152, "lon": 105.9370, "elevation_m": 10, "days": 2,
+      "activities": [{"type": "boat"}, {"type": "cycling"}, {"type": "hiking", "difficulty": "easy", "max_altitude_m": 200}],
+      "visits": [{"name": "Trang An", "day": 1}, {"name": "Mua Cave", "day": 2}],
+      "plan": ["Rowing boat through the caves and rice fields of Trang An.", "Bike ride through the villages, the steps up to the Mua Cave viewpoint at sunset. Night train south to Hue."],
+      "do": ["Trang An or Tam Coc by rowing boat, early in the morning.", "The 500 steps of the Mua Cave viewpoint at sunset."],
+      "skip": ["The boats at midday in summer: no shade and full heat."],
+      "excursions": [{"title": "Trang An boat and bike tour", "query": "Ninh Binh Trang An"}],
+      "programs": 71
+    },
+    {
+      "name": "Hue", "country_code": "VN", "lat": 16.4637, "lon": 107.5909, "elevation_m": 10, "days": 2,
+      "activities": [{"type": "city"}, {"type": "cycling"}],
+      "visits": [{"name": "Imperial City of Hue", "day": 1}, {"name": "Tomb of Tu Duc", "day": 2}, {"name": "Thien Mu Pagoda", "day": 2}],
+      "plan": ["Arrive by night train. Half a day in the Imperial City.", "Royal tombs and Thien Mu Pagoda by bike or scooter."],
+      "do": ["Give the Imperial City half a day.", "The tomb of Tu Duc and Thien Mu Pagoda on two wheels."],
+      "skip": ["Going from September to December without rain gear: it is the wettest part of the country."],
+      "excursions": [{"title": "Hue imperial tombs tour", "query": "Hue imperial city tour"}],
+      "programs": 80
+    },
+    {
+      "name": "Hoi An", "country_code": "VN", "lat": 15.8801, "lon": 108.3380, "elevation_m": 5, "days": 3,
+      "activities": [{"type": "city"}, {"type": "cycling"}, {"type": "beach"}],
+      "visits": [{"name": "Hai Van Pass", "day": 1}, {"name": "My Son", "day": 2}],
+      "plan": ["Over the Hai Van Pass to Hoi An. Old Town by lantern light.", "My Son temples early in the morning, a tailor fitting in the afternoon.", "Bike through the rice fields to An Bang beach."],
+      "do": ["Cross the Hai Van Pass by car or on the back of a motorbike.", "Order tailored clothes on day one so there is time for fittings."],
+      "skip": ["Ordering from a tailor on your last day: no time to fix the fit."],
+      "excursions": [{"title": "Hai Van Pass motorbike tour", "query": "Hai Van Pass"}, {"title": "My Son sunrise tour", "query": "My Son sanctuary"}],
+      "programs": 106
+    },
+    {
+      "name": "Ho Chi Minh City", "country_code": "VN", "lat": 10.7769, "lon": 106.7009, "elevation_m": 10, "days": 2,
+      "activities": [{"type": "city"}, {"type": "boat"}],
+      "visits": [{"name": "Cu Chi Tunnels", "day": 1}, {"name": "Mekong Delta", "day": 2}],
+      "plan": ["Fly south. Cu Chi Tunnels in the morning, the War Remnants Museum and Ben Thanh market.", "Mekong Delta by boat and bike, back to the city to fly home."],
+      "do": ["Cu Chi Tunnels at Ben Duoc, quieter than Ben Dinh.", "For the Cai Rang floating market, sleep near Can Tho: it happens at dawn."],
+      "skip": ["One-day 'floating market' tours from the city: the real markets are at dawn, about four hours away."],
+      "excursions": [{"title": "Cu Chi Tunnels tour", "query": "Cu Chi Tunnels"}, {"title": "Mekong Delta day trip", "query": "Mekong Delta day trip"}],
+      "programs": 112
+    }
+  ],
+  "group_trips": [
+    {"operator": "Intrepid Travel", "title": "Classic Vietnam", "days": 15, "url": "https://www.intrepidtravel.com/en/vietnam/classic-vietnam-175672", "network": "direct"},
+    {"operator": "Exodus Adventure Travels", "title": "Best of Vietnam", "days": 12, "url": "https://www.exodustravels.com/trips/vietnam-holidays/culture/best-of-vietnam/aow", "network": "direct"}
+  ]
+}

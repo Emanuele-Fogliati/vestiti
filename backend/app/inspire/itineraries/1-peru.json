@@ -1,0 +1,103 @@
+{
+  "slug": "peru-coast-andes-titicaca",
+  "title": "Peru: desert coast, the Andes and Lake Titicaca",
+  "countries": ["PE"],
+  "summary": "The classic loop most organised trips follow, in an order that climbs slowly: the Pacific coast and the desert first, then Arequipa, the Colca Canyon and Lake Titicaca, so you reach Cusco and Machu Picchu already used to the altitude.",
+  "best_months": [5, 6, 7, 8, 9],
+  "season_note": "May to September is the dry season in the Andes: sunny days, nights below freezing above 3,500 m. Lima is grey and mild in the same months.",
+  "stops": [
+    {
+      "name": "Lima", "country_code": "PE", "lat": -12.1211, "lon": -77.0297, "elevation_m": 80, "days": 2,
+      "activities": [{"type": "city"}],
+      "visits": [{"name": "Historic centre", "day": 1}, {"name": "Barranco", "day": 2}],
+      "plan": ["Arrive. Evening walk along the Miraflores clifftops.", "Historic centre in the morning, Barranco and a ceviche lunch."],
+      "do": ["Walk the clifftop path from Miraflores to Barranco at sunset.", "Eat ceviche at lunch: many cevicherías serve it fresh and close by late afternoon."],
+      "skip": ["More than two days if time is short: from June to November Lima sits under a grey sea mist."],
+      "excursions": [{"title": "Lima food tour", "query": "Lima food tour"}],
+      "programs": 89
+    },
+    {
+      "name": "Paracas", "country_code": "PE", "lat": -13.8337, "lon": -76.2512, "elevation_m": 5, "days": 1,
+      "activities": [{"type": "boat"}, {"type": "desert"}],
+      "visits": [{"name": "Ballestas Islands", "day": 1}],
+      "plan": ["Morning boat to the Ballestas Islands (sea lions, penguins), afternoon in the Paracas desert reserve."],
+      "do": ["Take the earliest Ballestas boat, around 8 am: calmer sea and busier wildlife."],
+      "skip": ["The afternoon boat: the wind picks up and the ride gets rough and wet."],
+      "excursions": [{"title": "Ballestas Islands boat trip", "query": "Ballestas Islands"}],
+      "programs": 39
+    },
+    {
+      "name": "Huacachina", "country_code": "PE", "lat": -14.0875, "lon": -75.7626, "elevation_m": 420, "days": 1,
+      "activities": [{"type": "desert"}],
+      "plan": ["Short drive inland. Dune buggy and sandboarding in the late afternoon, sunset from the top of the dunes."],
+      "do": ["Go out on the dunes late in the day: cooler sand and the sunset at the end."],
+      "skip": ["A second night: the oasis is tiny and you will have seen it in two hours."],
+      "excursions": [{"title": "Dune buggy and sandboarding", "query": "Huacachina dune buggy sandboarding"}],
+      "programs": 32
+    },
+    {
+      "name": "Arequipa", "country_code": "PE", "lat": -16.3989, "lon": -71.5369, "elevation_m": 2335, "days": 2,
+      "activities": [{"type": "city"}],
+      "visits": [{"name": "Santa Catalina Monastery", "day": 2}],
+      "plan": ["Overnight bus or a flight from Lima. Plaza de Armas and the cathedral.", "Santa Catalina Monastery, then a rooftop for the view of El Misti."],
+      "do": ["Give Santa Catalina Monastery two hours: it is a walled town of its own.", "First night above 2,000 m: drink a lot of water and take it easy."],
+      "skip": ["Climbing El Misti (5,822 m) this early in the trip: you are not used to the altitude yet."],
+      "excursions": [{"title": "Arequipa city walk", "query": "Arequipa walking tour"}],
+      "programs": 55
+    },
+    {
+      "name": "Colca Canyon (Chivay)", "country_code": "PE", "lat": -15.6383, "lon": -71.6011, "elevation_m": 3630, "days": 2,
+      "activities": [{"type": "city", "max_altitude_m": 4910}, {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 3800}],
+      "visits": [{"name": "Cruz del Condor", "day": 2}],
+      "plan": ["Road over the Patapampa pass (4,910 m, cold and windy) down to Chivay. Hot springs in the evening.", "Cruz del Cóndor in the morning, a walk along the canyon terraces."],
+      "do": ["Sleep in Chivay and be at Cruz del Cóndor around 8 to 9 am, when the condors ride the morning air.", "Keep a warm layer in the day bag for the pass: it can snow there even in the dry season."],
+      "skip": ["The one-day tour from Arequipa: it leaves around 3 am and you spend most of it on the bus."],
+      "excursions": [{"title": "Colca Canyon tour", "query": "Colca Canyon"}],
+      "programs": 35
+    },
+    {
+      "name": "Puno", "country_code": "PE", "lat": -15.8402, "lon": -70.0219, "elevation_m": 3830, "days": 2,
+      "activities": [{"type": "boat"}, {"type": "city"}],
+      "visits": [{"name": "Uros floating islands", "day": 2}, {"name": "Taquile Island", "day": 2}],
+      "plan": ["Bus across the altiplano to Puno, on Lake Titicaca.", "Full day on the lake: the Uros reed islands, then Taquile Island."],
+      "do": ["Go on to Taquile after the Uros: the textiles and the views across the lake are the highlight.", "If you have a spare day, a homestay night on Amantaní island."],
+      "skip": ["A free day in Puno town: there is little to see beyond the lake."],
+      "excursions": [{"title": "Uros and Taquile boat trip", "query": "Uros Taquile"}],
+      "programs": 76
+    },
+    {
+      "name": "Cusco", "country_code": "PE", "lat": -13.5320, "lon": -71.9675, "elevation_m": 3400, "days": 3,
+      "activities": [{"type": "city"}, {"type": "hiking", "difficulty": "hard", "max_altitude_m": 5036}],
+      "visits": [{"name": "Sacsayhuaman", "day": 1}, {"name": "Rainbow Mountain", "day": 3}],
+      "plan": ["Bus or flight to Cusco. Plaza de Armas and the Sacsayhuamán walls above town.", "San Pedro market, the cathedral and the San Blas quarter.", "Rainbow Mountain (Vinicunca): a 4 am start, a short steep hike to 5,036 m."],
+      "do": ["San Pedro market for lunch and a fresh juice.", "Rainbow Mountain only after days above 3,000 m: on this route you reach it well used to the altitude.", "Palccoyo is a shorter, quieter alternative to Vinicunca."],
+      "skip": ["Rainbow Mountain on your first day in Cusco if you flew in straight from Lima."],
+      "excursions": [{"title": "Rainbow Mountain day trip", "query": "Rainbow Mountain Vinicunca"}, {"title": "Cusco walking tour", "query": "Cusco walking tour"}],
+      "programs": 109
+    },
+    {
+      "name": "Sacred Valley (Ollantaytambo)", "country_code": "PE", "lat": -13.2584, "lon": -72.2643, "elevation_m": 2790, "days": 1,
+      "activities": [{"type": "city"}, {"type": "hiking", "difficulty": "easy", "max_altitude_m": 3500}],
+      "visits": [{"name": "Pisac", "day": 1}, {"name": "Moray", "day": 1}, {"name": "Maras salt pans", "day": 1}],
+      "plan": ["Pisac market and ruins, Moray's terraces and the Maras salt pans. Sleep in Ollantaytambo."],
+      "do": ["Sleep in Ollantaytambo to catch an early train to Machu Picchu."],
+      "skip": ["Doing the valley as a day trip from Cusco the day before Machu Picchu: you would go back and forth twice."],
+      "excursions": [{"title": "Sacred Valley tour", "query": "Sacred Valley Pisac Moray Maras"}],
+      "programs": 85
+    },
+    {
+      "name": "Aguas Calientes", "country_code": "PE", "lat": -13.1547, "lon": -72.5254, "elevation_m": 2040, "days": 1,
+      "activities": [{"type": "hiking", "difficulty": "moderate", "max_altitude_m": 2720}],
+      "visits": [{"name": "Machu Picchu", "day": 1}],
+      "plan": ["Early train, bus up to Machu Picchu, Huayna Picchu if you have the ticket. Train back to Cusco in the evening and fly home."],
+      "do": ["Book the entry ticket and its circuit weeks ahead, months ahead for June to August. Huayna Picchu tickets sell out first.", "Take one of the first buses up for the softest light and fewer people."],
+      "skip": ["An extra night in Aguas Calientes: the town is a base for the ruins, not a destination."],
+      "excursions": [{"title": "Machu Picchu guided tour", "query": "Machu Picchu guided tour"}],
+      "programs": 103
+    }
+  ],
+  "group_trips": [
+    {"operator": "Intrepid Travel", "title": "Majestic Peru", "days": 15, "url": "https://www.intrepidtravel.com/en/peru/majestic-peru-175700", "network": "direct"},
+    {"operator": "Exodus Adventure Travels", "title": "Essential Peru", "days": 14, "url": "https://www.exodustravels.com/trips/peru-holidays/culture/essential-peru/apd", "network": "direct"}
+  ]
+}

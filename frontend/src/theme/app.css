@@ -235,3 +235,32 @@ footer nav a{font-size:13px}
 .tc-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
 .pc-owned li{font-size:14px;color:var(--ink-2);padding-left:14px;position:relative}
 .pc-owned li::before{content:"·";position:absolute;left:2px;font-weight:700}
+
+/* ready-made itineraries ("Ideas") */
+.icards .label{color:var(--ink-2)}
+.ititle{font-size:clamp(34px,5vw,64px)!important;line-height:1}
+.kicker a{color:inherit}
+.brief.pack{display:grid;gap:12px;align-content:start}
+.brief.pack h2{font-size:26px}
+.pack-end{max-width:520px}
+.istop{cursor:default}
+.istop:hover{background:var(--stop-bg)}
+.istop .pop{margin-top:6px}
+.plan{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px;max-width:62ch}
+.plan li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;font-size:15px}
+.plan .vd,.vday .vd{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.tips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.tips h4,.exc h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 6px}
+.tips ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+.tip-do{background:color-mix(in srgb,var(--ok-text) 8%,var(--surface));border-radius:var(--radius-sm);padding:12px 14px}
+.tip-do h4{color:var(--ok-text)}
+.tip-skip{background:color-mix(in srgb,var(--warn-text) 7%,var(--surface));border-radius:var(--radius-sm);padding:12px 14px}
+.tip-skip h4{color:var(--warn-text)}
+.exc{margin-top:16px;display:grid;gap:8px}
+.exc-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;font-size:14px;padding-block:6px;border-top:1px solid var(--rule)}
+.exc-links{display:flex;gap:6px;flex-wrap:wrap}
+.gtrips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.gtrips a{display:grid;gap:4px;padding:16px;border-radius:var(--radius);background:var(--surface);border:var(--bw) solid var(--rule-strong);text-decoration:none;color:var(--ink)}
+.gtrips a:hover{background:var(--surface-2)}
+.gtrips b{font-size:18px}
+@media (max-width:700px){.tips{grid-template-columns:minmax(0,1fr)}}

@@ -360,3 +360,36 @@ export interface DraftStop {
   visits: Visit[];
   days_estimated: boolean;
 }
+
+/** A ready-made itinerary on the "Looking for ideas?" list. */
+export interface ItineraryCard {
+  slug: string;
+  title: string;
+  countries: string[];
+  summary: string;
+  days: number;
+  best_months: number[];
+  highest_m: number;
+  places: string[];
+  art: StopArt | null;
+}
+
+export interface ExcursionLink { provider: string; label: string; href: string }
+
+/** One stop of an itinerary: the same shape as a trip stop, plus the day plan and tips. */
+export interface ItineraryStop extends Stop {
+  plan: string[];
+  do: string[];
+  skip: string[];
+  /** How many of the organised trips we read include this place. */
+  programs: number | null;
+  excursions: { title: string; links: ExcursionLink[] }[];
+}
+
+export interface Itinerary extends ItineraryCard {
+  season_note: string;
+  start_date: string;
+  inventory_trips: number;
+  stops: ItineraryStop[];
+  group_trips: { operator: string; title: string; days: number; href: string }[];
+}

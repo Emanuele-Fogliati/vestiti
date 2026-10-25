@@ -47,3 +47,13 @@ export const SOURCE_LABEL: Record<string, string> = {
   observed: "Observed",
   estimate: "Rough estimate",
 };
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+/** [11, 12, 1, 2, 3] -> "Nov–Mar"; [7] -> "Jul". Months run in the order given (they can wrap the year). */
+export const monthRange = (ms: number[]) =>
+  !ms.length ? "" : ms.length === 1 ? MONTHS[ms[0] - 1] : `${MONTHS[ms[0] - 1]}–${MONTHS[ms[ms.length - 1] - 1]}`;
+
+/** "2027-05-01" -> "May 2027" */
+export const monthYear = (s: string) =>
+  new Date(`${s}T00:00:00`).toLocaleDateString("en-GB", { month: "long", year: "numeric" });

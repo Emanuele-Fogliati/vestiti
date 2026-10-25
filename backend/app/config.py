@@ -58,6 +58,10 @@ class Settings(BaseSettings):
     impact_account_sid: str = ""
     cj_publisher_id: str = ""
     avantlink_affiliate_id: str = ""
+    # tours and excursions at each stop of the ready-made itineraries
+    getyourguide_partner_id: str = ""
+    viator_pid: str = ""
+    viator_mcid: str = ""
 
     # --- Admin ---
     admin_emails: list[str] = Field(default_factory=list)

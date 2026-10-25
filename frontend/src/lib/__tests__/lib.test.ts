@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { friendlyError } from "../api";
 import { buildProfile, monoPath, niceMax } from "../elevation";
-import { activityText, addDays, minus, nights, signed } from "../format";
+import { activityText, addDays, minus, monthRange, nights, signed } from "../format";
 import { layOut, redate, spread } from "../spread";
 import { terrainFor } from "../terrain";
 import type { Stop } from "../types";
@@ -12,6 +12,11 @@ const stop = (p: Partial<Stop>): Stop => ({
 } as Stop);
 
 describe("format", () => {
+  it("names a season across the new year", () => {
+    expect(monthRange([11, 12, 1, 2, 3])).toBe("Nov–Mar");
+    expect(monthRange([7])).toBe("Jul");
+    expect(monthRange([])).toBe("");
+  });
   it("uses a real minus sign and signs margins", () => {
     expect(minus(-4)).toBe("−4");
     expect(signed(0.05)).toBe("+0.05");

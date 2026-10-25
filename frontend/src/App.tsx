@@ -4,6 +4,8 @@ import Account from "./pages/Account";
 import Admin from "./pages/Admin";
 import Auth from "./pages/Auth";
 import HowItWorks from "./pages/HowItWorks";
+import Ideas from "./pages/Ideas";
+import ItineraryPage from "./pages/ItineraryPage";
 import Landing from "./pages/Landing";
 import Legal from "./pages/Legal";
 import NewTrip from "./pages/NewTrip";
@@ -17,6 +19,8 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Landing />} />
+        <Route path="ideas" element={<Ideas />} />
+        <Route path="ideas/:slug" element={<ItineraryPage />} />
         <Route path="trips" element={<Trips />} />
         <Route path="trips/new" element={<NewTrip />} />
         <Route path="trips/:id" element={<TripPage />} />
