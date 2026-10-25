@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { Illustration } from "../components/Illustration";
+import { TripMap } from "../components/Maps";
 import { Visits } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
@@ -133,7 +134,8 @@ export default function ItineraryPage() {
       <section className="band alt">
         <div className="wrap">
           <header className="sh"><p className="sh-k">Day by day</p><h2>The route</h2>
-            <p>Stops in the order that works best. Tap a stop on the profile to jump to it.</p></header>
+            <p>Stops in the order that works best. Tap a stop on the map to zoom in and see what is around it.</p></header>
+          <TripMap stops={it.stops} />
           <ElevationProfile stops={it.stops} selected={sel} onSelect={pick} />
           <ol className="stops" style={{ marginTop: 24 }}>
             {it.stops.map((s, i) => <StopBlock key={s.id} stop={s} index={i} dayFrom={starts[i]} total={it.inventory_trips} />)}

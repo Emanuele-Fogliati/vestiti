@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Illustration } from "../components/Illustration";
 import { ItineraryCards } from "../components/ItineraryCards";
+import { HomeGlobe } from "../components/Maps";
 import { brandName, useApp } from "../lib/app-context";
 
 const EXAMPLE =
@@ -20,6 +21,7 @@ export default function Landing() {
 
   return (
     <main>
+      <HomeGlobe />
       <section className="hero">
         <div className="wrap hero-in">
           <div>
