@@ -1,9 +1,9 @@
-<defs><clipPath id="il-rb"><path d="M-10 200V150L40 120L86 72L104 66L126 86L170 108L230 130L310 150V200Z"/></clipPath></defs>
 <rect width="300" height="200" fill="var(--il-sky)"/>
+<defs><clipPath id="il-pe-rainbow-mountain-clip"><path d="M-10 200V150L40 120L86 72L104 66L126 86L170 108L230 130L310 150V200Z"/></clipPath></defs>
 <circle cx="44" cy="40" r="13" fill="var(--il-sun)"/>
 <path d="M120 112L176 58L196 70L220 36L250 66L268 60L310 104V140H120Z" fill="var(--il-far)"/>
 <path d="M176 58L188 66L182 76L168 70ZM220 36L238 54L226 62L214 50ZM268 60L282 74L272 78Z" fill="var(--il-ice)"/>
-<g clip-path="url(#il-rb)">
+<g clip-path="url(#il-pe-rainbow-mountain-clip)">
 <rect x="-10" y="40" width="330" height="170" fill="var(--il-mid)"/>
 <path d="M58 40L96 40L170 210L120 210Z" fill="var(--il-sun)"/>
 <path d="M96 40L114 40L200 210L170 210Z" fill="var(--il-ice)"/>

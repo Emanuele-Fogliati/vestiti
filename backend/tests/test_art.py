@@ -20,15 +20,15 @@ PERU = [  # the stops the agency program becomes (see test_llm), with real coord
 def test_peru_trip_gets_one_landmark_per_stop():
     stops = [S(name=n, latitude=la, longitude=lo, notes=no) for n, la, lo, no in PERU]
     assert [lm.id if lm else None for lm in art.assign(stops)] == [
-        "cusco-cathedral", "machu-picchu", "rainbow-mountain", "uros-titicaca", "taquile",
-        "colca-canyon", "arequipa", "paracas-ballestas", "lima-costa-verde"]
+        "pe-cusco-cathedral", "pe-machu-picchu", "pe-rainbow-mountain", "pe-uros-titicaca", "pe-taquile",
+        "pe-colca-canyon", "pe-arequipa", "pe-paracas-ballestas", "pe-lima-costa-verde"]
 
 
 def test_name_beats_distance_and_far_places_get_nothing():
     # "Huacachina" is 5 km from Ica: the name wins even with rough coordinates
-    assert art.match("Huacachina", -14.06, -75.73).id == "huacachina"
+    assert art.match("Huacachina", -14.06, -75.73).id == "pe-huacachina"
     assert art.match("Reykjavik", 64.14, -21.94) is None
-    assert art.match("Machu Picchu Pueblo", None, None).id == "machu-picchu"
+    assert art.match("Machu Picchu Pueblo", None, None).id == "pe-machu-picchu"
 
 
 def test_every_landmark_has_a_token_only_svg():
@@ -43,8 +43,8 @@ def test_every_landmark_has_a_token_only_svg():
 
 def test_api_serves_landmarks_and_trips_carry_them(client):
     assert client.post("/api/auth/guest").status_code == 200
-    assert {x["id"] for x in client.get("/api/art/landmarks").json()} >= {"machu-picchu", "uros-titicaca"}
-    r = client.get("/api/art/landmarks/machu-picchu.svg")
+    assert {x["id"] for x in client.get("/api/art/landmarks").json()} >= {"pe-machu-picchu", "pe-uros-titicaca"}
+    r = client.get("/api/art/landmarks/pe-machu-picchu.svg")
     assert r.status_code == 200 and "var(--il-sky)" in r.text
     assert client.get("/api/art/landmarks/nope.svg").status_code == 404
     trip = client.post("/api/trips", json={"name": "Peru", "stops": [
@@ -53,6 +53,23 @@ def test_api_serves_landmarks_and_trips_carry_them(client):
         {"name": "Reykjavik", "latitude": 64.14, "longitude": -21.94, "start_date": "2027-05-03",
          "end_date": "2027-05-04"}]}).json()
     assert [s["art"] and s["art"]["id"] for s in trip["stops"]] == [
-        "cusco-cathedral", "machu-picchu", "rainbow-mountain", None]
+        "pe-cusco-cathedral", "pe-machu-picchu", "pe-rainbow-mountain", None]
     summary = next(t for t in client.get("/api/trips").json() if t["id"] == trip["id"])
-    assert summary["art"]["id"] == "cusco-cathedral"
+    assert summary["art"]["id"] == "pe-cusco-cathedral"
+
+
+def test_library_follows_the_style_guide():
+    from app.art.lint import lint_catalog, lint_svg
+    assert lint_catalog() == []
+    for lm in art.landmarks():
+        assert lint_svg(lm.id, art.svg(lm.id)) == [], lm.id
+
+
+def test_linter_catches_off_style_scenes():
+    from app.art.lint import lint_svg
+    good = art.svg("pe-machu-picchu")
+    assert lint_svg("pe-machu-picchu", good) == []
+    assert any("tokens" in p for p in lint_svg("pe-x", good.replace("var(--il-mid)", "#ff0000", 1)))
+    assert any("sky" in p for p in lint_svg("pe-x", good.split("\n", 1)[1]))
+    assert any("<text>" in p for p in lint_svg("pe-x", good + '<text x="1" y="1">Hi</text>'))
+    assert any("bad id" in p or "must be" in p for p in lint_svg("Peru Machu", good))
