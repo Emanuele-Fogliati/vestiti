@@ -112,16 +112,24 @@ visible. So every object must visibly rest on the ground, the water or its suppo
   The bad example was the first Torres del Paine, whose towers seemed to float over the lake.
 - **No gaps between layers.** Each layer touches or overlaps the layer in front of it. A sliver
   of sky colour between two terrain layers reads as a hole.
-- **Animals stand, sit, swim or perch** on something visible, at a believable size for the
-  scene. A bird in flight is allowed only when it is the place's trait (the Colca condor) and
+- **Only things that really fly may float**: the sun, birds in flight, a paraglider, lanterns
+  hanging from a visible string. Smoke and steam rise from a visible source.
+- **Animals stand, sit, swim or perch** on something visible (a perched bird's branch connects
+  to a trunk that reaches the ground), at a believable size for the scene. A bird in flight is allowed only when it is the place's trait (the Colca condor) and
   its silhouette is unmistakable: spread wings, body, head. If an animal is not instantly
   recognisable at card size, leave it out. The bad example was the first Iguazu, with a toucan
   that read as an unknown object in mid-air.
 - **Water falls down and flows to a lower level**, it lands in a pool or river, and spray stays
   at the bottom of the fall.
-- **Lean, size and perspective are consistent**: things further away are smaller and higher on
-  the canvas, verticals are vertical, and nothing is larger than the landmark it stands next to
-  unless it really is.
+- **Lean, size and perspective are consistent**: one viewpoint per scene, things further away
+  are smaller and higher on the canvas, verticals are vertical, and nothing is larger than the
+  landmark it stands next to unless it really is.
+- **No ambiguous shapes.** If a shape needs explaining, remove it.
+
+**Automatic check:** `node tools/art/floatcheck.js <folder>` renders each scene with a key-coloured
+sky and flags any solid shape (at least 20 × 30 px) with sky underneath it. It needs Node and
+Playwright. It catches floating mountains and buildings, not everything above, so look at the
+render too.
 
 ## 5. Layer order (back to front)
 
@@ -178,6 +186,7 @@ visible. So every object must visibly rest on the ground, the water or its suppo
 ## 8. Checklist before handing in
 
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
+- [ ] `node tools/art/floatcheck.js <your out/ folder>` prints only `ok`.
 - [ ] Rendered preview looked at, full size and at card size: the place is recognisable.
 - [ ] 2-4 signature features present, proportions right, nothing invented.
 - [ ] Palette = the real colours of the place; `near` near black; light sky.
