@@ -10,8 +10,49 @@ export interface User {
   is_admin: boolean;
   gender_pref: "men" | "women" | "any";
   thermal_offset: number;
+  pace: Pace;
+  evenings: Evenings;
+  profile_done_at: string | null;
   created_at: string;
 }
+
+export type Cold = "very_cold" | "bit_cold" | "average" | "warm";
+export type Pace = "relaxed" | "average" | "brisk";
+export type Evenings = "early" | "sometimes" | "late";
+
+export interface Profile {
+  cold: Cold;
+  thermal_offset: number;
+  pace: Pace;
+  evenings: Evenings;
+  owned: string[];
+  done: boolean;
+  basics: { key: string; label: string }[];
+}
+
+export interface PlanDiff {
+  tier: Tier;
+  pieces: { slot: string; slot_name: string; before: string; after: string; cost_delta: number }[];
+  totals: { tier: Tier; before: number; after: number }[];
+  status: { before: string; after: string } | null;
+  owned: string[];
+}
+
+export interface ProfileUndo {
+  profile: { thermal_offset: number; pace: Pace; evenings: Evenings };
+  wardrobe_ids: string[];
+}
+
+export interface QuizResult {
+  profile: Profile;
+  changes: string[];
+  undo: ProfileUndo;
+  plan: PlanDiff;
+}
+
+export type ChatReply =
+  | { kind: "answer"; text: string; source: string; reader: string }
+  | { kind: "update"; text: string; changes: string[]; plan: PlanDiff; undo: ProfileUndo; profile: Profile; reader: string };
 
 export interface Activity {
   type: string;

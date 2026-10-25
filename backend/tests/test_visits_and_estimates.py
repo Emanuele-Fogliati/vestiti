@@ -245,7 +245,7 @@ def test_migration_adds_the_new_columns(tmp_path):
     url = f"sqlite:///{tmp_path / 'm.db'}"
     env = {**os.environ, "DATABASE_URL": url}
     here = Path(__file__).resolve().parents[1]
-    for step in (["upgrade", "head"], ["downgrade", "0001"], ["upgrade", "head"]):
+    for step in (["upgrade", "head"], ["downgrade", "0002"], ["upgrade", "head"]):
         subprocess.run([sys.executable, "-m", "alembic", *step], cwd=here, env=env, check=True,
                        capture_output=True)
     insp = inspect(create_engine(url))

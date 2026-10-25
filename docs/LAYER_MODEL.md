@@ -119,3 +119,21 @@ fill type and weight (`catalog/classify.py`) and mark it "estimated".
   That data is the moat, and the way to calibrate the constants above.
 - Humidity, solar radiation and sweat accumulation are ignored.
 - Sleeping (tents, huts) is out of scope.
+
+## Traveller profile (quiz and chat)
+
+Four optional quiz questions before the first plan, and a chat box on the trip page, set a
+few structured fields. The engine reads them; no model ever picks a product.
+
+| Field | Answers | What the engine does |
+|---|---|---|
+| `thermal_offset` | always cold +0.30, a bit +0.15, average 0, rarely cold −0.30 clo | added to every warmth requirement |
+| `pace` | relaxed ×0.85, average ×1.0, brisk ×1.15 | multiplies the MET on the move (not at rest) |
+| `evenings` | early / sometimes / late | town evenings outdoors: early = spend nothing on them, sometimes = up to 15% of the kit, late = covered like any cold moment |
+| owned pieces | fleece, rain jacket, puffy, thermal top, hiking trousers, boots (quiz chips) or anything said in the chat | saved as wardrobe items and rated against the spec like any owned piece |
+
+The chat (`POST /api/trips/{id}/chat`) asks the local model to fill the same fields as JSON,
+validates every value, and fills gaps with a rule-based reader (English and Italian) that
+also runs alone when the model is offline. A message with nothing to update is answered as
+a question about the plan. Every update returns what changed in the kit (pieces, totals,
+warmth) and undo data.

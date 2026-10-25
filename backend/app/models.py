@@ -41,6 +41,12 @@ class User(Base):
     gender_pref: Mapped[str] = mapped_column(String(10), default="any")
     # Personal comfort offset in clo: +0.3 means "I run cold", -0.3 "I run warm"
     thermal_offset: Mapped[float] = mapped_column(Float, default=0.0)
+    # Pace on the move: relaxed | average | brisk (changes the heat you make walking)
+    pace: Mapped[str] = mapped_column(String(10), default="average")
+    # Evenings outdoors in town: early (back inside) | sometimes | late (out after dark)
+    evenings: Mapped[str] = mapped_column(String(10), default="sometimes")
+    # Set when the traveller answered or skipped the profile quiz (it is not shown again)
+    profile_done_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     last_login_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 

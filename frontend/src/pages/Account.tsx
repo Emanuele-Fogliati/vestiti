@@ -55,6 +55,18 @@ export default function Account() {
                 onMouseUp={() => patch({ thermal_offset: offset })} onTouchEnd={() => patch({ thermal_offset: offset })} onKeyUp={() => patch({ thermal_offset: offset })} />
               <div className="row small muted"><span>I run warm</span><span className="spacer" /><span>Average</span><span className="spacer" /><span>I run cold</span></div>
             </div>
+            <div className="field"><label>Your pace on the move</label>
+              <select value={user.pace} onChange={(e) => patch({ pace: e.target.value as "relaxed" | "average" | "brisk" })}>
+                <option value="relaxed">Slow, lots of photo stops</option>
+                <option value="average">Average</option>
+                <option value="brisk">Fast, I rarely stop</option>
+              </select></div>
+            <div className="field"><label>Evenings</label>
+              <select value={user.evenings} onChange={(e) => patch({ evenings: e.target.value as "early" | "sometimes" | "late" })}>
+                <option value="early">Back inside after dinner: don't buy anything for cold evenings</option>
+                <option value="sometimes">Out some evenings: spend a little on them</option>
+                <option value="late">Out late most evenings: cover them fully</option>
+              </select></div>
           </section>
           <section className="panel stack">
             <h2 style={{ fontSize: 20 }}>Your data</h2>
