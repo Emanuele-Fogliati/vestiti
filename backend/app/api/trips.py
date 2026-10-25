@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from app.art import assign
 from app.db import get_db
 from app.deps import current_user, own_trip
 from app.models import Stop, Trip, User
@@ -34,7 +35,8 @@ def list_trips(user: User = Depends(current_user), db: Session = Depends(get_db)
                                stop_count=len(stops),
                                start_date=min((s.start_date for s in stops), default=None),
                                end_date=max((s.end_date for s in stops), default=None),
-                               places=[s.name for s in stops]))
+                               places=[s.name for s in stops],
+                               art=next(({"id": lm.id, "label": lm.label} for lm in assign(stops) if lm), None)))
     return out
 
 

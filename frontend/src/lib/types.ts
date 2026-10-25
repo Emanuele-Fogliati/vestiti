@@ -73,6 +73,14 @@ export interface Stop {
   end_date: string;
   activities: Activity[];
   notes: string | null;
+  /** The place's own landmark scene, when the library has one near this stop. */
+  art?: StopArt | null;
+}
+
+export interface StopArt {
+  kind: "landmark";
+  id: string;
+  label: string;
 }
 
 export interface Trip {
@@ -92,6 +100,8 @@ export interface TripSummary {
   end_date: string | null;
   places: string[];
   updated_at: string;
+  /** The first landmark of the trip, for the card. */
+  art?: StopArt | null;
 }
 
 export interface Place {
