@@ -64,6 +64,7 @@ class DraftStop(BaseModel):
     end_date: date
     activities: list[DraftActivity] = Field(default_factory=list)
     notes: str | None = None
+    elevation_m: float | None = None  # where the traveller sleeps, when the text says it
 
 
 class DraftItinerary(BaseModel):
@@ -227,6 +228,9 @@ TRANSPORT = re.compile(r"\bvol[oi]\b|flight|\bbus\b|pullman|trasferiment|transfe
 BOAT = re.compile(r"rafting|kayak|canoa|canoe|navig|navegaci|\bbarca\b|battello|catamaran|"
                   r"gommone|\bboat\b|cruise|crociera|motonave|traghetto|ferry|lancha|zodiac|"
                   r"verso le isole|alle isole|isole galleggianti|to the islands|a las islas", re.I)
+# "La nostra barca ci riporterà a Puno": a boat used to get somewhere is not an activity
+BOAT_TRANSFER = re.compile(r"(?:barca|battello|traghetto|lancha|boat|ferry)\w*\s+(?:ci\s+)?(?:riport|port|trasport|takes|brings)"
+                           r"|(?:rientro|ritorno|trasferimento|transfer|return)\w*\s+(?:in\s+|by\s+)(?:barca|battello|boat|traghetto|ferry)", re.I)
 BOAT_EXCURSION = re.compile(r"(escursion\w*|excursi\w*|gita|tour)\s+(in|con|en|by)\s+"
                             r"(barca|battello|catamarano|gommone|kayak|motoscafo|nave|boat|lancha)", re.I)
 SAFARI = re.compile(r"safari|game drive|fotosafari", re.I)
@@ -237,7 +241,7 @@ BIKE = re.compile(r"cycling|\bbike|\bbici|bicicletta|mountain bike|bicicleta|\bv
 CITY = re.compile(r"city|città|citta|museum|museo|sightseeing|visit|centro storico|ciudad", re.I)
 # facts about a stop that matter for clothes (kept in notes)
 FACT = re.compile(r"vento|neve|pioggia|freddo|gelo|caldo|nebbia|quota\s*(?:di\s*)?\d|altitudin|ghiacci|"
-                  r"rampon|ripid|homestay|deserto|dune|sandboard|rafting|\bwind|snow|rain|cold|heat|"
+                  r"rampon|ripid|homestay|deserto|dune|sandboard|rafting|\bwind|\bsnow|\brain\b|\bcold\b|\bheat\b|"
                   r"\bice\b|steep|altitude|crampon|viento|nieve|lluvia|frío|frio|\d\s*metri|\d\s*m\b|"
                   r"\bore\b|\bhours?\b", re.I)
 NOT_FACT = re.compile(r"comprend|includ|inclus|prezz|price|€|euro|assicurazion|insurance|supplement", re.I)
@@ -259,6 +263,33 @@ class Day(NamedTuple):
     title: str      # short heading, usually the place
     body: str       # the day's own text, without repeated agency text and packing advice
     travel: bool    # leaving home or flying back: not a stop
+    subtitle: str = ""            # "Dune buggy e sandboarding": a tagline, not a sentence
+    sleep: str | None = None      # "Pernottamento a Puno" -> "Puno"
+    sleep_alt: float | None = None  # "... / Quota 3827 mt" -> 3827
+
+
+_PLACE = r"((?-i:[A-ZÀ-Ý][\w'’-]+)(?:\s+(?:de|del|di|da|la|las|los|el|y)?\s*(?-i:[A-ZÀ-Ý][\w'’-]+)){0,3})"
+SLEEP = [
+    re.compile(r"pernottament\w*\s+(?:a|ad|in|presso|al|all['’])\s*" + _PLACE, re.I),
+    re.compile(r"(?:passeremo|trascorreremo|dormiremo)\s+la\s+(?:nostra\s+)?(?:prima\s+|ultima\s+)?notte\s+(?:a|ad|in)\s+" + _PLACE, re.I),
+    re.compile(r"\b(?:a|ad|verso|in)\s+" + _PLACE + r"\s*(?:\([^)]*\))?,?\s*dove\s+(?:passeremo|trascorreremo|dormiremo)\s+la\s+(?:nostra\s+)?(?:prima\s+|ultima\s+)?notte", re.I),
+    re.compile(r"\b(?:overnight|night|stay)\s+(?:in|at)\s+" + _PLACE, re.I),
+    re.compile(r"\b(?:noche|alojamiento)\s+en\s+" + _PLACE, re.I),
+]
+
+
+def overnight(body: str) -> tuple[str | None, float | None]:
+    """Where the traveller sleeps that day and, if the line says it, at what altitude."""
+    best = None
+    for line in _sentences(body):  # the last mention wins: "Pernottamento a ..." closes the day
+        for rx in SLEEP:
+            for m in rx.finditer(line):
+                best = (line, m[1])
+    if best is None:
+        return None, None
+    line, place = best
+    alts = _numbers_m(line)
+    return place.strip(" .,"), (max(alts) if alts else None)
 
 
 def _home_words(first: str) -> set[str]:
@@ -297,15 +328,19 @@ def day_blocks(text: str) -> list[Day]:
         cut = SECTION.search(body)
         if cut:
             body = body[:cut.start()]
-        raw.append([int(h[1]), title.strip(" -–"), _sentences(body)])
+        sub = ""
+        first, nl, rest = body.strip().partition("\n")
+        if nl and len(first) <= 60 and not re.search(r"[.:;,]$", first):
+            sub, body = first, rest  # web pages put a tagline under the heading
+        raw.append([int(h[1]), title.strip(" -–"), _sentences(body), sub])
     # a sentence repeated on many days is agency boilerplate ("guida in italiano, assicurazione...")
     seen: dict[str, int] = {}
-    for _, _, sents in raw:
+    for _, _, sents, _ in raw:
         for k in {_fold(s) for s in sents}:
             seen[k] = seen.get(k, 0) + 1
     limit = max(3, math.ceil(len(raw) / 3))
-    days = [[n, title, "\n".join(s for s in sents if seen[_fold(s)] < limit and not ADVICE.search(s))]
-            for n, title, sents in raw]
+    days = [[n, title, "\n".join(s for s in sents if seen[_fold(s)] < limit and not ADVICE.search(s)), sub]
+            for n, title, sents, sub in raw]
     home = _home_words(f"{days[0][1]} {days[0][2]}")
     travel = [False] * len(days)
     for order in (range(len(days)), range(len(days) - 1, -1, -1)):
@@ -313,7 +348,11 @@ def day_blocks(text: str) -> list[Day]:
             if not _is_home_travel(days[k][1], days[k][2], home):
                 break
             travel[k] = True
-    return [Day(n, t, b, tr) for (n, t, b), tr in zip(days, travel)]
+    out = []
+    for (n, t, b, sub), tr in zip(days, travel):
+        sleep, alt = overnight(b)
+        out.append(Day(n, t, b, tr, sub, sleep, alt))
+    return out
 
 
 def condense(days: list[Day], text: str, lang: str) -> str:
@@ -324,7 +363,9 @@ def condense(days: list[Day], text: str, lang: str) -> str:
     label = "Giorno" if lang == "Italian" else "Day"
     lines = [head[:600]] if head else []
     for d in days:
-        lines.append(f"{label} {d.n}: {d.title} (travel)" if d.travel else f"{label} {d.n}: {d.title}. {d.body.replace(chr(10), ' ')}")
+        sub = f" ({d.subtitle})" if d.subtitle else ""
+        lines.append(f"{label} {d.n}: {d.title} (travel)" if d.travel
+                     else f"{label} {d.n}: {d.title}{sub}. {d.body.replace(chr(10), ' ')}")
     return "\n".join(lines)
 
 
@@ -333,8 +374,7 @@ def _day_dates(days: list[Day], text: str, today: date) -> tuple[date, bool]:
     start = _find_date(text, today)
     if start is not None:
         return start, True
-    first = next((d.n for d in days if not d.travel), days[0].n)
-    return today + timedelta(days=30) - timedelta(days=first - days[0].n), False
+    return today + timedelta(days=30), False  # day 1 is the (unknown) departure day
 
 
 def _date_of(days: list[Day], start: date, n: int) -> date:
@@ -403,14 +443,35 @@ def facts_note(ev: str | None, name: str = "") -> str | None:
     toks = _name_tokens(name) if name else set()
 
     def about_here(s: str) -> bool:
-        if not re.search(r"pernott|overnight|passeremo la notte", s, re.I):
+        # the overnight altitude goes to the stop itself; keep the line only when the
+        # kind of night matters ("in homestay", "in tenda") and it is about this place
+        if not (re.search(r"pernott|overnight|notte", s, re.I) or any(rx.search(s) for rx in SLEEP)):
             return True
-        return not toks or "homestay" in s.lower() or _tok_match(toks, set(_fold(s).split()))
-    sents = [s for s in _sentences(ev) if FACT.search(s) and not ADVICE.search(s)
+        if not re.search(r"homestay|tenda|tent|rifugio|refugio|hut|campo|camp", s, re.I):
+            return False
+        return not toks or _tok_match(toks, set(_fold(s).split()))
+    sents = [_fact_part(s) for s in _sentences(ev) if FACT.search(s) and not ADVICE.search(s)
              and not NOT_FACT.search(s) and not (TRANSPORT.search(s) and not HIKE.search(s))
              and about_here(s)]
-    ranked = sorted(sents, key=lambda s: -len(FACT.findall(s)))[:2]
-    return clean_note(" ".join(s for s in sents if s in ranked))
+    out: list[str] = []
+    for part in sorted(sents, key=lambda s: -len(FACT.findall(s))):
+        if len(" ".join(out + [part])) <= 200:
+            out.append(part)
+        if len(out) == 2:
+            break
+    return clean_note(" ".join(p for p in sents if p in out), limit=200)
+
+
+def _fact_part(sentence: str) -> str:
+    """Of a long sentence keep only the clauses with the facts:
+    'Oggi visiteremo la Rainbow Mountain: sfioreremo i 5200 metri e ..., ma ne varrà la pena!'
+    -> 'Sfioreremo i 5200 metri e ...'."""
+    if len(sentence) <= 120:
+        return sentence
+    parts = [p.strip() for p in re.split(r"[:;,]\s+|\s+[-–]\s+", sentence) if p.strip()]
+    keep = [p for p in parts if FACT.search(p)] or parts[:1]
+    text = ", ".join(keep).rstrip(".!?") + "."
+    return text[0].upper() + text[1:]
 
 
 def clean_note(note: str | None, limit: int = 160) -> str | None:
@@ -425,7 +486,7 @@ def clean_note(note: str | None, limit: int = 160) -> str | None:
 
 # ---------------------------------------------------------------- activities from text
 
-def _activities(seg: str) -> list[DraftActivity]:
+def _activities(seg: str, allow_unknown: bool = True) -> list[DraftActivity]:
     s = seg.lower()
     acts: list[DraftActivity] = []
     hike_s = BOAT_EXCURSION.sub(" ", s)
@@ -433,8 +494,8 @@ def _activities(seg: str) -> list[DraftActivity]:
     altitude = max(alts) if alts else None
     difficulty = _difficulty_in(hike_s, altitude)
     glacier = bool(GLACIER.search(hike_s))
-    unknown = any(w in s for w in ("don't know", "dont know", "not sure", "boh", "non so",
-                                   "maybe", "forse", "not decided"))
+    unknown = allow_unknown and any(w in s for w in ("don't know", "dont know", "not sure", "boh",
+                                                     "non so", "maybe", "forse", "not decided"))
     if unknown:
         difficulty = "unknown"
     hike = _is_hike(s)
@@ -453,7 +514,7 @@ def _activities(seg: str) -> list[DraftActivity]:
         acts.append(DraftActivity(type="cycling"))
     if SAFARI.search(s):
         acts.append(DraftActivity(type="safari"))
-    if BOAT.search(s):
+    if any(BOAT.search(x) and not BOAT_TRANSFER.search(x) for x in _sentences(s)):
         acts.append(DraftActivity(type="boat"))
     if DESERT.search(s):
         acts.append(DraftActivity(type="desert"))
@@ -464,7 +525,14 @@ def _activities(seg: str) -> list[DraftActivity]:
     return acts
 
 
-_CHECKS = {"beach": BEACH, "ski": SKI, "cycling": BIKE, "safari": SAFARI, "boat": BOAT,
+class _BoatTrip:
+    """A boat in the text that is a trip, not a ride to the next place."""
+    @staticmethod
+    def search(text: str):
+        return any(BOAT.search(x) and not BOAT_TRANSFER.search(x) for x in _sentences(text))
+
+
+_CHECKS = {"beach": BEACH, "ski": SKI, "cycling": BIKE, "safari": SAFARI, "boat": _BoatTrip,
            "desert": DESERT}
 
 
@@ -491,7 +559,7 @@ def refine_activities(stops: list[DraftStop], evs: list[str | None], text: str) 
                 if a.type == "trek_multiday" and not MULTIDAY.search(scope):
                     a.type = "hiking"
             elif a.type in _CHECKS and not _CHECKS[a.type].search(scope):
-                if a.type == "safari" and BOAT.search(scope):
+                if a.type == "safari" and _BoatTrip.search(scope):
                     a.type = "boat"
                 elif ev is not None or a.type in ("safari", "boat"):
                     continue
@@ -517,7 +585,7 @@ def refine_activities(stops: list[DraftStop], evs: list[str | None], text: str) 
         if ev is not None:  # add what the days clearly say and the model missed
             have = {a.type for a in kept}
             walking = have & {"hiking", "trek_multiday"}
-            for extra in _activities(ev):
+            for extra in _activities(ev, allow_unknown=False):
                 if extra.type in ("hiking", "trek_multiday") and walking:
                     continue
                 if extra.type not in ("city", "unknown") and extra.type not in have:
@@ -613,10 +681,10 @@ def assign_days(stops: list[DraftStop], days: list[Day]) -> list[list[int]]:
         if d.travel:
             continue
         lo = max(cur, 0)
-        tt = set(_fold(d.title).split())
+        tt = set(_fold(f"{d.title} {d.sleep or ''}").split())
         cand = [j for j in range(lo, min(lo + 4, len(stops))) if _tok_match(toks[j], tt)]
         if not cand:  # the heading is not a place: try the start of the day's text
-            bt = set(_fold(d.body[:200]).split())
+            bt = set(_fold(f"{d.subtitle} {d.body[:200]}").split())
             cand = [j for j in range(cur + 1, min(cur + 3, len(stops))) if _tok_match(toks[j], bt)][:1]
         if cand:
             cur = max(cand)
@@ -629,23 +697,76 @@ def assign_days(stops: list[DraftStop], days: list[Day]) -> list[list[int]]:
     return out
 
 
-def align_to_days(stops: list[DraftStop], days: list[Day], text: str, today: date):
-    """Give the model's stops the dates of their days. Stops that own no day are dropped
-    (the model invented or split them). None when too few stops match the program."""
-    assigned = assign_days(stops, days)
-    matched = [j for j, ks in enumerate(assigned) if ks]
-    if len(matched) < 2 and len([d for d in days if not d.travel]) >= 3:
-        return None
+def _same_place(a: str, b: str) -> bool:
+    ka, kb = place_key(a), place_key(b)
+    return ka == kb or difflib.SequenceMatcher(None, ka, kb).ratio() >= 0.8  # Cuzco / Cusco
+
+
+def _heading_place(title: str) -> str | None:
+    # "Lima - Cusco" or "Lima / Cusco": the traveller ends the day at the last place
+    parts = [p for p in re.split(r"\s+-\s+|\s*[–—/>→]\s*", title) if p.strip()]
+    title = parts[-1] if parts else title
+    return _place(title) or _place(title.title())
+
+
+class _Seg(NamedTuple):
+    place: str
+    from_sleep: bool
+    ks: list[int]
+
+
+def segments(days: list[Day]) -> list[_Seg]:
+    """Cut the program into stops. A day belongs to the place where the traveller sleeps
+    ("Pernottamento a Puno"); without that line, to the place in the heading; a day with
+    neither ("Giornata libera") stays with the stop before it."""
+    home = _home_words(f"{days[0].title} {days[0].body}")
+    segs: list[_Seg] = []
+    for k, d in enumerate(days):
+        if d.travel:
+            continue
+        place, from_sleep = (d.sleep, True) if d.sleep else (_heading_place(d.title), False)
+        if place and place_key(place) in home:
+            continue
+        if not place or (segs and _same_place(segs[-1].place, place)):
+            if segs:
+                segs[-1].ks.append(k)
+                if from_sleep and not segs[-1].from_sleep:
+                    segs[-1] = _Seg(place, True, segs[-1].ks)
+            continue
+        segs.append(_Seg(place, from_sleep, [k]))
+    return segs
+
+
+def build_from_days(days: list[Day], text: str, today: date,
+                    model_stops: list[DraftStop] | None = None):
+    """Stops, dates, sleeping altitude and day texts of a day-by-day program, decided by the
+    program itself. The model's stops only lend their activities (and a cleaner name when
+    the heading is not a place) to the days they match."""
     start, _ = _day_dates(days, text, today)
-    new, evs = [], []
-    for j in matched:
-        ks = assigned[j]
-        s = stops[j].model_copy(deep=True)
-        s.start_date = _date_of(days, start, days[ks[0]].n)
-        s.end_date = _date_of(days, start, days[ks[-1]].n)
-        new.append(s)
-        evs.append("\n".join(f"{days[k].title}. {days[k].body}" for k in ks))
-    return merge_consecutive(new, evs)
+    owner: dict[int, int] = {}
+    if model_stops:
+        for j, ks in enumerate(assign_days(model_stops, days)):
+            for k in ks:
+                owner.setdefault(k, j)
+    stops, evs, note_evs = [], [], []
+    for seg in segments(days):
+        js = list(dict.fromkeys(owner[k] for k in seg.ks if k in owner))
+        name = seg.place
+        if not seg.from_sleep and js:
+            name = model_stops[js[0]].name
+        ev = "\n".join(f"{days[k].title}. {days[k].subtitle}. {days[k].body}" for k in seg.ks)
+        if model_stops is not None:
+            acts = [a.model_copy() for j in js for a in model_stops[j].activities]
+        else:
+            acts = _activities(ev, allow_unknown=False)  # "patate (forse)" is not "I don't know"
+        alts = [days[k].sleep_alt for k in seg.ks
+                if days[k].sleep_alt and days[k].sleep and _same_place(days[k].sleep, seg.place)]
+        stops.append(DraftStop(name=name, start_date=_date_of(days, start, days[seg.ks[0]].n),
+                               end_date=_date_of(days, start, days[seg.ks[-1]].n),
+                               activities=_merge_activities(acts), elevation_m=max(alts) if alts else None))
+        evs.append(ev)
+        note_evs.append("\n".join(days[k].body for k in seg.ks))
+    return stops, evs, note_evs
 
 
 def questions_for(text: str, today: date, lang: str) -> list[str]:
@@ -708,14 +829,11 @@ def parse_with_llm(text: str, today: date, client: LLMClient | None = None) -> D
     draft.parser = "llm"
     draft.stops = merge_consecutive(draft.stops)
     if days:
-        aligned = align_to_days(draft.stops, days, text, today)
-        if aligned is None:
-            raise ValueError("the model's stops do not match the program days")
-        draft.stops, evs = aligned
+        draft.stops, evs, note_evs = build_from_days(days, text, today, draft.stops)
     else:
-        evs = [None] * len(draft.stops)
+        evs = note_evs = [None] * len(draft.stops)
     refine_activities(draft.stops, evs, text)
-    for st, ev in zip(draft.stops, evs):
+    for st, ev in zip(draft.stops, note_evs):
         if ev is not None:
             st.notes = facts_note(ev, st.name)
     draft.questions = questions_for(text, today, lang)
@@ -772,40 +890,14 @@ def _day_by_day(text: str, today: date) -> DraftItinerary | None:
     days = day_blocks(text)
     if not days:
         return None
-    lang = detect_language(text)
-    start, _ = _day_dates(days, text, today)
-    home = _home_words(f"{days[0].title} {days[0].body}")
-    runs: list[list] = []  # [place, first_day, last_day, day texts]
-    for d in days:
-        if d.travel:
-            continue
-        # "Lima - Cusco" or "Lima / Cusco": the traveller sleeps at the last place
-        parts = [p for p in re.split(r"\s+-\s+|\s*[–—/>→]\s*", d.title) if p.strip()]
-        title = parts[-1] if parts else d.title
-        place = _place(title) or _place(title.title())
-        if place and place_key(place) in home:
-            continue
-        if not place:
-            if runs:  # "Giornata libera": same place as the day before
-                runs[-1][2] = d.n
-                runs[-1][3].append(d.body)
-            continue
-        if runs and place_key(runs[-1][0]) == place_key(place):
-            runs[-1][2] = d.n
-            runs[-1][3].append(f"{d.title}. {d.body}")
-        else:
-            runs.append([place, d.n, d.n, [f"{d.title}. {d.body}"]])
-    if not runs:
+    stops, _, note_evs = build_from_days(days, text, today)
+    if not stops:
         return None
-    stops = []
-    for p, a, b, texts in runs:
-        ev = "\n".join(texts)
-        stops.append(DraftStop(name=p, start_date=_date_of(days, start, a),
-                               end_date=_date_of(days, start, max(a, b)),
-                               activities=_merge_activities(_activities(ev)), notes=facts_note(ev, p)))
+    for st, ev in zip(stops, note_evs):
+        st.notes = facts_note(ev, st.name)
     name = " · ".join(s.name for s in stops[:3])
-    return DraftItinerary(trip_name=name, stops=stops, questions=questions_for(text, today, lang),
-                          parser="rules")
+    return DraftItinerary(trip_name=name, stops=stops,
+                          questions=questions_for(text, today, detect_language(text)), parser="rules")
 
 
 def parse_with_rules(text: str, today: date) -> DraftItinerary:

@@ -29,8 +29,12 @@ def parse(body: ParseIn, user: User = Depends(current_user)):
     stops = []
     for s in draft.stops:
         matches = geocode.search(s.name, limit=3)
-        stops.append({**s.model_dump(mode="json"), "matches": matches,
-                      "place": matches[0] if matches else None})
+        place = dict(matches[0]) if matches else None
+        if place and s.elevation_m:
+            # the program says where you sleep and how high ("Quota 3827 mt"): nights at
+            # altitude are what makes the warm layers necessary
+            place["elevation_m"] = s.elevation_m
+        stops.append({**s.model_dump(mode="json"), "matches": matches, "place": place})
     return {"trip_name": draft.trip_name, "stops": stops, "questions": draft.questions,
             "parser": draft.parser}
 

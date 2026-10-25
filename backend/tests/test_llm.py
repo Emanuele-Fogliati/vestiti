@@ -159,35 +159,29 @@ def test_peru_program_from_an_agency_page():
 
     from tests.fixtures_peru import PERU, PERU_BAD_LLM
     today = date(2026, 10, 25)
-    d = parse_itinerary(PERU, today=today, client=_llm(PERU_BAD_LLM))
-    names = [s.name for s in d.stops]
-    assert names == ["Lima", "Cusco", "Valle Sacra", "Machu Picchu", "Aguas Calientes",
-                     "Rainbow Mountain", "Lago Titicaca", "Chivay", "Valle del Colca", "Arequipa",
-                     "Huacachina", "Isole Ballestas"]  # no Italy days, no invented Paracas/Lima stops
-    # no dates in the text: one day per program day from 30 days ahead, and only that question
-    assert [(s.start_date - today).days for s in d.stops] == list(range(30, 42))
-    assert len(d.questions) == 1 and d.questions[0].startswith("Quando parti")
-    by = {s.name: s for s in d.stops}
-    rainbow = by["Rainbow Mountain"].activities[0]
-    assert (rainbow.type, rainbow.difficulty, rainbow.max_altitude_m) == ("hiking", "hard", 5200)
-    assert [a.type for a in by["Machu Picchu"].activities] == ["city"]  # a visit, not a 2,500 m trek
-    assert "boat" in {a.type for a in by["Lago Titicaca"].activities}
-    assert "boat" in {a.type for a in by["Isole Ballestas"].activities}
-    assert [a.type for a in by["Huacachina"].activities] == ["desert"]
-    assert "4072" in by["Lago Titicaca"].notes
-    acts = [a for s in d.stops for a in s.activities]
-    assert all(a.max_altitude_m in (None, 5200) for a in acts)
-    assert by["Lima"].notes is None  # "Pernottamento a Cuzco" belongs to Cusco, not Lima
-
-
-def test_peru_program_without_the_model():
-    from datetime import date
-
-    from tests.fixtures_peru import PERU
-    d = parse_itinerary(PERU, today=date(2026, 10, 25), use_llm=False)
-    names = [s.name for s in d.stops]
-    assert names[0] == "Lima" and names[-1] == "Isole Ballestas" and "Italia" not in names
-    assert len(d.stops) == 12 and len(d.questions) == 1
-    high = [a for s in d.stops for a in s.activities if a.max_altitude_m]
-    assert [(a.type, a.difficulty, a.max_altitude_m) for a in high] == [("hiking", "hard", 5200)]
-    assert any(a.type == "desert" for s in d.stops for a in s.activities)
+    for d in (parse_itinerary(PERU, today=today, client=_llm(PERU_BAD_LLM)),
+              parse_itinerary(PERU, today=today, use_llm=False)):
+        # a stop is where the traveller sleeps ("Pernottamento a Puno"); no Italy days
+        assert [s.name for s in d.stops] == ["Cuzco", "Aguas Calientes", "Cusco", "Puno", "Taquile",
+                                             "Chivay", "Arequipa", "Paracas", "Lima"]
+        # no dates in the text: day 1 (leaving Italy) is 30 days from today, Cuzco is day 2
+        assert [((s.start_date - today).days, (s.end_date - today).days) for s in d.stops] == [
+            (31, 32), (33, 34), (35, 35), (36, 36), (37, 37), (38, 38), (39, 40), (41, 41), (42, 42)]
+        assert len(d.questions) == 1 and d.questions[0].startswith("Quando parti")
+        by = {s.name: s for s in d.stops}
+        # the altitude of each night comes from the text
+        assert {n: s.elevation_m for n, s in by.items() if s.elevation_m} == {
+            "Cuzco": 3400, "Aguas Calientes": 2040, "Cusco": 3400, "Puno": 3827, "Taquile": 4072,
+            "Chivay": 3600, "Arequipa": 2500}
+        rainbow = next(a for a in by["Puno"].activities if a.type == "hiking")
+        assert (rainbow.difficulty, rainbow.max_altitude_m) == ("hard", 5200)
+        assert "boat" in {a.type for a in by["Taquile"].activities}
+        assert "boat" not in {a.type for a in by["Chivay"].activities}  # the boat back is a transfer
+        assert "boat" in {a.type for a in by["Lima"].activities}  # Isole Ballestas
+        assert "desert" in {a.type for a in by["Paracas"].activities}
+        assert all(a.type != "unknown" for s in d.stops for a in s.activities)  # "patate (forse)"
+        assert "homestay" in by["Taquile"].notes
+        assert "5200" in by["Puno"].notes and "…" not in by["Puno"].notes
+        assert by["Cuzco"].notes is None  # the overnight line is the altitude, not a note
+        notes = " ".join(s.notes or "" for s in d.stops)
+        assert "Dune buggy e sandboarding Arriviamo" not in notes  # taglines are not sentences
