@@ -131,6 +131,35 @@ sky and flags any solid shape (at least 20 × 30 px) with sky underneath it. It 
 Playwright. It catches floating mountains and buildings, not everything above, so look at the
 render too.
 
+## 4c. Mountains: recognisable by their own profile (Manu, permanent rule)
+
+A famous mountain must be recognisable **from its silhouette alone**, like a skyline. If two
+mountain scenes could swap names, both are wrong. Before drawing:
+
+1. Look up the real profile from the classic viewpoint and write down what only that mountain has:
+   the number of summits, their relative heights, the spacing, the shape of each top (needle,
+   horn, dome, cone, saw-tooth, flat table), the steepness of each side, the colour bands.
+2. Draw that profile with enough points to carry it (a famous peak is usually 15-40 path points,
+   not a 4-point triangle), and keep the real proportions between the summits.
+3. Add the 1-2 features that finish the identification: the rock colour change, the snow
+   pattern, the glacier at the foot, the lake the view is always taken from.
+4. Background ranges stay simple and low, so they never compete with the hero profile.
+
+Examples of what makes each one unique:
+- **Torres del Paine**: three separate granite towers of similar height, close together, rising
+  from a broad grey massif; the classic view is from the base lake.
+- **Cerro Torre**: one very thin needle, much taller than its neighbours, slightly leaning, with an
+  ice mushroom on top; Torre Egger and Standhardt are lower needles beside it.
+- **Cuernos del Paine**: a light granite base with **dark sedimentary caps** (the "horns"),
+  a wide jagged crest over Lago Pehoé; the two-colour bands are the signature.
+- **Fitz Roy**: a massive broad tower with a flat-ish top, flanked by smaller needles on both
+  sides (Poincenot on the left), often pink at sunrise.
+- **Osorno**: an almost perfect symmetric cone with a white snow cap, over a lake.
+- **Huayna Picchu**: a sugar-loaf peak behind the ruins. **Misti**: a wide cone behind Arequipa.
+
+Reviewers check this explicitly: cover the label and ask "which mountain is it?". If the answer
+is "a mountain", it fails.
+
 ## 5. Layer order (back to front)
 
 1. `<rect width="300" height="200" fill="var(--il-sky)"/>`, always the very first element.
@@ -196,7 +225,8 @@ render too.
 - [ ] **Physics:** every building, monument, mountain, tree and animal rests on the ground, water
       or a support; no sky or light band under a mountain; no curved bottoms; no gaps between
       layers; water falls down into something.
-- [ ] No two scenes in the batch look like the same generic mountain.
+- [ ] **Mountains:** each famous peak is recognisable from its silhouette alone (4c): label
+      covered, a reviewer can name it. No two scenes look like the same generic mountain.
 
 ## 9. What Manu rejected (learn from it)
 
@@ -210,6 +240,8 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Skógafoss, Iguazu | rainbows added for decoration | 3.8: no rainbows |
 | Ho Chi Minh City | only one church, the city feels empty | 4: cities may combine 2-3 landmarks |
 | Gullfoss | hard to tell it is Gullfoss | 4: signature features, big and clear |
+| Cerro Torre, Torres del Paine, Cuernos | the Patagonia peaks looked alike; Cuernos unreadable | 4c: each mountain by its real profile |
+| Colosseum (2nd try) | still not liked | 4: signature features, real proportions |
 
 ## 10. Reference scenes
 
