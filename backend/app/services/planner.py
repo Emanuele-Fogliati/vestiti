@@ -79,7 +79,8 @@ class Planner:
             stages = self.stage_inputs()
             conds = []
             for st in stages:
-                conds += conditions_for_stage(st, personal_offset=self.user.thermal_offset or 0.0)
+                conds += conditions_for_stage(st, personal_offset=self.user.thermal_offset or 0.0,
+                                              pace=self.user.pace or "average")
             reqs = requirements(stages, conds) if conds else {}
             self._computed = Computed(stages, conds, reqs)
         return self._computed
@@ -120,7 +121,8 @@ class Planner:
         owned = self.owned(c.reqs)
         sels = self.selections()
         partners = self.partners()
-        tiers = {t: O.build_tier(t, c.stages, c.conds, c.reqs, cands, owned, sels, partners)
+        tiers = {t: O.build_tier(t, c.stages, c.conds, c.reqs, cands, owned, sels, partners,
+                                 evenings=self.user.evenings or "sometimes")
                  for t in O.TIERS}
         return c, {"tiers": tiers, "candidates": cands, "owned": owned}
 

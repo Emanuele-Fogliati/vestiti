@@ -8,6 +8,11 @@ from app.engine.activities import ACTIVITY_TYPES, DIFFICULTIES
 from app.engine.garments import FOOTWEAR_TYPES, LEVELS, SLOT_KEYS
 
 
+PACES = ("relaxed", "average", "brisk")
+EVENINGS = ("early", "sometimes", "late")
+COLD = ("very_cold", "bit_cold", "average", "warm")
+
+
 class ORM(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
@@ -33,6 +38,9 @@ class UserOut(ORM):
     is_admin: bool
     gender_pref: str
     thermal_offset: float
+    pace: str = "average"
+    evenings: str = "sometimes"
+    profile_done_at: datetime | None = None
     created_at: datetime
 
 
@@ -40,6 +48,22 @@ class ProfileIn(BaseModel):
     display_name: str | None = Field(default=None, max_length=120)
     gender_pref: str | None = None
     thermal_offset: float | None = Field(default=None, ge=-0.5, le=0.5)
+    pace: str | None = None
+    evenings: str | None = None
+
+    @field_validator("pace")
+    @classmethod
+    def _p(cls, v):
+        if v is not None and v not in PACES:
+            raise ValueError(f"pace must be one of {PACES}")
+        return v
+
+    @field_validator("evenings")
+    @classmethod
+    def _e(cls, v):
+        if v is not None and v not in EVENINGS:
+            raise ValueError(f"evenings must be one of {EVENINGS}")
+        return v
 
     @field_validator("gender_pref")
     @classmethod
@@ -258,4 +282,41 @@ class ExplainIn(BaseModel):
 
 class AskIn(BaseModel):
     question: str = Field(min_length=3, max_length=1000)
+    tier: str = "medium"
+
+
+# ---------------------------------------------------------------- traveller profile
+
+class QuizIn(BaseModel):
+    """The pre-plan quiz. Every answer is optional: None = skipped, keep what we have."""
+    cold: str | None = None
+    pace: str | None = None
+    evenings: str | None = None
+    # basics the traveller already owns (keys of services.profile.BASICS); None = skipped
+    owned: list[str] | None = None
+
+    @field_validator("cold")
+    @classmethod
+    def _c(cls, v):
+        if v is not None and v not in COLD:
+            raise ValueError(f"cold must be one of {COLD}")
+        return v
+
+    @field_validator("pace")
+    @classmethod
+    def _p(cls, v):
+        if v is not None and v not in PACES:
+            raise ValueError(f"pace must be one of {PACES}")
+        return v
+
+    @field_validator("evenings")
+    @classmethod
+    def _e(cls, v):
+        if v is not None and v not in EVENINGS:
+            raise ValueError(f"evenings must be one of {EVENINGS}")
+        return v
+
+
+class ChatIn(BaseModel):
+    message: str = Field(min_length=2, max_length=1000)
     tier: str = "medium"

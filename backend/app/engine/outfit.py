@@ -335,6 +335,7 @@ def build_tier(
     selections: dict[tuple[str, str], dict],
     partners: list[RentalPartnerData],
     max_auto_upgrades: int = 12,
+    evenings: str = "sometimes",
 ) -> dict:
     choices: dict[str, Choice] = {}
     owned_notes: list[dict] = []
@@ -398,7 +399,8 @@ def build_tier(
     original = {k: (c.item.as_dict() if c.item else None, c.cost()) for k, c in choices.items()}
     # an evening outside in town is partly the traveller's choice: spend a little on it,
     # not €250 (the rest is explained in the shortfall)
-    evening_budget = round(AVOIDABLE_BUDGET * sum(c.cost() for c in choices.values()), 2)
+    evening_budget = round(EVENING_BUDGET.get(evenings, AVOIDABLE_BUDGET)
+                           * sum(c.cost() for c in choices.values()), 2)
     done: set[tuple[int, str]] = set()
     for _ in range(max_auto_upgrades + 2 * len(stages)):
         if len(steps) >= max_auto_upgrades:
@@ -411,7 +413,7 @@ def build_tier(
         if not cold:
             break
         _, si, mode = cold[0]
-        soft = avoidable(_worst(stages, conds, kit_now, si, mode)[0])
+        soft = avoidable(_worst(stages, conds, kit_now, si, mode)[0], evenings)
         up = cheapest_upgrade(stages, conds, choices, reqs, candidates, si, mode, ceiling,
                               max_cost=evening_budget if soft else None,
                               min_value=AVOIDABLE_MIN_VALUE if soft else 0.0)
@@ -491,7 +493,7 @@ def build_tier(
                                "rest": {k: s["modes"]["rest"][k] for k in ("required", "provided", "margin", "status")}}
                               for s in ev["stages"]]},
         "auto_upgrades": auto,
-        "shortfall": shortfall(stages, conds, kit, ev, tier),
+        "shortfall": shortfall(stages, conds, kit, ev, tier, evenings),
         "owned_notes": owned_notes,
         "owned_fine_count": owned_fine,
         "_choices": choices,
@@ -535,24 +537,30 @@ def _merge_upgrades(steps: list[dict], original: dict, choices: dict[str, Choice
 
 AVOIDABLE_REST = {"city", "beach", "boat", "desert"}
 AVOIDABLE_BUDGET = 0.15  # share of the tier's cost that may go to town evenings
+# The traveller's own answer to "evenings out?" sets that share: back inside early = spend
+# nothing on town evenings, out late = they are not avoidable at all (see avoidable()).
+EVENING_BUDGET = {"early": 0.0, "sometimes": AVOIDABLE_BUDGET, "late": AVOIDABLE_BUDGET}
 AVOIDABLE_MIN_VALUE = 0.0004  # clo per euro: 0.1 clo for €250 is the least worth paying
 
 
-def avoidable(cond: Condition | None) -> bool:
+def avoidable(cond: Condition | None, evenings: str = "sometimes") -> bool:
     """A cold moment the traveller can simply walk away from (an evening outdoors in town),
-    unlike a summit break, a camp night or an early game drive."""
+    unlike a summit break, a camp night or an early game drive. Someone who says they stay
+    out late gets those evenings covered like any other cold moment."""
+    if evenings == "late":
+        return False
     return bool(cond and cond.mode == "rest" and cond.activity.key in AVOIDABLE_REST
                 and cond.where == "evening outdoors")
 
 
-def shortfall(stages, conds, kit, ev, tier: str) -> dict | None:
+def shortfall(stages, conds, kit, ev, tier: str, evenings: str = "sometimes") -> dict | None:
     """When even the upgrades leave a stop cold: where, how much, and what would close it."""
     cold = sorted((s["modes"][m]["margin"], s["index"], m) for s in ev["stages"]
                   for m in ("moving", "rest") if s["modes"][m]["status"] == "cold")
     if not cold:
         return None
     rows = [(m, si, mode, _worst(stages, conds, kit, si, mode)[0]) for m, si, mode in cold]
-    hard = [r for r in rows if not avoidable(r[3])]
+    hard = [r for r in rows if not avoidable(r[3], evenings)]
     margin, si, mode, cond = (hard or rows)[0]
     name = stages_name(stages, si)
     gap = -margin
