@@ -36,7 +36,7 @@ export default function Trips() {
           <div className="tlist">
             {trips.map((t, i) => (
               <Link className="tcard" to={`/trips/${t.id}`} key={t.id}>
-                <Illustration terrain={TERR[i % TERR.length]} />
+                <Illustration terrain={TERR[i % TERR.length]} art={t.art} />
                 <div className="b">
                   <h3>{t.name}</h3>
                   <span className="small muted">{t.start_date ? `${dayMonth(t.start_date)} – ${dayMonth(t.end_date!)}` : "No dates"} · {t.stop_count} stops</span>
