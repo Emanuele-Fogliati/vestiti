@@ -1,12 +1,15 @@
 """Fetch the reference photo of a place: every scene starts from the classic photo (LANDMARK_STYLE.md 0).
 
     python tools/art/ref.py <id> "<Wikipedia title>" [--lang en] [--out refs]
-    python tools/art/ref.py <id> --url <direct image url> [--out refs]
+    python tools/art/ref.py <id> --url <direct image url> [--page <page url>] [--out refs]
 
 With a title it takes the lead image of the Wikipedia article, which is usually the classic view of the
 place and is freely licensed (Wikimedia Commons). If that image is not the classic view, find a better
 one (web search for the place's most photographed viewpoint) and pass it with --url.
-Writes <out>/<id>.jpg (960 px wide) and <out>/<id>.json with where it came from. The photo is a
+Use up to 4 photos per place (Manu): run it once per photo, the classic view first. Each run writes
+the next free <out>/<id>-<n>.jpg (n = 1..4) and adds it to <out>/<id>.json:
+{"sources": [{"file", "url", "page"}], "notes": "..."}. Write in "notes" what you took from each
+photo; the review tool shows the photos, the notes and the drawing to Manu. The photo is a
 reference to look at, never a file of the app: it stays in the batch folder and is not committed.
 Standard library only.
 """
@@ -55,16 +58,26 @@ def main() -> None:
     ap.add_argument("title", nargs="?")
     ap.add_argument("--lang", default="en")
     ap.add_argument("--url")
+    ap.add_argument("--page", default="")
     ap.add_argument("--out", default="refs")
     a = ap.parse_args()
     if not (a.title or a.url):
         ap.error("give a Wikipedia title or --url")
-    url, page = (a.url, "") if a.url else lead_image(a.title, a.lang)
+    url, page = (a.url, a.page) if a.url else lead_image(a.title, a.lang)
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
-    (out / f"{a.id}.jpg").write_bytes(get(url))
-    (out / f"{a.id}.json").write_text(json.dumps({"id": a.id, "image": url, "page": page}, indent=1) + "\n")
-    print(f"{out / (a.id + '.jpg')}  <- {url}")
+    meta_file = out / f"{a.id}.json"
+    meta = json.loads(meta_file.read_text()) if meta_file.is_file() else {"sources": [], "notes": ""}
+    if any(s["url"] == url for s in meta["sources"]):
+        sys.exit(f"{url} is already a reference of {a.id}")
+    n = next((i for i in range(1, 5) if not (out / f"{a.id}-{i}.jpg").exists()), None)
+    if n is None:
+        sys.exit(f"{a.id} already has 4 reference photos (the maximum)")
+    name = f"{a.id}-{n}.jpg"
+    (out / name).write_bytes(get(url))
+    meta["sources"].append({"file": name, "url": url, "page": page})
+    meta_file.write_text(json.dumps(meta, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"{out / name}  <- {url}")
 
 
 if __name__ == "__main__":

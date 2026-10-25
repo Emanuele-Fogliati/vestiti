@@ -20,9 +20,12 @@ recognises. We draw real places, so there is always one. Draw from it, then styl
    Machu Picchu from the Guardhouse above the ruins, terraces in front and Huayna Picchu towering
    behind; Valle de la Luna from the top of the ridge, looking down at the saw-tooth salt crests;
    Fitz Roy from the road into El Chaltén, the skyline of the Patagonia logo.
-2. **Fetch it**: `python tools/art/ref.py <id> "<Wikipedia title>"` saves the article's lead image
-   to `refs/<id>.jpg`. Look at it: if it is not the classic view (an old photo, a detail, a map),
-   find a better one and use `--url`. Prefer freely licensed photos (Wikimedia Commons). The photo
+2. **Fetch up to 4 photos** (Manu): the classic view first, then others that show what matters
+   (another angle, the colours, the detail that makes it recognisable).
+   `python tools/art/ref.py <id> "<Wikipedia title>"` saves the article's lead image as
+   `refs/<id>-1.jpg`; run it again with `--url` for each extra photo. Look at each: if it is not
+   useful (an old photo, a portrait, a map), find a better one. Write in `refs/<id>.json` "notes"
+   what you took from each photo. Prefer freely licensed photos (Wikimedia Commons). The photo
    stays in the batch folder as a reference; it is never committed or shipped.
 3. **Measure before you draw.** Write down from the photo: what is in front, middle and back; the
    **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on a
@@ -32,9 +35,12 @@ recognises. We draw real places, so there is always one. Draw from it, then styl
 5. **Then follow the content rules**, which win over the photo: remove people, cars, clouds and
    signs; **add the typical animal even if the photo has none** (a llama at Machu Picchu,
    guanacos at Torres del Paine), standing on the ground (4b).
-6. **Compare**: `node tools/art/compare.js <batch folder>` writes `compare/<id>.png`, the photo
-   next to the rendered scene at the same size. If someone who knows the photo would not match
-   the two at a glance, redo it. Reviewers judge on this sheet.
+6. **Compare**: `node tools/art/compare.js <batch folder>` writes `compare/<id>.png`, the photos
+   next to the rendered scene. If someone who knows the place would not match them at a glance,
+   redo it. Reviewers judge on this sheet.
+7. **Manu reviews** every drawing himself in the review page (photos, notes and drawing side by
+   side, "Va bene" / "Da rifare" and a comment that reaches Claude). How to load a batch there:
+   `/mnt/project-files/app-build/landmark-art/review/README.md` and `tools/art/review_docs.py`.
 
 ## 1. What you draw and what the app adds
 
