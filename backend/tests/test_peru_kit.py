@@ -61,3 +61,36 @@ def test_tier_close_to_the_next_one_suggests_it():
     assert tiers["medium"]["advice"]["tier"] == "premium"
     assert tiers["medium"]["advice"]["extra_cost"] == 68
     assert tiers["cheap"]["advice"] is None and tiers["premium"]["advice"] is None
+
+
+def test_basics_count_as_owned_and_one_tap_have_or_buy(client):
+    client.post("/api/auth/guest")
+    t = client.post("/api/trips", json={"name": "Peru", "stops": [
+        {"name": n, "latitude": la, "longitude": lo, "elevation_m": el, "start_date": a,
+         "end_date": b, "activities": acts} for n, la, lo, el, a, b, acts in STOPS]}).json()
+    url = f"/api/trips/{t['id']}"
+
+    def line(plans, tier, slot):
+        return next(i for i in plans["tiers"][tier]["items"] if i["slot"] == slot)
+
+    p = client.get(url + "/plans").json()
+    for slot in ("headwear", "gloves", "socks", "base_bottom"):
+        ln = line(p, "medium", slot)
+        assert ln["kind"] == "have" and ln["assumed"] and ln["cost"] == 0, slot
+    assert "warm enough" in line(p, "medium", "gloves")["note"]  # 5,200 m: not liners
+    before = p["tiers"]["medium"]["totals"]["total"]
+
+    # "I already have one" for the shell, without saying which: gone from every tier's total
+    shell = line(p, "medium", "shell_top")["cost"]
+    assert client.put(url + "/selections", json={"tier": "medium", "slot": "shell_top",
+                                                 "choice": "have"}).status_code == 200
+    p2 = client.get(url + "/plans").json()
+    assert all(line(p2, t, "shell_top")["kind"] == "have" for t in ("cheap", "medium", "premium"))
+    assert p2["tiers"]["medium"]["totals"]["total"] <= before - shell + 1e-6
+
+    # "Buy one" for gloves puts a product back
+    client.put(url + "/selections", json={"tier": "cheap", "slot": "gloves", "choice": "buy"})
+    p3 = client.get(url + "/plans").json()
+    assert line(p3, "premium", "gloves")["kind"] == "product"
+    client.put(url + "/selections", json={"tier": "cheap", "slot": "gloves", "choice": "auto"})
+    assert line(client.get(url + "/plans").json(), "medium", "gloves")["kind"] == "have"

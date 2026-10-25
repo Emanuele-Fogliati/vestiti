@@ -63,6 +63,23 @@ def set_selection(body: SelectionIn, trip: Trip = Depends(own_trip),
     row = db.scalar(select(TripSelection).where(TripSelection.trip_id == trip.id,
                                                 TripSelection.tier == body.tier,
                                                 TripSelection.slot == body.slot))
+    if body.choice in ("have", "buy") or (body.choice == "auto" and row and row.choice in ("have", "buy")):
+        # owning something does not depend on the budget: same answer in every tier
+        rows = db.scalars(select(TripSelection).where(TripSelection.trip_id == trip.id,
+                                                      TripSelection.slot == body.slot)).all()
+        by_tier = {r.tier: r for r in rows}
+        for t in ("cheap", "medium", "premium"):
+            r = by_tier.get(t)
+            if body.choice == "auto":
+                if r and r.choice in ("have", "buy"):
+                    db.delete(r)
+                continue
+            if r is None:
+                r = TripSelection(trip_id=trip.id, tier=t, slot=body.slot)
+                db.add(r)
+            r.choice, r.product_id, r.wardrobe_item_id = body.choice, None, None
+        db.commit()
+        return {"ok": True, "choice": body.choice}
     if body.choice == "auto":
         if row:
             db.delete(row)

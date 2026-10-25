@@ -56,7 +56,7 @@ backend/
   app/affiliates/  per-network link building
   app/api/         HTTP routes
   alembic/         DB migrations
-  seed/            sample catalog (169 products), places, placeholder rental partners
+  seed/            sample catalog (235 products, Decathlon-heavy so cheap and medium stay cheap), places, placeholder rental partners
   tests/           pytest
 frontend/src/
   pages/ components/ lib/ theme/

@@ -157,7 +157,7 @@ class ReorderIn(BaseModel):
 class SelectionIn(BaseModel):
     tier: str
     slot: str
-    choice: str  # product | owned | rent | skip | auto
+    choice: str  # product | owned | rent | skip | have | buy | auto
     product_id: str | None = None
     wardrobe_item_id: str | None = None
 
@@ -178,8 +178,8 @@ class SelectionIn(BaseModel):
     @field_validator("choice")
     @classmethod
     def _choice(cls, v):
-        if v not in ("product", "owned", "rent", "skip", "auto"):
-            raise ValueError("choice must be product, owned, rent, skip or auto")
+        if v not in ("product", "owned", "rent", "skip", "have", "buy", "auto"):
+            raise ValueError("choice must be product, owned, rent, skip, have, buy or auto")
         return v
 
 

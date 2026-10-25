@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { ProductArt } from "../components/ProductArt";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
@@ -22,7 +23,12 @@ const blank = (): Omit<WardrobeItem, "id"> => ({
 export default function Wardrobe() {
   const { ensureUser, toast } = useApp();
   const [items, setItems] = useState<WardrobeItem[] | null>(null);
-  const [form, setForm] = useState(blank());
+  const [params] = useSearchParams();
+  // "Check mine" from a kit card opens the form on that piece
+  const [form, setForm] = useState(() => {
+    const slot = params.get("slot");
+    return slot && CATS.some(([k]) => k === slot) ? { ...blank(), category: slot } : blank();
+  });
   const [editId, setEditId] = useState<string | null>(null);
   const [err, setErr] = useState<string | null>(null);
 

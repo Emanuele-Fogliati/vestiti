@@ -147,8 +147,9 @@ export interface KitLine {
   slot: string;
   code: string;
   slot_name: string;
-  kind: "product" | "owned" | "rent" | "none";
+  kind: "product" | "owned" | "have" | "rent" | "none";
   locked: boolean;
+  assumed: boolean;
   note: string | null;
   item: Item | null;
   rental: Rental | null;

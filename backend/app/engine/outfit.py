@@ -27,6 +27,26 @@ from app.engine.strategy import (
 )
 
 TIERS = ["cheap", "medium", "premium"]
+# Most travellers already own these: counted as theirs unless they ask to buy one
+ASSUMED_BASICS = ("headwear", "gloves", "socks", "base_bottom", "sun_hat")
+
+HAVE_HINT = {
+    "gloves": "insulated gloves, not thin liners",
+    "headwear": "a thick beanie that covers the ears",
+    "socks": "wool or merino hiking socks, not cotton",
+    "base_bottom": "thermal leggings, merino or synthetic",
+    "base_top": "a merino or synthetic thermal top, not cotton",
+    "sun_hat": "a hat with a brim (UPF 50+ is best)",
+}
+
+
+def have_note(req: SlotRequirement) -> str:
+    hint = HAVE_HINT.get(req.slot)
+    if req.level in ("warm", "very_warm") and hint:
+        return f"Counted as yours. Make sure it is warm enough: {hint}."
+    return "Counted as yours, so it is not in the total."
+
+
 UPGRADE_SLOTS = ["insulation_top", "mid_top", "base_top", "base_bottom", "shell_top", "trousers",
                  "headwear", "gloves", "shell_bottom"]
 
@@ -109,10 +129,19 @@ class Choice:
     rental: dict | None = None
     locked: bool = False
     note: str | None = None
+    assumed: bool = False  # "have" by default (basics), not said by the user
 
     def kit_item(self, req: SlotRequirement) -> KitItem | None:
         if self.kind in ("product", "owned") and self.item:
             return self.item.kit_item()
+        if self.kind == "have":
+            # "I already have one": we take it to be what the trip needs
+            it = reference_item(self.slot, req.level)
+            it.source = "owned"
+            it.price = 0.0
+            it.waterproof = it.waterproof or req.waterproof
+            it.name = f"Your {SLOT_BY_KEY[self.slot].name.lower()}"
+            return it
         if self.kind == "rent":
             it = reference_item(self.slot, req.level)
             it.source = "rental"
@@ -337,8 +366,14 @@ def build_tier(
                 choices[slot] = Choice(slot, "none", locked=True,
                                        note="You chose to skip this item.")
                 continue
+            elif kind == "have":
+                choices[slot] = Choice(slot, "have", locked=True, note=have_note(req))
+                continue
         if best_owned:
             choices[slot] = Choice(slot, "owned", best_owned)
+            continue
+        if slot in ASSUMED_BASICS and not (sel and sel["choice"] == "buy"):
+            choices[slot] = Choice(slot, "have", locked=True, assumed=True, note=have_note(req))
             continue
         if mine:
             owned_notes.append({"slot": slot, "item": mine[0].as_dict(),
@@ -415,7 +450,7 @@ def build_tier(
             buy += ch.item.price
         elif ch.kind == "rent" and ch.rental:
             rent += ch.rental["price"]
-        elif ch.kind == "owned" and tier_pick:
+        elif ch.kind in ("owned", "have") and tier_pick:
             owned_value += tier_pick.price
         kit_item = kit.get(slot)
         if kit_item and kit_item.weight_g:
@@ -432,7 +467,7 @@ def build_tier(
                             + "; ".join(ch.item.fit.issues) + ".")})
         items.append({
             "slot": slot, "code": s.code, "slot_name": s.name, "kind": ch.kind,
-            "locked": ch.locked, "note": ch.note,
+            "locked": ch.locked, "note": ch.note, "assumed": ch.assumed,
             "item": ch.item.as_dict() if ch.item else None, "rental": ch.rental,
             "rent_suggestion": rent_suggestion, "rental_options": rentals[:3],
             "alternatives": len(candidates.get(slot, [])),
@@ -447,7 +482,7 @@ def build_tier(
         "totals": {"buy": round(buy, 2), "rent": round(rent, 2), "total": round(buy + rent, 2),
                    "owned_value_saved": round(owned_value, 2),
                    "items_to_buy": sum(1 for i in items if i["kind"] == "product"),
-                   "items_owned": sum(1 for i in items if i["kind"] == "owned"),
+                   "items_owned": sum(1 for i in items if i["kind"] in ("owned", "have")),
                    "items_rented": sum(1 for i in items if i["kind"] == "rent"),
                    "weight_g": round(weight)},
         "warmth": {"status": ev["status"], "margins": ev["margins"],
