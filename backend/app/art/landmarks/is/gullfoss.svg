@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="48" cy="26" r="10" fill="var(--il-sun)"/>
+<path d="M0 80Q100 72 200 76Q260 74 300 80V96H0Z" fill="var(--il-far)"/>
+<path d="M150 76Q200 66 270 72Q240 78 200 78Z" fill="var(--il-ice)"/>
+<path d="M0 200V88Q150 84 300 86V200Z" fill="var(--il-leaf)"/>
+<path d="M300 86Q200 90 110 98L104 108Q200 102 300 98Z" fill="var(--il-water)"/>
+<path d="M104 108Q200 102 300 98V118Q200 122 110 130Z" fill="var(--il-ice)"/>
+<path d="M130 108V126M160 106V124M190 104V122M220 102V120M250 100V118M280 99V117" stroke="var(--il-water)" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M110 130Q200 122 300 118V126Q220 130 160 138L122 144Z" fill="var(--il-water)"/>
+<path d="M132 172L170 162Q220 152 300 150V176Q230 178 190 190L166 200H84Z" fill="var(--il-mid)"/>
+<path d="M122 144L160 138Q220 130 300 126V150Q220 152 170 162L132 172Z" fill="var(--il-ice)"/>
+<path d="M140 146V166M166 140V160M194 136V156M222 132V152M250 130V150M278 128V148" stroke="var(--il-water)" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.45"/>
+<path d="M124 176Q134 162 148 170Q160 156 176 166Q190 152 206 162Q220 150 236 158Q250 150 262 158Q200 172 150 182Z" fill="var(--il-ice)"/>
+<path d="M100 200L150 182Q210 172 300 170V178Q220 180 176 192L156 200Z" fill="var(--il-water)"/>
+<path d="M0 200V96L104 108L110 130L122 144L132 172L84 200Z" fill="var(--il-leaf)"/>
+<path d="M30 150Q27 145 25 142M30 150Q30 144 31 140M30 150Q33 145 36 143M60 176Q57 171 55 168M60 176Q60 170 61 166M60 176Q63 171 66 169M20 190Q17 185 15 182M20 190Q20 184 21 180M20 190Q23 185 26 183M250 196Q247 191 245 188M250 196Q250 190 251 186M250 196Q253 191 256 189M290 190Q287 185 285 182M290 190Q290 184 291 180M290 190Q293 185 296 183" stroke="var(--il-mid)" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(40 136) scale(1.1)"><path vector-effect="non-scaling-stroke" d="M-5 -4V0M-2 -4V0M2 -4V0M5 -4V0" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path vector-effect="non-scaling-stroke" d="M-8 -8Q-9 -14 -3 -14Q0 -17 4 -14Q9 -14 8 -8Q8 -4 3 -4H-3Q-8 -4 -8 -8Z" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M7 -13Q12 -14 12 -10Q11 -8 8 -9Z" fill="var(--il-near)"/></g>
