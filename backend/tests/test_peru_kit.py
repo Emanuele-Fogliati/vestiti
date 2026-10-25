@@ -26,6 +26,9 @@ def test_upgrades_are_one_line_per_piece_and_cold_is_explained(client):
             assert u["to"]["id"] == line["item"]["id"]  # the line names the item you get
             before = u["from"]["price"] if u["from"] else 0
             assert round(u["to"]["price"] - before, 2) == u["extra_cost"]
+            assert "+" not in u["reason"] and ("€" in u["reason"] or "Same price" in u["reason"])
+            if u["extra_cost"] < 0 and u["from"]:
+                assert "warmer and cheaper" in u["reason"] and "Saves €" in u["reason"]
         if tp["warmth"]["status"] == "cold":
             assert tp["shortfall"] and tp["shortfall"]["message"]
         else:

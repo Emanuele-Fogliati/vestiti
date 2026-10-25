@@ -483,7 +483,8 @@ def _merge_upgrades(steps: list[dict], original: dict, choices: dict[str, Choice
         w = line.pop("worst")
         added = line["from"] is None
         what = (f"added a {SLOT_BY_KEY[slot].name.lower()}" if added else
-                f"swapped the {tier} pick for a warmer one")
+                f"swapped the {tier} pick for a warmer"
+                + (" and cheaper" if net < 0 else "") + " one")
         line.update({
             "to": ch.item.as_dict() if ch.item else None, "extra_cost": net, "added": added,
             "reason": f"{SLOT_BY_KEY[slot].name}: {what}. Without it you were "
@@ -569,7 +570,7 @@ def stages_name(stages, idx: int) -> str:
 
 
 def _money(v: float) -> str:
-    return f"+{v:.0f}" if v >= 0 else f"{v:.0f}"
+    return f"€{abs(v):,.0f}"
 
 
 def group_by_slot(items: list[CatalogItem]) -> dict[str, list[CatalogItem]]:
