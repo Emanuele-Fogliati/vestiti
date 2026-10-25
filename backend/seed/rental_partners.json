@@ -1,0 +1,49 @@
+{
+  "_note": "PLACEHOLDER rental partners. None of these companies exist or have a deal with us. They show how the rental option works end to end. Replace with real partners (signed agreement + affiliate or referral terms) before launch.",
+  "partners": [
+    {
+      "slug": "example-alps-rental",
+      "name": "Example Alpine Gear Rental (placeholder)",
+      "url_template": "https://example.com/alps/rent?item={category}&from={start}&to={end}&country={country}",
+      "network": "direct",
+      "countries": ["IT", "CH", "AT", "FR", "DE", "SI"],
+      "categories": ["shell_top", "shell_bottom", "insulation_top", "footwear", "gloves"],
+      "daily_rates": {"shell_top": 6, "shell_bottom": 4, "insulation_top": 7, "footwear": 8, "gloves": 2},
+      "min_days": 2,
+      "currency": "EUR"
+    },
+    {
+      "slug": "example-patagonia-rental",
+      "name": "Example Patagonia Outfitters (placeholder)",
+      "url_template": "https://example.com/patagonia/rent?item={category}&from={start}&to={end}",
+      "network": "direct",
+      "countries": ["AR", "CL"],
+      "categories": ["shell_top", "shell_bottom", "insulation_top", "footwear"],
+      "daily_rates": {"shell_top": 7, "shell_bottom": 5, "insulation_top": 8, "footwear": 9},
+      "min_days": 1,
+      "currency": "EUR"
+    },
+    {
+      "slug": "example-nordic-rental",
+      "name": "Example Nordic Kit Hire (placeholder)",
+      "url_template": "https://example.com/nordic/rent?item={category}&from={start}&to={end}",
+      "network": "direct",
+      "countries": ["IS", "NO", "SE", "FI"],
+      "categories": ["shell_top", "shell_bottom", "insulation_top", "footwear", "gloves", "headwear"],
+      "daily_rates": {"shell_top": 8, "shell_bottom": 5, "insulation_top": 9, "footwear": 9, "gloves": 2, "headwear": 1},
+      "min_days": 2,
+      "currency": "EUR"
+    },
+    {
+      "slug": "example-ship-anywhere",
+      "name": "Example Rent-and-Ship (placeholder)",
+      "url_template": "https://example.com/ship/rent?item={category}&from={start}&to={end}&dest={country}",
+      "network": "direct",
+      "countries": ["*"],
+      "categories": ["shell_top", "insulation_top", "footwear"],
+      "daily_rates": {"shell_top": 9, "insulation_top": 11, "footwear": 10},
+      "min_days": 4,
+      "currency": "EUR"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+# Local run:  docker compose up --build    ->  http://localhost:8000
+# With the AI model inside Docker too:  docker compose --profile ollama up --build
+# (see docs/AI_SETUP.md; on Windows, running Ollama natively is faster and uses your GPU)
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: vestiti
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vestiti}
+      POSTGRES_DB: vestiti
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vestiti -d vestiti"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    restart: unless-stopped
+
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://vestiti:${POSTGRES_PASSWORD:-vestiti}@db:5432/vestiti
+      # Ollama running natively on your PC (default). If you use the ollama profile,
+      # set LLM_BASE_URL=http://ollama:11434/v1 in .env instead.
+      LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434/v1}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:0.12.6
+    profiles: ["ollama"]
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - "11434:11434"
+    restart: unless-stopped
+    # NVIDIA GPU on Docker Desktop (WSL2): uncomment
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+volumes:
+  pgdata:
+  ollama:
