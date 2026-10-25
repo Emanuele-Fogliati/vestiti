@@ -6,6 +6,7 @@ import { terrainFor, type Terrain } from "../lib/terrain";
 import type { Activity, Place, Stage, Stop, Visit } from "../lib/types";
 import { ActivityEditor } from "./ActivityEditor";
 import { Illustration } from "./Illustration";
+import { PlaceGuide } from "./PlaceGuide";
 import { PlaceSearch } from "./PlaceSearch";
 
 function Conditions({ stage }: { stage?: Stage }) {
@@ -77,6 +78,7 @@ export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelec
         <h3>{stop.name}</h3>
         <div className="acts">{stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}
           <span className="tag">{Math.round(stop.elevation_m)} m</span></div>
+        <PlaceGuide guide={stop.guide} />
         {stop.notes && <p className="act">{stop.notes}</p>}
         <Visits stop={stop} dayFrom={dayFrom} terrain={terrain} />
         <Conditions stage={stage} />

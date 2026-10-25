@@ -51,7 +51,8 @@ def list_trips(user: User = Depends(current_user), db: Session = Depends(get_db)
                                end_date=max((s.end_date for s in stops), default=None),
                                places=[s.name for s in stops],
                                art=next(({"id": lm.id, "label": lm.label} for lm in assign(stops) if lm), None),
-                               estimated=bool(t.start_estimated or any(s.days_estimated for s in stops))))
+                               estimated=bool(t.start_estimated or any(s.days_estimated for s in stops)),
+                               source_itinerary=t.source_itinerary))
     return out
 
 
@@ -91,7 +92,7 @@ def delete_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
 @router.post("/{trip_id}/duplicate", response_model=TripOut, status_code=201)
 def duplicate_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
     copy = Trip(user_id=trip.user_id, name=f"{trip.name} (copy)", notes=trip.notes,
-                start_estimated=trip.start_estimated)
+                start_estimated=trip.start_estimated, source_itinerary=trip.source_itinerary)
     copy.stops = [Stop(name=s.name, country_code=s.country_code, latitude=s.latitude,
                        longitude=s.longitude, elevation_m=s.elevation_m, start_date=s.start_date,
                        end_date=s.end_date, activities=list(s.activities or []), notes=s.notes,

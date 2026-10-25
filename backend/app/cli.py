@@ -5,6 +5,7 @@
     python -m app.cli ingest --network awin --file feeds/awin.csv.gz
     python -m app.cli create-admin --email you@example.com --password '...'
     python -m app.cli check-ai                     # is the local model reachable? try a parse
+    python -m app.cli prune-guests --days 30       # delete guests with no trips, idle 30+ days
 """
 import argparse
 import json
@@ -26,6 +27,8 @@ def main(argv=None):
     p.add_argument("--email", required=True)
     p.add_argument("--password", required=True)
     sub.add_parser("check-ai")
+    p = sub.add_parser("prune-guests")
+    p.add_argument("--days", type=int, default=30)
     args = ap.parse_args(argv)
 
     if args.cmd == "migrate":
@@ -63,6 +66,9 @@ def main(argv=None):
             u.is_guest = False
             db.commit()
             print(f"admin ready: {email}")
+        elif args.cmd == "prune-guests":
+            from app.services.accounts import prune_guests
+            print(json.dumps({"deleted_guests": prune_guests(db, args.days)}))
         elif args.cmd == "check-ai":
             from app.llm.client import LLMClient
             from app.llm.itinerary import parse_itinerary

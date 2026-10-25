@@ -10,7 +10,6 @@ os.environ.update({
     "SECRET_KEY": "test-secret-key-not-for-production-use-0123456789",
     "AUTH_RATE_LIMIT_PER_MINUTE": "1000",
     "AI_RATE_LIMIT_PER_MINUTE": "1000",
-    "ADMIN_EMAILS": "[\"admin@example.com\"]",
     "ENVIRONMENT": "test",
 })
 
