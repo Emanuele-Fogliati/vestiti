@@ -47,8 +47,8 @@ def main() -> None:
         doc = {
             "label": labels.get(pid, pid), "country": pid[:2].upper(),
             "countryName": COUNTRY_IT.get(pid[:2], pid[:2].upper()), "round": a.round, "order": n, "svg": svg,
-            "refs": [{"url": "/_blob/" + assets[s["file"]], "page": s.get("page", ""), "file": s["file"]}
-                     for s in meta["sources"][:4]],
+            "refs": [{"url": "/_blob/" + assets[s["file"]], "page": s.get("page", ""), "file": s["file"],
+                      "took": s.get("took", ""), "license": s.get("license", "")} for s in meta["sources"][:4]],
             "notes": meta.get("notes", ""),
         }
         (out / f"{pid}.json").write_text(json.dumps(doc, ensure_ascii=False), encoding="utf-8")
