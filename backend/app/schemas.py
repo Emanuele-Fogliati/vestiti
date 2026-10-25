@@ -105,6 +105,12 @@ class StopPatch(BaseModel):
     notes: str | None = None
 
 
+class StopArt(BaseModel):
+    kind: str = "landmark"
+    id: str
+    label: str
+
+
 class StopOut(ORM):
     id: str
     position: int
@@ -117,6 +123,15 @@ class StopOut(ORM):
     end_date: date
     activities: list[dict]
     notes: str | None
+    art: StopArt | None = None
+
+    @model_validator(mode="after")
+    def _art(self):
+        if self.art is None:
+            from app.art import match
+            lm = match(self.name, self.latitude, self.longitude)
+            self.art = StopArt(id=lm.id, label=lm.label) if lm else None
+        return self
 
 
 class TripIn(BaseModel):
@@ -138,6 +153,14 @@ class TripOut(ORM):
     updated_at: datetime
     stops: list[StopOut]
 
+    @model_validator(mode="after")
+    def _art(self):
+        # trip-wide pass: the same landmark twice in a row gives way to one named in the notes
+        from app.art import assign
+        for s, lm in zip(self.stops, assign(self.stops)):
+            s.art = StopArt(id=lm.id, label=lm.label) if lm else None
+        return self
+
 
 class TripSummary(ORM):
     id: str
@@ -148,6 +171,7 @@ class TripSummary(ORM):
     start_date: date | None
     end_date: date | None
     places: list[str]
+    art: StopArt | None = None
 
 
 class ReorderIn(BaseModel):
