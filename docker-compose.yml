@@ -43,7 +43,9 @@ services:
     volumes:
       - ollama:/root/.ollama
     ports:
-      - "11434:11434"
+      # localhost only: the model server has no password, so it must not be reachable from
+      # the network (the app reaches it inside Docker at http://ollama:11434)
+      - "127.0.0.1:11434:11434"
     restart: unless-stopped
     # NVIDIA GPU on Docker Desktop (WSL2): uncomment
     # deploy:

@@ -326,7 +326,7 @@ export interface AppConfig {
   brand: { name: string; tagline: string; domain: string; support_email: string };
   theme: string;
   currency: string;
-  ai: { enabled: boolean; available: boolean; model: string; base_url: string; detail: string };
+  ai: { enabled: boolean; available: boolean; model: string };
   slots: { key: string; code: string; name: string; torso: boolean }[];
   activity_types: string[];
   difficulties: string[];

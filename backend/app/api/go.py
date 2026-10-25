@@ -57,8 +57,11 @@ def go_rental(partner_id: str, request: Request, slot: str, start: date, end: da
         raise HTTPException(404, "Rental not available")
     if end < start or (end - start).days > 120:
         raise HTTPException(422, "Bad dates")
+    cc = (country or "")[:2]
+    if cc and not (cc.isascii() and cc.isalpha()):
+        raise HTTPException(422, "Bad country")  # it goes into the partner's URL as is
     url = r.url_template.format(category=slot, start=start.isoformat(), end=end.isoformat(),
-                                country=(country or "")[:2])
+                                country=cc)
     click = AffiliateClick(user_id=user.id if user else None, trip_id=_trip_id(db, trip_id, user),
                            rental_partner_id=r.id, kind="rent", network=r.network, slot=slot,
                            destination_url="", referrer=request.headers.get("referer"),

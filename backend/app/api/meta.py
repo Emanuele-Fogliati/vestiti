@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.config import get_settings
 from app.db import get_db
+from app.deps import rate_limit
 from app.engine.activities import ACTIVITIES, ACTIVITY_TYPES, DIFFICULTIES
 from app.engine.garments import FOOTWEAR_TYPES, LEVELS, SLOTS
 from app.llm.client import LLMClient
@@ -27,7 +28,7 @@ def config():
                   "support_email": s.support_email},
         "theme": s.theme,
         "currency": s.currency,
-        "ai": LLMClient().status(),
+        "ai": LLMClient().public_status(),
         "slots": [{"key": x.key, "code": x.code, "name": x.name, "torso": x.torso} for x in SLOTS],
         "activity_types": ACTIVITY_TYPES,
         "difficulties": DIFFICULTIES,
@@ -40,14 +41,18 @@ def config():
     }
 
 
-@router.get("/geocode")
+# each search is a request to Open-Meteo from our server: without a limit anyone could burn
+# our share of their free tier (and get weather blocked for every user)
+@router.get("/geocode", dependencies=[Depends(rate_limit("geo", "geo_rate_limit_per_minute"))])
 def geocode_search(q: str = Query(min_length=2, max_length=120)):
     return {"results": geocode.search(q)}
 
 
 @router.get("/catalog/products")
-def catalog(slot: str | None = None, q: str | None = None, brand: str | None = None,
-            sort: str = "price_asc", limit: int = Query(60, le=200), offset: int = 0,
+def catalog(slot: str | None = Query(None, max_length=40), q: str | None = Query(None, max_length=120),
+            brand: str | None = Query(None, max_length=120),
+            sort: str = "price_asc", limit: int = Query(60, ge=1, le=200),
+            offset: int = Query(0, ge=0, le=100_000),
             db: Session = Depends(get_db)):
     stmt = select(Product).where(Product.active.is_(True))
     if slot:
