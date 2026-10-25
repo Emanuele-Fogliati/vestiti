@@ -50,7 +50,7 @@ The details of each step:
    that keeps coming back: Machu Picchu from the Guardhouse above the ruins, terraces in front and
    Huayna Picchu towering behind; Valle de la Luna from the top of the ridge, looking down at the
    saw-tooth salt crests; Fitz Roy from the road into El Chaltén, the skyline of the Patagonia
-   logo; Osorno's cone above the Petrohué rapids. Then search only for that view.
+   logo; Osorno's cone above Lago Llanquihue or the Petrohué river. Then search only for that view.
 2. **Photos: exactly 4, sunny, no clouds**, never fewer.
    - **Photo 1 is always the symbol view**, the postcard everybody knows (Torres del Paine = the
      three towers above the lagoon from the Mirador Base). Never swap it for another viewpoint
@@ -73,28 +73,33 @@ The details of each step:
    flanks that sweep out at the foot: it is never a straight-sided triangle), the
    **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on
    a saddle, below the peak), what is in front, middle and back, and the colours.
-4. **Composition: the subject large and centred, the rest only a frame** ("contorno"). The framing is
-   yours, not the photo's. The subject the place is famous for is the main thing in the scene,
-   big and in the middle. Side walls, slopes, foreground rocks, water and anything in shadow are
-   a **narrow frame** at the edges (about a fifth of the width each side at most): they give
-   context and never take anything away from the subject. Torres del Paine: in the photo the
-   dark Peineta wall fills a third of the frame and the towers sit small at the back; in the
-   drawing the three towers fill the centre and the wall is a thin frame. Keep the proportions
-   *within* the subject (tower to tower, peak to ruins); only the crop and the size of the side
-   elements change. Do not trace pixels: redraw the shapes you measured, in the official style.
-   **But the scene stays one connected landscape, never pieces pasted together** (Manu): "voglio
-   in centro la parte principale, ma il resto deve essere comunque tutto attaccato per bene".
-   - Peaks and spires **grow out of the mass below them** (or out of a glacier lying over their
-     foot): the rock continues down into the base, under any snow. A white band or a gap must never cut the subject off from what holds
-     it up (Torres del Paine and Cerro Torre looked "nel vuoto", just set down on top).
-   - The frame physically connects to the subject and to the rest: slopes run into the base of
-     the mountain, walls meet the ground, water meets the shore.
+4. **Composition: the subject large and centred, the rest a frame that belongs to it**
+   ("contorno"). The subject the place is famous for is the main thing in the scene, big and in
+   the middle; the framing is yours, so crop and zoom until it is. But the frame is **not a set
+   of blocks placed around it** (Manu, 22:14 and 22:32): it is what really stands next to the
+   subject, drawn **as it is in reality, connected and in harmony** with it. Seeing the scene,
+   you must understand the place.
+   - **One photo, one scene.** Draw the whole scene from photo 1, as one landscape. Do not build
+     a montage from several photos, above all for a mountain: photos 2-4 only help you read
+     shapes and depth.
+   - **Everything is connected.** Peaks and spires **grow out of the mass below them** (or out
+     of a glacier lying over their foot): the rock continues down into the base, under any snow.
+     A white band or a gap must never cut the subject off from what holds it up (Torres del
+     Paine and Cerro Torre looked "nel vuoto", just set down on top). Neighbouring mountains
+     join the subject's ridge as in reality; slopes run into its base; water meets the shore.
+   - **One rock colour, one season.** Neighbouring mountains share the subject's rock colour and
+     the same season and snow: never a white massif beside a grey spire.
+   - **Near-black mountains are only shadow.** A mountain that is near-black in the photo is in
+     shade: draw it in its real rock colour, or leave it out. Never a black block at the side.
    - The **foreground stays small**: a thin strip that helps recognise the place (the road to
      Fitz Roy through the steppe), never generic grass, scree or fields that compete with the
      subject (Fitz Roy had too much green and brown in front).
-   - **Water**: never squiggle "wave" strokes or lines on the water. Rapids are white foam
-     shapes pouring over and around rocks, a fall is one clean fall shape; calm water is a flat
-     colour, at most one reflection.
+   - **Water is flat colour. Never waves**, in any style: no wave strokes, squiggles, foam
+     scallops, streaks or lines on the water (Manu: "fanno paura"). At most one reflection. A
+     waterfall that is the place itself (Iguazú, Gullfoss) is one clean fall shape. If rapids
+     seem needed to recognise a place, find another unique element instead.
+   Keep the proportions *within* the subject (tower to tower, peak to ruins). Do not trace
+   pixels: redraw the shapes you measured, in the official style.
 5. **Snow: only where permanent, attached to the rock** (4d), never a loose block, never fresh
    seasonal snow. Then the other content rules (section 3), which win over the photo: remove
    people, cars, clouds and signs; **add the typical animal even if the photo has none** (a llama
@@ -103,7 +108,8 @@ The details of each step:
    <batch folder>` writes `compare/<id>.png`, the photos next to the scene) and answer honestly:
    - **Cover the name: do I know where I am at first glance?** If the scene could be any
      mountain, lake or city in the world (a cone over a lake could be anywhere), add the
-     element only this place has (Osorno: the Petrohué rapids under the cone).
+     element only this place has (Osorno: its concave cone with the glacier streaks, the black
+     basalt of the Petrohué river at its foot; Fitz Roy: the road through the steppe).
    - **Is the subject really the protagonist?** Large, centred, the first thing the eye sees,
      its profile and curvature as in photo 1.
    - **Is the rest only a frame?** It supports the subject and takes nothing away from it.
@@ -349,11 +355,12 @@ glaciers**. So:
       first glance; the subject is the protagonist; every object can be named; nothing floats.
 - [ ] Mountain curvature as in photo 1 (a concave volcano is never a straight triangle).
 - [ ] No small objects that can be misread (flowers that look like people, posts in water).
-- [ ] **Composition:** the subject the place is famous for is large and centred; shaded walls
-      and slopes are a narrow frame at the edges, never the biggest shape (section 0, step 4).
+- [ ] **Composition:** the subject the place is famous for is large and centred; what stands
+      around it is drawn as in reality and never outweighs it (section 0, step 4).
 - [ ] **One connected landscape:** peaks grow out of their base (no white band or gap under
       them), the frame touches the subject, the foreground is a thin strip, no wave squiggles
-      on water (section 0, step 4).
+      on water, one rock colour and season, no near-black shadow
+      mountains, drawn from photo 1 as one scene (section 0, step 4).
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
 - [ ] `node tools/art/floatcheck.js <your out/ folder>` prints only `ok`.
 - [ ] Rendered preview looked at, full size and at card size: the place is recognisable.
@@ -389,6 +396,7 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Torres del Paine (round 5) | liked, but the dark Peineta wall took a third of the scene and the towers sat small at the back: the photo's framing copied literally | 0.4: recompose, subject large and centred, side walls a narrow frame |
 | Osorno (round 3) | approved earlier, then rejected: straight-sided cone (the real one is concave and pointed), lupins that look like little people, a jetty in the water and white lines nobody understands, "could be any mountain in the world" | 0.3 curvature, 0.5 no misreadable objects, 0.6 critical pass: add what only this place has |
 | Torres, Cerro Torre, Fitz Roy, Osorno (2026-10-25 22:14) | towers "nel vuoto", set on top of the base; Fitz Roy's green and brown foreground made the peaks secondary; Osorno's wave squiggles "tremende" | 0.4: subject central but one connected landscape; thin foreground; rapids as foam, no wave strokes |
+| Osorno, Cerro Torre (22:32) | waves still on the water ("fanno paura"); Cerro Torre's neighbours unconnected blocks, a black mountain (shadow) and a white massif beside grey spires | 0.4: no waves ever; one photo, one scene; neighbours as in reality, same rock colour and season; near-black = shadow |
 | Patagonia redraws (round 2) | snow and ice drawn as blocks that look like flying glaciers; too few photos, cloudy and snowy ones | 0: 4 photos, clear sky, summer, from far away; 4d |
 
 ## 10. Reference scenes
