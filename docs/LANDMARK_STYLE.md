@@ -15,6 +15,11 @@ panoramas, zoom crops, symbol-only versions, grain, gradients and generic theme 
 Every scene starts from **the classic photo of the place**: the view everyone takes and everyone
 recognises. We draw real places, so there is always one. Draw from it, then stylise.
 
+Manu reviewed the first set of places (Patagonia, Peru, the showcase) only to tune this guide.
+The other places are drawn and checked **without him**, so every correction he gave is written
+here as a general rule. Drawers and reviewers apply his eye: if a scene would make him say
+"Da rifare", it is not done.
+
 1. **Find the classic view.** Look at several photos of the place (web search for the place and
    "viewpoint", the Wikipedia article, postcards) and pick the framing that keeps coming back:
    Machu Picchu from the Guardhouse above the ruins, terraces in front and Huayna Picchu towering
@@ -39,21 +44,34 @@ recognises. We draw real places, so there is always one. Draw from it, then styl
    `python tools/art/ref.py <id> "<Wikipedia title>"` saves the article's lead image as
    `refs/<id>-1.jpg`; run it with `--url` (and `--page`) for each other photo. Write in
    `refs/<id>.json` a "took" for each photo (what you used it for) and overall "notes". Prefer
-   freely licensed photos (Wikimedia Commons). The photos stay in the batch folder as reference;
-   they are never committed or shipped. `tools/art/review_docs.py` refuses a place without 4.
+   **Any photo from the web is fine** (Google Images, Flickr, Wikimedia, travel sites; Manu,
+   2026-10-25): pick the best one, not the first freely licensed one. The photos are only
+   references to look at: they stay in the batch folder and are never committed, shipped or
+   traced, and the drawing is our own. `tools/art/review_docs.py` refuses a place without 4.
 3. **Measure before you draw.** Write down from the photo: what is in front, middle and back; the
    **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on a
    saddle, below the peak); the exact profile of every mountain (section 4c); the colours.
-4. **Draw that composition** in the official style, simplified but with the same viewpoint, the
-   same proportions and the same skyline. Do not trace pixels: redraw the shapes you measured.
+4. **Recompose, don't copy the framing** (Manu, permanent rule). Photo 1 gives the subject's
+   shapes, proportions, skyline and viewpoint; the framing is yours. Judge the photo critically:
+   what does a visitor come here to see? That subject is **large and centred**, the main thing
+   in the scene. Side walls, slopes, foreground rocks and anything in shadow are only a **narrow
+   frame** at the edges (about a fifth of the width each side at most) and never outweigh the
+   subject. Torres del Paine: in the photo the dark Peineta wall fills a third of the frame and
+   the towers sit small at the back; in the drawing the three towers fill the centre and the
+   walls are a thin frame. Keep the proportions *within* the subject (tower to tower, peak to
+   ruins); only the crop and the size of the side elements change. Do not trace pixels: redraw
+   the shapes you measured, in the official style.
 5. **Then follow the content rules**, which win over the photo: remove people, cars, clouds and
    signs; **add the typical animal even if the photo has none** (a llama at Machu Picchu,
    guanacos at Torres del Paine), standing on the ground (4b).
 6. **Compare**: `node tools/art/compare.js <batch folder>` writes `compare/<id>.png`, the photos
    next to the rendered scene. If someone who knows the place would not match them at a glance,
    redo it. Reviewers judge on this sheet.
-7. **Manu reviews** every drawing himself in the review page (photos, notes and drawing side by
-   side, "Va bene" / "Da rifare" and a comment that reaches Claude). How to load a batch there:
+7. **Review.** A second Claude reviews every scene on its compare sheet against the checklist
+   (section 8) and sends it back if any item fails. Manu looks at **samples** in the review page
+   (photos, notes and drawing side by side, "Va bene" / "Da rifare" and a comment that reaches
+   Claude), not at every place; each "Da rifare" becomes a new rule in this guide. How to load a
+   batch there:
    `/mnt/project-files/app-build/landmark-art/review/README.md` and `tools/art/review_docs.py`.
 
 ## 1. What you draw and what the app adds
@@ -280,6 +298,8 @@ glaciers**. So:
 - [ ] Snow and ice only where permanent, attached to the rock, never a loose block (4d).
 - [ ] Started from the classic reference photo (section 0); `compare/<id>.png` shows the same
       viewpoint, proportions and skyline.
+- [ ] **Composition:** the subject the place is famous for is large and centred; shaded walls
+      and slopes are a narrow frame at the edges, never the biggest shape (section 0, step 4).
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
 - [ ] `node tools/art/floatcheck.js <your out/ folder>` prints only `ok`.
 - [ ] Rendered preview looked at, full size and at card size: the place is recognisable.
@@ -312,6 +332,7 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Valle de la Luna | generic dunes instead of the saw-tooth crests seen from above | 0: the classic view |
 | Fitz Roy | a row of mountain shapes, not the Patagonia-logo skyline | 0 + 4c: profile from the photo |
 | Torres del Paine (round 4) | redrawn from Laguna Amarga to get a clear sky: not the view everyone knows | 0: photo 1 is always the iconic view; crop clouds, never change viewpoint |
+| Torres del Paine (round 5) | liked, but the dark Peineta wall took a third of the scene and the towers sat small at the back: the photo's framing copied literally | 0.4: recompose, subject large and centred, side walls a narrow frame |
 | Patagonia redraws (round 2) | snow and ice drawn as blocks that look like flying glaciers; too few photos, cloudy and snowy ones | 0: 4 photos, clear sky, summer, from far away; 4d |
 
 ## 10. Reference scenes
