@@ -6,7 +6,8 @@
 With a title it takes the lead image of the Wikipedia article, which is usually the classic view of the
 place and is freely licensed (Wikimedia Commons). If that image is not the classic view, find a better
 one (web search for the place's most photographed viewpoint) and pass it with --url.
-Use up to 4 photos per place (Manu): run it once per photo, the classic view first. Each run writes
+Use exactly 4 photos per place (Manu): run it once per photo, the classic view first, then 3 from
+other points of view or distances (mountains: clear sky, summer, from far away). Each run writes
 the next free <out>/<id>-<n>.jpg (n = 1..4) and adds it to <out>/<id>.json:
 {"sources": [{"file", "url", "page"}], "notes": "..."}. Write in "notes" what you took from each
 photo; the review tool shows the photos, the notes and the drawing to Manu. The photo is a

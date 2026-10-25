@@ -20,13 +20,22 @@ recognises. We draw real places, so there is always one. Draw from it, then styl
    Machu Picchu from the Guardhouse above the ruins, terraces in front and Huayna Picchu towering
    behind; Valle de la Luna from the top of the ridge, looking down at the saw-tooth salt crests;
    Fitz Roy from the road into El Chaltén, the skyline of the Patagonia logo.
-2. **Fetch up to 4 photos** (Manu): the classic view first, then others that show what matters
-   (another angle, the colours, the detail that makes it recognisable).
+2. **Always exactly 4 photos** (Manu): never fewer.
+   - Photo 1 is the classic view. Photos 2-4 show the **same place from other points of view and
+     distances**, so you understand the whole place and can combine elements seen from slightly
+     different spots into one scene.
+   - Prefer photos **taken from far away**, which show the whole place and what is around it, over
+     close-ups.
+   - **Mountains and nature: clear sky, sun, no clouds**, and preferably **summer with little snow**:
+     the rock shapes read better and you will not invent snow (see 4d). Keep only the permanent
+     snow and ice that belong to the place's identity (the ice mushroom on Cerro Torre, the cap on
+     Osorno, a glacier tongue).
+   - Never a diagram, a map, an old black-and-white photo, a portrait or a crop of a detail.
    `python tools/art/ref.py <id> "<Wikipedia title>"` saves the article's lead image as
-   `refs/<id>-1.jpg`; run it again with `--url` for each extra photo. Look at each: if it is not
-   useful (an old photo, a portrait, a map), find a better one. Write in `refs/<id>.json` "notes"
-   what you took from each photo. Prefer freely licensed photos (Wikimedia Commons). The photo
-   stays in the batch folder as a reference; it is never committed or shipped.
+   `refs/<id>-1.jpg`; run it with `--url` (and `--page`) for each other photo. Write in
+   `refs/<id>.json` a "took" for each photo (what you used it for) and overall "notes". Prefer
+   freely licensed photos (Wikimedia Commons). The photos stay in the batch folder as reference;
+   they are never committed or shipped. `tools/art/review_docs.py` refuses a place without 4.
 3. **Measure before you draw.** Write down from the photo: what is in front, middle and back; the
    **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on a
    saddle, below the peak); the exact profile of every mountain (section 4c); the colours.
@@ -193,6 +202,20 @@ Examples of what makes each one unique:
 Reviewers check this explicitly: cover the label and ask "which mountain is it?". If the answer
 is "a mountain", it fails.
 
+## 4d. Snow and ice: part of the mountain, never a separate block (Manu)
+
+Manu's finding: drawn snow and ice came out as **loose white blocks that look like flying
+glaciers**. So:
+- Start from snow-poor summer photos (section 0) and draw the rock first.
+- Draw only permanent snow and ice. A snow cap is clipped to the mountain's own outline (the same
+  path, or a `clipPath` of it), with a jagged lower edge that follows the gullies. It never has an
+  outline of its own that sits beside or above the rock.
+- A glacier is a tongue that flows **down a valley between two slopes** and ends on the ground or
+  in water. It is wider at the bottom, it touches the rock on both sides and it is never a
+  rectangle or a floating slab.
+- No white patches in the middle of a slope that do not connect to anything. If in doubt, leave
+  the snow out: bare rock is always believable.
+
 ## 5. Layer order (back to front)
 
 1. `<rect width="300" height="200" fill="var(--il-sky)"/>`, always the very first element.
@@ -247,6 +270,9 @@ is "a mountain", it fails.
 
 ## 8. Checklist before handing in
 
+- [ ] Exactly 4 reference photos: the classic view plus 3 other points of view or distances, clear
+      sky, mountains preferably in summer (section 0).
+- [ ] Snow and ice only where permanent, attached to the rock, never a loose block (4d).
 - [ ] Started from the classic reference photo (section 0); `compare/<id>.png` shows the same
       viewpoint, proportions and skyline.
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
@@ -280,6 +306,7 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Machu Picchu | ruins much wider than the mountain; not the view everyone knows | 0: start from the classic photo, keep its proportions |
 | Valle de la Luna | generic dunes instead of the saw-tooth crests seen from above | 0: the classic view |
 | Fitz Roy | a row of mountain shapes, not the Patagonia-logo skyline | 0 + 4c: profile from the photo |
+| Patagonia redraws (round 2) | snow and ice drawn as blocks that look like flying glaciers; too few photos, cloudy and snowy ones | 0: 4 photos, clear sky, summer, from far away; 4d |
 
 ## 10. Reference scenes
 

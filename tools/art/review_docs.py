@@ -41,6 +41,8 @@ def main() -> None:
                                       cwd=BACKEND, text=True)
         meta_file = batch / "refs" / f"{pid}.json"
         meta = json.loads(meta_file.read_text()) if meta_file.is_file() else {"sources": [], "notes": ""}
+        if len(meta["sources"]) != 4:
+            raise SystemExit(f"{pid}: has {len(meta['sources'])} reference photos, Manu wants exactly 4")
         missing = [s["file"] for s in meta["sources"] if s["file"] not in assets]
         if missing:
             raise SystemExit(f"{pid}: upload these photos first: {', '.join(missing)}")
