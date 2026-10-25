@@ -449,7 +449,7 @@ Palette: `{"sky": "#DCE3E8", "far": "#BFC5CA", "mid": "#B9945F", "ice": "#FFFFFF
 ## 11. Decision log (registro decisioni)
 
 Every rule Manu decided, in order. Each new decision is added here **and** written into the
-section it changes, in the same commit. Times are CET on the date shown.
+section it changes, in the same commit. Times are UTC.
 
 | Date and time | Decision (Manu) | Where |
 |---|---|---|
