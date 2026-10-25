@@ -43,7 +43,11 @@ BIG_BODY_PATHS = ("/api/admin/feeds/import",)
 CSP = ("default-src 'self'; script-src 'self'; "
        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
        "font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https:; "
-       "connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; "
+       # maps (MapLibre): vector tiles and fonts from OpenFreeMap, relief from AWS terrain
+       # tiles, and a worker the library starts from a blob: URL
+       "connect-src 'self' https://tiles.openfreemap.org https://s3.amazonaws.com; "
+       "worker-src 'self' blob:; child-src 'self' blob:; "
+       "object-src 'none'; base-uri 'self'; form-action 'self'; "
        "frame-ancestors 'none'")
 
 
