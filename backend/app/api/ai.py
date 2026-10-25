@@ -35,8 +35,11 @@ def parse(body: ParseIn, user: User = Depends(current_user)):
             # altitude are what makes the warm layers necessary
             place["elevation_m"] = s.elevation_m
         stops.append({**s.model_dump(mode="json"), "matches": matches, "place": place})
-    return {"trip_name": draft.trip_name, "stops": stops, "questions": draft.questions,
-            "parser": draft.parser}
+    est = draft.estimate
+    # the page asks the estimate's questions in its own form ("When do you leave?", "How long?")
+    questions = [q for q in draft.questions if not est or q not in est.questions]
+    return {"trip_name": draft.trip_name, "stops": stops, "questions": questions,
+            "parser": draft.parser, "estimate": est.model_dump(mode="json") if est else None}
 
 
 def _facts(strategy: dict, stage_index: int | None, slot: str | None) -> tuple[dict, str]:
