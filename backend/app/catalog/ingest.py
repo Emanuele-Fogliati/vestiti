@@ -95,8 +95,21 @@ def ingest_bytes(db: Session, raw: bytes, network: str, filename: str,
 
 def seed_products(db: Session) -> FeedImport:
     raw = (SEED_DIR / "products.json").read_bytes()
-    return ingest_rows(db, read_feed(raw, "json"), "seed", "seed/products.json",
-                       deactivate_missing=False, source="seed")
+    rows = list(read_feed(raw, "json"))
+    job = ingest_rows(db, rows, "seed", "seed/products.json", deactivate_missing=False,
+                      source="seed")
+    # a product taken out of the seed file must not keep being picked from an old database
+    keep = {r.get("external_id") for r in rows}
+    stale = [p for p in db.scalars(select(Product).where(Product.source == "seed",
+                                                         Product.active.is_(True)))
+             if p.external_id not in keep]
+    for p in stale:
+        p.active = False
+    if stale:
+        job.deactivated += len(stale)
+        db.commit()
+        log.info("seed: %s products no longer in the seed file deactivated", len(stale))
+    return job
 
 
 def seed_rental_partners(db: Session) -> int:

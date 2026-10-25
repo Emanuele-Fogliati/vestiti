@@ -82,14 +82,14 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
         )}
         {have ? (
           <div className="act2">
-            <button type="button" className="buy" onClick={() => choose("buy")}>I need one</button>
+            <button type="button" className="buy" aria-label={`I need one: ${line.slot_name}`} onClick={() => choose("buy")}>I need one</button>
             <Link className="buy" to={`/wardrobe?slot=${line.slot}`}>Check mine</Link>
             {!line.assumed && <button type="button" className="buy" onClick={() => choose("auto")}>Auto</button>}
           </div>
         ) : (
         <div className="act2">
           {!owned && line.kind !== "none" && (
-            <button type="button" className="buy" title="Already in your wardrobe: no need to say which one" onClick={() => choose("have")}>I have it</button>
+            <button type="button" className="buy" aria-label={`I have it: ${line.slot_name}`} title="Already in your wardrobe: no need to say which one" onClick={() => choose("have")}>I have it</button>
           )}
           <button type="button" className="buy" onClick={onSwap}>Swap{line.alternatives ? ` (${line.alternatives})` : ""}</button>
           {line.owned_alternatives.length > 0 && !owned && (
