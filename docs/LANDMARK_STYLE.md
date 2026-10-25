@@ -68,6 +68,10 @@ Palette rules (the linter checks the first three):
    symbol-only versions.
 6. **The sun is always there**: exactly one `<circle fill="var(--il-sun)">`, radius 10-22, in the
    top quarter, away from the landmark's tallest point.
+7. **Believable physics: nothing floats.** See section 4b. This is the most common reason a
+   scene is rejected.
+8. **No rainbows**, unless a rainbow is truly what the place is known for. A waterfall's spray
+   is not a reason to add one.
 
 ## 4. Recognisable, not generic
 
@@ -81,7 +85,10 @@ to read on their own:
 - Uros: the yellow reed boats with the puma head, the reed huts, the lake.
 
 Rules:
-- One landmark per scene, seen from its most famous viewpoint.
+- One landmark per scene, seen from its most famous viewpoint. **Cities** may combine their 2-3
+  most famous landmarks in one believable street or waterfront view, when one alone would feel
+  empty (Ho Chi Minh City: Notre-Dame, the Central Post Office and the Bitexco tower). It must
+  still read as one real place, not a collage.
 - Real proportions (number of towers, arches, domes, peaks). Never invent: look it up if unsure.
 - No text, no letters, no flags with emblems, no logos, no faces.
 - Only real places. Never copy a photo or another illustration: draw from what the place is.
@@ -89,6 +96,32 @@ Rules:
   Cusco = the cathedral and Inca walls), not a generic skyline.
 - Nature: the shape only that place has (the canyon profile, the striped mountain).
 - The detail level is the 10 Peru references: usually **20-40 elements, 2-4 KB**.
+
+## 4b. Physics: everything stands on something
+
+The paper shadow under every shape makes an object look **lifted** whenever its bottom edge is
+visible. So every object must visibly rest on the ground, the water or its support:
+
+- **Ground overlaps the base.** Draw the ground (or water) layer **after** a building, monument,
+  tree or rock, so it covers the object's bottom 4-8 px. The base of a building is a straight
+  horizontal edge sitting on the ground, never a curved or rounded bottom with ground or road
+  visible underneath.
+- **Mountains reach the ground.** A mountain or a range continues down to the horizon, the valley
+  floor or the waterline: no strip of sky, and no light band (snow, glacier, mist), between the
+  mountain and what is in front of it. Peaks rise from a base, they do not hang above a lake.
+  The bad example was the first Torres del Paine, whose towers seemed to float over the lake.
+- **No gaps between layers.** Each layer touches or overlaps the layer in front of it. A sliver
+  of sky colour between two terrain layers reads as a hole.
+- **Animals stand, sit, swim or perch** on something visible, at a believable size for the
+  scene. A bird in flight is allowed only when it is the place's trait (the Colca condor) and
+  its silhouette is unmistakable: spread wings, body, head. If an animal is not instantly
+  recognisable at card size, leave it out. The bad example was the first Iguazu, with a toucan
+  that read as an unknown object in mid-air.
+- **Water falls down and flows to a lower level**, it lands in a pool or river, and spray stays
+  at the bottom of the fall.
+- **Lean, size and perspective are consistent**: things further away are smaller and higher on
+  the canvas, verticals are vertical, and nothing is larger than the landmark it stands next to
+  unless it really is.
 
 ## 5. Layer order (back to front)
 
@@ -148,11 +181,28 @@ Rules:
 - [ ] Rendered preview looked at, full size and at card size: the place is recognisable.
 - [ ] 2-4 signature features present, proportions right, nothing invented.
 - [ ] Palette = the real colours of the place; `near` near black; light sky.
-- [ ] No people except one activity figure; no clouds unless they are the place's trait; animals
-      only if they belong; no half-cut background shapes; one clear scene; one sun.
+- [ ] No people except one activity figure; no clouds and no rainbows unless they are the
+      place's trait; animals only if they belong; no half-cut background shapes; one clear scene;
+      one sun.
+- [ ] **Physics:** every building, monument, mountain, tree and animal rests on the ground, water
+      or a support; no sky or light band under a mountain; no curved bottoms; no gaps between
+      layers; water falls down into something.
 - [ ] No two scenes in the batch look like the same generic mountain.
 
-## 9. Reference scenes
+## 9. What Manu rejected (learn from it)
+
+Feedback on the first showcase of the official style (2026-10-25):
+
+| Scene | Problem | Rule |
+|---|---|---|
+| Torres del Paine | the towers seem to fly over the lake | 4b: mountains reach the ground |
+| Colosseum | the building seems to float, and it looked rough | 4b: ground overlaps the base |
+| Iguazu Falls | an unreadable animal in mid-air (a toucan) | 4b: animals stand on something and are unmistakable |
+| Skógafoss, Iguazu | rainbows added for decoration | 3.8: no rainbows |
+| Ho Chi Minh City | only one church, the city feels empty | 4: cities may combine 2-3 landmarks |
+| Gullfoss | hard to tell it is Gullfoss | 4: signature features, big and clear |
+
+## 10. Reference scenes
 
 The ten Peru scenes in `backend/app/art/landmarks/pe/` (palettes in `catalog/pe.json`) are the
 approved references. Read at least three before drawing. One in full:
