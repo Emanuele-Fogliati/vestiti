@@ -10,6 +10,32 @@ style tests. It is **"Fumetto in carta"**: flat shapes in the real colours of th
 comic outline, and a soft paper-cut shadow under every shape. Picking it ruled out frames,
 panoramas, zoom crops, symbol-only versions, grain, gradients and generic theme colours.
 
+## 0. Always start from the reference photo (Manu, permanent rule)
+
+Every scene starts from **the classic photo of the place**: the view everyone takes and everyone
+recognises. We draw real places, so there is always one. Draw from it, then stylise.
+
+1. **Find the classic view.** Look at several photos of the place (web search for the place and
+   "viewpoint", the Wikipedia article, postcards) and pick the framing that keeps coming back:
+   Machu Picchu from the Guardhouse above the ruins, terraces in front and Huayna Picchu towering
+   behind; Valle de la Luna from the top of the ridge, looking down at the saw-tooth salt crests;
+   Fitz Roy from the road into El Chaltén, the skyline of the Patagonia logo.
+2. **Fetch it**: `python tools/art/ref.py <id> "<Wikipedia title>"` saves the article's lead image
+   to `refs/<id>.jpg`. Look at it: if it is not the classic view (an old photo, a detail, a map),
+   find a better one and use `--url`. Prefer freely licensed photos (Wikimedia Commons). The photo
+   stays in the batch folder as a reference; it is never committed or shipped.
+3. **Measure before you draw.** Write down from the photo: what is in front, middle and back; the
+   **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on a
+   saddle, below the peak); the exact profile of every mountain (section 4c); the colours.
+4. **Draw that composition** in the official style, simplified but with the same viewpoint, the
+   same proportions and the same skyline. Do not trace pixels: redraw the shapes you measured.
+5. **Then follow the content rules**, which win over the photo: remove people, cars, clouds and
+   signs; **add the typical animal even if the photo has none** (a llama at Machu Picchu,
+   guanacos at Torres del Paine), standing on the ground (4b).
+6. **Compare**: `node tools/art/compare.js <batch folder>` writes `compare/<id>.png`, the photo
+   next to the rendered scene at the same size. If someone who knows the photo would not match
+   the two at a glance, redo it. Reviewers judge on this sheet.
+
 ## 1. What you draw and what the app adds
 
 You draw a **flat scene**. The app adds the look on top when it serves the scene
@@ -136,7 +162,7 @@ render too.
 A famous mountain must be recognisable **from its silhouette alone**, like a skyline. If two
 mountain scenes could swap names, both are wrong. Before drawing:
 
-1. Look up the real profile from the classic viewpoint and write down what only that mountain has:
+1. Take the real profile from the reference photo (section 0) and write down what only that mountain has:
    the number of summits, their relative heights, the spacing, the shape of each top (needle,
    horn, dome, cone, saw-tooth, flat table), the steepness of each side, the colour bands.
 2. Draw that profile with enough points to carry it (a famous peak is usually 15-40 path points,
@@ -152,8 +178,9 @@ Examples of what makes each one unique:
   ice mushroom on top; Torre Egger and Standhardt are lower needles beside it.
 - **Cuernos del Paine**: a light granite base with **dark sedimentary caps** (the "horns"),
   a wide jagged crest over Lago Pehoé; the two-colour bands are the signature.
-- **Fitz Roy**: a massive broad tower with a flat-ish top, flanked by smaller needles on both
-  sides (Poincenot on the left), often pink at sunrise.
+- **Fitz Roy**: the skyline of the Patagonia logo: a massive steep tower with a pointed top,
+  a long stepped shoulder, and a row of granite needles on both sides (Poincenot on the left),
+  often pink at sunrise.
 - **Osorno**: an almost perfect symmetric cone with a white snow cap, over a lake.
 - **Huayna Picchu**: a sugar-loaf peak behind the ruins. **Misti**: a wide cone behind Arequipa.
 
@@ -214,6 +241,8 @@ is "a mountain", it fails.
 
 ## 8. Checklist before handing in
 
+- [ ] Started from the classic reference photo (section 0); `compare/<id>.png` shows the same
+      viewpoint, proportions and skyline.
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
 - [ ] `node tools/art/floatcheck.js <your out/ folder>` prints only `ok`.
 - [ ] Rendered preview looked at, full size and at card size: the place is recognisable.
@@ -242,6 +271,9 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Gullfoss | hard to tell it is Gullfoss | 4: signature features, big and clear |
 | Cerro Torre, Torres del Paine, Cuernos | the Patagonia peaks looked alike; Cuernos unreadable | 4c: each mountain by its real profile |
 | Colosseum (2nd try) | still not liked | 4: signature features, real proportions |
+| Machu Picchu | ruins much wider than the mountain; not the view everyone knows | 0: start from the classic photo, keep its proportions |
+| Valle de la Luna | generic dunes instead of the saw-tooth crests seen from above | 0: the classic view |
+| Fitz Roy | a row of mountain shapes, not the Patagonia-logo skyline | 0 + 4c: profile from the photo |
 
 ## 10. Reference scenes
 
