@@ -27,7 +27,8 @@ def test_peru_trip_gets_one_landmark_per_stop():
 def test_name_beats_distance_and_far_places_get_nothing():
     # "Huacachina" is 5 km from Ica: the name wins even with rough coordinates
     assert art.match("Huacachina", -14.06, -75.73).id == "pe-huacachina"
-    assert art.match("Reykjavik", 64.14, -21.94) is None
+    assert art.match("Tromso", 69.65, 18.96) is None
+    assert art.match("Reykjavik", 64.14, -21.94).id == "is-reykjavik"
     assert art.match("Machu Picchu Pueblo", None, None).id == "pe-machu-picchu"
 
 
@@ -52,7 +53,7 @@ def test_api_serves_landmarks_and_trips_carry_them(client):
     trip = client.post("/api/trips", json={"name": "Peru", "stops": [
         {"name": n, "latitude": la, "longitude": lo, "notes": no, "start_date": "2027-05-01",
          "end_date": "2027-05-02"} for n, la, lo, no in PERU[:3]] + [
-        {"name": "Reykjavik", "latitude": 64.14, "longitude": -21.94, "start_date": "2027-05-03",
+        {"name": "Tromso", "latitude": 69.65, "longitude": 18.96, "start_date": "2027-05-03",
          "end_date": "2027-05-04"}]}).json()
     assert [s["art"] and s["art"]["id"] for s in trip["stops"]] == [
         "pe-cusco-cathedral", "pe-machu-picchu", "pe-rainbow-mountain", None]
@@ -99,3 +100,15 @@ def test_every_place_has_a_full_palette():
         assert palette_problems(dict(lm.palette)) == [], lm.id
     assert palette_problems({"sky": "#FFFFFF"})
     assert palette_problems({t: "red" for t in TOKENS})
+
+
+def test_showcase_places_match_their_stops():
+    """The 7 wonders and the most visited places of AR, CL, VN, IS (2026-10-25 showcase)."""
+    cases = [("Buenos Aires", -34.60, -58.38, "ar-buenos-aires"), ("Caminito", None, None, "ar-la-boca"),
+             ("Santiago", -33.45, -70.67, "cl-santiago"), ("Santiago de Compostela", 42.88, -8.54, None),
+             ("Halong Bay", None, None, "vn-ha-long-bay"), ("Saigon", None, None, "vn-ho-chi-minh-city"),
+             ("Beijing", 39.90, 116.40, None), ("Mutianyu", 40.43, 116.57, "cn-great-wall-of-china"),
+             ("Roma", None, None, "it-colosseum"), ("Thingvellir", None, None, "is-thingvellir-national-park")]
+    for name, lat, lon, want in cases:
+        got = art.match(name, lat, lon)
+        assert (got.id if got else None) == want, name
