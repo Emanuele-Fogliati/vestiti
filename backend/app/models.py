@@ -13,6 +13,7 @@ from sqlalchemy import (
     String,
     Text,
     UniqueConstraint,
+    false,
 )
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -56,6 +57,8 @@ class Trip(Base):
     user_id: Mapped[str] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
     name: Mapped[str] = mapped_column(String(200))
     notes: Mapped[str | None] = mapped_column(Text)
+    # the traveller gave no start date: the dates are a guess until they set one
+    start_estimated: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, onupdate=utcnow
@@ -86,6 +89,11 @@ class Stop(Base):
     # [{"type": "hiking", "difficulty": "hard", "max_altitude_m": 2400, "hours": 6}]
     activities: Mapped[list] = mapped_column(JSON, default=list)
     notes: Mapped[str | None] = mapped_column(Text)
+    # places seen during the stop besides where you sleep, in order:
+    # [{"name": "Moray", "date": "2027-05-08"}, {"name": "Maras", "date": "2027-05-08"}]
+    visits: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
+    # the traveller gave places but not how long: this stop's days are a guess
+    days_estimated: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
 
     trip: Mapped[Trip] = relationship(back_populates="stops")
 
