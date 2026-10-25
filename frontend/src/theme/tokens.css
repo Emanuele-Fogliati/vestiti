@@ -2,7 +2,7 @@
    Swap the whole look by changing THEME in the backend env (or data-theme on <html>).
    To add a theme: copy one block, rename it, change the values. Components only use var(--*). */
 
-/* Signal yellow on black (default). Layout: poster. Yellow hero band, black rules 2px, square corners, uppercase expanded headlines; yellow marks only the thing you act on. */
+/* Signal yellow and black (default), soft version: same palette, friendly rounded type (Outfit + Figtree), rounded cards and pill controls, soft shadows instead of heavy black rules. Yellow marks the thing you act on. */
 :root,
 [data-theme="yellow-black"]{
   color-scheme:light;
@@ -14,7 +14,7 @@
   --ink-2:#55554F;
   --ink-3:#9A9A92;
   --rule:#D9D9D2;
-  --rule-strong:#0D0D0D;
+  --rule-strong:#DEDCD1;
   --focus:#2457C5;
   --top-bg:#0D0D0D;
   --top-ink:#FFFFFF;
@@ -24,7 +24,7 @@
   --hl-bg:#0D0D0D;
   --hl-ink:#FFD60A;
   --accent:#FFD60A;
-  --accent-border:#0D0D0D;
+  --accent-border:#FFD60A;
   --accent-ink:#0D0D0D;
   --sh-k:#0D0D0D;
   --el-sel:#FFF6C7;
@@ -33,14 +33,14 @@
   --el-dot:#0D0D0D;
   --el-dot-ring:#FFD60A;
   --el-label:#0D0D0D;
-  --stop-gap:0px;
-  --stop-pad:26px 12px;
-  --stop-bg:transparent;
-  --stop-radius:0px;
+  --stop-gap:12px;
+  --stop-pad:20px;
+  --stop-bg:#FFFFFF;
+  --stop-radius:22px;
   --stop-hover:#FFFBE3;
-  --stop-sel:inset 0 0 0 2px #0D0D0D;
+  --stop-sel:0 0 0 2px #0D0D0D,0 10px 28px rgba(13,13,13,.10);
   --days-ink:#0D0D0D;
-  --thumb-border:2px solid #0D0D0D;
+  --thumb-border:0;
   --hot:#0D0D0D;
   --il-sky:#EDEDE6;
   --il-far:#C6C6BD;
@@ -64,7 +64,7 @@
   --cell-sel:#0D0D0D;
   --dot:#0D0D0D;
   --why-bg:#FFD60A;
-  --why-border:2px solid #0D0D0D;
+  --why-border:0;
   --why-k:#0D0D0D;
   --tag-bg:#0D0D0D;
   --tag-ink:#FFFFFF;
@@ -75,7 +75,7 @@
   --total-bg:#0D0D0D;
   --total-ink:#FFFFFF;
   --total-ink-2:#C4C4BC;
-  --total-border:#0D0D0D;
+  --total-border:transparent;
   --total-track:#2C2C29;
   --total-fill:#FFD60A;
   --total-fill-dim:#77776F;
@@ -91,37 +91,56 @@
   --ly-base:#ECECE5;
   --ly-skin:#E5DFD4;
   --ly-pattern:rgba(13,13,13,.35);
-  --f-display:"Archivo","Arial Black",Arial,sans-serif;
-  --f-body:"Archivo",Arial,sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
-  --d-weight:800;
-  --d-stretch:125%;
-  --d-transform:uppercase;
-  --d-tracking:-0.01em;
-  --radius:0px;
-  --radius-sm:0px;
-  --radius-btn:0px;
-  --radius-pill:2px;
-  --bw:2px;
-  --shadow:none;
+  --f-display:"Outfit","Avenir Next","Segoe UI",Arial,sans-serif;
+  --f-body:"Figtree","Segoe UI",Arial,sans-serif;
+  --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --d-weight:700;
+  --d-stretch:normal;
+  --d-transform:none;
+  --d-tracking:-0.025em;
+  --radius:22px;
+  --radius-sm:14px;
+  --radius-btn:999px;
+  --radius-pill:999px;
+  --bw:1px;
+  --shadow:0 1px 2px rgba(13,13,13,.05),0 10px 30px rgba(13,13,13,.07);
 }
 
-[data-theme="yellow-black"] .hero{background:var(--accent);border-bottom:2px solid var(--ink)}
+[data-theme="yellow-black"] .hero{background:var(--accent);border-bottom:0;border-radius:0 0 36px 36px}
 [data-theme="yellow-black"] .hero .kicker,[data-theme="yellow-black"] .hero .lede{color:#2B2A22}
-[data-theme="yellow-black"] .hero h1{font-size:clamp(40px,5.4vw,76px);line-height:.9}
-[data-theme="yellow-black"] .hero h1 .hl{padding:0 .1em}
-[data-theme="yellow-black"] .brief .btn.primary{background:var(--ink);color:var(--accent);border-color:var(--ink);text-transform:uppercase;letter-spacing:.08em;font-stretch:115%}
-[data-theme="yellow-black"] .btn.primary,[data-theme="yellow-black"] .apply{text-transform:uppercase;letter-spacing:.06em}
-[data-theme="yellow-black"] .sh-k{justify-self:start;background:var(--accent);color:var(--ink);padding:4px 8px;font-weight:700;border:2px solid var(--ink)}
-[data-theme="yellow-black"] .stops{border-top:2px solid var(--ink)}
-[data-theme="yellow-black"] .stop{border-bottom:2px solid var(--ink)}
-[data-theme="yellow-black"] .cond dd.hot{background:var(--accent);padding:0 5px;justify-self:start}
+[data-theme="yellow-black"] .hero h1{font-size:clamp(40px,5.6vw,80px);line-height:1;font-weight:800}
+[data-theme="yellow-black"] .hero h1{line-height:1.08}
+[data-theme="yellow-black"] .hero h1 .hl{display:inline-block;margin-top:.12em;padding:0 .16em .04em;border-radius:.2em}
+[data-theme="yellow-black"] .brief{border:0;border-radius:28px}
+[data-theme="yellow-black"] .brief .btn.primary{background:var(--ink);color:var(--accent);border-color:var(--ink)}
+[data-theme="yellow-black"] .facts{border:0;box-shadow:var(--shadow);border-radius:22px}
+[data-theme="yellow-black"] .fact{border-right-color:#ECEAE1}
+[data-theme="yellow-black"] .fact b{font-weight:700}
+[data-theme="yellow-black"] .btn{font-weight:600}
+[data-theme="yellow-black"] .btn.primary{box-shadow:0 1px 0 rgba(13,13,13,.08),0 6px 16px rgba(255,214,10,.35)}
+[data-theme="yellow-black"] :is(.kicker,.sh-k,.label,.field label,.cond dt,.days,.free,.xhead){font-family:var(--f-body);letter-spacing:.06em;font-weight:600}
+[data-theme="yellow-black"] .sh-k{justify-self:start;background:var(--accent);color:var(--ink);padding:5px 14px;border-radius:999px;font-size:13px;letter-spacing:.04em;text-transform:none}
+[data-theme="yellow-black"] .sh h2{font-weight:800}
+[data-theme="yellow-black"] .stops{border-top:0}
+[data-theme="yellow-black"] .stop{border-bottom:0;box-shadow:0 1px 2px rgba(13,13,13,.05),0 6px 18px rgba(13,13,13,.05)}
+[data-theme="yellow-black"] .stop:hover{background:var(--stop-hover)}
+[data-theme="yellow-black"] .thumb{border-radius:16px}
+[data-theme="yellow-black"] :is(.elev,.panel,.mx-box,.lt-box,.card){border-color:#E6E4DA;box-shadow:0 1px 2px rgba(13,13,13,.04),0 8px 24px rgba(13,13,13,.05)}
+[data-theme="yellow-black"] .card{border-radius:22px;overflow:hidden}
+[data-theme="yellow-black"] .seg{padding:4px;gap:4px;border-color:var(--rule-strong)}
+[data-theme="yellow-black"] .seg button{border-right:0;border-radius:999px}
+[data-theme="yellow-black"] .cond dd.hot{background:var(--accent);padding:0 8px;border-radius:999px;justify-self:start}
 [data-theme="yellow-black"] .chip.own{box-shadow:inset 0 0 0 1.5px var(--ink)}
 [data-theme="yellow-black"] .src.own{box-shadow:inset 0 0 0 1px var(--ink)}
-[data-theme="yellow-black"] .toolbar{background:var(--surface)}
-[data-theme="yellow-black"] .card h3{font-size:16px}
-[data-theme="yellow-black"] .days b{font-size:34px}
-[data-theme="yellow-black"] .free{font-weight:700}
+[data-theme="yellow-black"] .toolbar{background:rgba(255,255,255,.96);border-color:#E6E4DA}
+[data-theme="yellow-black"] .card h3{font-size:17px}
+[data-theme="yellow-black"] .days b{font-size:38px;font-weight:800}
+[data-theme="yellow-black"] .free{font-weight:700;text-transform:none;letter-spacing:.02em}
+[data-theme="yellow-black"] textarea:not(.titleedit){font-family:var(--f-body)}
+[data-theme="yellow-black"] .secnav a{font-family:var(--f-body);font-weight:600;letter-spacing:.02em;text-transform:none}
+[data-theme="yellow-black"] :is(.fig .lt,.chip,.brandline,.stars){font-family:var(--f-body);letter-spacing:.04em}
+[data-theme="yellow-black"] .fig .lt{max-width:calc(100% - 76px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:4px 10px}
+[data-theme="yellow-black"] .chip{padding:4px 10px}
 
 /* Cobalt on white. Layout: calm product. White ground, one cobalt blue, soft rounded panels, pill controls; illustrations in duotone blue with a warm sun. */
 [data-theme="cobalt"]{
