@@ -20,59 +20,75 @@ The other places are drawn and checked **without him**, so every correction he g
 here as a general rule. Drawers and reviewers apply his eye: if a scene would make him say
 "Da rifare", it is not done.
 
-1. **Find the classic view.** Look at several photos of the place (web search for the place and
-   "viewpoint", the Wikipedia article, postcards) and pick the framing that keeps coming back:
-   Machu Picchu from the Guardhouse above the ruins, terraces in front and Huayna Picchu towering
-   behind; Valle de la Luna from the top of the ridge, looking down at the saw-tooth salt crests;
-   Fitz Roy from the road into El Chaltén, the skyline of the Patagonia logo.
-2. **Always exactly 4 photos** (Manu): never fewer.
-   - **Photo 1 is always the iconic postcard view**, the one everybody knows (Torres del Paine =
-     the three towers above the lagoon from the Mirador Base; Fitz Roy = the skyline from the road
-     into El Chaltén). Never swap it for another viewpoint just to get a clearer sky: if no
-     cloudless shot of that view exists, take the clearest one and crop the clouds out. The
-     drawing follows photo 1.
+These are the steps to make every image (Manu, 2026-10-25). Follow them in order; none is optional.
+
+1. **Decide the place's symbol first.** Before searching any photo, decide what makes this place
+   recognisable: the view everyone takes, the one on the postcard. Look at several photos (web
+   search for the place and "viewpoint", the Wikipedia article, postcards) and pick the framing
+   that keeps coming back: Machu Picchu from the Guardhouse above the ruins, terraces in front and
+   Huayna Picchu towering behind; Valle de la Luna from the top of the ridge, looking down at the
+   saw-tooth salt crests; Fitz Roy from the road into El Chaltén, the skyline of the Patagonia
+   logo; Osorno's cone above the Petrohué rapids. Then search only for that view.
+2. **Collect exactly 4 sunny photos**, never fewer.
+   - **Photo 1 is always the symbol view**, the postcard everybody knows (Torres del Paine = the
+     three towers above the lagoon from the Mirador Base). Never swap it for another viewpoint
+     just to get a clearer sky: if no cloudless shot of that view exists, take the clearest one
+     and crop the clouds out. The drawing follows photo 1.
    - Photos 2-4 show the **same place from other points of view and distances** (not three crops
-     of one spot), so you understand the whole place and can combine elements seen from slightly
-     different spots into one scene.
-   - Prefer photos **taken from far away**, which show the whole place and what is around it, over
-     close-ups.
-   - **Mountains and nature: clear sky, sun, no clouds**, and preferably **summer with little snow**:
-     the rock shapes read better and you will not invent snow (see 4d). Keep only the permanent
-     snow and ice that belong to the place's identity (the ice mushroom on Cerro Torre, the cap on
-     Osorno, a glacier tongue).
+     of one spot), preferably **from far away**, so you understand the whole place and what is
+     around it.
+   - **Sun and clear sky, no clouds**, in every photo; mountains preferably in **summer with
+     little snow**, so the rock shapes read and you do not invent snow (step 5, 4d).
    - Never a diagram, a map, an old black-and-white photo, a portrait or a crop of a detail.
+   - **Any photo from the web is fine** (Google Images, Flickr, Wikimedia, travel sites): pick the
+     best one, not the first freely licensed one. Photos are references to look at: they stay in
+     the batch folder and are never committed, shipped or traced; the drawing is our own.
    `python tools/art/ref.py <id> "<Wikipedia title>"` saves the article's lead image as
    `refs/<id>-1.jpg`; run it with `--url` (and `--page`) for each other photo. Write in
-   `refs/<id>.json` a "took" for each photo (what you used it for) and overall "notes". Prefer
-   **Any photo from the web is fine** (Google Images, Flickr, Wikimedia, travel sites; Manu,
-   2026-10-25): pick the best one, not the first freely licensed one. The photos are only
-   references to look at: they stay in the batch folder and are never committed, shipped or
-   traced, and the drawing is our own. `tools/art/review_docs.py` refuses a place without 4.
-3. **Measure before you draw.** Write down from the photo: what is in front, middle and back; the
-   **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on a
-   saddle, below the peak); the exact profile of every mountain (section 4c); the colours.
-4. **Recompose, don't copy the framing** (Manu, permanent rule). Photo 1 gives the subject's
-   shapes, proportions, skyline and viewpoint; the framing is yours. Judge the photo critically:
-   what does a visitor come here to see? That subject is **large and centred**, the main thing
-   in the scene. Side walls, slopes, foreground rocks and anything in shadow are only a **narrow
-   frame** at the edges (about a fifth of the width each side at most) and never outweigh the
-   subject. Torres del Paine: in the photo the dark Peineta wall fills a third of the frame and
-   the towers sit small at the back; in the drawing the three towers fill the centre and the
-   walls are a thin frame. Keep the proportions *within* the subject (tower to tower, peak to
-   ruins); only the crop and the size of the side elements change. Do not trace pixels: redraw
-   the shapes you measured, in the official style.
-5. **Then follow the content rules**, which win over the photo: remove people, cars, clouds and
-   signs; **add the typical animal even if the photo has none** (a llama at Machu Picchu,
-   guanacos at Torres del Paine), standing on the ground (4b).
-6. **Compare**: `node tools/art/compare.js <batch folder>` writes `compare/<id>.png`, the photos
-   next to the rendered scene. If someone who knows the place would not match them at a glance,
-   redo it. Reviewers judge on this sheet.
-7. **Review.** A second Claude reviews every scene on its compare sheet against the checklist
-   (section 8) and sends it back if any item fails. Manu looks at **samples** in the review page
-   (photos, notes and drawing side by side, "Va bene" / "Da rifare" and a comment that reaches
-   Claude), not at every place; each "Da rifare" becomes a new rule in this guide. How to load a
-   batch there:
-   `/mnt/project-files/app-build/landmark-art/review/README.md` and `tools/art/review_docs.py`.
+   `refs/<id>.json` a "took" for each photo (what you used it for) and overall "notes".
+   `tools/art/review_docs.py` refuses a place without 4.
+3. **Take the subject's true shapes from photo 1.** Write down the exact **profile** of every
+   mountain and building (section 4c), its **curvature** (a volcano like Osorno has concave
+   flanks that sweep out at the foot: it is never a straight-sided triangle), the
+   **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on
+   a saddle, below the peak), what is in front, middle and back, and the colours.
+4. **Compose: the subject large and centred, the rest only a frame** ("contorno"). The framing is
+   yours, not the photo's. The subject the place is famous for is the main thing in the scene,
+   big and in the middle. Side walls, slopes, foreground rocks, water and anything in shadow are
+   a **narrow frame** at the edges (about a fifth of the width each side at most): they give
+   context and never take anything away from the subject. Torres del Paine: in the photo the
+   dark Peineta wall fills a third of the frame and the towers sit small at the back; in the
+   drawing the three towers fill the centre and the wall is a thin frame. Keep the proportions
+   *within* the subject (tower to tower, peak to ruins); only the crop and the size of the side
+   elements change. Do not trace pixels: redraw the shapes you measured, in the official style.
+5. **Apply the content rules**, which win over the photo:
+   - **Snow and ice only where permanent, attached to the rock** (4d), never a loose block.
+   - Remove people, cars, clouds and signs (section 3).
+   - **Add the typical animal even if the photo has none** (a llama at Machu Picchu, guanacos at
+     Torres del Paine), standing on the ground (4b).
+   - **No small objects that can be misread.** Every object must be identifiable at a glance;
+     if in doubt, leave it out. Manu's examples from Osorno: purple and white lupin spikes that
+     read as little people, a jetty standing in the middle of the water, white lines on the
+     water that mean nothing.
+6. **Critical pass, mandatory, after drawing.** Render the scene (`node tools/art/compare.js
+   <batch folder>` writes `compare/<id>.png`, the photos next to the scene) and answer honestly:
+   - **Cover the name: do I know where I am at first glance?** If the scene could be any
+     mountain, lake or city in the world (a cone over a lake could be anywhere), add the
+     element only this place has (Osorno: the Petrohué rapids under the cone).
+   - **Is the subject really the protagonist?** Large, centred, the first thing the eye sees,
+     its profile and curvature as in photo 1.
+   - **Is the rest only a frame?** It supports the subject and takes nothing away from it.
+   - **Can every object be named?** If not, remove it.
+   - **Is everything physically sensible?** Grounded, nothing floating, water falls into
+     something (4b).
+   If any answer is no, redo the scene before handing it in. Do not hand in and wait for Manu
+   to find it.
+7. **Review.** A second Claude runs the same critical pass and the checklist (section 8) on the
+   compare sheet and sends the scene back if any item fails. Manu looks at **samples** in the
+   review page (photos, notes and drawing side by side, "Va bene" / "Da rifare" and a comment
+   that reaches Claude), not at every place; each "Da rifare" becomes a new rule in this guide.
+   How to load a batch there: `/mnt/project-files/app-build/landmark-art/review/README.md` and
+   `tools/art/review_docs.py`.
 
 ## 1. What you draw and what the app adds
 
@@ -219,7 +235,7 @@ Examples of what makes each one unique:
 - **Fitz Roy**: the skyline of the Patagonia logo: a massive steep tower with a pointed top,
   a long stepped shoulder, and a row of granite needles on both sides (Poincenot on the left),
   often pink at sunrise.
-- **Osorno**: an almost perfect symmetric cone with a white snow cap, over a lake.
+- **Osorno**: an almost perfect symmetric cone, pointed, with **concave flanks** that sweep out at the foot and a white snow cap; the symbol view is the cone above the Petrohué rapids.
 - **Huayna Picchu**: a sugar-loaf peak behind the ruins. **Misti**: a wide cone behind Arequipa.
 
 Reviewers check this explicitly: cover the label and ask "which mountain is it?". If the answer
@@ -298,6 +314,10 @@ glaciers**. So:
 - [ ] Snow and ice only where permanent, attached to the rock, never a loose block (4d).
 - [ ] Started from the classic reference photo (section 0); `compare/<id>.png` shows the same
       viewpoint, proportions and skyline.
+- [ ] **Critical pass done** (section 0, step 6): name covered, the place is recognisable at
+      first glance; the subject is the protagonist; every object can be named; nothing floats.
+- [ ] Mountain curvature as in photo 1 (a concave volcano is never a straight triangle).
+- [ ] No small objects that can be misread (flowers that look like people, posts in water).
 - [ ] **Composition:** the subject the place is famous for is large and centred; shaded walls
       and slopes are a narrow frame at the edges, never the biggest shape (section 0, step 4).
 - [ ] `cd backend && python -m app.art.lint <your out/ folder>` prints only `ok`.
@@ -333,6 +353,7 @@ Feedback on the first showcase of the official style (2026-10-25):
 | Fitz Roy | a row of mountain shapes, not the Patagonia-logo skyline | 0 + 4c: profile from the photo |
 | Torres del Paine (round 4) | redrawn from Laguna Amarga to get a clear sky: not the view everyone knows | 0: photo 1 is always the iconic view; crop clouds, never change viewpoint |
 | Torres del Paine (round 5) | liked, but the dark Peineta wall took a third of the scene and the towers sat small at the back: the photo's framing copied literally | 0.4: recompose, subject large and centred, side walls a narrow frame |
+| Osorno (round 3) | approved earlier, then rejected: straight-sided cone (the real one is concave and pointed), lupins that look like little people, a jetty in the water and white lines nobody understands, "could be any mountain in the world" | 0.3 curvature, 0.5 no misreadable objects, 0.6 critical pass: add what only this place has |
 | Patagonia redraws (round 2) | snow and ice drawn as blocks that look like flying glaciers; too few photos, cloudy and snowy ones | 0: 4 photos, clear sky, summer, from far away; 4d |
 
 ## 10. Reference scenes
