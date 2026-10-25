@@ -102,8 +102,13 @@ The details of each step:
    pixels: redraw the shapes you measured, in the official style.
 5. **Snow: only where permanent, attached to the rock** (4d), never a loose block, never fresh
    seasonal snow. Then the other content rules (section 3), which win over the photo: remove
-   people, cars, clouds and signs; **add the typical animal even if the photo has none** (a llama
-   at Machu Picchu, guanacos at Torres del Paine), standing on the ground (4b).
+   people, cars, clouds and signs.
+   **Always ask: which animal lives here?** (Manu, 22:34: "in questi posti gli animali ci sono,
+   ricordati"). Where one belongs, add it even if the photos have none: a guanaco at Torres del
+   Paine and the Cuernos, a llama at Machu Picchu, sea lions, penguins. Small, unmistakable
+   (side view, clear silhouette) and standing on the ground (4b). A bird in flight only where
+   it is the place's trait and its silhouette is unmistakable (the condor over Colca or the
+   Andes). Leave it out only where no animal makes sense (a city square, a monument).
 6. **Critical check, mandatory, after drawing.** Render the scene (`node tools/art/compare.js
    <batch folder>` writes `compare/<id>.png`, the photos next to the scene) and answer honestly:
    - **Cover the name: do I know where I am at first glance?** If the scene could be any
@@ -116,6 +121,7 @@ The details of each step:
    - **Can every object be named?** If in doubt, remove it. Manu's examples from Osorno: purple
      and white lupin spikes that read as little people, a jetty standing in the middle of the
      water, white lines on the water that mean nothing.
+   - **Is the typical animal there**, if one belongs to the place (step 5)?
    - **Is everything physically sensible?** Grounded, nothing floating, water falls into
      something (4b).
    If any answer is no, redo the scene before handing it in. Do not hand in and wait for Manu
@@ -367,7 +373,7 @@ glaciers**. So:
 - [ ] 2-4 signature features present, proportions right, nothing invented.
 - [ ] Palette = the real colours of the place; `near` near black; light sky.
 - [ ] No people except one activity figure; no clouds and no rainbows unless they are the
-      place's trait; animals only if they belong; no half-cut background shapes; one clear scene;
+      place's trait; the typical animal where one belongs (step 5); no half-cut background shapes; one clear scene;
       one sun.
 - [ ] **Physics:** every building, monument, mountain, tree and animal rests on the ground, water
       or a support; no sky or light band under a mountain; no curved bottoms; no gaps between
