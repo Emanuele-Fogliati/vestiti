@@ -53,3 +53,12 @@ def test_single_place_search_is_unchanged(online):
     with httpx.Client(transport=_transport([])) as c:
         out = geocode.resolve_trip(["Lima"], client=c)
     assert out[0][0]["country_code"] == "PE"
+
+
+def test_a_sight_is_placed_at_the_town_you_sleep_in(online):
+    # GeoNames knows a village "Titicaca" in the Amazon, not the lake: use Puno, keep the name
+    seen = []
+    c = httpx.Client(transport=_transport(seen))
+    found = geocode.resolve_trip(["Lima", "Cusco", "Titicaca"], client=c)
+    t = found[2][0]
+    assert (t["name"], t["admin"], round(t["latitude"], 2)) == ("Titicaca", "Puno", -15.84)

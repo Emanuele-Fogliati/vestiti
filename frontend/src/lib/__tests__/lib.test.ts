@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { friendlyError } from "../api";
 import { buildProfile, monoPath, niceMax } from "../elevation";
 import { activityText, addDays, minus, nights, signed } from "../format";
+import { layOut, redate, spread } from "../spread";
 import { terrainFor } from "../terrain";
 import type { Stop } from "../types";
 
@@ -64,5 +65,29 @@ describe("friendlyError", () => {
   });
   it("falls back to the raw message", () => {
     expect(friendlyError({ type: "x", loc: ["body", "email"], msg: "Not an email" })).toBe("email: not an email.");
+  });
+});
+
+describe("spreading days over places", () => {
+  it("matches the API rule", () => {
+    expect(spread([null, null, null, null], null)).toEqual([2, 2, 2, 2]);
+    expect(spread([null, null, null, null], 14)).toEqual([4, 4, 3, 3]);
+    expect(spread([null, 4, null], 10)).toEqual([3, 4, 3]);
+    expect(spread([null, null], 1)).toEqual([1, 1]);
+  });
+  it("lays stops back to back and moves visits with them", () => {
+    const stops = [
+      { start_date: "2027-05-01", end_date: "2027-05-02", days_estimated: true, visits: [] },
+      { start_date: "2027-05-03", end_date: "2027-05-05", days_estimated: false, visits: [{ date: "2027-05-04" }] },
+      { start_date: "2027-05-06", end_date: "2027-05-07", days_estimated: true, visits: [] },
+    ];
+    const moved = redate(stops, { start: "2027-06-10" });
+    expect(moved.map((s) => s.start_date)).toEqual(["2027-06-10", "2027-06-12", "2027-06-15"]);
+    expect(moved[1].visits[0].date).toBe("2027-06-13");
+    const longer = redate(moved, { total: 11 });
+    expect(longer.map((s) => [s.start_date, s.end_date])).toEqual([
+      ["2027-06-10", "2027-06-13"], ["2027-06-14", "2027-06-16"], ["2027-06-17", "2027-06-20"]]);
+    expect(longer[1].visits[0].date).toBe("2027-06-15");
+    expect(layOut([1], "2027-12-31")).toEqual([["2027-12-31", "2027-12-31"]]);
   });
 });

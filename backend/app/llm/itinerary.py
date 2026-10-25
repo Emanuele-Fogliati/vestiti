@@ -13,6 +13,7 @@ Two kinds of input:
 """
 from __future__ import annotations
 
+import datetime as _dt
 import difflib
 import html
 import logging
@@ -24,8 +25,10 @@ from typing import NamedTuple
 
 from pydantic import BaseModel, Field, ValidationError, field_validator
 
+from app import art
 from app.engine.activities import ACTIVITY_TYPES, DIFFICULTIES
 from app.llm.client import LLMClient, LLMUnavailable
+from app.services.dates import lay_out, spread
 
 log = logging.getLogger(__name__)
 
@@ -58,6 +61,12 @@ class DraftActivity(BaseModel):
         return v if v in DIFFICULTIES else None
 
 
+class DraftVisit(BaseModel):
+    """A place seen during a stop besides where you sleep: Moray on a Cusco day."""
+    name: str
+    date: _dt.date | None = None
+
+
 class DraftStop(BaseModel):
     name: str
     start_date: date
@@ -65,6 +74,21 @@ class DraftStop(BaseModel):
     activities: list[DraftActivity] = Field(default_factory=list)
     notes: str | None = None
     elevation_m: float | None = None  # where the traveller sleeps, when the text says it
+    visits: list[DraftVisit] = Field(default_factory=list)
+    days_estimated: bool = False  # the text does not say how long: the days are a guess
+
+    @field_validator("visits", mode="before")
+    @classmethod
+    def _v(cls, v):  # the model gives plain names
+        return [{"name": x} if isinstance(x, str) else x for x in (v or []) if x]
+
+
+class DraftEstimate(BaseModel):
+    """What of the dates is a guess. The app asks for it and marks the plan as an estimate."""
+    start: bool = False        # no start date in the text
+    days: bool = False         # places without how long: the days are spread evenly
+    total_days: int | None = None  # the trip length, when the text gives it ("2 settimane")
+    questions: list[str] = Field(default_factory=list)  # the questions this covers
 
 
 class DraftItinerary(BaseModel):
@@ -72,13 +96,15 @@ class DraftItinerary(BaseModel):
     stops: list[DraftStop]
     questions: list[str] = Field(default_factory=list)
     parser: str = "rules"
+    estimate: DraftEstimate | None = None
 
 
 SYSTEM = """You turn a traveller's description of a trip into JSON. Output ONLY a JSON object:
 {"trip_name": str, "stops": [{"name": str, "start_date": "YYYY-MM-DD", "end_date": "YYYY-MM-DD",
 "activities": [{"type": one of ["city","hiking","trek_multiday","beach","ski","cycling","safari","boat","desert","unknown"],
 "difficulty": one of ["easy","moderate","hard","technical","unknown"] or null,
-"max_altitude_m": number or null, "glacier": true or false}], "notes": str or null}]}
+"max_altitude_m": number or null, "glacier": true or false}], "notes": str or null,
+"visits": [str]}]}
 Rules:
 - "name" is a real place name that a map search can find (a town, park or region).
 - Consecutive stops: the next stop starts the day after the previous one ends, unless dates are given.
@@ -93,6 +119,8 @@ Rules:
   named trek (Laugavegur 1100, Tour du Mont Blanc 2665, W Trek 900, Inca Trail 4215). Otherwise null. Never guess.
 - "notes": at most 15 words about what happens at that stop that matters for clothes, else null.
   Never copy general advice ("layered clothing, waterproof boots, sun cream") into notes.
+- "visits": the other named places seen during the stop's days besides where the traveller
+  sleeps (sites, villages, islands, viewpoints), in order, as the text names them. [] if none.
 - Write trip_name and notes in the language of the trip description.
 - Never invent dates the traveller gave differently. Never add stops they did not mention.
 - Day-by-day programs ("Day 1", "Giorno 2", ...): make ONE stop per place, not per day: merge
@@ -162,9 +190,11 @@ def detect_language(text: str) -> str:
 Q = {
     "English": {"dates": "When do you leave? Dates were not clear, so the draft starts in 30 days.",
                 "days": "How many days in {place}? The draft assumes 2.",
+                "length": "How long is the whole trip? The draft gives each place {n} days.",
                 "high": "How high does the hike near {place} go?"},
     "Italian": {"dates": "Quando parti? Le date non erano chiare, quindi la bozza parte tra 30 giorni.",
                 "days": "Quanti giorni a {place}? La bozza ne conta 2.",
+                "length": "Quanto dura il viaggio? La bozza dà {n} giorni a ogni posto.",
                 "high": "Fino a che quota arriva l'escursione vicino a {place}?"},
 }
 
@@ -680,6 +710,9 @@ def merge_consecutive(stops: list[DraftStop], evs: list[str | None] | None = Non
             prev.start_date = min(prev.start_date, s.start_date)
             prev.activities = _merge_activities(prev.activities + s.activities)
             prev.notes = _merge_notes([prev.notes, s.notes])
+            prev.visits = prev.visits + [v for v in s.visits
+                                         if not any(_dupe(v.name, w.name) for w in prev.visits)]
+            prev.days_estimated = prev.days_estimated or s.days_estimated
             if evs:
                 out_ev[-1] = "\n".join(e for e in (out_ev[-1], ev) if e)
         else:
@@ -755,6 +788,140 @@ def segments(days: list[Day]) -> list[_Seg]:
     return segs
 
 
+# ---------------------------------------------------------------- places visited during a stop
+
+# words that start with a capital in a heading but are not places ("Giornata libera")
+NOT_PLACE = {"giornata", "libera", "libero", "free", "day", "relax", "natura", "riserva", "rientro",
+             "ritorno", "partenza", "arrivo", "trasferimento", "volo", "escursione", "escursioni",
+             "visita", "mattinata", "pomeriggio", "sera", "notte", "arrival", "departure", "transfer",
+             "flight", "rest", "leisure", "libre", "llegada", "salida", "ciao", "benvenuti", "welcome",
+             "pronti", "oggi", "today", "domani", "alla", "scoperta", "tempo", "il", "grande", "fine",
+             "end", "programma", "program", "viaggio", "trip", "tour", "giro", "cena", "pranzo"}
+_VISIT_TYPE = (r"((?:sito\s+archeologico|sito|rovine|citt[aà]|cittadina|villaggio|paese|isola|isole|"
+               r"lago|laguna|baia|valle|piazza|chiesa|cattedrale|museo|monastero|ghiacciaio|monte|cerro|"
+               r"fiordo|canyon|cascata|cascate|town|village|city|island|islands|lake|ruins|site|"
+               r"glacier|mount|falls|ciudad|pueblo|isla|islas|glaciar)\s+(?:di\s+|de\s+|of\s+)?)?")
+VISIT_VERB = re.compile(
+    r"\b(?:visiteremo|visitiamo|visiterete|visitaremos|visitamos|conoceremos|esploreremo|scopriremo|"
+    r"raggiungeremo|ammireremo|we\s+(?:visit|explore|reach|see)|visiting|visit|explore|"
+    r"(?:continu|prosegu)(?:eremo|iamo)\s+(?:verso|per|fino\s+a|alla\s+volta\s+di)|"
+    r"(?:continue|head|go\s+on)\s+to|(?:continuamos|seguimos)\s+hacia|"
+    r"(?:partiremo|partiamo|partenza)(?:\s+\w+){0,3}?\s+(?:verso|per|alla\s+volta\s+di)|"
+    r"(?:ci\s+)?dirig(?:iamo|eremo|erci)\s+verso|"
+    r"(?:trekking|trek|escursione|camminata|navigazione|hike|walk|excursi[oó]n|caminata|navegaci[oó]n)"
+    r"\s+(?:a|al|alla|allo|ai|agli|alle|all['’]|fino\s+a(?:l|lla|llo)?|verso|to|up\s+to|hacia|a\s+la|"
+    r"sul|sulla|sui|nel|nella|nei|lungo|tra|on|along|in|en|por))\s+"
+    r"(?:[«“\"']\s*)?(?:(?:il|lo|la|l['’]|i|gli|le|the|el|los|las)\s+)?" + _VISIT_TYPE
+    + r"((?-i:[A-ZÀ-Ý][\w'’-]+)(?:\s+(?:(?:de|del|di|da|la|las|los|el|y|of|the)\s+){0,2}(?-i:[A-ZÀ-Ý][\w'’-]+)){0,3})",
+    re.I)
+VISIT_CUE = re.compile(r"\b(?:visit\w*|seeing|see|including|incl|vedere|tra cui|compres[oaie]|"
+                       r"conoc\w*|incluye\w*)\b|[:(]", re.I)
+
+
+def _place_like(part: str) -> str | None:
+    """'Le isole Uros' -> 'Isole Uros'; 'Giornata libera' -> None."""
+    part = re.sub(r"[!?.:;«»“”\"]", " ", part).strip()
+    part = re.sub(r"^(?:il|lo|la|i|gli|le|l['’]|the|el|los|las)\s+", "", part, flags=re.I).strip()
+    words = part.split()
+    if not words or len(words) > 5:
+        return None
+    if art.match(part, None, None):
+        return part[0].upper() + part[1:]
+    caps = [w for w in words if w[:1].isupper() and _fold(w) not in STOPWORDS
+            and _fold(w) not in NOT_PLACE and _fold(w) not in MONTHS]
+    if not caps or any(_fold(w) in NOT_PLACE for w in words):
+        return None
+    return part[0].upper() + part[1:]
+
+
+def _title_places(title: str) -> list[str]:
+    """Places named in a day heading. 'Moray, Maras e Chinchero' -> three; 'Lima - Cusco'
+    is a transfer (the stop is where you sleep), so it gives none."""
+    if re.search(r"\s[-–—/>→]\s|→|->", title):
+        return []
+    parts = re.split(r"\s*,\s*|\s+(?:e|ed|and|y|et|und)\s+|\s*&\s*", title)
+    return [p for p in (_place_like(x) for x in parts) if p]
+
+
+def _text_places(body: str) -> list[str]:
+    """Places the day's own text says you visit: 'Partiremo per Moray', 'visiteremo il sito
+    archeologico di Chinchero', 'Trekking alla Laguna de los Tres'."""
+    out: list[str] = []
+    for sent in _sentences(_firm(body)):
+        moving = TRANSPORT.search(sent) or BOAT_TRANSFER.search(sent)
+        for m in VISIT_VERB.finditer(sent):
+            if moving and re.match(r"partenza", m[0], re.I):  # "partenza in bus per Paracas"
+                continue
+            # "il sito archeologico di Chinchero" -> Chinchero, but "Lago Grey" keeps its "Lago"
+            p = _place_like(f"{m[1]}{m[2]}" if m[1] and m[1][0].isupper() else m[2])
+            if p:
+                out.append(p)
+    return out
+
+
+def _dupe(a: str, b: str, by_landmark: bool = True) -> bool:
+    """Same place: 'Salineras de Maras' and 'Maras', or two names of one landmark."""
+    ta, tb = set(_name_tokens(a)), set(_name_tokens(b))
+    if _same_place(a, b) or (ta and tb and (ta <= tb or tb <= ta)):
+        return True
+    if not by_landmark:
+        return False
+    la, lb = art.match(a, None, None), art.match(b, None, None)
+    return bool(la and lb and la.id == lb.id)
+
+
+def add_visit(visits: list[DraftVisit], name: str, on: date | None, skip: list[str],
+              limit: int = 12) -> None:
+    """Add a visit unless it is one of the skip places (by name: Machu Picchu is not
+    Aguas Calientes even if they share a picture) or a visit already listed."""
+    name = name.strip(" .,;:-")
+    if (not name or len(visits) >= limit or any(_dupe(name, x, False) for x in skip if x)
+            or any(_dupe(name, v.name) for v in visits) or place_key(name) in HOME):
+        return
+    visits.append(DraftVisit(name=name, date=on))
+
+
+def day_visits(days: list[Day], ks: list[int], stop: str, dates: list[date]) -> list[DraftVisit]:
+    """The places of a stop's days besides the stop itself, in order, each on its day. The
+    place you slept the night before is where the day starts, not something you go to see."""
+    out: list[DraftVisit] = []
+    for k, on in zip(ks, dates):
+        d = days[k]
+        before = days[k - 1].sleep if k > 0 else None
+        for name in _title_places(d.title) + _text_places(d.body):
+            add_visit(out, name, on, [stop, d.sleep, before])
+    return out
+
+
+def backed_visits(names: list[DraftVisit], ev: str, have: list[DraftVisit], stop: str,
+                  dated: list[tuple[date, str]] | None = None) -> None:
+    """The model's visits, kept only when the stop's own text names them."""
+    words = set(_fold(ev).split())
+    for v in names:
+        toks = _name_tokens(v.name)
+        if not toks or not all(_tok_match({t}, words) for t in toks):
+            continue
+        on = next((d for d, t in dated or [] if _tok_match(toks, set(_fold(t).split()))), v.date)
+        add_visit(have, v.name, on, [stop])
+
+
+def _segment_visits(seg: str, place: str | None) -> list[DraftVisit]:
+    """'4 days in Cusco visiting Moray, Maras and Chinchero' -> Moray, Maras, Chinchero."""
+    at = seg.find(place) if place else -1
+    cue = VISIT_CUE.search(seg, at + len(place)) if at >= 0 else None
+    if not cue:
+        return []
+    tail = seg[cue.start():]
+    out: list[DraftVisit] = []
+    for part in re.split(r"\s*[,;()]\s*|\s+(?:e|ed|and|y|et|und|or|o)\s+|\s*&\s*", tail):
+        part = re.sub(r"^\W*(?:visit\w*|seeing|see|including|incl|vedere|tra cui|compres\w*|"
+                      r"conoc\w*|incluye\w*)\b", "", part, flags=re.I).strip(" :")
+        p = _place_like(DUR.sub(" ", part)) if part else None
+        if p:
+            add_visit(out, p, None, [place])
+    return out
+
+
 def build_from_days(days: list[Day], text: str, today: date,
                     model_stops: list[DraftStop] | None = None):
     """Stops, dates, sleeping altitude and day texts of a day-by-day program, decided by the
@@ -779,9 +946,14 @@ def build_from_days(days: list[Day], text: str, today: date,
             acts = _activities(ev, allow_unknown=False)  # "patate (forse)" is not "I don't know"
         alts = [days[k].sleep_alt for k in seg.ks
                 if days[k].sleep_alt and days[k].sleep and _same_place(days[k].sleep, seg.place)]
-        stops.append(DraftStop(name=name, start_date=_date_of(days, start, days[seg.ks[0]].n),
-                               end_date=_date_of(days, start, days[seg.ks[-1]].n),
-                               activities=_merge_activities(acts), elevation_m=max(alts) if alts else None))
+        on = [_date_of(days, start, days[k].n) for k in seg.ks]
+        visits = day_visits(days, seg.ks, name, on)
+        if model_stops is not None:
+            dated = [(d, f"{days[k].title} {days[k].body}") for k, d in zip(seg.ks, on)]
+            backed_visits([v for j in js for v in model_stops[j].visits], ev, visits, name, dated)
+        stops.append(DraftStop(name=name, start_date=on[0], end_date=on[-1],
+                               activities=_merge_activities(acts), elevation_m=max(alts) if alts else None,
+                               visits=visits))
         evs.append(ev)
         note_evs.append("\n".join(days[k].body for k in seg.ks))
     return stops, evs, note_evs
@@ -803,6 +975,7 @@ def _sanitize(d: DraftItinerary, today: date) -> DraftItinerary:
         if not s.activities:
             s.activities = [DraftActivity(type="city")]
         s.notes = clean_note(s.notes)
+        s.visits = s.visits[:12]
         fixed.append(s)
     # the same note on several stops is agency boilerplate, not about the place
     counts: dict[str, int] = {}
@@ -850,12 +1023,43 @@ def parse_with_llm(text: str, today: date, client: LLMClient | None = None) -> D
         draft.stops, evs, note_evs = build_from_days(days, text, today, draft.stops)
     else:
         evs = note_evs = [None] * len(draft.stops)
+        for st in draft.stops:
+            kept: list[DraftVisit] = []
+            backed_visits(st.visits, text, kept, st.name)
+            st.visits = kept
+        if draft.stops and not _has_lengths(text):
+            # "Lima, then Cusco, then Titicaca": the model makes up how long. Spread evenly
+            # instead, and say it is a guess.
+            start = _find_date(text, today) or today + timedelta(days=30)
+            for st, (a, b) in zip(draft.stops, lay_out(spread([None] * len(draft.stops), None), start)):
+                st.start_date, st.end_date, st.days_estimated = a, b, True
     refine_activities(draft.stops, evs, text)
     for st, ev in zip(draft.stops, note_evs):
         if ev is not None:
             st.notes = facts_note(ev, st.name)
     draft.questions = questions_for(text, today, lang)
+    draft.estimate = estimate_for(draft, text, today, lang)
     return _sanitize(draft, today)
+
+
+def _has_lengths(text: str) -> bool:
+    return bool(DUR.search(text) or WEEK.search(text) or RANGE.search(text))
+
+
+def estimate_for(d: DraftItinerary, text: str, today: date, lang: str,
+                 total: int | None = None) -> DraftEstimate | None:
+    """What the app must mark as a guess, and the questions that cover it. The length
+    question joins d.questions here (the start date one is already there)."""
+    start = _find_date(text, today) is None
+    days = any(s.days_estimated for s in d.stops)
+    if not d.stops or not (start or days):
+        return None
+    qs = [_q(lang, "dates")] if start else []
+    if days and total is None:
+        n = next(((s.end_date - s.start_date).days + 1 for s in d.stops if s.days_estimated), 2)
+        qs.append(_q(lang, "length", n=n))
+        d.questions.insert(1 if start else 0, qs[-1])
+    return DraftEstimate(start=start, days=days, total_days=total, questions=qs)
 
 
 # ---------------------------------------------------------------- rule-based fallback
@@ -918,18 +1122,105 @@ def _day_by_day(text: str, today: date) -> DraftItinerary | None:
                           questions=questions_for(text, today, detect_language(text)), parser="rules")
 
 
+_LIST_SEP = re.compile(r"\s*(?:,|;|->|→|–|—|\s-\s|\s+(?:e|ed|and|y|et|und|then|poi|quindi)\s+)\s*", re.I)
+_BULLET = " -•*·\t"
+
+
+def _lengths(item: str) -> int | None:
+    m, w = DUR.search(item), WEEK.search(item)
+    if m:
+        return max(int(m[1]), 1)
+    if w:
+        return 7 * (1 if w[1].lower() in ("a", "one", "una") else int(w[1]))
+    return None
+
+
+def place_list(text: str, today: date) -> tuple[str, list[tuple[str, list[str]]]] | None:
+    """'Lima, Cusco, Machu Picchu, Titicaca', one place per line, or 'Lima -> Cusco': the
+    places in order (each with the places in its brackets, 'Cusco (Moray, Maras)'), and the
+    header before a colon ('Perù, 2 settimane: ...'). None when the text is prose or when
+    every place already says how long."""
+    t = text.strip()
+    lines = [ln.strip(_BULLET) for ln in t.split("\n") if ln.strip(_BULLET)]
+    header = ""
+    if len(lines) >= 2:
+        first = lines[0]
+        if first.endswith(":") or (len(lines) >= 3 and (_lengths(first) or _find_date(first, today))
+                                   and not _place(DUR.sub(" ", WEEK.sub(" ", first)))):
+            header, lines = first.rstrip(":"), lines[1:]
+        raw = []
+        for ln in lines:  # "Cusco: Moray, Maras" on its own line
+            head, colon, rest = ln.partition(":")
+            raw.append(f"{head} ({rest})" if colon and rest.strip() else ln)
+    else:
+        line = lines[0] if lines else ""
+        head, colon, rest = line.partition(":")
+        if colon and len(_LIST_SEP.split(_protect(rest))) >= 2:
+            header, line = head, rest
+        raw = _LIST_SEP.split(_protect(line))
+    items: list[tuple[str, list[str]]] = []
+    for r in raw:
+        r = r.replace("\x00", ",").replace("\x01", " ").strip(_BULLET + " .")
+        if not r:
+            continue
+        inner = re.findall(r"\(([^)]*)\)", r)
+        core = re.sub(r"\([^)]*\)", " ", r).strip()
+        bare = WEEK.sub(" ", DUR.sub(" ", core))
+        if (len(bare.split()) > 6 or re.search(r"[.!?]\s+\w", core) or VISIT_CUE.search(core)
+                or not _place(bare)):
+            return None  # prose: "3 days in Cusco visiting Moray, Maras and Chinchero"
+        subs = [x for part in inner for x in re.split(r"\s*[,;]\s*|\s+(?:e|and|y)\s+", part) if x.strip()]
+        items.append((core, subs))
+    if len(items) < 2 or all(_lengths(c) for c, _ in items):
+        return None
+    return header, items
+
+
+def _protect(s: str) -> str:
+    """Commas and 'e' inside brackets are not list separators."""
+    return re.sub(r"\([^)]*\)", lambda m: m[0].replace(",", "\x00").replace(" ", "\x01"), s)
+
+
+def _from_list(text: str, today: date, header: str, items) -> DraftItinerary:
+    lang = detect_language(text)
+    total = _lengths(header) if header else None
+    start = _find_date(header, today) if header else None
+    start = start or _find_date(text, today)
+    stops = []
+    for core, subs in items:
+        place = _place(WEEK.sub(" ", DUR.sub(" ", core)))
+        visits: list[DraftVisit] = []
+        for x in subs:
+            p = _place_like(x) or _place(x)
+            if p:
+                add_visit(visits, p, None, [place])
+        stops.append((place, _lengths(core), _activities(core), visits))
+    first = start or today + timedelta(days=30)
+    dates = lay_out(spread([k for _, k, _, _ in stops], total), first)
+    d = DraftItinerary(stops=[DraftStop(name=p, start_date=a, end_date=b, activities=acts, visits=v,
+                                        days_estimated=k is None)
+                              for (p, k, acts, v), (a, b) in zip(stops, dates)], parser="rules")
+    d.trip_name = " · ".join(s.name for s in d.stops[:3])
+    d.questions = [_q(lang, "dates")] if start is None else []
+    d.estimate = estimate_for(d, text, today, lang, total)
+    return d
+
+
 def parse_with_rules(text: str, today: date) -> DraftItinerary:
     dbd = _day_by_day(text, today)
     if dbd is not None:
+        dbd.estimate = estimate_for(dbd, text, today, detect_language(text))
         return dbd
+    pl = place_list(text, today)
+    if pl is not None:
+        return _from_list(text, today, *pl)
     lang = detect_language(text)
     questions: list[str] = []
     start = _find_date(text, today)
     if start is None:
         start = today + timedelta(days=30)
         questions.append(_q(lang, "dates"))
-    stops: list[DraftStop] = []
-    cursor = start
+    found = []  # (place, days or None, own date, activities, visits)
     for seg in SPLIT.split(text):
         seg = seg.strip(" .,-")
         if not seg:
@@ -937,25 +1228,20 @@ def parse_with_rules(text: str, today: date) -> DraftItinerary:
         place = _place(seg)
         if not place:
             continue
-        m = DUR.search(seg)
-        w = WEEK.search(seg)
-        if m:
-            n = int(m[1])
-            if m[2].lower().startswith(("night", "nott")):
-                n = max(n, 1)
-        elif w:
-            n = 7 * (1 if w[1].lower() in ("a", "one", "una") else int(w[1]))
-        else:
-            n = 2
-            questions.append(_q(lang, "days", place=place))
-        seg_start = _find_date(seg, today) or cursor
-        end = seg_start + timedelta(days=max(n, 1) - 1)
         acts = _activities(seg)
         for a in acts:  # in a one-line description a stated altitude belongs to the hike
             if a.type in ("hiking", "trek_multiday", "ski") and not a.max_altitude_m:
                 nums = _numbers_m(seg)
                 a.max_altitude_m = max(nums) if nums else None
-        stops.append(DraftStop(name=place, start_date=seg_start, end_date=end, activities=acts))
+        found.append((place, _lengths(seg), _find_date(seg, today), acts, _segment_visits(seg, place)))
+    days = spread([k for _, k, _, _, _ in found], None)
+    stops: list[DraftStop] = []
+    cursor = start
+    for (place, known, own, acts, visits), n in zip(found, days):
+        seg_start = own or cursor
+        end = seg_start + timedelta(days=max(n, 1) - 1)
+        stops.append(DraftStop(name=place, start_date=seg_start, end_date=end, activities=acts,
+                               visits=visits, days_estimated=known is None))
         cursor = end + timedelta(days=1)
     for s in stops:
         for a in s.activities:
@@ -963,14 +1249,16 @@ def parse_with_rules(text: str, today: date) -> DraftItinerary:
                 questions.append(_q(lang, "high", place=s.name))
                 break
     name = " · ".join(s.name for s in stops[:3]) if stops else None
-    return DraftItinerary(trip_name=name, stops=stops, questions=questions[:4], parser="rules")
+    d = DraftItinerary(trip_name=name, stops=stops, questions=questions[:4], parser="rules")
+    d.estimate = estimate_for(d, text, today, lang)
+    return d
 
 
 def parse_itinerary(text: str, today: date | None = None, client: LLMClient | None = None,
                     use_llm: bool = True) -> DraftItinerary:
     today = today or date.today()
     text = normalize_text(text)
-    if use_llm:
+    if use_llm and place_list(text, today) is None:  # a list of places needs no model
         try:
             d = parse_with_llm(text, today, client)
             if d.stops:

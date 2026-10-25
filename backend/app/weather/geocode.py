@@ -40,6 +40,16 @@ def offline_search(q: str, limit: int = 8) -> list[dict]:
 
 # names GeoNames does not resolve to the place travellers mean
 ALIASES = {"cuzco": "Cusco", "cuzco city": "Cusco", "cusco city": "Cusco"}
+# sights that are not towns (GeoNames lists a village of the same name elsewhere, or nothing):
+# the weather and altitude are those of the town where travellers sleep to see them
+SITE_BASE = {"titicaca": "Puno", "lago titicaca": "Puno", "lake titicaca": "Puno",
+             "lago titicaca peru": "Puno", "isole uros": "Puno", "uros": "Puno",
+             "machu picchu": "Aguas Calientes", "machupicchu": "Aguas Calientes",
+             "rainbow mountain": "Cusco", "vinicunca": "Cusco", "montagna arcobaleno": "Cusco",
+             "valle sacra": "Urubamba", "sacred valley": "Urubamba", "valle sagrado": "Urubamba",
+             "colca": "Chivay", "canyon del colca": "Chivay", "colca canyon": "Chivay",
+             "valle del colca": "Chivay", "huacachina": "Ica", "isole ballestas": "Paracas",
+             "ballestas": "Paracas", "salar de uyuni": "Uyuni", "uyuni salt flats": "Uyuni"}
 FEATURE_BONUS = {"PPLC": 1.0, "PPLA": 0.7, "PPLA2": 0.4, "PPLA3": 0.2, "PPL": 0.1}
 _cache: dict[tuple, list[dict]] = {}
 
@@ -51,6 +61,10 @@ def search(q: str, limit: int = 8, client: httpx.Client | None = None,
     if not q or len(q.strip()) < 2:
         return []
     q = ALIASES.get(_norm(q.strip()), q.strip())
+    base = SITE_BASE.get(" ".join(_norm(q).split()))
+    if base:  # "Titicaca" is the lake by Puno, not the village in San Martín
+        return [{**r, "name": q, "admin": r.get("admin") or r["name"]}
+                for r in search(base, limit, client, country)]  # neighbours pick among them
     if s.weather_enabled:
         key = (_norm(q), limit, country)
         if client is None and key in _cache:
@@ -126,15 +140,21 @@ def resolve_trip(names: list[str], limit: int = 5, client: httpx.Client | None =
         top = max(votes.values())
         # a trip can cross borders (Patagonia): keep every country with real support
         countries = {cc for cc, v in votes.items() if v >= max(1.5, top / 2)}
+    ranks = [list(range(len(cs))) for cs in cands]
     if countries:
         for i, (n, cs) in enumerate(zip(names, cands)):
             if not any(c.get("country_code") in countries for c in cs[:3]):
                 for cc in sorted(countries, key=lambda k: -votes[k]):
                     extra = search(n, limit=10, client=client, country=cc)
                     known = {(c["latitude"], c["longitude"]) for c in cs}
-                    cs.extend(c for c in extra if (c["latitude"], c["longitude"]) not in known)
+                    # ranked within the country's own list: the 2nd Peruvian "Aguas Calientes"
+                    # is not 12th just because ten foreign ones came first
+                    for r, c in enumerate(extra):
+                        if (c["latitude"], c["longitude"]) not in known:
+                            cs.append(c)
+                            ranks[i].append(r)
                 cands[i] = cs
-    ranked = [list(enumerate(cs)) for cs in cands]
+    ranked = [list(zip(rk, cs)) for rk, cs in zip(ranks, cands)]
     chosen: list[dict | None] = [None] * len(names)
     for _ in range(2):  # pass 1 without neighbours known, pass 2 with them
         for i, rs in enumerate(ranked):

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { activityText, addDays, dayMonth, minus, nights, SOURCE_LABEL } from "../lib/format";
-import { terrainFor } from "../lib/terrain";
-import type { Activity, Place, Stage, Stop } from "../lib/types";
+import { activityText, addDays, dayMonth, daysBetween, minus, nights, SOURCE_LABEL } from "../lib/format";
+import { terrainFor, type Terrain } from "../lib/terrain";
+import type { Activity, Place, Stage, Stop, Visit } from "../lib/types";
 import { ActivityEditor } from "./ActivityEditor";
 import { Illustration } from "./Illustration";
 import { PlaceSearch } from "./PlaceSearch";
@@ -27,23 +27,58 @@ function Conditions({ stage }: { stage?: Stage }) {
   );
 }
 
+/** The places a stop's days take you to, day by day: a picture for each one the library has
+ * drawn (once: Machu Picchu is not shown twice), a name for the others. */
+export function Visits({ stop, dayFrom, terrain }: { stop: Stop; dayFrom: number; terrain: Terrain }) {
+  const vs = stop.visits ?? [];
+  if (!vs.length) return null;
+  const multi = nights(stop.start_date, stop.end_date) > 1;
+  const groups: { day: number | null; items: Visit[] }[] = [];
+  for (const v of vs) {
+    const day = multi && v.date ? dayFrom + daysBetween(stop.start_date, v.date) : null;
+    const g = groups[groups.length - 1];
+    if (g && g.day === day) g.items.push(v); else groups.push({ day, items: [v] });
+  }
+  const shown = new Set(stop.art ? [stop.art.id] : []);
+  return (
+    <div className="visits" aria-label={`Places you visit from ${stop.name}`}>
+      {groups.map((g, gi) => (
+        <div className="vday" key={gi}>
+          {g.day !== null && <span className="vd">Day {g.day}</span>}
+          {g.items.map((v, i) => {
+            const pic = v.art && !shown.has(v.art.id);
+            if (v.art) shown.add(v.art.id);
+            return pic ? (
+              <div className="visit" key={i}><Illustration terrain={terrain} art={v.art} label={v.name} /><span>{v.name}</span></div>
+            ) : <span className="vchip" key={i} title={v.art ? v.art.label : undefined}>{v.name}</span>;
+          })}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelect, onEdit, onDelete, onMove }: {
   stop: Stop; stage?: Stage; index: number; count: number; selected: boolean; dayFrom: number;
   onSelect: () => void; onEdit: () => void; onDelete: () => void; onMove: (dir: -1 | 1) => void;
 }) {
   const n = nights(stop.start_date, stop.end_date);
+  const terrain = terrainFor(stop, index);
+  const est = stop.days_estimated;
   return (
     <li className={`stop${selected ? " sel" : ""}`} tabIndex={0} onClick={onSelect}
       onKeyDown={(e) => { if (e.key === "Enter" && e.target === e.currentTarget) onSelect(); }}
       aria-label={`${stop.name}, select to see its layers`}>
-      <div className="days">{n > 1 ? "Days" : "Day"} <b>{n > 1 ? `${dayFrom}–${dayFrom + n - 1}` : dayFrom}</b>
-        <span>{dayMonth(stop.start_date)}{n > 1 ? ` – ${dayMonth(stop.end_date)}` : ""}</span></div>
-      <Illustration terrain={terrainFor(stop, index)} art={stop.art} />
+      <div className="days" title={est ? "You did not say how long: these days are a guess" : undefined}>{n > 1 ? "Days" : "Day"} <b>{n > 1 ? `${dayFrom}–${dayFrom + n - 1}` : dayFrom}</b>
+        <span>{dayMonth(stop.start_date)}{n > 1 ? ` – ${dayMonth(stop.end_date)}` : ""}</span>
+        {est && <span className="est">≈ {n} {n === 1 ? "day" : "days"}, a guess</span>}</div>
+      <Illustration terrain={terrain} art={stop.art} />
       <div className="info">
         <h3>{stop.name}</h3>
         <div className="acts">{stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}
           <span className="tag">{Math.round(stop.elevation_m)} m</span></div>
         {stop.notes && <p className="act">{stop.notes}</p>}
+        <Visits stop={stop} dayFrom={dayFrom} terrain={terrain} />
         <Conditions stage={stage} />
         {stage && (
           <div className="wx" aria-label="Daily weather">
@@ -79,6 +114,7 @@ export function StopForm({ tripId, stop, defaultStart, onDone, onCancel }: {
   const [end, setEnd] = useState(stop?.end_date ?? addDays(defaultStart, 2));
   const [acts, setActs] = useState<Activity[]>(stop?.activities?.length ? stop.activities : [{ type: "city" }]);
   const [notes, setNotes] = useState(stop?.notes ?? "");
+  const [visits, setVisits] = useState((stop?.visits ?? []).map((v) => v.name).join(", "));
   const [elev, setElev] = useState<number | "">(stop?.elevation_m ?? "");
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
@@ -92,6 +128,7 @@ export function StopForm({ tripId, stop, defaultStart, onDone, onCancel }: {
       name: place.name, country_code: place.country_code ?? null, latitude: place.latitude,
       longitude: place.longitude, elevation_m: elev === "" ? place.elevation_m ?? 0 : Number(elev),
       start_date: start, end_date: end, activities: acts, notes: notes || null,
+      visits: visitsFrom(visits, stop?.visits ?? []),
     };
     try {
       if (stop) await api.patchStop(tripId, stop.id, body);
@@ -112,6 +149,7 @@ export function StopForm({ tripId, stop, defaultStart, onDone, onCancel }: {
         <div className="field"><label>Town elevation (m)</label><input type="number" value={elev} onChange={(e) => setElev(e.target.value === "" ? "" : Number(e.target.value))} /></div>
       </div>
       <ActivityEditor value={acts} onChange={setActs} />
+      <div className="field"><label>Places you visit from here (optional, comma-separated)</label><input type="text" value={visits} onChange={(e) => setVisits(e.target.value)} placeholder="e.g. Moray, Maras, Chinchero" /></div>
       <div className="field"><label>Notes (optional)</label><input type="text" value={notes} onChange={(e) => setNotes(e.target.value)} placeholder="e.g. Laguna de los Tres, 20 km" /></div>
       {err && <p className="err">{err}</p>}
       <div className="row">
@@ -120,4 +158,11 @@ export function StopForm({ tripId, stop, defaultStart, onDone, onCancel }: {
       </div>
     </form>
   );
+}
+
+/** "Moray, Maras" -> visits; names that were already there keep their day. */
+function visitsFrom(text: string, before: Visit[]): { name: string; date: string | null }[] {
+  return text.split(",").map((x) => x.trim()).filter(Boolean).slice(0, 30).map((name) => ({
+    name, date: before.find((v) => v.name.toLowerCase() === name.toLowerCase())?.date ?? null,
+  }));
 }
