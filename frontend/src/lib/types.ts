@@ -42,14 +42,6 @@ export interface StopArt {
   label: string;
 }
 
-/** A model-made illustration for a place outside the landmark library. */
-export interface PlaceArt {
-  status: "ready" | "pending" | "failed" | "none";
-  key?: string;
-  label?: string | null;
-  url?: string;
-}
-
 export interface Trip {
   id: string;
   name: string;

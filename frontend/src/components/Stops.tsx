@@ -38,7 +38,7 @@ export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelec
       aria-label={`${stop.name}, select to see its layers`}>
       <div className="days">{n > 1 ? "Days" : "Day"} <b>{n > 1 ? `${dayFrom}–${dayFrom + n - 1}` : dayFrom}</b>
         <span>{dayMonth(stop.start_date)}{n > 1 ? ` – ${dayMonth(stop.end_date)}` : ""}</span></div>
-      <Illustration terrain={terrainFor(stop, index)} art={stop.art} place={stop} />
+      <Illustration terrain={terrainFor(stop, index)} art={stop.art} />
       <div className="info">
         <h3>{stop.name}</h3>
         <div className="acts">{stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}

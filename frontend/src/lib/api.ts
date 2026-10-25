@@ -1,5 +1,5 @@
 import type {
-  AppConfig, DraftStop, Place, PlaceArt, Plans, Stop, Strategy, Tier, Trip, TripSummary, User, WardrobeItem,
+  AppConfig, DraftStop, Place, Plans, Stop, Strategy, Tier, Trip, TripSummary, User, WardrobeItem,
 } from "./types";
 
 export class ApiError extends Error {
@@ -89,8 +89,6 @@ export const api = {
   resetSelections: (id: string, tier?: Tier) =>
     req<{ ok: boolean }>("DELETE", `/api/trips/${id}/selections${tier ? `?tier=${tier}` : ""}`),
 
-  placeArt: (place: { name: string; country_code: string | null; latitude: number; longitude: number }) =>
-    req<PlaceArt>("POST", "/api/art/places", place),
   geocode: (q: string) => req<{ results: Place[] }>("GET", `/api/geocode?q=${encodeURIComponent(q)}`),
   parseItinerary: (text: string) =>
     req<{ trip_name: string | null; stops: DraftStop[]; questions: string[]; parser: string }>(
