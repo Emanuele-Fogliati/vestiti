@@ -41,11 +41,12 @@ floating? If anything fails, redo it before handing it in.
 **Status: FINAL (Manu, 2026-10-26).** Manu approved all 45 calibration images ("tutte
 stupende") and fixed this procedure, with the techniques below, as the one used for every
 image from now on. The 45 approved scenes in `backend/app/art/landmarks/` are the reference
-set: when unsure, look at how they solve the same problem. Before mass production, a blind test
-of about 100 famous places worldwide (nature, mountains, sea, cities, monuments) checks that
-Manu recognises each one without reading its name. If he does, production runs **country by
+set: when unsure, look at how they solve the same problem. A blind test of 108 famous places
+worldwide (nature, mountains, sea, cities, monuments) checked that Manu recognises each one
+without reading its name: he **passed it on 2026-10-26** ("le immagini sono perfette... vanno
+tutte bene"), and those 108 joined the library too. Mass production now runs **country by
 country, the most-visited places of each country first** (the inventory's trip count), then
-the secondary ones.
+the secondary ones, with no further review by Manu: the critical self-check (0.6) is the gate.
 
 Every decision Manu takes is recorded in this guide and dated in section 11.
 
@@ -503,3 +504,4 @@ section it changes, in the same commit. Times are UTC.
 | 2026-10-26 07:33 | Approved techniques: waterfalls (flat curtains, pale shade, one spray cloud), single tiny activity figure only when needed, pale rock fully coloured (no white cap), palms with curved trunk and crescent fronds, one canopy, no-sunny-photo places completed from known layout, no collage | 0 |
 | 2026-10-26 07:35 | This procedure is FINAL: use it for every image; browser and Google Images allowed for photos | 0 |
 | 2026-10-26 07:35 | Before mass production, a blind test of about 100 famous places worldwide; then production country by country, most-visited places first, then secondary | 0 |
+| 2026-10-26 09:55 | Blind test passed: all 108 places recognised ("vanno tutte bene"); start mass production of every place, in many parallel threads | 0 |
