@@ -3,6 +3,32 @@
  "name": "Ecuador",
  "places": [
   {
+   "slug": "baltra-island",
+   "label": "Baltra's arid shore with a land iguana over the Itabaca Channel",
+   "lat": -0.45,
+   "lon": -90.27,
+   "radius_km": 5,
+   "aliases": [
+    "baltra island",
+    "isla baltra"
+   ],
+   "names": [
+    "baltra"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9A9686",
+    "mid": "#8C5A44",
+    "ice": "#F4F2EC",
+    "water": "#5FB3B0",
+    "near": "#25211F",
+    "sun": "#EDBE3A",
+    "leaf": "#7FA548",
+    "acc": "#C2652E",
+    "obj": "#4A4541"
+   }
+  },
+  {
    "slug": "banos",
    "label": "Basilica of Banos de Agua Santa below the green valley walls",
    "lat": -1.396,
@@ -32,6 +58,104 @@
     "leaf": "#4E7B3A",
     "acc": "#B04A3A",
     "obj": "#E0B44E"
+   }
+  },
+  {
+   "slug": "bartolome-island",
+   "label": "Pinnacle Rock and the twin bays of Bartolome",
+   "lat": -0.285,
+   "lon": -90.548,
+   "radius_km": 5,
+   "aliases": [
+    "bartolome",
+    "isla bartolome",
+    "bartolome island",
+    "sullivan bay",
+    "bahia sullivan"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#8C8478",
+    "mid": "#8E6A4E",
+    "ice": "#F2EEE4",
+    "water": "#2F86B4",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4A",
+    "acc": "#E2C08C",
+    "obj": "#6E6862"
+   }
+  },
+  {
+   "slug": "black-turtle-cove",
+   "label": "Mangrove lagoon of Black Turtle Cove with a sea turtle, Santa Cruz",
+   "lat": -0.494,
+   "lon": -90.312,
+   "radius_km": 3,
+   "aliases": [
+    "black turtle cove",
+    "caleta tortuga negra",
+    "tortuga negra"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9BA6AC",
+    "mid": "#3E6B38",
+    "ice": "#F2F2EA",
+    "water": "#6FB0A6",
+    "near": "#21281F",
+    "sun": "#F2C14E",
+    "leaf": "#5E9446",
+    "acc": "#9A9480",
+    "obj": "#6B6448"
+   }
+  },
+  {
+   "slug": "buccaneer-cove",
+   "label": "The Monk rock pinnacle and red cliffs of Buccaneer Cove, Santiago Island",
+   "lat": -0.175,
+   "lon": -90.83,
+   "radius_km": 3,
+   "aliases": [
+    "buccaneer cove",
+    "caleta bucanero",
+    "caleta bucaneros",
+    "bahia bucanero"
+   ],
+   "palette": {
+    "sky": "#9FC9F0",
+    "far": "#8E7D5C",
+    "mid": "#6B5649",
+    "ice": "#EDE6DA",
+    "water": "#2D5E8C",
+    "near": "#241F1C",
+    "sun": "#F2C14E",
+    "leaf": "#6F8A45",
+    "acc": "#B0583C",
+    "obj": "#7C6A5A"
+   }
+  },
+  {
+   "slug": "cerro-dragon",
+   "label": "Cerro Dragon hill with a land iguana, Santa Cruz",
+   "lat": -0.542,
+   "lon": -90.592,
+   "radius_km": 4,
+   "aliases": [
+    "cerro dragon",
+    "dragon hill"
+   ],
+   "palette": {
+    "sky": "#AACCEC",
+    "far": "#9E8E8C",
+    "mid": "#A87C4E",
+    "ice": "#F2EEE2",
+    "water": "#7FA8B6",
+    "near": "#181616",
+    "sun": "#F2C14E",
+    "leaf": "#7AA448",
+    "acc": "#363230",
+    "obj": "#DDA83C"
    }
   },
   {
@@ -133,6 +257,30 @@
    }
   },
   {
+   "slug": "gardner-bay",
+   "label": "Sea lions on the white beach of Gardner Bay, Espanola",
+   "lat": -1.349,
+   "lon": -89.651,
+   "radius_km": 3,
+   "aliases": [
+    "gardner bay",
+    "bahia gardner",
+    "bahia de gardner"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#8FD8D0",
+    "mid": "#6E6052",
+    "ice": "#F5F2EA",
+    "water": "#2E9EB4",
+    "near": "#1E2224",
+    "sun": "#F2C14E",
+    "leaf": "#56703E",
+    "acc": "#5C5852",
+    "obj": "#4E4238"
+   }
+  },
+  {
    "slug": "isabela-island",
    "label": "Darwin Lake and Tagus Cove, Isabela Island",
    "lat": -0.268,
@@ -144,7 +292,10 @@
     "tagus cove",
     "caleta tagus",
     "darwin lake",
-    "lago darwin"
+    "lago darwin",
+    "sierra negra",
+    "volcan sierra negra",
+    "volcan chico"
    ],
    "names": [
     "isabela",
@@ -198,6 +349,193 @@
    ]
   },
   {
+   "slug": "las-bachas",
+   "label": "Las Bachas beach with a nesting green sea turtle, Santa Cruz",
+   "lat": -0.493,
+   "lon": -90.338,
+   "radius_km": 3,
+   "aliases": [
+    "las bachas",
+    "bachas beach",
+    "playa las bachas"
+   ],
+   "palette": {
+    "sky": "#AECEEE",
+    "far": "#9EE2DA",
+    "mid": "#2E2C2C",
+    "ice": "#F4F1EA",
+    "water": "#3FB6BE",
+    "near": "#181818",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A44",
+    "acc": "#9A4A26",
+    "obj": "#6E6A48"
+   }
+  },
+  {
+   "slug": "las-tintoreras",
+   "label": "Lava channel with white-tip sharks and marine iguanas, Las Tintoreras",
+   "lat": -0.968,
+   "lon": -90.958,
+   "radius_km": 2,
+   "aliases": [
+    "tintoreras"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#8A98A8",
+    "mid": "#5C5854",
+    "ice": "#E6E4DE",
+    "water": "#5E9CA4",
+    "near": "#1C1E20",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3E",
+    "acc": "#C8643A",
+    "obj": "#7E7468"
+   }
+  },
+  {
+   "slug": "north-seymour-island",
+   "label": "Frigatebird with red pouch and blue-footed booby, North Seymour",
+   "lat": -0.396,
+   "lon": -90.285,
+   "radius_km": 4,
+   "aliases": [
+    "north seymour",
+    "seymour norte",
+    "isla seymour norte"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#7E7A74",
+    "mid": "#6E5844",
+    "ice": "#E8E4DA",
+    "water": "#3A7FAE",
+    "near": "#1E2024",
+    "sun": "#F2C14E",
+    "leaf": "#7E8A5A",
+    "acc": "#E0352E",
+    "obj": "#46A8DA"
+   }
+  },
+  {
+   "slug": "otavalo",
+   "label": "Otavalo's Plaza de los Ponchos market under Imbabura",
+   "lat": 0.2343,
+   "lon": -78.2625,
+   "radius_km": 12,
+   "aliases": [
+    "plaza de los ponchos",
+    "otavalo market",
+    "mercado de otavalo"
+   ],
+   "names": [
+    "otavalo"
+   ],
+   "palette": {
+    "sky": "#AECDEE",
+    "far": "#B4ACA0",
+    "mid": "#9C9A68",
+    "ice": "#F0ECE4",
+    "water": "#5E8EB0",
+    "near": "#22201E",
+    "sun": "#F0B828",
+    "leaf": "#3E5E34",
+    "acc": "#C0402E",
+    "obj": "#3E6AB8"
+   }
+  },
+  {
+   "slug": "puerto-baquerizo-moreno",
+   "label": "Lighthouse, sea lions and harbour of Puerto Baquerizo Moreno",
+   "lat": -0.9017,
+   "lon": -89.6136,
+   "radius_km": 6,
+   "aliases": [
+    "isla lobos",
+    "lobos island"
+   ],
+   "names": [
+    "puerto baquerizo moreno",
+    "baquerizo moreno",
+    "puerto baquerizo"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#8E7E68",
+    "mid": "#4A4642",
+    "ice": "#F2EEE4",
+    "water": "#64B2B6",
+    "near": "#1E1E1E",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4A",
+    "acc": "#D8342C",
+    "obj": "#EAD890"
+   }
+  },
+  {
+   "slug": "puerto-egas",
+   "label": "Sugarloaf cone above the lava shore of Puerto Egas, Santiago Island",
+   "lat": -0.243,
+   "lon": -90.862,
+   "radius_km": 3,
+   "aliases": [
+    "puerto egas",
+    "egas port",
+    "santiago island",
+    "isla santiago",
+    "james island",
+    "isla san salvador",
+    "san salvador island"
+   ],
+   "names": [
+    "james bay"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CDB98E",
+    "mid": "#9E7A54",
+    "ice": "#F2EEE4",
+    "water": "#2F5F7A",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#7F9466",
+    "acc": "#6A645C",
+    "obj": "#3E3B37"
+   }
+  },
+  {
+   "slug": "punta-suarez",
+   "label": "The Punta Suarez blowhole with a waved albatross, Espanola",
+   "lat": -1.372,
+   "lon": -89.742,
+   "radius_km": 4,
+   "aliases": [
+    "punta suarez",
+    "suarez point",
+    "el soplador"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#7A6650",
+    "mid": "#46423E",
+    "ice": "#F6F6F2",
+    "water": "#1E5C8C",
+    "near": "#1A1A1C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3C",
+    "acc": "#C8443A",
+    "obj": "#CFE2EC"
+   },
+   "names": [
+    "espanola island",
+    "isla espanola",
+    "espanola",
+    "hood island",
+    "espanola galapagos"
+   ]
+  },
+  {
    "slug": "quito",
    "label": "Quito old town below El Panecillo and its winged Virgin",
    "lat": -0.22,
@@ -233,6 +571,31 @@
    }
   },
   {
+   "slug": "rabida-island",
+   "label": "Sea lions on the red beach of Rabida Island",
+   "lat": -0.405,
+   "lon": -90.708,
+   "radius_km": 4,
+   "aliases": [
+    "rabida island",
+    "isla rabida",
+    "rabida",
+    "jervis island"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#C9B68C",
+    "mid": "#9C3F2C",
+    "ice": "#F2EEE6",
+    "water": "#3A86B4",
+    "near": "#1E1614",
+    "sun": "#F2C14E",
+    "leaf": "#7EA040",
+    "acc": "#8E7254",
+    "obj": "#5A4434"
+   }
+  },
+  {
    "slug": "santa-cruz-island",
    "label": "Giant tortoise, Santa Cruz highlands",
    "lat": -0.65,
@@ -241,7 +604,12 @@
    "aliases": [
     "santa cruz island",
     "isla santa cruz",
-    "puerto ayora"
+    "puerto ayora",
+    "highlands of santa cruz",
+    "santa cruz highland",
+    "el chato tortoise reserve",
+    "rancho el chato",
+    "reserva el chato"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -254,7 +622,16 @@
     "leaf": "#3E6A36",
     "acc": "#7EA552",
     "obj": "#7E7464"
-   }
+   },
+   "names": [
+    "galapagos",
+    "galapagos islands",
+    "islas galapagos",
+    "isole galapagos",
+    "galapagos archipelago",
+    "galapagos national park",
+    "santa cruz highlands"
+   ]
   }
  ]
 }

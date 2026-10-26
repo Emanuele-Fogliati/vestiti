@@ -1,0 +1,32 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="24" r="10" fill="var(--il-sun)"/>
+<defs><clipPath id="il-pe-moray-m"><path d="M0 100V62L20 56L44 54L66 50L80 44L96 50L114 58L128 52L142 46L150 42L158 46L172 52L188 46L200 44L214 52L232 58L246 52L262 48L278 46L292 44L300 46V100Z"/></clipPath></defs>
+<path d="M0 100V62L20 56L44 54L66 50L80 44L96 50L114 58L128 52L142 46L150 42L158 46L172 52L188 46L200 44L214 52L232 58L246 52L262 48L278 46L292 44L300 46V100Z" fill="var(--il-far)"/>
+<path d="M134 50L142 46L150 42L158 46L166 50L161 54L157 50L153 56L149 50L144 55L140 51ZM270 48L278 46L292 44L300 46V52L295 49L290 54L285 49L279 53L275 49Z" fill="var(--il-ice)" clip-path="url(#il-pe-moray-m)"/>
+<path d="M0 200V70Q40 68 80 74Q110 78 130 84V200Z" fill="var(--il-acc)"/>
+<path d="M60 200V96Q120 76 190 74Q250 72 300 76V200Z" fill="var(--il-mid)"/>
+<path d="M150 78L144 90M168 76L164 88M226 76L236 90M262 78L276 94" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V88Q30 84 60 92Q80 98 90 112L60 160L0 170Z" fill="var(--il-leaf)"/>
+<path d="M8 104Q34 96 64 102M6 112Q32 104 66 110" stroke="var(--il-obj)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<ellipse cx="156" cy="142" rx="122" ry="56" fill="var(--il-acc)"/>
+<ellipse cx="154" cy="131.7" rx="112.6" ry="50.3" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="134" rx="112" ry="48" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="134.4" rx="101.8" ry="45.4" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="136.6" rx="101.2" ry="43.1" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="137" rx="91.1" ry="40.4" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="139.2" rx="90.5" ry="38.2" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="139.7" rx="80.3" ry="35.5" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="141.8" rx="79.8" ry="33.4" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="142.4" rx="69.6" ry="30.5" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="144.4" rx="69" ry="28.5" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="145.1" rx="58.9" ry="25.6" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="147" rx="58.2" ry="23.6" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="147.8" rx="48.1" ry="20.6" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="149.6" rx="47.5" ry="18.8" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="150.4" rx="37.4" ry="15.7" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="152.2" rx="36.8" ry="13.9" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="153.1" rx="26.6" ry="10.7" fill="var(--il-obj)"/>
+<ellipse cx="154" cy="154.8" rx="26" ry="9" fill="var(--il-leaf)"/>
+<ellipse cx="154" cy="154.8" rx="26" ry="9" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 200V172Q40 166 80 176Q100 186 120 200Z" fill="var(--il-mid)"/>
+<path d="M300 200V160Q280 170 262 186Q254 194 250 200Z" fill="var(--il-mid)"/>

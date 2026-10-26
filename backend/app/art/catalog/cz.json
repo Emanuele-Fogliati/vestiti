@@ -3,6 +3,39 @@
  "name": "Czechia",
  "places": [
   {
+   "slug": "cesky-krumlov",
+   "label": "Cesky Krumlov's painted castle tower above the old town",
+   "lat": 48.8127,
+   "lon": 14.3158,
+   "radius_km": 10,
+   "aliases": [
+    "cesky krumlov castle",
+    "krumlov castle",
+    "zamek cesky krumlov",
+    "castello di cesky krumlov",
+    "castello di krumlov"
+   ],
+   "names": [
+    "cesky krumlov",
+    "krumlov",
+    "krumau",
+    "cesky krumlov old town",
+    "krumlov old town"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#EFD2C0",
+    "mid": "#A09584",
+    "ice": "#F3F0E8",
+    "water": "#5A8A8E",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#557F3E",
+    "acc": "#C4573A",
+    "obj": "#5E9C82"
+   }
+  },
+  {
    "slug": "charles-bridge",
    "label": "Charles Bridge and Prague Castle",
    "lat": 50.086,
@@ -29,6 +62,65 @@
     "leaf": "#5E8A4A",
     "acc": "#C0583A",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "prague-astronomical-clock",
+   "label": "Prague's Astronomical Clock on the Old Town Hall tower",
+   "lat": 50.087,
+   "lon": 14.4207,
+   "radius_km": 2,
+   "aliases": [
+    "prague astronomical clock",
+    "prazsky orloj",
+    "staromestsky orloj",
+    "orologio astronomico di praga",
+    "old town hall clock tower",
+    "staromestska radnice",
+    "old town hall prague",
+    "staromestske namesti",
+    "old town square prague"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#4D5056",
+    "mid": "#8A7C68",
+    "ice": "#EFE8D8",
+    "water": "#3F6EA8",
+    "near": "#26262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A4A",
+    "acc": "#CFA445",
+    "obj": "#C0583A"
+   }
+  },
+  {
+   "slug": "prague-castle",
+   "label": "Prague Castle and St Vitus Cathedral above the Vltava",
+   "lat": 50.0906,
+   "lon": 14.4005,
+   "radius_km": 3,
+   "aliases": [
+    "prague castle",
+    "prazsky hrad",
+    "castello di praga",
+    "st vitus cathedral",
+    "saint vitus cathedral",
+    "katedrala svateho vita",
+    "cattedrale di san vito",
+    "hradcany"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#585E66",
+    "mid": "#6A645C",
+    "ice": "#EFE7D4",
+    "water": "#4F8090",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A4A",
+    "acc": "#C0583A",
+    "obj": "#6FA58C"
    }
   }
  ]
