@@ -5,6 +5,9 @@ import react from "@vitejs/plugin-react";
 // first-party. In docker, nginx does the same proxying.
 export default defineConfig({
   plugins: [react()],
+  // changes on every build: old copies of landmark scenes and globe places cached under the
+  // previous URLs are never shown again after an update
+  define: { __BUILD_ID__: JSON.stringify(Date.now().toString(36)) },
   // the map library's web worker is an ES module (see src/lib/maplibre.ts)
   worker: { format: "es" },
   server: {
