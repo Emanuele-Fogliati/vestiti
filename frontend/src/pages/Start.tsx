@@ -51,7 +51,7 @@ export default function Start({ tab }: { tab: "own" | "ideas" }) {
             <p className="lede" style={{ marginTop: 12, maxWidth: "62ch" }}>
               {tab === "own"
                 ? "Tell us your route in your own words. We read the weather at every stop and dress you for all of it, at three budgets."
-                : "Routes built from the places thousands of organised trips visit most, with what is worth it and what to skip. Pick one, change anything you like, and we dress you for it."}
+                : "Routes built from the places travellers visit most, with what is worth it and what to skip. Pick one, change anything you like, and we dress you for it."}
             </p>
           </div>
         </div>

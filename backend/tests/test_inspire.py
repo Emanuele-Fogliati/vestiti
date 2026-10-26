@@ -64,6 +64,15 @@ def test_list_and_detail(client):
     assert client.get("/api/inspire/nope").status_code == 404
 
 
+def test_never_says_how_many_organised_trips_include_a_place(client):
+    """Manu, 2026-10-26: no "in 39 of 4,916 organised trips" anywhere, not even in the API."""
+    for it in client.get("/api/inspire").json():
+        d = client.get(f"/api/inspire/{it['slug']}").json()
+        assert "inventory_trips" not in d
+        assert all("programs" not in s for s in d["stops"])
+        assert "organised trips we read" not in str(d).lower()
+
+
 def test_pack_my_bag_creates_a_trip_ready_for_the_kit(client):
     assert client.post("/api/auth/guest").status_code == 200
     r = client.post("/api/inspire/peru-coast-andes-titicaca/trip", json={"start_date": "2027-06-01"})
