@@ -46,6 +46,70 @@ export function loadPlaces(): Promise<GlobeData> {
   return cache;
 }
 
+export interface RouteStop {
+  /** The place on the globe (null on the routes that come from a ready-made itinerary). */
+  place: string | null;
+  name: string;
+  country: string;
+  kind: PlaceKind;
+  lat: number;
+  lon: number;
+  elevation_m: number;
+  days: number;
+  /** [day of the stop, places you see that day] */
+  visits: [number, string[]][];
+}
+
+export interface GlobeRoute {
+  id: string;
+  /** Slug of the ready-made itinerary with a day-by-day guide, when the route is one. */
+  guide: string | null;
+  countries: string[];
+  bucket: string;
+  days: number;
+  title: string;
+  best_months: number[];
+  stops: RouteStop[];
+}
+
+export interface RouteData {
+  buckets: { key: string; label: string }[];
+  routes: GlobeRoute[];
+}
+
+let routeCache: Promise<RouteData> | null = null;
+
+/** The routes you can pick on the globe, fetched once per page load. */
+export function loadRoutes(): Promise<RouteData> {
+  if (!routeCache) {
+    routeCache = fetch("/api/globe/routes")
+      .then((r) => { if (!r.ok) throw new Error(`routes: ${r.status}`); return r.json() as Promise<RouteData>; });
+    routeCache.catch(() => { routeCache = null; });
+  }
+  return routeCache;
+}
+
+/** Distance in km between two points (haversine). */
+export function km(aLat: number, aLon: number, bLat: number, bLon: number): number {
+  const r = Math.PI / 180;
+  const h = Math.sin(((bLat - aLat) * r) / 2) ** 2 + Math.cos(aLat * r) * Math.cos(bLat * r) * Math.sin(((bLon - aLon) * r) / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+
+/** Routes that stop at a place, stop right next to it (a square in town) or visit it on a day
+ *  out. Shortest first. */
+export function routesThrough(place: GlobePlace, routes: GlobeRoute[]): GlobeRoute[] {
+  const n = place.name.toLocaleLowerCase();
+  return routes.filter((r) => r.countries.includes(place.country) && r.stops.some((s) =>
+    s.place === place.id || s.name.toLocaleLowerCase() === n || km(s.lat, s.lon, place.lat, place.lon) < 15
+    || s.visits.some(([, vs]) => vs.some((v) => v.toLocaleLowerCase() === n))))
+    .sort((a, b) => a.days - b.days);
+}
+
+export function countriesLabel(cs: string[]): string {
+  return cs.map(countryName).join(" & ");
+}
+
 /** The zoom from which a place shows: the most visited places (level 6) are visible from
  *  space, the rarest (level 1) appear when you are close. */
 export function minZoom(level: number): number {

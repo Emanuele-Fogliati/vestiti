@@ -143,7 +143,7 @@ export default function RouteMap({ stops }: { stops: RouteStop[] }) {
         <div className="rmap-map" ref={box} />
         {sel && data && (
           <div className="rmap-card">
-            <PlaceCard place={sel} data={data} planLink={false} onClose={() => setSel(null)}
+            <PlaceCard place={sel} planLink={false} onClose={() => setSel(null)}
               onZoom={() => mapRef.current?.flyTo({ center: [sel.lon, sel.lat], zoom: 12, speed: 1.3 })} />
           </div>
         )}

@@ -122,6 +122,10 @@ export const api = {
   packItinerary: (slug: string, start_date?: string) =>
     req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null }),
 
+  /** "Dress me for this trip" on a route of the globe. No date = a placeholder the trip page asks to change. */
+  routeTrip: (id: string, start_date?: string) =>
+    req<Trip>("POST", `/api/globe/routes/${encodeURIComponent(id)}/trip`, { start_date: start_date || null }),
+
   geocode: (q: string) => req<{ results: Place[] }>("GET", `/api/geocode?q=${encodeURIComponent(q)}`),
   parseItinerary: (text: string) =>
     req<{ trip_name: string | null; stops: DraftStop[]; questions: string[]; parser: string; estimate: TripEstimate | null }>(
