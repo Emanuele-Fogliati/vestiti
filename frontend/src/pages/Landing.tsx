@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Illustration } from "../components/Illustration";
 import { ItineraryCards } from "../components/ItineraryCards";
+import { HomeGlobe } from "../components/Maps";
 import { brandName, useApp } from "../lib/app-context";
 import { DRESS_ME, OwnTripForm } from "./Start";
 
@@ -10,6 +11,7 @@ export default function Landing() {
 
   return (
     <main>
+      <HomeGlobe />
       <section className="hero">
         <div className="wrap hero-in">
           <div>

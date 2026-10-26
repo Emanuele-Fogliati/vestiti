@@ -5,6 +5,8 @@ import react from "@vitejs/plugin-react";
 // first-party. In docker, nginx does the same proxying.
 export default defineConfig({
   plugins: [react()],
+  // the map library's web worker is an ES module (see src/lib/maplibre.ts)
+  worker: { format: "es" },
   server: {
     port: 5173,
     proxy: { "/api": { target: process.env.API_URL ?? "http://localhost:8000", changeOrigin: false } },

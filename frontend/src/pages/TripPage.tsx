@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ElevationProfile } from "../components/ElevationProfile";
+import { TripMap } from "../components/Maps";
 import { useItineraries } from "../components/ItineraryCards";
 import { Kit } from "../components/Kit";
 import { LayerStrategy } from "../components/LayerStrategy";
@@ -204,6 +205,7 @@ export default function TripPage() {
               </div>
             )}
             <p>Each stop sets its own conditions. One kit has to cover all of them, so we size it to the hardest hour of the whole trip. Edit, add or remove stops any time: the plan follows.</p></header>
+          <TripMap stops={stops} />
           <ElevationProfile stops={stops} selected={stageIdx} onSelect={(i) => { setStageIdx(i); document.getElementById("layers")?.scrollIntoView({ behavior: "smooth" }); }} />
           <ol className="stops">
             {stops.map((s, i) => editing === s.id ? (
