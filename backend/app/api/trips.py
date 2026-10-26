@@ -9,6 +9,8 @@ from app.db import get_db
 from app.deps import current_user, own_trip
 from app.models import Stop, Trip, User
 from app.schemas import (
+    MAX_STOP_DAYS,
+    MAX_STOPS,
     ReorderIn,
     StopIn,
     StopOut,
@@ -22,7 +24,6 @@ from app.schemas import (
 from app.services.dates import lay_out, spread
 
 router = APIRouter(prefix="/api/trips", tags=["trips"])
-MAX_STOPS = 30
 
 
 def _renumber(trip: Trip):
@@ -51,7 +52,8 @@ def list_trips(user: User = Depends(current_user), db: Session = Depends(get_db)
                                end_date=max((s.end_date for s in stops), default=None),
                                places=[s.name for s in stops],
                                art=next(({"id": lm.id, "label": lm.label} for lm in assign(stops) if lm), None),
-                               estimated=bool(t.start_estimated or any(s.days_estimated for s in stops))))
+                               estimated=bool(t.start_estimated or any(s.days_estimated for s in stops)),
+                               source_itinerary=t.source_itinerary))
     return out
 
 
@@ -91,7 +93,7 @@ def delete_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
 @router.post("/{trip_id}/duplicate", response_model=TripOut, status_code=201)
 def duplicate_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
     copy = Trip(user_id=trip.user_id, name=f"{trip.name} (copy)", notes=trip.notes,
-                start_estimated=trip.start_estimated)
+                start_estimated=trip.start_estimated, source_itinerary=trip.source_itinerary)
     copy.stops = [Stop(name=s.name, country_code=s.country_code, latitude=s.latitude,
                        longitude=s.longitude, elevation_m=s.elevation_m, start_date=s.start_date,
                        end_date=s.end_date, activities=list(s.activities or []), notes=s.notes,
@@ -130,12 +132,21 @@ def patch_stop(stop_id: str, body: StopPatch, trip: Trip = Depends(own_trip),
         data["activities"] = [dict(a) for a in data["activities"]]
     if "visits" in data:
         data["visits"] = [v.model_dump(mode="json") for v in body.visits or []]
+    for k in ("name", "latitude", "longitude", "elevation_m", "start_date", "end_date"):
+        if k in data and data[k] is None:
+            del data[k]  # required columns: null means "leave as is", not a 500
+    if data.get("country_code"):
+        data["country_code"] = data["country_code"].upper()
+    start, end = data.get("start_date", stop.start_date), data.get("end_date", stop.end_date)
+    if end < start:
+        raise HTTPException(422, "end_date is before start_date")
+    if (end - start).days > MAX_STOP_DAYS:
+        # without this a guest could stretch one stop over centuries and freeze the server
+        raise HTTPException(422, f"a single stop can be at most {MAX_STOP_DAYS} days")
     if any(k in data and data[k] != getattr(stop, k) for k in ("start_date", "end_date")):
         data["days_estimated"] = False  # the traveller chose this stop's days
     for k, v in data.items():
         setattr(stop, k, v)
-    if stop.end_date < stop.start_date:
-        raise HTTPException(422, "end_date is before start_date")
     db.commit()
     db.refresh(stop)
     return stop
@@ -155,7 +166,7 @@ def delete_stop(stop_id: str, trip: Trip = Depends(own_trip), db: Session = Depe
 @router.post("/{trip_id}/stops/reorder", response_model=TripOut)
 def reorder(body: ReorderIn, trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
     ids = {s.id: s for s in trip.stops}
-    if set(body.stop_ids) != set(ids):
+    if len(body.stop_ids) != len(ids) or set(body.stop_ids) != set(ids):
         raise HTTPException(422, "stop_ids must list every stop of the trip exactly once")
     for i, sid in enumerate(body.stop_ids):
         ids[sid].position = i

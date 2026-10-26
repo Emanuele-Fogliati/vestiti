@@ -26,8 +26,15 @@ user never pays.
 Senza Ollama l'app funziona lo stesso: il piano è calcolato da regole fisse, l'AI serve
 solo a leggere l'itinerario scritto a parole e a spiegare il piano.
 
-Per avere un account admin (statistiche click, import feed), metti in `.env`:
-`ADMIN_EMAIL`, `ADMIN_PASSWORD` e `ADMIN_EMAILS=["la-tua@email"]`, poi riavvia.
+Per avere un account admin (statistiche click, import feed), metti in `.env`
+`ADMIN_EMAIL` e `ADMIN_PASSWORD`, poi riavvia (oppure `python -m app.cli create-admin`).
+Registrarsi con quella email non basta: i diritti admin vengono solo da questo comando.
+
+Login: email + password, oppure un link via email senza password. Senza server email
+(`SMTP_HOST` vuoto) nessuna email parte; per provarlo sul PC metti `DEV_EMAIL_LINKS=true`:
+il link compare sullo schermo, solo aprendo http://localhost:8000 (non dalla rete o da un
+tunnel) e mai per l'account admin. Un account registrato con password ma mai verificato perde
+quella password quando il vero proprietario dell'email entra con un link.
 
 ## What's in it
 
@@ -39,7 +46,9 @@ Per avere un account admin (statistiche click, import feed), metti in `.env`:
 | Kit | Cheap / medium / premium tiers with totals. 1–5 fit stars per product, spec rows, swap any piece (search by brand, sort by price, warmth, weight, waterproofing, rating), skip, use your own, or rent. |
 | Wardrobe | What you own is used first in every tier, at zero cost, with an honest "this is fine" or "this falls short". |
 | Affiliates | Outbound links go through `/api/go/…`: click logged, tracking added per network (Amazon, Awin, Impact, CJ, AvantLink). Feed import (CSV/TSV/gz/JSON) with automatic slot classification. Rental partners. See [docs/AFFILIATES.md](docs/AFFILIATES.md). |
-| Accounts | Start as a guest, upgrade to a free account and keep everything. Data export and deletion (GDPR). |
+| Plan a trip | One way in, two doors: describe your own trip, or "Inspire me" with the recommended trips (filter by month and length). Either way the button is "Dress me for this trip". A trip from a recommended route stays linked to its day-by-day guide; your own trip to Peru is pointed to the Peru route. |
+| Place guide | Every known stop gets a one-line "what this place is" and a fun fact with its source (`backend/app/guide/places.json`), on the recommended routes and on your own trips. |
+| Accounts | Start as a guest, upgrade to a free account and keep everything; signing in from a guest session keeps the guest's trips. Password or a one-use link by email, password reset, change password, sign out on all devices. Data export and deletion (GDPR). |
 | AI | Any OpenAI-compatible server, local by default (Ollama + Qwen3 from Unsloth). Used only for parsing, explaining and answering. See [docs/AI_SETUP.md](docs/AI_SETUP.md). |
 | Admin | Click stats by network, top products, affiliate status, feed import. |
 
@@ -90,7 +99,8 @@ cd frontend && npm test && npm run build
 ```
 
 CLI (`python -m app.cli …`, or `docker compose exec app python -m app.cli …`):
-`migrate`, `seed`, `ingest --network awin --file feed.csv.gz`, `create-admin`, `check-ai`.
+`migrate`, `seed`, `ingest --network awin --file feed.csv.gz`, `create-admin`, `check-ai`,
+`prune-guests --days 30`.
 
 ## Before a public launch
 

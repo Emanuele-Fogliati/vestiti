@@ -48,7 +48,7 @@ export const SOURCE_LABEL: Record<string, string> = {
   estimate: "Rough estimate",
 };
 
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+export const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 /** [11, 12, 1, 2, 3] -> "Nov–Mar"; [7] -> "Jul". Months run in the order given (they can wrap the year). */
 export const monthRange = (ms: number[]) =>

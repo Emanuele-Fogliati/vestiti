@@ -25,7 +25,11 @@ Ordered by how badly it would hurt.
 
 ## Needed soon after
 
-- [ ] **Password reset by email.** Not built: there is no email sending at all.
+- [ ] **Email sending (password reset and sign-in links).** Built; needs a mail provider.
+  Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `MAIL_FROM` (Brevo, Mailgun,
+  Amazon SES...: free tiers cover a launch) and set up SPF/DKIM on the domain so the links
+  don't land in spam. Without SMTP the links only work on a local machine (shown on screen).
+- [ ] **Clean up idle guests.** Run `python -m app.cli prune-guests --days 30` daily (cron).
 - [ ] **Email verification** on sign-up.
 - [ ] **Hosting.** Docker image is ready; choose a host, set `ENVIRONMENT=production`,
       a real `SECRET_KEY`, `COOKIE_SECURE=true`, HTTPS, Postgres backups.

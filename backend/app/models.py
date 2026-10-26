@@ -49,6 +49,10 @@ class User(Base):
     profile_done_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     last_login_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    # bumped on "sign out everywhere" and on a password change: older session cookies stop working
+    session_version: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    # set when the traveller proved they own the email (opened a link we sent there)
+    email_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
     trips: Mapped[list["Trip"]] = relationship(back_populates="user", cascade="all, delete-orphan")
     wardrobe: Mapped[list["WardrobeItem"]] = relationship(
@@ -65,6 +69,8 @@ class Trip(Base):
     notes: Mapped[str | None] = mapped_column(Text)
     # the traveller gave no start date: the dates are a guess until they set one
     start_estimated: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
+    # slug of the recommended itinerary this trip started from (None = the traveller's own)
+    source_itinerary: Mapped[str | None] = mapped_column(String(80))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, onupdate=utcnow
@@ -247,3 +253,19 @@ class FeedImport(Base):
     skipped: Mapped[int] = mapped_column(Integer, default=0)
     deactivated: Mapped[int] = mapped_column(Integer, default=0)
     errors: Mapped[list] = mapped_column(JSON, default=list)
+
+
+class AuthToken(Base):
+    """One-use links sent by email: password reset and passwordless sign-in.
+    Only a SHA-256 of the token is stored, so a database leak gives no working links."""
+
+    __tablename__ = "auth_tokens"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    token_hash: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    purpose: Mapped[str] = mapped_column(String(10))  # reset | login
+    email: Mapped[str] = mapped_column(String(320), index=True)
+    user_id: Mapped[str | None] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    used_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))

@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { api, ApiError } from "./api";
+import { api } from "./api";
 import type { AppConfig, User } from "./types";
 
 interface Ctx {
@@ -34,7 +34,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       if (!readThemeOverride()) setThemeState(c.theme);
       document.title = `${c.brand.name} · ${c.brand.tagline}`;
     }).catch(() => undefined);
-    api.me().then(setUser).catch(() => setUser(null)).finally(() => setLoading(false));
+    api.session().then((r) => setUser(r.user)).catch(() => setUser(null)).finally(() => setLoading(false));
   }, []);
 
   useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
@@ -46,20 +46,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const ensureUser = useCallback(async () => {
     if (user) return user;
-    try {
-      const u = await api.me();
-      setUser(u);
-      return u;
-    } catch (e) {
-      if (!(e instanceof ApiError) || e.status !== 401) throw e;
-    }
+    const { user: u } = await api.session();
+    if (u) { setUser(u); return u; }
     const g = await api.guest();
     setUser(g);
     return g;
   }, [user]);
 
   const refreshUser = useCallback(async () => {
-    try { setUser(await api.me()); } catch { setUser(null); }
+    try { setUser((await api.session()).user); } catch { setUser(null); }
   }, []);
 
   const toast = useCallback((m: string) => {

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { TripMap } from "../components/Maps";
+import { useItineraries } from "../components/ItineraryCards";
 import { Kit } from "../components/Kit";
 import { LayerStrategy } from "../components/LayerStrategy";
 import { EstimateForm } from "../components/Estimate";
@@ -37,6 +38,7 @@ export default function TripPage() {
   const [editing, setEditing] = useState<string | "new" | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [planning, setPlanning] = useState(false);
+  const itineraries = useItineraries();
 
   const loadPlans = useCallback(async (t: Tier) => {
     setPlanning(true);
@@ -113,6 +115,11 @@ export default function TripPage() {
   const coldest = strategy?.stages?.length ? Math.min(...strategy.stages.map((s) => s.modes.rest.condition.feels_like_c)) : null;
   const tp = plans && !plans.empty ? plans.tiers[tier] : null;
 
+  const source = trip.source_itinerary ? itineraries?.find((it) => it.slug === trip.source_itinerary) : undefined;
+  // your own trip to a country we have a recommended route for: point to it
+  const countries = new Set(stops.map((s) => s.country_code).filter(Boolean));
+  const related = !trip.source_itinerary ? itineraries?.find((it) => it.countries.some((c) => countries.has(c))) : undefined;
+
   const sources = new Set(strategy?.stages.flatMap((s) => s.weather_sources) ?? []);
   const weatherHeadline = !sources.size ? "weather loading" : sources.has("estimate") ? "estimated weather"
     : sources.has("forecast") ? "real forecast" : "climate averages";
@@ -150,6 +157,28 @@ export default function TripPage() {
               <div className="row"><b>{quizResult.plan.pieces.length || quizResult.plan.status ? "Your answers changed the kit" : "Saved. Your kit already fit you"}</b><span className="spacer" />
                 <button type="button" className="btn sm ghost" aria-label="Close" onClick={() => setQuizResult(null)}>✕</button></div>
               <PlanChange changes={quizResult.changes} plan={quizResult.plan} />
+            </div>
+          )}
+          {trip.source_itinerary && (
+            <p className="from-rec small">
+              <span className="label">From a recommended trip</span>
+              <span>It's yours now: change stops, days and activities, the kit follows.</span>
+              <Link to={`/ideas/${trip.source_itinerary}`}>Day-by-day guide and tours{source ? `: ${source.title}` : ""} →</Link>
+            </p>
+          )}
+          {related && (
+            <p className="from-rec small">
+              <span className="label">Ideas for this trip</span>
+              <Link to={`/ideas/${related.slug}`}>See our recommended route: {related.title} →</Link>
+            </p>
+          )}
+          {user?.is_guest && tp && (
+            <div className="banner info save-nudge">
+              <span><b>Keep this trip.</b> You're a guest: it lives only in this browser. A free account keeps it on any device.</span>
+              <span className="row">
+                <Link className="btn sm primary" to="/register" state={{ from: `/trips/${id}` }}>Create free account</Link>
+                <Link className="btn sm" to="/login" state={{ from: `/trips/${id}` }}>Sign in</Link>
+              </span>
             </div>
           )}
           <div className="row" style={{ marginTop: 18 }}>

@@ -7,6 +7,9 @@ export default function Account() {
   const { user, setUser, toast } = useApp();
   const nav = useNavigate();
   const [offset, setOffset] = useState(user?.thermal_offset ?? 0);
+  const [curPw, setCurPw] = useState("");
+  const [newPw, setNewPw] = useState("");
+  const [pwErr, setPwErr] = useState<string | null>(null);
   if (!user) return <main className="page"><div className="wrap"><p>You're not signed in. <Link to="/login">Sign in</Link> or <Link to="/trips/new">start as a guest</Link>.</p></div></main>;
 
   async function patch(p: Parameters<typeof api.updateMe>[0]) {
@@ -22,6 +25,23 @@ export default function Account() {
     a.download = "my-data.json";
     a.click();
     URL.revokeObjectURL(a.href);
+  }
+
+  async function changePw(e: React.FormEvent) {
+    e.preventDefault();
+    setPwErr(null);
+    try {
+      setUser(await api.changePassword(newPw, curPw));
+      setCurPw(""); setNewPw("");
+      toast("Password saved. Other devices are signed out.");
+    } catch (e2) { setPwErr((e2 as Error).message); }
+  }
+
+  async function everywhere() {
+    if (!window.confirm("Sign out on every device, this one included?")) return;
+    await api.logoutEverywhere();
+    setUser(null);
+    nav("/login");
   }
 
   async function del() {
@@ -68,6 +88,25 @@ export default function Account() {
                 <option value="late">Out late most evenings: cover them fully</option>
               </select></div>
           </section>
+          {!user.is_guest && (
+            <section className="panel form">
+              <h2 style={{ fontSize: 20 }}>Sign-in</h2>
+              <form className="stack" onSubmit={changePw}>
+                <p className="small muted">Signed in as <b>{user.email}</b>. You can always sign in with a link sent to this email, too.</p>
+                <div className="field"><label htmlFor="cpw">Current password (leave empty if you never set one)</label>
+                  <input id="cpw" type="password" value={curPw} maxLength={200} onChange={(e) => setCurPw(e.target.value)} autoComplete="current-password" /></div>
+                <div className="field"><label htmlFor="npw">New password</label>
+                  <input id="npw" type="password" required minLength={8} maxLength={200} value={newPw} onChange={(e) => setNewPw(e.target.value)} autoComplete="new-password" />
+                  <span className="small muted">At least 8 characters. Other devices are signed out when you change it.</span></div>
+                {pwErr && <p className="err" role="alert">{pwErr}</p>}
+                <div className="row">
+                  <button className="btn" type="submit">Save password</button>
+                  <span className="spacer" />
+                  <button className="btn ghost" type="button" onClick={everywhere}>Sign out on all devices</button>
+                </div>
+              </form>
+            </section>
+          )}
           <section className="panel stack">
             <h2 style={{ fontSize: 20 }}>Your data</h2>
             <p className="small muted">Download everything we store about you, or delete it all. Clicks on shop links are kept anonymously for affiliate accounting.</p>
