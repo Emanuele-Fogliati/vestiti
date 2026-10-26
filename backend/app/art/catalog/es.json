@@ -1,0 +1,82 @@
+{
+ "country": "ES",
+ "name": "Spain",
+ "places": [
+  {
+   "slug": "alhambra",
+   "label": "The Alhambra, Granada",
+   "lat": 37.176,
+   "lon": -3.588,
+   "radius_km": 6,
+   "aliases": [
+    "alhambra"
+   ],
+   "names": [
+    "granada"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8A9AB0",
+    "mid": "#C8B898",
+    "ice": "#F4F0E6",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A34",
+    "acc": "#C8845A",
+    "obj": "#B8603E"
+   }
+  },
+  {
+   "slug": "sagrada-familia",
+   "label": "Sagrada Familia, Barcelona",
+   "lat": 41.404,
+   "lon": 2.174,
+   "radius_km": 12,
+   "aliases": [
+    "sagrada familia"
+   ],
+   "names": [
+    "barcelona",
+    "barcellona"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C8BCA8",
+    "mid": "#B8A488",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#C8402A",
+    "obj": "#C9AD84"
+   }
+  },
+  {
+   "slug": "seville",
+   "label": "Plaza de Espana, Seville",
+   "lat": 37.377,
+   "lon": -5.987,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "seville",
+    "sevilla",
+    "siviglia"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8A9AB0",
+    "mid": "#D8C8A8",
+    "ice": "#F2EAD8",
+    "water": "#3E8AA0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#C8724A",
+    "obj": "#C8A040"
+   }
+  }
+ ]
+}

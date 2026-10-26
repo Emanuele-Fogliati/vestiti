@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="56" cy="28" r="10" fill="var(--il-sun)"/>
+<path d="M0 150V132Q40 126 80 132L60 150Z" fill="var(--il-far)"/>
+<path d="M30 150L80 132L120 114L148 92L166 68L180 44L190 30L200 28L208 34L214 56L220 92L230 124L270 148Z" fill="var(--il-mid)"/>
+<path d="M200 28L208 34L214 56L220 92L230 124L270 148H226L212 90L206 50Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M170 62L212 62M156 80L216 80M140 98L220 98M122 114L226 114M100 128L240 128" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.35"/>
+<path d="M160 72L214 70M146 90L218 88M130 106L222 106M110 122L232 122" stroke="var(--il-leaf)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M40 160L80 132Q120 126 160 130Q220 128 260 136L300 150V160Z" fill="var(--il-leaf)"/>
+<path d="M0 200V150Q60 142 120 148Q190 142 300 152V200Z" fill="var(--il-acc)"/>
+<path d="M92 156Q130 148 170 154L162 160H100Z" fill="var(--il-water)"/>
+<path d="M104 178Q105 168 102 158Q98 154 92 154Q86 158 82 164Q79 172 80 180Q92 181 104 178ZM184 180Q185 170 182 160Q177 154 170 152Q164 153 160 158Q157 168 158 178Q171 181 184 180Z" fill="var(--il-mid)"/>
+<path d="M102 159Q112 157 122 159L124 178H100ZM134 159Q146 157 160 159L162 178H132Z" fill="var(--il-ice)"/>
+<path d="M122 178L123 162Q128 156 134 161L132 178Z" fill="var(--il-mid)"/>
+<path d="M110 162V176M144 162V176M152 162V176" stroke="var(--il-water)" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+<path d="M60 200Q80 176 130 176Q180 176 210 200Z" fill="var(--il-water)"/>
+<path d="M170 182Q169 177 164 174Q147 171 130 172Q114 171 98 174Q93 177 92 182Q131 184 170 182Z" fill="var(--il-ice)"/>
+<path d="M241 172L239.5 160M236.5 172L236.5 160M226 172L226 160M221.5 172L223 160" stroke="var(--il-obj)" stroke-width="1.7999999999999998" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M244 160Q245.5 152.5 238 152.5H224.5Q221.5 151 218.5 145L214 145L212.5 149.5L217 151Q218.5 157 221.5 160ZM244 154Q248.5 157 248.5 164.5" fill="var(--il-obj)"/>

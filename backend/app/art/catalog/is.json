@@ -73,14 +73,38 @@
    }
   },
   {
+   "slug": "kirkjufell",
+   "label": "Kirkjufell and its waterfall",
+   "lat": 64.942,
+   "lon": -23.307,
+   "radius_km": 8,
+   "aliases": [
+    "kirkjufell"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9A8C",
+    "mid": "#6E6A5E",
+    "ice": "#F2F6F6",
+    "water": "#4E7EA0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E44",
+    "acc": "#7EA552",
+    "obj": "#8A6A4A"
+   }
+  },
+  {
    "slug": "reykjavik",
    "label": "Hallgrimskirkja, Reykjavik",
    "lat": 64.1466,
    "lon": -21.9426,
    "radius_km": 20,
    "aliases": [
-    "reykjavik",
     "hallgrimskirkja"
+   ],
+   "names": [
+    "reykjavik"
    ],
    "palette": {
     "sky": "#AFCFF0",

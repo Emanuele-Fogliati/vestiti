@@ -370,12 +370,17 @@ glaciers**. So:
   180 × 120 px).
 - **In the library** (organizer only): `backend/app/art/landmarks/<cc>/<slug>.svg` plus an entry in
   `backend/app/art/catalog/<cc>.json`:
-  `{"slug", "label", "lat", "lon", "radius_km", "aliases", "palette"}`.
+  `{"slug", "label", "lat", "lon", "radius_km", "aliases", "names", "palette"}`.
   - `label`: what the scene shows, in English ("Lima's Costa Verde cliffs").
   - `radius_km`: how far a stop can be and still get this scene (a city 15-30, a single site 5-15,
     a big park or canyon 30-60).
   - `aliases`: lowercase ascii names agencies write for this place (local and Italian spellings).
-    Only other names of the **same** place. Each alias belongs to one place.
+    Only other names of the **same** place. Each alias belongs to one place. An alias matches
+    anywhere in a stop's name, so it must be the place itself ("eiffel tower", "machu picchu").
+  - `names`: names that match only as the **whole** stop name. Use them for a city whose scene is
+    one of its monuments ("paris", "lima", "rome"), so "Notre-Dame de Paris" or "Lima Cathedral"
+    don't get the Eiffel Tower or the Costa Verde. A stop named after a landmark but more than
+    250 km from it is another place and gets nothing (Venice Beach, the Acropolis of Lindos).
 - A place already in the catalog is never redrawn. `python -m app.art.lint <folder>` flags it.
 - The API serves the rendered scene at `/api/art/landmarks/<id>.svg` and the flat drawing at
   `?flat=1`.

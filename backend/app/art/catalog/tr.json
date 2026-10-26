@@ -1,0 +1,80 @@
+{
+ "country": "TR",
+ "name": "Turkey",
+ "places": [
+  {
+   "slug": "cappadocia",
+   "label": "Balloons over the fairy chimneys of Cappadocia",
+   "lat": 38.64,
+   "lon": 34.83,
+   "radius_km": 30,
+   "aliases": [
+    "cappadocia",
+    "kapadokya",
+    "goreme"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D8B49A",
+    "mid": "#D8C8A8",
+    "ice": "#F0E2CC",
+    "water": "#3E7EC0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#8AA058",
+    "acc": "#D84A3A",
+    "obj": "#8A6E5A"
+   }
+  },
+  {
+   "slug": "istanbul",
+   "label": "Hagia Sophia and the Blue Mosque, Istanbul",
+   "lat": 41.008,
+   "lon": 28.978,
+   "radius_km": 30,
+   "aliases": [
+    "sultanahmet"
+   ],
+   "names": [
+    "istanbul",
+    "hagia sophia",
+    "blue mosque"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7E8C9E",
+    "mid": "#C2B8A6",
+    "ice": "#ECE6DA",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E44",
+    "acc": "#B04A3A",
+    "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "pamukkale",
+   "label": "Travertine terraces of Pamukkale",
+   "lat": 37.921,
+   "lon": 29.12,
+   "radius_km": 6,
+   "aliases": [
+    "pamukkale",
+    "hierapolis"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B4BCC4",
+    "mid": "#C8B8A0",
+    "ice": "#FAFAF8",
+    "water": "#62C4D8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A48",
+    "acc": "#C8A060",
+    "obj": "#8A6A4A"
+   }
+  }
+ ]
+}

@@ -45,7 +45,8 @@ def payload() -> dict:
         {_norm(n) for s in it.stops for n in [s.name, *(v.name for v in s.visits)]} for it in its]
     places = []
     for pid, name, cc, kind, lat, lon, trips in doc["places"]:
-        lm = next((m for m in art._named(name) if m.country == cc), None)
+        lm = next((m for m in art._named(name)
+                   if m.country == cc and art._km(lat, lon, m.lat, m.lon) <= art.NAMESAKE_KM), None)
         hits = [i for i, names in enumerate(in_it) if cc in its[i].countries and _norm(name) in names]
         places.append([pid, name, cc, kind, lat, lon, level(trips), lm.id if lm else None,
                        lm.label if lm else None, hits])

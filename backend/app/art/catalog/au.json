@@ -1,0 +1,55 @@
+{
+ "country": "AU",
+ "name": "Australia",
+ "places": [
+  {
+   "slug": "sydney",
+   "label": "Sydney Opera House and Harbour Bridge",
+   "lat": -33.857,
+   "lon": 151.215,
+   "radius_km": 25,
+   "aliases": [
+    "sydney opera house",
+    "sydney harbour bridge"
+   ],
+   "names": [
+    "sydney"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#5E6670",
+    "mid": "#B8B0A0",
+    "ice": "#F6F4EE",
+    "water": "#2E6EA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#C8A090",
+    "obj": "#3E7E4A"
+   }
+  },
+  {
+   "slug": "uluru",
+   "label": "Uluru",
+   "lat": -25.344,
+   "lon": 131.036,
+   "radius_km": 30,
+   "aliases": [
+    "uluru",
+    "ayers rock"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8A9AB0",
+    "mid": "#7A4A30",
+    "ice": "#F4F0E6",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#8A9A5A",
+    "acc": "#C0582E",
+    "obj": "#C8683A"
+   }
+  }
+ ]
+}
