@@ -289,6 +289,29 @@
    ]
   },
   {
+   "slug": "ollantaytambo",
+   "label": "Ollantaytambo's Inca terraces",
+   "lat": -13.2583,
+   "lon": -72.265,
+   "radius_km": 6,
+   "aliases": [
+    "ollantaytambo",
+    "ollantaytampu"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#C9B794",
+    "mid": "#7E7064",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#2B2622",
+    "sun": "#F6C431",
+    "leaf": "#6E9A4E",
+    "acc": "#C49283",
+    "obj": "#A59886"
+   }
+  },
+  {
    "slug": "paracas-ballestas",
    "label": "Ballestas Islands and the Candelabra",
    "lat": -13.79,
@@ -319,7 +342,11 @@
    "radius_km": 5,
    "aliases": [
     "pisac",
-    "pisaq"
+    "pisaq",
+    "sacred valley",
+    "valle sagrado",
+    "valle sacro",
+    "valle sacra"
    ],
    "palette": {
     "sky": "#A9CDF0",
@@ -336,6 +363,33 @@
    "names": [
     "urubamba"
    ]
+  },
+  {
+   "slug": "puerto-maldonado",
+   "label": "Billinghurst Bridge over the Madre de Dios, Puerto Maldonado",
+   "lat": -12.58,
+   "lon": -69.18,
+   "radius_km": 15,
+   "aliases": [
+    "billinghurst bridge",
+    "puente billinghurst",
+    "puente continental"
+   ],
+   "names": [
+    "puerto maldonado"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#B2AEA4",
+    "mid": "#3E6B33",
+    "ice": "#F4F1EA",
+    "water": "#B39874",
+    "near": "#2A221E",
+    "sun": "#F6C431",
+    "leaf": "#5E8C40",
+    "acc": "#B4452F",
+    "obj": "#C2805A"
+   }
   },
   {
    "slug": "rainbow-mountain",
