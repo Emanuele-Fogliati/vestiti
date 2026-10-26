@@ -24,6 +24,14 @@
 .globe-len{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;padding:8px 12px;border-radius:999px;
   background:color-mix(in srgb,var(--bg) 90%,transparent);box-shadow:0 4px 18px rgba(13,13,13,.08)}
 .globe-len .fchip{font-size:14px;padding:7px 14px}
+.globe-sep{width:1px;align-self:stretch;margin:4px 2px;background:var(--rule-strong)}
+.globe-when{display:flex;gap:8px;align-items:center}
+.globe-when select.fchip{width:auto;flex:none;appearance:none;-webkit-appearance:none;cursor:pointer;font:inherit;font-size:14px;padding-right:30px;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 16px) 52%,calc(100% - 11px) 52%;background-size:5px 5px;background-repeat:no-repeat}
+.globe-when select.fchip.on{background-color:var(--ink);color:var(--bg)}
+.rcard-wx{margin-top:2px}
+.rcard-wx.ok::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok-text);margin-right:7px;vertical-align:1px}
 .globe.open .globe-title,.globe.close .globe-title{opacity:0;pointer-events:none;height:0;overflow:hidden}
 .globe.open .globe-head,.globe.close .globe-head{top:14px}
 .globe-tools{position:absolute;z-index:2;left:16px;right:16px;bottom:24px;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;pointer-events:none}
@@ -37,13 +45,18 @@
 .gmark svg{width:100%;height:100%;display:block}
 .gmark:hover,.gmark:focus-visible{transform:scale(1.12)}
 @media (max-width:599px){
-  .globe{height:min(calc(100svh - 104px),calc(100vw + 190px));min-height:480px}
+  .globe{height:min(calc(100svh - 104px),calc(100vw + 230px));min-height:520px}
   .globe-head{top:14px;gap:10px;left:0;right:0}
   .globe-title{font-size:34px}
-  .globe-len{flex-wrap:nowrap;overflow-x:auto;max-width:100%;justify-content:flex-start;scrollbar-width:none;padding:6px 12px;border-radius:0;box-shadow:none;background:transparent}
+  .globe-len{gap:6px;justify-content:center;max-width:100%;padding:6px 10px;border-radius:0;box-shadow:none;background:transparent}
+  .globe-len .fchip{padding:7px 12px}
   .globe-len .label{display:none}
   .globe-len .fchip{flex:none;background:var(--surface)}
   .globe-hint{display:none}
+  .globe-hint.on{display:inline-block;text-align:center}
+  .globe-sep{display:none}
+  .globe-when{flex-basis:100%;justify-content:center}
+  .globe-when .label{display:inline}
   .globe-card{left:10px;right:10px;top:auto;bottom:10px;width:auto;max-height:52%}
   .globe.open .globe-head{top:8px}
 }

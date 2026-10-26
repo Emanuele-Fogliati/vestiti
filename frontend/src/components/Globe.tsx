@@ -4,9 +4,10 @@ import type { FeatureCollection } from "geojson";
 import { loadLandmark } from "./Illustration";
 import { PlaceCard } from "./PlaceCard";
 import { RouteCard } from "./RouteCard";
+import { MONTH_LONG } from "../lib/format";
 import type { GlobeData, GlobePlace, GlobeRoute, RouteData } from "../lib/worldmap";
 import {
-  baseStyle, countriesLabel, loadPlaces, loadRoutes, mapColors, placeLayers, placesGeoJSON, reducedMotion, routesThrough,
+  baseStyle, countriesLabel, km, loadPlaces, loadRoutes, mapColors, placeLayers, placesGeoJSON, reducedMotion, routesThrough,
 } from "../lib/worldmap";
 
 const SPIN_DEG_PER_S = 3; // one turn in two minutes
@@ -17,9 +18,15 @@ const DEFAULT_BUCKET = "10d";
 
 const narrow = (el: HTMLElement) => el.clientWidth < 600;
 
+/** Web Mercator pixels at zoom 0 (512 px world). */
+function merc(lon: number, lat: number): [number, number] {
+  const s = Math.sin((lat * Math.PI) / 180);
+  return [((lon + 180) / 360) * 512, (0.5 - Math.log((1 + s) / (1 - s)) / (4 * Math.PI)) * 512];
+}
+
 /** Room the title and the length picker take at the top, so the globe sits below them. */
 function topPad(el: HTMLElement): number {
-  return narrow(el) ? 110 : 150;
+  return narrow(el) ? 160 : 150;
 }
 
 /** The zoom at which the whole globe fills the box under the title. */
@@ -89,6 +96,7 @@ export default function Globe() {
   const [data, setData] = useState<GlobeData | null>(null);
   const [rdata, setRdata] = useState<RouteData | null>(null);
   const [bucket, setBucket] = useState(DEFAULT_BUCKET);
+  const [month, setMonth] = useState<number | null>(null);
   const [route, setRoute] = useState<GlobeRoute | null>(null);
   const [sel, setSel] = useState<GlobePlace | null>(null);
   const [close, setClose] = useState(false);
@@ -108,7 +116,9 @@ export default function Globe() {
     loadRoutes().then(setRdata).catch(() => setRdata({ buckets: [], routes: [] }));
   }, []);
 
-  const shown = useMemo(() => rdata?.routes.filter((r) => r.bucket === bucket) ?? [], [rdata, bucket]);
+  const fits = (r: GlobeRoute) => month === null || r.best_months.includes(month);
+  const shown = useMemo(() => rdata?.routes.filter((r) => r.bucket === bucket && (month === null || r.best_months.includes(month))) ?? [],
+    [rdata, bucket, month]);
   const shownRef = useRef(shown);
   shownRef.current = shown;
 
@@ -192,16 +202,21 @@ export default function Globe() {
     });
 
     // pictures once you are close, never on top of each other: where two would overlap, the
-    // more visited place keeps its picture (markers are in that order)
+    // more visited place keeps its picture (markers are in that order). Only pictures on the
+    // side of the globe you see and on screen: a hidden one on the far side still took taps
+    // (Ho Chi Minh City sits right behind Cusco).
     const GAP_PX = 54;
     function showMarkers() {
       const far = map.getZoom() < PLACES_FROM_ZOOM || routeOpen.current;
       const kept: { x: number; y: number }[] = [];
+      const c = map.getCenter();
+      const { clientWidth: w, clientHeight: h } = map.getContainer();
       for (const k of markers) {
-        let want = !far;
+        let want = !far && km(c.lat, c.lng, k.at[1], k.at[0]) < 7000;
         if (want) {
           const pt = map.project(k.at);
-          want = !kept.some((o) => Math.abs(o.x - pt.x) < GAP_PX && Math.abs(o.y - pt.y) < GAP_PX);
+          want = pt.x > -GAP_PX && pt.y > -GAP_PX && pt.x < w + GAP_PX && pt.y < h + GAP_PX
+            && !kept.some((o) => Math.abs(o.x - pt.x) < GAP_PX && Math.abs(o.y - pt.y) < GAP_PX);
           if (want) kept.push(pt);
         }
         if (want !== k.on) { if (want) k.m.addTo(map); else k.m.remove(); k.on = want; }
@@ -248,7 +263,7 @@ export default function Globe() {
     map.on("mousedown", hold); map.on("touchstart", hold); map.on("wheel", hold);
     map.on("moveend", (e) => { if ((e as { originalEvent?: Event }).originalEvent || busyUntil === Infinity) release(); });
     map.on("zoom", () => setClose(map.getZoom() >= SPIN_UNTIL_ZOOM));
-    map.on("zoomend", showMarkers);
+    map.on("moveend", showMarkers);
     const io = new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; });
     io.observe(el);
 
@@ -311,9 +326,19 @@ export default function Globe() {
     if (!map || !el) return;
     const b = new maplibregl.LngLatBounds();
     r.stops.forEach((s) => b.extend([s.lon, s.lat]));
-    const pad = narrow(el)
-      ? { top: 90, bottom: Math.round(el.clientHeight * 0.5), left: 36, right: 36 }
-      : { top: 110, bottom: 60, left: 80, right: Math.min(480, el.clientWidth * 0.4) };
+    if (narrow(el)) {
+      // phone: the route sits between the heading and the card that covers the lower half.
+      // fitBounds on the globe misplaces it when the map has its own top padding, so the zoom
+      // and the shift are worked out here, in Web Mercator pixels.
+      const w = el.clientWidth, h = el.clientHeight;
+      const top = topPad(el) + 10, bottom = h * 0.43;
+      const [x0, y0] = merc(b.getWest(), b.getNorth()), [x1, y1] = merc(b.getEast(), b.getSouth());
+      const zoom = Math.min(7.5, Math.log2(Math.min((w - 72) / Math.max(x1 - x0, 1e-6), (bottom - top) / Math.max(y1 - y0, 1e-6))));
+      const centreY = topPad(el) + (h - topPad(el)) / 2; // where the map puts its centre
+      map.flyTo({ center: b.getCenter(), zoom, offset: [0, (top + bottom) / 2 - centreY], speed: 1.4, essential: true });
+      return;
+    }
+    const pad = { top: 110, bottom: 60, left: 80, right: Math.min(480, el.clientWidth * 0.4) };
     map.fitBounds(b, { padding: pad, maxZoom: 7.5, speed: 1.4, essential: true });
   }
 
@@ -345,8 +370,14 @@ export default function Globe() {
     if (route && route.bucket !== k) { setRoute(null); spin.current.resume(); }
   }
 
+  function pickMonth(m: number | null) {
+    setMonth(m);
+    if (route && m !== null && !route.best_months.includes(m)) { setRoute(null); spin.current.resume(); }
+  }
+
   if (failed) return null;
-  const through = sel && rdata ? routesThrough(sel, rdata.routes) : [];
+  const through = sel && rdata ? routesThrough(sel, rdata.routes.filter(fits)) : [];
+  const empty = !!rdata && rdata.routes.length > 0 && shown.length === 0;
   const open = !!(sel || route);
 
   return (
@@ -362,17 +393,30 @@ export default function Globe() {
             {rdata.buckets.map((b) => (
               <button key={b.key} type="button" className="fchip" aria-pressed={b.key === bucket} onClick={() => pickBucket(b.key)}>{b.label}</button>
             ))}
+            <span className="globe-sep" aria-hidden="true" />
+            <label className="globe-when">
+              <span className="label">When?</span>
+              <select className={`fchip${month ? " on" : ""}`} value={month ?? ""} aria-label="Month of your trip"
+                onChange={(e) => pickMonth(e.target.value ? Number(e.target.value) : null)}>
+                <option value="">Any month</option>
+                {MONTH_LONG.map((n, i) => <option key={n} value={i + 1}>{n}</option>)}
+              </select>
+            </label>
           </div>
         )}
       </div>
       <div className="globe-tools">
         {close
           ? <button type="button" className="btn sm" onClick={backToGlobe}>Back to the globe</button>
-          : <span className="globe-hint small">Every line is a route travellers follow. Tap one, or zoom in anywhere.</span>}
+          : empty
+            ? <span className="globe-hint small on">No route of this length has good weather in {MONTH_LONG[(month ?? 1) - 1]}. Try another length or month.</span>
+            : <span className="globe-hint small">{month
+              ? `Routes with good weather in ${MONTH_LONG[month - 1]}. Tap one, or zoom in anywhere.`
+              : "Every line is a route travellers follow. Tap one, or zoom in anywhere."}</span>}
       </div>
       {route && (
         <div className="globe-card">
-          <RouteCard key={route.id} route={route} onClose={handlers.current.clear} />
+          <RouteCard key={route.id} route={route} month={month} onClose={handlers.current.clear} />
         </div>
       )}
       {sel && data && (

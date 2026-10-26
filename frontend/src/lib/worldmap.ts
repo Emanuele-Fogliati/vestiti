@@ -69,6 +69,9 @@ export interface GlobeRoute {
   days: number;
   title: string;
   best_months: number[];
+  /** Jan..Dec: coldest night and warmest day on the route (°C), weather level 2 good /
+   *  1 so-so / 0 poor, and the main reason when not good ("rainy season in Puno"). */
+  months: { lo: number; hi: number; level: 0 | 1 | 2; note: string | null }[] | null;
   stops: RouteStop[];
 }
 
