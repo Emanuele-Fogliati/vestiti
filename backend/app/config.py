@@ -69,6 +69,12 @@ class Settings(BaseSettings):
     # --- Rate limits (in-memory, per process) ---
     auth_rate_limit_per_minute: int = 10
     ai_rate_limit_per_minute: int = 20
+    geo_rate_limit_per_minute: int = 60
+
+    # --- Abuse limits ---
+    max_body_bytes: int = 1_000_000  # JSON bodies; the admin feed upload has its own cap
+    llm_max_concurrent: int = 2  # model calls at once; the rest wait, then use the rule fallback
+    llm_queue_wait_s: float = 20.0
 
     @property
     def is_production(self) -> bool:

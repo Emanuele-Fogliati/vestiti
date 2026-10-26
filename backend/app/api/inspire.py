@@ -2,14 +2,14 @@
 from datetime import date, datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 from sqlalchemy.orm import Session
 
 from app import inspire
 from app.db import get_db
 from app.deps import current_user
 from app.models import Stop, Trip, User
-from app.schemas import TripOut
+from app.schemas import TripOut, check_date
 
 router = APIRouter(prefix="/api/inspire", tags=["inspire"])
 
@@ -43,7 +43,10 @@ def get_itinerary(slug: str, start: date | None = None):
     it = inspire.get(slug)
     if it is None:
         raise HTTPException(404, "Itinerary not found")
-    start = start or inspire.default_start(it)
+    try:
+        start = check_date(start) or inspire.default_start(it)
+    except ValueError as e:
+        raise HTTPException(422, str(e)) from e
     prev = _preview(it, start)
     stops = []
     for i, (s, out) in enumerate(zip(it.stops, prev.stops)):
@@ -68,6 +71,8 @@ def get_itinerary(slug: str, start: date | None = None):
 
 class PackIn(BaseModel):
     start_date: date | None = None  # none: the next good month, shown as a guess
+
+    _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v)))
 
 
 @router.post("/{slug}/trip", response_model=TripOut, status_code=201)
