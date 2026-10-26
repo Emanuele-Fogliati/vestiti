@@ -38,6 +38,15 @@ and is the subject really the protagonist? Does the frame support without steali
 every object be named (if in doubt, remove it)? Is it physically sensible, grounded, nothing
 floating? If anything fails, redo it before handing it in.
 
+**Status: FINAL (Manu, 2026-10-26).** Manu approved all 45 calibration images ("tutte
+stupende") and fixed this procedure, with the techniques below, as the one used for every
+image from now on. The 45 approved scenes in `backend/app/art/landmarks/` are the reference
+set: when unsure, look at how they solve the same problem. Before mass production, a blind test
+of about 100 famous places worldwide (nature, mountains, sea, cities, monuments) checks that
+Manu recognises each one without reading its name. If he does, production runs **country by
+country, the most-visited places of each country first** (the inventory's trip count), then
+the secondary ones.
+
 Every decision Manu takes is recorded in this guide and dated in section 11.
 
 Manu tuned this procedure on the first set of places (Patagonia, Peru, the showcase). The other
@@ -128,6 +137,25 @@ The details of each step:
      something (4b).
    If any answer is no, redo the scene before handing it in. Do not hand in and wait for Manu
    to find it.
+
+**Techniques approved with the 45 calibration images (Manu, 2026-10-26).**
+- **Waterfalls:** flat white curtain(s), a pale-blue shaded side or lower part, one lumpy spray
+  cloud at the foot. No streaks, no foam on the pool. A place with several falls (Iguazú) gets
+  separate curtains with rock gaps between them.
+- **Activity figure:** allowed only when the place is unrecognisable without it, tiny and
+  single: the person climbing out of the hatch holding the lid at Cu Chi, the paraglider at
+  Lima.
+- **Guano or pale rock:** colour the whole rock pale. Never a white cap on top: it reads as
+  snow.
+- **Palms and trees:** a palm is a curved trunk with crescent fronds, never a lollipop. A mass
+  of trees is one continuous canopy, not a row of separate balls.
+- **No sunny photo exists** (a place under dense forest, a place photographed only at dusk):
+  complete the scene from the place's known layout and daylight colours, and say so in the refs
+  notes.
+- **No collage:** a city or site with several famous landmarks gets one view from one photo,
+  not a montage of its landmarks (Ho Chi Minh City, Hoi An).
+- Photos may be found with the browser (Google Images) as well as by other means (Manu,
+  2026-10-26).
 
 **Then hand it in.** Lint and floatcheck (section 8) must print `ok`. A second Claude runs the
 same critical check and the checklist (section 8) on the compare sheet and sends the scene back if
@@ -409,41 +437,33 @@ Feedback on the first showcase of the official style (2026-10-25):
 
 ## 10. Reference scenes
 
-The ten Peru scenes in `backend/app/art/landmarks/pe/` (palettes in `catalog/pe.json`) are the
-approved references. Read at least three before drawing. One in full:
+The 45 scenes Manu approved on 2026-10-26 (`backend/app/art/landmarks/<cc>/`, palettes in
+`catalog/<cc>.json`) are the references: Peru, Argentina, Chile, Iceland, Vietnam and seven
+world wonders. Read at least three close to what you are drawing (a waterfall: Gullfoss,
+Skógafoss, Iguazú; a city: Buenos Aires, Hanoi; a mountain: Fitz Roy, Torres del Paine) before
+you start. Gullfoss is the weakest of the set: do not copy it. One in full:
 
-### pe-lima-costa-verde (cliffs + lighthouse + towers + paraglider + surfer)
+### pe-lima-costa-verde (cliffs, lighthouse, towers, one paraglider, flat sea)
 
-Palette: `{"sky": "#DCE3E8", "far": "#BFC5CA", "mid": "#B9945F", "ice": "#FFFFFF", "water": "#4A88AD", "near": "#26292C", "sun": "#F6C431", "leaf": "#6E9A4E", "acc": "#C63A32", "obj": "#E8833A"}`
+Palette: `{"sky": "#AFCFF0", "far": "#A68E78", "mid": "#9C7E62", "ice": "#EEEAE2", "water": "#3F8FA0", "near": "#2E2A28", "sun": "#F2C14E", "leaf": "#6E9A4E", "acc": "#F2C230", "obj": "#CDBBA0"}`
 
 ```svg
 <rect width="300" height="200" fill="var(--il-sky)"/>
-<circle cx="40" cy="32" r="12" fill="var(--il-sun)"/>
-<path d="M150 92V60H162V92ZM166 92V48H180V92ZM186 92V56H196V92ZM204 86V36H218V86ZM250 80V44H264V80ZM270 78V54H284V78ZM286 76V40H300V76Z" fill="var(--il-far)"/>
-<path d="M170 54V88M210 42V82M256 50V76M292 46V72" stroke="var(--il-sky)" stroke-width="2" stroke-dasharray="3 3"/>
-<rect y="112" width="300" height="88" fill="var(--il-water)"/>
-<path d="M30 114L120 96L200 80L300 66V174L52 122Z" fill="var(--il-mid)"/>
-<path d="M70 114L300 82M96 118L300 98M130 124L300 116M170 134L300 134M210 146L300 150" stroke="var(--il-far)" stroke-width="1.2"/>
-<path d="M120 100L118 112M160 92L156 116M200 84L194 124M240 78L236 136M276 72L272 150" stroke="var(--il-far)" stroke-width="1" stroke-linecap="round"/>
-<path d="M26 113L120 94L200 78L300 63V70L200 84L120 99L30 117Z" fill="var(--il-leaf)"/>
-<path d="M52 122L300 174V186L44 126Z" fill="var(--il-near)"/>
-<path d="M58 124L300 180" stroke="var(--il-ice)" stroke-width="0.8" stroke-dasharray="4 4"/>
-<path d="M44 126L300 186V194L38 130Z" fill="var(--il-far)"/>
-<path d="M38 132L300 198M0 150Q20 146 40 150T80 150M10 170Q34 165 58 170T106 170M60 186Q86 181 112 186T164 186" stroke="var(--il-ice)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-<path d="M227 77L231 30H241L245 77Z" fill="var(--il-ice)"/>
-<path d="M230.2 40H241.8L242.5 49H229.5ZM228.9 58H243.1L243.8 67H228.2Z" fill="var(--il-acc)"/>
-<path d="M226 30H246V26H226Z" fill="var(--il-near)"/>
-<rect x="230" y="15" width="12" height="11" fill="var(--il-sun)" stroke="var(--il-near)" stroke-width="1"/>
-<path d="M229 15Q236 5 243 15Z" fill="var(--il-acc)"/>
-<path d="M236 8V3" stroke="var(--il-near)" stroke-width="1.2"/>
-<path d="M262 70Q263 58 260 48M274 68Q274 60 276 52" stroke="var(--il-near)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-<path d="M260 48Q252 46 248 52Q254 48 260 50ZM260 48Q268 44 272 50Q266 47 260 50ZM260 48Q256 40 250 40Q256 43 260 49ZM276 52Q270 49 266 54Q271 51 276 54ZM276 52Q283 48 287 53Q282 51 276 54Z" fill="var(--il-leaf)" stroke="var(--il-leaf)" stroke-width="1"/>
-<path d="M86 50Q110 32 134 50Q110 42 86 50Z" fill="var(--il-sun)" stroke="var(--il-near)" stroke-width="1"/>
-<path d="M88 50L108 72M132 50L112 72M100 44L109 72M120 44L111 72" stroke="var(--il-near)" stroke-width="0.6"/>
-<path d="M107 71H113V77H107Z" fill="var(--il-near)"/>
-<path d="M62 166L82 163" stroke="var(--il-near)" stroke-width="2.4" stroke-linecap="round"/>
-<path d="M70 163L71 155M71 156L66 159M71 156L76 158" stroke="var(--il-near)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-<circle cx="71" cy="153" r="2" fill="var(--il-near)"/>
+<circle cx="262" cy="24" r="10" fill="var(--il-sun)"/>
+<path d="M0 200V92H300V200Z" fill="var(--il-water)"/>
+<path d="M122 93L132 88Q140 82 150 80L160 79L172 74Q190 72 202 77L210 82Q218 86 226 93Z" fill="var(--il-far)"/>
+<path d="M172 74Q190 72 202 77L210 82Q218 86 226 93H196Q198 84 172 74Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M2 90V70H10V90ZM12 90V64H19V90ZM22 90V74H31V90ZM34 90V68H41V90ZM46 90V76H56V90ZM60 90V72H68V90ZM72 90V78H81V90ZM84 90V80H92V90Z" fill="var(--il-ice)"/>
+<path d="M4 73H8M4 77H8M4 81H8M4 85H8M14 67H17M14 71H17M14 75H17M14 79H17M14 83H17M14 87H17M24 77H29M24 81H29M24 85H29M36 71H39M36 75H39M36 79H39M36 83H39M36 87H39M48 79H54M48 83H54M48 87H54M62 75H66M62 79H66M62 83H66M62 87H66M74 81H79M74 85H79M86 83H90M86 87H90" stroke="var(--il-near)" stroke-width="0.7" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+<path d="M0 200V86Q50 86 100 90Q110 92 112 96Q60 98 30 104Z" fill="var(--il-mid)"/>
+<path d="M0 88Q50 84 100 88L104 91Q50 88 0 92Z" fill="var(--il-leaf)"/>
+<path d="M112 96L0 100V200H160Q90 184 56 152Q36 126 50 108Q78 99 112 96Z" fill="var(--il-obj)"/>
+<path d="M40 108Q30 126 46 150Q76 182 128 200" stroke="var(--il-near)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M0 200V96Q14 104 24 130Q40 168 60 186Q76 196 96 200Z" fill="var(--il-mid)"/>
+<path d="M0 96Q14 104 24 130Q40 168 60 186Q76 196 96 200H60Q36 170 18 136Q8 112 0 108Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M176 44Q200 30 226 42L224 47Q200 37 178 49Z" fill="var(--il-acc)"/>
+<path d="M178 48L200 66M224 46L202 66M190 41L200 66M212 40L202 66" stroke="var(--il-near)" stroke-width="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+<path d="M199 65H203V71H199Z" fill="var(--il-near)"/>
 ```
 
 ## 11. Decision log (registro decisioni)
@@ -474,3 +494,7 @@ section it changes, in the same commit. Times are UTC.
 | 2026-10-25 22:32 | One rock colour and one season across the scene; near-black mountains are only shadow: real colour or leave out | 0.4 |
 | 2026-10-25 22:34 | Remember animals: always ask which animal lives here and add it where it belongs | 0.5, 0.6 |
 | 2026-10-25 22:42 | Every decision is recorded in this guide, with this log | 11 |
+| 2026-10-26 07:33 | All 45 calibration images approved ("tutte stupende"); they join the library as the reference set | 0, 10 |
+| 2026-10-26 07:33 | Approved techniques: waterfalls (flat curtains, pale shade, one spray cloud), single tiny activity figure only when needed, pale rock fully coloured (no white cap), palms with curved trunk and crescent fronds, one canopy, no-sunny-photo places completed from known layout, no collage | 0 |
+| 2026-10-26 07:35 | This procedure is FINAL: use it for every image; browser and Google Images allowed for photos | 0 |
+| 2026-10-26 07:35 | Before mass production, a blind test of about 100 famous places worldwide; then production country by country, most-visited places first, then secondary | 0 |

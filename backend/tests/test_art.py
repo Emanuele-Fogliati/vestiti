@@ -27,8 +27,31 @@ def test_peru_trip_gets_one_landmark_per_stop():
 def test_name_beats_distance_and_far_places_get_nothing():
     # "Huacachina" is 5 km from Ica: the name wins even with rough coordinates
     assert art.match("Huacachina", -14.06, -75.73).id == "pe-huacachina"
-    assert art.match("Reykjavik", 64.14, -21.94) is None
+    assert art.match("Nairobi", -1.29, 36.82) is None
     assert art.match("Machu Picchu Pueblo", None, None).id == "pe-machu-picchu"
+
+
+def test_approved_places_match_their_stops_and_not_namesakes():
+    m = lambda n, la=None, lo=None: (art.match(n, la, lo) or S(id=None)).id
+    assert m("Reykjavik", 64.14, -21.94) == "is-reykjavik"
+    assert m("El Chaltén", -49.33, -72.89) == "ar-fitz-roy"
+    assert m("Caminito, La Boca, Buenos Aires") == "ar-la-boca"
+    assert m("Buenos Aires", -34.60, -58.38) == "ar-buenos-aires"
+    assert m("Iguaçu") == "ar-iguazu-falls"
+    assert m("San Pedro de Atacama", -22.91, -68.20) == "cl-san-pedro-de-atacama"
+    assert m("Valle de la Luna", -22.93, -68.26) == "cl-valle-de-la-luna"
+    assert m("Hội An") == "vn-hoi-an" and m("Saigon") == "vn-ho-chi-minh-city"
+    # namesakes far from the drawn place get nothing
+    assert m("Santiago de Compostela", 42.88, -8.54) is None
+    assert m("Osorno", -40.57, -73.13) is None  # the city, 60 km from the volcano
+    assert m("Valle de la Luna", -16.57, -68.09) is None  # La Paz, Bolivia
+
+
+def test_library_has_the_approved_calibration_set():
+    ids = {lm.id for lm in art.landmarks()}
+    assert len(ids) >= 45 and {"is-gullfoss", "vn-cu-chi-tunnels", "jo-petra", "cl-osorno-volcano"} <= ids
+    for lm in art.landmarks():
+        assert lm.id.startswith(lm.country.lower() + "-")
 
 
 def test_every_landmark_has_a_token_only_svg():
@@ -52,7 +75,7 @@ def test_api_serves_landmarks_and_trips_carry_them(client):
     trip = client.post("/api/trips", json={"name": "Peru", "stops": [
         {"name": n, "latitude": la, "longitude": lo, "notes": no, "start_date": "2027-05-01",
          "end_date": "2027-05-02"} for n, la, lo, no in PERU[:3]] + [
-        {"name": "Reykjavik", "latitude": 64.14, "longitude": -21.94, "start_date": "2027-05-03",
+        {"name": "Nairobi", "latitude": -1.29, "longitude": 36.82, "start_date": "2027-05-03",
          "end_date": "2027-05-04"}]}).json()
     assert [s["art"] and s["art"]["id"] for s in trip["stops"]] == [
         "pe-cusco-cathedral", "pe-machu-picchu", "pe-rainbow-mountain", None]
@@ -81,15 +104,18 @@ def test_render_gives_the_official_look():
     """Palette of the place, 1 px --il-near outline and a paper shadow on every filled shape but the sky."""
     out = art.rendered("pe-huacachina")
     assert out.startswith('<defs><filter id="il-pe-huacachina-shadow"')
-    assert '<g style="--il-sky:#DDEEF6;' in out and "--il-obj:#2F7FB5" in out
+    assert '<g style="--il-sky:#AFCFF0;' in out and "--il-obj:#D9C092" in out
     sky = re.search(r"<rect [^>]*fill=\"var\(--il-sky\)\"[^>]*>", out)[0]
     assert "stroke" not in sky and "filter" not in sky
     sun = re.search(r"<circle [^>]*fill=\"var\(--il-sun\)\"[^>]*>", out)[0]
     assert 'stroke="var(--il-near)"' in sun and "url(#il-pe-huacachina-shadow)" in sun
-    # clipped stripes of the Rainbow Mountain get the outline of their clip shape
-    rb = art.rendered("pe-rainbow-mountain")
-    clip_d = re.search(r'<clipPath id="il-pe-rainbow-mountain-clip"><path d="([^"]+)"', rb)[1]
-    assert f'<path d="{clip_d}" fill="none" stroke="var(--il-near)"' in rb
+    # clipped stripes get the outline of their clip shape
+    from app.art.render import render
+    body = ('<rect width="320" height="180" fill="var(--il-sky)"/>'
+            '<clipPath id="il-pe-x-clip"><path d="M0 180 L160 40 L320 180 Z"/></clipPath>'
+            '<g clip-path="url(#il-pe-x-clip)"><rect y="100" width="320" height="20" fill="var(--il-acc)"/></g>')
+    rb = render("pe-x", body, None)
+    assert '<path d="M0 180 L160 40 L320 180 Z" fill="none" stroke="var(--il-near)"' in rb
     assert art.rendered("pe-nope") is None
 
 
