@@ -3,6 +3,32 @@
  "name": "Ecuador",
  "places": [
   {
+   "slug": "baltra-island",
+   "label": "Baltra's arid shore with a land iguana over the Itabaca Channel",
+   "lat": -0.45,
+   "lon": -90.27,
+   "radius_km": 5,
+   "aliases": [
+    "baltra island",
+    "isla baltra"
+   ],
+   "names": [
+    "baltra"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9A9686",
+    "mid": "#8C5A44",
+    "ice": "#F4F2EC",
+    "water": "#5FB3B0",
+    "near": "#25211F",
+    "sun": "#EDBE3A",
+    "leaf": "#7FA548",
+    "acc": "#C2652E",
+    "obj": "#4A4541"
+   }
+  },
+  {
    "slug": "banos",
    "label": "Basilica of Banos de Agua Santa below the green valley walls",
    "lat": -1.396,
@@ -32,6 +58,79 @@
     "leaf": "#4E7B3A",
     "acc": "#B04A3A",
     "obj": "#E0B44E"
+   }
+  },
+  {
+   "slug": "bartolome-island",
+   "label": "Pinnacle Rock and the twin bays of Bartolome",
+   "lat": -0.285,
+   "lon": -90.548,
+   "radius_km": 5,
+   "aliases": [
+    "bartolome",
+    "isla bartolome",
+    "bartolome island"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#8C8478",
+    "mid": "#8E6A4E",
+    "ice": "#F2EEE4",
+    "water": "#2F86B4",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4A",
+    "acc": "#E2C08C",
+    "obj": "#6E6862"
+   }
+  },
+  {
+   "slug": "black-turtle-cove",
+   "label": "Mangrove lagoon of Black Turtle Cove with a sea turtle, Santa Cruz",
+   "lat": -0.494,
+   "lon": -90.312,
+   "radius_km": 3,
+   "aliases": [
+    "black turtle cove",
+    "caleta tortuga negra",
+    "tortuga negra"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9BA6AC",
+    "mid": "#3E6B38",
+    "ice": "#F2F2EA",
+    "water": "#6FB0A6",
+    "near": "#21281F",
+    "sun": "#F2C14E",
+    "leaf": "#5E9446",
+    "acc": "#9A9480",
+    "obj": "#6B6448"
+   }
+  },
+  {
+   "slug": "buccaneer-cove",
+   "label": "The Monk rock pinnacle and red cliffs of Buccaneer Cove, Santiago Island",
+   "lat": -0.175,
+   "lon": -90.83,
+   "radius_km": 3,
+   "aliases": [
+    "buccaneer cove",
+    "caleta bucanero",
+    "caleta bucaneros",
+    "bahia bucanero"
+   ],
+   "palette": {
+    "sky": "#9FC9F0",
+    "far": "#8E7D5C",
+    "mid": "#6B5649",
+    "ice": "#EDE6DA",
+    "water": "#2D5E8C",
+    "near": "#241F1C",
+    "sun": "#F2C14E",
+    "leaf": "#6F8A45",
+    "acc": "#B0583C",
+    "obj": "#7C6A5A"
    }
   },
   {
@@ -198,6 +297,138 @@
    ]
   },
   {
+   "slug": "las-tintoreras",
+   "label": "Lava channel with white-tip sharks and marine iguanas, Las Tintoreras",
+   "lat": -0.968,
+   "lon": -90.958,
+   "radius_km": 2,
+   "aliases": [
+    "tintoreras"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#8A98A8",
+    "mid": "#5C5854",
+    "ice": "#E6E4DE",
+    "water": "#5E9CA4",
+    "near": "#1C1E20",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3E",
+    "acc": "#C8643A",
+    "obj": "#7E7468"
+   }
+  },
+  {
+   "slug": "north-seymour-island",
+   "label": "Frigatebird with red pouch and blue-footed booby, North Seymour",
+   "lat": -0.396,
+   "lon": -90.285,
+   "radius_km": 4,
+   "aliases": [
+    "north seymour",
+    "seymour norte",
+    "isla seymour norte"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#7E7A74",
+    "mid": "#6E5844",
+    "ice": "#E8E4DA",
+    "water": "#3A7FAE",
+    "near": "#1E2024",
+    "sun": "#F2C14E",
+    "leaf": "#7E8A5A",
+    "acc": "#E0352E",
+    "obj": "#46A8DA"
+   }
+  },
+  {
+   "slug": "otavalo",
+   "label": "Otavalo's Plaza de los Ponchos market under Imbabura",
+   "lat": 0.2343,
+   "lon": -78.2625,
+   "radius_km": 12,
+   "aliases": [
+    "plaza de los ponchos",
+    "otavalo market",
+    "mercado de otavalo"
+   ],
+   "names": [
+    "otavalo"
+   ],
+   "palette": {
+    "sky": "#AECDEE",
+    "far": "#B4ACA0",
+    "mid": "#9C9A68",
+    "ice": "#F0ECE4",
+    "water": "#5E8EB0",
+    "near": "#22201E",
+    "sun": "#F0B828",
+    "leaf": "#3E5E34",
+    "acc": "#C0402E",
+    "obj": "#3E6AB8"
+   }
+  },
+  {
+   "slug": "puerto-baquerizo-moreno",
+   "label": "Lighthouse, sea lions and harbour of Puerto Baquerizo Moreno",
+   "lat": -0.9017,
+   "lon": -89.6136,
+   "radius_km": 6,
+   "aliases": [
+    "isla lobos",
+    "lobos island"
+   ],
+   "names": [
+    "puerto baquerizo moreno",
+    "baquerizo moreno",
+    "puerto baquerizo"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#8E7E68",
+    "mid": "#4A4642",
+    "ice": "#F2EEE4",
+    "water": "#64B2B6",
+    "near": "#1E1E1E",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4A",
+    "acc": "#D8342C",
+    "obj": "#EAD890"
+   }
+  },
+  {
+   "slug": "puerto-egas",
+   "label": "Sugarloaf cone above the lava shore of Puerto Egas, Santiago Island",
+   "lat": -0.243,
+   "lon": -90.862,
+   "radius_km": 3,
+   "aliases": [
+    "puerto egas",
+    "egas port",
+    "santiago island",
+    "isla santiago",
+    "james island",
+    "isla san salvador",
+    "san salvador island"
+   ],
+   "names": [
+    "james bay"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CDB98E",
+    "mid": "#9E7A54",
+    "ice": "#F2EEE4",
+    "water": "#2F5F7A",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#7F9466",
+    "acc": "#6A645C",
+    "obj": "#3E3B37"
+   }
+  },
+  {
    "slug": "quito",
    "label": "Quito old town below El Panecillo and its winged Virgin",
    "lat": -0.22,
@@ -241,7 +472,12 @@
    "aliases": [
     "santa cruz island",
     "isla santa cruz",
-    "puerto ayora"
+    "puerto ayora",
+    "highlands of santa cruz",
+    "santa cruz highland",
+    "el chato tortoise reserve",
+    "rancho el chato",
+    "reserva el chato"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -254,7 +490,16 @@
     "leaf": "#3E6A36",
     "acc": "#7EA552",
     "obj": "#7E7464"
-   }
+   },
+   "names": [
+    "galapagos",
+    "galapagos islands",
+    "islas galapagos",
+    "isole galapagos",
+    "galapagos archipelago",
+    "galapagos national park",
+    "santa cruz highlands"
+   ]
   }
  ]
 }

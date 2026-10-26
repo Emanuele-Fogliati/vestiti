@@ -3,6 +3,41 @@
  "name": "Nepal",
  "places": [
   {
+   "slug": "bhaktapur",
+   "label": "Nyatapola temple, Bhaktapur",
+   "lat": 27.6714,
+   "lon": 85.4293,
+   "radius_km": 8,
+   "aliases": [
+    "nyatapola",
+    "nyatpola",
+    "taumadhi",
+    "bhaktapur durbar square"
+   ],
+   "names": [
+    "bhaktapur",
+    "bhaktapur city",
+    "badgaon",
+    "bagdaon",
+    "bakhtapur",
+    "baktapur",
+    "bhadgaon",
+    "bhagdaon"
+   ],
+   "palette": {
+    "sky": "#A8CDF0",
+    "far": "#A39C90",
+    "mid": "#B4583E",
+    "ice": "#EFE3D0",
+    "water": "#4A7DB8",
+    "near": "#2B2220",
+    "sun": "#F2C14E",
+    "leaf": "#5B8A3C",
+    "acc": "#5E4232",
+    "obj": "#D4A32E"
+   }
+  },
+  {
    "slug": "boudhanath",
    "label": "Boudhanath stupa",
    "lat": 27.721,
@@ -25,6 +60,145 @@
     "leaf": "#3E9A4E",
     "acc": "#C8402E",
     "obj": "#D9A63A"
+   }
+  },
+  {
+   "slug": "chitwan-national-park",
+   "label": "One-horned rhino by the Rapti river, Chitwan National Park",
+   "lat": 27.55,
+   "lon": 84.45,
+   "radius_km": 40,
+   "aliases": [
+    "chitwan",
+    "sauraha",
+    "parco nazionale di chitwan",
+    "royal chitwan"
+   ],
+   "palette": {
+    "sky": "#B0D4F0",
+    "far": "#A9BC5C",
+    "mid": "#8F8C87",
+    "ice": "#EEF0E6",
+    "water": "#6F9AAE",
+    "near": "#262A22",
+    "sun": "#F2C14E",
+    "leaf": "#3F6A34",
+    "acc": "#C9B25A",
+    "obj": "#7A5A3A"
+   }
+  },
+  {
+   "slug": "kathmandu-durbar-square",
+   "label": "Maju Deval temple, Kathmandu Durbar Square",
+   "lat": 27.7043,
+   "lon": 85.3071,
+   "radius_km": 2,
+   "aliases": [
+    "kathmandu durbar square",
+    "ktm durbar square",
+    "basantapur",
+    "hanuman dhoka",
+    "maju deval",
+    "kumari ghar",
+    "old durbar square"
+   ],
+   "names": [
+    "durbar square kathmandu"
+   ],
+   "palette": {
+    "sky": "#A9CEF0",
+    "far": "#B9AE9C",
+    "mid": "#C65A3E",
+    "ice": "#F4F1EA",
+    "water": "#4A7DB8",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#5B8A3C",
+    "acc": "#C42A26",
+    "obj": "#6E655E"
+   }
+  },
+  {
+   "slug": "lukla",
+   "label": "Tenzing-Hillary airstrip, Lukla",
+   "lat": 27.6869,
+   "lon": 86.7297,
+   "radius_km": 5,
+   "aliases": [
+    "lukla airport",
+    "tenzing hillary airport"
+   ],
+   "names": [
+    "lukla"
+   ],
+   "palette": {
+    "sky": "#A7CDEF",
+    "far": "#9AAABD",
+    "mid": "#5F7A48",
+    "ice": "#F5F5F0",
+    "water": "#3E78B8",
+    "near": "#262A2C",
+    "sun": "#F2C94E",
+    "leaf": "#7A9A4A",
+    "acc": "#C8332E",
+    "obj": "#5E6064"
+   }
+  },
+  {
+   "slug": "pashupatinath",
+   "label": "Pashupatinath temple on the Bagmati",
+   "lat": 27.7105,
+   "lon": 85.3487,
+   "radius_km": 2,
+   "aliases": [
+    "pashupatinath",
+    "pashupathinath",
+    "pashupati temple",
+    "pashupati",
+    "pasupatinath"
+   ],
+   "palette": {
+    "sky": "#B2D2F0",
+    "far": "#A8A9A6",
+    "mid": "#C8582F",
+    "ice": "#F3F0E8",
+    "water": "#6E8C7E",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3A",
+    "acc": "#5A3E2E",
+    "obj": "#D9A62E"
+   }
+  },
+  {
+   "slug": "patan",
+   "label": "Krishna Mandir, Patan Durbar Square",
+   "lat": 27.6736,
+   "lon": 85.3252,
+   "radius_km": 5,
+   "aliases": [
+    "patan durbar square",
+    "krishna mandir",
+    "lalitpur durbar square",
+    "mangal bazar"
+   ],
+   "names": [
+    "patan",
+    "lalitpur",
+    "patan city",
+    "lalitpur city"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#D3C1A5",
+    "mid": "#8F7D69",
+    "ice": "#EFE7DA",
+    "water": "#4A7DB8",
+    "near": "#2A231F",
+    "sun": "#F2C14E",
+    "leaf": "#5B8A3C",
+    "acc": "#C42A26",
+    "obj": "#B25C3E"
    }
   },
   {
@@ -52,6 +226,39 @@
     "acc": "#C83A32",
     "obj": "#F2EEE6"
    }
+  },
+  {
+   "slug": "swayambhunath",
+   "label": "Swayambhunath stupa (the Monkey Temple)",
+   "lat": 27.7149,
+   "lon": 85.2904,
+   "radius_km": 2,
+   "aliases": [
+    "swayambhunath",
+    "swayambhu",
+    "swoyambhu",
+    "swayambunath",
+    "swayanbunath",
+    "monkey temple",
+    "tempio delle scimmie"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#9A8670",
+    "mid": "#C4B9A4",
+    "ice": "#F6F3EC",
+    "water": "#3A6FC4",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7D3A",
+    "acc": "#C8302A",
+    "obj": "#D4A32E"
+   },
+   "names": [
+    "kathmandu",
+    "kathmandu city",
+    "katmandu"
+   ]
   }
  ]
 }
