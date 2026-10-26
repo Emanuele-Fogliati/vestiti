@@ -56,6 +56,35 @@
    }
   },
   {
+   "slug": "ayutthaya",
+   "label": "The three chedis of Wat Phra Si Sanphet, Ayutthaya",
+   "lat": 14.3559,
+   "lon": 100.5583,
+   "radius_km": 12,
+   "aliases": [
+    "wat phra si sanphet",
+    "ayutthaya historical park",
+    "parco storico di ayutthaya"
+   ],
+   "names": [
+    "ayutthaya",
+    "ayuthaya",
+    "phra nakhon si ayutthaya"
+   ],
+   "palette": {
+    "sky": "#A8CFF2",
+    "far": "#BDB6AA",
+    "mid": "#8F8A80",
+    "ice": "#E6E1D6",
+    "water": "#6A8FA0",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#5E8E3E",
+    "acc": "#B5603C",
+    "obj": "#C88A5A"
+   }
+  },
+  {
    "slug": "bangkok",
    "label": "Wat Arun and a longtail boat, Bangkok",
    "lat": 13.744,
@@ -107,7 +136,10 @@
     "leaf": "#4E7E3A",
     "acc": "#E6D3A2",
     "obj": "#E0782E"
-   }
+   },
+   "names": [
+    "kanchanaburi"
+   ]
   },
   {
    "slug": "cheow-lan-lake",
@@ -161,6 +193,57 @@
    }
   },
   {
+   "slug": "grand-palace",
+   "label": "Chakri Maha Prasat, the Grand Palace, Bangkok",
+   "lat": 13.75,
+   "lon": 100.4913,
+   "radius_km": 2,
+   "aliases": [
+    "grand palace",
+    "gran palazzo reale",
+    "grande palazzo reale",
+    "chakri maha prasat",
+    "phra borom maha ratchawang"
+   ],
+   "palette": {
+    "sky": "#B5D3F0",
+    "far": "#CDC6BA",
+    "mid": "#F0ECE2",
+    "ice": "#FFFFFF",
+    "water": "#2F5470",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A4A",
+    "acc": "#D9A53A",
+    "obj": "#B8553A"
+   }
+  },
+  {
+   "slug": "khao-san-road",
+   "label": "Khao San Road with a tuk-tuk, Bangkok",
+   "lat": 13.7589,
+   "lon": 100.4974,
+   "radius_km": 2,
+   "aliases": [
+    "khao san",
+    "khaosan",
+    "khao sarn",
+    "thanon khao san"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#B3ADA4",
+    "mid": "#EAD9BE",
+    "ice": "#F6F2EA",
+    "water": "#2E6CB4",
+    "near": "#26262A",
+    "sun": "#F2C230",
+    "leaf": "#4E8A3E",
+    "acc": "#D8432E",
+    "obj": "#2E8A5A"
+   }
+  },
+  {
    "slug": "khao-sok-national-park",
    "label": "Khao Sok rainforest and karst peaks with a great hornbill",
    "lat": 8.913,
@@ -184,6 +267,35 @@
    }
   },
   {
+   "slug": "ko-samui",
+   "label": "The Big Buddha of Wat Phra Yai, Ko Samui",
+   "lat": 9.57,
+   "lon": 100.0603,
+   "radius_km": 20,
+   "aliases": [
+    "wat phra yai",
+    "big buddha samui",
+    "samui big buddha"
+   ],
+   "names": [
+    "ko samui",
+    "koh samui",
+    "samui"
+   ],
+   "palette": {
+    "sky": "#A8D0F2",
+    "far": "#D9D2C4",
+    "mid": "#CF9B34",
+    "ice": "#F4F0E8",
+    "water": "#3E8EB8",
+    "near": "#2A2422",
+    "sun": "#F6D35A",
+    "leaf": "#3E7A3A",
+    "acc": "#C8402E",
+    "obj": "#8E2A22"
+   }
+  },
+  {
    "slug": "phi-phi-islands",
    "label": "Phi Phi Islands and a longtail boat",
    "lat": 7.74,
@@ -204,6 +316,36 @@
     "leaf": "#3E7A3A",
     "acc": "#8A5A3A",
     "obj": "#6CD0C8"
+   }
+  },
+  {
+   "slug": "phuket",
+   "label": "The Big Buddha above Chalong Bay, Phuket",
+   "lat": 7.8276,
+   "lon": 98.3128,
+   "radius_km": 25,
+   "aliases": [
+    "big buddha phuket",
+    "phuket big buddha"
+   ],
+   "names": [
+    "phuket",
+    "pukhet",
+    "phuket town",
+    "phuket city",
+    "phuket old town"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#7FA08E",
+    "mid": "#E8E6E0",
+    "ice": "#FFFFFF",
+    "water": "#3E9AB8",
+    "near": "#2A2C2E",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A3A",
+    "acc": "#D8B04A",
+    "obj": "#B4B0A8"
    }
   },
   {
@@ -238,6 +380,32 @@
    }
   },
   {
+   "slug": "wat-pho",
+   "label": "The four great chedis of Wat Pho, Bangkok",
+   "lat": 13.7465,
+   "lon": 100.4927,
+   "radius_km": 2,
+   "aliases": [
+    "wat pho",
+    "wat po",
+    "wat phra chetuphon",
+    "tempio del buddha sdraiato",
+    "temple of the reclining buddha"
+   ],
+   "palette": {
+    "sky": "#B5D3F0",
+    "far": "#D8CFC0",
+    "mid": "#D9A63A",
+    "ice": "#EEEAE0",
+    "water": "#4F6FA8",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#4E9A5A",
+    "acc": "#D2642E",
+    "obj": "#8E2E24"
+   }
+  },
+  {
    "slug": "white-temple",
    "label": "Wat Rong Khun, the White Temple of Chiang Rai",
    "lat": 19.8243,
@@ -260,7 +428,11 @@
     "leaf": "#3F6E38",
     "acc": "#D47A3A",
     "obj": "#8A9CB2"
-   }
+   },
+   "names": [
+    "chiang rai",
+    "chang rai"
+   ]
   }
  ]
 }
