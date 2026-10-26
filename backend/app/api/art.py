@@ -11,9 +11,10 @@ def list_landmarks():
 
 
 @router.get("/landmarks/{landmark_id}.svg")
-def landmark_svg(landmark_id: str):
-    """The scene as an SVG fragment (no <svg> wrapper): the page inlines it so the --il-* tokens apply."""
-    body = art.svg(landmark_id)
+def landmark_svg(landmark_id: str, flat: bool = False):
+    """The scene as an SVG fragment (no <svg> wrapper) that the page inlines: by default with the
+    official look (the place's palette, outline and shadow); ?flat=1 gives the drawing as stored."""
+    body = art.svg(landmark_id) if flat else art.rendered(landmark_id)
     if body is None:
         raise HTTPException(404, "Unknown landmark")
     return Response(body, media_type="text/plain; charset=utf-8",
