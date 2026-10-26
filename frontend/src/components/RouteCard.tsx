@@ -41,7 +41,7 @@ export function RouteCard({ route, onClose }: { route: GlobeRoute; onClose: () =
         <p className="small muted">
           {route.guide
             ? "A ready-made trip with a day-by-day guide: what is worth it and what to skip."
-            : "The route most organised trips of this length follow, stop by stop."}
+            : "The route travellers follow most at this length, stop by stop."}
         </p>
         {route.best_months.length > 0 && <p className="small">Best weather: {monthRange(route.best_months)}</p>}
         <ol className="rcard-stops">

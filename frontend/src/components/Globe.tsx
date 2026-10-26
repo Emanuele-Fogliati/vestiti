@@ -368,7 +368,7 @@ export default function Globe() {
       <div className="globe-tools">
         {close
           ? <button type="button" className="btn sm" onClick={backToGlobe}>Back to the globe</button>
-          : <span className="globe-hint small">Every line is a route organised trips follow. Tap one, or zoom in anywhere.</span>}
+          : <span className="globe-hint small">Every line is a route travellers follow. Tap one, or zoom in anywhere.</span>}
       </div>
       {route && (
         <div className="globe-card">
