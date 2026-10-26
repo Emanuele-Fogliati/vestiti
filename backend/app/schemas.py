@@ -353,6 +353,15 @@ class WardrobeIn(BaseModel):
     footwear_type: str | None = None
     ankle_support: bool = False
     notes: str | None = Field(default=None, max_length=1000)
+    model_ref: str | None = Field(default=None, max_length=120)
+    added_via: str | None = None
+
+    @field_validator("added_via")
+    @classmethod
+    def _via(cls, v):
+        if v is not None and v not in ("hand", "search", "photo"):
+            raise ValueError("unknown way of adding")
+        return v
 
     @field_validator("material")
     @classmethod
@@ -396,6 +405,9 @@ class WardrobeOut(ORM):
     footwear_type: str | None
     ankle_support: bool
     notes: str | None
+    model_ref: str | None = None
+    added_via: str | None = None
+    specs: dict | None = None
     created_at: datetime
 
 

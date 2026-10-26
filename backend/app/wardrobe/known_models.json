@@ -1,0 +1,2648 @@
+{
+ "_note": "Well-known clothing model lines, including older and discontinued ones, so a traveller can add what they own by name. Values are coarse on purpose (warmth level, waterproof yes/no): a model line keeps them across versions. 'older' marks a model that was replaced or renamed. Entries with an empty brand are everyday pieces for when the name is forgotten. Add a model only when you know what it is.",
+ "models": [
+  {
+   "id": "patagonia-torrentshell-jacket-2-5l-older",
+   "brand": "Patagonia",
+   "name": "Torrentshell Jacket (2.5L, older)",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "Torrentshell",
+    "Torrent Shell"
+   ],
+   "note": "Replaced by the Torrentshell 3L in 2020."
+  },
+  {
+   "id": "patagonia-rainshadow-jacket",
+   "brand": "Patagonia",
+   "name": "Rainshadow Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "Rain Shadow"
+   ]
+  },
+  {
+   "id": "patagonia-calcite-jacket",
+   "brand": "Patagonia",
+   "name": "Calcite Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Calcite GORE-TEX Paclite"
+   ]
+  },
+  {
+   "id": "patagonia-granite-crest-jacket",
+   "brand": "Patagonia",
+   "name": "Granite Crest Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic"
+  },
+  {
+   "id": "patagonia-triolet-jacket",
+   "brand": "Patagonia",
+   "name": "Triolet Jacket",
+   "category": "shell_top",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Triolet GORE-TEX"
+   ]
+  },
+  {
+   "id": "patagonia-houdini-jacket",
+   "brand": "Patagonia",
+   "name": "Houdini Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Houdini wind jacket"
+   ],
+   "note": "Wind jacket: stops wind and drizzle, not rain."
+  },
+  {
+   "id": "patagonia-nano-puff-hoody",
+   "brand": "Patagonia",
+   "name": "Nano Puff Hoody",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Nano Puff Hooded"
+   ]
+  },
+  {
+   "id": "patagonia-nano-air-jacket",
+   "brand": "Patagonia",
+   "name": "Nano-Air Jacket",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Nano Air",
+    "Nano-Air Hoody"
+   ]
+  },
+  {
+   "id": "patagonia-micro-puff-hoody",
+   "brand": "Patagonia",
+   "name": "Micro Puff Hoody",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Micropuff"
+   ]
+  },
+  {
+   "id": "patagonia-down-sweater-hoody",
+   "brand": "Patagonia",
+   "name": "Down Sweater Hoody",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "fill_power": 800,
+   "aka": [
+    "Down Sweater Hooded"
+   ]
+  },
+  {
+   "id": "patagonia-fitz-roy-down-hoody",
+   "brand": "Patagonia",
+   "name": "Fitz Roy Down Hoody",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "fill_power": 800
+  },
+  {
+   "id": "patagonia-das-parka",
+   "brand": "Patagonia",
+   "name": "Das Parka",
+   "category": "insulation_top",
+   "warmth": "very_warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "DAS"
+   ]
+  },
+  {
+   "id": "patagonia-r1-pullover",
+   "brand": "Patagonia",
+   "name": "R1 Pullover",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "R1 Fleece",
+    "R1 Hoody",
+    "R1 TechFace"
+   ]
+  },
+  {
+   "id": "patagonia-retro-x-fleece-jacket",
+   "brand": "Patagonia",
+   "name": "Retro-X Fleece Jacket",
+   "category": "mid_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": true,
+   "material": "fleece",
+   "aka": [
+    "Retro X",
+    "Classic Retro-X"
+   ]
+  },
+  {
+   "id": "patagonia-synchilla-snap-t-pullover",
+   "brand": "Patagonia",
+   "name": "Synchilla Snap-T Pullover",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "Snap-T",
+    "Snap T",
+    "Synchilla"
+   ]
+  },
+  {
+   "id": "patagonia-los-gatos-fleece",
+   "brand": "Patagonia",
+   "name": "Los Gatos Fleece",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece"
+  },
+  {
+   "id": "patagonia-capilene-midweight-crew",
+   "brand": "Patagonia",
+   "name": "Capilene Midweight Crew",
+   "category": "base_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Capilene 3",
+    "Cap 3",
+    "Capilene Midweight"
+   ]
+  },
+  {
+   "id": "patagonia-capilene-thermal-weight-zip-neck",
+   "brand": "Patagonia",
+   "name": "Capilene Thermal Weight Zip-Neck",
+   "category": "base_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Capilene 4",
+    "Cap 4",
+    "Capilene Thermal"
+   ]
+  },
+  {
+   "id": "patagonia-capilene-air-crew",
+   "brand": "Patagonia",
+   "name": "Capilene Air Crew",
+   "category": "base_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "Cap Air"
+   ]
+  },
+  {
+   "id": "patagonia-capilene-midweight-bottoms",
+   "brand": "Patagonia",
+   "name": "Capilene Midweight Bottoms",
+   "category": "base_bottom",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Capilene 3 bottoms"
+   ]
+  },
+  {
+   "id": "patagonia-terrebonne-joggers",
+   "brand": "Patagonia",
+   "name": "Terrebonne Joggers",
+   "category": "trousers",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic"
+  },
+  {
+   "id": "arcteryx-alpha-sv-jacket",
+   "brand": "Arc'teryx",
+   "name": "Alpha SV Jacket",
+   "category": "shell_top",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Alpha SV"
+   ]
+  },
+  {
+   "id": "arcteryx-alpha-fl-jacket",
+   "brand": "Arc'teryx",
+   "name": "Alpha FL Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Alpha FL"
+   ]
+  },
+  {
+   "id": "arcteryx-beta-lt-jacket",
+   "brand": "Arc'teryx",
+   "name": "Beta LT Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Beta LT"
+   ]
+  },
+  {
+   "id": "arcteryx-beta-sl-jacket",
+   "brand": "Arc'teryx",
+   "name": "Beta SL Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Beta SL",
+    "Beta SL Hybrid"
+   ]
+  },
+  {
+   "id": "arcteryx-zeta-sl-jacket",
+   "brand": "Arc'teryx",
+   "name": "Zeta SL Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Zeta SL"
+   ]
+  },
+  {
+   "id": "arcteryx-zeta-lt-jacket",
+   "brand": "Arc'teryx",
+   "name": "Zeta LT Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Zeta LT"
+   ]
+  },
+  {
+   "id": "arcteryx-squamish-hoody",
+   "brand": "Arc'teryx",
+   "name": "Squamish Hoody",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": true,
+   "material": "synthetic",
+   "note": "Wind jacket: stops wind and drizzle, not rain."
+  },
+  {
+   "id": "arcteryx-atom-lt-hoody",
+   "brand": "Arc'teryx",
+   "name": "Atom LT Hoody",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "Atom LT",
+    "Atom LT Jacket"
+   ],
+   "note": "Renamed Atom Hoody in 2022."
+  },
+  {
+   "id": "arcteryx-atom-ar-hoody",
+   "brand": "Arc'teryx",
+   "name": "Atom AR Hoody",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "Atom AR",
+    "Atom Heavyweight"
+   ]
+  },
+  {
+   "id": "arcteryx-cerium-lt-hoody",
+   "brand": "Arc'teryx",
+   "name": "Cerium LT Hoody",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "older": true,
+   "fill_power": 850,
+   "aka": [
+    "Cerium LT"
+   ],
+   "note": "Renamed Cerium Hoody in 2022."
+  },
+  {
+   "id": "arcteryx-thorium-ar-hoody",
+   "brand": "Arc'teryx",
+   "name": "Thorium AR Hoody",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "Thorium",
+    "Thorium Hoody"
+   ]
+  },
+  {
+   "id": "arcteryx-delta-lt-jacket",
+   "brand": "Arc'teryx",
+   "name": "Delta LT Jacket",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "Delta LT",
+    "Delta Jacket",
+    "Delta Hoody"
+   ]
+  },
+  {
+   "id": "arcteryx-covert-cardigan",
+   "brand": "Arc'teryx",
+   "name": "Covert Cardigan",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "Covert"
+   ]
+  },
+  {
+   "id": "arcteryx-rho-lt-zip-neck",
+   "brand": "Arc'teryx",
+   "name": "Rho LT Zip Neck",
+   "category": "base_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Rho LT",
+    "Rho"
+   ]
+  },
+  {
+   "id": "arcteryx-motus-crew",
+   "brand": "Arc'teryx",
+   "name": "Motus Crew",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Motus",
+    "Cormac"
+   ]
+  },
+  {
+   "id": "arcteryx-gamma-lt-pant",
+   "brand": "Arc'teryx",
+   "name": "Gamma LT Pant",
+   "category": "trousers",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Gamma LT",
+    "Gamma MX",
+    "Gamma Lightweight"
+   ]
+  },
+  {
+   "id": "arcteryx-lefroy-pant",
+   "brand": "Arc'teryx",
+   "name": "Lefroy Pant",
+   "category": "trousers",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Lefroy"
+   ]
+  },
+  {
+   "id": "arcteryx-norvan-ld",
+   "brand": "Arc'teryx",
+   "name": "Norvan LD",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Norvan LD 3",
+    "Norvan"
+   ]
+  },
+  {
+   "id": "arcteryx-aerios-fl-mid-gtx",
+   "brand": "Arc'teryx",
+   "name": "Aerios FL Mid GTX",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Aerios FL"
+   ]
+  },
+  {
+   "id": "the-north-face-1996-retro-nuptse-jacket",
+   "brand": "The North Face",
+   "name": "1996 Retro Nuptse Jacket",
+   "category": "insulation_top",
+   "warmth": "very_warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "fill_power": 700,
+   "aka": [
+    "Nuptse",
+    "Nuptse 1996",
+    "TNF Nuptse"
+   ]
+  },
+  {
+   "id": "the-north-face-thermoball-jacket-original",
+   "brand": "The North Face",
+   "name": "ThermoBall Jacket (original)",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "ThermoBall",
+    "Thermoball"
+   ],
+   "note": "Replaced by ThermoBall Eco."
+  },
+  {
+   "id": "the-north-face-thermoball-eco-jacket",
+   "brand": "The North Face",
+   "name": "ThermoBall Eco Jacket",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Thermoball Eco"
+   ]
+  },
+  {
+   "id": "the-north-face-aconcagua-jacket",
+   "brand": "The North Face",
+   "name": "Aconcagua Jacket",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "Aconcagua 2",
+    "Aconcagua 3"
+   ]
+  },
+  {
+   "id": "the-north-face-mcmurdo-parka",
+   "brand": "The North Face",
+   "name": "McMurdo Parka",
+   "category": "insulation_top",
+   "warmth": "very_warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "down",
+   "aka": [
+    "McMurdo"
+   ]
+  },
+  {
+   "id": "the-north-face-himalayan-parka",
+   "brand": "The North Face",
+   "name": "Himalayan Parka",
+   "category": "insulation_top",
+   "warmth": "very_warm",
+   "waterproof": false,
+   "windproof": true,
+   "material": "down",
+   "aka": [
+    "Himalayan Down Parka"
+   ]
+  },
+  {
+   "id": "the-north-face-resolve-2-jacket",
+   "brand": "The North Face",
+   "name": "Resolve 2 Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Resolve",
+    "Resolve 2"
+   ]
+  },
+  {
+   "id": "the-north-face-venture-2-jacket",
+   "brand": "The North Face",
+   "name": "Venture 2 Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Venture",
+    "Venture 2"
+   ]
+  },
+  {
+   "id": "the-north-face-dryzzle-futurelight-jacket",
+   "brand": "The North Face",
+   "name": "Dryzzle FUTURELIGHT Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Dryzzle"
+   ]
+  },
+  {
+   "id": "the-north-face-1990-mountain-jacket-gtx",
+   "brand": "The North Face",
+   "name": "1990 Mountain Jacket GTX",
+   "category": "shell_top",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Mountain Jacket 1990",
+    "1990 Mountain"
+   ]
+  },
+  {
+   "id": "the-north-face-summit-series-futurelight-jacket",
+   "brand": "The North Face",
+   "name": "Summit Series FUTURELIGHT Jacket",
+   "category": "shell_top",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Summit L5",
+    "Summit Series"
+   ]
+  },
+  {
+   "id": "the-north-face-apex-bionic-jacket",
+   "brand": "The North Face",
+   "name": "Apex Bionic Jacket",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Apex Bionic",
+    "Apex Bionic 2"
+   ],
+   "note": "Softshell: stops wind and light showers."
+  },
+  {
+   "id": "the-north-face-denali-jacket",
+   "brand": "The North Face",
+   "name": "Denali Jacket",
+   "category": "mid_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": true,
+   "material": "fleece",
+   "aka": [
+    "Denali",
+    "Denali 2"
+   ]
+  },
+  {
+   "id": "the-north-face-100-glacier-quarter-zip",
+   "brand": "The North Face",
+   "name": "100 Glacier Quarter-Zip",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "Glacier",
+    "TKA 100 Glacier",
+    "Glacier 1/4 zip"
+   ]
+  },
+  {
+   "id": "the-north-face-paramount-convertible-pant",
+   "brand": "The North Face",
+   "name": "Paramount Convertible Pant",
+   "category": "trousers",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Paramount"
+   ]
+  },
+  {
+   "id": "the-north-face-venture-2-half-zip-pant",
+   "brand": "The North Face",
+   "name": "Venture 2 Half-Zip Pant",
+   "category": "shell_bottom",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic"
+  },
+  {
+   "id": "the-north-face-etip-gloves",
+   "brand": "The North Face",
+   "name": "Etip Gloves",
+   "category": "gloves",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Etip",
+    "E-tip"
+   ]
+  },
+  {
+   "id": "the-north-face-hedgehog-fastpack-gtx",
+   "brand": "The North Face",
+   "name": "Hedgehog Fastpack GTX",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Hedgehog"
+   ]
+  },
+  {
+   "id": "the-north-face-vectiv-exploris-mid-futurelight",
+   "brand": "The North Face",
+   "name": "VECTIV Exploris Mid FUTURELIGHT",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Vectiv Exploris",
+    "Exploris"
+   ]
+  },
+  {
+   "id": "columbia-pouring-adventure-ii-jacket",
+   "brand": "Columbia",
+   "name": "Pouring Adventure II Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Pouring Adventure"
+   ]
+  },
+  {
+   "id": "columbia-inner-limits-ii-jacket",
+   "brand": "Columbia",
+   "name": "Inner Limits II Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Inner Limits"
+   ]
+  },
+  {
+   "id": "columbia-bugaboo-interchange-jacket-3-in-1",
+   "brand": "Columbia",
+   "name": "Bugaboo Interchange Jacket (3-in-1)",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Bugaboo",
+    "Bugaboo II",
+    "Whirlibird",
+    "Interchange 3 in 1"
+   ],
+   "note": "3-in-1: if you wear the shell and the liner apart, add them as two items."
+  },
+  {
+   "id": "columbia-delta-ridge-down-jacket",
+   "brand": "Columbia",
+   "name": "Delta Ridge Down Jacket",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "Delta Ridge"
+   ]
+  },
+  {
+   "id": "columbia-fast-trek-ii-fleece",
+   "brand": "Columbia",
+   "name": "Fast Trek II Fleece",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "Fast Trek"
+   ]
+  },
+  {
+   "id": "columbia-silver-ridge-utility-shirt",
+   "brand": "Columbia",
+   "name": "Silver Ridge Utility Shirt",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Silver Ridge shirt"
+   ]
+  },
+  {
+   "id": "columbia-newton-ridge-plus-ii-waterproof",
+   "brand": "Columbia",
+   "name": "Newton Ridge Plus II Waterproof",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Newton Ridge"
+   ]
+  },
+  {
+   "id": "columbia-redmond-iii-waterproof",
+   "brand": "Columbia",
+   "name": "Redmond III Waterproof",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Redmond"
+   ]
+  },
+  {
+   "id": "decathlon-quechua-arpenaz-rain-jacket",
+   "brand": "Decathlon",
+   "name": "Quechua Arpenaz Rain Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "Arpenaz rain",
+    "Arpenaz 50",
+    "Arpenaz 100 jacket"
+   ],
+   "note": "Older line, renamed NH/MH around 2018."
+  },
+  {
+   "id": "decathlon-quechua-arpenaz-50-fleece",
+   "brand": "Decathlon",
+   "name": "Quechua Arpenaz 50 Fleece",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "older": true,
+   "aka": [
+    "Arpenaz fleece",
+    "Arpenaz 100 fleece",
+    "Arpenaz 200"
+   ]
+  },
+  {
+   "id": "decathlon-quechua-arpenaz-trousers",
+   "brand": "Decathlon",
+   "name": "Quechua Arpenaz Trousers",
+   "category": "trousers",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "Arpenaz pants",
+    "Arpenaz convertible"
+   ]
+  },
+  {
+   "id": "decathlon-quechua-arpenaz-mid-boots",
+   "brand": "Decathlon",
+   "name": "Quechua Arpenaz Mid Boots",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "older": true,
+   "aka": [
+    "Arpenaz 100 mid",
+    "Arpenaz boots"
+   ]
+  },
+  {
+   "id": "decathlon-quechua-forclaz-500-jacket",
+   "brand": "Decathlon",
+   "name": "Quechua Forclaz 500 Jacket",
+   "category": "shell_top",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "Forclaz 500 rain",
+    "Forclaz 400"
+   ],
+   "note": "Pre-2018 name of the trekking range."
+  },
+  {
+   "id": "decathlon-forclaz-trek-100-down-jacket",
+   "brand": "Decathlon",
+   "name": "Forclaz Trek 100 Down Jacket",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "older": true,
+   "aka": [
+    "Trek 100 down",
+    "Forclaz Trek 100"
+   ],
+   "note": "Now sold as Forclaz MT100."
+  },
+  {
+   "id": "decathlon-quechua-sh100-x-warm-jacket",
+   "brand": "Decathlon",
+   "name": "Quechua SH100 X-Warm Jacket",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "SH100 X-Warm",
+    "X-Warm",
+    "SH500 X-Warm"
+   ]
+  },
+  {
+   "id": "decathlon-quechua-mh100-hiking-shoes",
+   "brand": "Decathlon",
+   "name": "Quechua MH100 Hiking Shoes",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "MH100 shoes"
+   ]
+  },
+  {
+   "id": "decathlon-quechua-sh500-winter-boots",
+   "brand": "Decathlon",
+   "name": "Quechua SH500 Winter Boots",
+   "category": "footwear",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "SH500 snow boots",
+    "SH500 X-Warm boots"
+   ]
+  },
+  {
+   "id": "decathlon-kalenji-run-shoes",
+   "brand": "Decathlon",
+   "name": "Kalenji Run Shoes",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "sneaker",
+   "ankle_support": false,
+   "aka": [
+    "Kalenji"
+   ]
+  },
+  {
+   "id": "rab-electron-pro-down-jacket",
+   "brand": "Rab",
+   "name": "Electron Pro Down Jacket",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "Electron",
+    "Electron Pro"
+   ]
+  },
+  {
+   "id": "rab-xenair-alpine-jacket",
+   "brand": "Rab",
+   "name": "Xenair Alpine Jacket",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Xenair"
+   ]
+  },
+  {
+   "id": "rab-kinetic-alpine-2-0-jacket",
+   "brand": "Rab",
+   "name": "Kinetic Alpine 2.0 Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Kinetic Alpine",
+    "Kinetic"
+   ]
+  },
+  {
+   "id": "rab-downpour-plus-2-0-jacket",
+   "brand": "Rab",
+   "name": "Downpour Plus 2.0 Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Downpour Plus"
+   ]
+  },
+  {
+   "id": "mountain-hardwear-ghost-whisperer-2-hoody",
+   "brand": "Mountain Hardwear",
+   "name": "Ghost Whisperer/2 Hoody",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "fill_power": 800,
+   "aka": [
+    "Ghost Whisperer",
+    "Ghost Whisperer 2"
+   ]
+  },
+  {
+   "id": "mountain-hardwear-exposure-2-gore-tex-paclite-jacket",
+   "brand": "Mountain Hardwear",
+   "name": "Exposure/2 GORE-TEX Paclite Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Exposure 2"
+   ]
+  },
+  {
+   "id": "mountain-hardwear-microchill-fleece",
+   "brand": "Mountain Hardwear",
+   "name": "Microchill Fleece",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "Microchill",
+    "Microchill 2.0"
+   ]
+  },
+  {
+   "id": "montbell-plasma-1000-down-jacket",
+   "brand": "Montbell",
+   "name": "Plasma 1000 Down Jacket",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "fill_power": 1000,
+   "aka": [
+    "Plasma 1000"
+   ]
+  },
+  {
+   "id": "montbell-versalite-jacket",
+   "brand": "Montbell",
+   "name": "Versalite Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Versalite"
+   ]
+  },
+  {
+   "id": "outdoor-research-foray-ii-jacket",
+   "brand": "Outdoor Research",
+   "name": "Foray II Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Foray"
+   ]
+  },
+  {
+   "id": "outdoor-research-aspire-ii-jacket",
+   "brand": "Outdoor Research",
+   "name": "Aspire II Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Aspire"
+   ]
+  },
+  {
+   "id": "marmot-precip-jacket-original",
+   "brand": "Marmot",
+   "name": "PreCip Jacket (original)",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "older": true,
+   "aka": [
+    "PreCip",
+    "Precip"
+   ],
+   "note": "Replaced by PreCip Eco."
+  },
+  {
+   "id": "marmot-minimalist-gore-tex-jacket",
+   "brand": "Marmot",
+   "name": "Minimalist GORE-TEX Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Minimalist"
+   ]
+  },
+  {
+   "id": "berghaus-paclite-jacket",
+   "brand": "Berghaus",
+   "name": "Paclite Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Paclite 2.0",
+    "Berghaus Paclite"
+   ]
+  },
+  {
+   "id": "berghaus-deluge-pro-jacket",
+   "brand": "Berghaus",
+   "name": "Deluge Pro Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Deluge",
+    "Deluge Pro 2.0"
+   ]
+  },
+  {
+   "id": "berghaus-deluge-overtrousers",
+   "brand": "Berghaus",
+   "name": "Deluge Overtrousers",
+   "category": "shell_bottom",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Deluge pants"
+   ]
+  },
+  {
+   "id": "helly-hansen-seven-j-jacket",
+   "brand": "Helly Hansen",
+   "name": "Seven J Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Seven J",
+    "7J"
+   ]
+  },
+  {
+   "id": "helly-hansen-daybreaker-fleece-jacket",
+   "brand": "Helly Hansen",
+   "name": "Daybreaker Fleece Jacket",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "Daybreaker"
+   ]
+  },
+  {
+   "id": "mammut-kento-hs-hooded-jacket",
+   "brand": "Mammut",
+   "name": "Kento HS Hooded Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Kento"
+   ]
+  },
+  {
+   "id": "mammut-runbold-pants",
+   "brand": "Mammut",
+   "name": "Runbold Pants",
+   "category": "trousers",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Runbold"
+   ]
+  },
+  {
+   "id": "salomon-bonatti-wp-jacket",
+   "brand": "Salomon",
+   "name": "Bonatti WP Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Bonatti"
+   ]
+  },
+  {
+   "id": "jack-wolfskin-texapore-rain-jacket",
+   "brand": "Jack Wolfskin",
+   "name": "Texapore Rain Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Texapore",
+    "Jack Wolfskin Texapore"
+   ]
+  },
+  {
+   "id": "fjallraven-greenland-jacket",
+   "brand": "Fjällräven",
+   "name": "Greenland Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": true,
+   "material": "other",
+   "aka": [
+    "Greenland",
+    "G-1000 jacket"
+   ],
+   "note": "G-1000 waxed fabric: stops wind and showers, not a downpour."
+  },
+  {
+   "id": "fjallraven-keb-trousers",
+   "brand": "Fjällräven",
+   "name": "Keb Trousers",
+   "category": "trousers",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": true,
+   "material": "other",
+   "aka": [
+    "Keb",
+    "Keb pants"
+   ]
+  },
+  {
+   "id": "fjallraven-expedition-down-lite-jacket",
+   "brand": "Fjällräven",
+   "name": "Expedition Down Lite Jacket",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "Expedition Down"
+   ]
+  },
+  {
+   "id": "craghoppers-nosilife-pro-trousers",
+   "brand": "Craghoppers",
+   "name": "NosiLife Pro Trousers",
+   "category": "trousers",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Nosilife"
+   ]
+  },
+  {
+   "id": "craghoppers-kiwi-pro-trousers",
+   "brand": "Craghoppers",
+   "name": "Kiwi Pro Trousers",
+   "category": "trousers",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Kiwi Pro",
+    "Kiwi"
+   ]
+  },
+  {
+   "id": "prana-stretch-zion-pant",
+   "brand": "prAna",
+   "name": "Stretch Zion Pant",
+   "category": "trousers",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Zion",
+    "Stretch Zion"
+   ]
+  },
+  {
+   "id": "rei-co-op-rainier-rain-jacket",
+   "brand": "REI Co-op",
+   "name": "Rainier Rain Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Rainier"
+   ]
+  },
+  {
+   "id": "rains-long-jacket",
+   "brand": "Rains",
+   "name": "Long Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Rains jacket"
+   ],
+   "note": "City rain coat: fully waterproof, does not breathe."
+  },
+  {
+   "id": "uniqlo-ultra-light-down-vest",
+   "brand": "Uniqlo",
+   "name": "Ultra Light Down Vest",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "ULD vest",
+    "Ultra Light Down gilet"
+   ]
+  },
+  {
+   "id": "uniqlo-seamless-down-parka",
+   "brand": "Uniqlo",
+   "name": "Seamless Down Parka",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": true,
+   "material": "down",
+   "aka": [
+    "Seamless Down"
+   ]
+  },
+  {
+   "id": "uniqlo-pufftech-jacket",
+   "brand": "Uniqlo",
+   "name": "PUFFTECH Jacket",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Pufftech",
+    "Warm Padded Jacket"
+   ]
+  },
+  {
+   "id": "uniqlo-pocketable-uv-protection-parka",
+   "brand": "Uniqlo",
+   "name": "Pocketable UV Protection Parka",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "Pocketable parka",
+    "Pocketable UV parka"
+   ],
+   "note": "Water-repellent, not waterproof."
+  },
+  {
+   "id": "uniqlo-heattech-extra-warm-crew-neck",
+   "brand": "Uniqlo",
+   "name": "HEATTECH Extra Warm Crew Neck",
+   "category": "base_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Heattech Extra Warm"
+   ]
+  },
+  {
+   "id": "uniqlo-heattech-ultra-warm-crew-neck",
+   "brand": "Uniqlo",
+   "name": "HEATTECH Ultra Warm Crew Neck",
+   "category": "base_top",
+   "warmth": "very_warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Heattech Ultra Warm"
+   ]
+  },
+  {
+   "id": "uniqlo-heattech-extra-warm-tights",
+   "brand": "Uniqlo",
+   "name": "HEATTECH Extra Warm Tights",
+   "category": "base_bottom",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic"
+  },
+  {
+   "id": "uniqlo-airism-t-shirt",
+   "brand": "Uniqlo",
+   "name": "AIRism T-Shirt",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Airism"
+   ]
+  },
+  {
+   "id": "canada-goose-expedition-parka",
+   "brand": "Canada Goose",
+   "name": "Expedition Parka",
+   "category": "insulation_top",
+   "warmth": "very_warm",
+   "waterproof": false,
+   "windproof": true,
+   "material": "down",
+   "aka": [
+    "Expedition"
+   ]
+  },
+  {
+   "id": "canada-goose-chilliwack-bomber",
+   "brand": "Canada Goose",
+   "name": "Chilliwack Bomber",
+   "category": "insulation_top",
+   "warmth": "very_warm",
+   "waterproof": false,
+   "windproof": true,
+   "material": "down",
+   "aka": [
+    "Chilliwack"
+   ]
+  },
+  {
+   "id": "moncler-maya-jacket",
+   "brand": "Moncler",
+   "name": "Maya Jacket",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "Maya"
+   ]
+  },
+  {
+   "id": "barbour-bedale-wax-jacket",
+   "brand": "Barbour",
+   "name": "Bedale Wax Jacket",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": true,
+   "material": "cotton",
+   "aka": [
+    "Bedale",
+    "Beaufort",
+    "Barbour wax"
+   ],
+   "note": "Waxed cotton: sheds showers, not a downpour."
+  },
+  {
+   "id": "levis-501-original-jeans",
+   "brand": "Levi's",
+   "name": "501 Original Jeans",
+   "category": "trousers",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton",
+   "aka": [
+    "501",
+    "Levis jeans"
+   ],
+   "note": "Cotton jeans: cold and slow to dry when wet."
+  },
+  {
+   "id": "under-armour-coldgear-base-layer-top",
+   "brand": "Under Armour",
+   "name": "ColdGear Base Layer Top",
+   "category": "base_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "ColdGear"
+   ]
+  },
+  {
+   "id": "under-armour-coldgear-leggings",
+   "brand": "Under Armour",
+   "name": "ColdGear Leggings",
+   "category": "base_bottom",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic"
+  },
+  {
+   "id": "under-armour-heatgear-t-shirt",
+   "brand": "Under Armour",
+   "name": "HeatGear T-Shirt",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "HeatGear"
+   ]
+  },
+  {
+   "id": "odlo-active-warm-eco-top",
+   "brand": "Odlo",
+   "name": "Active Warm Eco Top",
+   "category": "base_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Active Warm"
+   ]
+  },
+  {
+   "id": "odlo-active-warm-eco-bottoms",
+   "brand": "Odlo",
+   "name": "Active Warm Eco Bottoms",
+   "category": "base_bottom",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic"
+  },
+  {
+   "id": "nike-dri-fit-t-shirt",
+   "brand": "Nike",
+   "name": "Dri-FIT T-Shirt",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Dri Fit"
+   ]
+  },
+  {
+   "id": "icebreaker-tech-lite-150-t-shirt",
+   "brand": "Icebreaker",
+   "name": "Tech Lite 150 T-Shirt",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "Tech Lite",
+    "150 Tech Lite"
+   ]
+  },
+  {
+   "id": "icebreaker-260-tech-long-sleeve-half-zip",
+   "brand": "Icebreaker",
+   "name": "260 Tech Long Sleeve Half Zip",
+   "category": "base_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "260 Tech",
+    "260 Zone"
+   ]
+  },
+  {
+   "id": "icebreaker-260-tech-leggings",
+   "brand": "Icebreaker",
+   "name": "260 Tech Leggings",
+   "category": "base_bottom",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino"
+  },
+  {
+   "id": "smartwool-merino-150-base-layer",
+   "brand": "Smartwool",
+   "name": "Merino 150 Base Layer",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "Merino 150",
+    "NTS Micro 150"
+   ]
+  },
+  {
+   "id": "smartwool-phd-outdoor-light-crew-socks",
+   "brand": "Smartwool",
+   "name": "PhD Outdoor Light Crew Socks",
+   "category": "socks",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "PhD socks"
+   ],
+   "note": "Older line; now sold as Performance Hike."
+  },
+  {
+   "id": "falke-tk2-trekking-socks",
+   "brand": "Falke",
+   "name": "TK2 Trekking Socks",
+   "category": "socks",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "TK2",
+    "TK2 Explore"
+   ]
+  },
+  {
+   "id": "black-diamond-mercury-mitts",
+   "brand": "Black Diamond",
+   "name": "Mercury Mitts",
+   "category": "gloves",
+   "warmth": "very_warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Mercury"
+   ]
+  },
+  {
+   "id": "black-diamond-lightweight-screentap-gloves",
+   "brand": "Black Diamond",
+   "name": "LightWeight ScreenTap Gloves",
+   "category": "gloves",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "Screentap"
+   ]
+  },
+  {
+   "id": "hestra-army-leather-heli-ski-gloves",
+   "brand": "Hestra",
+   "name": "Army Leather Heli Ski Gloves",
+   "category": "gloves",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "aka": [
+    "Heli Ski"
+   ]
+  },
+  {
+   "id": "sunday-afternoons-adventure-hat",
+   "brand": "Sunday Afternoons",
+   "name": "Adventure Hat",
+   "category": "sun_hat",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic"
+  },
+  {
+   "id": "merrell-moab-2-mid-waterproof",
+   "brand": "Merrell",
+   "name": "Moab 2 Mid Waterproof",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "older": true,
+   "aka": [
+    "Moab 2 Mid",
+    "Moab Mid"
+   ],
+   "note": "Replaced by Moab 3 in 2021."
+  },
+  {
+   "id": "merrell-moab-3-low",
+   "brand": "Merrell",
+   "name": "Moab 3 (low)",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Moab 3 low",
+    "Moab Ventilator",
+    "Moab 2 Ventilator"
+   ]
+  },
+  {
+   "id": "salomon-x-ultra-3-mid-gtx",
+   "brand": "Salomon",
+   "name": "X Ultra 3 Mid GTX",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "older": true,
+   "aka": [
+    "X Ultra 3"
+   ],
+   "note": "Replaced by X Ultra 4 in 2021."
+  },
+  {
+   "id": "salomon-quest-4-gtx",
+   "brand": "Salomon",
+   "name": "Quest 4 GTX",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Quest 4D",
+    "Quest 4D GTX",
+    "Quest"
+   ]
+  },
+  {
+   "id": "salomon-speedcross-6",
+   "brand": "Salomon",
+   "name": "Speedcross 6",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Speedcross",
+    "Speedcross 5"
+   ]
+  },
+  {
+   "id": "salomon-xa-pro-3d-v8",
+   "brand": "Salomon",
+   "name": "XA Pro 3D v8",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "older": true,
+   "aka": [
+    "XA Pro 3D"
+   ]
+  },
+  {
+   "id": "hoka-speedgoat-5",
+   "brand": "Hoka",
+   "name": "Speedgoat 5",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "older": true,
+   "aka": [
+    "Speedgoat 4"
+   ]
+  },
+  {
+   "id": "hoka-anacapa-2-mid-gtx",
+   "brand": "Hoka",
+   "name": "Anacapa 2 Mid GTX",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Anacapa"
+   ]
+  },
+  {
+   "id": "altra-lone-peak",
+   "brand": "Altra",
+   "name": "Lone Peak",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Lone Peak 7",
+    "Lone Peak 8"
+   ]
+  },
+  {
+   "id": "la-sportiva-bushido-iii",
+   "brand": "La Sportiva",
+   "name": "Bushido III",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Bushido"
+   ]
+  },
+  {
+   "id": "adidas-terrex-swift-r2-gtx",
+   "brand": "Adidas",
+   "name": "Terrex Swift R2 GTX",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "older": true,
+   "aka": [
+    "Swift R2"
+   ]
+  },
+  {
+   "id": "adidas-stan-smith",
+   "brand": "Adidas",
+   "name": "Stan Smith",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "sneaker",
+   "ankle_support": false
+  },
+  {
+   "id": "keen-targhee-iii-mid-waterproof",
+   "brand": "Keen",
+   "name": "Targhee III Mid Waterproof",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "older": true,
+   "aka": [
+    "Targhee",
+    "Targhee II",
+    "Targhee IV"
+   ]
+  },
+  {
+   "id": "lowa-renegade-gtx-lo",
+   "brand": "Lowa",
+   "name": "Renegade GTX Lo",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "trail_runner",
+   "ankle_support": false,
+   "aka": [
+    "Renegade Lo"
+   ]
+  },
+  {
+   "id": "meindl-bhutan-mfs",
+   "brand": "Meindl",
+   "name": "Bhutan MFS",
+   "category": "footwear",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Bhutan"
+   ]
+  },
+  {
+   "id": "asolo-fugitive-gtx",
+   "brand": "Asolo",
+   "name": "Fugitive GTX",
+   "category": "footwear",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Fugitive"
+   ]
+  },
+  {
+   "id": "danner-mountain-600",
+   "brand": "Danner",
+   "name": "Mountain 600",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Mountain 600"
+   ]
+  },
+  {
+   "id": "timberland-6-inch-premium-waterproof-boot",
+   "brand": "Timberland",
+   "name": "6-Inch Premium Waterproof Boot",
+   "category": "footwear",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "other",
+   "footwear_type": "hiking_boot",
+   "ankle_support": true,
+   "aka": [
+    "Timberland yellow boot",
+    "6 inch"
+   ],
+   "note": "Heavy work boot: fine for town and short walks."
+  },
+  {
+   "id": "dr-martens-1460-boot",
+   "brand": "Dr. Martens",
+   "name": "1460 Boot",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "sneaker",
+   "ankle_support": false,
+   "aka": [
+    "1460",
+    "Docs",
+    "Doc Martens"
+   ],
+   "note": "City boot: no grip or support for trails."
+  },
+  {
+   "id": "nike-air-force-1",
+   "brand": "Nike",
+   "name": "Air Force 1",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "sneaker",
+   "ankle_support": false,
+   "aka": [
+    "AF1"
+   ]
+  },
+  {
+   "id": "nike-pegasus",
+   "brand": "Nike",
+   "name": "Pegasus",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "sneaker",
+   "ankle_support": false,
+   "aka": [
+    "Air Zoom Pegasus",
+    "Pegasus 40",
+    "Pegasus 41"
+   ]
+  },
+  {
+   "id": "converse-chuck-taylor-all-star",
+   "brand": "Converse",
+   "name": "Chuck Taylor All Star",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton",
+   "footwear_type": "sneaker",
+   "ankle_support": false,
+   "aka": [
+    "Converse",
+    "All Star",
+    "Chucks"
+   ]
+  },
+  {
+   "id": "vans-old-skool",
+   "brand": "Vans",
+   "name": "Old Skool",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "sneaker",
+   "ankle_support": false
+  },
+  {
+   "id": "birkenstock-arizona",
+   "brand": "Birkenstock",
+   "name": "Arizona",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "sandal",
+   "ankle_support": false
+  },
+  {
+   "id": "teva-original-universal",
+   "brand": "Teva",
+   "name": "Original Universal",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "sandal",
+   "ankle_support": false
+  },
+  {
+   "id": "chaco-z-1-classic",
+   "brand": "Chaco",
+   "name": "Z/1 Classic",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "sandal",
+   "ankle_support": false,
+   "aka": [
+    "Z1",
+    "Chacos"
+   ]
+  },
+  {
+   "id": "crocs-classic-clog",
+   "brand": "Crocs",
+   "name": "Classic Clog",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "sandal",
+   "ankle_support": false,
+   "aka": [
+    "Crocs"
+   ]
+  },
+  {
+   "id": "generic-jeans",
+   "brand": "",
+   "name": "Jeans",
+   "category": "trousers",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton",
+   "note": "Cotton: cold and slow to dry when wet."
+  },
+  {
+   "id": "generic-chinos-cotton-trousers",
+   "brand": "",
+   "name": "Chinos / cotton trousers",
+   "category": "trousers",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton"
+  },
+  {
+   "id": "generic-leggings-sports-tights",
+   "brand": "",
+   "name": "Leggings / sports tights",
+   "category": "base_bottom",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic"
+  },
+  {
+   "id": "generic-cotton-t-shirt",
+   "brand": "",
+   "name": "Cotton T-shirt",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton"
+  },
+  {
+   "id": "generic-sports-t-shirt-synthetic",
+   "brand": "",
+   "name": "Sports T-shirt (synthetic)",
+   "category": "base_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic"
+  },
+  {
+   "id": "generic-thin-merino-jumper",
+   "brand": "",
+   "name": "Thin merino jumper",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino"
+  },
+  {
+   "id": "generic-wool-jumper-sweater",
+   "brand": "",
+   "name": "Wool jumper / sweater",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "knit sweater",
+    "pullover"
+   ]
+  },
+  {
+   "id": "generic-cotton-hoodie-sweatshirt",
+   "brand": "",
+   "name": "Cotton hoodie / sweatshirt",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton",
+   "aka": [
+    "hoodie",
+    "sweatshirt",
+    "felpa"
+   ]
+  },
+  {
+   "id": "generic-fleece-jacket",
+   "brand": "",
+   "name": "Fleece jacket",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "fleece",
+   "aka": [
+    "pile"
+   ]
+  },
+  {
+   "id": "generic-softshell-jacket",
+   "brand": "",
+   "name": "Softshell jacket",
+   "category": "mid_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": true,
+   "material": "synthetic"
+  },
+  {
+   "id": "generic-light-down-jacket-packable",
+   "brand": "",
+   "name": "Light down jacket (packable)",
+   "category": "insulation_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "down",
+   "aka": [
+    "piumino leggero",
+    "light puffer"
+   ]
+  },
+  {
+   "id": "generic-winter-puffer-jacket",
+   "brand": "",
+   "name": "Winter puffer jacket",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "aka": [
+    "puffer",
+    "piumino",
+    "padded coat"
+   ]
+  },
+  {
+   "id": "generic-wool-coat",
+   "brand": "",
+   "name": "Wool coat",
+   "category": "insulation_top",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": true,
+   "material": "other",
+   "aka": [
+    "cappotto",
+    "overcoat"
+   ],
+   "note": "Warm in town; heavy and soaks up rain."
+  },
+  {
+   "id": "generic-trench-coat",
+   "brand": "",
+   "name": "Trench coat",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": true,
+   "material": "cotton",
+   "aka": [
+    "trench"
+   ],
+   "note": "Showerproof at best."
+  },
+  {
+   "id": "generic-denim-jacket",
+   "brand": "",
+   "name": "Denim jacket",
+   "category": "mid_top",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton",
+   "aka": [
+    "jean jacket"
+   ]
+  },
+  {
+   "id": "generic-cheap-rain-poncho",
+   "brand": "",
+   "name": "Cheap rain poncho",
+   "category": "shell_top",
+   "warmth": "light",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "poncho",
+    "k-way",
+    "kway"
+   ],
+   "note": "Keeps rain off, but you sweat inside."
+  },
+  {
+   "id": "generic-ski-jacket",
+   "brand": "",
+   "name": "Ski jacket",
+   "category": "insulation_top",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "giacca da sci"
+   ]
+  },
+  {
+   "id": "generic-ski-trousers",
+   "brand": "",
+   "name": "Ski trousers",
+   "category": "shell_bottom",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic",
+   "aka": [
+    "salopette",
+    "ski pants"
+   ]
+  },
+  {
+   "id": "generic-city-sneakers",
+   "brand": "",
+   "name": "City sneakers",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "sneaker",
+   "ankle_support": false,
+   "aka": [
+    "trainers",
+    "scarpe da ginnastica"
+   ]
+  },
+  {
+   "id": "generic-running-shoes",
+   "brand": "",
+   "name": "Running shoes",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "sneaker",
+   "ankle_support": false
+  },
+  {
+   "id": "generic-leather-city-boots",
+   "brand": "",
+   "name": "Leather city boots",
+   "category": "footwear",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "footwear_type": "sneaker",
+   "ankle_support": false,
+   "aka": [
+    "stivaletti",
+    "chelsea boots"
+   ]
+  },
+  {
+   "id": "generic-flip-flops-sandals",
+   "brand": "",
+   "name": "Flip-flops / sandals",
+   "category": "footwear",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "synthetic",
+   "footwear_type": "sandal",
+   "ankle_support": false,
+   "aka": [
+    "infradito",
+    "ciabatte"
+   ]
+  },
+  {
+   "id": "generic-wool-beanie",
+   "brand": "",
+   "name": "Wool beanie",
+   "category": "headwear",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino",
+   "aka": [
+    "berretto",
+    "cuffia"
+   ]
+  },
+  {
+   "id": "generic-baseball-cap",
+   "brand": "",
+   "name": "Baseball cap",
+   "category": "sun_hat",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton",
+   "aka": [
+    "cappellino"
+   ]
+  },
+  {
+   "id": "generic-knitted-gloves",
+   "brand": "",
+   "name": "Knitted gloves",
+   "category": "gloves",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "other",
+   "aka": [
+    "guanti"
+   ]
+  },
+  {
+   "id": "generic-ski-gloves",
+   "brand": "",
+   "name": "Ski gloves",
+   "category": "gloves",
+   "warmth": "warm",
+   "waterproof": true,
+   "windproof": true,
+   "material": "synthetic"
+  },
+  {
+   "id": "generic-cotton-socks",
+   "brand": "",
+   "name": "Cotton socks",
+   "category": "socks",
+   "warmth": "light",
+   "waterproof": false,
+   "windproof": false,
+   "material": "cotton",
+   "note": "Cotton socks give blisters on long walks."
+  },
+  {
+   "id": "generic-wool-hiking-socks",
+   "brand": "",
+   "name": "Wool hiking socks",
+   "category": "socks",
+   "warmth": "medium",
+   "waterproof": false,
+   "windproof": false,
+   "material": "merino"
+  }
+ ]
+}

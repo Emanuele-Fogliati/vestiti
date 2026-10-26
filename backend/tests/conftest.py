@@ -10,6 +10,7 @@ os.environ.update({
     "SECRET_KEY": "test-secret-key-not-for-production-use-0123456789",
     "AUTH_RATE_LIMIT_PER_MINUTE": "1000",
     "AI_RATE_LIMIT_PER_MINUTE": "1000",
+    "PHOTO_RATE_LIMIT_PER_MINUTE": "1000",
     "ENVIRONMENT": "test",
     "DEV_EMAIL_LINKS": "true",  # tests read the links from the API reply (on localhost only)
 })

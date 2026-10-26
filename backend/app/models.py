@@ -129,6 +129,11 @@ class WardrobeItem(Base):
     footwear_type: Mapped[str | None] = mapped_column(String(30))
     ankle_support: Mapped[bool] = mapped_column(Boolean, default=False)
     notes: Mapped[str | None] = mapped_column(Text)
+    # the model it was matched to: lib:<known model id> | product:<product id> | None
+    model_ref: Mapped[str | None] = mapped_column(String(120))
+    added_via: Mapped[str | None] = mapped_column(String(10))  # hand | search | photo
+    # extra data of the matched model: fill_power, waterproof_mm
+    specs: Mapped[dict | None] = mapped_column(JSON)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
     user: Mapped[User] = relationship(back_populates="wardrobe")
