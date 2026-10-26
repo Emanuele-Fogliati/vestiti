@@ -181,7 +181,7 @@ export default function Globe() {
 
   function surprise() {
     if (!data) return;
-    const pool = data.places.filter((p) => p.trips >= 15 && p.kind !== "city" && p.kind !== "town");
+    const pool = data.places.filter((p) => p.level >= 4 && p.kind !== "city" && p.kind !== "town");
     const p = pool[Math.floor(Math.random() * pool.length)];
     setSel(p);
     spin.current.hold();
@@ -203,7 +203,7 @@ export default function Globe() {
       <div className="globe-head wrap">
         <p className="kicker">Explore</p>
         <h2 className="globe-title">Where to <span className="hl">next?</span></h2>
-        <p className="lede">Spin the globe and zoom in anywhere. The places organised trips visit most show up first, and more appear as you get closer.</p>
+        <p className="lede">Spin the globe and zoom in anywhere. The most visited places show up first, and more appear as you get closer.</p>
       </div>
       <div className="globe-map" ref={box}>
         {!data && <p className="globe-wait"><span className="spin" /></p>}

@@ -388,15 +388,12 @@ export interface ItineraryStop extends Stop {
   plan: string[];
   do: string[];
   skip: string[];
-  /** How many of the organised trips we read include this place. */
-  programs: number | null;
   excursions: { title: string; links: ExcursionLink[] }[];
 }
 
 export interface Itinerary extends ItineraryCard {
   season_note: string;
   start_date: string;
-  inventory_trips: number;
   stops: ItineraryStop[];
   group_trips: { operator: string; title: string; days: number; href: string }[];
 }

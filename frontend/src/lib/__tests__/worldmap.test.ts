@@ -3,22 +3,22 @@ import type { GlobePlace } from "../worldmap";
 import { minZoom, placesGeoJSON } from "../worldmap";
 
 const place = (p: Partial<GlobePlace>): GlobePlace => ({
-  id: "pe-x", name: "X", country: "PE", kind: "landmark", lat: -13, lon: -72, trips: 3,
+  id: "pe-x", name: "X", country: "PE", kind: "landmark", lat: -13, lon: -72, level: 1,
   art: null, artLabel: null, itineraries: [], ...p,
 });
 
 describe("places appear as you zoom in", () => {
   it("shows the most visited places from space and the rare ones only up close", () => {
-    expect(minZoom(109)).toBe(0);
-    expect(minZoom(40)).toBeLessThan(minZoom(10));
-    expect(minZoom(10)).toBeLessThan(minZoom(3));
-    expect(minZoom(3)).toBeLessThanOrEqual(6);
+    expect(minZoom(6)).toBe(0);
+    expect(minZoom(5)).toBeLessThan(minZoom(3));
+    expect(minZoom(3)).toBeLessThan(minZoom(1));
+    expect(minZoom(1)).toBeLessThanOrEqual(6);
   });
 
   it("brings a trip's own places forward on its map", () => {
-    const fc = placesGeoJSON([place({ trips: 3 }), place({ name: "Cusco", trips: 3 })],
+    const fc = placesGeoJSON([place({ level: 1 }), place({ name: "Cusco", level: 1 })],
       { boost: (p) => (p.name === "Cusco" ? 99 : 0) });
-    expect(fc.features[0].properties!.z).toBe(minZoom(3));
+    expect(fc.features[0].properties!.z).toBe(minZoom(1));
     expect(fc.features[1].properties!.z).toBe(0);
     expect(fc.features[1].geometry).toEqual({ type: "Point", coordinates: [-72, -13] });
   });

@@ -13,8 +13,9 @@ export interface GlobePlace {
   kind: PlaceKind;
   lat: number;
   lon: number;
-  /** How many of the organised trips we read visit the place. */
-  trips: number;
+  /** Popularity from 1 (few visit it) to 6 (the most visited). Never shown as a number:
+   *  the app does not say how many trips include a place. */
+  level: number;
   art: string | null;
   artLabel: string | null;
   /** Indexes into GlobeData.itineraries: ready-made itineraries that stop here. */
@@ -22,7 +23,6 @@ export interface GlobePlace {
 }
 
 export interface GlobeData {
-  inventoryTrips: number;
   itineraries: { slug: string; title: string }[];
   places: GlobePlace[];
 }
@@ -36,26 +36,21 @@ export function loadPlaces(): Promise<GlobeData> {
   if (!cache) {
     cache = fetch("/api/globe/places")
       .then((r) => { if (!r.ok) throw new Error(`places: ${r.status}`); return r.json(); })
-      .then((d: { inventory_trips: number; itineraries: GlobeData["itineraries"]; places: Row[] }) => ({
-        inventoryTrips: d.inventory_trips,
+      .then((d: { itineraries: GlobeData["itineraries"]; places: Row[] }) => ({
         itineraries: d.itineraries,
-        places: d.places.map(([id, name, country, kind, lat, lon, trips, art, artLabel, itineraries]) =>
-          ({ id, name, country, kind, lat, lon, trips, art, artLabel, itineraries })),
+        places: d.places.map(([id, name, country, kind, lat, lon, level, art, artLabel, itineraries]) =>
+          ({ id, name, country, kind, lat, lon, level, art, artLabel, itineraries })),
       }));
     cache.catch(() => { cache = null; });
   }
   return cache;
 }
 
-/** The zoom from which a place shows: the most visited places are visible from space,
- *  the ones only a few trips visit appear when you are close. */
-export function minZoom(trips: number): number {
-  if (trips >= 60) return 0;
-  if (trips >= 30) return 1.6;
-  if (trips >= 15) return 2.6;
-  if (trips >= 8) return 3.6;
-  if (trips >= 5) return 4.6;
-  return 5.6;
+/** The zoom from which a place shows: the most visited places (level 6) are visible from
+ *  space, the rarest (level 1) appear when you are close. */
+export function minZoom(level: number): number {
+  const l = Math.min(6, Math.max(1, Math.round(level)));
+  return [5.6, 4.6, 3.6, 2.6, 1.6, 0][l - 1];
 }
 
 export const SIGHT_KINDS: PlaceKind[] = ["landmark", "nature", "island", "region"];
@@ -68,9 +63,9 @@ export function placesGeoJSON(places: GlobePlace[], opts: { boost?: (p: GlobePla
       id: i,
       geometry: { type: "Point", coordinates: [p.lon, p.lat] },
       properties: {
-        i, name: p.name, kind: p.kind, trips: p.trips, art: p.art ? 1 : 0,
+        i, name: p.name, kind: p.kind, level: p.level, art: p.art ? 1 : 0,
         sight: SIGHT_KINDS.includes(p.kind) ? 1 : 0,
-        z: Math.max(0, minZoom(p.trips) - (opts.boost?.(p) ?? 0)),
+        z: Math.max(0, minZoom(p.level) - (opts.boost?.(p) ?? 0)),
       },
     })),
   };
@@ -203,7 +198,7 @@ export function placeLayers(c: MapColors, source = "places"): StyleSpecification
   return [
     { id: "pl-dot", type: "circle", source, filter: shown,
       paint: {
-        "circle-radius": ["interpolate", ["linear"], ["get", "trips"], 3, 3.5, 30, 5.5, 100, 7.5],
+        "circle-radius": ["interpolate", ["linear"], ["get", "level"], 1, 3.5, 5, 5.5, 6, 7.5],
         "circle-color": ["case", ["==", ["get", "sight"], 1], c.accent, c.ink],
         "circle-stroke-color": ["case", ["==", ["get", "sight"], 1], c.ink, c.halo],
         "circle-stroke-width": 1.6,
@@ -211,9 +206,9 @@ export function placeLayers(c: MapColors, source = "places"): StyleSpecification
     { id: "pl-name", type: "symbol", source, filter: shown,
       layout: {
         "text-field": ["get", "name"], "text-font": FONT_BOLD,
-        "text-size": ["interpolate", ["linear"], ["get", "trips"], 3, 11, 60, 13.5],
+        "text-size": ["interpolate", ["linear"], ["get", "level"], 1, 11, 6, 13.5],
         "text-variable-anchor": ["left", "right", "top", "bottom"], "text-radial-offset": 0.75,
-        "text-justify": "auto", "text-max-width": 9, "symbol-sort-key": ["-", 0, ["get", "trips"]],
+        "text-justify": "auto", "text-max-width": 9, "symbol-sort-key": ["-", 0, ["get", "level"]],
         "text-optional": true,
       },
       paint: { "text-color": c.ink, "text-halo-color": c.halo, "text-halo-width": 1.6 } },

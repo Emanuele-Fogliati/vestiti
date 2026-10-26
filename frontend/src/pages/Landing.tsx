@@ -38,7 +38,7 @@ export default function Landing() {
       <section className="band">
         <div className="wrap">
           <header className="sh"><p className="sh-k">No trip yet?</p><h2>Start from a recommended trip</h2>
-            <p>Day-by-day routes built from the places organised trips visit most, with what each place is, a fun fact, and what is worth it or not at every stop. Change anything, then tap “{DRESS_ME}”.</p></header>
+            <p>Day-by-day routes built from the places travellers visit most, with what each place is, a fun fact, and what is worth it or not at every stop. Change anything, then tap “{DRESS_ME}”.</p></header>
           <ItineraryCards />
           <p style={{ marginTop: 20 }}><Link className="btn" to="/ideas">All recommended trips</Link></p>
         </div>

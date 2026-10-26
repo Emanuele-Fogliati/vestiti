@@ -3,8 +3,8 @@ import { Illustration } from "./Illustration";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
 import { KIND_LABEL, countryName } from "../lib/worldmap";
 
-/** What we know about one place on the map: its picture when we have drawn it, how many
- *  organised trips go there, the itineraries that stop there and a way to plan a trip to it. */
+/** What we know about one place on the map: its picture when we have drawn it, the itineraries
+ *  that stop there and a way to plan a trip to it. Never how many organised trips go there. */
 export function PlaceCard({ place, data, onClose, onZoom, planLink = true }: {
   place: GlobePlace; data: GlobeData; onClose: () => void; onZoom?: () => void; planLink?: boolean;
 }) {
@@ -18,9 +18,6 @@ export function PlaceCard({ place, data, onClose, onZoom, planLink = true }: {
       <div className="pcard-in">
         <p className="kicker">{KIND_LABEL[place.kind]} · {country}</p>
         <h3>{place.name}</h3>
-        <p className="small muted">
-          In {place.trips.toLocaleString("en-US")} of the {data.inventoryTrips.toLocaleString("en-US")} organised trips we read.
-        </p>
         <div className="pcard-acts">
           {its.map((it) => <Link key={it.slug} className="btn sm primary" to={`/ideas/${it.slug}`}>{it.title}</Link>)}
           {onZoom && <button type="button" className="btn sm" onClick={onZoom}>Zoom in here</button>}
