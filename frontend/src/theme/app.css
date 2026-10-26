@@ -294,3 +294,17 @@ footer nav a{font-size:13px}
 @media (max-width:640px){.doors{grid-template-columns:minmax(0,1fr)}}
 .btn.hero-alt{width:100%;background:transparent;border-color:var(--ink)}
 .btn.hero-alt:hover{background:rgba(255,255,255,.35)}
+
+/* wardrobe: find what you own */
+.matches{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.matches{grid-template-columns:minmax(0,1fr)}
+.match{box-sizing:border-box;display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:10px;cursor:pointer}
+.match:hover{background:var(--surface-2);border-color:var(--rule-strong)}
+.match .tag{margin-left:4px;vertical-align:2px}
+.shots{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
+.shots li,.shot>span,.match>span:last-child{min-width:0}
+.shot{box-sizing:border-box;display:flex;gap:12px;align-items:flex-start;cursor:pointer;border:1px dashed var(--rule-strong);border-radius:var(--radius);padding:10px;background:var(--surface)}
+.shots li.done .shot{border-style:solid;border-color:var(--ok)}
+.shot img,.shot-ph{width:64px;height:64px;flex:none;border-radius:8px;object-fit:cover}
+.shot-ph{display:grid;place-items:center;background:var(--surface-2);font-family:var(--f-mono);font-weight:700;font-size:20px;color:var(--ink-2)}
+[hidden]{display:none!important}

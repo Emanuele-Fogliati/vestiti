@@ -50,6 +50,13 @@ class Settings(BaseSettings):
     llm_api: str = "auto"  # auto | ollama | openai
     llm_num_ctx_max: int = 32768  # largest context window we ask Ollama for (long itineraries)
     llm_long_timeout_s: float = 600.0  # cap for reading very long trip descriptions
+    # Photos of a garment -> brand, model, kind. Needs a model that sees images:
+    #   ollama pull qwen3-vl:8b-instruct   (about 6 GB; 4b / 2b for smaller GPUs)
+    # Empty VISION_BASE_URL = the same server as the text model.
+    vision_enabled: bool = True
+    vision_model: str = "qwen3-vl:8b-instruct"
+    vision_base_url: str = ""
+    vision_timeout_s: float = 180.0
 
     # --- Affiliate networks (empty = link goes out untracked, click still logged) ---
     amazon_associate_tag: str = ""
@@ -81,6 +88,7 @@ class Settings(BaseSettings):
     auth_rate_limit_per_minute: int = 10
     ai_rate_limit_per_minute: int = 20
     geo_rate_limit_per_minute: int = 60
+    photo_rate_limit_per_minute: int = 6  # each photo check keeps the GPU busy for a while
 
     # --- Abuse limits ---
     max_body_bytes: int = 1_000_000  # JSON bodies; the admin feed upload has its own cap

@@ -39,10 +39,12 @@ app.add_middleware(
 UNSAFE = {"POST", "PUT", "PATCH", "DELETE"}
 # Paths with their own, larger upload cap (checked in the endpoint)
 BIG_BODY_PATHS = ("/api/admin/feeds/import",)
+# Photo uploads: up to 4 photos of a garment (the app shrinks them first)
+PHOTO_BODY_PATHS = {"/api/wardrobe/recognize": 17_000_000}
 # The page loads only our own scripts; images can come from shops' CDNs (product photos).
 CSP = ("default-src 'self'; script-src 'self'; "
        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-       "font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https:; "
+       "font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; "
        # maps (MapLibre): vector tiles and fonts from OpenFreeMap, relief from AWS terrain
        # tiles, and a worker the library starts from a blob: URL
        "connect-src 'self' https://tiles.openfreemap.org https://s3.amazonaws.com; "
@@ -56,13 +58,14 @@ class BodyLimit:
     it one request with a huge JSON body (or a 100 MB 'password') ties up a worker."""
 
     def __init__(self, app, max_bytes: int):
-        self.app, self.max = app, max_bytes
+        self.app, self.default = app, max_bytes
 
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http" or scope["path"].startswith(BIG_BODY_PATHS):
             return await self.app(scope, receive, send)
+        cap = next((n for p, n in PHOTO_BODY_PATHS.items() if scope["path"] == p), self.default)
         for k, v in scope.get("headers") or []:
-            if k == b"content-length" and v.isdigit() and int(v) > self.max:
+            if k == b"content-length" and v.isdigit() and int(v) > cap:
                 return await JSONResponse({"detail": "Request body too large"}, 413)(scope, receive, send)
         seen, over, replaced = 0, False, False
 
@@ -71,7 +74,7 @@ class BodyLimit:
             msg = await receive()
             if msg["type"] == "http.request":
                 seen += len(msg.get("body", b""))
-                if seen > self.max:  # chunked upload with no Content-Length
+                if seen > cap:  # chunked upload with no Content-Length
                     over = True
                     raise HTTPException(413, "Request body too large")
             return msg
