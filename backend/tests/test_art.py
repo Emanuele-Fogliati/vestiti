@@ -77,6 +77,10 @@ def test_api_serves_landmarks_and_trips_carry_them(client):
     flat = client.get("/api/art/landmarks/pe-machu-picchu.svg?flat=1").text
     assert flat == art.svg("pe-machu-picchu") and "filter" not in flat
     assert client.get("/api/art/landmarks/nope.svg").status_code == 404
+    # a redrawn scene must show at once: no long browser cache, a cheap 304 when unchanged
+    assert r.headers["cache-control"] == "no-cache"
+    assert client.get("/api/art/landmarks/pe-machu-picchu.svg",
+                      headers={"If-None-Match": r.headers["etag"]}).status_code == 304
     trip = client.post("/api/trips", json={"name": "Peru", "stops": [
         {"name": n, "latitude": la, "longitude": lo, "notes": no, "start_date": "2027-05-01",
          "end_date": "2027-05-02"} for n, la, lo, no in PERU[:3]] + [

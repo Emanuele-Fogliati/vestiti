@@ -8,7 +8,10 @@ from app import globe
 def test_places_endpoint_is_compact_and_gzipped(client):
     r = client.get("/api/globe/places", headers={"Accept-Encoding": "gzip"})
     assert r.status_code == 200
-    assert "max-age" in r.headers["cache-control"]
+    # revalidated every time, so new landmark scenes reach the globe at once; 304 when unchanged
+    assert r.headers["cache-control"] == "no-cache" and r.headers["etag"]
+    again = client.get("/api/globe/places", headers={"Accept-Encoding": "gzip", "If-None-Match": r.headers["etag"]})
+    assert again.status_code == 304
     d = r.json()  # the test client decompresses
     assert d["fields"][:7] == ["id", "name", "country", "kind", "lat", "lon", "level"]
     assert len(d["places"]) > 1000

@@ -130,4 +130,5 @@ if STATIC_DIR.is_dir() and (STATIC_DIR / "index.html").exists():
         f = STATIC_DIR / full_path
         if full_path and f.is_file() and STATIC_DIR in f.resolve().parents:
             return FileResponse(f)
-        return FileResponse(STATIC_DIR / "index.html")
+        # the page itself is always revalidated, so a rebuilt app is picked up without a hard refresh
+        return FileResponse(STATIC_DIR / "index.html", headers={"Cache-Control": "no-cache"})

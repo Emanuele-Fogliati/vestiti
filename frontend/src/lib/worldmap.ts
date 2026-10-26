@@ -34,7 +34,7 @@ let cache: Promise<GlobeData> | null = null;
 /** All the places, fetched once per page load (one compact, gzipped response). */
 export function loadPlaces(): Promise<GlobeData> {
   if (!cache) {
-    cache = fetch("/api/globe/places")
+    cache = fetch(`/api/globe/places?v=${__BUILD_ID__}`)
       .then((r) => { if (!r.ok) throw new Error(`places: ${r.status}`); return r.json(); })
       .then((d: { itineraries: GlobeData["itineraries"]; places: Row[] }) => ({
         itineraries: d.itineraries,
