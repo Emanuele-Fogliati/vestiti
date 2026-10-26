@@ -45,6 +45,11 @@ def test_approved_places_match_their_stops_and_not_namesakes():
     assert m("Santiago de Compostela", 42.88, -8.54) is None
     assert m("Osorno", -40.57, -73.13) is None  # the city, 60 km from the volcano
     assert m("Valle de la Luna", -16.57, -68.09) is None  # La Paz, Bolivia
+    assert m("Ho Chi Minh Mausoleum") is None  # in Hanoi, not Ho Chi Minh City
+    assert m("Agra Fort") is None and m("Catacombs of Rome") is None
+    # cities whose symbol is a monument get it from their coordinates
+    assert m("Agra", 27.18, 78.01) == "in-taj-mahal" and m("Rome", 41.90, 12.50) == "it-colosseum"
+    assert m("Rio de Janeiro", -22.91, -43.17) == "br-christ-the-redeemer"
 
 
 def test_library_has_the_approved_calibration_set():
