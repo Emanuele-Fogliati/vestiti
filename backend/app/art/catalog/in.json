@@ -3,6 +3,58 @@
  "name": "India",
  "places": [
   {
+   "slug": "delhi",
+   "label": "India Gate, Delhi",
+   "lat": 28.613,
+   "lon": 77.229,
+   "radius_km": 25,
+   "aliases": [
+    "india gate",
+    "new delhi"
+   ],
+   "names": [
+    "delhi"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#5E7E4A",
+    "mid": "#D6B088",
+    "ice": "#EED9BC",
+    "water": "#7A6450",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#86A456",
+    "acc": "#8C8A86",
+    "obj": "#BF9670"
+   }
+  },
+  {
+   "slug": "hawa-mahal",
+   "label": "Hawa Mahal, Jaipur",
+   "lat": 26.924,
+   "lon": 75.827,
+   "radius_km": 6,
+   "aliases": [
+    "hawa mahal",
+    "palace of the winds"
+   ],
+   "names": [
+    "jaipur"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9AA0A6",
+    "mid": "#E07F62",
+    "ice": "#FBEFE6",
+    "water": "#4E5C66",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#B8AA98",
+    "obj": "#EE9B7E"
+   }
+  },
+  {
    "slug": "taj-mahal",
    "label": "Taj Mahal",
    "lat": 27.1751,
@@ -10,6 +62,9 @@
    "radius_km": 15,
    "aliases": [
     "taj mahal"
+   ],
+   "names": [
+    "agra"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -22,6 +77,30 @@
     "leaf": "#7BAA5A",
     "acc": "#3E6B3A",
     "obj": "#C9A24E"
+   }
+  },
+  {
+   "slug": "varanasi",
+   "label": "The ghats of Varanasi on the Ganges",
+   "lat": 25.311,
+   "lon": 83.01,
+   "radius_km": 15,
+   "aliases": [
+    "varanasi",
+    "benares",
+    "banaras"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D9C4A2",
+    "mid": "#D79A5C",
+    "ice": "#F4E8D4",
+    "water": "#7F8B6C",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#D8B04A",
+    "acc": "#6E4A30",
+    "obj": "#B05E44"
    }
   }
  ]

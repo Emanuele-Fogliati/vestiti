@@ -33,6 +33,8 @@ class Landmark:
     radius_km: float
     aliases: tuple[str, ...]
     palette: tuple[tuple[str, str], ...] = ()
+    # matched only when they are the whole name: "Rome" gets the Colosseum, "Catacombs of Rome" does not
+    names: tuple[str, ...] = ()
 
 
 def _norm(s: str) -> str:
@@ -53,7 +55,8 @@ def landmarks() -> tuple[Landmark, ...]:
             out.append(Landmark(id=f"{cc.lower()}-{d['slug']}", label=d["label"], country=cc, lat=d["lat"],
                                 lon=d["lon"], radius_km=d["radius_km"],
                                 aliases=tuple(_norm(a) for a in d["aliases"]),
-                                palette=tuple(d.get("palette", {}).items())))
+                                palette=tuple(d.get("palette", {}).items()),
+                                names=tuple(_norm(a) for a in d.get("names", []))))
     return tuple(out)
 
 
@@ -85,12 +88,16 @@ def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     return 6371 * 2 * math.asin(math.sqrt(min(1.0, a)))
 
 
+NAMESAKE_KM = 250  # a stop named after a landmark but farther than this is a different place
+
+
 def _named(text: str) -> list[Landmark]:
     """Landmarks whose alias appears as whole words in the text, in order of appearance."""
-    t = f" {_norm(text)} "
+    n = _norm(text)
+    t = f" {n} "
     hits = []
     for lm in landmarks():
-        pos = [t.find(f" {a} ") for a in lm.aliases if f" {a} " in t]
+        pos = [t.find(f" {a} ") for a in lm.aliases if f" {a} " in t] + [0 for a in lm.names if a == n]
         if pos:
             hits.append((min(pos), lm))
     return [lm for _, lm in sorted(hits, key=lambda h: h[0])]
@@ -111,7 +118,10 @@ def match(name: str, lat: float | None, lon: float | None, notes: str | None = N
 
     When that landmark is already used by an earlier stop of the trip (Cusco twice), a different
     landmark named in the stop's notes wins (the second Cusco stop is the Rainbow Mountain day)."""
-    own = next(iter(_named(name)), None)
+    named = _named(name)
+    if lat is not None and lon is not None:  # a namesake far away is another place (Venice Beach)
+        named = [lm for lm in named if _km(lat, lon, lm.lat, lm.lon) <= NAMESAKE_KM]
+    own = next(iter(named), None)
     if own is None and lat is not None and lon is not None:
         own = _nearest(lat, lon)
     if own is not None and own.id in taken and notes:

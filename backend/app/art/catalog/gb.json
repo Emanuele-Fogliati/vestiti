@@ -1,0 +1,79 @@
+{
+ "country": "GB",
+ "name": "United Kingdom",
+ "places": [
+  {
+   "slug": "edinburgh",
+   "label": "Edinburgh Castle on Castle Rock",
+   "lat": 55.949,
+   "lon": -3.2,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "edinburgh",
+    "edimburgo"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#5E5650",
+    "mid": "#A89C88",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#7EA552",
+    "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "london",
+   "label": "Big Ben and Westminster, London",
+   "lat": 51.5,
+   "lon": -0.124,
+   "radius_km": 25,
+   "aliases": [
+    "big ben",
+    "westminster",
+    "londra"
+   ],
+   "names": [
+    "london"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#4E5A6A",
+    "mid": "#C8A040",
+    "ice": "#F4F0E4",
+    "water": "#6E7E70",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E5A",
+    "acc": "#C8302A",
+    "obj": "#C8A86A"
+   }
+  },
+  {
+   "slug": "stonehenge",
+   "label": "Stonehenge",
+   "lat": 51.179,
+   "lon": -1.826,
+   "radius_km": 5,
+   "aliases": [
+    "stonehenge"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9C978C",
+    "mid": "#8E8A80",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#7EA552",
+    "acc": "#C8B060",
+    "obj": "#8A6A4A"
+   }
+  }
+ ]
+}

@@ -3,6 +3,29 @@
  "name": "Italy",
  "places": [
   {
+   "slug": "cinque-terre",
+   "label": "Manarola, Cinque Terre",
+   "lat": 44.107,
+   "lon": 9.729,
+   "radius_km": 9,
+   "aliases": [
+    "cinque terre",
+    "manarola"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E79A8A",
+    "mid": "#6E625A",
+    "ice": "#F4E6D4",
+    "water": "#2E6FA0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#C8504A",
+    "obj": "#E8B04A"
+   }
+  },
+  {
    "slug": "colosseum",
    "label": "Colosseum",
    "lat": 41.8902,
@@ -12,6 +35,10 @@
     "colosseum",
     "colosseo",
     "coliseum"
+   ],
+   "names": [
+    "rome",
+    "roma"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -24,6 +51,131 @@
     "leaf": "#5E7A3E",
     "acc": "#6E5238",
     "obj": "#DCC7A0"
+   }
+  },
+  {
+   "slug": "dolomites",
+   "label": "Tre Cime di Lavaredo, Dolomites",
+   "lat": 46.619,
+   "lon": 12.302,
+   "radius_km": 30,
+   "aliases": [
+    "dolomites",
+    "dolomiti",
+    "tre cime"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B4AA98",
+    "mid": "#D8D2C4",
+    "ice": "#FFFFFF",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A48",
+    "acc": "#C8B060",
+    "obj": "#8A6440"
+   }
+  },
+  {
+   "slug": "florence",
+   "label": "Duomo and red roofs of Florence",
+   "lat": 43.773,
+   "lon": 11.256,
+   "radius_km": 10,
+   "aliases": [],
+   "names": [
+    "florence",
+    "firenze"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8AA07A",
+    "mid": "#E2C9A0",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A5A",
+    "acc": "#C0603C",
+    "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "pisa",
+   "label": "Leaning Tower of Pisa",
+   "lat": 43.723,
+   "lon": 10.397,
+   "radius_km": 6,
+   "aliases": [
+    "leaning tower",
+    "torre di pisa",
+    "piazza dei miracoli"
+   ],
+   "names": [
+    "pisa"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8C8C88",
+    "mid": "#D6CCB8",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A44",
+    "acc": "#D8CDB4",
+    "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "positano",
+   "label": "Positano on the Amalfi Coast",
+   "lat": 40.628,
+   "lon": 14.485,
+   "radius_km": 6,
+   "aliases": [
+    "positano",
+    "amalfi coast",
+    "costiera amalfitana"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7A8A78",
+    "mid": "#8E8478",
+    "ice": "#F6EEDC",
+    "water": "#2E6E9E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#E89A7A",
+    "obj": "#E8B84A"
+   }
+  },
+  {
+   "slug": "venice",
+   "label": "Rialto Bridge on the Grand Canal, Venice",
+   "lat": 45.438,
+   "lon": 12.336,
+   "radius_km": 6,
+   "aliases": [
+    "rialto"
+   ],
+   "names": [
+    "venice",
+    "venezia"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8C8A84",
+    "mid": "#D9C8A8",
+    "ice": "#F2EDE2",
+    "water": "#3E8A80",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E44",
+    "acc": "#B85A3C",
+    "obj": "#D9A050"
    }
   }
  ]

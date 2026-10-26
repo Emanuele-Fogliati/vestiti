@@ -52,6 +52,25 @@ def test_approved_places_match_their_stops_and_not_namesakes():
     assert m("Rio de Janeiro", -22.91, -43.17) == "br-christ-the-redeemer"
 
 
+def test_city_names_match_only_as_the_whole_name_and_far_namesakes_are_ignored():
+    m = lambda n, la=None, lo=None: (art.match(n, la, lo) or S(id=None)).id
+    assert m("Lima") == "pe-lima-costa-verde" and m("Lima Cathedral") is None
+    assert m("Paris") == "fr-paris" and m("Eiffel Tower") == "fr-paris" and m("Notre-Dame de Paris") is None
+    assert m("Chiang Mai") == "th-doi-suthep" and m("Rome") == "it-colosseum"
+    # a stop named after a landmark but far from it is another place
+    assert m("Venice Beach", 33.985, -118.47) is None and m("Venice", 45.44, 12.33) == "it-venice"
+    assert m("Grand Canyon of the Yellowstone", 44.72, -110.48) is None
+
+
+def test_globe_places_get_their_own_scene_only():
+    from app import globe
+    got = {(p[1], p[2]): p[7] for p in globe.payload()["places"]}
+    for (name, cc), want in got.items():
+        if name in ("Acropolis of Lindos", "Palazzo Venezia", "Hagia Sophia of Trabzon", "Agra Fort", "Lima Cathedral"):
+            assert want is None, name
+    assert got.get(("Eiffel Tower", "FR")) == "fr-paris" and got.get(("Paris", "FR")) == "fr-paris"
+
+
 def test_library_has_the_approved_calibration_set():
     ids = {lm.id for lm in art.landmarks()}
     assert len(ids) >= 45 and {"is-gullfoss", "vn-cu-chi-tunnels", "jo-petra", "cl-osorno-volcano"} <= ids

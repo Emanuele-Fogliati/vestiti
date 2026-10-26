@@ -153,7 +153,7 @@ def lint_catalog(art_dir: Path | None = None) -> list[str]:
             if not pl.get("label"):
                 p.append(f"{lid}: label missing")
             p += [f"{lid}: {x}" for x in palette_problems(pl.get("palette"))]
-            for a in pl.get("aliases", []):
+            for a in pl.get("aliases", []) + pl.get("names", []):
                 if a != a.lower() or re.search(r"[^a-z0-9 ]", a):
                     p.append(f"{lid}: alias '{a}' must be lowercase ascii letters, digits, spaces")
                 if a in aliases and aliases[a] != lid:
