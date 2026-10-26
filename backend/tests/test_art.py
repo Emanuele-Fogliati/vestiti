@@ -105,7 +105,7 @@ def test_api_serves_landmarks_and_trips_carry_them(client):
     trip = client.post("/api/trips", json={"name": "Peru", "stops": [
         {"name": n, "latitude": la, "longitude": lo, "notes": no, "start_date": "2027-05-01",
          "end_date": "2027-05-02"} for n, la, lo, no in PERU[:3]] + [
-        {"name": "Nairobi", "latitude": -1.29, "longitude": 36.82, "start_date": "2027-05-03",
+        {"name": "Somewhere at sea", "latitude": 0.0, "longitude": -30.0, "start_date": "2027-05-03",
          "end_date": "2027-05-04"}]}).json()
     assert [s["art"] and s["art"]["id"] for s in trip["stops"]] == [
         "pe-cusco-cathedral", "pe-machu-picchu", "pe-rainbow-mountain", None]
