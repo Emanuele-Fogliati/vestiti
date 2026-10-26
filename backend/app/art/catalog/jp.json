@@ -3,6 +3,59 @@
  "name": "Japan",
  "places": [
   {
+   "slug": "akihabara",
+   "label": "Akihabara Electric Town, Tokyo",
+   "lat": 35.6984,
+   "lon": 139.7731,
+   "radius_km": 2,
+   "aliases": [
+    "akihabara",
+    "radio kaikan",
+    "akihabara electric town"
+   ],
+   "names": [
+    "akiba"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#BCC4CC",
+    "mid": "#6E6E70",
+    "ice": "#F2F0EA",
+    "water": "#5EC4E0",
+    "near": "#222326",
+    "sun": "#F2C14E",
+    "leaf": "#F28AB4",
+    "acc": "#F2CE2A",
+    "obj": "#D8302E"
+   }
+  },
+  {
+   "slug": "dotonbori",
+   "label": "Dotonbori canal and the Ebisu Tower, Osaka",
+   "lat": 34.6687,
+   "lon": 135.5013,
+   "radius_km": 2,
+   "aliases": [
+    "dotonbori",
+    "dotombori",
+    "doutonbori",
+    "ebisubashi",
+    "ebisu bridge"
+   ],
+   "palette": {
+    "sky": "#A8CCF2",
+    "far": "#BCB8B0",
+    "mid": "#8E8C88",
+    "ice": "#F2F0EA",
+    "water": "#4E7E9A",
+    "near": "#232426",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E4E",
+    "acc": "#F0C020",
+    "obj": "#D8402E"
+   }
+  },
+  {
    "slug": "fushimi-inari-taisha",
    "label": "Torii gates of Fushimi Inari",
    "lat": 34.967,
@@ -25,14 +78,114 @@
    }
   },
   {
+   "slug": "ginkaku-ji",
+   "label": "Ginkaku-ji, the Silver Pavilion, with its sand cone",
+   "lat": 35.027,
+   "lon": 135.7982,
+   "radius_km": 3,
+   "aliases": [
+    "ginkaku ji",
+    "ginkakuji",
+    "silver pavilion",
+    "padiglione d argento",
+    "jisho ji",
+    "jishoji"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#3E5E40",
+    "mid": "#4E3E30",
+    "ice": "#E6E2D8",
+    "water": "#5E8A7A",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A48",
+    "acc": "#C98A34",
+    "obj": "#6A645C"
+   }
+  },
+  {
+   "slug": "gion",
+   "label": "Gion Shirakawa: Tatsumi-bashi, teahouses and willow",
+   "lat": 35.0049,
+   "lon": 135.7749,
+   "radius_km": 2,
+   "aliases": [
+    "gion shirakawa",
+    "shirakawa minami",
+    "tatsumi bridge",
+    "tatsumi bashi",
+    "tatsumibashi",
+    "hanamikoji",
+    "hanami koji",
+    "gion district",
+    "quartiere di gion"
+   ],
+   "names": [
+    "gion"
+   ],
+   "palette": {
+    "sky": "#B4D4F2",
+    "far": "#9A968E",
+    "mid": "#7E5636",
+    "ice": "#E4D8B8",
+    "water": "#5E8A86",
+    "near": "#24211F",
+    "sun": "#F2C14E",
+    "leaf": "#6A9A4A",
+    "acc": "#46464A",
+    "obj": "#D2442E"
+   }
+  },
+  {
+   "slug": "harajuku",
+   "label": "Takeshita Street gate, Harajuku",
+   "lat": 35.6713,
+   "lon": 139.7041,
+   "radius_km": 2,
+   "aliases": [
+    "takeshita"
+   ],
+   "names": [
+    "harajuku",
+    "harajuku district",
+    "quartiere harajuku",
+    "harajuku tokyo"
+   ],
+   "palette": {
+    "sky": "#A8CCF2",
+    "far": "#C8C2B8",
+    "mid": "#6E6A68",
+    "ice": "#F2F0EA",
+    "water": "#5E86B8",
+    "near": "#232426",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#E8508A",
+    "obj": "#D8302E"
+   }
+  },
+  {
    "slug": "hiroshima",
    "label": "Atomic Bomb Dome, Hiroshima",
    "lat": 34.395,
    "lon": 132.453,
    "radius_km": 15,
-   "aliases": [],
+   "aliases": [
+    "hiroshima peace memorial",
+    "peace memorial park",
+    "genbaku dome",
+    "genbaku",
+    "atomic bomb dome",
+    "a bomb dome",
+    "parco del memoriale della pace",
+    "memoriale della pace di hiroshima",
+    "parco della pace di hiroshima"
+   ],
    "names": [
-    "hiroshima"
+    "hiroshima",
+    "memorial park",
+    "parco della pace"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -45,6 +198,34 @@
     "leaf": "#4E7E44",
     "acc": "#B05A3A",
     "obj": "#8A7A60"
+   }
+  },
+  {
+   "slug": "kanazawa",
+   "label": "Kotoji-toro lantern in Kenroku-en, Kanazawa",
+   "lat": 36.5621,
+   "lon": 136.6625,
+   "radius_km": 15,
+   "aliases": [
+    "kenrokuen",
+    "kenroku en",
+    "kotoji toro",
+    "kotojitoro"
+   ],
+   "names": [
+    "kanazawa"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#3E5E40",
+    "mid": "#A8A090",
+    "ice": "#D8D0BC",
+    "water": "#6E8E80",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6A9446",
+    "acc": "#D89A3A",
+    "obj": "#7A5236"
    }
   },
   {
@@ -69,6 +250,66 @@
     "leaf": "#2E5E36",
     "acc": "#A8822A",
     "obj": "#D9AE3A"
+   }
+  },
+  {
+   "slug": "kyoto",
+   "label": "Yasaka Pagoda above the Higashiyama lanes, Kyoto",
+   "lat": 34.9985,
+   "lon": 135.7794,
+   "radius_km": 20,
+   "aliases": [
+    "yasaka pagoda",
+    "hokan ji",
+    "hokanji",
+    "yasaka no to",
+    "ninenzaka",
+    "ninen zaka",
+    "sannenzaka",
+    "sannen zaka"
+   ],
+   "names": [
+    "kyoto",
+    "kioto"
+   ],
+   "palette": {
+    "sky": "#B4D4F2",
+    "far": "#4E4E50",
+    "mid": "#8E6440",
+    "ice": "#E8DCC0",
+    "water": "#5E7A96",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A48",
+    "acc": "#5C4030",
+    "obj": "#A8A298"
+   }
+  },
+  {
+   "slug": "meiji-shrine",
+   "label": "The great wooden torii of Meiji Jingu",
+   "lat": 35.6764,
+   "lon": 139.6993,
+   "radius_km": 3,
+   "aliases": [
+    "meiji shrine",
+    "meiji jingu",
+    "meijijingu",
+    "santuario meiji",
+    "tempio meiji",
+    "meiji temple"
+   ],
+   "palette": {
+    "sky": "#C8DCEC",
+    "far": "#7E9E62",
+    "mid": "#B8B4AA",
+    "ice": "#D8D4CA",
+    "water": "#5E7A96",
+    "near": "#22241F",
+    "sun": "#F2C14E",
+    "leaf": "#3E5E34",
+    "acc": "#8C7E68",
+    "obj": "#D4A830"
    }
   },
   {
@@ -125,6 +366,179 @@
    }
   },
   {
+   "slug": "nara",
+   "label": "Kofuku-ji pagoda with sika deer, Nara Park",
+   "lat": 34.6827,
+   "lon": 135.832,
+   "radius_km": 15,
+   "aliases": [
+    "nara park",
+    "nara koen",
+    "parco di nara",
+    "kofuku ji",
+    "kofukuji",
+    "kohfukuji"
+   ],
+   "names": [
+    "nara"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#55555A",
+    "mid": "#D6C6A2",
+    "ice": "#ECE6D6",
+    "water": "#5E8AA0",
+    "near": "#252220",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A3A",
+    "acc": "#4E3A2C",
+    "obj": "#A8703E"
+   }
+  },
+  {
+   "slug": "nijo-castle",
+   "label": "Ninomaru Palace of Nijo Castle, Kyoto",
+   "lat": 35.0142,
+   "lon": 135.7482,
+   "radius_km": 2,
+   "aliases": [
+    "nijo castle",
+    "nijo jo",
+    "nijojo",
+    "castello nijo",
+    "castello di nijo",
+    "ninomaru"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#BDB8AC",
+    "mid": "#5A3E2C",
+    "ice": "#F2F0EA",
+    "water": "#5E7A70",
+    "near": "#24211F",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#C9A040",
+    "obj": "#6E7072"
+   }
+  },
+  {
+   "slug": "senso-ji",
+   "label": "Kaminarimon gate and its red lantern, Senso-ji",
+   "lat": 35.7111,
+   "lon": 139.7964,
+   "radius_km": 3,
+   "aliases": [
+    "senso ji",
+    "sensoji",
+    "kaminarimon",
+    "kaminari mon",
+    "asakusa kannon",
+    "tempio kannon",
+    "nakamise"
+   ],
+   "palette": {
+    "sky": "#B4D4F2",
+    "far": "#50545A",
+    "mid": "#B4AEA4",
+    "ice": "#ECE6DA",
+    "water": "#5E7A96",
+    "near": "#242120",
+    "sun": "#E8B83A",
+    "leaf": "#4E7A46",
+    "acc": "#D2482C",
+    "obj": "#C8302A"
+   },
+   "names": [
+    "asakusa"
+   ]
+  },
+  {
+   "slug": "shibuya-crossing",
+   "label": "Shibuya scramble crossing and QFRONT",
+   "lat": 35.6595,
+   "lon": 139.7005,
+   "radius_km": 2,
+   "aliases": [
+    "shibuya crossing",
+    "shibuya scramble",
+    "scramble crossing",
+    "incrocio di shibuya",
+    "shibuya intersection",
+    "qfront"
+   ],
+   "palette": {
+    "sky": "#C4D8EC",
+    "far": "#B4B8BE",
+    "mid": "#6A6C70",
+    "ice": "#F2F2EE",
+    "water": "#3E9AD0",
+    "near": "#222326",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A46",
+    "acc": "#D8324E",
+    "obj": "#7E8FA2"
+   },
+   "names": [
+    "shibuya"
+   ]
+  },
+  {
+   "slug": "shinjuku",
+   "label": "Tokyo Metropolitan Government Building, Shinjuku",
+   "lat": 35.6896,
+   "lon": 139.6917,
+   "radius_km": 3,
+   "aliases": [
+    "tokyo metropolitan government",
+    "tocho",
+    "nishi shinjuku"
+   ],
+   "names": [
+    "shinjuku",
+    "shinjuku tokyo",
+    "quartiere shinjuku"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#B4BCC6",
+    "mid": "#86868A",
+    "ice": "#E4E0D8",
+    "water": "#6E86A2",
+    "near": "#232426",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#B8682E",
+    "obj": "#BDB7AC"
+   }
+  },
+  {
+   "slug": "todai-ji",
+   "label": "Daibutsuden hall of Todai-ji, Nara",
+   "lat": 34.689,
+   "lon": 135.84,
+   "radius_km": 2,
+   "aliases": [
+    "todai ji",
+    "todaiji",
+    "daibutsuden",
+    "daibutsu den",
+    "tempio todai"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#6E8E5E",
+    "mid": "#3E302A",
+    "ice": "#ECE6D8",
+    "water": "#5E7A96",
+    "near": "#232426",
+    "sun": "#E2B23A",
+    "leaf": "#6E9A48",
+    "acc": "#A8743E",
+    "obj": "#6A6C6E"
+   }
+  },
+  {
    "slug": "tokyo",
    "label": "Tokyo skyline with Fuji",
    "lat": 35.68,
@@ -146,6 +560,30 @@
     "leaf": "#4E7A46",
     "acc": "#E8622E",
     "obj": "#A8B4C2"
+   }
+  },
+  {
+   "slug": "tokyo-skytree",
+   "label": "Tokyo Skytree over the Sumida River",
+   "lat": 35.7101,
+   "lon": 139.8107,
+   "radius_km": 3,
+   "aliases": [
+    "skytree",
+    "sky tree",
+    "solamachi"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#AEB8C4",
+    "mid": "#D8CCB8",
+    "ice": "#EEF1F2",
+    "water": "#4E7896",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A48",
+    "acc": "#D63A4E",
+    "obj": "#C8A040"
    }
   }
  ]
