@@ -3,6 +3,119 @@
  "name": "Kenya",
  "places": [
   {
+   "slug": "eldoret",
+   "label": "MUPS Towers in Eldoret with a runner",
+   "lat": 0.517,
+   "lon": 35.274,
+   "radius_km": 15,
+   "aliases": [
+    "mups towers",
+    "mups plaza"
+   ],
+   "names": [
+    "eldoret",
+    "eldoret town",
+    "eldoret city"
+   ],
+   "palette": {
+    "sky": "#BFD8EE",
+    "far": "#A9A9A4",
+    "mid": "#E3D4B4",
+    "ice": "#F4F1EA",
+    "water": "#3E9C9A",
+    "near": "#262624",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#B5643A",
+    "obj": "#2F8A5E"
+   }
+  },
+  {
+   "slug": "lake-naivasha",
+   "label": "Hippos in Lake Naivasha",
+   "lat": -0.77,
+   "lon": 36.4,
+   "radius_km": 20,
+   "aliases": [
+    "lake naivasha",
+    "lago naivasha",
+    "naivasha lake",
+    "crescent island"
+   ],
+   "names": [
+    "naivasha"
+   ],
+   "palette": {
+    "sky": "#D2E3EE",
+    "far": "#A9B7C4",
+    "mid": "#76686C",
+    "ice": "#FFFFFF",
+    "water": "#86A6B8",
+    "near": "#2A2628",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#CDB88A",
+    "obj": "#B9787C"
+   }
+  },
+  {
+   "slug": "lake-nakuru-national-park",
+   "label": "Flamingos on Lake Nakuru",
+   "lat": -0.37,
+   "lon": 36.08,
+   "radius_km": 25,
+   "aliases": [
+    "lake nakuru",
+    "lago nakuru",
+    "nakuru national park",
+    "nakuru park"
+   ],
+   "names": [
+    "nakuru",
+    "nakuru town",
+    "nakuru city"
+   ],
+   "palette": {
+    "sky": "#C9DDEA",
+    "far": "#9AB0B4",
+    "mid": "#5E7F7A",
+    "ice": "#FFFFFF",
+    "water": "#A9C2CC",
+    "near": "#2A2A2E",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4E",
+    "acc": "#F2A9B6",
+    "obj": "#DC5E78"
+   }
+  },
+  {
+   "slug": "loita-hills",
+   "label": "Maasai manyatta and cattle in the green Loita Hills",
+   "lat": -1.7,
+   "lon": 35.8,
+   "radius_km": 30,
+   "aliases": [
+    "loita hills",
+    "loita forest",
+    "loita plains"
+   ],
+   "names": [
+    "loita"
+   ],
+   "palette": {
+    "sky": "#BFD7EC",
+    "far": "#8EA3B8",
+    "mid": "#5F7F45",
+    "ice": "#F2EEE4",
+    "water": "#6E9AB8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#8FAE58",
+    "acc": "#A8835C",
+    "obj": "#C8322C"
+   }
+  },
+  {
    "slug": "maasai-mara",
    "label": "Wildebeest crossing the Mara River",
    "lat": -1.49,
@@ -23,6 +136,33 @@
     "leaf": "#8A9A4A",
     "acc": "#CDB07A",
     "obj": "#4A4440"
+   }
+  },
+  {
+   "slug": "nairobi",
+   "label": "Giraffe in Nairobi National Park below the city skyline",
+   "lat": -1.29,
+   "lon": 36.82,
+   "radius_km": 20,
+   "aliases": [
+    "nairobi national park",
+    "nairobi np"
+   ],
+   "names": [
+    "nairobi",
+    "nairobi city"
+   ],
+   "palette": {
+    "sky": "#D3E3EF",
+    "far": "#C3CDD6",
+    "mid": "#A3B6C6",
+    "ice": "#EEF1F2",
+    "water": "#6E8FAA",
+    "near": "#2B2723",
+    "sun": "#F2C14E",
+    "leaf": "#A3A45E",
+    "acc": "#9C5B3A",
+    "obj": "#D49B5A"
    }
   }
  ]

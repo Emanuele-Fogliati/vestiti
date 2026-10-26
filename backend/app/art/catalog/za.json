@@ -3,6 +3,67 @@
  "name": "South Africa",
  "places": [
   {
+   "slug": "blyde-river-canyon",
+   "label": "The Three Rondavels above the Blyde River Canyon",
+   "lat": -24.58,
+   "lon": 30.81,
+   "radius_km": 15,
+   "aliases": [
+    "blyde river canyon",
+    "blyde canyon",
+    "blyderivierspoort",
+    "three rondavels",
+    "blyde",
+    "bourke s luck",
+    "bourkes luck",
+    "bourke luck",
+    "god s window",
+    "gods window",
+    "finestra di dio",
+    "panorama route"
+   ],
+   "palette": {
+    "sky": "#B3D2EE",
+    "far": "#93A3B4",
+    "mid": "#A85A3E",
+    "ice": "#F0EEE8",
+    "water": "#3E9C96",
+    "near": "#2A2422",
+    "sun": "#F2C14E",
+    "leaf": "#8A9A4A",
+    "acc": "#C99A6E",
+    "obj": "#76804A"
+   },
+   "names": [
+    "panorama route mpumalanga"
+   ]
+  },
+  {
+   "slug": "bo-kaap",
+   "label": "The colourful houses of Bo-Kaap below Table Mountain",
+   "lat": -33.921,
+   "lon": 18.415,
+   "radius_km": 2,
+   "aliases": [
+    "bo kaap",
+    "bokaap",
+    "bo kapp",
+    "malay quarter"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#7F848C",
+    "mid": "#F2C232",
+    "ice": "#F4EEDC",
+    "water": "#2F6FA8",
+    "near": "#26292C",
+    "sun": "#F6C431",
+    "leaf": "#8CCB5A",
+    "acc": "#EE7FB4",
+    "obj": "#4FA3D8"
+   }
+  },
+  {
    "slug": "boulders-beach",
    "label": "African penguins at Boulders Beach",
    "lat": -34.197,
@@ -22,6 +83,33 @@
     "leaf": "#6CC9C0",
     "acc": "#C8463A",
     "obj": "#BDB3A2"
+   }
+  },
+  {
+   "slug": "cape-of-good-hope",
+   "label": "The Cape of Good Hope headland above Dias Beach",
+   "lat": -34.357,
+   "lon": 18.474,
+   "radius_km": 5,
+   "aliases": [
+    "cape of good hope",
+    "capo di buona speranza",
+    "kaap die goeie hoop",
+    "cape point",
+    "cabo da boa esperanca",
+    "cabo de buena esperanza"
+   ],
+   "palette": {
+    "sky": "#B2D3F0",
+    "far": "#9AA06A",
+    "mid": "#7E7C76",
+    "ice": "#F4EEDC",
+    "water": "#2E6EA6",
+    "near": "#262624",
+    "sun": "#F2C14E",
+    "leaf": "#4F7436",
+    "acc": "#3CB8B0",
+    "obj": "#C79C88"
    }
   },
   {
@@ -49,6 +137,62 @@
     "leaf": "#6E8A4A",
     "acc": "#E8DCC0",
     "obj": "#F2EEE6"
+   }
+  },
+  {
+   "slug": "johannesburg",
+   "label": "Ponte City and the Hillbrow Tower over Johannesburg",
+   "lat": -26.19,
+   "lon": 28.05,
+   "radius_km": 20,
+   "aliases": [
+    "ponte city",
+    "hillbrow tower"
+   ],
+   "names": [
+    "johannesburg",
+    "joburg",
+    "jo burg",
+    "jozi",
+    "johannesburgo"
+   ],
+   "palette": {
+    "sky": "#A9CBEF",
+    "far": "#A3ABB5",
+    "mid": "#8E9196",
+    "ice": "#E9EBEC",
+    "water": "#2F6FA8",
+    "near": "#24272B",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#B0644A",
+    "obj": "#1F5FA8"
+   }
+  },
+  {
+   "slug": "kruger-national-park",
+   "label": "Elephants at a river in Kruger National Park",
+   "lat": -24.0,
+   "lon": 31.5,
+   "radius_km": 60,
+   "aliases": [
+    "kruger national park",
+    "kruger park",
+    "parco kruger",
+    "parco nazionale kruger",
+    "kruger"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#8C9B6C",
+    "mid": "#8F8A85",
+    "ice": "#F2EEE4",
+    "water": "#6E96A6",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#5F8A3A",
+    "acc": "#D9C49A",
+    "obj": "#A9B56C"
    }
   }
  ]
