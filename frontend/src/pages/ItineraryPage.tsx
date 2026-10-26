@@ -51,7 +51,7 @@ function PackForm({ it, id }: { it: Itinerary; id?: string }) {
   );
 }
 
-function StopBlock({ stop, index, dayFrom, total }: { stop: ItineraryStop; index: number; dayFrom: number; total: number }) {
+function StopBlock({ stop, index, dayFrom }: { stop: ItineraryStop; index: number; dayFrom: number }) {
   const n = nights(stop.start_date, stop.end_date);
   const terrain = terrainFor(stop, index);
   return (
@@ -65,7 +65,6 @@ function StopBlock({ stop, index, dayFrom, total }: { stop: ItineraryStop; index
           <span className="tag">{Math.round(stop.elevation_m).toLocaleString("en-US")} m</span>
         </div>
         <PlaceGuide guide={stop.guide} />
-        {stop.programs ? <p className="small muted pop">In {stop.programs} of the {total.toLocaleString("en-US")} organised trips we read</p> : null}
         <ol className="plan">
           {stop.plan.map((p, i) => <li key={i}><span className="vd">Day {dayFrom + i}</span>{p}</li>)}
         </ol>
@@ -142,7 +141,7 @@ export default function ItineraryPage() {
           <TripMap stops={it.stops} />
           <ElevationProfile stops={it.stops} selected={sel} onSelect={pick} />
           <ol className="stops" style={{ marginTop: 24 }}>
-            {it.stops.map((s, i) => <StopBlock key={s.id} stop={s} index={i} dayFrom={starts[i]} total={it.inventory_trips} />)}
+            {it.stops.map((s, i) => <StopBlock key={s.id} stop={s} index={i} dayFrom={starts[i]} />)}
           </ol>
           <p className="small muted" style={{ marginTop: 16 }}>
             Tour links go to GetYourGuide and Viator. We may earn a commission when you book, at no extra cost to you.

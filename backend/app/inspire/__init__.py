@@ -3,7 +3,8 @@
 Each itinerary is a JSON file in itineraries/: stops in order, days per stop, what you do on
 each day, what is worth it and what to skip, tours to book at each stop and similar organised
 group trips. The stops are the places the organised trips we read visit most often
-("programs" = how many of those trips include the place).
+("programs" = how many of those trips include the place). The counts are internal only: the
+API never sends them and the app never says how many trips include a place.
 
 "Pack my bag for this" turns an itinerary into a normal trip (stops with dates and
 activities), so the existing weather -> layers -> kit flow runs on it unchanged.
@@ -21,9 +22,6 @@ from app.schemas import ActivityIn
 
 HERE = Path(__file__).resolve().parent
 DATA_DIR = HERE / "itineraries"
-
-# Organised trips read for the place inventory (10 tour-operator sites, October 2026).
-INVENTORY_TRIPS = 4916
 
 # Search pages of the tour marketplaces; the query comes from our data files only.
 EXCURSION_PROVIDERS = {

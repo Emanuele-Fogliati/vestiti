@@ -29,7 +29,7 @@ export default function RouteMap({ stops }: { stops: RouteStop[] }) {
     .filter((s) => Number.isFinite(s.latitude) && Number.isFinite(s.longitude) && !(s.latitude === 0 && s.longitude === 0)), [stops]);
   const key = pts.map((s) => `${s.latitude.toFixed(3)},${s.longitude.toFixed(3)}`).join("|");
 
-  useEffect(() => { loadPlaces().then(setData).catch(() => setData({ inventoryTrips: 0, itineraries: [], places: [] })); }, []);
+  useEffect(() => { loadPlaces().then(setData).catch(() => setData({ itineraries: [], places: [] })); }, []);
 
   useEffect(() => {
     const el = box.current;
@@ -148,7 +148,7 @@ export default function RouteMap({ stops }: { stops: RouteStop[] }) {
           </div>
         )}
       </div>
-      <p className="small muted">Tap a stop to zoom in: the places organised trips visit around it appear on the map.</p>
+      <p className="small muted">Tap a stop to zoom in: the places worth seeing around it appear on the map.</p>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import hashlib
 from datetime import date
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
@@ -14,8 +15,13 @@ from app.schemas import TripOut, check_date
 router = APIRouter(prefix="/api/globe", tags=["globe"])
 
 
-def _compact(request: Request, raw: bytes, gz: bytes) -> Response:
-    headers = {"Cache-Control": "public, max-age=3600", "Vary": "Accept-Encoding"}
+def _revalidated(request: Request, raw: bytes, gz: bytes) -> Response:
+    """Revalidated on every load, so new landmark scenes and rebuilt routes reach the globe at
+    once (304 when unchanged)."""
+    tag = '"' + hashlib.sha1(raw).hexdigest()[:16] + '"'
+    headers = {"Cache-Control": "no-cache", "ETag": tag, "Vary": "Accept-Encoding"}
+    if request.headers.get("if-none-match") == tag:
+        return Response(status_code=304, headers=headers)
     if "gzip" in request.headers.get("accept-encoding", ""):
         return Response(gz, media_type="application/json", headers={**headers, "Content-Encoding": "gzip"})
     return Response(raw, media_type="application/json", headers=headers)
@@ -23,14 +29,14 @@ def _compact(request: Request, raw: bytes, gz: bytes) -> Response:
 
 @router.get("/places")
 def places(request: Request):
-    """Every place for the globe in one compact, cacheable response (rows, not objects)."""
-    return _compact(request, *globe.payload_bytes())
+    """Every place for the globe in one compact response (rows, not objects)."""
+    return _revalidated(request, *globe.payload_bytes())
 
 
 @router.get("/routes")
 def routes(request: Request):
-    """The routes you can pick on the globe, by trip length, in one cacheable response."""
-    return _compact(request, *globe_routes.payload_bytes())
+    """The routes you can pick on the globe, by trip length, in one response."""
+    return _revalidated(request, *globe_routes.payload_bytes())
 
 
 class RouteTripIn(BaseModel):

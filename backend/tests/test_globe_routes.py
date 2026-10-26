@@ -7,7 +7,7 @@ from app.globe import routes as gr
 
 def test_routes_endpoint_is_light_and_has_every_length(client):
     r = client.get("/api/globe/routes", headers={"Accept-Encoding": "gzip"})
-    assert r.status_code == 200 and "max-age" in r.headers["cache-control"]
+    assert r.status_code == 200 and r.headers["etag"]
     d = r.json()
     assert [b["key"] for b in d["buckets"]] == ["1w", "10d", "2w", "3w"]
     keys = {b["key"] for b in d["buckets"]}

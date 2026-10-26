@@ -30,7 +30,7 @@ const landmarkCache = new Map<string, Promise<string | null>>();
 export function loadLandmark(id: string): Promise<string | null> {
   let p = landmarkCache.get(id);
   if (!p) {
-    p = fetch(`/api/art/landmarks/${encodeURIComponent(id)}.svg`)
+    p = fetch(`/api/art/landmarks/${encodeURIComponent(id)}.svg?v=${__BUILD_ID__}`)
       .then((r) => (r.ok ? r.text() : null))
       .catch(() => null);
     landmarkCache.set(id, p);

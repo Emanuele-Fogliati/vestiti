@@ -52,7 +52,7 @@ def get_itinerary(slug: str, start: date | None = None):
     for i, (s, out) in enumerate(zip(it.stops, prev.stops)):
         stops.append({
             **out.model_dump(mode="json"),
-            "plan": s.plan, "do": s.do, "skip": s.skip, "programs": s.programs,
+            "plan": s.plan, "do": s.do, "skip": s.skip,
             "excursions": [{"title": e.title, "links": [
                 {"provider": p, "label": label, "href": f"/api/go/excursion/{it.slug}/{i}/{n}?provider={p}"}
                 for p, (label, _) in inspire.EXCURSION_PROVIDERS.items()]}
@@ -62,7 +62,6 @@ def get_itinerary(slug: str, start: date | None = None):
         **_card(it),
         "season_note": it.season_note,
         "start_date": start.isoformat(),
-        "inventory_trips": inspire.INVENTORY_TRIPS,
         "stops": stops,
         "group_trips": [{"operator": g.operator, "title": g.title, "days": g.days,
                          "href": f"/api/go/tour/{it.slug}/{n}"} for n, g in enumerate(it.group_trips)],
