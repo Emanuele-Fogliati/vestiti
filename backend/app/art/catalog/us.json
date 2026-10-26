@@ -82,6 +82,29 @@
    }
   },
   {
+   "slug": "bryce-canyon-national-park",
+   "label": "Hoodoos of the Bryce Amphitheater with Thor's Hammer",
+   "lat": 37.6227,
+   "lon": -112.1663,
+   "radius_km": 20,
+   "aliases": [
+    "bryce canyon",
+    "bryce"
+   ],
+   "palette": {
+    "sky": "#BBD8F0",
+    "far": "#B7B5C6",
+    "mid": "#DE7E50",
+    "ice": "#FFFFFF",
+    "water": "#6FA6C8",
+    "near": "#2E2420",
+    "sun": "#F4C443",
+    "leaf": "#3F6A3A",
+    "acc": "#EFC6A2",
+    "obj": "#C25B38"
+   }
+  },
+  {
    "slug": "central-park",
    "label": "Bow Bridge and the San Remo, Central Park",
    "lat": 40.7756,
@@ -134,6 +157,33 @@
    }
   },
   {
+   "slug": "death-valley-national-park",
+   "label": "Manly Beacon and the Zabriskie Point badlands, Death Valley",
+   "lat": 36.4205,
+   "lon": -116.81,
+   "radius_km": 40,
+   "aliases": [
+    "death valley national park",
+    "valle della morte",
+    "parco nazionale della valle della morte"
+   ],
+   "names": [
+    "death valley"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#9EA3BC",
+    "mid": "#D9C07E",
+    "ice": "#F2EEE6",
+    "water": "#9FC3D8",
+    "near": "#2C2622",
+    "sun": "#F4C443",
+    "leaf": "#8A8F5A",
+    "acc": "#E7DAB6",
+    "obj": "#A8846E"
+   }
+  },
+  {
    "slug": "denali-national-park",
    "label": "Denali reflected in Reflection Pond, Denali National Park",
    "lat": 63.33,
@@ -156,6 +206,28 @@
     "leaf": "#6E7A3E",
     "acc": "#B8B85A",
     "obj": "#5A3E2C"
+   }
+  },
+  {
+   "slug": "ellis-island",
+   "label": "Ellis Island Immigration Museum main building",
+   "lat": 40.6993,
+   "lon": -74.0395,
+   "radius_km": 2,
+   "aliases": [
+    "ellis island"
+   ],
+   "palette": {
+    "sky": "#BCDCF2",
+    "far": "#B9A88E",
+    "mid": "#B4573F",
+    "ice": "#ECE2CC",
+    "water": "#6E8F86",
+    "near": "#28282A",
+    "sun": "#F3C33E",
+    "leaf": "#5A8A3E",
+    "acc": "#A8302B",
+    "obj": "#6FA08E"
    }
   },
   {
@@ -320,6 +392,136 @@
    }
   },
   {
+   "slug": "joshua-tree-national-park",
+   "label": "Joshua trees and boulder piles, Joshua Tree National Park",
+   "lat": 34.012,
+   "lon": -116.168,
+   "radius_km": 40,
+   "aliases": [
+    "joshua tree",
+    "parco nazionale di joshua tree"
+   ],
+   "palette": {
+    "sky": "#AFD2F0",
+    "far": "#A99070",
+    "mid": "#D9BA88",
+    "ice": "#ECDDBC",
+    "water": "#7FA9C8",
+    "near": "#2B261F",
+    "sun": "#F4C443",
+    "leaf": "#6E8A3C",
+    "acc": "#6C5B46",
+    "obj": "#C8B184"
+   }
+  },
+  {
+   "slug": "kenai-fjords-national-park",
+   "label": "Aialik Glacier calving into its fjord, Kenai Fjords",
+   "lat": 59.88,
+   "lon": -149.8,
+   "radius_km": 30,
+   "aliases": [
+    "kenai fjords",
+    "aialik glacier",
+    "holgate glacier"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#8C8682",
+    "mid": "#6D6862",
+    "ice": "#F1F6FA",
+    "water": "#557A84",
+    "near": "#232628",
+    "sun": "#F4C640",
+    "leaf": "#56703E",
+    "acc": "#A8D2E6",
+    "obj": "#30363A"
+   }
+  },
+  {
+   "slug": "las-vegas",
+   "label": "Bellagio fountains and the Paris Las Vegas Eiffel Tower on the Strip",
+   "lat": 36.1126,
+   "lon": -115.1728,
+   "radius_km": 20,
+   "aliases": [
+    "las vegas strip",
+    "bellagio",
+    "paris las vegas"
+   ],
+   "names": [
+    "las vegas",
+    "las vegas nevada",
+    "the strip"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#BFA184",
+    "mid": "#E6D6B4",
+    "ice": "#FFFFFF",
+    "water": "#3D8C98",
+    "near": "#2A2522",
+    "sun": "#F4C443",
+    "leaf": "#4E7A3A",
+    "acc": "#2F6E8C",
+    "obj": "#9A6A3C"
+   }
+  },
+  {
+   "slug": "los-angeles",
+   "label": "Griffith Observatory above Los Angeles",
+   "lat": 34.1184,
+   "lon": -118.3004,
+   "radius_km": 25,
+   "aliases": [
+    "griffith observatory",
+    "griffith park"
+   ],
+   "names": [
+    "los angeles",
+    "los angeles california",
+    "l a"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#D8CCB8",
+    "mid": "#F0ECE2",
+    "ice": "#FFFFFF",
+    "water": "#6FA6C8",
+    "near": "#2B2620",
+    "sun": "#F4C443",
+    "leaf": "#6E9446",
+    "acc": "#8E6436",
+    "obj": "#4F9A8A"
+   }
+  },
+  {
+   "slug": "monterey",
+   "label": "Old Fisherman's Wharf, Monterey",
+   "lat": 36.6036,
+   "lon": -121.8932,
+   "radius_km": 12,
+   "aliases": [
+    "old fisherman s wharf",
+    "old fishermans wharf"
+   ],
+   "names": [
+    "monterey"
+   ],
+   "palette": {
+    "sky": "#AACCEB",
+    "far": "#6F8C70",
+    "mid": "#857A6E",
+    "ice": "#F1E9D6",
+    "water": "#4F8A8C",
+    "near": "#28272A",
+    "sun": "#F4C443",
+    "leaf": "#7C9A48",
+    "acc": "#B2503D",
+    "obj": "#CFC4B2"
+   }
+  },
+  {
    "slug": "monument-valley",
    "label": "The Mittens, Monument Valley",
    "lat": 36.99,
@@ -339,6 +541,31 @@
     "leaf": "#8A9A6A",
     "acc": "#B8582E",
     "obj": "#C8764A"
+   }
+  },
+  {
+   "slug": "morro-bay",
+   "label": "Morro Rock across Morro Bay",
+   "lat": 35.3699,
+   "lon": -120.8676,
+   "radius_km": 10,
+   "aliases": [
+    "morro rock"
+   ],
+   "names": [
+    "morro bay"
+   ],
+   "palette": {
+    "sky": "#A0C7EA",
+    "far": "#CDBB98",
+    "mid": "#BE8D63",
+    "ice": "#F5F3EE",
+    "water": "#5E91B5",
+    "near": "#2B2622",
+    "sun": "#F4C443",
+    "leaf": "#7D8A5A",
+    "acc": "#6E4C37",
+    "obj": "#C8362E"
    }
   },
   {
@@ -534,6 +761,64 @@
     "leaf": "#4E7E3E",
     "acc": "#EBD6A8",
     "obj": "#A89E8E"
+   }
+  },
+  {
+   "slug": "yellowstone-national-park",
+   "label": "Bison in Hayden Valley, Yellowstone",
+   "lat": 44.65,
+   "lon": -110.47,
+   "radius_km": 50,
+   "aliases": [
+    "yellowstone national park",
+    "parco dello yellowstone",
+    "parco nazionale di yellowstone",
+    "yellowstone lake",
+    "hayden valley",
+    "lamar valley"
+   ],
+   "names": [
+    "yellowstone"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#8E9AB2",
+    "mid": "#8DB25A",
+    "ice": "#F4F6F6",
+    "water": "#5D8EBA",
+    "near": "#24201C",
+    "sun": "#F4C443",
+    "leaf": "#2F5A34",
+    "acc": "#7A5638",
+    "obj": "#4A3426"
+   }
+  },
+  {
+   "slug": "zion-national-park",
+   "label": "The Watchman above the Virgin River, Zion",
+   "lat": 37.2002,
+   "lon": -112.9845,
+   "radius_km": 25,
+   "aliases": [
+    "zion national park",
+    "zion canyon",
+    "parco nazionale di zion"
+   ],
+   "names": [
+    "springdale",
+    "zion"
+   ],
+   "palette": {
+    "sky": "#BEDBF2",
+    "far": "#DCCBB2",
+    "mid": "#B9A493",
+    "ice": "#F2EBDD",
+    "water": "#4F90B2",
+    "near": "#2A2420",
+    "sun": "#F4C443",
+    "leaf": "#5A8E3E",
+    "acc": "#A9563E",
+    "obj": "#9C7A5A"
    }
   }
  ]
