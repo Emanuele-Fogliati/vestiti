@@ -85,3 +85,5 @@
 .rpin:hover,.rpin:focus-visible{transform:scale(1.12)}
 .maplibregl-ctrl-attrib{font-size:10px}
 
+/* the route card's buttons stay in reach while its stops scroll */
+.rcard .pcard-acts{position:sticky;bottom:0;background:var(--surface);padding:10px 0 4px;margin-top:0;box-shadow:0 -10px 12px -10px rgba(13,13,13,.12)}

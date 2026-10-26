@@ -90,7 +90,8 @@ class Builder:
                 q = self.places[pid]
                 d_new = km((q["lat"], q["lon"]), (here["lat"], here["lon"]))
                 d_old = km((q["lat"], q["lon"]), (last["lat"], last["lon"])) if last else 1e9
-                (theirs if d_old < d_new else mine).append(pid)
+                # near the place you left: a last visit there; anything else: seen on the way
+                (theirs if d_old < d_new and d_old < 60 else mine).append(pid)
             if theirs:
                 last["seen"].append((day - 1, theirs))
             stop["seen"].append((day, mine))
