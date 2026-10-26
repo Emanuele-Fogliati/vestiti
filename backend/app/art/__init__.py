@@ -91,8 +91,10 @@ def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 NAMESAKE_KM = 250  # a stop named after a landmark but farther than this is a different place
 
 
-def _named(text: str) -> list[Landmark]:
-    """Landmarks whose alias appears as whole words in the text, in order of appearance."""
+def _named(text: str, lat: float | None = None, lon: float | None = None) -> list[Landmark]:
+    """Landmarks whose alias appears as whole words in the text, in order of appearance.
+
+    Two landmarks named at the same position ("red fort of agra" / "red fort") go nearest first."""
     n = _norm(text)
     t = f" {n} "
     hits = []
@@ -100,7 +102,8 @@ def _named(text: str) -> list[Landmark]:
         pos = [t.find(f" {a} ") for a in lm.aliases if f" {a} " in t] + [0 for a in lm.names if a == n]
         if pos:
             hits.append((min(pos), lm))
-    return [lm for _, lm in sorted(hits, key=lambda h: h[0])]
+    near = (lambda lm: _km(lat, lon, lm.lat, lm.lon)) if lat is not None and lon is not None else (lambda lm: 0)
+    return [lm for _, lm in sorted(hits, key=lambda h: (h[0], near(h[1])))]
 
 
 def _nearest(lat: float, lon: float) -> Landmark | None:
@@ -118,7 +121,7 @@ def match(name: str, lat: float | None, lon: float | None, notes: str | None = N
 
     When that landmark is already used by an earlier stop of the trip (Cusco twice), a different
     landmark named in the stop's notes wins (the second Cusco stop is the Rainbow Mountain day)."""
-    named = _named(name)
+    named = _named(name, lat, lon)
     if lat is not None and lon is not None:  # a namesake far away is another place (Venice Beach)
         named = [lm for lm in named if _km(lat, lon, lm.lat, lm.lon) <= NAMESAKE_KM]
     own = next(iter(named), None)

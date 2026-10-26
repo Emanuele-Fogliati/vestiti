@@ -27,7 +27,7 @@ def test_peru_trip_gets_one_landmark_per_stop():
 def test_name_beats_distance_and_far_places_get_nothing():
     # "Huacachina" is 5 km from Ica: the name wins even with rough coordinates
     assert art.match("Huacachina", -14.06, -75.73).id == "pe-huacachina"
-    assert art.match("Nairobi", -1.29, 36.82) is None
+    assert art.match("Somewhere at sea", 0.0, -30.0) is None
     assert art.match("Machu Picchu Pueblo", None, None).id == "pe-machu-picchu"
 
 
@@ -41,12 +41,12 @@ def test_approved_places_match_their_stops_and_not_namesakes():
     assert m("San Pedro de Atacama", -22.91, -68.20) == "cl-san-pedro-de-atacama"
     assert m("Valle de la Luna", -22.93, -68.26) == "cl-valle-de-la-luna"
     assert m("Hội An") == "vn-hoi-an" and m("Saigon") == "vn-ho-chi-minh-city"
-    # namesakes far from the drawn place get nothing
-    assert m("Santiago de Compostela", 42.88, -8.54) is None
-    assert m("Osorno", -40.57, -73.13) is None  # the city, 60 km from the volcano
-    assert m("Valle de la Luna", -16.57, -68.09) is None  # La Paz, Bolivia
-    assert m("Ho Chi Minh Mausoleum") is None  # in Hanoi, not Ho Chi Minh City
-    assert m("Agra Fort") is None and m("Catacombs of Rome") is None
+    # namesakes far from the drawn place never get its scene (they may get their own one day)
+    assert m("Santiago de Compostela", 42.88, -8.54) != "cl-santiago"
+    assert m("Osorno", -40.57, -73.13) != "cl-osorno-volcano"  # the city, 60 km from the volcano
+    assert m("Valle de la Luna", -16.57, -68.09) != "cl-valle-de-la-luna"  # La Paz, Bolivia
+    assert m("Ho Chi Minh Mausoleum") != "vn-ho-chi-minh-city"  # in Hanoi, not Ho Chi Minh City
+    assert m("Agra Fort") != "in-taj-mahal" and m("Catacombs of Rome") != "it-colosseum"
     # cities whose symbol is a monument get it from their coordinates
     assert m("Agra", 27.18, 78.01) == "in-taj-mahal" and m("Rome", 41.90, 12.50) == "it-colosseum"
     assert m("Rio de Janeiro", -22.91, -43.17) == "br-christ-the-redeemer"
@@ -54,20 +54,22 @@ def test_approved_places_match_their_stops_and_not_namesakes():
 
 def test_city_names_match_only_as_the_whole_name_and_far_namesakes_are_ignored():
     m = lambda n, la=None, lo=None: (art.match(n, la, lo) or S(id=None)).id
-    assert m("Lima") == "pe-lima-costa-verde" and m("Lima Cathedral") is None
-    assert m("Paris") == "fr-paris" and m("Eiffel Tower") == "fr-paris" and m("Notre-Dame de Paris") is None
+    assert m("Lima") == "pe-lima-costa-verde" and m("Lima Cathedral") != "pe-lima-costa-verde"
+    assert m("Paris") == "fr-paris" and m("Eiffel Tower") == "fr-paris" and m("Notre-Dame de Paris") != "fr-paris"
     assert m("Chiang Mai") == "th-doi-suthep" and m("Rome") == "it-colosseum"
     # a stop named after a landmark but far from it is another place
-    assert m("Venice Beach", 33.985, -118.47) is None and m("Venice", 45.44, 12.33) == "it-venice"
-    assert m("Grand Canyon of the Yellowstone", 44.72, -110.48) is None
+    assert m("Venice Beach", 33.985, -118.47) != "it-venice" and m("Venice", 45.44, 12.33) == "it-venice"
+    assert m("Grand Canyon of the Yellowstone", 44.72, -110.48) != "us-grand-canyon"
 
 
 def test_globe_places_get_their_own_scene_only():
     from app import globe
     got = {(p[1], p[2]): p[7] for p in globe.payload()["places"]}
+    wrong = {"Acropolis of Lindos": "gr-acropolis-of-athens", "Palazzo Venezia": "it-venice",
+             "Hagia Sophia of Trabzon": "tr-istanbul", "Agra Fort": "in-taj-mahal", "Lima Cathedral": "pe-lima-costa-verde"}
     for (name, cc), want in got.items():
-        if name in ("Acropolis of Lindos", "Palazzo Venezia", "Hagia Sophia of Trabzon", "Agra Fort", "Lima Cathedral"):
-            assert want is None, name
+        if name in wrong:
+            assert want is None or want != wrong[name], name
     assert got.get(("Eiffel Tower", "FR")) == "fr-paris" and got.get(("Paris", "FR")) == "fr-paris"
 
 
@@ -153,3 +155,11 @@ def test_every_place_has_a_full_palette():
         assert palette_problems(dict(lm.palette)) == [], lm.id
     assert palette_problems({"sky": "#FFFFFF"})
     assert palette_problems({t: "red" for t in TOKENS})
+
+
+def test_same_position_names_go_to_the_nearest(monkeypatch):
+    far = art.Landmark("in-agra-fort", "Agra Fort", "IN", 27.18, 78.02, 3, ("red fort of agra",))
+    near = art.Landmark("in-red-fort", "Red Fort", "IN", 28.656, 77.241, 3, ("red fort",))
+    monkeypatch.setattr(art, "landmarks", lambda: (far, near))
+    assert art.match("Red Fort", 28.65, 77.24).id == "in-red-fort"
+    assert art.match("Red Fort of Agra", 27.18, 78.02).id == "in-agra-fort"

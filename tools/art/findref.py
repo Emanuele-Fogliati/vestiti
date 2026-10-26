@@ -162,7 +162,11 @@ def search(a) -> None:
     seen = {i["url"] for i in idx}
     wiki = from_wikipedia(a.wiki, a.lang) if a.wiki else []
     found = wiki[:1]  # the article's lead image: often the postcard view
-    com = from_commons(a.query)
+    try:
+        com = from_commons(a.query)
+    except Exception as e:  # Wikimedia busy (429) even after retries: carry on with what we have
+        print(f"Commons search failed ({e}); try again in a minute or use another query", file=sys.stderr)
+        com = []
     for k in range(max(len(wiki), len(com))):  # then alternate commons results and article photos
         found += com[k:k + 1] + wiki[k + 1:k + 2]
     if len([f for f in found if f["url"] not in seen]) < 8:
@@ -181,8 +185,11 @@ def search(a) -> None:
         new.append({"n": n, **f})
     idx += new
     idx_f.write_text(json.dumps(idx, indent=1, ensure_ascii=False))
-    sheet(cdir, idx[-16:] if len(idx) > 16 else idx)
-    print(f"{len(new)} new candidates ({len(idx)} total). Look at {cdir / 'sheet.jpg'} (shows the last 16)")
+    sheet(cdir, new)
+    if not new:
+        sys.exit("no new candidates: try another query (local name, '<place> viewpoint', the Wikipedia title)")
+    print(f"{len(new)} new candidates ({len(idx)} total). Look at {cdir / 'sheet.jpg'} (this search's numbers "
+          f"{new[0]['n']}-{new[-1]['n']}; each search replaces the sheet, pick numbers from any search)")
     for i in new:
         print(f"  {i['n']:>3} {i['src']:9} {i['title'][:90]}")
 
