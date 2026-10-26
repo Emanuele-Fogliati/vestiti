@@ -3,6 +3,68 @@
  "name": "China",
  "places": [
   {
+   "slug": "chengdu-research-base-of-giant-panda-breeding",
+   "label": "Giant panda at the Chengdu Research Base of Giant Panda Breeding",
+   "lat": 30.733,
+   "lon": 104.146,
+   "radius_km": 4,
+   "aliases": [
+    "chengdu research base",
+    "chengdu panda",
+    "panda breeding center",
+    "panda breeding centre",
+    "giant panda breeding",
+    "panda base",
+    "centro di ricerca dei panda",
+    "centro di ricerca e allevamento dei panda",
+    "centro di ricerca e allevamento del panda",
+    "rifugio dei panda",
+    "panda di chengdu"
+   ],
+   "palette": {
+    "sky": "#B5D6EE",
+    "far": "#7FA868",
+    "mid": "#8C6A46",
+    "ice": "#F3F0E8",
+    "water": "#6E9AAE",
+    "near": "#1F1E1C",
+    "sun": "#F6C431",
+    "leaf": "#8DB04E",
+    "acc": "#A88B63",
+    "obj": "#3F6E31"
+   },
+   "names": [
+    "chengdu"
+   ]
+  },
+  {
+   "slug": "forbidden-city",
+   "label": "Hall of Supreme Harmony, Forbidden City, Beijing",
+   "lat": 39.9155,
+   "lon": 116.3906,
+   "radius_km": 2,
+   "aliases": [
+    "forbidden city",
+    "citta proibita",
+    "palace museum",
+    "gugong",
+    "zijincheng",
+    "hall of supreme harmony"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#A9A49A",
+    "mid": "#B33B2E",
+    "ice": "#EEEBE3",
+    "water": "#2D4F8E",
+    "near": "#2A2220",
+    "sun": "#F6C431",
+    "leaf": "#6F9450",
+    "acc": "#E3A23A",
+    "obj": "#2F5E62"
+   }
+  },
+  {
    "slug": "great-wall-of-china",
    "label": "Great Wall of China",
    "lat": 40.4319,
@@ -31,6 +93,122 @@
    }
   },
   {
+   "slug": "jokhang-temple",
+   "label": "Jokhang Temple, Lhasa",
+   "lat": 29.653,
+   "lon": 91.1322,
+   "radius_km": 2,
+   "aliases": [
+    "jokhang",
+    "jokang",
+    "tempio di jokhang",
+    "barkhor"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#8E8B86",
+    "mid": "#8A3A32",
+    "ice": "#F2EFE8",
+    "water": "#2F6DB5",
+    "near": "#221C1A",
+    "sun": "#F2C14E",
+    "leaf": "#3E9A4E",
+    "acc": "#7A2228",
+    "obj": "#D4A22E"
+   }
+  },
+  {
+   "slug": "leshan-giant-buddha",
+   "label": "Leshan Giant Buddha",
+   "lat": 29.5446,
+   "lon": 103.7733,
+   "radius_km": 4,
+   "aliases": [
+    "leshan giant buddha",
+    "giant buddha of leshan",
+    "buddha gigante di leshan",
+    "buddha di leshan",
+    "grande buddha di leshan",
+    "leshan dafo"
+   ],
+   "names": [
+    "leshan"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9C8676",
+    "mid": "#B5614A",
+    "ice": "#B49A88",
+    "water": "#8C8A62",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3C",
+    "acc": "#A07E6C",
+    "obj": "#B8AA94"
+   }
+  },
+  {
+   "slug": "muslim-quarter-xian",
+   "label": "Drum Tower and Muslim Quarter, Xi'an",
+   "lat": 34.2618,
+   "lon": 108.9414,
+   "radius_km": 2,
+   "aliases": [
+    "xi an muslim quarter",
+    "xian muslim quarter",
+    "muslim quarter xi an",
+    "muslim quarter xian",
+    "huimin street",
+    "huimin jie",
+    "beiyuanmen",
+    "quartiere musulmano di xi an",
+    "quartiere musulmano xi an"
+   ],
+   "names": [
+    "muslim quarter",
+    "quartiere musulmano",
+    "muslim street"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#ADA79C",
+    "mid": "#525650",
+    "ice": "#EDE4D2",
+    "water": "#2C4A7A",
+    "near": "#241E1C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A44",
+    "acc": "#B8322A",
+    "obj": "#948F86"
+   }
+  },
+  {
+   "slug": "potala-palace",
+   "label": "Potala Palace, Lhasa",
+   "lat": 29.6578,
+   "lon": 91.117,
+   "radius_km": 5,
+   "aliases": [
+    "potala",
+    "palazzo del potala"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#A39B8E",
+    "mid": "#A98C62",
+    "ice": "#F4F1EA",
+    "water": "#3E6E9A",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#7A9450",
+    "acc": "#8E2E26",
+    "obj": "#D9A93A"
+   },
+   "names": [
+    "lhasa"
+   ]
+  },
+  {
    "slug": "shanghai",
    "label": "The Bund and Pudong, Shanghai",
    "lat": 31.24,
@@ -53,6 +231,34 @@
     "leaf": "#9AA6A6",
     "acc": "#C9488A",
     "obj": "#7FA2BC"
+   }
+  },
+  {
+   "slug": "summer-palace",
+   "label": "Longevity Hill and the Tower of Buddhist Incense, Summer Palace, Beijing",
+   "lat": 39.9998,
+   "lon": 116.2733,
+   "radius_km": 3,
+   "aliases": [
+    "summer palace",
+    "palazzo d estate",
+    "palazzo destate",
+    "yiheyuan",
+    "yihe yuan",
+    "kunming lake",
+    "longevity hill"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#5E8A48",
+    "mid": "#D8C9A3",
+    "ice": "#ECEAE2",
+    "water": "#6F9DAE",
+    "near": "#24251E",
+    "sun": "#F6C431",
+    "leaf": "#3E6A33",
+    "acc": "#E2A43A",
+    "obj": "#B5352C"
    }
   },
   {
@@ -101,6 +307,103 @@
     "leaf": "#5E7E4A",
     "acc": "#9C8A72",
     "obj": "#B4ADA2"
+   }
+  },
+  {
+   "slug": "tiananmen-square",
+   "label": "Tiananmen Gate from Tiananmen Square, Beijing",
+   "lat": 39.9075,
+   "lon": 116.3972,
+   "radius_km": 3,
+   "aliases": [
+    "tiananmen",
+    "tian anmen",
+    "tian an men",
+    "tienanmen",
+    "tien an men",
+    "gate of heavenly peace",
+    "porta della pace celeste"
+   ],
+   "palette": {
+    "sky": "#A9CCEB",
+    "far": "#C8C2B8",
+    "mid": "#A8453C",
+    "ice": "#ECE8DE",
+    "water": "#D8352B",
+    "near": "#2A2220",
+    "sun": "#F6C431",
+    "leaf": "#6F9450",
+    "acc": "#E6AA3A",
+    "obj": "#2F6B5E"
+   },
+   "names": [
+    "beijing",
+    "pechino",
+    "peking"
+   ]
+  },
+  {
+   "slug": "xian",
+   "label": "Bell Tower of Xi'an",
+   "lat": 34.261,
+   "lon": 108.9423,
+   "radius_km": 15,
+   "aliases": [
+    "bell tower of xi an",
+    "xi an bell tower",
+    "xian bell tower",
+    "bell tower of xian",
+    "torre della campana di xi an",
+    "torre della campana di xian"
+   ],
+   "names": [
+    "xi an",
+    "xian"
+   ],
+   "palette": {
+    "sky": "#A3CBF0",
+    "far": "#BDB7AC",
+    "mid": "#A9A69F",
+    "ice": "#E4E1DA",
+    "water": "#2E5656",
+    "near": "#24261F",
+    "sun": "#F2C230",
+    "leaf": "#5A8A48",
+    "acc": "#B23A2E",
+    "obj": "#3D7B5B"
+   }
+  },
+  {
+   "slug": "xian-city-wall",
+   "label": "Yongning Gate of the Xi'an City Wall",
+   "lat": 34.2513,
+   "lon": 108.9466,
+   "radius_km": 3,
+   "aliases": [
+    "xi an city wall",
+    "xian city wall",
+    "city wall of xi an",
+    "city wall of xian",
+    "mura di xi an",
+    "mura di xian",
+    "fortificazioni di xi an",
+    "fortifications of xi an",
+    "yongning gate",
+    "yongningmen",
+    "xi an walls",
+    "xian walls"
+   ],
+   "palette": {
+    "sky": "#AFCDEA",
+    "far": "#5E6064",
+    "mid": "#958D80",
+    "ice": "#CFCBC3",
+    "water": "#5E8FA8",
+    "near": "#262422",
+    "sun": "#E2B042",
+    "leaf": "#4F7A43",
+    "acc": "#CC3429",
+    "obj": "#4A3427"
    }
   },
   {
