@@ -3,6 +3,59 @@
  "name": "Thailand",
  "places": [
   {
+   "slug": "ang-thong-national-marine-park",
+   "label": "Ang Thong archipelago from the Ko Wua Talab viewpoint",
+   "lat": 9.62,
+   "lon": 99.68,
+   "radius_km": 20,
+   "aliases": [
+    "ang thong",
+    "angthong",
+    "mu ko ang thong",
+    "mu koh ang thong",
+    "koh wua talab",
+    "ko wua talab"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#7F988C",
+    "mid": "#8E8A80",
+    "ice": "#F2EEDF",
+    "water": "#2E9AA2",
+    "near": "#22291F",
+    "sun": "#F2C14E",
+    "leaf": "#4A7A3A",
+    "acc": "#74CBC2",
+    "obj": "#D8484A"
+   }
+  },
+  {
+   "slug": "ao-nang",
+   "label": "Ao Nang beach, its limestone cliff and a longtail boat",
+   "lat": 8.032,
+   "lon": 98.82,
+   "radius_km": 6,
+   "aliases": [
+    "ao nang beach",
+    "aonang"
+   ],
+   "names": [
+    "ao nang"
+   ],
+   "palette": {
+    "sky": "#B4D6EE",
+    "far": "#7E9486",
+    "mid": "#CDBFA4",
+    "ice": "#EDE2C8",
+    "water": "#5FB4B8",
+    "near": "#2A2A24",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A3A",
+    "acc": "#C9965E",
+    "obj": "#8A5A3A"
+   }
+  },
+  {
    "slug": "bangkok",
    "label": "Wat Arun and a longtail boat, Bangkok",
    "lat": 13.744,
@@ -26,6 +79,60 @@
     "leaf": "#4E8A3E",
     "acc": "#C2643A",
     "obj": "#B8A890"
+   }
+  },
+  {
+   "slug": "bridge-over-the-river-kwai",
+   "label": "The Bridge on the River Kwai with a train crossing",
+   "lat": 14.0407,
+   "lon": 99.5036,
+   "radius_km": 4,
+   "aliases": [
+    "river kwai bridge",
+    "bridge on the river kwai",
+    "bridge over the river kwai",
+    "bridge of the river kwai",
+    "kwai bridge",
+    "death railway bridge",
+    "ponte sul fiume kwai"
+   ],
+   "palette": {
+    "sky": "#B8D6F0",
+    "far": "#8EA69A",
+    "mid": "#3F4549",
+    "ice": "#B5AFA3",
+    "water": "#86B4C2",
+    "near": "#1F2326",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#E6D3A2",
+    "obj": "#E0782E"
+   }
+  },
+  {
+   "slug": "cheow-lan-lake",
+   "label": "The Three Pinnacles (Khao Sam Kloe) on Cheow Lan Lake",
+   "lat": 8.99,
+   "lon": 98.75,
+   "radius_km": 20,
+   "aliases": [
+    "cheow lan",
+    "chiew larn",
+    "cheow larn",
+    "chiao lan",
+    "ratchaprapha"
+   ],
+   "palette": {
+    "sky": "#C4DDEE",
+    "far": "#9AB0A8",
+    "mid": "#958F82",
+    "ice": "#F2EEE4",
+    "water": "#3B8C86",
+    "near": "#22291F",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E3A",
+    "acc": "#D8434A",
+    "obj": "#8A5A3A"
    }
   },
   {
@@ -54,6 +161,29 @@
    }
   },
   {
+   "slug": "khao-sok-national-park",
+   "label": "Khao Sok rainforest and karst peaks with a great hornbill",
+   "lat": 8.913,
+   "lon": 98.529,
+   "radius_km": 25,
+   "aliases": [
+    "khao sok",
+    "khaosok"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#8DA79A",
+    "mid": "#A39E92",
+    "ice": "#F2EEE4",
+    "water": "#3B8C86",
+    "near": "#1F241C",
+    "sun": "#F2C14E",
+    "leaf": "#3C6A36",
+    "acc": "#6E9C46",
+    "obj": "#7E6C56"
+   }
+  },
+  {
    "slug": "phi-phi-islands",
    "label": "Phi Phi Islands and a longtail boat",
    "lat": 7.74,
@@ -74,6 +204,62 @@
     "leaf": "#3E7A3A",
     "acc": "#8A5A3A",
     "obj": "#6CD0C8"
+   }
+  },
+  {
+   "slug": "sukhothai",
+   "label": "Seated Buddha, laterite columns and lotus-bud chedi, Sukhothai Historical Park",
+   "lat": 17.0173,
+   "lon": 99.7036,
+   "radius_km": 12,
+   "aliases": [
+    "sukhothai historical park",
+    "parco storico di sukhothai",
+    "old sukhothai",
+    "wat mahathat sukhothai"
+   ],
+   "names": [
+    "sukhothai",
+    "sukhotai",
+    "sukhotay",
+    "mueang kao sukhothai"
+   ],
+   "palette": {
+    "sky": "#C6DDF0",
+    "far": "#B8B48A",
+    "mid": "#A85A3E",
+    "ice": "#E8E2D4",
+    "water": "#5A8FB0",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#ABAAA4",
+    "obj": "#6A4434"
+   }
+  },
+  {
+   "slug": "white-temple",
+   "label": "Wat Rong Khun, the White Temple of Chiang Rai",
+   "lat": 19.8243,
+   "lon": 99.7631,
+   "radius_km": 3,
+   "aliases": [
+    "wat rong khun",
+    "white temple",
+    "tempio bianco",
+    "rong khun"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#B4C3D4",
+    "mid": "#E4EAF0",
+    "ice": "#FFFFFF",
+    "water": "#2F527E",
+    "near": "#1E2430",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E38",
+    "acc": "#D47A3A",
+    "obj": "#8A9CB2"
    }
   }
  ]

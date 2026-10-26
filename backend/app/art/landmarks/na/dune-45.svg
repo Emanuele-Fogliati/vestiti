@@ -1,0 +1,10 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 172V85Q34 70 85 45Q110 33 130 28Q148 24 160 23Q166 23 170 26Q200 44 230 60Q262 76 300 89V172Z" fill="var(--il-mid)"/>
+<path d="M160 23Q166 23 170 26Q200 44 230 60Q262 76 300 89V172H130Q152 160 162 144Q172 124 170 106Q166 92 152 87Q120 82 108 72Q102 58 120 46Q138 34 152 27Z" fill="var(--il-acc)"/>
+<path d="M18 120Q40 116 60 122M70 100Q90 96 106 102M30 148Q56 144 80 150M90 130Q110 126 126 132" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M20 170Q20 162 26 162Q32 161 34 166L35 170ZM82 170Q82 162 89 161Q96 162 96 170ZM150 172Q150 164 158 163Q166 163 166 172ZM178 172Q178 165 186 164Q194 164 196 172ZM254 172Q254 164 261 163Q268 164 268 172Z" fill="var(--il-leaf)"/>
+<path d="M0 200V168Q150 166 300 168V200Z" fill="var(--il-far)"/>
+<path d="M0 174Q150 170 300 174V178Q150 175 0 179Z" fill="var(--il-ice)"/>
+<g transform="translate(226 189) scale(0.9)"><path d="M12 -26Q16 -24 15 -18L14 0H12L11 -14H8L8 0H6V-15H-5L-5 0H-7V-15L-8 -15L-8 0H-10L-10 -16Q-12 -19 -12 -24L-15 -32L-19 -30Q-22 -29 -21 -32L-17 -38Q-14 -40 -12 -37L-9 -28Q-2 -27 4 -27Q9 -28 12 -26Z" fill="var(--il-obj)"/><path d="M-15 -38L-6 -60M-13 -38L-3 -59M-9 -17Q2 -19 14 -19M15 -24Q18 -18 17 -12M-20 -31L-16 -37M-13 -33L-10 -28" vector-effect="non-scaling-stroke" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/></g>
+<path d="M210 191Q213 182 219 188Q224 181 229 188Q235 182 238 188Q242 184 244 191Z" fill="var(--il-ice)"/>

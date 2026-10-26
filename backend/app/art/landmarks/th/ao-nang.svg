@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="26" r="11" fill="var(--il-sun)"/>
+<path d="M0 200V128H300V200Z" fill="var(--il-water)"/>
+<g transform="translate(-10 -4) scale(1.12)">
+<path d="M146 120L150 90L154 82L158 88L164 84L170 76L176 84L184 80L190 86L196 78L204 86L212 82L220 88L226 80L234 88L242 84L250 90L256 86L262 92L268 104L270 120Z" fill="var(--il-far)"/>
+<path d="M24 122L30 70Q34 50 44 44L58 34L64 36L70 30L78 32L84 28L92 31L100 27L108 30L116 28Q122 30 124 40L126 52L130 60Q136 70 138 84L144 102L150 122Z" fill="var(--il-mid)"/>
+<path d="M30 70Q34 50 44 44L58 34Q66 40 62 52Q54 62 52 80Q46 96 40 108L28 110ZM84 28L92 31L100 27L108 30L116 28Q121 30 122 36Q110 42 100 36Q92 42 84 28ZM126 52L130 60Q134 66 134 72Q126 70 124 62Z" fill="var(--il-leaf)"/>
+<path d="M76 46V96M90 40V100M104 42V96M116 48V94M134 74V104" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3" vector-effect="non-scaling-stroke"/>
+<path d="M0 132V96Q10 86 22 92Q34 86 44 96Q60 90 72 100Q90 94 104 104Q124 98 140 106Q156 104 168 114L178 124V132Z" fill="var(--il-leaf)"/>
+<path d="M22 136Q18 118 26 100M40 136Q42 120 36 106" stroke="var(--il-obj)" stroke-width="3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M26 100Q14 94 6 102Q16 96 26 102ZM26 100Q36 92 46 98Q36 96 26 102ZM26 100Q20 88 10 88Q20 92 26 100ZM26 100Q32 88 42 86Q34 92 26 100ZM36 106Q26 102 20 110Q28 104 36 108ZM36 106Q46 100 54 106Q46 104 36 108ZM36 106Q34 96 26 94Q34 98 36 106Z" fill="var(--il-leaf)"/>
+</g>
+<path d="M0 200V140Q100 134 196 134Q240 146 300 188V200Z" fill="var(--il-ice)"/>
+<path d="M176 162Q210 170 244 166Q256 160 262 148L266 150Q264 164 254 172Q214 178 180 170Z" fill="var(--il-obj)"/>
+<path d="M182 164Q212 170 242 168L246 165Q214 168 184 162Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M260 152L268 156M259 155L267 160" stroke="var(--il-sun)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M178 166L164 158" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>

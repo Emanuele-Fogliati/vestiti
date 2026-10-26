@@ -3,6 +3,29 @@
  "name": "United States",
  "places": [
   {
+   "slug": "anchorage",
+   "label": "Downtown Anchorage and the Chugach Mountains",
+   "lat": 61.217,
+   "lon": -149.895,
+   "radius_km": 20,
+   "aliases": [],
+   "names": [
+    "anchorage"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#C8B48A",
+    "mid": "#857C70",
+    "ice": "#F2F4F6",
+    "water": "#7E9CB8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E5E40",
+    "acc": "#A8643A",
+    "obj": "#2E5E9E"
+   }
+  },
+  {
    "slug": "antelope-canyon",
    "label": "Antelope Canyon",
    "lat": 36.862,
@@ -22,6 +45,143 @@
     "leaf": "#5E8A4A",
     "acc": "#D8743E",
     "obj": "#7A3A4A"
+   },
+   "names": [
+    "page",
+    "page arizona",
+    "page az"
+   ]
+  },
+  {
+   "slug": "arches-national-park",
+   "label": "Delicate Arch, Arches National Park",
+   "lat": 38.7436,
+   "lon": -109.4993,
+   "radius_km": 20,
+   "aliases": [
+    "arches national park",
+    "delicate arch",
+    "parco nazionale degli arches",
+    "arches np",
+    "arches park"
+   ],
+   "names": [
+    "arches"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E96AE",
+    "mid": "#C8693C",
+    "ice": "#F2E6D6",
+    "water": "#4E8EB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#6E7E4A",
+    "acc": "#DE9E78",
+    "obj": "#A66A54"
+   }
+  },
+  {
+   "slug": "central-park",
+   "label": "Bow Bridge and the San Remo, Central Park",
+   "lat": 40.7756,
+   "lon": -73.9718,
+   "radius_km": 3,
+   "aliases": [
+    "central park",
+    "bow bridge",
+    "bethesda terrace",
+    "bethesda fountain",
+    "the lake central park"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C2C4C6",
+    "mid": "#D8C6A0",
+    "ice": "#F2ECDE",
+    "water": "#5A8A84",
+    "near": "#262A2A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#6FA88E",
+    "obj": "#2F6B4E"
+   }
+  },
+  {
+   "slug": "chicago",
+   "label": "Chicago skyline with Willis Tower across Lake Michigan",
+   "lat": 41.8789,
+   "lon": -87.6359,
+   "radius_km": 20,
+   "aliases": [
+    "willis tower",
+    "sears tower"
+   ],
+   "names": [
+    "chicago"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#BCB4A6",
+    "mid": "#8A98A8",
+    "ice": "#F0EEE8",
+    "water": "#2EA6B0",
+    "near": "#22252A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A44",
+    "acc": "#8A3A32",
+    "obj": "#33373E"
+   }
+  },
+  {
+   "slug": "denali-national-park",
+   "label": "Denali reflected in Reflection Pond, Denali National Park",
+   "lat": 63.33,
+   "lon": -150.5,
+   "radius_km": 60,
+   "aliases": [
+    "denali",
+    "mount mckinley",
+    "mt mckinley",
+    "wonder lake"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#8C7462",
+    "mid": "#8A8C98",
+    "ice": "#F6F8FA",
+    "water": "#4E86B8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E7A3E",
+    "acc": "#B8B85A",
+    "obj": "#5A3E2C"
+   }
+  },
+  {
+   "slug": "empire-state-building",
+   "label": "Empire State Building above Midtown Manhattan",
+   "lat": 40.7484,
+   "lon": -73.9857,
+   "radius_km": 2,
+   "aliases": [
+    "empire state building",
+    "empire state bldg"
+   ],
+   "names": [
+    "empire state"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#BCB6AC",
+    "mid": "#9C988E",
+    "ice": "#ECEAE4",
+    "water": "#7A9AB4",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5EA88A",
+    "acc": "#C8A040",
+    "obj": "#5A6470"
    }
   },
   {
@@ -95,6 +255,71 @@
    }
   },
   {
+   "slug": "hollywood-walk-of-fame",
+   "label": "TCL Chinese Theatre and the Walk of Fame, Hollywood",
+   "lat": 34.1022,
+   "lon": -118.3409,
+   "radius_km": 3,
+   "aliases": [
+    "hollywood walk of fame",
+    "walk of fame",
+    "chinese theatre",
+    "chinese theater",
+    "grauman",
+    "hollywood boulevard",
+    "hollywood blvd"
+   ],
+   "names": [
+    "hollywood",
+    "hollywood los angeles",
+    "hollywood california",
+    "hollywood ca"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B8C0B6",
+    "mid": "#6F8C6A",
+    "ice": "#F2F0EA",
+    "water": "#4C4E58",
+    "near": "#25262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3E",
+    "acc": "#D9502E",
+    "obj": "#E89A80"
+   }
+  },
+  {
+   "slug": "jackson",
+   "label": "Elk antler arch on Jackson Town Square",
+   "lat": 43.4799,
+   "lon": -110.7624,
+   "radius_km": 12,
+   "aliases": [
+    "jackson town square",
+    "antler arch",
+    "elk antler arch"
+   ],
+   "names": [
+    "jackson",
+    "jackson hole",
+    "jackson wyoming",
+    "jackson wy",
+    "town of jackson"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#4F7046",
+    "mid": "#B9A078",
+    "ice": "#F1EBDF",
+    "water": "#4E8EB0",
+    "near": "#282420",
+    "sun": "#F2C14E",
+    "leaf": "#7FA457",
+    "acc": "#8C5C3E",
+    "obj": "#9A6E58"
+   }
+  },
+  {
    "slug": "monument-valley",
    "label": "The Mittens, Monument Valley",
    "lat": 36.99,
@@ -114,6 +339,41 @@
     "leaf": "#8A9A6A",
     "acc": "#B8582E",
     "obj": "#C8764A"
+   }
+  },
+  {
+   "slug": "new-orleans",
+   "label": "St. Louis Cathedral and Jackson Square, New Orleans",
+   "lat": 29.9581,
+   "lon": -90.0637,
+   "radius_km": 20,
+   "aliases": [
+    "st louis cathedral",
+    "saint louis cathedral",
+    "jackson square",
+    "french quarter",
+    "vieux carre"
+   ],
+   "names": [
+    "new orleans",
+    "nola",
+    "new orleans louisiana",
+    "new orleans la",
+    "la nouvelle orleans",
+    "nuova orleans",
+    "new orleans city park"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CFC4B0",
+    "mid": "#B8B2A6",
+    "ice": "#F5F3EE",
+    "water": "#6E8A70",
+    "near": "#25262A",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3B",
+    "acc": "#E2C26A",
+    "obj": "#4E4D58"
    }
   },
   {
@@ -141,6 +401,139 @@
     "leaf": "#5E8A4A",
     "acc": "#E8A030",
     "obj": "#6FA88E"
+   }
+  },
+  {
+   "slug": "seattle",
+   "label": "Space Needle and downtown Seattle with Mount Rainier",
+   "lat": 47.6205,
+   "lon": -122.3493,
+   "radius_km": 20,
+   "aliases": [
+    "space needle",
+    "kerry park"
+   ],
+   "names": [
+    "seattle"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#C8C0B2",
+    "mid": "#7A8696",
+    "ice": "#F2F2EE",
+    "water": "#3E6E96",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A3E",
+    "acc": "#D0402E",
+    "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "seligman",
+   "label": "Historic Seligman Sundries on Route 66",
+   "lat": 35.3256,
+   "lon": -112.8767,
+   "radius_km": 8,
+   "aliases": [
+    "historic seligman sundries",
+    "seligman sundries"
+   ],
+   "names": [
+    "seligman",
+    "seligman arizona",
+    "seligman az"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#BDB4A4",
+    "mid": "#3FB5B0",
+    "ice": "#F3F1EC",
+    "water": "#2E4A8E",
+    "near": "#232428",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E3E",
+    "acc": "#D2402E",
+    "obj": "#F2CF3A"
+   }
+  },
+  {
+   "slug": "sequoia-national-park",
+   "label": "Tunnel Log in Giant Forest, Sequoia National Park",
+   "lat": 36.567,
+   "lon": -118.766,
+   "radius_km": 25,
+   "aliases": [
+    "sequoia national park",
+    "giant forest",
+    "tunnel log",
+    "parco nazionale di sequoia"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#CDAF88",
+    "mid": "#A49C92",
+    "ice": "#F0ECE4",
+    "water": "#6E6E74",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#3A6438",
+    "acc": "#A4502E",
+    "obj": "#7E9A4A"
+   }
+  },
+  {
+   "slug": "times-square",
+   "label": "Times Square and One Times Square, New York",
+   "lat": 40.758,
+   "lon": -73.9855,
+   "radius_km": 2,
+   "aliases": [
+    "times square",
+    "one times square"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#C2B8A8",
+    "mid": "#6A6E78",
+    "ice": "#F4F2EE",
+    "water": "#2E6EC8",
+    "near": "#22252A",
+    "sun": "#F2C14E",
+    "leaf": "#3EA85A",
+    "acc": "#D8303A",
+    "obj": "#F2C230"
+   }
+  },
+  {
+   "slug": "venice-beach",
+   "label": "Venice Beach Skatepark and palms, Los Angeles",
+   "lat": 33.985,
+   "lon": -118.4725,
+   "radius_km": 3,
+   "aliases": [
+    "venice beach",
+    "venice skatepark",
+    "venice skate park",
+    "venice boardwalk",
+    "ocean front walk"
+   ],
+   "names": [
+    "venice los angeles",
+    "venice california",
+    "venice ca"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9AAC",
+    "mid": "#D2CCC0",
+    "ice": "#F4F2EC",
+    "water": "#4A8DB8",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3E",
+    "acc": "#EBD6A8",
+    "obj": "#A89E8E"
    }
   }
  ]
