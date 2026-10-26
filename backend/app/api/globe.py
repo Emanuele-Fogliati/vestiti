@@ -2,10 +2,10 @@ import hashlib
 from datetime import date
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.orm import Session
 
-from app import globe
+from app import globe, inspire
 from app.db import get_db
 from app.deps import current_user
 from app.globe import routes as globe_routes
@@ -40,7 +40,8 @@ def routes(request: Request):
 
 
 class RouteTripIn(BaseModel):
-    start_date: date | None = None  # none: a placeholder date the trip page asks to change
+    start_date: date | None = None  # none: a guess the trip page asks to confirm...
+    month: int | None = Field(default=None, ge=1, le=12)  # ...in this month, else a good one
 
     _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v)))
 
@@ -52,10 +53,14 @@ def dress_me(route_id: str, body: RouteTripIn, user: User = Depends(current_user
     r = globe_routes.get(route_id)
     if r is None:
         raise HTTPException(404, "Route not found")
-    start = body.start_date or globe_routes.default_start()
-    trip = Trip(user_id=user.id, name=r["title"], notes="From a route on the globe.",
+    start = body.start_date or globe_routes.start_in([body.month] if body.month else r["best_months"])
+    it = inspire.get(r["guide"]) if r["guide"] else None
+    trip = Trip(user_id=user.id, name=r["title"],
+                notes=f"From the itinerary '{it.title}'." if it else "From a route on the globe.",
                 start_estimated=body.start_date is None, source_itinerary=r["guide"])
-    trip.stops = [Stop(position=i, **s) for i, s in enumerate(globe_routes.stops_for(r, start))]
+    # a ready-made itinerary keeps its own stops (notes, guide links); only the start moves
+    stops = inspire.stops_for(it, start) if it else globe_routes.stops_for(r, start)
+    trip.stops = [Stop(position=i, **s) for i, s in enumerate(stops)]
     db.add(trip)
     db.commit()
     db.refresh(trip)

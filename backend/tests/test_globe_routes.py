@@ -83,3 +83,71 @@ def test_dress_me_errors(client):
     assert client.post("/api/globe/routes/nope/trip", json={}).status_code == 404
     client.cookies.clear()
     assert client.post(f"/api/globe/routes/{gr.routes()[0]['id']}/trip", json={}).status_code == 401
+
+
+# ---- weather by month
+
+
+def test_every_route_knows_its_weather():
+    for r in gr.routes():
+        assert r["months"] and len(r["months"]) == 12, r["id"]
+        assert r["best_months"], r["id"]
+        for m in r["months"]:
+            assert m["lo"] <= m["hi"] and m["level"] in (0, 1, 2)
+            if m["level"] == gr.GOOD:
+                assert m["note"] is None, r["id"]
+
+
+def test_best_months_make_sense():
+    peru = next(r for r in gr.routes() if r["countries"] == ["PE"] and not r["guide"])
+    assert not {1, 2, 3} & set(peru["best_months"])  # Andean rainy season
+    assert 7 in peru["best_months"]
+    assert "rainy season" in peru["months"][0]["note"]
+    japan = next(r for r in gr.routes() if r["countries"] == ["JP"])
+    assert {4, 10} <= set(japan["best_months"]) and 8 not in japan["best_months"]  # hot, wet August
+    iceland = next(r for r in gr.routes() if r["countries"] == ["IS"] and not r["guide"])
+    assert 7 in iceland["best_months"] and 1 not in iceland["best_months"]
+
+
+def test_stop_month_rules():
+    assert gr.stop_month(10, 22, 40, 50) == (gr.GOOD, None)
+    assert gr.stop_month(5, 18, 160, 60)[1] == "rainy season"  # Cusco January
+    assert gr.stop_month(15, 22, 160, 140)[0] == gr.GOOD       # an average month in a wet place
+    assert gr.stop_month(15, 22, 220, 140)[0] == gr.SO_SO      # a very wet one
+    assert gr.stop_month(28, 40, 0, 5) == (gr.BAD, "very hot")
+    assert gr.stop_month(-8, -2, 30, 40) == (gr.BAD, "cold")
+    assert gr.stop_month(25, 32.5, 150, 130, 2.7) == (gr.SO_SO, "hot and humid")  # Kyoto August
+    assert gr.stop_month(27, 35.5, 50, 120, 3.1) == (gr.BAD, "hot and humid")   # Bangkok April
+    assert gr.stop_month(18, 31, 20, 60, 1.6)[0] == gr.GOOD                       # a dry 31 °C
+
+
+def test_feels_like():
+    assert gr.feels_like(20, 2.0) == 20               # mild: just the temperature
+    assert gr.feels_like(31, 1.0) <= 31.5             # dry heat feels like itself
+    assert 34 <= gr.feels_like(31, 2.7) <= 37         # sticky
+    assert gr.feels_like(35.5, 3.1) >= 41
+
+
+def test_start_in_the_month_you_pick():
+    assert gr.start_in([5], date(2026, 10, 26)) == date(2027, 5, 1)
+    assert gr.start_in([11], date(2026, 10, 15)) == date(2026, 11, 1)
+    assert gr.start_in([11], date(2026, 10, 26)) == date(2026, 11, 9)  # two weeks away, same month
+    assert gr.start_in([10], date(2026, 10, 26)) == date(2027, 10, 1)  # this month is too soon
+    assert gr.start_in([], date(2026, 10, 26)) == date(2026, 12, 1)
+
+
+def test_dress_me_in_a_month(client):
+    client.post("/api/auth/guest")
+    r = gr.routes()[-1]
+    trip = client.post(f"/api/globe/routes/{r['id']}/trip", json={"month": 3}).json()
+    assert trip["stops"][0]["start_date"][5:7] == "03"
+    assert trip["start_estimated"] is True
+    assert client.post(f"/api/globe/routes/{r['id']}/trip", json={"month": 13}).status_code == 422
+
+
+def test_dress_me_for_a_ready_made_itinerary_keeps_its_guide(client):
+    client.post("/api/auth/guest")
+    r = next(x for x in gr.routes() if x["guide"])
+    trip = client.post(f"/api/globe/routes/{r['id']}/trip", json={"start_date": "2027-06-01"}).json()
+    assert trip["source_itinerary"] == r["guide"]
+    assert [s["name"] for s in trip["stops"]] == [s["name"] for s in r["stops"]]

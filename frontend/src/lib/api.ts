@@ -122,9 +122,9 @@ export const api = {
   packItinerary: (slug: string, start_date?: string) =>
     req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null }),
 
-  /** "Dress me for this trip" on a route of the globe. No date = a placeholder the trip page asks to change. */
-  routeTrip: (id: string, start_date?: string) =>
-    req<Trip>("POST", `/api/globe/routes/${encodeURIComponent(id)}/trip`, { start_date: start_date || null }),
+  /** "Dress me for this trip" on a route of the globe. No date: the next good month (or the month given), a guess. */
+  routeTrip: (id: string, opts: { start_date?: string; month?: number | null } = {}) =>
+    req<Trip>("POST", `/api/globe/routes/${encodeURIComponent(id)}/trip`, { start_date: opts.start_date || null, month: opts.month ?? null }),
 
   geocode: (q: string) => req<{ results: Place[] }>("GET", `/api/geocode?q=${encodeURIComponent(q)}`),
   parseItinerary: (text: string) =>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { monthRange } from "../lib/format";
+import { MONTH_LONG, monthRuns } from "../lib/format";
 import type { GlobeRoute } from "../lib/worldmap";
 import { countriesLabel } from "../lib/worldmap";
 import { DRESS_ME } from "../pages/Start";
@@ -10,7 +10,23 @@ import { DRESS_ME } from "../pages/Start";
 const nightsLabel = (d: number) => `${d} ${d === 1 ? "day" : "days"}`;
 
 /** One route of the globe: its stops in order, what you see day by day, and "Dress me". */
-export function RouteCard({ route, onClose }: { route: GlobeRoute; onClose: () => void }) {
+/** The weather of the route in the month picked on the globe, or its best months. */
+function Weather({ route, month }: { route: GlobeRoute; month: number | null }) {
+  const m = month && route.months?.[month - 1];
+  if (!month || !m) {
+    return route.best_months.length > 0 ? <p className="small">Best weather: {monthRuns(route.best_months)}</p> : null;
+  }
+  const good = route.best_months.includes(month);
+  const verdict = good ? "good weather" : m.note ?? (m.level === 0 ? "poor weather" : "so-so weather");
+  return (
+    <p className={`small rcard-wx${good ? " ok" : ""}`}>
+      In {MONTH_LONG[month - 1]}: {m.lo} to {m.hi} °C · {verdict}
+      {!good && route.best_months.length > 0 && <span className="muted"> · best {monthRuns(route.best_months)}</span>}
+    </p>
+  );
+}
+
+export function RouteCard({ route, month = null, onClose }: { route: GlobeRoute; month?: number | null; onClose: () => void }) {
   const { ensureUser } = useApp();
   const nav = useNavigate();
   const [open, setOpen] = useState(false);
@@ -21,7 +37,7 @@ export function RouteCard({ route, onClose }: { route: GlobeRoute; onClose: () =
     setBusy(true); setErr(null);
     try {
       await ensureUser();
-      const t = route.guide ? await api.packItinerary(route.guide) : await api.routeTrip(route.id);
+      const t = await api.routeTrip(route.id, month ? { month } : {});
       nav(`/trips/${t.id}`);
     } catch (e) {
       setErr((e as Error).message);
@@ -43,7 +59,7 @@ export function RouteCard({ route, onClose }: { route: GlobeRoute; onClose: () =
             ? "A ready-made trip with a day-by-day guide: what is worth it and what to skip."
             : "The route travellers follow most at this length, stop by stop."}
         </p>
-        {route.best_months.length > 0 && <p className="small">Best weather: {monthRange(route.best_months)}</p>}
+        <Weather route={route} month={month} />
         <ol className="rcard-stops">
           {legs.map(({ s, from }, i) => (
             <li key={i}>
