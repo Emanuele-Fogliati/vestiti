@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="248" cy="36" r="12" fill="var(--il-sun)"/>
+<path d="M0 166V126H300V166Z" fill="var(--il-water)"/>
+<path d="M0 130V110Q24 106 48 110Q76 116 100 124Q112 128 118 130Z" fill="var(--il-leaf)"/>
+<path d="M0 130V120Q40 120 80 125Q100 128 118 130Z" fill="var(--il-obj)"/>
+<g transform="translate(-18 -18) scale(1.12)">
+<path d="M130 150V104Q130 97 137 95H163Q170 97 170 104V150Z" fill="var(--il-mid)"/>
+<path d="M135 60Q150 57 165 60L164 88Q163 95 157 96H143Q137 95 136 88Z" fill="var(--il-mid)"/>
+<path d="M137 66H163V73Q156 74 150 73Q144 74 137 73Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M139 69.5Q143 66 147 69.5Q143 73 139 69.5ZM153 69.5Q157 66 161 69.5Q157 73 153 69.5Z" fill="var(--il-ice)"/>
+<path d="M150 71L147 84Q147 87 150 87Q153 87 153 84Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M131 42V58Q150 63 169 58V42Q150 37 131 42Z" fill="var(--il-acc)"/>
+<path d="M140 41V37Q150 35 160 37V41Z" fill="var(--il-acc)"/>
+<path d="M142.5 69.5H143.5M156.5 69.5H157.5" stroke="var(--il-near)" stroke-width="1.8" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M137 65Q150 62 163 65M145 91H155M138 68V86M162 68V86M135 104Q131 128 147 134M165 104Q169 128 153 134" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.6"/>
+</g>
+<path d="M66 166V146H234V166Z" fill="var(--il-far)"/>
+<path d="M66 153H234M80 146V153M100 153V160M120 146V153M140 153V160M160 146V153M180 153V160M200 146V153M220 153V160" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V162Q150 159 300 162V200Z" fill="var(--il-leaf)"/>
+<path d="M214 172Q218 164 234 165Q248 165 252 170L261 179L264 187L257 189L253 182L248 178L247 192H243L242 180H226L224 192H220L218 179Q213 177 214 172ZM216 178L219 179L216 192H212ZM244 179L247 179L251 192H247Z" fill="var(--il-obj)"/>
+<path d="M215 172Q209 178 211 188M236 165Q244 162 251 169" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.7"/>

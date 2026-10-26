@@ -3,6 +3,58 @@
  "name": "Chile",
  "places": [
   {
+   "slug": "casablanca-valley",
+   "label": "Vina Indomita winery above the Casablanca Valley vineyards",
+   "lat": -33.3,
+   "lon": -71.4,
+   "radius_km": 20,
+   "aliases": [
+    "casablanca valley",
+    "valle de casablanca",
+    "valle di casablanca",
+    "valle casablanca",
+    "vina indomita",
+    "indomita winery"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A0A6B0",
+    "mid": "#C6A66F",
+    "ice": "#F7F5EF",
+    "water": "#6E9CC8",
+    "near": "#2A2A2C",
+    "sun": "#F4C430",
+    "leaf": "#5E8C3A",
+    "acc": "#3F3835",
+    "obj": "#8E7A5C"
+   }
+  },
+  {
+   "slug": "cejar-lagoon",
+   "label": "Laguna Cejar's salt-rimmed lagoon under Licancabur",
+   "lat": -23.06,
+   "lon": -68.21,
+   "radius_km": 5,
+   "aliases": [
+    "laguna cejar",
+    "cejar lagoon",
+    "lagunas cejar",
+    "laguna de cejar"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#B59E93",
+    "mid": "#968698",
+    "ice": "#F4F1EA",
+    "water": "#3E9FCB",
+    "near": "#2B2830",
+    "sun": "#F4C430",
+    "leaf": "#8A8F4A",
+    "acc": "#D29B48",
+    "obj": "#C9A595"
+   }
+  },
+  {
    "slug": "cuernos-del-paine",
    "label": "Cuernos del Paine above Lago Pehoe",
    "lat": -50.99,
@@ -11,7 +63,8 @@
    "aliases": [
     "cuernos del paine",
     "los cuernos",
-    "lago pehoe"
+    "lago pehoe",
+    "lake pehoe"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -24,6 +77,39 @@
     "leaf": "#7E9440",
     "acc": "#B8763C",
     "obj": "#DCD3C4"
+   }
+  },
+  {
+   "slug": "easter-island",
+   "label": "Moai of Ahu Ko Te Riku with its red topknot, Easter Island",
+   "lat": -27.1395,
+   "lon": -109.4275,
+   "radius_km": 25,
+   "aliases": [
+    "ahu ko te riku",
+    "ko te riku",
+    "ahu tahai"
+   ],
+   "names": [
+    "easter island",
+    "isla de pascua",
+    "isola di pasqua",
+    "rapa nui",
+    "rapa nui isola di pasqua",
+    "ile de paques",
+    "osterinsel"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#8C877D",
+    "mid": "#7E7464",
+    "ice": "#F5F2EA",
+    "water": "#2D6FA6",
+    "near": "#26231F",
+    "sun": "#F4C430",
+    "leaf": "#9DB257",
+    "acc": "#93412C",
+    "obj": "#6E4A30"
    }
   },
   {

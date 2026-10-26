@@ -27,6 +27,36 @@
    }
   },
   {
+   "slug": "da-nang",
+   "label": "Dragon Bridge over the Han River, Da Nang",
+   "lat": 16.0612,
+   "lon": 108.2272,
+   "radius_km": 15,
+   "aliases": [
+    "dragon bridge",
+    "cau rong",
+    "ponte del drago"
+   ],
+   "names": [
+    "da nang",
+    "danang",
+    "da nang city",
+    "thanh pho da nang"
+   ],
+   "palette": {
+    "sky": "#9ECBF2",
+    "far": "#B9C6CE",
+    "mid": "#4C5156",
+    "ice": "#F2F0EA",
+    "water": "#86A592",
+    "near": "#23252A",
+    "sun": "#F6CF4A",
+    "leaf": "#5E8E3E",
+    "acc": "#E9B51E",
+    "obj": "#B7B4AC"
+   }
+  },
+  {
    "slug": "ha-long-bay",
    "label": "Ha Long Bay",
    "lat": 20.9101,
@@ -54,17 +84,51 @@
    }
   },
   {
+   "slug": "hai-van-pass",
+   "label": "Hai Van Gate at the top of Hai Van Pass",
+   "lat": 16.19,
+   "lon": 108.13,
+   "radius_km": 6,
+   "aliases": [
+    "hai van",
+    "deo hai van",
+    "colle delle nuvole"
+   ],
+   "palette": {
+    "sky": "#B8D8F2",
+    "far": "#8FAEC6",
+    "mid": "#4E8640",
+    "ice": "#F2EEE2",
+    "water": "#4E9AC0",
+    "near": "#22201C",
+    "sun": "#F4C43E",
+    "leaf": "#6E9A48",
+    "acc": "#A4553A",
+    "obj": "#CFCBC2"
+   }
+  },
+  {
    "slug": "hanoi",
    "label": "Hoan Kiem Lake and the Huc Bridge, Hanoi",
    "lat": 21.0285,
    "lon": 105.8542,
    "radius_km": 20,
    "aliases": [
-    "hoan kiem"
+    "hoan kiem",
+    "hanoi old quarter",
+    "ha noi old quarter",
+    "36 streets",
+    "pho co ha noi",
+    "pho co hanoi",
+    "quartiere vecchio di hanoi",
+    "quartiere vecchio hanoi"
    ],
    "names": [
     "hanoi",
-    "ha noi"
+    "ha noi",
+    "hanoi old quarter",
+    "old quarter of hanoi",
+    "ha noi old quarter"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -148,6 +212,139 @@
     "leaf": "#4E8A3E",
     "acc": "#8A3A2A",
     "obj": "#9A948A"
+   }
+  },
+  {
+   "slug": "mekong-delta",
+   "label": "Cai Rang floating market, Mekong Delta",
+   "lat": 10.0,
+   "lon": 105.75,
+   "radius_km": 60,
+   "aliases": [
+    "mekong delta",
+    "delta del mekong",
+    "dong bang song cuu long",
+    "cai rang"
+   ],
+   "names": [
+    "can tho",
+    "cantho"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#7FA25A",
+    "mid": "#6A5440",
+    "ice": "#E9E4D6",
+    "water": "#8C8466",
+    "near": "#241E18",
+    "sun": "#F2C64A",
+    "leaf": "#4F8C3A",
+    "acc": "#C9402E",
+    "obj": "#3C6F94"
+   }
+  },
+  {
+   "slug": "my-son",
+   "label": "Cham brick temples of My Son Sanctuary",
+   "lat": 15.7643,
+   "lon": 108.1243,
+   "radius_km": 4,
+   "aliases": [
+    "my son sanctuary",
+    "santuario di my son",
+    "thanh dia my son"
+   ],
+   "names": [
+    "my son"
+   ],
+   "palette": {
+    "sky": "#A6CDEE",
+    "far": "#7FA448",
+    "mid": "#A9583C",
+    "ice": "#C9A27A",
+    "water": "#5E94A8",
+    "near": "#2A1A14",
+    "sun": "#F3C440",
+    "leaf": "#3F7232",
+    "acc": "#7C4632",
+    "obj": "#8E897E"
+   }
+  },
+  {
+   "slug": "ninh-binh",
+   "label": "Tam Coc rice paddies and karsts, Ninh Binh",
+   "lat": 20.22,
+   "lon": 105.92,
+   "radius_km": 30,
+   "aliases": [
+    "ninh binh province"
+   ],
+   "names": [
+    "ninh binh",
+    "ninh binh region"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#8FA894",
+    "mid": "#4A7038",
+    "ice": "#B9B4A6",
+    "water": "#7E8C80",
+    "near": "#22281C",
+    "sun": "#F4C33C",
+    "leaf": "#7E9E3A",
+    "acc": "#DCC35A",
+    "obj": "#6B4A2E"
+   }
+  },
+  {
+   "slug": "temple-of-literature",
+   "label": "Khue Van Cac pavilion, Temple of Literature, Hanoi",
+   "lat": 21.0293,
+   "lon": 105.8356,
+   "radius_km": 2,
+   "aliases": [
+    "temple of literature",
+    "tempio della letteratura",
+    "van mieu",
+    "khue van cac",
+    "quoc tu giam"
+   ],
+   "palette": {
+    "sky": "#C2DCF0",
+    "far": "#86AE54",
+    "mid": "#A6362E",
+    "ice": "#E6E1D6",
+    "water": "#6A9EA8",
+    "near": "#2A1E1A",
+    "sun": "#F3C33F",
+    "leaf": "#4C7C36",
+    "acc": "#A8705A",
+    "obj": "#7E6656"
+   }
+  },
+  {
+   "slug": "thien-mu-pagoda",
+   "label": "Phuoc Duyen tower of Thien Mu Pagoda, Hue",
+   "lat": 16.4533,
+   "lon": 107.5447,
+   "radius_km": 2,
+   "aliases": [
+    "thien mu",
+    "tien mu pagoda",
+    "pagoda di dame celeste",
+    "phuoc duyen"
+   ],
+   "palette": {
+    "sky": "#B5D6F0",
+    "far": "#D4B266",
+    "mid": "#EBDDC8",
+    "ice": "#CFCBC1",
+    "water": "#5E9AB0",
+    "near": "#2A201C",
+    "sun": "#F3C33F",
+    "leaf": "#4E7E36",
+    "acc": "#9C6C54",
+    "obj": "#8A3E32"
    }
   }
  ]

@@ -3,6 +3,236 @@
  "name": "Ecuador",
  "places": [
   {
+   "slug": "banos",
+   "label": "Basilica of Banos de Agua Santa below the green valley walls",
+   "lat": -1.396,
+   "lon": -78.425,
+   "radius_km": 15,
+   "aliases": [
+    "banos de agua santa",
+    "basilica de banos",
+    "basilica of banos",
+    "nuestra senora del agua santa",
+    "nuestra senora del rosario de agua santa"
+   ],
+   "names": [
+    "banos",
+    "banos ecuador",
+    "banos tungurahua",
+    "banos city"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#6F9468",
+    "mid": "#4E4B50",
+    "ice": "#F2F0EA",
+    "water": "#4A86A8",
+    "near": "#232224",
+    "sun": "#F2C14E",
+    "leaf": "#4E7B3A",
+    "acc": "#B04A3A",
+    "obj": "#E0B44E"
+   }
+  },
+  {
+   "slug": "charles-darwin-research-station",
+   "label": "Saddleback giant tortoise at the Charles Darwin Research Station",
+   "lat": -0.743,
+   "lon": -90.304,
+   "radius_km": 3,
+   "aliases": [
+    "charles darwin research station",
+    "charles darwin station",
+    "darwin research station",
+    "estacion cientifica charles darwin",
+    "estacion charles darwin",
+    "fausto llerena",
+    "lonesome george",
+    "solitario jorge"
+   ],
+   "names": [
+    "darwin station"
+   ],
+   "palette": {
+    "sky": "#B5D4EE",
+    "far": "#948B7C",
+    "mid": "#AD8566",
+    "ice": "#EDE6D6",
+    "water": "#3E8FA6",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#7C9C50",
+    "acc": "#5C4E40",
+    "obj": "#77736C"
+   }
+  },
+  {
+   "slug": "cotopaxi-national-park",
+   "label": "Cotopaxi volcano above the paramo and Laguna Limpiopungo",
+   "lat": -0.681,
+   "lon": -78.438,
+   "radius_km": 30,
+   "aliases": [
+    "cotopaxi national park",
+    "parque nacional cotopaxi",
+    "parco nazionale cotopaxi",
+    "cotopaxi volcano",
+    "volcan cotopaxi",
+    "vulcano cotopaxi",
+    "laguna limpiopungo",
+    "limpiopungo"
+   ],
+   "names": [
+    "cotopaxi",
+    "cotopaxi park",
+    "parque cotopaxi"
+   ],
+   "palette": {
+    "sky": "#A2CAF0",
+    "far": "#8C8C78",
+    "mid": "#6F6A5E",
+    "ice": "#FFFFFF",
+    "water": "#5D82A2",
+    "near": "#232321",
+    "sun": "#F2C14E",
+    "leaf": "#A39A5C",
+    "acc": "#86483A",
+    "obj": "#6E4630"
+   }
+  },
+  {
+   "slug": "floreana-island",
+   "label": "Devil's Crown below the tuff cones of Floreana Island",
+   "lat": -1.216,
+   "lon": -90.423,
+   "radius_km": 25,
+   "aliases": [
+    "floreana island",
+    "isla floreana",
+    "devils crown",
+    "devil s crown",
+    "corona del diablo",
+    "isla santa maria galapagos"
+   ],
+   "names": [
+    "floreana",
+    "floreana galapagos",
+    "puerto velasco ibarra"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#9CA4AC",
+    "mid": "#B49C7C",
+    "ice": "#EFEBE2",
+    "water": "#23559A",
+    "near": "#252322",
+    "sun": "#F2C14E",
+    "leaf": "#8C8A56",
+    "acc": "#8A7258",
+    "obj": "#4E4A48"
+   }
+  },
+  {
+   "slug": "isabela-island",
+   "label": "Darwin Lake and Tagus Cove, Isabela Island",
+   "lat": -0.268,
+   "lon": -91.36,
+   "radius_km": 40,
+   "aliases": [
+    "isabela island",
+    "isla isabela",
+    "tagus cove",
+    "caleta tagus",
+    "darwin lake",
+    "lago darwin"
+   ],
+   "names": [
+    "isabela",
+    "isabela galapagos"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#A69E86",
+    "mid": "#9C8C76",
+    "ice": "#EFEBE2",
+    "water": "#22568E",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#8E9650",
+    "acc": "#2E8A90",
+    "obj": "#5E4A3A"
+   }
+  },
+  {
+   "slug": "kicker-rock",
+   "label": "Kicker Rock (Leon Dormido) with a blue-footed booby",
+   "lat": -0.773,
+   "lon": -89.517,
+   "radius_km": 4,
+   "aliases": [
+    "kicker rock",
+    "leon dormido",
+    "roca leon dormido",
+    "isla leon dormido",
+    "sleeping lion rock",
+    "leon durmiente",
+    "san cristobal island",
+    "isla san cristobal"
+   ],
+   "palette": {
+    "sky": "#9EC6EC",
+    "far": "#5C5856",
+    "mid": "#AE9A86",
+    "ice": "#EEEAE2",
+    "water": "#2E6B9E",
+    "near": "#2A2725",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#8A7058",
+    "obj": "#4FB3CF"
+   },
+   "names": [
+    "san cristobal",
+    "san cristobal galapagos",
+    "isla san cristobal galapagos"
+   ]
+  },
+  {
+   "slug": "quito",
+   "label": "Quito old town below El Panecillo and its winged Virgin",
+   "lat": -0.22,
+   "lon": -78.512,
+   "radius_km": 20,
+   "aliases": [
+    "quito old town",
+    "old town quito",
+    "centro historico de quito",
+    "quito historic center",
+    "quito historic centre",
+    "el panecillo",
+    "virgen del panecillo",
+    "virgen de quito"
+   ],
+   "names": [
+    "quito",
+    "quito city",
+    "san francisco de quito",
+    "quito ecuador"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#8C98A8",
+    "mid": "#7F8F57",
+    "ice": "#F3F0E8",
+    "water": "#4A86A8",
+    "near": "#2B2A28",
+    "sun": "#F2C14E",
+    "leaf": "#4E7036",
+    "acc": "#B95A3A",
+    "obj": "#C3C8CE"
+   }
+  },
+  {
    "slug": "santa-cruz-island",
    "label": "Giant tortoise, Santa Cruz highlands",
    "lat": -0.65,

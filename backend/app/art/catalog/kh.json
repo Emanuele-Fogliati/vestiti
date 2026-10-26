@@ -3,6 +3,28 @@
  "name": "Cambodia",
  "places": [
   {
+   "slug": "angkor-thom",
+   "label": "Angkor Thom South Gate with its face tower",
+   "lat": 13.4291,
+   "lon": 103.859,
+   "radius_km": 3,
+   "aliases": [
+    "angkor thom"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D2CCBC",
+    "mid": "#968E7C",
+    "ice": "#E8E2D4",
+    "water": "#7FA6A0",
+    "near": "#262826",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#C08A5C",
+    "obj": "#7E7868"
+   }
+  },
+  {
    "slug": "angkor-wat",
    "label": "Angkor Wat",
    "lat": 13.412,
@@ -29,6 +51,226 @@
    }
   },
   {
+   "slug": "banteay-srei",
+   "label": "Banteay Srei pink sandstone shrines",
+   "lat": 13.5989,
+   "lon": 103.9628,
+   "radius_km": 3,
+   "aliases": [
+    "banteay srei",
+    "bantei srei",
+    "banteay srey"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A8705A",
+    "mid": "#C8806A",
+    "ice": "#F2E6DA",
+    "water": "#6F9A8C",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#4A7A3A",
+    "acc": "#A85A46",
+    "obj": "#5A3A2E"
+   }
+  },
+  {
+   "slug": "battambang",
+   "label": "Battambang bamboo train",
+   "lat": 13.0957,
+   "lon": 103.2022,
+   "radius_km": 15,
+   "aliases": [
+    "bamboo train",
+    "norry"
+   ],
+   "names": [
+    "battambang",
+    "battambang city",
+    "battambang province"
+   ],
+   "palette": {
+    "sky": "#B5D6EE",
+    "far": "#C9A882",
+    "mid": "#D9C48A",
+    "ice": "#F4EBDD",
+    "water": "#7FA6A0",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#4F8A3A",
+    "acc": "#C8503C",
+    "obj": "#5E5E58"
+   }
+  },
+  {
+   "slug": "bayon",
+   "label": "The face towers of the Bayon, Angkor Thom",
+   "lat": 13.4412,
+   "lon": 103.859,
+   "radius_km": 2,
+   "aliases": [
+    "bayon",
+    "bayon temple",
+    "tempio bayon",
+    "prasat bayon",
+    "temple du bayon"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#8E8B78",
+    "mid": "#A8A08A",
+    "ice": "#E7E2D2",
+    "water": "#6F9AB8",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#7C7462",
+    "obj": "#B9B096"
+   }
+  },
+  {
+   "slug": "choeung-ek",
+   "label": "The memorial stupa of Choeung Ek (Killing Fields)",
+   "lat": 11.4844,
+   "lon": 104.9019,
+   "radius_km": 3,
+   "aliases": [
+    "choeung ek",
+    "killing fields",
+    "killing field",
+    "campi della morte",
+    "campi di sterminio",
+    "choeung ek genocidal center"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#C9C7BE",
+    "mid": "#F1EEE6",
+    "ice": "#FFFFFF",
+    "water": "#8FA7B4",
+    "near": "#2A2A28",
+    "sun": "#F2C14E",
+    "leaf": "#4F8A3A",
+    "acc": "#E2B526",
+    "obj": "#4F8466"
+   }
+  },
+  {
+   "slug": "koh-rong",
+   "label": "Koh Touch bay on Koh Rong: stilt guesthouses, pier and Khmer boats",
+   "lat": 10.7235,
+   "lon": 103.2433,
+   "radius_km": 15,
+   "aliases": [
+    "koh rong",
+    "ko rong"
+   ],
+   "palette": {
+    "sky": "#A9D3F2",
+    "far": "#5E7E6A",
+    "mid": "#8E6E4E",
+    "ice": "#D9C79C",
+    "water": "#7CCFC4",
+    "near": "#22302C",
+    "sun": "#F2C14E",
+    "leaf": "#2F6B3A",
+    "acc": "#F3EEE2",
+    "obj": "#2A9C86"
+   }
+  },
+  {
+   "slug": "royal-palace-phnom-penh",
+   "label": "The Throne Hall of the Royal Palace, Phnom Penh",
+   "lat": 11.5636,
+   "lon": 104.9311,
+   "radius_km": 2,
+   "aliases": [
+    "royal palace phnom penh",
+    "royal palace of phnom penh",
+    "phnom penh royal palace",
+    "palazzo reale phnom penh",
+    "palazzo reale di phnom penh",
+    "palais royal de phnom penh",
+    "throne hall phnom penh",
+    "chanchhaya pavilion"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#F2DE9A",
+    "mid": "#E3B23C",
+    "ice": "#F8F5EC",
+    "water": "#6FA3C0",
+    "near": "#2B2620",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#E8892A",
+    "obj": "#3E7A52"
+   },
+   "names": [
+    "phnom penh",
+    "phnon penh",
+    "phnom phen"
+   ]
+  },
+  {
+   "slug": "sihanoukville",
+   "label": "Sihanoukville's Golden Lions roundabout",
+   "lat": 10.6265,
+   "lon": 103.5205,
+   "radius_km": 15,
+   "aliases": [
+    "golden lions",
+    "golden lion roundabout",
+    "golden lions roundabout"
+   ],
+   "names": [
+    "sihanoukville",
+    "kampong som",
+    "preah sihanouk",
+    "sihanoukville city"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#D6C8AA",
+    "mid": "#B9B5AC",
+    "ice": "#F2F0EA",
+    "water": "#6FA8C8",
+    "near": "#262422",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A3A",
+    "acc": "#D6A632",
+    "obj": "#C9B89A"
+   }
+  },
+  {
+   "slug": "silver-pagoda",
+   "label": "The Silver Pagoda in the Royal Palace, Phnom Penh",
+   "lat": 11.5617,
+   "lon": 104.9316,
+   "radius_km": 2,
+   "aliases": [
+    "silver pagoda",
+    "pagoda d argento",
+    "pagode d argent",
+    "wat preah keo",
+    "wat preah keo morakot",
+    "wat ubosoth ratanaram",
+    "pagoda d oro e d argento"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#C4A79B",
+    "mid": "#ECE8E0",
+    "ice": "#FBFAF6",
+    "water": "#8FCFC2",
+    "near": "#2A2522",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#DDA43A",
+    "obj": "#9A4A2E"
+   }
+  },
+  {
    "slug": "ta-prohm",
    "label": "Ta Prohm temple in the roots",
    "lat": 13.435,
@@ -48,6 +290,93 @@
     "leaf": "#4E8A3E",
     "acc": "#B89A78",
     "obj": "#7A6E60"
+   }
+  },
+  {
+   "slug": "tonle-sap",
+   "label": "Stilt houses on the Tonle Sap lake",
+   "lat": 13.15,
+   "lon": 103.95,
+   "radius_km": 40,
+   "aliases": [
+    "tonle sap",
+    "tonle sap lake",
+    "lago tonle sap",
+    "lac tonle sap",
+    "kampong phluk",
+    "kompong phluk",
+    "chong kneas",
+    "chong khneas",
+    "kampong khleang",
+    "kompong khleang"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#D8C9A8",
+    "mid": "#8A6646",
+    "ice": "#F6F4EE",
+    "water": "#A07E5A",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3A",
+    "acc": "#C8463A",
+    "obj": "#3F7FC0"
+   }
+  },
+  {
+   "slug": "tuol-sleng-genocide-museum",
+   "label": "The S-21 school building of the Tuol Sleng Genocide Museum",
+   "lat": 11.5494,
+   "lon": 104.9178,
+   "radius_km": 2,
+   "aliases": [
+    "tuol sleng",
+    "toul sleng",
+    "tuol sleng genocide museum",
+    "s 21",
+    "s21",
+    "s 21 prison",
+    "museo s21",
+    "museo s 21",
+    "prigione s21",
+    "prigione s 21"
+   ],
+   "palette": {
+    "sky": "#A8C8E8",
+    "far": "#A3A097",
+    "mid": "#C4C0B6",
+    "ice": "#E9E7E0",
+    "water": "#7FA6C0",
+    "near": "#2A2A28",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3A",
+    "acc": "#6C675E",
+    "obj": "#9A7458"
+   }
+  },
+  {
+   "slug": "wat-phnom",
+   "label": "Wat Phnom's naga staircase, vihara and stupa",
+   "lat": 11.5762,
+   "lon": 104.923,
+   "radius_km": 2,
+   "aliases": [
+    "wat phnom",
+    "wat phnom daun penh",
+    "phnom daun penh",
+    "tempio wat phnom"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#7FB25E",
+    "mid": "#EADFD0",
+    "ice": "#F8F6F0",
+    "water": "#6FA0C0",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A34",
+    "acc": "#D19284",
+    "obj": "#C46A3A"
    }
   }
  ]
