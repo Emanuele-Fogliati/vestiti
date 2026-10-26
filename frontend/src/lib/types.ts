@@ -355,6 +355,35 @@ export interface WardrobeItem {
   footwear_type: string | null;
   ankle_support: boolean;
   notes: string | null;
+  model_ref?: string | null;
+  added_via?: "hand" | "search" | "photo" | null;
+  specs?: { fill_power?: number; waterproof_mm?: number } | null;
+}
+
+/** A model the traveller may own: from the shop, the known older models, an estimate or a photo. */
+export interface ModelMatch {
+  ref: string | null;
+  source: "shop" | "known" | "estimate" | "photo";
+  brand: string | null;
+  name: string;
+  category: string;
+  warmth: string;
+  waterproof: boolean;
+  windproof: boolean;
+  material: string | null;
+  footwear_type: string | null;
+  ankle_support: boolean;
+  older: boolean;
+  note: string | null;
+  score?: number;
+  by?: "ai" | "rules";
+}
+
+export interface PhotoReading {
+  seen: { brand: string | null; model: string | null; style_code: string | null; text: string[]; colour: string | null;
+    features: string[]; label_readable: boolean; confidence: "low" | "medium" | "high" };
+  results: ModelMatch[];
+  described: ModelMatch | null;
 }
 
 export interface DraftStop {

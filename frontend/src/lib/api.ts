@@ -1,5 +1,5 @@
 import type {
-  AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem,
+  AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
 } from "./types";
 
 export class ApiError extends Error {
@@ -139,6 +139,16 @@ export const api = {
   addWardrobe: (item: Omit<WardrobeItem, "id">) => req<WardrobeItem>("POST", "/api/wardrobe", item),
   updateWardrobe: (id: string, item: Omit<WardrobeItem, "id">) => req<WardrobeItem>("PUT", `/api/wardrobe/${id}`, item),
   deleteWardrobe: (id: string) => req<void>("DELETE", `/api/wardrobe/${id}`),
+  findModel: (q: string, category?: string) =>
+    req<{ results: ModelMatch[] }>("GET", `/api/wardrobe/lookup?q=${encodeURIComponent(q)}${category ? `&category=${category}` : ""}`),
+  guessModel: (name: string) => req<{ result: ModelMatch | null }>("POST", "/api/wardrobe/guess", { name }),
+  photoStatus: () => req<{ enabled: boolean; available: boolean; model: string }>("GET", "/api/wardrobe/photo-status"),
+  recognize: (photos: Blob[], kind: string) => {
+    const f = new FormData();
+    photos.forEach((p, i) => f.append("photos", p, `photo-${i + 1}.jpg`));
+    f.append("kind", kind);
+    return req<PhotoReading>("POST", "/api/wardrobe/recognize", f);
+  },
 
   adminStats: () => req<Record<string, unknown>>("GET", "/api/admin/stats"),
   adminFeeds: () => req<{ networks: string[]; imports: Record<string, unknown>[] }>("GET", "/api/admin/feeds"),

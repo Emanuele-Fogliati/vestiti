@@ -44,7 +44,7 @@ PHOTO_BODY_PATHS = {"/api/wardrobe/recognize": 17_000_000}
 # The page loads only our own scripts; images can come from shops' CDNs (product photos).
 CSP = ("default-src 'self'; script-src 'self'; "
        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-       "font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https:; "
+       "font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; "
        # maps (MapLibre): vector tiles and fonts from OpenFreeMap, relief from AWS terrain
        # tiles, and a worker the library starts from a blob: URL
        "connect-src 'self' https://tiles.openfreemap.org https://s3.amazonaws.com; "
