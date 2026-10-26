@@ -78,13 +78,14 @@ class PackIn(BaseModel):
 @router.post("/{slug}/trip", response_model=TripOut, status_code=201)
 def pack_for_this(slug: str, body: PackIn, user: User = Depends(current_user),
                   db: Session = Depends(get_db)):
-    """Pack my bag for this: the itinerary becomes the user's own trip, ready for the kit."""
+    """Dress me for this trip: the itinerary becomes the user's own trip, ready for the kit.
+    It stays linked to the itinerary (source_itinerary) for the day-by-day guide and tours."""
     it = inspire.get(slug)
     if it is None:
         raise HTTPException(404, "Itinerary not found")
     start = body.start_date or inspire.default_start(it)
     trip = Trip(user_id=user.id, name=it.title, notes=f"From the itinerary '{it.title}'.",
-                start_estimated=body.start_date is None)
+                start_estimated=body.start_date is None, source_itinerary=it.slug)
     trip.stops = [Stop(position=i, **s) for i, s in enumerate(inspire.stops_for(it, start))]
     db.add(trip)
     db.commit()

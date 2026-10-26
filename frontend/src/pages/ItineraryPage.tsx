@@ -2,16 +2,19 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { Illustration } from "../components/Illustration";
+import { PlaceGuide } from "../components/PlaceGuide";
 import { Visits } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, monthRange, monthYear, nights, today } from "../lib/format";
 import { terrainFor } from "../lib/terrain";
 import type { Itinerary, ItineraryStop } from "../lib/types";
+import { DRESS_ME } from "./Start";
 
 const COUNTRY: Record<string, string> = { PE: "Peru", AR: "Argentina", CL: "Chile", IS: "Iceland", VN: "Vietnam" };
 
-/** "Pack my bag for this": optional start date, then the itinerary becomes the user's trip. */
+/** "Dress me for this trip": optional start date, then the itinerary becomes the user's own
+ *  trip (stops, days and activities can all be changed there) and the kit is worked out. */
 function PackForm({ it, id }: { it: Itinerary; id?: string }) {
   const { ensureUser } = useApp();
   const nav = useNavigate();
@@ -33,16 +36,16 @@ function PackForm({ it, id }: { it: Itinerary; id?: string }) {
   }
 
   return (
-    <form className="brief pack" onSubmit={pack} aria-label="Pack my bag for this trip">
-      <h2>Pack my bag for this</h2>
-      <p className="small muted">The weather at every stop, the layers that cover all of it and the kit at three budgets. Free.</p>
+    <form className="brief pack" onSubmit={pack} aria-label={DRESS_ME}>
+      <h2>Like this trip?</h2>
+      <p className="small muted">We read the weather at every stop and dress you for all of it: what to wear, what to pack, at three budgets. It becomes your trip, so you can change stops and days after. Free.</p>
       <div className="field">
         <label htmlFor={`start-${id ?? "top"}`}>When do you leave? (optional)</label>
         <input id={`start-${id ?? "top"}`} type="date" value={start} min={today()} onChange={(e) => setStart(e.target.value)} />
       </div>
       <p className="small muted">{start ? `${it.days} days from this date.` : `No date yet? We plan for ${monthYear(it.start_date)} and you set the date later.`}</p>
       {err && <p className="err">{err}</p>}
-      <button className="btn primary" type="submit" disabled={busy}>{busy ? <span className="spin" /> : "Pack my bag for this"}</button>
+      <button className="btn primary" type="submit" disabled={busy}>{busy ? <span className="spin" /> : DRESS_ME}</button>
     </form>
   );
 }
@@ -60,6 +63,7 @@ function StopBlock({ stop, index, dayFrom, total }: { stop: ItineraryStop; index
           {stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}
           <span className="tag">{Math.round(stop.elevation_m).toLocaleString("en-US")} m</span>
         </div>
+        <PlaceGuide guide={stop.guide} />
         {stop.programs ? <p className="small muted pop">In {stop.programs} of the {total.toLocaleString("en-US")} organised trips we read</p> : null}
         <ol className="plan">
           {stop.plan.map((p, i) => <li key={i}><span className="vd">Day {dayFrom + i}</span>{p}</li>)}
@@ -104,7 +108,7 @@ export default function ItineraryPage() {
     api.itinerary(slug).then(setIt).catch((e) => setErr((e as Error).message));
   }, [slug]);
 
-  if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/ideas">All itineraries</Link></div></main>;
+  if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/ideas">All recommended trips</Link></div></main>;
   if (!it) return <main className="page"><div className="wrap"><p className="loading"><span className="spin" /></p></div></main>;
 
   const starts: number[] = [];
@@ -116,7 +120,7 @@ export default function ItineraryPage() {
       <section className="hero">
         <div className="wrap hero-in">
           <div>
-            <p className="kicker"><Link to="/ideas">Ideas</Link> · {it.countries.map((c) => COUNTRY[c] ?? c).join(" & ")}</p>
+            <p className="kicker"><Link to="/ideas">Recommended trips</Link> · {it.countries.map((c) => COUNTRY[c] ?? c).join(" & ")}</p>
             <h1 className="ititle">{it.title}</h1>
             <p className="lede">{it.summary}</p>
             <div className="facts">
@@ -149,7 +153,7 @@ export default function ItineraryPage() {
         <section className="band">
           <div className="wrap">
             <header className="sh"><p className="sh-k">Rather go with a group?</p><h2>Organised trips on a similar route</h2>
-              <p>Guide, transport and most tours included. The clothes are still on you: pack the bag here either way.</p></header>
+              <p>Guide, transport and most tours included. The clothes are still on you: tap “{DRESS_ME}” either way.</p></header>
             <ul className="gtrips">
               {it.group_trips.map((g, i) => (
                 <li key={i}>

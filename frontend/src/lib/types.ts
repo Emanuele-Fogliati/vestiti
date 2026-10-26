@@ -79,7 +79,11 @@ export interface Stop {
   visits?: Visit[];
   /** The traveller did not say how long: the days are a guess. */
   days_estimated?: boolean;
+  /** What the place is and a fun fact, when we know the place. */
+  guide?: PlaceGuide | null;
 }
+
+export interface PlaceGuide { blurb: string; fun_fact: string; source: string }
 
 export interface Visit {
   name: string;
@@ -109,6 +113,8 @@ export interface Trip {
   stops: Stop[];
   start_estimated?: boolean;
   estimate?: TripEstimate | null;
+  /** Slug of the recommended trip it started from; null = the traveller's own. */
+  source_itinerary?: string | null;
 }
 
 export interface TripSummary {
@@ -122,6 +128,7 @@ export interface TripSummary {
   /** The first landmark of the trip, for the card. */
   art?: StopArt | null;
   estimated?: boolean;
+  source_itinerary?: string | null;
 }
 
 export interface Place {

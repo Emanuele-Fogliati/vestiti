@@ -47,7 +47,7 @@ class RegisterIn(BaseModel):
 
 class LoginIn(BaseModel):
     email: EmailStr
-    password: str
+    password: str = Field(max_length=200)  # argon2 on a megabyte "password" would burn CPU
 
 
 class UserOut(ORM):
@@ -200,6 +200,8 @@ class StopOut(ORM):
     visits: list[VisitOut] = Field(default_factory=list)
     days_estimated: bool = False
     art: StopArt | None = None
+    # what the place is and a fun fact, when we know the place (app.guide)
+    guide: dict | None = None
 
     @field_validator("visits", mode="before")
     @classmethod
@@ -221,6 +223,10 @@ class StopOut(ORM):
         if self.art is None:
             lm = match(self.name, self.latitude, self.longitude)
             self.art = StopArt(id=lm.id, label=lm.label) if lm else _first_visit_art(self)
+        if self.guide is None:
+            from app.guide import lookup
+            g = lookup(self.name, self.country_code)
+            self.guide = g.model_dump() if g else None
         return self
 
 
@@ -250,6 +256,7 @@ class TripOut(ORM):
     stops: list[StopOut]
     start_estimated: bool = False
     estimate: TripEstimate | None = None
+    source_itinerary: str | None = None  # slug of the recommended trip it started from
 
     @field_validator("start_estimated", mode="before")
     @classmethod
@@ -296,6 +303,7 @@ class TripSummary(ORM):
     places: list[str]
     art: StopArt | None = None
     estimated: bool = False
+    source_itinerary: str | None = None
 
 
 class ReorderIn(BaseModel):

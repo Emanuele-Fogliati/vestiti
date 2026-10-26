@@ -113,10 +113,15 @@ def test_guest_upgrade_login_export_delete(client):
     assert client.post("/api/auth/login", json={"email": "ana@example.com", "password": "correct horse 1"}).status_code == 401
 
 
-def test_admin_only(client):
+def test_admin_only(client, db):
     client.post("/api/auth/guest")
     assert client.get("/api/admin/stats").status_code == 403
-    client.post("/api/auth/register", json={"email": "admin@example.com", "password": "admin-pass-123"})
+    # registering with an admin-looking email gives no rights: only the CLI flag does
+    u = client.post("/api/auth/register", json={"email": "admin@example.com", "password": "admin-pass-123"}).json()
+    assert u["is_admin"] is False and client.get("/api/admin/stats").status_code == 403
+    from app.models import User
+    db.get(User, u["id"]).is_admin = True
+    db.commit()
     s = client.get("/api/admin/stats")
     assert s.status_code == 200 and s.json()["products_active"] > 100
 

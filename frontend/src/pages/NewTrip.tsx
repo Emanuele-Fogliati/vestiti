@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ActivityEditor } from "../components/ActivityEditor";
 import { EstimateForm } from "../components/Estimate";
 import { PlaceSearch } from "../components/PlaceSearch";
@@ -8,6 +8,7 @@ import { useApp } from "../lib/app-context";
 import { activityText, nights } from "../lib/format";
 import { redate } from "../lib/spread";
 import type { DraftStop, TripEstimate } from "../lib/types";
+import { DRESS_ME } from "./Start";
 
 const MAX_TEXT = 50_000; // same limit as the API (ParseIn.text)
 const LONG_TEXT = 5_000;
@@ -146,7 +147,7 @@ export default function NewTrip() {
                 )}
                 <div className="field"><label htmlFor="tname">Trip name</label>
                   <input id="tname" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Patagonia, May 2027" /></div>
-                <button className="btn primary" type="button" disabled={busy} onClick={() => create(true)}>Create trip and dress it</button>
+                <button className="btn primary big" type="button" disabled={busy} onClick={() => create(true)}>{DRESS_ME}</button>
               </div>
             )}
           </div>
@@ -159,6 +160,7 @@ export default function NewTrip() {
               <li>Not decided? "Maybe hiking, don't know yet" plans for both.</li>
               <li>You can change, add or remove stops later. The plan updates.</li>
             </ul>
+            <p className="small muted">No route yet? <Link to="/ideas">Start from a recommended trip</Link>.</p>
           </aside>
         </div>
       </div>

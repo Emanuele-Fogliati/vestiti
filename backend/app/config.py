@@ -63,8 +63,19 @@ class Settings(BaseSettings):
     viator_pid: str = ""
     viator_mcid: str = ""
 
-    # --- Admin ---
-    admin_emails: list[str] = Field(default_factory=list)
+    # --- Email (password reset and sign-in links). Empty SMTP_HOST = no email is sent:
+    # in local development the link is shown on screen instead (see app.mailer).
+    smtp_host: str = ""
+    smtp_port: int = 587
+    smtp_user: str = ""
+    smtp_password: str = ""
+    smtp_starttls: bool = True
+    mail_from: str = ""  # default: SUPPORT_EMAIL
+    # local testing without a mail server: return the link to the screen. Off by default,
+    # and even when on, only for requests addressed to localhost and never for an admin.
+    dev_email_links: bool = False
+    reset_link_minutes: int = 60
+    login_link_minutes: int = 15
 
     # --- Rate limits (in-memory, per process) ---
     auth_rate_limit_per_minute: int = 10
@@ -79,6 +90,20 @@ class Settings(BaseSettings):
     @property
     def is_production(self) -> bool:
         return self.environment == "production"
+
+    @property
+    def email_enabled(self) -> bool:
+        return bool(self.smtp_host)
+
+    @property
+    def show_dev_links(self) -> bool:
+        """No mail server on a local machine: the API may hand the link back so it can be
+        clicked on screen (see also the per-request check in api.auth). Never on a public
+        address, where it would let anyone take over any account by asking for a reset."""
+        from urllib.parse import urlparse
+        host = urlparse(self.public_base_url).hostname or ""
+        return (self.dev_email_links and not self.email_enabled
+                and self.environment in ("development", "test") and host in ("localhost", "127.0.0.1"))
 
 
 @lru_cache

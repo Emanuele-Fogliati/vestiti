@@ -264,3 +264,34 @@ footer nav a{font-size:13px}
 .gtrips a:hover{background:var(--surface-2)}
 .gtrips b{font-size:18px}
 @media (max-width:700px){.tips{grid-template-columns:minmax(0,1fr)}}
+
+/* place guide: what the place is + fun fact (stop cards, itinerary stops) */
+.pguide{margin-top:10px;display:grid;gap:8px;max-width:62ch}
+.pg-blurb{font-size:15px;line-height:1.5;margin:0}
+.pg-fact{display:flex;gap:8px;align-items:flex-start;margin:0;font-size:14px;line-height:1.45;padding:8px 12px;border-radius:var(--radius);background:var(--surface-2)}
+.pg-fact .bulb{flex:none;margin-top:1px}
+.pg-fact b{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-right:4px}
+.pg-src{font-size:12px;color:var(--ink-2)}
+
+/* auth */
+.or{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+/* Plan a trip: two doors (own trip / recommended) and the recommended filters */
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.door{display:grid;gap:4px;text-align:left;padding:16px 18px;border-radius:var(--radius);border:var(--bw) solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit}
+.door b{font-family:var(--f-display);font-size:20px;font-weight:800}
+.door span{font-size:14px;color:var(--ink-2)}
+.door[aria-selected="true"]{background:var(--seg-on);color:var(--seg-on-ink);border-color:var(--seg-on)}
+.door[aria-selected="true"] span{color:var(--seg-on-ink);opacity:.85}
+.filters{display:grid;gap:10px;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chips .label{min-width:64px}
+.fchip{font:inherit;font-size:13px;padding:6px 12px;border-radius:var(--radius-pill);border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.fchip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.big{font-size:17px;padding-block:14px}
+.from-rec{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:14px}
+.save-nudge{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:16px}
+@media (max-width:640px){.doors{grid-template-columns:minmax(0,1fr)}}
+.btn.hero-alt{width:100%;background:transparent;border-color:var(--ink)}
+.btn.hero-alt:hover{background:rgba(255,255,255,.35)}
