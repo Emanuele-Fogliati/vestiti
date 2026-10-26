@@ -1,24 +1,17 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Illustration } from "../components/Illustration";
+import { ItineraryCards } from "../components/ItineraryCards";
+import { HomeGlobe } from "../components/Maps";
 import { brandName, useApp } from "../lib/app-context";
-
-const EXAMPLE =
-  "From 6 May 2027: 4 days hard hiking in El Chaltén up to 1200 m, then 2 days in El Calafate, then 4 days trekking Torres del Paine, then 2 days in Ushuaia";
+import { DRESS_ME, OwnTripForm } from "./Start";
 
 export default function Landing() {
   const { config } = useApp();
-  const nav = useNavigate();
-  const [text, setText] = useState("");
   const name = brandName(config);
-
-  function go(e: React.FormEvent) {
-    e.preventDefault();
-    nav("/trips/new", { state: { text: text.trim() || EXAMPLE } });
-  }
 
   return (
     <main>
+      <HomeGlobe />
       <section className="hero">
         <div className="wrap hero-in">
           <div>
@@ -35,16 +28,19 @@ export default function Landing() {
               <div className="fact"><b>Per day</b><span>Weather, altitude and wind</span></div>
             </div>
           </div>
-          <form className="brief" onSubmit={go} aria-label="Describe your trip">
-            <div className="row"><h2>Your trip</h2><span className="spacer" /><span className="label">Plain words are fine</span></div>
-            <div className="field">
-              <label htmlFor="trip-text">Where, when, what you'll do</label>
-              <textarea id="trip-text" value={text} maxLength={50_000} onChange={(e) => setText(e.target.value)} placeholder={EXAMPLE} rows={5} />
-            </div>
-            <p className="small muted">Not sure what you'll do somewhere? Write "don't know yet" and we cover both easy and technical days.</p>
-            <button className="btn primary" type="submit">Dress this trip</button>
-            <Link className="btn" to="/trips/new">Or add stops one by one</Link>
-          </form>
+          <div className="stack" style={{ gap: 12 }}>
+            <OwnTripForm />
+            <Link className="btn ghost hero-alt" to="/ideas">No trip yet? Start from a recommended one →</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="band">
+        <div className="wrap">
+          <header className="sh"><p className="sh-k">No trip yet?</p><h2>Start from a recommended trip</h2>
+            <p>Day-by-day routes built from the places organised trips visit most, with what each place is, a fun fact, and what is worth it or not at every stop. Change anything, then tap “{DRESS_ME}”.</p></header>
+          <ItineraryCards />
+          <p style={{ marginTop: 20 }}><Link className="btn" to="/ideas">All recommended trips</Link></p>
         </div>
       </section>
 
@@ -74,7 +70,7 @@ export default function Landing() {
           <header className="sh"><p className="sh-k">Honest by design</p><h2>If what you own is fine, we say so</h2>
             <p>{name} is free and earns a commission only when you buy through a link. That never decides the plan: owned items are used first, and a cheaper pick that passes beats an expensive one that doesn't.</p></header>
           <div className="row">
-            <Link className="btn primary" to="/trips/new">Plan a trip</Link>
+            <Link className="btn primary" to="/start">Plan a trip</Link>
             <Link className="btn" to="/how-it-works">How we calculate warmth</Link>
           </div>
         </div>

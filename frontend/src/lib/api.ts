@@ -1,5 +1,5 @@
 import type {
-  AppConfig, ChatReply, DraftStop, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem,
+  AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem,
 } from "./types";
 
 export class ApiError extends Error {
@@ -49,16 +49,29 @@ async function req<T>(method: string, path: string, body?: unknown): Promise<T> 
   return data as T;
 }
 
+/** Reply to "email me a link": the same whether or not the email has an account.
+ *  dev_link only on a local machine without a mail server. */
+export interface LinkSent { detail: string; email_enabled: boolean; dev_link?: string }
+
 export type StopInput = Omit<Stop, "id" | "position"> & { position?: number };
 
 export const api = {
   config: () => req<AppConfig>("GET", "/api/config"),
   me: () => req<User>("GET", "/api/me"),
+  /** Who is signed in, or null (200 either way: no error in the console for visitors). */
+  session: () => req<{ user: User | null }>("GET", "/api/session"),
   guest: () => req<User>("POST", "/api/auth/guest"),
   register: (email: string, password: string, display_name?: string) =>
     req<User>("POST", "/api/auth/register", { email, password, display_name }),
   login: (email: string, password: string) => req<User>("POST", "/api/auth/login", { email, password }),
   logout: () => req<void>("POST", "/api/auth/logout"),
+  logoutEverywhere: () => req<void>("POST", "/api/auth/logout-everywhere"),
+  forgotPassword: (email: string) => req<LinkSent>("POST", "/api/auth/password/forgot", { email }),
+  resetPassword: (token: string, password: string) => req<User>("POST", "/api/auth/password/reset", { token, password }),
+  emailLink: (email: string) => req<LinkSent>("POST", "/api/auth/email-link", { email }),
+  verifyEmailLink: (token: string) => req<User>("POST", "/api/auth/email-link/verify", { token }),
+  changePassword: (new_password: string, current_password?: string) =>
+    req<User>("POST", "/api/me/password", { new_password, current_password: current_password || null }),
   updateMe: (patch: Partial<Pick<User, "display_name" | "gender_pref" | "thermal_offset" | "pace" | "evenings">>) =>
     req<User>("PATCH", "/api/me", patch),
   profile: () => req<Profile>("GET", "/api/me/profile"),
@@ -101,6 +114,13 @@ export const api = {
     req<{ ok: boolean }>("PUT", `/api/trips/${id}/selections`, body),
   resetSelections: (id: string, tier?: Tier) =>
     req<{ ok: boolean }>("DELETE", `/api/trips/${id}/selections${tier ? `?tier=${tier}` : ""}`),
+
+  itineraries: () => req<ItineraryCard[]>("GET", "/api/inspire"),
+  itinerary: (slug: string, start?: string) =>
+    req<Itinerary>("GET", `/api/inspire/${encodeURIComponent(slug)}${start ? `?start=${start}` : ""}`),
+  /** "Dress me for this trip": the itinerary becomes the user's trip. No date = next good month, a guess. */
+  packItinerary: (slug: string, start_date?: string) =>
+    req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null }),
 
   geocode: (q: string) => req<{ results: Place[] }>("GET", `/api/geocode?q=${encodeURIComponent(q)}`),
   parseItinerary: (text: string) =>

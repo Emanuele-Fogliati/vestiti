@@ -27,7 +27,7 @@ const ART: Record<Terrain, string> = {
 // with the same --il-* tokens. Each one is fetched once per page load and shared by every card.
 const landmarkCache = new Map<string, Promise<string | null>>();
 
-function loadLandmark(id: string): Promise<string | null> {
+export function loadLandmark(id: string): Promise<string | null> {
   let p = landmarkCache.get(id);
   if (!p) {
     p = fetch(`/api/art/landmarks/${encodeURIComponent(id)}.svg`)

@@ -10,6 +10,7 @@ from app.catalog.ingest import ingest_bytes, seed_all
 from app.config import get_settings
 from app.db import get_db
 from app.deps import admin_user
+from app.llm.client import LLMClient
 from app.models import AffiliateClick, FeedImport, Product, Trip, User
 
 router = APIRouter(prefix="/api/admin", tags=["admin"], dependencies=[Depends(admin_user)])
@@ -36,6 +37,7 @@ def stats(db: Session = Depends(get_db)):
         "clicks_by_network": [{"network": n, "kind": k, "tracked": t, "count": c} for n, k, t, c in clicks],
         "top_products_30d": [{"brand": b, "name": n, "clicks": c} for b, n, c in top],
         "affiliates": affiliate_status(get_settings()),
+        "ai": LLMClient().status(),  # server address and model list: admins only
     }
 
 

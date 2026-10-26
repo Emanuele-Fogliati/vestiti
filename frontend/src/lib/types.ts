@@ -79,7 +79,11 @@ export interface Stop {
   visits?: Visit[];
   /** The traveller did not say how long: the days are a guess. */
   days_estimated?: boolean;
+  /** What the place is and a fun fact, when we know the place. */
+  guide?: PlaceGuide | null;
 }
+
+export interface PlaceGuide { blurb: string; fun_fact: string; source: string }
 
 export interface Visit {
   name: string;
@@ -109,6 +113,8 @@ export interface Trip {
   stops: Stop[];
   start_estimated?: boolean;
   estimate?: TripEstimate | null;
+  /** Slug of the recommended trip it started from; null = the traveller's own. */
+  source_itinerary?: string | null;
 }
 
 export interface TripSummary {
@@ -122,6 +128,7 @@ export interface TripSummary {
   /** The first landmark of the trip, for the card. */
   art?: StopArt | null;
   estimated?: boolean;
+  source_itinerary?: string | null;
 }
 
 export interface Place {
@@ -326,7 +333,7 @@ export interface AppConfig {
   brand: { name: string; tagline: string; domain: string; support_email: string };
   theme: string;
   currency: string;
-  ai: { enabled: boolean; available: boolean; model: string; base_url: string; detail: string };
+  ai: { enabled: boolean; available: boolean; model: string };
   slots: { key: string; code: string; name: string; torso: boolean }[];
   activity_types: string[];
   difficulties: string[];
@@ -359,4 +366,37 @@ export interface DraftStop {
   place: Place | null;
   visits: Visit[];
   days_estimated: boolean;
+}
+
+/** A ready-made itinerary on the "Looking for ideas?" list. */
+export interface ItineraryCard {
+  slug: string;
+  title: string;
+  countries: string[];
+  summary: string;
+  days: number;
+  best_months: number[];
+  highest_m: number;
+  places: string[];
+  art: StopArt | null;
+}
+
+export interface ExcursionLink { provider: string; label: string; href: string }
+
+/** One stop of an itinerary: the same shape as a trip stop, plus the day plan and tips. */
+export interface ItineraryStop extends Stop {
+  plan: string[];
+  do: string[];
+  skip: string[];
+  /** How many of the organised trips we read include this place. */
+  programs: number | null;
+  excursions: { title: string; links: ExcursionLink[] }[];
+}
+
+export interface Itinerary extends ItineraryCard {
+  season_note: string;
+  start_date: string;
+  inventory_trips: number;
+  stops: ItineraryStop[];
+  group_trips: { operator: string; title: string; days: number; href: string }[];
 }

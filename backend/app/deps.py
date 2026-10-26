@@ -20,8 +20,14 @@ def optional_user(request: Request, db: Session = Depends(get_db)) -> User | Non
     tok = _token(request)
     if not tok:
         return None
-    uid = read_token(tok)
-    return db.get(User, uid) if uid else None
+    claims = read_token(tok)
+    if not claims:
+        return None
+    user = db.get(User, claims[0])
+    # signed out everywhere or password changed since this cookie was made
+    if user is None or (user.session_version or 0) != claims[1]:
+        return None
+    return user
 
 
 def current_user(user: User | None = Depends(optional_user)) -> User:
@@ -31,7 +37,8 @@ def current_user(user: User | None = Depends(optional_user)) -> User:
 
 
 def admin_user(user: User = Depends(current_user)) -> User:
-    if not (user.is_admin or (user.email and user.email in get_settings().admin_emails)):
+    # only the flag set by `python -m app.cli create-admin`: an email address proves nothing
+    if not user.is_admin:
         raise HTTPException(status.HTTP_403_FORBIDDEN, "Admins only")
     return user
 
@@ -41,6 +48,10 @@ def own_trip(trip_id: str, user: User = Depends(current_user), db: Session = Dep
     if trip is None or trip.user_id != user.id:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Trip not found")
     return trip
+
+
+def client_ip(request: Request) -> str:
+    return request.client.host if request.client else "?"
 
 
 def rate_limit(bucket: str, limit_attr: str):
