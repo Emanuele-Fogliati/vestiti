@@ -3,6 +3,30 @@
  "name": "Philippines",
  "places": [
   {
+   "slug": "alona-beach",
+   "label": "Alona Beach on Panglao with bangka outriggers",
+   "lat": 9.5497,
+   "lon": 123.7744,
+   "radius_km": 3,
+   "aliases": [
+    "alona beach",
+    "spiaggia di alona",
+    "alona beach panglao"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#F4EEDF",
+    "mid": "#A89A7E",
+    "ice": "#FFFFFF",
+    "water": "#6FD0C6",
+    "near": "#1F2A2E",
+    "sun": "#F6C431",
+    "leaf": "#3E7F3A",
+    "acc": "#9A4A2E",
+    "obj": "#2E78B4"
+   }
+  },
+  {
    "slug": "el-nido",
    "label": "El Nido town beach under Taraw Cliff with bangka boats",
    "lat": 11.188,
@@ -27,6 +51,31 @@
     "leaf": "#4D7C3A",
     "acc": "#B8523C",
     "obj": "#3E9A76"
+   }
+  },
+  {
+   "slug": "kawasan-falls",
+   "label": "Kawasan Falls' turquoise pool with bamboo rafts",
+   "lat": 9.8037,
+   "lon": 123.3747,
+   "radius_km": 4,
+   "aliases": [
+    "kawasan falls",
+    "kawasan waterfall",
+    "cascate kawasan",
+    "cascata kawasan"
+   ],
+   "palette": {
+    "sky": "#D2E8F2",
+    "far": "#7FA858",
+    "mid": "#7A7A5A",
+    "ice": "#F7FBFB",
+    "water": "#3EC6B9",
+    "near": "#1E2A1C",
+    "sun": "#F4C430",
+    "leaf": "#3C7A34",
+    "acc": "#C9A35A",
+    "obj": "#C8463A"
    }
   },
   {
@@ -57,6 +106,36 @@
     "leaf": "#4C7F3E",
     "acc": "#F2D27A",
     "obj": "#4A4336"
+   }
+  },
+  {
+   "slug": "palawan",
+   "label": "Palawan island hopping: a Bacuit Bay beach under limestone crags",
+   "lat": 10.0,
+   "lon": 118.9,
+   "radius_km": 60,
+   "aliases": [
+    "seven commando",
+    "7 commando",
+    "bacuit bay",
+    "bacuit"
+   ],
+   "names": [
+    "palawan",
+    "palawan island",
+    "isola di palawan"
+   ],
+   "palette": {
+    "sky": "#A8D0F2",
+    "far": "#8DBF4E",
+    "mid": "#8E8F88",
+    "ice": "#FBF8EE",
+    "water": "#3CCBC0",
+    "near": "#1C2422",
+    "sun": "#F6C431",
+    "leaf": "#3D7A32",
+    "acc": "#C9A266",
+    "obj": "#3E86C8"
    }
   },
   {
