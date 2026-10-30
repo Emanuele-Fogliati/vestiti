@@ -3,6 +3,172 @@
  "name": "Italy",
  "places": [
   {
+   "slug": "alberobello",
+   "label": "Trulli of Alberobello, Rione Monti",
+   "lat": 40.7817,
+   "lon": 17.237,
+   "radius_km": 6,
+   "aliases": [
+    "trulli",
+    "rione monti"
+   ],
+   "names": [
+    "alberobello"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#CFC6B4",
+    "mid": "#857F76",
+    "ice": "#F7F5EF",
+    "water": "#4E8EB0",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#4F6E38",
+    "acc": "#A8A298",
+    "obj": "#6E8A4A"
+   }
+  },
+  {
+   "slug": "bari",
+   "label": "Basilica of San Nicola, Bari",
+   "lat": 41.1306,
+   "lon": 16.8701,
+   "radius_km": 12,
+   "aliases": [
+    "basilica di san nicola",
+    "basilica of saint nicholas",
+    "basilica of san nicola",
+    "san nicola di bari",
+    "bari vecchia"
+   ],
+   "names": [
+    "bari"
+   ],
+   "palette": {
+    "sky": "#A8CBF0",
+    "far": "#CFC1A4",
+    "mid": "#EAE0CA",
+    "ice": "#F6F1E6",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#E2B06E",
+    "obj": "#B4ACA0"
+   }
+  },
+  {
+   "slug": "bridge-of-sighs",
+   "label": "Bridge of Sighs over the Rio di Palazzo, Venice",
+   "lat": 45.434,
+   "lon": 12.3409,
+   "radius_km": 2,
+   "aliases": [
+    "bridge of sighs",
+    "ponte dei sospiri"
+   ],
+   "palette": {
+    "sky": "#B4D2F0",
+    "far": "#A9A59C",
+    "mid": "#DCD6CA",
+    "ice": "#F4F1EA",
+    "water": "#3E7A72",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E44",
+    "acc": "#B85A3C",
+    "obj": "#D9A050"
+   }
+  },
+  {
+   "slug": "capri",
+   "label": "The Faraglioni of Capri",
+   "lat": 40.544,
+   "lon": 14.256,
+   "radius_km": 6,
+   "aliases": [
+    "isola di capri",
+    "isle of capri",
+    "capri island",
+    "faraglioni di capri"
+   ],
+   "names": [
+    "capri"
+   ],
+   "palette": {
+    "sky": "#B9DAF2",
+    "far": "#A9B8C8",
+    "mid": "#B3ADA2",
+    "ice": "#FFFFFF",
+    "water": "#1F5FA6",
+    "near": "#262A2E",
+    "sun": "#F5C842",
+    "leaf": "#4E7A3A",
+    "acc": "#8C8577",
+    "obj": "#E9E4D8"
+   }
+  },
+  {
+   "slug": "catania",
+   "label": "Elephant Fountain and Cathedral, Piazza del Duomo, Catania",
+   "lat": 37.5025,
+   "lon": 15.0872,
+   "radius_km": 15,
+   "aliases": [
+    "fontana dell elefante",
+    "elephant fountain",
+    "liotru",
+    "cattedrale di sant agata",
+    "sant agata cathedral",
+    "catania cathedral"
+   ],
+   "names": [
+    "catania",
+    "catania city"
+   ],
+   "palette": {
+    "sky": "#B4D0EE",
+    "far": "#A9A295",
+    "mid": "#D9D0BC",
+    "ice": "#F2EDE2",
+    "water": "#4E8EB0",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#807C76",
+    "obj": "#4A4B4E"
+   }
+  },
+  {
+   "slug": "cefalu",
+   "label": "Cefalu with La Rocca and the Norman cathedral",
+   "lat": 38.039,
+   "lon": 14.023,
+   "radius_km": 8,
+   "aliases": [
+    "rocca di cefalu",
+    "la rocca cefalu",
+    "cefalu cathedral",
+    "duomo di cefalu",
+    "cattedrale di cefalu"
+   ],
+   "names": [
+    "cefalu"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#C2BBAE",
+    "mid": "#C98E5C",
+    "ice": "#F1E8D6",
+    "water": "#3FA3A6",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E3A",
+    "acc": "#D8693A",
+    "obj": "#DDB86E"
+   }
+  },
+  {
    "slug": "cinque-terre",
    "label": "Manarola, Cinque Terre",
    "lat": 44.107,
@@ -83,10 +249,23 @@
    "lat": 43.773,
    "lon": 11.256,
    "radius_km": 10,
-   "aliases": [],
+   "aliases": [
+    "florence cathedral",
+    "duomo di firenze",
+    "duomo of florence",
+    "santa maria del fiore",
+    "brunelleschi dome",
+    "brunelleschi s dome",
+    "cupola del brunelleschi",
+    "cattedrale di firenze",
+    "cathedral of florence",
+    "cattedrale di santa maria del fiore"
+   ],
    "names": [
     "florence",
-    "firenze"
+    "firenze",
+    "florence duomo",
+    "duomo florence"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -99,6 +278,390 @@
     "leaf": "#4E7A5A",
     "acc": "#C0603C",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "lucca",
+   "label": "Guinigi Tower over the roofs of Lucca",
+   "lat": 43.8436,
+   "lon": 10.5079,
+   "radius_km": 12,
+   "aliases": [
+    "torre guinigi",
+    "guinigi tower"
+   ],
+   "names": [
+    "lucca"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#8FA88E",
+    "mid": "#B8654A",
+    "ice": "#EFE4CF",
+    "water": "#4E8EB0",
+    "near": "#2B2320",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A36",
+    "acc": "#D27A4E",
+    "obj": "#E6CC8A"
+   }
+  },
+  {
+   "slug": "modica",
+   "label": "Duomo di San Giorgio, Modica",
+   "lat": 36.8586,
+   "lon": 14.7608,
+   "radius_km": 6,
+   "aliases": [
+    "san giorgio modica",
+    "duomo di modica",
+    "duomo di san giorgio modica",
+    "cathedral of san giorgio modica"
+   ],
+   "names": [
+    "modica"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#D7B58E",
+    "mid": "#E2CDAA",
+    "ice": "#F0D6B2",
+    "water": "#4E8EB0",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#B5875C",
+    "obj": "#5E5248"
+   }
+  },
+  {
+   "slug": "monreale",
+   "label": "Monreale Cathedral",
+   "lat": 38.0819,
+   "lon": 13.2923,
+   "radius_km": 5,
+   "aliases": [
+    "monreale cathedral",
+    "duomo di monreale",
+    "cattedrale di monreale"
+   ],
+   "names": [
+    "monreale"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#ECE6D8",
+    "mid": "#C7A57A",
+    "ice": "#E9DEC6",
+    "water": "#4E8EB0",
+    "near": "#2A241E",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#A8764E",
+    "obj": "#7A5A40"
+   }
+  },
+  {
+   "slug": "mount-etna",
+   "label": "Mount Etna's broad massif with its summit plume",
+   "lat": 37.748,
+   "lon": 14.999,
+   "radius_km": 15,
+   "aliases": [
+    "mount etna",
+    "monte etna",
+    "mt etna",
+    "etna volcano",
+    "vulcano etna",
+    "etna summit",
+    "etna excursion",
+    "etna tour"
+   ],
+   "names": [
+    "etna"
+   ],
+   "palette": {
+    "sky": "#B4D2F0",
+    "far": "#9A8E86",
+    "mid": "#7A6B64",
+    "ice": "#F2F2F0",
+    "water": "#3E78B0",
+    "near": "#221C1A",
+    "sun": "#F4C542",
+    "leaf": "#4F6E3A",
+    "acc": "#3A302D",
+    "obj": "#8A5E4A"
+   }
+  },
+  {
+   "slug": "naples",
+   "label": "Castel dell'Ovo and Vesuvius, Bay of Naples",
+   "lat": 40.828,
+   "lon": 14.248,
+   "radius_km": 15,
+   "aliases": [
+    "castel dell ovo",
+    "castello dell ovo",
+    "borgo marinari"
+   ],
+   "names": [
+    "naples",
+    "napoli",
+    "napoli city",
+    "naples city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7F8E86",
+    "mid": "#D2BE92",
+    "ice": "#EEE8DC",
+    "water": "#2E6E9E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A48",
+    "acc": "#C8503C",
+    "obj": "#A8946E"
+   }
+  },
+  {
+   "slug": "neapolis-archaeological-park",
+   "label": "Ear of Dionysius, Neapolis Archaeological Park, Syracuse",
+   "lat": 37.0767,
+   "lon": 15.2783,
+   "radius_km": 2,
+   "aliases": [
+    "neapolis archaeological park",
+    "parco archeologico della neapolis",
+    "parco archeologico di siracusa",
+    "neapolis park",
+    "teatro greco di siracusa",
+    "greek theatre of syracuse",
+    "greek theater of syracuse",
+    "orecchio di dionisio",
+    "ear of dionysius",
+    "latomia del paradiso"
+   ],
+   "names": [
+    "neapolis"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C8C1B2",
+    "mid": "#DCCBA6",
+    "ice": "#EFE8DA",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#B89A72",
+    "obj": "#4E4943"
+   }
+  },
+  {
+   "slug": "noto",
+   "label": "Noto Cathedral and its staircase",
+   "lat": 36.8925,
+   "lon": 15.0698,
+   "radius_km": 10,
+   "aliases": [
+    "noto cathedral",
+    "cattedrale di noto",
+    "san nicolo di noto",
+    "duomo di noto"
+   ],
+   "names": [
+    "noto"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#DCCBA8",
+    "mid": "#E2BE86",
+    "ice": "#F0DDB4",
+    "water": "#4E8EB0",
+    "near": "#2A2520",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#C89A5A",
+    "obj": "#B8854A"
+   }
+  },
+  {
+   "slug": "ostuni",
+   "label": "Ostuni, the White Town on its hill",
+   "lat": 40.7302,
+   "lon": 17.5781,
+   "radius_km": 8,
+   "aliases": [
+    "citta bianca",
+    "white city of ostuni"
+   ],
+   "names": [
+    "ostuni"
+   ],
+   "palette": {
+    "sky": "#B6D6EF",
+    "far": "#DEDAD0",
+    "mid": "#CFB289",
+    "ice": "#F8F6F1",
+    "water": "#5E9CC4",
+    "near": "#2A2A26",
+    "sun": "#F4C542",
+    "leaf": "#557A38",
+    "acc": "#B4915F",
+    "obj": "#8A9A5A"
+   }
+  },
+  {
+   "slug": "palazzo-vecchio",
+   "label": "Palazzo Vecchio and its tower on Piazza della Signoria, Florence",
+   "lat": 43.7694,
+   "lon": 11.256,
+   "radius_km": 2,
+   "aliases": [
+    "palazzo vecchio",
+    "torre di arnolfo",
+    "arnolfo tower"
+   ],
+   "palette": {
+    "sky": "#A8CBF0",
+    "far": "#7E6A54",
+    "mid": "#A98C6A",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#B5AB98",
+    "acc": "#D9B07A",
+    "obj": "#9C9A92"
+   }
+  },
+  {
+   "slug": "palermo",
+   "label": "Palermo Cathedral",
+   "lat": 38.1145,
+   "lon": 13.3561,
+   "radius_km": 15,
+   "aliases": [
+    "palermo cathedral",
+    "cattedrale di palermo",
+    "duomo di palermo",
+    "cathedral of palermo"
+   ],
+   "names": [
+    "palermo",
+    "palermo city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CFC6B4",
+    "mid": "#D8B684",
+    "ice": "#EEE2C8",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#A8844E",
+    "obj": "#8FAEA2"
+   }
+  },
+  {
+   "slug": "pantheon",
+   "label": "Pantheon, Rome",
+   "lat": 41.8986,
+   "lon": 12.4768,
+   "radius_km": 2,
+   "aliases": [
+    "pantheon",
+    "panteon",
+    "piazza della rotonda",
+    "santa maria ad martyres"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#BDB8AE",
+    "mid": "#A97E62",
+    "ice": "#E6DFCF",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#78736C",
+    "obj": "#A29E96"
+   }
+  },
+  {
+   "slug": "path-of-the-gods",
+   "label": "Path of the Gods above the Amalfi Coast",
+   "lat": 40.6346,
+   "lon": 14.5163,
+   "radius_km": 4,
+   "aliases": [
+    "path of the gods",
+    "sentiero degli dei",
+    "path of gods",
+    "walk of the gods"
+   ],
+   "palette": {
+    "sky": "#B6D4F0",
+    "far": "#AEBBC6",
+    "mid": "#CBC4B2",
+    "ice": "#E2DDD2",
+    "water": "#1F5FA8",
+    "near": "#28261F",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A38",
+    "acc": "#A4A15E",
+    "obj": "#A8323A"
+   }
+  },
+  {
+   "slug": "piazza-navona",
+   "label": "Piazza Navona: Sant'Agnese in Agone and the Fountain of the Four Rivers",
+   "lat": 41.8992,
+   "lon": 12.4731,
+   "radius_km": 2,
+   "aliases": [
+    "piazza navona",
+    "fontana dei quattro fiumi",
+    "fountain of the four rivers",
+    "four rivers fountain",
+    "sant agnese in agone"
+   ],
+   "palette": {
+    "sky": "#A8CBF0",
+    "far": "#BDB5A8",
+    "mid": "#E9E1CF",
+    "ice": "#F7F4EC",
+    "water": "#6FB0C0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#8E8982",
+    "acc": "#D9925A",
+    "obj": "#C2A48A"
+   }
+  },
+  {
+   "slug": "piazzale-michelangelo",
+   "label": "Florence panorama from Piazzale Michelangelo",
+   "lat": 43.7629,
+   "lon": 11.265,
+   "radius_km": 1,
+   "aliases": [
+    "piazzale michelangelo",
+    "piazzale michelangiolo",
+    "michelangelo square"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#8E9BB0",
+    "mid": "#B49A74",
+    "ice": "#F1EBDD",
+    "water": "#6A9488",
+    "near": "#2B2A27",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#C0623E",
+    "obj": "#E6C489"
    }
   },
   {
@@ -129,6 +692,30 @@
    }
   },
   {
+   "slug": "ponte-vecchio",
+   "label": "Ponte Vecchio over the Arno, Florence",
+   "lat": 43.768,
+   "lon": 11.2531,
+   "radius_km": 2,
+   "aliases": [
+    "ponte vecchio",
+    "vasari corridor",
+    "corridoio vasariano"
+   ],
+   "palette": {
+    "sky": "#A8CCEB",
+    "far": "#E3A866",
+    "mid": "#A39A86",
+    "ice": "#F1E6CB",
+    "water": "#4F8C94",
+    "near": "#2C2824",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3E",
+    "acc": "#B8603E",
+    "obj": "#E8C25A"
+   }
+  },
+  {
    "slug": "positano",
    "label": "Positano on the Amalfi Coast",
    "lat": 40.628,
@@ -151,6 +738,334 @@
     "acc": "#E89A7A",
     "obj": "#E8B84A"
    }
+  },
+  {
+   "slug": "ragusa",
+   "label": "Ragusa Ibla with the domes of San Giorgio and Santa Maria dell'Itria",
+   "lat": 36.927,
+   "lon": 14.742,
+   "radius_km": 10,
+   "aliases": [
+    "ragusa ibla"
+   ],
+   "names": [
+    "ragusa",
+    "ibla"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#BDBB86",
+    "mid": "#B08E6C",
+    "ice": "#EDE2C8",
+    "water": "#86A3B4",
+    "near": "#2C2620",
+    "sun": "#F2C14E",
+    "leaf": "#5C8A3C",
+    "acc": "#E6BE48",
+    "obj": "#2F63B4"
+   }
+  },
+  {
+   "slug": "ravello",
+   "label": "Villa Rufolo gardens over the sea, Ravello",
+   "lat": 40.649,
+   "lon": 14.6115,
+   "radius_km": 4,
+   "aliases": [
+    "villa rufolo"
+   ],
+   "names": [
+    "ravello"
+   ],
+   "palette": {
+    "sky": "#BFE0F4",
+    "far": "#9E978A",
+    "mid": "#D8C8A6",
+    "ice": "#F2EEE4",
+    "water": "#3F86B8",
+    "near": "#263022",
+    "sun": "#F2B630",
+    "leaf": "#4E7436",
+    "acc": "#C0704A",
+    "obj": "#E07AA0"
+   }
+  },
+  {
+   "slug": "roman-forum",
+   "label": "Roman Forum with the Temple of Saturn",
+   "lat": 41.8925,
+   "lon": 12.4853,
+   "radius_km": 1,
+   "aliases": [
+    "roman forum",
+    "foro romano",
+    "forum romanum",
+    "temple of saturn",
+    "tempio di saturno"
+   ],
+   "palette": {
+    "sky": "#B2D2F0",
+    "far": "#DCCAA8",
+    "mid": "#A99C8C",
+    "ice": "#ECE6DA",
+    "water": "#4A88B8",
+    "near": "#2C2722",
+    "sun": "#F4C542",
+    "leaf": "#4E7438",
+    "acc": "#B5724E",
+    "obj": "#CDB892"
+   }
+  },
+  {
+   "slug": "siena",
+   "label": "Piazza del Campo and Torre del Mangia, Siena",
+   "lat": 43.3184,
+   "lon": 11.3316,
+   "radius_km": 12,
+   "aliases": [
+    "torre del mangia",
+    "mangia tower"
+   ],
+   "names": [
+    "siena",
+    "siena city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E2B48C",
+    "mid": "#A85A3E",
+    "ice": "#ECE4D2",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#C98E6E",
+    "obj": "#B07850"
+   }
+  },
+  {
+   "slug": "spanish-steps",
+   "label": "Spanish Steps and Trinita dei Monti",
+   "lat": 41.9058,
+   "lon": 12.4828,
+   "radius_km": 2,
+   "aliases": [
+    "spanish steps",
+    "piazza di spagna",
+    "trinita dei monti",
+    "scalinata di spagna"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#E2D8C4",
+    "mid": "#D29A5C",
+    "ice": "#F6F1E6",
+    "water": "#6FB0C8",
+    "near": "#2B2622",
+    "sun": "#F6C431",
+    "leaf": "#4F7A36",
+    "acc": "#B5734A",
+    "obj": "#8E969C"
+   }
+  },
+  {
+   "slug": "st-marks-basilica",
+   "label": "St Mark's Basilica facade",
+   "lat": 45.4345,
+   "lon": 12.3397,
+   "radius_km": 1,
+   "aliases": [
+    "st mark s basilica",
+    "st marks basilica",
+    "basilica di san marco",
+    "basilica of san marco",
+    "basilica of saint mark",
+    "san marco basilica"
+   ],
+   "palette": {
+    "sky": "#B8D6F0",
+    "far": "#ECE6DA",
+    "mid": "#D8C6AE",
+    "ice": "#F6F2EA",
+    "water": "#8C939A",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#5E7A44",
+    "acc": "#D6A83C",
+    "obj": "#3F5E8C"
+   }
+  },
+  {
+   "slug": "st-marks-square",
+   "label": "Piazza San Marco with the Basilica and the Campanile, Venice",
+   "lat": 45.4341,
+   "lon": 12.3388,
+   "radius_km": 2,
+   "aliases": [
+    "piazza san marco",
+    "st mark s square",
+    "st marks square",
+    "saint mark s square",
+    "saint marks square",
+    "san marco square"
+   ],
+   "names": [
+    "san marco"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A9A69C",
+    "mid": "#B5583A",
+    "ice": "#F1EBDD",
+    "water": "#6F7884",
+    "near": "#27231F",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E86",
+    "acc": "#D9AA3C",
+    "obj": "#4B4640"
+   }
+  },
+  {
+   "slug": "syracuse",
+   "label": "Duomo of Syracuse with the Doric columns of the Temple of Athena, Ortigia",
+   "lat": 37.0594,
+   "lon": 15.2933,
+   "radius_km": 12,
+   "aliases": [
+    "ortigia",
+    "ortygia",
+    "duomo di siracusa",
+    "syracuse cathedral",
+    "cattedrale di siracusa",
+    "isola di ortigia"
+   ],
+   "names": [
+    "syracuse",
+    "siracusa",
+    "syracuse city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D2B88C",
+    "mid": "#EADBBE",
+    "ice": "#F6F0E2",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#E4C9AC",
+    "obj": "#C9B08A"
+   }
+  },
+  {
+   "slug": "taormina",
+   "label": "Taormina's Greek Theatre with Mount Etna",
+   "lat": 37.8524,
+   "lon": 15.2921,
+   "radius_km": 6,
+   "aliases": [
+    "taormina greek theatre",
+    "teatro antico taormina"
+   ],
+   "names": [
+    "taormina"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#7C86A6",
+    "mid": "#B47A57",
+    "ice": "#F4F4F2",
+    "water": "#2E86C1",
+    "near": "#2B2622",
+    "sun": "#F4C542",
+    "leaf": "#4F7A3A",
+    "acc": "#BDB3A4",
+    "obj": "#D8CBB3"
+   }
+  },
+  {
+   "slug": "trapani",
+   "label": "Torre di Ligny, Trapani",
+   "lat": 38.0177,
+   "lon": 12.5046,
+   "radius_km": 10,
+   "aliases": [
+    "torre di ligny",
+    "ligny tower"
+   ],
+   "names": [
+    "trapani"
+   ],
+   "palette": {
+    "sky": "#A9CEF0",
+    "far": "#BDB3A0",
+    "mid": "#D3BC92",
+    "ice": "#E8DFCB",
+    "water": "#2F6E9C",
+    "near": "#2A2724",
+    "sun": "#F4C542",
+    "leaf": "#5E7E40",
+    "acc": "#C48C4C",
+    "obj": "#5E574F"
+   }
+  },
+  {
+   "slug": "trevi-fountain",
+   "label": "Trevi Fountain, Rome",
+   "lat": 41.9009,
+   "lon": 12.4833,
+   "radius_km": 2,
+   "aliases": [
+    "trevi fountain",
+    "fontana di trevi",
+    "fontaine de trevi",
+    "trevi brunnen",
+    "fuente de trevi"
+   ],
+   "names": [
+    "trevi"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#ABA597",
+    "mid": "#D2C9B4",
+    "ice": "#F1ECE0",
+    "water": "#4DB5B0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#E3A266",
+    "obj": "#C97E4A"
+   }
+  },
+  {
+   "slug": "valley-of-the-temples",
+   "label": "Temple of Concordia, Valley of the Temples",
+   "lat": 37.2908,
+   "lon": 13.5918,
+   "radius_km": 4,
+   "aliases": [
+    "valley of the temples",
+    "valle dei templi",
+    "temple of concordia",
+    "tempio della concordia",
+    "concordia temple"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A7AE8C",
+    "mid": "#D4A86C",
+    "ice": "#F2EFE8",
+    "water": "#4A88B8",
+    "near": "#2E2620",
+    "sun": "#F4C542",
+    "leaf": "#6E7F45",
+    "acc": "#7E5A36",
+    "obj": "#E2CFA6"
+   },
+   "names": [
+    "agrigento"
+   ]
   },
   {
    "slug": "venice",
