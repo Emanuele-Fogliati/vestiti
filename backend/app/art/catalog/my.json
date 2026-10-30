@@ -3,6 +3,206 @@
  "name": "Malaysia",
  "places": [
   {
+   "slug": "batu-caves",
+   "label": "Batu Caves: the golden Murugan statue and rainbow stairs",
+   "lat": 3.2379,
+   "lon": 101.684,
+   "radius_km": 4,
+   "aliases": [
+    "batu caves",
+    "batu cave",
+    "grotte di batu",
+    "murugan statue"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C8B6A2",
+    "mid": "#C2BBAE",
+    "ice": "#F2EFE6",
+    "water": "#3E8ED0",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A36",
+    "acc": "#D9A425",
+    "obj": "#E2457A"
+   }
+  },
+  {
+   "slug": "cameron-highlands",
+   "label": "Tea hills and the BOH Sungai Palas tea centre, Cameron Highlands",
+   "lat": 4.47,
+   "lon": 101.38,
+   "radius_km": 25,
+   "aliases": [
+    "cameron highlands",
+    "sungai palas",
+    "boh tea"
+   ],
+   "names": [
+    "tanah rata",
+    "brinchang"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#8EA2B8",
+    "mid": "#2E5A30",
+    "ice": "#F2F0EA",
+    "water": "#4E8EA8",
+    "near": "#22281E",
+    "sun": "#F2C14E",
+    "leaf": "#7CB43C",
+    "acc": "#A8643E",
+    "obj": "#6E8A94"
+   }
+  },
+  {
+   "slug": "george-town",
+   "label": "Chew Clan Jetty stilt houses, George Town (Penang)",
+   "lat": 5.4135,
+   "lon": 100.3405,
+   "radius_km": 15,
+   "aliases": [
+    "clan jetty",
+    "clan jetties",
+    "chew jetty"
+   ],
+   "names": [
+    "george town",
+    "georgetown",
+    "penang",
+    "pulau penang",
+    "pulau pinang",
+    "george town penang"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E2DDD2",
+    "mid": "#8E6E54",
+    "ice": "#F2F0EA",
+    "water": "#4FA39C",
+    "near": "#2A2522",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#A8483A",
+    "obj": "#2E6EC0"
+   }
+  },
+  {
+   "slug": "kinabatangan-river",
+   "label": "Pygmy elephants on the Kinabatangan River",
+   "lat": 5.52,
+   "lon": 118.25,
+   "radius_km": 30,
+   "aliases": [
+    "kinabatangan",
+    "sungai kinabatangan",
+    "fiume kinabatangan"
+   ],
+   "palette": {
+    "sky": "#A9CCF0",
+    "far": "#E2DCCF",
+    "mid": "#2F6A32",
+    "ice": "#F2F0EA",
+    "water": "#C49C70",
+    "near": "#26221C",
+    "sun": "#F2C14E",
+    "leaf": "#5C9A3C",
+    "acc": "#6A5038",
+    "obj": "#7C726C"
+   }
+  },
+  {
+   "slug": "kota-kinabalu",
+   "label": "City Mosque on its lagoon, Kota Kinabalu",
+   "lat": 5.9927,
+   "lon": 116.105,
+   "radius_km": 15,
+   "aliases": [
+    "kota kinabalu city mosque",
+    "masjid bandaraya kota kinabalu"
+   ],
+   "names": [
+    "kota kinabalu",
+    "jesselton"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9E9A",
+    "mid": "#EDE0BC",
+    "ice": "#F6F4EE",
+    "water": "#6E98A6",
+    "near": "#2A2B30",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A3E",
+    "acc": "#D4B86A",
+    "obj": "#3460A8"
+   }
+  },
+  {
+   "slug": "malacca",
+   "label": "Christ Church and the red Dutch Square, Melaka",
+   "lat": 2.1945,
+   "lon": 102.249,
+   "radius_km": 15,
+   "aliases": [
+    "christ church melaka",
+    "christ church malacca",
+    "dutch square",
+    "stadthuys"
+   ],
+   "names": [
+    "malacca",
+    "melaka",
+    "malacca city",
+    "melaka city",
+    "bandar melaka"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B9A294",
+    "mid": "#C2524A",
+    "ice": "#F4F1EA",
+    "water": "#5E9AB0",
+    "near": "#2E2422",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A3A",
+    "acc": "#C46A3A",
+    "obj": "#3A3A3A"
+   }
+  },
+  {
+   "slug": "mount-kinabalu",
+   "label": "Mount Kinabalu's granite summit above the rainforest",
+   "lat": 6.075,
+   "lon": 116.558,
+   "radius_km": 20,
+   "aliases": [
+    "mount kinabalu",
+    "mt kinabalu",
+    "gunung kinabalu",
+    "monte kinabalu",
+    "kinabalu national park",
+    "kinabalu park",
+    "low s peak",
+    "lows peak"
+   ],
+   "names": [
+    "kinabalu"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#5E8A4E",
+    "mid": "#8A8C92",
+    "ice": "#E8E6E0",
+    "water": "#4E8EA8",
+    "near": "#262A26",
+    "sun": "#F2C14E",
+    "leaf": "#3A6A38",
+    "acc": "#A89A80",
+    "obj": "#B06A3A"
+   }
+  },
+  {
    "slug": "petronas-towers",
    "label": "Petronas Towers, Kuala Lumpur",
    "lat": 3.158,
@@ -26,6 +226,32 @@
     "leaf": "#3E7E44",
     "acc": "#C8A060",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "sepilok-orangutan-rehabilitation-centre",
+   "label": "Orangutans at the Sepilok feeding platform",
+   "lat": 5.8636,
+   "lon": 117.9497,
+   "radius_km": 5,
+   "aliases": [
+    "sepilok orangutan",
+    "sepilok orang utan"
+   ],
+   "names": [
+    "sepilok"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#6E5038",
+    "mid": "#2E5E2E",
+    "ice": "#E6E0CE",
+    "water": "#4E8EA8",
+    "near": "#221E1A",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3E",
+    "acc": "#9A8E7E",
+    "obj": "#B04E24"
    }
   }
  ]
