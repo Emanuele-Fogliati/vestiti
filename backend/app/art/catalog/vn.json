@@ -3,6 +3,30 @@
  "name": "Vietnam",
  "places": [
   {
+   "slug": "bai-dinh-pagoda",
+   "label": "Bai Dinh Pagoda hall and 13-storey stupa",
+   "lat": 20.276,
+   "lon": 105.864,
+   "radius_km": 3,
+   "aliases": [
+    "bai dinh",
+    "chua bai dinh",
+    "pagoda di bai dinh"
+   ],
+   "palette": {
+    "sky": "#B7D6EC",
+    "far": "#93AE92",
+    "mid": "#C97A4E",
+    "ice": "#D8D5CC",
+    "water": "#A3A49F",
+    "near": "#2A2420",
+    "sun": "#E9B949",
+    "leaf": "#4B7A3A",
+    "acc": "#7A3B2C",
+    "obj": "#5A3B2B"
+   }
+  },
+  {
    "slug": "ben-thanh-market",
    "label": "Ben Thanh Market clock tower gate, Ho Chi Minh City",
    "lat": 10.7725,
@@ -48,6 +72,35 @@
     "leaf": "#3F7E36",
     "acc": "#B98A58",
     "obj": "#7E6A55"
+   }
+  },
+  {
+   "slug": "bich-dong-pagoda",
+   "label": "Bich Dong Pagoda gate by the mushroom rock and lotus pond",
+   "lat": 20.2155,
+   "lon": 105.9338,
+   "radius_km": 2,
+   "aliases": [
+    "bich dong pagoda",
+    "chua bich dong",
+    "pagoda bich dong",
+    "pagoda di bich dong",
+    "bich dong temple"
+   ],
+   "names": [
+    "bich dong"
+   ],
+   "palette": {
+    "sky": "#BFDDF0",
+    "far": "#8E9A8C",
+    "mid": "#9A988F",
+    "ice": "#EDE5D3",
+    "water": "#5E9A8C",
+    "near": "#262620",
+    "sun": "#F4C542",
+    "leaf": "#4E8636",
+    "acc": "#B6463A",
+    "obj": "#5E5A54"
    }
   },
   {
@@ -154,6 +207,30 @@
    }
   },
   {
+   "slug": "cua-dai-beach",
+   "label": "Cua Dai Beach with thatched parasols, basket boats and the Cham Islands",
+   "lat": 15.8838,
+   "lon": 108.3866,
+   "radius_km": 3,
+   "aliases": [
+    "cua dai",
+    "spiaggia di cua dai",
+    "bai bien cua dai"
+   ],
+   "palette": {
+    "sky": "#BFDCEE",
+    "far": "#8DA39E",
+    "mid": "#B8955E",
+    "ice": "#EEE2C4",
+    "water": "#4FA0B2",
+    "near": "#2A2420",
+    "sun": "#F4C542",
+    "leaf": "#4E8A3E",
+    "acc": "#7A5C3C",
+    "obj": "#3C3128"
+   }
+  },
+  {
    "slug": "da-nang",
    "label": "Dragon Bridge over the Han River, Da Nang",
    "lat": 16.0612,
@@ -181,6 +258,32 @@
     "leaf": "#5E8E3E",
     "acc": "#E9B51E",
     "obj": "#B7B4AC"
+   }
+  },
+  {
+   "slug": "dong-hoi",
+   "label": "Quang Binh Quan citadel gate, Dong Hoi",
+   "lat": 17.4797,
+   "lon": 106.6005,
+   "radius_km": 12,
+   "aliases": [
+    "quang binh quan",
+    "quang binh gate"
+   ],
+   "names": [
+    "dong hoi"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#B8B3A6",
+    "mid": "#A85B3F",
+    "ice": "#E2CC8C",
+    "water": "#5C8FB0",
+    "near": "#2C2522",
+    "sun": "#F4C542",
+    "leaf": "#4E7E3A",
+    "acc": "#9A9482",
+    "obj": "#7A6E58"
    }
   },
   {
@@ -251,7 +354,9 @@
     "pho co ha noi",
     "pho co hanoi",
     "quartiere vecchio di hanoi",
-    "quartiere vecchio hanoi"
+    "quartiere vecchio hanoi",
+    "ngoc son",
+    "den ngoc son"
    ],
    "names": [
     "hanoi",
@@ -285,7 +390,9 @@
     "notre dame cathedral basilica of saigon",
     "notre dame basilica of saigon",
     "nha tho duc ba",
-    "saigon cathedral"
+    "saigon cathedral",
+    "cattedrale notre dame di saigon",
+    "cattedrale di notre dame di saigon"
    ],
    "names": [
     "ho chi minh",
@@ -434,6 +541,29 @@
    }
   },
   {
+   "slug": "ky-co-beach",
+   "label": "Ky Co beach cove below its rocky headland, Quy Nhon",
+   "lat": 13.827,
+   "lon": 109.303,
+   "radius_km": 5,
+   "aliases": [
+    "ky co",
+    "bai ky co"
+   ],
+   "palette": {
+    "sky": "#CFE3F2",
+    "far": "#B8946C",
+    "mid": "#946A4E",
+    "ice": "#F3E8CF",
+    "water": "#3E86B8",
+    "near": "#2A2420",
+    "sun": "#F4C542",
+    "leaf": "#6C7C3E",
+    "acc": "#5EC8C0",
+    "obj": "#2D5E9E"
+   }
+  },
+  {
    "slug": "lang-co",
    "label": "Lang Co sand spit, village and lagoon bridge below the mountains",
    "lat": 16.262,
@@ -567,7 +697,10 @@
     "leaf": "#4A853A",
     "acc": "#A9C86E",
     "obj": "#B5533A"
-   }
+   },
+   "names": [
+    "mua caves"
+   ]
   },
   {
    "slug": "my-son",
@@ -594,6 +727,35 @@
     "leaf": "#3F7232",
     "acc": "#7C4632",
     "obj": "#8E897E"
+   }
+  },
+  {
+   "slug": "my-tho",
+   "label": "Rach Mieu Bridge over the Tien River with a Mekong boat, My Tho",
+   "lat": 10.33,
+   "lon": 106.36,
+   "radius_km": 12,
+   "aliases": [
+    "rach mieu",
+    "cau rach mieu"
+   ],
+   "names": [
+    "my tho",
+    "mytho",
+    "my tho city",
+    "citta di my tho"
+   ],
+   "palette": {
+    "sky": "#B9D8EE",
+    "far": "#7E9A6E",
+    "mid": "#DCD5C7",
+    "ice": "#F2EEE6",
+    "water": "#A98C6C",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#4F7A3A",
+    "acc": "#D9785A",
+    "obj": "#2E6FA8"
    }
   },
   {
@@ -833,7 +995,10 @@
    ],
    "names": [
     "sapa",
-    "sa pa"
+    "sa pa",
+    "lao cai",
+    "lao cai city",
+    "lao cai province"
    ],
    "palette": {
     "sky": "#CFE3EE",
@@ -846,6 +1011,32 @@
     "leaf": "#4E7E34",
     "acc": "#8A5A34",
     "obj": "#4A4743"
+   }
+  },
+  {
+   "slug": "sung-sot-cave",
+   "label": "Sung Sot Cave mouth over Ha Long Bay",
+   "lat": 20.8566,
+   "lon": 107.0925,
+   "radius_km": 3,
+   "aliases": [
+    "sung sot",
+    "surprise cave",
+    "grotta delle sorprese",
+    "grotta sung sot",
+    "hang sung sot"
+   ],
+   "palette": {
+    "sky": "#A8D4F2",
+    "far": "#E3D5B5",
+    "mid": "#B39568",
+    "ice": "#F3ECDC",
+    "water": "#6F9E8E",
+    "near": "#2B241E",
+    "sun": "#F4C542",
+    "leaf": "#4F7F3B",
+    "acc": "#A8452E",
+    "obj": "#8E8C84"
    }
   },
   {
@@ -926,6 +1117,29 @@
     "leaf": "#3F6E38",
     "acc": "#9C5A42",
     "obj": "#9A7E62"
+   }
+  },
+  {
+   "slug": "tra-que",
+   "label": "Tra Que vegetable village gardens, Hoi An",
+   "lat": 15.9006,
+   "lon": 108.3428,
+   "radius_km": 2,
+   "aliases": [
+    "tra que",
+    "traque"
+   ],
+   "palette": {
+    "sky": "#BFDDF0",
+    "far": "#9CC66A",
+    "mid": "#7A5A3E",
+    "ice": "#F1EBD8",
+    "water": "#8FA9A6",
+    "near": "#26261E",
+    "sun": "#F4C542",
+    "leaf": "#3F8A35",
+    "acc": "#C2522F",
+    "obj": "#4C78A8"
    }
   },
   {
