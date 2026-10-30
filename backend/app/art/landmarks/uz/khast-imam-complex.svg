@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="40" r="12" fill="var(--il-sun)"/>
+<g transform="translate(0 10)">
+<path d="M0 154V132Q8 124 16 130Q24 124 32 132V154ZM268 154V132Q276 124 284 130Q292 124 300 132V154Z" fill="var(--il-leaf)"/>
+<path d="M62 107V96H94V107ZM206 107V96H238V107Z" fill="var(--il-mid)"/>
+<path d="M62 98Q60 74 78 71Q96 74 94 98ZM206 98Q204 74 222 71Q240 74 238 98Z" fill="var(--il-acc)"/>
+<path d="M62 100H94M206 100H238" stroke="var(--il-water)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M78 71V63M222 71V63" stroke="var(--il-sun)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M46 154V113H254V154Z" fill="var(--il-mid)"/>
+<path d="M58 154V107H98V154ZM202 154V107H242V154ZM110 154V100H190V154Z" fill="var(--il-mid)"/>
+<path d="M98 107V154M202 107V154M110 100V154M190 100V154" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M62 152V111H94V152ZM206 152V111H238V152ZM114 106H186V110H114Z" fill="var(--il-water)"/>
+<path d="M67 152V128Q67 118 78 114Q89 118 89 128V152ZM211 152V128Q211 118 222 114Q233 118 233 128V152Z" fill="var(--il-mid)"/>
+<path d="M72 152V132Q72 126 78 123Q84 126 84 132V152ZM216 152V132Q216 126 222 123Q228 126 228 132V152Z" fill="var(--il-near)" opacity="0.8"/>
+<path d="M142 140V124Q142 118 150 115Q158 118 158 124V140ZM118 144V122Q118 118 121 117Q124 118 124 122V144ZM176 144V122Q176 118 179 117Q182 118 182 122V144ZM102 142V126Q102 122 104 121Q106 122 106 126V142ZM194 142V126Q194 122 196 121Q198 122 198 126V142Z" fill="var(--il-water)"/>
+<path d="M33 154V42H47V154ZM253 154V42H267V154Z" fill="var(--il-mid)"/>
+<path d="M33 60H47M33 82H47M253 60H267M253 82H267" stroke="var(--il-water)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M32 42V36Q40 33 48 36V42ZM252 42V36Q260 33 268 36V42Z" fill="var(--il-mid)"/>
+<path d="M38 41V38M42 41V38M258 41V38M262 41V38" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M35 34Q35 28 40 26Q45 28 45 34ZM255 34Q255 28 260 26Q265 28 265 34Z" fill="var(--il-acc)"/>
+</g>
+<path d="M0 168V162H300V168Z" fill="var(--il-obj)"/>
+<path d="M0 200V167H300V200Z" fill="var(--il-far)"/>

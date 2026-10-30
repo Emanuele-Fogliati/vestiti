@@ -30,8 +30,12 @@ def owned_item(w: WardrobeItem) -> O.CatalogItem:
     specs = {"clo": clo, "waterproof": w.waterproof, "windproof": w.windproof or w.waterproof,
              "insulation": {"synthetic": "synthetic_base" if w.category.startswith("base")
                             else "synthetic"}.get(w.material or "", w.material)}
+    known = w.specs or {}  # data of the model it was matched to, when it was
     if w.waterproof and w.category in ("shell_top", "shell_bottom"):
-        specs["waterproof_mm"] = 10000  # unknown rating: assume an average membrane
+        # unknown rating: assume an average membrane
+        specs["waterproof_mm"] = known.get("waterproof_mm") or 10000
+    if known.get("fill_power"):
+        specs["fill_power"] = known["fill_power"]
     if w.category == "footwear":
         specs["footwear_type"] = w.footwear_type or "sneaker"
         specs["ankle_support"] = w.ankle_support

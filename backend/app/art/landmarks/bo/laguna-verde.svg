@@ -1,0 +1,13 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="258" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 100V66L10 62L22 70L40 90L50 100Z" fill="var(--il-mid)"/>
+<defs><clipPath id="il-bo-laguna-verde-c"><path d="M0 104L28 92L60 70L100 47L138 28L145 24L155 24L163 29L200 50L240 72L280 92L300 98V124H0Z"/></clipPath></defs>
+<path d="M0 104L28 92L60 70L100 47L138 28L145 24L155 24L163 29L200 50L240 72L280 92L300 98V124H0Z" fill="var(--il-mid)"/>
+<path d="M155 24L163 29L200 50L240 72L280 92L300 98V124H196Q186 70 155 24Z" fill="var(--il-near)" opacity="0.3"/>
+<path clip-path="url(#il-bo-laguna-verde-c)" d="M136 20H166V31L163 32L160 30L157 34L154 31L151 34L147 31L143 33L136 30ZM147 31L151 33L142 48L130 62L127 61L139 45ZM157 32L160 31L166 44L164 46L159 38ZM143 33L145 34L136 42L134 41Z" fill="var(--il-ice)"/>
+<path d="M0 124V102Q50 96 100 100Q150 92 200 98Q250 94 300 104V124Z" fill="var(--il-obj)"/>
+<path d="M0 126V116Q150 112 300 116V126Z" fill="var(--il-ice)"/>
+<path d="M0 200V120Q150 116 300 120V200Z" fill="var(--il-water)"/>
+<path d="M0 200V172Q60 166 140 170Q170 172 190 176Q240 166 300 158V200Z" fill="var(--il-ice)"/>
+<path d="M170 200Q200 178 240 172Q270 166 300 162V200Z" fill="var(--il-far)"/>
+<g transform="translate(250 180) scale(1.3)"><path vector-effect="non-scaling-stroke" d="M-7 -11V0M-4 -11V0M4 -11V0M7 -11V0" stroke="var(--il-acc)" stroke-width="1.6" fill="none" stroke-linecap="round"/><path vector-effect="non-scaling-stroke" d="M-10 -12Q-10 -17 -4 -17H5L7 -26Q8 -29 11 -28L14 -25L12 -24L10 -25L9 -15Q9 -10 6 -10H-8Q-10 -10 -10 -12Z" fill="var(--il-acc)"/><path vector-effect="non-scaling-stroke" d="M9 -28L9 -31L11 -28Z" fill="var(--il-acc)"/></g>

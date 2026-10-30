@@ -23,15 +23,17 @@ export default function Trips() {
       <div className="wrap">
         <div className="page-head">
           <div><p className="kicker">Your trips</p><h1>My trips</h1></div>
-          <Link className="btn primary" to="/trips/new">+ New trip</Link>
+          <div className="row"><Link className="btn" to="/ideas">Recommended trips</Link><Link className="btn primary" to="/start">+ New trip</Link></div>
         </div>
         {user?.is_guest && (
           <div className="banner info" style={{ marginBottom: 20 }}>
-            You're planning as a guest. <Link to="/register">Create a free account</Link> to keep these trips on any device.
+            You're planning as a guest. <Link to="/register" state={{ from: "/trips" }}>Create a free account</Link> or <Link to="/login" state={{ from: "/trips" }}>sign in</Link> to keep these trips on any device.
           </div>
         )}
         {trips === null ? <p className="loading"><span className="spin" /></p> : trips.length === 0 ? (
-          <div className="empty"><p>No trips yet.</p><p style={{ marginTop: 12 }}><Link className="btn primary" to="/trips/new">Plan your first trip</Link></p></div>
+          <div className="empty"><p>No trips yet. Write your own, or start from a recommended one and make it yours.</p>
+            <p className="row" style={{ marginTop: 12, justifyContent: "center" }}><Link className="btn primary" to="/start">I have a trip in mind</Link><Link className="btn" to="/ideas">Inspire me</Link></p>
+            {!user && <p className="small muted" style={{ marginTop: 12 }}>Planned trips before? <Link to="/login" state={{ from: "/trips" }}>Sign in</Link> to see them.</p>}</div>
         ) : (
           <div className="tlist">
             {trips.map((t, i) => (
@@ -41,6 +43,7 @@ export default function Trips() {
                   <h3>{t.name}</h3>
                   <span className="small muted">{t.start_date ? `${t.estimated ? "≈ " : ""}${dayMonth(t.start_date)} – ${dayMonth(t.end_date!)}` : "No dates"} · {t.stop_count} stops{t.estimated ? " · dates are a guess" : ""}</span>
                   <span className="small">{t.places.join(" → ")}</span>
+                  {t.source_itinerary && <span className="label">From a recommended trip</span>}
                 </div>
               </Link>
             ))}

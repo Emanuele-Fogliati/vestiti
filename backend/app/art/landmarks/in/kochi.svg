@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="272" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V134H300V200Z" fill="var(--il-water)"/>
+<path d="M180 135Q200 131 230 132Q260 130 300 131V136H180Z" fill="var(--il-far)"/>
+<path d="M150 38L62 160M150 38L84 160M150 38L104 160" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.6"/>
+<defs><clipPath id="il-in-kochi-net"><path d="M190 122L204 110H262L276 122Q256 158 233 160Q210 158 190 122Z"/></clipPath></defs>
+<path d="M190 122L204 110H262L276 122Q256 158 233 160Q210 158 190 122Z" fill="var(--il-obj)" opacity="0.55"/>
+<path d="M198 108V162M207 108V162M216 108V162M225 108V162M234 108V162M243 108V162M252 108V162M261 108V162M270 108V162M186 120Q233 128 280 120M186 130Q233 138 280 130M186 140Q233 148 280 140M186 150Q233 158 280 150" stroke="var(--il-ice)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.9" clip-path="url(#il-in-kochi-net)"/>
+<path d="M114.1 162.7L152.4 36.4L149.6 35.6L109.9 161.3ZM136.2 162.3L154.5 38.2L151.5 37.8L131.8 161.7ZM149.1 37.5L231.4 87L232.6 85L150.9 34.5ZM150.8 38.3L177 150.2L179 149.8L153.2 37.7ZM126.3 113L148.3 107L147.7 105L125.7 111ZM232 86Q206 90 190 122L188 121Q204 87 232 84Z M232 86Q258 90 276 122L278 121Q260 87 232 84Z M232 86Q212 92 204 110L202 110Q210 89 232 84Z M232 86Q254 92 262 110L264 110Q256 89 232 84Z" fill="var(--il-mid)"/>
+<path d="M14 200Q12 140 32 80L36 81Q18 140 20 200Z" fill="var(--il-mid)"/>
+<path d="M34 80Q18 66 0 74Q16 72 32 84ZM34 80Q26 58 8 52Q24 62 32 82ZM34 80Q42 58 60 54Q44 64 36 82ZM34 80Q54 72 70 84Q52 78 36 84ZM34 80Q26 90 18 110Q28 94 36 84ZM34 80Q46 90 52 108Q42 92 34 84Z" fill="var(--il-leaf)"/>
+<path d="M0 200V172Q26 168 46 174Q60 182 68 200Z" fill="var(--il-acc)"/>
+<path d="M82 200V164H86V200ZM106 200V164H110V200ZM130 200V164H134V200ZM152 200V164H156V200Z" fill="var(--il-mid)"/>
+<path d="M0 170V160H164V170Z" fill="var(--il-mid)"/>
+<path d="M0 160H164" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>

@@ -13,6 +13,25 @@ PACES = ("relaxed", "average", "brisk")
 EVENINGS = ("early", "sometimes", "late")
 COLD = ("very_cold", "bit_cold", "average", "warm")
 
+# Trip dates must stay in a sane window: a stop dated in year 9999 made the weather loop
+# run over millions of days and froze the server for minutes (security audit 2026-10).
+MIN_DATE = date(1950, 1, 1)  # Open-Meteo's archive starts in 1940
+MAX_DATE = date(2100, 12, 31)
+MAX_STOP_DAYS = 120
+MAX_STOPS = 30
+
+
+def check_date(d: date | None) -> date | None:
+    if d is not None and not MIN_DATE <= d <= MAX_DATE:
+        raise ValueError(f"dates must be between {MIN_DATE} and {MAX_DATE}")
+    return d
+
+
+def check_country(v: str | None) -> str | None:
+    if v and not (len(v) == 2 and v.isascii() and v.isalpha()):
+        raise ValueError("country_code must be a 2-letter ISO code")
+    return v
+
 
 class ORM(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -28,7 +47,7 @@ class RegisterIn(BaseModel):
 
 class LoginIn(BaseModel):
     email: EmailStr
-    password: str
+    password: str = Field(max_length=200)  # argon2 on a megabyte "password" would burn CPU
 
 
 class UserOut(ORM):
@@ -102,6 +121,8 @@ class VisitIn(BaseModel):
     name: str = Field(min_length=1, max_length=120)
     date: _dt.date | None = None
 
+    _d = field_validator("date")(classmethod(lambda cls, v: check_date(v)))
+
 
 class StopIn(BaseModel):
     name: str = Field(min_length=1, max_length=200)
@@ -111,34 +132,40 @@ class StopIn(BaseModel):
     elevation_m: float = Field(default=0, ge=-500, le=9000)
     start_date: date
     end_date: date
-    activities: list[ActivityIn] = Field(default_factory=lambda: [ActivityIn()])
+    activities: list[ActivityIn] = Field(default_factory=lambda: [ActivityIn()], max_length=20)
     notes: str | None = Field(default=None, max_length=2000)
     position: int | None = None
     visits: list[VisitIn] = Field(default_factory=list, max_length=30)
     days_estimated: bool = False  # the traveller did not say how long: the days are a guess
     place_confirmed: bool = False  # the traveller said "yes, this is the place"
 
+    _cc = field_validator("country_code")(classmethod(lambda cls, v: check_country(v)))
+    _sd = field_validator("start_date", "end_date")(classmethod(lambda cls, v: check_date(v)))
+
     @model_validator(mode="after")
     def _dates(self):
         if self.end_date < self.start_date:
             raise ValueError("end_date is before start_date")
-        if (self.end_date - self.start_date).days > 120:
-            raise ValueError("a single stop can be at most 120 days")
+        if (self.end_date - self.start_date).days > MAX_STOP_DAYS:
+            raise ValueError(f"a single stop can be at most {MAX_STOP_DAYS} days")
         return self
 
 
 class StopPatch(BaseModel):
     name: str | None = Field(default=None, min_length=1, max_length=200)
-    country_code: str | None = None
+    country_code: str | None = Field(default=None, max_length=2)
     latitude: float | None = Field(default=None, ge=-90, le=90)
     longitude: float | None = Field(default=None, ge=-180, le=180)
     elevation_m: float | None = Field(default=None, ge=-500, le=9000)
     start_date: date | None = None
     end_date: date | None = None
-    activities: list[ActivityIn] | None = None
-    notes: str | None = None
+    activities: list[ActivityIn] | None = Field(default=None, max_length=20)
+    notes: str | None = Field(default=None, max_length=2000)
     visits: list[VisitIn] | None = Field(default=None, max_length=30)
     place_confirmed: bool | None = None  # true: "yes, this is the place"
+
+    _cc = field_validator("country_code")(classmethod(lambda cls, v: check_country(v)))
+    _sd = field_validator("start_date", "end_date")(classmethod(lambda cls, v: check_date(v)))
 
 
 class StopArt(BaseModel):
@@ -178,6 +205,8 @@ class StopOut(ORM):
     # ok | check (ask "Is this the place?", place_note says why) | confirmed | null (older stop)
     place_status: str | None = None
     place_note: str | None = None
+    # what the place is and a fun fact, when we know the place (app.guide)
+    guide: dict | None = None
 
     @field_validator("visits", mode="before")
     @classmethod
@@ -199,6 +228,10 @@ class StopOut(ORM):
         if self.art is None:
             lm = match(self.name, self.latitude, self.longitude, country=self.country_code)
             self.art = StopArt(id=lm.id, label=lm.label) if lm else _first_visit_art(self)
+        if self.guide is None:
+            from app.guide import lookup
+            g = lookup(self.name, self.country_code)
+            self.guide = g.model_dump() if g else None
         return self
 
 
@@ -210,7 +243,7 @@ def _first_visit_art(stop: StopOut) -> StopArt | None:
 class TripIn(BaseModel):
     name: str = Field(min_length=1, max_length=200)
     notes: str | None = Field(default=None, max_length=4000)
-    stops: list[StopIn] = Field(default_factory=list)
+    stops: list[StopIn] = Field(default_factory=list, max_length=MAX_STOPS)
     start_estimated: bool = False  # no start date was given: the plan shows it as a guess
     countries: list[str] = Field(default_factory=list, max_length=30)  # ISO codes, from the parse
 
@@ -223,7 +256,7 @@ class TripIn(BaseModel):
 
 class TripPatch(BaseModel):
     name: str | None = Field(default=None, min_length=1, max_length=200)
-    notes: str | None = None
+    notes: str | None = Field(default=None, max_length=4000)
 
 
 class TripOut(ORM):
@@ -241,6 +274,7 @@ class TripOut(ORM):
     @classmethod
     def _cs(cls, v):
         return v or []
+    source_itinerary: str | None = None  # slug of the recommended trip it started from
 
     @field_validator("start_estimated", mode="before")
     @classmethod
@@ -274,6 +308,8 @@ class TripDatesIn(BaseModel):
     total_days: int | None = Field(default=None, ge=1, le=365)
     confirm: bool = False
 
+    _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v)))
+
 
 class TripSummary(ORM):
     id: str
@@ -286,10 +322,11 @@ class TripSummary(ORM):
     places: list[str]
     art: StopArt | None = None
     estimated: bool = False
+    source_itinerary: str | None = None
 
 
 class ReorderIn(BaseModel):
-    stop_ids: list[str]
+    stop_ids: list[str] = Field(max_length=MAX_STOPS)
 
 
 class SelectionIn(BaseModel):
@@ -335,6 +372,15 @@ class WardrobeIn(BaseModel):
     footwear_type: str | None = None
     ankle_support: bool = False
     notes: str | None = Field(default=None, max_length=1000)
+    model_ref: str | None = Field(default=None, max_length=120)
+    added_via: str | None = None
+
+    @field_validator("added_via")
+    @classmethod
+    def _via(cls, v):
+        if v is not None and v not in ("hand", "search", "photo"):
+            raise ValueError("unknown way of adding")
+        return v
 
     @field_validator("material")
     @classmethod
@@ -378,6 +424,9 @@ class WardrobeOut(ORM):
     footwear_type: str | None
     ankle_support: bool
     notes: str | None
+    model_ref: str | None = None
+    added_via: str | None = None
+    specs: dict | None = None
     created_at: datetime
 
 
@@ -390,7 +439,7 @@ class ParseIn(BaseModel):
 class ExplainIn(BaseModel):
     topic: str = Field(max_length=300)
     stage_index: int | None = None
-    slot: str | None = None
+    slot: str | None = Field(default=None, max_length=40)
     tier: str = "medium"
 
 
@@ -407,7 +456,7 @@ class QuizIn(BaseModel):
     pace: str | None = None
     evenings: str | None = None
     # basics the traveller already owns (keys of services.profile.BASICS); None = skipped
-    owned: list[str] | None = None
+    owned: list[str] | None = Field(default=None, max_length=30)
 
     @field_validator("cold")
     @classmethod

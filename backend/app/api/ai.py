@@ -19,7 +19,7 @@ ai_limit = rate_limit("ai", "ai_rate_limit_per_minute")
 
 @router.get("/ai/status")
 def ai_status():
-    return LLMClient().status()
+    return LLMClient().public_status()
 
 
 @router.post("/ai/parse-itinerary", dependencies=[Depends(ai_limit)])

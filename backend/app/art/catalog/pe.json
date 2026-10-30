@@ -1,0 +1,538 @@
+{
+ "country": "PE",
+ "name": "Peru",
+ "places": [
+  {
+   "slug": "arequipa",
+   "label": "Arequipa Cathedral and El Misti",
+   "lat": -16.3989,
+   "lon": -71.5369,
+   "radius_km": 25,
+   "aliases": [],
+   "names": [
+    "arequipa"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9A94A0",
+    "mid": "#B4B0BA",
+    "ice": "#F2EFE8",
+    "water": "#4F8DB5",
+    "near": "#3A3A3E",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#8A6A4A",
+    "obj": "#BDB6AA"
+   }
+  },
+  {
+   "slug": "chinchero",
+   "label": "Chinchero church above its Inca walls",
+   "lat": -13.3926,
+   "lon": -72.0486,
+   "radius_km": 6,
+   "aliases": [],
+   "names": [
+    "chinchero",
+    "chincheros",
+    "chinceros"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8E98AE",
+    "mid": "#B9A26E",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#2E2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#7E4E3E",
+    "obj": "#9C8270"
+   }
+  },
+  {
+   "slug": "colca-canyon",
+   "label": "Condor over the Colca Canyon",
+   "lat": -15.612,
+   "lon": -71.903,
+   "radius_km": 45,
+   "aliases": [
+    "colca",
+    "chivay",
+    "cabanaconde",
+    "cruz del condor"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B3A79C",
+    "mid": "#A88C72",
+    "ice": "#FFFFFF",
+    "water": "#6FA08A",
+    "near": "#2E2A28",
+    "sun": "#F2C14E",
+    "leaf": "#9AA45A",
+    "acc": "#C88A7A",
+    "obj": "#8C6E56"
+   }
+  },
+  {
+   "slug": "cusco-cathedral",
+   "label": "Cusco Cathedral and Inca walls",
+   "lat": -13.5165,
+   "lon": -71.9783,
+   "radius_km": 25,
+   "aliases": [],
+   "names": [
+    "cusco",
+    "cuzco",
+    "qosqo"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9A80",
+    "mid": "#A86A58",
+    "ice": "#F4EFE6",
+    "water": "#4F8DB5",
+    "near": "#3A2E2A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8F4E",
+    "acc": "#C8463A",
+    "obj": "#C69886"
+   }
+  },
+  {
+   "slug": "huacachina",
+   "label": "Huacachina oasis",
+   "lat": -14.0875,
+   "lon": -75.7626,
+   "radius_km": 8,
+   "aliases": [
+    "huacachina"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E6CFA2",
+    "mid": "#EDD9B0",
+    "ice": "#F4F1EA",
+    "water": "#5E8A5A",
+    "near": "#3A3226",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A32",
+    "acc": "#8A6A4A",
+    "obj": "#D9C092"
+   }
+  },
+  {
+   "slug": "inca-trail",
+   "label": "The Inca Trail towards Huayna Picchu",
+   "lat": -13.2,
+   "lon": -72.45,
+   "radius_km": 10,
+   "aliases": [
+    "inca trail",
+    "camino inca",
+    "camino inka",
+    "inka trail",
+    "sentiero inca",
+    "inti punku",
+    "intipunku"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#93A6C0",
+    "mid": "#7C8574",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#23262A",
+    "sun": "#F6C431",
+    "leaf": "#5E8C40",
+    "acc": "#B98B4E",
+    "obj": "#B9B2A0"
+   }
+  },
+  {
+   "slug": "lima-costa-verde",
+   "label": "Lima's Costa Verde cliffs",
+   "lat": -12.13,
+   "lon": -77.03,
+   "radius_km": 30,
+   "aliases": [
+    "miraflores",
+    "barranco"
+   ],
+   "names": [
+    "lima"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A68E78",
+    "mid": "#9C7E62",
+    "ice": "#EEEAE2",
+    "water": "#3F8FA0",
+    "near": "#2E2A28",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4E",
+    "acc": "#F2C230",
+    "obj": "#CDBBA0"
+   }
+  },
+  {
+   "slug": "machu-picchu",
+   "label": "Machu Picchu and Huayna Picchu",
+   "lat": -13.1631,
+   "lon": -72.545,
+   "radius_km": 15,
+   "aliases": [
+    "machu picchu",
+    "machupicchu",
+    "aguas calientes",
+    "huayna picchu"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#93A6C0",
+    "mid": "#5F7F6C",
+    "ice": "#F4F1EA",
+    "water": "#B98B4E",
+    "near": "#23262A",
+    "sun": "#F6C431",
+    "leaf": "#4A7A3A",
+    "acc": "#8CC152",
+    "obj": "#ABA392"
+   }
+  },
+  {
+   "slug": "maras-salt-mines",
+   "label": "The Maras salt pans",
+   "lat": -13.3046,
+   "lon": -72.1556,
+   "radius_km": 4,
+   "aliases": [
+    "salineras de maras",
+    "salinas de maras",
+    "maras salt",
+    "saline di maras",
+    "miniere di sale di maras",
+    "salt mines of maras",
+    "salt pans of maras"
+   ],
+   "names": [
+    "maras"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8A9CB8",
+    "mid": "#A86E58",
+    "ice": "#F7F4EF",
+    "water": "#C9A245",
+    "near": "#2E2622",
+    "sun": "#F2C14E",
+    "leaf": "#8A8E50",
+    "acc": "#A88468",
+    "obj": "#E6D8C6"
+   }
+  },
+  {
+   "slug": "moray",
+   "label": "The circular Inca terraces of Moray",
+   "lat": -13.3297,
+   "lon": -72.1972,
+   "radius_km": 3,
+   "aliases": [
+    "moray",
+    "muray"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#8E98AE",
+    "mid": "#7E8A4E",
+    "ice": "#F4F2EE",
+    "water": "#4F8DB5",
+    "near": "#2A2A24",
+    "sun": "#F2C14E",
+    "leaf": "#7FAA48",
+    "acc": "#C9A57C",
+    "obj": "#B8AA90"
+   }
+  },
+  {
+   "slug": "nazca-lines",
+   "label": "The Nazca Lines hummingbird",
+   "lat": -14.692,
+   "lon": -75.149,
+   "radius_km": 30,
+   "aliases": [
+    "nazca lines",
+    "nasca lines",
+    "lineas de nazca",
+    "lineas de nasca",
+    "linee di nazca",
+    "linee di nasca",
+    "nazca geoglyphs",
+    "nasca geoglyphs"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#A8927A",
+    "mid": "#B08A5E",
+    "ice": "#F2E6CC",
+    "water": "#4F8DB5",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#7E8A4A",
+    "acc": "#8A6A4A",
+    "obj": "#C8A87C"
+   },
+   "names": [
+    "nazca",
+    "nasca"
+   ]
+  },
+  {
+   "slug": "ollantaytambo",
+   "label": "Ollantaytambo's Inca terraces",
+   "lat": -13.2583,
+   "lon": -72.265,
+   "radius_km": 6,
+   "aliases": [
+    "ollantaytambo",
+    "ollantaytampu"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#C9B794",
+    "mid": "#7E7064",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#2B2622",
+    "sun": "#F6C431",
+    "leaf": "#6E9A4E",
+    "acc": "#C49283",
+    "obj": "#A59886"
+   }
+  },
+  {
+   "slug": "paracas-ballestas",
+   "label": "Ballestas Islands and the Candelabra",
+   "lat": -13.79,
+   "lon": -76.32,
+   "radius_km": 30,
+   "aliases": [
+    "paracas",
+    "ballestas"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CFC6B6",
+    "mid": "#6E5E52",
+    "ice": "#F1EEE6",
+    "water": "#2F7FA6",
+    "near": "#2E2A28",
+    "sun": "#F2C14E",
+    "leaf": "#D9A441",
+    "acc": "#9A5E46",
+    "obj": "#8C8478"
+   }
+  },
+  {
+   "slug": "pisac",
+   "label": "The curved Inca terraces of Pisac",
+   "lat": -13.418,
+   "lon": -71.846,
+   "radius_km": 5,
+   "aliases": [
+    "pisac",
+    "pisaq",
+    "sacred valley",
+    "valle sagrado",
+    "valle sacro",
+    "valle sacra"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#A7AAB8",
+    "mid": "#8A7461",
+    "ice": "#F4F1EA",
+    "water": "#6C9BB0",
+    "near": "#2B2622",
+    "sun": "#F6C431",
+    "leaf": "#BCB46C",
+    "acc": "#8DAA5E",
+    "obj": "#6F6450"
+   },
+   "names": [
+    "urubamba"
+   ]
+  },
+  {
+   "slug": "puerto-maldonado",
+   "label": "Billinghurst Bridge over the Madre de Dios, Puerto Maldonado",
+   "lat": -12.58,
+   "lon": -69.18,
+   "radius_km": 15,
+   "aliases": [
+    "billinghurst bridge",
+    "puente billinghurst",
+    "puente continental"
+   ],
+   "names": [
+    "puerto maldonado"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#B2AEA4",
+    "mid": "#3E6B33",
+    "ice": "#F4F1EA",
+    "water": "#B39874",
+    "near": "#2A221E",
+    "sun": "#F6C431",
+    "leaf": "#5E8C40",
+    "acc": "#B4452F",
+    "obj": "#C2805A"
+   }
+  },
+  {
+   "slug": "rainbow-mountain",
+   "label": "Vinicunca, the Rainbow Mountain",
+   "lat": -13.8689,
+   "lon": -71.303,
+   "radius_km": 15,
+   "aliases": [
+    "vinicunca",
+    "rainbow mountain",
+    "montana de colores",
+    "montana de siete colores",
+    "montagna arcobaleno",
+    "montagne arcobaleno"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A8584A",
+    "mid": "#DCC7A0",
+    "ice": "#F4F1EA",
+    "water": "#8E7084",
+    "near": "#2E2A28",
+    "sun": "#F2C14E",
+    "leaf": "#9DB89A",
+    "acc": "#B5523E",
+    "obj": "#D6A55A"
+   }
+  },
+  {
+   "slug": "sillustani",
+   "label": "The chullpas of Sillustani above Lake Umayo",
+   "lat": -15.7206,
+   "lon": -70.1556,
+   "radius_km": 4,
+   "aliases": [
+    "sillustani",
+    "umayo"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#B09A78",
+    "mid": "#7E6A60",
+    "ice": "#F4F1EA",
+    "water": "#5E8FB4",
+    "near": "#2E2622",
+    "sun": "#F2C14E",
+    "leaf": "#9A9A5A",
+    "acc": "#C8AE88",
+    "obj": "#8C6E62"
+   }
+  },
+  {
+   "slug": "tambopata-national-reserve",
+   "label": "Macaws at a Tambopata clay lick",
+   "lat": -12.9,
+   "lon": -69.4,
+   "radius_km": 45,
+   "aliases": [
+    "tambopata"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#7E9A6A",
+    "mid": "#C9A15E",
+    "ice": "#F2EEE4",
+    "water": "#9C7A56",
+    "near": "#26261E",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A34",
+    "acc": "#D2382A",
+    "obj": "#2E6CB8"
+   }
+  },
+  {
+   "slug": "taquile",
+   "label": "Taquile island on Lake Titicaca",
+   "lat": -15.774,
+   "lon": -69.686,
+   "radius_km": 8,
+   "aliases": [
+    "taquile",
+    "amantani"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9A8E7A",
+    "mid": "#8A6A58",
+    "ice": "#FFFFFF",
+    "water": "#2A62A8",
+    "near": "#2E2A28",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A44",
+    "acc": "#C8A27A",
+    "obj": "#9C8676"
+   }
+  },
+  {
+   "slug": "uros-titicaca",
+   "label": "Totora reed boat on Lake Titicaca",
+   "lat": -15.818,
+   "lon": -69.969,
+   "radius_km": 30,
+   "aliases": [
+    "puno",
+    "uros",
+    "titicaca"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E7E70",
+    "mid": "#D2B276",
+    "ice": "#FFFFFF",
+    "water": "#2E64A0",
+    "near": "#3A3226",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A52",
+    "acc": "#C8463A",
+    "obj": "#B48E52"
+   }
+  },
+  {
+   "slug": "winay-wayna",
+   "label": "Winay Wayna ruins and terraces",
+   "lat": -13.1925,
+   "lon": -72.5305,
+   "radius_km": 2,
+   "aliases": [
+    "winay wayna",
+    "winaywayna",
+    "huinay huayna"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#93A6C0",
+    "mid": "#3F6B35",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#1F2620",
+    "sun": "#F6C431",
+    "leaf": "#86B24E",
+    "acc": "#B98B4E",
+    "obj": "#B3AFA4"
+   }
+  }
+ ]
+}

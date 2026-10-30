@@ -261,3 +261,17 @@ def test_a_stop_in_another_country_never_gets_a_peruvian_landmark():
     from app.art import match
     assert match("Aguas Calientes", -13.155, -72.525, country="PE").id.endswith("machu-picchu")
     assert match("Aguas Calientes", 16.84, -99.64, country="MX") is None
+
+
+def test_ready_made_route_across_a_border_is_not_asked_about(client):
+    """Our own routes are curated: one night across a border (Victoria Falls on a Botswana
+    trip) is not a homonym, so "Dress me" from the globe never asks "Is this the place?"."""
+    from app.globe import routes as gr
+    client.post("/api/auth/guest")
+    r = next(r for r in gr.routes()
+             if len({s.get("country") for s in r["stops"]}) > 1 and r["guide"] is None)
+    trip = client.post(f"/api/globe/routes/{r['id']}/trip", json={"start_date": "2027-04-05"}).json()
+    assert sorted(trip["countries"]) == sorted({s["country_code"] for s in trip["stops"] if s["country_code"]})
+    assert all(s["place_status"] == "ok" for s in trip["stops"])
+    again = client.get(f"/api/trips/{trip['id']}").json()  # reading it does not re-flag it
+    assert all(s["place_status"] == "ok" for s in again["stops"])

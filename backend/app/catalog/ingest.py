@@ -19,6 +19,10 @@ SEED_DIR = Path(__file__).resolve().parents[2] / "seed"
 OUT_OF_STOCK = {"0", "false", "no", "out of stock", "outofstock", "out_of_stock"}
 
 
+def _web_url(u) -> bool:
+    return isinstance(u, str) and u.lower().startswith(("https://", "http://")) and len(u) < 4000
+
+
 def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
                 deactivate_missing: bool = True, source: str = "feed") -> FeedImport:
     job = FeedImport(network=network, filename=filename, errors=[])
@@ -37,6 +41,11 @@ def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
             if not (ext and name and url) or price is None or price <= 0:
                 job.skipped += 1
                 continue
+            if not _web_url(url):
+                # the Buy button redirects here: only plain web links (no javascript:, data:...)
+                job.skipped += 1
+                continue
+            ext = str(ext)[:200]
             if str(r.get("in_stock") or "1").strip().lower() in OUT_OF_STOCK:
                 job.skipped += 1
                 continue
@@ -53,11 +62,11 @@ def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
                                                 Product.external_id == ext))
             fields = dict(
                 name=name[:300], brand=(r.get("brand") or "Unknown")[:120],
-                merchant=(r.get("merchant") or row_network)[:120], program_id=r.get("program_id"),
+                merchant=(r.get("merchant") or row_network)[:120], program_id=(str(r["program_id"])[:80] if r.get("program_id") else None),
                 category=slot, gender=r.get("gender") if r.get("gender") in ("men", "women", "unisex")
                 else gender_of(name, r.get("gender")), price=float(price),
                 currency=(r.get("currency") or "EUR")[:3].upper(), url=url,
-                image_url=r.get("image_url"), specs=specs, rating=r.get("rating"),
+                image_url=r.get("image_url") if _web_url(r.get("image_url")) else None, specs=specs, rating=r.get("rating"),
                 review_count=int(r.get("review_count") or 0), active=True, source=source,
             )
             if p is None:

@@ -72,6 +72,31 @@ Ollama's native API (`/api/chat`) and asks for a bigger window per request (`num
 Qwen3 "thinks" before answering by default. The app appends `/no_think` and strips any
 `<think>` block (set `LLM_DISABLE_THINKING=false` to turn that off).
 
+### Photos of clothes (wardrobe)
+
+The Wardrobe page can recognise a garment from 2–4 photos. It needs a model that sees images;
+the text model above cannot. Default (needs Ollama 0.12.7 or newer):
+
+```powershell
+ollama pull qwen3-vl:8b-instruct
+```
+
+| Model | VRAM | Notes |
+|---|---|---|
+| `qwen3-vl:8b-instruct` | ~6–8 GB | Default. Reads labels well. 10–30 s per item on a GPU, minutes on CPU. |
+| `qwen3-vl:4b-instruct` | ~4 GB | Smaller GPUs. Misreads small print more often. |
+
+Ollama loads one model at a time on a small GPU, so the first photo check after reading a trip
+waits while it swaps models. Settings: `VISION_MODEL`, `VISION_BASE_URL` (empty = same server
+as the text model), `VISION_ENABLED`, `VISION_TIMEOUT_S`, `PHOTO_RATE_LIMIT_PER_MINUTE`.
+Any OpenAI-compatible server that accepts images works (llama.cpp with an `--mmproj`, vLLM, LM Studio).
+
+What to expect: the model reads the brand, the model name and the style code printed on the
+label, and tells the kind of garment, quilting, hood and so on. It cannot tell two plain black
+jackets apart without a readable label, so the app asks for a label photo and the traveller
+always confirms. Photos are never stored. Without the model, the page says so and people add
+items by name instead (search + keyword estimate work with no AI at all).
+
 ## Option B: Ollama inside Docker
 
 ```powershell

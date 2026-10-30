@@ -95,3 +95,12 @@ def check_stops(stops: list, expected: set[str] | list[str] | None = None,
             c.add("elevation", f"This place is at {el:,.0f} m.")
         out.append(c)
     return out
+
+
+def mark_ready_made(trip) -> None:
+    """A trip copied from one of our own routes or itineraries: its places are curated, so the
+    trip's countries are all of its stops' and no stop is asked about (a route with one night
+    across a border is not a homonym). Later edits by the traveller are checked as usual."""
+    trip.countries = sorted({s.country_code.upper() for s in trip.stops if s.country_code})
+    for s in trip.stops:
+        s.place_status, s.place_note = "ok", None

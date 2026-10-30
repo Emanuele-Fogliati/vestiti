@@ -1,0 +1,22 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="22" r="10" fill="var(--il-sun)"/>
+<path d="M0 200V40Q10 30 22 36Q32 24 46 32Q58 22 72 30Q84 34 96 30Q104 40 116 44Q128 36 140 42Q152 46 166 40Q180 36 192 30Q204 24 220 28Q234 18 250 24Q264 16 278 26Q290 22 300 28V200Z" fill="var(--il-mid)"/>
+<path d="M112 200V40H130V200Z" fill="var(--il-acc)"/>
+<path d="M208 200Q212 120 210 40H262Q260 120 266 200Z" fill="var(--il-acc)"/>
+<path d="M218 70Q222 100 218 130M248 60Q244 96 250 140M236 150Q238 170 234 190" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M186 0V40Q194 52 208 46Q220 56 234 48Q248 56 260 46Q274 52 284 42Q294 44 300 36V0Z" fill="var(--il-leaf)"/>
+<path d="M0 52L211 30M0 72L211 44M180 34V64" stroke="var(--il-ice)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M118 200V140H126V200Z" fill="var(--il-far)"/>
+<path d="M150 150L210 176" stroke="var(--il-far)" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M58 146V136H211V146Z" fill="var(--il-far)"/>
+<path d="M76 136V146M94 136V146M112 136V146M132 136V146M150 136V146M168 136V146M186 136V146M202 136V146" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.5"/>
+<path d="M38 49Q32 60 40 72M62 46Q70 58 60 72" stroke="var(--il-obj)" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M38 74Q40 66 50 66Q60 66 62 74Q64 90 58 98L62 108L56 110L50 100L44 110L38 108L42 98Q36 90 38 74Z" fill="var(--il-obj)"/>
+<circle cx="50" cy="62" r="7" fill="var(--il-obj)"/>
+<ellipse cx="50" cy="64" rx="4" ry="4.5" fill="var(--il-acc)"/>
+<path d="M150 114Q138 120 138 137M170 114Q182 120 182 137" stroke="var(--il-obj)" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M146 138Q142 112 160 106Q178 112 174 138H166L163 130H157L154 138Z" fill="var(--il-obj)"/>
+<circle cx="160" cy="100" r="9" fill="var(--il-obj)"/>
+<ellipse cx="160" cy="103" rx="5" ry="5.5" fill="var(--il-acc)"/>
+<path d="M157 101h1.6v1.6h-1.6ZM161.4 101h1.6v1.6h-1.6Z" fill="var(--il-near)"/>
+<path d="M0 200V186Q40 180 80 186Q130 180 180 186Q240 180 300 186V200Z" fill="var(--il-leaf)"/>

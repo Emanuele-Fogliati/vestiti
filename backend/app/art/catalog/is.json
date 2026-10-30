@@ -1,0 +1,518 @@
+{
+ "country": "IS",
+ "name": "Iceland",
+ "places": [
+  {
+   "slug": "akureyri",
+   "label": "Akureyrarkirkja above its stairway, Akureyri",
+   "lat": 65.6795,
+   "lon": -18.0915,
+   "radius_km": 15,
+   "aliases": [
+    "akureyrarkirkja",
+    "akureyri church"
+   ],
+   "names": [
+    "akureyri"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#8E9A8C",
+    "mid": "#D8D0C2",
+    "ice": "#F4F1EA",
+    "water": "#4F86A8",
+    "near": "#262628",
+    "sun": "#F2C14E",
+    "leaf": "#5F8F3C",
+    "acc": "#6C8FB0",
+    "obj": "#B7AD9C"
+   }
+  },
+  {
+   "slug": "blue-lagoon",
+   "label": "The Blue Lagoon in the lava field, Svartsengi",
+   "lat": 63.8804,
+   "lon": -22.4495,
+   "radius_km": 4,
+   "aliases": [
+    "blue lagoon",
+    "laguna blu",
+    "blaa lonid",
+    "bla lonid"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#7F7A50",
+    "mid": "#3F3833",
+    "ice": "#F6F6F2",
+    "water": "#8FD3DA",
+    "near": "#222426",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#C98A4A",
+    "obj": "#8D969A"
+   }
+  },
+  {
+   "slug": "dettifoss",
+   "label": "Dettifoss falling into the Jokulsargljufur canyon",
+   "lat": 65.8147,
+   "lon": -16.3846,
+   "radius_km": 5,
+   "aliases": [
+    "dettifoss"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#857A66",
+    "mid": "#4F4C49",
+    "ice": "#F2EFE8",
+    "water": "#A49A87",
+    "near": "#232325",
+    "sun": "#F2C14E",
+    "leaf": "#6E9440",
+    "acc": "#C98A4A",
+    "obj": "#B3A68E"
+   }
+  },
+  {
+   "slug": "dyrholaey",
+   "label": "Dyrholaey sea arch with puffins",
+   "lat": 63.4,
+   "lon": -19.13,
+   "radius_km": 3,
+   "aliases": [
+    "dyrholaey"
+   ],
+   "palette": {
+    "sky": "#C2D8EC",
+    "far": "#8A9AA2",
+    "mid": "#6A5C4E",
+    "ice": "#F4F2EC",
+    "water": "#3E959A",
+    "near": "#24272A",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4A",
+    "acc": "#E8692C",
+    "obj": "#B0A08C"
+   }
+  },
+  {
+   "slug": "geysir",
+   "label": "Strokkur geyser, Haukadalur",
+   "lat": 64.3104,
+   "lon": -20.3024,
+   "radius_km": 6,
+   "aliases": [
+    "geysir",
+    "strokkur",
+    "haukadalur"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8C9488",
+    "mid": "#A89070",
+    "ice": "#FFFFFF",
+    "water": "#A9CFE0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#7E9458",
+    "acc": "#C98A4A",
+    "obj": "#DCE8EF"
+   },
+   "names": [
+    "golden circle",
+    "cerchio d oro",
+    "circolo d oro",
+    "gullni hringurinn"
+   ]
+  },
+  {
+   "slug": "godafoss",
+   "label": "Godafoss horseshoe falls",
+   "lat": 65.6828,
+   "lon": -17.5502,
+   "radius_km": 5,
+   "aliases": [
+    "godafoss",
+    "cascata degli dei"
+   ],
+   "palette": {
+    "sky": "#B6D2EE",
+    "far": "#8FA866",
+    "mid": "#55504A",
+    "ice": "#FFFFFF",
+    "water": "#7EA6A2",
+    "near": "#232528",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4E",
+    "acc": "#9C7A5A",
+    "obj": "#D4E4EA"
+   }
+  },
+  {
+   "slug": "gullfoss",
+   "label": "Gullfoss",
+   "lat": 64.3271,
+   "lon": -20.1199,
+   "radius_km": 6,
+   "aliases": [
+    "gullfoss"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7C7E70",
+    "mid": "#4E4A46",
+    "ice": "#FFFFFF",
+    "water": "#8FB0B4",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A48",
+    "acc": "#B5A38A",
+    "obj": "#DCE8EF"
+   }
+  },
+  {
+   "slug": "jokulsarlon",
+   "label": "Jokulsarlon glacier lagoon",
+   "lat": 64.0784,
+   "lon": -16.2306,
+   "radius_km": 15,
+   "aliases": [
+    "jokulsarlon",
+    "glacier lagoon",
+    "diamond beach"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7E746E",
+    "mid": "#8C807A",
+    "ice": "#FFFFFF",
+    "water": "#3E6E86",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#8A847C",
+    "acc": "#9FD0E2",
+    "obj": "#BFD3DE"
+   }
+  },
+  {
+   "slug": "kirkjufell",
+   "label": "Kirkjufell and its waterfall",
+   "lat": 64.942,
+   "lon": -23.307,
+   "radius_km": 8,
+   "aliases": [
+    "kirkjufell"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9A8C",
+    "mid": "#6E6A5E",
+    "ice": "#F2F6F6",
+    "water": "#4E7EA0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E44",
+    "acc": "#7EA552",
+    "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "lake-myvatn",
+   "label": "Lake Myvatn with Vindbelgjarfjall and lava pillars",
+   "lat": 65.6,
+   "lon": -17.0,
+   "radius_km": 12,
+   "aliases": [
+    "myvatn"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#8E96B0",
+    "mid": "#5E534C",
+    "ice": "#F4F4F0",
+    "water": "#5E8EC4",
+    "near": "#222428",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#6A5A44",
+    "obj": "#C9A04A"
+   }
+  },
+  {
+   "slug": "reykjanes-peninsula",
+   "label": "Reykjanesviti lighthouse on Baejarfell, Reykjanes",
+   "lat": 63.8155,
+   "lon": -22.704,
+   "radius_km": 25,
+   "aliases": [
+    "reykjanesviti",
+    "reykjanes lighthouse",
+    "penisola di reykjanes",
+    "reykjanes peninsula"
+   ],
+   "names": [
+    "reykjanes",
+    "reykjanesskagi"
+   ],
+   "palette": {
+    "sky": "#A6CCEE",
+    "far": "#5E5A3E",
+    "mid": "#5A4A3A",
+    "ice": "#F6F6F2",
+    "water": "#3E7FA6",
+    "near": "#272523",
+    "sun": "#F2C14E",
+    "leaf": "#7C8A40",
+    "acc": "#D2452E",
+    "obj": "#8D969A"
+   }
+  },
+  {
+   "slug": "reykjavik",
+   "label": "Hallgrimskirkja, Reykjavik",
+   "lat": 64.1466,
+   "lon": -21.9426,
+   "radius_km": 20,
+   "aliases": [
+    "hallgrimskirkja"
+   ],
+   "names": [
+    "reykjavik"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9AA6",
+    "mid": "#D6D3CC",
+    "ice": "#F4F4F2",
+    "water": "#4F7C9C",
+    "near": "#262A2E",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A55",
+    "acc": "#C8463A",
+    "obj": "#3F7FBF"
+   }
+  },
+  {
+   "slug": "reynisfjara",
+   "label": "Reynisfjara basalt columns and black beach",
+   "lat": 63.4044,
+   "lon": -19.0447,
+   "radius_km": 3,
+   "aliases": [
+    "reynisfjara",
+    "spiaggia nera di vik",
+    "black sand beach vik",
+    "halsanefshellir"
+   ],
+   "palette": {
+    "sky": "#B8D2EC",
+    "far": "#3A3938",
+    "mid": "#43403E",
+    "ice": "#F2F4F4",
+    "water": "#6E8E9C",
+    "near": "#1E1E20",
+    "sun": "#F2C14E",
+    "leaf": "#8E8A50",
+    "acc": "#A39A7A",
+    "obj": "#6E6B66"
+   }
+  },
+  {
+   "slug": "seljalandsfoss",
+   "label": "Seljalandsfoss falling in front of its cave",
+   "lat": 63.6156,
+   "lon": -19.9886,
+   "radius_km": 4,
+   "aliases": [
+    "seljalandsfoss"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#9AA08A",
+    "mid": "#6B5D4C",
+    "ice": "#FFFFFF",
+    "water": "#5D8FA8",
+    "near": "#25282A",
+    "sun": "#F2C14E",
+    "leaf": "#7FA040",
+    "acc": "#B7BE55",
+    "obj": "#D3E3EC"
+   }
+  },
+  {
+   "slug": "skaftafell",
+   "label": "Skaftafellsjokull glacier tongue, Skaftafell",
+   "lat": 64.02,
+   "lon": -16.93,
+   "radius_km": 15,
+   "aliases": [
+    "skaftafell",
+    "skaftafellsjokull"
+   ],
+   "palette": {
+    "sky": "#9DC6EE",
+    "far": "#8A8576",
+    "mid": "#5A514C",
+    "ice": "#F2F5F7",
+    "water": "#A8ACA6",
+    "near": "#252424",
+    "sun": "#F2C14E",
+    "leaf": "#6E9440",
+    "acc": "#C98A4A",
+    "obj": "#A9C3D2"
+   }
+  },
+  {
+   "slug": "skogafoss",
+   "label": "Skogafoss",
+   "lat": 63.5321,
+   "lon": -19.5114,
+   "radius_km": 8,
+   "aliases": [
+    "skogafoss",
+    "skogar"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#4E5258",
+    "mid": "#8C7A54",
+    "ice": "#FFFFFF",
+    "water": "#6E8C9C",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#8C9A50",
+    "acc": "#6E5A48",
+    "obj": "#DCE8EF"
+   }
+  },
+  {
+   "slug": "snaefellsjokull",
+   "label": "Snaefellsjokull ice-capped volcano",
+   "lat": 64.8081,
+   "lon": -23.7761,
+   "radius_km": 20,
+   "aliases": [
+    "snaefellsjokull",
+    "snaefellsjoekull"
+   ],
+   "palette": {
+    "sky": "#9FC9F0",
+    "far": "#C2A35E",
+    "mid": "#7E6F62",
+    "ice": "#FBFBF8",
+    "water": "#4F86C2",
+    "near": "#262422",
+    "sun": "#F2C14E",
+    "leaf": "#6FA33A",
+    "acc": "#7A5A55",
+    "obj": "#8D969A"
+   }
+  },
+  {
+   "slug": "snaefellsnes",
+   "label": "Londrangar sea stacks, Snaefellsnes",
+   "lat": 64.7346,
+   "lon": -23.776,
+   "radius_km": 40,
+   "aliases": [
+    "londrangar"
+   ],
+   "names": [
+    "snaefellsnes",
+    "snaefellsnes peninsula",
+    "penisola di snaefellsnes",
+    "penisola dello snaefellsnes"
+   ],
+   "palette": {
+    "sky": "#B4D0EC",
+    "far": "#3E3C3A",
+    "mid": "#4F4A42",
+    "ice": "#F4F4F0",
+    "water": "#4E7E9E",
+    "near": "#212326",
+    "sun": "#F2C14E",
+    "leaf": "#6F8A3E",
+    "acc": "#A88A5E",
+    "obj": "#C9B48A"
+   }
+  },
+  {
+   "slug": "solheimajokull",
+   "label": "Solheimajokull glacier tongue and lagoon",
+   "lat": 63.5317,
+   "lon": -19.37,
+   "radius_km": 5,
+   "aliases": [
+    "solheimajokull",
+    "solheimajoekull"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#5C5A48",
+    "mid": "#4A453F",
+    "ice": "#EDF1F3",
+    "water": "#6C8DA3",
+    "near": "#232322",
+    "sun": "#F2C14E",
+    "leaf": "#8C9C3E",
+    "acc": "#4A4847",
+    "obj": "#B4D0DC"
+   }
+  },
+  {
+   "slug": "thingvellir-national-park",
+   "label": "Thingvellir from the Almannagja rim",
+   "lat": 64.2559,
+   "lon": -21.1299,
+   "radius_km": 12,
+   "aliases": [
+    "thingvellir",
+    "pingvellir",
+    "almannagja"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8C9AA0",
+    "mid": "#7A716A",
+    "ice": "#F4F4F2",
+    "water": "#4F86A8",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#86A45E",
+    "acc": "#D7262E",
+    "obj": "#1F4E9A"
+   }
+  },
+  {
+   "slug": "vik-i-myrdal",
+   "label": "Vik church above the village and Reynisdrangar",
+   "lat": 63.4195,
+   "lon": -19.0063,
+   "radius_km": 6,
+   "aliases": [
+    "vik i myrdal",
+    "vikurkirkja",
+    "myrdal"
+   ],
+   "names": [
+    "vik",
+    "vik village",
+    "vik iceland"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#A3AC66",
+    "mid": "#4F5A40",
+    "ice": "#FFFFFF",
+    "water": "#5E88A8",
+    "near": "#222426",
+    "sun": "#F2C14E",
+    "leaf": "#7C9A46",
+    "acc": "#9E2A2E",
+    "obj": "#6E767E"
+   }
+  }
+ ]
+}

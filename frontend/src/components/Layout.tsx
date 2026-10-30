@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { api } from "../lib/api";
 import { brandName, useApp } from "../lib/app-context";
 
@@ -21,13 +21,18 @@ const THEMES: [string, string][] = [["yellow-black", "Yellow + black"], ["cobalt
 export function Layout() {
   const { config, user, setUser, theme, setTheme } = useApp();
   const nav = useNavigate();
+  const loc = useLocation();
   const name = brandName(config);
+  // "Plan a trip" covers both ways in: your own trip and the recommended ones
+  const planning = /^\/(start|ideas|trips\/new)(\/|$)/.test(loc.pathname);
   const links = [
+    ["/start", "Plan a trip"],
     ["/trips", "My trips"],
     ["/wardrobe", "Wardrobe"],
     ["/how-it-works", "How it works"],
   ];
   if (user?.is_admin) links.push(["/admin", "Admin"]);
+  const on = (to: string, isActive: boolean) => (to === "/start" ? planning : to === "/trips" ? isActive && !planning : isActive);
 
   async function logout() {
     await api.logout();
@@ -42,7 +47,7 @@ export function Layout() {
           <Link className="logo" to="/" aria-label={`${name} home`}><Logo name={name} /></Link>
           <nav className="nav" aria-label="Main">
             {links.map(([to, label]) => (
-              <NavLink key={to} to={to} className={({ isActive }) => (isActive ? "active" : "")}>{label}</NavLink>
+              <NavLink key={to} to={to} className={({ isActive }) => (on(to, isActive) ? "active" : "")}>{label}</NavLink>
             ))}
           </nav>
           <div className="acct">
@@ -54,8 +59,8 @@ export function Layout() {
               </>
             ) : (
               <>
-                {user?.is_guest && <NavLink to="/account">Guest</NavLink>}
-                <NavLink to="/login">Sign in</NavLink>
+                {user?.is_guest && <NavLink to="/account" title="You're planning as a guest">Guest</NavLink>}
+                <NavLink to="/login" state={{ from: loc.pathname }}>Sign in</NavLink>
               </>
             )}
           </div>
@@ -63,9 +68,9 @@ export function Layout() {
       </header>
       <nav className="mnav" aria-label="Main (mobile)">
         {links.map(([to, label]) => (
-          <NavLink key={to} to={to} className={({ isActive }) => (isActive ? "active" : "")}>{label}</NavLink>
+          <NavLink key={to} to={to} className={({ isActive }) => (on(to, isActive) ? "active" : "")}>{label}</NavLink>
         ))}
-        <NavLink to="/account">Account</NavLink>
+        <NavLink to={user && !user.is_guest ? "/account" : "/login"}>{user && !user.is_guest ? "Account" : "Sign in"}</NavLink>
       </nav>
       <Outlet />
       <footer>

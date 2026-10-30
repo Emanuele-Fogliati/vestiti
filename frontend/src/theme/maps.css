@@ -1,0 +1,102 @@
+/* Home globe and trip maps. Map colours are tokens so a theme can restyle the maps too. */
+:root{
+  --map-sea:#BFD9E6;
+  --map-land:#F8F5EC;
+  --map-green:#E4ECD5;
+  --map-ice:#FFFFFF;
+  --map-sand:#F2EAD2;
+  --map-line:#BEBAAA;
+  --map-label:#77746A;
+  --map-halo:#FFFFFF;
+  --map-atmosphere:#D4E9F5;
+  --map-glow:#EEF6FB;
+}
+
+/* home globe: the centrepiece, title and length picker on top, the card on the side */
+.globe{position:relative;height:min(calc(100svh - 62px),960px);min-height:600px;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 60%,var(--map-glow) 0,var(--bg) 66%)}
+.globe .globe-map{position:absolute;inset:0}
+.globe-map .maplibregl-canvas{outline:none}
+.globe-head{position:absolute;z-index:2;top:clamp(20px,4vh,40px);left:16px;right:16px;display:grid;justify-items:center;gap:14px;pointer-events:none;text-align:center;transition:top .3s}
+.globe-head>*{pointer-events:auto}
+.globe-title{font-size:clamp(36px,4.8vw,64px);line-height:1.15;margin:0;transition:opacity .3s}
+.globe-title .hl{display:inline-block;background:var(--hl-bg);color:var(--hl-ink);padding:.02em .18em .08em;border-radius:.18em;margin-left:.06em}
+.globe-len{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;padding:8px 12px;border-radius:999px;
+  background:color-mix(in srgb,var(--bg) 90%,transparent);box-shadow:0 4px 18px rgba(13,13,13,.08)}
+.globe-len .fchip{font-size:14px;padding:7px 14px}
+.globe-sep{width:1px;align-self:stretch;margin:4px 2px;background:var(--rule-strong)}
+.globe-when{display:flex;gap:8px;align-items:center}
+.globe-when select.fchip{width:auto;flex:none;appearance:none;-webkit-appearance:none;cursor:pointer;font:inherit;font-size:14px;padding-right:30px;
+  background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);
+  background-position:calc(100% - 16px) 52%,calc(100% - 11px) 52%;background-size:5px 5px;background-repeat:no-repeat}
+.globe-when select.fchip.on{background-color:var(--ink);color:var(--bg)}
+.rcard-wx{margin-top:2px}
+.rcard-wx.ok::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok-text);margin-right:7px;vertical-align:1px}
+.globe.open .globe-title,.globe.close .globe-title{opacity:0;pointer-events:none;height:0;overflow:hidden}
+.globe.open .globe-head,.globe.close .globe-head{top:14px}
+.globe-tools{position:absolute;z-index:2;left:16px;right:16px;bottom:24px;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;pointer-events:none}
+.globe-tools>*{pointer-events:auto}
+.globe-hint{color:var(--ink-2);background:color-mix(in srgb,var(--bg) 82%,transparent);padding:6px 12px;border-radius:999px}
+.globe-wait{position:absolute;inset:0;display:grid;place-items:center}
+.globe-card{position:absolute;z-index:3;right:max(16px,calc((100vw - 1240px)/2 + 16px));top:84px;width:min(380px,calc(100% - 32px));max-height:calc(100% - 108px);overflow:auto;border-radius:var(--radius);
+  scrollbar-width:thin}
+.gmark{width:46px;height:46px;padding:0;border-radius:50%;overflow:hidden;border:3px solid var(--surface);
+  box-shadow:0 0 0 1.5px var(--ink),0 6px 16px rgba(13,13,13,.25);background:var(--il-sky);cursor:pointer;margin-bottom:6px}
+.gmark svg{width:100%;height:100%;display:block}
+.gmark:hover,.gmark:focus-visible{transform:scale(1.12)}
+@media (max-width:599px){
+  .globe{height:min(calc(100svh - 104px),calc(100vw + 230px));min-height:520px}
+  .globe-head{top:14px;gap:10px;left:0;right:0}
+  .globe-title{font-size:34px}
+  .globe-len{gap:6px;justify-content:center;max-width:100%;padding:6px 10px;border-radius:0;box-shadow:none;background:transparent}
+  .globe-len .fchip{padding:7px 12px}
+  .globe-len .label{display:none}
+  .globe-len .fchip{flex:none;background:var(--surface)}
+  .globe-hint{display:none}
+  .globe-hint.on{display:inline-block;text-align:center}
+  .globe-sep{display:none}
+  .globe-when{flex-basis:100%;justify-content:center}
+  .globe-when .label{display:inline}
+  .globe-card{left:10px;right:10px;top:auto;bottom:10px;width:auto;max-height:52%}
+  .globe.open .globe-head{top:8px}
+}
+.globe-loading{background:var(--bg)}
+
+/* a place on any map */
+.pcard{position:relative;background:var(--surface);border-radius:var(--radius);box-shadow:0 2px 6px rgba(13,13,13,.08),0 18px 40px rgba(13,13,13,.16);overflow:hidden}
+.pcard .thumb{margin:0;border-radius:0}
+.pcard .thumb svg{display:block;width:100%;aspect-ratio:3/2;height:auto}
+.pcard-in{padding:16px 18px 18px;display:grid;gap:8px}
+.pcard-in .kicker{margin:0}
+.pcard-in h3{font-size:24px;line-height:1.1}
+.pcard-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pcard-sub{margin-top:8px}
+.pcard-routes{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.pcard-routes button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:3px;width:100%;padding:10px 12px;border-radius:12px;background:var(--surface-2)}
+.pcard-routes button:hover,.pcard-routes button:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.pcard-routes .kicker{font-size:11px}
+.rcard-stops{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:7px;font-size:14px}
+.rcard-stops li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
+.rcard-n{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:11px}
+.rcard-days{display:grid;gap:3px;margin-top:4px;font-size:13px}
+.linkish{all:unset;cursor:pointer;justify-self:start;text-decoration:underline;text-underline-offset:3px}
+.pcard-x{position:absolute;z-index:1;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:0;background:color-mix(in srgb,var(--surface) 88%,transparent);cursor:pointer;font-size:14px;box-shadow:0 1px 4px rgba(13,13,13,.15)}
+
+/* trip map */
+.rmap{display:grid;gap:12px;margin-bottom:28px}
+.rmap-loading{height:440px;border-radius:var(--radius);background:var(--surface-2)}
+.rmap-stops{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.chip-btn{font:inherit;font-size:14px;white-space:nowrap;padding:8px 14px;border-radius:999px;border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip-btn b{font-family:var(--f-mono);font-size:12px;margin-right:4px}
+.chip-btn:hover{background:var(--surface-2)}
+.chip-btn.on{background:var(--ink);color:var(--accent);border-color:var(--ink)}
+.rmap-box{position:relative;height:clamp(340px,52vh,520px);border-radius:var(--radius);overflow:hidden;background:var(--map-sea)}
+.rmap .rmap-map{position:absolute;inset:0}
+.rmap-card{position:absolute;z-index:3;left:12px;bottom:12px;width:min(320px,calc(100% - 24px))}
+.rpin{min-width:30px;height:30px;padding:0 8px;border-radius:999px;border:2.5px solid var(--surface);background:var(--ink);color:var(--accent);
+  font-family:var(--f-mono);font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 3px 10px rgba(13,13,13,.3)}
+.rpin:hover,.rpin:focus-visible{transform:scale(1.12)}
+.maplibregl-ctrl-attrib{font-size:10px}
+
+/* the route card's buttons stay in reach while its stops scroll */
+.rcard .pcard-acts{position:sticky;bottom:0;background:var(--surface);padding:10px 0 4px;margin-top:0;box-shadow:0 -10px 12px -10px rgba(13,13,13,.12)}

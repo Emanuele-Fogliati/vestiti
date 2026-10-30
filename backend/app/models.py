@@ -49,6 +49,10 @@ class User(Base):
     profile_done_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     last_login_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
+    # bumped on "sign out everywhere" and on a password change: older session cookies stop working
+    session_version: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
+    # set when the traveller proved they own the email (opened a link we sent there)
+    email_verified_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 
     trips: Mapped[list["Trip"]] = relationship(back_populates="user", cascade="all, delete-orphan")
     wardrobe: Mapped[list["WardrobeItem"]] = relationship(
@@ -68,6 +72,8 @@ class Trip(Base):
     # the countries the trip is in (ISO codes): named in its text or shared by its stops.
     # A stop outside them is asked about ("Is this the place?")
     countries: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
+    # slug of the recommended itinerary this trip started from (None = the traveller's own)
+    source_itinerary: Mapped[str | None] = mapped_column(String(80))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, onupdate=utcnow
@@ -151,6 +157,11 @@ class WardrobeItem(Base):
     footwear_type: Mapped[str | None] = mapped_column(String(30))
     ankle_support: Mapped[bool] = mapped_column(Boolean, default=False)
     notes: Mapped[str | None] = mapped_column(Text)
+    # the model it was matched to: lib:<known model id> | product:<product id> | None
+    model_ref: Mapped[str | None] = mapped_column(String(120))
+    added_via: Mapped[str | None] = mapped_column(String(10))  # hand | search | photo
+    # extra data of the matched model: fill_power, waterproof_mm
+    specs: Mapped[dict | None] = mapped_column(JSON)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
 
     user: Mapped[User] = relationship(back_populates="wardrobe")
@@ -239,7 +250,7 @@ class AffiliateClick(Base):
     rental_partner_id: Mapped[str | None] = mapped_column(
         ForeignKey("rental_partners.id", ondelete="SET NULL")
     )
-    kind: Mapped[str] = mapped_column(String(10), default="buy")  # buy | rent
+    kind: Mapped[str] = mapped_column(String(10), default="buy")  # buy | rent | excursion | tour
     network: Mapped[str] = mapped_column(String(40))
     tracked: Mapped[bool] = mapped_column(Boolean, default=False)
     tier: Mapped[str | None] = mapped_column(String(10))
@@ -275,3 +286,19 @@ class FeedImport(Base):
     skipped: Mapped[int] = mapped_column(Integer, default=0)
     deactivated: Mapped[int] = mapped_column(Integer, default=0)
     errors: Mapped[list] = mapped_column(JSON, default=list)
+
+
+class AuthToken(Base):
+    """One-use links sent by email: password reset and passwordless sign-in.
+    Only a SHA-256 of the token is stored, so a database leak gives no working links."""
+
+    __tablename__ = "auth_tokens"
+
+    id: Mapped[str] = mapped_column(String(36), primary_key=True, default=_uuid)
+    token_hash: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    purpose: Mapped[str] = mapped_column(String(10))  # reset | login
+    email: Mapped[str] = mapped_column(String(320), index=True)
+    user_id: Mapped[str | None] = mapped_column(ForeignKey("users.id", ondelete="CASCADE"), index=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
+    expires_at: Mapped[datetime] = mapped_column(DateTime(timezone=True))
+    used_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))

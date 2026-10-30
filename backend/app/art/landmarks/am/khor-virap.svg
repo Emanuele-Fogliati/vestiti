@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="268" cy="28" r="11" fill="var(--il-sun)"/>
+<path d="M-4 110L20 106L48 98L74 88L94 76L110 64L124 52L136 41L146 33L154 29L164 29L176 32L190 37L204 42L218 49L234 58L252 68L272 78L290 84L304 86V170H-4Z" fill="var(--il-far)"/>
+<path d="M90 79L94 76L110 64L124 52L136 41L146 33L154 29L164 29L176 32L190 37L204 42L218 49L234 58L252 68L262 74Q254 76 248 72L244 84L238 70Q232 66 226 70L222 62Q214 64 210 76L206 58Q198 56 194 64L190 52Q184 50 180 68L176 50Q168 48 164 56L160 46Q152 46 150 62L146 50Q140 52 138 70L134 56Q126 58 122 66L118 60Q112 64 112 80L106 70Q98 72 96 80Z" fill="var(--il-ice)"/>
+<path d="M0 170V150Q80 146 150 150Q230 146 300 148V170Z" fill="var(--il-leaf)"/>
+<path d="M60 176Q84 156 112 146L150 142Q200 140 236 132Q266 122 304 118V180H60Z" fill="var(--il-mid)"/>
+<path d="M238 140Q266 128 304 124V150Q276 144 256 150Z" fill="var(--il-near)" opacity="0.3"/>
+<g transform="translate(48 22) scale(0.85)">
+<path d="M124 147V126H230V147Z" fill="var(--il-obj)"/>
+<path d="M116 149V122Q123 118 130 122V149ZM224 149V122Q231 118 238 122V149Z" fill="var(--il-obj)"/>
+<path d="M158 126V102L180 92L202 102V126Z" fill="var(--il-acc)"/>
+<path d="M155 103L180 90L205 103L202 107L180 96L158 107Z" fill="var(--il-near)" opacity="0.5"/>
+<path d="M171 97V78H189V97Z" fill="var(--il-acc)"/>
+<path d="M168 79L180 58L192 79Z" fill="var(--il-acc)"/>
+<path d="M205 126V112L214 106L223 112V126Z" fill="var(--il-acc)"/>
+<path d="M179 83V91H181V83ZM176 112V124H184V112ZM164 108V116H167V108ZM193 108V116H196V108Z" fill="var(--il-near)"/>
+<path d="M124 132H224M116 129H130M224 129H238" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.35"/>
+</g>
+<path d="M90 166Q100 160 112 162M200 158Q220 150 244 152" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V172Q70 166 140 172Q220 176 300 170V200Z" fill="var(--il-leaf)"/>
+<path d="M0 186Q150 178 300 184" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>

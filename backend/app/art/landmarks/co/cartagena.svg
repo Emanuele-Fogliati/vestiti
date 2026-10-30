@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="256" cy="22" r="10" fill="var(--il-sun)"/>
+<path d="M136 134V64H164V134Z" fill="var(--il-obj)"/>
+<path d="M132 66V58H168V66Z" fill="var(--il-obj)"/>
+<path d="M140 58V44H160V58Z" fill="var(--il-obj)"/>
+<path d="M140 44C140 30.7 160 30.7 160 44Z" fill="var(--il-obj)"/>
+<path d="M150 34V26M147 29H153" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M146 92V80Q150 76 154 80V92ZM146 54V48Q150 45 154 48V54Z" fill="var(--il-near)" opacity="0.5"/>
+<path d="M0 200L0 20L60 66L60 168Z" fill="var(--il-acc)"/>
+<path d="M60 168L60 66L128 104L128 132Z" fill="var(--il-water)"/>
+<path d="M300 200L300 26L236 70L236 166Z" fill="var(--il-leaf)"/>
+<path d="M236 166L236 70L172 104L172 132Z" fill="var(--il-acc)"/>
+<path d="M0 200L128 132H172L300 200Z" fill="var(--il-mid)"/>
+<path d="M0 104L60 96L128 116V120L60 102L0 112Z" fill="var(--il-far)"/>
+<path d="M6 111V123M14 110V121M22 108V120M30 107V118M38 106V116M46 104V115M54 103V113" stroke="var(--il-far)" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 108L236 100L172 116V120L236 106L300 116Z" fill="var(--il-far)"/>
+<path d="M294 115V127M286 114V125M278 113V124M270 111V122M262 110V121M254 109V119M246 108V118M238 106V116" stroke="var(--il-far)" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0 101L44 95Q40 113 35 101Q31 109 26 102Q22 115 18 104Q13 111 9 105Q4 118 0 106ZM72 97L116 110Q112 126 107 112Q103 118 98 110Q94 121 90 107Q85 113 81 105Q76 116 72 102ZM300 105L256 99Q260 117 265 105Q269 113 274 106Q278 119 282 108Q287 115 291 109Q296 122 300 110ZM224 100L186 110Q190 126 194 113Q197 119 201 111Q205 122 209 109Q213 115 216 107Q220 118 224 105Z" fill="var(--il-ice)"/>
+<path d="M14 135h8v26h-8ZM40 127h8v26h-8ZM270 133h8v26h-8ZM246 125h8v26h-8Z" fill="var(--il-near)" opacity="0.5"/>
+<path d="M0 60L60 72M300 64L236 76" stroke="var(--il-ice)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>

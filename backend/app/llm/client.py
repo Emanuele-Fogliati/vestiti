@@ -14,6 +14,7 @@ from __future__ import annotations
 import json
 import logging
 import re
+import threading
 import time
 
 import httpx
@@ -26,6 +27,21 @@ _THINK = re.compile(r"<think>.*?</think>", re.S)
 
 class LLMUnavailable(RuntimeError):
     pass
+
+
+# One model server (a single GPU) serves everyone. Without a cap, a few long itineraries
+# (up to 10 minutes each) tie up every worker thread and the GPU, and the site hangs.
+# Calls over the cap wait a little, then the caller uses its rule-based fallback.
+_slots: threading.BoundedSemaphore | None = None
+_slots_lock = threading.Lock()
+
+
+def _llm_slots(n: int) -> threading.BoundedSemaphore:
+    global _slots
+    with _slots_lock:
+        if _slots is None:
+            _slots = threading.BoundedSemaphore(max(1, n))
+        return _slots
 
 
 class LLMClient:
@@ -69,6 +85,11 @@ class LLMClient:
         return {"enabled": True, "available": ok, "model": self.s.llm_model,
                 "base_url": self.s.llm_base_url, "detail": detail}
 
+    def public_status(self) -> dict:
+        """What any visitor may see: no server address, no list of the models on it."""
+        st = self.status()
+        return {"enabled": st["enabled"], "available": st["available"], "model": st["model"]}
+
     def _root(self) -> str:
         return re.sub(r"/v1/?$", "", self.s.llm_base_url.rstrip("/"))
 
@@ -100,6 +121,9 @@ class LLMClient:
             user = user + "\n/no_think"
         messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
         timeout = timeout or self.s.llm_timeout_s
+        slots = _llm_slots(self.s.llm_max_concurrent)
+        if not slots.acquire(timeout=self.s.llm_queue_wait_s):
+            raise LLMUnavailable("model busy")
         try:
             if num_ctx and self.is_ollama():
                 body = {"model": self.s.llm_model, "messages": messages, "stream": False,
@@ -125,6 +149,8 @@ class LLMClient:
         except Exception as e:
             log.info("LLM call failed: %s", e)
             raise LLMUnavailable(str(e)) from e
+        finally:
+            slots.release()
         return _THINK.sub("", text).strip()
 
     def chat_json(self, system: str, user: str, **kw) -> dict:

@@ -237,3 +237,76 @@ footer nav a{font-size:13px}
 .pc-owned li::before{content:"·";position:absolute;left:2px;font-weight:700}
 .placeq{margin:8px 0;font-size:14px}
 .placeq .btn.sm{white-space:normal;text-align:left}
+
+/* ready-made itineraries ("Ideas") */
+.icards .label{color:var(--ink-2)}
+.ititle{font-size:clamp(34px,5vw,64px)!important;line-height:1}
+.kicker a{color:inherit}
+.brief.pack{display:grid;gap:12px;align-content:start}
+.brief.pack h2{font-size:26px}
+.pack-end{max-width:520px}
+.istop{cursor:default}
+.istop:hover{background:var(--stop-bg)}
+.plan{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px;max-width:62ch}
+.plan li{display:grid;grid-template-columns:62px minmax(0,1fr);gap:10px;font-size:15px}
+.plan .vd,.vday .vd{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding-top:3px}
+.tips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:16px}
+.tips h4,.exc h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin:0 0 6px}
+.tips ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+.tip-do{background:color-mix(in srgb,var(--ok-text) 8%,var(--surface));border-radius:var(--radius-sm);padding:12px 14px}
+.tip-do h4{color:var(--ok-text)}
+.tip-skip{background:color-mix(in srgb,var(--warn-text) 7%,var(--surface));border-radius:var(--radius-sm);padding:12px 14px}
+.tip-skip h4{color:var(--warn-text)}
+.exc{margin-top:16px;display:grid;gap:8px}
+.exc-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;font-size:14px;padding-block:6px;border-top:1px solid var(--rule)}
+.exc-links{display:flex;gap:6px;flex-wrap:wrap}
+.gtrips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.gtrips a{display:grid;gap:4px;padding:16px;border-radius:var(--radius);background:var(--surface);border:var(--bw) solid var(--rule-strong);text-decoration:none;color:var(--ink)}
+.gtrips a:hover{background:var(--surface-2)}
+.gtrips b{font-size:18px}
+@media (max-width:700px){.tips{grid-template-columns:minmax(0,1fr)}}
+
+/* place guide: what the place is + fun fact (stop cards, itinerary stops) */
+.pguide{margin-top:10px;display:grid;gap:8px;max-width:62ch}
+.pg-blurb{font-size:15px;line-height:1.5;margin:0}
+.pg-fact{display:flex;gap:8px;align-items:flex-start;margin:0;font-size:14px;line-height:1.45;padding:8px 12px;border-radius:var(--radius);background:var(--surface-2)}
+.pg-fact .bulb{flex:none;margin-top:1px}
+.pg-fact b{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-right:4px}
+.pg-src{font-size:12px;color:var(--ink-2)}
+
+/* auth */
+.or{display:flex;align-items:center;gap:10px;color:var(--ink-2);font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--rule)}
+
+/* Plan a trip: two doors (own trip / recommended) and the recommended filters */
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.door{display:grid;gap:4px;text-align:left;padding:16px 18px;border-radius:var(--radius);border:var(--bw) solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit}
+.door b{font-family:var(--f-display);font-size:20px;font-weight:800}
+.door span{font-size:14px;color:var(--ink-2)}
+.door[aria-selected="true"]{background:var(--seg-on);color:var(--seg-on-ink);border-color:var(--seg-on)}
+.door[aria-selected="true"] span{color:var(--seg-on-ink);opacity:.85}
+.filters{display:grid;gap:10px;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chips .label{min-width:64px}
+.fchip{font:inherit;font-size:13px;padding:6px 12px;border-radius:var(--radius-pill);border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.fchip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.big{font-size:17px;padding-block:14px}
+.from-rec{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:14px}
+.save-nudge{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:16px}
+@media (max-width:640px){.doors{grid-template-columns:minmax(0,1fr)}}
+.btn.hero-alt{width:100%;background:transparent;border-color:var(--ink)}
+.btn.hero-alt:hover{background:rgba(255,255,255,.35)}
+
+/* wardrobe: find what you own */
+.matches{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.matches{grid-template-columns:minmax(0,1fr)}
+.match{box-sizing:border-box;display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--rule);border-radius:var(--radius);padding:10px;cursor:pointer}
+.match:hover{background:var(--surface-2);border-color:var(--rule-strong)}
+.match .tag{margin-left:4px;vertical-align:2px}
+.shots{list-style:none;margin:0;padding:0;display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
+.shots li,.shot>span,.match>span:last-child{min-width:0}
+.shot{box-sizing:border-box;display:flex;gap:12px;align-items:flex-start;cursor:pointer;border:1px dashed var(--rule-strong);border-radius:var(--radius);padding:10px;background:var(--surface)}
+.shots li.done .shot{border-style:solid;border-color:var(--ok)}
+.shot img,.shot-ph{width:64px;height:64px;flex:none;border-radius:8px;object-fit:cover}
+.shot-ph{display:grid;place-items:center;background:var(--surface-2);font-family:var(--f-mono);font-weight:700;font-size:20px;color:var(--ink-2)}
+[hidden]{display:none!important}

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { friendlyError } from "../api";
 import { buildProfile, monoPath, niceMax } from "../elevation";
-import { activityText, addDays, minus, nights, signed } from "../format";
+import { activityText, addDays, minus, monthRange, monthRuns, nights, signed } from "../format";
 import { layOut, redate, spread } from "../spread";
 import { terrainFor } from "../terrain";
 import type { Stop } from "../types";
@@ -12,6 +12,11 @@ const stop = (p: Partial<Stop>): Stop => ({
 } as Stop);
 
 describe("format", () => {
+  it("names a season across the new year", () => {
+    expect(monthRange([11, 12, 1, 2, 3])).toBe("Nov–Mar");
+    expect(monthRange([7])).toBe("Jul");
+    expect(monthRange([])).toBe("");
+  });
   it("uses a real minus sign and signs margins", () => {
     expect(minus(-4)).toBe("−4");
     expect(signed(0.05)).toBe("+0.05");
@@ -89,5 +94,16 @@ describe("spreading days over places", () => {
       ["2027-06-10", "2027-06-13"], ["2027-06-14", "2027-06-16"], ["2027-06-17", "2027-06-20"]]);
     expect(longer[1].visits[0].date).toBe("2027-06-15");
     expect(layOut([1], "2027-12-31")).toEqual([["2027-12-31", "2027-12-31"]]);
+  });
+});
+
+describe("monthRuns", () => {
+  it("joins months into runs that may wrap the year", () => {
+    expect(monthRuns([1, 2, 3, 11, 12])).toBe("Nov–Mar");
+    expect(monthRuns([3, 4, 5, 10, 11])).toBe("Mar–May, Oct–Nov");
+    expect(monthRuns([7])).toBe("Jul");
+    expect(monthRuns([12, 1])).toBe("Dec–Jan");
+    expect(monthRuns([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])).toBe("all year");
+    expect(monthRuns([])).toBe("");
   });
 });

@@ -52,6 +52,8 @@ export default function Legal() {
       <p className="kicker">Legal</p><h1>Terms of use</h1>{draft}
       <p>{name} gives clothing suggestions based on estimates of weather and of how warm clothes are. They are not safety advice.
         In the mountains, check local conditions, and ask a guide or a mountain hut when in doubt.</p>
+      <p>The typical weather by month on the globe comes from the TerraClimate 1991–2020 normals
+        (Abatzoglou et al. 2018, public domain): an average, not a forecast.</p>
       <p>Prices and availability come from shops and can change; the shop's page is what counts. We don't sell anything ourselves:
         purchases and rentals are contracts between you and the shop.</p>
       <p>Don't misuse the service (scraping, automated account creation, attacks). We may suspend accounts that do.</p>

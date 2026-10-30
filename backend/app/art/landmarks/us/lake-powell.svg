@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-us-lake-powell-clip"><path d="M95 140L96.4 95L100.5 87.5L110 82L118.4 77.3L121 67L126 54.3L129 47L132 43L136 44L139 40L144 41L148 37L153 38L157 35L162 36L166 35L170 39L172 44L173.5 49.2L175.5 62L179.6 67L187.2 74.7L192.3 90L197.4 110.4L204 140Z"/></clipPath></defs>
+<path d="M0 130V104L8 101L20 102L30 100H52L56 96H62L64 100L84 101L96 99H118V130ZM196 130V104L210 102L222 103L232 100H252L256 97H262L264 101L280 102L300 104V130Z" fill="var(--il-far)"/>
+<path d="M0 108H96M204 108H300" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 130V118Q10 112 22 116Q34 110 46 116L58 113L66 116L72 110H82L84 115Q92 113 100 117V130ZM204 130V116L216 113H230L232 117Q246 112 258 117L270 115Q284 112 300 116V130Z" fill="var(--il-obj)"/>
+<path d="M95 140L96.4 95L100.5 87.5L110 82L118.4 77.3L121 67L126 54.3L129 47L132 43L136 44L139 40L144 41L148 37L153 38L157 35L162 36L166 35L170 39L172 44L173.5 49.2L175.5 62L179.6 67L187.2 74.7L192.3 90L197.4 110.4L204 140Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-us-lake-powell-clip)">
+<path d="M90 30H210V70L196 68L184 64L176 60L168 62L160 58L150 61L140 59L130 64L120 70L106 74L90 76Z" fill="var(--il-acc)"/>
+<path d="M90 76L100 87.5L110 82L118.4 77.3L120 140H90Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M90 121Q150 117 210 121V145H90Z" fill="var(--il-ice)"/>
+<path d="M128 54H170M124 64H176M122 84H188M120 98H192M118 112H196" stroke="var(--il-near)" stroke-width="0.7" fill="none" stroke-linecap="round" opacity="0.3"/>
+</g>
+<path d="M0 200V129H300V200Z" fill="var(--il-water)"/>
+<path d="M44 158V152H54V148H70V152H76V158Z" fill="var(--il-ice)"/>
+<path d="M40 158H80L77 163H43Z" fill="var(--il-ice)"/>
+<path d="M50 152H74" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M0 200V178Q40 176 80 186Q110 194 140 200Z" fill="var(--il-obj)"/>

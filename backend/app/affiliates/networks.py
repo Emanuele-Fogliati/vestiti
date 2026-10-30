@@ -123,7 +123,40 @@ class AvantLink(Network):
                         + quote(click_id) + "&url=" + quote(url, safe=""), True, self.key)
 
 
-REGISTRY = {cls.key: cls for cls in (Direct, Amazon, Awin, Impact, CJ, AvantLink)}
+class GetYourGuide(Network):
+    """GetYourGuide partner program (tours and excursions): adds partner_id=<our partner id>
+    and cmp=<click id>, the campaign field their partner reports show."""
+
+    key = "getyourguide"
+
+    def configured(self) -> bool:
+        return bool(self.s.getyourguide_partner_id)
+
+    def build(self, url, click_id, program_id=None):
+        if not self.configured():
+            return Outbound(url, False, self.key)
+        return Outbound(_with_params(url, {"partner_id": self.s.getyourguide_partner_id,
+                                           "cmp": click_id}), True, self.key)
+
+
+class Viator(Network):
+    """Viator partner program (tours and excursions): adds pid=<partner id>, mcid=<campaign
+    tracking id>, medium=link and campaign=<click id>."""
+
+    key = "viator"
+
+    def configured(self) -> bool:
+        return bool(self.s.viator_pid and self.s.viator_mcid)
+
+    def build(self, url, click_id, program_id=None):
+        if not self.configured():
+            return Outbound(url, False, self.key)
+        return Outbound(_with_params(url, {"pid": self.s.viator_pid, "mcid": self.s.viator_mcid,
+                                           "medium": "link", "campaign": click_id}), True, self.key)
+
+
+REGISTRY = {cls.key: cls for cls in (Direct, Amazon, Awin, Impact, CJ, AvantLink, GetYourGuide,
+                                     Viator)}
 
 
 def network_for(key: str, settings: Settings) -> Network:
