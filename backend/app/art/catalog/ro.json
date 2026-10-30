@@ -3,6 +3,28 @@
  "name": "Romania",
  "places": [
   {
+   "slug": "biertan",
+   "label": "Biertan fortified church on its hill above the village",
+   "lat": 46.1353,
+   "lon": 24.5213,
+   "radius_km": 3,
+   "aliases": [
+    "biertan"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#8DB35E",
+    "mid": "#E2CFA0",
+    "ice": "#F2EEE4",
+    "water": "#8E8A84",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F8A3C",
+    "acc": "#B4573A",
+    "obj": "#5A4232"
+   }
+  },
+  {
    "slug": "black-church",
    "label": "The Black Church in Brasov",
    "lat": 45.6408,
@@ -129,6 +151,61 @@
    ]
   },
   {
+   "slug": "peles-castle",
+   "label": "Peles Castle with its clock tower among the spruces, Sinaia",
+   "lat": 45.3598,
+   "lon": 25.5426,
+   "radius_km": 3,
+   "aliases": [
+    "peles",
+    "castelul peles",
+    "castello di peles"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#8E9E5E",
+    "mid": "#E4D4AC",
+    "ice": "#F4EFE2",
+    "water": "#4E7E9A",
+    "near": "#26231F",
+    "sun": "#F2C14E",
+    "leaf": "#2F5236",
+    "acc": "#7A3E28",
+    "obj": "#4A4F57"
+   },
+   "names": [
+    "sinaia"
+   ]
+  },
+  {
+   "slug": "sibiu",
+   "label": "The Council Tower over Piata Mare, Sibiu",
+   "lat": 45.7972,
+   "lon": 24.1521,
+   "radius_km": 15,
+   "aliases": [
+    "turnul sfatului",
+    "council tower sibiu",
+    "piata mare sibiu"
+   ],
+   "names": [
+    "sibiu",
+    "hermannstadt"
+   ],
+   "palette": {
+    "sky": "#A6CBF0",
+    "far": "#A9C7A4",
+    "mid": "#E6C65A",
+    "ice": "#F5F3EC",
+    "water": "#A6A39C",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E4A",
+    "acc": "#A3402F",
+    "obj": "#3A4644"
+   }
+  },
+  {
    "slug": "sighisoara",
    "label": "Sighisoara citadel with the Clock Tower",
    "lat": 46.2192,
@@ -160,6 +237,29 @@
     "leaf": "#547E3E",
     "acc": "#B4583A",
     "obj": "#9A9A58"
+   }
+  },
+  {
+   "slug": "viscri",
+   "label": "The white fortified church of Viscri with its wooden-gallery towers",
+   "lat": 46.0558,
+   "lon": 25.0889,
+   "radius_km": 3,
+   "aliases": [
+    "viscri",
+    "deutsch weisskirch"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#A9B97A",
+    "mid": "#C9B38E",
+    "ice": "#F4F2EC",
+    "water": "#8E8A84",
+    "near": "#26201C",
+    "sun": "#F2C14E",
+    "leaf": "#93A650",
+    "acc": "#B5603F",
+    "obj": "#4A3426"
    }
   }
  ]
