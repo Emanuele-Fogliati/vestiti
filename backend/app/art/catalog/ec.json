@@ -191,6 +191,30 @@
    }
   },
   {
+   "slug": "chinese-hat",
+   "label": "Sombrero Chino's hat-shaped islet over the channel",
+   "lat": -0.366,
+   "lon": -90.583,
+   "radius_km": 2,
+   "aliases": [
+    "sombrero chino",
+    "chinese hat",
+    "cappello cinese"
+   ],
+   "palette": {
+    "sky": "#A4CCF0",
+    "far": "#6A4C38",
+    "mid": "#94704E",
+    "ice": "#F2EEE4",
+    "water": "#46B8C0",
+    "near": "#1E2124",
+    "sun": "#F6C431",
+    "leaf": "#6E9040",
+    "acc": "#2266B4",
+    "obj": "#3C3836"
+   }
+  },
+  {
    "slug": "cotopaxi-national-park",
    "label": "Cotopaxi volcano above the paramo and Laguna Limpiopungo",
    "lat": -0.681,
@@ -392,7 +416,11 @@
     "leaf": "#5E9A3E",
     "acc": "#C8643A",
     "obj": "#7E7468"
-   }
+   },
+   "names": [
+    "puerto villamil",
+    "villamil"
+   ]
   },
   {
    "slug": "north-seymour-island",
@@ -443,6 +471,59 @@
     "leaf": "#3E5E34",
     "acc": "#C0402E",
     "obj": "#3E6AB8"
+   }
+  },
+  {
+   "slug": "papallacta",
+   "label": "Papallacta hot-spring pools below the Andean valley",
+   "lat": -0.358,
+   "lon": -78.136,
+   "radius_km": 8,
+   "aliases": [
+    "termas de papallacta",
+    "papallacta hot springs",
+    "termas papallacta",
+    "sorgenti termali di papallacta",
+    "papallacta thermal"
+   ],
+   "names": [
+    "papallacta"
+   ],
+   "palette": {
+    "sky": "#C6DCEE",
+    "far": "#A39A62",
+    "mid": "#3E6E32",
+    "ice": "#E2E1DA",
+    "water": "#8ED2C8",
+    "near": "#1F2220",
+    "sun": "#F6C431",
+    "leaf": "#2F5A26",
+    "acc": "#C9AA66",
+    "obj": "#8A8A84"
+   }
+  },
+  {
+   "slug": "post-office-bay",
+   "label": "Post Office Bay's barrel mailbox and sign heap, Floreana",
+   "lat": -1.237,
+   "lon": -90.452,
+   "radius_km": 2,
+   "aliases": [
+    "post office bay",
+    "bahia del correo",
+    "barrel post office"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#93A872",
+    "mid": "#8C6440",
+    "ice": "#D9C49E",
+    "water": "#3FA9C0",
+    "near": "#22201E",
+    "sun": "#F6C431",
+    "leaf": "#5E8A3A",
+    "acc": "#B04A36",
+    "obj": "#A39888"
    }
   },
   {
@@ -502,6 +583,29 @@
     "leaf": "#7F9466",
     "acc": "#6A645C",
     "obj": "#3E3B37"
+   }
+  },
+  {
+   "slug": "punta-cormorant",
+   "label": "Punta Cormorant's flamingo lagoon, Floreana",
+   "lat": -1.222,
+   "lon": -90.422,
+   "radius_km": 2,
+   "aliases": [
+    "punta cormorant",
+    "punta cormorano"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#B4B0A4",
+    "mid": "#8A8A72",
+    "ice": "#D6CEBC",
+    "water": "#93A096",
+    "near": "#202220",
+    "sun": "#F6C431",
+    "leaf": "#5E8A3A",
+    "acc": "#F27C70",
+    "obj": "#3E3A36"
    }
   },
   {
@@ -632,6 +736,84 @@
     "galapagos national park",
     "santa cruz highlands"
    ]
+  },
+  {
+   "slug": "santa-fe-island",
+   "label": "Santa Fe Island giant prickly-pear cacti over Barrington Bay",
+   "lat": -0.8,
+   "lon": -90.05,
+   "radius_km": 6,
+   "aliases": [
+    "santa fe island",
+    "isla santa fe",
+    "barrington island",
+    "isola santa fe"
+   ],
+   "names": [
+    "santa fe"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#BDB39C",
+    "mid": "#8A5038",
+    "ice": "#DAD6CB",
+    "water": "#3FB6AE",
+    "near": "#1F2326",
+    "sun": "#F6C431",
+    "leaf": "#6F9440",
+    "acc": "#AEC08E",
+    "obj": "#4E5052"
+   }
+  },
+  {
+   "slug": "south-plaza-island",
+   "label": "South Plaza's red Sesuvium, opuntias and a land iguana",
+   "lat": -0.583,
+   "lon": -90.163,
+   "radius_km": 3,
+   "aliases": [
+    "south plaza",
+    "plaza sur",
+    "islas plaza",
+    "plaza islands",
+    "isole plaza"
+   ],
+   "palette": {
+    "sky": "#A6CDEE",
+    "far": "#9A8A6E",
+    "mid": "#7E5A44",
+    "ice": "#7E7A76",
+    "water": "#2E9EC2",
+    "near": "#202326",
+    "sun": "#F6C431",
+    "leaf": "#7E9844",
+    "acc": "#B8473A",
+    "obj": "#E2B43C"
+   }
+  },
+  {
+   "slug": "tortuga-bay",
+   "label": "Tortuga Bay beach with mangroves and marine iguanas",
+   "lat": -0.765,
+   "lon": -90.33,
+   "radius_km": 3,
+   "aliases": [
+    "tortuga bay",
+    "bahia tortuga",
+    "baia tortuga"
+   ],
+   "palette": {
+    "sky": "#8CC4EE",
+    "far": "#9DB58A",
+    "mid": "#5E4434",
+    "ice": "#F6F3EA",
+    "water": "#5CCFCB",
+    "near": "#202326",
+    "sun": "#F6C431",
+    "leaf": "#6EA03E",
+    "acc": "#2B8EC0",
+    "obj": "#3B3D3C"
+   }
   }
  ]
 }
