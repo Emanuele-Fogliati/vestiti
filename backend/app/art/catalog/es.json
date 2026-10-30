@@ -3,6 +3,30 @@
  "name": "Spain",
  "places": [
   {
+   "slug": "albaicin",
+   "label": "The Albaicin hillside with San Nicolas church, Granada",
+   "lat": 37.1811,
+   "lon": -3.5925,
+   "radius_km": 2,
+   "aliases": [
+    "albaicin",
+    "albayzin",
+    "albaycin"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#8E9CB2",
+    "mid": "#B8A07A",
+    "ice": "#F6F2EA",
+    "water": "#4E8EB0",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#3E6232",
+    "acc": "#C27548",
+    "obj": "#A8A096"
+   }
+  },
+  {
    "slug": "alcazar-of-seville",
    "label": "Patio de las Doncellas, Real Alcazar of Seville",
    "lat": 37.3838,
@@ -88,6 +112,29 @@
    }
   },
   {
+   "slug": "casa-batllo",
+   "label": "Casa Batlló facade, Barcelona",
+   "lat": 41.3916,
+   "lon": 2.1649,
+   "radius_km": 2,
+   "aliases": [
+    "casa batllo",
+    "batllo house"
+   ],
+   "palette": {
+    "sky": "#9FC6EC",
+    "far": "#A9C4D8",
+    "mid": "#CFC1A6",
+    "ice": "#F2EDE4",
+    "water": "#B9B4AC",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F5C",
+    "acc": "#C97A5C",
+    "obj": "#3E8E8C"
+   }
+  },
+  {
    "slug": "cordoba",
    "label": "Roman bridge and Mosque-Cathedral, Cordoba",
    "lat": 37.8775,
@@ -120,6 +167,35 @@
    }
   },
   {
+   "slug": "la-rambla",
+   "label": "La Rambla and the Columbus Monument, Barcelona",
+   "lat": 41.3809,
+   "lon": 2.1735,
+   "radius_km": 2,
+   "aliases": [
+    "la rambla",
+    "las ramblas",
+    "les rambles",
+    "mirador de colom"
+   ],
+   "names": [
+    "rambla",
+    "ramblas"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D9D2C4",
+    "mid": "#D7B48C",
+    "ice": "#F4F0E8",
+    "water": "#8A8C8E",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#6F8F3A",
+    "acc": "#2F5E46",
+    "obj": "#4E4A44"
+   }
+  },
+  {
    "slug": "madrid",
    "label": "Metropolis Building on Gran Via, Madrid",
    "lat": 40.4189,
@@ -145,6 +221,61 @@
     "leaf": "#4F7A3A",
     "acc": "#D2A645",
     "obj": "#353B4A"
+   }
+  },
+  {
+   "slug": "mosque-cathedral-of-cordoba",
+   "label": "Red-and-white double arches of the Mezquita prayer hall, Cordoba",
+   "lat": 37.8789,
+   "lon": -4.7794,
+   "radius_km": 2,
+   "aliases": [
+    "mezquita",
+    "mezquita catedral",
+    "mosque cathedral of cordoba",
+    "mosque of cordoba",
+    "mezquita de cordoba",
+    "great mosque of cordoba",
+    "moschea di cordova",
+    "moschea di cordoba",
+    "mezquita cattedrale",
+    "moschea cattedrale"
+   ],
+   "palette": {
+    "sky": "#F4E8D0",
+    "far": "#F0D8A8",
+    "mid": "#D8B886",
+    "ice": "#F2E4C4",
+    "water": "#6B4A34",
+    "near": "#2A211C",
+    "sun": "#F2C14E",
+    "leaf": "#D2A486",
+    "acc": "#B4432E",
+    "obj": "#6A6764"
+   }
+  },
+  {
+   "slug": "plaza-mayor-madrid",
+   "label": "Plaza Mayor, Madrid, with the Casa de la Panaderia",
+   "lat": 40.4155,
+   "lon": -3.7074,
+   "radius_km": 2,
+   "aliases": [
+    "plaza mayor de madrid",
+    "plaza mayor madrid",
+    "casa de la panaderia"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#DDB89A",
+    "mid": "#A8463A",
+    "ice": "#EEE8DE",
+    "water": "#4E8EB0",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#BCB2A2",
+    "acc": "#C99A5E",
+    "obj": "#4E5560"
    }
   },
   {
@@ -307,7 +438,9 @@
     "cathedral of seville",
     "seville s cathedral",
     "cattedrale de siviglia",
-    "catedral sevilla"
+    "catedral sevilla",
+    "giralda",
+    "la giralda"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -320,6 +453,31 @@
     "leaf": "#4E7A34",
     "acc": "#C9925C",
     "obj": "#6A5332"
+   }
+  },
+  {
+   "slug": "teide-national-park",
+   "label": "Mount Teide and Roque Cinchado, Teide National Park",
+   "lat": 28.25,
+   "lon": -16.635,
+   "radius_km": 20,
+   "aliases": [
+    "teide",
+    "las canadas del teide",
+    "roque cinchado",
+    "roques de garcia"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#D6A65A",
+    "mid": "#8C6656",
+    "ice": "#D8C7A2",
+    "water": "#4E8EB0",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#9AA05A",
+    "acc": "#B5683E",
+    "obj": "#5A4438"
    }
   }
  ]

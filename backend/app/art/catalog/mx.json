@@ -3,6 +3,95 @@
  "name": "Mexico",
  "places": [
   {
+   "slug": "agua-azul-waterfalls",
+   "label": "The turquoise cascades of Agua Azul",
+   "lat": 17.257,
+   "lon": -92.114,
+   "radius_km": 5,
+   "aliases": [
+    "agua azul",
+    "cascadas de agua azul",
+    "cascate di agua azul"
+   ],
+   "palette": {
+    "sky": "#B6D8EE",
+    "far": "#CBE6EA",
+    "mid": "#D6B87E",
+    "ice": "#FFFFFF",
+    "water": "#3DB5BC",
+    "near": "#22291F",
+    "sun": "#F6C431",
+    "leaf": "#4F8A3A",
+    "acc": "#B48C4A",
+    "obj": "#2F5E2A"
+   }
+  },
+  {
+   "slug": "arbol-del-tule",
+   "label": "The Tule tree and church of Santa Maria del Tule",
+   "lat": 17.0465,
+   "lon": -96.6363,
+   "radius_km": 3,
+   "aliases": [
+    "arbol del tule",
+    "tule tree",
+    "el tule",
+    "santa maria del tule"
+   ],
+   "names": [
+    "tule"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#9AA3B4",
+    "mid": "#6E5C48",
+    "ice": "#F5F2EA",
+    "water": "#3E6FC2",
+    "near": "#24221E",
+    "sun": "#F6C431",
+    "leaf": "#56603A",
+    "acc": "#C23A30",
+    "obj": "#77894A"
+   }
+  },
+  {
+   "slug": "bacalar",
+   "label": "Fort San Felipe and a palapa over the turquoise lagoon, Bacalar",
+   "lat": 18.6773,
+   "lon": -88.3916,
+   "radius_km": 15,
+   "aliases": [
+    "lake bacalar",
+    "lago bacalar",
+    "lago di bacalar",
+    "lago de bacalar",
+    "fuerte de san felipe bacalar",
+    "fort san felipe bacalar",
+    "pueblo magico bacalar",
+    "bacalar lagoon",
+    "laguna de bacalar",
+    "laguna di bacalar",
+    "laguna dei 7 colori",
+    "laguna de los siete colores",
+    "lagoon of seven colors"
+   ],
+   "names": [
+    "bacalar"
+   ],
+   "palette": {
+    "sky": "#9CCBF0",
+    "far": "#C9C4B5",
+    "mid": "#A49E8F",
+    "ice": "#F4F4EE",
+    "water": "#2A78C2",
+    "near": "#23292B",
+    "sun": "#F4C542",
+    "leaf": "#4A7F3A",
+    "acc": "#C8A86A",
+    "obj": "#5AD3C9"
+   }
+  },
+  {
    "slug": "basilica-of-our-lady-of-guadalupe",
    "label": "Basilica of Our Lady of Guadalupe, Mexico City",
    "lat": 19.4846,
@@ -38,6 +127,28 @@
    }
   },
   {
+   "slug": "calakmul",
+   "label": "Structure II of Calakmul above the jungle",
+   "lat": 18.105,
+   "lon": -89.81,
+   "radius_km": 6,
+   "aliases": [
+    "calakmul"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#86A878",
+    "mid": "#B9B3A3",
+    "ice": "#D8D2C2",
+    "water": "#5E9FB8",
+    "near": "#262A22",
+    "sun": "#F6C431",
+    "leaf": "#6E9E3E",
+    "acc": "#E58A2E",
+    "obj": "#3F6B2C"
+   }
+  },
+  {
    "slug": "campeche",
    "label": "Calle 59 and the city gate, Campeche",
    "lat": 19.8454,
@@ -64,6 +175,64 @@
     "leaf": "#4E8A3E",
     "acc": "#E7B23C",
     "obj": "#C24A3C"
+   }
+  },
+  {
+   "slug": "cancun",
+   "label": "Cancún's hotel zone beach between the Caribbean and the lagoon",
+   "lat": 21.136,
+   "lon": -86.746,
+   "radius_km": 20,
+   "aliases": [
+    "cancun hotel zone",
+    "hotel zone cancun",
+    "zona hotelera cancun",
+    "zona hotelera de cancun",
+    "punta cancun",
+    "playa gaviota azul"
+   ],
+   "names": [
+    "cancun",
+    "cancun city",
+    "cancun mexico",
+    "cancun quintana roo"
+   ],
+   "palette": {
+    "sky": "#A6CDEE",
+    "far": "#F1E4C6",
+    "mid": "#C9CCCC",
+    "ice": "#F5F4EF",
+    "water": "#2384B8",
+    "near": "#25292D",
+    "sun": "#F4C542",
+    "leaf": "#4F8A3E",
+    "acc": "#B8925A",
+    "obj": "#45CBBF"
+   }
+  },
+  {
+   "slug": "celestun",
+   "label": "Flamingos in the Ria Celestun",
+   "lat": 20.87,
+   "lon": -90.38,
+   "radius_km": 12,
+   "aliases": [
+    "ria celestun"
+   ],
+   "names": [
+    "celestun"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#9FB0A8",
+    "mid": "#7E9E62",
+    "ice": "#FFFFFF",
+    "water": "#B2C6D2",
+    "near": "#24221F",
+    "sun": "#F6C431",
+    "leaf": "#4A7438",
+    "acc": "#F26E58",
+    "obj": "#C9B48A"
    }
   },
   {
@@ -96,6 +265,40 @@
    ]
   },
   {
+   "slug": "cholula",
+   "label": "Church on the Great Pyramid of Cholula with Popocatepetl",
+   "lat": 19.0576,
+   "lon": -98.3019,
+   "radius_km": 6,
+   "aliases": [
+    "great pyramid of cholula",
+    "gran piramide de cholula",
+    "piramide di cholula",
+    "piramide de cholula",
+    "tlachihualtepetl",
+    "santuario de los remedios",
+    "nuestra senora de los remedios"
+   ],
+   "names": [
+    "cholula",
+    "san pedro cholula",
+    "san andres cholula",
+    "cholula de rivadavia"
+   ],
+   "palette": {
+    "sky": "#92C4EA",
+    "far": "#8A8FA6",
+    "mid": "#F0B53C",
+    "ice": "#FFFFFF",
+    "water": "#5B9BD5",
+    "near": "#2A2420",
+    "sun": "#F6C431",
+    "leaf": "#4E8034",
+    "acc": "#E3893A",
+    "obj": "#E2A72A"
+   }
+  },
+  {
    "slug": "coba",
    "label": "Nohoch Mul pyramid, Cobá",
    "lat": 20.4947,
@@ -125,6 +328,131 @@
     "acc": "#5E8A3E",
     "obj": "#8C8576"
    }
+  },
+  {
+   "slug": "coyoacan",
+   "label": "Coyote fountain and San Juan Bautista church, Coyoacan",
+   "lat": 19.3497,
+   "lon": -99.1625,
+   "radius_km": 4,
+   "aliases": [
+    "fuente de los coyotes",
+    "coyotes fountain",
+    "jardin centenario",
+    "parroquia de san juan bautista coyoacan"
+   ],
+   "names": [
+    "coyoacan",
+    "coyocan",
+    "coyoacan mexico city",
+    "barrio de coyoacan"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#D3C6B2",
+    "mid": "#A09079",
+    "ice": "#F2ECDF",
+    "water": "#4AB0DA",
+    "near": "#2B2622",
+    "sun": "#F4C13A",
+    "leaf": "#5E8C3E",
+    "acc": "#DDB08A",
+    "obj": "#6A5038"
+   }
+  },
+  {
+   "slug": "cozumel",
+   "label": "Celarain lighthouse at Punta Sur, Cozumel",
+   "lat": 20.2717,
+   "lon": -86.9888,
+   "radius_km": 30,
+   "aliases": [
+    "isla cozumel",
+    "isola di cozumel",
+    "cozumel island",
+    "punta sur cozumel",
+    "punta sur park",
+    "parque punta sur",
+    "celarain"
+   ],
+   "names": [
+    "cozumel",
+    "san miguel de cozumel"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#F3EBD8",
+    "mid": "#B9B3A6",
+    "ice": "#F6F6F2",
+    "water": "#1E6CB0",
+    "near": "#24292C",
+    "sun": "#F4C542",
+    "leaf": "#5E8C3E",
+    "acc": "#C9A063",
+    "obj": "#3DC4BC"
+   }
+  },
+  {
+   "slug": "frida-kahlo-museum",
+   "label": "La Casa Azul, the Frida Kahlo Museum in Coyoacán",
+   "lat": 19.3551,
+   "lon": -99.1625,
+   "radius_km": 2,
+   "aliases": [
+    "frida kahlo museum",
+    "museo frida kahlo",
+    "casa museo frida kahlo",
+    "museo casa azul",
+    "casa azul",
+    "casa di frida kahlo",
+    "museo di frida kahlo",
+    "frida kahlo house",
+    "frida kahlo s house",
+    "frida s house"
+   ],
+   "names": [
+    "frida kahlo",
+    "the blue house"
+   ],
+   "palette": {
+    "sky": "#B6D6F0",
+    "far": "#4E7A3C",
+    "mid": "#2450D6",
+    "ice": "#E6E2DA",
+    "water": "#7C7E80",
+    "near": "#1E2028",
+    "sun": "#F2C440",
+    "leaf": "#2A8A54",
+    "acc": "#C2452F",
+    "obj": "#5E5853"
+   }
+  },
+  {
+   "slug": "holbox",
+   "label": "Hammocks in the shallow sea of Isla Holbox",
+   "lat": 21.522,
+   "lon": -87.378,
+   "radius_km": 15,
+   "aliases": [
+    "holbox"
+   ],
+   "palette": {
+    "sky": "#A2D4F2",
+    "far": "#2E9FB8",
+    "mid": "#8E7D6A",
+    "ice": "#FBF7EA",
+    "water": "#8EDCCB",
+    "near": "#22262A",
+    "sun": "#F6C431",
+    "leaf": "#3F8A3C",
+    "acc": "#E8508C",
+    "obj": "#2A7FC0"
+   },
+   "names": [
+    "chiquila",
+    "chiquila port",
+    "puerto de chiquila"
+   ]
   },
   {
    "slug": "isla-mujeres",
@@ -205,6 +533,28 @@
     "leaf": "#4A7A34",
     "acc": "#93B356",
     "obj": "#8E8774"
+   }
+  },
+  {
+   "slug": "las-coloradas",
+   "label": "The pink salt lagoons of Las Coloradas with flamingos",
+   "lat": 21.6,
+   "lon": -87.99,
+   "radius_km": 6,
+   "aliases": [
+    "las coloradas"
+   ],
+   "palette": {
+    "sky": "#9ED2F2",
+    "far": "#C9C4BA",
+    "mid": "#E2D8C0",
+    "ice": "#FAF8F4",
+    "water": "#EE97AE",
+    "near": "#2A2326",
+    "sun": "#F6C431",
+    "leaf": "#6E8E52",
+    "acc": "#E5574E",
+    "obj": "#CFC3A6"
    }
   },
   {
@@ -320,6 +670,28 @@
    }
   },
   {
+   "slug": "mitla",
+   "label": "The Palace of the Columns at Mitla with its step-fret mosaics",
+   "lat": 16.9265,
+   "lon": -96.3596,
+   "radius_km": 4,
+   "aliases": [
+    "mitla"
+   ],
+   "palette": {
+    "sky": "#A6CFF0",
+    "far": "#9AA6B2",
+    "mid": "#CFB78E",
+    "ice": "#DDD5C4",
+    "water": "#5E9FB8",
+    "near": "#2A2622",
+    "sun": "#F6C431",
+    "leaf": "#6F9070",
+    "acc": "#B79C74",
+    "obj": "#B3AB9C"
+   }
+  },
+  {
    "slug": "monte-alban",
    "label": "The Gran Plaza of Monte Alban with Building J and the stepped platforms",
    "lat": 17.0436,
@@ -422,6 +794,38 @@
    }
   },
   {
+   "slug": "puebla",
+   "label": "Puebla Cathedral's twin towers on the Zócalo, Puebla",
+   "lat": 19.0429,
+   "lon": -98.1983,
+   "radius_km": 15,
+   "aliases": [
+    "puebla cathedral",
+    "catedral de puebla",
+    "cattedrale di puebla",
+    "heroica puebla de zaragoza"
+   ],
+   "names": [
+    "puebla",
+    "puebla de zaragoza",
+    "puebla de los angeles",
+    "puebla city",
+    "puebla mexico"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#C9C4BC",
+    "mid": "#726A62",
+    "ice": "#EEEAE2",
+    "water": "#7DA7C9",
+    "near": "#232120",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E3A",
+    "acc": "#9E3434",
+    "obj": "#8A5A3C"
+   }
+  },
+  {
    "slug": "puerto-vallarta",
    "label": "Crowned church tower of Puerto Vallarta",
    "lat": 20.6085,
@@ -451,6 +855,57 @@
    }
   },
   {
+   "slug": "rio-lagartos",
+   "label": "Flamingos and a crocodile in the mangroves of Ria Lagartos",
+   "lat": 21.6,
+   "lon": -88.15,
+   "radius_km": 15,
+   "aliases": [
+    "rio lagartos",
+    "ria lagartos"
+   ],
+   "palette": {
+    "sky": "#B7DCF2",
+    "far": "#CDB98F",
+    "mid": "#6E6B48",
+    "ice": "#FFFFFF",
+    "water": "#6E9FC2",
+    "near": "#22261E",
+    "sun": "#F6C431",
+    "leaf": "#3F6B33",
+    "acc": "#F0775E",
+    "obj": "#7A5A40"
+   }
+  },
+  {
+   "slug": "san-cristobal-de-las-casas",
+   "label": "The yellow cathedral and its wooden cross, San Cristóbal de las Casas",
+   "lat": 16.7372,
+   "lon": -92.6378,
+   "radius_km": 12,
+   "aliases": [
+    "san cristobal cathedral",
+    "catedral de san cristobal",
+    "cattedrale di san cristobal"
+   ],
+   "names": [
+    "san cristobal de las casas",
+    "san cristobal de las casas chiapas"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#BDB5A7",
+    "mid": "#F0BE2C",
+    "ice": "#F5EFE0",
+    "water": "#8DB6D4",
+    "near": "#2A2220",
+    "sun": "#F7D25A",
+    "leaf": "#4E7D45",
+    "acc": "#B3282C",
+    "obj": "#7A4B2E"
+   }
+  },
+  {
    "slug": "san-juan-chamula",
    "label": "The white church of San Juan Chamula with its green and blue portal",
    "lat": 16.7871,
@@ -471,6 +926,38 @@
     "acc": "#9A4A2C",
     "obj": "#2F6FB0"
    }
+  },
+  {
+   "slug": "sumidero-canyon",
+   "label": "The sheer walls of the Sumidero Canyon over the Grijalva River",
+   "lat": 16.85,
+   "lon": -93.08,
+   "radius_km": 25,
+   "aliases": [
+    "sumidero",
+    "canon del sumidero",
+    "canon de sumidero",
+    "canyon del sumidero",
+    "canyon sumidero",
+    "canyon de sumidero",
+    "canone del sumidero"
+   ],
+   "palette": {
+    "sky": "#8FC4F0",
+    "far": "#AEB3A8",
+    "mid": "#BFB194",
+    "ice": "#EDE8DC",
+    "water": "#4E8086",
+    "near": "#262A24",
+    "sun": "#F4C542",
+    "leaf": "#4E7A34",
+    "acc": "#8E7F62",
+    "obj": "#6A6E4C"
+   },
+   "names": [
+    "tuxtla gutierrez",
+    "tuxtla"
+   ]
   },
   {
    "slug": "suytun-cenote",
@@ -643,6 +1130,56 @@
     "leaf": "#3E7A3C",
     "acc": "#E0336B",
     "obj": "#F2B21E"
+   }
+  },
+  {
+   "slug": "zinacantan",
+   "label": "San Lorenzo church and textile market, Zinacantan",
+   "lat": 16.7597,
+   "lon": -92.7225,
+   "radius_km": 3,
+   "aliases": [
+    "zinacantan",
+    "zinancantan"
+   ],
+   "palette": {
+    "sky": "#AED3F2",
+    "far": "#D2CEC5",
+    "mid": "#B9AB90",
+    "ice": "#F8F6F0",
+    "water": "#3D7CC9",
+    "near": "#24231F",
+    "sun": "#F6C431",
+    "leaf": "#41703B",
+    "acc": "#9E4B2E",
+    "obj": "#DA3B8E"
+   }
+  },
+  {
+   "slug": "zocalo",
+   "label": "The Zócalo with its giant flag and the Metropolitan Cathedral, Mexico City",
+   "lat": 19.4326,
+   "lon": -99.1332,
+   "radius_km": 2,
+   "aliases": [
+    "plaza de la constitucion",
+    "piazza della costituzione",
+    "zocalo de la ciudad de mexico",
+    "zocalo mexico city",
+    "zocalo cdmx",
+    "zocalo di citta del messico"
+   ],
+   "palette": {
+    "sky": "#A4CCF0",
+    "far": "#CFC8BC",
+    "mid": "#A8987F",
+    "ice": "#F4F2EC",
+    "water": "#6FA3C8",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#1F7A48",
+    "acc": "#9A4B3C",
+    "obj": "#CE1A2E"
    }
   }
  ]
