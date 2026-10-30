@@ -85,6 +85,16 @@ The details of each step:
    flanks that sweep out at the foot: it is never a straight-sided triangle), the
    **proportions** (Huayna Picchu is about twice as tall as the ruins are wide; the ruins sit on
    a saddle, below the peak), what is in front, middle and back, and the colours.
+   **Element map (prompt v2, Manu 2026-10-30).** Before drawing, list every element you will
+   draw with the photo that shows it and its shape ("bell tower: photo 1, square, 3 stages,
+   onion top, left of the facade"). An element no photo shows is not drawn (except sky, sun,
+   the plain ground or water strip, and the typical animal of point 5). Name 3 details that
+   tell this place apart from any other place of its type; all 3 must be visible. Plants and
+   animals are the real species, with that species' silhouette (Opuntia pads, saguaro arms),
+   never a generic tree. Every element must read as what it is at card size (150x100 px): a
+   shape that could read as something else (a statue as a robot, a cactus as broccoli) is
+   simplified to its clearest silhouette or removed. *Why:* in the first 1,600 reviewed scenes
+   1 in 4 was sent back, mostly for drawing the type of place instead of this place.
 4. **Composition: the subject large and centred, the rest a frame that belongs to it**
    ("contorno"). The subject the place is famous for is the main thing in the scene, big and in
    the middle; the framing is yours, so crop and zoom until it is. But the frame is **not a set
