@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="252" cy="30" r="11" fill="var(--il-sun)"/>
+<path d="M0 200V112H300V200Z" fill="var(--il-water)"/>
+<path d="M262 113L276 101L281 99L286 101L300 110V113Z" fill="var(--il-far)" opacity="0.7"/>
+<path d="M90 113L95 104L102 99L118 97L134 96L146 98L152 104L156 113Z" fill="var(--il-far)"/>
+<path d="M102 104L106 112M136 102L142 112" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M156 113L163 101L169 84L175 66L180 54L185 58L190 70L196 80L202 88L209 98L218 113Z" fill="var(--il-mid)"/>
+<path d="M180 60L176 80L172 104M190 74L195 102" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M218 113L222 108L227 113ZM254 113L258 107L263 113Z" fill="var(--il-mid)"/>
+<path d="M228 113L232 107L241 105L250 108L253 113Z" fill="var(--il-acc)"/>
+<path d="M140 160V140H160V160ZM158 160V144H172V160ZM200 164V146H218V164ZM216 166V150H230V166ZM254 170V152H272V170Z" fill="var(--il-ice)"/>
+<path d="M145 144h3v4h-3ZM163 148h3v4h-3ZM205 150h3v4h-3ZM221 154h3v4h-3ZM259 156h3v4h-3Z" fill="var(--il-near)" opacity="0.5"/>
+<path d="M12 148V106H88V148Z" fill="var(--il-ice)"/>
+<path d="M18 144V124Q24 116 30 124V144ZM36 144V124Q42 116 48 124V144ZM54 144V124Q60 116 66 124V144ZM72 144V124Q78 116 84 124V144Z" fill="var(--il-near)" opacity="0.45"/>
+<path d="M12 108V84H48V108ZM52 108V84H58V108ZM66 108V84H72V108ZM80 108V84H86V108Z" fill="var(--il-ice)"/>
+<path d="M8 86V80H92V86Z" fill="var(--il-ice)"/>
+<path d="M18 90h5v9h-5ZM32 90h5v9h-5Z" fill="var(--il-near)" opacity="0.55"/>
+<path d="M48 104H88" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M2 148Q0 134 8 130Q12 122 20 128Q26 124 26 134Q30 142 24 148Z" fill="var(--il-obj)"/>
+<path d="M0 200V142Q11 135 21 144Q32 141 43 147Q54 140 64 149Q75 146 86 152Q96 145 107 154Q118 150 129 157Q139 150 150 159Q161 155 171 161Q182 155 193 164Q204 160 214 166Q225 160 236 169Q246 165 257 171Q268 164 279 174Q289 170 300 176V200Z" fill="var(--il-leaf)"/>

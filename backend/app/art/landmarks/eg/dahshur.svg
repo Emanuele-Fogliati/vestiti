@@ -1,0 +1,10 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="256" cy="32" r="11" fill="var(--il-sun)"/>
+<path d="M0 162V152Q60 148 150 150Q230 147 300 151V162Z" fill="var(--il-far)"/>
+<path d="M4 154L20 143L36 154Z" fill="var(--il-obj)"/>
+<path d="M26 163L68 108L140 60L228 112L270 163Z" fill="var(--il-mid)"/>
+<path d="M140 60L228 112L270 163H148Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M150 163V153L168 151L186 154L204 150L222 153L240 150L256 154L264 156L270 163Z" fill="var(--il-obj)"/>
+<path d="M68 108L146 110L228 112M140 60L148 163" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+<path d="M50 134H146M90 92L142 88M156 134H250M158 90L196 98" stroke="var(--il-far)" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+<path d="M0 200V159Q150 156 300 159V200Z" fill="var(--il-acc)"/>

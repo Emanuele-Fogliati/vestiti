@@ -25,20 +25,53 @@
    }
   },
   {
+   "slug": "aga-khan-mausoleum",
+   "label": "Mausoleum of Aga Khan above the Nile at Aswan",
+   "lat": 24.0846,
+   "lon": 32.8783,
+   "radius_km": 2,
+   "aliases": [
+    "aga khan mausoleum",
+    "mausoleum of aga khan",
+    "mausoleo dell aga khan",
+    "mausoleo di aga khan",
+    "mausoleo aga khan"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#C2A27C",
+    "mid": "#DDBE92",
+    "ice": "#F6F1E6",
+    "water": "#3F7FA8",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#EAD3AC",
+    "obj": "#6B4A32"
+   }
+  },
+  {
    "slug": "aswan",
    "label": "Felucca on the Nile below the Qubbet el-Hawa hill",
    "lat": 24.1035,
    "lon": 32.8885,
    "radius_km": 15,
    "aliases": [
-    "qubbet el hawa"
+    "qubbet el hawa",
+    "felucca"
    ],
    "names": [
     "aswan",
     "assuan",
     "assouan",
     "aswan city",
-    "aswan corniche"
+    "aswan corniche",
+    "nile",
+    "nile river",
+    "river nile",
+    "nilo",
+    "il nilo",
+    "fiume nilo"
    ],
    "palette": {
     "sky": "#A2C6EA",
@@ -80,6 +113,33 @@
     "leaf": "#4E8A3A",
     "acc": "#CDB590",
     "obj": "#8A6A44"
+   }
+  },
+  {
+   "slug": "bibliotheca-alexandrina",
+   "label": "Bibliotheca Alexandrina with its planetarium and tilted roof",
+   "lat": 31.2089,
+   "lon": 29.9092,
+   "radius_km": 2,
+   "aliases": [
+    "bibliotheca alexandrina",
+    "biblioteca alessandrina",
+    "biblioteca di alessandria",
+    "alexandria library",
+    "library of alexandria",
+    "new library of alexandria"
+   ],
+   "palette": {
+    "sky": "#ADD0EF",
+    "far": "#CDC8BE",
+    "mid": "#9A7B55",
+    "ice": "#E4E9EC",
+    "water": "#8EA7B6",
+    "near": "#262626",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#DADAD6",
+    "obj": "#6F6D6B"
    }
   },
   {
@@ -135,7 +195,10 @@
     "mosque of muhammad ali",
     "alabaster mosque",
     "moschea di alabastro",
-    "moschea di muhammad ali"
+    "moschea di muhammad ali",
+    "moschea di mohammed ali",
+    "moschea di mohamed ali",
+    "moschea mehmet ali"
    ],
    "palette": {
     "sky": "#AECDEE",
@@ -274,6 +337,34 @@
    }
   },
   {
+   "slug": "dahshur",
+   "label": "Bent Pyramid of Dahshur",
+   "lat": 29.7903,
+   "lon": 31.2094,
+   "radius_km": 4,
+   "aliases": [
+    "dahshur",
+    "dashur",
+    "bent pyramid",
+    "piramide romboidale",
+    "piramide piegata",
+    "red pyramid",
+    "piramide rossa"
+   ],
+   "palette": {
+    "sky": "#B6D2EA",
+    "far": "#E6D3AC",
+    "mid": "#E0CCA6",
+    "ice": "#F0E8D8",
+    "water": "#5F8FB0",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A4A",
+    "acc": "#D6B988",
+    "obj": "#B39066"
+   }
+  },
+  {
    "slug": "edfu",
    "label": "Pylon of the Temple of Horus at Edfu with its falcons",
    "lat": 24.9779,
@@ -297,6 +388,32 @@
     "leaf": "#5A8A3A",
     "acc": "#D7BC8A",
     "obj": "#85807A"
+   }
+  },
+  {
+   "slug": "egyptian-museum",
+   "label": "Egyptian Museum facade in Cairo",
+   "lat": 30.0478,
+   "lon": 31.2336,
+   "radius_km": 2,
+   "aliases": [
+    "egyptian museum",
+    "museum of egyptian antiquities",
+    "museo egizio del cairo",
+    "egyptian museum cairo",
+    "tahrir museum"
+   ],
+   "palette": {
+    "sky": "#B8D5EE",
+    "far": "#E3D6C0",
+    "mid": "#E39C80",
+    "ice": "#ECE9E2",
+    "water": "#4E8C8A",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#4E8040",
+    "acc": "#F2BEA5",
+    "obj": "#A48A68"
    }
   },
   {
@@ -325,6 +442,33 @@
     "leaf": "#4E8A3A",
     "acc": "#D6B98C",
     "obj": "#A68670"
+   }
+  },
+  {
+   "slug": "esna",
+   "label": "Temple of Khnum at Esna",
+   "lat": 25.2934,
+   "lon": 32.5547,
+   "radius_km": 10,
+   "aliases": [
+    "esna temple",
+    "temple of esna",
+    "tempio di esna"
+   ],
+   "names": [
+    "esna"
+   ],
+   "palette": {
+    "sky": "#A6CDEF",
+    "far": "#C7AE88",
+    "mid": "#C2A985",
+    "ice": "#ECE6DA",
+    "water": "#5F8FB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4A",
+    "acc": "#D2BC98",
+    "obj": "#9E8366"
    }
   },
   {
@@ -638,6 +782,31 @@
    }
   },
   {
+   "slug": "pyramid-of-menkaure",
+   "label": "Pyramid of Menkaure with the Queens' pyramids",
+   "lat": 29.9725,
+   "lon": 31.1283,
+   "radius_km": 2,
+   "aliases": [
+    "menkaure",
+    "mykerinos",
+    "micerino",
+    "menkaura"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#E2CA9C",
+    "mid": "#C9A56E",
+    "ice": "#F0E6D2",
+    "water": "#5F8FB0",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A4A",
+    "acc": "#DCC194",
+    "obj": "#8A5E3A"
+   }
+  },
+  {
    "slug": "saqqara",
    "label": "Step Pyramid of Djoser at Saqqara with a camel",
    "lat": 29.8713,
@@ -739,6 +908,35 @@
     "leaf": "#7A8A4A",
     "acc": "#E2CFAA",
     "obj": "#C4AC86"
+   }
+  },
+  {
+   "slug": "wadi-el-natrun",
+   "label": "Domed church of the St Bishoy monastery in Wadi El Natrun",
+   "lat": 30.3236,
+   "lon": 30.3672,
+   "radius_km": 20,
+   "aliases": [
+    "wadi el natrun",
+    "wadi al natrun",
+    "wadi natrun",
+    "monastery of st bishoy",
+    "monastero di san bishoy",
+    "deir anba bishoy",
+    "st bishoy monastery",
+    "monastery of saint bishoy"
+   ],
+   "palette": {
+    "sky": "#B6D2EC",
+    "far": "#DCCBAA",
+    "mid": "#CFA977",
+    "ice": "#EADCC2",
+    "water": "#5F8FB0",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#BE9864",
+    "obj": "#8A6A48"
    }
   }
  ]
