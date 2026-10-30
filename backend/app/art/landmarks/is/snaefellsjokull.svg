@@ -1,0 +1,11 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="52" cy="34" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-is-snaefellsjokull-clip"><path d="M0 142V130Q50 115 80 90Q110 65 136 55L142 52.5L150 55L160 52.5L164 48.8L168 53.8Q185 57.5 200 65L206 62.5L210 68.8Q222 80 232 85L250 90L266 87.5L300 95V142Z"/></clipPath></defs>
+<path d="M0 142V130Q50 115 80 90Q110 65 136 55L142 52.5L150 55L160 52.5L164 48.8L168 53.8Q185 57.5 200 65L206 62.5L210 68.8Q222 80 232 85L250 90L266 87.5L300 95V142Z" fill="var(--il-mid)"/>
+<path d="M78 92L88 89L96 90L101 96L106 88L114 86L120 84L124 92L128 98L132 86L140 84L146 80L152 82L156 90L160 80L170 82L178 84L182 94L186 98L190 86L198 85L204 88L210 96L214 88L224 88L234 90L244 89L252 92V30H70Z" fill="var(--il-ice)" clip-path="url(#il-is-snaefellsjokull-clip)"/>
+<path d="M30 128Q60 116 82 104M240 104Q260 106 280 106" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 154V136Q150 128 300 134V154Z" fill="var(--il-far)"/>
+<path d="M0 150Q150 142 300 146" stroke="var(--il-leaf)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M0 200V150H300V200Z" fill="var(--il-water)"/>
+<path d="M0 200V170Q30 170 50 178Q70 188 120 192Q170 188 210 194L300 186V200Z" fill="var(--il-leaf)"/>
+<g transform="translate(36 188) scale(1.1)"><path vector-effect="non-scaling-stroke" d="M-5 -4V0M-2 -4V0M2 -4V0M5 -4V0" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path vector-effect="non-scaling-stroke" d="M-8 -8Q-9 -14 -3 -14Q0 -17 4 -14Q9 -14 8 -8Q8 -4 3 -4H-3Q-8 -4 -8 -8Z" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M7 -13Q12 -14 12 -10Q11 -8 8 -9Z" fill="var(--il-near)"/></g>
