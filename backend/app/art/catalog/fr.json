@@ -3,6 +3,93 @@
  "name": "France",
  "places": [
   {
+   "slug": "arc-de-triomphe",
+   "label": "Arc de Triomphe, Paris",
+   "lat": 48.8738,
+   "lon": 2.295,
+   "radius_km": 2,
+   "aliases": [
+    "arc de triomphe",
+    "arc de triomphe de l etoile",
+    "place de l etoile",
+    "place charles de gaulle",
+    "arco di trionfo parigi"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CBBFA6",
+    "mid": "#E6DDC8",
+    "ice": "#F2ECDE",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#7E8894",
+    "obj": "#A29E94"
+   }
+  },
+  {
+   "slug": "bordeaux",
+   "label": "Place de la Bourse and the Miroir d'eau, Bordeaux",
+   "lat": 44.8413,
+   "lon": -0.5695,
+   "radius_km": 15,
+   "aliases": [
+    "place de la bourse bordeaux",
+    "miroir d eau",
+    "water mirror bordeaux"
+   ],
+   "names": [
+    "bordeaux",
+    "bordeaux city",
+    "bordeaux centre"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7E848A",
+    "mid": "#E4D6B6",
+    "ice": "#F1E9D7",
+    "water": "#B4CCDC",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E4A",
+    "acc": "#56665E",
+    "obj": "#C9C1B2"
+   }
+  },
+  {
+   "slug": "louvre",
+   "label": "The Louvre and its glass pyramid, Paris",
+   "lat": 48.861,
+   "lon": 2.3358,
+   "radius_km": 2,
+   "aliases": [
+    "musee du louvre",
+    "palazzo del louvre",
+    "louvre museum",
+    "museo del louvre",
+    "louvre pyramid",
+    "piramide del louvre",
+    "cour napoleon"
+   ],
+   "names": [
+    "louvre",
+    "the louvre"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#6F7A86",
+    "mid": "#E2D5B8",
+    "ice": "#D4E1EA",
+    "water": "#8DA6B6",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#CDBE98",
+    "obj": "#D9CDB2"
+   }
+  },
+  {
    "slug": "mont-saint-michel",
    "label": "Mont-Saint-Michel",
    "lat": 48.636,
@@ -23,6 +110,58 @@
     "leaf": "#7E9E52",
     "acc": "#C8B060",
     "obj": "#D8A830"
+   }
+  },
+  {
+   "slug": "montmartre",
+   "label": "Sacré-Cœur Basilica on Montmartre, Paris",
+   "lat": 48.8867,
+   "lon": 2.3431,
+   "radius_km": 2,
+   "aliases": [
+    "montmartre",
+    "sacre coeur",
+    "sacro cuore",
+    "butte montmartre"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C9C3B6",
+    "mid": "#ECE8DE",
+    "ice": "#F7F5EF",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#6E9E88",
+    "obj": "#8AB85A"
+   }
+  },
+  {
+   "slug": "notre-dame-de-paris",
+   "label": "Notre-Dame de Paris from the Seine",
+   "lat": 48.853,
+   "lon": 2.3499,
+   "radius_km": 2,
+   "aliases": [
+    "notre dame de paris",
+    "cattedrale di notre dame",
+    "cathedrale notre dame de paris"
+   ],
+   "names": [
+    "notre dame"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B9AB90",
+    "mid": "#D6C8AA",
+    "ice": "#E8DEC6",
+    "water": "#5E8C94",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5A7E3A",
+    "acc": "#8E98A2",
+    "obj": "#5C636C"
    }
   },
   {
