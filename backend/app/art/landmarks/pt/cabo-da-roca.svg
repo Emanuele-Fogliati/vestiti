@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="42" cy="32" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V110H300V200Z" fill="var(--il-water)"/>
+<path d="M18 144L21 128L25 119L29 112L33 117L37 108L41 116L44 124L46 144ZM46 144L49 130L53 122L57 127L60 124L64 134L66 144Z" fill="var(--il-obj)"/>
+<path d="M30 120L32 140M54 128L55 140" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 200V139H96V200Z" fill="var(--il-water)" stroke="var(--il-water)" stroke-width="0.5"/>
+<path d="M42 200L56 162L64 140L74 122L86 110L122 100L300 92V200Z" fill="var(--il-mid)"/>
+<path d="M64 140L74 122L86 110L82 150L76 200H42L56 162ZM118 102L136 100L130 150L126 200H108L114 150ZM176 99L198 98L190 146L196 200H170L170 150ZM240 96L264 95L256 150L262 200H234L232 146Z" fill="var(--il-far)"/>
+<path d="M100 120L96 196M150 116L146 196M214 112L218 196M282 108L280 196M64 170L70 150" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M128 100V80H292V100Z" fill="var(--il-ice)"/>
+<path d="M134 81V72H152V81ZM196 81V70H236V81ZM246 81V66H286V81Z" fill="var(--il-ice)"/>
+<path d="M132 73L143 67L154 73ZM194 71L216 64L238 71ZM244 67L266 59L288 67Z" fill="var(--il-acc)"/>
+<path d="M160 100V41H178V100Z" fill="var(--il-ice)"/>
+<path d="M157 42V37H181V42Z" fill="var(--il-ice)"/>
+<path d="M162 38V24H176V38Z" fill="var(--il-acc)"/>
+<path d="M161 25Q162 16 169 14Q176 16 177 25Z" fill="var(--il-acc)"/>
+<path d="M169 14V8" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M165 35V28H173V35ZM167 58V51H171V58ZM167 80V73H171V80ZM140 92V86H144V92ZM204 92V86H208V92ZM222 92V86H226V92ZM254 92V86H258V92ZM274 92V86H278V92Z" fill="var(--il-near)" opacity="0.7"/>
+<path d="M88 110V103H114V110ZM92 104V98H110V104ZM98 99V62H104V99ZM96 63V58H106V63ZM100 59V44H102V47H105V49H102V59H100V49H97V47H100Z" fill="var(--il-far)"/>
+<path d="M84 112Q96 102 122 99L300 91V110L278 114L254 108L230 118L204 110L178 120L152 112L128 122L108 116L94 124Z" fill="var(--il-leaf)"/>
