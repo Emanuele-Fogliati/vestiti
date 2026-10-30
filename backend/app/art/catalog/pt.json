@@ -3,6 +3,83 @@
  "name": "Portugal",
  "places": [
   {
+   "slug": "cabo-da-roca",
+   "label": "Cabo da Roca lighthouse on the Atlantic cliffs",
+   "lat": 38.7804,
+   "lon": -9.4989,
+   "radius_km": 4,
+   "aliases": [
+    "cabo da roca",
+    "cape roca",
+    "capo da roca",
+    "cabo de roca"
+   ],
+   "palette": {
+    "sky": "#9EC6EE",
+    "far": "#A9A398",
+    "mid": "#B8925E",
+    "ice": "#F7F5F0",
+    "water": "#1F5F92",
+    "near": "#2A2622",
+    "sun": "#F4C445",
+    "leaf": "#7D8A42",
+    "acc": "#D33A2C",
+    "obj": "#E2DDD2"
+   }
+  },
+  {
+   "slug": "evora",
+   "label": "Roman Temple of Évora",
+   "lat": 38.5725,
+   "lon": -7.9073,
+   "radius_km": 10,
+   "aliases": [
+    "roman temple of evora",
+    "temple of diana evora",
+    "templo romano de evora",
+    "tempio romano di evora"
+   ],
+   "names": [
+    "evora"
+   ],
+   "palette": {
+    "sky": "#A9CBEB",
+    "far": "#9E8B6C",
+    "mid": "#BCA683",
+    "ice": "#F5F2EA",
+    "water": "#C9C2B4",
+    "near": "#2A2622",
+    "sun": "#F2C24A",
+    "leaf": "#5E8A3E",
+    "acc": "#C2603A",
+    "obj": "#D9A93A"
+   }
+  },
+  {
+   "slug": "jeronimos-monastery",
+   "label": "Jerónimos Monastery's Manueline facade and domed tower, Lisbon",
+   "lat": 38.6979,
+   "lon": -9.2068,
+   "radius_km": 2,
+   "aliases": [
+    "jeronimos",
+    "geronimiti",
+    "hieronymites monastery"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#CFC9BD",
+    "mid": "#E8DFCB",
+    "ice": "#F7F3EA",
+    "water": "#4F86B5",
+    "near": "#2B2925",
+    "sun": "#F4C34A",
+    "leaf": "#6E9A4A",
+    "acc": "#C27A4C",
+    "obj": "#8E7E66"
+   }
+  },
+  {
    "slug": "lisbon",
    "label": "Tram 28 in Alfama, Lisbon",
    "lat": 38.712,
@@ -27,6 +104,70 @@
     "leaf": "#A89C8C",
     "acc": "#E8A0A0",
     "obj": "#F2C230"
+   }
+  },
+  {
+   "slug": "pena-palace",
+   "label": "Pena Palace on its wooded hilltop, Sintra",
+   "lat": 38.7876,
+   "lon": -9.3906,
+   "radius_km": 3,
+   "aliases": [
+    "pena palace",
+    "palacio da pena",
+    "palacio nacional da pena",
+    "palazzo pena",
+    "palazzo della pena",
+    "pena national palace",
+    "palacio de pena",
+    "parque da pena",
+    "pena park"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#8DB35C",
+    "mid": "#F2C531",
+    "ice": "#E6E1E4",
+    "water": "#5A84B0",
+    "near": "#262A22",
+    "sun": "#F5C542",
+    "leaf": "#3F6E34",
+    "acc": "#D2453A",
+    "obj": "#5E6577"
+   },
+   "names": [
+    "sintra"
+   ]
+  },
+  {
+   "slug": "porto",
+   "label": "Porto's Ribeira and the Dom Luís I bridge over the Douro",
+   "lat": 41.1405,
+   "lon": -8.6118,
+   "radius_km": 12,
+   "aliases": [
+    "dom luis i bridge",
+    "ponte dom luis",
+    "ponte luis i",
+    "ponte luiz i",
+    "cais da ribeira",
+    "ribeira do porto"
+   ],
+   "names": [
+    "porto",
+    "oporto"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#A39C86",
+    "mid": "#E2B65A",
+    "ice": "#F3EFE6",
+    "water": "#3F6E7C",
+    "near": "#24272A",
+    "sun": "#F3C24B",
+    "leaf": "#6C9A48",
+    "acc": "#C9653E",
+    "obj": "#5E6A70"
    }
   }
  ]
