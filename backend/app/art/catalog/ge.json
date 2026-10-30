@@ -27,6 +27,123 @@
    }
   },
   {
+   "slug": "gergeti-trinity-church",
+   "label": "Gergeti Trinity Church on its hill below Mount Kazbek",
+   "lat": 42.6625,
+   "lon": 44.6203,
+   "radius_km": 4,
+   "aliases": [
+    "gergeti",
+    "gergheti",
+    "kazbek",
+    "kazbegi national park",
+    "mt kazbegi",
+    "mount kazbegi"
+   ],
+   "palette": {
+    "sky": "#A8CCEA",
+    "far": "#8F9A72",
+    "mid": "#A9876A",
+    "ice": "#FFFFFF",
+    "water": "#6AA6C0",
+    "near": "#2A2420",
+    "sun": "#F3C443",
+    "leaf": "#9FAE55",
+    "acc": "#9C7466",
+    "obj": "#B4BAC0"
+   },
+   "names": [
+    "stepantsminda",
+    "stepansminda",
+    "kazbegi",
+    "qazbegi"
+   ]
+  },
+  {
+   "slug": "gudauri",
+   "label": "The Friendship Monument mosaic above Gudauri",
+   "lat": 42.4964,
+   "lon": 44.4566,
+   "radius_km": 8,
+   "aliases": [
+    "friendship monument",
+    "russia georgia friendship monument",
+    "treaty of georgievsk monument",
+    "georgievsk monument",
+    "monumento all amicizia",
+    "gudauri panorama"
+   ],
+   "names": [
+    "gudauri"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#7FA06A",
+    "mid": "#8E8C88",
+    "ice": "#EDE6D6",
+    "water": "#3E86C8",
+    "near": "#26231F",
+    "sun": "#F3C443",
+    "leaf": "#A3AA60",
+    "acc": "#D2452E",
+    "obj": "#D6D3CC"
+   }
+  },
+  {
+   "slug": "jvari-monastery",
+   "label": "Jvari Monastery on its hilltop above Mtskheta",
+   "lat": 41.8381,
+   "lon": 44.7335,
+   "radius_km": 2,
+   "aliases": [
+    "jvari",
+    "jivari",
+    "dzhvari"
+   ],
+   "palette": {
+    "sky": "#A6CBEA",
+    "far": "#8FA27E",
+    "mid": "#C29A6E",
+    "ice": "#E5CFA6",
+    "water": "#6E9FA6",
+    "near": "#2A2420",
+    "sun": "#F3C443",
+    "leaf": "#7E9A4A",
+    "acc": "#BC9157",
+    "obj": "#C2603F"
+   }
+  },
+  {
+   "slug": "kutaisi",
+   "label": "Kutaisi's Colchis Fountain on the central square",
+   "lat": 42.2713,
+   "lon": 42.7046,
+   "radius_km": 15,
+   "aliases": [
+    "colchis fountain",
+    "fontana della colchide",
+    "kolkheti fountain"
+   ],
+   "names": [
+    "kutaisi",
+    "kutaissi",
+    "kutaisi city",
+    "kutaisi old town"
+   ],
+   "palette": {
+    "sky": "#A4CBEE",
+    "far": "#DDCFB0",
+    "mid": "#A98870",
+    "ice": "#F3F7F9",
+    "water": "#4E92A8",
+    "near": "#26221E",
+    "sun": "#F3C443",
+    "leaf": "#4F7A3A",
+    "acc": "#C9A04A",
+    "obj": "#C4BCB0"
+   }
+  },
+  {
    "slug": "mestia",
    "label": "The Svan towers of Mestia below the Caucasus",
    "lat": 43.045,
@@ -47,6 +164,112 @@
     "leaf": "#3F7A34",
     "acc": "#B5503A",
     "obj": "#7FA850"
+   }
+  },
+  {
+   "slug": "narikala-fortress",
+   "label": "Narikala Fortress and St Nicholas church above Tbilisi's Old Town",
+   "lat": 41.6879,
+   "lon": 44.8086,
+   "radius_km": 2,
+   "aliases": [
+    "narikala"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#A8987A",
+    "mid": "#A97E5E",
+    "ice": "#E9DCB0",
+    "water": "#5E8E8A",
+    "near": "#2B2420",
+    "sun": "#F3C443",
+    "leaf": "#6E8A3E",
+    "acc": "#B34A35",
+    "obj": "#B9C0C6"
+   }
+  },
+  {
+   "slug": "svetitskhoveli-cathedral",
+   "label": "Svetitskhoveli Cathedral behind its fortified wall, Mtskheta",
+   "lat": 41.8421,
+   "lon": 44.7209,
+   "radius_km": 3,
+   "aliases": [
+    "svetitskhoveli",
+    "sveti tskhoveli",
+    "svetitskoveli"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#6F8E5A",
+    "mid": "#CFAA78",
+    "ice": "#E2C696",
+    "water": "#6A9AB0",
+    "near": "#2A2420",
+    "sun": "#F3C443",
+    "leaf": "#7C9A44",
+    "acc": "#B3875E",
+    "obj": "#8C7F72"
+   },
+   "names": [
+    "mtskheta",
+    "mtsketa",
+    "mtskheta old town"
+   ]
+  },
+  {
+   "slug": "tbilisi",
+   "label": "Tbilisi: the Bridge of Peace over the Mtkvari below Narikala",
+   "lat": 41.6927,
+   "lon": 44.8085,
+   "radius_km": 15,
+   "aliases": [
+    "bridge of peace",
+    "ponte della pace",
+    "rike park"
+   ],
+   "names": [
+    "tbilisi",
+    "tiflis",
+    "tbilisi old town",
+    "old tbilisi"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#A79772",
+    "mid": "#A97E5E",
+    "ice": "#F1EFE8",
+    "water": "#7A9A9A",
+    "near": "#262422",
+    "sun": "#F3C443",
+    "leaf": "#3F6B32",
+    "acc": "#B24A34",
+    "obj": "#6FBFC0"
+   }
+  },
+  {
+   "slug": "uplistsikhe",
+   "label": "Uplistsikhe cave town and its brick church on the rock",
+   "lat": 41.9672,
+   "lon": 44.2081,
+   "radius_km": 4,
+   "aliases": [
+    "uplistsikhe",
+    "upistsikhe",
+    "uplistlicke",
+    "uplis tsikhe"
+   ],
+   "palette": {
+    "sky": "#8EC1F0",
+    "far": "#C6B07E",
+    "mid": "#CDBE9A",
+    "ice": "#E6DCC4",
+    "water": "#6F9FA8",
+    "near": "#2B2622",
+    "sun": "#F3C443",
+    "leaf": "#8A9A4E",
+    "acc": "#B5734F",
+    "obj": "#A24E38"
    }
   }
  ]
