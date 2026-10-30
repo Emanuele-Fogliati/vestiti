@@ -3,6 +3,34 @@
  "name": "South Africa",
  "places": [
   {
+   "slug": "addo-elephant-national-park",
+   "label": "Elephants at a waterhole in Addo Elephant National Park",
+   "lat": -33.445,
+   "lon": 25.745,
+   "radius_km": 30,
+   "aliases": [
+    "addo elephant",
+    "addo national park",
+    "parco nazionale degli elefanti di addo",
+    "addo park"
+   ],
+   "names": [
+    "addo"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#9AA6B4",
+    "mid": "#B8774C",
+    "ice": "#F4EEE2",
+    "water": "#7E8C86",
+    "near": "#26231F",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E44",
+    "acc": "#C9B48A",
+    "obj": "#97806C"
+   }
+  },
+  {
    "slug": "blyde-river-canyon",
    "label": "The Three Rondavels above the Blyde River Canyon",
    "lat": -24.58,
@@ -95,7 +123,6 @@
     "cape of good hope",
     "capo di buona speranza",
     "kaap die goeie hoop",
-    "cape point",
     "cabo da boa esperanca",
     "cabo de buena esperanza"
    ],
@@ -110,6 +137,28 @@
     "leaf": "#4F7436",
     "acc": "#3CB8B0",
     "obj": "#C79C88"
+   }
+  },
+  {
+   "slug": "cape-point",
+   "label": "Cape Point headland and lighthouse",
+   "lat": -34.353,
+   "lon": 18.497,
+   "radius_km": 4,
+   "aliases": [
+    "cape point"
+   ],
+   "palette": {
+    "sky": "#A6CFF2",
+    "far": "#B3A890",
+    "mid": "#8A7458",
+    "ice": "#FFFFFF",
+    "water": "#2B93A8",
+    "near": "#27241F",
+    "sun": "#F2C14E",
+    "leaf": "#7C8A48",
+    "acc": "#C8463A",
+    "obj": "#9C8A70"
    }
   },
   {
@@ -170,6 +219,51 @@
    }
   },
   {
+   "slug": "karongwe-private-game-reserve",
+   "label": "White rhino in the Karongwe bushveld below the Drakensberg escarpment",
+   "lat": -24.17,
+   "lon": 30.99,
+   "radius_km": 12,
+   "aliases": [
+    "karongwe"
+   ],
+   "palette": {
+    "sky": "#B2D0F0",
+    "far": "#7E8FB4",
+    "mid": "#C08A5A",
+    "ice": "#FFFFFF",
+    "water": "#5E8FA0",
+    "near": "#262622",
+    "sun": "#F2C14E",
+    "leaf": "#6C8A42",
+    "acc": "#B39A82",
+    "obj": "#8E8A84"
+   }
+  },
+  {
+   "slug": "kirstenbosch",
+   "label": "Kirstenbosch's Boomslang canopy walkway below Table Mountain",
+   "lat": -33.988,
+   "lon": 18.432,
+   "radius_km": 3,
+   "aliases": [
+    "kirstenbosch",
+    "boomslang"
+   ],
+   "palette": {
+    "sky": "#A6CDF2",
+    "far": "#8E9A72",
+    "mid": "#A8A79C",
+    "ice": "#FFFFFF",
+    "water": "#3F7FA8",
+    "near": "#23261F",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A3A",
+    "acc": "#D9707E",
+    "obj": "#6A3A30"
+   }
+  },
+  {
    "slug": "kruger-national-park",
    "label": "Elephants at a river in Kruger National Park",
    "lat": -24.0,
@@ -193,6 +287,163 @@
     "leaf": "#5F8A3A",
     "acc": "#D9C49A",
     "obj": "#A9B56C"
+   }
+  },
+  {
+   "slug": "port-elizabeth",
+   "label": "Donkin Reserve lighthouse and pyramid in Port Elizabeth",
+   "lat": -33.9608,
+   "lon": 25.6175,
+   "radius_km": 15,
+   "aliases": [
+    "donkin reserve"
+   ],
+   "names": [
+    "port elizabeth",
+    "gqeberha",
+    "nelson mandela bay",
+    "port elizabeth gqeberha"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#7D8794",
+    "mid": "#B8B2A6",
+    "ice": "#FFFFFF",
+    "water": "#3F8FA6",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#A8644A",
+    "obj": "#C8342E"
+   }
+  },
+  {
+   "slug": "soweto",
+   "label": "The painted Orlando Towers in Soweto",
+   "lat": -26.2536,
+   "lon": 27.9269,
+   "radius_km": 10,
+   "aliases": [
+    "orlando towers"
+   ],
+   "names": [
+    "soweto"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#8E9A84",
+    "mid": "#C9A46A",
+    "ice": "#F2EEE4",
+    "water": "#5FB9B2",
+    "near": "#23242A",
+    "sun": "#F2C14E",
+    "leaf": "#6A8A3E",
+    "acc": "#D2602E",
+    "obj": "#34497A"
+   }
+  },
+  {
+   "slug": "st-lucia",
+   "label": "Hippos in the St Lucia estuary",
+   "lat": -28.375,
+   "lon": 32.41,
+   "radius_km": 25,
+   "aliases": [
+    "lake st lucia",
+    "st lucia estuary",
+    "isimangaliso"
+   ],
+   "names": [
+    "st lucia",
+    "saint lucia"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#4E6E42",
+    "mid": "#B9A27A",
+    "ice": "#F6F2EA",
+    "water": "#7A8F8C",
+    "near": "#25221F",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4C",
+    "acc": "#D9878A",
+    "obj": "#5C5258"
+   }
+  },
+  {
+   "slug": "stellenbosch",
+   "label": "Cape Dutch wine estate below the Stellenbosch mountains",
+   "lat": -33.93,
+   "lon": 18.86,
+   "radius_km": 15,
+   "aliases": [
+    "lanzerac"
+   ],
+   "names": [
+    "stellenbosch",
+    "stellenbosch winelands",
+    "stellenbosch wine route"
+   ],
+   "palette": {
+    "sky": "#A8CDEF",
+    "far": "#8E8B82",
+    "mid": "#A89A68",
+    "ice": "#FFFFFF",
+    "water": "#3F7FA8",
+    "near": "#262A28",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#8E3B2E",
+    "obj": "#6E6253"
+   }
+  },
+  {
+   "slug": "tsitsikamma-national-park",
+   "label": "Storms River Mouth suspension bridge in Tsitsikamma",
+   "lat": -34.0217,
+   "lon": 23.899,
+   "radius_km": 25,
+   "aliases": [
+    "tsitsikamma",
+    "storms river mouth"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#8FA0B0",
+    "mid": "#A8714A",
+    "ice": "#FFFFFF",
+    "water": "#1F4E7A",
+    "near": "#22261F",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B34",
+    "acc": "#6E9A44",
+    "obj": "#C9C4B6"
+   }
+  },
+  {
+   "slug": "v-a-waterfront",
+   "label": "The Clock Tower at the V&A Waterfront below Table Mountain",
+   "lat": -33.9036,
+   "lon": 18.4206,
+   "radius_km": 2,
+   "aliases": [
+    "v a waterfront",
+    "victoria alfred waterfront",
+    "victoria and alfred waterfront",
+    "v and a waterfront",
+    "va waterfront"
+   ],
+   "palette": {
+    "sky": "#A8CDEF",
+    "far": "#7E8088",
+    "mid": "#B4AC9C",
+    "ice": "#FFFFFF",
+    "water": "#2F6F96",
+    "near": "#24252A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4A",
+    "acc": "#C2392E",
+    "obj": "#5F6670"
    }
   }
  ]
