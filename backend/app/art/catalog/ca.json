@@ -3,6 +3,260 @@
  "name": "Canada",
  "places": [
   {
+   "slug": "athabasca-glacier",
+   "label": "Athabasca Glacier below the Columbia Icefield",
+   "lat": 52.205,
+   "lon": -117.24,
+   "radius_km": 5,
+   "aliases": [
+    "athabasca glacier",
+    "ghiacciaio athabasca",
+    "columbia icefield"
+   ],
+   "palette": {
+    "sky": "#9EC8F0",
+    "far": "#A8CCE0",
+    "mid": "#5E5650",
+    "ice": "#F2F6F8",
+    "water": "#7FB8C8",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E6E44",
+    "acc": "#8E857C",
+    "obj": "#C8402E"
+   }
+  },
+  {
+   "slug": "banff",
+   "label": "Banff Avenue and Cascade Mountain",
+   "lat": 51.1784,
+   "lon": -115.5708,
+   "radius_km": 15,
+   "aliases": [
+    "banff national park",
+    "parco nazionale di banff",
+    "banff avenue",
+    "cascade mountain"
+   ],
+   "names": [
+    "banff",
+    "banff town",
+    "banff townsite"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#CFCAC0",
+    "mid": "#C4C2BC",
+    "ice": "#F6F6F2",
+    "water": "#5E9C8E",
+    "near": "#23282A",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A3A",
+    "acc": "#A89A86",
+    "obj": "#6E7073"
+   }
+  },
+  {
+   "slug": "calgary",
+   "label": "Calgary skyline with the Saddledome and the Calgary Tower",
+   "lat": 51.0447,
+   "lon": -114.0631,
+   "radius_km": 20,
+   "aliases": [
+    "calgary tower",
+    "saddledome"
+   ],
+   "names": [
+    "calgary",
+    "calgary city",
+    "downtown calgary"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#D3D6DA",
+    "mid": "#6C747E",
+    "ice": "#F2F2EE",
+    "water": "#3E9AA0",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#C8282E",
+    "obj": "#8EA4B6"
+   }
+  },
+  {
+   "slug": "emerald-lake",
+   "label": "Emerald Lake and its lodge, Yoho",
+   "lat": 51.443,
+   "lon": -116.535,
+   "radius_km": 4,
+   "aliases": [
+    "emerald lake",
+    "yoho national park",
+    "parco nazionale di yoho",
+    "parco nazionale yoho",
+    "yoho park",
+    "yoho lake",
+    "lake o hara",
+    "lake ohara",
+    "lago o hara"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#B49A80",
+    "mid": "#8E7464",
+    "ice": "#F4F6F8",
+    "water": "#3BAE9A",
+    "near": "#22282A",
+    "sun": "#F2C14E",
+    "leaf": "#2E5638",
+    "acc": "#B4472E",
+    "obj": "#4E7E6E"
+   },
+   "names": [
+    "yoho"
+   ]
+  },
+  {
+   "slug": "icefields-parkway",
+   "label": "The Icefields Parkway at the Big Bend",
+   "lat": 52.17,
+   "lon": -117.08,
+   "radius_km": 25,
+   "aliases": [
+    "icefields parkway",
+    "icefield parkway",
+    "icefields pkwy",
+    "promenade des glaciers"
+   ],
+   "names": [
+    "highway 93 north"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B4B4B2",
+    "mid": "#8C8884",
+    "ice": "#F2F6F8",
+    "water": "#5EB8C8",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#2E5A3A",
+    "acc": "#7E7E80",
+    "obj": "#C8402E"
+   }
+  },
+  {
+   "slug": "jasper-national-park",
+   "label": "Pyramid Mountain over the lakes of Jasper",
+   "lat": 52.9223,
+   "lon": -118.1133,
+   "radius_km": 40,
+   "aliases": [
+    "jasper national park",
+    "parco nazionale di jasper",
+    "pyramid mountain",
+    "pyramid lake",
+    "patricia lake"
+   ],
+   "names": [
+    "jasper",
+    "jasper town",
+    "jasper alberta"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#8A9282",
+    "mid": "#CC8650",
+    "ice": "#F2F4F4",
+    "water": "#3E7A78",
+    "near": "#22282A",
+    "sun": "#F2C14E",
+    "leaf": "#24432E",
+    "acc": "#8C5034",
+    "obj": "#C2AA84"
+   }
+  },
+  {
+   "slug": "lake-louise",
+   "label": "Lake Louise and the Victoria Glacier",
+   "lat": 51.4167,
+   "lon": -116.2167,
+   "radius_km": 6,
+   "aliases": [
+    "lake louise",
+    "lago louise",
+    "chateau lake louise",
+    "victoria glacier"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#8D939B",
+    "mid": "#857E76",
+    "ice": "#F4F7F8",
+    "water": "#4DBAB6",
+    "near": "#22282A",
+    "sun": "#F2C14E",
+    "leaf": "#2C4F38",
+    "acc": "#A27C56",
+    "obj": "#C8322E"
+   }
+  },
+  {
+   "slug": "maligne-lake",
+   "label": "Spirit Island on Maligne Lake",
+   "lat": 52.7266,
+   "lon": -117.6528,
+   "radius_km": 15,
+   "aliases": [
+    "maligne lake",
+    "lake maligne",
+    "lago maligne"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#9AA0A6",
+    "mid": "#8C877F",
+    "ice": "#F2F5F6",
+    "water": "#3E9C9E",
+    "near": "#22282A",
+    "sun": "#F2C14E",
+    "leaf": "#24432E",
+    "acc": "#8A4E30",
+    "obj": "#8FA650"
+   }
+  },
+  {
+   "slug": "montreal",
+   "label": "Old Montreal: Bonsecours Market from the Old Port",
+   "lat": 45.5089,
+   "lon": -73.5517,
+   "radius_km": 20,
+   "aliases": [
+    "old montreal",
+    "vieux montreal",
+    "old port of montreal",
+    "vieux port de montreal",
+    "bonsecours"
+   ],
+   "names": [
+    "montreal",
+    "montreal city",
+    "downtown montreal"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#A39A8C",
+    "mid": "#C4BAAA",
+    "ice": "#ECE6DA",
+    "water": "#3F7690",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3E",
+    "acc": "#A0553E",
+    "obj": "#7C96A8"
+   }
+  },
+  {
    "slug": "moraine-lake",
    "label": "Moraine Lake and the Ten Peaks",
    "lat": 51.322,
@@ -44,6 +298,176 @@
     "leaf": "#4E7E3A",
     "acc": "#2E5EA8",
     "obj": "#6EC8A8"
+   }
+  },
+  {
+   "slug": "peyto-lake",
+   "label": "Peyto Lake from Bow Summit",
+   "lat": 51.72,
+   "lon": -116.51,
+   "radius_km": 5,
+   "aliases": [
+    "peyto lake",
+    "lago peyto",
+    "peyto"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8A9CBA",
+    "mid": "#B4A286",
+    "ice": "#F2F6F8",
+    "water": "#3FC8D0",
+    "near": "#1F2624",
+    "sun": "#F2C14E",
+    "leaf": "#2E5A3A",
+    "acc": "#D8CBB0",
+    "obj": "#6E7478"
+   }
+  },
+  {
+   "slug": "quebec-city",
+   "label": "Chateau Frontenac above the St. Lawrence, Quebec City",
+   "lat": 46.8118,
+   "lon": -71.2049,
+   "radius_km": 15,
+   "aliases": [
+    "chateau frontenac",
+    "fairmont le chateau frontenac",
+    "dufferin terrace",
+    "terrasse dufferin"
+   ],
+   "names": [
+    "quebec",
+    "quebec city",
+    "ville de quebec",
+    "citta di quebec",
+    "old quebec",
+    "vieux quebec",
+    "quebec old town"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#B8B2A6",
+    "mid": "#A65A40",
+    "ice": "#EEE8DC",
+    "water": "#3E6E8E",
+    "near": "#22201E",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E3A",
+    "acc": "#7E3A2C",
+    "obj": "#6FA08A"
+   }
+  },
+  {
+   "slug": "stanley-park",
+   "label": "The totem poles at Brockton Point, Stanley Park",
+   "lat": 49.2992,
+   "lon": -123.1205,
+   "radius_km": 3,
+   "aliases": [
+    "stanley park",
+    "brockton point",
+    "totem poles stanley",
+    "parco stanley"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#8EB45A",
+    "mid": "#4E4038",
+    "ice": "#F2F0EA",
+    "water": "#3E7E9E",
+    "near": "#1C1E1C",
+    "sun": "#F2C14E",
+    "leaf": "#2E5A30",
+    "acc": "#C83A2E",
+    "obj": "#3EA0A0"
+   }
+  },
+  {
+   "slug": "toronto",
+   "label": "Toronto skyline and the CN Tower from the Islands",
+   "lat": 43.6426,
+   "lon": -79.3871,
+   "radius_km": 20,
+   "aliases": [
+    "toronto islands",
+    "toronto island",
+    "rogers centre"
+   ],
+   "names": [
+    "toronto",
+    "toronto city",
+    "downtown toronto"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#BAC4CE",
+    "mid": "#8E979F",
+    "ice": "#F4F6F6",
+    "water": "#33628E",
+    "near": "#20262C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3E",
+    "acc": "#C8323A",
+    "obj": "#5E86AE"
+   }
+  },
+  {
+   "slug": "vancouver",
+   "label": "Canada Place and the Vancouver waterfront",
+   "lat": 49.2888,
+   "lon": -123.1111,
+   "radius_km": 15,
+   "aliases": [
+    "canada place",
+    "vancouver harbour",
+    "vancouver harbor"
+   ],
+   "names": [
+    "vancouver",
+    "vancouver city",
+    "vancouver bc",
+    "downtown vancouver"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#86A3B6",
+    "mid": "#B8AA94",
+    "ice": "#F4F5F3",
+    "water": "#4C7C92",
+    "near": "#20262B",
+    "sun": "#F2C14E",
+    "leaf": "#3E6B48",
+    "acc": "#9A6A52",
+    "obj": "#2E5280"
+   }
+  },
+  {
+   "slug": "whistler",
+   "label": "The Inukshuk on Whistler Mountain, with Black Tusk",
+   "lat": 50.0614,
+   "lon": -122.9486,
+   "radius_km": 15,
+   "aliases": [
+    "whistler blackcomb",
+    "whistler mountain",
+    "whistler village",
+    "whistler peak"
+   ],
+   "names": [
+    "whistler"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#8A9AB0",
+    "mid": "#9A968E",
+    "ice": "#F4F7FA",
+    "water": "#5E8EAE",
+    "near": "#222628",
+    "sun": "#F2C14E",
+    "leaf": "#33503E",
+    "acc": "#C8402E",
+    "obj": "#4E4C4A"
    }
   }
  ]
