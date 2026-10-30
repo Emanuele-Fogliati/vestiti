@@ -3,6 +3,35 @@
  "name": "Indonesia",
  "places": [
   {
+   "slug": "bali",
+   "label": "Bali: the Lempuyang split gate framing Mount Agung",
+   "lat": -8.3906,
+   "lon": 115.6311,
+   "radius_km": 5,
+   "aliases": [
+    "lempuyang",
+    "gates of heaven",
+    "gate of heaven"
+   ],
+   "names": [
+    "bali",
+    "bali island",
+    "isola di bali"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#6E809E",
+    "mid": "#9C9A92",
+    "ice": "#DCDAD2",
+    "water": "#4E8EB0",
+    "near": "#262628",
+    "sun": "#F2C14E",
+    "leaf": "#5A8A44",
+    "acc": "#C8A060",
+    "obj": "#4A4640"
+   }
+  },
+  {
    "slug": "borobudur",
    "label": "Borobudur with Merapi behind",
    "lat": -7.608,
@@ -25,16 +54,46 @@
    }
   },
   {
+   "slug": "candidasa",
+   "label": "Candidasa lagoon with coconut palms",
+   "lat": -8.5094,
+   "lon": 115.5672,
+   "radius_km": 6,
+   "aliases": [
+    "candi dasa",
+    "candidasa"
+   ],
+   "palette": {
+    "sky": "#B0D4F0",
+    "far": "#86A87A",
+    "mid": "#9A9284",
+    "ice": "#F2F0EA",
+    "water": "#6E9AB8",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#3E7E36",
+    "acc": "#D2B26A",
+    "obj": "#E27AA6"
+   }
+  },
+  {
    "slug": "gili-trawangan",
    "label": "The sea swing of Gili Trawangan with Mount Agung on the horizon",
    "lat": -8.35,
    "lon": 116.035,
    "radius_km": 4,
    "aliases": [
-    "trawangan"
+    "trawangan",
+    "gili islands",
+    "isole gili"
    ],
    "names": [
-    "gili t"
+    "gili t",
+    "gili",
+    "gili islands",
+    "the gilis",
+    "isole gili",
+    "gili island"
    ],
    "palette": {
     "sky": "#B4DAF2",
@@ -47,6 +106,43 @@
     "leaf": "#4E8C3A",
     "acc": "#F2E8D0",
     "obj": "#7ED2CC"
+   }
+  },
+  {
+   "slug": "jakarta",
+   "label": "Monas, the National Monument of Jakarta, on Medan Merdeka",
+   "lat": -6.1754,
+   "lon": 106.8272,
+   "radius_km": 20,
+   "aliases": [
+    "monumen nasional",
+    "national monument jakarta",
+    "jakarta national monument",
+    "monas jakarta",
+    "monas tower",
+    "tugu monas",
+    "medan merdeka",
+    "merdeka square jakarta",
+    "monumento nazionale di giacarta"
+   ],
+   "names": [
+    "jakarta",
+    "giacarta",
+    "monas",
+    "jakarta city",
+    "dki jakarta"
+   ],
+   "palette": {
+    "sky": "#AFD0EE",
+    "far": "#AAB4C0",
+    "mid": "#DCD8CE",
+    "ice": "#F7F6F2",
+    "water": "#5E8AB0",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#4A8040",
+    "acc": "#D9A62E",
+    "obj": "#7AAE4C"
    }
   },
   {
@@ -72,6 +168,115 @@
    }
   },
   {
+   "slug": "kuta",
+   "label": "Kuta Beach with a surfer",
+   "lat": -8.718,
+   "lon": 115.1686,
+   "radius_km": 6,
+   "aliases": [
+    "kuta beach",
+    "pantai kuta"
+   ],
+   "names": [
+    "kuta",
+    "kuta bali"
+   ],
+   "palette": {
+    "sky": "#A2D0F4",
+    "far": "#8A5E3E",
+    "mid": "#F4ECD8",
+    "ice": "#F6F8FA",
+    "water": "#2A7EC4",
+    "near": "#22242A",
+    "sun": "#F6C431",
+    "leaf": "#3E7A36",
+    "acc": "#D8302A",
+    "obj": "#2A5EC8"
+   }
+  },
+  {
+   "slug": "labuan-bajo",
+   "label": "Labuan Bajo bay with a phinisi schooner",
+   "lat": -8.4964,
+   "lon": 119.8877,
+   "radius_km": 12,
+   "aliases": [
+    "labuanbajo"
+   ],
+   "names": [
+    "labuan bajo",
+    "labuan bajo flores"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#7E8EAA",
+    "mid": "#B4865A",
+    "ice": "#F6F4EE",
+    "water": "#2E6E9E",
+    "near": "#22242A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A3E",
+    "acc": "#E0A030",
+    "obj": "#6A3E26"
+   }
+  },
+  {
+   "slug": "lombok",
+   "label": "Mount Rinjani above the Segara Anak crater lake and the Barujari cone, Lombok",
+   "lat": -8.411,
+   "lon": 116.44,
+   "radius_km": 40,
+   "aliases": [
+    "rinjani",
+    "segara anak",
+    "barujari",
+    "gunung baru jari"
+   ],
+   "names": [
+    "lombok",
+    "lombok island",
+    "isola di lombok",
+    "pulau lombok"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#7E7464",
+    "mid": "#8C7C6C",
+    "ice": "#EDEAE2",
+    "water": "#4FA39C",
+    "near": "#262321",
+    "sun": "#F2C14E",
+    "leaf": "#4F7E3A",
+    "acc": "#3E3A38",
+    "obj": "#8E6450"
+   }
+  },
+  {
+   "slug": "mount-batur",
+   "label": "Mount Batur and Lake Batur from the Kintamani rim",
+   "lat": -8.242,
+   "lon": 115.375,
+   "radius_km": 12,
+   "aliases": [
+    "batur"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8FA2C0",
+    "mid": "#7A6E60",
+    "ice": "#A89C88",
+    "water": "#4F7FA8",
+    "near": "#23262A",
+    "sun": "#F2C14E",
+    "leaf": "#7A9A4E",
+    "acc": "#3F3B39",
+    "obj": "#4F7438"
+   },
+   "names": [
+    "kintamani"
+   ]
+  },
+  {
    "slug": "mount-bromo",
    "label": "Mount Bromo and the sand sea",
    "lat": -7.942,
@@ -91,6 +296,130 @@
     "leaf": "#7A8A5E",
     "acc": "#C8A060",
     "obj": "#6E4E36"
+   }
+  },
+  {
+   "slug": "prambanan",
+   "label": "Prambanan temple spires",
+   "lat": -7.752,
+   "lon": 110.4915,
+   "radius_km": 5,
+   "aliases": [
+    "prambanan",
+    "candi prambanan",
+    "tempio prambanan",
+    "roro jonggrang"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#8E8A82",
+    "mid": "#5E5A54",
+    "ice": "#E8E6E0",
+    "water": "#5E8AB0",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3E",
+    "acc": "#BCAE92",
+    "obj": "#4E7E36"
+   }
+  },
+  {
+   "slug": "sanur",
+   "label": "Sanur beach with jukung outrigger boats",
+   "lat": -8.6833,
+   "lon": 115.2633,
+   "radius_km": 5,
+   "aliases": [
+    "sanur beach",
+    "pantai sanur"
+   ],
+   "names": [
+    "sanur"
+   ],
+   "palette": {
+    "sky": "#8CC4F0",
+    "far": "#9AA6BC",
+    "mid": "#F2E0B0",
+    "ice": "#F6F6F2",
+    "water": "#2E8EC0",
+    "near": "#22262A",
+    "sun": "#F6C431",
+    "leaf": "#3E8A3A",
+    "acc": "#D8382E",
+    "obj": "#F2B820"
+   }
+  },
+  {
+   "slug": "seminyak",
+   "label": "Seminyak beach with its beach-club umbrellas and bean bags",
+   "lat": -8.678,
+   "lon": 115.152,
+   "radius_km": 5,
+   "aliases": [
+    "petitenget",
+    "seminyak beach",
+    "pantai seminyak"
+   ],
+   "names": [
+    "seminyak"
+   ],
+   "palette": {
+    "sky": "#AED4F2",
+    "far": "#E2CDA4",
+    "mid": "#7A5A3E",
+    "ice": "#F6F4EE",
+    "water": "#3E93B4",
+    "near": "#24221F",
+    "sun": "#F4C542",
+    "leaf": "#4E8A3A",
+    "acc": "#D9453A",
+    "obj": "#6F6BC2"
+   }
+  },
+  {
+   "slug": "tanah-lot",
+   "label": "Tanah Lot sea temple on its rock",
+   "lat": -8.6212,
+   "lon": 115.0868,
+   "radius_km": 4,
+   "aliases": [
+    "tanah lot",
+    "pura tanah lot"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#A6B6C0",
+    "mid": "#6E5E4C",
+    "ice": "#F2F0EA",
+    "water": "#3E8E8C",
+    "near": "#26231F",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3A",
+    "acc": "#4E3E30",
+    "obj": "#D8507A"
+   }
+  },
+  {
+   "slug": "tirta-empul",
+   "label": "Tirta Empul holy spring pool and split gate",
+   "lat": -8.4155,
+   "lon": 115.3153,
+   "radius_km": 3,
+   "aliases": [
+    "tirta empul",
+    "pura tirta empul"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#A89C84",
+    "mid": "#857A64",
+    "ice": "#F4F6F4",
+    "water": "#3E7E78",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3A",
+    "acc": "#B4643E",
+    "obj": "#6EA246"
    }
   },
   {
@@ -116,6 +445,90 @@
     "leaf": "#6EAE3E",
     "acc": "#8A6A4A",
     "obj": "#E0A030"
+   }
+  },
+  {
+   "slug": "ubud-monkey-forest",
+   "label": "Ubud Sacred Monkey Forest temple with macaques",
+   "lat": -8.5188,
+   "lon": 115.2588,
+   "radius_km": 2,
+   "aliases": [
+    "monkey forest",
+    "sacred monkey forest",
+    "mandala suci wenara wana",
+    "foresta delle scimmie"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#857B6E",
+    "mid": "#8E8C82",
+    "ice": "#E4C8B8",
+    "water": "#8AAE3E",
+    "near": "#26241F",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A34",
+    "acc": "#C0623E",
+    "obj": "#4E4A46"
+   }
+  },
+  {
+   "slug": "ulun-danu-beratan-temple",
+   "label": "Pura Ulun Danu Beratan, the 11-tiered meru on Lake Beratan",
+   "lat": -8.2752,
+   "lon": 115.1668,
+   "radius_km": 4,
+   "aliases": [
+    "ulun danu bratan",
+    "ulun danu beratan",
+    "pura bratan",
+    "pura beratan",
+    "bratan temple",
+    "beratan temple"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#5E8A5C",
+    "mid": "#8A6A4E",
+    "ice": "#E6DFD0",
+    "water": "#7096AA",
+    "near": "#222124",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#3C3733",
+    "obj": "#8E8A82"
+   }
+  },
+  {
+   "slug": "yogyakarta",
+   "label": "The Tugu monument of Yogyakarta",
+   "lat": -7.7829,
+   "lon": 110.3671,
+   "radius_km": 15,
+   "aliases": [
+    "tugu yogyakarta",
+    "tugu jogja",
+    "tugu pal putih"
+   ],
+   "names": [
+    "yogyakarta",
+    "jogja",
+    "jogjakarta",
+    "yogya",
+    "yogjakarta",
+    "yogiakarta"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#9AA8BE",
+    "mid": "#B9583A",
+    "ice": "#F4F1EA",
+    "water": "#8E9094",
+    "near": "#25262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E9444",
+    "acc": "#D2A33A",
+    "obj": "#DCD3C0"
    }
   }
  ]

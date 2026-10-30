@@ -3,6 +3,119 @@
  "name": "Australia",
  "places": [
   {
+   "slug": "adelaide",
+   "label": "Adelaide Oval across the River Torrens with the fountain and footbridge",
+   "lat": -34.9156,
+   "lon": 138.5961,
+   "radius_km": 15,
+   "aliases": [
+    "adelaide oval",
+    "river torrens",
+    "torrens lake"
+   ],
+   "names": [
+    "adelaide",
+    "tandanya",
+    "tarntanya",
+    "adelaide city"
+   ],
+   "palette": {
+    "sky": "#8EC2F0",
+    "far": "#A8B878",
+    "mid": "#A8AEB2",
+    "ice": "#F6F6F2",
+    "water": "#4E6470",
+    "near": "#222628",
+    "sun": "#F2C14E",
+    "leaf": "#4E7440",
+    "acc": "#B05A44",
+    "obj": "#C8CCD0"
+   }
+  },
+  {
+   "slug": "airlie-beach",
+   "label": "Airlie Beach's Coral Sea Marina with yachts below the green hills",
+   "lat": -20.265,
+   "lon": 148.722,
+   "radius_km": 12,
+   "aliases": [
+    "coral sea marina",
+    "port of airlie"
+   ],
+   "names": [
+    "airlie",
+    "airlie beach"
+   ],
+   "palette": {
+    "sky": "#A6CEF2",
+    "far": "#B49A78",
+    "mid": "#4E7A50",
+    "ice": "#F8F8F4",
+    "water": "#5CBFBA",
+    "near": "#1E2626",
+    "sun": "#F2C14E",
+    "leaf": "#5E9444",
+    "acc": "#8E8A80",
+    "obj": "#C4B08C"
+   }
+  },
+  {
+   "slug": "alice-springs",
+   "label": "Alice Springs and Heavitree Gap in the MacDonnell Ranges from Anzac Hill",
+   "lat": -23.692,
+   "lon": 133.881,
+   "radius_km": 15,
+   "aliases": [
+    "anzac hill",
+    "mparntwe",
+    "heavitree gap"
+   ],
+   "names": [
+    "alice springs",
+    "alice spring"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#B88A70",
+    "mid": "#9A5A44",
+    "ice": "#F2F0EA",
+    "water": "#7E807C",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#D2C2A8",
+    "obj": "#B8643E"
+   }
+  },
+  {
+   "slug": "blue-mountains",
+   "label": "The Three Sisters from Echo Point over the Jamison Valley",
+   "lat": -33.732,
+   "lon": 150.3121,
+   "radius_km": 25,
+   "aliases": [
+    "three sisters",
+    "echo point",
+    "blue mountains",
+    "montagne blu"
+   ],
+   "names": [
+    "katoomba"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#7E96A8",
+    "mid": "#C8946A",
+    "ice": "#ECE8DE",
+    "water": "#4E86A8",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#4A6A3A",
+    "acc": "#D8C2A4",
+    "obj": "#4E7466"
+   }
+  },
+  {
    "slug": "brisbane",
    "label": "Brisbane's Story Bridge and CBD skyline over the river",
    "lat": -27.4635,
@@ -29,6 +142,87 @@
     "leaf": "#4E7E3A",
     "acc": "#2E3C52",
     "obj": "#6E7A86"
+   }
+  },
+  {
+   "slug": "byron-bay",
+   "label": "Cape Byron Lighthouse above Byron Bay",
+   "lat": -28.6385,
+   "lon": 153.6365,
+   "radius_km": 12,
+   "aliases": [
+    "cape byron",
+    "cape byron lighthouse",
+    "byron bay lighthouse",
+    "byron lighthouse"
+   ],
+   "names": [
+    "byron bay",
+    "byron"
+   ],
+   "palette": {
+    "sky": "#9CCBEE",
+    "far": "#8E9092",
+    "mid": "#7A6A52",
+    "ice": "#F7F7F2",
+    "water": "#2B7FB8",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E3E",
+    "acc": "#4FB4BC",
+    "obj": "#D04A3A"
+   }
+  },
+  {
+   "slug": "cairns",
+   "label": "Cairns Esplanade Lagoon with its fish sculptures",
+   "lat": -16.9187,
+   "lon": 145.7786,
+   "radius_km": 15,
+   "aliases": [
+    "cairns esplanade",
+    "cairns lagoon",
+    "esplanade lagoon cairns"
+   ],
+   "names": [
+    "cairns",
+    "gimuy",
+    "cairns city"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#B4BCC4",
+    "mid": "#4C7A46",
+    "ice": "#EFE6D2",
+    "water": "#6E92A8",
+    "near": "#23282C",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A3A",
+    "acc": "#A8503A",
+    "obj": "#A6E0DE"
+   }
+  },
+  {
+   "slug": "cape-tribulation",
+   "label": "Cape Tribulation's rainforest headland meeting the beach, with a cassowary",
+   "lat": -16.088,
+   "lon": 145.468,
+   "radius_km": 8,
+   "aliases": [
+    "cape tribulation",
+    "cape trib"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#CDB98E",
+    "mid": "#3C7434",
+    "ice": "#8E8A80",
+    "water": "#4AA0BE",
+    "near": "#1E241E",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3E",
+    "acc": "#C83A2E",
+    "obj": "#3A78C0"
    }
   },
   {
@@ -80,6 +274,28 @@
    }
   },
   {
+   "slug": "daintree-rainforest",
+   "label": "The Daintree River and rainforest with a saltwater crocodile",
+   "lat": -16.29,
+   "lon": 145.39,
+   "radius_km": 20,
+   "aliases": [
+    "daintree"
+   ],
+   "palette": {
+    "sky": "#B2D4EC",
+    "far": "#8A7456",
+    "mid": "#3E6A42",
+    "ice": "#E8E4DA",
+    "water": "#5E8A86",
+    "near": "#20261E",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3C",
+    "acc": "#6A6440",
+    "obj": "#6EA04A"
+   }
+  },
+  {
    "slug": "eli-creek",
    "label": "Eli Creek footbridge and pandanus, K'gari",
    "lat": -25.255,
@@ -99,6 +315,212 @@
     "leaf": "#5E8A3A",
     "acc": "#8C857A",
     "obj": "#2F82B8"
+   }
+  },
+  {
+   "slug": "flinders-ranges",
+   "label": "Wilpena Pound and Rawnsley Bluff, Flinders Ranges",
+   "lat": -31.58,
+   "lon": 138.6,
+   "radius_km": 45,
+   "aliases": [
+    "flinders ranges",
+    "ikara",
+    "wilpena pound",
+    "wilpena",
+    "rawnsley bluff",
+    "rawnsley park"
+   ],
+   "palette": {
+    "sky": "#A4CBEF",
+    "far": "#9AA6B4",
+    "mid": "#B5604A",
+    "ice": "#F2EADA",
+    "water": "#4C8AAE",
+    "near": "#2B2420",
+    "sun": "#F4C542",
+    "leaf": "#4E6A34",
+    "acc": "#D4AE6C",
+    "obj": "#7C7C4E"
+   }
+  },
+  {
+   "slug": "grampians-national-park",
+   "label": "The Balconies (Jaws of Death), Grampians",
+   "lat": -37.161,
+   "lon": 142.475,
+   "radius_km": 30,
+   "aliases": [
+    "grampians",
+    "gariwerd",
+    "balconies lookout",
+    "jaws of death"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#7F93AA",
+    "mid": "#A29D90",
+    "ice": "#ECE8DC",
+    "water": "#4E86A8",
+    "near": "#262622",
+    "sun": "#F2C14E",
+    "leaf": "#4F6E34",
+    "acc": "#C9B9A0",
+    "obj": "#7C9455"
+   },
+   "names": [
+    "halls gap"
+   ]
+  },
+  {
+   "slug": "great-barrier-reef",
+   "label": "Great Barrier Reef from the air: coral reef and sand cay",
+   "lat": -18.29,
+   "lon": 147.7,
+   "radius_km": 40,
+   "aliases": [
+    "great barrier reef",
+    "grande barriera corallina",
+    "barriera corallina",
+    "outer reef",
+    "gbr reef"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#6FB8DA",
+    "mid": "#2E7480",
+    "ice": "#F6F2E4",
+    "water": "#1C5EA6",
+    "near": "#1E2A30",
+    "sun": "#F2C14E",
+    "leaf": "#7A7444",
+    "acc": "#56CDD0",
+    "obj": "#A6E8E2"
+   }
+  },
+  {
+   "slug": "great-ocean-road",
+   "label": "The Great Ocean Road winding around a coastal headland, with a koala",
+   "lat": -38.68,
+   "lon": 143.82,
+   "radius_km": 40,
+   "aliases": [
+    "great ocean road",
+    "grande strada oceanica"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#D6CDBA",
+    "mid": "#7A6450",
+    "ice": "#F4F2EC",
+    "water": "#2E9AA8",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#4E6E3A",
+    "acc": "#8E8C88",
+    "obj": "#5A5E62"
+   }
+  },
+  {
+   "slug": "great-otway-national-park",
+   "label": "Cape Otway Lighthouse and a koala, Great Otway National Park",
+   "lat": -38.857,
+   "lon": 143.512,
+   "radius_km": 25,
+   "aliases": [
+    "great otway",
+    "otway national park",
+    "cape otway",
+    "otways"
+   ],
+   "palette": {
+    "sky": "#A6CDEF",
+    "far": "#CFC6B4",
+    "mid": "#8E8A86",
+    "ice": "#F7F6F1",
+    "water": "#1F5E99",
+    "near": "#22282A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4A",
+    "acc": "#A0503A",
+    "obj": "#566F3E"
+   }
+  },
+  {
+   "slug": "kata-tjuta",
+   "label": "The red domes of Kata Tjuta",
+   "lat": -25.3,
+   "lon": 130.73,
+   "radius_km": 8,
+   "aliases": [
+    "kata tjuta",
+    "kata tijuta",
+    "the olgas",
+    "mount olga",
+    "monti olga"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#C8B070",
+    "mid": "#B0603E",
+    "ice": "#F4F0E6",
+    "water": "#4E8EB0",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#7E8E4E",
+    "acc": "#8A4430",
+    "obj": "#C8683A"
+   }
+  },
+  {
+   "slug": "kgari",
+   "label": "The SS Maheno wreck on 75 Mile Beach, K'gari (Fraser Island)",
+   "lat": -25.265,
+   "lon": 153.236,
+   "radius_km": 40,
+   "aliases": [
+    "fraser island",
+    "frazer island",
+    "kgari",
+    "k gari",
+    "maheno",
+    "75 mile beach",
+    "seventy five mile beach"
+   ],
+   "palette": {
+    "sky": "#8EC3EE",
+    "far": "#D8C7A2",
+    "mid": "#9C4A24",
+    "ice": "#F4EEDF",
+    "water": "#2F87BE",
+    "near": "#2A211C",
+    "sun": "#F4C430",
+    "leaf": "#5F7F3C",
+    "acc": "#EDE1C4",
+    "obj": "#D2924A"
+   }
+  },
+  {
+   "slug": "kings-canyon",
+   "label": "Kings Canyon's sheer sandstone wall from the Rim Walk",
+   "lat": -24.255,
+   "lon": 131.575,
+   "radius_km": 12,
+   "aliases": [
+    "kings canyon",
+    "watarrka"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#D9935E",
+    "mid": "#C9572C",
+    "ice": "#F2D9BE",
+    "water": "#5E8EA8",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A3E",
+    "acc": "#9A3E26",
+    "obj": "#D8784A"
    }
   },
   {
@@ -122,6 +544,137 @@
     "leaf": "#3E7436",
     "acc": "#CDBB7A",
     "obj": "#2C5A2E"
+   }
+  },
+  {
+   "slug": "mackenzie-falls",
+   "label": "MacKenzie Falls, Grampians",
+   "lat": -37.112,
+   "lon": 142.405,
+   "radius_km": 4,
+   "aliases": [
+    "mackenzie falls",
+    "mckenzie falls",
+    "mac kenzie falls"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#C6D8E6",
+    "mid": "#55504C",
+    "ice": "#F7F8F8",
+    "water": "#4E6E70",
+    "near": "#1E1C1A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4C",
+    "acc": "#B4683E",
+    "obj": "#8A7A5A"
+   }
+  },
+  {
+   "slug": "melbourne",
+   "label": "Melbourne's Flinders Street Station with a tram",
+   "lat": -37.8183,
+   "lon": 144.9671,
+   "radius_km": 20,
+   "aliases": [
+    "flinders street station",
+    "flinders st station"
+   ],
+   "names": [
+    "melbourne",
+    "narrm",
+    "melbourne city",
+    "melbourne cbd"
+   ],
+   "palette": {
+    "sky": "#B8D4EE",
+    "far": "#8E9096",
+    "mid": "#E2A94E",
+    "ice": "#F3E9D2",
+    "water": "#6F8E9E",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#6F9A86",
+    "acc": "#A9472F",
+    "obj": "#3F8A4E"
+   }
+  },
+  {
+   "slug": "mossman-gorge",
+   "label": "Mossman Gorge boulders and rainforest",
+   "lat": -16.471,
+   "lon": 145.335,
+   "radius_km": 6,
+   "aliases": [
+    "mossman gorge",
+    "manjal dimbi"
+   ],
+   "palette": {
+    "sky": "#C4DCEE",
+    "far": "#7E9C8A",
+    "mid": "#B9BAB2",
+    "ice": "#F2F2EE",
+    "water": "#5A8E70",
+    "near": "#1E2A1C",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A2A",
+    "acc": "#6E7A4A",
+    "obj": "#4E7E3A"
+   }
+  },
+  {
+   "slug": "noosa",
+   "label": "Noosa Main Beach and the Noosa National Park headland",
+   "lat": -26.385,
+   "lon": 153.09,
+   "radius_km": 12,
+   "aliases": [
+    "noosa heads",
+    "noosa national park",
+    "noosa main beach",
+    "hastings street"
+   ],
+   "names": [
+    "noosa"
+   ],
+   "palette": {
+    "sky": "#9CC9F0",
+    "far": "#DCC9A0",
+    "mid": "#9A8A74",
+    "ice": "#F6F4EE",
+    "water": "#2FA6B0",
+    "near": "#22301E",
+    "sun": "#F4C430",
+    "leaf": "#3E6E34",
+    "acc": "#F1E2BE",
+    "obj": "#D8342C"
+   }
+  },
+  {
+   "slug": "port-macquarie",
+   "label": "Tacking Point Lighthouse with its barrel-roofed annex on the headland",
+   "lat": -31.475,
+   "lon": 152.9375,
+   "radius_km": 12,
+   "aliases": [
+    "tacking point",
+    "lighthouse beach port macquarie"
+   ],
+   "names": [
+    "port macquarie",
+    "port macquarie city"
+   ],
+   "palette": {
+    "sky": "#A2CCF0",
+    "far": "#C9C7BE",
+    "mid": "#8E8C84",
+    "ice": "#F8F8F6",
+    "water": "#2E6FA8",
+    "near": "#1E2230",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A44",
+    "acc": "#D8B898",
+    "obj": "#2A3E9E"
    }
   },
   {
@@ -200,7 +753,11 @@
     "leaf": "#7E9A56",
     "acc": "#B89468",
     "obj": "#5AAEB4"
-   }
+   },
+   "names": [
+    "port campbell",
+    "port campbell national park"
+   ]
   },
   {
    "slug": "uluru",
@@ -224,6 +781,39 @@
     "acc": "#C0582E",
     "obj": "#C8683A"
    }
+  },
+  {
+   "slug": "whitehaven-beach",
+   "label": "Whitehaven Beach and the Hill Inlet swirl from the lookout",
+   "lat": -20.2735,
+   "lon": 149.041,
+   "radius_km": 6,
+   "aliases": [
+    "whitehaven",
+    "hill inlet",
+    "tongue point",
+    "whitsunday islands"
+   ],
+   "palette": {
+    "sky": "#9CCAF2",
+    "far": "#3E6648",
+    "mid": "#4C7A48",
+    "ice": "#FAFAF4",
+    "water": "#1E78B4",
+    "near": "#1E2A2A",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A34",
+    "acc": "#B2E6DC",
+    "obj": "#4CC4CC"
+   },
+   "names": [
+    "whitsunday islands",
+    "whitsundays",
+    "whitsunday island",
+    "the whitsundays",
+    "wytsundays",
+    "isole whitsunday"
+   ]
   }
  ]
 }

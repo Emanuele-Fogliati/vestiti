@@ -25,6 +25,98 @@
    }
   },
   {
+   "slug": "auckland",
+   "label": "Auckland skyline and the Sky Tower across the Waitemata Harbour",
+   "lat": -36.848,
+   "lon": 174.762,
+   "radius_km": 20,
+   "aliases": [
+    "tamaki makaurau",
+    "waitemata harbour"
+   ],
+   "names": [
+    "auckland",
+    "auckland city",
+    "auckland cbd",
+    "auckland central"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#8B9FB8",
+    "mid": "#6E8BA6",
+    "ice": "#F2F2EE",
+    "water": "#2D78AE",
+    "near": "#25292E",
+    "sun": "#F2C14E",
+    "leaf": "#4E7D3E",
+    "acc": "#CDBE9F",
+    "obj": "#D2D3CF"
+   }
+  },
+  {
+   "slug": "christchurch",
+   "label": "Heritage tram on New Regent Street, Christchurch",
+   "lat": -43.53,
+   "lon": 172.6384,
+   "radius_km": 15,
+   "aliases": [
+    "new regent street",
+    "christchurch tram",
+    "christchurch tramway"
+   ],
+   "names": [
+    "christchurch",
+    "christchurch city",
+    "christchurch central",
+    "otautahi"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#C9C1B6",
+    "mid": "#C3E0CB",
+    "ice": "#F4EEDC",
+    "water": "#B4CAE4",
+    "near": "#26282B",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B3A",
+    "acc": "#EEDB9C",
+    "obj": "#A8322C"
+   }
+  },
+  {
+   "slug": "franz-josef-glacier",
+   "label": "Franz Josef Glacier descending between rainforest and bare rock walls to the Waiho riverbed",
+   "lat": -43.47,
+   "lon": 170.2,
+   "radius_km": 8,
+   "aliases": [
+    "franz josef glacier",
+    "franz joseph glacier",
+    "ka roimata o hine hukatere",
+    "ghiacciaio franz josef",
+    "franz josef glacier valley walk"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#7C8794",
+    "mid": "#A9A49A",
+    "ice": "#F2F6F8",
+    "water": "#8FA9B4",
+    "near": "#222628",
+    "sun": "#F2C14E",
+    "leaf": "#3E6B36",
+    "acc": "#6E7680",
+    "obj": "#9CC8E0"
+   },
+   "names": [
+    "franz josef",
+    "franz joseph",
+    "franz josef township",
+    "franz josef village",
+    "waiau"
+   ]
+  },
+  {
    "slug": "huka-falls",
    "label": "The turquoise chute of Huka Falls",
    "lat": -38.6487,
@@ -124,6 +216,64 @@
    }
   },
   {
+   "slug": "queenstown",
+   "label": "Queenstown and Lake Wakatipu from Bob's Peak, The Remarkables behind",
+   "lat": -45.03,
+   "lon": 168.66,
+   "radius_km": 12,
+   "aliases": [
+    "bob s peak",
+    "bobs peak",
+    "skyline queenstown",
+    "queenstown skyline"
+   ],
+   "names": [
+    "queenstown",
+    "queenstown town centre"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A9B07C",
+    "mid": "#857C72",
+    "ice": "#F4F2EC",
+    "water": "#1F5E9E",
+    "near": "#25272B",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A34",
+    "acc": "#8E9752",
+    "obj": "#B4533E"
+   }
+  },
+  {
+   "slug": "rotorua",
+   "label": "Pohutu Geyser erupting at Te Puia (Whakarewarewa), Rotorua",
+   "lat": -38.1636,
+   "lon": 176.2525,
+   "radius_km": 15,
+   "aliases": [
+    "te puia",
+    "pohutu geyser",
+    "pohutu",
+    "whakarewarewa"
+   ],
+   "names": [
+    "rotorua",
+    "rotorua city"
+   ],
+   "palette": {
+    "sky": "#A6CEF2",
+    "far": "#6E8A5A",
+    "mid": "#BEC2C3",
+    "ice": "#F7F8F8",
+    "water": "#3F6E68",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#2F5530",
+    "acc": "#D9A740",
+    "obj": "#8C8274"
+   }
+  },
+  {
    "slug": "taupo",
    "label": "Lake Taupo with Ruapehu and Ngauruhoe across the water",
    "lat": -38.8,
@@ -178,6 +328,66 @@
     "leaf": "#3E6E36",
     "acc": "#6FE3E6",
     "obj": "#8A8F94"
+   }
+  },
+  {
+   "slug": "wanaka",
+   "label": "That Wanaka Tree, the lone willow in Lake Wanaka",
+   "lat": -44.6998,
+   "lon": 169.1311,
+   "radius_km": 15,
+   "aliases": [
+    "that wanaka tree",
+    "wanaka tree",
+    "lake wanaka"
+   ],
+   "names": [
+    "wanaka",
+    "wanaka town",
+    "wanaka township"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#7F93AE",
+    "mid": "#B98D4C",
+    "ice": "#F4F4F2",
+    "water": "#2C6CA8",
+    "near": "#24272A",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A48",
+    "acc": "#D9B46A",
+    "obj": "#2F4A33"
+   }
+  },
+  {
+   "slug": "wellington",
+   "label": "The red Wellington Cable Car above the city and the harbour",
+   "lat": -41.2853,
+   "lon": 174.7685,
+   "radius_km": 15,
+   "aliases": [
+    "wellington cable car",
+    "kelburn cable car",
+    "cable car wellington",
+    "funicolare di wellington"
+   ],
+   "names": [
+    "wellington",
+    "wellington city",
+    "wellington cbd",
+    "te whanganui a tara"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8AA08A",
+    "mid": "#BDBAB2",
+    "ice": "#ECECE8",
+    "water": "#4A88B8",
+    "near": "#242628",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#C8262C",
+    "obj": "#5E6E80"
    }
   }
  ]
