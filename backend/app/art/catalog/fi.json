@@ -14,7 +14,11 @@
     "senate square",
     "senaatintori",
     "cattedrale di helsinki",
-    "piazza del senato"
+    "piazza del senato",
+    "helsingin tuomiokirkko",
+    "cattedrale luterana di helsinki",
+    "st nicholas church helsinki",
+    "senaatintorg"
    ],
    "names": [
     "helsinki",
@@ -31,6 +35,37 @@
     "leaf": "#4E8E6E",
     "acc": "#D8A931",
     "obj": "#8C969C"
+   }
+  },
+  {
+   "slug": "inari",
+   "label": "Ukonsaari island on Lake Inari with a reindeer",
+   "lat": 68.98,
+   "lon": 27.07,
+   "radius_km": 30,
+   "aliases": [
+    "lake inari",
+    "inarijarvi",
+    "lago inari",
+    "lago di inari",
+    "ukonsaari",
+    "ukko island",
+    "anarjavri"
+   ],
+   "names": [
+    "inari"
+   ],
+   "palette": {
+    "sky": "#CDE3F2",
+    "far": "#6F8A6C",
+    "mid": "#8E8B85",
+    "ice": "#ECEAE4",
+    "water": "#4F7FA0",
+    "near": "#242725",
+    "sun": "#F4C430",
+    "leaf": "#6F9A3A",
+    "acc": "#C9A03C",
+    "obj": "#7A6550"
    }
   },
   {
@@ -88,6 +123,58 @@
     "leaf": "#2F5C3E",
     "acc": "#C23B2E",
     "obj": "#9BA2A8"
+   }
+  },
+  {
+   "slug": "suomenlinna",
+   "label": "Suomenlinna's King's Gate seen from the sea",
+   "lat": 60.1438,
+   "lon": 24.9862,
+   "radius_km": 3,
+   "aliases": [
+    "suomenlinna",
+    "sveaborg",
+    "viapori",
+    "kuninkaanportti",
+    "king s gate suomenlinna"
+   ],
+   "palette": {
+    "sky": "#CFE4F5",
+    "far": "#BDB6AA",
+    "mid": "#7D7B78",
+    "ice": "#E6E2DA",
+    "water": "#3D6E8C",
+    "near": "#262626",
+    "sun": "#F4C430",
+    "leaf": "#6F9B3F",
+    "acc": "#D9C24A",
+    "obj": "#1F4E9A"
+   }
+  },
+  {
+   "slug": "temppeliaukio-church",
+   "label": "Temppeliaukio Rock Church's copper dome on its granite outcrop",
+   "lat": 60.173,
+   "lon": 24.9253,
+   "radius_km": 2,
+   "aliases": [
+    "temppeliaukio",
+    "rock church",
+    "kalliokirkko",
+    "chiesa nella roccia",
+    "chiesa di temppeliaukio"
+   ],
+   "palette": {
+    "sky": "#CFE3F3",
+    "far": "#BFA9A2",
+    "mid": "#6F6763",
+    "ice": "#DCE5EA",
+    "water": "#7AAA9C",
+    "near": "#262422",
+    "sun": "#F4C430",
+    "leaf": "#6E9A44",
+    "acc": "#D8B46C",
+    "obj": "#B5573D"
    }
   }
  ]
