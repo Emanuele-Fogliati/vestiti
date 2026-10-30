@@ -3,6 +3,36 @@
  "name": "United Kingdom",
  "places": [
   {
+   "slug": "bath",
+   "label": "The Great Bath of the Roman Baths with Bath Abbey behind",
+   "lat": 51.381,
+   "lon": -2.3597,
+   "radius_km": 12,
+   "aliases": [
+    "roman baths bath",
+    "roman baths of bath",
+    "great bath bath",
+    "bath abbey",
+    "terme di bath"
+   ],
+   "names": [
+    "bath",
+    "bath spa"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D9C8A0",
+    "mid": "#D2B57E",
+    "ice": "#EDE3C8",
+    "water": "#5E9684",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E3E",
+    "acc": "#A8583A",
+    "obj": "#6E6E72"
+   }
+  },
+  {
    "slug": "belfast",
    "label": "Titanic Belfast and the Harland & Wolff cranes",
    "lat": 54.6081,
@@ -27,6 +57,35 @@
     "leaf": "#5E8A4A",
     "acc": "#B0682E",
     "obj": "#E2B02A"
+   }
+  },
+  {
+   "slug": "derry",
+   "label": "Derry's Peace Bridge over the Foyle with the Guildhall clock tower",
+   "lat": 54.9975,
+   "lon": -7.3165,
+   "radius_km": 12,
+   "aliases": [
+    "peace bridge derry",
+    "derry guildhall",
+    "peace bridge londonderry"
+   ],
+   "names": [
+    "derry",
+    "londonderry",
+    "derry londonderry"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A4AAA2",
+    "mid": "#B0644E",
+    "ice": "#EEF0F0",
+    "water": "#4E6E84",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A6E",
+    "acc": "#5EA08E",
+    "obj": "#6A6E76"
    }
   },
   {
@@ -58,6 +117,28 @@
    }
   },
   {
+   "slug": "eilean-donan-castle",
+   "label": "Eilean Donan Castle on Loch Duich",
+   "lat": 57.274,
+   "lon": -5.516,
+   "radius_km": 5,
+   "aliases": [
+    "eilean donan"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E7A64",
+    "mid": "#A0968A",
+    "ice": "#ECE6DA",
+    "water": "#4E7EA0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6A7A48",
+    "acc": "#BCA272",
+    "obj": "#5A5C62"
+   }
+  },
+  {
    "slug": "giants-causeway",
    "label": "Giant's Causeway basalt columns",
    "lat": 55.2408,
@@ -83,6 +164,33 @@
    }
   },
   {
+   "slug": "glasgow",
+   "label": "Glasgow's Clyde waterfront: Finnieston Crane and the Armadillo",
+   "lat": 55.8598,
+   "lon": -4.2856,
+   "radius_km": 18,
+   "aliases": [
+    "finnieston crane",
+    "clyde auditorium",
+    "sec armadillo"
+   ],
+   "names": [
+    "glasgow"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8A9098",
+    "mid": "#A8B2BC",
+    "ice": "#E8EAEC",
+    "water": "#4E6A80",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8E4A",
+    "acc": "#5A6676",
+    "obj": "#40454C"
+   }
+  },
+  {
    "slug": "glencoe",
    "label": "Buachaille Etive Mor at the head of Glen Coe",
    "lat": 56.647,
@@ -105,6 +213,31 @@
     "leaf": "#6E9446",
     "acc": "#B89A60",
     "obj": "#7E4E32"
+   }
+  },
+  {
+   "slug": "inverness",
+   "label": "Inverness Castle above the River Ness",
+   "lat": 57.4766,
+   "lon": -4.2256,
+   "radius_km": 15,
+   "aliases": [
+    "inverness castle"
+   ],
+   "names": [
+    "inverness"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B4A894",
+    "mid": "#C9866A",
+    "ice": "#F2EEE4",
+    "water": "#3E5A8C",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E46",
+    "acc": "#3E6A3A",
+    "obj": "#8A5E4A"
    }
   },
   {
@@ -186,6 +319,60 @@
    }
   },
   {
+   "slug": "orkney-islands",
+   "label": "Ring of Brodgar standing stones above the loch, Orkney",
+   "lat": 59.0015,
+   "lon": -3.2297,
+   "radius_km": 35,
+   "aliases": [
+    "ring of brodgar",
+    "brodgar"
+   ],
+   "names": [
+    "orkney",
+    "orkney islands",
+    "orcadi",
+    "isole orcadi"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8C9A84",
+    "mid": "#A49E8E",
+    "ice": "#ECE8DC",
+    "water": "#3E6EA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#86A050",
+    "acc": "#7E6866",
+    "obj": "#A4B474"
+   }
+  },
+  {
+   "slug": "oxford",
+   "label": "Oxford's Radcliffe Square: the Radcliffe Camera between St Mary's spire and All Souls",
+   "lat": 51.7534,
+   "lon": -1.254,
+   "radius_km": 12,
+   "aliases": [
+    "radcliffe camera"
+   ],
+   "names": [
+    "oxford"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#DCC79C",
+    "mid": "#D4B784",
+    "ice": "#EDE2C6",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A46",
+    "acc": "#A89A86",
+    "obj": "#8E949A"
+   }
+  },
+  {
    "slug": "royal-mile",
    "label": "St Giles' Cathedral on the Royal Mile, Edinburgh",
    "lat": 55.9495,
@@ -207,6 +394,28 @@
     "leaf": "#4E7E3A",
     "acc": "#C23B2E",
     "obj": "#5E5650"
+   }
+  },
+  {
+   "slug": "skara-brae",
+   "label": "Skara Brae Neolithic house with its stone dresser",
+   "lat": 59.0488,
+   "lon": -3.3418,
+   "radius_km": 4,
+   "aliases": [
+    "skara brae"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7E9A66",
+    "mid": "#A08E76",
+    "ice": "#E4DAC2",
+    "water": "#3E7EA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E46",
+    "acc": "#C4B496",
+    "obj": "#8A6E5A"
    }
   },
   {
