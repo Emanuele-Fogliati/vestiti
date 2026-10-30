@@ -75,6 +75,11 @@ export interface Stop {
   notes: string | null;
   /** The place's own landmark scene, when the library has one near this stop. */
   art?: StopArt | null;
+  /** Is the map match where the traveller means? "check": ask "Is this the place?" (place_note says why). */
+  place_status?: "ok" | "check" | "confirmed" | null;
+  place_note?: string | null;
+  /** The traveller said "yes, this is the place" (sent on create / patch only). */
+  place_confirmed?: boolean;
   /** Other places seen during the stop's days (Moray, Maras... on a Cusco day), in order. */
   visits?: Visit[];
   /** The traveller did not say how long: the days are a guess. */
@@ -113,6 +118,8 @@ export interface Trip {
   stops: Stop[];
   start_estimated?: boolean;
   estimate?: TripEstimate | null;
+  /** The trip's countries (ISO codes): a stop outside them is asked about. */
+  countries?: string[];
   /** Slug of the recommended trip it started from; null = the traveller's own. */
   source_itinerary?: string | null;
 }
@@ -140,6 +147,10 @@ export interface Place {
   longitude: number;
   elevation_m: number;
   source?: string;
+  /** The verified place registry's id, when the place comes from it. */
+  place_id?: string | null;
+  /** A sight placed at the town where you sleep (Machu Picchu -> Aguas Calientes). */
+  base?: string | null;
 }
 
 export interface Fit {
@@ -386,6 +397,13 @@ export interface PhotoReading {
   described: ModelMatch | null;
 }
 
+/** The server's verdict on a stop's map match: "check" means it may be the wrong place. */
+export interface PlaceCheck {
+  status: "ok" | "check" | "confirmed";
+  codes: string[];
+  issues: string[];
+}
+
 export interface DraftStop {
   name: string;
   start_date: string;
@@ -393,6 +411,7 @@ export interface DraftStop {
   activities: Activity[];
   matches: Place[];
   place: Place | null;
+  check?: PlaceCheck | null;
   visits: Visit[];
   days_estimated: boolean;
 }

@@ -69,6 +69,9 @@ class Trip(Base):
     notes: Mapped[str | None] = mapped_column(Text)
     # the traveller gave no start date: the dates are a guess until they set one
     start_estimated: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
+    # the countries the trip is in (ISO codes): named in its text or shared by its stops.
+    # A stop outside them is asked about ("Is this the place?")
+    countries: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
     # slug of the recommended itinerary this trip started from (None = the traveller's own)
     source_itinerary: Mapped[str | None] = mapped_column(String(80))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
@@ -106,8 +109,33 @@ class Stop(Base):
     visits: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
     # the traveller gave places but not how long: this stop's days are a guess
     days_estimated: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
+    # is the map match where the traveller means (app.places.verify)?
+    # ok | check (the app asks "Is this the place?") | confirmed (the traveller said yes) | null (older stop)
+    place_status: Mapped[str | None] = mapped_column(String(10))
+    place_note: Mapped[str | None] = mapped_column(Text)  # why it is asked about
 
     trip: Mapped[Trip] = relationship(back_populates="stops")
+
+
+class Place(Base):
+    """The verified place registry (seed/places.json, copied here by `app.cli seed`): every
+    place with its country, coordinates and elevation, and the sources that confirm them."""
+    __tablename__ = "places"
+
+    id: Mapped[str] = mapped_column(String(80), primary_key=True)  # <cc>-<slug>: pe-machu-picchu
+    name: Mapped[str] = mapped_column(String(200))
+    kind: Mapped[str] = mapped_column(String(10), default="town")  # town | site | lake | region
+    country_code: Mapped[str] = mapped_column(String(2), index=True)  # ISO 3166-1 alpha-2
+    admin: Mapped[str | None] = mapped_column(String(200))
+    latitude: Mapped[float] = mapped_column(Float)
+    longitude: Mapped[float] = mapped_column(Float)
+    elevation_m: Mapped[float] = mapped_column(Float, default=0.0)
+    base: Mapped[str | None] = mapped_column(String(80))  # a sight's town (where you sleep)
+    aliases: Mapped[list] = mapped_column(JSON, default=list)
+    verified: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
+    verified_on: Mapped[date | None] = mapped_column(Date)
+    sources: Mapped[list] = mapped_column(JSON, default=list)  # what confirmed it
+    problems: Mapped[list] = mapped_column(JSON, default=list)  # what did not, if anything
 
 
 class WardrobeItem(Base):

@@ -8,6 +8,7 @@ from app.art import assign
 from app.db import get_db
 from app.deps import current_user, own_trip
 from app.models import Stop, Trip, User
+from app.places.verify import check_stops
 from app.schemas import (
     MAX_STOP_DAYS,
     MAX_STOPS,
@@ -37,7 +38,19 @@ def _stop_from(body: StopIn, position: int) -> Stop:
                 start_date=body.start_date, end_date=body.end_date,
                 activities=[a.model_dump() for a in body.activities], notes=body.notes,
                 visits=[v.model_dump(mode="json") for v in body.visits],
-                days_estimated=body.days_estimated, position=position)
+                days_estimated=body.days_estimated, position=position,
+                place_status="confirmed" if body.place_confirmed else None)
+
+
+def _verify(trip: Trip) -> None:
+    """Check every stop against the rest of the trip (country, distance), so a stop in the
+    wrong country is never shown as if it were right: it is marked "check" and the page asks.
+    A stop the traveller confirmed stays confirmed."""
+    stops = sorted(trip.stops, key=lambda s: (s.position, s.start_date))
+    for s, c in zip(stops, check_stops(stops, trip.countries or [])):
+        if s.place_status == "confirmed":
+            continue
+        s.place_status, s.place_note = c.status, c.note
 
 
 @router.get("", response_model=list[TripSummary])
@@ -62,8 +75,9 @@ def create_trip(body: TripIn, user: User = Depends(current_user), db: Session = 
     if len(body.stops) > MAX_STOPS:
         raise HTTPException(422, f"At most {MAX_STOPS} stops")
     trip = Trip(user_id=user.id, name=body.name, notes=body.notes,
-                start_estimated=body.start_estimated and bool(body.stops))
+                start_estimated=body.start_estimated and bool(body.stops), countries=body.countries)
     trip.stops = [_stop_from(s, i) for i, s in enumerate(body.stops)]
+    _verify(trip)
     db.add(trip)
     db.commit()
     db.refresh(trip)
@@ -71,7 +85,10 @@ def create_trip(body: TripIn, user: User = Depends(current_user), db: Session = 
 
 
 @router.get("/{trip_id}", response_model=TripOut)
-def get_trip(trip: Trip = Depends(own_trip)):
+def get_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
+    if any(s.place_status is None for s in trip.stops):  # saved before the place checks existed
+        _verify(trip)
+        db.commit()
     return trip
 
 
@@ -93,12 +110,14 @@ def delete_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
 @router.post("/{trip_id}/duplicate", response_model=TripOut, status_code=201)
 def duplicate_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
     copy = Trip(user_id=trip.user_id, name=f"{trip.name} (copy)", notes=trip.notes,
-                start_estimated=trip.start_estimated, source_itinerary=trip.source_itinerary)
+                start_estimated=trip.start_estimated, countries=list(trip.countries or []),
+                source_itinerary=trip.source_itinerary)
     copy.stops = [Stop(name=s.name, country_code=s.country_code, latitude=s.latitude,
                        longitude=s.longitude, elevation_m=s.elevation_m, start_date=s.start_date,
                        end_date=s.end_date, activities=list(s.activities or []), notes=s.notes,
                        visits=list(s.visits or []), days_estimated=s.days_estimated,
-                       position=s.position) for s in trip.stops]
+                       position=s.position, place_status=s.place_status,
+                       place_note=s.place_note) for s in trip.stops]
     db.add(copy)
     db.commit()
     db.refresh(copy)
@@ -116,6 +135,7 @@ def add_stop(body: StopIn, trip: Trip = Depends(own_trip), db: Session = Depends
     stop = _stop_from(body, pos)
     trip.stops.append(stop)
     _renumber(trip)
+    _verify(trip)
     db.commit()
     db.refresh(stop)
     return stop
@@ -145,8 +165,17 @@ def patch_stop(stop_id: str, body: StopPatch, trip: Trip = Depends(own_trip),
         raise HTTPException(422, f"a single stop can be at most {MAX_STOP_DAYS} days")
     if any(k in data and data[k] != getattr(stop, k) for k in ("start_date", "end_date")):
         data["days_estimated"] = False  # the traveller chose this stop's days
+    confirm = data.pop("place_confirmed", None)
+    moved = any(k in data and data[k] != getattr(stop, k)
+                for k in ("name", "country_code", "latitude", "longitude"))
     for k, v in data.items():
         setattr(stop, k, v)
+    if moved:
+        stop.place_status = None  # another place: check it again
+    if confirm is not None:
+        stop.place_status = "confirmed" if confirm else None
+        stop.place_note = None if confirm else stop.place_note
+    _verify(trip)
     db.commit()
     db.refresh(stop)
     return stop
@@ -160,6 +189,7 @@ def delete_stop(stop_id: str, trip: Trip = Depends(own_trip), db: Session = Depe
     trip.stops.remove(stop)
     db.delete(stop)
     _renumber(trip)
+    _verify(trip)
     db.commit()
 
 
@@ -170,6 +200,7 @@ def reorder(body: ReorderIn, trip: Trip = Depends(own_trip), db: Session = Depen
         raise HTTPException(422, "stop_ids must list every stop of the trip exactly once")
     for i, sid in enumerate(body.stop_ids):
         ids[sid].position = i
+    _verify(trip)
     db.commit()
     db.refresh(trip)
     return trip

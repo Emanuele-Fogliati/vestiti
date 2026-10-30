@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { api } from "../lib/api";
 import type { Place } from "../lib/types";
+import { whereLabel } from "./PlaceQuestion";
 
-export function placeLabel(p: Place) {
-  return [p.name, p.admin, p.country].filter(Boolean).join(", ");
-}
+/** Always with the country, so a homonym abroad is visible at a glance. */
+export const placeLabel = (p: Place) => whereLabel(p);
 
-export function PlaceSearch({ value, onPick, id, autoFocus }: {
+export function PlaceSearch({ value, onPick, id, autoFocus, countries }: {
   value: Place | null; onPick: (p: Place) => void; id?: string; autoFocus?: boolean;
+  /** The trip's countries: places there are listed first. */
+  countries?: string[];
 }) {
   const [q, setQ] = useState(value ? placeLabel(value) : "");
   const [results, setResults] = useState<Place[]>([]);
@@ -24,7 +26,7 @@ export function PlaceSearch({ value, onPick, id, autoFocus }: {
     timer.current = window.setTimeout(async () => {
       setBusy(true);
       try {
-        const r = await api.geocode(v.trim());
+        const r = await api.geocode(v.trim(), countries);
         setResults(r.results);
         setOpen(true);
       } finally { setBusy(false); }

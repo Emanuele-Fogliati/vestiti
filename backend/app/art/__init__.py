@@ -111,9 +111,11 @@ def _named(text: str, lat: float | None = None, lon: float | None = None) -> lis
     return [lm for _, lm in sorted(hits, key=lambda h: (h[0], near(h[1])))]
 
 
-def _nearest(lat: float, lon: float) -> Landmark | None:
+def _nearest(lat: float, lon: float, country: str = "") -> Landmark | None:
     best = None
     for lm in landmarks():
+        if country and lm.country != country:
+            continue
         d = _km(lat, lon, lm.lat, lm.lon)
         if d <= lm.radius_km and (best is None or d < best[0]):
             best = (d, lm)
@@ -121,19 +123,22 @@ def _nearest(lat: float, lon: float) -> Landmark | None:
 
 
 def match(name: str, lat: float | None, lon: float | None, notes: str | None = None,
-          taken: set[str] | frozenset[str] = frozenset()) -> Landmark | None:
+          taken: set[str] | frozenset[str] = frozenset(), country: str | None = None) -> Landmark | None:
     """The landmark for one stop: named in the stop's name, else the nearest one within its radius.
 
     When that landmark is already used by an earlier stop of the trip (Cusco twice), a different
-    landmark named in the stop's notes wins (the second Cusco stop is the Rainbow Mountain day)."""
-    named = _named(name, lat, lon)
+    landmark named in the stop's notes wins (the second Cusco stop is the Rainbow Mountain day).
+    A stop in a known country never gets another country's landmark (Aguas Calientes, Mexico
+    is not Machu Picchu)."""
+    cc = (country or "").upper()
+    named = [lm for lm in _named(name, lat, lon) if not cc or lm.country == cc]
     if lat is not None and lon is not None:  # a namesake far away is another place (Venice Beach)
         named = [lm for lm in named if _km(lat, lon, lm.lat, lm.lon) <= NAMESAKE_KM]
     own = next(iter(named), None)
     if own is None and lat is not None and lon is not None:
-        own = _nearest(lat, lon)
+        own = _nearest(lat, lon, cc)
     if own is not None and own.id in taken and notes:
-        other = next((lm for lm in _named(notes) if lm.id not in taken), None)
+        other = next((lm for lm in _named(notes) if lm.id not in taken and (not cc or lm.country == cc)), None)
         if other is not None:
             return other
     return own
@@ -145,7 +150,7 @@ def assign(stops) -> list[Landmark | None]:
     out = []
     for s in stops:
         lm = match(s.name, getattr(s, "latitude", None), getattr(s, "longitude", None),
-                   getattr(s, "notes", None), taken)
+                   getattr(s, "notes", None), taken, getattr(s, "country_code", None))
         if lm is not None:
             taken.add(lm.id)
         out.append(lm)

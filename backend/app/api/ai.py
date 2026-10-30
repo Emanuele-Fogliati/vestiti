@@ -27,18 +27,24 @@ def parse(body: ParseIn, user: User = Depends(current_user)):
     """Free text -> draft stops with map matches. Nothing is saved: the UI confirms."""
     draft = parse_itinerary(body.text, today=date.today())
     stops = []
-    found = geocode.resolve_trip([s.name for s in draft.stops], limit=3)
-    for s, matches in zip(draft.stops, found):
+    # read together, checked together: a stop in another country or thousands of km from its
+    # neighbours is searched again inside the trip's countries, and asked about if still unsure
+    found, checks, countries = geocode.resolve_and_check(
+        [s.name for s in draft.stops], limit=3, text=body.text,
+        altitudes=[s.elevation_m for s in draft.stops])
+    for s, matches, check in zip(draft.stops, found, checks):
         place = dict(matches[0]) if matches else None
         if place and s.elevation_m:
             # the program says where you sleep and how high ("Quota 3827 mt"): nights at
             # altitude are what makes the warm layers necessary
             place["elevation_m"] = s.elevation_m
-        stops.append({**s.model_dump(mode="json"), "matches": matches, "place": place})
+        stops.append({**s.model_dump(mode="json"), "matches": matches, "place": place,
+                      "check": check.json() if place else None})
     est = draft.estimate
     # the page asks the estimate's questions in its own form ("When do you leave?", "How long?")
     questions = [q for q in draft.questions if not est or q not in est.questions]
     return {"trip_name": draft.trip_name, "stops": stops, "questions": questions,
+            "countries": sorted(countries),
             "parser": draft.parser, "estimate": est.model_dump(mode="json") if est else None}
 
 

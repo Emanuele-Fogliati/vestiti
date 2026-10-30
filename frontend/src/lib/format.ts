@@ -48,6 +48,15 @@ export const SOURCE_LABEL: Record<string, string> = {
   estimate: "Rough estimate",
 };
 
+let regionNames: Intl.DisplayNames | null = null;
+/** "PE" -> "Peru" (the browser knows every country's name). */
+export const countryName = (cc?: string | null) => {
+  if (!cc) return null;
+  try {
+    regionNames ??= new Intl.DisplayNames(["en"], { type: "region" });
+    return regionNames.of(cc.toUpperCase()) ?? cc;
+  } catch { return cc; }
+};
 export const MONTH_LONG = ["January", "February", "March", "April", "May", "June", "July", "August",
   "September", "October", "November", "December"];
 export const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

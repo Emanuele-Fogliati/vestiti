@@ -10,6 +10,7 @@ from app.db import get_db
 from app.deps import current_user
 from app.globe import routes as globe_routes
 from app.models import Stop, Trip, User
+from app.places.verify import mark_ready_made
 from app.schemas import TripOut, check_date
 
 router = APIRouter(prefix="/api/globe", tags=["globe"])
@@ -61,6 +62,7 @@ def dress_me(route_id: str, body: RouteTripIn, user: User = Depends(current_user
     # a ready-made itinerary keeps its own stops (notes, guide links); only the start moves
     stops = inspire.stops_for(it, start) if it else globe_routes.stops_for(r, start)
     trip.stops = [Stop(position=i, **s) for i, s in enumerate(stops)]
+    mark_ready_made(trip)
     db.add(trip)
     db.commit()
     db.refresh(trip)

@@ -235,6 +235,8 @@ footer nav a{font-size:13px}
 .tc-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
 .pc-owned li{font-size:14px;color:var(--ink-2);padding-left:14px;position:relative}
 .pc-owned li::before{content:"·";position:absolute;left:2px;font-weight:700}
+.placeq{margin:8px 0;font-size:14px}
+.placeq .btn.sm{white-space:normal;text-align:left}
 
 /* ready-made itineraries ("Ideas") */
 .icards .label{color:var(--ink-2)}

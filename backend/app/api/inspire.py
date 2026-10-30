@@ -9,6 +9,7 @@ from app import inspire
 from app.db import get_db
 from app.deps import current_user
 from app.models import Stop, Trip, User
+from app.places.verify import mark_ready_made
 from app.schemas import TripOut, check_date
 
 router = APIRouter(prefix="/api/inspire", tags=["inspire"])
@@ -86,6 +87,7 @@ def pack_for_this(slug: str, body: PackIn, user: User = Depends(current_user),
     trip = Trip(user_id=user.id, name=it.title, notes=f"From the itinerary '{it.title}'.",
                 start_estimated=body.start_date is None, source_itinerary=it.slug)
     trip.stops = [Stop(position=i, **s) for i, s in enumerate(inspire.stops_for(it, start))]
+    mark_ready_made(trip)
     db.add(trip)
     db.commit()
     db.refresh(trip)
