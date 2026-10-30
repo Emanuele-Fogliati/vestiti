@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="34" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V104H300V200Z" fill="var(--il-water)"/>
+<path d="M150 105Q200 101 270 103L280 106H140Z" fill="var(--il-far)"/>
+<path d="M0 124Q60 118 120 122Q90 128 0 130Z" fill="var(--il-acc)"/>
+<g transform="translate(-34 -44) scale(1.25)">
+<path d="M197 46L62 140M198 46L246 162" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<path d="M120 150L230 162M168 146L250 156" stroke="var(--il-obj)" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<path d="M216 170L260 154L266 158L224 176Z" fill="var(--il-mid)"/>
+<path d="M46 134L60 142Q130 150 198 136L206 130L202 152Q188 170 140 174L62 178Q50 160 46 134Z" fill="var(--il-mid)"/>
+<path d="M48 138L60 143Q130 150 198 137L206 130L203 141Q130 160 56 154Z" fill="var(--il-obj)"/>
+<path d="M90 150L104 140M150 147L162 138" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<path d="M176 146L194 44" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+<path d="M193 56Q191 88 182 112L172 140L180 142Q188 114 195 82Z" fill="var(--il-ice)"/>
+</g>
+<path d="M0 200V172Q80 166 160 176Q240 182 300 176V200Z" fill="var(--il-acc)"/>
+<path d="M30 190Q40 187 50 190M240 192Q252 189 264 192" stroke="var(--il-far)" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
