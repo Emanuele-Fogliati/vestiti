@@ -93,10 +93,14 @@
     "vale do douro",
     "valle del douro",
     "valle do douro",
-    "douro wine region"
+    "douro wine region",
+    "douro river",
+    "rio douro",
+    "fiume douro"
    ],
    "names": [
-    "douro vineyards"
+    "douro vineyards",
+    "douro"
    ],
    "palette": {
     "sky": "#BFD8EE",
@@ -137,6 +141,35 @@
     "leaf": "#5E8A3E",
     "acc": "#C2603A",
     "obj": "#D9A93A"
+   }
+  },
+  {
+   "slug": "faial-island",
+   "label": "Capelinhos lighthouse and volcano, Faial",
+   "lat": 38.5945,
+   "lon": -28.8275,
+   "radius_km": 15,
+   "aliases": [
+    "faial island",
+    "ilha do faial",
+    "isola di faial",
+    "capelinhos",
+    "ponta dos capelinhos"
+   ],
+   "names": [
+    "faial"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#827769",
+    "mid": "#5E4E44",
+    "ice": "#E8E4DA",
+    "water": "#2F6597",
+    "near": "#24201E",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A3A",
+    "acc": "#8F654B",
+    "obj": "#A39B8D"
    }
   },
   {
@@ -244,6 +277,93 @@
     "leaf": "#A89C8C",
     "acc": "#E8A0A0",
     "obj": "#F2C230"
+   }
+  },
+  {
+   "slug": "lisbon-cathedral",
+   "label": "Lisbon Cathedral (Se) with a tram 28",
+   "lat": 38.7098,
+   "lon": -9.1335,
+   "radius_km": 2,
+   "aliases": [
+    "lisbon cathedral",
+    "se de lisboa",
+    "cattedrale di lisbona",
+    "se patriarcal",
+    "santa maria maior de lisboa"
+   ],
+   "names": [
+    "the se"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#C9B486",
+    "mid": "#E4D3A8",
+    "ice": "#F4EEE0",
+    "water": "#6E8FA8",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#ABA398",
+    "acc": "#C8372D",
+    "obj": "#F2C230"
+   }
+  },
+  {
+   "slug": "monte",
+   "label": "Church of Our Lady of Monte above Funchal, Madeira",
+   "lat": 32.6744,
+   "lon": -16.9007,
+   "radius_km": 2,
+   "aliases": [
+    "nossa senhora do monte",
+    "our lady of monte",
+    "nostra signora del monte",
+    "monte toboggan",
+    "carros de cesto"
+   ],
+   "names": [
+    "monte",
+    "monte funchal",
+    "monte madeira"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#5E5C59",
+    "mid": "#8A8278",
+    "ice": "#F7F6F2",
+    "water": "#3F7FB0",
+    "near": "#26262A",
+    "sun": "#F4C542",
+    "leaf": "#3F6B36",
+    "acc": "#C9A46A",
+    "obj": "#3B66B0"
+   }
+  },
+  {
+   "slug": "monument-to-the-discoveries",
+   "label": "Monument to the Discoveries on the Tagus, Lisbon",
+   "lat": 38.6936,
+   "lon": -9.2057,
+   "radius_km": 2,
+   "aliases": [
+    "monument to the discoveries",
+    "monument of the discoveries",
+    "padrao dos descobrimentos",
+    "padrao das descobertas",
+    "monumento alle scoperte",
+    "monumento dos descobrimentos"
+   ],
+   "palette": {
+    "sky": "#9CCBEE",
+    "far": "#D8C4A0",
+    "mid": "#EAD9BA",
+    "ice": "#F3E8D2",
+    "water": "#2F6E9E",
+    "near": "#2B2926",
+    "sun": "#F2C14E",
+    "leaf": "#6E8F55",
+    "acc": "#C4452F",
+    "obj": "#CFC4B2"
    }
   },
   {
