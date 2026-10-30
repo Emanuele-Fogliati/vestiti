@@ -29,8 +29,9 @@ Then describe the item. Answer with one JSON object and nothing else:
  "brand": brand name if a logo or label shows it, else null,
  "model": model name if printed (e.g. "Torrentshell 3L", "Moab 3"), else null,
  "style_code": style or article number if printed (e.g. "STY85240", "8 552 123"), else null,
- "category": shell_top (rain or wind jacket), insulation_top (down or padded jacket, coat),
-   mid_top (fleece, jumper, hoodie, softshell), base_top (T-shirt, thermal top, shirt),
+ "category": shell_top (thin rain or wind jacket, smooth fabric, no padding),
+   insulation_top (down or padded jacket or coat: quilted, puffy, stitched baffles),
+   mid_top (fleece, knitted jumper, hoodie, softshell), base_top (T-shirt, thermal top, any woven shirt),
    base_bottom (thermal leggings), trousers, shell_bottom (rain or ski trousers),
    headwear (beanie), gloves, sun_hat, socks, footwear,
  "colour": main colour,
@@ -42,7 +43,7 @@ Then describe the item. Answer with one JSON object and nothing else:
  "ankle_support": true|false,
  "label_readable": true if you could read a brand or model on a label, else false,
  "confidence": low|medium|high}
-Only report text you can actually read. If unsure, use null. Never guess a model name."""
+Ignore text that is not on the item (signs, packaging, background). Only report text you can actually read. If unsure, use null. Never guess a model name."""
 
 
 def vision_status(s: Settings | None = None) -> dict:

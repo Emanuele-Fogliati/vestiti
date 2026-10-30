@@ -97,9 +97,9 @@ def photo_status(_: User = Depends(current_user)):
             r = c.get("/models")
             r.raise_for_status()
             ids = [m.get("id", "") for m in r.json().get("data", [])]
-        # Ollama lists pulled models; llama.cpp and others serve one model whatever its name
-        out["available"] = not ids or any(s.vision_model == i or s.vision_model in i for i in ids) \
-            or len(ids) == 1
+        # Ollama lists every pulled model, so the vision model must be among them: the text
+        # model alone cannot read photos. A server that lists nothing serves whatever it loaded.
+        out["available"] = not ids or any(s.vision_model == i or s.vision_model in i for i in ids)
     except Exception:
         out["available"] = False
     _photo_status_cache[base + s.vision_model] = (time.time(), out)
@@ -175,8 +175,12 @@ def lookup_from_photos(db: Session, seen: dict, kind: str) -> dict:
         results = [r for r in results if r["category"] in kind_cats]
     if not results and brand:
         # brand read, model not: show that brand's models of this kind to pick from
-        results = [r for r in lookup.search(db, brand, cat, limit=12)
-                   if not kind_cats or r["category"] in kind_cats][:8]
+        # the model's guess of the kind is often wrong (an insulated jacket read as a shell):
+        # list every model of the brand of the kind the traveller chose, its guess first
+        found = [r for r in lookup.search(db, brand, None, limit=40)
+                 if not kind_cats or r["category"] in kind_cats]
+        guessed = [r for r in found if r["category"] == cat]
+        results = (guessed[:4] + [r for r in found if r not in guessed[:4]])[:10]
     # a plain description of what the photos show, for when no model matches
     described = lookup.clean_guess({
         "brand": brand, "name": " ".join(x for x in (brand, model) if x)
