@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="50" cy="30" r="11" fill="var(--il-sun)"/>
+<path d="M96 124L104 116L114 104L122 106L130 101H232L238 108L250 112L258 106Q264 103 268 108L276 116L300 118V124Z" fill="var(--il-far)"/>
+<path d="M0 132V122H300V132Z" fill="var(--il-water)"/>
+<path d="M0 200V130Q60 126 130 128Q200 124 300 128V200Z" fill="var(--il-mid)"/>
+<path d="M168 156V130H204V156Z" fill="var(--il-obj)"/>
+<path d="M164 131L176 122H198L208 131Z" fill="var(--il-leaf)"/>
+<path d="M172 136H178V142H172ZM186 136H192V142H186ZM196 140H201V156H196Z" fill="var(--il-near)"/>
+<path d="M136 156L139 82H161L164 156Z" fill="var(--il-ice)"/>
+<path d="M152 82H161L164 156H154Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M134 75H166V83H134Z" fill="var(--il-acc)"/>
+<path d="M142 75V62H158V75Z" fill="var(--il-far)"/>
+<path d="M147 62V75M153 62V75" stroke="var(--il-acc)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M140 63Q140 49 150 47Q160 49 160 63Z" fill="var(--il-acc)"/>
+<path d="M150 47V41" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M147 98H153V106H147ZM147 120H153V128H147ZM145 140H155V156H145Z" fill="var(--il-near)"/>
+<path d="M0 200V150Q40 146 90 150Q150 156 210 150Q260 146 300 150V200Z" fill="var(--il-mid)"/>
+<path d="M136 200L146 153H156L172 200Z" fill="var(--il-obj)"/>
+<path d="M0 156V72Q12 58 30 62Q44 54 58 66Q74 64 80 82Q92 92 86 110Q96 124 88 140Q96 150 90 156Z" fill="var(--il-leaf)"/>
+<path d="M210 152Q212 140 226 138Q238 130 252 136Q266 132 278 140Q296 138 300 144V152Z" fill="var(--il-leaf)"/>
+<g transform="translate(150 6)"><path d="M65.6 178.0Q63.4 168.1 66.7 163.7Q65.6 158.2 70.0 158.2Q73.3 158.2 73.3 161.5L76.6 162.1L73.3 163.2Q75.5 169.2 74.4 178.0ZM50.4 182.0Q47.6 169.4 51.8 163.8Q50.4 156.8 56.0 156.8Q60.2 156.8 60.2 161.0L64.4 161.7L60.2 163.1Q63.0 170.8 61.6 182.0Z" fill="var(--il-near)"/><path d="M67.8 176.9Q66.7 169.2 68.9 164.8Q72.2 164.8 72.6 169.2Q73.3 173.6 72.2 176.9ZM53.2 180.6Q51.8 170.8 54.6 165.2Q58.8 165.2 59.4 170.8Q60.2 176.4 58.8 180.6Z" fill="var(--il-ice)"/><path d="M68.3 160.9Q70.5 159.3 72.2 161.5M53.9 160.3Q56.7 158.2 58.8 161.0" stroke="var(--il-ice)" stroke-width="0.9" fill="none" stroke-linecap="round"/></g>
