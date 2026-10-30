@@ -3,12 +3,59 @@
  "name": "Hungary",
  "places": [
   {
+   "slug": "buda-castle",
+   "label": "Buda Castle Royal Palace above the Danube, Budapest",
+   "lat": 47.4962,
+   "lon": 19.0396,
+   "radius_km": 3,
+   "aliases": [
+    "buda castle",
+    "budavari palota",
+    "budai var",
+    "budavar",
+    "castello di buda",
+    "royal palace of buda",
+    "buda royal palace",
+    "castello reale di buda",
+    "palazzo reale di buda",
+    "budapest royal palace",
+    "budapest castle",
+    "castle hill budapest",
+    "budai varnegyed",
+    "buda castle district"
+   ],
+   "names": [
+    "castello reale",
+    "castello e palazzo reale"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#C2B49A",
+    "mid": "#D4BB92",
+    "ice": "#F1EBDD",
+    "water": "#6E95A6",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3A",
+    "acc": "#B8553A",
+    "obj": "#76AE9A"
+   }
+  },
+  {
    "slug": "budapest",
    "label": "Hungarian Parliament on the Danube, Budapest",
    "lat": 47.507,
    "lon": 19.046,
    "radius_km": 20,
-   "aliases": [],
+   "aliases": [
+    "hungarian parliament",
+    "orszaghaz",
+    "parlamento di budapest",
+    "parlamento ungherese",
+    "budapest parliament",
+    "parliament of budapest",
+    "parlement hongrois"
+   ],
    "names": [
     "budapest"
    ],
@@ -23,6 +70,69 @@
     "leaf": "#5E8A4A",
     "acc": "#A8402E",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "memento-park",
+   "label": "Memento Park entrance gate with Lenin and Marx-Engels statues, Budapest",
+   "lat": 47.4266,
+   "lon": 19.0006,
+   "radius_km": 2,
+   "aliases": [
+    "memento park",
+    "statue park budapest",
+    "szoborpark",
+    "memento szoborpark",
+    "parco delle statue di budapest",
+    "budapest statue park",
+    "memento parco"
+   ],
+   "names": [
+    "statue park",
+    "parco delle statue"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#DAD3C3",
+    "mid": "#B4553E",
+    "ice": "#E8E0D0",
+    "water": "#6E95A6",
+    "near": "#262626",
+    "sun": "#F2C14E",
+    "leaf": "#5C8A44",
+    "acc": "#CE7E62",
+    "obj": "#3F4446"
+   }
+  },
+  {
+   "slug": "szechenyi-thermal-bath",
+   "label": "Széchenyi Thermal Bath outdoor pool, Budapest",
+   "lat": 47.5186,
+   "lon": 19.0823,
+   "radius_km": 2,
+   "aliases": [
+    "szechenyi thermal bath",
+    "szechenyi bath",
+    "szechenyi baths",
+    "szechenyi furdo",
+    "szechenyi gyogyfurdo",
+    "terme szechenyi",
+    "bagni szechenyi",
+    "szechenyi spa",
+    "terme di szechenyi",
+    "szechenyi thermal baths"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#D6CBB2",
+    "mid": "#E5B649",
+    "ice": "#F3ECDA",
+    "water": "#3FB2C9",
+    "near": "#2A2B2C",
+    "sun": "#F2C14E",
+    "leaf": "#2F6B4A",
+    "acc": "#D2463C",
+    "obj": "#56605E"
    }
   }
  ]
