@@ -3,6 +3,35 @@
  "name": "Colombia",
  "places": [
   {
+   "slug": "bogota",
+   "label": "Bogotá's red-brick towers and bullring below the Monserrate hills",
+   "lat": 4.612,
+   "lon": -74.068,
+   "radius_km": 20,
+   "aliases": [
+    "torres del parque",
+    "plaza de toros la santamaria"
+   ],
+   "names": [
+    "bogota",
+    "bogota d c",
+    "santa fe de bogota",
+    "bogota city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D8C49A",
+    "mid": "#3E6B3A",
+    "ice": "#E6E0D4",
+    "water": "#5E8FB0",
+    "near": "#2A2422",
+    "sun": "#F2C14E",
+    "leaf": "#5C8E44",
+    "acc": "#A9532F",
+    "obj": "#4E5A66"
+   }
+  },
+  {
    "slug": "cartagena",
    "label": "Colonial street of Cartagena",
    "lat": 10.423,
@@ -25,6 +54,79 @@
     "leaf": "#E0703A",
     "acc": "#F0B83A",
     "obj": "#E8C88A"
+   }
+  },
+  {
+   "slug": "castillo-san-felipe-de-barajas",
+   "label": "Castillo San Felipe de Barajas, the stepped stone fortress with its sentry boxes above Cartagena",
+   "lat": 10.4227,
+   "lon": -75.5395,
+   "radius_km": 2,
+   "aliases": [
+    "san felipe de barajas",
+    "san felipe cartagena",
+    "castillo de cartagena"
+   ],
+   "palette": {
+    "sky": "#97C6EE",
+    "far": "#D9CBA6",
+    "mid": "#9C907A",
+    "ice": "#F2EEE4",
+    "water": "#1F4FA8",
+    "near": "#272320",
+    "sun": "#F6C531",
+    "leaf": "#6E9A3A",
+    "acc": "#8A6248",
+    "obj": "#CE2B37"
+   }
+  },
+  {
+   "slug": "cocora-valley",
+   "label": "Tall Quindio wax palms on the green pastures of the Cocora Valley",
+   "lat": 4.638,
+   "lon": -75.487,
+   "radius_km": 6,
+   "aliases": [
+    "cocora",
+    "wax palm valley"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#7F97A8",
+    "mid": "#4F7F3A",
+    "ice": "#E6E3D8",
+    "water": "#5E8FB0",
+    "near": "#23281F",
+    "sun": "#F3C64A",
+    "leaf": "#86B84A",
+    "acc": "#2F5B2A",
+    "obj": "#8A7B60"
+   }
+  },
+  {
+   "slug": "comuna-13",
+   "label": "Comuna 13's brick hillside houses, painted roof and orange-roofed escalators in Medellín",
+   "lat": 6.2556,
+   "lon": -75.6175,
+   "radius_km": 2,
+   "aliases": [
+    "comuna 13",
+    "comuna trece",
+    "graffitour",
+    "graffiti tour medellin",
+    "escaleras electricas comuna 13"
+   ],
+   "palette": {
+    "sky": "#B6D3EE",
+    "far": "#93AAA6",
+    "mid": "#5F8C4E",
+    "ice": "#EEECE6",
+    "water": "#3E86C8",
+    "near": "#2A2422",
+    "sun": "#F2C230",
+    "leaf": "#4E8A3C",
+    "acc": "#B05A36",
+    "obj": "#E8742A"
    }
   },
   {
@@ -76,6 +178,34 @@
     "leaf": "#2F5E3E",
     "acc": "#E9B93C",
     "obj": "#A84B32"
+   }
+  },
+  {
+   "slug": "medellin",
+   "label": "Medellín's Coltejer tower in the green Aburrá valley, with a Metrocable cabin",
+   "lat": 6.249,
+   "lon": -75.567,
+   "radius_km": 18,
+   "aliases": [
+    "edificio coltejer",
+    "coltejer"
+   ],
+   "names": [
+    "medellin",
+    "medellin city",
+    "medellin colombia"
+   ],
+   "palette": {
+    "sky": "#B8D4EE",
+    "far": "#9AA3A8",
+    "mid": "#6A8A5C",
+    "ice": "#F0F0EC",
+    "water": "#6A9AC0",
+    "near": "#26282A",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A36",
+    "acc": "#A9532F",
+    "obj": "#D23A30"
    }
   },
   {
@@ -151,7 +281,12 @@
     "leaf": "#4E8A3A",
     "acc": "#E6DCC8",
     "obj": "#C8553D"
-   }
+   },
+   "names": [
+    "guatape",
+    "guatape colombia",
+    "guatape antioquia"
+   ]
   },
   {
    "slug": "rosario-islands",
@@ -177,6 +312,61 @@
     "leaf": "#4C8C3C",
     "acc": "#D9663A",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "salento",
+   "label": "Colourful balconied houses of Calle Real in Salento with a Willys jeep",
+   "lat": 4.637,
+   "lon": -75.57,
+   "radius_km": 6,
+   "aliases": [
+    "calle real salento"
+   ],
+   "names": [
+    "salento",
+    "salento quindio",
+    "salento colombia"
+   ],
+   "palette": {
+    "sky": "#B9D8F2",
+    "far": "#9EA9AE",
+    "mid": "#5E9149",
+    "ice": "#F6F3EC",
+    "water": "#2A6FB8",
+    "near": "#2A2524",
+    "sun": "#F4C430",
+    "leaf": "#2E9A4E",
+    "acc": "#8E4A32",
+    "obj": "#D8322C"
+   }
+  },
+  {
+   "slug": "santa-marta",
+   "label": "Santa Marta bay with El Morro and its lighthouse",
+   "lat": 11.249,
+   "lon": -74.221,
+   "radius_km": 15,
+   "aliases": [
+    "morro de santa marta",
+    "bahia de santa marta"
+   ],
+   "names": [
+    "santa marta",
+    "santa marta city",
+    "santa marta colombia"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#B8996A",
+    "mid": "#7A6F60",
+    "ice": "#FFFFFF",
+    "water": "#3E8EB0",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#E9D8AE",
+    "obj": "#8C7A64"
    }
   },
   {

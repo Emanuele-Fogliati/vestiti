@@ -102,6 +102,34 @@
    }
   },
   {
+   "slug": "chau-doc",
+   "label": "Floating houses on the Hau River, Chau Doc",
+   "lat": 10.7065,
+   "lon": 105.1215,
+   "radius_km": 12,
+   "aliases": [
+    "chau doc floating",
+    "chau doc floating village",
+    "villaggio galleggiante di chau doc"
+   ],
+   "names": [
+    "chau doc",
+    "chaudoc"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#5E8A48",
+    "mid": "#A7AFB3",
+    "ice": "#F0ECE2",
+    "water": "#9E8668",
+    "near": "#2C2622",
+    "sun": "#F2C14E",
+    "leaf": "#4FA095",
+    "acc": "#A4502F",
+    "obj": "#9CC4DC"
+   }
+  },
+  {
    "slug": "cu-chi-tunnels",
    "label": "Cu Chi Tunnels",
    "lat": 11.1418,
@@ -167,7 +195,10 @@
     "ha long bay",
     "halong bay",
     "baia di ha long",
-    "baia di halong"
+    "baia di halong",
+    "lan ha",
+    "baia di lan ha",
+    "vinh lan ha"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -403,6 +434,37 @@
    }
   },
   {
+   "slug": "lang-co",
+   "label": "Lang Co sand spit, village and lagoon bridge below the mountains",
+   "lat": 16.262,
+   "lon": 108.065,
+   "radius_km": 8,
+   "aliases": [
+    "lang co beach",
+    "lang co bay",
+    "spiaggia di lang co",
+    "baia di lang co",
+    "lap an lagoon",
+    "laguna di lap an"
+   ],
+   "names": [
+    "lang co",
+    "lang co town"
+   ],
+   "palette": {
+    "sky": "#CFE4F2",
+    "far": "#6F8A99",
+    "mid": "#EBDFC3",
+    "ice": "#F4F1EA",
+    "water": "#4FA2A6",
+    "near": "#24302F",
+    "sun": "#F5C542",
+    "leaf": "#4F803E",
+    "acc": "#C2533A",
+    "obj": "#A4A8AA"
+   }
+  },
+  {
    "slug": "mai-chau",
    "label": "Thai stilt houses in the rice fields of the Mai Chau valley",
    "lat": 20.6567,
@@ -424,6 +486,33 @@
     "leaf": "#3D7835",
     "acc": "#8DC448",
     "obj": "#A8704E"
+   }
+  },
+  {
+   "slug": "marble-mountains",
+   "label": "The Marble Mountains above Da Nang",
+   "lat": 16.0035,
+   "lon": 108.2636,
+   "radius_km": 3,
+   "aliases": [
+    "marble mountain",
+    "marble mountains",
+    "montagne di marmo",
+    "montagna di marmo",
+    "ngu hanh son",
+    "thuy son"
+   ],
+   "palette": {
+    "sky": "#BED8EE",
+    "far": "#B5B79A",
+    "mid": "#C4BCAE",
+    "ice": "#F2EEE6",
+    "water": "#6E9AA8",
+    "near": "#2E2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A3A",
+    "acc": "#C2553E",
+    "obj": "#BE9670"
    }
   },
   {
@@ -543,7 +632,11 @@
    "lon": 105.92,
    "radius_km": 30,
    "aliases": [
-    "ninh binh province"
+    "ninh binh province",
+    "tam coc",
+    "grotte di tam coc",
+    "tam coc bich dong",
+    "tam coc caves"
    ],
    "names": [
     "ninh binh",
@@ -560,6 +653,35 @@
     "leaf": "#7E9E3A",
     "acc": "#DCC35A",
     "obj": "#6B4A2E"
+   }
+  },
+  {
+   "slug": "one-pillar-pagoda",
+   "label": "One Pillar Pagoda on its stone column in the lotus pond, Hanoi",
+   "lat": 21.0359,
+   "lon": 105.8336,
+   "radius_km": 2,
+   "aliases": [
+    "one pillar pagoda",
+    "one pillar",
+    "chua mot cot",
+    "mot cot pagoda",
+    "pagoda su una sola colonna",
+    "pagoda a colonna unica",
+    "pagoda della colonna unica",
+    "dien huu"
+   ],
+   "palette": {
+    "sky": "#CFE3EE",
+    "far": "#8DB06A",
+    "mid": "#C8C3B8",
+    "ice": "#F0EEE6",
+    "water": "#5E9A94",
+    "near": "#2A231E",
+    "sun": "#F4C542",
+    "leaf": "#4E7F3A",
+    "acc": "#9A4E34",
+    "obj": "#5A3B28"
    }
   },
   {
@@ -778,6 +900,35 @@
    }
   },
   {
+   "slug": "tomb-of-tu-duc",
+   "label": "Xung Khiem pavilion on the lake, Tomb of Tu Duc",
+   "lat": 16.4335,
+   "lon": 107.5655,
+   "radius_km": 3,
+   "aliases": [
+    "tu duc",
+    "tomb of tu duc",
+    "tu duc tomb",
+    "lang tu duc",
+    "mausoleo tu duc",
+    "mausoleo di tu duc",
+    "tomba di tu duc",
+    "xung khiem"
+   ],
+   "palette": {
+    "sky": "#C2DAEE",
+    "far": "#6F9A58",
+    "mid": "#8E8A7A",
+    "ice": "#D9C9AE",
+    "water": "#5F8C86",
+    "near": "#2C2622",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E38",
+    "acc": "#9C5A42",
+    "obj": "#9A7E62"
+   }
+  },
+  {
    "slug": "tran-quoc-pagoda",
    "label": "Tran Quoc Pagoda on West Lake, Hanoi",
    "lat": 21.0479,
@@ -797,6 +948,31 @@
     "leaf": "#4C8A36",
     "acc": "#E5C15A",
     "obj": "#CF6A50"
+   }
+  },
+  {
+   "slug": "trang-an",
+   "label": "Water pavilion among the karsts of Trang An",
+   "lat": 20.2536,
+   "lon": 105.8986,
+   "radius_km": 5,
+   "aliases": [
+    "trang an",
+    "trangan",
+    "grotte di trang an",
+    "grotte trang an"
+   ],
+   "palette": {
+    "sky": "#B9D7EE",
+    "far": "#B9AD92",
+    "mid": "#A8A498",
+    "ice": "#F2EEE4",
+    "water": "#5E8C6E",
+    "near": "#2A2A24",
+    "sun": "#F2C14E",
+    "leaf": "#4F7E3C",
+    "acc": "#6A4A3C",
+    "obj": "#5E7268"
    }
   }
  ]
