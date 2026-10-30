@@ -163,3 +163,12 @@ def test_same_position_names_go_to_the_nearest(monkeypatch):
     monkeypatch.setattr(art, "landmarks", lambda: (far, near))
     assert art.match("Red Fort", 28.65, 77.24).id == "in-red-fort"
     assert art.match("Red Fort of Agra", 27.18, 78.02).id == "in-agra-fort"
+
+
+def test_names_with_unsplittable_letters_fold_to_ascii():
+    assert art._norm("Tromsø") == "tromso"
+    assert art._norm("Svolvær") == "svolvaer"
+    assert art._norm("Ærø") == "aero"
+    assert art._norm("Łódź") == "lodz"
+    assert art._norm("Þingvellir") == "thingvellir"
+    assert art._norm("Straße") == "strasse"

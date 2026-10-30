@@ -37,8 +37,13 @@ class Landmark:
     names: tuple[str, ...] = ()
 
 
+# letters NFKD cannot split into base + accent: "Tromsø" must read "tromso", not "troms"
+_FOLD = str.maketrans({"ø": "o", "æ": "ae", "œ": "oe", "ß": "ss", "đ": "d", "ð": "d", "ł": "l", "þ": "th",
+                       "ı": "i", "ħ": "h"})
+
+
 def _norm(s: str) -> str:
-    s = "".join(c for c in unicodedata.normalize("NFKD", s.lower()) if not unicodedata.combining(c))
+    s = "".join(c for c in unicodedata.normalize("NFKD", s.lower().translate(_FOLD)) if not unicodedata.combining(c))
     return re.sub(r"[^a-z0-9]+", " ", s).strip()
 
 
