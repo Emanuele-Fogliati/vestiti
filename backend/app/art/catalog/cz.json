@@ -13,7 +13,14 @@
     "krumlov castle",
     "zamek cesky krumlov",
     "castello di cesky krumlov",
-    "castello di krumlov"
+    "castello di krumlov",
+    "cesky krumlov chateau",
+    "krumlov chateau",
+    "castle of cesky krumlov",
+    "hrad a zamek cesky krumlov",
+    "statni hrad a zamek cesky krumlov",
+    "krumlov castle tower",
+    "cesky krumlov castle tower"
    ],
    "names": [
     "cesky krumlov",
@@ -65,6 +72,38 @@
    }
   },
   {
+   "slug": "kutna-hora",
+   "label": "St Barbara's Church and the Jesuit College in Kutna Hora",
+   "lat": 49.9447,
+   "lon": 15.2636,
+   "radius_km": 12,
+   "aliases": [
+    "st barbara s church",
+    "church of st barbara",
+    "cathedral of st barbara",
+    "chram svate barbory",
+    "svate barbory",
+    "santa barbara a kutna",
+    "cattedrale di santa barbara"
+   ],
+   "names": [
+    "kutna hora",
+    "kuttenberg"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9AAE78",
+    "mid": "#B4A688",
+    "ice": "#F2EDE2",
+    "water": "#4E7E8A",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#CF6E3A",
+    "obj": "#555C66"
+   }
+  },
+  {
    "slug": "prague-astronomical-clock",
    "label": "Prague's Astronomical Clock on the Old Town Hall tower",
    "lat": 50.087,
@@ -79,7 +118,17 @@
     "staromestska radnice",
     "old town hall prague",
     "staromestske namesti",
-    "old town square prague"
+    "old town square prague",
+    "prague old town square",
+    "old town square of prague",
+    "old town square in prague",
+    "piazza della citta vecchia di praga",
+    "piazza della citta vecchia praga",
+    "tyn church",
+    "church of our lady before tyn",
+    "kostel matky bozi pred tynem",
+    "chiesa di santa maria di tyn",
+    "chiesa di tyn"
    ],
    "palette": {
     "sky": "#A6CBEE",
@@ -92,7 +141,14 @@
     "leaf": "#5E8A4A",
     "acc": "#CFA445",
     "obj": "#C0583A"
-   }
+   },
+   "names": [
+    "old town square",
+    "piazza della citta vecchia",
+    "prague old town",
+    "old town of prague",
+    "praga citta vecchia"
+   ]
   },
   {
    "slug": "prague-castle",
@@ -121,6 +177,49 @@
     "leaf": "#5E8A4A",
     "acc": "#C0583A",
     "obj": "#6FA58C"
+   }
+  },
+  {
+   "slug": "sedlec-ossuary",
+   "label": "The Cemetery Church of All Saints over the Sedlec Ossuary, Kutna Hora",
+   "lat": 49.9617,
+   "lon": 15.2883,
+   "radius_km": 2,
+   "aliases": [
+    "sedlec ossuary",
+    "ossuary of sedlec",
+    "ossuary sedlec",
+    "sedlec bone church",
+    "sedlec bone chapel",
+    "kutna hora ossuary",
+    "kutna hora bone church",
+    "kostnice sedlec",
+    "sedlecka kostnice",
+    "kostnice v sedlci",
+    "ossario di sedlec",
+    "ossario di kutna hora",
+    "chiesa delle ossa di sedlec",
+    "chiesa delle ossa di kutna hora",
+    "church of all saints sedlec",
+    "cemetery church of all saints",
+    "hrbitovni kostel vsech svatych"
+   ],
+   "names": [
+    "sedlec",
+    "bone church",
+    "chiesa delle ossa"
+   ],
+   "palette": {
+    "sky": "#92C2EE",
+    "far": "#6F9A5E",
+    "mid": "#B9AC90",
+    "ice": "#F1EEE6",
+    "water": "#4E7E8A",
+    "near": "#262624",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3C",
+    "acc": "#C4573A",
+    "obj": "#474D57"
    }
   }
  ]
