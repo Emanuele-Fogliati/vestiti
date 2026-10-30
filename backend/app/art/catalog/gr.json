@@ -33,6 +33,67 @@
    }
   },
   {
+   "slug": "aegina",
+   "label": "Temple of Aphaia, Aegina",
+   "lat": 37.754,
+   "lon": 23.533,
+   "radius_km": 12,
+   "aliases": [
+    "aphaia",
+    "aphaea",
+    "afaia",
+    "afea"
+   ],
+   "names": [
+    "aegina",
+    "egina",
+    "aigina",
+    "aegina island",
+    "isola di egina"
+   ],
+   "palette": {
+    "sky": "#A9CCF0",
+    "far": "#7F937F",
+    "mid": "#D3AE6A",
+    "ice": "#E8D09C",
+    "water": "#3E78B0",
+    "near": "#2A2522",
+    "sun": "#F2C14E",
+    "leaf": "#3D5A2C",
+    "acc": "#C9B791",
+    "obj": "#A6834C"
+   }
+  },
+  {
+   "slug": "amorgos",
+   "label": "Chora of Amorgos under its Kastro rock",
+   "lat": 36.832,
+   "lon": 25.896,
+   "radius_km": 20,
+   "aliases": [
+    "chora of amorgos",
+    "amorgos chora",
+    "chora amorgos"
+   ],
+   "names": [
+    "amorgos",
+    "amorgo",
+    "isola di amorgos"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#A89A70",
+    "mid": "#A8987E",
+    "ice": "#FAF8F2",
+    "water": "#3E78B0",
+    "near": "#2A2A2C",
+    "sun": "#F2C14E",
+    "leaf": "#6E7E46",
+    "acc": "#B5503A",
+    "obj": "#2E5E9E"
+   }
+  },
+  {
    "slug": "corfu",
    "label": "Vlacherna monastery and Mouse Island at Kanoni, Corfu",
    "lat": 39.6066,
@@ -151,6 +212,67 @@
    }
   },
   {
+   "slug": "folegandros",
+   "label": "Panagia church and zigzag path, Folegandros",
+   "lat": 36.624,
+   "lon": 24.918,
+   "radius_km": 15,
+   "aliases": [
+    "folegandros",
+    "panagia folegandros"
+   ],
+   "names": [
+    "isola di folegandros"
+   ],
+   "palette": {
+    "sky": "#B2D0EE",
+    "far": "#B4A684",
+    "mid": "#9A8460",
+    "ice": "#F8F6F0",
+    "water": "#2E6EA8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5E7238",
+    "acc": "#2E5E9E",
+    "obj": "#B08A62"
+   }
+  },
+  {
+   "slug": "heraklion",
+   "label": "Koules fortress in Heraklion's Venetian harbour",
+   "lat": 35.343,
+   "lon": 25.136,
+   "radius_km": 12,
+   "aliases": [
+    "koules",
+    "rocca a mare"
+   ],
+   "names": [
+    "heraklion",
+    "iraklio",
+    "iraklion",
+    "irakleio",
+    "irakleion",
+    "candia",
+    "heraklion city",
+    "heraklion port",
+    "heraklion crete",
+    "iraklio crete"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#A3A4A6",
+    "mid": "#C9B48E",
+    "ice": "#F6F4EE",
+    "water": "#3C9AAE",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4A",
+    "acc": "#2E5E9E",
+    "obj": "#B4A07C"
+   }
+  },
+  {
    "slug": "ios",
    "label": "The windmills and the white Chora of Ios under its chapel hill",
    "lat": 36.7318,
@@ -176,6 +298,31 @@
     "leaf": "#6E7E46",
     "acc": "#8C7152",
     "obj": "#2F6FC4"
+   }
+  },
+  {
+   "slug": "knossos",
+   "label": "North Entrance of the Palace of Knossos",
+   "lat": 35.298,
+   "lon": 25.163,
+   "radius_km": 3,
+   "aliases": [
+    "knossos",
+    "cnosso",
+    "knosos",
+    "palace of minos"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#8A9A62",
+    "mid": "#D8C49A",
+    "ice": "#F2EEE4",
+    "water": "#3E6EB8",
+    "near": "#2A2422",
+    "sun": "#F2C14E",
+    "leaf": "#4E6E3A",
+    "acc": "#B5432E",
+    "obj": "#BFA676"
    }
   },
   {
@@ -352,6 +499,37 @@
    }
   },
   {
+   "slug": "panathenaic-stadium",
+   "label": "Panathenaic Stadium, Athens",
+   "lat": 37.968,
+   "lon": 23.741,
+   "radius_km": 2,
+   "aliases": [
+    "panathenaic",
+    "panathenaic stadium",
+    "panathinaiko",
+    "panathinaikon",
+    "kallimarmaro",
+    "stadio panatenaico",
+    "stadio panathenaico",
+    "stadio panathinaiko",
+    "stadio panatinaico",
+    "panatenaico"
+   ],
+   "palette": {
+    "sky": "#B4D4F2",
+    "far": "#B3A98F",
+    "mid": "#5E5F62",
+    "ice": "#EEE6D4",
+    "water": "#4E8EB0",
+    "near": "#26282A",
+    "sun": "#F2C14E",
+    "leaf": "#4A6B34",
+    "acc": "#2C4527",
+    "obj": "#D9CDB2"
+   }
+  },
+  {
    "slug": "paros",
    "label": "The sculpted granite rocks of Kolymbithres, Paros",
    "lat": 37.1285,
@@ -377,6 +555,35 @@
     "leaf": "#8C9460",
     "acc": "#8F8E89",
     "obj": "#D8C29A"
+   }
+  },
+  {
+   "slug": "sifnos",
+   "label": "Church of the Seven Martyrs, Sifnos",
+   "lat": 36.978,
+   "lon": 24.752,
+   "radius_km": 15,
+   "aliases": [
+    "seven martyrs",
+    "epta martyres",
+    "sette martiri"
+   ],
+   "names": [
+    "sifnos",
+    "isola di sifnos",
+    "kastro sifnos"
+   ],
+   "palette": {
+    "sky": "#B4D2F0",
+    "far": "#9A9890",
+    "mid": "#8C8A80",
+    "ice": "#F6F4EE",
+    "water": "#1E4C94",
+    "near": "#26282C",
+    "sun": "#F2C14E",
+    "leaf": "#7A8048",
+    "acc": "#2A6AD0",
+    "obj": "#C9A464"
    }
   },
   {
