@@ -29,6 +29,30 @@
    }
   },
   {
+   "slug": "amalfi",
+   "label": "Amalfi from the sea",
+   "lat": 40.634,
+   "lon": 14.603,
+   "radius_km": 3,
+   "aliases": [],
+   "names": [
+    "amalfi",
+    "amalfi town"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#AAA49A",
+    "mid": "#D8C49A",
+    "ice": "#F4EEE2",
+    "water": "#2E6E9E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#56803E",
+    "acc": "#E3A08A",
+    "obj": "#E8C468"
+   }
+  },
+  {
    "slug": "bari",
    "label": "Basilica of San Nicola, Bari",
    "lat": 41.1306,
@@ -220,6 +244,37 @@
    }
   },
   {
+   "slug": "doges-palace",
+   "label": "Doge's Palace from the Bacino di San Marco, Venice",
+   "lat": 45.4337,
+   "lon": 12.3404,
+   "radius_km": 2,
+   "aliases": [
+    "doge s palace",
+    "doges palace",
+    "doge palace",
+    "palazzo dei dogi",
+    "palazzo ducale di venezia",
+    "palazzo ducale venezia",
+    "palazzo ducale venice"
+   ],
+   "names": [
+    "palazzo ducale"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A29E96",
+    "mid": "#E8CDBA",
+    "ice": "#F4EFE6",
+    "water": "#3E8A80",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E44",
+    "acc": "#D2A08E",
+    "obj": "#8E7A52"
+   }
+  },
+  {
    "slug": "dolomites",
    "label": "Tre Cime di Lavaredo, Dolomites",
    "lat": 46.619,
@@ -241,6 +296,35 @@
     "leaf": "#6E9A48",
     "acc": "#C8B060",
     "obj": "#8A6440"
+   }
+  },
+  {
+   "slug": "erice",
+   "label": "Castello di Venere and Torretta Pepoli, Erice",
+   "lat": 38.0372,
+   "lon": 12.5888,
+   "radius_km": 4,
+   "aliases": [
+    "castello di venere",
+    "castle of venus",
+    "venus castle",
+    "torretta pepoli",
+    "monte erice"
+   ],
+   "names": [
+    "erice"
+   ],
+   "palette": {
+    "sky": "#B8D6F0",
+    "far": "#C4C29C",
+    "mid": "#B8A482",
+    "ice": "#E6D8B8",
+    "water": "#3E7FA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E6E3A",
+    "acc": "#C0603C",
+    "obj": "#8A6A48"
    }
   },
   {
@@ -304,6 +388,59 @@
     "leaf": "#4F7A36",
     "acc": "#D27A4E",
     "obj": "#E6CC8A"
+   }
+  },
+  {
+   "slug": "marsala",
+   "label": "Salt pans and windmill of Marsala on the Stagnone",
+   "lat": 37.866,
+   "lon": 12.479,
+   "radius_km": 12,
+   "aliases": [
+    "saline di marsala",
+    "marsala salt pans",
+    "saline ettore infersa",
+    "ettore infersa",
+    "mulino infersa"
+   ],
+   "names": [
+    "marsala"
+   ],
+   "palette": {
+    "sky": "#A8CAEC",
+    "far": "#DCC8A0",
+    "mid": "#CFA474",
+    "ice": "#F8F6F2",
+    "water": "#A9C6D6",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A44",
+    "acc": "#B8323A",
+    "obj": "#B0643E"
+   }
+  },
+  {
+   "slug": "matera",
+   "label": "The Sassi of Matera and the cathedral",
+   "lat": 40.6664,
+   "lon": 16.6107,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "matera",
+    "matera city"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#BFA984",
+    "mid": "#D6C49C",
+    "ice": "#EBE0C6",
+    "water": "#4E8EB0",
+    "near": "#2E2A24",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#A88A60",
+    "obj": "#8A7A60"
    }
   },
   {
@@ -391,6 +528,29 @@
     "leaf": "#4F6E3A",
     "acc": "#3A302D",
     "obj": "#8A5E4A"
+   }
+  },
+  {
+   "slug": "mount-vesuvius",
+   "label": "Mount Vesuvius and Monte Somma",
+   "lat": 40.821,
+   "lon": 14.426,
+   "radius_km": 6,
+   "aliases": [
+    "vesuvius",
+    "vesuvio"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C2AE86",
+    "mid": "#8A7B72",
+    "ice": "#F2EEE4",
+    "water": "#3E7FA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6A8A4A",
+    "acc": "#3F5E36",
+    "obj": "#6E4A30"
    }
   },
   {
@@ -548,8 +708,10 @@
     "cathedral of palermo"
    ],
    "names": [
-    "palermo",
-    "palermo city"
+    "palermo city",
+    "palermo sicily",
+    "palermo sicilia",
+    "palermo italy"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -689,6 +851,30 @@
     "leaf": "#5E9A44",
     "acc": "#D8CDB4",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "pompeii",
+   "label": "Forum of Pompeii and the Temple of Jupiter with Vesuvius",
+   "lat": 40.7487,
+   "lon": 14.4848,
+   "radius_km": 3,
+   "aliases": [
+    "pompeii",
+    "pompei",
+    "scavi di pompei"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#CDBB9A",
+    "mid": "#8E7C72",
+    "ice": "#DDD2BE",
+    "water": "#4E8EB0",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#B3653F",
+    "obj": "#A89272"
    }
   },
   {
@@ -841,6 +1027,33 @@
     "leaf": "#6E8A4E",
     "acc": "#C98E6E",
     "obj": "#B07850"
+   }
+  },
+  {
+   "slug": "sorrento",
+   "label": "Sorrento's tufa cliff over Marina Piccola",
+   "lat": 40.627,
+   "lon": 14.375,
+   "radius_km": 5,
+   "aliases": [
+    "marina piccola sorrento",
+    "marina grande sorrento"
+   ],
+   "names": [
+    "sorrento",
+    "surriento"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9A8A",
+    "mid": "#C2A57A",
+    "ice": "#F2EADC",
+    "water": "#2E5E9A",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#D98C6E",
+    "obj": "#E8C870"
    }
   },
   {
