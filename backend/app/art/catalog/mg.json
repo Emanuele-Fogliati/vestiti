@@ -86,7 +86,10 @@
     "leaf": "#9AA85A",
     "acc": "#C77A4A",
     "obj": "#6E5A4A"
-   }
+   },
+   "names": [
+    "morondava"
+   ]
   },
   {
    "slug": "isalo-national-park",
@@ -107,7 +110,8 @@
     "isalo massif"
    ],
    "names": [
-    "isalo"
+    "isalo",
+    "ranohira"
    ],
    "palette": {
     "sky": "#A9CBEA",
@@ -120,6 +124,55 @@
     "leaf": "#A3A45A",
     "acc": "#C8783E",
     "obj": "#8FA89A"
+   }
+  },
+  {
+   "slug": "nosy-tanikely",
+   "label": "Nosy Tanikely islet with its lighthouse, white beach and a sailing pirogue",
+   "lat": -13.48,
+   "lon": 48.24,
+   "radius_km": 3,
+   "aliases": [
+    "nosy tanikely",
+    "tanikely",
+    "tanikeley"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#7F9AAE",
+    "mid": "#8C6A4E",
+    "ice": "#F4EFE2",
+    "water": "#2456A8",
+    "near": "#1E2224",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A34",
+    "acc": "#4FC0C0",
+    "obj": "#6B4E36"
+   }
+  },
+  {
+   "slug": "tsingy-de-bemaraha",
+   "label": "The Grand Tsingy suspension bridge over the limestone needles of Bemaraha",
+   "lat": -18.95,
+   "lon": 44.72,
+   "radius_km": 30,
+   "aliases": [
+    "tsingy de bemaraha",
+    "grand tsingy",
+    "grands tsingy",
+    "bemaraha"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#B3B3AE",
+    "mid": "#85878A",
+    "ice": "#F2F0EA",
+    "water": "#5F8FB0",
+    "near": "#232527",
+    "sun": "#F2C14E",
+    "leaf": "#7E8F4A",
+    "acc": "#B89A6E",
+    "obj": "#6E5A4A"
    }
   }
  ]
