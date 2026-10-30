@@ -3,6 +3,60 @@
  "name": "Sri Lanka",
  "places": [
   {
+   "slug": "anuradhapura",
+   "label": "Ruwanwelisaya, the great white stupa of Anuradhapura",
+   "lat": 8.35,
+   "lon": 80.396,
+   "radius_km": 12,
+   "aliases": [
+    "ruwanwelisaya",
+    "ruwanweliseya",
+    "ruwanweli saya",
+    "ruwanweli maha seya",
+    "mahathupa"
+   ],
+   "names": [
+    "anuradhapura",
+    "anuradhapura sacred city",
+    "anuradhapura ancient city"
+   ],
+   "palette": {
+    "sky": "#9FC4EA",
+    "far": "#E2DCCF",
+    "mid": "#6E6A68",
+    "ice": "#F6F4EE",
+    "water": "#5E95A8",
+    "near": "#26282C",
+    "sun": "#F2C14E",
+    "leaf": "#4F7B3A",
+    "acc": "#C8402E",
+    "obj": "#CDA97C"
+   }
+  },
+  {
+   "slug": "minneriya-national-park",
+   "label": "The elephant gathering on the Minneriya tank shore",
+   "lat": 8.03,
+   "lon": 80.86,
+   "radius_km": 12,
+   "aliases": [
+    "minneriya",
+    "mineriya"
+   ],
+   "palette": {
+    "sky": "#B7D3EE",
+    "far": "#5B7F5C",
+    "mid": "#706862",
+    "ice": "#F2F0E8",
+    "water": "#8EB2CC",
+    "near": "#262626",
+    "sun": "#F2C14E",
+    "leaf": "#79A847",
+    "acc": "#C9B07A",
+    "obj": "#5E9238"
+   }
+  },
+  {
    "slug": "nine-arches-bridge",
    "label": "Nine Arches Bridge, Ella",
    "lat": 6.877,
@@ -29,6 +83,34 @@
    }
   },
   {
+   "slug": "polonnaruwa",
+   "label": "Gal Vihara's standing and reclining Buddhas, Polonnaruwa",
+   "lat": 7.966,
+   "lon": 81.005,
+   "radius_km": 12,
+   "aliases": [
+    "gal vihara",
+    "gal viharaya",
+    "gal vihare"
+   ],
+   "names": [
+    "polonnaruwa",
+    "polonnaruwa ancient city"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#CDBDA4",
+    "mid": "#A3927C",
+    "ice": "#EFE8DA",
+    "water": "#5E95A8",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#A8583E",
+    "obj": "#D9C49C"
+   }
+  },
+  {
    "slug": "sigiriya",
    "label": "Sigiriya, the Lion Rock",
    "lat": 7.957,
@@ -49,6 +131,53 @@
     "leaf": "#3E6E3A",
     "acc": "#C8A47A",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "udawalawe-national-park",
+   "label": "Elephants by the Udawalawe reservoir with its dead trees and the hills behind",
+   "lat": 6.45,
+   "lon": 80.88,
+   "radius_km": 18,
+   "aliases": [
+    "udawalawe",
+    "uda walawe",
+    "udawalawa"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#7F958E",
+    "mid": "#7E6E64",
+    "ice": "#EEEAE0",
+    "water": "#A3BAC0",
+    "near": "#272522",
+    "sun": "#F2C14E",
+    "leaf": "#A9A65C",
+    "acc": "#C68A58",
+    "obj": "#5E7648"
+   }
+  },
+  {
+   "slug": "yala-national-park",
+   "label": "A leopard on the granite rocks of Yala, Elephant Rock behind",
+   "lat": 6.37,
+   "lon": 81.52,
+   "radius_km": 25,
+   "aliases": [
+    "yala",
+    "ruhuna national park"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#9AAF5E",
+    "mid": "#A09284",
+    "ice": "#F2EBDC",
+    "water": "#5E95A8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A36",
+    "acc": "#D9A04A",
+    "obj": "#7C6C60"
    }
   }
  ]
