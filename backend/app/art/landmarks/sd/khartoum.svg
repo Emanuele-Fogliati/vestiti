@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-sd-khartoum-clip"><path d="M120 156Q111 126 112 94C112 80 122 66 128 60L137 44Q150 38 163 44L172 60C178 66 188 80 188 94Q189 126 180 156Z"/></clipPath></defs>
+<path d="M0 150V128H10V122H24V130H34V118H46V126H58V132H70V124H84V134H96V150ZM196 150V130H206V122H218V128H226V150ZM264 150V126H276V132H290V124H300V150Z" fill="var(--il-far)"/>
+<path d="M2 128V150M10 122V150M34 118V150M58 126V150M84 124V150" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M228 150V112H262V150Z" fill="var(--il-mid)"/>
+<path d="M234 108H256V112H234Z" fill="var(--il-mid)"/>
+<path d="M232 122H258M232 132H258" stroke="var(--il-far)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M120 156Q111 126 112 94C112 80 122 66 128 60L137 44Q150 38 163 44L172 60C178 66 188 80 188 94Q189 126 180 156Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-sd-khartoum-clip)">
+<path d="M100 30H200V62H100Z" fill="var(--il-obj)"/>
+<path d="M100 62H200V82H100Z" fill="var(--il-acc)"/>
+<path d="M100 82H200V91H100Z" fill="var(--il-obj)"/>
+<path d="M150 62V82M139 62V82M161 62V82" stroke="var(--il-ice)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M110 96H190M110 102H190M110 108H190M110 114H190M110 120H190M110 126H190M110 132H190M110 138H190M110 144H190M110 150H190" stroke="var(--il-acc)" stroke-width="2.6" fill="none" stroke-linecap="butt"/>
+</g>
+<path d="M47 152L49 132H55L57 152Z" fill="var(--il-near)"/>
+<path d="M22 140Q14 128 30 124Q30 110 46 108Q60 100 72 110Q88 110 86 124Q98 130 88 140Q70 136 54 138Q38 136 22 140Z" fill="var(--il-leaf)"/>
+<path d="M0 200V146Q30 142 60 146Q110 140 160 148Q220 142 300 146V200Z" fill="var(--il-leaf)"/>
+<path d="M0 200V160Q60 154 120 158Q200 152 300 158V200Z" fill="var(--il-water)"/>
+<path d="M214 178H246L240 184H220Z" fill="var(--il-near)"/>
+<path d="M218 172L245 142L240 177Z" fill="var(--il-ice)"/>
+<path d="M214 175L248 138M232 178V160" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
