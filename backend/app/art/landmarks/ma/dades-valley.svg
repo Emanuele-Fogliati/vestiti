@@ -1,0 +1,12 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="22" r="10" fill="var(--il-sun)"/>
+<path d="M0 60L40 46L90 40L140 34L190 28L230 20L262 14L300 22V90H0Z" fill="var(--il-far)"/>
+<path d="M0 200V56Q40 50 80 52Q130 50 170 46Q196 46 212 56L230 100Q244 140 250 200Z" fill="var(--il-mid)"/>
+<path d="M300 200V20Q270 26 252 40Q236 52 232 66Q238 120 262 200Z" fill="var(--il-mid)"/>
+<path d="M232 66Q238 120 262 200H284Q262 140 252 84Q248 64 262 44L252 40Q236 52 232 66Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M212 56Q222 54 232 66Q238 120 262 200H232Q228 150 220 110Q214 80 212 56Z" fill="var(--il-leaf)"/>
+<path d="M218 62Q226 100 236 140Q242 170 246 200" stroke="var(--il-water)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M10 80Q40 76 60 82M14 100Q30 96 44 100M160 64Q180 60 196 66M190 120Q204 118 214 124M264 60Q276 56 290 60M262 90Q276 86 292 92M270 124Q282 120 296 126M20 176Q50 170 80 176M150 180Q180 174 210 182" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M86 200Q60 176 58 158Q56 138 76 140L150 156Q170 160 170 146Q170 134 150 128L84 108Q66 102 70 92Q74 84 92 88L160 102Q178 104 178 94Q178 84 162 80L104 68Q94 64 100 58Q106 54 120 54Q150 52 170 47" stroke="var(--il-far)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 2)"/>
+<path d="M86 200Q60 176 58 158Q56 138 76 140L150 156Q170 160 170 146Q170 134 150 128L84 108Q66 102 70 92Q74 84 92 88L160 102Q178 104 178 94Q178 84 162 80L104 68Q94 64 100 58Q106 54 120 54Q150 52 170 47" stroke="var(--il-obj)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86 200Q60 176 58 158Q56 138 76 140L150 156Q170 160 170 146Q170 134 150 128L84 108Q66 102 70 92Q74 84 92 88L160 102Q178 104 178 94Q178 84 162 80L104 68Q94 64 100 58Q106 54 120 54Q150 52 170 47" stroke="var(--il-ice)" stroke-width="0.6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3 3"/>

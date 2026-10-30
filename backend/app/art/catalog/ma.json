@@ -26,6 +26,33 @@
    }
   },
   {
+   "slug": "badi-palace",
+   "label": "El Badi Palace ruined walls and pool with a stork",
+   "lat": 31.6185,
+   "lon": -7.9858,
+   "radius_km": 2,
+   "aliases": [
+    "badi palace",
+    "el badi",
+    "palais badi",
+    "palazzo badi",
+    "palazzi badi",
+    "palais el badi"
+   ],
+   "palette": {
+    "sky": "#A8C6E4",
+    "far": "#C98F68",
+    "mid": "#D9A47A",
+    "ice": "#F1EDE5",
+    "water": "#6E7A4E",
+    "near": "#2C2420",
+    "sun": "#F4C542",
+    "leaf": "#4F7A3A",
+    "acc": "#D2642E",
+    "obj": "#7A5A3C"
+   }
+  },
+  {
    "slug": "bahia-palace",
    "label": "Grand courtyard of the Bahia Palace",
    "lat": 31.6216,
@@ -104,6 +131,57 @@
     "leaf": "#4F8A3A",
     "acc": "#C2643A",
     "obj": "#B8CDF0"
+   }
+  },
+  {
+   "slug": "dades-valley",
+   "label": "Dades Gorges hairpin road",
+   "lat": 31.52,
+   "lon": -5.92,
+   "radius_km": 25,
+   "aliases": [
+    "dades",
+    "dades gorge"
+   ],
+   "palette": {
+    "sky": "#B2CFEA",
+    "far": "#CF9E78",
+    "mid": "#B4704E",
+    "ice": "#ECE6DA",
+    "water": "#6FA4A8",
+    "near": "#2A2220",
+    "sun": "#F4C542",
+    "leaf": "#6A8A3E",
+    "acc": "#8E4A34",
+    "obj": "#555C66"
+   }
+  },
+  {
+   "slug": "draa-valley",
+   "label": "Draa Valley palm grove under Jbel Kissane",
+   "lat": 30.62,
+   "lon": -6.35,
+   "radius_km": 35,
+   "aliases": [
+    "draa valley",
+    "valle del draa",
+    "vallee du draa",
+    "draa river"
+   ],
+   "names": [
+    "draa"
+   ],
+   "palette": {
+    "sky": "#BFD6EC",
+    "far": "#8F8073",
+    "mid": "#B98A62",
+    "ice": "#DCCBB0",
+    "water": "#5F8FB0",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#3F6E2E",
+    "acc": "#6E9E44",
+    "obj": "#6E4E36"
    }
   },
   {
@@ -232,6 +310,32 @@
    ]
   },
   {
+   "slug": "imlil",
+   "label": "Imlil village under the High Atlas slopes with a mule",
+   "lat": 31.137,
+   "lon": -7.919,
+   "radius_km": 10,
+   "aliases": [
+    "imlil valley",
+    "ait mizane"
+   ],
+   "names": [
+    "imlil"
+   ],
+   "palette": {
+    "sky": "#A9C8E8",
+    "far": "#C9A27E",
+    "mid": "#B5875E",
+    "ice": "#EDE4D6",
+    "water": "#5F8FB0",
+    "near": "#2B241F",
+    "sun": "#F4C542",
+    "leaf": "#5C8A3A",
+    "acc": "#D9A584",
+    "obj": "#6E5A50"
+   }
+  },
+  {
    "slug": "jemaa-el-fnaa",
    "label": "Jemaa el-Fnaa square with its food stalls and the Koutoubia",
    "lat": 31.6258,
@@ -259,6 +363,31 @@
     "leaf": "#3F7A50",
     "acc": "#B8382E",
     "obj": "#D9C2A0"
+   }
+  },
+  {
+   "slug": "kasbah-of-the-udayas",
+   "label": "Kasbah of the Udayas above the Bou Regreg mouth",
+   "lat": 34.0313,
+   "lon": -6.8366,
+   "radius_km": 2,
+   "aliases": [
+    "udaya",
+    "oudaya",
+    "oudaia",
+    "kasbah of the udayas"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#8E7C62",
+    "mid": "#C79A62",
+    "ice": "#F6F5F0",
+    "water": "#3B7FA8",
+    "near": "#23272B",
+    "sun": "#F4C542",
+    "leaf": "#5C8A3A",
+    "acc": "#D9BE8A",
+    "obj": "#2F6FC0"
    }
   },
   {
@@ -384,6 +513,34 @@
    }
   },
   {
+   "slug": "saadian-tombs",
+   "label": "Saadian Tombs mausoleum with green-tiled roofs",
+   "lat": 31.6173,
+   "lon": -7.9886,
+   "radius_km": 2,
+   "aliases": [
+    "saadian tomb",
+    "saadiane",
+    "tombeaux saadiens",
+    "tombe dei saadi",
+    "saadi tombs",
+    "saadier",
+    "sa adiane"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#C98E70",
+    "mid": "#E2AA8E",
+    "ice": "#EDE3D3",
+    "water": "#3E7F86",
+    "near": "#2B221E",
+    "sun": "#F4C542",
+    "leaf": "#4E7D3A",
+    "acc": "#3F8A62",
+    "obj": "#6B4A32"
+   }
+  },
+  {
    "slug": "skoura",
    "label": "Kasbah Amridil in the Skoura palm oasis",
    "lat": 31.056,
@@ -414,6 +571,67 @@
     "acc": "#A8744E",
     "obj": "#8A6A48"
    }
+  },
+  {
+   "slug": "tangier",
+   "label": "White medina of Tangier above the port",
+   "lat": 35.786,
+   "lon": -5.812,
+   "radius_km": 15,
+   "aliases": [
+    "tangier medina",
+    "medina of tangier",
+    "medina de tanger"
+   ],
+   "names": [
+    "tangier",
+    "tanger",
+    "tangeri",
+    "tangiers"
+   ],
+   "palette": {
+    "sky": "#A6CDEB",
+    "far": "#E3D4B6",
+    "mid": "#E6C796",
+    "ice": "#F8F6F0",
+    "water": "#2F7DA8",
+    "near": "#24292E",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3E",
+    "acc": "#CFA06A",
+    "obj": "#2F5FA8"
+   }
+  },
+  {
+   "slug": "taourirt-kasbah",
+   "label": "Taourirt Kasbah towers in Ouarzazate",
+   "lat": 30.9197,
+   "lon": -6.9086,
+   "radius_km": 3,
+   "aliases": [
+    "taourirt kasbah",
+    "kasbah taourirt",
+    "kasbah de taourirt",
+    "kasbah of taourirt",
+    "casbah taourirt"
+   ],
+   "palette": {
+    "sky": "#A7C9EC",
+    "far": "#D8C2A4",
+    "mid": "#C9855A",
+    "ice": "#F0E6D8",
+    "water": "#5F8FB0",
+    "near": "#2B221D",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3C",
+    "acc": "#D4946A",
+    "obj": "#6E4A30"
+   },
+   "names": [
+    "ouarzazate",
+    "ouarzazat",
+    "warzazat"
+   ]
   },
   {
    "slug": "todra-gorge",
@@ -461,6 +679,33 @@
     "leaf": "#5F8A42",
     "acc": "#C4C98A",
     "obj": "#D8603A"
+   }
+  },
+  {
+   "slug": "zagora",
+   "label": "Jebel Zagora with dromedaries",
+   "lat": 30.32,
+   "lon": -5.83,
+   "radius_km": 12,
+   "aliases": [
+    "jebel zagora",
+    "djebel zagora",
+    "jbel zagora"
+   ],
+   "names": [
+    "zagora"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#D2B08A",
+    "mid": "#A57A5C",
+    "ice": "#E9DCC4",
+    "water": "#5F8FB0",
+    "near": "#2A221E",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3C",
+    "acc": "#C2443A",
+    "obj": "#B98E62"
    }
   }
  ]
