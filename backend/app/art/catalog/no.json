@@ -3,6 +3,131 @@
  "name": "Norway",
  "places": [
   {
+   "slug": "a",
+   "label": "Red rorbuer and stockfish racks of A i Lofoten",
+   "lat": 67.879,
+   "lon": 12.979,
+   "radius_km": 4,
+   "aliases": [
+    "a i lofoten",
+    "aa i lofoten"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#B8B2A6",
+    "mid": "#8C8C88",
+    "ice": "#F4F2EE",
+    "water": "#2E6E78",
+    "near": "#23272B",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A44",
+    "acc": "#B02E2A",
+    "obj": "#6A5E56"
+   }
+  },
+  {
+   "slug": "akershus-fortress",
+   "label": "Akershus Fortress above Oslo harbour",
+   "lat": 59.907,
+   "lon": 10.736,
+   "radius_km": 2,
+   "aliases": [
+    "akershus fortress",
+    "akershus festning",
+    "fortezza di akershus",
+    "akershus slott",
+    "akershus castle"
+   ],
+   "names": [
+    "akershus"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#6E6C67",
+    "mid": "#B4A78F",
+    "ice": "#E4D4B2",
+    "water": "#3B6A86",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A3A",
+    "acc": "#A4553E",
+    "obj": "#6FAE93"
+   }
+  },
+  {
+   "slug": "bergen",
+   "label": "Bryggen wharf houses, Bergen",
+   "lat": 60.3975,
+   "lon": 5.3243,
+   "radius_km": 20,
+   "aliases": [
+    "bryggen"
+   ],
+   "names": [
+    "bergen"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7A3A32",
+    "mid": "#8C8A84",
+    "ice": "#F2EEE4",
+    "water": "#3E6478",
+    "near": "#26292C",
+    "sun": "#E8C24A",
+    "leaf": "#4E7A3A",
+    "acc": "#B0402F",
+    "obj": "#D0953A"
+   }
+  },
+  {
+   "slug": "dalsnibba",
+   "label": "View from Dalsnibba down to the Geirangerfjord",
+   "lat": 62.047,
+   "lon": 7.268,
+   "radius_km": 5,
+   "aliases": [
+    "dalsnibba",
+    "geiranger skywalk",
+    "nibbevegen"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#8E9AA6",
+    "mid": "#8B8A84",
+    "ice": "#F4F6F8",
+    "water": "#2F6A84",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#8DB25A",
+    "obj": "#C9C0AE"
+   }
+  },
+  {
+   "slug": "flam",
+   "label": "Flåm village at the head of the Aurlandsfjord",
+   "lat": 60.862,
+   "lon": 7.113,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "flam",
+    "flaam"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#A9B6B4",
+    "mid": "#8A8E86",
+    "ice": "#F4F4F0",
+    "water": "#2E6670",
+    "near": "#23282A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#A8392E",
+    "obj": "#2F4F86"
+   }
+  },
+  {
    "slug": "geirangerfjord",
    "label": "Geirangerfjord",
    "lat": 62.1,
@@ -22,6 +147,299 @@
     "leaf": "#4E7E3A",
     "acc": "#C8A040",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "henningsvaer",
+   "label": "Henningsvaer football pitch on the rocks",
+   "lat": 68.152,
+   "lon": 14.205,
+   "radius_km": 6,
+   "aliases": [],
+   "names": [
+    "henningsvaer",
+    "henningsv r",
+    "henningsvar"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#8C969C",
+    "mid": "#9C9A92",
+    "ice": "#F6F6F2",
+    "water": "#3C76A0",
+    "near": "#23272B",
+    "sun": "#F2C14E",
+    "leaf": "#4E9A3E",
+    "acc": "#B03A2E",
+    "obj": "#6E8A50"
+   }
+  },
+  {
+   "slug": "lofoten",
+   "label": "Reine and Olstind, Lofoten",
+   "lat": 67.93,
+   "lon": 13.09,
+   "radius_km": 25,
+   "aliases": [
+    "lofoten islands",
+    "isole lofoten"
+   ],
+   "names": [
+    "lofoten",
+    "lofotens",
+    "reine",
+    "reine lofoten",
+    "reine village"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#A7B0B4",
+    "mid": "#82888A",
+    "ice": "#F4F4F0",
+    "water": "#2F64A0",
+    "near": "#23272B",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#B23A2E",
+    "obj": "#6A6E70"
+   }
+  },
+  {
+   "slug": "naeroyfjord",
+   "label": "The narrow Nærøyfjord with a ferry and Bakka church",
+   "lat": 60.88,
+   "lon": 6.95,
+   "radius_km": 15,
+   "aliases": [
+    "naeroyfjord",
+    "naeroyfjorden",
+    "naerofjord",
+    "naeroy fjord"
+   ],
+   "palette": {
+    "sky": "#A8CDEF",
+    "far": "#9EA7AE",
+    "mid": "#7E837E",
+    "ice": "#F4F5F2",
+    "water": "#3E6676",
+    "near": "#202426",
+    "sun": "#F2C14E",
+    "leaf": "#4D7E36",
+    "acc": "#A33A2E",
+    "obj": "#3A6E9A"
+   },
+   "names": [
+    "gudvangen"
+   ]
+  },
+  {
+   "slug": "nidaros-cathedral",
+   "label": "Nidaros Cathedral west front",
+   "lat": 63.427,
+   "lon": 10.397,
+   "radius_km": 2,
+   "aliases": [
+    "nidaros",
+    "nidarosdomen",
+    "cattedrale di nidaros"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#CFCBC2",
+    "mid": "#8C948D",
+    "ice": "#E6E5DF",
+    "water": "#4A7A9A",
+    "near": "#23262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3C",
+    "acc": "#A9A08A",
+    "obj": "#5FAE8A"
+   }
+  },
+  {
+   "slug": "north-cape",
+   "label": "The North Cape globe monument on the cliff plateau",
+   "lat": 71.1711,
+   "lon": 25.784,
+   "radius_km": 6,
+   "aliases": [
+    "north cape",
+    "nordkapp",
+    "nordkap",
+    "capo nord",
+    "cabo norte",
+    "cap nord"
+   ],
+   "palette": {
+    "sky": "#B4D4F2",
+    "far": "#B9BCBC",
+    "mid": "#8E8676",
+    "ice": "#F2F2EE",
+    "water": "#2F6496",
+    "near": "#202326",
+    "sun": "#F2C14E",
+    "leaf": "#6E7A4E",
+    "acc": "#A39C8C",
+    "obj": "#6B5848"
+   }
+  },
+  {
+   "slug": "nusfjord",
+   "label": "Nusfjord's harbour with red rorbuer on stilts",
+   "lat": 68.035,
+   "lon": 13.348,
+   "radius_km": 4,
+   "aliases": [
+    "nusfjord"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#9A9890",
+    "mid": "#8E8F8A",
+    "ice": "#F4F2EC",
+    "water": "#2E7A68",
+    "near": "#25272A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A45",
+    "acc": "#A3282A",
+    "obj": "#E2B33C"
+   }
+  },
+  {
+   "slug": "oslo",
+   "label": "Oslo Opera House",
+   "lat": 59.9075,
+   "lon": 10.7531,
+   "radius_km": 20,
+   "aliases": [
+    "oslo opera",
+    "operahuset",
+    "opera house oslo",
+    "opera di oslo",
+    "oslo opera house"
+   ],
+   "names": [
+    "oslo"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#B9BEC2",
+    "mid": "#5E6670",
+    "ice": "#F2F2EE",
+    "water": "#3E5F7A",
+    "near": "#22272C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B3A",
+    "acc": "#D6D8DA",
+    "obj": "#6FA0AC"
+   }
+  },
+  {
+   "slug": "svolvaer",
+   "label": "Svolvaer harbour and Svolvaergeita",
+   "lat": 68.234,
+   "lon": 14.568,
+   "radius_km": 10,
+   "aliases": [
+    "svolvaergeita",
+    "svolvaer goat"
+   ],
+   "names": [
+    "svolvaer",
+    "svolv r",
+    "svolvar"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#B4B6B0",
+    "mid": "#6E7270",
+    "ice": "#F2F0EA",
+    "water": "#2E5878",
+    "near": "#23272B",
+    "sun": "#F2C14E",
+    "leaf": "#5E8040",
+    "acc": "#A8382C",
+    "obj": "#B07838"
+   }
+  },
+  {
+   "slug": "trollfjord",
+   "label": "The narrow Trollfjord entrance between sheer granite walls",
+   "lat": 68.358,
+   "lon": 14.938,
+   "radius_km": 6,
+   "aliases": [
+    "trollfjord",
+    "trollfjorden"
+   ],
+   "palette": {
+    "sky": "#A8CEF2",
+    "far": "#8FA88A",
+    "mid": "#9C9C92",
+    "ice": "#F2F2EE",
+    "water": "#1F3E5E",
+    "near": "#1E2224",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#E6D8A6",
+    "obj": "#5A4636"
+   }
+  },
+  {
+   "slug": "tromso",
+   "label": "Arctic Cathedral and Tromso Bridge, Tromso",
+   "lat": 69.6479,
+   "lon": 18.987,
+   "radius_km": 20,
+   "aliases": [
+    "arctic cathedral",
+    "ishavskatedralen",
+    "tromsdalen church"
+   ],
+   "names": [
+    "tromso",
+    "troms"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C4C8CA",
+    "mid": "#7C8476",
+    "ice": "#F4F6F6",
+    "water": "#3E6E96",
+    "near": "#23282C",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E44",
+    "acc": "#B5473C",
+    "obj": "#5A6A7A"
+   }
+  },
+  {
+   "slug": "trondheim",
+   "label": "Trondheim's coloured wharves on the Nidelva and the Old Town Bridge",
+   "lat": 63.4283,
+   "lon": 10.4006,
+   "radius_km": 15,
+   "aliases": [
+    "gamle bybro",
+    "old town bridge trondheim",
+    "bryggene trondheim",
+    "bakklandet"
+   ],
+   "names": [
+    "trondheim",
+    "trondhjem"
+   ],
+   "palette": {
+    "sky": "#A6CEF0",
+    "far": "#EDE9E0",
+    "mid": "#C9A26A",
+    "ice": "#F6F4EE",
+    "water": "#2B3D55",
+    "near": "#221F1D",
+    "sun": "#F2C14E",
+    "leaf": "#4A7A3E",
+    "acc": "#B7332B",
+    "obj": "#6E3A34"
    }
   }
  ]
