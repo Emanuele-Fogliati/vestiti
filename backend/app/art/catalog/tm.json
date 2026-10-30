@@ -3,6 +3,33 @@
  "name": "Turkmenistan",
  "places": [
   {
+   "slug": "arch-of-neutrality",
+   "label": "The Arch of Neutrality in Ashgabat",
+   "lat": 37.887,
+   "lon": 58.366,
+   "radius_km": 3,
+   "aliases": [
+    "arch of neutrality",
+    "neutrality arch",
+    "neutrality monument",
+    "monument of neutrality",
+    "bitaraplyk",
+    "arco della neutralita"
+   ],
+   "palette": {
+    "sky": "#AEC0EA",
+    "far": "#B3A193",
+    "mid": "#C9C3BA",
+    "ice": "#F3F1EB",
+    "water": "#6E9FB8",
+    "near": "#1E2226",
+    "sun": "#F6C543",
+    "leaf": "#56803E",
+    "acc": "#D6A42C",
+    "obj": "#46525C"
+   }
+  },
+  {
    "slug": "ashgabat",
    "label": "Independence Monument, Ashgabat",
    "lat": 37.884,
@@ -32,6 +59,96 @@
     "leaf": "#3E6A3A",
     "acc": "#D4A537",
     "obj": "#8E9290"
+   }
+  },
+  {
+   "slug": "darvaza-gas-crater",
+   "label": "The burning Darvaza gas crater in the Karakum desert",
+   "lat": 40.2525,
+   "lon": 58.4397,
+   "radius_km": 8,
+   "aliases": [
+    "darvaza",
+    "darwaza",
+    "derweze",
+    "door to hell",
+    "gates of hell",
+    "porta dell inferno"
+   ],
+   "palette": {
+    "sky": "#D8E2EA",
+    "far": "#D9C7A6",
+    "mid": "#C3A47D",
+    "ice": "#FFF4C2",
+    "water": "#7FA7B8",
+    "near": "#2B1D16",
+    "sun": "#F7B733",
+    "leaf": "#7D8A55",
+    "acc": "#E8742A",
+    "obj": "#A8401C"
+   }
+  },
+  {
+   "slug": "merv",
+   "label": "The Great Kyz Kala, Ancient Merv",
+   "lat": 37.6647,
+   "lon": 62.1577,
+   "radius_km": 8,
+   "aliases": [
+    "kyz kala",
+    "kiz kala",
+    "gyz gala"
+   ],
+   "names": [
+    "merv",
+    "marv",
+    "ancient merv",
+    "mary",
+    "mary city",
+    "mary turkmenistan"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#DCC39C",
+    "mid": "#CDAE84",
+    "ice": "#F4ECDD",
+    "water": "#6E9FB8",
+    "near": "#2E2419",
+    "sun": "#F5C542",
+    "leaf": "#8E9A62",
+    "acc": "#B8925E",
+    "obj": "#8A5A34"
+   }
+  },
+  {
+   "slug": "nisa",
+   "label": "The Parthian ruins of Old Nisa below the Kopet Dag",
+   "lat": 37.9497,
+   "lon": 58.2036,
+   "radius_km": 4,
+   "aliases": [
+    "old nisa",
+    "nisa fortress",
+    "fortresses of nisa",
+    "parthian nisa",
+    "nusay",
+    "mithradatkert",
+    "antica nisa"
+   ],
+   "names": [
+    "nisa"
+   ],
+   "palette": {
+    "sky": "#B9D3EC",
+    "far": "#CDB894",
+    "mid": "#C2A57D",
+    "ice": "#E0CDA8",
+    "water": "#6E9FB8",
+    "near": "#2C261E",
+    "sun": "#F4C542",
+    "leaf": "#8FA25E",
+    "acc": "#9C7F5A",
+    "obj": "#7F8A6E"
    }
   }
  ]
