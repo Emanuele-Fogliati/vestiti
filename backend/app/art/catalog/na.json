@@ -3,6 +3,57 @@
  "name": "Namibia",
  "places": [
   {
+   "slug": "cape-cross",
+   "label": "Cape Cross padrão and seal colony",
+   "lat": -21.77,
+   "lon": 13.95,
+   "radius_km": 6,
+   "aliases": [
+    "cape cross",
+    "kaap kruis",
+    "cape cross seal",
+    "capo cross",
+    "capo croce"
+   ],
+   "palette": {
+    "sky": "#BFD8EC",
+    "far": "#D9C4A0",
+    "mid": "#B59A78",
+    "ice": "#E8E3D8",
+    "water": "#4E8DA6",
+    "near": "#262220",
+    "sun": "#F2C14E",
+    "leaf": "#7D8A5A",
+    "acc": "#8A7462",
+    "obj": "#5E5046"
+   }
+  },
+  {
+   "slug": "damaraland",
+   "label": "Damaraland's red hills with desert elephants",
+   "lat": -20.5,
+   "lon": 14.4,
+   "radius_km": 60,
+   "aliases": [],
+   "names": [
+    "damaraland",
+    "damara land",
+    "damaraland region"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#C79A82",
+    "mid": "#A8644C",
+    "ice": "#F2EBDD",
+    "water": "#DDBE78",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#5E6B3E",
+    "acc": "#D7AE86",
+    "obj": "#8C8279"
+   }
+  },
+  {
    "slug": "deadvlei",
    "label": "Deadvlei dead trees under red dunes",
    "lat": -24.759,
@@ -78,6 +129,64 @@
    }
   },
   {
+   "slug": "fish-river-canyon",
+   "label": "Fish River Canyon: the river looping around Hell's Bend",
+   "lat": -27.59,
+   "lon": 17.6,
+   "radius_km": 40,
+   "aliases": [
+    "fish river canyon",
+    "fishriver canyon",
+    "fish river",
+    "fischfluss",
+    "fischflusscanyon",
+    "canyon del fish river",
+    "hell s bend",
+    "hells bend",
+    "hobas"
+   ],
+   "palette": {
+    "sky": "#AACDEB",
+    "far": "#B39A88",
+    "mid": "#9C6239",
+    "ice": "#D9C6A4",
+    "water": "#9CC6D6",
+    "near": "#2B231E",
+    "sun": "#F2C14E",
+    "leaf": "#7D7A44",
+    "acc": "#5F4231",
+    "obj": "#C99B55"
+   }
+  },
+  {
+   "slug": "namib-naukluft-national-park",
+   "label": "Red Namib dunes with a gemsbok in Namib-Naukluft",
+   "lat": -24.5,
+   "lon": 15.5,
+   "radius_km": 60,
+   "aliases": [
+    "namib naukluft",
+    "naukluft",
+    "deserto del namib",
+    "namib desert"
+   ],
+   "palette": {
+    "sky": "#A9CFEF",
+    "far": "#E0956A",
+    "mid": "#D2703E",
+    "ice": "#F2EEE6",
+    "water": "#DCD2AE",
+    "near": "#26211E",
+    "sun": "#F2C14E",
+    "leaf": "#8E9656",
+    "acc": "#A84E2C",
+    "obj": "#ADA192"
+   },
+   "names": [
+    "namib"
+   ]
+  },
+  {
    "slug": "spitzkoppe",
    "label": "Spitzkoppe granite peak over the Namib plain",
    "lat": -21.8297,
@@ -127,6 +236,30 @@
    }
   },
   {
+   "slug": "twyfelfontein",
+   "label": "Twyfelfontein's Lion Plate rock engravings",
+   "lat": -20.59,
+   "lon": 14.37,
+   "radius_km": 5,
+   "aliases": [
+    "twyfelfontein",
+    "ui aes",
+    "lion plate"
+   ],
+   "palette": {
+    "sky": "#9DCBEF",
+    "far": "#9A6A5C",
+    "mid": "#BA5E33",
+    "ice": "#E8C9A2",
+    "water": "#5F8FB0",
+    "near": "#2A1F1A",
+    "sun": "#F2C14E",
+    "leaf": "#8E9A5A",
+    "acc": "#7C3D27",
+    "obj": "#D8B888"
+   }
+  },
+  {
    "slug": "walvis-bay",
    "label": "Flamingos in the Walvis Bay lagoon",
    "lat": -22.98,
@@ -150,6 +283,32 @@
     "leaf": "#6F7A44",
     "acc": "#E0607A",
     "obj": "#EC94A6"
+   }
+  },
+  {
+   "slug": "waterberg-plateau",
+   "label": "Waterberg Plateau's red cliffs with a white rhino",
+   "lat": -20.5,
+   "lon": 17.24,
+   "radius_km": 20,
+   "aliases": [
+    "waterberg plateau",
+    "waterberg national park",
+    "waterberg park",
+    "plateau del waterberg",
+    "waterberg"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#8E9A7A",
+    "mid": "#B0563A",
+    "ice": "#D6CFC2",
+    "water": "#C9B57A",
+    "near": "#272320",
+    "sun": "#F2C14E",
+    "leaf": "#5F7E3A",
+    "acc": "#D08A4A",
+    "obj": "#9A958E"
    }
   },
   {
