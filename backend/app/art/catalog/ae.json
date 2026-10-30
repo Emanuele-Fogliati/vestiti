@@ -3,6 +3,29 @@
  "name": "United Arab Emirates",
  "places": [
   {
+   "slug": "burj-al-arab",
+   "label": "The Burj Al Arab sail hotel from Jumeirah beach",
+   "lat": 25.1412,
+   "lon": 55.1853,
+   "radius_km": 3,
+   "aliases": [
+    "burj al arab",
+    "burj el arab"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#A9C0D0",
+    "mid": "#EADFC6",
+    "ice": "#F6F7F7",
+    "water": "#3FB3BE",
+    "near": "#22282E",
+    "sun": "#F4C84A",
+    "leaf": "#5C8A44",
+    "acc": "#9C7A56",
+    "obj": "#4A73A2"
+   }
+  },
+  {
    "slug": "burj-khalifa",
    "label": "Burj Khalifa over the Dubai Fountain",
    "lat": 25.197,
@@ -25,6 +48,88 @@
     "leaf": "#5E8A48",
     "acc": "#C8A060",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "dubai-creek",
+   "label": "An abra on Dubai Creek below the Bur Dubai minaret and wind towers",
+   "lat": 25.2636,
+   "lon": 55.2969,
+   "radius_km": 4,
+   "aliases": [
+    "dubai creek",
+    "khor dubai",
+    "creek di dubai"
+   ],
+   "palette": {
+    "sky": "#A9D0EE",
+    "far": "#CBB089",
+    "mid": "#E2CFAC",
+    "ice": "#F4F1EA",
+    "water": "#2F78A8",
+    "near": "#2A241E",
+    "sun": "#F4C84A",
+    "leaf": "#5E8A48",
+    "acc": "#7A4A2C",
+    "obj": "#B5452E"
+   }
+  },
+  {
+   "slug": "palm-jumeirah",
+   "label": "Palm Jumeirah's fronds and Atlantis from the air",
+   "lat": 25.1124,
+   "lon": 55.139,
+   "radius_km": 5,
+   "aliases": [
+    "palm jumeirah",
+    "palma jumeirah",
+    "palm jumeira",
+    "atlantis the palm",
+    "atlantis hotel dubai"
+   ],
+   "names": [
+    "the palm"
+   ],
+   "palette": {
+    "sky": "#CFE2EE",
+    "far": "#AEB9BE",
+    "mid": "#F0E4C8",
+    "ice": "#FFFFFF",
+    "water": "#3FBDBE",
+    "near": "#22282C",
+    "sun": "#F4C84A",
+    "leaf": "#4E7E46",
+    "acc": "#C98A6A",
+    "obj": "#1E5C86"
+   }
+  },
+  {
+   "slug": "sheikh-zayed-grand-mosque",
+   "label": "Sheikh Zayed Grand Mosque's white domes and four minarets",
+   "lat": 24.4128,
+   "lon": 54.4749,
+   "radius_km": 4,
+   "aliases": [
+    "sheikh zayed grand mosque",
+    "sheikh zayed mosque",
+    "grande moschea sheikh zayed",
+    "grande moschea dello sceicco zayed",
+    "gran moschea dello sceicco zayed",
+    "moschea dello sceicco zayed",
+    "moschea sheikh zayed",
+    "grand mosque abu dhabi"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#E2DDD4",
+    "mid": "#BDB6AA",
+    "ice": "#FBFAF7",
+    "water": "#4E8FC4",
+    "near": "#2A2724",
+    "sun": "#F4C84A",
+    "leaf": "#6E9A50",
+    "acc": "#C8A060",
+    "obj": "#D4A12C"
    }
   }
  ]
