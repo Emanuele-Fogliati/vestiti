@@ -1,0 +1,13 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="46" cy="32" r="12" fill="var(--il-sun)"/>
+<g transform="translate(12 0)"><path d="M186 150V96L204 66Q213 59 222 61L232 56L240 58L250 57Q262 62 276 71Q290 78 300 82V150Z" fill="var(--il-far)"/>
+<path d="M204 66Q213 59 222 61L232 56L240 58L250 57Q262 62 276 71L268 74L263 69L256 78L249 70L243 76L236 69L228 80L220 70L212 76L201 72Z" fill="var(--il-ice)"/></g>
+<path d="M0 122Q20 114 40 116Q54 118 64 124V150H0Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-nz-tongariro-national-park-c"><path d="M-2 172V142Q78 104 124 30L134 26L146 28L158 26L168 30Q216 104 302 132V172Z"/></clipPath></defs>
+<path d="M-2 172V142Q78 104 124 30L134 26L146 28L158 26L168 30Q216 104 302 132V172Z" fill="var(--il-mid)"/>
+<path d="M90 10H180L160 34Q146 42 138 54Q128 58 122 70Q112 74 104 86L88 74Z" fill="var(--il-obj)" clip-path="url(#il-nz-tongariro-national-park-c)"/>
+<path d="M168 30Q216 104 302 132V172H220Q206 100 168 30Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M154 28Q152 56 160 84Q168 110 182 136" stroke="var(--il-far)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M138 34Q130 70 116 120M118 56Q100 96 70 136M184 60Q204 100 236 140" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V168Q50 164 100 168Q160 164 210 168Q260 164 300 168V200Z" fill="var(--il-leaf)"/>
+<path d="M0 200V186Q40 182 80 186Q130 182 180 187Q240 182 300 186V200Z" fill="var(--il-acc)"/>

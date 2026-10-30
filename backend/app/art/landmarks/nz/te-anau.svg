@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="256" cy="24" r="11" fill="var(--il-sun)"/>
+<path d="M0 100V60Q24 52 46 56Q74 46 102 52Q130 58 158 50Q196 42 236 54Q268 60 300 56V100Z" fill="var(--il-far)"/>
+<path d="M0 100V76Q28 66 56 70Q86 56 116 50Q138 48 158 58Q186 70 216 72Q256 78 300 76V100Z" fill="var(--il-mid)"/>
+<path d="M0 100V88Q40 80 80 86Q120 90 160 83Q200 78 240 86Q272 90 300 88V100Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 200V98H300V200Z" fill="var(--il-water)"/>
+<path d="M76 118V140M100 118V140M124 118V140M148 118V142M172 118V144M206 118V150M230 118V150M254 118V148M278 118V146" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M76 122L100 138M100 122L76 138M100 122L124 138M124 122L100 138M124 122L148 138M148 122L124 138M206 122L230 148M230 122L206 148M230 122L254 146M254 122L230 146" stroke="var(--il-obj)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M70 120V115H296V120Z" fill="var(--il-obj)"/>
+<path d="M200 116V86H290V116Z" fill="var(--il-acc)"/>
+<path d="M192 87L206 74H284L298 87Z" fill="var(--il-near)"/>
+<path d="M210 92H234V104H210ZM250 92H270V104H250Z" fill="var(--il-near)"/>
+<path d="M60 200Q150 176 220 160Q262 150 300 144V200Z" fill="var(--il-ice)"/>
+<path d="M80 200Q160 182 226 168Q266 160 300 156V200Z" fill="var(--il-leaf)"/>
+<path d="M96 196Q100 192 106 195ZM140 186Q145 182 151 185ZM250 160Q256 156 262 159Z" fill="var(--il-far)"/>
+<g transform="translate(196 192) scale(1.3)"><path vector-effect="non-scaling-stroke" d="M-3 -6L-4 0M6 -6L7 0" stroke="var(--il-acc)" stroke-width="2.5" fill="none" stroke-linecap="round"/><path vector-effect="non-scaling-stroke" d="M-16 -14Q-16 -22 -12 -25Q-14 -32 -8 -34Q-2 -34 -1 -28Q-1 -24 4 -22Q18 -22 22 -12Q22 -5 14 -4Q0 -2 -8 -6Q-16 -8 -16 -14Z" fill="var(--il-water)"/><path vector-effect="non-scaling-stroke" d="M-3 -19Q6 -24 17 -19Q23 -13 18 -7Q8 -5 -2 -9Q-6 -14 -3 -19Z" fill="var(--il-mid)"/><path vector-effect="non-scaling-stroke" d="M-8 -34Q-14 -33 -21 -26Q-17 -23 -11 -24Q-11 -29 -8 -34Z" fill="var(--il-acc)"/></g>
