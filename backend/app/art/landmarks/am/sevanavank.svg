@@ -1,0 +1,24 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 118V110Q20 104 40 108Q60 102 80 108Q120 104 160 110Q200 102 240 108Q270 100 300 106V118Z" fill="var(--il-obj)"/>
+<path d="M0 120V116Q150 112 300 116V120Z" fill="var(--il-far)"/>
+<path d="M0 200V119H300V200Z" fill="var(--il-water)"/>
+<path d="M70 184V128L120 100L170 124V184Z" fill="var(--il-mid)"/>
+<path d="M170 184V122H204V184Z" fill="var(--il-mid)"/>
+<path d="M170 122H204V184H170Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M78 124L82 102H194L200 122Z" fill="var(--il-acc)"/>
+<path d="M66 129L120 97L174 123L171 126L120 103L69 132ZM166 124L172 119H202L207 124Z" fill="var(--il-acc)"/>
+<path d="M109 104V75H165V104Z" fill="var(--il-mid)"/>
+<path d="M152 75H165V104H152Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M106 77L137 34L168 77Z" fill="var(--il-acc)"/>
+<path d="M137 34L168 77H152Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M137 34V24M134 28H140" stroke="var(--il-near)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M135 98V86Q137 82 139 86V98ZM117 98V88Q118.5 85 120 88V98ZM186 160V146Q188 142 190 146V160ZM86 176V160Q88 156 90 160V176Z" fill="var(--il-near)"/>
+<path d="M72 140H168M72 152H168M72 164H168M172 140H202M172 152H202M172 164H202M112 84H150M112 94H150" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M222 160V128L238 118L254 126V160ZM254 160V124H268V160Z" fill="var(--il-mid)"/>
+<path d="M254 124H268V160H254Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M219 129L238 116L256 127L254 129L238 120L222 131ZM252 125L256 121H268L270 125Z" fill="var(--il-acc)"/>
+<path d="M236 124V112H256V124Z" fill="var(--il-mid)"/>
+<path d="M234 113L246 96L258 113Z" fill="var(--il-acc)"/>
+<path d="M246 96V91" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M0 200V190Q30 184 60 181L208 178Q216 162 226 156Q260 150 300 148V200Z" fill="var(--il-leaf)"/>
