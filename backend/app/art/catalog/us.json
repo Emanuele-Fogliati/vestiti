@@ -3,6 +3,54 @@
  "name": "United States",
  "places": [
   {
+   "slug": "9-11-memorial",
+   "label": "9/11 Memorial pool and One World Trade Center",
+   "lat": 40.7115,
+   "lon": -74.0134,
+   "radius_km": 2,
+   "aliases": [
+    "9 11 memorial",
+    "911 memorial",
+    "memorial 9 11",
+    "ground zero",
+    "september 11 memorial"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#A6BCCF",
+    "mid": "#C6C3BB",
+    "ice": "#F3F5F5",
+    "water": "#4A585C",
+    "near": "#1E2124",
+    "sun": "#F4C542",
+    "leaf": "#6E9450",
+    "acc": "#C7A46A",
+    "obj": "#3C3836"
+   }
+  },
+  {
+   "slug": "alcatraz-island",
+   "label": "Alcatraz Island from San Francisco Bay",
+   "lat": 37.8267,
+   "lon": -122.423,
+   "radius_km": 3,
+   "aliases": [
+    "alcatraz"
+   ],
+   "palette": {
+    "sky": "#A8CBEC",
+    "far": "#8E9E8C",
+    "mid": "#CFC8B6",
+    "ice": "#F1EFE8",
+    "water": "#3F7598",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#4E6B3E",
+    "acc": "#BDB29A",
+    "obj": "#A8473A"
+   }
+  },
+  {
    "slug": "anchorage",
    "label": "Downtown Anchorage and the Chugach Mountains",
    "lat": 61.217,
@@ -85,6 +133,103 @@
    }
   },
   {
+   "slug": "badwater-basin",
+   "label": "Badwater Basin salt flat, Death Valley",
+   "lat": 36.2297,
+   "lon": -116.7672,
+   "radius_km": 5,
+   "aliases": [
+    "badwater"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#8A87A6",
+    "mid": "#7A5E4C",
+    "ice": "#F4F1EA",
+    "water": "#7FA9B8",
+    "near": "#2A2420",
+    "sun": "#F4C542",
+    "leaf": "#6E8A50",
+    "acc": "#9C5A44",
+    "obj": "#B9A48A"
+   }
+  },
+  {
+   "slug": "beverly-hills",
+   "label": "Palm-lined drive in Beverly Hills",
+   "lat": 34.0736,
+   "lon": -118.4004,
+   "radius_km": 4,
+   "aliases": [
+    "beverly drive"
+   ],
+   "names": [
+    "beverly hills"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#E2DACB",
+    "mid": "#8C8C8A",
+    "ice": "#F6F4EE",
+    "water": "#C0623E",
+    "near": "#22261E",
+    "sun": "#F4C542",
+    "leaf": "#4D7F3E",
+    "acc": "#8C7860",
+    "obj": "#E8B830"
+   }
+  },
+  {
+   "slug": "bozeman",
+   "label": "Hotel Baxter on Main Street, Bozeman, with the Bridger Range",
+   "lat": 45.6796,
+   "lon": -111.0378,
+   "radius_km": 15,
+   "aliases": [
+    "hotel baxter",
+    "baxter hotel"
+   ],
+   "names": [
+    "bozeman",
+    "bozeman montana"
+   ],
+   "palette": {
+    "sky": "#A9CCEF",
+    "far": "#8E9AAB",
+    "mid": "#DCCDAE",
+    "ice": "#F1EADB",
+    "water": "#C3B08F",
+    "near": "#23262B",
+    "sun": "#F4C542",
+    "leaf": "#5E8C3A",
+    "acc": "#B5603F",
+    "obj": "#2F6B4F"
+   }
+  },
+  {
+   "slug": "brooklyn-bridge",
+   "label": "Brooklyn Bridge and Lower Manhattan",
+   "lat": 40.7061,
+   "lon": -73.9969,
+   "radius_km": 2,
+   "aliases": [
+    "brooklyn bridge",
+    "ponte di brooklyn"
+   ],
+   "palette": {
+    "sky": "#AED3F2",
+    "far": "#93A7BC",
+    "mid": "#CDBFA4",
+    "ice": "#EAE3D2",
+    "water": "#3D6F94",
+    "near": "#262628",
+    "sun": "#F4C542",
+    "leaf": "#5E8C46",
+    "acc": "#94694F",
+    "obj": "#6F8FB2"
+   }
+  },
+  {
    "slug": "bryce-canyon-national-park",
    "label": "Hoodoos of the Bryce Amphitheater with Thor's Hammer",
    "lat": 37.6227,
@@ -105,6 +250,30 @@
     "leaf": "#3F6A3A",
     "acc": "#EFC6A2",
     "obj": "#C25B38"
+   }
+  },
+  {
+   "slug": "canyonlands-national-park",
+   "label": "Mesa Arch framing the canyon, Canyonlands National Park",
+   "lat": 38.3893,
+   "lon": -109.8681,
+   "radius_km": 30,
+   "aliases": [
+    "canyonlands",
+    "mesa arch",
+    "island in the sky"
+   ],
+   "palette": {
+    "sky": "#A9D0F0",
+    "far": "#9AA4B8",
+    "mid": "#B8653A",
+    "ice": "#E6CFA8",
+    "water": "#C2DCF0",
+    "near": "#2A2220",
+    "sun": "#F4C542",
+    "leaf": "#6E7C46",
+    "acc": "#E27A30",
+    "obj": "#D29A6C"
    }
   },
   {
@@ -168,7 +337,9 @@
    "aliases": [
     "death valley national park",
     "valle della morte",
-    "parco nazionale della valle della morte"
+    "parco nazionale della valle della morte",
+    "zabriskie point",
+    "zabriski point"
    ],
    "names": [
     "death valley"
@@ -209,6 +380,29 @@
     "leaf": "#6E7A3E",
     "acc": "#B8B85A",
     "obj": "#5A3E2C"
+   }
+  },
+  {
+   "slug": "el-capitan",
+   "label": "El Capitan from El Capitan Meadow, Yosemite",
+   "lat": 37.734,
+   "lon": -119.6378,
+   "radius_km": 4,
+   "aliases": [
+    "el capitan",
+    "el capitan meadow"
+   ],
+   "palette": {
+    "sky": "#92C3EC",
+    "far": "#C8B57E",
+    "mid": "#C9C6BE",
+    "ice": "#EEECE6",
+    "water": "#4E7E96",
+    "near": "#1F2622",
+    "sun": "#F4C542",
+    "leaf": "#2E5A36",
+    "acc": "#8A6848",
+    "obj": "#9C9A93"
    }
   },
   {
@@ -260,6 +454,87 @@
    }
   },
   {
+   "slug": "fifth-avenue",
+   "label": "Fifth Avenue with St. Patrick's spires and the Empire State Building",
+   "lat": 40.7587,
+   "lon": -73.9776,
+   "radius_km": 2,
+   "aliases": [
+    "fifth avenue",
+    "5th avenue",
+    "fifth ave",
+    "5th ave",
+    "5 strada",
+    "quinta strada"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#D8CAB0",
+    "mid": "#B6B2A8",
+    "ice": "#EFEBE1",
+    "water": "#4F7FA8",
+    "near": "#22252A",
+    "sun": "#F4C542",
+    "leaf": "#4E7A44",
+    "acc": "#A65E48",
+    "obj": "#86888A"
+   }
+  },
+  {
+   "slug": "fishermans-wharf",
+   "label": "Fisherman's Wharf crab wheel sign, San Francisco",
+   "lat": 37.808,
+   "lon": -122.4177,
+   "radius_km": 2,
+   "aliases": [
+    "fisherman s wharf",
+    "fishermans wharf",
+    "fisherman wharf",
+    "fisherman warf",
+    "fishermans warf"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#9C9C98",
+    "mid": "#C9BFAE",
+    "ice": "#EFE8CF",
+    "water": "#2F79B8",
+    "near": "#24221F",
+    "sun": "#F4C542",
+    "leaf": "#4F7A5E",
+    "acc": "#E8582E",
+    "obj": "#5E4A3A"
+   }
+  },
+  {
+   "slug": "glacier-national-park",
+   "label": "St. Mary Lake and Wild Goose Island, Glacier National Park",
+   "lat": 48.675,
+   "lon": -113.61,
+   "radius_km": 40,
+   "aliases": [
+    "glacier national park",
+    "parco nazionale glacier",
+    "parco nazionale di glacier",
+    "wild goose island"
+   ],
+   "names": [
+    "glacier"
+   ],
+   "palette": {
+    "sky": "#AACFEF",
+    "far": "#B3BCCE",
+    "mid": "#7E8091",
+    "ice": "#F5F4EE",
+    "water": "#3F8DB0",
+    "near": "#1E2828",
+    "sun": "#F4C542",
+    "leaf": "#2F5E3A",
+    "acc": "#94503F",
+    "obj": "#B6A576"
+   }
+  },
+  {
    "slug": "golden-gate-bridge",
    "label": "Golden Gate Bridge, San Francisco",
    "lat": 37.82,
@@ -304,6 +579,28 @@
     "leaf": "#5E6E3E",
     "acc": "#C0663E",
     "obj": "#E0A060"
+   }
+  },
+  {
+   "slug": "grand-central-terminal",
+   "label": "Grand Central Terminal, New York",
+   "lat": 40.7527,
+   "lon": -73.9772,
+   "radius_km": 2,
+   "aliases": [
+    "grand central"
+   ],
+   "palette": {
+    "sky": "#BBD7EE",
+    "far": "#A4A8AA",
+    "mid": "#D6CAB0",
+    "ice": "#ECE6D6",
+    "water": "#8C8B86",
+    "near": "#26262A",
+    "sun": "#F4C542",
+    "leaf": "#7FA898",
+    "acc": "#D2A845",
+    "obj": "#6E5A48"
    }
   },
   {
@@ -469,6 +766,31 @@
     "leaf": "#56703E",
     "acc": "#A8D2E6",
     "obj": "#30363A"
+   }
+  },
+  {
+   "slug": "lake-havasu-city",
+   "label": "London Bridge, Lake Havasu City",
+   "lat": 34.4717,
+   "lon": -114.3477,
+   "radius_km": 15,
+   "aliases": [
+    "lake havasu"
+   ],
+   "names": [
+    "lake havasu city"
+   ],
+   "palette": {
+    "sky": "#BCDCF2",
+    "far": "#B08A6A",
+    "mid": "#BDB29E",
+    "ice": "#DCD3C0",
+    "water": "#3E9AA0",
+    "near": "#2A2826",
+    "sun": "#F4C542",
+    "leaf": "#4E7E3A",
+    "acc": "#D8C49C",
+    "obj": "#C8402F"
    }
   },
   {
@@ -743,6 +1065,32 @@
    }
   },
   {
+   "slug": "portland",
+   "label": "Portland skyline with Mount Hood from Pittock Mansion",
+   "lat": 45.52,
+   "lon": -122.68,
+   "radius_km": 20,
+   "aliases": [
+    "pittock mansion"
+   ],
+   "names": [
+    "portland",
+    "portland oregon"
+   ],
+   "palette": {
+    "sky": "#C4DCF0",
+    "far": "#8DA4C0",
+    "mid": "#6F7F98",
+    "ice": "#FFFFFF",
+    "water": "#7C9CB4",
+    "near": "#1F2630",
+    "sun": "#F3C44B",
+    "leaf": "#3F5E3A",
+    "acc": "#C8867E",
+    "obj": "#E9E4D8"
+   }
+  },
+  {
    "slug": "san-diego",
    "label": "California Tower, Balboa Park, San Diego",
    "lat": 32.7317,
@@ -958,6 +1306,35 @@
     "leaf": "#4E7E3E",
     "acc": "#EBD6A8",
     "obj": "#A89E8E"
+   }
+  },
+  {
+   "slug": "washington-d-c",
+   "label": "Washington Monument and the Reflecting Pool, Washington, D.C.",
+   "lat": 38.8895,
+   "lon": -77.0353,
+   "radius_km": 20,
+   "aliases": [
+    "washington monument",
+    "lincoln memorial reflecting pool"
+   ],
+   "names": [
+    "washington",
+    "washington dc",
+    "washington d c",
+    "washington district of columbia"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#DDD6C6",
+    "mid": "#E6DCC8",
+    "ice": "#F6F4EE",
+    "water": "#6E93AE",
+    "near": "#23272A",
+    "sun": "#F4C542",
+    "leaf": "#3F6B37",
+    "acc": "#B5523B",
+    "obj": "#7FAA4E"
    }
   },
   {
