@@ -123,6 +123,9 @@ export const api = {
     req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null }),
 
   /** "Dress me for this trip" on a route of the globe. No date: the next good month (or the month given), a guess. */
+  /** A trip from the places picked on the globe: whole cities and single sights inside them. */
+  pickedTrip: (places: string[], month: number | null = null) =>
+    req<Trip>("POST", "/api/globe/trip", { places, month }),
   routeTrip: (id: string, opts: { start_date?: string; month?: number | null } = {}) =>
     req<Trip>("POST", `/api/globe/routes/${encodeURIComponent(id)}/trip`, { start_date: opts.start_date || null, month: opts.month ?? null }),
 

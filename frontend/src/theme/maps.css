@@ -84,3 +84,33 @@
 
 /* the route card's buttons stay in reach while its stops scroll */
 .rcard .pcard-acts{position:sticky;bottom:0;background:var(--surface);padding:10px 0 4px;margin-top:0;box-shadow:0 -10px 12px -10px rgba(13,13,13,.12)}
+
+/* the places inside a city, on its card; each can go into your trip on its own */
+.pcard-note{margin:-4px 0 0}
+.pcard-inside{list-style:none;padding:0;margin:0;display:grid;gap:4px}
+.pcard-inside li{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.pcard-in-name{all:unset;cursor:pointer;flex:1;min-width:0;padding:6px 2px;font-size:14px;display:flex;align-items:center;gap:8px}
+.pcard-in-name:hover,.pcard-in-name:focus-visible{text-decoration:underline;text-underline-offset:3px}
+.pcard-dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--rule-strong)}
+.pcard-dot.art{background:var(--accent);box-shadow:0 0 0 1.5px var(--ink)}
+.pcard-add{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:16px;line-height:1}
+.pcard-add.on{background:var(--ink);color:var(--bg)}
+.pcard .btn.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* your trip, picked on the globe: cities and the places inside them */
+.globe-trip{position:absolute;z-index:3;left:16px;bottom:24px;width:min(320px,calc(100% - 32px));max-height:calc(100% - 200px);overflow:auto;
+  background:var(--surface);border-radius:var(--radius);padding:14px 16px;display:grid;gap:8px;
+  box-shadow:0 2px 6px rgba(13,13,13,.08),0 18px 40px rgba(13,13,13,.16)}
+.globe-trip .label{margin:0}
+.globe-trip ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14px}
+.globe-trip li{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.globe-trip .pcard-add{width:24px;height:24px;font-size:11px}
+.globe-trip-sum{display:none;margin:0;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (min-width:600px){.globe.has-trip .globe-tools{left:352px}}
+@media (max-width:599px){
+  .globe-trip{left:10px;right:10px;bottom:10px;width:auto;padding:10px 14px;gap:6px}
+  .globe-trip ol{display:none}
+  .globe-trip-sum{display:block!important}
+  .globe.open .globe-trip{display:none}
+  .globe.has-trip .globe-tools{bottom:118px}
+}

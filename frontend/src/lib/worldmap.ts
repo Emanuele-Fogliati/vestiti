@@ -20,6 +20,9 @@ export interface GlobePlace {
   artLabel: string | null;
   /** Indexes into GlobeData.itineraries: ready-made itineraries that stop here. */
   itineraries: number[];
+  /** Id of the city or town this place is inside (the Uffizi is in Florence), else null.
+   *  From far away only the city shows; its places appear once you zoom on it. */
+  parent: string | null;
 }
 
 export interface GlobeData {
@@ -27,7 +30,7 @@ export interface GlobeData {
   places: GlobePlace[];
 }
 
-type Row = [string, string, string, PlaceKind, number, number, number, string | null, string | null, number[]];
+type Row = [string, string, string, PlaceKind, number, number, number, string | null, string | null, number[], string | null];
 
 let cache: Promise<GlobeData> | null = null;
 
@@ -38,8 +41,8 @@ export function loadPlaces(): Promise<GlobeData> {
       .then((r) => { if (!r.ok) throw new Error(`places: ${r.status}`); return r.json(); })
       .then((d: { itineraries: GlobeData["itineraries"]; places: Row[] }) => ({
         itineraries: d.itineraries,
-        places: d.places.map(([id, name, country, kind, lat, lon, level, art, artLabel, itineraries]) =>
-          ({ id, name, country, kind, lat, lon, level, art, artLabel, itineraries })),
+        places: d.places.map(([id, name, country, kind, lat, lon, level, art, artLabel, itineraries, parent]) =>
+          ({ id, name, country, kind, lat, lon, level, art, artLabel, itineraries, parent: parent ?? null })),
       }));
     cache.catch(() => { cache = null; });
   }
@@ -120,6 +123,45 @@ export function minZoom(level: number): number {
   return [5.6, 4.6, 3.6, 2.6, 1.6, 0][l - 1];
 }
 
+/** The zoom from which the places inside a city show: once the city fills the screen. The
+ *  most visited sights first (Qorikancha before the Twelve-Angled Stone). */
+export function insideZoom(level: number): number {
+  const l = Math.min(6, Math.max(1, Math.round(level)));
+  return 10.5 + (6 - l) * 0.5;
+}
+
+/** The zoom from which a place shows on the map: a city by how visited it is, a place inside a
+ *  city only when you are close to that city. */
+export function placeZoom(p: Pick<GlobePlace, "level" | "parent">): number {
+  return p.parent ? insideZoom(p.level) : minZoom(p.level);
+}
+
+/** The places inside each city, most visited first: { "it-florence": [Uffizi, ...] }. */
+export function insideOf(places: GlobePlace[]): Map<string, GlobePlace[]> {
+  const out = new Map<string, GlobePlace[]>();
+  for (const p of places) {
+    if (!p.parent) continue;
+    const l = out.get(p.parent);
+    if (l) l.push(p); else out.set(p.parent, [p]);
+  }
+  for (const l of out.values()) l.sort((a, b) => b.level - a.level);
+  return out;
+}
+
+/** Where a scene's picture sits at this zoom, and which place it opens. Zoomed on a city, the
+ *  picture sits on the sight it shows (the Colosseum); from far away on the city (Rome). A city
+ *  with no scene of its own shows the scene of a place inside it from far away (Kathmandu shows
+ *  Boudhanath), so no picture is lost; tapping it opens the place it shows. */
+export function sceneAnchor(owners: GlobePlace[], zoom: number, byId: Map<string, GlobePlace>):
+  { at: GlobePlace; opens: GlobePlace; own: boolean } | null {
+  const child = owners.find((o) => o.parent && zoom >= insideZoom(o.level));
+  if (child) return { at: child, opens: child, own: true };
+  const top = owners.find((o) => !o.parent);
+  if (top) return { at: top, opens: top, own: true };
+  const city = owners[0]?.parent ? byId.get(owners[0].parent) : undefined;
+  return city ? { at: city, opens: owners[0], own: false } : null;
+}
+
 export const SIGHT_KINDS: PlaceKind[] = ["landmark", "nature", "island", "region"];
 
 export function placesGeoJSON(places: GlobePlace[], opts: { boost?: (p: GlobePlace) => number } = {}): FeatureCollection {
@@ -132,7 +174,8 @@ export function placesGeoJSON(places: GlobePlace[], opts: { boost?: (p: GlobePla
       properties: {
         i, name: p.name, kind: p.kind, level: p.level, art: p.art ? 1 : 0,
         sight: SIGHT_KINDS.includes(p.kind) ? 1 : 0,
-        z: Math.max(0, minZoom(p.level) - (opts.boost?.(p) ?? 0)),
+        top: p.parent ? 0 : 1, // a city's name wins over the names of the places inside it
+        z: Math.max(0, placeZoom(p) - (opts.boost?.(p) ?? 0)),
       },
     })),
   };
@@ -275,7 +318,7 @@ export function placeLayers(c: MapColors, source = "places"): StyleSpecification
         "text-field": ["get", "name"], "text-font": FONT_BOLD,
         "text-size": ["interpolate", ["linear"], ["get", "level"], 1, 11, 6, 13.5],
         "text-variable-anchor": ["left", "right", "top", "bottom"], "text-radial-offset": 0.75,
-        "text-justify": "auto", "text-max-width": 9, "symbol-sort-key": ["-", 0, ["get", "level"]],
+        "text-justify": "auto", "text-max-width": 9, "symbol-sort-key": ["-", 0, ["+", ["get", "level"], ["*", 10, ["coalesce", ["get", "top"], 1]]]],
         "text-optional": true,
       },
       paint: { "text-color": c.ink, "text-halo-color": c.halo, "text-halo-width": 1.6 } },
