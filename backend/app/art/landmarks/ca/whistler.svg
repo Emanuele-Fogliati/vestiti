@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="46" cy="32" r="11" fill="var(--il-sun)"/>
+<path d="M62 88L64 76L67 74L68 64L76 64L78 74L80 78L82 88Z" fill="var(--il-obj)"/>
+<defs><clipPath id="il-ca-whistler-range"><path d="M0 132V102L14 96L30 98L46 90L62 86L82 86L98 94L120 98L146 90L170 96L196 88L222 94L250 88L276 94L300 90V132Z"/></clipPath></defs>
+<path d="M0 132V102L14 96L30 98L46 90L62 86L82 86L98 94L120 98L146 90L170 96L196 88L222 94L250 88L276 94L300 90V132Z" fill="var(--il-far)"/>
+<path d="M0 80H300V96L286 100L272 98L258 104L244 96L230 102L214 98L200 104L184 98L170 104L156 98L140 104L124 102L110 106L96 100L86 96L70 92L56 98L44 102L30 104L16 102L0 108Z" fill="var(--il-ice)" clip-path="url(#il-ca-whistler-range)"/>
+<path d="M0 150V120Q40 116 80 122Q140 116 200 122Q250 118 300 122V150Z" fill="var(--il-leaf)"/>
+<path d="M120 158V110H138V158ZM154 158V110H172V158Z" fill="var(--il-mid)"/>
+<path d="M116 112L118 90H172L176 112Z" fill="var(--il-mid)"/>
+<path d="M94 90L97 72L196 69L200 88Z" fill="var(--il-mid)"/>
+<path d="M132 72L134 48H158L161 72Z" fill="var(--il-mid)"/>
+<path d="M98 76L196 73M120 100L172 100M128 122L130 150M162 122L164 150" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V146Q40 136 80 142Q110 150 140 150Q180 148 210 144Q260 140 300 150V200Z" fill="var(--il-ice)"/>
+<path d="M200 176Q240 168 300 172M0 182Q50 176 90 180" stroke="var(--il-far)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>

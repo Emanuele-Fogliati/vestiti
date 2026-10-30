@@ -3,12 +3,76 @@
  "name": "Croatia",
  "places": [
   {
+   "slug": "brac",
+   "label": "Pucisca harbour on the island of Brac",
+   "lat": 43.3478,
+   "lon": 16.7339,
+   "radius_km": 20,
+   "aliases": [
+    "pucisca",
+    "brac island",
+    "otok brac",
+    "isola di brazza"
+   ],
+   "names": [
+    "brac",
+    "brazza"
+   ],
+   "palette": {
+    "sky": "#B6D6F0",
+    "far": "#B9AE98",
+    "mid": "#DCD2BA",
+    "ice": "#F5F2EA",
+    "water": "#3D7C9C",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6A36",
+    "acc": "#C65A3C",
+    "obj": "#2F5FA8"
+   }
+  },
+  {
+   "slug": "diocletians-palace",
+   "label": "The Peristyle of Diocletian's Palace, Split",
+   "lat": 43.5081,
+   "lon": 16.4402,
+   "radius_km": 2,
+   "aliases": [
+    "diocletian s palace",
+    "diocletians palace",
+    "diocletian palace",
+    "dioklecijanova palaca",
+    "palaca dioklecijana",
+    "palazzo di diocleziano",
+    "peristil"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#9C8E78",
+    "mid": "#E4D9C2",
+    "ice": "#F3EEE3",
+    "water": "#3A8BB0",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E4A",
+    "acc": "#B9573A",
+    "obj": "#B49690"
+   }
+  },
+  {
    "slug": "dubrovnik",
    "label": "Walls of Dubrovnik",
    "lat": 42.641,
    "lon": 18.108,
    "radius_km": 8,
-   "aliases": [],
+   "aliases": [
+    "walls of dubrovnik",
+    "dubrovnik city walls",
+    "dubrovnik city wall",
+    "dubrovacke zidine",
+    "mura di dubrovnik",
+    "dubrovnik walls"
+   ],
    "names": [
     "dubrovnik"
    ],
@@ -23,6 +87,125 @@
     "leaf": "#7E8A8E",
     "acc": "#D8693E",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "hvar",
+   "label": "Hvar Town harbour and the Pakleni islands from the Fortica",
+   "lat": 43.172,
+   "lon": 16.441,
+   "radius_km": 15,
+   "aliases": [
+    "hvar town",
+    "hvar island",
+    "fortica hvar",
+    "spanjola",
+    "spanish fortress hvar"
+   ],
+   "names": [
+    "hvar",
+    "lesina",
+    "isola di hvar",
+    "otok hvar",
+    "grad hvar"
+   ],
+   "palette": {
+    "sky": "#BCDBF2",
+    "far": "#E2D8C2",
+    "mid": "#D8CCB2",
+    "ice": "#F4F0E6",
+    "water": "#2F86B8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6B36",
+    "acc": "#D4683F",
+    "obj": "#FFFFFF"
+   }
+  },
+  {
+   "slug": "korcula",
+   "label": "Korcula old town from the sea",
+   "lat": 42.9617,
+   "lon": 17.1358,
+   "radius_km": 15,
+   "aliases": [
+    "korcula town",
+    "korcula old town",
+    "korcula island",
+    "curzola"
+   ],
+   "names": [
+    "korcula",
+    "grad korcula",
+    "otok korcula"
+   ],
+   "palette": {
+    "sky": "#9CCBF2",
+    "far": "#A4A89C",
+    "mid": "#D8CCB2",
+    "ice": "#F0EBDF",
+    "water": "#2E6FB0",
+    "near": "#262626",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#C9653E",
+    "obj": "#BDB29C"
+   }
+  },
+  {
+   "slug": "lokrum",
+   "label": "Lokrum island from Dubrovnik",
+   "lat": 42.626,
+   "lon": 18.121,
+   "radius_km": 2,
+   "aliases": [
+    "lokrum",
+    "otok lokrum",
+    "isola di lacroma",
+    "lacroma"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#DAD4C6",
+    "mid": "#C9BFA8",
+    "ice": "#EFE9DC",
+    "water": "#2C6EB4",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#33602F",
+    "acc": "#D86A3C",
+    "obj": "#8E969C"
+   }
+  },
+  {
+   "slug": "mount-srd",
+   "label": "Mount Srd and the Dubrovnik cable car",
+   "lat": 42.6475,
+   "lon": 18.1125,
+   "radius_km": 2,
+   "aliases": [
+    "mount srd",
+    "mt srd",
+    "monte srd",
+    "srd hill",
+    "brdo srd",
+    "dubrovnik cable car",
+    "cable car dubrovnik"
+   ],
+   "names": [
+    "srd"
+   ],
+   "palette": {
+    "sky": "#B3D3F2",
+    "far": "#C9B68F",
+    "mid": "#B5B1A4",
+    "ice": "#F2EEE6",
+    "water": "#3A7FB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E34",
+    "acc": "#E0662A",
+    "obj": "#C65A3E"
    }
   },
   {
@@ -45,6 +228,124 @@
     "leaf": "#3E7A3A",
     "acc": "#C8A040",
     "obj": "#A8B878"
+   }
+  },
+  {
+   "slug": "split",
+   "label": "Split's Riva and the St Domnius bell tower",
+   "lat": 43.508,
+   "lon": 16.44,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "split",
+    "spalato",
+    "split old town",
+    "split city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A9AEB2",
+    "mid": "#E2D6BC",
+    "ice": "#F4F0E6",
+    "water": "#3A8BB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E3A",
+    "acc": "#D2693E",
+    "obj": "#F4F0E6"
+   }
+  },
+  {
+   "slug": "trogir",
+   "label": "Trogir's Riva, cathedral bell tower and Kamerlengo fortress",
+   "lat": 43.5167,
+   "lon": 16.2497,
+   "radius_km": 8,
+   "aliases": [
+    "trogir old town",
+    "kamerlengo"
+   ],
+   "names": [
+    "trogir",
+    "trau"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#98896A",
+    "mid": "#DCCFB4",
+    "ice": "#F2EEE4",
+    "water": "#2E8C93",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E3A",
+    "acc": "#D0603A",
+    "obj": "#CDBF9F"
+   }
+  },
+  {
+   "slug": "zadar",
+   "label": "Zadar's Land Gate over the Fosa harbour",
+   "lat": 44.1112,
+   "lon": 15.2337,
+   "radius_km": 12,
+   "aliases": [
+    "land gate zadar",
+    "zadar land gate",
+    "kopnena vrata",
+    "porta terraferma",
+    "fosa zadar"
+   ],
+   "names": [
+    "zadar",
+    "zara",
+    "zadar old town"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#A39C8A",
+    "mid": "#E6DCC4",
+    "ice": "#F6F2E8",
+    "water": "#2F7F98",
+    "near": "#262626",
+    "sun": "#F2C14E",
+    "leaf": "#4B7A3A",
+    "acc": "#C8603A",
+    "obj": "#FFFFFF"
+   }
+  },
+  {
+   "slug": "zagreb",
+   "label": "St. Mark's Church, Zagreb",
+   "lat": 45.8164,
+   "lon": 15.9734,
+   "radius_km": 15,
+   "aliases": [
+    "st mark s church zagreb",
+    "crkva svetog marka",
+    "crkva sv marka",
+    "st mark s square zagreb",
+    "markov trg",
+    "trg svetog marka"
+   ],
+   "names": [
+    "zagreb",
+    "zagabria",
+    "zagreb city",
+    "zagreb upper town",
+    "gornji grad"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#C9C1B2",
+    "mid": "#E3D8C4",
+    "ice": "#F7F5F0",
+    "water": "#3A7FB0",
+    "near": "#262626",
+    "sun": "#F2C14E",
+    "leaf": "#3C6C58",
+    "acc": "#C8352E",
+    "obj": "#4071B8"
    }
   }
  ]
