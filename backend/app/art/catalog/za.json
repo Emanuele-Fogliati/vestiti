@@ -124,7 +124,9 @@
     "capo di buona speranza",
     "kaap die goeie hoop",
     "cabo da boa esperanca",
-    "cabo de buena esperanza"
+    "cabo de buena esperanza",
+    "penisola del capo",
+    "kaapse skiereiland"
    ],
    "palette": {
     "sky": "#B2D3F0",
@@ -137,7 +139,10 @@
     "leaf": "#4F7436",
     "acc": "#3CB8B0",
     "obj": "#C79C88"
-   }
+   },
+   "names": [
+    "cape peninsula"
+   ]
   },
   {
    "slug": "cape-point",
@@ -186,6 +191,105 @@
     "leaf": "#6E8A4A",
     "acc": "#E8DCC0",
     "obj": "#F2EEE6"
+   }
+  },
+  {
+   "slug": "cederberg",
+   "label": "Wolfberg Arch in the Cederberg mountains",
+   "lat": -32.46,
+   "lon": 19.22,
+   "radius_km": 40,
+   "aliases": [
+    "cederberg",
+    "cedarberg",
+    "wolfberg arch",
+    "wolfberg cracks"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#9AA0B4",
+    "mid": "#C99A62",
+    "ice": "#F2E6CF",
+    "water": "#3E7FA8",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E5632",
+    "acc": "#8E8A5C",
+    "obj": "#E3D3B5"
+   }
+  },
+  {
+   "slug": "hazyview",
+   "label": "Thatched lodges and a hippo on the Sabie River at Hazyview",
+   "lat": -25.05,
+   "lon": 31.13,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "hazyview"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E8E8C",
+    "mid": "#55732F",
+    "ice": "#FFFFFF",
+    "water": "#4E7F8A",
+    "near": "#26241F",
+    "sun": "#F2C14E",
+    "leaf": "#7BA83C",
+    "acc": "#C4A266",
+    "obj": "#9A4A32"
+   }
+  },
+  {
+   "slug": "hermanus",
+   "label": "Southern right whale tail in Walker Bay below the Hermanus mountains",
+   "lat": -34.42,
+   "lon": 19.24,
+   "radius_km": 12,
+   "aliases": [
+    "walker bay"
+   ],
+   "names": [
+    "hermanus"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8F9BAB",
+    "mid": "#6E7A7A",
+    "ice": "#FFFFFF",
+    "water": "#1F6E92",
+    "near": "#23272A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#B8463A",
+    "obj": "#CDBFA4"
+   }
+  },
+  {
+   "slug": "hluhluwe-imfolozi-park",
+   "label": "White rhinos in the green hills of Hluhluwe-iMfolozi Park",
+   "lat": -28.2,
+   "lon": 31.95,
+   "radius_km": 30,
+   "aliases": [
+    "hluhluwe",
+    "imfolozi",
+    "umfolozi",
+    "hluhluwe imfolozi",
+    "hluhluwe umfolozi"
+   ],
+   "palette": {
+    "sky": "#B8D2EC",
+    "far": "#8FA68E",
+    "mid": "#8C8781",
+    "ice": "#FFFFFF",
+    "water": "#4E7F8A",
+    "near": "#26241F",
+    "sun": "#F2C14E",
+    "leaf": "#4F7E34",
+    "acc": "#9BB25A",
+    "obj": "#A47A55"
    }
   },
   {
@@ -315,6 +419,31 @@
     "leaf": "#6E9A3E",
     "acc": "#A8644A",
     "obj": "#C8342E"
+   }
+  },
+  {
+   "slug": "robben-island",
+   "label": "Robben Island lighthouse with Table Mountain across the bay",
+   "lat": -33.806,
+   "lon": 18.366,
+   "radius_km": 4,
+   "aliases": [
+    "robben island",
+    "robbeneiland",
+    "isola di robben",
+    "nelson mandela prison"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E97AA",
+    "mid": "#8C9460",
+    "ice": "#FFFFFF",
+    "water": "#2F6FA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#56703C",
+    "acc": "#C8323A",
+    "obj": "#E2DCCB"
    }
   },
   {
