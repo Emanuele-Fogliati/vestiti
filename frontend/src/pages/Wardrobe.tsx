@@ -88,8 +88,8 @@ function MatchList({ list, onPick }: { list: ModelMatch[]; onPick: (m: ModelMatc
   );
 }
 
-function SearchByName({ onPick }: { onPick: (m: ModelMatch) => void }) {
-  const [q, setQ] = useState("");
+function SearchByName({ onPick, seed = "" }: { onPick: (m: ModelMatch) => void; seed?: string }) {
+  const [q, setQ] = useState(seed);
   const [res, setRes] = useState<ModelMatch[] | null>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
@@ -130,7 +130,7 @@ function SearchByName({ onPick }: { onPick: (m: ModelMatch) => void }) {
   );
 }
 
-function FromPhotos({ onPick }: { onPick: (m: ModelMatch) => void }) {
+function FromPhotos({ onPick, onSearch }: { onPick: (m: ModelMatch) => void; onSearch: (q: string) => void }) {
   const [status, setStatus] = useState<{ available: boolean } | null>(null);
   const [kind, setKind] = useState<string | null>(null);
   const [shots, setShots] = useState<(Blob | null)[]>([]);
@@ -221,6 +221,10 @@ function FromPhotos({ onPick }: { onPick: (m: ModelMatch) => void }) {
             <p className="small">{reading.seen.label_readable ? "We read the label but this model isn't in our list yet." : "Without a readable label we can't name the exact model."}{" "}
               Here is what the photos show: check it and add it.</p>
           )}
+          {/* a logo alone does not name the model: the traveller often remembers it */}
+          <button type="button" className="btn" onClick={() => onSearch(reading.seen.brand ?? "")}>
+            {reading.seen.brand ? `Not here? Search ${reading.seen.brand} models by name` : "Search by name instead"}
+          </button>
           {reading.described && (
             <button type="button" className="btn" onClick={() => onPick(reading.described!)}>
               {reading.results.length ? "None of these: use what the photos show" : `Use: ${reading.described.name}, ${summary(reading.described).toLowerCase()}`}
@@ -243,6 +247,7 @@ export default function Wardrobe() {
   });
   const [mode, setMode] = useState<"name" | "photo" | "hand">(params.get("slot") ? "hand" : "name");
   const [picked, setPicked] = useState<ModelMatch | null>(null);
+  const [nameSeed, setNameSeed] = useState({ q: "", n: 0 });
   const [editId, setEditId] = useState<string | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
@@ -329,9 +334,9 @@ export default function Wardrobe() {
               </div>
             )}
             {/* kept mounted, so "Back" returns to the same results and photos */}
-            <div hidden={mode !== "name" || !!picked || !!editId}><SearchByName onPick={(m) => pick(m, "search")} /></div>
+            <div hidden={mode !== "name" || !!picked || !!editId}><SearchByName key={nameSeed.n} seed={nameSeed.q} onPick={(m) => pick(m, "search")} /></div>
             {mode === "photo" || picked?.source === "photo" || form.added_via === "photo" ? (
-              <div hidden={mode !== "photo" || !!picked || !!editId}><FromPhotos onPick={(m) => pick(m, "photo")} /></div>
+              <div hidden={mode !== "photo" || !!picked || !!editId}><FromPhotos onPick={(m) => pick(m, "photo")} onSearch={(q) => { setNameSeed((s) => ({ q: q ? `${q} ` : "", n: s.n + 1 })); setMode("name"); }} /></div>
             ) : null}
             {mode === "hand" && (
               <form className="form" onSubmit={save}>
