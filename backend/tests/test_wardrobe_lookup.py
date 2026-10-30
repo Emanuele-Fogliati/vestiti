@@ -213,7 +213,42 @@ def test_recognize_brand_only_lists_that_brands_models(client, monkeypatch):
         "text_seen": ["THE NORTH FACE", "100% POLYESTER"], "brand": "The North Face", "model": None,
         "category": "mid_top"})
     res = _send(client).json()["results"]
-    assert res and all(r["brand"] == "The North Face" and r["category"] == "mid_top" for r in res)
+    tops = {"shell_top", "insulation_top", "mid_top", "base_top"}
+    assert res and all(r["brand"] == "The North Face" and r["category"] in tops for r in res)
+    assert res[0]["category"] == "mid_top"  # the model's guess first
+
+
+def test_recognize_wrong_kind_guess_keeps_the_right_models(client, monkeypatch):
+    # tested on real photos: an Arc'teryx Atom (insulated) was read as a shell jacket
+    guest(client)
+    monkeypatch.setattr(wardrobe_api, "read_garment", lambda i, h: {
+        "text_seen": ["ARCTERYX"], "brand": "ARCTERYX", "model": None, "category": "shell_top"})
+    names = [r["name"] for r in _send(client).json()["results"]]
+    assert names[0].startswith(("Beta", "Alpha", "Zeta", "Squamish"))
+    assert any(n.startswith("Atom") for n in names), names
+
+
+def test_photo_status_needs_the_vision_model_itself(client, monkeypatch):
+    # tested on Manu's PC: Ollama with only the text model said "available"
+    guest(client)
+    from app.config import get_settings
+    monkeypatch.setattr(get_settings(), "llm_enabled", True)
+    listed = {"ids": ["hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M"]}
+
+    class FakeClient:
+        def __init__(self, *a, **k): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def get(self, path):
+            return httpx.Response(200, json={"data": [{"id": i} for i in listed["ids"]]},
+                                  request=httpx.Request("GET", "http://x" + path))
+    monkeypatch.setattr(wardrobe_api.httpx, "Client", FakeClient)
+    wardrobe_api._photo_status_cache.clear()
+    assert client.get("/api/wardrobe/photo-status").json()["available"] is False
+    listed["ids"].append("qwen3-vl:8b-instruct")
+    wardrobe_api._photo_status_cache.clear()
+    assert client.get("/api/wardrobe/photo-status").json()["available"] is True
+    wardrobe_api._photo_status_cache.clear()
 
 
 def test_recognize_checks_the_photos(client, monkeypatch):
