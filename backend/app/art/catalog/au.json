@@ -3,6 +3,35 @@
  "name": "Australia",
  "places": [
   {
+   "slug": "brisbane",
+   "label": "Brisbane's Story Bridge and CBD skyline over the river",
+   "lat": -27.4635,
+   "lon": 153.0355,
+   "radius_km": 20,
+   "aliases": [
+    "story bridge"
+   ],
+   "names": [
+    "brisbane",
+    "meanjin",
+    "meeanjin",
+    "brisbane city",
+    "brisbane cbd"
+   ],
+   "palette": {
+    "sky": "#8EC6F0",
+    "far": "#DCE2E8",
+    "mid": "#AEBAC6",
+    "ice": "#F2F2EE",
+    "water": "#9A8E66",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#2E3C52",
+    "obj": "#6E7A86"
+   }
+  },
+  {
    "slug": "cradle-mountain",
    "label": "Cradle Mountain over Dove Lake with the boatshed",
    "lat": -41.684,
@@ -146,6 +175,31 @@
     "leaf": "#4E7E3A",
     "acc": "#C8A090",
     "obj": "#3E7E4A"
+   }
+  },
+  {
+   "slug": "twelve-apostles",
+   "label": "The Twelve Apostles limestone stacks",
+   "lat": -38.6625,
+   "lon": 143.1045,
+   "radius_km": 5,
+   "aliases": [
+    "twelve apostles",
+    "12 apostles",
+    "12 apostoli",
+    "dodici apostoli"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#D8B47E",
+    "mid": "#DCC296",
+    "ice": "#F4F0E6",
+    "water": "#2C7E9C",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A56",
+    "acc": "#B89468",
+    "obj": "#5AAEB4"
    }
   },
   {
