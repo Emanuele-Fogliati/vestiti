@@ -3,6 +3,137 @@
  "name": "Turkey",
  "places": [
   {
+   "slug": "anitkabir",
+   "label": "Anitkabir, the mausoleum of Ataturk in Ankara",
+   "lat": 39.925,
+   "lon": 32.837,
+   "radius_km": 3,
+   "aliases": [
+    "anitkabir",
+    "ataturk mausoleum",
+    "ataturk s mausoleum",
+    "mausoleum of ataturk",
+    "mausoleo di ataturk"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#B9B1A2",
+    "mid": "#D2B47E",
+    "ice": "#E4D9C2",
+    "water": "#4E8EB0",
+    "near": "#26221E",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#D9A63A",
+    "obj": "#4A4640"
+   },
+   "names": [
+    "ankara"
+   ]
+  },
+  {
+   "slug": "antalya",
+   "label": "Antalya's old harbour and the Beydağları mountains",
+   "lat": 36.884,
+   "lon": 30.703,
+   "radius_km": 20,
+   "aliases": [
+    "antalya harbour",
+    "antalya marina",
+    "porto di antalya"
+   ],
+   "names": [
+    "antalya"
+   ],
+   "palette": {
+    "sky": "#B5DAF5",
+    "far": "#8E9DB6",
+    "mid": "#CDB892",
+    "ice": "#F7F4EE",
+    "water": "#2B9CBA",
+    "near": "#22282E",
+    "sun": "#F4C542",
+    "leaf": "#4F8A3E",
+    "acc": "#C8623C",
+    "obj": "#8A5A34"
+   }
+  },
+  {
+   "slug": "anzac-cove",
+   "label": "The Sphinx above Anzac Cove",
+   "lat": 40.247,
+   "lon": 26.278,
+   "radius_km": 3,
+   "aliases": [
+    "anzac cove",
+    "anzac koyu",
+    "ari burnu"
+   ],
+   "palette": {
+    "sky": "#A9D3F2",
+    "far": "#ECCF96",
+    "mid": "#D8A863",
+    "ice": "#F6F0E2",
+    "water": "#2F86B0",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#5E803F",
+    "acc": "#E8D6AC",
+    "obj": "#B8864A"
+   }
+  },
+  {
+   "slug": "balat",
+   "label": "The colourful houses of Balat",
+   "lat": 41.029,
+   "lon": 28.948,
+   "radius_km": 2,
+   "aliases": [
+    "balat"
+   ],
+   "palette": {
+    "sky": "#BFDDF3",
+    "far": "#B9B2A8",
+    "mid": "#8E8A86",
+    "ice": "#F4F1EA",
+    "water": "#1F8A86",
+    "near": "#24262B",
+    "sun": "#F2C84B",
+    "leaf": "#9FC48A",
+    "acc": "#E5782E",
+    "obj": "#3593DC"
+   }
+  },
+  {
+   "slug": "basilica-cistern",
+   "label": "Columns of the Basilica Cistern, Istanbul",
+   "lat": 41.0084,
+   "lon": 28.9779,
+   "radius_km": 2,
+   "aliases": [
+    "basilica cistern",
+    "basilica cisterna",
+    "cisterna basilica",
+    "yerebatan",
+    "binbirdirek",
+    "cistern of istanbul",
+    "cisterna di istanbul",
+    "sunken palace"
+   ],
+   "palette": {
+    "sky": "#F4D9B0",
+    "far": "#B4552A",
+    "mid": "#D07A3A",
+    "ice": "#F4B45A",
+    "water": "#2A120C",
+    "near": "#1C120E",
+    "sun": "#F2C14E",
+    "leaf": "#6E7A3A",
+    "acc": "#E09A50",
+    "obj": "#7E3A1C"
+   }
+  },
+  {
    "slug": "cappadocia",
    "label": "Balloons over the fairy chimneys of Cappadocia",
    "lat": 38.64,
@@ -24,6 +155,92 @@
     "leaf": "#8AA058",
     "acc": "#D84A3A",
     "obj": "#8A6E5A"
+   }
+  },
+  {
+   "slug": "devrent-valley",
+   "label": "Camel Rock in Devrent Valley, Cappadocia",
+   "lat": 38.6743,
+   "lon": 34.8875,
+   "radius_km": 3,
+   "aliases": [
+    "devrent",
+    "dervent valley",
+    "valle di dervent",
+    "imagination valley",
+    "camel rock",
+    "valle dell immaginazione",
+    "hayal vadisi"
+   ],
+   "palette": {
+    "sky": "#92C2EA",
+    "far": "#A9AAB2",
+    "mid": "#D49C6A",
+    "ice": "#F0E0C6",
+    "water": "#6A9AC0",
+    "near": "#2E2420",
+    "sun": "#F2C14E",
+    "leaf": "#8A8A50",
+    "acc": "#E2C29C",
+    "obj": "#8C5C3E"
+   }
+  },
+  {
+   "slug": "gallipoli",
+   "label": "Canakkale Martyrs' Memorial on the Gallipoli peninsula",
+   "lat": 40.0497,
+   "lon": 26.2206,
+   "radius_km": 30,
+   "aliases": [
+    "gallipoli peninsula",
+    "gelibolu peninsula",
+    "gallipoli battlefields",
+    "penisola di gallipoli",
+    "canakkale martyrs memorial",
+    "sehitler abidesi",
+    "canakkale sehitler abidesi",
+    "canakkale sehitleri aniti"
+   ],
+   "names": [
+    "gallipoli",
+    "gelibolu"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A3A878",
+    "mid": "#B9B3A6",
+    "ice": "#DDD8CC",
+    "water": "#2F6FA8",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#3E6436",
+    "acc": "#C8303A",
+    "obj": "#8A8476"
+   }
+  },
+  {
+   "slug": "golden-horn",
+   "label": "The Golden Horn from Pierre Loti hill",
+   "lat": 41.04,
+   "lon": 28.94,
+   "radius_km": 4,
+   "aliases": [
+    "golden horn",
+    "halic",
+    "corno d oro",
+    "pierre loti"
+   ],
+   "palette": {
+    "sky": "#C9E0F2",
+    "far": "#C7C4BE",
+    "mid": "#D9CCB8",
+    "ice": "#F6F3EE",
+    "water": "#3E6E9C",
+    "near": "#24292E",
+    "sun": "#F3C54A",
+    "leaf": "#4D7A3A",
+    "acc": "#C0603E",
+    "obj": "#6E7B8C"
    }
   },
   {
@@ -54,6 +271,41 @@
    }
   },
   {
+   "slug": "izmir",
+   "label": "Izmir Clock Tower and Yali Mosque on Konak Square",
+   "lat": 38.4189,
+   "lon": 27.1287,
+   "radius_km": 20,
+   "aliases": [
+    "izmir clock tower",
+    "saat kulesi izmir",
+    "izmir saat kulesi",
+    "konak square",
+    "konak meydani",
+    "piazza konak",
+    "yali mosque",
+    "konak mosque"
+   ],
+   "names": [
+    "izmir",
+    "smirne",
+    "smyrna",
+    "izmir city"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#C7CBD1",
+    "mid": "#D9B888",
+    "ice": "#F1E5CC",
+    "water": "#6F8EA8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A36",
+    "acc": "#C8303A",
+    "obj": "#B8AC9A"
+   }
+  },
+  {
    "slug": "pamukkale",
    "label": "Travertine terraces of Pamukkale",
    "lat": 37.921,
@@ -74,6 +326,86 @@
     "leaf": "#5E8A48",
     "acc": "#C8A060",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "spice-bazaar",
+   "label": "Striped arches and spice stalls of the Spice Bazaar, Istanbul",
+   "lat": 41.0166,
+   "lon": 28.9706,
+   "radius_km": 2,
+   "aliases": [
+    "spice bazaar",
+    "spice market istanbul",
+    "egyptian bazaar",
+    "misir carsisi",
+    "bazar egiziano",
+    "bazar delle spezie",
+    "mercato egiziano",
+    "mercato delle spezie",
+    "gran bazar delle spezie"
+   ],
+   "palette": {
+    "sky": "#F4E6C4",
+    "far": "#F0DCA8",
+    "mid": "#E8B428",
+    "ice": "#F6F0E2",
+    "water": "#D8682A",
+    "near": "#26201C",
+    "sun": "#F2C14E",
+    "leaf": "#7E8C2E",
+    "acc": "#B82A28",
+    "obj": "#6E4628"
+   }
+  },
+  {
+   "slug": "suleymaniye-mosque",
+   "label": "The Süleymaniye Mosque above the Golden Horn",
+   "lat": 41.016,
+   "lon": 28.964,
+   "radius_km": 2,
+   "aliases": [
+    "suleymaniye",
+    "moschea di solimano"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#9AA4B0",
+    "mid": "#E2DACB",
+    "ice": "#F6F2EA",
+    "water": "#2D7D98",
+    "near": "#25282D",
+    "sun": "#F4C542",
+    "leaf": "#5A8A3E",
+    "acc": "#C4643F",
+    "obj": "#1F4E8C"
+   }
+  },
+  {
+   "slug": "uchisar-castle",
+   "label": "Uchisar Castle rock, Cappadocia",
+   "lat": 38.6305,
+   "lon": 34.8053,
+   "radius_km": 3,
+   "aliases": [
+    "uchisar",
+    "ucisar",
+    "castello di uchisar",
+    "cittadella di uchisar",
+    "uchisar castle",
+    "uchisar kalesi"
+   ],
+   "palette": {
+    "sky": "#98C4EC",
+    "far": "#B4ACA6",
+    "mid": "#CDB59C",
+    "ice": "#EEE6D8",
+    "water": "#5A8EC0",
+    "near": "#2C2622",
+    "sun": "#F2C14E",
+    "leaf": "#A2A266",
+    "acc": "#D8C6A6",
+    "obj": "#A88E78"
    }
   }
  ]
