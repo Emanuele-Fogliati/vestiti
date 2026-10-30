@@ -3,6 +3,104 @@
  "name": "New Zealand",
  "places": [
   {
+   "slug": "arrowtown",
+   "label": "Buckingham Street shopfronts under the autumn hill, Arrowtown",
+   "lat": -44.9416,
+   "lon": 168.8306,
+   "radius_km": 6,
+   "aliases": [
+    "arrowtown"
+   ],
+   "palette": {
+    "sky": "#C2DCF1",
+    "far": "#B07A3E",
+    "mid": "#F0ECDF",
+    "ice": "#CBBE9E",
+    "water": "#B5C4A4",
+    "near": "#23262B",
+    "sun": "#F4C64A",
+    "leaf": "#D8A436",
+    "acc": "#B94B2B",
+    "obj": "#8E9398"
+   }
+  },
+  {
+   "slug": "huka-falls",
+   "label": "The turquoise chute of Huka Falls",
+   "lat": -38.6487,
+   "lon": 176.09,
+   "radius_km": 3,
+   "aliases": [
+    "huka falls",
+    "huka fall",
+    "cascate huka",
+    "cascate di huka",
+    "hukafalls"
+   ],
+   "names": [
+    "huka"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#B9BBAE",
+    "mid": "#4A4840",
+    "ice": "#F6FBFB",
+    "water": "#3EC0CF",
+    "near": "#1E2224",
+    "sun": "#F4C64A",
+    "leaf": "#4E6E3A",
+    "acc": "#C9B26A",
+    "obj": "#2F5E8C"
+   }
+  },
+  {
+   "slug": "kaikoura",
+   "label": "Whale fluke and fur seal under the Seaward Kaikoura Range",
+   "lat": -42.4,
+   "lon": 173.68,
+   "radius_km": 20,
+   "aliases": [
+    "kaikoura"
+   ],
+   "palette": {
+    "sky": "#BCD9F2",
+    "far": "#9DB585",
+    "mid": "#7487A0",
+    "ice": "#FFFFFF",
+    "water": "#2B5D8F",
+    "near": "#1E2630",
+    "sun": "#F4C64A",
+    "leaf": "#4F6E5E",
+    "acc": "#D8D0BC",
+    "obj": "#3B3F46"
+   }
+  },
+  {
+   "slug": "lake-tekapo",
+   "label": "Church of the Good Shepherd on Lake Tekapo",
+   "lat": -44.0046,
+   "lon": 170.4777,
+   "radius_km": 20,
+   "aliases": [
+    "tekapo",
+    "church of the good shepherd",
+    "good shepherd church",
+    "chiesa del buon pastore"
+   ],
+   "palette": {
+    "sky": "#9FCBEF",
+    "far": "#A99C8C",
+    "mid": "#9E8E78",
+    "ice": "#FFFFFF",
+    "water": "#3DBCC6",
+    "near": "#24262A",
+    "sun": "#F4C64A",
+    "leaf": "#8E9C4E",
+    "acc": "#D7AE5C",
+    "obj": "#4B5059"
+   }
+  },
+  {
    "slug": "milford-sound",
    "label": "Mitre Peak, Milford Sound",
    "lat": -44.64,
@@ -23,6 +121,63 @@
     "leaf": "#3A5E34",
     "acc": "#6E8A3E",
     "obj": "#B8B2A4"
+   }
+  },
+  {
+   "slug": "taupo",
+   "label": "Lake Taupo with Ruapehu and Ngauruhoe across the water",
+   "lat": -38.8,
+   "lon": 175.95,
+   "radius_km": 25,
+   "aliases": [
+    "lake taupo",
+    "lago taupo",
+    "lago di taupo"
+   ],
+   "names": [
+    "taupo"
+   ],
+   "palette": {
+    "sky": "#BBD8F0",
+    "far": "#9BB2CB",
+    "mid": "#6E86A4",
+    "ice": "#FFFFFF",
+    "water": "#2F6FA8",
+    "near": "#1F2833",
+    "sun": "#F4C64A",
+    "leaf": "#4F6E62",
+    "acc": "#D9CDB2",
+    "obj": "#2B3E5C"
+   }
+  },
+  {
+   "slug": "waitomo-caves",
+   "label": "Waitomo Glowworm Cave mouth over the stream",
+   "lat": -38.261,
+   "lon": 175.1036,
+   "radius_km": 6,
+   "aliases": [
+    "waitomo cave",
+    "waitomo glowworm",
+    "waitomo glow worm",
+    "grotte di waitomo",
+    "grotta di waitomo",
+    "ruakuri cave"
+   ],
+   "names": [
+    "waitomo"
+   ],
+   "palette": {
+    "sky": "#BFDDF3",
+    "far": "#A39C8A",
+    "mid": "#2E2B28",
+    "ice": "#8DC36A",
+    "water": "#2F6A5E",
+    "near": "#161616",
+    "sun": "#F4C64A",
+    "leaf": "#3E6E36",
+    "acc": "#6FE3E6",
+    "obj": "#8A8F94"
    }
   }
  ]

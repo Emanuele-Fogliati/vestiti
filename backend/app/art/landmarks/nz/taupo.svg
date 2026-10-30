@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="32" r="11" fill="var(--il-sun)"/>
+<path d="M0 126V106Q22 100 44 106L62 112V126ZM258 126Q276 102 300 100V126Z" fill="var(--il-far)"/>
+<path d="M184 126Q208 114 220 96L231 72H237L248 96Q258 110 274 114L284 106Q292 101 300 104V126Z" fill="var(--il-mid)"/>
+<path d="M237 72L248 96Q258 110 274 114V126H248Q244 98 237 72Z" fill="var(--il-near)" opacity="0.3"/>
+<defs><clipPath id="il-nz-taupo-ruapehu"><path d="M8 126Q36 116 58 104Q76 92 88 80L96 74L104 72L110 66L118 68L126 63L134 66L142 60L150 64L158 62L166 66L174 70Q186 80 198 94Q206 104 214 110L222 126Z"/></clipPath></defs>
+<path d="M8 126Q36 116 58 104Q76 92 88 80L96 74L104 72L110 66L118 68L126 63L134 66L142 60L150 64L158 62L166 66L174 70Q186 80 198 94Q206 104 214 110L222 126Z" fill="var(--il-mid)"/>
+<path clip-path="url(#il-nz-taupo-ruapehu)" d="M70 50H210V100L200 92L194 98L186 86L178 94L170 84L162 92L154 82L146 92L138 84L130 94L122 86L112 96L104 88L94 98L86 92L76 100L70 96Z" fill="var(--il-ice)"/>
+<path d="M150 64L158 62L166 66L174 70Q186 80 198 94Q206 104 214 110L222 126H180Q174 90 150 64Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 130V114Q18 106 36 110Q52 116 62 124L150 124Q164 116 182 115Q200 115 212 124H300V130Z" fill="var(--il-leaf)"/>
+<path d="M0 200V128H300V200Z" fill="var(--il-water)"/>
+<path d="M82 150H96L94 153H84ZM130 156H146L144 159H132ZM190 147H202L200 150H192Z" fill="var(--il-obj)"/>
+<path d="M88 149V133L82 149ZM90 149V135L95 149ZM137 155V137L131 155ZM139 155V139L145 155ZM195 146V132L190 146ZM197 146V134L201 146Z" fill="var(--il-ice)"/>
+<path d="M0 200V188Q60 181 130 191Q148 195 158 200Z" fill="var(--il-acc)"/>
+<path d="M216 178Q214 171 222 170Q234 168 242 172Q246 176 242 179H220Q216 179 216 178ZM213 171L220 170L218 175Z" fill="var(--il-near)"/>
+<path d="M238 172Q234 162 240 156Q243 152 247 154" stroke="var(--il-near)" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M247 154L252 156" stroke="var(--il-sun)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>

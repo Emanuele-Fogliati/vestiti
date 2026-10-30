@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="252" cy="30" r="13" fill="var(--il-sun)"/>
+<path d="M0 100V84Q30 79 62 82Q92 77 122 79Q162 72 202 75Q240 70 272 75L300 73V100Z" fill="var(--il-far)"/>
+<path d="M0 200V96H300V200Z" fill="var(--il-water)"/>
+<path d="M0 104V96H300V104Z" fill="var(--il-obj)"/>
+<path d="M0 116V106Q40 102 82 103L112 100Q142 98 172 101Q186 103 178 107Q132 107 92 110Q44 113 0 120Z" fill="var(--il-ice)"/>
+<path d="M0 104Q36 104 64 108Q34 118 24 142Q16 170 34 200H0Z" fill="var(--il-acc)"/>
+<path d="M30 112Q20 140 30 162Q50 184 112 190Q180 194 232 188Q272 184 300 190V200H0V200Q20 172 18 144Q20 122 30 112Z" fill="var(--il-ice)"/>
+<path d="M0 200V170Q12 186 40 194Q60 198 84 200Z" fill="var(--il-acc)"/>
+<path d="M98 132L104 120Q108 112 118 110L126 100Q136 92 146 95L156 89Q168 89 172 98L182 102Q192 108 194 118L200 132Z" fill="var(--il-mid)"/>
+<path d="M172 98L182 102Q192 108 194 118L200 132H184Q186 116 172 98Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M126 104L136 112M150 96L156 106M114 120L128 122M160 112L172 118" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M84 136Q90 128 102 127L198 126Q214 128 220 136Q202 143 152 143Q106 143 84 136Z" fill="var(--il-ice)"/>
+<g transform="translate(60 42) scale(0.8)">
+<path d="M196 163Q200 156 212 156L240 157Q250 157 255 153L258 148L262 150L260 156Q256 163 240 164L204 165Z" fill="var(--il-acc)"/>
+<path d="M226 157H236V164H226Z" fill="var(--il-obj)"/>
+<circle cx="192" cy="158" r="6" fill="var(--il-acc)"/>
+<path d="M186 159Q185 151 193 152Q188 155 189 161Z" fill="var(--il-near)"/>
+<path d="M204 158L210 147M214 158L222 148" stroke="var(--il-acc)" stroke-width="2.4" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M204 149L211 131L233 134L226 152Z" fill="var(--il-ice)"/>
+<path d="M222 133L215 151" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+</g>
+<path d="M40 170Q70 182 112 186M150 188Q200 190 240 184" stroke="var(--il-acc)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
