@@ -3,12 +3,43 @@
  "name": "United Kingdom",
  "places": [
   {
+   "slug": "belfast",
+   "label": "Titanic Belfast and the Harland & Wolff cranes",
+   "lat": 54.6081,
+   "lon": -5.9099,
+   "radius_km": 15,
+   "aliases": [
+    "titanic belfast",
+    "titanic quarter",
+    "samson and goliath"
+   ],
+   "names": [
+    "belfast"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#C9C4BA",
+    "mid": "#B4B8BE",
+    "ice": "#F4F4F2",
+    "water": "#4E8C8C",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A4A",
+    "acc": "#B0682E",
+    "obj": "#E2B02A"
+   }
+  },
+  {
    "slug": "edinburgh",
    "label": "Edinburgh Castle on Castle Rock",
    "lat": 55.949,
    "lon": -3.2,
    "radius_km": 12,
-   "aliases": [],
+   "aliases": [
+    "edinburgh castle",
+    "castello di edimburgo",
+    "castle rock edinburgh"
+   ],
    "names": [
     "edinburgh",
     "edimburgo"
@@ -24,6 +55,107 @@
     "leaf": "#4E7E3A",
     "acc": "#7EA552",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "giants-causeway",
+   "label": "Giant's Causeway basalt columns",
+   "lat": 55.2408,
+   "lon": -6.5116,
+   "radius_km": 4,
+   "aliases": [
+    "giant s causeway",
+    "giants causeway",
+    "giant causeway",
+    "selciato del gigante"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#B39478",
+    "mid": "#7E6450",
+    "ice": "#F2EEE6",
+    "water": "#3E6F92",
+    "near": "#262320",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4A",
+    "acc": "#C8B060",
+    "obj": "#4E4A46"
+   }
+  },
+  {
+   "slug": "glencoe",
+   "label": "Buachaille Etive Mor at the head of Glen Coe",
+   "lat": 56.647,
+   "lon": -4.9,
+   "radius_km": 20,
+   "aliases": [
+    "glencoe",
+    "glen coe",
+    "buachaille etive mor",
+    "buachaille"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#8E96A0",
+    "mid": "#6E6E72",
+    "ice": "#F2F0EA",
+    "water": "#4E7E9E",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9446",
+    "acc": "#B89A60",
+    "obj": "#7E4E32"
+   }
+  },
+  {
+   "slug": "isle-of-skye",
+   "label": "Sligachan Old Bridge and the Black Cuillin, Isle of Skye",
+   "lat": 57.288,
+   "lon": -6.172,
+   "radius_km": 40,
+   "aliases": [
+    "sligachan",
+    "cuillin"
+   ],
+   "names": [
+    "skye",
+    "isle of skye",
+    "isola di skye"
+   ],
+   "palette": {
+    "sky": "#B4D0EC",
+    "far": "#7E8C66",
+    "mid": "#5E6672",
+    "ice": "#EDE6D8",
+    "water": "#5A7E96",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9446",
+    "acc": "#B8622E",
+    "obj": "#77726A"
+   }
+  },
+  {
+   "slug": "loch-ness",
+   "label": "Loch Ness with Nessie",
+   "lat": 57.3,
+   "lon": -4.45,
+   "radius_km": 20,
+   "aliases": [
+    "loch ness",
+    "nessie"
+   ],
+   "palette": {
+    "sky": "#B7D3EE",
+    "far": "#8496B0",
+    "mid": "#55693F",
+    "ice": "#F2F0EA",
+    "water": "#3E5E8C",
+    "near": "#23282C",
+    "sun": "#F2C14E",
+    "leaf": "#6F8A4C",
+    "acc": "#A89A80",
+    "obj": "#3F5A46"
    }
   },
   {
@@ -51,6 +183,30 @@
     "leaf": "#4E7E5A",
     "acc": "#C8302A",
     "obj": "#C8A86A"
+   }
+  },
+  {
+   "slug": "royal-mile",
+   "label": "St Giles' Cathedral on the Royal Mile, Edinburgh",
+   "lat": 55.9495,
+   "lon": -3.1908,
+   "radius_km": 2,
+   "aliases": [
+    "royal mile",
+    "st giles cathedral",
+    "miglio reale"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#B9AC94",
+    "mid": "#857B6B",
+    "ice": "#C9C3B6",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#C23B2E",
+    "obj": "#5E5650"
    }
   },
   {
