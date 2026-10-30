@@ -28,7 +28,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-UA = "ThruwearArt/0.1 (https://github.com/Emanuele-Fogliati/vestiti)"
+UA = "ThruwearArtBot/1.0 (reference only)"
 SKIP = ("map", "locator", "logo", "flag", "coat of arms", "diagram", "plan ", "svg", "icon", "seal",
         "banner", "drawing", "interior", "inside", "night", "door", "ceiling", "detail", "museum exhibit",
         "statue of", "portrait", "mosaic", "fresco", "inscription", "sunset", "dusk", "aerial photograph", "painting", "engraving", "stamp", "chart", "location", "relief", "1890",

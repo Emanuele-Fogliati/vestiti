@@ -25,7 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "backend"))
 OUT = ROOT / "backend" / "app" / "globe" / "coords.json"
 SPARQL = "https://query.wikidata.org/sparql"
-UA = "ThruwearBuild/0.1 (https://github.com/Emanuele-Fogliati/vestiti)"
+UA = "ThruwearBuild/1.0"
 MAX_KM = 3.0
 BATCH = 150
 
