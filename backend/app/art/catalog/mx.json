@@ -3,6 +3,41 @@
  "name": "Mexico",
  "places": [
   {
+   "slug": "basilica-of-our-lady-of-guadalupe",
+   "label": "Basilica of Our Lady of Guadalupe, Mexico City",
+   "lat": 19.4846,
+   "lon": -99.1176,
+   "radius_km": 3,
+   "aliases": [
+    "basilica of our lady of guadalupe",
+    "basilica de guadalupe",
+    "basilica of guadalupe",
+    "basilica di guadalupe",
+    "basilica della madonna di guadalupe",
+    "basilica di nostra signora di guadalupe",
+    "santuario di nuestra senora de guadalupe",
+    "basilica de santa maria de guadalupe",
+    "basilica de nuestra senora de guadalupe",
+    "villa de guadalupe",
+    "tepeyac"
+   ],
+   "names": [
+    "la villa"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#9A938A",
+    "mid": "#8E4B3E",
+    "ice": "#D8CCB6",
+    "water": "#4E8EB0",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#E2B13C",
+    "obj": "#8ACBC0"
+   }
+  },
+  {
    "slug": "campeche",
    "label": "Calle 59 and the city gate, Campeche",
    "lat": 19.8454,
@@ -53,6 +88,123 @@
     "leaf": "#86B35A",
     "acc": "#8E7E64",
     "obj": "#9A9078"
+   },
+   "names": [
+    "piste",
+    "piste yucatan",
+    "piste chichen itza"
+   ]
+  },
+  {
+   "slug": "coba",
+   "label": "Nohoch Mul pyramid, Cobá",
+   "lat": 20.4947,
+   "lon": -87.7203,
+   "radius_km": 5,
+   "aliases": [
+    "coba ruins",
+    "coba archaeological",
+    "zona arqueologica de coba",
+    "nohoch mul",
+    "rovine di coba",
+    "sito archeologico di coba"
+   ],
+   "names": [
+    "coba",
+    "coba mexico"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C9C3B4",
+    "mid": "#A29B8C",
+    "ice": "#E2D9C4",
+    "water": "#4E8EB0",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E33",
+    "acc": "#5E8A3E",
+    "obj": "#8C8576"
+   }
+  },
+  {
+   "slug": "isla-mujeres",
+   "label": "Playa Norte at the northern tip of Isla Mujeres",
+   "lat": 21.262,
+   "lon": -86.751,
+   "radius_km": 8,
+   "aliases": [
+    "isla mujeres",
+    "playa norte isla mujeres",
+    "isola mujeres",
+    "isla de mujeres"
+   ],
+   "palette": {
+    "sky": "#8CC2EE",
+    "far": "#F4F4F0",
+    "mid": "#C9C4BA",
+    "ice": "#F7F0DE",
+    "water": "#3CC6BA",
+    "near": "#1F2A2E",
+    "sun": "#F6C431",
+    "leaf": "#3E7D3A",
+    "acc": "#D9668A",
+    "obj": "#1D5FA6"
+   }
+  },
+  {
+   "slug": "izamal",
+   "label": "The yellow Convent of San Antonio de Padua, Izamal",
+   "lat": 20.9317,
+   "lon": -89.0178,
+   "radius_km": 10,
+   "aliases": [
+    "izamal convent",
+    "convento de izamal",
+    "convento di izamal",
+    "convent of izamal"
+   ],
+   "names": [
+    "izamal",
+    "izamal yucatan",
+    "izamal pueblo magico"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#F1E7C8",
+    "mid": "#E6B42C",
+    "ice": "#F8F6EE",
+    "water": "#3F6FA8",
+    "near": "#2A2620",
+    "sun": "#F6C431",
+    "leaf": "#5E8F3A",
+    "acc": "#C4961C",
+    "obj": "#A9A193"
+   }
+  },
+  {
+   "slug": "kinich-kakmo",
+   "label": "Kinich Kakmó pyramid, Izamal",
+   "lat": 20.9367,
+   "lon": -89.0167,
+   "radius_km": 1,
+   "aliases": [
+    "kinich kakmo",
+    "kinich kak moo",
+    "kinich kak mo",
+    "piramide kinich",
+    "pyramid of kinich"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8FA65A",
+    "mid": "#A69E88",
+    "ice": "#E6E0D0",
+    "water": "#4E8EB0",
+    "near": "#2A2A24",
+    "sun": "#F2C14E",
+    "leaf": "#4A7A34",
+    "acc": "#93B356",
+    "obj": "#8E8774"
    }
   },
   {
@@ -90,7 +242,10 @@
    "lon": -99.1412,
    "radius_km": 20,
    "aliases": [
-    "palacio de bellas artes"
+    "palacio de bellas artes",
+    "bellas artes",
+    "palace of fine arts mexico",
+    "palacio bellas artes"
    ],
    "names": [
     "mexico city",
@@ -112,6 +267,78 @@
     "leaf": "#4E7A3A",
     "acc": "#E3A33C",
     "obj": "#A89E8C"
+   }
+  },
+  {
+   "slug": "mexico-city-metropolitan-cathedral",
+   "label": "The twin-towered facade of Mexico City's Metropolitan Cathedral",
+   "lat": 19.4345,
+   "lon": -99.1331,
+   "radius_km": 2,
+   "aliases": [
+    "metropolitan cathedral",
+    "catedral metropolitana",
+    "cattedrale metropolitana",
+    "metropolitana de la ciudad de mexico"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#B3ACA0",
+    "mid": "#8E877C",
+    "ice": "#DAD6CE",
+    "water": "#6E8DA6",
+    "near": "#262422",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#9A4E3C",
+    "obj": "#C8C1B4"
+   }
+  },
+  {
+   "slug": "misol-ha",
+   "label": "The Misol-Ha waterfall dropping into its jungle pool",
+   "lat": 17.3925,
+   "lon": -92.0006,
+   "radius_km": 4,
+   "aliases": [
+    "misol ha",
+    "misolha",
+    "misol ha waterfall",
+    "cascata misol"
+   ],
+   "palette": {
+    "sky": "#B5D6EE",
+    "far": "#9A9484",
+    "mid": "#7A6E58",
+    "ice": "#F6FAFA",
+    "water": "#4E8F86",
+    "near": "#23281F",
+    "sun": "#F6C431",
+    "leaf": "#3D6E30",
+    "acc": "#CFE3EA",
+    "obj": "#5E8A3E"
+   }
+  },
+  {
+   "slug": "monte-alban",
+   "label": "The Gran Plaza of Monte Alban with Building J and the stepped platforms",
+   "lat": 17.0436,
+   "lon": -96.7676,
+   "radius_km": 4,
+   "aliases": [
+    "monte alban"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#8296AE",
+    "mid": "#C8B595",
+    "ice": "#E6DCC6",
+    "water": "#6E8DA6",
+    "near": "#2B2A27",
+    "sun": "#F2C14E",
+    "leaf": "#B3AE66",
+    "acc": "#9C8B6E",
+    "obj": "#4F6F3A"
    }
   },
   {
@@ -192,6 +419,109 @@
     "leaf": "#4E8A3E",
     "acc": "#D6C6A4",
     "obj": "#4A4A42"
+   }
+  },
+  {
+   "slug": "puerto-vallarta",
+   "label": "Crowned church tower of Puerto Vallarta",
+   "lat": 20.6085,
+   "lon": -105.2353,
+   "radius_km": 15,
+   "aliases": [
+    "malecon de puerto vallarta",
+    "puerto vallarta malecon",
+    "templo de nuestra senora de guadalupe puerto vallarta"
+   ],
+   "names": [
+    "puerto vallarta",
+    "vallarta",
+    "puerto vallarta jalisco"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#5E8A4E",
+    "mid": "#A65C44",
+    "ice": "#F4F0E8",
+    "water": "#2E8FB8",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3C",
+    "acc": "#E2B84A",
+    "obj": "#8E8C86"
+   }
+  },
+  {
+   "slug": "san-juan-chamula",
+   "label": "The white church of San Juan Chamula with its green and blue portal",
+   "lat": 16.7871,
+   "lon": -92.6884,
+   "radius_km": 5,
+   "aliases": [
+    "chamula"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#7FA27A",
+    "mid": "#F4F2EC",
+    "ice": "#CFC8BA",
+    "water": "#3C5E3A",
+    "near": "#252525",
+    "sun": "#F2C14E",
+    "leaf": "#2E8B62",
+    "acc": "#9A4A2C",
+    "obj": "#2F6FB0"
+   }
+  },
+  {
+   "slug": "suytun-cenote",
+   "label": "Cenote Suytun, its platform and light beam",
+   "lat": 20.699,
+   "lon": -88.1246,
+   "radius_km": 2,
+   "aliases": [
+    "suytun",
+    "cenote suytun",
+    "suytun cenote"
+   ],
+   "palette": {
+    "sky": "#C4E2F2",
+    "far": "#76695A",
+    "mid": "#A3957C",
+    "ice": "#E8E1D0",
+    "water": "#3FB3AA",
+    "near": "#221F1B",
+    "sun": "#F6D45A",
+    "leaf": "#5E8A3E",
+    "acc": "#BFAE8E",
+    "obj": "#B08A62"
+   }
+  },
+  {
+   "slug": "taxco",
+   "label": "Santa Prisca church above Taxco",
+   "lat": 18.5566,
+   "lon": -99.6055,
+   "radius_km": 12,
+   "aliases": [
+    "taxco de alarcon",
+    "santa prisca"
+   ],
+   "names": [
+    "taxco",
+    "taxco guerrero",
+    "taxco mexico"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#7E9A6A",
+    "mid": "#C98E78",
+    "ice": "#F3EFE6",
+    "water": "#4E8EB0",
+    "near": "#2C2422",
+    "sun": "#F2C14E",
+    "leaf": "#4E8038",
+    "acc": "#C0573A",
+    "obj": "#3F7DB4"
    }
   },
   {
@@ -288,6 +618,31 @@
     "leaf": "#3F7A36",
     "acc": "#E8B43A",
     "obj": "#8C8472"
+   }
+  },
+  {
+   "slug": "xochimilco",
+   "label": "A painted trajinera on the canals of Xochimilco",
+   "lat": 19.257,
+   "lon": -99.104,
+   "radius_km": 6,
+   "aliases": [
+    "xochimilco",
+    "trajinera",
+    "embarcadero cuemanco",
+    "embarcadero nativitas"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#7FA06A",
+    "mid": "#2E5FA8",
+    "ice": "#F4EEE2",
+    "water": "#6AAE9E",
+    "near": "#23262A",
+    "sun": "#F6C431",
+    "leaf": "#3E7A3C",
+    "acc": "#E0336B",
+    "obj": "#F2B21E"
    }
   }
  ]
