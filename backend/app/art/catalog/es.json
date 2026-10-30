@@ -135,6 +135,36 @@
    }
   },
   {
+   "slug": "city-of-arts-and-sciences",
+   "label": "Hemisferic and Palau de les Arts, City of Arts and Sciences, Valencia",
+   "lat": 39.4555,
+   "lon": -0.3509,
+   "radius_km": 3,
+   "aliases": [
+    "city of arts and sciences",
+    "ciudad de las artes y las ciencias",
+    "ciutat de les arts i les ciencies",
+    "citta delle arti e delle scienze",
+    "hemisferic",
+    "palau de les arts"
+   ],
+   "palette": {
+    "sky": "#AFD2F2",
+    "far": "#D9C9AE",
+    "mid": "#8C877C",
+    "ice": "#F4F6F6",
+    "water": "#3E9CB4",
+    "near": "#22282C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#D8D0C0",
+    "obj": "#86C2B4"
+   },
+   "names": [
+    "valencia"
+   ]
+  },
+  {
    "slug": "cordoba",
    "label": "Roman bridge and Mosque-Cathedral, Cordoba",
    "lat": 37.8775,
@@ -164,6 +194,33 @@
     "leaf": "#5E7E3A",
     "acc": "#B8704A",
     "obj": "#5F4E42"
+   }
+  },
+  {
+   "slug": "gothic-quarter",
+   "label": "Pont del Bisbe in Barcelona's Gothic Quarter",
+   "lat": 41.3833,
+   "lon": 2.1767,
+   "radius_km": 2,
+   "aliases": [
+    "gothic quarter",
+    "barri gotic",
+    "barrio gotico",
+    "quartiere gotico",
+    "pont del bisbe",
+    "carrer del bisbe"
+   ],
+   "palette": {
+    "sky": "#CFE3F2",
+    "far": "#E2D6C0",
+    "mid": "#A8957C",
+    "ice": "#ECE4D4",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#B8503E",
+    "obj": "#7A6D5E"
    }
   },
   {
@@ -224,6 +281,33 @@
    }
   },
   {
+   "slug": "malaga",
+   "label": "Malaga Cathedral above the old town",
+   "lat": 36.7202,
+   "lon": -4.4194,
+   "radius_km": 15,
+   "aliases": [
+    "malaga cathedral",
+    "catedral de malaga",
+    "la manquita"
+   ],
+   "names": [
+    "malaga"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#E4DACA",
+    "mid": "#C9AC82",
+    "ice": "#F2EEE6",
+    "water": "#5E9CC0",
+    "near": "#2C2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#C27A52",
+    "obj": "#9C8462"
+   }
+  },
+  {
    "slug": "mosque-cathedral-of-cordoba",
    "label": "Red-and-white double arches of the Mezquita prayer hall, Cordoba",
    "lat": 37.8789,
@@ -255,6 +339,31 @@
    }
   },
   {
+   "slug": "park-guell",
+   "label": "Park Guell gatehouses and mosaic bench, Barcelona",
+   "lat": 41.4136,
+   "lon": 2.1527,
+   "radius_km": 2,
+   "aliases": [
+    "park guell",
+    "parc guell",
+    "parque guell",
+    "parco guell"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#DCCFB8",
+    "mid": "#A87E56",
+    "ice": "#F4F1EA",
+    "water": "#4E86A8",
+    "near": "#2A2622",
+    "sun": "#F0B83C",
+    "leaf": "#4F7A3A",
+    "acc": "#B85A38",
+    "obj": "#3E6EB0"
+   }
+  },
+  {
    "slug": "plaza-mayor-madrid",
    "label": "Plaza Mayor, Madrid, with the Casa de la Panaderia",
    "lat": 40.4155,
@@ -276,6 +385,29 @@
     "leaf": "#BCB2A2",
     "acc": "#C99A5E",
     "obj": "#4E5560"
+   }
+  },
+  {
+   "slug": "ronda",
+   "label": "Puente Nuevo over El Tajo gorge, Ronda",
+   "lat": 36.7409,
+   "lon": -5.1658,
+   "radius_km": 10,
+   "aliases": [],
+   "names": [
+    "ronda"
+   ],
+   "palette": {
+    "sky": "#B8D4EE",
+    "far": "#D6BE94",
+    "mid": "#C29C68",
+    "ice": "#F4F0E6",
+    "water": "#8FC0D4",
+    "near": "#2C2824",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A3A",
+    "acc": "#C27548",
+    "obj": "#8A6A44"
    }
   },
   {
@@ -478,6 +610,29 @@
     "leaf": "#9AA05A",
     "acc": "#B5683E",
     "obj": "#5A4438"
+   }
+  },
+  {
+   "slug": "toledo",
+   "label": "Toledo above the Tagus, with the Alcazar and the cathedral",
+   "lat": 39.857,
+   "lon": -4.024,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "toledo"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#E6D2A8",
+    "mid": "#B99263",
+    "ice": "#EADCBE",
+    "water": "#7A9C86",
+    "near": "#2C2A26",
+    "sun": "#F2C14E",
+    "leaf": "#587E36",
+    "acc": "#C27A50",
+    "obj": "#4C535C"
    }
   }
  ]
