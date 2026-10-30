@@ -3,6 +3,35 @@
  "name": "Italy",
  "places": [
   {
+   "slug": "aci-trezza",
+   "label": "The Cyclops sea stacks and Isola Lachea off Aci Trezza",
+   "lat": 37.562,
+   "lon": 15.166,
+   "radius_km": 4,
+   "aliases": [
+    "aci trezza",
+    "acitrezza",
+    "arcitrezza",
+    "faraglioni dei ciclopi",
+    "isole dei ciclopi",
+    "cyclops islands",
+    "cyclopean isles",
+    "isola lachea"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#B8A07E",
+    "mid": "#5A4C42",
+    "ice": "#F4F1EA",
+    "water": "#3584B8",
+    "near": "#221E1B",
+    "sun": "#F6C431",
+    "leaf": "#7C9550",
+    "acc": "#D8402E",
+    "obj": "#1E4F9C"
+   }
+  },
+  {
    "slug": "alberobello",
    "label": "Trulli of Alberobello, Rione Monti",
    "lat": 40.7817,
@@ -79,6 +108,30 @@
     "leaf": "#6E8A4E",
     "acc": "#E2B06E",
     "obj": "#B4ACA0"
+   }
+  },
+  {
+   "slug": "boboli-gardens",
+   "label": "Boboli Gardens amphitheatre with the Egyptian obelisk, Florence",
+   "lat": 43.7638,
+   "lon": 11.2488,
+   "radius_km": 2,
+   "aliases": [
+    "boboli",
+    "giardino di boboli",
+    "giardini di boboli"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#DCD0B4",
+    "mid": "#C8A468",
+    "ice": "#DAD4C6",
+    "water": "#8FB8C8",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#A8583A",
+    "obj": "#D2AE98"
    }
   },
   {
@@ -570,6 +623,36 @@
    }
   },
   {
+   "slug": "fountain-of-arethusa",
+   "label": "The papyrus pool of the Fountain of Arethusa on the Ortigia seafront",
+   "lat": 37.0592,
+   "lon": 15.2934,
+   "radius_km": 2,
+   "aliases": [
+    "fonte aretusa",
+    "fontana di aretusa",
+    "fontana aretusa",
+    "fonte di aretusa",
+    "fountain of arethusa",
+    "arethusa fountain",
+    "fontana di arethusa",
+    "fonte arethusa",
+    "arethusa spring"
+   ],
+   "palette": {
+    "sky": "#CFE3F2",
+    "far": "#ECE3CC",
+    "mid": "#CDB68C",
+    "ice": "#FBFAF6",
+    "water": "#4F8FBF",
+    "near": "#23251F",
+    "sun": "#F4BE3A",
+    "leaf": "#6E9440",
+    "acc": "#B0563A",
+    "obj": "#2E5C58"
+   }
+  },
+  {
    "slug": "ischia",
    "label": "Castello Aragonese and its causeway, Ischia",
    "lat": 40.7317,
@@ -597,6 +680,34 @@
     "leaf": "#5A7A3A",
     "acc": "#C8504A",
     "obj": "#DCCBA6"
+   }
+  },
+  {
+   "slug": "juliets-house",
+   "label": "Juliet's balcony, Casa di Giulietta, Verona",
+   "lat": 45.4419,
+   "lon": 10.9984,
+   "radius_km": 2,
+   "aliases": [
+    "juliet s house",
+    "juliets house",
+    "juliet house",
+    "casa di giulietta",
+    "juliet s balcony",
+    "juliets balcony",
+    "balcone di giulietta"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#BDB4A6",
+    "mid": "#D8C0A2",
+    "ice": "#ECE4D4",
+    "water": "#4E8EB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A34",
+    "acc": "#B4603E",
+    "obj": "#6E4A30"
    }
   },
   {
@@ -767,6 +878,29 @@
    }
   },
   {
+   "slug": "locorotondo",
+   "label": "Locorotondo's white skyline over the Valle d'Itria vineyards",
+   "lat": 40.7548,
+   "lon": 17.3266,
+   "radius_km": 4,
+   "aliases": [],
+   "names": [
+    "locorotondo"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#D4C8AE",
+    "mid": "#B8B2A4",
+    "ice": "#F6F3EC",
+    "water": "#4E8EB0",
+    "near": "#2A2824",
+    "sun": "#F2C14E",
+    "leaf": "#5A7A34",
+    "acc": "#A5643E",
+    "obj": "#7E8A58"
+   }
+  },
+  {
    "slug": "lucca",
    "label": "Guinigi Tower over the roofs of Lucca",
    "lat": 43.8436,
@@ -790,6 +924,63 @@
     "leaf": "#4F7A36",
     "acc": "#D27A4E",
     "obj": "#E6CC8A"
+   }
+  },
+  {
+   "slug": "madonna-di-campiglio",
+   "label": "The Brenta Dolomites above Madonna di Campiglio's meadows and spruce forest",
+   "lat": 46.23,
+   "lon": 10.83,
+   "radius_km": 12,
+   "aliases": [
+    "madonna di campiglio",
+    "dolomiti di brenta",
+    "brenta dolomites",
+    "gruppo di brenta",
+    "brenta group",
+    "cima tosa"
+   ],
+   "names": [
+    "campiglio"
+   ],
+   "palette": {
+    "sky": "#B9D7F0",
+    "far": "#D9D4CB",
+    "mid": "#B4AEA5",
+    "ice": "#F7F8FA",
+    "water": "#4C8DB0",
+    "near": "#24262A",
+    "sun": "#F6C431",
+    "leaf": "#4E7A3A",
+    "acc": "#6B4A2E",
+    "obj": "#2C5230"
+   }
+  },
+  {
+   "slug": "marmolada",
+   "label": "Marmolada glacier above Lago di Fedaia",
+   "lat": 46.434,
+   "lon": 11.86,
+   "radius_km": 8,
+   "aliases": [
+    "marmolada",
+    "marmolata",
+    "punta penia",
+    "lago di fedaia",
+    "fedaia lake",
+    "passo fedaia"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#A8A69E",
+    "mid": "#BAB5AA",
+    "ice": "#F4F6F8",
+    "water": "#1F5E86",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6234",
+    "acc": "#8A6E4C",
+    "obj": "#DAD7CE"
    }
   },
   {
@@ -822,6 +1013,30 @@
    }
   },
   {
+   "slug": "martorana",
+   "label": "La Martorana and San Cataldo's red domes, Palermo",
+   "lat": 38.1146,
+   "lon": 13.3627,
+   "radius_km": 2,
+   "aliases": [
+    "martorana",
+    "santa maria dell ammiraglio",
+    "piazza bellini"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#DCCBA6",
+    "mid": "#CFA868",
+    "ice": "#EADBB6",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#D9543E",
+    "obj": "#8A6A44"
+   }
+  },
+  {
    "slug": "matera",
    "label": "The Sassi of Matera and the cathedral",
    "lat": 40.6664,
@@ -847,6 +1062,31 @@
     "leaf": "#5E8A3E",
     "acc": "#A88A60",
     "obj": "#8A7A60"
+   }
+  },
+  {
+   "slug": "minori",
+   "label": "Minori seafront and the bell tower of Santa Trofimena, Amalfi Coast",
+   "lat": 40.6497,
+   "lon": 14.6267,
+   "radius_km": 3,
+   "aliases": [
+    "santa trofimena"
+   ],
+   "names": [
+    "minori"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A8A296",
+    "mid": "#5A7642",
+    "ice": "#F2EDE2",
+    "water": "#2E5E9E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E5E2E",
+    "acc": "#E8B48E",
+    "obj": "#E2C47A"
    }
   },
   {
@@ -1184,6 +1424,33 @@
    }
   },
   {
+   "slug": "palatine-chapel",
+   "label": "Norman Palace, home of the Palatine Chapel, Palermo",
+   "lat": 38.1109,
+   "lon": 13.3533,
+   "radius_km": 2,
+   "aliases": [
+    "palatine chapel",
+    "cappella palatina",
+    "palazzo dei normanni",
+    "norman palace",
+    "palazzo reale di palermo",
+    "royal palace of palermo"
+   ],
+   "palette": {
+    "sky": "#A9D0F0",
+    "far": "#D9CCB0",
+    "mid": "#D4B07A",
+    "ice": "#EFE2C4",
+    "water": "#4E8EB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E7436",
+    "acc": "#C68E66",
+    "obj": "#8C8478"
+   }
+  },
+  {
    "slug": "palatine-hill",
    "label": "Palatine Hill ruins seen from the Circus Maximus, Rome",
    "lat": 41.8885,
@@ -1224,7 +1491,8 @@
    "aliases": [
     "palazzo vecchio",
     "torre di arnolfo",
-    "arnolfo tower"
+    "arnolfo tower",
+    "piazza della signoria"
    ],
    "palette": {
     "sky": "#A8CBF0",
@@ -1352,7 +1620,8 @@
     "path of the gods",
     "sentiero degli dei",
     "path of gods",
-    "walk of the gods"
+    "walk of the gods",
+    "bomerano"
    ],
    "palette": {
     "sky": "#B6D4F0",
@@ -1365,7 +1634,10 @@
     "leaf": "#4E7A38",
     "acc": "#A4A15E",
     "obj": "#A8323A"
-   }
+   },
+   "names": [
+    "agerola"
+   ]
   },
   {
    "slug": "piazza-navona",
@@ -1415,6 +1687,34 @@
     "leaf": "#4E7A3A",
     "acc": "#C0623E",
     "obj": "#E6C489"
+   }
+  },
+  {
+   "slug": "pienza",
+   "label": "Pienza on its hill over the Val d'Orcia",
+   "lat": 43.0766,
+   "lon": 11.6789,
+   "radius_km": 10,
+   "aliases": [
+    "val d orcia",
+    "val dorcia",
+    "valdorcia",
+    "orcia valley"
+   ],
+   "names": [
+    "pienza"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D6BD86",
+    "mid": "#C99C66",
+    "ice": "#E8D9AE",
+    "water": "#4E8EB0",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#3E5A2E",
+    "acc": "#B0603C",
+    "obj": "#7E8E52"
    }
   },
   {
@@ -1688,6 +1988,36 @@
    }
   },
   {
+   "slug": "salina",
+   "label": "The twin volcanoes of Salina, Aeolian Islands",
+   "lat": 38.56,
+   "lon": 14.85,
+   "radius_km": 8,
+   "aliases": [
+    "isola di salina",
+    "salina island",
+    "santa marina salina",
+    "pollara"
+   ],
+   "names": [
+    "salina",
+    "malfa",
+    "leni"
+   ],
+   "palette": {
+    "sky": "#C6DDF0",
+    "far": "#8EA6BC",
+    "mid": "#76784E",
+    "ice": "#F4F0E6",
+    "water": "#1E5FA6",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E3E",
+    "acc": "#A88A66",
+    "obj": "#B8503C"
+   }
+  },
+  {
    "slug": "san-gimignano",
    "label": "Medieval towers of San Gimignano",
    "lat": 43.4677,
@@ -1737,6 +2067,31 @@
     "leaf": "#6E8A4E",
     "acc": "#C98E6E",
     "obj": "#B07850"
+   }
+  },
+  {
+   "slug": "silvestri-craters",
+   "label": "Silvestri craters below the summit of Etna",
+   "lat": 37.6997,
+   "lon": 15.0003,
+   "radius_km": 3,
+   "aliases": [
+    "silvestri crater",
+    "crateri silvestri",
+    "monti silvestri",
+    "rifugio sapienza"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#7E7268",
+    "mid": "#8E4A34",
+    "ice": "#F2F0EA",
+    "water": "#4E8EB0",
+    "near": "#26221F",
+    "sun": "#F2C14E",
+    "leaf": "#B4A85A",
+    "acc": "#B4643E",
+    "obj": "#4E4844"
    }
   },
   {
