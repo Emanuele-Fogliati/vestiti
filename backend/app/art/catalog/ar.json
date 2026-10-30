@@ -54,6 +54,33 @@
    }
   },
   {
+   "slug": "cafayate",
+   "label": "Arcaded bodega among the vineyards of Cafayate",
+   "lat": -26.066,
+   "lon": -65.976,
+   "radius_km": 12,
+   "aliases": [
+    "bodega el esteco",
+    "el esteco",
+    "bodega michel torino"
+   ],
+   "names": [
+    "cafayate"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#A89C88",
+    "mid": "#7E7A55",
+    "ice": "#F4F1EA",
+    "water": "#6FA0C8",
+    "near": "#26241F",
+    "sun": "#F4C542",
+    "leaf": "#4F7B35",
+    "acc": "#B9875C",
+    "obj": "#DCC7A2"
+   }
+  },
+  {
    "slug": "cerro-torre",
    "label": "Cerro Torre needles above Laguna Torre",
    "lat": -49.2928,
@@ -116,7 +143,11 @@
     "iguazu falls",
     "cataratas del iguazu",
     "foz do iguacu",
-    "puerto iguazu"
+    "puerto iguazu",
+    "garganta del diablo",
+    "devil s throat",
+    "devils throat",
+    "gola del diavolo"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -178,6 +209,56 @@
    }
   },
   {
+   "slug": "laguna-de-los-tres",
+   "label": "Fitz Roy above the glacier and Laguna de los Tres",
+   "lat": -49.271,
+   "lon": -73.001,
+   "radius_km": 4,
+   "aliases": [
+    "laguna de los tres",
+    "laguna los tres",
+    "mirador laguna de los tres"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#7D7068",
+    "mid": "#CFCBC4",
+    "ice": "#FFFFFF",
+    "water": "#79BDC7",
+    "near": "#26272B",
+    "sun": "#F5C842",
+    "leaf": "#6E7D4A",
+    "acc": "#BFD6E4",
+    "obj": "#9A928B"
+   }
+  },
+  {
+   "slug": "mendoza",
+   "label": "Vineyards below the snowy Andes, Mendoza",
+   "lat": -32.98,
+   "lon": -68.88,
+   "radius_km": 25,
+   "aliases": [],
+   "names": [
+    "mendoza",
+    "mendoza city",
+    "ciudad de mendoza",
+    "mendoza argentina"
+   ],
+   "palette": {
+    "sky": "#B3D2EF",
+    "far": "#A9A6A8",
+    "mid": "#8C8E9C",
+    "ice": "#FBFBFD",
+    "water": "#6FA0C8",
+    "near": "#26241F",
+    "sun": "#F4C542",
+    "leaf": "#3D5C34",
+    "acc": "#B79E7C",
+    "obj": "#7E9F45"
+   }
+  },
+  {
    "slug": "palermo",
    "label": "Floralis Generica, Palermo",
    "lat": -34.5817,
@@ -231,7 +312,13 @@
     "leaf": "#3F5A36",
     "acc": "#8CCBE4",
     "obj": "#2C4228"
-   }
+   },
+   "names": [
+    "los glaciares national park",
+    "parque nacional los glaciares",
+    "parco nazionale los glaciares",
+    "los glaciares"
+   ]
   },
   {
    "slug": "plaza-de-mayo",
@@ -260,6 +347,92 @@
    }
   },
   {
+   "slug": "puerto-madryn",
+   "label": "Puerto Madryn beach and pier on Golfo Nuevo",
+   "lat": -42.7692,
+   "lon": -65.0385,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "puerto madryn",
+    "pto madryn",
+    "madryn"
+   ],
+   "palette": {
+    "sky": "#A7CDF0",
+    "far": "#C8B48C",
+    "mid": "#E6D6B0",
+    "ice": "#F3F1EA",
+    "water": "#3C8CB6",
+    "near": "#1F262E",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3E",
+    "acc": "#D7CBB6",
+    "obj": "#8F9599"
+   }
+  },
+  {
+   "slug": "purmamarca",
+   "label": "Cerro de los Siete Colores above Purmamarca",
+   "lat": -23.745,
+   "lon": -65.496,
+   "radius_km": 6,
+   "aliases": [
+    "cerro de los siete colores",
+    "cerro de los 7 colores",
+    "cerro siete colores",
+    "collina dei sette colori",
+    "hill of seven colors",
+    "hill of seven colours",
+    "hill of the seven colors",
+    "hill of the seven colours"
+   ],
+   "names": [
+    "purmamarca"
+   ],
+   "palette": {
+    "sky": "#9CC3EC",
+    "far": "#8E9B86",
+    "mid": "#C9694F",
+    "ice": "#F0E6DA",
+    "water": "#DCA2A0",
+    "near": "#2E2522",
+    "sun": "#F5C542",
+    "leaf": "#5B8A3A",
+    "acc": "#9A6684",
+    "obj": "#CDA47C"
+   }
+  },
+  {
+   "slug": "quebrada-de-humahuaca",
+   "label": "Serranía de Hornocal zigzag mountains, Quebrada de Humahuaca",
+   "lat": -23.18,
+   "lon": -65.22,
+   "radius_km": 25,
+   "aliases": [
+    "quebrada de humahuaca",
+    "humahuaca gorge",
+    "valle de humahuaca",
+    "hornocal",
+    "cerro de los 14 colores",
+    "cerro de los catorce colores",
+    "cerro 14 colores",
+    "serrania del hornocal"
+   ],
+   "palette": {
+    "sky": "#A6CAEE",
+    "far": "#A88678",
+    "mid": "#C7999A",
+    "ice": "#E8DAC5",
+    "water": "#A3AB8E",
+    "near": "#2B2422",
+    "sun": "#F5C542",
+    "leaf": "#6E6A3E",
+    "acc": "#AE6A68",
+    "obj": "#CDB37C"
+   }
+  },
+  {
    "slug": "recoleta-cemetery",
    "label": "Alley of mausoleums, Recoleta Cemetery",
    "lat": -34.5875,
@@ -283,6 +456,28 @@
     "leaf": "#5E8A45",
     "acc": "#BCA889",
     "obj": "#55575C"
+   }
+  },
+  {
+   "slug": "salinas-grandes",
+   "label": "Salt pools of Salinas Grandes, Jujuy",
+   "lat": -23.62,
+   "lon": -65.88,
+   "radius_km": 25,
+   "aliases": [
+    "salinas grandes"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#7F6A72",
+    "mid": "#B39A86",
+    "ice": "#F7F4EF",
+    "water": "#93D8D0",
+    "near": "#1F2428",
+    "sun": "#F4C542",
+    "leaf": "#6E7F4A",
+    "acc": "#5DB0AC",
+    "obj": "#E4DBCF"
    }
   },
   {
@@ -314,6 +509,33 @@
    }
   },
   {
+   "slug": "san-carlos-de-bariloche",
+   "label": "Centro Cívico clock tower, Bariloche",
+   "lat": -41.1335,
+   "lon": -71.3103,
+   "radius_km": 15,
+   "aliases": [
+    "centro civico bariloche",
+    "centro civico de bariloche"
+   ],
+   "names": [
+    "bariloche",
+    "san carlos de bariloche"
+   ],
+   "palette": {
+    "sky": "#A7CDEE",
+    "far": "#8E9DB3",
+    "mid": "#8E9483",
+    "ice": "#F4F2EC",
+    "water": "#4F86B5",
+    "near": "#24221F",
+    "sun": "#F4C542",
+    "leaf": "#2F5A35",
+    "acc": "#B5733A",
+    "obj": "#59606A"
+   }
+  },
+  {
    "slug": "san-telmo",
    "label": "Plaza Dorrego, San Telmo",
    "lat": -34.6212,
@@ -334,6 +556,83 @@
     "leaf": "#2F7A5A",
     "acc": "#D99A80",
     "obj": "#B9BEC4"
+   }
+  },
+  {
+   "slug": "teatro-colon",
+   "label": "Teatro Colón facade from Plaza Lavalle",
+   "lat": -34.6011,
+   "lon": -58.3833,
+   "radius_km": 2,
+   "aliases": [
+    "teatro colon",
+    "colon theatre",
+    "colon theater",
+    "teatro de colon"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#B79B72",
+    "mid": "#DCC6A0",
+    "ice": "#EFE5D2",
+    "water": "#5E93A8",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#5F8E3E",
+    "acc": "#8DB5A6",
+    "obj": "#C7C0B4"
+   }
+  },
+  {
+   "slug": "tilcara",
+   "label": "Pucará de Tilcara pyramid among cardón cacti",
+   "lat": -23.578,
+   "lon": -65.401,
+   "radius_km": 5,
+   "aliases": [
+    "pucara de tilcara",
+    "pucara tilcara",
+    "pukara de tilcara"
+   ],
+   "names": [
+    "tilcara"
+   ],
+   "palette": {
+    "sky": "#A3C8EE",
+    "far": "#7E5E52",
+    "mid": "#DCBFA8",
+    "ice": "#DCC4B0",
+    "water": "#D2C4B2",
+    "near": "#2A2321",
+    "sun": "#F5C542",
+    "leaf": "#6E8F5C",
+    "acc": "#D49176",
+    "obj": "#A58C7B"
+   }
+  },
+  {
+   "slug": "upsala-glacier",
+   "label": "Upsala Glacier front and icebergs, Lago Argentino",
+   "lat": -49.95,
+   "lon": -73.27,
+   "radius_km": 15,
+   "aliases": [
+    "upsala",
+    "glaciar upsala",
+    "ghiacciaio upsala",
+    "upsala glacier"
+   ],
+   "palette": {
+    "sky": "#A6CBEC",
+    "far": "#6F6A68",
+    "mid": "#8CC3E2",
+    "ice": "#FFFFFF",
+    "water": "#6E9BAC",
+    "near": "#1E2730",
+    "sun": "#F4C542",
+    "leaf": "#4C5A3A",
+    "acc": "#4E93C6",
+    "obj": "#DCEAF3"
    }
   },
   {
@@ -361,6 +660,33 @@
     "leaf": "#3E5E3A",
     "acc": "#C8463A",
     "obj": "#2F6FA0"
+   }
+  },
+  {
+   "slug": "valdes-peninsula",
+   "label": "Southern right whale tail below the Península Valdés cliffs",
+   "lat": -42.5,
+   "lon": -63.95,
+   "radius_km": 45,
+   "aliases": [
+    "peninsula valdes",
+    "valdes peninsula",
+    "penisola valdes",
+    "penisola valdez",
+    "penisola di valdez",
+    "peninsula de valdes"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#DCCFB4",
+    "mid": "#BCA685",
+    "ice": "#F4F0E6",
+    "water": "#2E6C9E",
+    "near": "#1C2026",
+    "sun": "#F4C542",
+    "leaf": "#8A8A5C",
+    "acc": "#CDBB98",
+    "obj": "#363B45"
    }
   }
  ]
