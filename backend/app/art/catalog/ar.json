@@ -155,6 +155,60 @@
    }
   },
   {
+   "slug": "lago-argentino",
+   "label": "Iceberg on Lago Argentino",
+   "lat": -50.2,
+   "lon": -72.6,
+   "radius_km": 30,
+   "aliases": [
+    "lago argentino",
+    "lake argentino"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#7C736C",
+    "mid": "#8B7A62",
+    "ice": "#FFFFFF",
+    "water": "#5FB0B4",
+    "near": "#22303A",
+    "sun": "#F6C431",
+    "leaf": "#8A8656",
+    "acc": "#A6DAEC",
+    "obj": "#5BA4CC"
+   }
+  },
+  {
+   "slug": "palermo",
+   "label": "Floralis Generica, Palermo",
+   "lat": -34.5817,
+   "lon": -58.3934,
+   "radius_km": 4,
+   "aliases": [
+    "floralis generica",
+    "floralis",
+    "plaza naciones unidas",
+    "palermo viejo",
+    "palermo soho",
+    "palermo hollywood"
+   ],
+   "names": [
+    "palermo",
+    "palermo buenos aires"
+   ],
+   "palette": {
+    "sky": "#A8CFF2",
+    "far": "#D6CFC2",
+    "mid": "#8D97A2",
+    "ice": "#F2F4F6",
+    "water": "#3F7FB8",
+    "near": "#26292D",
+    "sun": "#F6C431",
+    "leaf": "#4E8A3E",
+    "acc": "#C9A55A",
+    "obj": "#C3CAD2"
+   }
+  },
+  {
    "slug": "perito-moreno-glacier",
    "label": "Perito Moreno Glacier",
    "lat": -50.4967,
@@ -178,6 +232,86 @@
     "leaf": "#3F5A36",
     "acc": "#8CCBE4",
     "obj": "#2C4228"
+   }
+  },
+  {
+   "slug": "plaza-de-mayo",
+   "label": "Casa Rosada and the Piramide de Mayo, Plaza de Mayo",
+   "lat": -34.6081,
+   "lon": -58.3712,
+   "radius_km": 2,
+   "aliases": [
+    "plaza de mayo",
+    "piramide de mayo",
+    "piazza di maggio",
+    "casa rosada",
+    "pink house"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CFC8BC",
+    "mid": "#D98C7E",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#2A2B2E",
+    "sun": "#F6C431",
+    "leaf": "#5E8F45",
+    "acc": "#ECC0B2",
+    "obj": "#8FA59C"
+   }
+  },
+  {
+   "slug": "recoleta-cemetery",
+   "label": "Alley of mausoleums, Recoleta Cemetery",
+   "lat": -34.5875,
+   "lon": -58.3934,
+   "radius_km": 2,
+   "aliases": [
+    "recoleta cemetery",
+    "cementerio de la recoleta",
+    "cementerio recoleta",
+    "cimitero della recoleta",
+    "cimitero recoleta"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#DCD6CB",
+    "mid": "#C9C4B9",
+    "ice": "#EEEBE4",
+    "water": "#4F8DB5",
+    "near": "#26272A",
+    "sun": "#F6C431",
+    "leaf": "#5E8A45",
+    "acc": "#BCA889",
+    "obj": "#55575C"
+   }
+  },
+  {
+   "slug": "salta",
+   "label": "Iglesia de San Francisco, Salta",
+   "lat": -24.7886,
+   "lon": -65.4064,
+   "radius_km": 15,
+   "aliases": [
+    "salta la linda"
+   ],
+   "names": [
+    "salta",
+    "salta city",
+    "ciudad de salta",
+    "salta capital"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#D8CFC0",
+    "mid": "#B5423E",
+    "ice": "#F3EFE6",
+    "water": "#4F8DB5",
+    "near": "#2A2224",
+    "sun": "#F6C431",
+    "leaf": "#6E8F4A",
+    "acc": "#E6B443",
+    "obj": "#A89480"
    }
   },
   {
@@ -210,7 +344,12 @@
    "lon": -68.303,
    "radius_km": 15,
    "aliases": [
-    "ushuaia"
+    "ushuaia",
+    "tierra del fuego national park",
+    "parque nacional tierra del fuego",
+    "parco nazionale terra del fuoco",
+    "parco nazionale della terra del fuoco",
+    "lapataia"
    ],
    "palette": {
     "sky": "#AFCFF0",

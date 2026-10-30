@@ -3,13 +3,155 @@
  "name": "South Korea",
  "places": [
   {
+   "slug": "busan",
+   "label": "Gwangan Bridge and the Marine City skyline, Busan",
+   "lat": 35.147,
+   "lon": 129.13,
+   "radius_km": 20,
+   "aliases": [
+    "gwangan bridge",
+    "gwangandaegyo",
+    "gwangan grand bridge",
+    "gwangan daegyo",
+    "diamond bridge",
+    "gwangalli",
+    "marine city"
+   ],
+   "names": [
+    "busan",
+    "pusan",
+    "busan city"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#8DA39C",
+    "mid": "#5F84A2",
+    "ice": "#F1F3F4",
+    "water": "#3B7FA6",
+    "near": "#22292F",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A55",
+    "acc": "#E3C88F",
+    "obj": "#9DB4C6"
+   }
+  },
+  {
+   "slug": "gamcheon-culture-village",
+   "label": "Gamcheon Culture Village's pastel hillside, Busan",
+   "lat": 35.097,
+   "lon": 129.011,
+   "radius_km": 3,
+   "aliases": [
+    "gamcheon"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#93D6BF",
+    "mid": "#8EC5E8",
+    "ice": "#F3F1EA",
+    "water": "#3E7FCB",
+    "near": "#262A30",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B35",
+    "acc": "#F2D36B",
+    "obj": "#EFA3A8"
+   }
+  },
+  {
+   "slug": "gyeongju",
+   "label": "The royal tumuli of Daereungwon, Gyeongju",
+   "lat": 35.838,
+   "lon": 129.212,
+   "radius_km": 15,
+   "aliases": [
+    "tumuli park",
+    "hwangnam daechong",
+    "hwangnamdaechong",
+    "gyeongju historic areas"
+   ],
+   "names": [
+    "gyeongju",
+    "gyeongju si",
+    "gyeongju city",
+    "kyongju",
+    "kyeongju"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#A9B9C4",
+    "mid": "#B3BE5E",
+    "ice": "#6E9B44",
+    "water": "#5E8AB0",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#355E2E",
+    "acc": "#A48C76",
+    "obj": "#4B7A38"
+   }
+  },
+  {
+   "slug": "haedong-yonggungsa",
+   "label": "Haedong Yonggungsa temple on the rocks above the sea, Busan",
+   "lat": 35.188,
+   "lon": 129.223,
+   "radius_km": 3,
+   "aliases": [
+    "yonggungsa",
+    "haedong yonggung"
+   ],
+   "palette": {
+    "sky": "#B3D3EF",
+    "far": "#C9C1B3",
+    "mid": "#A84A3A",
+    "ice": "#F1EFEA",
+    "water": "#3E9AA6",
+    "near": "#24272B",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A3A",
+    "acc": "#3E9A80",
+    "obj": "#50565C"
+   }
+  },
+  {
+   "slug": "korean-demilitarized-zone",
+   "label": "The blue huts of the Joint Security Area at Panmunjom, DMZ",
+   "lat": 37.956,
+   "lon": 126.677,
+   "radius_km": 15,
+   "aliases": [
+    "demilitarized zone",
+    "demilitarised zone",
+    "dmz",
+    "panmunjom",
+    "panmunjeom",
+    "joint security area",
+    "zona demilitarizzata"
+   ],
+   "names": [
+    "jsa"
+   ],
+   "palette": {
+    "sky": "#B0CFEE",
+    "far": "#BDB9AE",
+    "mid": "#55585C",
+    "ice": "#EEEDE8",
+    "water": "#2C6DB5",
+    "near": "#222528",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E3E",
+    "acc": "#E2B53A",
+    "obj": "#4EA3DA"
+   }
+  },
+  {
    "slug": "seoul",
    "label": "Gyeongbokgung palace, Seoul",
    "lat": 37.58,
    "lon": 126.977,
    "radius_km": 30,
    "aliases": [
-    "gyeongbokgung"
+    "gyeongbokgung",
+    "bukchon"
    ],
    "names": [
     "seoul"
