@@ -105,6 +105,35 @@
    }
   },
   {
+   "slug": "cagliari",
+   "label": "Bastione di Saint Remy, Cagliari",
+   "lat": 39.2167,
+   "lon": 9.115,
+   "radius_km": 15,
+   "aliases": [
+    "bastione di saint remy",
+    "bastione saint remy",
+    "bastione di san remy",
+    "saint remy bastion"
+   ],
+   "names": [
+    "cagliari",
+    "casteddu"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C9B9A0",
+    "mid": "#EADCBC",
+    "ice": "#F6EEDE",
+    "water": "#2E7AA6",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#D8B88E",
+    "obj": "#566474"
+   }
+  },
+  {
    "slug": "capri",
    "label": "The Faraglioni of Capri",
    "lat": 40.544,
@@ -130,6 +159,75 @@
     "leaf": "#4E7A3A",
     "acc": "#8C8577",
     "obj": "#E9E4D8"
+   }
+  },
+  {
+   "slug": "castel-santangelo",
+   "label": "Castel Sant'Angelo and Ponte Sant'Angelo, Rome",
+   "lat": 41.9031,
+   "lon": 12.4663,
+   "radius_km": 2,
+   "aliases": [
+    "castel sant angelo",
+    "castel santangelo",
+    "castel s angelo",
+    "castle of the holy angel",
+    "mausoleum of hadrian",
+    "hadrian s mausoleum",
+    "mausoleo di adriano",
+    "ponte sant angelo",
+    "ponte santangelo"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#DDAE7C",
+    "mid": "#C4875A",
+    "ice": "#ECE2CE",
+    "water": "#7A8E6E",
+    "near": "#2E2621",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A3E",
+    "acc": "#B8AC94",
+    "obj": "#4E6E62"
+   }
+  },
+  {
+   "slug": "catacombs-of-rome",
+   "label": "Catacombs of Rome under the Appian Way",
+   "lat": 41.8588,
+   "lon": 12.5106,
+   "radius_km": 3,
+   "aliases": [
+    "catacombs of rome",
+    "catacombe di roma",
+    "roman catacombs",
+    "catacombe romane",
+    "catacombs of san callisto",
+    "catacombe di san callisto",
+    "catacombs of st callixtus",
+    "catacombs of saint callixtus",
+    "catacombs of san sebastiano",
+    "catacombe di san sebastiano",
+    "catacombs of domitilla",
+    "catacombe di domitilla",
+    "catacombs of priscilla",
+    "catacombe di priscilla"
+   ],
+   "names": [
+    "catacombs",
+    "catacombe"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#D9BE8C",
+    "mid": "#A27A52",
+    "ice": "#ECE6DA",
+    "water": "#5A8FB0",
+    "near": "#2A221C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3C",
+    "acc": "#B5674A",
+    "obj": "#8E4A36"
    }
   },
   {
@@ -193,6 +291,30 @@
    }
   },
   {
+   "slug": "chianti",
+   "label": "Chianti vineyard hills with a hilltop villa and cypresses",
+   "lat": 43.53,
+   "lon": 11.32,
+   "radius_km": 30,
+   "aliases": [
+    "chianti",
+    "castello di brolio",
+    "brolio castle"
+   ],
+   "palette": {
+    "sky": "#CFE2F2",
+    "far": "#6F8C5C",
+    "mid": "#C8AA7E",
+    "ice": "#EEE6D2",
+    "water": "#93A57E",
+    "near": "#262A22",
+    "sun": "#F2C14E",
+    "leaf": "#4F7C35",
+    "acc": "#B8643E",
+    "obj": "#2F4A2C"
+   }
+  },
+  {
    "slug": "cinque-terre",
    "label": "Manarola, Cinque Terre",
    "lat": 44.107,
@@ -241,6 +363,32 @@
     "leaf": "#5E7A3E",
     "acc": "#6E5238",
     "obj": "#DCC7A0"
+   }
+  },
+  {
+   "slug": "cortina-dampezzo",
+   "label": "Cortina d'Ampezzo bell tower below the Tofane",
+   "lat": 46.5383,
+   "lon": 12.1373,
+   "radius_km": 10,
+   "aliases": [
+    "cortina d ampezzo",
+    "cortina dampezzo"
+   ],
+   "names": [
+    "cortina"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D2CDC2",
+    "mid": "#86AE56",
+    "ice": "#ECE8DE",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A3A",
+    "acc": "#5E9A80",
+    "obj": "#7A5034"
    }
   },
   {
@@ -328,6 +476,29 @@
    }
   },
   {
+   "slug": "favignana",
+   "label": "Cala Rossa and the tufa quarries, Favignana",
+   "lat": 37.9385,
+   "lon": 12.353,
+   "radius_km": 8,
+   "aliases": [
+    "favignana",
+    "cala rossa"
+   ],
+   "palette": {
+    "sky": "#B4D2F0",
+    "far": "#8C9AB0",
+    "mid": "#D2BC92",
+    "ice": "#FFFFFF",
+    "water": "#4CC8C8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A4E",
+    "acc": "#A8916C",
+    "obj": "#2A62A8"
+   }
+  },
+  {
    "slug": "florence",
    "label": "Duomo and red roofs of Florence",
    "lat": 43.773,
@@ -343,7 +514,13 @@
     "cupola del brunelleschi",
     "cattedrale di firenze",
     "cathedral of florence",
-    "cattedrale di santa maria del fiore"
+    "cattedrale di santa maria del fiore",
+    "giotto s campanile",
+    "giottos campanile",
+    "giotto campanile",
+    "campanile di giotto",
+    "giotto bell tower",
+    "giotto s bell tower"
    ],
    "names": [
     "florence",
@@ -362,6 +539,231 @@
     "leaf": "#4E7A5A",
     "acc": "#C0603C",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "florence-baptistery",
+   "label": "Baptistery of San Giovanni, Florence",
+   "lat": 43.7731,
+   "lon": 11.2549,
+   "radius_km": 2,
+   "aliases": [
+    "florence baptistery",
+    "baptistery of san giovanni",
+    "battistero di san giovanni",
+    "battistero di firenze",
+    "baptistery of florence",
+    "gates of paradise",
+    "porta del paradiso"
+   ],
+   "palette": {
+    "sky": "#9EC8EE",
+    "far": "#BDB8AA",
+    "mid": "#E4E0D4",
+    "ice": "#F6F3EA",
+    "water": "#BCB4A6",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E5A4A",
+    "acc": "#B8603E",
+    "obj": "#CDA660"
+   }
+  },
+  {
+   "slug": "ischia",
+   "label": "Castello Aragonese and its causeway, Ischia",
+   "lat": 40.7317,
+   "lon": 13.9653,
+   "radius_km": 12,
+   "aliases": [
+    "castello aragonese d ischia",
+    "aragonese castle of ischia",
+    "castello aragonese di ischia",
+    "ischia ponte"
+   ],
+   "names": [
+    "ischia",
+    "isola d ischia",
+    "ischia island"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E867A",
+    "mid": "#A49884",
+    "ice": "#F2E8D6",
+    "water": "#2E6E9E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5A7A3A",
+    "acc": "#C8504A",
+    "obj": "#DCCBA6"
+   }
+  },
+  {
+   "slug": "la-spezia",
+   "label": "La Spezia and its gulf with the port",
+   "lat": 44.1025,
+   "lon": 9.8241,
+   "radius_km": 10,
+   "aliases": [
+    "golfo della spezia",
+    "gulf of la spezia"
+   ],
+   "names": [
+    "la spezia",
+    "spezia"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#8C96A6",
+    "mid": "#6E8A5C",
+    "ice": "#F2E6D2",
+    "water": "#4A88A8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4A6E36",
+    "acc": "#C2604A",
+    "obj": "#E8B488"
+   }
+  },
+  {
+   "slug": "lago-di-braies",
+   "label": "Lago di Braies with the boathouse under the Croda del Becco",
+   "lat": 46.6945,
+   "lon": 12.0855,
+   "radius_km": 6,
+   "aliases": [
+    "lago di braies",
+    "lake braies",
+    "braies lake",
+    "pragser wildsee",
+    "lake prags",
+    "pragser see",
+    "braies"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A8A398",
+    "mid": "#CFCBC3",
+    "ice": "#E6E4DF",
+    "water": "#3F8F86",
+    "near": "#262A2C",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A3A",
+    "acc": "#B9652F",
+    "obj": "#7A4E2E"
+   }
+  },
+  {
+   "slug": "lake-como",
+   "label": "Villa del Balbianello on Lake Como",
+   "lat": 45.9653,
+   "lon": 9.2016,
+   "radius_km": 25,
+   "aliases": [
+    "lake como",
+    "lago di como",
+    "villa del balbianello",
+    "balbianello"
+   ],
+   "names": [
+    "como"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#7A98A8",
+    "mid": "#8E8A80",
+    "ice": "#F2E8CC",
+    "water": "#3E8A9A",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#B8644A",
+    "obj": "#E0C07A"
+   }
+  },
+  {
+   "slug": "lake-garda",
+   "label": "Malcesine's Scaliger castle on Lake Garda, with Monte Baldo",
+   "lat": 45.7633,
+   "lon": 10.8106,
+   "radius_km": 40,
+   "aliases": [
+    "lake garda",
+    "lago di garda",
+    "garda lake",
+    "gardasee",
+    "lac de garde",
+    "malcesine",
+    "castello di malcesine",
+    "malcesine castle"
+   ],
+   "names": [
+    "garda",
+    "lago garda"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#9AA486",
+    "mid": "#DCD3BF",
+    "ice": "#B5B2A6",
+    "water": "#2F8FA3",
+    "near": "#22261E",
+    "sun": "#F4C543",
+    "leaf": "#56763E",
+    "acc": "#C9714F",
+    "obj": "#2F4A2A"
+   }
+  },
+  {
+   "slug": "lecce",
+   "label": "Basilica di Santa Croce, Lecce",
+   "lat": 40.3549,
+   "lon": 18.1727,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "lecce"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#F5E8CC",
+    "mid": "#E6CFA4",
+    "ice": "#FBF4E2",
+    "water": "#3E5E8E",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#6E4A30",
+    "obj": "#C8A676"
+   }
+  },
+  {
+   "slug": "lipari",
+   "label": "Marina Corta and the Castello of Lipari",
+   "lat": 38.4645,
+   "lon": 14.958,
+   "radius_km": 8,
+   "aliases": [
+    "marina corta",
+    "castello di lipari"
+   ],
+   "names": [
+    "lipari",
+    "isola di lipari",
+    "lipari island"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E9A82",
+    "mid": "#8C887C",
+    "ice": "#F2EEE6",
+    "water": "#2C6EA6",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6234",
+    "acc": "#A87A5C",
+    "obj": "#3E7EC0"
    }
   },
   {
@@ -425,7 +827,11 @@
    "lat": 40.6664,
    "lon": 16.6107,
    "radius_km": 8,
-   "aliases": [],
+   "aliases": [
+    "sassi di matera",
+    "sasso caveoso",
+    "sasso barisano"
+   ],
    "names": [
     "matera",
     "matera city"
@@ -499,6 +905,58 @@
    }
   },
   {
+   "slug": "montepulciano",
+   "label": "San Biagio church below Montepulciano",
+   "lat": 43.0917,
+   "lon": 11.7716,
+   "radius_km": 10,
+   "aliases": [
+    "tempio di san biagio",
+    "madonna di san biagio",
+    "san biagio montepulciano",
+    "lake montepulciano",
+    "lago di montepulciano"
+   ],
+   "names": [
+    "montepulciano"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#7D8C4E",
+    "mid": "#D9C39C",
+    "ice": "#EDE3CF",
+    "water": "#9AAFC6",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#3C5A2E",
+    "acc": "#B4684A",
+    "obj": "#8C9FAE"
+   }
+  },
+  {
+   "slug": "monterosso-al-mare",
+   "label": "Monterosso al Mare, Fegina beach and Torre Aurora",
+   "lat": 44.146,
+   "lon": 9.652,
+   "radius_km": 3,
+   "aliases": [
+    "monterosso",
+    "fegina"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#6C9150",
+    "mid": "#9A9284",
+    "ice": "#DCD0B8",
+    "water": "#2E8DB5",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B35",
+    "acc": "#E8803E",
+    "obj": "#D9A85A"
+   }
+  },
+  {
    "slug": "mount-etna",
    "label": "Mount Etna's broad massif with its summit plume",
    "lat": 37.748,
@@ -551,6 +1009,29 @@
     "leaf": "#6A8A4A",
     "acc": "#3F5E36",
     "obj": "#6E4A30"
+   }
+  },
+  {
+   "slug": "murano",
+   "label": "Murano's Rio dei Vetrai canal and clock tower",
+   "lat": 45.4567,
+   "lon": 12.3529,
+   "radius_km": 3,
+   "aliases": [
+    "murano",
+    "rio dei vetrai"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#D9B46A",
+    "mid": "#A9573C",
+    "ice": "#EFE6D2",
+    "water": "#4F8E86",
+    "near": "#262423",
+    "sun": "#F2C14E",
+    "leaf": "#7FA36A",
+    "acc": "#C4544A",
+    "obj": "#2C6FD0"
    }
   },
   {
@@ -672,6 +1153,69 @@
    }
   },
   {
+   "slug": "otranto",
+   "label": "Aragonese castle and walled old town of Otranto over the harbour",
+   "lat": 40.1453,
+   "lon": 18.491,
+   "radius_km": 8,
+   "aliases": [
+    "castello aragonese di otranto",
+    "castello di otranto",
+    "aragonese castle of otranto",
+    "otranto castle",
+    "castle of otranto",
+    "centro storico di otranto",
+    "otranto old town"
+   ],
+   "names": [
+    "otranto"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#E6D9BC",
+    "mid": "#D8B983",
+    "ice": "#F5F2EA",
+    "water": "#3FB0B6",
+    "near": "#2A241E",
+    "sun": "#F4C543",
+    "leaf": "#4E7A3C",
+    "acc": "#B28650",
+    "obj": "#2E6FA8"
+   }
+  },
+  {
+   "slug": "palatine-hill",
+   "label": "Palatine Hill ruins seen from the Circus Maximus, Rome",
+   "lat": 41.8885,
+   "lon": 12.4865,
+   "radius_km": 2,
+   "aliases": [
+    "palatine hill",
+    "colle palatino",
+    "monte palatino",
+    "palatino",
+    "domus augustana",
+    "domus flavia",
+    "circus maximus",
+    "circo massimo"
+   ],
+   "names": [
+    "palatine"
+   ],
+   "palette": {
+    "sky": "#B3D3EF",
+    "far": "#E2D5B8",
+    "mid": "#B8875D",
+    "ice": "#DCC6A2",
+    "water": "#6FA0C2",
+    "near": "#2D2620",
+    "sun": "#F4C543",
+    "leaf": "#86A04C",
+    "acc": "#6A4834",
+    "obj": "#3F5E2E"
+   }
+  },
+  {
    "slug": "palazzo-vecchio",
    "label": "Palazzo Vecchio and its tower on Piazza della Signoria, Florence",
    "lat": 43.7694,
@@ -693,6 +1237,30 @@
     "leaf": "#B5AB98",
     "acc": "#D9B07A",
     "obj": "#9C9A92"
+   }
+  },
+  {
+   "slug": "palazzo-venezia",
+   "label": "Palazzo Venezia, Rome",
+   "lat": 41.896,
+   "lon": 12.4818,
+   "radius_km": 2,
+   "aliases": [
+    "palazzo venezia",
+    "venezia palace",
+    "palace of venice"
+   ],
+   "palette": {
+    "sky": "#B4D0EC",
+    "far": "#DCCDB2",
+    "mid": "#C4613C",
+    "ice": "#EFE7D6",
+    "water": "#4E8EB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#A39C92",
+    "obj": "#6A4A38"
    }
   },
   {
@@ -722,6 +1290,31 @@
     "leaf": "#4E7A3E",
     "acc": "#A8844E",
     "obj": "#8FAEA2"
+   }
+  },
+  {
+   "slug": "panarea",
+   "label": "Panarea: white Aeolian villa above the sea with Dattilo, Lisca Bianca and Basiluzzo",
+   "lat": 38.6375,
+   "lon": 15.0703,
+   "radius_km": 5,
+   "aliases": [
+    "panarea",
+    "dattilo",
+    "basiluzzo",
+    "lisca bianca"
+   ],
+   "palette": {
+    "sky": "#B5D5EE",
+    "far": "#9A9C88",
+    "mid": "#6F6A62",
+    "ice": "#F7F6F2",
+    "water": "#2F78B0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#557A3E",
+    "acc": "#DCD5C2",
+    "obj": "#C2367E"
    }
   },
   {
@@ -852,6 +1445,55 @@
    }
   },
   {
+   "slug": "pitti-palace",
+   "label": "Palazzo Pitti facade, Florence",
+   "lat": 43.7651,
+   "lon": 11.25,
+   "radius_km": 2,
+   "aliases": [
+    "palazzo pitti",
+    "pitti palace",
+    "piazza pitti",
+    "piazza de pitti"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#D8BC86",
+    "mid": "#C29A60",
+    "ice": "#E8D8B4",
+    "water": "#8E8A82",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A3E",
+    "acc": "#7E5C34",
+    "obj": "#A8936E"
+   }
+  },
+  {
+   "slug": "polignano-a-mare",
+   "label": "Lama Monachile cove between the cliff houses, Polignano a Mare",
+   "lat": 40.9946,
+   "lon": 17.2196,
+   "radius_km": 5,
+   "aliases": [
+    "polignano",
+    "lama monachile",
+    "cala porto polignano"
+   ],
+   "palette": {
+    "sky": "#A8D0F2",
+    "far": "#D6C8A6",
+    "mid": "#C8B48C",
+    "ice": "#F4F1EA",
+    "water": "#2C86A6",
+    "near": "#2A2824",
+    "sun": "#F2C14E",
+    "leaf": "#6F7F45",
+    "acc": "#D9C9A6",
+    "obj": "#DCD6C8"
+   }
+  },
+  {
    "slug": "pompeii",
    "label": "Forum of Pompeii and the Temple of Jupiter with Vesuvius",
    "lat": 40.7487,
@@ -896,6 +1538,29 @@
     "sun": "#F4C542",
     "leaf": "#5E8A3E",
     "acc": "#B8603E",
+    "obj": "#E8C25A"
+   }
+  },
+  {
+   "slug": "portovenere",
+   "label": "Palazzata and Castello Doria, Portovenere",
+   "lat": 44.0505,
+   "lon": 9.836,
+   "radius_km": 5,
+   "aliases": [
+    "portovenere",
+    "porto venere"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#B8B0A0",
+    "mid": "#A49C8E",
+    "ice": "#F2E6D0",
+    "water": "#3A8AA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A34",
+    "acc": "#E0806A",
     "obj": "#E8C25A"
    }
   },
@@ -975,6 +1640,28 @@
    }
   },
   {
+   "slug": "riomaggiore",
+   "label": "Riomaggiore harbour, Cinque Terre",
+   "lat": 44.0993,
+   "lon": 9.7375,
+   "radius_km": 2,
+   "aliases": [
+    "riomaggiore"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E8A08A",
+    "mid": "#76706A",
+    "ice": "#F2E6CC",
+    "water": "#2E6FA0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#D2463C",
+    "obj": "#E8B84A"
+   }
+  },
+  {
    "slug": "roman-forum",
    "label": "Roman Forum with the Temple of Saturn",
    "lat": 41.8925,
@@ -1001,6 +1688,29 @@
    }
   },
   {
+   "slug": "san-gimignano",
+   "label": "Medieval towers of San Gimignano",
+   "lat": 43.4677,
+   "lon": 11.0432,
+   "radius_km": 6,
+   "aliases": [
+    "san gimignano",
+    "torre grossa"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B7BE8E",
+    "mid": "#A89A82",
+    "ice": "#D9C29A",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E3E",
+    "acc": "#B66C4A",
+    "obj": "#3E5A32"
+   }
+  },
+  {
    "slug": "siena",
    "label": "Piazza del Campo and Torre del Mangia, Siena",
    "lat": 43.3184,
@@ -1008,7 +1718,9 @@
    "radius_km": 12,
    "aliases": [
     "torre del mangia",
-    "mangia tower"
+    "mangia tower",
+    "piazza del campo",
+    "il campo di siena"
    ],
    "names": [
     "siena",
@@ -1118,7 +1830,13 @@
     "st marks square",
     "saint mark s square",
     "saint marks square",
-    "san marco square"
+    "san marco square",
+    "st mark s campanile",
+    "st marks campanile",
+    "campanile san marco",
+    "campanile di san marco",
+    "st mark s bell tower",
+    "st marks bell tower"
    ],
    "names": [
     "san marco"
@@ -1134,6 +1852,30 @@
     "leaf": "#6E9E86",
     "acc": "#D9AA3C",
     "obj": "#4B4640"
+   }
+  },
+  {
+   "slug": "stromboli",
+   "label": "Stromboli volcano and the Sciara del Fuoco",
+   "lat": 38.789,
+   "lon": 15.213,
+   "radius_km": 6,
+   "aliases": [
+    "stromboli",
+    "isola di stromboli",
+    "strombolicchio"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#8E8782",
+    "mid": "#7C6A50",
+    "ice": "#F4F4F0",
+    "water": "#1E5A96",
+    "near": "#26262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E7A44",
+    "acc": "#A07A5C",
+    "obj": "#E0E0DC"
    }
   },
   {
@@ -1176,7 +1918,14 @@
    "radius_km": 6,
    "aliases": [
     "taormina greek theatre",
-    "teatro antico taormina"
+    "teatro antico taormina",
+    "teatro antico di taormina",
+    "teatro greco di taormina",
+    "teatro greco romano di taormina",
+    "ancient theatre of taormina",
+    "greek theatre of taormina",
+    "taormina theatre",
+    "teatro greco taormina"
    ],
    "names": [
     "taormina"
@@ -1192,6 +1941,30 @@
     "leaf": "#4F7A3A",
     "acc": "#BDB3A4",
     "obj": "#D8CBB3"
+   }
+  },
+  {
+   "slug": "teatro-massimo",
+   "label": "Teatro Massimo opera house, Palermo",
+   "lat": 38.1203,
+   "lon": 13.3571,
+   "radius_km": 2,
+   "aliases": [
+    "teatro massimo",
+    "massimo theatre",
+    "teatro massimo vittorio emanuele"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#C2B9A8",
+    "mid": "#D2AC70",
+    "ice": "#E9D8B2",
+    "water": "#4E8EB0",
+    "near": "#2A2522",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#A85A44",
+    "obj": "#4A4038"
    }
   },
   {
@@ -1285,7 +2058,10 @@
    "lon": 12.336,
    "radius_km": 6,
    "aliases": [
-    "rialto"
+    "rialto",
+    "grand canal",
+    "canal grande",
+    "canalazzo"
    ],
    "names": [
     "venice",
@@ -1302,6 +2078,109 @@
     "leaf": "#4E7E44",
     "acc": "#B85A3C",
     "obj": "#D9A050"
+   }
+  },
+  {
+   "slug": "verona",
+   "label": "Arena di Verona with the Ala on Piazza Bra",
+   "lat": 45.4391,
+   "lon": 10.9944,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "verona"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#E4DCCC",
+    "mid": "#D6B49A",
+    "ice": "#F2E8D8",
+    "water": "#B8B0A6",
+    "near": "#2A2422",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A44",
+    "acc": "#A85E46",
+    "obj": "#B4342C"
+   }
+  },
+  {
+   "slug": "villa-romana-del-casale",
+   "label": "Great Hunt floor mosaic of the Villa Romana del Casale, Piazza Armerina",
+   "lat": 37.3654,
+   "lon": 14.3343,
+   "radius_km": 6,
+   "aliases": [
+    "villa romana del casale",
+    "villa del casale",
+    "villa romana di piazza armerina"
+   ],
+   "names": [
+    "villa romana",
+    "piazza armerina"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CDAA72",
+    "mid": "#A88660",
+    "ice": "#EEE4CC",
+    "water": "#7E9EA6",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#6F907C",
+    "acc": "#A8503E",
+    "obj": "#77746C"
+   }
+  },
+  {
+   "slug": "vulcano",
+   "label": "Vulcano's Gran Cratere with Lipari and Salina beyond",
+   "lat": 38.404,
+   "lon": 14.962,
+   "radius_km": 6,
+   "aliases": [
+    "isola di vulcano",
+    "vulcano island",
+    "gran cratere",
+    "cratere della fossa"
+   ],
+   "names": [
+    "vulcano"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#8C8A72",
+    "mid": "#A8846A",
+    "ice": "#EEEBE2",
+    "water": "#1F5EA6",
+    "near": "#262320",
+    "sun": "#F2C14E",
+    "leaf": "#6E7D4C",
+    "acc": "#E2D67C",
+    "obj": "#C2B6A2"
+   }
+  },
+  {
+   "slug": "zingaro-nature-reserve",
+   "label": "Cala Tonnarella dell'Uzzo in the Zingaro Nature Reserve",
+   "lat": 38.1006,
+   "lon": 12.8094,
+   "radius_km": 8,
+   "aliases": [
+    "zingaro",
+    "tonnarella dell uzzo",
+    "cala dell uzzo"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#AEB2B4",
+    "mid": "#8E9E52",
+    "ice": "#EDE8DC",
+    "water": "#1F6FA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6B32",
+    "acc": "#46C0BE",
+    "obj": "#9A6A4E"
    }
   }
  ]
