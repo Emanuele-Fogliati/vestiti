@@ -32,6 +32,62 @@
    }
   },
   {
+   "slug": "aveiro",
+   "label": "Moliceiro boat on Aveiro's Central Canal below the Art Nouveau houses",
+   "lat": 40.6413,
+   "lon": -8.6537,
+   "radius_km": 12,
+   "aliases": [
+    "canal central de aveiro",
+    "aveiro canal",
+    "aveiro canals",
+    "ria de aveiro",
+    "canali di aveiro"
+   ],
+   "names": [
+    "aveiro",
+    "aveiro city"
+   ],
+   "palette": {
+    "sky": "#B2D3F0",
+    "far": "#EFE2C4",
+    "mid": "#E6C77A",
+    "ice": "#F7F5EF",
+    "water": "#6E8C86",
+    "near": "#2B2A2C",
+    "sun": "#F2C230",
+    "leaf": "#3E9A52",
+    "acc": "#D2643A",
+    "obj": "#1F4E8C"
+   }
+  },
+  {
+   "slug": "bairro-alto",
+   "label": "Bica funicular climbing to Bairro Alto, Lisbon",
+   "lat": 38.7105,
+   "lon": -9.1462,
+   "radius_km": 2,
+   "aliases": [
+    "bairro alto",
+    "barrio alto",
+    "elevador da bica",
+    "ascensor da bica",
+    "bica funicular"
+   ],
+   "palette": {
+    "sky": "#D2E3F0",
+    "far": "#CFC8BA",
+    "mid": "#A79F92",
+    "ice": "#ECE8DF",
+    "water": "#8FB2C8",
+    "near": "#24272B",
+    "sun": "#F2C14E",
+    "leaf": "#93A08E",
+    "acc": "#E9D48A",
+    "obj": "#F2B705"
+   }
+  },
+  {
    "slug": "belem-tower",
    "label": "Belém Tower on the Tagus, Lisbon",
    "lat": 38.6916,
@@ -54,7 +110,10 @@
     "leaf": "#7E7A58",
     "acc": "#8F877A",
     "obj": "#C9B48E"
-   }
+   },
+   "names": [
+    "belem"
+   ]
   },
   {
    "slug": "cabo-da-roca",
@@ -79,6 +138,143 @@
     "leaf": "#7D8A42",
     "acc": "#D33A2C",
     "obj": "#E2DDD2"
+   }
+  },
+  {
+   "slug": "cabo-girao",
+   "label": "The sheer sea cliff of Cabo Girão, Madeira",
+   "lat": 32.6556,
+   "lon": -17.0047,
+   "radius_km": 4,
+   "aliases": [
+    "cabo girao",
+    "girao cliffs",
+    "capo girao",
+    "cabo girao skywalk",
+    "miradouro do cabo girao"
+   ],
+   "palette": {
+    "sky": "#8CC4F0",
+    "far": "#A49C92",
+    "mid": "#7A4A38",
+    "ice": "#F5F3EE",
+    "water": "#1E4F8E",
+    "near": "#241C18",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E3E",
+    "acc": "#B85A40",
+    "obj": "#8B8580"
+   }
+  },
+  {
+   "slug": "cape-st-vincent",
+   "label": "Cape St. Vincent lighthouse on its cliffs",
+   "lat": 37.0225,
+   "lon": -8.9965,
+   "radius_km": 3,
+   "aliases": [
+    "cape st vincent",
+    "cape saint vincent",
+    "cabo sao vicente",
+    "cabo de sao vicente",
+    "capo s vicente",
+    "capo san vincenzo",
+    "cabo sao vicente lighthouse",
+    "farol do cabo de sao vicente"
+   ],
+   "palette": {
+    "sky": "#92C2EE",
+    "far": "#CDB892",
+    "mid": "#9C8467",
+    "ice": "#F8F8F4",
+    "water": "#1F5E99",
+    "near": "#2B2620",
+    "sun": "#F4C430",
+    "leaf": "#7A8F4A",
+    "acc": "#D9352B",
+    "obj": "#E8834A"
+   },
+   "names": [
+    "sagres",
+    "sagres town",
+    "vila de sagres"
+   ]
+  },
+  {
+   "slug": "cascais",
+   "label": "Santa Marta lighthouse cove, Cascais",
+   "lat": 38.6915,
+   "lon": -9.421,
+   "radius_km": 6,
+   "aliases": [
+    "farol de santa marta",
+    "santa marta lighthouse",
+    "casa de santa maria"
+   ],
+   "names": [
+    "cascais",
+    "cascais town",
+    "cascais old town"
+   ],
+   "palette": {
+    "sky": "#9CC9EE",
+    "far": "#6F665C",
+    "mid": "#DDAE86",
+    "ice": "#F7F6F2",
+    "water": "#3F8C8E",
+    "near": "#232628",
+    "sun": "#F6C431",
+    "leaf": "#5C8A3A",
+    "acc": "#C2412E",
+    "obj": "#2F5FA6"
+   }
+  },
+  {
+   "slug": "chapel-of-bones",
+   "label": "Skull-lined nave of the Chapel of Bones, Évora",
+   "lat": 38.5687,
+   "lon": -7.9083,
+   "radius_km": 2,
+   "aliases": [
+    "capela dos ossos",
+    "chapel of bones",
+    "cappella delle ossa",
+    "capilla de los huesos"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#EEE2C2",
+    "mid": "#B08D5A",
+    "ice": "#F1ECE0",
+    "water": "#4A4540",
+    "near": "#24201C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#D2BC8E",
+    "obj": "#C9A040"
+   }
+  },
+  {
+   "slug": "clerigos-tower",
+   "label": "Clérigos Tower above a Porto street",
+   "lat": 41.1457,
+   "lon": -8.6146,
+   "radius_km": 2,
+   "aliases": [
+    "clerigos",
+    "torre dos clerigos"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#D8D0BE",
+    "mid": "#B7AC97",
+    "ice": "#F2EEE4",
+    "water": "#3E78B0",
+    "near": "#2A2824",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A3A",
+    "acc": "#C8603C",
+    "obj": "#E2B44A"
    }
   },
   {
@@ -173,6 +369,63 @@
    }
   },
   {
+   "slug": "faro",
+   "label": "Arco da Vila with its stork nests, Faro",
+   "lat": 37.0157,
+   "lon": -7.9349,
+   "radius_km": 12,
+   "aliases": [
+    "arco da vila",
+    "cidade velha de faro",
+    "faro old town"
+   ],
+   "names": [
+    "faro",
+    "faro city"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#CFC8BA",
+    "mid": "#C9B28A",
+    "ice": "#F5F2EA",
+    "water": "#3E86B0",
+    "near": "#2B2722",
+    "sun": "#F6C431",
+    "leaf": "#5E8A3A",
+    "acc": "#D9462E",
+    "obj": "#7A5A38"
+   }
+  },
+  {
+   "slug": "fatima",
+   "label": "Basilica and esplanade of the Sanctuary of Fatima",
+   "lat": 39.6317,
+   "lon": -8.6727,
+   "radius_km": 12,
+   "aliases": [
+    "sanctuary of fatima",
+    "santuario de fatima",
+    "santuario di fatima",
+    "basilica of our lady of the rosary of fatima",
+    "cova da iria"
+   ],
+   "names": [
+    "fatima"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#C9C5BC",
+    "mid": "#EEEAE0",
+    "ice": "#FAF8F2",
+    "water": "#6A9CC8",
+    "near": "#2A2A2A",
+    "sun": "#F3C84A",
+    "leaf": "#3F6B3A",
+    "acc": "#BFB396",
+    "obj": "#D4A73A"
+   }
+  },
+  {
    "slug": "funchal",
    "label": "Funchal's amphitheatre of houses above the bay",
    "lat": 32.648,
@@ -233,7 +486,10 @@
    "radius_km": 8,
    "aliases": [
     "ponta da piedade",
-    "ponta de piedade"
+    "ponta de piedade",
+    "pinta da piedade",
+    "punta da piedade",
+    "punta della piedade"
    ],
    "names": [
     "lagos",
@@ -309,6 +565,31 @@
    }
   },
   {
+   "slug": "livraria-lello",
+   "label": "The crimson forked staircase inside Livraria Lello bookshop, Porto",
+   "lat": 41.1469,
+   "lon": -8.6149,
+   "radius_km": 2,
+   "aliases": [
+    "livraria lello",
+    "lello e irmao",
+    "lello irmao",
+    "libreria lello"
+   ],
+   "palette": {
+    "sky": "#C4DCF2",
+    "far": "#E8B98A",
+    "mid": "#9A6534",
+    "ice": "#F1E6CC",
+    "water": "#2F5E9A",
+    "near": "#1E1612",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A4A",
+    "acc": "#B0232E",
+    "obj": "#4A2C18"
+   }
+  },
+  {
    "slug": "monte",
    "label": "Church of Our Lady of Monte above Funchal, Madeira",
    "lat": 32.6744,
@@ -364,6 +645,37 @@
     "leaf": "#6E8F55",
     "acc": "#C4452F",
     "obj": "#CFC4B2"
+   }
+  },
+  {
+   "slug": "nazare",
+   "label": "Nazaré's Sítio promontory with the fort lighthouse and a big wave",
+   "lat": 39.6047,
+   "lon": -9.0847,
+   "radius_km": 6,
+   "aliases": [
+    "praia da nazare",
+    "sitio da nazare",
+    "forte de sao miguel arcanjo",
+    "farol da nazare",
+    "nazare lighthouse",
+    "praia do norte nazare",
+    "praia do norte da nazare"
+   ],
+   "names": [
+    "nazare"
+   ],
+   "palette": {
+    "sky": "#B4D5EE",
+    "far": "#E3CB98",
+    "mid": "#C49A5E",
+    "ice": "#F6F4EE",
+    "water": "#2E7E98",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A44",
+    "acc": "#D2342E",
+    "obj": "#1C5A6E"
    }
   },
   {
@@ -428,6 +740,95 @@
    ]
   },
   {
+   "slug": "pico-island",
+   "label": "Mount Pico rising from the sea, with basalt-walled vineyards and a red-capped windmill, Pico Island",
+   "lat": 38.4686,
+   "lon": -28.3994,
+   "radius_km": 25,
+   "aliases": [
+    "mount pico",
+    "montanha do pico",
+    "pico mountain"
+   ],
+   "names": [
+    "pico island",
+    "ilha do pico",
+    "isola di pico",
+    "pico"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#9DB866",
+    "mid": "#5E5650",
+    "ice": "#F2F0EA",
+    "water": "#2F6E9E",
+    "near": "#22201F",
+    "sun": "#F2C14E",
+    "leaf": "#4E7D36",
+    "acc": "#C8352B",
+    "obj": "#3A3634"
+   }
+  },
+  {
+   "slug": "ponta-de-sao-lourenco",
+   "label": "Red volcanic cliffs and sea stacks of Ponta de São Lourenço, Madeira",
+   "lat": 32.7444,
+   "lon": -16.709,
+   "radius_km": 6,
+   "aliases": [
+    "ponta de sao lourenco",
+    "ponta sao lourenco",
+    "ponta de s lourenco",
+    "punta san lorenzo",
+    "punta di san lorenzo",
+    "ponta sao lorenzo",
+    "ponta do rosto",
+    "vereda da ponta de sao lourenco"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#C8A06A",
+    "mid": "#8E4433",
+    "ice": "#F4F1EA",
+    "water": "#1E6FA0",
+    "near": "#2A1E1A",
+    "sun": "#F2C14E",
+    "leaf": "#7C8A46",
+    "acc": "#C0643E",
+    "obj": "#2A6E8E"
+   }
+  },
+  {
+   "slug": "ponta-delgada",
+   "label": "Portas da Cidade and the Igreja Matriz clock tower, Ponta Delgada",
+   "lat": 37.7387,
+   "lon": -25.6685,
+   "radius_km": 12,
+   "aliases": [
+    "portas da cidade",
+    "ponta delgada city gates",
+    "porte della citta ponta delgada",
+    "praca de goncalo velho"
+   ],
+   "names": [
+    "ponta delgada",
+    "ponta delgada azores",
+    "ponta delgada city"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#D9D2C4",
+    "mid": "#46423F",
+    "ice": "#F6F4EF",
+    "water": "#2D6FA0",
+    "near": "#262423",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A44",
+    "acc": "#C4623E",
+    "obj": "#77736E"
+   }
+  },
+  {
    "slug": "porto",
    "label": "Porto's Ribeira and the Dom Luís I bridge over the Douro",
    "lat": 41.1405,
@@ -439,11 +840,15 @@
     "ponte luis i",
     "ponte luiz i",
     "cais da ribeira",
-    "ribeira do porto"
+    "ribeira do porto",
+    "praca da ribeira",
+    "ribeira district",
+    "ribeira di porto"
    ],
    "names": [
     "porto",
-    "oporto"
+    "oporto",
+    "ribeira"
    ],
    "palette": {
     "sky": "#B5D3EE",
@@ -456,6 +861,241 @@
     "leaf": "#6C9A48",
     "acc": "#C9653E",
     "obj": "#5E6A70"
+   }
+  },
+  {
+   "slug": "porto-moniz",
+   "label": "Lava rock natural pools of Porto Moniz, Madeira",
+   "lat": 32.8676,
+   "lon": -17.1696,
+   "radius_km": 5,
+   "aliases": [
+    "piscinas naturais do porto moniz",
+    "porto moniz natural pools",
+    "ilheu mole"
+   ],
+   "names": [
+    "porto moniz"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C99552",
+    "mid": "#3A2E29",
+    "ice": "#E8E4DA",
+    "water": "#3FC0C8",
+    "near": "#1A1411",
+    "sun": "#F4C846",
+    "leaf": "#6A5546",
+    "acc": "#C0503E",
+    "obj": "#1F5FA8"
+   }
+  },
+  {
+   "slug": "praca-do-comercio",
+   "label": "Praça do Comércio with the Rua Augusta Arch, Lisbon",
+   "lat": 38.7075,
+   "lon": -9.1365,
+   "radius_km": 2,
+   "aliases": [
+    "praca do comercio",
+    "terreiro do paco",
+    "arco da rua augusta",
+    "rua augusta arch",
+    "piazza del commercio",
+    "commerce square"
+   ],
+   "palette": {
+    "sky": "#A8D0F2",
+    "far": "#DAD2C2",
+    "mid": "#E9BC3F",
+    "ice": "#F4EFE3",
+    "water": "#3D78A6",
+    "near": "#2A2622",
+    "sun": "#F6C431",
+    "leaf": "#6E9A4E",
+    "acc": "#96503A",
+    "obj": "#4F7F68"
+   }
+  },
+  {
+   "slug": "quinta-da-regaleira",
+   "label": "Initiation Well of Quinta da Regaleira, Sintra",
+   "lat": 38.7963,
+   "lon": -9.396,
+   "radius_km": 2,
+   "aliases": [
+    "quinta da regaleira",
+    "regaleira",
+    "initiation well",
+    "poco iniciatico",
+    "pozzo iniziatico"
+   ],
+   "palette": {
+    "sky": "#CFE3EE",
+    "far": "#A9A893",
+    "mid": "#7F806A",
+    "ice": "#E6DCCB",
+    "water": "#3D4437",
+    "near": "#1A1C18",
+    "sun": "#F2C94C",
+    "leaf": "#4C7232",
+    "acc": "#8DA552",
+    "obj": "#5F6352"
+   }
+  },
+  {
+   "slug": "santana",
+   "label": "Traditional thatched A-frame houses of Santana, Madeira",
+   "lat": 32.8053,
+   "lon": -16.8829,
+   "radius_km": 8,
+   "aliases": [
+    "casas de santana",
+    "casas tipicas de santana",
+    "santana houses",
+    "palheiros de santana"
+   ],
+   "names": [
+    "santana",
+    "santana madeira"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#6E9A7E",
+    "mid": "#B9935C",
+    "ice": "#FAF8F2",
+    "water": "#3A78A8",
+    "near": "#2A241E",
+    "sun": "#F6C431",
+    "leaf": "#4E8436",
+    "acc": "#D8342C",
+    "obj": "#2F72B8"
+   }
+  },
+  {
+   "slug": "sao-jorge-castle",
+   "label": "São Jorge Castle on its hill above Lisbon",
+   "lat": 38.7139,
+   "lon": -9.1334,
+   "radius_km": 2,
+   "aliases": [
+    "castelo de sao jorge",
+    "castelo de s jorge",
+    "castelo s jorge",
+    "sao jorge castle",
+    "castle of sao jorge",
+    "saint george castle",
+    "st george s castle",
+    "castello di lisbona",
+    "castello di san giorgio",
+    "castello sao jorge",
+    "castello di sao jorge"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#EFD9C6",
+    "mid": "#C4AD86",
+    "ice": "#F4F0E6",
+    "water": "#9DBCDB",
+    "near": "#272522",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3C",
+    "acc": "#CC6440",
+    "obj": "#E6C468"
+   }
+  },
+  {
+   "slug": "sete-cidades",
+   "label": "Blue and Green Lakes of Sete Cidades from Vista do Rei",
+   "lat": 37.8556,
+   "lon": -25.7925,
+   "radius_km": 6,
+   "aliases": [
+    "sete cidades",
+    "lagoa das sete cidades",
+    "vista do rei",
+    "ilha de sao miguel",
+    "isola di sao miguel"
+   ],
+   "palette": {
+    "sky": "#C9DDEE",
+    "far": "#8FAE6A",
+    "mid": "#4F7D3A",
+    "ice": "#F4F2EC",
+    "water": "#46AE92",
+    "near": "#1E2A1E",
+    "sun": "#F2C94C",
+    "leaf": "#2C5530",
+    "acc": "#A8C76E",
+    "obj": "#6A8CB4"
+   },
+   "names": [
+    "sao miguel",
+    "sao miguel island",
+    "sao miguel azores"
+   ]
+  },
+  {
+   "slug": "university-of-coimbra",
+   "label": "The University of Coimbra's tower crowning the old town above the Mondego",
+   "lat": 40.2075,
+   "lon": -8.4256,
+   "radius_km": 3,
+   "aliases": [
+    "university of coimbra",
+    "coimbra university",
+    "universidade de coimbra",
+    "universita di coimbra",
+    "paco das escolas",
+    "torre da universidade",
+    "biblioteca joanina",
+    "joanina library"
+   ],
+   "palette": {
+    "sky": "#B0D4F2",
+    "far": "#D8CBB0",
+    "mid": "#5E7068",
+    "ice": "#F6F3EC",
+    "water": "#5A8CA6",
+    "near": "#2A2624",
+    "sun": "#F2C14E",
+    "leaf": "#3F6A34",
+    "acc": "#D2643C",
+    "obj": "#EBCB7E"
+   },
+   "names": [
+    "coimbra"
+   ]
+  },
+  {
+   "slug": "vila-nova-de-gaia",
+   "label": "Vila Nova de Gaia's port-wine lodges, rabelo boats and Serra do Pilar",
+   "lat": 41.1375,
+   "lon": -8.6115,
+   "radius_km": 4,
+   "aliases": [
+    "cais de gaia",
+    "serra do pilar",
+    "port wine cellars",
+    "port wine lodges",
+    "caves do vinho do porto",
+    "cantine del porto"
+   ],
+   "names": [
+    "vila nova de gaia",
+    "gaia"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#B57E4A",
+    "mid": "#9C968C",
+    "ice": "#F3F0E8",
+    "water": "#3C7C94",
+    "near": "#262320",
+    "sun": "#F2C14E",
+    "leaf": "#4F7B3E",
+    "acc": "#C55C3B",
+    "obj": "#4A3022"
    }
   }
  ]
