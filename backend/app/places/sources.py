@@ -19,7 +19,7 @@ from pathlib import Path
 
 import httpx
 
-UA = "Thruwear-place-audit/1.0 (https://github.com/Emanuele-Fogliati/vestiti)"
+UA = "Thruwear-place-audit/1.0"
 WIKIDATA = "https://www.wikidata.org/w/api.php"
 NOMINATIM = "https://nominatim.openstreetmap.org/reverse"
 GEONAMES = "https://geocoding-api.open-meteo.com/v1/search"

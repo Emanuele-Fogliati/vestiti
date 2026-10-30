@@ -26,7 +26,7 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-UA = "ThruwearArt/0.1 (https://github.com/Emanuele-Fogliati/vestiti)"
+UA = "ThruwearArtBot/1.0 (reference only)"
 
 
 def get(url: str) -> bytes:
