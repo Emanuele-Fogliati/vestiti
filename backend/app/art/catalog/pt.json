@@ -3,6 +3,60 @@
  "name": "Portugal",
  "places": [
   {
+   "slug": "algarve",
+   "label": "The double sea arch of Praia da Marinha, Algarve",
+   "lat": 37.0897,
+   "lon": -8.4122,
+   "radius_km": 20,
+   "aliases": [
+    "praia da marinha",
+    "marinha beach",
+    "spiaggia della marinha"
+   ],
+   "names": [
+    "algarve",
+    "the algarve",
+    "algarve coast"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#9AB0A8",
+    "mid": "#DCA864",
+    "ice": "#F4E9D2",
+    "water": "#2B9AA2",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#5F7A3A",
+    "acc": "#C48848",
+    "obj": "#EBD3A0"
+   }
+  },
+  {
+   "slug": "belem-tower",
+   "label": "Belém Tower on the Tagus, Lisbon",
+   "lat": 38.6916,
+   "lon": -9.216,
+   "radius_km": 2,
+   "aliases": [
+    "belem tower",
+    "torre de belem",
+    "torre di belem",
+    "tour de belem"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#8E9C80",
+    "mid": "#D3C7AC",
+    "ice": "#F2ECDD",
+    "water": "#3E7FA6",
+    "near": "#2B2A28",
+    "sun": "#F2C14E",
+    "leaf": "#7E7A58",
+    "acc": "#8F877A",
+    "obj": "#C9B48E"
+   }
+  },
+  {
    "slug": "cabo-da-roca",
    "label": "Cabo da Roca lighthouse on the Atlantic cliffs",
    "lat": 38.7804,
@@ -25,6 +79,36 @@
     "leaf": "#7D8A42",
     "acc": "#D33A2C",
     "obj": "#E2DDD2"
+   }
+  },
+  {
+   "slug": "douro-valley",
+   "label": "Terraced vineyards above the Douro river",
+   "lat": 41.17,
+   "lon": -7.56,
+   "radius_km": 40,
+   "aliases": [
+    "douro valley",
+    "alto douro",
+    "vale do douro",
+    "valle del douro",
+    "valle do douro",
+    "douro wine region"
+   ],
+   "names": [
+    "douro vineyards"
+   ],
+   "palette": {
+    "sky": "#BFD8EE",
+    "far": "#8E9CB2",
+    "mid": "#6F8C48",
+    "ice": "#E6D8B6",
+    "water": "#4F8FB0",
+    "near": "#2A2A22",
+    "sun": "#F2C14E",
+    "leaf": "#93AE52",
+    "acc": "#4E6534",
+    "obj": "#B9584A"
    }
   },
   {
@@ -56,6 +140,35 @@
    }
   },
   {
+   "slug": "funchal",
+   "label": "Funchal's amphitheatre of houses above the bay",
+   "lat": 32.648,
+   "lon": -16.908,
+   "radius_km": 12,
+   "aliases": [
+    "funchal bay",
+    "baia do funchal",
+    "porto do funchal"
+   ],
+   "names": [
+    "funchal",
+    "funchal madeira",
+    "funchal city"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#6F8F68",
+    "mid": "#A8A49A",
+    "ice": "#F4F1EA",
+    "water": "#3E78A8",
+    "near": "#2A2A2C",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A3A",
+    "acc": "#C4563E",
+    "obj": "#D23A8C"
+   }
+  },
+  {
    "slug": "jeronimos-monastery",
    "label": "Jerónimos Monastery's Manueline facade and domed tower, Lisbon",
    "lat": 38.6979,
@@ -77,6 +190,33 @@
     "leaf": "#6E9A4A",
     "acc": "#C27A4C",
     "obj": "#8E7E66"
+   }
+  },
+  {
+   "slug": "lagos",
+   "label": "Ponta da Piedade sea stacks, Lagos",
+   "lat": 37.0806,
+   "lon": -8.6697,
+   "radius_km": 8,
+   "aliases": [
+    "ponta da piedade",
+    "ponta de piedade"
+   ],
+   "names": [
+    "lagos",
+    "lagos algarve"
+   ],
+   "palette": {
+    "sky": "#B5D4EE",
+    "far": "#8FB0B8",
+    "mid": "#E2B870",
+    "ice": "#F4E8CC",
+    "water": "#1F7192",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A44",
+    "acc": "#BE8A4C",
+    "obj": "#3FA59A"
    }
   },
   {
@@ -104,6 +244,34 @@
     "leaf": "#A89C8C",
     "acc": "#E8A0A0",
     "obj": "#F2C230"
+   }
+  },
+  {
+   "slug": "obidos",
+   "label": "Óbidos castle above the white walled town",
+   "lat": 39.3622,
+   "lon": -9.1573,
+   "radius_km": 5,
+   "aliases": [
+    "obidos castle",
+    "castelo de obidos",
+    "castello di obidos"
+   ],
+   "names": [
+    "obidos",
+    "vila de obidos"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#A9AE86",
+    "mid": "#C6AA7E",
+    "ice": "#F7F5EF",
+    "water": "#4C86B0",
+    "near": "#2C2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4E6B3A",
+    "acc": "#C8603E",
+    "obj": "#D9A62E"
    }
   },
   {
