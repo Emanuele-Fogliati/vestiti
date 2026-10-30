@@ -3,6 +3,54 @@
  "name": "Vietnam",
  "places": [
   {
+   "slug": "ben-thanh-market",
+   "label": "Ben Thanh Market clock tower gate, Ho Chi Minh City",
+   "lat": 10.7725,
+   "lon": 106.698,
+   "radius_km": 2,
+   "aliases": [
+    "ben thanh"
+   ],
+   "palette": {
+    "sky": "#C4DCEF",
+    "far": "#A3A4A0",
+    "mid": "#EEDFA6",
+    "ice": "#FFFFFF",
+    "water": "#3E7FC1",
+    "near": "#2A2522",
+    "sun": "#F4C542",
+    "leaf": "#3F7D3A",
+    "acc": "#B03E30",
+    "obj": "#CB6A40"
+   }
+  },
+  {
+   "slug": "ben-tre",
+   "label": "Coconut shed and palms on the river, Ben Tre",
+   "lat": 10.2415,
+   "lon": 106.3759,
+   "radius_km": 20,
+   "aliases": [
+    "ben tre province",
+    "provincia di ben tre"
+   ],
+   "names": [
+    "ben tre"
+   ],
+   "palette": {
+    "sky": "#BFDCF0",
+    "far": "#9DB98A",
+    "mid": "#A3A39C",
+    "ice": "#ECE6D8",
+    "water": "#A6855E",
+    "near": "#2E2218",
+    "sun": "#F4C542",
+    "leaf": "#3F7E36",
+    "acc": "#B98A58",
+    "obj": "#7E6A55"
+   }
+  },
+  {
    "slug": "cu-chi-tunnels",
    "label": "Cu Chi Tunnels",
    "lat": 11.1418,
@@ -170,6 +218,36 @@
    }
   },
   {
+   "slug": "ho-chi-minh-mausoleum",
+   "label": "Ho Chi Minh Mausoleum on Ba Dinh Square, Hanoi",
+   "lat": 21.0368,
+   "lon": 105.8346,
+   "radius_km": 2,
+   "aliases": [
+    "ho chi minh mausoleum",
+    "ho chi minh s mausoleum",
+    "mausoleum of ho chi minh",
+    "mausoleo di ho chi minh",
+    "ho chi minh complex",
+    "complesso di ho chi minh",
+    "lang chu tich ho chi minh",
+    "lang bac",
+    "ba dinh square"
+   ],
+   "palette": {
+    "sky": "#BCD8F0",
+    "far": "#D2C9B6",
+    "mid": "#82878A",
+    "ice": "#C4C7C6",
+    "water": "#6FA9C8",
+    "near": "#1F2124",
+    "sun": "#F4C542",
+    "leaf": "#4F8E3A",
+    "acc": "#D8261E",
+    "obj": "#8A4A38"
+   }
+  },
+  {
    "slug": "hoi-an",
    "label": "Hoi An riverside old town",
    "lat": 15.8801,
@@ -212,6 +290,34 @@
     "leaf": "#4E8A3E",
     "acc": "#8A3A2A",
     "obj": "#9A948A"
+   }
+  },
+  {
+   "slug": "japanese-covered-bridge",
+   "label": "Japanese Covered Bridge (Chua Cau), Hoi An",
+   "lat": 15.8772,
+   "lon": 108.3262,
+   "radius_km": 2,
+   "aliases": [
+    "japanese covered bridge",
+    "japanese bridge",
+    "chua cau",
+    "ponte coperto giapponese",
+    "ponte giapponese",
+    "pagoda giapponese",
+    "lai vien kieu"
+   ],
+   "palette": {
+    "sky": "#B5D4F0",
+    "far": "#A7A196",
+    "mid": "#8C4A30",
+    "ice": "#F2ECDF",
+    "water": "#3F8FA0",
+    "near": "#2A211C",
+    "sun": "#F4C542",
+    "leaf": "#4E8C3A",
+    "acc": "#E2948F",
+    "obj": "#E9C25A"
    }
   },
   {
@@ -271,6 +377,35 @@
    }
   },
   {
+   "slug": "nha-trang",
+   "label": "Nha Trang beach and bay",
+   "lat": 12.2388,
+   "lon": 109.1967,
+   "radius_km": 15,
+   "aliases": [
+    "nha trang beach",
+    "nha trang bay",
+    "tran phu beach",
+    "spiaggia di nha trang",
+    "baia di nha trang"
+   ],
+   "names": [
+    "nha trang"
+   ],
+   "palette": {
+    "sky": "#BFD9EE",
+    "far": "#6F9478",
+    "mid": "#E2B4A2",
+    "ice": "#F4F3EE",
+    "water": "#3E93A6",
+    "near": "#22272B",
+    "sun": "#F4C542",
+    "leaf": "#4E8B3C",
+    "acc": "#EBD8A6",
+    "obj": "#3A8E8C"
+   }
+  },
+  {
    "slug": "ninh-binh",
    "label": "Tam Coc rice paddies and karsts, Ninh Binh",
    "lat": 20.22,
@@ -294,6 +429,62 @@
     "leaf": "#7E9E3A",
     "acc": "#DCC35A",
     "obj": "#6B4A2E"
+   }
+  },
+  {
+   "slug": "reunification-palace",
+   "label": "Reunification Palace (Independence Palace), Ho Chi Minh City",
+   "lat": 10.777,
+   "lon": 106.6953,
+   "radius_km": 2,
+   "aliases": [
+    "reunification palace",
+    "independence palace",
+    "dinh doc lap",
+    "reunification hall",
+    "palazzo della riunificazione",
+    "palazzo dell indipendenza"
+   ],
+   "palette": {
+    "sky": "#BFD9F0",
+    "far": "#8E8E8A",
+    "mid": "#ECE6D6",
+    "ice": "#FFFFFF",
+    "water": "#8FC3D8",
+    "near": "#272523",
+    "sun": "#F4C542",
+    "leaf": "#5E9A35",
+    "acc": "#D9281E",
+    "obj": "#9C8A72"
+   }
+  },
+  {
+   "slug": "sapa",
+   "label": "Rice terraces of the Muong Hoa valley, Sapa",
+   "lat": 22.31,
+   "lon": 103.87,
+   "radius_km": 20,
+   "aliases": [
+    "muong hoa",
+    "lao chai",
+    "sapa rice",
+    "sapa terrace"
+   ],
+   "names": [
+    "sapa",
+    "sa pa"
+   ],
+   "palette": {
+    "sky": "#CFE3EE",
+    "far": "#93B5AA",
+    "mid": "#A2CC3E",
+    "ice": "#C9CBC6",
+    "water": "#6FA9B5",
+    "near": "#24301E",
+    "sun": "#F4C542",
+    "leaf": "#4E7E34",
+    "acc": "#8A5A34",
+    "obj": "#4A4743"
    }
   },
   {
@@ -345,6 +536,28 @@
     "leaf": "#4E7E36",
     "acc": "#9C6C54",
     "obj": "#8A3E32"
+   }
+  },
+  {
+   "slug": "tran-quoc-pagoda",
+   "label": "Tran Quoc Pagoda on West Lake, Hanoi",
+   "lat": 21.0479,
+   "lon": 105.8368,
+   "radius_km": 2,
+   "aliases": [
+    "tran quoc"
+   ],
+   "palette": {
+    "sky": "#BCDCEF",
+    "far": "#B3AE9E",
+    "mid": "#B4432F",
+    "ice": "#F4EFE3",
+    "water": "#6F9466",
+    "near": "#2A1F1A",
+    "sun": "#F4C542",
+    "leaf": "#4C8A36",
+    "acc": "#E5C15A",
+    "obj": "#CF6A50"
    }
   }
  ]
