@@ -76,6 +76,28 @@
    }
   },
   {
+   "slug": "dyrholaey",
+   "label": "Dyrholaey sea arch with puffins",
+   "lat": 63.4,
+   "lon": -19.13,
+   "radius_km": 3,
+   "aliases": [
+    "dyrholaey"
+   ],
+   "palette": {
+    "sky": "#C2D8EC",
+    "far": "#8A9AA2",
+    "mid": "#6A5C4E",
+    "ice": "#F4F2EC",
+    "water": "#3E959A",
+    "near": "#24272A",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4A",
+    "acc": "#E8692C",
+    "obj": "#B0A08C"
+   }
+  },
+  {
    "slug": "geysir",
    "label": "Strokkur geyser, Haukadalur",
    "lat": 64.3104,
@@ -104,6 +126,29 @@
     "circolo d oro",
     "gullni hringurinn"
    ]
+  },
+  {
+   "slug": "godafoss",
+   "label": "Godafoss horseshoe falls",
+   "lat": 65.6828,
+   "lon": -17.5502,
+   "radius_km": 5,
+   "aliases": [
+    "godafoss",
+    "cascata degli dei"
+   ],
+   "palette": {
+    "sky": "#B6D2EE",
+    "far": "#8FA866",
+    "mid": "#55504A",
+    "ice": "#FFFFFF",
+    "water": "#7EA6A2",
+    "near": "#232528",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4E",
+    "acc": "#9C7A5A",
+    "obj": "#D4E4EA"
+   }
   },
   {
    "slug": "gullfoss",
@@ -174,6 +219,28 @@
    }
   },
   {
+   "slug": "lake-myvatn",
+   "label": "Lake Myvatn with Vindbelgjarfjall and lava pillars",
+   "lat": 65.6,
+   "lon": -17.0,
+   "radius_km": 12,
+   "aliases": [
+    "myvatn"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#8E96B0",
+    "mid": "#5E534C",
+    "ice": "#F4F4F0",
+    "water": "#5E8EC4",
+    "near": "#222428",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#6A5A44",
+    "obj": "#C9A04A"
+   }
+  },
+  {
    "slug": "reykjanes-peninsula",
    "label": "Reykjanesviti lighthouse on Baejarfell, Reykjanes",
    "lat": 63.8155,
@@ -225,6 +292,53 @@
     "leaf": "#6E9A55",
     "acc": "#C8463A",
     "obj": "#3F7FBF"
+   }
+  },
+  {
+   "slug": "reynisfjara",
+   "label": "Reynisfjara basalt columns and black beach",
+   "lat": 63.4044,
+   "lon": -19.0447,
+   "radius_km": 3,
+   "aliases": [
+    "reynisfjara",
+    "spiaggia nera di vik",
+    "black sand beach vik",
+    "halsanefshellir"
+   ],
+   "palette": {
+    "sky": "#B8D2EC",
+    "far": "#3A3938",
+    "mid": "#43403E",
+    "ice": "#F2F4F4",
+    "water": "#6E8E9C",
+    "near": "#1E1E20",
+    "sun": "#F2C14E",
+    "leaf": "#8E8A50",
+    "acc": "#A39A7A",
+    "obj": "#6E6B66"
+   }
+  },
+  {
+   "slug": "seljalandsfoss",
+   "label": "Seljalandsfoss falling in front of its cave",
+   "lat": 63.6156,
+   "lon": -19.9886,
+   "radius_km": 4,
+   "aliases": [
+    "seljalandsfoss"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#9AA08A",
+    "mid": "#6B5D4C",
+    "ice": "#FFFFFF",
+    "water": "#5D8FA8",
+    "near": "#25282A",
+    "sun": "#F2C14E",
+    "leaf": "#7FA040",
+    "acc": "#B7BE55",
+    "obj": "#D3E3EC"
    }
   },
   {
@@ -297,6 +411,34 @@
    }
   },
   {
+   "slug": "snaefellsnes",
+   "label": "Londrangar sea stacks, Snaefellsnes",
+   "lat": 64.7346,
+   "lon": -23.776,
+   "radius_km": 40,
+   "aliases": [
+    "londrangar"
+   ],
+   "names": [
+    "snaefellsnes",
+    "snaefellsnes peninsula",
+    "penisola di snaefellsnes",
+    "penisola dello snaefellsnes"
+   ],
+   "palette": {
+    "sky": "#B4D0EC",
+    "far": "#3E3C3A",
+    "mid": "#4F4A42",
+    "ice": "#F4F4F0",
+    "water": "#4E7E9E",
+    "near": "#212326",
+    "sun": "#F2C14E",
+    "leaf": "#6F8A3E",
+    "acc": "#A88A5E",
+    "obj": "#C9B48A"
+   }
+  },
+  {
    "slug": "solheimajokull",
    "label": "Solheimajokull glacier tongue and lagoon",
    "lat": 63.5317,
@@ -341,6 +483,35 @@
     "leaf": "#86A45E",
     "acc": "#D7262E",
     "obj": "#1F4E9A"
+   }
+  },
+  {
+   "slug": "vik-i-myrdal",
+   "label": "Vik church above the village and Reynisdrangar",
+   "lat": 63.4195,
+   "lon": -19.0063,
+   "radius_km": 6,
+   "aliases": [
+    "vik i myrdal",
+    "vikurkirkja",
+    "myrdal"
+   ],
+   "names": [
+    "vik",
+    "vik village",
+    "vik iceland"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#A3AC66",
+    "mid": "#4F5A40",
+    "ice": "#FFFFFF",
+    "water": "#5E88A8",
+    "near": "#222426",
+    "sun": "#F2C14E",
+    "leaf": "#7C9A46",
+    "acc": "#9E2A2E",
+    "obj": "#6E767E"
    }
   }
  ]
