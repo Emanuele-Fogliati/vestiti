@@ -3,6 +3,33 @@
  "name": "South Korea",
  "places": [
   {
+   "slug": "bulguksa",
+   "label": "Bulguksa temple, the stone stairways to Jahamun gate",
+   "lat": 35.79,
+   "lon": 129.332,
+   "radius_km": 3,
+   "aliases": [
+    "bulguksa",
+    "bulguk sa",
+    "bulguk temple",
+    "tempio bulguksa",
+    "cheongungyo",
+    "baegungyo"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#4F6E45",
+    "mid": "#A89B87",
+    "ice": "#D9D2C4",
+    "water": "#3F8C7E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4E",
+    "acc": "#A33A2C",
+    "obj": "#E3BE5C"
+   }
+  },
+  {
    "slug": "busan",
    "label": "Gwangan Bridge and the Marine City skyline, Busan",
    "lat": 35.147,
@@ -36,6 +63,31 @@
    }
   },
   {
+   "slug": "cheomseongdae",
+   "label": "Cheomseongdae observatory, Gyeongju",
+   "lat": 35.8347,
+   "lon": 129.219,
+   "radius_km": 2,
+   "aliases": [
+    "cheomseongdae",
+    "cheomseong dae",
+    "chomsongdae",
+    "osservatorio di cheomseongdae"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8FA6A0",
+    "mid": "#C7B08A",
+    "ice": "#DCD0B8",
+    "water": "#5E8AB0",
+    "near": "#2A2723",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#7FAE50",
+    "obj": "#6E9A48"
+   }
+  },
+  {
    "slug": "gamcheon-culture-village",
    "label": "Gamcheon Culture Village's pastel hillside, Busan",
    "lat": 35.097,
@@ -55,6 +107,58 @@
     "leaf": "#3F6B35",
     "acc": "#F2D36B",
     "obj": "#EFA3A8"
+   }
+  },
+  {
+   "slug": "gangnam",
+   "label": "Gangnam towers above Bongeunsa temple, Seoul",
+   "lat": 37.5145,
+   "lon": 127.0573,
+   "radius_km": 5,
+   "aliases": [
+    "bongeunsa",
+    "bongeun sa",
+    "gangnam district",
+    "gangnam gu"
+   ],
+   "names": [
+    "gangnam"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#CFCAC0",
+    "mid": "#4F86B8",
+    "ice": "#EEF0F0",
+    "water": "#3A9A84",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3F7040",
+    "acc": "#8A3A2A",
+    "obj": "#5E86B0"
+   }
+  },
+  {
+   "slug": "gwangjang-market",
+   "label": "Gwangjang Market food stalls, Seoul",
+   "lat": 37.5701,
+   "lon": 126.9996,
+   "radius_km": 2,
+   "aliases": [
+    "gwangjang market",
+    "gwangjang sijang",
+    "mercato di gwangjang"
+   ],
+   "palette": {
+    "sky": "#E4EEF0",
+    "far": "#AEB4B8",
+    "mid": "#D6CCBA",
+    "ice": "#F5F3EE",
+    "water": "#6B5A4E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5BA64A",
+    "acc": "#D8352A",
+    "obj": "#C88A3A"
    }
   },
   {
@@ -113,6 +217,149 @@
    }
   },
   {
+   "slug": "haeundae-beach",
+   "label": "Haeundae Beach with the LCT towers, Busan",
+   "lat": 35.1587,
+   "lon": 129.1604,
+   "radius_km": 3,
+   "aliases": [
+    "haeundae beach",
+    "spiaggia di haeundae",
+    "haeundae lct",
+    "lct the sharp"
+   ],
+   "names": [
+    "haeundae"
+   ],
+   "palette": {
+    "sky": "#A9CFEE",
+    "far": "#B9C6CF",
+    "mid": "#3E6C94",
+    "ice": "#F2F4F4",
+    "water": "#4A9DB2",
+    "near": "#22272B",
+    "sun": "#F4C430",
+    "leaf": "#4E8A45",
+    "acc": "#E3D0A6",
+    "obj": "#2F86C8"
+   }
+  },
+  {
+   "slug": "insadong",
+   "label": "Insadong-gil with its giant calligraphy brush, Seoul",
+   "lat": 37.5735,
+   "lon": 126.9858,
+   "radius_km": 2,
+   "aliases": [
+    "insadong",
+    "insa dong",
+    "insadong gil",
+    "ssamziegil"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#D3CBBE",
+    "mid": "#A89C8A",
+    "ice": "#EEEAE2",
+    "water": "#6A8FB0",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8C46",
+    "acc": "#8E5434",
+    "obj": "#B4664A"
+   }
+  },
+  {
+   "slug": "jagalchi-market",
+   "label": "Jagalchi Fish Market on Busan harbour",
+   "lat": 35.0966,
+   "lon": 129.0306,
+   "radius_km": 2,
+   "aliases": [
+    "jagalchi",
+    "mercato del pesce di jagalchi",
+    "jagalchi fish market"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#7F9478",
+    "mid": "#D8D0C2",
+    "ice": "#F4F5F4",
+    "water": "#3F7F96",
+    "near": "#1F2A36",
+    "sun": "#F2C14E",
+    "leaf": "#6FAEA2",
+    "acc": "#A9B0B4",
+    "obj": "#2F5FA0"
+   }
+  },
+  {
+   "slug": "jeju-island",
+   "label": "Jeju Island: a dol hareubang with Hallasan behind",
+   "lat": 33.38,
+   "lon": 126.55,
+   "radius_km": 45,
+   "aliases": [
+    "dol hareubang",
+    "harubang",
+    "hareubang"
+   ],
+   "names": [
+    "jeju",
+    "jeju island",
+    "jeju do",
+    "jejudo",
+    "isola di jeju",
+    "jeju city",
+    "jeju si"
+   ],
+   "palette": {
+    "sky": "#9FCBEB",
+    "far": "#7A9AA0",
+    "mid": "#8A8B8C",
+    "ice": "#E8E8E4",
+    "water": "#3E6E3C",
+    "near": "#25272A",
+    "sun": "#F4C430",
+    "leaf": "#79A852",
+    "acc": "#F08A1C",
+    "obj": "#45464A"
+   }
+  },
+  {
+   "slug": "jeonju",
+   "label": "Jeonju: Jeondong Cathedral above the hanok village roofs",
+   "lat": 35.8133,
+   "lon": 127.1491,
+   "radius_km": 15,
+   "aliases": [
+    "jeondong cathedral",
+    "jeondong catholic church",
+    "cattedrale di jeondong",
+    "jeondong",
+    "jeonju hanok village",
+    "jeonju hanok maeul",
+    "villaggio hanok di jeonju",
+    "hanok village jeonju"
+   ],
+   "names": [
+    "jeonju",
+    "jeonju si"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#555B62",
+    "mid": "#ABA59B",
+    "ice": "#EFEBE2",
+    "water": "#5E8AB0",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A4A",
+    "acc": "#A5503A",
+    "obj": "#8A6040"
+   }
+  },
+  {
    "slug": "korean-demilitarized-zone",
    "label": "The blue huts of the Joint Security Area at Panmunjom, DMZ",
    "lat": 37.956,
@@ -141,6 +388,77 @@
     "leaf": "#3F6E3E",
     "acc": "#E2B53A",
     "obj": "#4EA3DA"
+   }
+  },
+  {
+   "slug": "n-seoul-tower",
+   "label": "N Seoul Tower on Namsan above the Han River",
+   "lat": 37.5512,
+   "lon": 126.9882,
+   "radius_km": 4,
+   "aliases": [
+    "n seoul tower",
+    "seoul tower",
+    "namsan tower",
+    "n tower",
+    "n tower seoul",
+    "namsan seoul tower",
+    "torre di seoul",
+    "torre namsan",
+    "torre televisiva di seoul",
+    "namsan park",
+    "namsan cable car"
+   ],
+   "names": [
+    "namsan",
+    "namsan mountain",
+    "namsan seoul"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#9AA7A2",
+    "mid": "#8E959C",
+    "ice": "#F2F0EA",
+    "water": "#5D8DB5",
+    "near": "#23272B",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F45",
+    "acc": "#C8402E",
+    "obj": "#4E6B85"
+   }
+  },
+  {
+   "slug": "seongsan-ilchulbong",
+   "label": "Seongsan Ilchulbong tuff crater rising from the sea, Jeju",
+   "lat": 33.4581,
+   "lon": 126.9425,
+   "radius_km": 5,
+   "aliases": [
+    "seongsan ilchulbong",
+    "seongsan ilchul bong",
+    "ilchulbong",
+    "sunrise peak",
+    "seongsan sunrise",
+    "picco dell alba",
+    "seongsan peak",
+    "seongsan crater"
+   ],
+   "names": [
+    "seongsan",
+    "seongsan ri",
+    "seongsan eup"
+   ],
+   "palette": {
+    "sky": "#B8D8F2",
+    "far": "#7E9A86",
+    "mid": "#6E6A60",
+    "ice": "#F4F2EC",
+    "water": "#2F6FA8",
+    "near": "#22272A",
+    "sun": "#F2C14E",
+    "leaf": "#86C24E",
+    "acc": "#3F7A3A",
+    "obj": "#D9C9A0"
    }
   },
   {
