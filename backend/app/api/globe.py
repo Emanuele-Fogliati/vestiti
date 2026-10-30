@@ -1,5 +1,6 @@
 import hashlib
 from datetime import date
+from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from pydantic import BaseModel, Field, field_validator
@@ -63,6 +64,36 @@ def dress_me(route_id: str, body: RouteTripIn, user: User = Depends(current_user
     stops = inspire.stops_for(it, start) if it else globe_routes.stops_for(r, start)
     trip.stops = [Stop(position=i, **s) for i, s in enumerate(stops)]
     mark_ready_made(trip)
+    db.add(trip)
+    db.commit()
+    db.refresh(trip)
+    return trip
+
+
+class PickedTripIn(BaseModel):
+    """Places picked on the globe, in the order picked: whole cities and single sights."""
+    places: list[Annotated[str, Field(max_length=80)]] = Field(min_length=1, max_length=60)
+    month: int | None = Field(default=None, ge=1, le=12)
+
+
+MAX_PICKED_STOPS = 20
+
+
+@router.post("/trip", response_model=TripOut, status_code=201)
+def picked_trip(body: PickedTripIn, user: User = Depends(current_user), db: Session = Depends(get_db)):
+    """Dress me for the places I picked: Florence (with the Uffizi and Ponte Vecchio), then Rome."""
+    known = globe.by_id()
+    ids = list(dict.fromkeys(body.places))
+    missing = [p for p in ids if p not in known]
+    if missing:
+        raise HTTPException(404, "Place not found")
+    if len({known[p]["parent"] or p for p in ids}) > MAX_PICKED_STOPS:
+        raise HTTPException(422, f"Pick up to {MAX_PICKED_STOPS} cities or places")
+    start = globe_routes.start_in([body.month] if body.month else [])
+    stops = globe.trip_stops(ids, start)
+    trip = Trip(user_id=user.id, name=" · ".join(s["name"] for s in stops[:3]) + (" …" if len(stops) > 3 else ""),
+                notes="Picked on the globe.", start_estimated=True)
+    trip.stops = [Stop(position=i, **s) for i, s in enumerate(stops)]
     db.add(trip)
     db.commit()
     db.refresh(trip)
