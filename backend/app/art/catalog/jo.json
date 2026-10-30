@@ -3,6 +3,225 @@
  "name": "Jordan",
  "places": [
   {
+   "slug": "amman-citadel",
+   "label": "Temple of Hercules on the Amman Citadel above the white city",
+   "lat": 31.9543,
+   "lon": 35.9347,
+   "radius_km": 2,
+   "aliases": [
+    "amman citadel",
+    "citadel of amman",
+    "cittadella di amman",
+    "temple of hercules",
+    "tempio di ercole",
+    "jabal al qal a",
+    "gebel al qala a",
+    "jebel al qala a"
+   ],
+   "palette": {
+    "sky": "#A8CDF0",
+    "far": "#CDBFA6",
+    "mid": "#D2B184",
+    "ice": "#F3EEE4",
+    "water": "#6FA8C8",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4E",
+    "acc": "#B99468",
+    "obj": "#DCC9A2"
+   },
+   "names": [
+    "amman"
+   ]
+  },
+  {
+   "slug": "aqaba",
+   "label": "Aqaba waterfront with the great flagpole and the granite mountains",
+   "lat": 29.5267,
+   "lon": 35.0,
+   "radius_km": 15,
+   "aliases": [
+    "aqaba fort",
+    "aqaba castle",
+    "mamluk fort aqaba",
+    "castello di aqaba",
+    "forte di aqaba",
+    "aqaba flagpole",
+    "aqaba flag"
+   ],
+   "names": [
+    "aqaba",
+    "al aqaba",
+    "akaba",
+    "aqaba city",
+    "aqaba port"
+   ],
+   "palette": {
+    "sky": "#AFCDEB",
+    "far": "#E6D7BC",
+    "mid": "#B48A70",
+    "ice": "#F2EEE6",
+    "water": "#2F5FA0",
+    "near": "#222222",
+    "sun": "#F2C14E",
+    "leaf": "#3E8A4A",
+    "acc": "#C8323A",
+    "obj": "#C9A57A"
+   }
+  },
+  {
+   "slug": "dana-biosphere-reserve",
+   "label": "Dana village above the Wadi Dana canyon, with a Nubian ibex",
+   "lat": 30.675,
+   "lon": 35.612,
+   "radius_km": 20,
+   "aliases": [
+    "dana biosphere",
+    "dana reserve",
+    "dana nature reserve",
+    "riserva di dana",
+    "biosfera di dana",
+    "riserva della biosfera di dana",
+    "wadi dana",
+    "dana village"
+   ],
+   "names": [
+    "dana"
+   ],
+   "palette": {
+    "sky": "#C2DAEF",
+    "far": "#B49C96",
+    "mid": "#D6B585",
+    "ice": "#F1E9DA",
+    "water": "#6FA8C8",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#4E6B36",
+    "acc": "#C4A27A",
+    "obj": "#8A6646"
+   }
+  },
+  {
+   "slug": "dead-sea",
+   "label": "Salt shore of the Dead Sea with a floating bather",
+   "lat": 31.72,
+   "lon": 35.58,
+   "radius_km": 30,
+   "aliases": [
+    "dead sea",
+    "mar morto",
+    "mer morte",
+    "totes meer",
+    "mar muerto",
+    "al bahr al mayyit"
+   ],
+   "palette": {
+    "sky": "#C9E1F2",
+    "far": "#C4A6A0",
+    "mid": "#B98A62",
+    "ice": "#FAF8F2",
+    "water": "#3FAFB4",
+    "near": "#2E2622",
+    "sun": "#F4C24E",
+    "leaf": "#7A8A4E",
+    "acc": "#C9A27A",
+    "obj": "#2F6FB0"
+   }
+  },
+  {
+   "slug": "jerash",
+   "label": "The Oval Plaza colonnade of Jerash",
+   "lat": 32.2789,
+   "lon": 35.8913,
+   "radius_km": 5,
+   "aliases": [
+    "jerash",
+    "gerasa",
+    "jarash",
+    "gerash",
+    "oval plaza",
+    "oval forum"
+   ],
+   "palette": {
+    "sky": "#A9CCF0",
+    "far": "#B9B49A",
+    "mid": "#D9BC8C",
+    "ice": "#F2EDE2",
+    "water": "#6FA8C8",
+    "near": "#2E2820",
+    "sun": "#F2C14E",
+    "leaf": "#5F7F3C",
+    "acc": "#CDB27C",
+    "obj": "#E8DCC2"
+   }
+  },
+  {
+   "slug": "madaba",
+   "label": "St George's Church, home of the Madaba Mosaic Map",
+   "lat": 31.7186,
+   "lon": 35.7944,
+   "radius_km": 10,
+   "aliases": [
+    "madaba mosaic map",
+    "madaba map",
+    "mosaic map of madaba",
+    "st george s church madaba",
+    "saint george church madaba",
+    "church of saint george madaba",
+    "chiesa di san giorgio madaba",
+    "mappa di madaba",
+    "mappa musiva di madaba"
+   ],
+   "names": [
+    "madaba",
+    "madaba city",
+    "madaba town"
+   ],
+   "palette": {
+    "sky": "#A7CDF0",
+    "far": "#E0D3BC",
+    "mid": "#D4BA8E",
+    "ice": "#EFE6D4",
+    "water": "#6FA8C8",
+    "near": "#2A2420",
+    "sun": "#E2B23A",
+    "leaf": "#4E6A3A",
+    "acc": "#6E5038",
+    "obj": "#E6DECF"
+   }
+  },
+  {
+   "slug": "mount-nebo",
+   "label": "The Brazen Serpent Monument on Mount Nebo",
+   "lat": 31.7681,
+   "lon": 35.7257,
+   "radius_km": 4,
+   "aliases": [
+    "mount nebo",
+    "mt nebo",
+    "monte nebo",
+    "jabal nebo",
+    "jebel nebo",
+    "memorial of moses",
+    "siyagha"
+   ],
+   "names": [
+    "nebo"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#D9CDB6",
+    "mid": "#D7C29A",
+    "ice": "#EDE4D0",
+    "water": "#A9C4CF",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#7D9165",
+    "acc": "#B87A46",
+    "obj": "#7E4630"
+   }
+  },
+  {
    "slug": "petra",
    "label": "The Treasury, Petra",
    "lat": 30.3285,
@@ -24,6 +243,75 @@
     "leaf": "#8C9A5B",
     "acc": "#B98A5E",
     "obj": "#E6CDA2"
+   }
+  },
+  {
+   "slug": "roman-theatre-amman",
+   "label": "Roman Theatre of Amman carved into the hillside",
+   "lat": 31.9516,
+   "lon": 35.9392,
+   "radius_km": 2,
+   "aliases": [
+    "roman theatre of amman",
+    "roman theater of amman",
+    "amman roman theatre",
+    "amman roman theater",
+    "amman amphitheatre",
+    "amman amphitheater",
+    "teatro romano di amman",
+    "teatro romano amman",
+    "roman theatre amman",
+    "roman theater amman"
+   ],
+   "names": [
+    "roman theatre",
+    "roman theater",
+    "roman amphitheatre",
+    "roman amphitheater",
+    "teatro romano"
+   ],
+   "palette": {
+    "sky": "#AFD0F0",
+    "far": "#C9B48C",
+    "mid": "#DCCDB0",
+    "ice": "#F3EEE3",
+    "water": "#6FA8C8",
+    "near": "#2E2A24",
+    "sun": "#F2C14E",
+    "leaf": "#6F8F4A",
+    "acc": "#C2A57C",
+    "obj": "#E5D8BE"
+   }
+  },
+  {
+   "slug": "shobak-castle",
+   "label": "Shobak (Montreal) Crusader castle on its hill",
+   "lat": 30.5307,
+   "lon": 35.5605,
+   "radius_km": 5,
+   "aliases": [
+    "shobak",
+    "shoubak",
+    "shoback",
+    "showbak",
+    "castello di shobak",
+    "fortezza di shobak",
+    "montreal castle",
+    "krak de montreal",
+    "crac de montreal",
+    "mons regalis"
+   ],
+   "palette": {
+    "sky": "#AFCFEF",
+    "far": "#D8CBB0",
+    "mid": "#D2B784",
+    "ice": "#F1EADB",
+    "water": "#6FA8C8",
+    "near": "#2E2820",
+    "sun": "#F2C14E",
+    "leaf": "#6E7E44",
+    "acc": "#A68E6A",
+    "obj": "#CDBB94"
    }
   },
   {
