@@ -3,6 +3,67 @@
  "name": "Cuba",
  "places": [
   {
+   "slug": "che-guevara-mausoleum",
+   "label": "The Che Guevara statue and memorial, Santa Clara",
+   "lat": 22.4048,
+   "lon": -79.9811,
+   "radius_km": 3,
+   "aliases": [
+    "che guevara mausoleum",
+    "mausoleo del che",
+    "mausoleo di che guevara",
+    "mausoleo che guevara",
+    "che guevara memorial",
+    "memorial del che",
+    "memoriale ernesto che guevara",
+    "monumento al che",
+    "plaza de la revolucion ernesto che guevara",
+    "plaza del che"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#9E9A90",
+    "mid": "#D9CBAA",
+    "ice": "#ECE6D8",
+    "water": "#4A8FB8",
+    "near": "#262522",
+    "sun": "#F2C14E",
+    "leaf": "#3F7F3A",
+    "acc": "#C04A3A",
+    "obj": "#4F4D40"
+   },
+   "names": [
+    "santa clara"
+   ]
+  },
+  {
+   "slug": "cienfuegos",
+   "label": "The Purisima Concepcion Cathedral on Parque Marti, Cienfuegos",
+   "lat": 22.1458,
+   "lon": -80.4528,
+   "radius_km": 12,
+   "aliases": [
+    "cienfuegos cathedral",
+    "cattedrale di cienfuegos",
+    "catedral de cienfuegos"
+   ],
+   "names": [
+    "cienfuegos"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#B9B5AA",
+    "mid": "#EADB86",
+    "ice": "#F7F5EE",
+    "water": "#86BCD6",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#3F7F3A",
+    "acc": "#C42A3C",
+    "obj": "#8A2432"
+   }
+  },
+  {
    "slug": "havana",
    "label": "El Capitolio and a classic car, Havana",
    "lat": 23.135,
@@ -25,6 +86,88 @@
     "leaf": "#4E8A4A",
     "acc": "#E8A0B8",
     "obj": "#E86E9A"
+   }
+  },
+  {
+   "slug": "old-havana",
+   "label": "Havana Cathedral on Plaza de la Catedral, Old Havana",
+   "lat": 23.1414,
+   "lon": -82.3519,
+   "radius_km": 3,
+   "aliases": [
+    "old havana",
+    "habana vieja",
+    "havana vieja",
+    "avana vecchia",
+    "havana cathedral",
+    "catedral de la habana",
+    "cattedrale dell avana"
+   ],
+   "palette": {
+    "sky": "#A3CBEF",
+    "far": "#D9D2C2",
+    "mid": "#B8AE9C",
+    "ice": "#F3F0E8",
+    "water": "#2F7FB0",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A4A",
+    "acc": "#7A4A2A",
+    "obj": "#E8E2D4"
+   }
+  },
+  {
+   "slug": "trinidad",
+   "label": "The yellow bell tower of San Francisco over a cobbled street, Trinidad",
+   "lat": 21.8044,
+   "lon": -79.9853,
+   "radius_km": 12,
+   "aliases": [
+    "trinidad de cuba"
+   ],
+   "names": [
+    "trinidad"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#A9A49A",
+    "mid": "#E8B84A",
+    "ice": "#F5F2EA",
+    "water": "#3C8FD0",
+    "near": "#2A2A2C",
+    "sun": "#F2C14E",
+    "leaf": "#2F7D4F",
+    "acc": "#B5452E",
+    "obj": "#7FD8D2"
+   }
+  },
+  {
+   "slug": "vinales",
+   "label": "The Vinales Valley mogotes above red tobacco fields",
+   "lat": 22.64,
+   "lon": -83.72,
+   "radius_km": 20,
+   "aliases": [
+    "vinales valley",
+    "valle de vinales",
+    "valley of vinales",
+    "valle di vinales",
+    "valle de los mogotes"
+   ],
+   "names": [
+    "vinales"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#BDB49C",
+    "mid": "#8FA392",
+    "ice": "#F5F3EC",
+    "water": "#8A6A44",
+    "near": "#25291F",
+    "sun": "#F2C14E",
+    "leaf": "#56783F",
+    "acc": "#B95A33",
+    "obj": "#A3C060"
    }
   }
  ]
