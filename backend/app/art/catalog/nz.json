@@ -3,6 +3,30 @@
  "name": "New Zealand",
  "places": [
   {
+   "slug": "abel-tasman-national-park",
+   "label": "Split Apple Rock, Abel Tasman National Park",
+   "lat": -41.0,
+   "lon": 173.02,
+   "radius_km": 25,
+   "aliases": [
+    "abel tasman",
+    "split apple rock",
+    "toka ngawha"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#7F93B4",
+    "mid": "#B8B3A6",
+    "ice": "#F4F2EC",
+    "water": "#3BA3AE",
+    "near": "#25292A",
+    "sun": "#F4C542",
+    "leaf": "#3E6A34",
+    "acc": "#E3B865",
+    "obj": "#7E8B56"
+   }
+  },
+  {
    "slug": "arrowtown",
    "label": "Buckingham Street shopfronts under the autumn hill, Arrowtown",
    "lat": -44.9416,
@@ -81,6 +105,28 @@
     "leaf": "#3F6B3A",
     "acc": "#EEDB9C",
     "obj": "#A8322C"
+   }
+  },
+  {
+   "slug": "doubtful-sound",
+   "label": "Doubtful Sound fiord with a bottlenose dolphin",
+   "lat": -45.3,
+   "lon": 166.99,
+   "radius_km": 25,
+   "aliases": [
+    "doubtful sound"
+   ],
+   "palette": {
+    "sky": "#B2D4F0",
+    "far": "#AFC2CF",
+    "mid": "#4E7656",
+    "ice": "#E8ECEE",
+    "water": "#2C5D84",
+    "near": "#1F2A26",
+    "sun": "#F4C542",
+    "leaf": "#2E5230",
+    "acc": "#8DA6B8",
+    "obj": "#6A8798"
    }
   },
   {
@@ -200,7 +246,11 @@
    "radius_km": 15,
    "aliases": [
     "milford sound",
-    "piopiotahi"
+    "piopiotahi",
+    "fiordland national park",
+    "parco nazionale del fiordland",
+    "parco nazionale di fiordland",
+    "fiordland np"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -213,6 +263,63 @@
     "leaf": "#3A5E34",
     "acc": "#6E8A3E",
     "obj": "#B8B2A4"
+   },
+   "names": [
+    "fiordland"
+   ]
+  },
+  {
+   "slug": "pancake-rocks",
+   "label": "Punakaiki Pancake Rocks and blowhole",
+   "lat": -42.114,
+   "lon": 171.327,
+   "radius_km": 5,
+   "aliases": [
+    "pancake rocks",
+    "punakaiki pancake rocks",
+    "dolomite point"
+   ],
+   "names": [
+    "punakaiki"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#6E8C78",
+    "mid": "#A3A196",
+    "ice": "#F6F8F8",
+    "water": "#4C8FA6",
+    "near": "#272A29",
+    "sun": "#F4C542",
+    "leaf": "#4F7234",
+    "acc": "#C8B88A",
+    "obj": "#8C7A5A"
+   }
+  },
+  {
+   "slug": "picton",
+   "label": "Picton foreshore and harbour with the Cook Strait ferry",
+   "lat": -41.288,
+   "lon": 174.006,
+   "radius_km": 12,
+   "aliases": [
+    "picton foreshore",
+    "picton harbour",
+    "picton ferry terminal"
+   ],
+   "names": [
+    "picton"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#B4B8BC",
+    "mid": "#4A6F3E",
+    "ice": "#F6F7F8",
+    "water": "#3E9AAE",
+    "near": "#23272A",
+    "sun": "#F4C542",
+    "leaf": "#5C9640",
+    "acc": "#8A7460",
+    "obj": "#2D4E8E"
    }
   },
   {
@@ -298,6 +405,62 @@
     "leaf": "#4F6E62",
     "acc": "#D9CDB2",
     "obj": "#2B3E5C"
+   }
+  },
+  {
+   "slug": "te-anau",
+   "label": "Te Anau lakefront wharf with a takahe",
+   "lat": -45.415,
+   "lon": 167.718,
+   "radius_km": 15,
+   "aliases": [
+    "lake te anau",
+    "lago te anau"
+   ],
+   "names": [
+    "te anau"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#8399AA",
+    "mid": "#4F6A3E",
+    "ice": "#CDBDA0",
+    "water": "#33618A",
+    "near": "#232528",
+    "sun": "#F4C542",
+    "leaf": "#879A4C",
+    "acc": "#B23C2A",
+    "obj": "#6B5D4F"
+   }
+  },
+  {
+   "slug": "tongariro-national-park",
+   "label": "Mount Ngauruhoe and Ruapehu, Tongariro National Park",
+   "lat": -39.157,
+   "lon": 175.632,
+   "radius_km": 30,
+   "aliases": [
+    "tongariro national park",
+    "parco nazionale del tongariro",
+    "parco nazionale tongariro",
+    "mount tongariro",
+    "mt tongariro",
+    "ngauruhoe"
+   ],
+   "names": [
+    "tongariro"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#9A939A",
+    "mid": "#5E504A",
+    "ice": "#F4F5F7",
+    "water": "#4F86A6",
+    "near": "#262224",
+    "sun": "#F4C542",
+    "leaf": "#8A7A52",
+    "acc": "#C9A35A",
+    "obj": "#7E4636"
    }
   },
   {
