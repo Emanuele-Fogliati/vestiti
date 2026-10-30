@@ -113,6 +113,33 @@
    }
   },
   {
+   "slug": "grey-glacier",
+   "label": "Grey Glacier and its icebergs on Lago Grey",
+   "lat": -51.01,
+   "lon": -73.22,
+   "radius_km": 8,
+   "aliases": [
+    "grey glacier",
+    "glaciar grey",
+    "ghiacciaio grey",
+    "lago grey",
+    "lake grey",
+    "grey lake"
+   ],
+   "palette": {
+    "sky": "#B9D3EA",
+    "far": "#7C7F8A",
+    "mid": "#54473F",
+    "ice": "#FFFFFF",
+    "water": "#A3B8B4",
+    "near": "#23262A",
+    "sun": "#F6C431",
+    "leaf": "#3F5A34",
+    "acc": "#6FC3E6",
+    "obj": "#8E7E6E"
+   }
+  },
+  {
    "slug": "osorno-volcano",
    "label": "Osorno Volcano",
    "lat": -41.1,
@@ -158,6 +185,32 @@
     "leaf": "#E0B23C",
     "acc": "#C8463A",
     "obj": "#5E4836"
+   }
+  },
+  {
+   "slug": "puerto-varas",
+   "label": "Sagrado Corazon church of Puerto Varas under Osorno",
+   "lat": -41.3195,
+   "lon": -72.9833,
+   "radius_km": 10,
+   "aliases": [
+    "sagrado corazon puerto varas",
+    "iglesia del sagrado corazon puerto varas"
+   ],
+   "names": [
+    "puerto varas"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#4F6A90",
+    "mid": "#6E6A66",
+    "ice": "#F4F0E6",
+    "water": "#2F6FB0",
+    "near": "#26282C",
+    "sun": "#F6C431",
+    "leaf": "#3F6E36",
+    "acc": "#C8282E",
+    "obj": "#8C8F92"
    }
   },
   {
@@ -225,7 +278,10 @@
     "leaf": "#5E8F44",
     "acc": "#7FA9C6",
     "obj": "#E2D9C8"
-   }
+   },
+   "names": [
+    "santiago"
+   ]
   },
   {
    "slug": "torres-del-paine-national-park",
@@ -272,6 +328,37 @@
     "leaf": "#8E6448",
     "acc": "#CF9A68",
     "obj": "#D8C2A0"
+   },
+   "names": [
+    "valley of the moon",
+    "valle de la luna",
+    "moon valley",
+    "valle della luna"
+   ]
+  },
+  {
+   "slug": "valparaiso",
+   "label": "Valparaiso's colourful hills and ascensor",
+   "lat": -33.0428,
+   "lon": -71.6262,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "valparaiso",
+    "valpo",
+    "valparaiso city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E959C",
+    "mid": "#B8996C",
+    "ice": "#F2EEE4",
+    "water": "#2F72AE",
+    "near": "#26282C",
+    "sun": "#F6C431",
+    "leaf": "#6BA05A",
+    "acc": "#C8463A",
+    "obj": "#EDB93E"
    }
   }
  ]
