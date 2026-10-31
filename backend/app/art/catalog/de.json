@@ -3,6 +3,58 @@
  "name": "Germany",
  "places": [
   {
+   "slug": "berlin-cathedral",
+   "label": "Berlin Cathedral (Berliner Dom) from the Lustgarten",
+   "lat": 52.5192,
+   "lon": 13.401,
+   "radius_km": 2,
+   "aliases": [
+    "berlin cathedral",
+    "berliner dom",
+    "duomo di berlino",
+    "cattedrale di berlino"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B3A994",
+    "mid": "#857B6B",
+    "ice": "#F2EDE2",
+    "water": "#7FB4D2",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A4A",
+    "acc": "#5C9C88",
+    "obj": "#D4A63A"
+   }
+  },
+  {
+   "slug": "berlin-tv-tower",
+   "label": "Berlin TV Tower (Fernsehturm) at Alexanderplatz",
+   "lat": 52.5208,
+   "lon": 13.4094,
+   "radius_km": 2,
+   "aliases": [
+    "berlin tv tower",
+    "fernsehturm",
+    "torre della televisione di berlino",
+    "berlin television tower",
+    "alexanderplatz",
+    "alexander platz"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#C3C8CE",
+    "mid": "#D6D1C6",
+    "ice": "#F3F1EC",
+    "water": "#6E9AB8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A4A",
+    "acc": "#B5533C",
+    "obj": "#5C9C88"
+   }
+  },
+  {
    "slug": "brandenburg-gate",
    "label": "Brandenburg Gate, Berlin",
    "lat": 52.516,
@@ -28,6 +80,35 @@
     "leaf": "#4E8A6E",
     "acc": "#C8A040",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "charlottenburg-palace",
+   "label": "Charlottenburg Palace and its green cupola, Berlin",
+   "lat": 52.5209,
+   "lon": 13.2957,
+   "radius_km": 2,
+   "aliases": [
+    "charlottenburg palace",
+    "schloss charlottenburg",
+    "castello di charlottenburg",
+    "palazzo di charlottenburg",
+    "reggia di charlottenburg"
+   ],
+   "names": [
+    "charlottenburg"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#EFE6CC",
+    "mid": "#E2CB92",
+    "ice": "#F6F2E8",
+    "water": "#ABA597",
+    "near": "#26292C",
+    "sun": "#E8B83A",
+    "leaf": "#5E8A4A",
+    "acc": "#A84A36",
+    "obj": "#5C9C88"
    }
   },
   {
@@ -174,6 +255,55 @@
     "leaf": "#2E5A36",
     "acc": "#B8806A",
     "obj": "#A8BC8A"
+   }
+  },
+  {
+   "slug": "potsdamer-platz",
+   "label": "Potsdamer Platz towers, Berlin",
+   "lat": 52.5096,
+   "lon": 13.376,
+   "radius_km": 2,
+   "aliases": [
+    "potsdamer platz",
+    "sony center",
+    "kollhoff tower"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#A9C3D6",
+    "mid": "#7C7F84",
+    "ice": "#ECE5D2",
+    "water": "#5E93A8",
+    "near": "#24272B",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A4A",
+    "acc": "#8A4A36",
+    "obj": "#C9A46A"
+   }
+  },
+  {
+   "slug": "reichstag-building",
+   "label": "Reichstag building with its glass dome, Berlin",
+   "lat": 52.5186,
+   "lon": 13.3762,
+   "radius_km": 2,
+   "aliases": [
+    "reichstag",
+    "palazzo del reichstag",
+    "reichstagsgebaude",
+    "bundestag"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#DCD3C0",
+    "mid": "#BCAE92",
+    "ice": "#F2F0EA",
+    "water": "#A9C2CF",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4E",
+    "acc": "#8E8270",
+    "obj": "#3E6FA8"
    }
   }
  ]
