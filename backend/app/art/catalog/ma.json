@@ -204,7 +204,12 @@
    "radius_km": 6,
    "aliases": [
     "chefchaouen",
-    "chaouen"
+    "chaouen",
+    "rif mountains",
+    "rif mountain",
+    "monti del rif",
+    "montagne del rif",
+    "montagnes du rif"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -217,7 +222,11 @@
     "leaf": "#4F8A3A",
     "acc": "#C2643A",
     "obj": "#B8CDF0"
-   }
+   },
+   "names": [
+    "rif",
+    "the rif"
+   ]
   },
   {
    "slug": "chouara-tannery",
@@ -502,6 +511,37 @@
    }
   },
   {
+   "slug": "jardin-secret",
+   "label": "Le Jardin Secret: the Islamic garden and its tower, Marrakech",
+   "lat": 31.6316,
+   "lon": -7.9887,
+   "radius_km": 2,
+   "aliases": [
+    "jardin secret",
+    "secret garden marrakech",
+    "secret garden of marrakech",
+    "giardino segreto di marrakech",
+    "giardino segreto marrakech"
+   ],
+   "names": [
+    "secret garden",
+    "il giardino segreto",
+    "giardino segreto"
+   ],
+   "palette": {
+    "sky": "#A8CDF0",
+    "far": "#E0B48A",
+    "mid": "#EADFCB",
+    "ice": "#F7F5EF",
+    "water": "#4FB3A6",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8C3A",
+    "acc": "#B98E68",
+    "obj": "#2E6B4E"
+   }
+  },
+  {
    "slug": "jemaa-el-fnaa",
    "label": "Jemaa el-Fnaa square with its food stalls and the Koutoubia",
    "lat": 31.6258,
@@ -613,6 +653,62 @@
    }
   },
   {
+   "slug": "mausoleum-of-mohammed-v",
+   "label": "Mausoleum of Mohammed V in Rabat",
+   "lat": 34.0225,
+   "lon": -6.8225,
+   "radius_km": 2,
+   "aliases": [
+    "mohammed v mausoleum",
+    "mausoleum of mohamed v",
+    "mausoleo di mohamed v",
+    "mausoleo di maometto v",
+    "mausoleo di maometto",
+    "mausoleum of mohammed v",
+    "mausolee mohammed v",
+    "mausoleo di mohammed v",
+    "mausoleo di mohammed 5"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#DCC9A8",
+    "mid": "#F2EFE8",
+    "ice": "#FFFFFF",
+    "water": "#4A86B0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#2F7D52",
+    "acc": "#C9A272",
+    "obj": "#D6D2C8"
+   }
+  },
+  {
+   "slug": "medersa-el-attarine",
+   "label": "Courtyard of the Al-Attarine Madrasa in Fez",
+   "lat": 34.0654,
+   "lon": -4.9737,
+   "radius_km": 2,
+   "aliases": [
+    "attarine",
+    "medersa el attarine",
+    "medersa al attarine",
+    "madrasa al attarine",
+    "medresse el attarine"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#EFE8DA",
+    "mid": "#D9CCB2",
+    "ice": "#F7F4EC",
+    "water": "#3F8E9A",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E8A5E",
+    "acc": "#6E4A30",
+    "obj": "#A06A40"
+   }
+  },
+  {
    "slug": "meknes",
    "label": "Bab Mansour gate, Meknes",
    "lat": 33.894,
@@ -704,6 +800,37 @@
    }
   },
   {
+   "slug": "moulay-idriss",
+   "label": "Moulay Idriss Zerhoun, the white holy town with the green-roofed shrine",
+   "lat": 34.0547,
+   "lon": -5.5217,
+   "radius_km": 6,
+   "aliases": [
+    "moulay idriss zerhoun",
+    "moulay driss zerhoun",
+    "moulay idris zerhoun"
+   ],
+   "names": [
+    "moulay idriss",
+    "moulay idris",
+    "moulay driss",
+    "moulay idriss town",
+    "moulay idriss village"
+   ],
+   "palette": {
+    "sky": "#B9D4EE",
+    "far": "#93A877",
+    "mid": "#EFE3C9",
+    "ice": "#F8F6F0",
+    "water": "#7FA39A",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#5E7F3E",
+    "acc": "#E2C597",
+    "obj": "#2F7D52"
+   }
+  },
+  {
    "slug": "mount-toubkal",
    "label": "Jbel Toubkal summit massif with a Barbary sheep",
    "lat": 31.0597,
@@ -737,11 +864,7 @@
     "hassan tower",
     "tour hassan",
     "torre hassan",
-    "torre di hassan",
-    "mausoleum of mohammed v",
-    "mausolee mohammed v",
-    "mausoleo di mohammed v",
-    "mausoleo di mohammed 5"
+    "torre di hassan"
    ],
    "names": [
     "rabat",
@@ -913,6 +1036,39 @@
     "ouarzazat",
     "warzazat"
    ]
+  },
+  {
+   "slug": "taroudant",
+   "label": "The ochre ramparts of Taroudant with the High Atlas behind",
+   "lat": 30.4703,
+   "lon": -8.877,
+   "radius_km": 12,
+   "aliases": [
+    "taroudant ramparts",
+    "ramparts of taroudant",
+    "remparts de taroudant",
+    "mura di taroudant",
+    "walls of taroudant"
+   ],
+   "names": [
+    "taroudant",
+    "taroudannt",
+    "taroudant city",
+    "taroudant medina",
+    "medina of taroudant"
+   ],
+   "palette": {
+    "sky": "#A9CBEB",
+    "far": "#8E9BB4",
+    "mid": "#C98458",
+    "ice": "#F4F5F7",
+    "water": "#5F8FB0",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#A8673F",
+    "obj": "#7E7C78"
+   }
   },
   {
    "slug": "tetouan",
