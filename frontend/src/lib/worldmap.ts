@@ -17,7 +17,6 @@ export interface GlobePlace {
    *  the app does not say how many trips include a place. */
   level: number;
   art: string | null;
-  artLabel: string | null;
   /** Indexes into GlobeData.itineraries: ready-made itineraries that stop here. */
   itineraries: number[];
   /** Id of the city or town this place is inside (the Uffizi is in Florence), else null.
@@ -30,7 +29,7 @@ export interface GlobeData {
   places: GlobePlace[];
 }
 
-type Row = [string, string, string, PlaceKind, number, number, number, string | null, string | null, number[], string | null];
+type Row = [string, string, string, PlaceKind, number, number, number, string | null, number[], string | null];
 
 let cache: Promise<GlobeData> | null = null;
 
@@ -41,8 +40,8 @@ export function loadPlaces(): Promise<GlobeData> {
       .then((r) => { if (!r.ok) throw new Error(`places: ${r.status}`); return r.json(); })
       .then((d: { itineraries: GlobeData["itineraries"]; places: Row[] }) => ({
         itineraries: d.itineraries,
-        places: d.places.map(([id, name, country, kind, lat, lon, level, art, artLabel, itineraries, parent]) =>
-          ({ id, name, country, kind, lat, lon, level, art, artLabel, itineraries, parent: parent ?? null })),
+        places: d.places.map(([id, name, country, kind, lat, lon, level, art, itineraries, parent]) =>
+          ({ id, name, country, kind, lat, lon, level, art, itineraries, parent: parent ?? null })),
       }));
     cache.catch(() => { cache = null; });
   }
