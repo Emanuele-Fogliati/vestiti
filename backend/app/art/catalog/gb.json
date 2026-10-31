@@ -216,6 +216,30 @@
    }
   },
   {
+   "slug": "glenfinnan-viaduct",
+   "label": "The Jacobite steam train on the curved Glenfinnan Viaduct above Loch Shiel",
+   "lat": 56.876,
+   "lon": -5.432,
+   "radius_km": 4,
+   "aliases": [
+    "glenfinnan",
+    "jacobite steam train",
+    "jacobite train"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#7C8C66",
+    "mid": "#8A867E",
+    "ice": "#F6F4EE",
+    "water": "#8EB2CE",
+    "near": "#22261E",
+    "sun": "#F2C14E",
+    "leaf": "#7AA040",
+    "acc": "#9A8A50",
+    "obj": "#7A2630"
+   }
+  },
+  {
    "slug": "inverness",
    "label": "Inverness Castle above the River Ness",
    "lat": 57.4766,
@@ -269,6 +293,85 @@
    }
   },
   {
+   "slug": "kirkwall",
+   "label": "St Magnus Cathedral, Kirkwall",
+   "lat": 58.9814,
+   "lon": -2.9592,
+   "radius_km": 10,
+   "aliases": [
+    "st magnus cathedral",
+    "saint magnus cathedral",
+    "cattedrale di san magnus"
+   ],
+   "names": [
+    "kirkwall"
+   ],
+   "palette": {
+    "sky": "#9EC6EE",
+    "far": "#D2AE84",
+    "mid": "#A85A4A",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#5E9640",
+    "acc": "#C8B060",
+    "obj": "#6E6C66"
+   }
+  },
+  {
+   "slug": "lerwick",
+   "label": "The Lodberry, Lerwick's stone store-house standing in Bressay Sound",
+   "lat": 60.1529,
+   "lon": -1.1405,
+   "radius_km": 12,
+   "aliases": [
+    "lodberry",
+    "lodberries",
+    "bains beach",
+    "bain s beach"
+   ],
+   "names": [
+    "lerwick"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8E9668",
+    "mid": "#8E8A80",
+    "ice": "#F2F0EA",
+    "water": "#3F7FA6",
+    "near": "#23262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9248",
+    "acc": "#D9C29A",
+    "obj": "#4E535A"
+   }
+  },
+  {
+   "slug": "loch-lomond",
+   "label": "Ben Lomond above the wooded shore of Loch Lomond, with a Highland cow",
+   "lat": 56.12,
+   "lon": -4.62,
+   "radius_km": 20,
+   "aliases": [
+    "loch lomond",
+    "lago lomond",
+    "ben lomond"
+   ],
+   "palette": {
+    "sky": "#9EC4EC",
+    "far": "#8496A8",
+    "mid": "#A49484",
+    "ice": "#F0E8D6",
+    "water": "#3E66A8",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3A",
+    "acc": "#4E7650",
+    "obj": "#B4602C"
+   }
+  },
+  {
    "slug": "loch-ness",
    "label": "Loch Ness with Nessie",
    "lat": 57.3,
@@ -319,6 +422,30 @@
    }
   },
   {
+   "slug": "old-man-of-storr",
+   "label": "The Old Man of Storr pinnacles above the Sound of Raasay",
+   "lat": 57.507,
+   "lon": -6.183,
+   "radius_km": 4,
+   "aliases": [
+    "old man of storr",
+    "the storr",
+    "storr"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#6E7F86",
+    "mid": "#5E5A54",
+    "ice": "#F2EEE4",
+    "water": "#6F9DB8",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#7A9A46",
+    "acc": "#B8A660",
+    "obj": "#8A6A4A"
+   }
+  },
+  {
    "slug": "orkney-islands",
    "label": "Ring of Brodgar standing stones above the loch, Orkney",
    "lat": 59.0015,
@@ -326,7 +453,8 @@
    "radius_km": 35,
    "aliases": [
     "ring of brodgar",
-    "brodgar"
+    "brodgar",
+    "ring of brogar"
    ],
    "names": [
     "orkney",
@@ -397,6 +525,38 @@
    }
   },
   {
+   "slug": "shetland-islands",
+   "label": "St Ninian's Isle tombolo with Shetland ponies, Shetland",
+   "lat": 59.9725,
+   "lon": -1.3335,
+   "radius_km": 60,
+   "aliases": [
+    "st ninian s isle",
+    "st ninians isle",
+    "saint ninian s isle",
+    "st ninian s tombolo"
+   ],
+   "names": [
+    "shetland",
+    "shetland islands",
+    "shetland isles",
+    "isole shetland",
+    "zetland"
+   ],
+   "palette": {
+    "sky": "#B4D6EE",
+    "far": "#6E8A4E",
+    "mid": "#55534C",
+    "ice": "#F6F4EE",
+    "water": "#5FB0BE",
+    "near": "#1F2224",
+    "sun": "#F2C14E",
+    "leaf": "#98A04C",
+    "acc": "#F0E6CE",
+    "obj": "#4A3A30"
+   }
+  },
+  {
    "slug": "skara-brae",
    "label": "Skara Brae Neolithic house with its stone dresser",
    "lat": 59.0488,
@@ -416,6 +576,29 @@
     "leaf": "#6E9E46",
     "acc": "#C4B496",
     "obj": "#8A6E5A"
+   }
+  },
+  {
+   "slug": "stirling-castle",
+   "label": "Stirling Castle on its crag above the wooded slope",
+   "lat": 56.1238,
+   "lon": -3.9469,
+   "radius_km": 3,
+   "aliases": [
+    "stirling castle",
+    "castello di stirling"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#6A6358",
+    "mid": "#B4AA96",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#25272A",
+    "sun": "#F2C14E",
+    "leaf": "#4C7E34",
+    "acc": "#A8B464",
+    "obj": "#5A5E66"
    }
   },
   {
