@@ -28,6 +28,55 @@
    }
   },
   {
+   "slug": "djurgarden",
+   "label": "Nordiska museet on Djurgarden, Stockholm",
+   "lat": 59.3292,
+   "lon": 18.0937,
+   "radius_km": 2,
+   "aliases": [
+    "djurgarden",
+    "nordiska museet",
+    "nordic museum"
+   ],
+   "palette": {
+    "sky": "#AACDEF",
+    "far": "#9BB07C",
+    "mid": "#C38D70",
+    "ice": "#D9CBB4",
+    "water": "#355F8C",
+    "near": "#26272A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8B3E",
+    "acc": "#5E9A86",
+    "obj": "#4E5258"
+   }
+  },
+  {
+   "slug": "feskekorka",
+   "label": "Feskekorka fish market hall, Gothenburg",
+   "lat": 57.7012,
+   "lon": 11.9585,
+   "radius_km": 2,
+   "aliases": [
+    "feskekorka",
+    "feskekoerka",
+    "fish church",
+    "fiskekyrkan"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#BDB3A0",
+    "mid": "#D9C38E",
+    "ice": "#ECEFF1",
+    "water": "#3D6A86",
+    "near": "#25272A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8B3E",
+    "acc": "#9A3E30",
+    "obj": "#B9C5CC"
+   }
+  },
+  {
    "slug": "gamla-stan",
    "label": "Stortorget's coloured gabled houses in Gamla Stan",
    "lat": 59.325,
@@ -50,6 +99,35 @@
     "leaf": "#657A57",
     "acc": "#EBA43A",
     "obj": "#E9C74F"
+   }
+  },
+  {
+   "slug": "haga",
+   "label": "Haga wooden houses below Skansen Kronan, Gothenburg",
+   "lat": 57.6987,
+   "lon": 11.9549,
+   "radius_km": 2,
+   "aliases": [
+    "haga nygata",
+    "haga goteborg",
+    "haga gothenburg",
+    "haga gotheborg",
+    "hagastaden goteborg"
+   ],
+   "names": [
+    "haga"
+   ],
+   "palette": {
+    "sky": "#AACDEF",
+    "far": "#A8A39A",
+    "mid": "#E2C77E",
+    "ice": "#F1EDE2",
+    "water": "#7F9083",
+    "near": "#26262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8B3E",
+    "acc": "#A55A44",
+    "obj": "#4C4F55"
    }
   },
   {
@@ -84,6 +162,86 @@
    }
   },
   {
+   "slug": "kiruna-church",
+   "label": "Kiruna Church",
+   "lat": 67.8517,
+   "lon": 20.2192,
+   "radius_km": 5,
+   "aliases": [
+    "kiruna church",
+    "kiruna kyrka",
+    "chiesa di kiruna",
+    "kirche kiruna"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#BDB8AE",
+    "mid": "#AE4D3B",
+    "ice": "#EFECE4",
+    "water": "#4A7EA6",
+    "near": "#26222A",
+    "sun": "#E2B23A",
+    "leaf": "#6E8F3E",
+    "acc": "#7E3328",
+    "obj": "#7A6656"
+   }
+  },
+  {
+   "slug": "skansen",
+   "label": "Seglora church at Skansen open-air museum, Stockholm",
+   "lat": 59.3264,
+   "lon": 18.1036,
+   "radius_km": 2,
+   "aliases": [
+    "skansen open air museum",
+    "skansen museum",
+    "skansen stockholm",
+    "seglora"
+   ],
+   "names": [
+    "skansen"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#8DB55A",
+    "mid": "#B34A2C",
+    "ice": "#F4F1EA",
+    "water": "#4A7EA6",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E36",
+    "acc": "#CFC6B2",
+    "obj": "#8E5A47"
+   }
+  },
+  {
+   "slug": "skansen-kronan",
+   "label": "Skansen Kronan fortress tower, Gothenburg",
+   "lat": 57.6956,
+   "lon": 11.9541,
+   "radius_km": 2,
+   "aliases": [
+    "skansen kronan",
+    "skansberget",
+    "risasberget"
+   ],
+   "names": [
+    "kronan"
+   ],
+   "palette": {
+    "sky": "#AACDEF",
+    "far": "#B9AFA3",
+    "mid": "#9E8C80",
+    "ice": "#C9CED2",
+    "water": "#4A7EA6",
+    "near": "#26262A",
+    "sun": "#E8B630",
+    "leaf": "#5E8B3E",
+    "acc": "#A3412E",
+    "obj": "#7A5A40"
+   }
+  },
+  {
    "slug": "stockholm",
    "label": "Riddarholmen Church spire and palaces across Riddarfjarden, Stockholm",
    "lat": 59.3247,
@@ -112,6 +270,109 @@
     "leaf": "#6FA58F",
     "acc": "#E8B562",
     "obj": "#4A4F55"
+   }
+  },
+  {
+   "slug": "stockholm-city-hall",
+   "label": "Stockholm City Hall tower over Riddarfjarden",
+   "lat": 59.3275,
+   "lon": 18.0543,
+   "radius_km": 2,
+   "aliases": [
+    "stockholm city hall",
+    "stadshuset",
+    "stockholms stadshus",
+    "municipio di stoccolma",
+    "stockholm town hall"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#8FA88A",
+    "mid": "#8A3B2B",
+    "ice": "#F2EEE6",
+    "water": "#3E6A82",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B35",
+    "acc": "#E0B13A",
+    "obj": "#5E9C88"
+   }
+  },
+  {
+   "slug": "stockholm-palace",
+   "label": "Stockholm Royal Palace across Strommen",
+   "lat": 59.3268,
+   "lon": 18.0717,
+   "radius_km": 2,
+   "aliases": [
+    "stockholm palace",
+    "kungliga slottet",
+    "stockholms slott",
+    "royal palace of stockholm",
+    "royal palace stockholm",
+    "palazzo reale di stoccolma"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#DCC59E",
+    "mid": "#C4A276",
+    "ice": "#F4F1EA",
+    "water": "#3D6E9A",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#4A7A3A",
+    "acc": "#E6CB82",
+    "obj": "#5E9C88"
+   }
+  },
+  {
+   "slug": "vasa-museum",
+   "label": "Vasa Museum with its red masts, Djurgarden",
+   "lat": 59.328,
+   "lon": 18.0914,
+   "radius_km": 2,
+   "aliases": [
+    "vasa museum",
+    "vasamuseet",
+    "museo vasa",
+    "vasa ship",
+    "regalskeppet vasa",
+    "vasa museet"
+   ],
+   "palette": {
+    "sky": "#AFCFEF",
+    "far": "#8C9296",
+    "mid": "#5C3D2C",
+    "ice": "#EDEAE2",
+    "water": "#3E6A86",
+    "near": "#231D1A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8F3A",
+    "acc": "#C8322A",
+    "obj": "#8E3A2A"
+   }
+  },
+  {
+   "slug": "vrango",
+   "label": "Vrango harbour and granite rocks, Gothenburg archipelago",
+   "lat": 57.5713,
+   "lon": 11.7865,
+   "radius_km": 3,
+   "aliases": [
+    "vrango",
+    "vrangoe"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#A79E94",
+    "mid": "#B3A79C",
+    "ice": "#F3F1EC",
+    "water": "#3F6F94",
+    "near": "#26282B",
+    "sun": "#E2B93A",
+    "leaf": "#7E9A4E",
+    "acc": "#D9603A",
+    "obj": "#3E434A"
    }
   }
  ]

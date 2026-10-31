@@ -3,6 +3,90 @@
  "name": "Kazakhstan",
  "places": [
   {
+   "slug": "aktau",
+   "label": "Aktau lighthouse block over the Caspian cliffs",
+   "lat": 43.6487,
+   "lon": 51.1498,
+   "radius_km": 15,
+   "aliases": [
+    "aktau lighthouse"
+   ],
+   "names": [
+    "aktau",
+    "aqtau",
+    "aktau city",
+    "shevchenko"
+   ],
+   "palette": {
+    "sky": "#A9C8E8",
+    "far": "#BCB4A3",
+    "mid": "#DCCDA6",
+    "ice": "#ECE4D0",
+    "water": "#3F6F9E",
+    "near": "#2A2A2C",
+    "sun": "#F4C845",
+    "leaf": "#7C9A4C",
+    "acc": "#C23B2F",
+    "obj": "#CFC6B4"
+   }
+  },
+  {
+   "slug": "altyn-emel-national-park",
+   "label": "Aktau red and white mountains, Altyn-Emel National Park",
+   "lat": 44.12,
+   "lon": 78.72,
+   "radius_km": 50,
+   "aliases": [
+    "altyn emel",
+    "altynemel",
+    "singing dune",
+    "singing barkhan",
+    "aktau mountains",
+    "katutau"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#EADBC2",
+    "mid": "#D25A3B",
+    "ice": "#E4E3DD",
+    "water": "#5A8FB8",
+    "near": "#2E2420",
+    "sun": "#F5C842",
+    "leaf": "#8C9A4E",
+    "acc": "#E0B75E",
+    "obj": "#97503A"
+   }
+  },
+  {
+   "slug": "astana",
+   "label": "Baiterek tower, Astana",
+   "lat": 51.1283,
+   "lon": 71.4305,
+   "radius_km": 20,
+   "aliases": [
+    "baiterek",
+    "bayterek"
+   ],
+   "names": [
+    "astana",
+    "nur sultan",
+    "astana city",
+    "astana city tour"
+   ],
+   "palette": {
+    "sky": "#9FC6EA",
+    "far": "#D6D0C3",
+    "mid": "#D4C3A2",
+    "ice": "#F4F5F2",
+    "water": "#5E8AAE",
+    "near": "#232A30",
+    "sun": "#F5C842",
+    "leaf": "#6F9B46",
+    "acc": "#D6A62E",
+    "obj": "#A8BCCB"
+   }
+  },
+  {
    "slug": "charyn-canyon",
    "label": "Valley of Castles, Charyn Canyon",
    "lat": 43.355,
@@ -52,7 +136,11 @@
     "leaf": "#2F5C3B",
     "acc": "#8DA45A",
     "obj": "#7A5A3A"
-   }
+   },
+   "names": [
+    "saty",
+    "saty village"
+   ]
   },
   {
    "slug": "kolsay-lakes",
@@ -77,6 +165,37 @@
     "acc": "#7FB24A",
     "obj": "#7A4A2C"
    }
+  },
+  {
+   "slug": "mausoleum-of-khoja-ahmed-yasawi",
+   "label": "Mausoleum of Khoja Ahmed Yasawi, Turkistan",
+   "lat": 43.2932,
+   "lon": 68.2706,
+   "radius_km": 4,
+   "aliases": [
+    "yasawi",
+    "yassawi",
+    "yasavi",
+    "yassavi",
+    "yesevi"
+   ],
+   "palette": {
+    "sky": "#A8CCEA",
+    "far": "#D9CCB2",
+    "mid": "#C4A97E",
+    "ice": "#F2EAD8",
+    "water": "#2F5FA0",
+    "near": "#2A2622",
+    "sun": "#F4C443",
+    "leaf": "#5F8C3E",
+    "acc": "#3FA9CF",
+    "obj": "#2D8E8C"
+   },
+   "names": [
+    "turkistan",
+    "turkestan",
+    "turkistan city"
+   ]
   },
   {
    "slug": "zenkov-cathedral",

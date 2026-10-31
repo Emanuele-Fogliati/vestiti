@@ -38,7 +38,9 @@
     "roman baths of bath",
     "great bath bath",
     "bath abbey",
-    "terme di bath"
+    "terme di bath",
+    "roman baths",
+    "terme romane"
    ],
    "names": [
     "bath",
@@ -82,6 +84,81 @@
     "leaf": "#5E8A4A",
     "acc": "#B0682E",
     "obj": "#E2B02A"
+   }
+  },
+  {
+   "slug": "bristol",
+   "label": "Bristol: the Clifton Suspension Bridge over the Avon Gorge",
+   "lat": 51.4545,
+   "lon": -2.5879,
+   "radius_km": 12,
+   "aliases": [
+    "clifton suspension bridge",
+    "clifton bridge",
+    "avon gorge",
+    "ponte sospeso di clifton"
+   ],
+   "names": [
+    "bristol",
+    "bristol city",
+    "city of bristol"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#9AA486",
+    "mid": "#B8B0A2",
+    "ice": "#ECEAE4",
+    "water": "#6E8C9A",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A34",
+    "acc": "#A0503A",
+    "obj": "#8C8272"
+   }
+  },
+  {
+   "slug": "buckingham-palace",
+   "label": "Buckingham Palace and the Victoria Memorial",
+   "lat": 51.5014,
+   "lon": -0.1419,
+   "radius_km": 2,
+   "aliases": [
+    "buckingham palace",
+    "palazzo di buckingham"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#C9BBA4",
+    "mid": "#DCD5C4",
+    "ice": "#F4F2EC",
+    "water": "#6E9AB8",
+    "near": "#26282C",
+    "sun": "#F4C430",
+    "leaf": "#5E9A3E",
+    "acc": "#D8302A",
+    "obj": "#D9A92C"
+   }
+  },
+  {
+   "slug": "culloden-battlefield",
+   "label": "Culloden Memorial Cairn on Culloden Moor",
+   "lat": 57.4776,
+   "lon": -4.0949,
+   "radius_km": 3,
+   "aliases": [
+    "culloden"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#8492A4",
+    "mid": "#B0AA9C",
+    "ice": "#E6E1D4",
+    "water": "#3E5232",
+    "near": "#2A2824",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A44",
+    "acc": "#8C5A48",
+    "obj": "#9A8C78"
    }
   },
   {
@@ -162,6 +239,32 @@
     "acc": "#BCA272",
     "obj": "#5A5C62"
    }
+  },
+  {
+   "slug": "fairy-pools",
+   "label": "Fairy Pools waterfall below Sgurr an Fheadain, Isle of Skye",
+   "lat": 57.2503,
+   "lon": -6.256,
+   "radius_km": 3,
+   "aliases": [
+    "fairy pools"
+   ],
+   "palette": {
+    "sky": "#B8D2EC",
+    "far": "#7C7672",
+    "mid": "#6E6862",
+    "ice": "#F4F6F4",
+    "water": "#5EB4B0",
+    "near": "#262828",
+    "sun": "#F2C14E",
+    "leaf": "#A08E52",
+    "acc": "#B8A868",
+    "obj": "#8E4E2E"
+   },
+   "names": [
+    "glen brittle",
+    "glenbrittle"
+   ]
   },
   {
    "slug": "giants-causeway",
@@ -375,6 +478,31 @@
    }
   },
   {
+   "slug": "lands-end",
+   "label": "Enys Dodnan arch, Armed Knight and Longships lighthouse, Land's End",
+   "lat": 50.0657,
+   "lon": -5.7147,
+   "radius_km": 3,
+   "aliases": [
+    "land s end",
+    "lands end",
+    "longships lighthouse",
+    "enys dodnan"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#6E747A",
+    "mid": "#A8987A",
+    "ice": "#F2F0EA",
+    "water": "#2E6A96",
+    "near": "#23282C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A44",
+    "acc": "#C4B47A",
+    "obj": "#8E9088"
+   }
+  },
+  {
    "slug": "lerwick",
    "label": "The Lodberry, Lerwick's stone store-house standing in Bressay Sound",
    "lat": 60.1529,
@@ -556,6 +684,31 @@
    }
   },
   {
+   "slug": "palace-of-holyroodhouse",
+   "label": "Palace of Holyroodhouse west front with Salisbury Crags, Edinburgh",
+   "lat": 55.9527,
+   "lon": -3.1722,
+   "radius_km": 2,
+   "aliases": [
+    "holyroodhouse",
+    "holyrood palace",
+    "palace of holyrood",
+    "palazzo di holyrood"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#7E9A5A",
+    "mid": "#B8966A",
+    "ice": "#ECE4D4",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#7E8A96",
+    "obj": "#A8A49C"
+   }
+  },
+  {
    "slug": "quiraing",
    "label": "The Quiraing escarpment and its hairpin road, Isle of Skye",
    "lat": 57.627,
@@ -687,6 +840,58 @@
    }
   },
   {
+   "slug": "st-michaels-mount",
+   "label": "St Michael's Mount castle island and causeway, Cornwall",
+   "lat": 50.1168,
+   "lon": -5.4776,
+   "radius_km": 3,
+   "aliases": [
+    "st michael s mount",
+    "st michaels mount",
+    "saint michael s mount",
+    "monte di san michele"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#D8C8A0",
+    "mid": "#8E8C84",
+    "ice": "#E8E4DA",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A32",
+    "acc": "#6A6E74",
+    "obj": "#8EAE4E"
+   }
+  },
+  {
+   "slug": "standing-stones-of-stenness",
+   "label": "Standing Stones of Stenness, Orkney",
+   "lat": 58.9938,
+   "lon": -3.2077,
+   "radius_km": 2,
+   "aliases": [
+    "standing stones of stenness",
+    "stones of stenness",
+    "stenness stones"
+   ],
+   "names": [
+    "stenness"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#8EA07A",
+    "mid": "#8C867A",
+    "ice": "#F0EEE6",
+    "water": "#6E9CB8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E3E",
+    "acc": "#B8A060",
+    "obj": "#6A6A66"
+   }
+  },
+  {
    "slug": "stirling-castle",
    "label": "Stirling Castle on its crag above the wooded slope",
    "lat": 56.1238,
@@ -732,6 +937,35 @@
     "leaf": "#7EA552",
     "acc": "#C8B060",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "stratford-upon-avon",
+   "label": "Shakespeare's Birthplace, Stratford-upon-Avon",
+   "lat": 52.1942,
+   "lon": -1.7077,
+   "radius_km": 12,
+   "aliases": [
+    "shakespeare s birthplace",
+    "shakespeares birthplace",
+    "shakespeare birthplace",
+    "casa natale di shakespeare"
+   ],
+   "names": [
+    "stratford upon avon",
+    "stratford on avon"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#CEC4B0",
+    "mid": "#D8BC88",
+    "ice": "#ECE8DC",
+    "water": "#4E8EB0",
+    "near": "#262422",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#A0583C",
+    "obj": "#4E3A2C"
    }
   },
   {

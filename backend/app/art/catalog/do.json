@@ -3,6 +3,56 @@
  "name": "Dominican Republic",
  "places": [
   {
+   "slug": "bayahibe",
+   "label": "Bayahibe: Dominicus beach and its striped lighthouse",
+   "lat": 18.3627,
+   "lon": -68.8235,
+   "radius_km": 8,
+   "aliases": [
+    "dominicus",
+    "playa bayahibe",
+    "bayahibe beach"
+   ],
+   "names": [
+    "bayahibe"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#7E8A5A",
+    "mid": "#F1E5C6",
+    "ice": "#FFFFFF",
+    "water": "#62C9C8",
+    "near": "#1E2632",
+    "sun": "#F6C431",
+    "leaf": "#3F8238",
+    "acc": "#D2683E",
+    "obj": "#2A9CC0"
+   }
+  },
+  {
+   "slug": "los-haitises-national-park",
+   "label": "Limestone mogotes of Los Haitises in Samana Bay",
+   "lat": 19.06,
+   "lon": -69.5,
+   "radius_km": 25,
+   "aliases": [
+    "los haitises",
+    "haitises"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#7E9AA8",
+    "mid": "#8E8C80",
+    "ice": "#F2F2EC",
+    "water": "#5E9C96",
+    "near": "#1E2622",
+    "sun": "#F6C431",
+    "leaf": "#4E8A3A",
+    "acc": "#C9A86A",
+    "obj": "#2F6A2E"
+   }
+  },
+  {
    "slug": "santo-domingo",
    "label": "The Alcázar de Colón, Santo Domingo",
    "lat": 18.4774,
@@ -28,6 +78,29 @@
     "leaf": "#4E8A3A",
     "acc": "#C0603A",
     "obj": "#9C948A"
+   }
+  },
+  {
+   "slug": "saona-island",
+   "label": "Saona Island: palm beach and starfish natural pool",
+   "lat": 18.16,
+   "lon": -68.73,
+   "radius_km": 20,
+   "aliases": [
+    "saona",
+    "piscina natural de saona"
+   ],
+   "palette": {
+    "sky": "#9CCBF0",
+    "far": "#A6E8DD",
+    "mid": "#D9CDB2",
+    "ice": "#FBF8EE",
+    "water": "#3FC6C8",
+    "near": "#1F2A2C",
+    "sun": "#F6C431",
+    "leaf": "#3C8A3A",
+    "acc": "#E26A2C",
+    "obj": "#2492C4"
    }
   }
  ]

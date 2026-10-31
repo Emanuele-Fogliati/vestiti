@@ -3,6 +3,107 @@
  "name": "Chile",
  "places": [
   {
+   "slug": "ahu-tongariki",
+   "label": "The fifteen moai of Ahu Tongariki, Easter Island",
+   "lat": -27.1258,
+   "lon": -109.277,
+   "radius_km": 3,
+   "aliases": [
+    "tongariki",
+    "ahu tongariro"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#A8956A",
+    "mid": "#6C6358",
+    "ice": "#F2EFE8",
+    "water": "#2F6FA6",
+    "near": "#24211E",
+    "sun": "#F6C431",
+    "leaf": "#9AA650",
+    "acc": "#7E3628",
+    "obj": "#5B5650"
+   }
+  },
+  {
+   "slug": "arica",
+   "label": "Morro de Arica above the waterfront palms",
+   "lat": -18.48,
+   "lon": -70.3236,
+   "radius_km": 15,
+   "aliases": [
+    "morro de arica",
+    "el morro de arica"
+   ],
+   "names": [
+    "arica"
+   ],
+   "palette": {
+    "sky": "#A3CBF0",
+    "far": "#C7AE88",
+    "mid": "#A3866A",
+    "ice": "#F3EFE6",
+    "water": "#3F86A8",
+    "near": "#2B2621",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#7A5A3E",
+    "obj": "#DED6C8"
+   }
+  },
+  {
+   "slug": "balmaceda-glacier",
+   "label": "Balmaceda Glacier above Ultima Esperanza Sound",
+   "lat": -51.02,
+   "lon": -73.6,
+   "radius_km": 10,
+   "aliases": [
+    "balmaceda glacier",
+    "glaciar balmaceda",
+    "ghiacciaio balmaceda",
+    "monte balmaceda"
+   ],
+   "palette": {
+    "sky": "#B4D6EE",
+    "far": "#8D97A6",
+    "mid": "#6F6D72",
+    "ice": "#FFFFFF",
+    "water": "#4F8E8C",
+    "near": "#23282A",
+    "sun": "#F2C94C",
+    "leaf": "#3F6234",
+    "acc": "#A8805E",
+    "obj": "#9FD4EC"
+   }
+  },
+  {
+   "slug": "calama",
+   "label": "Chuquicamata copper mine pit near Calama",
+   "lat": -22.29,
+   "lon": -68.9,
+   "radius_km": 20,
+   "aliases": [
+    "chuquicamata",
+    "chuqui mine",
+    "mina chuquicamata"
+   ],
+   "names": [
+    "calama"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#B59A82",
+    "mid": "#9C978E",
+    "ice": "#E6E2DA",
+    "water": "#8FA5A0",
+    "near": "#26231F",
+    "sun": "#F6C431",
+    "leaf": "#8A8F6A",
+    "acc": "#D9C8AA",
+    "obj": "#E2B43A"
+   }
+  },
+  {
    "slug": "casablanca-valley",
    "label": "Vina Indomita winery above the Casablanca Valley vineyards",
    "lat": -33.3,
@@ -55,6 +156,31 @@
    }
   },
   {
+   "slug": "cerro-concepcion",
+   "label": "Lutheran church spire on Cerro Concepcion, Valparaiso",
+   "lat": -33.0418,
+   "lon": -71.6285,
+   "radius_km": 2,
+   "aliases": [
+    "cerro concepcion",
+    "iglesia luterana de la santa cruz",
+    "paseo atkinson",
+    "paseo gervasoni"
+   ],
+   "palette": {
+    "sky": "#A3CFF2",
+    "far": "#E6DABF",
+    "mid": "#BAC7B2",
+    "ice": "#F6F4EE",
+    "water": "#3E7FBE",
+    "near": "#26282B",
+    "sun": "#F2C230",
+    "leaf": "#56803C",
+    "acc": "#B5452F",
+    "obj": "#3D8B58"
+   }
+  },
+  {
    "slug": "chiloe-island",
    "label": "Chiloe palafitos, stilt houses over the water",
    "lat": -42.47,
@@ -78,6 +204,34 @@
     "leaf": "#4E8A3A",
     "acc": "#D8443A",
     "obj": "#3A8BD6"
+   }
+  },
+  {
+   "slug": "coyhaique",
+   "label": "Cerro Mackay above the roofs of Coyhaique",
+   "lat": -45.575,
+   "lon": -72.06,
+   "radius_km": 15,
+   "aliases": [
+    "cerro mackay",
+    "cerro macay"
+   ],
+   "names": [
+    "coyhaique",
+    "coihaique",
+    "cohaique"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#6E7F62",
+    "mid": "#B5B0A6",
+    "ice": "#F2F0EA",
+    "water": "#4F8DB5",
+    "near": "#23251F",
+    "sun": "#F6C431",
+    "leaf": "#3E6538",
+    "acc": "#B5442E",
+    "obj": "#4F7E73"
    }
   },
   {
@@ -136,6 +290,36 @@
     "leaf": "#9DB257",
     "acc": "#93412C",
     "obj": "#6E4A30"
+   }
+  },
+  {
+   "slug": "el-tatio",
+   "label": "El Tatio geyser field",
+   "lat": -22.333,
+   "lon": -68.011,
+   "radius_km": 8,
+   "aliases": [
+    "el tatio",
+    "tatio geysers",
+    "geysers del tatio",
+    "geyser del tatio",
+    "geiser del tatio",
+    "geiseres del tatio",
+    "geisers del tatio",
+    "geyser el tatio",
+    "geysers el tatio"
+   ],
+   "palette": {
+    "sky": "#B9D4EE",
+    "far": "#9C6A5C",
+    "mid": "#8C5E4C",
+    "ice": "#F3F5F7",
+    "water": "#C9DCE6",
+    "near": "#2B2420",
+    "sun": "#F6C445",
+    "leaf": "#B9A05E",
+    "acc": "#E0915A",
+    "obj": "#C68A52"
    }
   },
   {
@@ -214,6 +398,83 @@
     "leaf": "#2E4A2A",
     "acc": "#7FD3D6",
     "obj": "#DDE5EF"
+   }
+  },
+  {
+   "slug": "plaza-de-armas-santiago",
+   "label": "Santiago Cathedral on the Plaza de Armas",
+   "lat": -33.4378,
+   "lon": -70.6504,
+   "radius_km": 2,
+   "aliases": [
+    "plaza de armas santiago",
+    "plaza de armas de santiago",
+    "santiago metropolitan cathedral",
+    "metropolitan cathedral of santiago",
+    "catedral metropolitana de santiago",
+    "cattedrale metropolitana di santiago",
+    "cattedrale di santiago del cile",
+    "santiago de chile cathedral"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#DCD5C6",
+    "mid": "#CDC4B1",
+    "ice": "#F3EFE6",
+    "water": "#6E8CA6",
+    "near": "#2C2A28",
+    "sun": "#F5C842",
+    "leaf": "#4E7D36",
+    "acc": "#7E6248",
+    "obj": "#BDB7AC"
+   }
+  },
+  {
+   "slug": "pucon",
+   "label": "Villarrica volcano over the lake at Pucon",
+   "lat": -39.27,
+   "lon": -71.97,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "pucon"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#5C6E7E",
+    "mid": "#55606E",
+    "ice": "#FBFCFD",
+    "water": "#3F86C2",
+    "near": "#24282C",
+    "sun": "#F5C842",
+    "leaf": "#3E6F34",
+    "acc": "#8FA857",
+    "obj": "#4A4846"
+   }
+  },
+  {
+   "slug": "puerto-montt",
+   "label": "Angelmo's fishing boats, quay and craft-market kiosks, Puerto Montt, with a sea lion",
+   "lat": -41.4717,
+   "lon": -72.9369,
+   "radius_km": 15,
+   "aliases": [
+    "angelmo"
+   ],
+   "names": [
+    "puerto montt"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#9AA39A",
+    "mid": "#6E7656",
+    "ice": "#F6F6F2",
+    "water": "#2F6A9C",
+    "near": "#262624",
+    "sun": "#E8C030",
+    "leaf": "#3E6232",
+    "acc": "#C0383A",
+    "obj": "#4CB3C2"
    }
   },
   {
@@ -309,6 +570,31 @@
    }
   },
   {
+   "slug": "santa-lucia-hill",
+   "label": "Terraza Neptuno at the foot of Santa Lucia Hill",
+   "lat": -33.4404,
+   "lon": -70.644,
+   "radius_km": 2,
+   "aliases": [
+    "santa lucia hill",
+    "cerro santa lucia",
+    "terraza neptuno",
+    "colle santa lucia"
+   ],
+   "palette": {
+    "sky": "#B5D5F0",
+    "far": "#86A867",
+    "mid": "#E2BE74",
+    "ice": "#F4ECDC",
+    "water": "#5AA6C6",
+    "near": "#2B2A26",
+    "sun": "#F5C842",
+    "leaf": "#4A7838",
+    "acc": "#A65A3E",
+    "obj": "#C9C2B6"
+   }
+  },
+  {
    "slug": "santiago",
    "label": "Santiago under the Andes",
    "lat": -33.4489,
@@ -333,6 +619,31 @@
    "names": [
     "santiago"
    ]
+  },
+  {
+   "slug": "serrano-glacier",
+   "label": "Serrano Glacier and its iceberg lagoon",
+   "lat": -50.97,
+   "lon": -73.4,
+   "radius_km": 10,
+   "aliases": [
+    "serrano glacier",
+    "glaciar serrano",
+    "ghiacciaio serrano",
+    "laguna serrano"
+   ],
+   "palette": {
+    "sky": "#B8D7EE",
+    "far": "#8E99A8",
+    "mid": "#7C797C",
+    "ice": "#FFFFFF",
+    "water": "#5E8F82",
+    "near": "#22282A",
+    "sun": "#F2C94C",
+    "leaf": "#47703A",
+    "acc": "#A8805E",
+    "obj": "#A5D8EE"
+   }
   },
   {
    "slug": "torres-del-paine-national-park",

@@ -3,6 +3,60 @@
  "name": "Uzbekistan",
  "places": [
   {
+   "slug": "amir-timur-square",
+   "label": "Amir Timur statue and Hotel Uzbekistan, Tashkent",
+   "lat": 41.3113,
+   "lon": 69.2797,
+   "radius_km": 2,
+   "aliases": [
+    "amir timur square",
+    "amir temur square",
+    "amir temur xiyoboni",
+    "amir temur hiyoboni",
+    "piazza amir timur",
+    "piazza amir temur",
+    "piazza di tamerlano"
+   ],
+   "palette": {
+    "sky": "#A4C8EE",
+    "far": "#EAE0CA",
+    "mid": "#CDBFA6",
+    "ice": "#F4F1EA",
+    "water": "#4E86B0",
+    "near": "#25231F",
+    "sun": "#E2B544",
+    "leaf": "#4E7E3A",
+    "acc": "#4F4A3E",
+    "obj": "#8C3F33"
+   }
+  },
+  {
+   "slug": "ayaz-kala",
+   "label": "Ayaz-Kala fortress on its desert hill",
+   "lat": 41.7806,
+   "lon": 61.4756,
+   "radius_km": 5,
+   "aliases": [
+    "ayaz kala",
+    "ayazkala",
+    "ayaz qala",
+    "fortezza di ayaz kala",
+    "ajaz kala"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#D9BE88",
+    "mid": "#C8A267",
+    "ice": "#E8D7AE",
+    "water": "#5C8FB0",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#9A9A56",
+    "acc": "#DCC08E",
+    "obj": "#A8794A"
+   }
+  },
+  {
    "slug": "bibi-khanym-mosque",
    "label": "The Bibi-Khanym Mosque entrance portal, Samarkand",
    "lat": 39.6609,
@@ -26,6 +80,33 @@
     "leaf": "#4F7A3A",
     "acc": "#3AA7A8",
     "obj": "#A88A62"
+   }
+  },
+  {
+   "slug": "bolo-hauz-mosque",
+   "label": "Bolo Hauz Mosque and its pool, Bukhara",
+   "lat": 39.7776,
+   "lon": 64.4096,
+   "radius_km": 2,
+   "aliases": [
+    "bolo hauz",
+    "bolo haouz",
+    "bolo khauz",
+    "bolo khaouz",
+    "bolo hovuz",
+    "bolo houz"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#B49A72",
+    "mid": "#DCC9A4",
+    "ice": "#EEE9DE",
+    "water": "#3F8F9E",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5E8C3E",
+    "acc": "#A8693E",
+    "obj": "#2F6FA8"
    }
   },
   {
@@ -57,6 +138,54 @@
     "leaf": "#6E8F4A",
     "acc": "#2FA6A8",
     "obj": "#2D5A8A"
+   }
+  },
+  {
+   "slug": "chashma-ayub-mausoleum",
+   "label": "Chashma-Ayub Mausoleum, Bukhara",
+   "lat": 39.7777,
+   "lon": 64.4006,
+   "radius_km": 2,
+   "aliases": [
+    "chashma ayub",
+    "chashmai ayub",
+    "chashma i ayub",
+    "chasma ayub"
+   ],
+   "palette": {
+    "sky": "#A6C8EC",
+    "far": "#D9D3C6",
+    "mid": "#D8C6A2",
+    "ice": "#F2EEE4",
+    "water": "#4E86B0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A3C",
+    "acc": "#C9A877",
+    "obj": "#C1AB85"
+   }
+  },
+  {
+   "slug": "chor-minor",
+   "label": "Chor Minor, Bukhara",
+   "lat": 39.7752,
+   "lon": 64.4231,
+   "radius_km": 2,
+   "aliases": [
+    "chor minor",
+    "chor minar"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#E4D6BA",
+    "mid": "#D8C59E",
+    "ice": "#ECE6D6",
+    "water": "#2E5E8E",
+    "near": "#2A2824",
+    "sun": "#F2C14E",
+    "leaf": "#5F8A45",
+    "acc": "#3FA3A6",
+    "obj": "#BFA982"
    }
   },
   {
@@ -118,6 +247,143 @@
     "leaf": "#3F6E3A",
     "acc": "#2E8FA8",
     "obj": "#B38963"
+   }
+  },
+  {
+   "slug": "islam-khoja-minaret",
+   "label": "Islam Khoja minaret, Khiva",
+   "lat": 41.377,
+   "lon": 60.362,
+   "radius_km": 2,
+   "aliases": [
+    "islam khoja",
+    "islam khodja",
+    "islam hoja",
+    "islom hoja",
+    "islom xoja"
+   ],
+   "palette": {
+    "sky": "#C4DDF0",
+    "far": "#DCC39A",
+    "mid": "#D0A066",
+    "ice": "#F0F0EA",
+    "water": "#2A5C9A",
+    "near": "#2A2620",
+    "sun": "#E9B63E",
+    "leaf": "#2F6E5E",
+    "acc": "#4E8FC8",
+    "obj": "#BF9662"
+   }
+  },
+  {
+   "slug": "ismail-samani-mausoleum",
+   "label": "The Samanid (Ismail Samani) Mausoleum, Bukhara",
+   "lat": 39.7765,
+   "lon": 64.3999,
+   "radius_km": 2,
+   "aliases": [
+    "ismail samani",
+    "samanid mausoleum",
+    "samanids mausoleum",
+    "mausoleum of the samanids",
+    "mausoleo dei samanidi",
+    "mausoleo samanide",
+    "mausoleo di ismail samani",
+    "ismoil somoniy",
+    "ismail somoni mausoleum"
+   ],
+   "palette": {
+    "sky": "#B7D3EE",
+    "far": "#A8865A",
+    "mid": "#D2B482",
+    "ice": "#F2EADA",
+    "water": "#5A9BC4",
+    "near": "#2B2520",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#9A5A2E",
+    "obj": "#DCCFB4"
+   }
+  },
+  {
+   "slug": "itchan-kala",
+   "label": "Itchan Kala's West Gate and walls, Khiva",
+   "lat": 41.3785,
+   "lon": 60.357,
+   "radius_km": 3,
+   "aliases": [
+    "itchan kala",
+    "ichan kala",
+    "ichan qala",
+    "ichon qala",
+    "ota darvoza",
+    "kunya ark",
+    "kuhna ark",
+    "kukhna ark",
+    "kohna ark"
+   ],
+   "palette": {
+    "sky": "#A4C6EE",
+    "far": "#E2D6BE",
+    "mid": "#DCC9A0",
+    "ice": "#F0ECE0",
+    "water": "#2F67A0",
+    "near": "#28251F",
+    "sun": "#F2C14E",
+    "leaf": "#2E7A68",
+    "acc": "#56B4AA",
+    "obj": "#C4AE84"
+   }
+  },
+  {
+   "slug": "juma-mosque-khiva",
+   "label": "The column hall of the Juma Mosque, Khiva",
+   "lat": 41.3786,
+   "lon": 60.3594,
+   "radius_km": 2,
+   "aliases": [
+    "juma mosque khiva",
+    "djuma mosque khiva",
+    "friday mosque of khiva",
+    "friday mosque khiva",
+    "moschea juma di khiva",
+    "moschea del venerdi di khiva"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#E2D6BE",
+    "mid": "#7E5C3C",
+    "ice": "#E8E1D3",
+    "water": "#4E7EA0",
+    "near": "#2A2018",
+    "sun": "#F2C14E",
+    "leaf": "#6E8B4E",
+    "acc": "#5A4028",
+    "obj": "#C9BBA2"
+   }
+  },
+  {
+   "slug": "kalta-minor-minaret",
+   "label": "Kalta Minor minaret, Khiva",
+   "lat": 41.3786,
+   "lon": 60.3589,
+   "radius_km": 2,
+   "aliases": [
+    "kalta minor",
+    "kalta minar",
+    "minareto kalta minor"
+   ],
+   "palette": {
+    "sky": "#A6CCEE",
+    "far": "#E2CBA0",
+    "mid": "#D2A66C",
+    "ice": "#EEF2EA",
+    "water": "#2F67A0",
+    "near": "#24302E",
+    "sun": "#F2C14E",
+    "leaf": "#2E7A68",
+    "acc": "#56B6AA",
+    "obj": "#B4854E"
    }
   },
   {
@@ -214,6 +480,67 @@
    }
   },
   {
+   "slug": "kokand",
+   "label": "Khudayar Khan Palace, Kokand",
+   "lat": 40.5306,
+   "lon": 70.9425,
+   "radius_km": 12,
+   "aliases": [
+    "khudayar khan palace",
+    "khudoyar khan palace",
+    "khudoyarkhan palace",
+    "khudayar khan s palace",
+    "palazzo di khudayar khan",
+    "palazzo khudayar khan",
+    "palazzo di khudoyar khan"
+   ],
+   "names": [
+    "kokand",
+    "qoqon",
+    "qo qon",
+    "kokand city",
+    "coqand"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#E6D6B4",
+    "mid": "#D2BC90",
+    "ice": "#ECEAE0",
+    "water": "#4C73A6",
+    "near": "#262A30",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A48",
+    "acc": "#6CC0B4",
+    "obj": "#B9B3A8"
+   }
+  },
+  {
+   "slug": "kyzylkum-desert",
+   "label": "Yurt camp in the Kyzylkum Desert",
+   "lat": 42.0,
+   "lon": 64.0,
+   "radius_km": 60,
+   "aliases": [
+    "kyzylkum",
+    "kyzyl kum",
+    "kizilkum",
+    "kizil kum",
+    "qizilqum"
+   ],
+   "palette": {
+    "sky": "#A9CBEB",
+    "far": "#CDB089",
+    "mid": "#E2C79C",
+    "ice": "#EEE6D3",
+    "water": "#4E8FB0",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#8E9C6C",
+    "acc": "#A8432E",
+    "obj": "#9A6A3F"
+   }
+  },
+  {
    "slug": "lyab-i-hauz",
    "label": "Lyab-i Hauz pool and the Nadir Divan-Begi Khanaqah, Bukhara",
    "lat": 39.7741,
@@ -243,6 +570,37 @@
     "leaf": "#5E8A3C",
     "acc": "#4F8DC2",
     "obj": "#2B4A8C"
+   }
+  },
+  {
+   "slug": "nurata",
+   "label": "The Chashma holy spring and mosque, Nurata",
+   "lat": 40.5617,
+   "lon": 65.6886,
+   "radius_km": 12,
+   "aliases": [
+    "chashma complex",
+    "chashma spring",
+    "chil ustun",
+    "chilustun",
+    "nurata fortress"
+   ],
+   "names": [
+    "nurata",
+    "nurota",
+    "nur ata"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#A8916A",
+    "mid": "#D8BC90",
+    "ice": "#F2F0EA",
+    "water": "#3F7F76",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#6C9A48",
+    "acc": "#9C6A38",
+    "obj": "#DDB892"
    }
   },
   {
@@ -300,6 +658,33 @@
     "leaf": "#4F8A3C",
     "acc": "#62BCAE",
     "obj": "#C4A47A"
+   }
+  },
+  {
+   "slug": "tash-hauli-palace",
+   "label": "An aivan of the Tash Hauli harem, Khiva",
+   "lat": 41.3778,
+   "lon": 60.3639,
+   "radius_km": 2,
+   "aliases": [
+    "tash hauli",
+    "tash khauli",
+    "tosh hovli",
+    "toshhovli",
+    "palazzo tosh hovli",
+    "palazzo tash hauli"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#DCCDB0",
+    "mid": "#D8C29C",
+    "ice": "#F1EFE8",
+    "water": "#3E63A8",
+    "near": "#22262E",
+    "sun": "#F2C14E",
+    "leaf": "#4FB0B0",
+    "acc": "#B9573C",
+    "obj": "#8A5E3E"
    }
   },
   {

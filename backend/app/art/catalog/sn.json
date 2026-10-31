@@ -3,6 +3,28 @@
  "name": "Senegal",
  "places": [
   {
+   "slug": "bandia-reserve",
+   "label": "A giant baobab with a giraffe and a white rhino in the Bandia Reserve bush",
+   "lat": 14.58,
+   "lon": -17.01,
+   "radius_km": 6,
+   "aliases": [
+    "bandia"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#8F7A52",
+    "mid": "#A39484",
+    "ice": "#F0E8D6",
+    "water": "#4A8FB8",
+    "near": "#2A2420",
+    "sun": "#F4C430",
+    "leaf": "#7E8A42",
+    "acc": "#D8B676",
+    "obj": "#E0A85E"
+   }
+  },
+  {
    "slug": "dakar",
    "label": "African Renaissance Monument on the Mamelles hill, Dakar",
    "lat": 14.7224,
@@ -31,6 +53,29 @@
    }
   },
   {
+   "slug": "djoudj-national-bird-sanctuary",
+   "label": "Great white pelican colony on a mud island in the Djoudj bird sanctuary",
+   "lat": 16.37,
+   "lon": -16.25,
+   "radius_km": 20,
+   "aliases": [
+    "djoudj",
+    "djoudji"
+   ],
+   "palette": {
+    "sky": "#C4DCEB",
+    "far": "#B7A26E",
+    "mid": "#8C7048",
+    "ice": "#F7EFE6",
+    "water": "#6E97A6",
+    "near": "#2A2622",
+    "sun": "#F5C842",
+    "leaf": "#6F873E",
+    "acc": "#F0B43C",
+    "obj": "#3C3C3C"
+   }
+  },
+  {
    "slug": "goree-island",
    "label": "Goree Island waterfront seen from the ferry",
    "lat": 14.667,
@@ -50,6 +95,34 @@
     "leaf": "#4E8A3C",
     "acc": "#B8432E",
     "obj": "#D9773A"
+   }
+  },
+  {
+   "slug": "sine-saloum-delta",
+   "label": "A painted pirogue in a mangrove channel of the Sine-Saloum Delta",
+   "lat": 13.9,
+   "lon": -16.6,
+   "radius_km": 35,
+   "aliases": [
+    "sine saloum",
+    "saloum delta",
+    "delta du saloum",
+    "delta del saloum"
+   ],
+   "names": [
+    "saloum"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#86A866",
+    "mid": "#6E5C4A",
+    "ice": "#F2EEE4",
+    "water": "#7AA3A8",
+    "near": "#23261F",
+    "sun": "#F5C842",
+    "leaf": "#3E7838",
+    "acc": "#F2C230",
+    "obj": "#2F6FB0"
    }
   }
  ]

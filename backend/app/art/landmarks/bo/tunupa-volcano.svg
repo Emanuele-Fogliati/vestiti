@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="30" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-bo-tunupa-volcano-cr"><path d="M118 150L130 62L135 56L139 58L142 46L147 42L150 50L155 47L159 53L164 49L169 38L175 32L180 35L183 45L189 42L192 50L198 47L203 54L210 52L216 58L226 60L236 66L248 74L262 84L262 150Z"/></clipPath></defs>
+<path d="M118 150L130 62L135 56L139 58L142 46L147 42L150 50L155 47L159 53L164 49L169 38L175 32L180 35L183 45L189 42L192 50L198 47L203 54L210 52L216 58L226 60L236 66L248 74L262 84L262 150Z" fill="var(--il-far)"/>
+<path d="M110 20H270V78L256 80L246 72L236 70L226 66L216 68L206 62L196 64L186 58L176 62L166 56L156 64L146 60L136 66L126 72L110 74Z" fill="var(--il-obj)" clip-path="url(#il-bo-tunupa-volcano-cr)"/>
+<path d="M168 70L172 100M190 70L196 104M212 72L218 110M232 78L238 106M150 72L152 96" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M232 150L250 92L264 80L276 77L290 86L300 92V150Z" fill="var(--il-obj)"/>
+<defs><clipPath id="il-bo-tunupa-volcano-cone"><path d="M0 150V118Q30 96 56 74Q74 58 86 46Q92 40 100 40L106 41Q118 48 132 64Q150 86 170 112L196 150Z"/></clipPath></defs>
+<path d="M0 150V118Q30 96 56 74Q74 58 86 46Q92 40 100 40L106 41Q118 48 132 64Q150 86 170 112L196 150Z" fill="var(--il-mid)"/>
+<path d="M64 150Q96 118 128 102Q146 96 160 102L170 112L196 150Z" fill="var(--il-acc)" clip-path="url(#il-bo-tunupa-volcano-cone)"/>
+<path d="M106 41Q118 48 132 64Q150 86 170 112L196 150H182Q160 110 138 82Q122 60 104 44Z" fill="var(--il-near)" opacity="0.3" clip-path="url(#il-bo-tunupa-volcano-cone)"/>
+<path d="M0 166V140Q40 130 80 140Q120 148 160 136Q200 126 240 134Q270 128 300 132V166Z" fill="var(--il-obj)"/>
+<path d="M0 200V160Q60 152 120 162Q180 168 240 156Q270 152 300 156V200Z" fill="var(--il-leaf)"/>
+<path d="M20 178Q60 172 100 182M170 182Q210 172 250 176" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M220 180Q220 174 228 174H236L237 160Q238 157 241 158L245 160L244 162L241 162L241 176Q240 182 234 181H226Q220 182 220 180ZM238 158L238 153L240 157Z" fill="var(--il-ice)"/>
+<path d="M223 180V193M227 180V193M236 180V193M239 180V193" stroke="var(--il-ice)" stroke-width="1.8" fill="none"/>

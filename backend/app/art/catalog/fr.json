@@ -3,6 +3,34 @@
  "name": "France",
  "places": [
   {
+   "slug": "aix-en-provence",
+   "label": "Fontaine de la Rotonde, Aix-en-Provence",
+   "lat": 43.5263,
+   "lon": 5.4454,
+   "radius_km": 15,
+   "aliases": [
+    "fontaine de la rotonde",
+    "cours mirabeau"
+   ],
+   "names": [
+    "aix en provence",
+    "aix",
+    "aix en provence old town"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#E3CDA6",
+    "mid": "#D8CCB2",
+    "ice": "#F4F1E8",
+    "water": "#7FB3C4",
+    "near": "#2C2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#C8673E",
+    "obj": "#4A4A42"
+   }
+  },
+  {
    "slug": "amboise",
    "label": "Royal Chateau of Amboise above the Loire",
    "lat": 47.4131,
@@ -148,6 +176,34 @@
     "leaf": "#5E8A3E",
     "acc": "#BBA581",
     "obj": "#D6A630"
+   }
+  },
+  {
+   "slug": "bastia",
+   "label": "Saint-Jean-Baptiste church above the Vieux Port, Bastia",
+   "lat": 42.699,
+   "lon": 9.4513,
+   "radius_km": 15,
+   "aliases": [
+    "vieux port de bastia",
+    "old port of bastia",
+    "bastia old port",
+    "terra vecchia"
+   ],
+   "names": [
+    "bastia"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#CBC3AE",
+    "mid": "#E3D0A8",
+    "ice": "#F4F0E4",
+    "water": "#3F7F9A",
+    "near": "#2B2A28",
+    "sun": "#F2C14E",
+    "leaf": "#62804C",
+    "acc": "#E8C55A",
+    "obj": "#D99A86"
    }
   },
   {
@@ -351,6 +407,34 @@
    }
   },
   {
+   "slug": "chateau-de-chambord",
+   "label": "Chateau de Chambord north-west facade across the Cosson",
+   "lat": 47.6162,
+   "lon": 1.517,
+   "radius_km": 5,
+   "aliases": [
+    "chateau de chambord",
+    "castello di chambord",
+    "chambord castle",
+    "domaine de chambord"
+   ],
+   "names": [
+    "chambord"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#CFC6B2",
+    "mid": "#ECE6D6",
+    "ice": "#F8F5EC",
+    "water": "#7392A8",
+    "near": "#23262B",
+    "sun": "#F2C14E",
+    "leaf": "#5C8A3A",
+    "acc": "#D6CDB6",
+    "obj": "#4B5563"
+   }
+  },
+  {
    "slug": "chateau-de-chenonceau",
    "label": "Chateau de Chenonceau across the Cher",
    "lat": 47.3249,
@@ -466,6 +550,33 @@
     "leaf": "#6F8B4A",
     "acc": "#57606C",
     "obj": "#2E3238"
+   }
+  },
+  {
+   "slug": "etretat",
+   "label": "Aiguille and Porte d'Aval chalk cliffs, Etretat",
+   "lat": 49.7065,
+   "lon": 0.1975,
+   "radius_km": 6,
+   "aliases": [
+    "aiguille d etretat",
+    "porte d aval",
+    "falaise d aval"
+   ],
+   "names": [
+    "etretat"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#D2CDC2",
+    "mid": "#B8B3A6",
+    "ice": "#F0EDE4",
+    "water": "#2E7E96",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#7E9C52",
+    "acc": "#4E6E34",
+    "obj": "#8A8478"
    }
   },
   {
@@ -691,6 +802,41 @@
    }
   },
   {
+   "slug": "lyon",
+   "label": "Fourviere Basilica above Saint-Jean Cathedral and the Saone, Lyon",
+   "lat": 45.7623,
+   "lon": 4.8225,
+   "radius_km": 20,
+   "aliases": [
+    "vieux lyon",
+    "fourviere basilica",
+    "basilica of notre dame de fourviere",
+    "basilique notre dame de fourviere",
+    "notre dame de fourviere",
+    "basilica de fourviere",
+    "basilica di notre dame de fourviere",
+    "basilique de fourviere",
+    "colline de fourviere",
+    "fourviere hill"
+   ],
+   "names": [
+    "lyon",
+    "lione"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#CFC4AE",
+    "mid": "#BCAD92",
+    "ice": "#F2EEE4",
+    "water": "#6A8A7C",
+    "near": "#2A2A2A",
+    "sun": "#F2C14E",
+    "leaf": "#3F6A34",
+    "acc": "#E4B66E",
+    "obj": "#A8644A"
+   }
+  },
+  {
    "slug": "mont-saint-michel",
    "label": "Mont-Saint-Michel",
    "lat": 48.636,
@@ -789,6 +935,29 @@
     "leaf": "#5A7E3A",
     "acc": "#8E98A2",
     "obj": "#5C636C"
+   }
+  },
+  {
+   "slug": "omaha-beach",
+   "label": "Les Braves sculpture on Omaha Beach",
+   "lat": 49.3695,
+   "lon": -0.8835,
+   "radius_km": 5,
+   "aliases": [
+    "omaha beach",
+    "les braves"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#E8D4A8",
+    "mid": "#A9ACAC",
+    "ice": "#F4F4F0",
+    "water": "#3A8CA6",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E4E",
+    "acc": "#CFA368",
+    "obj": "#C8CBCB"
    }
   },
   {
@@ -927,6 +1096,33 @@
    }
   },
   {
+   "slug": "saint-emilion",
+   "label": "Saint-Emilion bell tower above the old town",
+   "lat": 44.8936,
+   "lon": -0.1555,
+   "radius_km": 8,
+   "aliases": [
+    "saint emilion bell tower",
+    "monolithic church saint emilion"
+   ],
+   "names": [
+    "saint emilion",
+    "st emilion"
+   ],
+   "palette": {
+    "sky": "#A4C8EC",
+    "far": "#E2CEA6",
+    "mid": "#CDB68C",
+    "ice": "#F0EADC",
+    "water": "#6A9AB0",
+    "near": "#2C2824",
+    "sun": "#F2C14E",
+    "leaf": "#6E9440",
+    "acc": "#B86C4C",
+    "obj": "#4E6E30"
+   }
+  },
+  {
    "slug": "toulouse",
    "label": "Pont-Neuf and the Dome de la Grave, Toulouse",
    "lat": 43.5998,
@@ -952,6 +1148,32 @@
     "leaf": "#5E7E3E",
     "acc": "#A84A32",
     "obj": "#5E9E8A"
+   }
+  },
+  {
+   "slug": "tours",
+   "label": "Saint-Gatien Cathedral, Tours",
+   "lat": 47.3958,
+   "lon": 0.6947,
+   "radius_km": 15,
+   "aliases": [
+    "cathedrale saint gatien",
+    "saint gatien cathedral"
+   ],
+   "names": [
+    "tours"
+   ],
+   "palette": {
+    "sky": "#9CC6F0",
+    "far": "#D9D3C6",
+    "mid": "#CFC6B2",
+    "ice": "#E2DACA",
+    "water": "#3E5A8E",
+    "near": "#2A2A2C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#B89A6A",
+    "obj": "#5E6670"
    }
   }
  ]

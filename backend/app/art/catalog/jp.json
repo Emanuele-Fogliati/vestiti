@@ -274,6 +274,36 @@
    }
   },
   {
+   "slug": "higashi-chaya-district",
+   "label": "Teahouse street of Higashi Chaya, Kanazawa",
+   "lat": 36.5725,
+   "lon": 136.6668,
+   "radius_km": 2,
+   "aliases": [
+    "higashi chaya",
+    "higashichaya",
+    "higashi chayagai",
+    "higashi chaya gai",
+    "higashiyama higashi"
+   ],
+   "names": [
+    "chaya gai",
+    "chaya district"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#CFC8BC",
+    "mid": "#6B4631",
+    "ice": "#EDE3CF",
+    "water": "#3E6A3A",
+    "near": "#2A1E18",
+    "sun": "#F4C542",
+    "leaf": "#5F9045",
+    "acc": "#A9693D",
+    "obj": "#5D6269"
+   }
+  },
+  {
    "slug": "himeji-castle",
    "label": "Main keep of Himeji Castle",
    "lat": 34.8394,
@@ -299,7 +329,10 @@
     "leaf": "#4F7E3A",
     "acc": "#8D96A0",
     "obj": "#6B747E"
-   }
+   },
+   "names": [
+    "himeji"
+   ]
   },
   {
    "slug": "hiroshima",
@@ -575,6 +608,34 @@
     "leaf": "#4E6E44",
     "acc": "#F2C6D2",
     "obj": "#6A4A3A"
+   }
+  },
+  {
+   "slug": "matsumoto-castle",
+   "label": "Black keep of Matsumoto Castle over its moat",
+   "lat": 36.2386,
+   "lon": 137.9689,
+   "radius_km": 3,
+   "aliases": [
+    "matsumoto castle",
+    "matsumoto jo",
+    "matsumotojo",
+    "castello di matsumoto",
+    "castello matsumoto",
+    "crow castle",
+    "karasu jo"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#A59D91",
+    "mid": "#7D8188",
+    "ice": "#F2F0EA",
+    "water": "#4D7480",
+    "near": "#1E1E22",
+    "sun": "#F4C542",
+    "leaf": "#4E8A3E",
+    "acc": "#C23B2E",
+    "obj": "#2E2F35"
    }
   },
   {
@@ -869,6 +930,57 @@
    "names": [
     "osaka"
    ]
+  },
+  {
+   "slug": "pontocho",
+   "label": "Pontocho: the narrow lantern-lit alley of teahouses in Kyoto",
+   "lat": 35.0062,
+   "lon": 135.7709,
+   "radius_km": 1,
+   "aliases": [
+    "pontocho alley",
+    "ponto cho",
+    "pontocho kyoto"
+   ],
+   "names": [
+    "pontocho"
+   ],
+   "palette": {
+    "sky": "#CFE0EE",
+    "far": "#D9CBAA",
+    "mid": "#7A5236",
+    "ice": "#F4EFE2",
+    "water": "#9EA4A2",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#C8A86A",
+    "acc": "#D2402E",
+    "obj": "#4E5258"
+   }
+  },
+  {
+   "slug": "ryoan-ji",
+   "label": "Zen rock garden of Ryoan-ji, Kyoto",
+   "lat": 35.0345,
+   "lon": 135.7183,
+   "radius_km": 2,
+   "aliases": [
+    "ryoan ji",
+    "ryoanji",
+    "ryouanji"
+   ],
+   "palette": {
+    "sky": "#A9CCEB",
+    "far": "#8D867D",
+    "mid": "#B9996C",
+    "ice": "#ECEAE4",
+    "water": "#3F5E3B",
+    "near": "#2A2520",
+    "sun": "#F4C542",
+    "leaf": "#86994A",
+    "acc": "#EBC3CC",
+    "obj": "#5C5853"
+   }
   },
   {
    "slug": "sapporo",
@@ -1207,6 +1319,38 @@
     "leaf": "#5E8A48",
     "acc": "#D63A4E",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "tsukiji-outer-market",
+   "label": "Tsukiji Outer Market lane with fish stalls, Tokyo",
+   "lat": 35.6654,
+   "lon": 139.7707,
+   "radius_km": 2,
+   "aliases": [
+    "tsukiji outer market",
+    "tsukiji market",
+    "tsukiji fish market",
+    "tsukiji jogai",
+    "jogai shijo",
+    "mercato di tsukiji",
+    "mercato del pesce di tsukiji",
+    "mercato esterno di tsukiji"
+   ],
+   "names": [
+    "tsukiji"
+   ],
+   "palette": {
+    "sky": "#C9DDEE",
+    "far": "#CDBFA6",
+    "mid": "#8E8A84",
+    "ice": "#EEECE6",
+    "water": "#4A6E9A",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E8A4E",
+    "acc": "#D2402E",
+    "obj": "#E6C04A"
    }
   },
   {

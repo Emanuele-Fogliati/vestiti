@@ -3,6 +3,34 @@
  "name": "Greenland",
  "places": [
   {
+   "slug": "eqip-sermia",
+   "label": "Eqip Sermia calving glacier front",
+   "lat": 69.78,
+   "lon": -50.23,
+   "radius_km": 8,
+   "aliases": [
+    "eqip sermia",
+    "eqi glacier",
+    "eqi sermia",
+    "eqip glacier"
+   ],
+   "names": [
+    "eqi"
+   ],
+   "palette": {
+    "sky": "#A9CCEC",
+    "far": "#8C8278",
+    "mid": "#5F534B",
+    "ice": "#FFFFFF",
+    "water": "#2D6593",
+    "near": "#1E2730",
+    "sun": "#F2C14E",
+    "leaf": "#7A8450",
+    "acc": "#B4DAEC",
+    "obj": "#C8302C"
+   }
+  },
+  {
    "slug": "ilulissat",
    "label": "Ilulissat's colourful houses with the icebergs beyond",
    "lat": 69.22,
@@ -60,6 +88,30 @@
    }
   },
   {
+   "slug": "ittoqqortoormiit",
+   "label": "Ittoqqortoormiit's red houses above the bay",
+   "lat": 70.485,
+   "lon": -21.966,
+   "radius_km": 10,
+   "aliases": [],
+   "names": [
+    "ittoqqortoormiit",
+    "scoresbysund"
+   ],
+   "palette": {
+    "sky": "#B5D2EC",
+    "far": "#8C8880",
+    "mid": "#A3826A",
+    "ice": "#FFFFFF",
+    "water": "#6A93AF",
+    "near": "#26252A",
+    "sun": "#F2C14E",
+    "leaf": "#7E8E50",
+    "acc": "#B32A2C",
+    "obj": "#2E5E9E"
+   }
+  },
+  {
    "slug": "kangerlussuaq",
    "label": "Russell Glacier ice front near Kangerlussuaq, with a musk ox",
    "lat": 67.088,
@@ -86,6 +138,108 @@
     "leaf": "#6F6A50",
     "acc": "#A9CFE2",
     "obj": "#4A3A2C"
+   }
+  },
+  {
+   "slug": "nuuk",
+   "label": "Nuuk's colourful houses below Sermitsiaq",
+   "lat": 64.18,
+   "lon": -51.72,
+   "radius_km": 15,
+   "aliases": [
+    "sermitsiaq"
+   ],
+   "names": [
+    "nuuk",
+    "godthab",
+    "godthaab"
+   ],
+   "palette": {
+    "sky": "#CFE2F0",
+    "far": "#A4A49C",
+    "mid": "#8E97A6",
+    "ice": "#FFFFFF",
+    "water": "#6F8EA6",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#7C8448",
+    "acc": "#C3262E",
+    "obj": "#2F6DB3"
+   }
+  },
+  {
+   "slug": "scoresby-sund",
+   "label": "Icebergs in Scoresby Sund",
+   "lat": 70.6,
+   "lon": -24.0,
+   "radius_km": 60,
+   "aliases": [
+    "scoresby sund",
+    "scoresby sound",
+    "kangertittivaq"
+   ],
+   "palette": {
+    "sky": "#9EC4EA",
+    "far": "#97A0AE",
+    "mid": "#8C5240",
+    "ice": "#FFFFFF",
+    "water": "#3E6A92",
+    "near": "#22262C",
+    "sun": "#F2C14E",
+    "leaf": "#A48C50",
+    "acc": "#AAD5E8",
+    "obj": "#4A3A30"
+   }
+  },
+  {
+   "slug": "sisimiut",
+   "label": "Sisimiut harbour below Nasaasaaq",
+   "lat": 66.94,
+   "lon": -53.67,
+   "radius_km": 12,
+   "aliases": [
+    "nasaasaaq"
+   ],
+   "names": [
+    "sisimiut",
+    "holsteinsborg"
+   ],
+   "palette": {
+    "sky": "#C9DDEE",
+    "far": "#8E8A84",
+    "mid": "#75685E",
+    "ice": "#FFFFFF",
+    "water": "#45657A",
+    "near": "#24252A",
+    "sun": "#EDB830",
+    "leaf": "#7E8B4C",
+    "acc": "#C42B2E",
+    "obj": "#2E62B0"
+   }
+  },
+  {
+   "slug": "tasiilaq",
+   "label": "Tasiilaq's colourful houses, sea ice and peaks",
+   "lat": 65.61,
+   "lon": -37.64,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "tasiilaq",
+    "ammassalik",
+    "angmagssalik"
+   ],
+   "palette": {
+    "sky": "#9FC6EC",
+    "far": "#8C8A80",
+    "mid": "#6C7584",
+    "ice": "#FFFFFF",
+    "water": "#3F7FB8",
+    "near": "#22262C",
+    "sun": "#EDB52C",
+    "leaf": "#6E9A3E",
+    "acc": "#B7262C",
+    "obj": "#2A55A8"
    }
   }
  ]

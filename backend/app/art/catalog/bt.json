@@ -28,6 +28,31 @@
    }
   },
   {
+   "slug": "chele-la",
+   "label": "Prayer flags on Chele La pass",
+   "lat": 27.3717,
+   "lon": 89.3427,
+   "radius_km": 4,
+   "aliases": [
+    "chele la",
+    "chelela",
+    "chele la pass",
+    "chelela pass"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#94A0B6",
+    "mid": "#4E6E62",
+    "ice": "#F4F2EC",
+    "water": "#3E7EC0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#8AA24E",
+    "acc": "#C8463A",
+    "obj": "#3E9A56"
+   }
+  },
+  {
    "slug": "chimi-lhakhang",
    "label": "Chimi Lhakhang temple near Punakha",
    "lat": 27.572,
@@ -106,7 +131,10 @@
     "leaf": "#4C7A3E",
     "acc": "#C8432C",
     "obj": "#D9A630"
-   }
+   },
+   "names": [
+    "gangtey"
+   ]
   },
   {
    "slug": "khamsum-yulley-namgyal-chorten",
@@ -131,6 +159,33 @@
     "leaf": "#46703A",
     "acc": "#9CBF55",
     "obj": "#A3342A"
+   }
+  },
+  {
+   "slug": "kila-gompa",
+   "label": "Kila Goempa nunnery under its cliff",
+   "lat": 27.3806,
+   "lon": 89.3311,
+   "radius_km": 3,
+   "aliases": [
+    "kila gompa",
+    "kila goempa",
+    "kila gonpa",
+    "kila nunnery",
+    "kila monastery",
+    "kila dechen yangtse"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A08560",
+    "mid": "#C2AE88",
+    "ice": "#F2EEE4",
+    "water": "#5E9AB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A3A",
+    "acc": "#7A4A30",
+    "obj": "#6E7074"
    }
   },
   {
@@ -284,6 +339,35 @@
     "leaf": "#5E7F44",
     "acc": "#A8432F",
     "obj": "#CFC2A6"
+   },
+   "names": [
+    "paro"
+   ]
+  },
+  {
+   "slug": "simtokha-dzong",
+   "label": "Simtokha Dzong, the oldest dzong of Bhutan",
+   "lat": 27.4378,
+   "lon": 89.6777,
+   "radius_km": 3,
+   "aliases": [
+    "simtokha dzong",
+    "semtokha dzong",
+    "simtokha",
+    "semtokha",
+    "sangak zabdhon phodrang"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7F9468",
+    "mid": "#B8B2A6",
+    "ice": "#F2F0EA",
+    "water": "#5E9AB0",
+    "near": "#2A2420",
+    "sun": "#E8B83A",
+    "leaf": "#6E9A48",
+    "acc": "#D8783A",
+    "obj": "#4A3A30"
    }
   },
   {
@@ -313,6 +397,42 @@
     "leaf": "#8DB25A",
     "acc": "#7E2E22",
     "obj": "#D4A537"
+   },
+   "names": [
+    "thimphu",
+    "thimpu"
+   ]
+  },
+  {
+   "slug": "wangdue-phodrang",
+   "label": "Wangdue Phodrang Dzong on its ridge above the river",
+   "lat": 27.4866,
+   "lon": 89.8993,
+   "radius_km": 12,
+   "aliases": [
+    "wangdue phodrang dzong",
+    "wangdi dzong",
+    "wangdue dzong",
+    "wangdi phodrang"
+   ],
+   "names": [
+    "wangdue phodrang",
+    "wangdue",
+    "wangdi",
+    "wangdiphodrang",
+    "wangdue phodrang town"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8FA6A8",
+    "mid": "#4F6F3A",
+    "ice": "#F2EFE6",
+    "water": "#6FA8A4",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4E",
+    "acc": "#8A3A2A",
+    "obj": "#4E4A46"
    }
   }
  ]
