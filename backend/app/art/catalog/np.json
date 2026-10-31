@@ -3,6 +3,92 @@
  "name": "Nepal",
  "places": [
   {
+   "slug": "annapurna-base-camp",
+   "label": "Annapurna I south face above Annapurna Base Camp",
+   "lat": 28.53,
+   "lon": 83.878,
+   "radius_km": 5,
+   "aliases": [
+    "annapurna base camp",
+    "annapurna sanctuary",
+    "annapurna basecamp",
+    "annapurna massif",
+    "annapurna himal",
+    "annapurna south face"
+   ],
+   "names": [
+    "abc",
+    "annapurna",
+    "annapurna i"
+   ],
+   "palette": {
+    "sky": "#A4C8EE",
+    "far": "#C4A05A",
+    "mid": "#7C7875",
+    "ice": "#F5F6F8",
+    "water": "#6A9CC4",
+    "near": "#232427",
+    "sun": "#F2C14E",
+    "leaf": "#3E9A4E",
+    "acc": "#C8302A",
+    "obj": "#3D6FB0"
+   }
+  },
+  {
+   "slug": "bandipur",
+   "label": "Bindabasini temple in Bandipur's bazaar",
+   "lat": 27.938,
+   "lon": 84.408,
+   "radius_km": 5,
+   "aliases": [
+    "bindabasini temple bandipur",
+    "bandipur bazaar"
+   ],
+   "names": [
+    "bandipur"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#E4CC9C",
+    "mid": "#B24A33",
+    "ice": "#EDE4D2",
+    "water": "#8E8F93",
+    "near": "#2A2220",
+    "sun": "#E2B13C",
+    "leaf": "#5E8C3A",
+    "acc": "#C8302A",
+    "obj": "#45454C"
+   }
+  },
+  {
+   "slug": "besisahar",
+   "label": "Besisahar on its terrace below Lamjung Himal",
+   "lat": 28.231,
+   "lon": 84.377,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "besi sahar",
+    "besisahar",
+    "besishahar",
+    "besi shahar",
+    "besishar",
+    "besi sahr"
+   ],
+   "palette": {
+    "sky": "#A6CDF2",
+    "far": "#7F93A8",
+    "mid": "#8DB060",
+    "ice": "#F4F4F0",
+    "water": "#6FB8C2",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#3E6B36",
+    "acc": "#C25A44",
+    "obj": "#3E7EC0"
+   }
+  },
+  {
    "slug": "bhaktapur",
    "label": "Nyatapola temple, Bhaktapur",
    "lat": 27.6714,
@@ -269,6 +355,32 @@
    }
   },
   {
+   "slug": "jomsom",
+   "label": "Nilgiri above the Jomsom airstrip",
+   "lat": 28.78,
+   "lon": 83.73,
+   "radius_km": 6,
+   "aliases": [
+    "jomsom airport"
+   ],
+   "names": [
+    "jomsom",
+    "jomsom bazaar"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8A7560",
+    "mid": "#7F776E",
+    "ice": "#F4F6F8",
+    "water": "#6E9FC0",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#5E8C3A",
+    "acc": "#C9B48A",
+    "obj": "#8F8D88"
+   }
+  },
+  {
    "slug": "kala-patthar",
    "label": "Everest seen from the summit of Kala Patthar",
    "lat": 27.9957,
@@ -322,6 +434,57 @@
     "leaf": "#5B8A3C",
     "acc": "#C42A26",
     "obj": "#6E655E"
+   }
+  },
+  {
+   "slug": "khumjung",
+   "label": "Khumjung village below Khumbila",
+   "lat": 27.818,
+   "lon": 86.719,
+   "radius_km": 3,
+   "aliases": [
+    "khumjung village"
+   ],
+   "names": [
+    "khumjung"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#A39066",
+    "mid": "#7A6E64",
+    "ice": "#F2EFE8",
+    "water": "#5E8FB0",
+    "near": "#2A2724",
+    "sun": "#F4C43E",
+    "leaf": "#7E8A48",
+    "acc": "#3F8C62",
+    "obj": "#B3A893"
+   }
+  },
+  {
+   "slug": "kurintar",
+   "label": "Manakamana cable car over the Trisuli valley at Kurintar",
+   "lat": 27.877,
+   "lon": 84.578,
+   "radius_km": 5,
+   "aliases": [
+    "manakamana cable car",
+    "manakamana cablecar"
+   ],
+   "names": [
+    "kurintar"
+   ],
+   "palette": {
+    "sky": "#A8CDEB",
+    "far": "#8FA9B8",
+    "mid": "#5B8E3C",
+    "ice": "#F4F4F0",
+    "water": "#86AAA2",
+    "near": "#24291F",
+    "sun": "#F4C640",
+    "leaf": "#86B44C",
+    "acc": "#C8352B",
+    "obj": "#B8BDC0"
    }
   },
   {
@@ -407,7 +570,11 @@
     "lumbini",
     "rummindei",
     "rupandehi lumbini",
-    "ashoka pillar lumbini"
+    "ashoka pillar lumbini",
+    "maya devi temple",
+    "mayadevi temple",
+    "maya devi",
+    "mayadevi"
    ],
    "palette": {
     "sky": "#B4D3EE",
@@ -420,6 +587,32 @@
     "leaf": "#4E8A42",
     "acc": "#A84B38",
     "obj": "#D4A93A"
+   }
+  },
+  {
+   "slug": "manang",
+   "label": "Manang village below Gangapurna and Annapurna III",
+   "lat": 28.666,
+   "lon": 84.017,
+   "radius_km": 6,
+   "aliases": [
+    "manang village",
+    "gangapurna lake"
+   ],
+   "names": [
+    "manang"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#9E9A94",
+    "mid": "#8A6A52",
+    "ice": "#F5F5F2",
+    "water": "#7EC4CC",
+    "near": "#26262A",
+    "sun": "#F2C14E",
+    "leaf": "#8A8A50",
+    "acc": "#BCA27E",
+    "obj": "#3E7EC0"
    }
   },
   {
@@ -662,6 +855,28 @@
    }
   },
   {
+   "slug": "pheriche",
+   "label": "Taboche and Cholatse above the Pheriche valley",
+   "lat": 27.895,
+   "lon": 86.82,
+   "radius_km": 3,
+   "aliases": [
+    "pheriche"
+   ],
+   "palette": {
+    "sky": "#A2C8F0",
+    "far": "#9C9AA2",
+    "mid": "#76695F",
+    "ice": "#F4F6F8",
+    "water": "#D6E2E8",
+    "near": "#222225",
+    "sun": "#F2C14E",
+    "leaf": "#7D7448",
+    "acc": "#BCA98A",
+    "obj": "#3F78B4"
+   }
+  },
+  {
    "slug": "pokhara",
    "label": "Phewa Lake and the Annapurnas, Pokhara",
    "lat": 28.21,
@@ -716,6 +931,34 @@
    ]
   },
   {
+   "slug": "sundarijal",
+   "label": "Sundarijal waterfall in the Shivapuri forest",
+   "lat": 27.768,
+   "lon": 85.427,
+   "radius_km": 5,
+   "aliases": [
+    "sundarijal falls",
+    "sundarijal waterfall",
+    "sundarijal water fall"
+   ],
+   "names": [
+    "sundarijal",
+    "sundarijel"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#BDBDB6",
+    "mid": "#85857E",
+    "ice": "#F7F8F6",
+    "water": "#6E9FB0",
+    "near": "#22261F",
+    "sun": "#F4C640",
+    "leaf": "#3F7A34",
+    "acc": "#D2392E",
+    "obj": "#2F6FC0"
+   }
+  },
+  {
    "slug": "swayambhunath",
    "label": "Swayambhunath stupa (the Monkey Temple)",
    "lat": 27.7149,
@@ -749,6 +992,28 @@
    ]
   },
   {
+   "slug": "tadapani",
+   "label": "Machhapuchhre between the blue lodges of Tadapani",
+   "lat": 28.394,
+   "lon": 83.795,
+   "radius_km": 3,
+   "aliases": [
+    "tadapani"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#8C96A8",
+    "mid": "#9A8468",
+    "ice": "#F5F6F4",
+    "water": "#2E7FD0",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B3A",
+    "acc": "#D2344A",
+    "obj": "#6E7480"
+   }
+  },
+  {
    "slug": "tengboche",
    "label": "Tengboche monastery gate with Ama Dablam",
    "lat": 27.8362,
@@ -771,6 +1036,50 @@
     "leaf": "#3F6B4A",
     "acc": "#C9414A",
     "obj": "#D9A531"
+   }
+  },
+  {
+   "slug": "thamel",
+   "label": "A Thamel street with shop signs, prayer flags and a cycle rickshaw",
+   "lat": 27.7153,
+   "lon": 85.3123,
+   "radius_km": 2,
+   "aliases": [
+    "thamel"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#C9BBA4",
+    "mid": "#A8613F",
+    "ice": "#EFE6D2",
+    "water": "#2F6DB5",
+    "near": "#26292C",
+    "sun": "#F2C230",
+    "leaf": "#3E9A4E",
+    "acc": "#C8302E",
+    "obj": "#7A3E8E"
+   }
+  },
+  {
+   "slug": "ulleri",
+   "label": "The stone staircase to Ulleri below Annapurna South",
+   "lat": 28.37,
+   "lon": 83.73,
+   "radius_km": 3,
+   "aliases": [
+    "ulleri"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#4F7A62",
+    "mid": "#A29D92",
+    "ice": "#F5F6F7",
+    "water": "#5E93B8",
+    "near": "#23272A",
+    "sun": "#E8B83A",
+    "leaf": "#7AA04A",
+    "acc": "#3B78B8",
+    "obj": "#8A5A36"
    }
   },
   {
