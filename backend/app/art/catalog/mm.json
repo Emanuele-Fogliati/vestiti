@@ -3,6 +3,34 @@
  "name": "Myanmar",
  "places": [
   {
+   "slug": "amarapura",
+   "label": "U Bein teak bridge across Taungthaman Lake, Amarapura",
+   "lat": 21.892,
+   "lon": 96.059,
+   "radius_km": 6,
+   "aliases": [
+    "u bein",
+    "ubein",
+    "u pein",
+    "taungthaman"
+   ],
+   "names": [
+    "amarapura"
+   ],
+   "palette": {
+    "sky": "#B6D3EC",
+    "far": "#9EABB6",
+    "mid": "#A08460",
+    "ice": "#EDE6D8",
+    "water": "#6F9DBA",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4E",
+    "acc": "#A8462E",
+    "obj": "#6E4E30"
+   }
+  },
+  {
    "slug": "bagan",
    "label": "Temples of Bagan with balloons",
    "lat": 21.17,
@@ -50,6 +78,142 @@
     "leaf": "#6E9450",
     "acc": "#6E4C68",
     "obj": "#5A4232"
+   }
+  },
+  {
+   "slug": "mandalay",
+   "label": "Mandalay palace moat and fort wall with a pyatthat bastion, Mandalay Hill behind",
+   "lat": 21.978,
+   "lon": 96.083,
+   "radius_km": 20,
+   "aliases": [
+    "mandalay palace",
+    "mandalay royal palace",
+    "mandalay fort",
+    "palazzo reale di mandalay"
+   ],
+   "names": [
+    "mandalay",
+    "mandalay city"
+   ],
+   "palette": {
+    "sky": "#ADCDEA",
+    "far": "#6F9152",
+    "mid": "#B8653C",
+    "ice": "#E4E0D4",
+    "water": "#7FA39C",
+    "near": "#2A2422",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A3A",
+    "acc": "#7E3426",
+    "obj": "#DDAA3A"
+   }
+  },
+  {
+   "slug": "mandalay-hill",
+   "label": "The white chinthe lions at the foot of Mandalay Hill, its summit pagoda above",
+   "lat": 22.006,
+   "lon": 96.11,
+   "radius_km": 3,
+   "aliases": [
+    "mandalay hill",
+    "sutaungpyei",
+    "su taung pyai",
+    "collina di mandalay"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#C8C9C2",
+    "mid": "#86A35C",
+    "ice": "#F4F2EC",
+    "water": "#6E9CC0",
+    "near": "#262624",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A3C",
+    "acc": "#A8402E",
+    "obj": "#DCA83A"
+   }
+  },
+  {
+   "slug": "mingun",
+   "label": "The cracked brick mass of the unfinished Mingun Pahtodawgyi",
+   "lat": 22.0517,
+   "lon": 96.0175,
+   "radius_km": 4,
+   "aliases": [
+    "pahtodawgyi",
+    "mingun paya",
+    "mingun pagoda",
+    "mingun temple"
+   ],
+   "names": [
+    "mingun"
+   ],
+   "palette": {
+    "sky": "#A2C8EC",
+    "far": "#8DA47A",
+    "mid": "#C9946A",
+    "ice": "#F4F2EC",
+    "water": "#6E9CC0",
+    "near": "#2E2420",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A48",
+    "acc": "#93553A",
+    "obj": "#D8C29A"
+   }
+  },
+  {
+   "slug": "shwedagon-pagoda",
+   "label": "The golden Shwedagon Pagoda stupa above its marble platform",
+   "lat": 16.7983,
+   "lon": 96.1496,
+   "radius_km": 3,
+   "aliases": [
+    "shwedagon",
+    "swedagon",
+    "shwe dagon"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#EDC85C",
+    "mid": "#D9A42E",
+    "ice": "#F1EEE8",
+    "water": "#5E8AB0",
+    "near": "#2A2420",
+    "sun": "#F7D25A",
+    "leaf": "#4E7E3E",
+    "acc": "#A8432E",
+    "obj": "#9A6C1C"
+   }
+  },
+  {
+   "slug": "yangon",
+   "label": "Karaweik Hall on Kandawgyi Lake with the Shwedagon on the skyline, Yangon",
+   "lat": 16.7906,
+   "lon": 96.165,
+   "radius_km": 20,
+   "aliases": [
+    "karaweik",
+    "kandawgyi"
+   ],
+   "names": [
+    "yangon",
+    "rangoon",
+    "yangoon",
+    "yangon city",
+    "rangoon city"
+   ],
+   "palette": {
+    "sky": "#AACDEC",
+    "far": "#5F8C5A",
+    "mid": "#DDB85A",
+    "ice": "#F0EBDD",
+    "water": "#7FA39A",
+    "near": "#23272A",
+    "sun": "#F4C84A",
+    "leaf": "#3F8A6E",
+    "acc": "#A8322C",
+    "obj": "#8A6420"
    }
   }
  ]
