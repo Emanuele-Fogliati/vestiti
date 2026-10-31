@@ -3,6 +3,74 @@
  "name": "Jordan",
  "places": [
   {
+   "slug": "ad-deir",
+   "label": "Ad Deir, the Monastery at Petra",
+   "lat": 30.3364,
+   "lon": 35.4317,
+   "radius_km": 2,
+   "aliases": [
+    "ad deir",
+    "al deir",
+    "el deir",
+    "petra monastery",
+    "monastery of petra",
+    "monastero di petra"
+   ],
+   "names": [
+    "the monastery",
+    "monastery",
+    "il monastero"
+   ],
+   "palette": {
+    "sky": "#A3C6EC",
+    "far": "#C08C70",
+    "mid": "#D6A57E",
+    "ice": "#ECCBA4",
+    "water": "#7FB3C8",
+    "near": "#33221C",
+    "sun": "#F2C14E",
+    "leaf": "#8C9A5B",
+    "acc": "#8A7F74",
+    "obj": "#E4C6A0"
+   }
+  },
+  {
+   "slug": "ajloun-castle",
+   "label": "Ajloun Castle on its wooded hilltop",
+   "lat": 32.3256,
+   "lon": 35.7272,
+   "radius_km": 3,
+   "aliases": [
+    "ajloun castle",
+    "ajlun castle",
+    "aljoun castle",
+    "castello di ajloun",
+    "qal at ar rabad",
+    "qalat ar rabad",
+    "qal at al rabad",
+    "qa lat al rabat",
+    "rabad castle"
+   ],
+   "palette": {
+    "sky": "#9CC3EA",
+    "far": "#8FA47A",
+    "mid": "#C9A26E",
+    "ice": "#E2CFA8",
+    "water": "#7FB3C8",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#4E6E36",
+    "acc": "#C8A877",
+    "obj": "#6B4A32"
+   },
+   "names": [
+    "ajloun",
+    "ajlun",
+    "ajlun town",
+    "ajloun town"
+   ]
+  },
+  {
    "slug": "amman-citadel",
    "label": "Temple of Hercules on the Amman Citadel above the white city",
    "lat": 31.9543,
@@ -67,6 +135,66 @@
     "leaf": "#3E8A4A",
     "acc": "#C8323A",
     "obj": "#C9A57A"
+   }
+  },
+  {
+   "slug": "as-salt",
+   "label": "As-Salt's golden-stone old town on its hillside",
+   "lat": 32.0392,
+   "lon": 35.7272,
+   "radius_km": 10,
+   "aliases": [
+    "as salt old town",
+    "salt old town",
+    "al salt old town"
+   ],
+   "names": [
+    "as salt",
+    "al salt",
+    "es salt",
+    "salt",
+    "as salt city",
+    "al salt city"
+   ],
+   "palette": {
+    "sky": "#BCD7EF",
+    "far": "#E2D3B0",
+    "mid": "#D9B45A",
+    "ice": "#F1ECE0",
+    "water": "#7FA9C0",
+    "near": "#2C241A",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A3A",
+    "acc": "#C29A45",
+    "obj": "#B49F78"
+   }
+  },
+  {
+   "slug": "bethany-beyond-the-jordan",
+   "label": "Church of St John the Baptist at the Bethany baptism site",
+   "lat": 31.837,
+   "lon": 35.553,
+   "radius_km": 4,
+   "aliases": [
+    "bethany beyond the jordan",
+    "bethany beyond jordan",
+    "al maghtas",
+    "maghtas",
+    "betania oltre il giordano",
+    "bethabara",
+    "baptism site"
+   ],
+   "palette": {
+    "sky": "#AFCDEB",
+    "far": "#E6D6B2",
+    "mid": "#D7B98A",
+    "ice": "#F2E8D2",
+    "water": "#7E9A6A",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A3E",
+    "acc": "#D6A62C",
+    "obj": "#8C6B45"
    }
   },
   {
@@ -156,6 +284,33 @@
    }
   },
   {
+   "slug": "king-abdullah-i-mosque",
+   "label": "King Abdullah I Mosque, Amman",
+   "lat": 31.9628,
+   "lon": 35.9161,
+   "radius_km": 2,
+   "aliases": [
+    "king abdullah i mosque",
+    "king abdullah mosque",
+    "king abdullah 1 mosque",
+    "king abdullah the first mosque",
+    "moschea di re abdullah",
+    "moschea re abdullah"
+   ],
+   "palette": {
+    "sky": "#A6C8EC",
+    "far": "#E2DCCF",
+    "mid": "#CFC7B6",
+    "ice": "#F3F0E8",
+    "water": "#5DA9CF",
+    "near": "#24292E",
+    "sun": "#F2C14E",
+    "leaf": "#5C7E3A",
+    "acc": "#C9A23A",
+    "obj": "#2C6A96"
+   }
+  },
+  {
    "slug": "madaba",
    "label": "St George's Church, home of the Madaba Mosaic Map",
    "lat": 31.7186,
@@ -170,12 +325,17 @@
     "church of saint george madaba",
     "chiesa di san giorgio madaba",
     "mappa di madaba",
-    "mappa musiva di madaba"
+    "mappa musiva di madaba",
+    "church of st george madaba",
+    "st george s church in madaba",
+    "st george church in madaba"
    ],
    "names": [
     "madaba",
     "madaba city",
-    "madaba town"
+    "madaba town",
+    "st george church",
+    "st george s church"
    ],
    "palette": {
     "sky": "#A7CDF0",
@@ -246,6 +406,40 @@
    }
   },
   {
+   "slug": "qasr-kharana",
+   "label": "Qasr Kharana desert castle",
+   "lat": 31.7286,
+   "lon": 36.4636,
+   "radius_km": 5,
+   "aliases": [
+    "qasr kharana",
+    "qasr al kharana",
+    "qasr al kharanah",
+    "qasr kharaneh",
+    "qasr al kharaneh",
+    "qasr haraneh",
+    "qasr al harrana",
+    "qaser kharana",
+    "kharana castle",
+    "kharaneh castle",
+    "castello di al kharraneh",
+    "castello di kharana",
+    "castello di kharraneh"
+   ],
+   "palette": {
+    "sky": "#B3D3F0",
+    "far": "#B8A58C",
+    "mid": "#D2A86E",
+    "ice": "#F1E2C4",
+    "water": "#7FA9C0",
+    "near": "#2C2117",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A4E",
+    "acc": "#A68B6E",
+    "obj": "#B48A55"
+   }
+  },
+  {
    "slug": "roman-theatre-amman",
    "label": "Roman Theatre of Amman carved into the hillside",
    "lat": 31.9516,
@@ -312,6 +506,64 @@
     "leaf": "#6E7E44",
     "acc": "#A68E6A",
     "obj": "#CDBB94"
+   }
+  },
+  {
+   "slug": "umm-qais",
+   "label": "Basalt columns of Umm Qais (Gadara) above the Sea of Galilee",
+   "lat": 32.6554,
+   "lon": 35.6806,
+   "radius_km": 4,
+   "aliases": [
+    "umm qais",
+    "umm quais",
+    "umm qays",
+    "um qais",
+    "gadara"
+   ],
+   "palette": {
+    "sky": "#8EC3EE",
+    "far": "#D2B48C",
+    "mid": "#4B4C50",
+    "ice": "#E8E4DC",
+    "water": "#6E9FC0",
+    "near": "#1C1C1E",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A3A",
+    "acc": "#D3C6AC",
+    "obj": "#A99F90"
+   }
+  },
+  {
+   "slug": "wadi-mujib",
+   "label": "The Wadi Mujib Siq gorge with its river",
+   "lat": 31.4545,
+   "lon": 35.5785,
+   "radius_km": 10,
+   "aliases": [
+    "wadi mujib",
+    "wadi al mujib",
+    "wadi el mujib",
+    "mujib siq",
+    "mujib biosphere",
+    "mujib nature reserve",
+    "mujib reserve"
+   ],
+   "names": [
+    "mujib",
+    "al mujib"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#E6C58E",
+    "mid": "#B8643A",
+    "ice": "#F3E3C0",
+    "water": "#6FA8A2",
+    "near": "#2E1E16",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A3E",
+    "acc": "#D49A5C",
+    "obj": "#D8CDB4"
    }
   },
   {
