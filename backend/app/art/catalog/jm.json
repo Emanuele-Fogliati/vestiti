@@ -3,6 +3,89 @@
  "name": "Jamaica",
  "places": [
   {
+   "slug": "blue-lagoon",
+   "label": "Blue Lagoon near Port Antonio: the turquoise lagoon ringed by jungle with a bamboo raft",
+   "lat": 18.176,
+   "lon": -76.385,
+   "radius_km": 3,
+   "aliases": [
+    "blue lagoon jamaica",
+    "blue lagoon port antonio",
+    "blue lagoon portland",
+    "blue lagoon san san",
+    "blue hole port antonio"
+   ],
+   "palette": {
+    "sky": "#B8DCF0",
+    "far": "#86B84C",
+    "mid": "#2F6A2C",
+    "ice": "#FFFFFF",
+    "water": "#2FBAB0",
+    "near": "#1E241E",
+    "sun": "#F6C431",
+    "leaf": "#3F8636",
+    "acc": "#1F5FA8",
+    "obj": "#C9A56A"
+   }
+  },
+  {
+   "slug": "kingston",
+   "label": "Kingston: Devon House, the white Georgian mansion with royal palms",
+   "lat": 18.013,
+   "lon": -76.783,
+   "radius_km": 15,
+   "aliases": [
+    "devon house"
+   ],
+   "names": [
+    "kingston",
+    "kingston jamaica",
+    "kingston city"
+   ],
+   "palette": {
+    "sky": "#A9CFEE",
+    "far": "#6E9A4E",
+    "mid": "#F1EAD6",
+    "ice": "#FFFFFF",
+    "water": "#7CC0D8",
+    "near": "#25261F",
+    "sun": "#F6C431",
+    "leaf": "#4F8A38",
+    "acc": "#C8A66C",
+    "obj": "#A9A69C"
+   }
+  },
+  {
+   "slug": "montego-bay",
+   "label": "Montego Bay: Doctor's Cave Beach with its red lifeguard tower, palms and the white hotel",
+   "lat": 18.4867,
+   "lon": -77.9296,
+   "radius_km": 15,
+   "aliases": [
+    "doctor s cave",
+    "doctors cave",
+    "hip strip"
+   ],
+   "names": [
+    "montego bay",
+    "mobay",
+    "mo bay",
+    "montego bay jamaica"
+   ],
+   "palette": {
+    "sky": "#B4D9F2",
+    "far": "#2C8DB8",
+    "mid": "#F2E8CC",
+    "ice": "#FFFFFF",
+    "water": "#56CBC4",
+    "near": "#23282A",
+    "sun": "#F6C431",
+    "leaf": "#3F8A3A",
+    "acc": "#D6343A",
+    "obj": "#8F7350"
+   }
+  },
+  {
    "slug": "negril",
    "label": "Negril's West End cliffs with a cliff diver and the lighthouse",
    "lat": 18.26,
@@ -29,6 +112,57 @@
     "leaf": "#5E8C3E",
     "acc": "#1F6AA8",
     "obj": "#9A7446"
+   }
+  },
+  {
+   "slug": "port-antonio",
+   "label": "Port Antonio: the Folly Mansion ruin with its grey pillars in the meadow",
+   "lat": 18.18,
+   "lon": -76.442,
+   "radius_km": 10,
+   "aliases": [
+    "folly mansion",
+    "folly ruins",
+    "folly point"
+   ],
+   "names": [
+    "port antonio",
+    "port antonio jamaica"
+   ],
+   "palette": {
+    "sky": "#9FCBF0",
+    "far": "#4E7F3A",
+    "mid": "#8E8B80",
+    "ice": "#C9C5B6",
+    "water": "#2F86B8",
+    "near": "#22231F",
+    "sun": "#F6C431",
+    "leaf": "#8DB84A",
+    "acc": "#46463F",
+    "obj": "#3F7A2E"
+   }
+  },
+  {
+   "slug": "ys-falls",
+   "label": "YS Falls: the wide lower cascade and the upper fall in the forest above a jade pool",
+   "lat": 18.099,
+   "lon": -77.774,
+   "radius_km": 3,
+   "aliases": [
+    "ys falls",
+    "y s falls"
+   ],
+   "palette": {
+    "sky": "#B5D8EE",
+    "far": "#2F4A2A",
+    "mid": "#9A8D76",
+    "ice": "#F4F7F6",
+    "water": "#5DB3A0",
+    "near": "#1E261C",
+    "sun": "#F6C431",
+    "leaf": "#3F7D36",
+    "acc": "#D8263A",
+    "obj": "#A69C88"
    }
   }
  ]
