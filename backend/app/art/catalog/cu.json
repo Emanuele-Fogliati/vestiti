@@ -3,6 +3,55 @@
  "name": "Cuba",
  "places": [
   {
+   "slug": "baracoa",
+   "label": "El Yunque above Baracoa and its bay",
+   "lat": 20.346,
+   "lon": -74.497,
+   "radius_km": 15,
+   "aliases": [
+    "el yunque de baracoa"
+   ],
+   "names": [
+    "baracoa"
+   ],
+   "palette": {
+    "sky": "#B6D5EE",
+    "far": "#93AFAA",
+    "mid": "#5E8A68",
+    "ice": "#F2F0EA",
+    "water": "#3BB2C8",
+    "near": "#22302A",
+    "sun": "#F4C542",
+    "leaf": "#4C8C3A",
+    "acc": "#C9654A",
+    "obj": "#D6C8A6"
+   }
+  },
+  {
+   "slug": "camaguey",
+   "label": "Iglesia del Carmen and tinajones on Plaza del Carmen, Camaguey",
+   "lat": 21.3836,
+   "lon": -77.9192,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "camaguey",
+    "puerto principe"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#B8AE9E",
+    "mid": "#EFDCC6",
+    "ice": "#F4F3EE",
+    "water": "#6E6340",
+    "near": "#2A2420",
+    "sun": "#F4C542",
+    "leaf": "#4E8A3C",
+    "acc": "#C77E6C",
+    "obj": "#7C2B24"
+   }
+  },
+  {
    "slug": "che-guevara-mausoleum",
    "label": "The Che Guevara statue and memorial, Santa Clara",
    "lat": 22.4048,
@@ -267,6 +316,80 @@
    }
   },
   {
+   "slug": "plaza-vieja",
+   "label": "The marble fountain and arcaded colonial facades of Plaza Vieja, Havana",
+   "lat": 23.1381,
+   "lon": -82.3505,
+   "radius_km": 2,
+   "aliases": [
+    "plaza vieja",
+    "old square havana"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#CFC9BC",
+    "mid": "#D8B572",
+    "ice": "#F4F1EA",
+    "water": "#9ED6D6",
+    "near": "#26282A",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A4A",
+    "acc": "#EAD892",
+    "obj": "#D9956E"
+   }
+  },
+  {
+   "slug": "remedios",
+   "label": "Iglesia Mayor de San Juan Bautista on Plaza Marti, Remedios",
+   "lat": 22.4949,
+   "lon": -79.5458,
+   "radius_km": 10,
+   "aliases": [],
+   "names": [
+    "remedios",
+    "san juan de los remedios"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#CBBFA6",
+    "mid": "#EDCB4C",
+    "ice": "#F6F2E6",
+    "water": "#4A8FB0",
+    "near": "#2B2622",
+    "sun": "#F4C542",
+    "leaf": "#4E8F3A",
+    "acc": "#B85C3C",
+    "obj": "#E9A7A0"
+   }
+  },
+  {
+   "slug": "santiago-de-cuba",
+   "label": "Santiago de Cuba Cathedral of the Assumption on Parque Cespedes",
+   "lat": 20.0204,
+   "lon": -75.8296,
+   "radius_km": 12,
+   "aliases": [
+    "catedral de santiago de cuba",
+    "parque cespedes",
+    "cathedral of our lady of the assumption santiago"
+   ],
+   "names": [
+    "santiago de cuba"
+   ],
+   "palette": {
+    "sky": "#9FC9F2",
+    "far": "#D8BCB0",
+    "mid": "#EBDDB0",
+    "ice": "#F6F3EA",
+    "water": "#4A8FB0",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#3F8236",
+    "acc": "#A55A42",
+    "obj": "#4FC3D6"
+   }
+  },
+  {
    "slug": "topes-de-collantes",
    "label": "Jungle waterfall in Topes de Collantes park",
    "lat": 21.905,
@@ -314,6 +437,31 @@
     "leaf": "#2F7D4F",
     "acc": "#B5452E",
     "obj": "#7FD8D2"
+   }
+  },
+  {
+   "slug": "valle-de-los-ingenios",
+   "label": "Manaca Iznaga tower in the Valle de los Ingenios",
+   "lat": 21.843,
+   "lon": -79.777,
+   "radius_km": 12,
+   "aliases": [
+    "valle de los ingenios",
+    "manaca iznaga",
+    "valley of the sugar mills",
+    "valle degli zuccherifici"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#7F9C93",
+    "mid": "#B09A7C",
+    "ice": "#D9CBB0",
+    "water": "#4A8FB0",
+    "near": "#2B2A26",
+    "sun": "#F4C542",
+    "leaf": "#5F9A3C",
+    "acc": "#B0573A",
+    "obj": "#E8C463"
    }
   },
   {
