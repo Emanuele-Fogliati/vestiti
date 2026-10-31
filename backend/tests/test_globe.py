@@ -19,7 +19,8 @@ def test_places_endpoint_is_compact_and_gzipped(client):
     assert "inventory_trips" not in d and "trips" not in d["fields"]
     raw, gz = globe.payload_bytes()
     assert json.loads(gzip.decompress(gz)) == json.loads(raw)
-    assert len(gz) < 250_000  # stays light enough for a phone
+    # 250 KB until 31 Oct; raised because every new landmark scene adds its id to some places
+    assert len(gz) < 300_000  # stays light enough for a phone
 
 
 def test_places_have_valid_rows():
