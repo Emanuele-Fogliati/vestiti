@@ -355,6 +355,30 @@
    }
   },
   {
+   "slug": "cape-range-national-park",
+   "label": "Yardie Creek gorge in Cape Range National Park opening to the Ningaloo sea, with a black-footed rock-wallaby",
+   "lat": -22.325,
+   "lon": 113.815,
+   "radius_km": 30,
+   "aliases": [
+    "cape range",
+    "yardie creek",
+    "yardie gorge"
+   ],
+   "palette": {
+    "sky": "#A9D3F0",
+    "far": "#B8A770",
+    "mid": "#C0602F",
+    "ice": "#EADBB8",
+    "water": "#2E6383",
+    "near": "#26201C",
+    "sun": "#F4C430",
+    "leaf": "#6F8A3C",
+    "acc": "#3CC4C0",
+    "obj": "#8B7D70"
+   }
+  },
+  {
    "slug": "cape-tribulation",
    "label": "Cape Tribulation's rainforest headland meeting the beach, with a cassowary",
    "lat": -16.088,
@@ -464,10 +488,17 @@
    "lon": 152.76,
    "radius_km": 15,
    "aliases": [
-    "crowdy bay"
+    "crowdy bay",
+    "diamond head nsw",
+    "diamond head crowdy bay",
+    "diamond head campground",
+    "diamond head loop",
+    "kylies beach",
+    "kylies hut"
    ],
    "names": [
-    "crowdy head"
+    "crowdy head",
+    "diamond head new south wales"
    ],
    "palette": {
     "sky": "#AFD0F0",
@@ -988,7 +1019,6 @@
    "radius_km": 60,
    "aliases": [
     "kakadu",
-    "ubirr",
     "nadab lookout",
     "nadab floodplain"
    ],
@@ -1573,6 +1603,38 @@
    }
   },
   {
+   "slug": "ningaloo-reef",
+   "label": "A whale shark over the coral of Ningaloo Reef, with the Cape Range coast on the horizon",
+   "lat": -22.7,
+   "lon": 113.68,
+   "radius_km": 60,
+   "aliases": [
+    "ningaloo",
+    "ningaloo reef",
+    "ningaloo marine park",
+    "ningaloo coast",
+    "turquoise bay",
+    "tantabiddi",
+    "coral bay wa",
+    "coral bay western australia"
+   ],
+   "names": [
+    "coral bay"
+   ],
+   "palette": {
+    "sky": "#A6D6F2",
+    "far": "#EADFBC",
+    "mid": "#C46A3C",
+    "ice": "#F2F7F7",
+    "water": "#2FA7B9",
+    "near": "#1E2A30",
+    "sun": "#F4C430",
+    "leaf": "#6E9A6A",
+    "acc": "#E09A7C",
+    "obj": "#4B5E6E"
+   }
+  },
+  {
    "slug": "noosa",
    "label": "Noosa Main Beach and the Noosa National Park headland",
    "lat": -26.385,
@@ -1930,6 +1992,33 @@
    ]
   },
   {
+   "slug": "ubirr",
+   "label": "Ubirr's main rock-art gallery: X-ray fish and turtle paintings under the sandstone overhang, Kakadu",
+   "lat": -12.41,
+   "lon": 132.957,
+   "radius_km": 3,
+   "aliases": [
+    "ubirr",
+    "ubirr rock",
+    "ubirr rock art",
+    "ubirr art site",
+    "ubirr art gallery",
+    "ubirr main gallery"
+   ],
+   "palette": {
+    "sky": "#A8D0EE",
+    "far": "#B48A6C",
+    "mid": "#8E6F5A",
+    "ice": "#F2EDE4",
+    "water": "#4F8FA0",
+    "near": "#2A201B",
+    "sun": "#F3C23A",
+    "leaf": "#7F9A3E",
+    "acc": "#C77B5B",
+    "obj": "#97402C"
+   }
+  },
+  {
    "slug": "uluru",
    "label": "Uluru",
    "lat": -25.344,
@@ -1954,6 +2043,41 @@
    "names": [
     "yulara"
    ]
+  },
+  {
+   "slug": "west-macdonnell-ranges",
+   "label": "Ormiston Gorge's red quartzite wall over the waterhole, with ghost gums, West MacDonnell Ranges",
+   "lat": -23.632,
+   "lon": 132.727,
+   "radius_km": 60,
+   "aliases": [
+    "west macdonnell",
+    "west macdonnells",
+    "west macs",
+    "tjoritja",
+    "ormiston gorge",
+    "ormiston pound",
+    "glen helen gorge",
+    "ellery creek big hole",
+    "ellery creek",
+    "redbank gorge",
+    "larapinta trail",
+    "larapinta",
+    "mount sonder",
+    "mt sonder"
+   ],
+   "palette": {
+    "sky": "#9FCBEF",
+    "far": "#B78E7E",
+    "mid": "#C65E30",
+    "ice": "#F4F1EA",
+    "water": "#2F5F5A",
+    "near": "#271E1A",
+    "sun": "#F4C430",
+    "leaf": "#8C9B5C",
+    "acc": "#E2C69C",
+    "obj": "#A8472A"
+   }
   },
   {
    "slug": "whitehaven-beach",
