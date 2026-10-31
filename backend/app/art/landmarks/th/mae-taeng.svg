@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="28" r="11" fill="var(--il-sun)"/>
+<path d="M0 150V92Q20 70 46 78Q70 56 98 70Q120 60 142 74Q166 64 188 76Q212 60 238 72Q262 64 284 78Q294 80 300 86V150Z" fill="var(--il-far)"/>
+<path d="M0 150V110Q10 98 24 104Q34 92 50 100Q62 92 76 102Q86 98 94 108L100 150Z" fill="var(--il-leaf)"/>
+<path d="M200 152V128Q240 122 300 124V152Z" fill="var(--il-leaf)"/>
+<path d="M232 130V112H290V130Z" fill="var(--il-obj)"/>
+<path d="M224 114L240 96H284L300 112V114Z" fill="var(--il-mid)"/>
+<path d="M242 126V116H252V126ZM270 126V116H280V126Z" fill="var(--il-near)"/>
+<path d="M0 162V136Q50 132 100 138H200Q250 130 300 134V162Z" fill="var(--il-acc)"/>
+<g transform="translate(6 106) scale(0.36)"><path d="M196 168V144Q206 124 198 106Q186 90 162 90Q142 90 128 94Q120 80 104 82Q90 86 88 100Q86 112 90 122Q92 140 88 158Q88 166 94 164Q100 158 100 140Q101 128 106 124L112 128V168H124V148Q150 152 172 148V168H184V152Z" fill="var(--il-mid)"/></g>
+<g transform="translate(0 6)">
+<path d="M196 168V144Q206 124 198 106Q186 90 162 90Q142 90 128 94Q120 80 104 82Q90 86 88 100Q86 112 90 122Q92 140 88 158Q88 166 94 164Q100 158 100 140Q101 128 106 124L112 128V168H124V148Q150 152 172 148V168H184V152Z" fill="var(--il-mid)"/>
+<path d="M114 98Q126 94 128 104Q128 118 120 124Q112 120 112 110Z" fill="var(--il-near)" opacity="0.3"/>
+<circle cx="100" cy="100" r="1.8" fill="var(--il-near)"/>
+<path d="M198 108Q206 118 204 134" stroke="var(--il-mid)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<path d="M136 96Q142 86 160 86Q178 86 184 96Q172 100 160 100Q146 100 136 96Z" fill="var(--il-acc)"/>
+<path d="M142 88V82H178V88ZM146 92V86H150V92ZM170 92V86H174V92ZM173 84V64H178V84ZM146 84V73H150V84ZM146 75V71H178V75Z" fill="var(--il-obj)"/>
+<path d="M150 98L146 108M172 98L178 108" stroke="var(--il-obj)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+</g>
+<path d="M0 200V160H300V200Z" fill="var(--il-water)"/>
+<path d="M112 160H124V171H112ZM172 160H184V171H172ZM124 160H172V164Q150 166 124 164ZM184 160H196V167H184Z" fill="var(--il-mid)" opacity="0.45"/>
