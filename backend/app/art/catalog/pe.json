@@ -37,6 +37,34 @@
    }
   },
   {
+   "slug": "andahuaylillas",
+   "label": "The church of San Pedro Apostol on the plaza of Andahuaylillas",
+   "lat": -13.6717,
+   "lon": -71.6776,
+   "radius_km": 5,
+   "aliases": [
+    "andahuaylillas",
+    "san pedro apostol de andahuaylillas",
+    "sistine chapel of the andes",
+    "sistine chapel of america",
+    "capilla sixtina de america",
+    "capilla sixtina de los andes",
+    "cappella sistina delle ande"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#A6876A",
+    "mid": "#C38F78",
+    "ice": "#F5F2EB",
+    "water": "#5E86A8",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E6B34",
+    "acc": "#B45F3A",
+    "obj": "#D9B48E"
+   }
+  },
+  {
    "slug": "arequipa",
    "label": "Arequipa Cathedral and El Misti",
    "lat": -16.3989,
@@ -86,6 +114,64 @@
     "leaf": "#4E8A3E",
     "acc": "#C8382E",
     "obj": "#D2B56E"
+   }
+  },
+  {
+   "slug": "chan-chan",
+   "label": "The adobe fishnet lattice walls and fish frieze of Chan Chan's Tschudi palace",
+   "lat": -8.106,
+   "lon": -79.0747,
+   "radius_km": 5,
+   "aliases": [
+    "chan chan",
+    "chanchan",
+    "tschudi palace",
+    "palacio tschudi",
+    "complejo tschudi",
+    "nik an palace",
+    "palacio nik an"
+   ],
+   "palette": {
+    "sky": "#C9E0EE",
+    "far": "#B7ADA0",
+    "mid": "#C6A170",
+    "ice": "#F3EEE4",
+    "water": "#5E8FA8",
+    "near": "#3A2E22",
+    "sun": "#F2C14E",
+    "leaf": "#7A8F4E",
+    "acc": "#DEC291",
+    "obj": "#D9C39C"
+   }
+  },
+  {
+   "slug": "chiclayo",
+   "label": "Chiclayo Cathedral on the Plaza de Armas",
+   "lat": -6.7712,
+   "lon": -79.8389,
+   "radius_km": 15,
+   "aliases": [
+    "chiclayo cathedral",
+    "catedral de chiclayo",
+    "cattedrale di chiclayo",
+    "catedral santa maria de chiclayo"
+   ],
+   "names": [
+    "chiclayo",
+    "chiclayo city",
+    "chiclayo peru"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#F2E3B0",
+    "mid": "#EEC968",
+    "ice": "#F7F5EF",
+    "water": "#5D8FB8",
+    "near": "#2E2620",
+    "sun": "#F6B93B",
+    "leaf": "#4C7A36",
+    "acc": "#D9837A",
+    "obj": "#A9A59D"
    }
   },
   {
@@ -209,7 +295,11 @@
     "leaf": "#2F5A32",
     "acc": "#8A6A4A",
     "obj": "#D9C092"
-   }
+   },
+   "names": [
+    "ica",
+    "ica city"
+   ]
   },
   {
    "slug": "humantay-lake",
@@ -262,6 +352,100 @@
    }
   },
   {
+   "slug": "iquitos",
+   "label": "The stilt houses of Belen over the Itaya river in Iquitos",
+   "lat": -3.7608,
+   "lon": -73.2462,
+   "radius_km": 15,
+   "aliases": [
+    "belen iquitos",
+    "iquitos belen",
+    "belen floating",
+    "belen market iquitos",
+    "belen floating village",
+    "belen floating city"
+   ],
+   "names": [
+    "iquitos",
+    "iquitos city",
+    "iquitos peru"
+   ],
+   "palette": {
+    "sky": "#A9D1F2",
+    "far": "#DCCFB6",
+    "mid": "#A2927C",
+    "ice": "#C9CED2",
+    "water": "#5E5A3A",
+    "near": "#2A241E",
+    "sun": "#F4C430",
+    "leaf": "#3F7A35",
+    "acc": "#C7A25E",
+    "obj": "#3C78A8"
+   }
+  },
+  {
+   "slug": "la-raya-pass",
+   "label": "La Raya Pass: snowy Nevado Chimboya between the puna slopes, the pass chapel, llamas and a textile stall",
+   "lat": -14.4806,
+   "lon": -70.9853,
+   "radius_km": 15,
+   "aliases": [
+    "la raya",
+    "abra la raya",
+    "abra de la raya",
+    "paso la raya",
+    "passo la raya",
+    "valico di la raya"
+   ],
+   "palette": {
+    "sky": "#9CC6F0",
+    "far": "#6E625A",
+    "mid": "#A8854F",
+    "ice": "#F6F7F9",
+    "water": "#4F7FA8",
+    "near": "#2A241F",
+    "sun": "#F4C430",
+    "leaf": "#C8A65E",
+    "acc": "#C0392B",
+    "obj": "#8A5A3C"
+   }
+  },
+  {
+   "slug": "lares",
+   "label": "The steaming hot spring pools of Lares in their green Andean valley",
+   "lat": -13.106,
+   "lon": -72.043,
+   "radius_km": 8,
+   "aliases": [
+    "lares hot springs",
+    "banos termales de lares",
+    "aguas termales de lares",
+    "termas de lares",
+    "terme di lares",
+    "lares thermal baths",
+    "lares trek",
+    "lares valley"
+   ],
+   "names": [
+    "lares",
+    "lares village",
+    "lares town",
+    "lares peru"
+   ],
+   "palette": {
+    "sky": "#BFD9EE",
+    "far": "#B9AE96",
+    "mid": "#7D7A50",
+    "ice": "#DEDAD0",
+    "water": "#A3BC8E",
+    "near": "#2B2A22",
+    "sun": "#F2C14E",
+    "leaf": "#4A6E34",
+    "acc": "#C7A35E",
+    "obj": "#8F8A80"
+   }
+  },
+  {
    "slug": "lima-costa-verde",
    "label": "Lima's Costa Verde cliffs",
    "lat": -12.13,
@@ -285,6 +469,30 @@
     "leaf": "#6E9A4E",
     "acc": "#F2C230",
     "obj": "#CDBBA0"
+   }
+  },
+  {
+   "slug": "llanganuco-lakes",
+   "label": "The turquoise Llanganuco lake (Chinancocha) between sheer granite walls, quenual trees on the shore",
+   "lat": -9.072,
+   "lon": -77.64,
+   "radius_km": 10,
+   "aliases": [
+    "llanganuco",
+    "chinancocha",
+    "orconcocha"
+   ],
+   "palette": {
+    "sky": "#8EC1EE",
+    "far": "#A7B2C2",
+    "mid": "#8C8880",
+    "ice": "#FFFFFF",
+    "water": "#3FBDB0",
+    "near": "#26282A",
+    "sun": "#F5C842",
+    "leaf": "#5E7A3A",
+    "acc": "#B8582F",
+    "obj": "#2E7D5B"
    }
   },
   {
