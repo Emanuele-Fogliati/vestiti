@@ -236,6 +236,79 @@
    }
   },
   {
+   "slug": "cenote-azul",
+   "label": "Cenote Azul, the open jungle pool of the Riviera Maya",
+   "lat": 20.5124,
+   "lon": -87.2435,
+   "radius_km": 3,
+   "aliases": [
+    "cenote azul riviera maya",
+    "cenote azul playa del carmen",
+    "cenote azul puerto aventuras"
+   ],
+   "palette": {
+    "sky": "#BFE0F2",
+    "far": "#6CCBB8",
+    "mid": "#B9B29C",
+    "ice": "#F2F0E8",
+    "water": "#2FB3AE",
+    "near": "#1F2A24",
+    "sun": "#F6CF4A",
+    "leaf": "#7DB33E",
+    "acc": "#2E72B4",
+    "obj": "#2F6A34"
+   }
+  },
+  {
+   "slug": "cenote-ik-kil",
+   "label": "Cenote Ik Kil, the round pit with hanging vines",
+   "lat": 20.6612,
+   "lon": -88.5507,
+   "radius_km": 2,
+   "aliases": [
+    "ik kil",
+    "ikkil"
+   ],
+   "palette": {
+    "sky": "#C4E2F4",
+    "far": "#C2BE66",
+    "mid": "#8E826C",
+    "ice": "#D6CBB2",
+    "water": "#1FA0A0",
+    "near": "#1A2420",
+    "sun": "#F6CF4A",
+    "leaf": "#5E9E36",
+    "acc": "#146670",
+    "obj": "#2C6430"
+   }
+  },
+  {
+   "slug": "chapultepec-castle",
+   "label": "Chapultepec Castle on its wooded hill",
+   "lat": 19.4204,
+   "lon": -99.1819,
+   "radius_km": 2,
+   "aliases": [
+    "chapultepec castle",
+    "castillo de chapultepec",
+    "castello di chapultepec",
+    "museo nacional de historia",
+    "national museum of history"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#B8C2CE",
+    "mid": "#C8BCA2",
+    "ice": "#ECE6D8",
+    "water": "#CE1126",
+    "near": "#262A24",
+    "sun": "#F2C14E",
+    "leaf": "#5A8A3E",
+    "acc": "#8C7E6A",
+    "obj": "#36603A"
+   }
+  },
+  {
    "slug": "chapultepec-park",
    "label": "Monument to the Ninos Heroes, Chapultepec Park",
    "lat": 19.4206,
@@ -560,6 +633,61 @@
    }
   },
   {
+   "slug": "guanajuato",
+   "label": "Guanajuato's yellow basilica and colourful hillside houses, from El Pipila",
+   "lat": 21.0172,
+   "lon": -101.2563,
+   "radius_km": 15,
+   "aliases": [
+    "basilica de guanajuato",
+    "basilica of our lady of guanajuato",
+    "basilica colegiata de guanajuato"
+   ],
+   "names": [
+    "guanajuato",
+    "guanajuato city",
+    "ciudad de guanajuato",
+    "guanajuato capital"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B39C7C",
+    "mid": "#EBB82A",
+    "ice": "#F3EFE6",
+    "water": "#5E9FD6",
+    "near": "#2A2522",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E46",
+    "acc": "#C8402E",
+    "obj": "#E68FA6"
+   }
+  },
+  {
+   "slug": "hacienda-oxman",
+   "label": "The yellow main house of Hacienda San Lorenzo Oxman",
+   "lat": 20.6667,
+   "lon": -88.2203,
+   "radius_km": 2,
+   "aliases": [
+    "hacienda oxman",
+    "oxman",
+    "san lorenzo oxman",
+    "cenote oxman"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#4E7E3E",
+    "mid": "#F4C21C",
+    "ice": "#E2DCCD",
+    "water": "#5E93D0",
+    "near": "#2A2620",
+    "sun": "#F8DA5A",
+    "leaf": "#6A9A40",
+    "acc": "#B04A3A",
+    "obj": "#A89A84"
+   }
+  },
+  {
    "slug": "holbox",
    "label": "Hammocks in the shallow sea of Isla Holbox",
    "lat": 21.522,
@@ -869,6 +997,33 @@
    }
   },
   {
+   "slug": "national-museum-of-anthropology",
+   "label": "El Paraguas umbrella in the courtyard of the National Museum of Anthropology",
+   "lat": 19.426,
+   "lon": -99.1863,
+   "radius_km": 1,
+   "aliases": [
+    "museum of anthropology",
+    "museo nacional de antropologia",
+    "museo antropologico",
+    "museo nazionale di antropologia",
+    "museo de antropologia",
+    "anthropology museum"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#A79C88",
+    "mid": "#DAD7CF",
+    "ice": "#EFEDE8",
+    "water": "#5C8E96",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9440",
+    "acc": "#5C5850",
+    "obj": "#5E5444"
+   }
+  },
+  {
    "slug": "oaxaca",
    "label": "Santo Domingo de Guzman church, Oaxaca",
    "lat": 17.0656,
@@ -1004,6 +1159,32 @@
     "leaf": "#3F6E3A",
     "acc": "#9E3434",
     "obj": "#8A5A3C"
+   }
+  },
+  {
+   "slug": "puerto-escondido",
+   "label": "Playa Carrizalillo, the cove below the green cliffs of Puerto Escondido",
+   "lat": 15.8578,
+   "lon": -97.0783,
+   "radius_km": 12,
+   "aliases": [
+    "carrizalillo"
+   ],
+   "names": [
+    "puerto escondido",
+    "puerto escondido oaxaca"
+   ],
+   "palette": {
+    "sky": "#A9D3F0",
+    "far": "#6CD2C4",
+    "mid": "#EBD29A",
+    "ice": "#F4EFE4",
+    "water": "#2A9EC0",
+    "near": "#26291F",
+    "sun": "#F6CF4A",
+    "leaf": "#6E9A3E",
+    "acc": "#8C7660",
+    "obj": "#4A6A38"
    }
   },
   {
