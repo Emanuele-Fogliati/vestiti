@@ -9,7 +9,8 @@
    "lon": 74.6036,
    "radius_km": 15,
    "aliases": [
-    "ala too square"
+    "ala too square",
+    "piazza ala too"
    ],
    "names": [
     "bishkek",
@@ -51,6 +52,95 @@
    }
   },
   {
+   "slug": "cholpon-ata",
+   "label": "Cholpon-Ata petroglyph boulder with a carved ibex below the Kungey Ala-Too",
+   "lat": 42.6655,
+   "lon": 77.0655,
+   "radius_km": 10,
+   "aliases": [
+    "cholpon ata petroglyphs",
+    "cholpon ata petroglyph museum",
+    "cholpon ata open air museum",
+    "cholpon ata stone garden",
+    "petroglifi di cholpon ata",
+    "rukh ordo",
+    "ruh ordo"
+   ],
+   "names": [
+    "cholpon ata",
+    "cholpan ata",
+    "chalpon ata",
+    "cholponata",
+    "cholpon ata town"
+   ],
+   "palette": {
+    "sky": "#AFD2F0",
+    "far": "#8E7A66",
+    "mid": "#CDB48C",
+    "ice": "#D8D3C8",
+    "water": "#4A90C0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A5A",
+    "acc": "#544841",
+    "obj": "#E6DAC0"
+   }
+  },
+  {
+   "slug": "dungan-mosque",
+   "label": "Dungan Mosque in Karakol",
+   "lat": 42.4917,
+   "lon": 78.3986,
+   "radius_km": 2,
+   "aliases": [
+    "dungan mosque",
+    "dunganese mosque",
+    "moschea dungan",
+    "moschea di dungane",
+    "dungan mosk",
+    "chinese mosque karakol"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#2E9C9A",
+    "mid": "#EEE6CC",
+    "ice": "#F7F5EE",
+    "water": "#2B7FC2",
+    "near": "#1E2428",
+    "sun": "#F4C542",
+    "leaf": "#2F8A50",
+    "acc": "#C7462E",
+    "obj": "#EAC45A"
+   }
+  },
+  {
+   "slug": "holy-trinity-cathedral-karakol",
+   "label": "Holy Trinity wooden cathedral in Karakol",
+   "lat": 42.4886,
+   "lon": 78.3927,
+   "radius_km": 2,
+   "aliases": [
+    "karakol cathedral",
+    "holy trinity cathedral karakol",
+    "karakol holy trinity",
+    "karakol orthodox church",
+    "karakol russian orthodox",
+    "trinity cathedral karakol"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#82C9A2",
+    "mid": "#A4764E",
+    "ice": "#F4F1E8",
+    "water": "#3E9BD0",
+    "near": "#2A1F18",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E45",
+    "acc": "#D4A637",
+    "obj": "#D8B27E"
+   }
+  },
+  {
    "slug": "issyk-kul",
    "label": "Lake Issyk-Kul with the snowy Terskey Ala-Too range, poplars and a yurt on the beach",
    "lat": 42.45,
@@ -76,7 +166,11 @@
     "leaf": "#6D8A4A",
     "acc": "#D8C49A",
     "obj": "#3FB3C4"
-   }
+   },
+   "names": [
+    "tamga",
+    "tamga village"
+   ]
   },
   {
    "slug": "jeti-oguz",
@@ -103,6 +197,116 @@
     "leaf": "#869A55",
     "acc": "#8C3626",
     "obj": "#CBB78F"
+   }
+  },
+  {
+   "slug": "kochkor",
+   "label": "Kochkor shyrdak felt carpets on a village wall",
+   "lat": 42.21,
+   "lon": 75.75,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "kochkor",
+    "kochkorka",
+    "kochkor village"
+   ],
+   "palette": {
+    "sky": "#BFDDF3",
+    "far": "#CDBDA2",
+    "mid": "#D8C690",
+    "ice": "#F2EFE6",
+    "water": "#A8A49C",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F38",
+    "acc": "#C0302A",
+    "obj": "#2F5DA0"
+   }
+  },
+  {
+   "slug": "osh",
+   "label": "Sulaiman-Too sacred mountain above Osh",
+   "lat": 40.5297,
+   "lon": 72.7856,
+   "radius_km": 15,
+   "aliases": [
+    "sulaiman too",
+    "sulayman too",
+    "suleiman too",
+    "sulaiman mountain",
+    "sulayman mountain",
+    "babur s house",
+    "throne of solomon"
+   ],
+   "names": [
+    "osh",
+    "osh city"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#9DB04E",
+    "mid": "#BDAA8C",
+    "ice": "#F4F1EA",
+    "water": "#6FA8D0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A34",
+    "acc": "#B8402E",
+    "obj": "#8A7A66"
+   }
+  },
+  {
+   "slug": "skazka-canyon",
+   "label": "Skazka (Fairy Tale) Canyon red rock crests",
+   "lat": 42.16,
+   "lon": 77.36,
+   "radius_km": 5,
+   "aliases": [
+    "skazka",
+    "fairy tale canyon",
+    "fairytale canyon",
+    "fairy tale valley",
+    "canyon of fairy tales"
+   ],
+   "palette": {
+    "sky": "#B8D8F2",
+    "far": "#8E9EB4",
+    "mid": "#A8492F",
+    "ice": "#DDBB92",
+    "water": "#3E86B8",
+    "near": "#2A1E1A",
+    "sun": "#F4C542",
+    "leaf": "#7C9A5A",
+    "acc": "#BE6242",
+    "obj": "#C8784E"
+   }
+  },
+  {
+   "slug": "song-kul",
+   "label": "Song-Kul lake with yurts and horses",
+   "lat": 41.83,
+   "lon": 75.12,
+   "radius_km": 30,
+   "aliases": [
+    "son kol",
+    "son kul",
+    "song kol",
+    "song kul",
+    "songkul",
+    "sonkul"
+   ],
+   "palette": {
+    "sky": "#BCDDF4",
+    "far": "#8E9A8E",
+    "mid": "#C2B46A",
+    "ice": "#F5F2EA",
+    "water": "#2D6E9E",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#7A8E46",
+    "acc": "#B23A2E",
+    "obj": "#8A5230"
    }
   }
  ]
