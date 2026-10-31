@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="28" r="11" fill="var(--il-sun)"/>
+<path d="M0 116V86Q28 74 58 82Q86 70 116 80Q150 66 190 78Q228 68 262 80Q284 76 300 82V116Z" fill="var(--il-far)"/>
+<path d="M0 126V104Q40 100 80 104Q104 102 120 108V126Z" fill="var(--il-water)"/>
+<path d="M190 126V106Q236 96 300 104V126Z" fill="var(--il-mid)"/>
+<path d="M136 86V68H172V86ZM118 86V72H132V86ZM178 86V76H190V86Z" fill="var(--il-obj)"/>
+<path d="M132 70L138 60H170L176 70ZM116 74L125 64L134 74Z" fill="var(--il-acc)"/>
+<path d="M144 86V74H151V86ZM156 86V74H163V86Z" fill="var(--il-near)"/>
+<defs><clipPath id="il-pe-andahuaylas-hill"><path d="M40 172L62 134Q84 116 102 98Q118 86 132 84H184Q204 90 220 106Q240 126 262 136L286 172Z"/></clipPath></defs>
+<path d="M0 200V118Q36 116 62 134Q84 116 102 98Q118 86 132 84H184Q204 90 220 106Q240 126 262 136Q282 128 300 128V200Z" fill="var(--il-leaf)"/>
+<path d="M90 94Q156 86 226 94V103Q156 95 90 103ZM70 114Q154 104 240 116V126Q154 114 70 124ZM56 138Q150 126 260 140V152Q150 138 56 150ZM40 162Q140 152 280 164V172Q140 160 40 170Z" fill="var(--il-obj)" clip-path="url(#il-pe-andahuaylas-hill)"/>
+<path d="M104 140H110V146H104ZM124 136H130V142H124ZM146 134H152V140H146ZM168 134H174V140H168ZM190 136H196V142H190Z" fill="var(--il-near)"/>
+<path d="M0 200V172Q80 168 150 170Q230 166 300 172V200Z" fill="var(--il-leaf)"/>
+<path d="M0 182Q80 178 150 180Q230 176 300 182" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
