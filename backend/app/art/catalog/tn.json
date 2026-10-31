@@ -65,6 +65,37 @@
    }
   },
   {
+   "slug": "chenini",
+   "label": "Chenini: ruined ksar on the ridge, cave dwellings and the white mosque on the saddle",
+   "lat": 32.9115,
+   "lon": 10.2625,
+   "radius_km": 4,
+   "aliases": [
+    "ksar chenini",
+    "chenini tataouine",
+    "chenini berber village",
+    "berber village of chenini",
+    "villaggio berbero di chenini",
+    "chenini village"
+   ],
+   "names": [
+    "chenini",
+    "chenini tunisia"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#E2CB9E",
+    "mid": "#D3AE72",
+    "ice": "#F6F5F0",
+    "water": "#4A8FB8",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A36",
+    "acc": "#B68A55",
+    "obj": "#8A6A44"
+   }
+  },
+  {
    "slug": "chott-el-djerid",
    "label": "Stranded boat with a red flag on the salt flat of Chott el Djerid",
    "lat": 33.8,
@@ -94,6 +125,104 @@
    }
   },
   {
+   "slug": "djerba",
+   "label": "Djerba: the whitewashed buttressed Fadhloun Mosque among palms",
+   "lat": 33.8139,
+   "lon": 10.9496,
+   "radius_km": 22,
+   "aliases": [
+    "fadhloun",
+    "fadhloun mosque",
+    "fadhloon mosque",
+    "moschea fadhloun",
+    "mosquee fadhloun",
+    "jemaa fadhloun",
+    "djerba island",
+    "isola di djerba",
+    "ile de djerba",
+    "jerba island"
+   ],
+   "names": [
+    "djerba",
+    "jerba",
+    "djerba tunisia",
+    "gerba"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#E9E2D2",
+    "mid": "#D9D0BE",
+    "ice": "#F7F4EC",
+    "water": "#2E8FB8",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A38",
+    "acc": "#CDBE9E",
+    "obj": "#8A6A44"
+   }
+  },
+  {
+   "slug": "dougga",
+   "label": "Dougga: the Roman Capitol portico among olive trees",
+   "lat": 36.4224,
+   "lon": 9.2187,
+   "radius_km": 4,
+   "aliases": [
+    "dougga",
+    "thugga",
+    "capitol of dougga",
+    "capitole de dougga",
+    "campidoglio di dougga",
+    "dougga capitol",
+    "dougga roman ruins",
+    "site archeologique de dougga"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#9FB48E",
+    "mid": "#D5AA78",
+    "ice": "#ECDDBF",
+    "water": "#4A8FB8",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F6E36",
+    "acc": "#A97C52",
+    "obj": "#86A456"
+   }
+  },
+  {
+   "slug": "douiret",
+   "label": "Douiret: ruined ksar on the rocky hilltop above the white mosque",
+   "lat": 32.765,
+   "lon": 10.28,
+   "radius_km": 4,
+   "aliases": [
+    "ksar douiret",
+    "old douiret",
+    "douiret village",
+    "douiret berber village",
+    "berber village of douiret",
+    "villaggio berbero di douiret",
+    "douirat"
+   ],
+   "names": [
+    "douiret",
+    "douiret tunisia"
+   ],
+   "palette": {
+    "sky": "#A9CCEC",
+    "far": "#E3CDA4",
+    "mid": "#D0A672",
+    "ice": "#F6F5F0",
+    "water": "#4A8FB8",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A36",
+    "acc": "#B07E52",
+    "obj": "#8A6A44"
+   }
+  },
+  {
    "slug": "douz",
    "label": "Camel caravan on the dunes at the Douz palm grove",
    "lat": 33.456,
@@ -105,7 +234,12 @@
     "dune di douz",
     "great dune of douz",
     "douz sahara",
-    "sahara douz"
+    "sahara douz",
+    "tunisian sahara",
+    "sahara tunisino",
+    "sahara tunisien",
+    "deserto del sahara tunisino",
+    "sahara of tunisia"
    ],
    "names": [
     "douz",
@@ -159,6 +293,41 @@
    }
   },
   {
+   "slug": "hammamet",
+   "label": "Hammamet: the kasbah walls on the beach with a fishing boat",
+   "lat": 36.4,
+   "lon": 10.6158,
+   "radius_km": 12,
+   "aliases": [
+    "kasbah of hammamet",
+    "kasbah di hammamet",
+    "kasbah d hammamet",
+    "hammamet kasbah",
+    "medina of hammamet",
+    "medina di hammamet",
+    "medina de hammamet",
+    "hammamet medina",
+    "hammamet old town"
+   ],
+   "names": [
+    "hammamet",
+    "hammamet tunisia",
+    "hammamet city"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#E8D4AC",
+    "mid": "#B98A5C",
+    "ice": "#F6F4EF",
+    "water": "#2F8FC0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E34",
+    "acc": "#9A6C44",
+    "obj": "#CF4B2C"
+   }
+  },
+  {
    "slug": "kairouan",
    "label": "Great Mosque of Kairouan, minaret over the courtyard",
    "lat": 35.6814,
@@ -170,7 +339,10 @@
     "grande mosquee de kairouan",
     "mosque of uqba",
     "sidi uqba mosque",
-    "uqba ibn nafi mosque"
+    "uqba ibn nafi mosque",
+    "grande moschea di al qayrawan",
+    "great mosque of al qayrawan",
+    "mosquee de kairouan"
    ],
    "names": [
     "kairouan",
@@ -190,6 +362,40 @@
     "leaf": "#4E8A3A",
     "acc": "#9A7A4E",
     "obj": "#2F7A5A"
+   }
+  },
+  {
+   "slug": "ksar-ghilane",
+   "label": "Ksar Ghilane: the ruined Roman fort gate of Tisavar in the dunes",
+   "lat": 32.968,
+   "lon": 9.627,
+   "radius_km": 8,
+   "aliases": [
+    "ksar ghilane",
+    "ksar ghilene",
+    "ksar guilane",
+    "ksar rhilane",
+    "ksar ghilan",
+    "tisavar",
+    "fort of tisavar",
+    "castellum tisavar",
+    "fort romain de ksar ghilane"
+   ],
+   "names": [
+    "ghilane",
+    "kasr ghilane"
+   ],
+   "palette": {
+    "sky": "#A9CCEC",
+    "far": "#ECC890",
+    "mid": "#C4A078",
+    "ice": "#E4D2B2",
+    "water": "#4A8FB8",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#6A7A3A",
+    "acc": "#E0AE6C",
+    "obj": "#A47448"
    }
   },
   {
@@ -251,6 +457,41 @@
    }
   },
   {
+   "slug": "sousse",
+   "label": "Sousse: the Ribat with its round tower and nador watchtower",
+   "lat": 35.8278,
+   "lon": 10.6386,
+   "radius_km": 12,
+   "aliases": [
+    "ribat of sousse",
+    "ribat di sousse",
+    "ribat de sousse",
+    "sousse ribat",
+    "medina of sousse",
+    "medina di sousse",
+    "medina de sousse",
+    "sousse medina",
+    "sousse old town"
+   ],
+   "names": [
+    "sousse",
+    "sousse tunisia",
+    "sousse city"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#DDD0B4",
+    "mid": "#D8BE8C",
+    "ice": "#ECE0C4",
+    "water": "#3E86B0",
+    "near": "#2B2520",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#B79A68",
+    "obj": "#8E6A44"
+   }
+  },
+  {
    "slug": "tamerza",
    "label": "Abandoned old village of Tamerza with its white koubba and palm grove",
    "lat": 34.388,
@@ -281,6 +522,37 @@
     "leaf": "#3F6E34",
     "acc": "#A8724A",
     "obj": "#E6D6B4"
+   }
+  },
+  {
+   "slug": "toujane",
+   "label": "Toujane: stone village on the terraces of the gorge under the cliff",
+   "lat": 33.4686,
+   "lon": 10.1256,
+   "radius_km": 4,
+   "aliases": [
+    "toujane village",
+    "toujane berber village",
+    "berber village of toujane",
+    "villaggio berbero di toujane",
+    "toujene",
+    "tujan"
+   ],
+   "names": [
+    "toujane",
+    "toujane tunisia"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#DDC79E",
+    "mid": "#C9A774",
+    "ice": "#F5F3EE",
+    "water": "#4A8FB8",
+    "near": "#2B241E",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A3A",
+    "acc": "#A8835A",
+    "obj": "#94704A"
    }
   },
   {
@@ -330,7 +602,11 @@
     "medina of tunis",
     "medina di tunisi",
     "medina de tunis",
-    "tunis medina"
+    "tunis medina",
+    "medina tunis",
+    "tunis old town",
+    "old town of tunis",
+    "souks of tunis"
    ],
    "names": [
     "tunis",
