@@ -1,0 +1,25 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="252" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-is-seydisfjordur-path"><path d="M146 150H154L190 200H110Z"/></clipPath></defs>
+<path d="M196 150L222 112Q250 88 300 82V150Z" fill="var(--il-far)"/>
+<path d="M226 108Q260 98 300 96M214 124Q250 112 300 110" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 150V16L36 18Q66 22 90 36L106 44Q126 58 150 76L166 86Q196 104 226 114Q262 124 300 126V150Z" fill="var(--il-far)"/>
+<path d="M0 40Q40 40 70 50L84 58Q110 70 140 90M0 64Q50 66 90 80L104 88Q140 106 190 120M0 92Q60 96 110 110L124 116Q150 124 200 130M30 120Q70 122 100 132" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M42 150Q36 136 44 124Q42 108 56 100Q62 86 78 88Q90 80 100 92Q114 94 114 108Q120 118 112 130Q116 142 108 150ZM188 150Q182 138 190 128Q188 114 202 108Q210 96 224 100Q238 98 242 112Q254 120 248 134Q254 144 248 150Z" fill="var(--il-leaf)"/>
+<path d="M98 120L118 113V150H98Z" fill="var(--il-mid)"/>
+<path d="M96 121L118 113L132 99L114 104Z" fill="var(--il-mid)"/>
+<path d="M118 150V113L132 99H168L182 113V150Z" fill="var(--il-mid)"/>
+<path d="M132 99V66H168V99Z" fill="var(--il-mid)"/>
+<path d="M129 67L136 58L143 66H157L164 58L171 67Z" fill="var(--il-mid)"/>
+<path d="M140 64L149 22L158 64Z" fill="var(--il-mid)"/>
+<path d="M149 22V14M146 17H152" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M118 113H182M132 99H168M132 66H168M118 113L132 99M182 113L168 99" stroke="var(--il-ice)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M146 92V82Q150 76 154 82V92ZM124 140V130Q127.5 126 131 130V140ZM169 140V130Q172.5 126 176 130V140ZM102 140V132Q105 129 108 132V140ZM111 138V131Q113.5 128 116 131V138Z" fill="var(--il-near)"/>
+<path d="M140 124A10 10 0 0 1 160 124Z" fill="var(--il-near)"/>
+<path d="M150 124V115M150 124L143 117M150 124L157 117M150 124L141 121M150 124L159 121" stroke="var(--il-ice)" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+<circle cx="150" cy="72" r="2.6" fill="var(--il-near)"/>
+<path d="M143 150V136Q150 128 157 136V150Z" fill="var(--il-ice)"/>
+<path d="M145.5 150V137Q150 132 154.5 137V150Z" fill="var(--il-obj)"/>
+<path d="M0 200V147H300V200Z" fill="var(--il-leaf)"/>
+<path d="M112 147H188L270 200H30Z" fill="var(--il-water)"/>
+<g clip-path="url(#il-is-seydisfjordur-path)"><path d="M100 150H200V152.2H100ZM100 164H200V167.9H100ZM100 188.6H200V195.4H100Z" fill="var(--il-acc)"/><path d="M100 152.2H200V154.7H100ZM100 167.9H200V172.2H100ZM100 195.4H200V200H100Z" fill="var(--il-obj)"/><path d="M100 154.7H200V157.4H100ZM100 172.2H200V177.1H100Z" fill="var(--il-sun)"/><path d="M100 157.4H200V160.5H100ZM100 177.1H200V182.5H100Z" fill="var(--il-leaf)"/><path d="M100 160.5H200V164H100ZM100 182.5H200V188.6H100Z" fill="var(--il-mid)"/></g>

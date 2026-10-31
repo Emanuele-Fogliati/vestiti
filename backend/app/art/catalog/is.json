@@ -76,6 +76,28 @@
    }
   },
   {
+   "slug": "dimmuborgir",
+   "label": "Dimmuborgir lava castles",
+   "lat": 65.5917,
+   "lon": -16.9122,
+   "radius_km": 3,
+   "aliases": [
+    "dimmuborgir"
+   ],
+   "palette": {
+    "sky": "#9CC7F0",
+    "far": "#8A7C6C",
+    "mid": "#5B4E44",
+    "ice": "#FFFFFF",
+    "water": "#6A8FA8",
+    "near": "#1C1916",
+    "sun": "#F2C14E",
+    "leaf": "#8DC63F",
+    "acc": "#9C9A58",
+    "obj": "#7C7E80"
+   }
+  },
+  {
    "slug": "dyrholaey",
    "label": "Dyrholaey sea arch with puffins",
    "lat": 63.4,
@@ -95,6 +117,55 @@
     "leaf": "#7E9A4A",
     "acc": "#E8692C",
     "obj": "#B0A08C"
+   }
+  },
+  {
+   "slug": "egilsstadir",
+   "label": "Egilsstadir on Lagarfljot with its bridge",
+   "lat": 65.2653,
+   "lon": -14.3948,
+   "radius_km": 15,
+   "aliases": [
+    "lagarfljot",
+    "fellabaer"
+   ],
+   "names": [
+    "egilsstadir"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#8C9AA6",
+    "mid": "#7A6F5C",
+    "ice": "#F2F3F0",
+    "water": "#A2B1AA",
+    "near": "#1E2320",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E48",
+    "acc": "#9C8A6A",
+    "obj": "#4A4E54"
+   }
+  },
+  {
+   "slug": "fjadrargljufur",
+   "label": "Fjadrargljufur canyon and river",
+   "lat": 63.7713,
+   "lon": -18.1718,
+   "radius_km": 4,
+   "aliases": [
+    "fjadrargljufur",
+    "fjadrargljufur canyon"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#8F8C7E",
+    "mid": "#6E6758",
+    "ice": "#FFFFFF",
+    "water": "#7FA9C0",
+    "near": "#1E211C",
+    "sun": "#F2C14E",
+    "leaf": "#7EAE48",
+    "acc": "#ABA796",
+    "obj": "#5A7A3A"
    }
   },
   {
@@ -126,6 +197,29 @@
     "circolo d oro",
     "gullni hringurinn"
    ]
+  },
+  {
+   "slug": "gljufrabui",
+   "label": "Gljufrabui waterfall inside its gorge",
+   "lat": 63.6214,
+   "lon": -19.9867,
+   "radius_km": 1,
+   "aliases": [
+    "gljufrabui",
+    "gljufurarfoss"
+   ],
+   "palette": {
+    "sky": "#C4DDF0",
+    "far": "#4F6B35",
+    "mid": "#8C8E8A",
+    "ice": "#FFFFFF",
+    "water": "#7FA6B0",
+    "near": "#1D231B",
+    "sun": "#F2C14E",
+    "leaf": "#86AE3C",
+    "acc": "#56603F",
+    "obj": "#CFE3EC"
+   }
   },
   {
    "slug": "godafoss",
@@ -173,6 +267,54 @@
    }
   },
   {
+   "slug": "harpa",
+   "label": "Harpa concert hall, Reykjavik harbour",
+   "lat": 64.1504,
+   "lon": -21.9325,
+   "radius_km": 2,
+   "aliases": [
+    "harpa"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9BA2A6",
+    "mid": "#2E8577",
+    "ice": "#D8F0EE",
+    "water": "#3F6E86",
+    "near": "#1C2729",
+    "sun": "#F2C14E",
+    "leaf": "#6E8F55",
+    "acc": "#5FA6BC",
+    "obj": "#1E4E4A"
+   }
+  },
+  {
+   "slug": "hofn",
+   "label": "Hofn harbour town below the Vatnajokull glacier tongues",
+   "lat": 64.2539,
+   "lon": -15.2082,
+   "radius_km": 15,
+   "aliases": [
+    "hornafjordur",
+    "hofn i hornafirdi"
+   ],
+   "names": [
+    "hofn"
+   ],
+   "palette": {
+    "sky": "#B3D0EC",
+    "far": "#8E8A80",
+    "mid": "#6E655C",
+    "ice": "#F4F8FA",
+    "water": "#5F87A8",
+    "near": "#1E2228",
+    "sun": "#F2C14E",
+    "leaf": "#8A9A56",
+    "acc": "#B8483E",
+    "obj": "#2B4FA8"
+   }
+  },
+  {
    "slug": "jokulsarlon",
    "label": "Jokulsarlon glacier lagoon",
    "lat": 64.0784,
@@ -194,6 +336,33 @@
     "leaf": "#8A847C",
     "acc": "#9FD0E2",
     "obj": "#BFD3DE"
+   }
+  },
+  {
+   "slug": "kirkjubaejarklaustur",
+   "label": "Kirkjubaejarklaustur and the Systrafoss falls",
+   "lat": 63.7894,
+   "lon": -18.056,
+   "radius_km": 8,
+   "aliases": [
+    "systrafoss",
+    "kirkjubaejarklaustri"
+   ],
+   "names": [
+    "kirkjubaejarklaustur",
+    "klaustur"
+   ],
+   "palette": {
+    "sky": "#B7D3EE",
+    "far": "#BFA46C",
+    "mid": "#6F7C3E",
+    "ice": "#F3F4F2",
+    "water": "#6B6455",
+    "near": "#1F2420",
+    "sun": "#F2C14E",
+    "leaf": "#2F4B2C",
+    "acc": "#A3502F",
+    "obj": "#8FA050"
    }
   },
   {
@@ -339,6 +508,32 @@
     "leaf": "#7FA040",
     "acc": "#B7BE55",
     "obj": "#D3E3EC"
+   }
+  },
+  {
+   "slug": "seydisfjordur",
+   "label": "Seydisfjordur blue church and rainbow street",
+   "lat": 65.2599,
+   "lon": -14.008,
+   "radius_km": 12,
+   "aliases": [
+    "seydisfjardarkirkja"
+   ],
+   "names": [
+    "seydisfjordur",
+    "seydisfjordur town"
+   ],
+   "palette": {
+    "sky": "#B9D4EC",
+    "far": "#7D8A58",
+    "mid": "#A8CDE6",
+    "ice": "#F5F7F8",
+    "water": "#6E7175",
+    "near": "#1F2428",
+    "sun": "#F4C534",
+    "leaf": "#5C8F3E",
+    "acc": "#E2463C",
+    "obj": "#EE8A2E"
    }
   },
   {
