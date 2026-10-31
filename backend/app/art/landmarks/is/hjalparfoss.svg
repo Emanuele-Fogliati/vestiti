@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 100V72Q30 66 60 62L110 50Q150 44 190 46L240 52Q270 58 300 66V100Z" fill="var(--il-far)"/>
+<path d="M0 104V84Q40 80 80 82L120 78Q160 80 200 76L250 80Q280 78 300 82V104Z" fill="var(--il-leaf)"/>
+<path d="M60 142V92H252V142Z" fill="var(--il-mid)"/>
+<path d="M64 96Q86 92 112 94L122 96Q128 118 140 132Q146 140 152 144H84Q74 130 68 112Z" fill="var(--il-ice)"/>
+<path d="M178 92Q204 88 230 88Q244 88 254 90L250 114Q246 134 238 144H148Q156 140 162 132Q172 116 178 92Z" fill="var(--il-ice)"/>
+<path d="M178 92L194 90Q188 120 168 144H148Q156 140 162 132Q172 116 178 92ZM100 94L122 96Q128 118 140 132Q146 140 152 144H134Q124 116 100 94Z" fill="var(--il-obj)"/>
+<path d="M112 98L114 82Q126 72 146 72Q168 72 184 80L188 92Q178 104 172 118Q164 134 151 140Q140 132 132 120Q120 108 112 98Z" fill="var(--il-mid)"/>
+<defs><clipPath id="il-is-hjalparfoss-rock"><path d="M112 98L114 82Q126 72 146 72Q168 72 184 80L188 92Q178 104 172 118Q164 134 151 140Q140 132 132 120Q120 108 112 98Z"/></clipPath></defs>
+<path d="M100 60H200V86Q186 90 172 87Q160 90 148 88Q134 91 122 87Q110 90 100 86Z" clip-path="url(#il-is-hjalparfoss-rock)" fill="var(--il-leaf)"/>
+<path d="M130 96L140 124M146 96L150 134M162 96L158 126M176 96L168 118" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 150V80Q14 72 26 76L40 78L56 84L64 92L68 112Q74 132 86 148Z" fill="var(--il-mid)"/>
+<path d="M300 150V74Q284 70 272 74L262 80L254 88L250 114Q246 134 236 148Z" fill="var(--il-mid)"/>
+<path d="M12 82V148M24 78V148M36 80V148M48 84V148M58 92V148M262 84V148M274 76V148M286 74V148" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M80 150Q78 140 88 138Q94 130 106 134Q116 128 126 134Q138 128 150 134Q162 128 174 134Q188 128 200 134Q212 128 224 134Q238 132 240 142Q246 146 242 150Z" fill="var(--il-ice)"/>
+<path d="M0 200V146H300V200Z" fill="var(--il-water)"/>
+<path d="M0 200V190Q60 184 120 188Q200 186 300 190V200Z" fill="var(--il-acc)"/>

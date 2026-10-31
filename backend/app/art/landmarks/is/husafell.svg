@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="252" cy="24" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-is-husafell-clip"><path d="M92 150L100 124L106 108L112 96L122 88Q136 68 168 63Q198 60 230 61Q262 66 276 84L286 94L292 108L296 124L300 150Z"/></clipPath></defs>
+<path d="M92 150L100 124L106 108L112 96L122 88Q136 68 168 63Q198 60 230 61Q262 66 276 84L286 94L292 108L296 124L300 150Z" fill="var(--il-far)"/>
+<path d="M90 40H300V96L292 94L287 106L281 95L270 98L262 91L256 100L248 94L243 110L237 93L226 96L219 91L211 102L203 93L192 96L186 90L180 106L173 93L162 97L154 92L147 103L140 93L130 97L124 93L117 108L110 98L92 100Z" clip-path="url(#il-is-husafell-clip)" fill="var(--il-ice)"/>
+<path d="M120 104L118 124M150 104L148 128M184 106L186 128M222 104L220 126M256 104L258 126" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 160V70Q24 76 46 92Q66 106 84 122L110 138Q130 146 150 152Z" fill="var(--il-mid)"/>
+<path d="M0 160V116Q8 108 16 114Q22 104 32 110Q40 102 48 110Q56 104 64 114Q74 110 80 118Q90 116 94 124Q104 122 108 130Q120 130 124 138Q140 136 150 142Q170 138 190 142Q210 136 228 140Q246 134 262 140Q280 134 300 138V160Z" fill="var(--il-leaf)"/>
+<g transform="translate(-35 42) scale(0.75)">
+<path d="M126 162V108H234V162Z" fill="var(--il-ice)"/>
+<path d="M120 110L134 86H226L240 110Z" fill="var(--il-acc)"/>
+<path d="M180 162V106L196 84L212 106V162Z" fill="var(--il-ice)"/>
+<path d="M176 108L196 80L216 108L212 110L196 88L180 110Z" fill="var(--il-acc)"/>
+<path d="M84 162V72H130V162Z" fill="var(--il-ice)"/>
+<path d="M76 74L107 50L138 74Z" fill="var(--il-acc)"/>
+<path d="M99 56V40H115V56Z" fill="var(--il-ice)"/>
+<path d="M96 42L107 33L118 42Z" fill="var(--il-acc)"/>
+<path vector-effect="non-scaling-stroke" d="M107 33V20M102 25H112" stroke="var(--il-ice)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M102 52V45Q104 43 106 45V52ZM109 52V45Q111 43 113 45V52Z" fill="var(--il-near)"/>
+<path d="M98 132H116V162H98ZM101 84H113V116H101ZM150 118H160V146H150ZM191 112H201V146H191ZM216 118H224V146H216Z" fill="var(--il-obj)"/>
+<path vector-effect="non-scaling-stroke" d="M104 88V112M110 88V112M101 96H113M101 104H113M155 120V144M150 128H160M150 136H160M196 114V144M191 124H201M191 134H201" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+</g>
+<path d="M0 200V160Q80 157 150 160Q230 157 300 160V200Z" fill="var(--il-leaf)"/>
