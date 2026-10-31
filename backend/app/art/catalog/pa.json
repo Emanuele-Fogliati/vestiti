@@ -3,6 +3,33 @@
  "name": "Panama",
  "places": [
   {
+   "slug": "baru-volcano",
+   "label": "Volcan Baru, Panama's highest peak, above the Chiriqui highlands",
+   "lat": 8.808,
+   "lon": -82.543,
+   "radius_km": 20,
+   "aliases": [
+    "volcan baru",
+    "baru volcano national park",
+    "volcano baru"
+   ],
+   "names": [
+    "baru volcano"
+   ],
+   "palette": {
+    "sky": "#A9D2F0",
+    "far": "#CDBFA8",
+    "mid": "#8E7D6C",
+    "ice": "#F4F4F0",
+    "water": "#3E8FB0",
+    "near": "#2B2A24",
+    "sun": "#F5C842",
+    "leaf": "#6E8A34",
+    "acc": "#B79F6E",
+    "obj": "#3F6A2C"
+   }
+  },
+  {
    "slug": "bocas-del-toro",
    "label": "Colourful stilt houses over the water in Bocas del Toro",
    "lat": 9.336,
@@ -89,7 +116,12 @@
    "aliases": [
     "panama canal",
     "canal de panama",
-    "canale di panama"
+    "canale di panama",
+    "miraflores locks",
+    "esclusas de miraflores",
+    "chiuse di miraflores",
+    "miraflores visitor center",
+    "centro de visitantes de miraflores"
    ],
    "palette": {
     "sky": "#CFE3F2",
