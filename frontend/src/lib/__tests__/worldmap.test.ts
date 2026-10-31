@@ -5,7 +5,7 @@ import { groupPicks } from "../picks";
 
 const place = (p: Partial<GlobePlace>): GlobePlace => ({
   id: "pe-x", name: "X", country: "PE", kind: "landmark", lat: -13, lon: -72, level: 1,
-  art: null, artLabel: null, itineraries: [], parent: null, ...p,
+  art: null, itineraries: [], parent: null, ...p,
 });
 
 describe("places appear as you zoom in", () => {
