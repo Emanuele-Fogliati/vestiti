@@ -1,0 +1,28 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="28" r="11" fill="var(--il-sun)"/>
+<path d="M0 98V88H300V98Z" fill="var(--il-water)"/>
+<path d="M0 200V96Q70 92 150 98Q230 92 300 96V200Z" fill="var(--il-leaf)"/>
+<g transform="translate(-18 -2) scale(1.12)">
+<path d="M92 128V88H208V128Z" fill="var(--il-mid)"/>
+<path d="M38 128L42 84H98V128ZM262 128L258 84H202V128Z" fill="var(--il-ice)"/>
+<path d="M38 128L42 84H52L50 128ZM262 128L258 84H248L250 128Z" fill="var(--il-mid)"/>
+<path d="M42 86V78H62V86ZM70 86V78H98V86ZM100 90V82H120V90ZM128 90V82H136V90ZM164 90V82H172V90ZM180 90V82H200V90ZM202 86V78H230V86ZM238 86V78H258V86Z" fill="var(--il-far)"/>
+<path d="M40 104H260" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M63 80L69 78M121 84L127 82M173 84L179 82M231 80L237 78" stroke="var(--il-acc)" stroke-width="2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M136 128V92L150 82L164 92V128Z" fill="var(--il-far)"/>
+<path d="M144 128V112Q144 106 150 106Q156 106 156 112V128Z" fill="var(--il-near)"/>
+<path d="M136 92H164" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M39 86L42 92H50L53 86ZM247 86L250 92H258L261 86Z" fill="var(--il-far)"/>
+<path d="M40 86V70H52V86ZM248 86V70H260V86Z" fill="var(--il-ice)"/>
+<path d="M39 71Q39 62 46 62Q53 62 53 71ZM247 71Q247 62 254 62Q261 62 261 71Z" fill="var(--il-far)"/>
+<circle cx="46" cy="60" r="1.6" fill="var(--il-far)"/>
+<circle cx="254" cy="60" r="1.6" fill="var(--il-far)"/>
+<path d="M44 74h4v5h-4ZM252 74h4v5h-4Z" fill="var(--il-near)"/>
+<path d="M30 138V126H270V138Z" fill="var(--il-obj)"/>
+<path d="M30 134V130H270V134Z" fill="var(--il-leaf)"/>
+<path d="M142 143V127H158V143Z" fill="var(--il-acc)"/>
+<path d="M144 112L142 128M156 112L158 128" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M26 144V140Q26 136 32 136H140V144ZM274 144V140Q274 136 268 136H160V144Z" fill="var(--il-far)"/>
+</g>
+<path d="M0 200V158Q80 156 150 158Q220 156 300 158V200Z" fill="var(--il-leaf)"/>
+<path d="M141 156H159Q162 172 174 184Q182 192 180 200H152Q154 190 148 182Q138 170 141 156Z" fill="var(--il-far)"/>

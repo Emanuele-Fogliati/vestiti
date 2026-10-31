@@ -3,6 +3,34 @@
  "name": "Israel",
  "places": [
   {
+   "slug": "capernaum",
+   "label": "The White Synagogue of Capernaum",
+   "lat": 32.8806,
+   "lon": 35.5753,
+   "radius_km": 3,
+   "aliases": [
+    "capernaum",
+    "cafarnao",
+    "kfar nahum",
+    "kafarnaum",
+    "capharnaum",
+    "cafarnaum",
+    "kefar nahum"
+   ],
+   "palette": {
+    "sky": "#B7D3EE",
+    "far": "#CFC4AD",
+    "mid": "#E2D8C4",
+    "ice": "#F3EEE3",
+    "water": "#4A86B0",
+    "near": "#2B2925",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#8A6E4E",
+    "obj": "#B8B3A9"
+   }
+  },
+  {
    "slug": "dead-sea",
    "label": "Dead Sea salt shore with a floating bather",
    "lat": 31.4,
@@ -26,6 +54,39 @@
    }
   },
   {
+   "slug": "haifa",
+   "label": "Haifa's Bahai Terraces and the golden-domed Shrine of the Bab",
+   "lat": 32.8144,
+   "lon": 34.987,
+   "radius_km": 15,
+   "aliases": [
+    "bahai terraces",
+    "baha i terraces",
+    "shrine of the bab",
+    "giardini bahai",
+    "giardini baha i",
+    "hanging gardens of haifa"
+   ],
+   "names": [
+    "haifa",
+    "hayfa",
+    "haifa city",
+    "haifa port"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#93A57F",
+    "mid": "#EFE8D8",
+    "ice": "#F8F6EF",
+    "water": "#4B6B3A",
+    "near": "#252A22",
+    "sun": "#F2C14E",
+    "leaf": "#86B44A",
+    "acc": "#D9A441",
+    "obj": "#B97F5E"
+   }
+  },
+  {
    "slug": "jerusalem",
    "label": "Old City of Jerusalem",
    "lat": 31.777,
@@ -33,7 +94,16 @@
    "radius_km": 15,
    "aliases": [
     "jerusalem",
-    "gerusalemme"
+    "gerusalemme",
+    "dome of the rock",
+    "cupola della roccia",
+    "qubbat al sakhra",
+    "qubbat as sakhrah",
+    "cupola della rocca",
+    "temple mount",
+    "haram al sharif",
+    "spianata delle moschee",
+    "monte del tempio"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -54,7 +124,13 @@
    "lat": 32.7021,
    "lon": 35.2978,
    "radius_km": 12,
-   "aliases": [],
+   "aliases": [
+    "basilica of the annunciation",
+    "church of the annunciation",
+    "basilica dell annunciazione",
+    "chiesa dell annunciazione",
+    "basilica de la anunciacion"
+   ],
    "names": [
     "nazareth",
     "nazaret",

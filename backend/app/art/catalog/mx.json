@@ -546,6 +546,29 @@
    }
   },
   {
+   "slug": "edzna",
+   "label": "Building of the Five Storeys, Edzna",
+   "lat": 19.5966,
+   "lon": -90.229,
+   "radius_km": 5,
+   "aliases": [
+    "edzna",
+    "cinco pisos"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#4C7A38",
+    "mid": "#C9BD9C",
+    "ice": "#E0D8C2",
+    "water": "#4E8EB0",
+    "near": "#2A2723",
+    "sun": "#F2C14E",
+    "leaf": "#8AA24E",
+    "acc": "#A39A80",
+    "obj": "#B2533C"
+   }
+  },
+  {
    "slug": "ek-balam",
    "label": "The Acropolis of Ek Balam with its thatched shelters",
    "lat": 20.8908,
@@ -566,6 +589,32 @@
     "leaf": "#5A8A3C",
     "acc": "#A28E6E",
     "obj": "#7E7460"
+   }
+  },
+  {
+   "slug": "fort-san-miguel",
+   "label": "Fuerte de San Miguel above Campeche, with its garitas, moat and drawbridge",
+   "lat": 19.835,
+   "lon": -90.555,
+   "radius_km": 3,
+   "aliases": [
+    "fuerte de san miguel",
+    "fort san miguel",
+    "fuerte san miguel",
+    "museo arqueologico de campeche",
+    "museo de arquitectura maya"
+   ],
+   "palette": {
+    "sky": "#A8D2F2",
+    "far": "#DAD3C2",
+    "mid": "#BDB6A4",
+    "ice": "#E9E3D4",
+    "water": "#2E8FA8",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#5A4232",
+    "obj": "#8C7A64"
    }
   },
   {
@@ -715,6 +764,31 @@
    ]
   },
   {
+   "slug": "hospicio-cabanas",
+   "label": "Hospicio Cabanas with its portico and dome, Guadalajara",
+   "lat": 20.6769,
+   "lon": -103.3375,
+   "radius_km": 3,
+   "aliases": [
+    "hospicio cabanas",
+    "hospicio de cabanas",
+    "instituto cultural cabanas",
+    "museo cabanas"
+   ],
+   "palette": {
+    "sky": "#9FC8EE",
+    "far": "#CDBFA4",
+    "mid": "#A8987A",
+    "ice": "#D9CCB2",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#8C7D64",
+    "obj": "#B2533C"
+   }
+  },
+  {
    "slug": "isla-mujeres",
    "label": "Playa Norte at the northern tip of Isla Mujeres",
    "lat": 21.262,
@@ -825,12 +899,23 @@
    "radius_km": 15,
    "aliases": [
     "catedral de san ildefonso",
-    "san ildefonso cathedral"
+    "san ildefonso cathedral",
+    "merida cathedral",
+    "cathedral of merida",
+    "catedral de merida",
+    "cattedrale di merida",
+    "cattedrale di san ildefonso",
+    "plaza grande de merida",
+    "plaza grande merida",
+    "zocalo de merida",
+    "zocalo merida",
+    "zocalo di merida"
    ],
    "names": [
     "merida",
     "merida yucatan",
-    "merida mexico"
+    "merida mexico",
+    "plaza grande"
    ],
    "palette": {
     "sky": "#A9CDEE",
@@ -1037,7 +1122,10 @@
     "oaxaca",
     "oaxaca de juarez",
     "oaxaca city",
-    "oaxaca mexico"
+    "oaxaca mexico",
+    "santo domingo church",
+    "church of santo domingo",
+    "santo domingo church oaxaca"
    ],
    "palette": {
     "sky": "#9CC8EE",
@@ -1074,6 +1162,31 @@
     "leaf": "#3A7436",
     "acc": "#C6C2B4",
     "obj": "#7E7A6E"
+   }
+  },
+  {
+   "slug": "paseo-de-montejo",
+   "label": "Monumento a la Patria on Paseo de Montejo, Merida",
+   "lat": 20.9934,
+   "lon": -89.6176,
+   "radius_km": 3,
+   "aliases": [
+    "paseo de montejo",
+    "paseo montejo",
+    "monumento a la patria",
+    "palacio canton"
+   ],
+   "palette": {
+    "sky": "#A6CEF0",
+    "far": "#E6D6B2",
+    "mid": "#D3BE94",
+    "ice": "#F2EBDC",
+    "water": "#4E8EB0",
+    "near": "#2C2620",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#BCA57E",
+    "obj": "#8A8682"
    }
   },
   {
@@ -1339,6 +1452,57 @@
    }
   },
   {
+   "slug": "san-miguel-de-allende",
+   "label": "La Parroquia from Calle Aldama, San Miguel de Allende",
+   "lat": 20.9146,
+   "lon": -100.7437,
+   "radius_km": 12,
+   "aliases": [
+    "parroquia de san miguel arcangel",
+    "parroquia san miguel arcangel"
+   ],
+   "names": [
+    "san miguel de allende",
+    "san miguel allende"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#B7AA98",
+    "mid": "#D7896C",
+    "ice": "#F3EEE4",
+    "water": "#4E8EB0",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3A",
+    "acc": "#E3B744",
+    "obj": "#C9573A"
+   }
+  },
+  {
+   "slug": "sian-kaan",
+   "label": "Sian Ka'an mangrove channel with a dock, a boat and a roseate spoonbill",
+   "lat": 19.98,
+   "lon": -87.55,
+   "radius_km": 40,
+   "aliases": [
+    "sian ka an",
+    "sian kaan",
+    "siankaan"
+   ],
+   "palette": {
+    "sky": "#B6D8F2",
+    "far": "#A3B263",
+    "mid": "#A69C8C",
+    "ice": "#FFFFFF",
+    "water": "#8ED9CC",
+    "near": "#22302A",
+    "sun": "#F4C430",
+    "leaf": "#4D7C36",
+    "acc": "#EB8FA8",
+    "obj": "#2E4630"
+   }
+  },
+  {
    "slug": "sumidero-canyon",
    "label": "The sheer walls of the Sumidero Canyon over the Grijalva River",
    "lat": 16.85,
@@ -1469,6 +1633,31 @@
    }
   },
   {
+   "slug": "teotitlan-del-valle",
+   "label": "Church and rug, Teotitlan del Valle",
+   "lat": 17.0306,
+   "lon": -96.5208,
+   "radius_km": 6,
+   "aliases": [
+    "teotitlan del valle"
+   ],
+   "names": [
+    "teotitlan"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#8C8A62",
+    "mid": "#F3F0E8",
+    "ice": "#FFFFFF",
+    "water": "#4E8EB0",
+    "near": "#2A2222",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#B5282E",
+    "obj": "#C8A574"
+   }
+  },
+  {
    "slug": "tequila",
    "label": "Blue agave fields below the Tequila volcano",
    "lat": 20.83,
@@ -1544,6 +1733,31 @@
     "leaf": "#4E7E36",
     "acc": "#E07B4F",
     "obj": "#6B5A48"
+   }
+  },
+  {
+   "slug": "torre-latinoamericana",
+   "label": "Torre Latinoamericana from the Alameda with a Pegasus statue",
+   "lat": 19.4339,
+   "lon": -99.1406,
+   "radius_km": 2,
+   "aliases": [
+    "torre latinoamericana",
+    "torre latino americana",
+    "latin american tower",
+    "torre latino"
+   ],
+   "palette": {
+    "sky": "#A8CCEB",
+    "far": "#CDBFA9",
+    "mid": "#8E9EAC",
+    "ice": "#E8E4DC",
+    "water": "#9A9C9E",
+    "near": "#23272C",
+    "sun": "#F4C430",
+    "leaf": "#4F7F3B",
+    "acc": "#B98E70",
+    "obj": "#4A5A68"
    }
   },
   {
