@@ -31,6 +31,42 @@
    }
   },
   {
+   "slug": "ahmedabad",
+   "label": "The tree-of-life jalis of the Sidi Saiyyed Mosque, Ahmedabad",
+   "lat": 23.0269,
+   "lon": 72.5811,
+   "radius_km": 20,
+   "aliases": [
+    "sidi saiyyed",
+    "sidi saiyed",
+    "sidi sayyed",
+    "sidi saiyad",
+    "sidi sayed mosque",
+    "siddi saiyyed",
+    "sidi syed mosque",
+    "sidi saiyyid"
+   ],
+   "names": [
+    "ahmedabad",
+    "amdavad",
+    "ahmadabad",
+    "ahmedabad city",
+    "city of ahmedabad"
+   ],
+   "palette": {
+    "sky": "#A9D2F0",
+    "far": "#CDB894",
+    "mid": "#C99C68",
+    "ice": "#F2EEE6",
+    "water": "#5E9EC0",
+    "near": "#2B231D",
+    "sun": "#F3C23C",
+    "leaf": "#5E8A3C",
+    "acc": "#A8402F",
+    "obj": "#7D8794"
+   }
+  },
+  {
    "slug": "akbars-tomb",
    "label": "South Gate of Akbar's Tomb with its four minarets, Sikandra",
    "lat": 27.2196,
@@ -150,6 +186,38 @@
     "leaf": "#7FA052",
     "acc": "#A27A52",
     "obj": "#B9705A"
+   }
+  },
+  {
+   "slug": "bara-imambara",
+   "label": "The arcaded hall of the Bara Imambara, Lucknow",
+   "lat": 26.8692,
+   "lon": 80.9128,
+   "radius_km": 2,
+   "aliases": [
+    "bara imambara",
+    "bada imambara",
+    "bara imambada",
+    "bada imambada",
+    "barra imambara",
+    "asafi imambara",
+    "imambara of asaf ud daula",
+    "asaf ud daula imambara",
+    "grande imambara",
+    "bhul bhulaiya lucknow",
+    "bhool bhulaiya lucknow"
+   ],
+   "palette": {
+    "sky": "#92CDEB",
+    "far": "#D8CDB6",
+    "mid": "#DECFAF",
+    "ice": "#F3EDE0",
+    "water": "#5E9EC0",
+    "near": "#2A2622",
+    "sun": "#F4C43A",
+    "leaf": "#6E9A45",
+    "acc": "#BDB29B",
+    "obj": "#D9A93A"
    }
   },
   {
@@ -393,14 +461,23 @@
     "mc leod ganj",
     "dhauladhar",
     "dhauladar",
-    "upper dharamshala"
+    "upper dharamshala",
+    "tsuglagkhang",
+    "tsuglag khang",
+    "tsuglakhang",
+    "dalai lama temple",
+    "dalai lama s temple",
+    "tempio del dalai lama",
+    "namgyal monastery dharamsala",
+    "namgyal monastery mcleod"
    ],
    "names": [
     "dharamshala",
     "dharamsala",
     "dharmsala",
     "dharmshala",
-    "dharamshala town"
+    "dharamshala town",
+    "tsuglagkhang complex"
    ],
    "palette": {
     "sky": "#8EC2F0",
@@ -1322,6 +1399,33 @@
    }
   },
   {
+   "slug": "markha-valley",
+   "label": "Kang Yatse above the fields of the Markha Valley, Ladakh, with a yak",
+   "lat": 33.82,
+   "lon": 77.45,
+   "radius_km": 30,
+   "aliases": [
+    "markha",
+    "markah",
+    "kang yatse",
+    "kang yatze",
+    "kangyatse",
+    "nimaling"
+   ],
+   "palette": {
+    "sky": "#9CC9F0",
+    "far": "#B3A99E",
+    "mid": "#8F8580",
+    "ice": "#F5F6F8",
+    "water": "#7FA9BC",
+    "near": "#262324",
+    "sun": "#F4C53A",
+    "leaf": "#7DAF4A",
+    "acc": "#A68C70",
+    "obj": "#4A3A30"
+   }
+  },
+  {
    "slug": "mattancherry-palace",
    "label": "Mattancherry Palace (Dutch Palace), Kochi",
    "lat": 9.9583,
@@ -1639,6 +1743,78 @@
     "thekkady",
     "kumily"
    ]
+  },
+  {
+   "slug": "phyang-monastery",
+   "label": "Phyang Monastery on its ridge below the Ladakh mountains",
+   "lat": 34.1864,
+   "lon": 77.4894,
+   "radius_km": 3,
+   "aliases": [
+    "phyang monastery",
+    "phyang gompa",
+    "phyang gonpa",
+    "phiyang monastery",
+    "phiang monastery",
+    "monastero di phyang",
+    "phyang tsedup"
+   ],
+   "names": [
+    "phyang",
+    "phiang",
+    "phyaang",
+    "phyang village"
+   ],
+   "palette": {
+    "sky": "#8EC3EE",
+    "far": "#C8B596",
+    "mid": "#A88466",
+    "ice": "#F3F0EA",
+    "water": "#5E9EC0",
+    "near": "#2A2220",
+    "sun": "#F4C53A",
+    "leaf": "#7E9A4E",
+    "acc": "#9E3B36",
+    "obj": "#D8A535"
+   }
+  },
+  {
+   "slug": "prayagraj",
+   "label": "Pilgrim boat and gulls at the Sangam below the New Yamuna Bridge, Prayagraj",
+   "lat": 25.42,
+   "lon": 81.875,
+   "radius_km": 20,
+   "aliases": [
+    "triveni sangam",
+    "sangam prayagraj",
+    "sangam allahabad",
+    "prayag sangam",
+    "allahabad sangam",
+    "prayagraj sangam",
+    "new yamuna bridge",
+    "naini bridge"
+   ],
+   "names": [
+    "prayagraj",
+    "allahabad",
+    "prayag",
+    "prayagraj city",
+    "allahabad city",
+    "sangam",
+    "triveni"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#B8B4A6",
+    "mid": "#E4E1DA",
+    "ice": "#FFFFFF",
+    "water": "#6F9C92",
+    "near": "#262728",
+    "sun": "#F2C14A",
+    "leaf": "#7A8F5E",
+    "acc": "#C6AE86",
+    "obj": "#3C8DC4"
+   }
   },
   {
    "slug": "puducherry",
@@ -2120,6 +2296,40 @@
     "leaf": "#3F7A30",
     "acc": "#B4573A",
     "obj": "#8A7660"
+   }
+  },
+  {
+   "slug": "vrindavan",
+   "label": "The white marble Prem Mandir, Vrindavan, with a peacock",
+   "lat": 27.5725,
+   "lon": 77.6725,
+   "radius_km": 12,
+   "aliases": [
+    "prem mandir",
+    "prem mandi",
+    "temple of divine love vrindavan",
+    "tempio dell amore divino"
+   ],
+   "names": [
+    "vrindavan",
+    "vrindaban",
+    "vrindavana",
+    "brindavan",
+    "brindaban",
+    "vrindavan town",
+    "vrindavan dham"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#C08372",
+    "mid": "#F1ECE3",
+    "ice": "#FFFFFF",
+    "water": "#2F67B0",
+    "near": "#2B2526",
+    "sun": "#F4C43A",
+    "leaf": "#5E9A3E",
+    "acc": "#E5862E",
+    "obj": "#D9A93A"
    }
   }
  ]
