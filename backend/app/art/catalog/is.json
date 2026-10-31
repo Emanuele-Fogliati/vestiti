@@ -104,6 +104,29 @@
    }
   },
   {
+   "slug": "deildartunguhver",
+   "label": "Deildartunguhver hot spring steaming beside its boardwalk and hot-water pipeline",
+   "lat": 64.6636,
+   "lon": -21.4111,
+   "radius_km": 3,
+   "aliases": [
+    "deildartunguhver",
+    "deildartunga"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#8F8774",
+    "mid": "#8A5640",
+    "ice": "#F4F4F2",
+    "water": "#9FC3C8",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#6F9A46",
+    "acc": "#B98A58",
+    "obj": "#C9CED2"
+   }
+  },
+  {
    "slug": "dettifoss",
    "label": "Dettifoss falling into the Jokulsargljufur canyon",
    "lat": 65.8147,
@@ -245,6 +268,30 @@
    }
   },
   {
+   "slug": "eyjafjordur",
+   "label": "Eyjafjordur below Hlidarfjall and the Vindheimajokull glacier, with a humpback whale",
+   "lat": 65.85,
+   "lon": -18.17,
+   "radius_km": 30,
+   "aliases": [
+    "eyjafjordur",
+    "eyjafjord",
+    "eyjafjoerdur"
+   ],
+   "palette": {
+    "sky": "#AACCEA",
+    "far": "#8E9A6E",
+    "mid": "#6C6A74",
+    "ice": "#F5F7FA",
+    "water": "#2F6F86",
+    "near": "#1E2226",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A58",
+    "acc": "#C2453A",
+    "obj": "#F2F2F2"
+   }
+  },
+  {
    "slug": "fjadrargljufur",
    "label": "Fjadrargljufur canyon and river",
    "lat": 63.7713,
@@ -296,6 +343,31 @@
     "circolo d oro",
     "gullni hringurinn"
    ]
+  },
+  {
+   "slug": "glaumbaer",
+   "label": "Glaumbaer turf farmhouses and church, Skagafjordur",
+   "lat": 65.6111,
+   "lon": -19.5072,
+   "radius_km": 3,
+   "aliases": [
+    "glaumbaer",
+    "glaumbar",
+    "byggdasafn skagfirdinga",
+    "skagafjordur heritage museum"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#8E9AA6",
+    "mid": "#7A5E44",
+    "ice": "#F6F6F2",
+    "water": "#6A9CC0",
+    "near": "#232220",
+    "sun": "#F2C14E",
+    "leaf": "#7FA046",
+    "acc": "#D9545A",
+    "obj": "#E2C46C"
+   }
   },
   {
    "slug": "gljufrabui",
@@ -388,6 +460,60 @@
    }
   },
   {
+   "slug": "heimaey",
+   "label": "Heimaey harbour below the Heimaklettur cliffs, Westman Islands, with a puffin",
+   "lat": 63.444,
+   "lon": -20.27,
+   "radius_km": 8,
+   "aliases": [
+    "heimaey",
+    "heimaklettur",
+    "vestmannaeyjar",
+    "westman islands",
+    "westmann islands",
+    "isole vestmann",
+    "vestmannaeyjabaer"
+   ],
+   "palette": {
+    "sky": "#9FC9F0",
+    "far": "#8B8F92",
+    "mid": "#5E4A3A",
+    "ice": "#F2F3F2",
+    "water": "#3A7593",
+    "near": "#1E1F21",
+    "sun": "#F2C14E",
+    "leaf": "#7FA040",
+    "acc": "#D63A33",
+    "obj": "#2F79B8"
+   }
+  },
+  {
+   "slug": "hella",
+   "label": "Hella on the Ytri-Ranga with its bridge, Icelandic horses and Hekla behind",
+   "lat": 63.8358,
+   "lon": -20.3992,
+   "radius_km": 10,
+   "aliases": [
+    "ytri ranga"
+   ],
+   "names": [
+    "hella",
+    "hella iceland"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#6F7468",
+    "mid": "#5E5B58",
+    "ice": "#F4F5F3",
+    "water": "#4E86A8",
+    "near": "#232427",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4C",
+    "acc": "#C8473C",
+    "obj": "#9A5E36"
+   }
+  },
+  {
    "slug": "hofn",
    "label": "Hofn harbour town below the Vatnajokull glacier tongues",
    "lat": 64.2539,
@@ -425,7 +551,8 @@
     "hraunfoss"
    ],
    "names": [
-    "lava falls"
+    "lava falls",
+    "barnafossar"
    ],
    "palette": {
     "sky": "#A9CDEE",
@@ -582,7 +709,10 @@
     "leaf": "#6E8E44",
     "acc": "#7EA552",
     "obj": "#8A6A4A"
-   }
+   },
+   "names": [
+    "grundarfjordur"
+   ]
   },
   {
    "slug": "lake-myvatn",
@@ -676,6 +806,30 @@
     "leaf": "#CFC8B6",
     "acc": "#D39A52",
     "obj": "#8F8A82"
+   }
+  },
+  {
+   "slug": "oxararfoss",
+   "label": "Oxararfoss falling over the Almannagja rift wall, Thingvellir",
+   "lat": 64.2656,
+   "lon": -21.1184,
+   "radius_km": 2,
+   "aliases": [
+    "oxararfoss",
+    "oxarafoss",
+    "oexararfoss"
+   ],
+   "palette": {
+    "sky": "#AACBEA",
+    "far": "#7C776E",
+    "mid": "#5C5852",
+    "ice": "#F7F8F8",
+    "water": "#6E8E96",
+    "near": "#1F1E1C",
+    "sun": "#F2C14E",
+    "leaf": "#8FA34A",
+    "acc": "#B7C46A",
+    "obj": "#C6DAE4"
    }
   },
   {
