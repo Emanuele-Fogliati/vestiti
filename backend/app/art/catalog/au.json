@@ -88,6 +88,31 @@
    }
   },
   {
+   "slug": "apollo-bay",
+   "label": "Apollo Bay's crescent beach and harbour from Marriners Lookout",
+   "lat": -38.757,
+   "lon": 143.671,
+   "radius_km": 10,
+   "aliases": [
+    "marriners lookout"
+   ],
+   "names": [
+    "apollo bay"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#4F6E40",
+    "mid": "#C9AE6C",
+    "ice": "#F4F1EA",
+    "water": "#2A8CC0",
+    "near": "#25292A",
+    "sun": "#F2C14E",
+    "leaf": "#8FAE62",
+    "acc": "#B95A40",
+    "obj": "#EAD9AA"
+   }
+  },
+  {
    "slug": "blue-mountains",
    "label": "The Three Sisters from Echo Point over the Jamison Valley",
    "lat": -33.732,
@@ -113,6 +138,34 @@
     "leaf": "#4A6A3A",
     "acc": "#D8C2A4",
     "obj": "#4E7466"
+   }
+  },
+  {
+   "slug": "bondi-beach",
+   "label": "Bondi Beach and the Icebergs ocean pool",
+   "lat": -33.8915,
+   "lon": 151.2767,
+   "radius_km": 3,
+   "aliases": [
+    "bondi beach",
+    "bondi icebergs",
+    "icebergs pool",
+    "bondi baths"
+   ],
+   "names": [
+    "bondi"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#CDBFA8",
+    "mid": "#EADBB0",
+    "ice": "#F2F0EA",
+    "water": "#1F7DA6",
+    "near": "#23292E",
+    "sun": "#F2C14E",
+    "leaf": "#5D8C45",
+    "acc": "#B8673E",
+    "obj": "#4ED0D2"
    }
   },
   {
@@ -922,6 +975,32 @@
    }
   },
   {
+   "slug": "perth",
+   "label": "Perth's skyline from Kings Park",
+   "lat": -31.955,
+   "lon": 115.851,
+   "radius_km": 20,
+   "aliases": [
+    "kings park",
+    "boorloo"
+   ],
+   "names": [
+    "perth"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#CFCBC2",
+    "mid": "#3F6F9C",
+    "ice": "#ECEEF0",
+    "water": "#5A9CC4",
+    "near": "#22262B",
+    "sun": "#F2C14E",
+    "leaf": "#5E8443",
+    "acc": "#4F8A86",
+    "obj": "#A9A7A2"
+   }
+  },
+  {
    "slug": "port-douglas",
    "label": "Four Mile Beach from Flagstaff Hill, Port Douglas",
    "lat": -16.483,
@@ -1134,7 +1213,10 @@
     "leaf": "#8A9A5A",
     "acc": "#C0582E",
     "obj": "#C8683A"
-   }
+   },
+   "names": [
+    "yulara"
+   ]
   },
   {
    "slug": "whitehaven-beach",
