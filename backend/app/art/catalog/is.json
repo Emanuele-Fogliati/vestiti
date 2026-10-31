@@ -29,6 +29,28 @@
    }
   },
   {
+   "slug": "alftavatn",
+   "label": "Alftavatn lake on the Laugavegur trail, with the moss-green peaks and the red-roofed huts",
+   "lat": 63.857,
+   "lon": -19.225,
+   "radius_km": 5,
+   "aliases": [
+    "alftavatn"
+   ],
+   "palette": {
+    "sky": "#C6DBEC",
+    "far": "#7F8E95",
+    "mid": "#4C5838",
+    "ice": "#F4F3EE",
+    "water": "#7FA6BE",
+    "near": "#1E231D",
+    "sun": "#F2C14E",
+    "leaf": "#8CA348",
+    "acc": "#C23B2C",
+    "obj": "#4A403A"
+   }
+  },
+  {
    "slug": "arnarstapi",
    "label": "Gatklettur sea arch, Arnarstapi",
    "lat": 64.7665,
@@ -799,6 +821,34 @@
    }
   },
   {
+   "slug": "helgafell",
+   "label": "Helgafell holy hill with its church and farm, Snaefellsnes",
+   "lat": 65.0328,
+   "lon": -22.7425,
+   "radius_km": 4,
+   "aliases": [
+    "helgafellskirkja",
+    "helgafell snaefellsnes",
+    "helgafell stykkisholmur",
+    "helgafellssveit"
+   ],
+   "names": [
+    "helgafell"
+   ],
+   "palette": {
+    "sky": "#9FC6EC",
+    "far": "#8E8FA4",
+    "mid": "#6E6352",
+    "ice": "#F6F5F0",
+    "water": "#4A7FA6",
+    "near": "#1F1E1C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#C2312A",
+    "obj": "#A88F62"
+   }
+  },
+  {
    "slug": "hella",
    "label": "Hella on the Ytri-Ranga with its bridge, Icelandic horses and Hekla behind",
    "lat": 63.8358,
@@ -949,6 +999,35 @@
     "leaf": "#6F8E4E",
     "acc": "#B53A2E",
     "obj": "#3E7A58"
+   }
+  },
+  {
+   "slug": "hvammstangi",
+   "label": "Hvammstangi church above the harbour, with a harbour seal",
+   "lat": 65.3964,
+   "lon": -20.9442,
+   "radius_km": 12,
+   "aliases": [
+    "hvammstangakirkja",
+    "icelandic seal center",
+    "icelandic seal centre",
+    "selasetur islands",
+    "selasetrid"
+   ],
+   "names": [
+    "hvammstangi"
+   ],
+   "palette": {
+    "sky": "#BFD8EE",
+    "far": "#9C9378",
+    "mid": "#E6DDC6",
+    "ice": "#F5F4F0",
+    "water": "#41738F",
+    "near": "#1F2326",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A50",
+    "acc": "#C23A2E",
+    "obj": "#5B6066"
    }
   },
   {
@@ -1241,6 +1320,30 @@
    }
   },
   {
+   "slug": "landmannahellir",
+   "label": "Landmannahellir huts below the moss-green Hellisfjall, with an Icelandic horse",
+   "lat": 64.0436,
+   "lon": -19.2333,
+   "radius_km": 5,
+   "aliases": [
+    "landmannahellir",
+    "hellisfjall",
+    "lodmundarvatn"
+   ],
+   "palette": {
+    "sky": "#C4DCEE",
+    "far": "#7E9C7E",
+    "mid": "#A7A86A",
+    "ice": "#F3F2EC",
+    "water": "#5D8FB0",
+    "near": "#1F2219",
+    "sun": "#E8C25A",
+    "leaf": "#7A8C3A",
+    "acc": "#8E2E2C",
+    "obj": "#5C4434"
+   }
+  },
+  {
    "slug": "landmannalaugar",
    "label": "Brennisteinsalda's coloured rhyolite slopes, Landmannalaugar",
    "lat": 63.983,
@@ -1249,7 +1352,10 @@
    "aliases": [
     "landmannalaugar",
     "brennisteinsalda",
-    "laugahraun"
+    "laugahraun",
+    "icelandic highlands",
+    "altopiani islandesi",
+    "highlands of iceland"
    ],
    "palette": {
     "sky": "#9EC6EA",
@@ -1262,7 +1368,13 @@
     "leaf": "#7C9A46",
     "acc": "#B24E34",
     "obj": "#3B3936"
-   }
+   },
+   "names": [
+    "iceland highlands",
+    "altopiani",
+    "halendid",
+    "halendi"
+   ]
   },
   {
    "slug": "langjokull",
@@ -1389,6 +1501,34 @@
     "leaf": "#CFC8B6",
     "acc": "#D39A52",
     "obj": "#8F8A82"
+   }
+  },
+  {
+   "slug": "olafsfjordur",
+   "label": "Olafsfjordur church and town below the snow-streaked Troll-peninsula mountains",
+   "lat": 66.0725,
+   "lon": -18.6497,
+   "radius_km": 12,
+   "aliases": [
+    "olafsfjardarkirkja",
+    "olafsfjardarvatn"
+   ],
+   "names": [
+    "olafsfjordur",
+    "olafsfjoerdur",
+    "olafsfjord"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8C8A92",
+    "mid": "#6E5D52",
+    "ice": "#F7F7F4",
+    "water": "#2F4F6E",
+    "near": "#1E1F22",
+    "sun": "#F2C230",
+    "leaf": "#79A04A",
+    "acc": "#C8382D",
+    "obj": "#5A5F66"
    }
   },
   {
@@ -1865,6 +2005,40 @@
    }
   },
   {
+   "slug": "solheimasandur-plane-wreck",
+   "label": "The DC-3 plane wreck on the black sand of Solheimasandur",
+   "lat": 63.4591,
+   "lon": -19.3647,
+   "radius_km": 3,
+   "aliases": [
+    "solheimasandur",
+    "plane wreck",
+    "dc 3 plane wreck",
+    "dc3 plane wreck",
+    "dc 3 wreck",
+    "relitto dell aereo",
+    "relitto aereo",
+    "flugvelarflakid"
+   ],
+   "names": [
+    "dc 3",
+    "dc3",
+    "plane wreck dc 3"
+   ],
+   "palette": {
+    "sky": "#CCDFEE",
+    "far": "#C9C4BA",
+    "mid": "#4A4542",
+    "ice": "#E2DFD8",
+    "water": "#A8BCC6",
+    "near": "#1E1C1B",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#9A5A3E",
+    "obj": "#B3ADA4"
+   }
+  },
+  {
    "slug": "strandarkirkja",
    "label": "Strandarkirkja: the lone white church with its dark roof and spire by the sea, Selvogur",
    "lat": 63.8319,
@@ -2025,7 +2199,10 @@
     "vatnajoekull",
     "oraefajokull",
     "svinafellsjokull",
-    "hvannadalshnukur"
+    "hvannadalshnukur",
+    "ring road route 1",
+    "iceland ring road",
+    "hringvegurinn"
    ],
    "palette": {
     "sky": "#A7CBEF",
@@ -2040,8 +2217,39 @@
     "obj": "#3C3E42"
    },
    "names": [
-    "vatnajokull national park"
+    "vatnajokull national park",
+    "ring road",
+    "route 1",
+    "the ring road",
+    "ring road iceland",
+    "hringvegur",
+    "circular road iceland"
    ]
+  },
+  {
+   "slug": "vidgelmir",
+   "label": "Vidgelmir lava tube entrance in the Hallmundarhraun lava field",
+   "lat": 64.7583,
+   "lon": -20.865,
+   "radius_km": 4,
+   "aliases": [
+    "vidgelmir",
+    "vithgelmir",
+    "vidgelmir lava cave",
+    "vidgelmir cave"
+   ],
+   "palette": {
+    "sky": "#AFD2F2",
+    "far": "#7E7268",
+    "mid": "#66615C",
+    "ice": "#F2F2F0",
+    "water": "#4C86AE",
+    "near": "#1E1C1C",
+    "sun": "#F3C64A",
+    "leaf": "#7E9A4E",
+    "acc": "#8E5A48",
+    "obj": "#AEB394"
+   }
   },
   {
    "slug": "vigur",
