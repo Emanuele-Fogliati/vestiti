@@ -3,6 +3,35 @@
  "name": "France",
  "places": [
   {
+   "slug": "amboise",
+   "label": "Royal Chateau of Amboise above the Loire",
+   "lat": 47.4131,
+   "lon": 0.9864,
+   "radius_km": 8,
+   "aliases": [
+    "chateau d amboise",
+    "amboise castle",
+    "castello di amboise",
+    "royal chateau of amboise",
+    "chateau royal d amboise"
+   ],
+   "names": [
+    "amboise"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#E6DFCE",
+    "mid": "#CFC5AC",
+    "ice": "#F2EEE4",
+    "water": "#7F9EAA",
+    "near": "#25282C",
+    "sun": "#F2C14E",
+    "leaf": "#6A9046",
+    "acc": "#505A68",
+    "obj": "#9C9484"
+   }
+  },
+  {
    "slug": "arc-de-triomphe",
    "label": "Arc de Triomphe, Paris",
    "lat": 48.8738,
@@ -13,7 +42,8 @@
     "arc de triomphe de l etoile",
     "place de l etoile",
     "place charles de gaulle",
-    "arco di trionfo parigi"
+    "arco di trionfo parigi",
+    "champs elysees"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -26,6 +56,62 @@
     "leaf": "#5E8A3E",
     "acc": "#7E8894",
     "obj": "#A29E94"
+   }
+  },
+  {
+   "slug": "arles",
+   "label": "Roman amphitheatre (Arenes) of Arles",
+   "lat": 43.6778,
+   "lon": 4.6312,
+   "radius_km": 12,
+   "aliases": [
+    "arenes d arles",
+    "arles amphitheatre",
+    "arles amphitheater",
+    "arles arena",
+    "arena of arles",
+    "arena di arles",
+    "anfiteatro di arles",
+    "amphitheatre of arles"
+   ],
+   "names": [
+    "arles"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#DDD2BD",
+    "mid": "#CABCA2",
+    "ice": "#F0EADF",
+    "water": "#8AB0C4",
+    "near": "#2B2824",
+    "sun": "#F2C14E",
+    "leaf": "#7D8F55",
+    "acc": "#BCAE94",
+    "obj": "#6E6152"
+   }
+  },
+  {
+   "slug": "avignon",
+   "label": "Pont d'Avignon and the Palais des Papes",
+   "lat": 43.9539,
+   "lon": 4.8049,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "avignon",
+    "avignone"
+   ],
+   "palette": {
+    "sky": "#B8D6F2",
+    "far": "#B8AA8C",
+    "mid": "#E4D6B4",
+    "ice": "#EEE6D4",
+    "water": "#6E9AAA",
+    "near": "#262A26",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#BBA581",
+    "obj": "#D6A630"
    }
   },
   {
@@ -83,6 +169,96 @@
     "leaf": "#6E8E4A",
     "acc": "#56665E",
     "obj": "#C9C1B2"
+   }
+  },
+  {
+   "slug": "dijon",
+   "label": "Palace of the Dukes of Burgundy and Tour Philippe le Bon, Dijon",
+   "lat": 47.3216,
+   "lon": 5.0415,
+   "radius_km": 15,
+   "aliases": [
+    "palace of the dukes of burgundy",
+    "palazzo dei duchi di borgogna",
+    "tour philippe le bon",
+    "place de la liberation dijon",
+    "palais des ducs de bourgogne",
+    "palais des ducs et des etats de bourgogne"
+   ],
+   "names": [
+    "dijon",
+    "digione"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#EDE3CC",
+    "mid": "#DCCBA6",
+    "ice": "#F5EFE2",
+    "water": "#CDBFA4",
+    "near": "#24262B",
+    "sun": "#F2C14E",
+    "leaf": "#6F8B4A",
+    "acc": "#57606C",
+    "obj": "#2E3238"
+   }
+  },
+  {
+   "slug": "giverny",
+   "label": "Monet's Japanese bridge and water-lily pond, Giverny",
+   "lat": 49.0753,
+   "lon": 1.5339,
+   "radius_km": 6,
+   "aliases": [
+    "giverny",
+    "monet s garden",
+    "monets garden",
+    "monet garden",
+    "jardins de monet",
+    "jardin de monet",
+    "fondation claude monet",
+    "maison de claude monet",
+    "claude monet s house",
+    "giardini di monet",
+    "giardino di monet",
+    "casa di monet"
+   ],
+   "palette": {
+    "sky": "#C4DDF0",
+    "far": "#3F6B3C",
+    "mid": "#86A85E",
+    "ice": "#F2ECEE",
+    "water": "#3E6462",
+    "near": "#1E2A22",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E48",
+    "acc": "#E79BBA",
+    "obj": "#2AA06A"
+   }
+  },
+  {
+   "slug": "honfleur",
+   "label": "Honfleur's Vieux Bassin and Quai Sainte-Catherine",
+   "lat": 49.4199,
+   "lon": 0.2336,
+   "radius_km": 10,
+   "aliases": [
+    "vieux bassin",
+    "quai sainte catherine"
+   ],
+   "names": [
+    "honfleur"
+   ],
+   "palette": {
+    "sky": "#B8D2EC",
+    "far": "#8E9AAA",
+    "mid": "#D8CAAE",
+    "ice": "#F2EFEA",
+    "water": "#4E6E86",
+    "near": "#23262C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A4C",
+    "acc": "#B4664E",
+    "obj": "#3F4B60"
    }
   },
   {
@@ -216,6 +392,35 @@
     "leaf": "#5A7E3A",
     "acc": "#8E98A2",
     "obj": "#5C636C"
+   }
+  },
+  {
+   "slug": "palace-of-versailles",
+   "label": "Royal Gate and Marble Court, Palace of Versailles",
+   "lat": 48.8049,
+   "lon": 2.1204,
+   "radius_km": 5,
+   "aliases": [
+    "palace of versailles",
+    "chateau de versailles",
+    "reggia di versailles",
+    "versailles palace",
+    "palais de versailles"
+   ],
+   "names": [
+    "versailles"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#E6D3B0",
+    "mid": "#C27A5C",
+    "ice": "#F2E8D8",
+    "water": "#BCB3A4",
+    "near": "#26242A",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E4A",
+    "acc": "#46546A",
+    "obj": "#D8A92C"
    }
   },
   {
