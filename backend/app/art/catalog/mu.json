@@ -3,6 +3,54 @@
  "name": "Mauritius",
  "places": [
   {
+   "slug": "grand-bassin",
+   "label": "Grand Bassin's giant Shiva and Durga statues by the crater lake",
+   "lat": -20.418,
+   "lon": 57.492,
+   "radius_km": 3,
+   "aliases": [
+    "grand bassin",
+    "ganga talao",
+    "mangal mahadev"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#9AA88A",
+    "mid": "#B06A3E",
+    "ice": "#F2ECE0",
+    "water": "#3E6F6A",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B3A",
+    "acc": "#D9532B",
+    "obj": "#E8A23A"
+   }
+  },
+  {
+   "slug": "ile-aux-benitiers",
+   "label": "Crystal Rock in the lagoon by Ile aux Benitiers",
+   "lat": -20.42,
+   "lon": 57.344,
+   "radius_km": 3,
+   "aliases": [
+    "ile aux benitiers",
+    "ile aux benitier",
+    "crystal rock"
+   ],
+   "palette": {
+    "sky": "#8FC4EE",
+    "far": "#7E9C84",
+    "mid": "#A89D88",
+    "ice": "#F4EEDC",
+    "water": "#6CD2C9",
+    "near": "#26302C",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3A",
+    "acc": "#EADFBE",
+    "obj": "#3496B6"
+   }
+  },
+  {
    "slug": "ile-aux-cerfs",
    "label": "Ile aux Cerfs beach and lagoon",
    "lat": -20.272,
@@ -24,6 +72,88 @@
     "leaf": "#3F6B3A",
     "acc": "#7A6450",
     "obj": "#D8352A"
+   }
+  },
+  {
+   "slug": "le-morne-brabant",
+   "label": "Le Morne Brabant monolith above the lagoon",
+   "lat": -20.452,
+   "lon": 57.319,
+   "radius_km": 5,
+   "aliases": [
+    "le morne",
+    "morne brabant"
+   ],
+   "palette": {
+    "sky": "#A6D0EE",
+    "far": "#8DA39A",
+    "mid": "#857C70",
+    "ice": "#F6F0E2",
+    "water": "#62CCCB",
+    "near": "#262A24",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A36",
+    "acc": "#B7A143",
+    "obj": "#2F86A8"
+   }
+  },
+  {
+   "slug": "pamplemousses-botanical-garden",
+   "label": "Giant water lily pond in the Pamplemousses Botanical Garden",
+   "lat": -20.104,
+   "lon": 57.58,
+   "radius_km": 3,
+   "aliases": [
+    "pamplemousses botanical",
+    "pamplemousses garden",
+    "jardin de pamplemousses",
+    "jardin botanique de pamplemousses",
+    "giardino botanico di pamplemousses",
+    "giardini botanici di pamplemousses",
+    "sir seewoosagur ramgoolam botanical",
+    "ssr botanical garden"
+   ],
+   "names": [
+    "pamplemousses"
+   ],
+   "palette": {
+    "sky": "#C9DDE8",
+    "far": "#8DB45A",
+    "mid": "#8DBB3E",
+    "ice": "#D8D2C4",
+    "water": "#34463E",
+    "near": "#22281F",
+    "sun": "#F2C14E",
+    "leaf": "#3C6431",
+    "acc": "#B44A30",
+    "obj": "#8C8579"
+   }
+  },
+  {
+   "slug": "port-louis",
+   "label": "Port Louis Caudan Waterfront below Pieter Both and Le Pouce",
+   "lat": -20.161,
+   "lon": 57.498,
+   "radius_km": 12,
+   "aliases": [
+    "caudan waterfront",
+    "le caudan"
+   ],
+   "names": [
+    "port louis",
+    "porto louis"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#6F8C5E",
+    "mid": "#EDC89A",
+    "ice": "#F4EEE2",
+    "water": "#3E8E90",
+    "near": "#2B2A2A",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A3A",
+    "acc": "#D8877A",
+    "obj": "#B7BEC2"
    }
   }
  ]
