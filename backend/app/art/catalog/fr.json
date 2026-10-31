@@ -3,6 +3,34 @@
  "name": "France",
  "places": [
   {
+   "slug": "aix-en-provence",
+   "label": "Fontaine de la Rotonde, Aix-en-Provence",
+   "lat": 43.5263,
+   "lon": 5.4454,
+   "radius_km": 15,
+   "aliases": [
+    "fontaine de la rotonde",
+    "cours mirabeau"
+   ],
+   "names": [
+    "aix en provence",
+    "aix",
+    "aix en provence old town"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#E3CDA6",
+    "mid": "#D8CCB2",
+    "ice": "#F4F1E8",
+    "water": "#7FB3C4",
+    "near": "#2C2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#C8673E",
+    "obj": "#4A4A42"
+   }
+  },
+  {
    "slug": "amboise",
    "label": "Royal Chateau of Amboise above the Loire",
    "lat": 47.4131,
@@ -148,6 +176,34 @@
     "leaf": "#5E8A3E",
     "acc": "#BBA581",
     "obj": "#D6A630"
+   }
+  },
+  {
+   "slug": "bastia",
+   "label": "Saint-Jean-Baptiste church above the Vieux Port, Bastia",
+   "lat": 42.699,
+   "lon": 9.4513,
+   "radius_km": 15,
+   "aliases": [
+    "vieux port de bastia",
+    "old port of bastia",
+    "bastia old port",
+    "terra vecchia"
+   ],
+   "names": [
+    "bastia"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#CBC3AE",
+    "mid": "#E3D0A8",
+    "ice": "#F4F0E4",
+    "water": "#3F7F9A",
+    "near": "#2B2A28",
+    "sun": "#F2C14E",
+    "leaf": "#62804C",
+    "acc": "#E8C55A",
+    "obj": "#D99A86"
    }
   },
   {
@@ -752,7 +808,16 @@
    "lon": 4.8225,
    "radius_km": 20,
    "aliases": [
-    "vieux lyon"
+    "vieux lyon",
+    "fourviere basilica",
+    "basilica of notre dame de fourviere",
+    "basilique notre dame de fourviere",
+    "notre dame de fourviere",
+    "basilica de fourviere",
+    "basilica di notre dame de fourviere",
+    "basilique de fourviere",
+    "colline de fourviere",
+    "fourviere hill"
    ],
    "names": [
     "lyon",
