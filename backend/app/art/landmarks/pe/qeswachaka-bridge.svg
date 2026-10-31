@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="256" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 84Q40 56 92 66Q140 50 190 62Q240 48 300 64V110H0Z" fill="var(--il-far)"/>
+<path d="M40 200V96Q100 86 150 92Q210 84 262 94V200Z" fill="var(--il-mid)"/>
+<path d="M40 200V100Q100 92 150 98Q210 90 262 98V200Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M40 96Q100 86 150 92Q210 84 262 94V100Q210 92 150 99Q100 94 40 102Z" fill="var(--il-leaf)"/>
+<path d="M104 112L112 136L106 158M150 108L156 128M196 110L190 134L198 156" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M60 200V176Q110 170 150 174Q200 170 240 176V200Z" fill="var(--il-water)"/>
+<path d="M0 200V96L20 94L46 100L62 104L72 118L64 132L78 146L70 160L86 176L80 190L96 200Z" fill="var(--il-mid)"/>
+<path d="M300 200V92L280 90L254 96L238 100L228 116L236 130L222 146L232 160L214 178L222 192L206 200Z" fill="var(--il-mid)"/>
+<path d="M14 120L22 146L18 170M40 132L46 156M268 116L262 140L268 166M246 140L240 164" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M30 76H62V104H30ZM238 72H270V100H238Z" fill="var(--il-obj)"/>
+<path d="M30 84H62M30 92H62M46 76V84M38 84V92M54 84V92M46 92V104M238 80H270M238 88H270M254 72V80M246 80V88M262 80V88M254 88V100" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M0 100L20 98L30 100V106H0ZM270 96L280 94L300 96V104H270Z" fill="var(--il-leaf)"/>
+<path d="M60 96Q150 154 240 92L240 98Q150 162 60 102Z" fill="var(--il-acc)"/>
+<path d="M60 80Q150 138 240 76" stroke="var(--il-acc)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M73 87L73 105M84 93L84 111M95 98L95 116M106 102L106 120M117 105L117 123M128 107L128 125M139 108L139 126M150 108L150 126M161 107L161 125M172 106L172 124M183 103L183 121M194 100L194 118M205 95L205 113M216 90L216 108M227 83L227 101" stroke="var(--il-acc)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M73 87L84 111M84 93L95 116M95 98L106 120M106 102L117 123M117 105L128 125M128 107L139 126M139 108L150 126M150 108L161 125M161 107L172 124M172 106L183 121M183 103L194 118M194 100L205 113M205 95L216 108M216 90L227 101" stroke="var(--il-acc)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.8"/>
