@@ -435,6 +435,29 @@
    }
   },
   {
+   "slug": "edith-falls",
+   "label": "Edith Falls (Leliyn) lower pool",
+   "lat": -14.183,
+   "lon": 132.186,
+   "radius_km": 5,
+   "aliases": [
+    "edith falls",
+    "leliyn"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8E9E5A",
+    "mid": "#B0704A",
+    "ice": "#F4F4F0",
+    "water": "#2E5A62",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#D49A66",
+    "obj": "#B4D2E0"
+   }
+  },
+  {
    "slug": "eli-creek",
    "label": "Eli Creek footbridge and pandanus, K'gari",
    "lat": -25.255,
@@ -644,6 +667,37 @@
    }
   },
   {
+   "slug": "hunter-valley",
+   "label": "Hunter Valley vineyards under the Brokenback Range, with a kangaroo",
+   "lat": -32.78,
+   "lon": 151.29,
+   "radius_km": 30,
+   "aliases": [
+    "hunter valley",
+    "pokolbin",
+    "lower hunter",
+    "brokenback range",
+    "valle hunter"
+   ],
+   "names": [
+    "cessnock",
+    "hunter",
+    "hunter region"
+   ],
+   "palette": {
+    "sky": "#B8D4EA",
+    "far": "#9DB46A",
+    "mid": "#3F5F44",
+    "ice": "#E8E2D4",
+    "water": "#6A9AB0",
+    "near": "#24281F",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A36",
+    "acc": "#94A878",
+    "obj": "#8E7C6C"
+   }
+  },
+  {
    "slug": "kakadu-national-park",
    "label": "Kakadu: the escarpment over the Nadab floodplain from Ubirr, with a jabiru",
    "lat": -12.8,
@@ -667,6 +721,34 @@
     "leaf": "#7F9B45",
     "acc": "#CDB8A6",
     "obj": "#CDB57E"
+   }
+  },
+  {
+   "slug": "kalbarri-national-park",
+   "label": "Nature's Window above the Murchison River gorge, Kalbarri",
+   "lat": -27.6625,
+   "lon": 114.4472,
+   "radius_km": 30,
+   "aliases": [
+    "kalbarri national park",
+    "nature s window",
+    "natures window",
+    "kalbarri np"
+   ],
+   "names": [
+    "kalbarri"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8E9460",
+    "mid": "#B4583A",
+    "ice": "#EEE6D4",
+    "water": "#7FA39A",
+    "near": "#2E2420",
+    "sun": "#F2C14E",
+    "leaf": "#6E7E46",
+    "acc": "#DDA078",
+    "obj": "#A9CDEE"
    }
   },
   {
@@ -831,7 +913,9 @@
    "radius_km": 4,
    "aliases": [
     "lake eacham",
-    "yidyam"
+    "yidyam",
+    "atherton tablelands",
+    "atherton tableland"
    ],
    "palette": {
     "sky": "#A8CCEE",
@@ -844,7 +928,13 @@
     "leaf": "#3E7436",
     "acc": "#CDBB7A",
     "obj": "#2C5A2E"
-   }
+   },
+   "names": [
+    "atherton",
+    "tablelands",
+    "the tablelands",
+    "yungaburra"
+   ]
   },
   {
    "slug": "lake-mckenzie",
@@ -924,6 +1014,69 @@
    }
   },
   {
+   "slug": "magnetic-island",
+   "label": "Horseshoe Bay, Magnetic Island: granite tors and hoop pines on the hill, a rock-wallaby on the boulders",
+   "lat": -19.15,
+   "lon": 146.85,
+   "radius_km": 12,
+   "aliases": [
+    "magnetic island",
+    "maggie island",
+    "horseshoe bay magnetic",
+    "arcadia bay",
+    "geoffrey bay",
+    "arthur bay",
+    "radical bay",
+    "florence bay"
+   ],
+   "names": [
+    "nelly bay",
+    "picnic bay"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#B9A79E",
+    "mid": "#6E8A44",
+    "ice": "#F4F0E6",
+    "water": "#4CB0B8",
+    "near": "#262A2C",
+    "sun": "#F2C14E",
+    "leaf": "#2F4A2C",
+    "acc": "#EAD8B2",
+    "obj": "#7E6A5E"
+   }
+  },
+  {
+   "slug": "manly-beach",
+   "label": "Manly Beach and its row of Norfolk Island pines",
+   "lat": -33.7969,
+   "lon": 151.2879,
+   "radius_km": 5,
+   "aliases": [
+    "manly beach",
+    "south steyne",
+    "north steyne",
+    "queenscliff beach"
+   ],
+   "names": [
+    "manly",
+    "manly nsw",
+    "manly sydney"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#8E9A7C",
+    "mid": "#C9C2B2",
+    "ice": "#F2EFE8",
+    "water": "#2FA3B4",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A3A",
+    "acc": "#E4C998",
+    "obj": "#B05A42"
+   }
+  },
+  {
    "slug": "melbourne",
    "label": "Melbourne's Flinders Street Station with a tram",
    "lat": -37.8183,
@@ -950,6 +1103,30 @@
     "leaf": "#6F9A86",
     "acc": "#A9472F",
     "obj": "#3F8A4E"
+   }
+  },
+  {
+   "slug": "millaa-millaa-falls",
+   "label": "Millaa Millaa Falls veil over the basalt cliff into its rainforest pool",
+   "lat": -17.4957,
+   "lon": 145.6118,
+   "radius_km": 4,
+   "aliases": [
+    "millaa millaa falls",
+    "milla milla falls",
+    "millaa millaa waterfall"
+   ],
+   "palette": {
+    "sky": "#B8D4EA",
+    "far": "#7FA05A",
+    "mid": "#55594F",
+    "ice": "#F4F6F4",
+    "water": "#4E7A6A",
+    "near": "#22261F",
+    "sun": "#F2C14E",
+    "leaf": "#3C6630",
+    "acc": "#93B84C",
+    "obj": "#B8D2DC"
    }
   },
   {
@@ -1337,6 +1514,35 @@
     "wytsundays",
     "isole whitsunday"
    ]
+  },
+  {
+   "slug": "yamba",
+   "label": "Yamba Lighthouse on Pilot Hill",
+   "lat": -29.4325,
+   "lon": 153.3646,
+   "radius_km": 12,
+   "aliases": [
+    "yamba lighthouse",
+    "clarence river lighthouse",
+    "clarence river light",
+    "pilot hill yamba"
+   ],
+   "names": [
+    "yamba",
+    "yamba nsw"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#7E9A5C",
+    "mid": "#F3F3EE",
+    "ice": "#FFFFFF",
+    "water": "#3A86B8",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#3F6436",
+    "acc": "#93B356",
+    "obj": "#2E62B8"
+   }
   }
  ]
 }
