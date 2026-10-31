@@ -165,6 +165,14 @@ def test_same_position_names_go_to_the_nearest(monkeypatch):
     assert art.match("Red Fort of Agra", 27.18, 78.02).id == "in-agra-fort"
 
 
+
+def test_same_position_without_coordinates_prefers_the_longer_name(monkeypatch):
+    short = art.Landmark("in-golden-temple", "Golden Temple", "IN", 31.62, 74.877, 3, ("golden temple",))
+    long_ = art.Landmark("lk-dambulla", "Dambulla", "LK", 7.857, 80.649, 5, ("golden temple of dambulla",))
+    monkeypatch.setattr(art, "landmarks", lambda: (short, long_))
+    assert art.match("Golden Temple of Dambulla", None, None).id == "lk-dambulla"
+    assert art.match("Golden Temple", None, None).id == "in-golden-temple"
+
 def test_names_with_unsplittable_letters_fold_to_ascii():
     assert art._norm("Tromsø") == "tromso"
     assert art._norm("Svolvær") == "svolvaer"

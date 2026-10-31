@@ -99,16 +99,18 @@ NAMESAKE_KM = 250  # a stop named after a landmark but farther than this is a di
 def _named(text: str, lat: float | None = None, lon: float | None = None) -> list[Landmark]:
     """Landmarks whose alias appears as whole words in the text, in order of appearance.
 
-    Two landmarks named at the same position ("red fort of agra" / "red fort") go nearest first."""
+    Two landmarks named at the same position ("red fort of agra" / "red fort") go nearest first,
+    then the longer, more specific alias ("golden temple of dambulla" beats "golden temple")."""
     n = _norm(text)
     t = f" {n} "
     hits = []
     for lm in landmarks():
-        pos = [t.find(f" {a} ") for a in lm.aliases if f" {a} " in t] + [0 for a in lm.names if a == n]
-        if pos:
-            hits.append((min(pos), lm))
+        found = [(t.find(f" {a} "), -len(a)) for a in lm.aliases if f" {a} " in t]
+        found += [(0, -len(a)) for a in lm.names if a == n]
+        if found:
+            hits.append((*min(found), lm))
     near = (lambda lm: _km(lat, lon, lm.lat, lm.lon)) if lat is not None and lon is not None else (lambda lm: 0)
-    return [lm for _, lm in sorted(hits, key=lambda h: (h[0], near(h[1])))]
+    return [lm for _, _, lm in sorted(hits, key=lambda h: (h[0], near(h[2]), h[1]))]
 
 
 def _nearest(lat: float, lon: float, country: str = "") -> Landmark | None:
