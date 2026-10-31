@@ -3,6 +3,37 @@
  "name": "Peru",
  "places": [
   {
+   "slug": "abancay",
+   "label": "Abancay Cathedral with its bell tower and the plaza palms below the Ampay mountainside",
+   "lat": -13.6339,
+   "lon": -72.8814,
+   "radius_km": 15,
+   "aliases": [
+    "abancay cathedral",
+    "catedral de abancay",
+    "cattedrale di abancay",
+    "plaza de armas de abancay"
+   ],
+   "names": [
+    "abancay",
+    "abancay city",
+    "abancay peru",
+    "ciudad de abancay"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A8996A",
+    "mid": "#EEE7D6",
+    "ice": "#D9D2C4",
+    "water": "#4E6E9A",
+    "near": "#2A2522",
+    "sun": "#F4C542",
+    "leaf": "#5A8A3A",
+    "acc": "#B0573B",
+    "obj": "#7A5034"
+   }
+  },
+  {
    "slug": "amazon-rainforest",
    "label": "A giant kapok over the Amazon rainforest and a capybara on the river bank",
    "lat": -12.5,
@@ -142,6 +173,28 @@
     "leaf": "#7A8F4E",
     "acc": "#DEC291",
     "obj": "#D9C39C"
+   }
+  },
+  {
+   "slug": "chavin-de-huantar",
+   "label": "El Castillo of Chavin de Huantar with the black-and-white Portada de las Falconidas, above the sunken plaza",
+   "lat": -9.5928,
+   "lon": -77.1775,
+   "radius_km": 4,
+   "aliases": [
+    "chavin"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#8E8460",
+    "mid": "#B4AA94",
+    "ice": "#E9E5DA",
+    "water": "#5A8FB0",
+    "near": "#2A2824",
+    "sun": "#F4C542",
+    "leaf": "#7FA04E",
+    "acc": "#C29A5A",
+    "obj": "#45464A"
    }
   },
   {
@@ -300,6 +353,60 @@
     "ica",
     "ica city"
    ]
+  },
+  {
+   "slug": "huanchaco",
+   "label": "Caballitos de totora reed boats standing on Huanchaco beach, the pier behind",
+   "lat": -8.0806,
+   "lon": -79.1211,
+   "radius_km": 6,
+   "aliases": [
+    "huanchaco"
+   ],
+   "palette": {
+    "sky": "#C3DDF0",
+    "far": "#C9AE82",
+    "mid": "#C8964E",
+    "ice": "#F2EEE6",
+    "water": "#5A97A8",
+    "near": "#2E2820",
+    "sun": "#F4C542",
+    "leaf": "#6F8F4A",
+    "acc": "#B5553E",
+    "obj": "#D4C3A2"
+   }
+  },
+  {
+   "slug": "huaraz",
+   "label": "Huaraz Cathedral on the Plaza de Armas below the snowy Cordillera Blanca",
+   "lat": -9.5278,
+   "lon": -77.5278,
+   "radius_km": 15,
+   "aliases": [
+    "huaraz cathedral",
+    "catedral de huaraz",
+    "cattedrale di huaraz",
+    "plaza de armas de huaraz",
+    "plaza de armas huaraz"
+   ],
+   "names": [
+    "huaraz",
+    "huaraz city",
+    "huaraz peru",
+    "ciudad de huaraz"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#9C8D80",
+    "mid": "#C4BFB4",
+    "ice": "#F7F7F4",
+    "water": "#4F7FB8",
+    "near": "#2B2A2C",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3E",
+    "acc": "#B9614B",
+    "obj": "#C8463A"
+   }
   },
   {
    "slug": "humantay-lake",
@@ -793,6 +900,65 @@
     "leaf": "#9DB89A",
     "acc": "#B5523E",
     "obj": "#D6A55A"
+   }
+  },
+  {
+   "slug": "raqchi",
+   "label": "The tall adobe wall of the Temple of Wiracocha at Raqchi, with its round column stumps and a thatched colca",
+   "lat": -14.1747,
+   "lon": -71.3672,
+   "radius_km": 4,
+   "aliases": [
+    "raqchi",
+    "raqch i",
+    "racchi",
+    "rajchi",
+    "temple of wiracocha",
+    "templo de wiracocha",
+    "tempio di wiracocha",
+    "wiracocha temple",
+    "viracocha temple",
+    "templo de viracocha"
+   ],
+   "palette": {
+    "sky": "#A9CDEC",
+    "far": "#A9846C",
+    "mid": "#B8714F",
+    "ice": "#DCC4A2",
+    "water": "#5A8FB0",
+    "near": "#2E211C",
+    "sun": "#F4C542",
+    "leaf": "#7E9A4C",
+    "acc": "#9A4630",
+    "obj": "#86574A"
+   }
+  },
+  {
+   "slug": "salkantay",
+   "label": "The glaciated face of Nevado Salkantay framed by the valley of the Salkantay trek, a llama on the meadow",
+   "lat": -13.3336,
+   "lon": -72.5442,
+   "radius_km": 12,
+   "aliases": [
+    "salkantay",
+    "salcantay",
+    "salkantay trek",
+    "salkantay pass",
+    "abra salkantay",
+    "soraypampa",
+    "sorayapampa"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#8C7A6A",
+    "mid": "#7D828E",
+    "ice": "#F4F7FB",
+    "water": "#5A9CC4",
+    "near": "#25262B",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#B4A160",
+    "obj": "#6B4E3A"
    }
   },
   {
