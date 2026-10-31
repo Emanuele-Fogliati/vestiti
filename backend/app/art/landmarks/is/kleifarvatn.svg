@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="28" r="11" fill="var(--il-sun)"/>
+<path d="M60 106V92Q90 74 124 72Q146 74 164 84Q194 76 226 78Q262 72 300 78V106Z" fill="var(--il-far)"/>
+<path d="M124 72Q146 74 164 84Q150 92 146 106H120Q130 90 124 72Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 200V100H300V200Z" fill="var(--il-water)"/>
+<path d="M0 40Q20 44 40 62Q64 84 84 110Q70 112 50 110Q24 108 0 112Z" fill="var(--il-mid)"/>
+<path d="M0 40Q20 44 40 62Q32 66 22 64Q10 56 0 56Z" fill="var(--il-leaf)"/>
+<path d="M300 98Q260 98 230 102Q200 104 178 112Q150 116 140 126Q142 136 158 136Q190 134 204 142Q210 150 196 160Q180 168 146 170L150 182Q260 178 300 172Z" fill="var(--il-obj)"/>
+<defs><clipPath id="il-is-kleifarvatn-hd"><path d="M300 98Q262 96 232 101Q202 104 180 112Q152 118 142 126Q150 132 170 130Q198 126 222 130Q246 136 262 150Q280 152 300 150Z"/></clipPath></defs>
+<path d="M300 98Q262 96 232 101Q202 104 180 112Q152 118 142 126Q150 132 170 130Q198 126 222 130Q246 136 262 150Q280 152 300 150Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-is-kleifarvatn-hd)"><path d="M140 110Q200 100 300 92V112Q270 118 240 114Q216 120 196 118Q176 124 140 128Z" fill="var(--il-leaf)"/></g>
+<path d="M230 130Q248 128 262 138Q270 146 262 150Q246 136 230 130Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M98 136Q96 124 102 120Q110 116 116 122Q120 128 118 136ZM118 136Q120 128 128 126Q138 126 140 136Z" fill="var(--il-mid)"/>
+<path d="M0 200V172Q40 164 80 170Q120 174 160 172Q200 170 240 162Q270 158 300 152V200Z" fill="var(--il-acc)"/>
+<path d="M0 200V184Q60 178 120 182Q200 184 300 172V200Z" fill="var(--il-obj)"/>
