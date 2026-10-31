@@ -3,6 +3,59 @@
  "name": "Morocco",
  "places": [
   {
+   "slug": "agadir",
+   "label": "Agadir Oufella kasbah hill above the beach",
+   "lat": 30.42,
+   "lon": -9.6,
+   "radius_km": 20,
+   "aliases": [
+    "agadir oufella",
+    "agadir ufella",
+    "kasbah of agadir",
+    "agadir kasbah",
+    "kasbah di agadir"
+   ],
+   "names": [
+    "agadir",
+    "agadir beach",
+    "agadir city"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D9CCB4",
+    "mid": "#AE9878",
+    "ice": "#F4F1EA",
+    "water": "#3F93B8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5A8A3E",
+    "acc": "#C2643A",
+    "obj": "#E2C38E"
+   }
+  },
+  {
+   "slug": "agafay-desert",
+   "label": "Agafay stone desert hills with a dromedary and the High Atlas behind",
+   "lat": 31.45,
+   "lon": -8.15,
+   "radius_km": 20,
+   "aliases": [
+    "agafay"
+   ],
+   "palette": {
+    "sky": "#B9D4EE",
+    "far": "#8E97AE",
+    "mid": "#C49478",
+    "ice": "#D9B9A0",
+    "water": "#5F8FB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#7A8048",
+    "acc": "#B5876C",
+    "obj": "#6E4A32"
+   }
+  },
+  {
    "slug": "ait-benhaddou",
    "label": "Ait Benhaddou kasbah",
    "lat": 31.047,
@@ -205,7 +258,17 @@
     "leaf": "#7A8A4A",
     "acc": "#C2443A",
     "obj": "#8A5E3A"
-   }
+   },
+   "names": [
+    "sahara desert",
+    "sahara",
+    "the sahara",
+    "deserto del sahara",
+    "deserto sahara",
+    "sahara marocchino",
+    "moroccan sahara",
+    "desert du sahara"
+   ]
   },
   {
    "slug": "essaouira",
@@ -479,6 +542,65 @@
    }
   },
   {
+   "slug": "mhamid",
+   "label": "M'hamid El Ghizlane's sandy square, mud mosque minaret and a dromedary",
+   "lat": 29.825,
+   "lon": -5.722,
+   "radius_km": 12,
+   "aliases": [
+    "m hamid el ghizlane",
+    "mhamid el ghizlane",
+    "mhamid el ghizlaine",
+    "mhamid el rhozlane",
+    "m hamid el rhozlane"
+   ],
+   "names": [
+    "mhamid",
+    "m hamid",
+    "mhamid village"
+   ],
+   "palette": {
+    "sky": "#BFD6EA",
+    "far": "#DCC196",
+    "mid": "#C28C5E",
+    "ice": "#ECDCBC",
+    "water": "#5F8FB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4A",
+    "acc": "#A0623E",
+    "obj": "#6E4A32"
+   }
+  },
+  {
+   "slug": "midelt",
+   "label": "Midelt's giant apple roundabout under Jbel Ayachi",
+   "lat": 32.68,
+   "lon": -4.74,
+   "radius_km": 20,
+   "aliases": [
+    "jbel ayachi",
+    "djebel ayachi",
+    "jebel ayachi"
+   ],
+   "names": [
+    "midelt",
+    "midelt city"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#A3958C",
+    "mid": "#D2B98E",
+    "ice": "#F2F0EA",
+    "water": "#5F8FB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B35",
+    "acc": "#A8322A",
+    "obj": "#C46A45"
+   }
+  },
+  {
    "slug": "rabat",
    "label": "Hassan Tower and its column field, Rabat",
    "lat": 34.024,
@@ -634,6 +756,37 @@
    ]
   },
   {
+   "slug": "tetouan",
+   "label": "Tetouan's white medina on Jbel Dersa above Place al-Feddan",
+   "lat": 35.571,
+   "lon": -5.368,
+   "radius_km": 15,
+   "aliases": [
+    "medina of tetouan",
+    "tetouan medina",
+    "medina di tetouan",
+    "place al feddan",
+    "feddan square"
+   ],
+   "names": [
+    "tetouan",
+    "tetuan",
+    "tetouane"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E6E4E",
+    "mid": "#76885A",
+    "ice": "#F6F4EE",
+    "water": "#3E7FB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4F8A3A",
+    "acc": "#2F6E4A",
+    "obj": "#C99A78"
+   }
+  },
+  {
    "slug": "todra-gorge",
    "label": "The narrows of the Todra Gorge",
    "lat": 31.5878,
@@ -655,7 +808,13 @@
     "leaf": "#5E8A3E",
     "acc": "#BDAE9C",
     "obj": "#86817C"
-   }
+   },
+   "names": [
+    "tinghir",
+    "tinerhir",
+    "tineghir",
+    "tinghir city"
+   ]
   },
   {
    "slug": "volubilis",
