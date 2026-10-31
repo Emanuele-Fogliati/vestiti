@@ -3,6 +3,34 @@
  "name": "Namibia",
  "places": [
   {
+   "slug": "brandberg-mountain",
+   "label": "The Brandberg granite massif over the Damaraland plain, with a desert elephant",
+   "lat": -21.15,
+   "lon": 14.57,
+   "radius_km": 20,
+   "aliases": [
+    "brandberg mountain",
+    "brandberg mountains",
+    "brandberg massif",
+    "konigstein"
+   ],
+   "names": [
+    "brandberg"
+   ],
+   "palette": {
+    "sky": "#A9D3EE",
+    "far": "#C9928C",
+    "mid": "#B5604E",
+    "ice": "#F2EADB",
+    "water": "#5F8FB0",
+    "near": "#2A2220",
+    "sun": "#F4C542",
+    "leaf": "#5E6B3A",
+    "acc": "#D9A86A",
+    "obj": "#8E8078"
+   }
+  },
+  {
    "slug": "cape-cross",
    "label": "Cape Cross padrão and seal colony",
    "lat": -21.77,
@@ -104,6 +132,28 @@
    }
   },
   {
+   "slug": "epupa-falls",
+   "label": "Epupa Falls on the Kunene, with baobabs on the gorge rim",
+   "lat": -16.999,
+   "lon": 13.247,
+   "radius_km": 6,
+   "aliases": [
+    "epupa"
+   ],
+   "palette": {
+    "sky": "#A9D2F0",
+    "far": "#C08B6C",
+    "mid": "#5C4C42",
+    "ice": "#F6F4EE",
+    "water": "#7FA294",
+    "near": "#262019",
+    "sun": "#F4C542",
+    "leaf": "#5E7F3A",
+    "acc": "#B0694A",
+    "obj": "#A79886"
+   }
+  },
+  {
    "slug": "etosha-national-park",
    "label": "Elephant, zebra and springbok at an Etosha waterhole",
    "lat": -18.95,
@@ -159,6 +209,34 @@
    }
   },
   {
+   "slug": "grootfontein",
+   "label": "The Hoba meteorite in its stone amphitheatre near Grootfontein",
+   "lat": -19.592,
+   "lon": 17.934,
+   "radius_km": 25,
+   "aliases": [
+    "hoba meteorite",
+    "meteorite di hoba",
+    "hoba meteorit",
+    "hoba farm"
+   ],
+   "names": [
+    "grootfontein"
+   ],
+   "palette": {
+    "sky": "#A8D2F0",
+    "far": "#CDB08C",
+    "mid": "#8B4A2B",
+    "ice": "#D8D4CC",
+    "water": "#4E4A47",
+    "near": "#221E1C",
+    "sun": "#F4C542",
+    "leaf": "#4F6B33",
+    "acc": "#D3BE84",
+    "obj": "#A8A49C"
+   }
+  },
+  {
    "slug": "namib-naukluft-national-park",
    "label": "Red Namib dunes with a gemsbok in Namib-Naukluft",
    "lat": -24.5,
@@ -185,6 +263,53 @@
    "names": [
     "namib"
    ]
+  },
+  {
+   "slug": "petrified-forest",
+   "label": "A segmented fossil tree trunk at the Petrified Forest near Khorixas, with a welwitschia",
+   "lat": -20.42,
+   "lon": 14.62,
+   "radius_km": 6,
+   "aliases": [
+    "petrified forest",
+    "foresta pietrificata",
+    "versteinerter wald"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#8F7362",
+    "mid": "#8E5B43",
+    "ice": "#D9B48F",
+    "water": "#5F8FB0",
+    "near": "#2A211D",
+    "sun": "#F4C542",
+    "leaf": "#6F8A3A",
+    "acc": "#E3CFA8",
+    "obj": "#BDB6A8"
+   }
+  },
+  {
+   "slug": "sandwich-harbour",
+   "label": "Sandwich Harbour dunes falling into the Atlantic",
+   "lat": -23.38,
+   "lon": 14.5,
+   "radius_km": 12,
+   "aliases": [
+    "sandwich harbour",
+    "sandwich harbor"
+   ],
+   "palette": {
+    "sky": "#B4D8F2",
+    "far": "#EFCFA0",
+    "mid": "#E5A866",
+    "ice": "#F3EFE6",
+    "water": "#1F3A5C",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#6E7F45",
+    "acc": "#C98248",
+    "obj": "#EED6AE"
+   }
   },
   {
    "slug": "spitzkoppe",
