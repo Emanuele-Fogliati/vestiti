@@ -386,6 +386,29 @@
    }
   },
   {
+   "slug": "curtain-fig-tree",
+   "label": "The Curtain Fig Tree's wall of aerial roots above the boardwalk, near Yungaburra",
+   "lat": -17.2857,
+   "lon": 145.5732,
+   "radius_km": 3,
+   "aliases": [
+    "curtain fig"
+   ],
+   "palette": {
+    "sky": "#BADCF0",
+    "far": "#3E6A34",
+    "mid": "#9A8A72",
+    "ice": "#CFC4AC",
+    "water": "#4E8C88",
+    "near": "#211F1A",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A36",
+    "acc": "#8C6440",
+    "obj": "#6E9A40"
+   },
+   "names": []
+  },
+  {
    "slug": "daintree-rainforest",
    "label": "The Daintree River and rainforest with a saltwater crocodile",
    "lat": -16.29,
@@ -405,6 +428,31 @@
     "leaf": "#4E8A3C",
     "acc": "#6A6440",
     "obj": "#6EA04A"
+   }
+  },
+  {
+   "slug": "daly-waters",
+   "label": "The Daly Waters outback pub",
+   "lat": -16.254,
+   "lon": 133.37,
+   "radius_km": 10,
+   "aliases": [
+    "daly waters pub"
+   ],
+   "names": [
+    "daly waters"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#C98A62",
+    "mid": "#E2D6B8",
+    "ice": "#ECE6DA",
+    "water": "#4E8EB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A44",
+    "acc": "#D8408A",
+    "obj": "#A84A3C"
    }
   },
   {
@@ -734,8 +782,7 @@
     "kakadu",
     "ubirr",
     "nadab lookout",
-    "nadab floodplain",
-    "yellow water billabong"
+    "nadab floodplain"
    ],
    "palette": {
     "sky": "#BCD8EE",
@@ -1702,6 +1749,35 @@
     "leaf": "#3F6436",
     "acc": "#93B356",
     "obj": "#2E62B8"
+   }
+  },
+  {
+   "slug": "yellow-water-billabong",
+   "label": "Yellow Water billabong, Kakadu: a pandanus clump on flat water, lotus lilies and a saltwater crocodile",
+   "lat": -12.903,
+   "lon": 132.52,
+   "radius_km": 6,
+   "aliases": [
+    "ngurrungurrudjba",
+    "cooinda",
+    "yellow water cruise",
+    "yellow water billabong"
+   ],
+   "names": [
+    "yellow water",
+    "yellow river"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#4E6E36",
+    "mid": "#7A5232",
+    "ice": "#E6E2D6",
+    "water": "#3D6A8E",
+    "near": "#232821",
+    "sun": "#F4C542",
+    "leaf": "#B4C445",
+    "acc": "#E07AA8",
+    "obj": "#7FA040"
    }
   }
  ]
