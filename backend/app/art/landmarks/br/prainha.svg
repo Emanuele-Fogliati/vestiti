@@ -1,0 +1,13 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="30" r="13" fill="var(--il-sun)"/>
+<defs><clipPath id="il-br-prainha-hill"><path d="M4 132Q30 122 56 112Q76 86 100 76Q116 70 128 78L140 86Q170 72 200 60Q236 44 268 36L300 32V170H4Z"/></clipPath></defs>
+<path d="M4 132Q30 122 56 112Q76 86 100 76Q116 70 128 78L140 86Q170 72 200 60Q236 44 268 36L300 32V170H4Z" fill="var(--il-mid)"/>
+<path d="M140 86Q170 72 200 60Q236 44 268 36L300 32V170H150Q186 120 140 86Z" fill="var(--il-leaf)" opacity="0.5"/>
+<path clip-path="url(#il-br-prainha-hill)" d="M58 124L64 100L90 70H134L124 84L120 98L114 110L100 114L86 120Z" fill="var(--il-acc)"/>
+<path d="M80 108L100 86M96 110L114 90" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V128H34Q86 132 132 146Q104 168 84 200Z" fill="var(--il-water)"/>
+<path d="M84 200Q106 166 134 148Q152 138 172 138Q198 138 216 144Q202 170 188 200Z" fill="var(--il-far)"/>
+<path d="M178 200Q192 162 222 148Q258 138 300 136V200Z" fill="var(--il-leaf)"/>
+<path d="M145 188Q142 166 149 150Q156 166 153 188Z" fill="var(--il-obj)"/>
+<path d="M149 154V186" stroke="var(--il-ice)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M137 192Q149 184 161 192Z" fill="var(--il-far)"/>
