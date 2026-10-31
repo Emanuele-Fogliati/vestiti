@@ -26,13 +26,13 @@ def test_places_have_valid_rows():
     d = globe.payload()
     kinds = {"city", "town", "landmark", "nature", "island", "region"}
     ids = set()
-    for pid, name, cc, kind, lat, lon, lvl, art, art_label, its, _parent in d["places"]:
+    for pid, name, cc, kind, lat, lon, lvl, art, its, _parent in d["places"]:
         assert pid not in ids
         ids.add(pid)
         assert name and len(cc) == 2 and cc.isupper() and kind in kinds
         assert -90 <= lat <= 90 and -180 <= lon <= 180
         assert lvl in range(1, 7)
-        assert (art is None) == (art_label is None)
+        assert art is None or isinstance(art, str)
         assert all(0 <= i < len(d["itineraries"]) for i in its)
     # most visited first
     levels = [p[6] for p in d["places"]]
@@ -50,7 +50,7 @@ def test_cusco_gets_its_picture_and_itinerary_but_not_its_neighbours():
     cusco = by_id["pe-cusco"]
     assert cusco[2] == "PE" and abs(cusco[4] + 13.53) < 0.1 and abs(cusco[5] + 71.97) < 0.1
     assert cusco[7] is not None and "cusco" in cusco[7]
-    assert any(d["itineraries"][i]["slug"].startswith("peru") for i in cusco[9])
+    assert any(d["itineraries"][i]["slug"].startswith("peru") for i in cusco[8])
     # a place near Cusco with no scene of its own gets no picture (no borrowed landmark)
     assert by_id["pe-sacsayhuaman"][7] is None
 
