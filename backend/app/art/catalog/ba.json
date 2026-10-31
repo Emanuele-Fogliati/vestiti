@@ -3,6 +3,89 @@
  "name": "Bosnia and Herzegovina",
  "places": [
   {
+   "slug": "blagaj-fortress",
+   "label": "Stjepan-grad fortress on its crag above Blagaj",
+   "lat": 43.2586,
+   "lon": 17.8935,
+   "radius_km": 2,
+   "aliases": [
+    "blagaj fortress",
+    "blagaj fort",
+    "stjepan grad",
+    "stjepangrad",
+    "fortezza di blagaj"
+   ],
+   "palette": {
+    "sky": "#B2D1EE",
+    "far": "#8FA28A",
+    "mid": "#CAC5B8",
+    "ice": "#DCD1BA",
+    "water": "#3E9C93",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#4E7B3A",
+    "acc": "#7FA45A",
+    "obj": "#8C7A60"
+   }
+  },
+  {
+   "slug": "citluk",
+   "label": "St. James Church, Medjugorje (Čitluk municipality)",
+   "lat": 43.1896,
+   "lon": 17.6774,
+   "radius_km": 8,
+   "aliases": [
+    "medjugorje",
+    "medugorje",
+    "medjugorie",
+    "krizevac",
+    "podbrdo",
+    "apparition hill"
+   ],
+   "names": [
+    "citluk"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#9AA58A",
+    "mid": "#F0DFA0",
+    "ice": "#F7F2E2",
+    "water": "#4A90B0",
+    "near": "#2A2A26",
+    "sun": "#F2C14E",
+    "leaf": "#5F8C45",
+    "acc": "#D2387E",
+    "obj": "#6E9C8A"
+   }
+  },
+  {
+   "slug": "latin-bridge",
+   "label": "Latin Bridge over the Miljacka, Sarajevo",
+   "lat": 43.8579,
+   "lon": 18.429,
+   "radius_km": 1,
+   "aliases": [
+    "latin bridge",
+    "latinska cuprija",
+    "latinska most",
+    "ponte latino",
+    "principov most",
+    "princip bridge"
+   ],
+   "palette": {
+    "sky": "#A9CCEF",
+    "far": "#8DAA7E",
+    "mid": "#CDB894",
+    "ice": "#ECE8DE",
+    "water": "#7FA89A",
+    "near": "#2B2925",
+    "sun": "#F2C14E",
+    "leaf": "#4F8638",
+    "acc": "#D2662E",
+    "obj": "#EDD25C"
+   }
+  },
+  {
    "slug": "mostar",
    "label": "Stari Most, Mostar",
    "lat": 43.337,
@@ -23,6 +106,29 @@
     "leaf": "#5E8A4A",
     "acc": "#D8D0C0",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "radimlja-necropolis",
+   "label": "Stećak tombstones of the Radimlja necropolis",
+   "lat": 43.0907,
+   "lon": 17.9374,
+   "radius_km": 2,
+   "aliases": [
+    "radimlja",
+    "necropoli di radimlja"
+   ],
+   "palette": {
+    "sky": "#AACBEB",
+    "far": "#8FA38A",
+    "mid": "#C7BFAD",
+    "ice": "#EEE9DC",
+    "water": "#5E8FA8",
+    "near": "#2B2B26",
+    "sun": "#F2C14E",
+    "leaf": "#3F6A35",
+    "acc": "#B07A50",
+    "obj": "#A8AD6C"
    }
   },
   {
@@ -53,6 +159,32 @@
     "leaf": "#56803F",
     "acc": "#B95A33",
     "obj": "#7E8890"
+   }
+  },
+  {
+   "slug": "sarajevo-city-hall",
+   "label": "Vijećnica, Sarajevo City Hall on the Miljacka",
+   "lat": 43.859,
+   "lon": 18.4337,
+   "radius_km": 3,
+   "aliases": [
+    "vijecnica",
+    "sarajevo city hall",
+    "city hall of sarajevo",
+    "municipio di sarajevo",
+    "national and university library of bosnia"
+   ],
+   "palette": {
+    "sky": "#A6CBF0",
+    "far": "#8FA08A",
+    "mid": "#EBC27C",
+    "ice": "#EFEBE2",
+    "water": "#5E8C7A",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#5C8A48",
+    "acc": "#B5513A",
+    "obj": "#3A5F9A"
    }
   },
   {
