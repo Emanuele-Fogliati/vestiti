@@ -1,0 +1,26 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="26" r="11" fill="var(--il-sun)"/>
+<g transform="translate(0 12)">
+<path d="M0 200V98Q40 84 80 88L140 90Q200 78 260 84Q284 86 300 88V200Z" fill="var(--il-far)"/>
+<path d="M0 132V118Q30 104 56 92Q80 64 104 50L118 44Q132 46 140 60Q152 82 170 98Q190 110 214 124L220 132Z" fill="var(--il-mid)"/>
+<path d="M118 44Q132 46 140 60Q152 82 170 98Q190 110 214 124L190 124Q160 100 146 80Q134 56 118 44Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M112 48V30H114V27H117V30H119V27H122V30H124V48Z" fill="var(--il-acc)"/>
+<path d="M84 74V58H86V55H89V58H91V55H94V58H96V74Z" fill="var(--il-acc)"/>
+<path d="M148 90V72H150V69H153V72H155V69H158V72H160V90Z" fill="var(--il-acc)"/>
+<path d="M116 36H120V40H116ZM88 62H92V66H88ZM152 78H156V82H152Z" fill="var(--il-near)"/>
+<path d="M168 112V112H300V116H168Z" fill="var(--il-acc)"/>
+<path d="M200 114V76H205V114ZM268 114V74H273V114Z" fill="var(--il-acc)"/>
+<path d="M202 78L172 112M202 78L188 112M202 78L222 112M202 78L236 112M270 76L246 112M270 76L258 112M270 76L284 112M270 76L298 112" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M98 112Q96 100 106 98Q112 92 120 98Q128 100 126 110Z" fill="var(--il-leaf)"/>
+<path d="M20 126V100H23V97H27V100H31V97H35V100H39V97H43V100H66V94H70V91H74V94H78V91H82V94H104V126Z" fill="var(--il-ice)"/>
+<path d="M42 100V60H52V100Z" fill="var(--il-ice)"/>
+<path d="M40 64H54V68H40ZM44 60V54Q47 50 50 54V60Z" fill="var(--il-ice)"/>
+<path d="M45 76H49V82H45ZM28 108H32V114H28ZM58 106H62V114H58ZM72 106H76V114H72ZM86 106H90V114H86Z" fill="var(--il-near)"/>
+</g>
+<path d="M0 200V136L60 138L120 140L170 136L220 138L300 130V200Z" fill="var(--il-water)"/>
+<g transform="translate(0 16)">
+<path d="M190 156Q186 148 192 146H252Q262 140 266 136L268 140Q262 152 254 162H200Q192 160 190 156Z" fill="var(--il-obj)"/>
+<path d="M206 146V138H234V146Z" fill="var(--il-acc)"/>
+<path d="M222 138V112M222 116L248 136" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M192 150H262" stroke="var(--il-acc)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+</g>

@@ -3,6 +3,108 @@
  "name": "Panama",
  "places": [
   {
+   "slug": "bocas-del-toro",
+   "label": "Colourful stilt houses over the water in Bocas del Toro",
+   "lat": 9.336,
+   "lon": -82.24,
+   "radius_km": 30,
+   "aliases": [
+    "bocas del toro",
+    "bocas town",
+    "isla colon",
+    "isla carenero"
+   ],
+   "palette": {
+    "sky": "#9CC9EE",
+    "far": "#4F8A55",
+    "mid": "#F2B533",
+    "ice": "#FAFAF6",
+    "water": "#2E9DB0",
+    "near": "#1E2424",
+    "sun": "#F6C431",
+    "leaf": "#3E8A3A",
+    "acc": "#C42E3A",
+    "obj": "#7A6650"
+   }
+  },
+  {
+   "slug": "boquete",
+   "label": "Boquete valley with coffee rows, a quetzal and Volcan Baru",
+   "lat": 8.78,
+   "lon": -82.433,
+   "radius_km": 15,
+   "aliases": [
+    "boquete valley",
+    "valle de boquete"
+   ],
+   "names": [
+    "boquete"
+   ],
+   "palette": {
+    "sky": "#BFDDF0",
+    "far": "#7F9DA6",
+    "mid": "#5E9A4C",
+    "ice": "#F5F3EC",
+    "water": "#5A9CB8",
+    "near": "#1F2A20",
+    "sun": "#F4C542",
+    "leaf": "#2E6B38",
+    "acc": "#C8382E",
+    "obj": "#6B4A32"
+   }
+  },
+  {
+   "slug": "casco-viejo",
+   "label": "Metropolitan Cathedral on Plaza de la Independencia, Casco Viejo",
+   "lat": 8.9526,
+   "lon": -79.5352,
+   "radius_km": 3,
+   "aliases": [
+    "casco viejo",
+    "casco antiguo de panama",
+    "catedral metropolitana de panama"
+   ],
+   "names": [
+    "casco antiguo"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#D6C7A2",
+    "mid": "#8E7D58",
+    "ice": "#F7F6F1",
+    "water": "#3E8FB0",
+    "near": "#24221F",
+    "sun": "#F4C542",
+    "leaf": "#4E8A3C",
+    "acc": "#8A4A2A",
+    "obj": "#E5B94E"
+   }
+  },
+  {
+   "slug": "panama-canal",
+   "label": "Container ship in the Miraflores Locks of the Panama Canal",
+   "lat": 8.997,
+   "lon": -79.591,
+   "radius_km": 8,
+   "aliases": [
+    "panama canal",
+    "canal de panama",
+    "canale di panama"
+   ],
+   "palette": {
+    "sky": "#CFE3F2",
+    "far": "#5F8F5A",
+    "mid": "#BDB8AA",
+    "ice": "#F4F2EC",
+    "water": "#6E8F86",
+    "near": "#1F2626",
+    "sun": "#F4C542",
+    "leaf": "#6FA348",
+    "acc": "#C2452D",
+    "obj": "#2C4A7C"
+   }
+  },
+  {
    "slug": "panama-city",
    "label": "Panama City's skyline with the F&F twisted tower across the bay",
    "lat": 8.975,
@@ -29,6 +131,37 @@
     "leaf": "#5A9040",
     "acc": "#7B6650",
     "obj": "#4FA592"
+   }
+  },
+  {
+   "slug": "san-blas-islands",
+   "label": "A tiny Guna Yala palm islet with thatched huts and an ulu dugout canoe",
+   "lat": 9.56,
+   "lon": -78.83,
+   "radius_km": 50,
+   "aliases": [
+    "san blas",
+    "guna yala",
+    "kuna yala",
+    "isole san blas",
+    "arcipelago di san blas",
+    "islas de san blas",
+    "isla perro",
+    "chichime",
+    "cayos holandeses",
+    "isla yandup"
+   ],
+   "palette": {
+    "sky": "#B6D9F2",
+    "far": "#4E7D52",
+    "mid": "#F2EAD6",
+    "ice": "#FFFFFF",
+    "water": "#45C1C8",
+    "near": "#22302E",
+    "sun": "#F6C431",
+    "leaf": "#3E8A3E",
+    "acc": "#8C7458",
+    "obj": "#2D80B0"
    }
   }
  ]
