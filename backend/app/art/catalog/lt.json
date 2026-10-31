@@ -3,6 +3,58 @@
  "name": "Lithuania",
  "places": [
   {
+   "slug": "hill-of-crosses",
+   "label": "The Hill of Crosses near Siauliai",
+   "lat": 56.0153,
+   "lon": 23.4167,
+   "radius_km": 4,
+   "aliases": [
+    "hill of crosses",
+    "kryziu kalnas",
+    "collina delle croci"
+   ],
+   "palette": {
+    "sky": "#C2DCF0",
+    "far": "#8FAE6A",
+    "mid": "#5F5348",
+    "ice": "#E3D8C3",
+    "water": "#6A9FC0",
+    "near": "#27211D",
+    "sun": "#F4C64A",
+    "leaf": "#3B5E31",
+    "acc": "#C59B5F",
+    "obj": "#8E877D"
+   }
+  },
+  {
+   "slug": "trakai-island-castle",
+   "label": "Trakai Island Castle on Lake Galve",
+   "lat": 54.6522,
+   "lon": 24.9336,
+   "radius_km": 5,
+   "aliases": [
+    "trakai island castle",
+    "trakai castle",
+    "castello di trakai",
+    "trakai island"
+   ],
+   "names": [
+    "trakai"
+   ],
+   "palette": {
+    "sky": "#AFD3EE",
+    "far": "#A9A08F",
+    "mid": "#B0523A",
+    "ice": "#F7F5F0",
+    "water": "#4B7EA6",
+    "near": "#2B201C",
+    "sun": "#F5C443",
+    "leaf": "#3F6A2F",
+    "acc": "#D2703A",
+    "obj": "#A57E55"
+   }
+  },
+  {
    "slug": "vilnius",
    "label": "Vilnius Cathedral and its belfry on Cathedral Square",
    "lat": 54.6858,
