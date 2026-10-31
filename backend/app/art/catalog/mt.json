@@ -3,6 +3,67 @@
  "name": "Malta",
  "places": [
   {
+   "slug": "gozo",
+   "label": "Mgarr harbour, the arrival on Gozo, with the ferry and the hillside churches",
+   "lat": 36.0253,
+   "lon": 14.2989,
+   "radius_km": 6,
+   "aliases": [
+    "gozo island",
+    "island of gozo",
+    "isola di gozo",
+    "mgarr harbour",
+    "mgarr harbor",
+    "mgarr gozo",
+    "ghawdex"
+   ],
+   "names": [
+    "gozo",
+    "ghajnsielem"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C9A46C",
+    "mid": "#DDB880",
+    "ice": "#F4F1EA",
+    "water": "#1F5FA0",
+    "near": "#232A33",
+    "sun": "#F4C542",
+    "leaf": "#6F8F4A",
+    "acc": "#F2C230",
+    "obj": "#1E3A78"
+   }
+  },
+  {
+   "slug": "mdina",
+   "label": "The Main Gate of Mdina and its bridge over the moat",
+   "lat": 35.8853,
+   "lon": 14.4033,
+   "radius_km": 3,
+   "aliases": [
+    "mdina gate",
+    "mdina main gate",
+    "main gate mdina",
+    "silent city"
+   ],
+   "names": [
+    "mdina",
+    "l imdina"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#CDB083",
+    "mid": "#E0B57A",
+    "ice": "#EEE2C6",
+    "water": "#3C86B5",
+    "near": "#2D2620",
+    "sun": "#F4C542",
+    "leaf": "#5F6E3B",
+    "acc": "#C8102E",
+    "obj": "#8C6B46"
+   }
+  },
+  {
    "slug": "valletta",
    "label": "Valletta skyline with the Carmelite dome and St Paul's spire",
    "lat": 35.8998,
@@ -30,6 +91,38 @@
     "leaf": "#6E8A4A",
     "acc": "#E8B830",
     "obj": "#2E6CB0"
+   }
+  },
+  {
+   "slug": "victoria",
+   "label": "The Citadel of Victoria (Gozo) with its cathedral above the town",
+   "lat": 36.0462,
+   "lon": 14.2395,
+   "radius_km": 4,
+   "aliases": [
+    "cittadella",
+    "citadel of victoria",
+    "victoria citadel",
+    "gozo citadel",
+    "citadel gozo",
+    "rabat gozo",
+    "victoria gozo",
+    "il kastell"
+   ],
+   "names": [
+    "victoria"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#C8BE92",
+    "mid": "#D8B47C",
+    "ice": "#EFE4CC",
+    "water": "#3C86B5",
+    "near": "#2E2A24",
+    "sun": "#F4C542",
+    "leaf": "#6F8A4C",
+    "acc": "#D2553A",
+    "obj": "#9A7C58"
    }
   }
  ]
