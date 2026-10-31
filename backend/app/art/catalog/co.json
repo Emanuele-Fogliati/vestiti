@@ -3,6 +3,32 @@
  "name": "Colombia",
  "places": [
   {
+   "slug": "armenia",
+   "label": "Armenia's A-frame Cathedral of the Immaculate Conception",
+   "lat": 4.5347,
+   "lon": -75.6744,
+   "radius_km": 15,
+   "aliases": [
+    "armenia quindio",
+    "catedral de armenia"
+   ],
+   "names": [
+    "armenia"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#7E9E78",
+    "mid": "#B8B1A0",
+    "ice": "#ECEAE4",
+    "water": "#3E8EC8",
+    "near": "#2A2A2C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E3A",
+    "acc": "#A8604A",
+    "obj": "#4A5868"
+   }
+  },
+  {
    "slug": "bogota",
    "label": "Bogotá's red-brick towers and bullring below the Monserrate hills",
    "lat": 4.612,
@@ -38,7 +64,12 @@
    "lon": -75.549,
    "radius_km": 12,
    "aliases": [
-    "cartagena de indias"
+    "cartagena de indias",
+    "walled city of cartagena",
+    "cartagena walled city",
+    "mura di cartagena",
+    "centro storico di cartagena",
+    "ciudad amurallada"
    ],
    "names": [
     "cartagena"
@@ -54,6 +85,33 @@
     "leaf": "#E0703A",
     "acc": "#F0B83A",
     "obj": "#E8C88A"
+   }
+  },
+  {
+   "slug": "cartagena-cathedral",
+   "label": "Cartagena Cathedral with its pink-domed bell tower",
+   "lat": 10.4246,
+   "lon": -75.5513,
+   "radius_km": 2,
+   "aliases": [
+    "cartagena cathedral",
+    "catedral de cartagena",
+    "catedral santa catalina de alejandria",
+    "catedral de santa catalina de alejandria",
+    "cattedrale di cartagena",
+    "cathedral of cartagena"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#E3B03E",
+    "mid": "#B9B0A0",
+    "ice": "#F2EBD8",
+    "water": "#3E8EC8",
+    "near": "#2A2422",
+    "sun": "#F2C14E",
+    "leaf": "#E39A86",
+    "acc": "#8E3A2E",
+    "obj": "#CDA88E"
    }
   },
   {
@@ -78,6 +136,36 @@
     "leaf": "#6E9A3A",
     "acc": "#8A6248",
     "obj": "#CE2B37"
+   }
+  },
+  {
+   "slug": "clock-tower-cartagena",
+   "label": "Cartagena's Clock Tower gate in the city walls",
+   "lat": 10.4229,
+   "lon": -75.5497,
+   "radius_km": 2,
+   "aliases": [
+    "torre del reloj cartagena",
+    "clock tower cartagena",
+    "puerta del reloj",
+    "torre dell orologio cartagena"
+   ],
+   "names": [
+    "torre del reloj",
+    "clock tower",
+    "torre dell orologio"
+   ],
+   "palette": {
+    "sky": "#8EC3EE",
+    "far": "#E2A93A",
+    "mid": "#B9AB8F",
+    "ice": "#F6F4EE",
+    "water": "#3E8EC8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A3A",
+    "acc": "#F0C232",
+    "obj": "#C9A08A"
    }
   },
   {
@@ -127,6 +215,32 @@
     "leaf": "#4E8A3C",
     "acc": "#B05A36",
     "obj": "#E8742A"
+   }
+  },
+  {
+   "slug": "filandia",
+   "label": "Filandia's Maria Inmaculada church and colourful houses",
+   "lat": 4.6745,
+   "lon": -75.6585,
+   "radius_km": 8,
+   "aliases": [
+    "iglesia maria inmaculada filandia"
+   ],
+   "names": [
+    "filandia",
+    "filandia quindio"
+   ],
+   "palette": {
+    "sky": "#A8CBEC",
+    "far": "#5E9A48",
+    "mid": "#F0E2B8",
+    "ice": "#F7F5EF",
+    "water": "#4C7FBE",
+    "near": "#272A30",
+    "sun": "#F2C14E",
+    "leaf": "#3E9A52",
+    "acc": "#C8502E",
+    "obj": "#B8BEC6"
    }
   },
   {
@@ -289,6 +403,34 @@
    ]
   },
   {
+   "slug": "plaza-de-bolivar-bogota",
+   "label": "Bogota's Plaza de Bolivar with the Catedral Primada",
+   "lat": 4.5981,
+   "lon": -74.0752,
+   "radius_km": 3,
+   "aliases": [
+    "plaza de bolivar bogota",
+    "plaza de bolivar de bogota",
+    "plaza bolivar bogota",
+    "piazza bolivar bogota",
+    "catedral primada",
+    "primada de colombia",
+    "primatial cathedral of bogota"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#5F7E5C",
+    "mid": "#C9A56C",
+    "ice": "#F1ECE2",
+    "water": "#7C8590",
+    "near": "#2B241E",
+    "sun": "#F2C14E",
+    "leaf": "#4E7B3E",
+    "acc": "#B8583C",
+    "obj": "#AE966E"
+   }
+  },
+  {
    "slug": "rosario-islands",
    "label": "Thatched palapa on stilts over the turquoise shallows of the Rosario Islands",
    "lat": 10.177,
@@ -370,6 +512,60 @@
    }
   },
   {
+   "slug": "sierra-nevada-de-santa-marta",
+   "label": "Snow peaks of the Sierra Nevada de Santa Marta above the Caribbean coast",
+   "lat": 10.84,
+   "lon": -73.69,
+   "radius_km": 45,
+   "aliases": [
+    "sierra nevada de santa marta",
+    "sierra nevada di santa marta",
+    "pico cristobal colon",
+    "pico simon bolivar"
+   ],
+   "names": [
+    "sierra nevada"
+   ],
+   "palette": {
+    "sky": "#A6C9EE",
+    "far": "#4D6E5A",
+    "mid": "#7C7268",
+    "ice": "#F4F6F8",
+    "water": "#3E8EC8",
+    "near": "#23272A",
+    "sun": "#F2C14E",
+    "leaf": "#4F8E3E",
+    "acc": "#D9C79A",
+    "obj": "#7A6048"
+   }
+  },
+  {
+   "slug": "tatacoa-desert",
+   "label": "Red fluted badlands of the Tatacoa Desert",
+   "lat": 3.232,
+   "lon": -75.168,
+   "radius_km": 20,
+   "aliases": [
+    "tatacoa",
+    "deserto di tatacoa",
+    "desierto de la tatacoa",
+    "desierto de tatacoa",
+    "el cuzco labyrinth"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#7F95B4",
+    "mid": "#C25E38",
+    "ice": "#F4EFE6",
+    "water": "#3E8EC8",
+    "near": "#2C1E18",
+    "sun": "#F2C14E",
+    "leaf": "#5F8A3E",
+    "acc": "#E09A62",
+    "obj": "#DDBB8E"
+   }
+  },
+  {
    "slug": "tayrona-national-park",
    "label": "Granite boulders, egrets and coconut palms below the jungle hills of Tayrona",
    "lat": 11.31,
@@ -379,7 +575,12 @@
     "tayrona",
     "tairona",
     "parco tayrona",
-    "playa arrecifes"
+    "playa arrecifes",
+    "tayrona national natural park",
+    "parque nacional natural tayrona",
+    "parco nazionale tayrona",
+    "parco nazionale di tayrona",
+    "parque tayrona"
    ],
    "palette": {
     "sky": "#A9D2F0",
@@ -392,6 +593,33 @@
     "leaf": "#5A9A3A",
     "acc": "#CFA184",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "villa-de-leyva",
+   "label": "Plaza Mayor of Villa de Leyva with its white church",
+   "lat": 5.6339,
+   "lon": -73.5246,
+   "radius_km": 12,
+   "aliases": [
+    "plaza mayor de villa de leyva",
+    "plaza mayor villa de leyva"
+   ],
+   "names": [
+    "villa de leyva",
+    "villa de leiva"
+   ],
+   "palette": {
+    "sky": "#9CCBEE",
+    "far": "#7F8E52",
+    "mid": "#CDB894",
+    "ice": "#F4F2EC",
+    "water": "#3E8EC8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#2F6B4E",
+    "acc": "#B2563A",
+    "obj": "#C79C6A"
    }
   }
  ]
