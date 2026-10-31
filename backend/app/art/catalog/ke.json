@@ -68,6 +68,33 @@
    }
   },
   {
+   "slug": "crescent-island",
+   "label": "A Masai giraffe and wildebeest under yellow-fever acacias on Crescent Island, Lake Naivasha behind",
+   "lat": -0.762,
+   "lon": 36.408,
+   "radius_km": 3,
+   "aliases": [
+    "crescent island",
+    "crescent island game sanctuary",
+    "crescent island sanctuary",
+    "crescent island wildlife sanctuary",
+    "crescent island naivasha",
+    "isola crescent"
+   ],
+   "palette": {
+    "sky": "#CADDEB",
+    "far": "#919FB0",
+    "mid": "#4E4A47",
+    "ice": "#EEDDB8",
+    "water": "#8BA8B3",
+    "near": "#221F1C",
+    "sun": "#F2C14E",
+    "leaf": "#7C9A46",
+    "acc": "#D3C285",
+    "obj": "#7A4524"
+   }
+  },
+  {
    "slug": "diani-beach",
    "label": "Camels with red saddle blankets on Diani's white beach below leaning coconut palms",
    "lat": -4.3,
@@ -180,6 +207,64 @@
    }
   },
   {
+   "slug": "il-ngwesi",
+   "label": "Il Ngwesi's thatched eco-lodge cottages on their bushy hill in Laikipia, an elephant below",
+   "lat": 0.38,
+   "lon": 37.37,
+   "radius_km": 15,
+   "aliases": [
+    "il ngwesi",
+    "ilngwesi",
+    "il n gwesi",
+    "il ngwesi lodge",
+    "il ngwesi eco lodge",
+    "il ngwesi conservancy",
+    "il ngwesi group ranch"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#8E928F",
+    "mid": "#4F7234",
+    "ice": "#CDB88C",
+    "water": "#7E9EA8",
+    "near": "#221E1A",
+    "sun": "#F2C14E",
+    "leaf": "#7D9E46",
+    "acc": "#A28C66",
+    "obj": "#B05A38"
+   }
+  },
+  {
+   "slug": "kericho",
+   "label": "Kericho's rolling tea estates with estate housing and forest belts",
+   "lat": -0.37,
+   "lon": 35.28,
+   "radius_km": 20,
+   "aliases": [
+    "kericho tea",
+    "kericho tea estates",
+    "kericho tea estate",
+    "kericho tea farms",
+    "kericho tea plantation"
+   ],
+   "names": [
+    "kericho",
+    "kericho town"
+   ],
+   "palette": {
+    "sky": "#C4DCEE",
+    "far": "#7E9C88",
+    "mid": "#86AE3C",
+    "ice": "#F3F1EA",
+    "water": "#B48C55",
+    "near": "#20241C",
+    "sun": "#F2C14E",
+    "leaf": "#A6CC3E",
+    "acc": "#B5503A",
+    "obj": "#36552B"
+   }
+  },
+  {
    "slug": "lake-naivasha",
    "label": "Hippos in Lake Naivasha",
    "lat": -0.77,
@@ -188,8 +273,7 @@
    "aliases": [
     "lake naivasha",
     "lago naivasha",
-    "naivasha lake",
-    "crescent island"
+    "naivasha lake"
    ],
    "names": [
     "naivasha"
@@ -285,7 +369,11 @@
     "leaf": "#8A9A4A",
     "acc": "#CDB07A",
     "obj": "#4A4440"
-   }
+   },
+   "names": [
+    "narok",
+    "narok town"
+   ]
   },
   {
    "slug": "mombasa",
@@ -317,6 +405,45 @@
    }
   },
   {
+   "slug": "mount-kenya",
+   "label": "The jagged twin summit of Mount Kenya (Batian and Nelion) with its glaciers, giant groundsels on the moorland",
+   "lat": -0.152,
+   "lon": 37.308,
+   "radius_km": 30,
+   "aliases": [
+    "mount kenya",
+    "mt kenya",
+    "monte kenya",
+    "mount kenya national park",
+    "parco nazionale del monte kenya",
+    "parco nazionale monte kenya",
+    "batian peak",
+    "nelion peak",
+    "point lenana",
+    "punta lenana",
+    "sirimon gate",
+    "sirimon route",
+    "mackinder camp",
+    "shipton camp"
+   ],
+   "names": [
+    "batian",
+    "lenana"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#A79E68",
+    "mid": "#646872",
+    "ice": "#F4F6F8",
+    "water": "#7FA6BE",
+    "near": "#23252A",
+    "sun": "#F2C14E",
+    "leaf": "#7FA34C",
+    "acc": "#7C7148",
+    "obj": "#5C4B3A"
+   }
+  },
+  {
    "slug": "nairobi",
    "label": "Giraffe in Nairobi National Park below the city skyline",
    "lat": -1.29,
@@ -341,6 +468,34 @@
     "leaf": "#A3A45E",
     "acc": "#9C5B3A",
     "obj": "#D49B5A"
+   }
+  },
+  {
+   "slug": "nanyuki",
+   "label": "The yellow equator sign with the map of Africa at Nanyuki, Mount Kenya on the horizon",
+   "lat": 0.0,
+   "lon": 37.07,
+   "radius_km": 15,
+   "aliases": [
+    "nanyuki equator",
+    "equator nanyuki",
+    "nanyuki equator sign"
+   ],
+   "names": [
+    "nanyuki",
+    "nanyuki town"
+   ],
+   "palette": {
+    "sky": "#9FCBEE",
+    "far": "#7F8DAA",
+    "mid": "#55585C",
+    "ice": "#F4F5F2",
+    "water": "#4E6E3A",
+    "near": "#1F1F1E",
+    "sun": "#F2C14E",
+    "leaf": "#93A05A",
+    "acc": "#F2D21A",
+    "obj": "#C8283A"
    }
   },
   {
@@ -370,6 +525,40 @@
     "leaf": "#7E9A42",
     "acc": "#A85C30",
     "obj": "#5E7038"
+   }
+  },
+  {
+   "slug": "thomsons-falls",
+   "label": "Thomson's Falls plunging into its forested basalt gorge at Nyahururu",
+   "lat": 0.044,
+   "lon": 36.373,
+   "radius_km": 5,
+   "aliases": [
+    "thomson s falls",
+    "thomsons falls",
+    "thomson falls",
+    "thompson s falls",
+    "thompsons falls",
+    "thompson falls",
+    "cascate thomson",
+    "cascate di thomson",
+    "nyahururu falls"
+   ],
+   "names": [
+    "nyahururu",
+    "nyahururu town"
+   ],
+   "palette": {
+    "sky": "#CFE3F0",
+    "far": "#9DB57A",
+    "mid": "#6E4E3F",
+    "ice": "#FFFFFF",
+    "water": "#A7C6D6",
+    "near": "#221F1C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#93B356",
+    "obj": "#3F5E2E"
    }
   }
  ]
