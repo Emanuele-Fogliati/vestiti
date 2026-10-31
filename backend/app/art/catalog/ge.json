@@ -3,6 +3,28 @@
  "name": "Georgia",
  "places": [
   {
+   "slug": "ananuri",
+   "label": "Ananuri fortress above the Zhinvali reservoir",
+   "lat": 42.164,
+   "lon": 44.703,
+   "radius_km": 4,
+   "aliases": [
+    "ananuri"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#4F7D3F",
+    "mid": "#C9A57C",
+    "ice": "#C4CCD2",
+    "water": "#73B8AE",
+    "near": "#2A2621",
+    "sun": "#F4C542",
+    "leaf": "#66983F",
+    "acc": "#A55B3F",
+    "obj": "#B03A2E"
+   }
+  },
+  {
    "slug": "bagrati-cathedral",
    "label": "Bagrati Cathedral in Kutaisi with its bell tower",
    "lat": 42.2771,
@@ -24,6 +46,30 @@
     "leaf": "#6FA343",
     "acc": "#4FB59B",
     "obj": "#2E4A2C"
+   }
+  },
+  {
+   "slug": "gelati-monastery",
+   "label": "Gelati Monastery's cathedral and bell tower",
+   "lat": 42.295,
+   "lon": 42.768,
+   "radius_km": 4,
+   "aliases": [
+    "gelati",
+    "cattedrale di gelati",
+    "monastero di gelati"
+   ],
+   "palette": {
+    "sky": "#C4DCEF",
+    "far": "#5E8E46",
+    "mid": "#C8A87C",
+    "ice": "#B7AE9F",
+    "water": "#5E8C84",
+    "near": "#2B251E",
+    "sun": "#F4C542",
+    "leaf": "#2F5A30",
+    "acc": "#7F858A",
+    "obj": "#78A548"
    }
   },
   {
@@ -60,6 +106,33 @@
    ]
   },
   {
+   "slug": "gori",
+   "label": "Gori fortress on its hill",
+   "lat": 41.986,
+   "lon": 44.108,
+   "radius_km": 12,
+   "aliases": [
+    "gori fortress",
+    "goris tsikhe",
+    "fortezza di gori"
+   ],
+   "names": [
+    "gori"
+   ],
+   "palette": {
+    "sky": "#8FC3EE",
+    "far": "#9AAE7A",
+    "mid": "#8E7D68",
+    "ice": "#E9E2D4",
+    "water": "#5E8C84",
+    "near": "#2A2520",
+    "sun": "#F4C542",
+    "leaf": "#79A04A",
+    "acc": "#B05A3C",
+    "obj": "#4F8A34"
+   }
+  },
+  {
    "slug": "gudauri",
    "label": "The Friendship Monument mosaic above Gudauri",
    "lat": 42.4964,
@@ -74,7 +147,11 @@
     "gudauri panorama"
    ],
    "names": [
-    "gudauri"
+    "gudauri",
+    "georgian military road",
+    "georgian military highway",
+    "grande strada militare georgiana",
+    "strada militare georgiana"
    ],
    "palette": {
     "sky": "#A9CFF2",
@@ -111,6 +188,34 @@
     "leaf": "#7E9A4A",
     "acc": "#BC9157",
     "obj": "#C2603F"
+   }
+  },
+  {
+   "slug": "kakheti",
+   "label": "Kakheti vineyards under the Greater Caucasus, with a qvevri",
+   "lat": 41.9,
+   "lon": 45.65,
+   "radius_km": 50,
+   "aliases": [
+    "alazani valley",
+    "kakheti wine"
+   ],
+   "names": [
+    "kakheti",
+    "kakhetia",
+    "kakheti region"
+   ],
+   "palette": {
+    "sky": "#C6DDEF",
+    "far": "#8E9DB2",
+    "mid": "#A0664A",
+    "ice": "#F2F4F6",
+    "water": "#557C45",
+    "near": "#2A241F",
+    "sun": "#F4C542",
+    "leaf": "#6E9E3A",
+    "acc": "#C27548",
+    "obj": "#B03A2E"
    }
   },
   {
@@ -186,6 +291,32 @@
     "leaf": "#6E8A3E",
     "acc": "#B34A35",
     "obj": "#B9C0C6"
+   }
+  },
+  {
+   "slug": "sighnaghi",
+   "label": "Sighnaghi's red roofs and bell tower above the Alazani valley",
+   "lat": 41.619,
+   "lon": 45.922,
+   "radius_km": 10,
+   "aliases": [],
+   "names": [
+    "sighnaghi",
+    "signagi",
+    "signakhi",
+    "sighnaghi town"
+   ],
+   "palette": {
+    "sky": "#C8DEEE",
+    "far": "#B7C78E",
+    "mid": "#B98466",
+    "ice": "#EDE6DA",
+    "water": "#A3B4C6",
+    "near": "#2B2420",
+    "sun": "#F4C542",
+    "leaf": "#4F7E37",
+    "acc": "#C25B3C",
+    "obj": "#B03A2E"
    }
   },
   {
@@ -270,6 +401,53 @@
     "leaf": "#8A9A4E",
     "acc": "#B5734F",
     "obj": "#A24E38"
+   }
+  },
+  {
+   "slug": "ushguli",
+   "label": "Ushguli's Svan towers under Mount Shkhara",
+   "lat": 42.917,
+   "lon": 43.015,
+   "radius_km": 8,
+   "aliases": [
+    "ushguli",
+    "ushkuli",
+    "chazhashi",
+    "shkhara"
+   ],
+   "palette": {
+    "sky": "#C9DFF0",
+    "far": "#7D8794",
+    "mid": "#76695A",
+    "ice": "#F3F5F7",
+    "water": "#BCD3D6",
+    "near": "#29251F",
+    "sun": "#F4C542",
+    "leaf": "#62973F",
+    "acc": "#5E5953",
+    "obj": "#B03A2E"
+   }
+  },
+  {
+   "slug": "vardzia",
+   "label": "Vardzia cave city cliff face",
+   "lat": 41.381,
+   "lon": 43.284,
+   "radius_km": 5,
+   "aliases": [
+    "vardzia"
+   ],
+   "palette": {
+    "sky": "#CFE2F0",
+    "far": "#8E9E6C",
+    "mid": "#A89C8C",
+    "ice": "#D3C1AE",
+    "water": "#5E8C84",
+    "near": "#2B2622",
+    "sun": "#F4C542",
+    "leaf": "#7A9450",
+    "acc": "#B49A78",
+    "obj": "#B03A2E"
    }
   }
  ]
