@@ -3,6 +3,70 @@
  "name": "Bulgaria",
  "places": [
   {
+   "slug": "plovdiv",
+   "label": "Old Plovdiv: the Kuyumdzhiev Revival house (Ethnographic Museum)",
+   "lat": 42.1497,
+   "lon": 24.7543,
+   "radius_km": 12,
+   "aliases": [
+    "old plovdiv",
+    "kuyumdzhiev",
+    "plovdiv ethnographic museum",
+    "regional ethnographic museum plovdiv",
+    "ethnographic museum plovdiv",
+    "museo etnografico di plovdiv",
+    "plovdiv old city",
+    "plovdiv old town"
+   ],
+   "names": [
+    "plovdiv",
+    "plovdiv city",
+    "philippopolis"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#D3CBBB",
+    "mid": "#3F4C68",
+    "ice": "#ECE4D2",
+    "water": "#C4865A",
+    "near": "#221F24",
+    "sun": "#E8B648",
+    "leaf": "#4E7D36",
+    "acc": "#A65A2E",
+    "obj": "#B7503A"
+   }
+  },
+  {
+   "slug": "rila-monastery",
+   "label": "Rila Monastery: Church of the Nativity and Hrelyo's tower",
+   "lat": 42.1335,
+   "lon": 23.3403,
+   "radius_km": 6,
+   "aliases": [
+    "rila monastery",
+    "monastero di rila",
+    "rilski manastir",
+    "rila monastir",
+    "monastery of saint ivan of rila",
+    "rilski monastery"
+   ],
+   "names": [
+    "rila"
+   ],
+   "palette": {
+    "sky": "#A2CBEF",
+    "far": "#A9A498",
+    "mid": "#C98476",
+    "ice": "#F3EFE6",
+    "water": "#4F78A0",
+    "near": "#211E1D",
+    "sun": "#F4C443",
+    "leaf": "#3E6D35",
+    "acc": "#D9A23E",
+    "obj": "#97806A"
+   }
+  },
+  {
    "slug": "sofia",
    "label": "Alexander Nevsky Cathedral, Sofia",
    "lat": 42.6959,
@@ -16,7 +80,12 @@
     "alexander nevski",
     "nevsky cathedral",
     "cattedrale di aleksandr nevskij",
-    "aleksandr nevskij"
+    "aleksandr nevskij",
+    "alexander nevsky",
+    "alexandre nevski",
+    "aleksandr nevsky",
+    "aleksandar nevsky",
+    "alexander nevskij"
    ],
    "names": [
     "sofia",
@@ -35,6 +104,37 @@
     "leaf": "#5E8A44",
     "acc": "#D6AC48",
     "obj": "#7FB89E"
+   }
+  },
+  {
+   "slug": "veliko-tarnovo",
+   "label": "Tsarevets fortress with the Patriarchal Cathedral, Veliko Tarnovo",
+   "lat": 43.0838,
+   "lon": 25.6527,
+   "radius_km": 12,
+   "aliases": [
+    "tsarevets",
+    "carevec",
+    "veliko turnovo fortress"
+   ],
+   "names": [
+    "veliko tarnovo",
+    "veliko turnovo",
+    "veliko tarnovo old town",
+    "tarnovo",
+    "tirnovo"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#93A97E",
+    "mid": "#B7A285",
+    "ice": "#D8CDBA",
+    "water": "#5E9AA8",
+    "near": "#2A2621",
+    "sun": "#F2C14E",
+    "leaf": "#5F8A3C",
+    "acc": "#A0826A",
+    "obj": "#7E909C"
    }
   }
  ]
