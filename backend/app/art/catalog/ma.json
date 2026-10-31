@@ -164,6 +164,39 @@
    }
   },
   {
+   "slug": "bou-inania-madrasa",
+   "label": "Courtyard and minaret of the Bou Inania Madrasa, Fes",
+   "lat": 34.0619,
+   "lon": -4.9827,
+   "radius_km": 2,
+   "aliases": [
+    "bou inania fes",
+    "bou inania fez",
+    "bou inania madrasa fes",
+    "bou inania madrasa fez",
+    "medersa bou inania fes",
+    "medersa bou inania fez",
+    "madrasa bou inania fes",
+    "madrasa bou inania fez",
+    "bou inania medersa fes",
+    "bou inania medersa fez",
+    "bu inaniya fes",
+    "bou inaniya fez"
+   ],
+   "palette": {
+    "sky": "#A6CBF2",
+    "far": "#E3D3B8",
+    "mid": "#D7B07A",
+    "ice": "#F1EBDF",
+    "water": "#3F8A86",
+    "near": "#241C17",
+    "sun": "#F2C14E",
+    "leaf": "#3E7E5C",
+    "acc": "#6B4429",
+    "obj": "#B8913F"
+   }
+  },
+  {
    "slug": "chefchaouen",
    "label": "Blue steps of Chefchaouen",
    "lat": 35.171,
@@ -184,6 +217,43 @@
     "leaf": "#4F8A3A",
     "acc": "#C2643A",
     "obj": "#B8CDF0"
+   }
+  },
+  {
+   "slug": "chouara-tannery",
+   "label": "Dye vats of the Chouara Tannery in Fes",
+   "lat": 34.066,
+   "lon": -4.973,
+   "radius_km": 2,
+   "aliases": [
+    "chouara",
+    "chouwara",
+    "chauwara",
+    "fes tannery",
+    "fez tannery",
+    "fes tanneries",
+    "fez tanneries",
+    "tanneries of fes",
+    "tanneries of fez",
+    "tannery of fes",
+    "tannery of fez",
+    "tanneries de fes",
+    "concerie di fes",
+    "conceria di fes",
+    "concerie di fez",
+    "conceria di fez"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E6DCC8",
+    "mid": "#D9B46C",
+    "ice": "#F0EEE6",
+    "water": "#9EA79A",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#A57B58",
+    "acc": "#6E4630",
+    "obj": "#C0303A"
    }
   },
   {
@@ -374,6 +444,35 @@
    ]
   },
   {
+   "slug": "ifrane",
+   "label": "The stone lion of Ifrane",
+   "lat": 33.533,
+   "lon": -5.108,
+   "radius_km": 12,
+   "aliases": [
+    "ifrane lion",
+    "lion of ifrane",
+    "lion d ifrane",
+    "leone di ifrane"
+   ],
+   "names": [
+    "ifrane",
+    "ifran"
+   ],
+   "palette": {
+    "sky": "#BFDBF0",
+    "far": "#93B565",
+    "mid": "#D6C7A4",
+    "ice": "#ECE4D2",
+    "water": "#6E9FB8",
+    "near": "#23261F",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B36",
+    "acc": "#A8583C",
+    "obj": "#4C6B60"
+   }
+  },
+  {
    "slug": "imlil",
    "label": "Imlil village under the High Atlas slopes with a mule",
    "lat": 31.137,
@@ -381,10 +480,13 @@
    "radius_km": 10,
    "aliases": [
     "imlil valley",
-    "ait mizane"
+    "ait mizane",
+    "aroumd",
+    "aremd"
    ],
    "names": [
-    "imlil"
+    "imlil",
+    "armed"
    ],
    "palette": {
     "sky": "#A9C8E8",
@@ -602,6 +704,30 @@
    }
   },
   {
+   "slug": "mount-toubkal",
+   "label": "Jbel Toubkal summit massif with a Barbary sheep",
+   "lat": 31.0597,
+   "lon": -7.9156,
+   "radius_km": 15,
+   "aliases": [
+    "toubkal",
+    "tubkal",
+    "toubkhal"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#B3B0B6",
+    "mid": "#6F645D",
+    "ice": "#EEF0F2",
+    "water": "#7FA7C0",
+    "near": "#221E1C",
+    "sun": "#F2C14E",
+    "leaf": "#6F7F4A",
+    "acc": "#9C6A52",
+    "obj": "#8C7C70"
+   }
+  },
+  {
    "slug": "rabat",
    "label": "Hassan Tower and its column field, Rabat",
    "lat": 34.024,
@@ -633,6 +759,38 @@
     "leaf": "#5E8A3C",
     "acc": "#9A5328",
     "obj": "#F2F0EA"
+   }
+  },
+  {
+   "slug": "rissani",
+   "label": "Rissani's monumental city gate with a date palm",
+   "lat": 31.284,
+   "lon": -4.262,
+   "radius_km": 10,
+   "aliases": [
+    "bab rissani",
+    "rissani gate",
+    "porte de rissani",
+    "porta di rissani"
+   ],
+   "names": [
+    "rissani",
+    "risani",
+    "rissani city",
+    "rissani market",
+    "rissani souk"
+   ],
+   "palette": {
+    "sky": "#AFD0F0",
+    "far": "#DDBF94",
+    "mid": "#E8CF95",
+    "ice": "#E9E0D2",
+    "water": "#86796B",
+    "near": "#2A211C",
+    "sun": "#F2C14E",
+    "leaf": "#5A7E3C",
+    "acc": "#E0A18A",
+    "obj": "#2F7F5E"
    }
   },
   {
