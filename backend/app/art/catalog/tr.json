@@ -3,6 +3,68 @@
  "name": "Turkey",
  "places": [
   {
+   "slug": "akdamar-island",
+   "label": "The Armenian Church of the Holy Cross on Akdamar Island, Lake Van, with Mount Artos",
+   "lat": 38.3406,
+   "lon": 43.0383,
+   "radius_km": 3,
+   "aliases": [
+    "akdamar",
+    "aghtamar",
+    "akhtamar",
+    "ahtamar",
+    "aghtamar island",
+    "isola di akdamar"
+   ],
+   "palette": {
+    "sky": "#AFD2F0",
+    "far": "#A99A92",
+    "mid": "#C68A6A",
+    "ice": "#EEE8E0",
+    "water": "#2C8FB8",
+    "near": "#2B221E",
+    "sun": "#F2C14E",
+    "leaf": "#5E8C3C",
+    "acc": "#A8705A",
+    "obj": "#B7B072"
+   }
+  },
+  {
+   "slug": "ani",
+   "label": "The ruined Cathedral of Ani on the steppe plateau",
+   "lat": 40.5075,
+   "lon": 43.5728,
+   "radius_km": 4,
+   "aliases": [
+    "ani ruins",
+    "ani ancient city",
+    "ancient ani",
+    "ani archaeological site",
+    "ani harabeleri",
+    "ani oren yeri",
+    "rovine di ani",
+    "ani cathedral",
+    "cattedrale di ani"
+   ],
+   "names": [
+    "ani",
+    "ani kars",
+    "ani city"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#B9AA8C",
+    "mid": "#BC8460",
+    "ice": "#E8DCC8",
+    "water": "#4E8EB0",
+    "near": "#2A201C",
+    "sun": "#F2C14E",
+    "leaf": "#A3A262",
+    "acc": "#8C5C44",
+    "obj": "#CDBC90"
+   }
+  },
+  {
    "slug": "anitkabir",
    "label": "Anitkabir, the mausoleum of Ataturk in Ankara",
    "lat": 39.925,
@@ -228,6 +290,36 @@
     "leaf": "#8C9A62",
     "acc": "#A9AFB0",
     "obj": "#857563"
+   }
+  },
+  {
+   "slug": "bodrum-castle",
+   "label": "The Castle of St Peter on Bodrum harbour, with a gulet and the white town behind",
+   "lat": 37.0318,
+   "lon": 27.4293,
+   "radius_km": 2,
+   "aliases": [
+    "bodrum castle",
+    "bodrum kalesi",
+    "castle of st peter",
+    "castle of saint peter",
+    "st peter castle",
+    "castello di san pietro",
+    "castello di bodrum",
+    "museum of underwater archaeology",
+    "museo di archeologia subacquea"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#C2AD8A",
+    "mid": "#A59C8A",
+    "ice": "#F4F1EA",
+    "water": "#2D7FB2",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5C7A3A",
+    "acc": "#BE9A62",
+    "obj": "#8B5A33"
    }
   },
   {
@@ -566,6 +658,30 @@
    }
   },
   {
+   "slug": "gobekli-tepe",
+   "label": "The T-shaped pillars of Enclosure D at Gobekli Tepe under the protective roof",
+   "lat": 37.2232,
+   "lon": 38.9224,
+   "radius_km": 4,
+   "aliases": [
+    "gobekli tepe",
+    "gobeklitepe",
+    "gobekli"
+   ],
+   "palette": {
+    "sky": "#B6D3EC",
+    "far": "#DCCBA8",
+    "mid": "#C3A984",
+    "ice": "#EFE7D6",
+    "water": "#4E8EB0",
+    "near": "#2B2620",
+    "sun": "#F2C14E",
+    "leaf": "#8A9A52",
+    "acc": "#F4F2EC",
+    "obj": "#5C6066"
+   }
+  },
+  {
    "slug": "golden-horn",
    "label": "The Golden Horn from Pierre Loti hill",
    "lat": 41.04,
@@ -693,6 +809,34 @@
     "leaf": "#5C8A40",
     "acc": "#D2C6AE",
     "obj": "#6E5A3A"
+   }
+  },
+  {
+   "slug": "ihlara-valley",
+   "label": "The Ihlara gorge: sheer walls with rock-cut churches, poplars and the Melendiz stream",
+   "lat": 38.255,
+   "lon": 34.29,
+   "radius_km": 8,
+   "aliases": [
+    "ihlara",
+    "valle di ihlara",
+    "valle di ilhara",
+    "ilhara",
+    "ihlara vadisi",
+    "belisirma",
+    "peristrema"
+   ],
+   "palette": {
+    "sky": "#A5CAEE",
+    "far": "#C9AC72",
+    "mid": "#A68A76",
+    "ice": "#EFE6D8",
+    "water": "#5D8F8C",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#A9BC3E",
+    "acc": "#5E7E34",
+    "obj": "#7A5A3E"
    }
   },
   {
@@ -921,6 +1065,32 @@
    }
   },
   {
+   "slug": "lone-pine",
+   "label": "The lone pine and the white memorial of Lone Pine Cemetery, Gallipoli",
+   "lat": 40.2306,
+   "lon": 26.2886,
+   "radius_km": 2,
+   "aliases": [
+    "lone pine",
+    "kanlisirt",
+    "kanli sirt",
+    "lone pine cemetery",
+    "lone pine memorial"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C9C2B0",
+    "mid": "#ECE7DC",
+    "ice": "#F8F6F0",
+    "water": "#4E8EB0",
+    "near": "#22241E",
+    "sun": "#F2C14E",
+    "leaf": "#86A34A",
+    "acc": "#3E6230",
+    "obj": "#6A4B36"
+   }
+  },
+  {
    "slug": "love-valley",
    "label": "The tall capped fairy chimneys of Love Valley (Bağlıdere), Cappadocia",
    "lat": 38.6601,
@@ -1083,6 +1253,33 @@
     "leaf": "#5E8A48",
     "acc": "#C8A060",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "pasabag",
+   "label": "The twin-headed capped fairy chimneys of Pasabag (Monks Valley), Cappadocia",
+   "lat": 38.6717,
+   "lon": 34.8527,
+   "radius_km": 2,
+   "aliases": [
+    "pasabag",
+    "pasabagi",
+    "monks valley",
+    "monk valley",
+    "valle dei monaci",
+    "pasabang"
+   ],
+   "palette": {
+    "sky": "#A4CBF2",
+    "far": "#CDB89E",
+    "mid": "#E6D5BC",
+    "ice": "#F4ECDD",
+    "water": "#6FA7C8",
+    "near": "#2E2620",
+    "sun": "#F2C14E",
+    "leaf": "#7E9C48",
+    "acc": "#8E7B6A",
+    "obj": "#EADFCA"
    }
   },
   {
