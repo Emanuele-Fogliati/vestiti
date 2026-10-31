@@ -3,6 +3,29 @@
  "name": "Georgia",
  "places": [
   {
+   "slug": "alaverdi-monastery",
+   "label": "Alaverdi Cathedral with its tall drum above the monastery walls",
+   "lat": 42.0326,
+   "lon": 45.3771,
+   "radius_km": 4,
+   "aliases": [
+    "alaverdi",
+    "monastero di alaverdi"
+   ],
+   "palette": {
+    "sky": "#9CC6EC",
+    "far": "#6F8F86",
+    "mid": "#BCA889",
+    "ice": "#ECE6D8",
+    "water": "#6E9FB8",
+    "near": "#2B2722",
+    "sun": "#F4C542",
+    "leaf": "#7FA14A",
+    "acc": "#D0683C",
+    "obj": "#8C8E8C"
+   }
+  },
+  {
    "slug": "ananuri",
    "label": "Ananuri fortress above the Zhinvali reservoir",
    "lat": 42.164,
@@ -46,6 +69,92 @@
     "leaf": "#6FA343",
     "acc": "#4FB59B",
     "obj": "#2E4A2C"
+   }
+  },
+  {
+   "slug": "batonis-tsikhe",
+   "label": "Batonis Tsikhe gate: round tower and balconied gate tower, Telavi",
+   "lat": 41.9197,
+   "lon": 45.4733,
+   "radius_km": 3,
+   "aliases": [
+    "batonis tsikhe",
+    "batonistsikhe",
+    "batonis castle",
+    "erekle ii palace",
+    "erekle ii s palace",
+    "palace of erekle ii"
+   ],
+   "palette": {
+    "sky": "#8CC2F0",
+    "far": "#BEB8AC",
+    "mid": "#CDB894",
+    "ice": "#F2ECE0",
+    "water": "#6A9CB0",
+    "near": "#2B2622",
+    "sun": "#F4C842",
+    "leaf": "#3F6B3A",
+    "acc": "#B0745A",
+    "obj": "#C79A62"
+   },
+   "names": [
+    "telavi",
+    "telavi town",
+    "telawi"
+   ]
+  },
+  {
+   "slug": "borjomi",
+   "label": "Borjomi: the glass-domed mineral spring rotunda in the forested gorge",
+   "lat": 41.8386,
+   "lon": 43.3836,
+   "radius_km": 12,
+   "aliases": [
+    "borjomi central park",
+    "borjomi mineral water park",
+    "borjomi park"
+   ],
+   "names": [
+    "borjomi",
+    "borjomi town",
+    "borzhomi"
+   ],
+   "palette": {
+    "sky": "#B4D6EE",
+    "far": "#9E9C8C",
+    "mid": "#6DB39A",
+    "ice": "#E6E4DA",
+    "water": "#2F6A3C",
+    "near": "#22302A",
+    "sun": "#F4C542",
+    "leaf": "#5A9A44",
+    "acc": "#9C6A3E",
+    "obj": "#B4DECF"
+   }
+  },
+  {
+   "slug": "chronicles-of-georgia",
+   "label": "The Chronicles of Georgia: giant bronze-relief pillars above the Tbilisi Sea",
+   "lat": 41.7695,
+   "lon": 44.803,
+   "radius_km": 3,
+   "aliases": [
+    "chronicles of georgia",
+    "chronicle of georgia",
+    "cronache della georgia",
+    "history memorial of georgia"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#B7AFA2",
+    "mid": "#5E635E",
+    "ice": "#D9CFBF",
+    "water": "#6E9FB8",
+    "near": "#1E211F",
+    "sun": "#F4C542",
+    "leaf": "#6E8A4A",
+    "acc": "#A0523C",
+    "obj": "#474C48"
    }
   },
   {
@@ -219,6 +328,33 @@
    }
   },
   {
+   "slug": "khertvisi-fortress",
+   "label": "Khertvisi Fortress on its crag in the Mtkvari gorge",
+   "lat": 41.4806,
+   "lon": 43.2847,
+   "radius_km": 4,
+   "aliases": [
+    "khertvisi"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#7E9461",
+    "mid": "#A89A84",
+    "ice": "#E4DCCB",
+    "water": "#5F8F86",
+    "near": "#2A2724",
+    "sun": "#F4C842",
+    "leaf": "#6E9F45",
+    "acc": "#B4573E",
+    "obj": "#6F675C"
+   },
+   "names": [
+    "aspindza",
+    "aspindza town",
+    "aspindza village"
+   ]
+  },
+  {
    "slug": "kutaisi",
    "label": "Kutaisi's Colchis Fountain on the central square",
    "lat": 42.2713,
@@ -272,6 +408,28 @@
    }
   },
   {
+   "slug": "metekhi-church",
+   "label": "Metekhi Church and King Vakhtang's statue on the cliff above the Mtkvari, Tbilisi",
+   "lat": 41.6906,
+   "lon": 44.8107,
+   "radius_km": 2,
+   "aliases": [
+    "metekhi"
+   ],
+   "palette": {
+    "sky": "#A4CCF0",
+    "far": "#B5A386",
+    "mid": "#C9A97F",
+    "ice": "#E2DCCF",
+    "water": "#7F9478",
+    "near": "#2A2522",
+    "sun": "#F4C842",
+    "leaf": "#56803E",
+    "acc": "#8E5B45",
+    "obj": "#97795A"
+   }
+  },
+  {
    "slug": "narikala-fortress",
    "label": "Narikala Fortress and St Nicholas church above Tbilisi's Old Town",
    "lat": 41.6879,
@@ -292,6 +450,35 @@
     "acc": "#B34A35",
     "obj": "#B9C0C6"
    }
+  },
+  {
+   "slug": "rabati-castle",
+   "label": "Rabati Castle in Akhaltsikhe: the citadel keep and the gold-domed mosque",
+   "lat": 41.6406,
+   "lon": 42.9817,
+   "radius_km": 4,
+   "aliases": [
+    "rabati castle",
+    "rabati fortress",
+    "rabati"
+   ],
+   "palette": {
+    "sky": "#AACCEA",
+    "far": "#B4BFA0",
+    "mid": "#9C968B",
+    "ice": "#ECE9E1",
+    "water": "#6E9FB8",
+    "near": "#2B2824",
+    "sun": "#F4C542",
+    "leaf": "#5A8A3C",
+    "acc": "#D8AC3A",
+    "obj": "#C9B793"
+   },
+   "names": [
+    "akhaltsikhe",
+    "akhaltsikhe town",
+    "akhalcikhe"
+   ]
   },
   {
    "slug": "sighnaghi",
