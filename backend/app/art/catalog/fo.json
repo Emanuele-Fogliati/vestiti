@@ -3,6 +3,35 @@
  "name": "Faroe Islands",
  "places": [
   {
+   "slug": "mykines",
+   "label": "Mykinesholmur lighthouse, puffins and the footbridge to Mykines",
+   "lat": 62.102,
+   "lon": -7.68,
+   "radius_km": 7,
+   "aliases": [
+    "mykinesholmur",
+    "mykines holmur",
+    "mykines lighthouse"
+   ],
+   "names": [
+    "mykines island",
+    "mykines village",
+    "mykines faroe islands"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#9FB0B8",
+    "mid": "#4D4A3E",
+    "ice": "#FBFBF8",
+    "water": "#2F5F86",
+    "near": "#1E2022",
+    "sun": "#F2C14E",
+    "leaf": "#7EA845",
+    "acc": "#E0482A",
+    "obj": "#A9C3CF"
+   }
+  },
+  {
    "slug": "saksun",
    "label": "Saksun church and lagoon between the green mountains",
    "lat": 62.248,
@@ -22,6 +51,34 @@
     "leaf": "#A3B85C",
     "acc": "#4E5848",
     "obj": "#8C8A80"
+   }
+  },
+  {
+   "slug": "vagar",
+   "label": "Mulafossur waterfall dropping into the sea below Gasadalur, Vagar",
+   "lat": 62.1053,
+   "lon": -7.4346,
+   "radius_km": 18,
+   "aliases": [
+    "mulafossur"
+   ],
+   "names": [
+    "vagar",
+    "vagar island",
+    "vagar faroe islands",
+    "gasadalur"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#C6D8E2",
+    "mid": "#4B4239",
+    "ice": "#FFFFFF",
+    "water": "#2E6E8E",
+    "near": "#1E201C",
+    "sun": "#F2C14E",
+    "leaf": "#7FAA40",
+    "acc": "#8B6040",
+    "obj": "#6F6C58"
    }
   }
  ]

@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="38" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V94H300V200Z" fill="var(--il-water)"/>
+<path d="M0 95V88L14 84L30 85L42 95ZM248 95L262 86L280 83L300 85V95Z" fill="var(--il-far)"/>
+<path d="M48 100L52 88L64 84Q96 70 128 58Q150 50 170 50Q192 54 206 64L220 78L228 100Z" fill="var(--il-leaf)"/>
+<path d="M48 100L52 88L64 84L68 92L66 100ZM136 100L148 92L162 90L172 84L184 86L194 76L204 70L210 68L220 78L228 100Z" fill="var(--il-mid)"/>
+<path d="M66 100L68 94L110 96L140 97V100Z" fill="var(--il-mid)"/>
+
+<path d="M0 200V150L12 132L26 116L40 106L58 101L92 99Q140 104 200 116L300 126V200Z" fill="var(--il-leaf)"/>
+<path d="M0 200V150L12 132L26 116L40 106L58 101L92 99L44 112L32 126L24 148L20 200Z" fill="var(--il-mid)"/>
+<path d="M8 160Q14 140 24 128M14 190Q18 168 26 150" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M66 94H92M66 99H92M66 99L70 94L74 99L78 94L82 99L86 94L90 99" stroke="var(--il-near)" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+<path d="M198 64L176 138M222 64L248 140" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M193 136L197 112H223L227 136ZM201 113L203.5 66H216.5L219 113Z" fill="var(--il-ice)"/>
+<path d="M198 66V60H222V66Z" fill="var(--il-ice)"/>
+<path d="M203 60V49H217V60Z" fill="var(--il-obj)"/>
+<path d="M207 60V49M213 60V49" stroke="var(--il-ice)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M200 50L210 39L220 50Z" fill="var(--il-acc)"/>
+<circle cx="210" cy="38" r="2.2" fill="var(--il-acc)"/>
+<path d="M210 35V28" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+<path d="M208 84h4v6h-4ZM207 124h6v10h-6Z" fill="var(--il-near)"/>
+<path d="M110 200Q140 150 190 134L300 138V200Z" fill="var(--il-leaf)"/>
+<g transform="translate(66 6)"><path d="M26.5 162Q23.5 153 28 147Q29.5 139.5 35.5 139.5Q41.5 139.5 41.5 145.5Q41.5 153 38.5 162ZM65 166Q67.8 157.6 63.6 152Q62.2 145 56.6 145Q51 145 51 150.6Q51 157.6 53.8 166ZM73 172Q70.2 163.6 74.4 158Q75.8 151 81.4 151Q87 151 87 156.6Q87 163.6 84.2 172Z" fill="var(--il-near)"/><path d="M35.5 160.5Q40 157.5 40.8 150L37 151.5Q34 156 35.5 160.5ZM34.8 141Q40.8 140.2 41.2 145.5Q38.5 148.5 34.8 147Q32.5 144 34.8 141ZM56.6 164.6Q52.4 161.8 51.7 154.8L55.2 156.2Q58 160.4 56.6 164.6ZM57.3 146.4Q51.7 145.7 51.3 150.6Q53.8 153.4 57.3 152Q59.4 149.2 57.3 146.4ZM81.4 170.6Q85.6 167.8 86.3 160.8L82.8 162.2Q80 166.4 81.4 170.6ZM80.7 152.4Q86.3 151.7 86.7 156.6Q84.2 159.4 80.7 158Q78.6 155.2 80.7 152.4Z" fill="var(--il-ice)"/><path d="M41.2 141.8L49 145.5L41.2 149.2ZM51.3 147.1L44 150.6L51.3 154.1ZM86.7 153.1L94 156.6L86.7 160.1Z" fill="var(--il-acc)"/><path d="M32.5 162V165M37 162V165M59.4 166V168.8M55.2 166V168.8M78.6 172V174.8M82.8 172V174.8" stroke="var(--il-acc)" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
