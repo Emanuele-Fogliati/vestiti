@@ -3,6 +3,33 @@
  "name": "Chile",
  "places": [
   {
+   "slug": "ahu-akivi",
+   "label": "The seven moai of Ahu Akivi, Easter Island",
+   "lat": -27.115,
+   "lon": -109.395,
+   "radius_km": 2,
+   "aliases": [
+    "ahu akivi",
+    "ahu a kivi",
+    "akivi"
+   ],
+   "names": [
+    "siete moai"
+   ],
+   "palette": {
+    "sky": "#C4DDF0",
+    "far": "#C2AE80",
+    "mid": "#76695A",
+    "ice": "#F2EEE4",
+    "water": "#3F78A8",
+    "near": "#28241F",
+    "sun": "#F5C744",
+    "leaf": "#4E7E3A",
+    "acc": "#93AE4C",
+    "obj": "#45403A"
+   }
+  },
+  {
    "slug": "ahu-tongariki",
    "label": "The fifteen moai of Ahu Tongariki, Easter Island",
    "lat": -27.1258,
@@ -23,6 +50,30 @@
     "leaf": "#9AA650",
     "acc": "#7E3628",
     "obj": "#5B5650"
+   }
+  },
+  {
+   "slug": "anakena",
+   "label": "Ahu Nau Nau moai among the palms of Anakena beach, Easter Island",
+   "lat": -27.073,
+   "lon": -109.323,
+   "radius_km": 2,
+   "aliases": [
+    "anakena",
+    "ahu nau nau",
+    "ahu naunau"
+   ],
+   "palette": {
+    "sky": "#9FC7EA",
+    "far": "#EEE8D8",
+    "mid": "#6E6457",
+    "ice": "#FFFFFF",
+    "water": "#2E8FB8",
+    "near": "#26221E",
+    "sun": "#F6C844",
+    "leaf": "#5B8A3A",
+    "acc": "#8E4636",
+    "obj": "#45413C"
    }
   },
   {
@@ -181,6 +232,31 @@
    }
   },
   {
+   "slug": "cerro-san-cristobal",
+   "label": "The Virgin statue on top of Cerro San Cristobal above Santiago",
+   "lat": -33.4253,
+   "lon": -70.6331,
+   "radius_km": 3,
+   "aliases": [
+    "cerro san cristobal",
+    "san cristobal hill",
+    "parque metropolitano",
+    "virgen del cerro san cristobal"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#CFC6C2",
+    "mid": "#A88A72",
+    "ice": "#F6F3EC",
+    "water": "#5A8FB8",
+    "near": "#262A24",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3C",
+    "acc": "#E6E0D8",
+    "obj": "#6F8FA8"
+   }
+  },
+  {
    "slug": "chiloe-island",
    "label": "Chiloe palafitos, stilt houses over the water",
    "lat": -42.47,
@@ -244,7 +320,9 @@
     "cuernos del paine",
     "los cuernos",
     "lago pehoe",
-    "lake pehoe"
+    "lake pehoe",
+    "nordenskjold",
+    "mirador cuernos"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -375,6 +453,56 @@
    }
   },
   {
+   "slug": "lake-llanquihue",
+   "label": "Lake Llanquihue with Osorno and Calbuco, Teatro del Lago at Frutillar",
+   "lat": -41.155,
+   "lon": -73.025,
+   "radius_km": 20,
+   "aliases": [
+    "llanquihue lake",
+    "lake llanquihue",
+    "lago llanquihue",
+    "teatro del lago"
+   ],
+   "names": [
+    "frutillar"
+   ],
+   "palette": {
+    "sky": "#B7D3EE",
+    "far": "#5C524B",
+    "mid": "#646A7C",
+    "ice": "#FFFFFF",
+    "water": "#6E9FC0",
+    "near": "#262428",
+    "sun": "#F6C844",
+    "leaf": "#6C9A3E",
+    "acc": "#B4643C",
+    "obj": "#A88C6E"
+   }
+  },
+  {
+   "slug": "orongo",
+   "label": "Orongo stone houses and petroglyphs above the motu islets",
+   "lat": -27.1906,
+   "lon": -109.4434,
+   "radius_km": 2,
+   "aliases": [
+    "orongo"
+   ],
+   "palette": {
+    "sky": "#B9D7F0",
+    "far": "#7D6E62",
+    "mid": "#9C9A92",
+    "ice": "#F2F0EA",
+    "water": "#2E5FA6",
+    "near": "#262624",
+    "sun": "#F4C542",
+    "leaf": "#86A84A",
+    "acc": "#C9B07A",
+    "obj": "#5E4B40"
+   }
+  },
+  {
    "slug": "osorno-volcano",
    "label": "Osorno Volcano",
    "lat": -41.1,
@@ -435,7 +563,12 @@
    "lat": -39.27,
    "lon": -71.97,
    "radius_km": 15,
-   "aliases": [],
+   "aliases": [
+    "villarrica volcano",
+    "volcan villarrica",
+    "vulcano villarrica",
+    "rucapillan"
+   ],
    "names": [
     "pucon"
    ],
@@ -545,6 +678,78 @@
     "leaf": "#4F7A44",
     "acc": "#C8463A",
     "obj": "#3F8F6A"
+   }
+  },
+  {
+   "slug": "rainbow-valley",
+   "label": "Rainbow Valley, the red rock canyon of Valle del Arcoiris near San Pedro de Atacama",
+   "lat": -22.665,
+   "lon": -68.25,
+   "radius_km": 5,
+   "aliases": [
+    "rainbow valley",
+    "valle del arcoiris",
+    "valle arcoiris",
+    "valle del arco iris",
+    "valle dell arcobaleno"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#A99AAE",
+    "mid": "#C9643F",
+    "ice": "#E6E1DA",
+    "water": "#5C8FC0",
+    "near": "#2B201C",
+    "sun": "#F6C844",
+    "leaf": "#9C9860",
+    "acc": "#8C7080",
+    "obj": "#E3A882"
+   }
+  },
+  {
+   "slug": "rano-kau",
+   "label": "Rano Kau crater with its reed-marsh lake, Easter Island",
+   "lat": -27.186,
+   "lon": -109.433,
+   "radius_km": 3,
+   "aliases": [
+    "rano kau",
+    "rano kao"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#C9B98C",
+    "mid": "#857560",
+    "ice": "#D9D3B8",
+    "water": "#3F6FB0",
+    "near": "#25241E",
+    "sun": "#F5C842",
+    "leaf": "#5E9136",
+    "acc": "#D3BC72",
+    "obj": "#6E7444"
+   }
+  },
+  {
+   "slug": "rano-raraku",
+   "label": "Moai heads on the slope of the Rano Raraku quarry",
+   "lat": -27.1213,
+   "lon": -109.2885,
+   "radius_km": 2,
+   "aliases": [
+    "rano raraku",
+    "moai quarry"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#7F786E",
+    "mid": "#5C524C",
+    "ice": "#F2F0EA",
+    "water": "#1F4F9C",
+    "near": "#252220",
+    "sun": "#F4C542",
+    "leaf": "#A3B84A",
+    "acc": "#C2A868",
+    "obj": "#9A5E3E"
    }
   },
   {
