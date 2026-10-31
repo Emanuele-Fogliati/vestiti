@@ -75,6 +75,30 @@
    }
   },
   {
+   "slug": "baphuon",
+   "label": "Baphuon temple-mountain at the end of its causeway, Angkor Thom",
+   "lat": 13.4434,
+   "lon": 103.8564,
+   "radius_km": 2,
+   "aliases": [
+    "baphuon",
+    "bapuon",
+    "baphoun"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#BDB29C",
+    "mid": "#7E7464",
+    "ice": "#D6CDBA",
+    "water": "#6E9AB8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E9440",
+    "acc": "#958A76",
+    "obj": "#5E574B"
+   }
+  },
+  {
    "slug": "battambang",
    "label": "Battambang bamboo train",
    "lat": 13.0957,
@@ -129,6 +153,34 @@
    }
   },
   {
+   "slug": "chambok",
+   "label": "Chambok waterfall in the forest near Kirirom",
+   "lat": 11.39,
+   "lon": 104.17,
+   "radius_km": 8,
+   "aliases": [
+    "chambok waterfall",
+    "chambak waterfall",
+    "chambok ecotourism",
+    "chambok community"
+   ],
+   "names": [
+    "chambok"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#8E9088",
+    "mid": "#7A5640",
+    "ice": "#F4F6F6",
+    "water": "#9CC4D4",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8E40",
+    "acc": "#B8703E",
+    "obj": "#3E6A30"
+   }
+  },
+  {
    "slug": "choeung-ek",
    "label": "The memorial stupa of Choeung Ek (Killing Fields)",
    "lat": 11.4844,
@@ -156,6 +208,59 @@
    }
   },
   {
+   "slug": "kampong-chhnang",
+   "label": "Kampong Chhnang floating village and clay pots on the Tonle Sap river",
+   "lat": 12.26,
+   "lon": 104.67,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "kampong chhnang",
+    "kompong chhnang"
+   ],
+   "palette": {
+    "sky": "#C8DCEC",
+    "far": "#7A8894",
+    "mid": "#4A86C2",
+    "ice": "#E6E4DC",
+    "water": "#9C9682",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4E",
+    "acc": "#C4452E",
+    "obj": "#B0683E"
+   }
+  },
+  {
+   "slug": "kampot",
+   "label": "Kampot's Old Bridge over the river, Bokor mountain behind",
+   "lat": 10.612,
+   "lon": 104.181,
+   "radius_km": 12,
+   "aliases": [
+    "kampot old bridge",
+    "old bridge kampot",
+    "kampot river"
+   ],
+   "names": [
+    "kampot",
+    "kampot town",
+    "kampot city"
+   ],
+   "palette": {
+    "sky": "#AFCDEE",
+    "far": "#7A8C94",
+    "mid": "#B8B4AC",
+    "ice": "#ECECE8",
+    "water": "#5A7E90",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3E",
+    "acc": "#2F7FB5",
+    "obj": "#8A8A84"
+   }
+  },
+  {
    "slug": "koh-rong",
    "label": "Koh Touch bay on Koh Rong: stilt guesthouses, pier and Khmer boats",
    "lat": 10.7235,
@@ -176,6 +281,35 @@
     "leaf": "#2F6B3A",
     "acc": "#F3EEE2",
     "obj": "#2A9C86"
+   }
+  },
+  {
+   "slug": "kratie",
+   "label": "Irrawaddy dolphin in the Mekong at Kratie",
+   "lat": 12.595,
+   "lon": 106.02,
+   "radius_km": 20,
+   "aliases": [
+    "kampi dolphin",
+    "kratie dolphin",
+    "kampi pool"
+   ],
+   "names": [
+    "kratie",
+    "kracheh",
+    "kratie town"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#5E7E4C",
+    "mid": "#5C666E",
+    "ice": "#E2D6B8",
+    "water": "#94A6A4",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#E3AE2A",
+    "obj": "#C23B30"
    }
   },
   {
@@ -211,6 +345,31 @@
     "phnon penh",
     "phnom phen"
    ]
+  },
+  {
+   "slug": "sambor-prei-kuk",
+   "label": "Prasat Tao brick tower with its lions at Sambor Prei Kuk",
+   "lat": 12.871,
+   "lon": 105.043,
+   "radius_km": 5,
+   "aliases": [
+    "sambor prei kuk",
+    "sambor prey kuk",
+    "isanapura",
+    "prasat tao"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#93A866",
+    "mid": "#9E6E52",
+    "ice": "#B8B0A0",
+    "water": "#6E9AB8",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#D2C6AE",
+    "obj": "#C9B282"
+   }
   },
   {
    "slug": "sihanoukville",
@@ -321,7 +480,15 @@
     "leaf": "#4E8A3A",
     "acc": "#C8463A",
     "obj": "#3F7FC0"
-   }
+   },
+   "names": [
+    "kampong kleang",
+    "kampong phlouk",
+    "kampong pluck",
+    "kampong plug",
+    "kompong pluk",
+    "kampong pluk"
+   ]
   },
   {
    "slug": "tuol-sleng-genocide-museum",
