@@ -3,6 +3,31 @@
  "name": "Eswatini",
  "places": [
   {
+   "slug": "hlane-royal-national-park",
+   "label": "Elephant and white rhinos at the Ndlovu waterhole in the lowveld bush, Hlane Royal National Park",
+   "lat": -26.27,
+   "lon": 31.89,
+   "radius_km": 20,
+   "aliases": [
+    "hlane",
+    "hlane royal national park",
+    "hlane national park",
+    "ndlovu camp"
+   ],
+   "palette": {
+    "sky": "#CFE3F0",
+    "far": "#C4A27A",
+    "mid": "#86817B",
+    "ice": "#F2EEE4",
+    "water": "#8FA0A2",
+    "near": "#2A2723",
+    "sun": "#F2C14E",
+    "leaf": "#7C8A4A",
+    "acc": "#BDB6AA",
+    "obj": "#A9A49C"
+   }
+  },
+  {
    "slug": "mlilwane-wildlife-sanctuary",
    "label": "Nyonyane peak and zebras, Mlilwane Wildlife Sanctuary",
    "lat": -26.48,
@@ -24,7 +49,14 @@
     "leaf": "#3F5E32",
     "acc": "#B5603E",
     "obj": "#8DB24E"
-   }
+   },
+   "names": [
+    "eswatini",
+    "swaziland",
+    "kingdom of eswatini",
+    "kingdom of swaziland",
+    "eswatini kingdom"
+   ]
   }
  ]
 }
