@@ -28,7 +28,7 @@ export function PlaceCard({ place, routes, onRoute, onClose, onZoom, zoomLabel, 
   return (
     <aside className="pcard" aria-label={place.name}>
       <button type="button" className="pcard-x" aria-label="Close" onClick={onClose}>✕</button>
-      {place.art && <Illustration terrain="hills" art={{ kind: "landmark", id: place.art, label: place.artLabel ?? place.name }} />}
+      {place.art && <Illustration terrain="hills" art={{ kind: "landmark", id: place.art, label: place.name }} />}
       <div className="pcard-in">
         <p className="kicker">
           {KIND_LABEL[place.kind]} · {parent

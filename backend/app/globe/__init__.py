@@ -64,10 +64,10 @@ def payload() -> dict:
         lm = next((m for m in art._named(name)
                    if m.country == cc and art._km(lat, lon, m.lat, m.lon) <= art.NAMESAKE_KM), None)
         hits = [i for i, names in enumerate(in_it) if cc in its[i].countries and _norm(name) in names]
-        places.append([pid, name, cc, kind, lat, lon, level(trips), lm.id if lm else None,
-                       lm.label if lm else None, hits, parent.get(pid)])
+        # no scene label here: it grows with every new scene and the card only needs it as alt text
+        places.append([pid, name, cc, kind, lat, lon, level(trips), lm.id if lm else None, hits, parent.get(pid)])
     return {
-        "fields": ["id", "name", "country", "kind", "lat", "lon", "level", "art", "art_label", "itineraries",
+        "fields": ["id", "name", "country", "kind", "lat", "lon", "level", "art", "itineraries",
                    "parent"],
         "itineraries": [{"slug": it.slug, "title": it.title} for it in its],
         "places": places,
