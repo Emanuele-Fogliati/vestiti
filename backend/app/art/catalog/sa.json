@@ -3,6 +3,43 @@
  "name": "Saudi Arabia",
  "places": [
   {
+   "slug": "al-balad",
+   "label": "Bayt Nasseef and coral-stone houses with wooden roshan balconies, Al-Balad (old Jeddah)",
+   "lat": 21.4836,
+   "lon": 39.1872,
+   "radius_km": 4,
+   "aliases": [
+    "old jeddah",
+    "historic jeddah",
+    "jeddah old town",
+    "old town jeddah",
+    "jeddah historic district",
+    "historic district of jeddah",
+    "al balad jeddah",
+    "jeddah al balad",
+    "bayt nasseef",
+    "beit nassif",
+    "nasseef house",
+    "nassif house"
+   ],
+   "names": [
+    "al balad",
+    "albalad"
+   ],
+   "palette": {
+    "sky": "#A9D0F0",
+    "far": "#E6D5B4",
+    "mid": "#CDB48E",
+    "ice": "#F6F1E6",
+    "water": "#4C8FB4",
+    "near": "#2B2119",
+    "sun": "#F3C443",
+    "leaf": "#4E8A36",
+    "acc": "#7A4A2C",
+    "obj": "#CFC2AA"
+   }
+  },
+  {
    "slug": "alula",
    "label": "Elephant Rock (Jabal AlFil), AlUla",
    "lat": 26.665,
@@ -30,6 +67,204 @@
     "leaf": "#6E8A4A",
     "acc": "#8E5A3A",
     "obj": "#E4BE94"
+   }
+  },
+  {
+   "slug": "diriyah",
+   "label": "Salwa Palace mud-brick walls at At-Turaif, Diriyah",
+   "lat": 24.7335,
+   "lon": 46.5727,
+   "radius_km": 6,
+   "aliases": [
+    "diriyah",
+    "ad diriyah",
+    "addiriyah",
+    "diriya",
+    "dir iyah",
+    "at turaif",
+    "al turaif",
+    "salwa palace"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#E3C49A",
+    "mid": "#C99C6C",
+    "ice": "#F0DDBC",
+    "water": "#4E8FB0",
+    "near": "#33251A",
+    "sun": "#F4C542",
+    "leaf": "#5F8A3C",
+    "acc": "#8C6844",
+    "obj": "#DCC6A2"
+   }
+  },
+  {
+   "slug": "hail",
+   "label": "A'arif Fort on its granite hill above Ha'il, Aja mountains behind",
+   "lat": 27.5195,
+   "lon": 41.6905,
+   "radius_km": 15,
+   "aliases": [
+    "a arif fort",
+    "aarif fort",
+    "airif fort",
+    "al aarif fort",
+    "a arif castle",
+    "aarif castle",
+    "qasr aarif"
+   ],
+   "names": [
+    "hail",
+    "ha il",
+    "hayil",
+    "hail city",
+    "ha il city"
+   ],
+   "palette": {
+    "sky": "#B3D4EE",
+    "far": "#A0928E",
+    "mid": "#BE8052",
+    "ice": "#EFE3CC",
+    "water": "#D8BC90",
+    "near": "#2C211B",
+    "sun": "#F3C443",
+    "leaf": "#5E8A3A",
+    "acc": "#6B4429",
+    "obj": "#7E5E4B"
+   }
+  },
+  {
+   "slug": "jubbah",
+   "label": "Camel and ibex petroglyphs on a sandstone outcrop at Jubbah, Nefud dunes around",
+   "lat": 28.0131,
+   "lon": 40.9094,
+   "radius_km": 10,
+   "aliases": [
+    "jubbah rock art",
+    "jubba rock art",
+    "jubbah petroglyphs",
+    "jabal umm sinman",
+    "umm sinman",
+    "rock art in the hail region",
+    "rock art of hail"
+   ],
+   "names": [
+    "jubbah",
+    "jubba",
+    "jubbah saudi arabia"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#D9845A",
+    "mid": "#C98A62",
+    "ice": "#ECC9A8",
+    "water": "#4C8FB4",
+    "near": "#2A1D1A",
+    "sun": "#F3C443",
+    "leaf": "#6E8A4A",
+    "acc": "#5C3A38",
+    "obj": "#E2A878"
+   }
+  },
+  {
+   "slug": "maraya",
+   "label": "Maraya, the mirror-clad concert hall in AlUla's Ashar Valley",
+   "lat": 26.6,
+   "lon": 37.93,
+   "radius_km": 3,
+   "aliases": [
+    "maraya concert hall",
+    "maraya hall",
+    "maraya alula",
+    "maraya al ula",
+    "maraya mirror"
+   ],
+   "names": [
+    "maraya"
+   ],
+   "palette": {
+    "sky": "#A6CEF2",
+    "far": "#D9AE88",
+    "mid": "#B8714A",
+    "ice": "#F4F6F8",
+    "water": "#7DA8DC",
+    "near": "#2A201C",
+    "sun": "#F3C443",
+    "leaf": "#6E8A4A",
+    "acc": "#8A5236",
+    "obj": "#E8C9A0"
+   }
+  },
+  {
+   "slug": "medina",
+   "label": "The Prophet's Mosque with the Green Dome and minarets, Medina",
+   "lat": 24.4672,
+   "lon": 39.6112,
+   "radius_km": 20,
+   "aliases": [
+    "masjid an nabawi",
+    "masjid al nabawi",
+    "masjid nabawi",
+    "masjid e nabawi",
+    "al masjid an nabawi",
+    "prophet s mosque",
+    "prophets mosque",
+    "prophet mosque",
+    "moschea del profeta"
+   ],
+   "names": [
+    "medina",
+    "madinah",
+    "al madinah",
+    "madina",
+    "medina saudi arabia",
+    "madinah al munawwarah",
+    "al madinah al munawwarah",
+    "medina city"
+   ],
+   "palette": {
+    "sky": "#A7CDEF",
+    "far": "#B88E6E",
+    "mid": "#D8B98C",
+    "ice": "#F1E6CF",
+    "water": "#CDD6DC",
+    "near": "#2C2620",
+    "sun": "#F3C443",
+    "leaf": "#2F8A4E",
+    "acc": "#C9A23E",
+    "obj": "#CFD4D8"
+   }
+  },
+  {
+   "slug": "tabuk",
+   "label": "Tabuk Castle, the Ottoman sandstone fort of Tabuk",
+   "lat": 28.3838,
+   "lon": 36.5662,
+   "radius_km": 15,
+   "aliases": [
+    "tabuk castle",
+    "tabuk fort",
+    "tabuk fortress",
+    "qalat tabuk",
+    "qal at tabuk",
+    "castello di tabuk"
+   ],
+   "names": [
+    "tabuk",
+    "tabouk",
+    "tabuk city"
+   ],
+   "palette": {
+    "sky": "#B2D6F2",
+    "far": "#DDBB8E",
+    "mid": "#C79566",
+    "ice": "#F3E8D6",
+    "water": "#4C8FB4",
+    "near": "#2E2218",
+    "sun": "#F3C443",
+    "leaf": "#5E8A3A",
+    "acc": "#7A4C30",
+    "obj": "#EADCC6"
    }
   }
  ]
