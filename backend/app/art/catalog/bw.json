@@ -3,6 +3,37 @@
  "name": "Botswana",
  "places": [
   {
+   "slug": "central-kalahari-game-reserve",
+   "label": "Black-maned Kalahari lion and springbok in Deception Valley, Central Kalahari Game Reserve",
+   "lat": -21.43,
+   "lon": 23.78,
+   "radius_km": 60,
+   "aliases": [
+    "central kalahari",
+    "ckgr",
+    "deception valley",
+    "kalahari centrale"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#C9B48A",
+    "mid": "#D8BE80",
+    "ice": "#F4EFE4",
+    "water": "#8DA9BF",
+    "near": "#26211D",
+    "sun": "#F2C14E",
+    "leaf": "#7A8446",
+    "acc": "#C48A52",
+    "obj": "#4A3526"
+   },
+   "names": [
+    "kalahari",
+    "kalahari desert",
+    "deserto del kalahari",
+    "deserto kalahari"
+   ]
+  },
+  {
    "slug": "chobe-national-park",
    "label": "Elephant herd on the Chobe River floodplain",
    "lat": -17.85,
@@ -89,6 +120,33 @@
    }
   },
   {
+   "slug": "gweta",
+   "label": "Giant baobab near Gweta with meerkats standing sentry on their burrow",
+   "lat": -20.21,
+   "lon": 25.26,
+   "radius_km": 15,
+   "aliases": [
+    "planet baobab",
+    "gweta lodge"
+   ],
+   "names": [
+    "gweta",
+    "gweta village"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#D9C49A",
+    "mid": "#A98370",
+    "ice": "#F2ECE0",
+    "water": "#8DA9BF",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#7E8A4A",
+    "acc": "#D6B878",
+    "obj": "#B59C7C"
+   }
+  },
+  {
    "slug": "khama-rhino-sanctuary",
    "label": "White rhinos at Khama Rhino Sanctuary",
    "lat": -22.0,
@@ -108,6 +166,36 @@
     "leaf": "#7C8F48",
     "acc": "#D2B77A",
     "obj": "#5E4E40"
+   },
+   "names": [
+    "serowe",
+    "serowe village"
+   ]
+  },
+  {
+   "slug": "khwai",
+   "label": "Khwai River lagoon with a yawning hippo and elephants drinking on the far bank",
+   "lat": -19.16,
+   "lon": 23.76,
+   "radius_km": 25,
+   "aliases": [
+    "khwai",
+    "khwai river",
+    "khwai concession",
+    "khwai private reserve",
+    "fiume khwai"
+   ],
+   "palette": {
+    "sky": "#ACCDEE",
+    "far": "#DCCDAA",
+    "mid": "#C8AC6A",
+    "ice": "#F3EFE6",
+    "water": "#4A78A8",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#637F3C",
+    "acc": "#D8958A",
+    "obj": "#77706B"
    }
   },
   {
@@ -163,6 +251,32 @@
     "leaf": "#6A5A40",
     "acc": "#F2B3B8",
     "obj": "#D86F80"
+   }
+  },
+  {
+   "slug": "nxai-pan-national-park",
+   "label": "Baines' Baobabs on the edge of Kudiakam Pan in Nxai Pan National Park, with springbok",
+   "lat": -20.1,
+   "lon": 24.77,
+   "radius_km": 35,
+   "aliases": [
+    "nxai pan",
+    "baines baobabs",
+    "baines baobab",
+    "kudiakam pan",
+    "sleeping sisters"
+   ],
+   "palette": {
+    "sky": "#A3C6EC",
+    "far": "#B7ACA0",
+    "mid": "#8A8076",
+    "ice": "#F1EEE6",
+    "water": "#9DB7C9",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E7A48",
+    "acc": "#D1B474",
+    "obj": "#B07A4A"
    }
   },
   {
