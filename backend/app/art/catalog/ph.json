@@ -60,6 +60,38 @@
    }
   },
   {
+   "slug": "baguio",
+   "label": "Baguio Cathedral among Benguet pines",
+   "lat": 16.4125,
+   "lon": 120.5983,
+   "radius_km": 15,
+   "aliases": [
+    "baguio cathedral",
+    "cattedrale di baguio",
+    "our lady of atonement cathedral",
+    "our lady of the atonement cathedral",
+    "cathedral of our lady of the atonement"
+   ],
+   "names": [
+    "baguio",
+    "baguio city",
+    "city of baguio",
+    "citta di baguio"
+   ],
+   "palette": {
+    "sky": "#A6CEF0",
+    "far": "#7FA37A",
+    "mid": "#EBCBCB",
+    "ice": "#FAF6F2",
+    "water": "#B9AFA5",
+    "near": "#2A2224",
+    "sun": "#F6C431",
+    "leaf": "#2F5E3A",
+    "acc": "#B8302B",
+    "obj": "#6A5148"
+   }
+  },
+  {
    "slug": "banaue",
    "label": "The Banaue Rice Terraces valley from the main viewpoint",
    "lat": 16.9268,
@@ -71,7 +103,9 @@
     "terrazze di banaue",
     "risaie di banaue",
     "banaue viewpoint",
-    "ifugao rice terraces"
+    "ifugao rice terraces",
+    "banaue rice terrace",
+    "rice terraces of banaue"
    ],
    "names": [
     "banaue",
@@ -146,6 +180,73 @@
     "leaf": "#4C8A34",
     "acc": "#5FCFC0",
     "obj": "#2F6FB8"
+   }
+  },
+  {
+   "slug": "binondo",
+   "label": "Binondo Church and its octagonal bell tower with a kalesa, Manila Chinatown",
+   "lat": 14.5998,
+   "lon": 120.9747,
+   "radius_km": 2,
+   "aliases": [
+    "binondo church",
+    "binondo chinatown",
+    "manila chinatown",
+    "chinatown manila",
+    "chinatown di manila",
+    "chiesa di binondo",
+    "minor basilica of san lorenzo ruiz",
+    "basilica of san lorenzo ruiz",
+    "san lorenzo ruiz church",
+    "plaza san lorenzo ruiz"
+   ],
+   "names": [
+    "binondo",
+    "binondo manila"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#C9C6C0",
+    "mid": "#6E6A66",
+    "ice": "#F2EFE8",
+    "water": "#9A958F",
+    "near": "#211E1D",
+    "sun": "#F2B83A",
+    "leaf": "#4F8A3C",
+    "acc": "#C0563E",
+    "obj": "#8B5A36"
+   }
+  },
+  {
+   "slug": "bontoc",
+   "label": "The Samoki rice terraces above the Chico River at Bontoc, Mountain Province",
+   "lat": 17.085,
+   "lon": 120.975,
+   "radius_km": 10,
+   "aliases": [
+    "samoki rice terraces",
+    "samoki terraces",
+    "samoki village",
+    "bontoc rice terraces",
+    "terrazze di bontoc",
+    "risaie di bontoc"
+   ],
+   "names": [
+    "bontoc",
+    "bontoc mountain province",
+    "bontoc town"
+   ],
+   "palette": {
+    "sky": "#CFE3EF",
+    "far": "#8FAA9A",
+    "mid": "#9E998E",
+    "ice": "#E4E0D5",
+    "water": "#8EC1C6",
+    "near": "#1F2620",
+    "sun": "#F6C431",
+    "leaf": "#3B6A35",
+    "acc": "#9CC35A",
+    "obj": "#4B4A48"
    }
   },
   {
@@ -261,6 +362,32 @@
    }
   },
   {
+   "slug": "helicopter-island",
+   "label": "The helicopter-shaped silhouette of Dilumacad (Helicopter) Island, El Nido",
+   "lat": 11.212,
+   "lon": 119.322,
+   "radius_km": 3,
+   "aliases": [
+    "helicopter island",
+    "dilumacad island",
+    "dilumacad",
+    "isola elicottero",
+    "isola dell elicottero"
+   ],
+   "palette": {
+    "sky": "#8EC3F0",
+    "far": "#7E9AA6",
+    "mid": "#8A8478",
+    "ice": "#F7F3E8",
+    "water": "#2FA6B8",
+    "near": "#1E2528",
+    "sun": "#F6C431",
+    "leaf": "#4A8436",
+    "acc": "#D9483A",
+    "obj": "#2E6FB0"
+   }
+  },
+  {
    "slug": "intramuros",
    "label": "Manila Cathedral on Plaza Roma in Intramuros",
    "lat": 14.5915,
@@ -309,6 +436,70 @@
     "leaf": "#3C7A34",
     "acc": "#C9A35A",
     "obj": "#C8463A"
+   }
+  },
+  {
+   "slug": "loboc-river",
+   "label": "A floating restaurant on the green Loboc River under coconut palms, Bohol",
+   "lat": 9.637,
+   "lon": 124.03,
+   "radius_km": 5,
+   "aliases": [
+    "loboc river",
+    "fiume loboc",
+    "loboc river cruise",
+    "loboc floating restaurant",
+    "crociera sul fiume loboc",
+    "rio loboc"
+   ],
+   "names": [
+    "loboc",
+    "loboc bohol"
+   ],
+   "palette": {
+    "sky": "#D6E8F2",
+    "far": "#8DAE86",
+    "mid": "#8A7A63",
+    "ice": "#F1ECE0",
+    "water": "#4C9A72",
+    "near": "#1F2620",
+    "sun": "#F6C431",
+    "leaf": "#3E8838",
+    "acc": "#A8804E",
+    "obj": "#5E4330"
+   }
+  },
+  {
+   "slug": "man-made-forest-bilar",
+   "label": "The road through the Bilar Man-made Forest's mahogany tunnel, Bohol",
+   "lat": 9.708,
+   "lon": 124.108,
+   "radius_km": 4,
+   "aliases": [
+    "man made forest",
+    "manmade forest",
+    "bilar forest",
+    "bilar man made forest",
+    "bohol man made forest",
+    "mahogany forest bohol",
+    "foresta artificiale di bilar",
+    "foresta di bilar"
+   ],
+   "names": [
+    "bilar",
+    "bilar bohol"
+   ],
+   "palette": {
+    "sky": "#D8EAD0",
+    "far": "#A9CF6E",
+    "mid": "#5A4637",
+    "ice": "#F2F2EE",
+    "water": "#6E5034",
+    "near": "#1E2419",
+    "sun": "#F6C431",
+    "leaf": "#3F7C34",
+    "acc": "#E8B52E",
+    "obj": "#4E5254"
    }
   },
   {
@@ -562,6 +753,41 @@
     "leaf": "#5A8F3A",
     "acc": "#F2C21C",
     "obj": "#D2463A"
+   }
+  },
+  {
+   "slug": "taytay",
+   "label": "Fuerza de Santa Isabel on Taytay Bay, Palawan",
+   "lat": 10.824,
+   "lon": 119.518,
+   "radius_km": 15,
+   "aliases": [
+    "fuerza de santa isabel",
+    "fuerza de sta isabel",
+    "fort santa isabel",
+    "fort of santa isabel",
+    "santa isabel fort",
+    "taytay fort",
+    "forte di santa isabel",
+    "forte santa isabel"
+   ],
+   "names": [
+    "taytay",
+    "tay tay",
+    "taytay palawan",
+    "taytay bay"
+   ],
+   "palette": {
+    "sky": "#C9E0EE",
+    "far": "#7FA27A",
+    "mid": "#66645C",
+    "ice": "#F4F1EA",
+    "water": "#7FAEB8",
+    "near": "#1F2421",
+    "sun": "#F6C431",
+    "leaf": "#4F8A3C",
+    "acc": "#E3A33E",
+    "obj": "#A5583A"
    }
   }
  ]
