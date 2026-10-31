@@ -3,6 +3,38 @@
  "name": "Mozambique",
  "places": [
   {
+   "slug": "ilha-de-mocambique",
+   "label": "Fort Sao Sebastiao on Ilha de Mocambique, with a dhow",
+   "lat": -15.0347,
+   "lon": 40.7375,
+   "radius_km": 6,
+   "aliases": [
+    "ilha de mocambique",
+    "ilha de mozambique",
+    "mozambique island",
+    "island of mozambique",
+    "isola di mozambico",
+    "fortaleza de sao sebastiao",
+    "fort sao sebastiao mozambique"
+   ],
+   "names": [
+    "mocambique island",
+    "ilha mocambique"
+   ],
+   "palette": {
+    "sky": "#9CCAEE",
+    "far": "#F2EBDA",
+    "mid": "#A69D8F",
+    "ice": "#F4F2EA",
+    "water": "#62C6C2",
+    "near": "#2A2724",
+    "sun": "#F4C542",
+    "leaf": "#5B8A3E",
+    "acc": "#2D7DB4",
+    "obj": "#5E5246"
+   }
+  },
+  {
    "slug": "maputo",
    "label": "Maputo railway station",
    "lat": -25.971,
@@ -29,6 +61,79 @@
     "leaf": "#3E6B3C",
     "acc": "#BDB6A8",
     "obj": "#7A5E44"
+   }
+  },
+  {
+   "slug": "pemba",
+   "label": "Wimbe Beach in Pemba, with a baobab and palms",
+   "lat": -12.958,
+   "lon": 40.548,
+   "radius_km": 15,
+   "aliases": [
+    "wimbe beach",
+    "wimbi beach",
+    "praia de wimbe",
+    "praia do wimbe",
+    "pemba bay",
+    "baia de pemba",
+    "porto amelia"
+   ],
+   "names": [
+    "pemba",
+    "pemba city",
+    "pemba mozambique",
+    "cidade de pemba"
+   ],
+   "palette": {
+    "sky": "#A2CDF0",
+    "far": "#F1E7D2",
+    "mid": "#9A8B7C",
+    "ice": "#FFFFFF",
+    "water": "#62BFC2",
+    "near": "#26292B",
+    "sun": "#F4C542",
+    "leaf": "#3E7A3A",
+    "acc": "#2F7FB2",
+    "obj": "#7A5A3E"
+   }
+  },
+  {
+   "slug": "quirimbas-archipelago",
+   "label": "Fort of Sao Joao Baptista on Ibo Island, Quirimbas",
+   "lat": -12.3367,
+   "lon": 40.5947,
+   "radius_km": 40,
+   "aliases": [
+    "quirimbas",
+    "arquipelago das quirimbas",
+    "arcipelago delle quirimbas",
+    "parque nacional das quirimbas",
+    "ilha do ibo",
+    "ilha de ibo",
+    "ibo island",
+    "isola di ibo",
+    "matemo island",
+    "ilha de matemo",
+    "medjumbe",
+    "quilalea",
+    "forte de sao joao baptista",
+    "fort sao joao baptista",
+    "sao joao baptista ibo"
+   ],
+   "names": [
+    "ibo"
+   ],
+   "palette": {
+    "sky": "#9CCBEF",
+    "far": "#D6C29E",
+    "mid": "#9A9890",
+    "ice": "#EEEDE6",
+    "water": "#5DC0C4",
+    "near": "#26282B",
+    "sun": "#F4C542",
+    "leaf": "#557F3C",
+    "acc": "#2F7FB2",
+    "obj": "#7A5636"
    }
   }
  ]
