@@ -3,6 +3,58 @@
  "name": "Brazil",
  "places": [
   {
+   "slug": "alter-do-chao",
+   "label": "Ilha do Amor sandbar and Serra da Piroca at Alter do Chão",
+   "lat": -2.502,
+   "lon": -54.955,
+   "radius_km": 10,
+   "aliases": [
+    "ilha do amor"
+   ],
+   "names": [
+    "alter do chao"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E2CFA8",
+    "mid": "#4F7A3E",
+    "ice": "#F4EEDF",
+    "water": "#5E93A3",
+    "near": "#25292A",
+    "sun": "#F4C23E",
+    "leaf": "#3E6E34",
+    "acc": "#C9A060",
+    "obj": "#2F6FA8"
+   }
+  },
+  {
+   "slug": "bonito",
+   "label": "Piraputanga fish in a crystal-clear river at Bonito",
+   "lat": -21.13,
+   "lon": -56.48,
+   "radius_km": 35,
+   "aliases": [
+    "rio sucuri"
+   ],
+   "names": [
+    "bonito",
+    "bonito ms",
+    "bonito mato grosso do sul"
+   ],
+   "palette": {
+    "sky": "#B4D8F0",
+    "far": "#9DBE3A",
+    "mid": "#6E9A2E",
+    "ice": "#E8E4CF",
+    "water": "#5FB4B0",
+    "near": "#1F2A28",
+    "sun": "#F4C23E",
+    "leaf": "#3F6E34",
+    "acc": "#C9CDA0",
+    "obj": "#E89A2C"
+   }
+  },
+  {
    "slug": "christ-the-redeemer",
    "label": "Christ the Redeemer on Corcovado",
    "lat": -22.9519,
@@ -53,6 +105,33 @@
     "leaf": "#3E6B35",
     "acc": "#D8CFBE",
     "obj": "#6E6E70"
+   }
+  },
+  {
+   "slug": "cuiaba",
+   "label": "Cuiabá Cathedral (Senhor Bom Jesus) on Praça da República",
+   "lat": -15.6015,
+   "lon": -56.0985,
+   "radius_km": 20,
+   "aliases": [
+    "catedral de cuiaba",
+    "cuiaba cathedral",
+    "senhor bom jesus de cuiaba"
+   ],
+   "names": [
+    "cuiaba"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E2D6C2",
+    "mid": "#C4B49C",
+    "ice": "#F4F2EC",
+    "water": "#4E8FB8",
+    "near": "#2A2622",
+    "sun": "#F4C23E",
+    "leaf": "#3F7A3A",
+    "acc": "#E3B23C",
+    "obj": "#9A9184"
    }
   },
   {
@@ -308,6 +387,29 @@
     "leaf": "#2F6131",
     "acc": "#B79559",
     "obj": "#B4512E"
+   }
+  },
+  {
+   "slug": "pedra-do-telegrafo",
+   "label": "The overhanging ledge of Pedra do Telégrafo above the Guaratiba coast",
+   "lat": -23.0606,
+   "lon": -43.561,
+   "radius_km": 4,
+   "aliases": [
+    "pedra do telegrafo",
+    "telegraph rock"
+   ],
+   "palette": {
+    "sky": "#AFD3F2",
+    "far": "#9DB4C8",
+    "mid": "#B8946C",
+    "ice": "#F2ECDC",
+    "water": "#2E78B0",
+    "near": "#2A2622",
+    "sun": "#F4C23E",
+    "leaf": "#3F7A36",
+    "acc": "#C88E64",
+    "obj": "#D8483A"
    }
   },
   {

@@ -3,6 +3,39 @@
  "name": "Malta",
  "places": [
   {
+   "slug": "birgu",
+   "label": "Fort St Angelo, Birgu",
+   "lat": 35.8925,
+   "lon": 14.5185,
+   "radius_km": 3,
+   "aliases": [
+    "fort st angelo",
+    "forte santangelo",
+    "forte sant angelo",
+    "le tre citta",
+    "cottonera"
+   ],
+   "names": [
+    "birgu",
+    "vittoriosa",
+    "three cities",
+    "the three cities",
+    "tre citta"
+   ],
+   "palette": {
+    "sky": "#B8D4EE",
+    "far": "#E6DCC6",
+    "mid": "#DCC69A",
+    "ice": "#EFE5CF",
+    "water": "#1E5288",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#C4A672",
+    "obj": "#C0392B"
+   }
+  },
+  {
    "slug": "gozo",
    "label": "Mgarr harbour, the arrival on Gozo, with the ferry and the hillside churches",
    "lat": 36.0253,
@@ -61,6 +94,87 @@
     "leaf": "#5F6E3B",
     "acc": "#C8102E",
     "obj": "#8C6B46"
+   }
+  },
+  {
+   "slug": "senglea",
+   "label": "Gardjola vedette at Senglea Point",
+   "lat": 35.8889,
+   "lon": 14.5153,
+   "radius_km": 3,
+   "aliases": [
+    "gardjola"
+   ],
+   "names": [
+    "isla",
+    "senglea",
+    "l isla"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D8C49A",
+    "mid": "#E2C793",
+    "ice": "#F1E4C6",
+    "water": "#1F6FA0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A4E",
+    "acc": "#C8A46C",
+    "obj": "#C8402E"
+   }
+  },
+  {
+   "slug": "st-johns-co-cathedral",
+   "label": "St John's Co-Cathedral, Valletta",
+   "lat": 35.8977,
+   "lon": 14.5125,
+   "radius_km": 2,
+   "aliases": [
+    "st john s co cathedral",
+    "st johns co cathedral",
+    "saint john s co cathedral",
+    "co cattedrale di san giovanni",
+    "concattedrale di san giovanni",
+    "concattedrale di s giovanni",
+    "cattedrale di st john"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#D4C3A0",
+    "mid": "#E6CB95",
+    "ice": "#F3E8D0",
+    "water": "#2470A8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#D6B67C",
+    "obj": "#5A3A2A"
+   }
+  },
+  {
+   "slug": "upper-barrakka-gardens",
+   "label": "Upper Barrakka Gardens arcade over the Grand Harbour",
+   "lat": 35.895,
+   "lon": 14.5125,
+   "radius_km": 2,
+   "aliases": [
+    "upper barrakka",
+    "upper barracca",
+    "giardini barrakka",
+    "giardini barraca",
+    "saluting battery"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#D9CBA8",
+    "mid": "#E0C089",
+    "ice": "#EFE6D2",
+    "water": "#2470A8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A46",
+    "acc": "#CDA86E",
+    "obj": "#8A4A30"
    }
   },
   {
