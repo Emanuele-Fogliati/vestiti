@@ -3,6 +3,37 @@
  "name": "Costa Rica",
  "places": [
   {
+   "slug": "alajuela",
+   "label": "Alajuela Cathedral with its red dome on Parque Central",
+   "lat": 10.0163,
+   "lon": -84.2133,
+   "radius_km": 12,
+   "aliases": [
+    "catedral de alajuela",
+    "alajuela cathedral",
+    "cattedrale di alajuela"
+   ],
+   "names": [
+    "alajuela",
+    "ciudad de alajuela",
+    "alajuela city",
+    "alajuela costa rica",
+    "alajuela centro"
+   ],
+   "palette": {
+    "sky": "#A6CBEB",
+    "far": "#D6D1C6",
+    "mid": "#F2EFE7",
+    "ice": "#FFFFFF",
+    "water": "#6FA0C0",
+    "near": "#25211F",
+    "sun": "#F4C33C",
+    "leaf": "#4E8A3A",
+    "acc": "#A9473D",
+    "obj": "#9A968E"
+   }
+  },
+  {
    "slug": "arenal-volcano",
    "label": "Arenal Volcano's cone above the rainforest",
    "lat": 10.463,
@@ -30,6 +61,31 @@
     "leaf": "#3E7F33",
     "acc": "#F2B22B",
     "obj": "#6B5240"
+   }
+  },
+  {
+   "slug": "braulio-carrillo-national-park",
+   "label": "The yellow Rio Sucio meeting the clear Rio Hondura in Braulio Carrillo's forested valley",
+   "lat": 10.155,
+   "lon": -83.957,
+   "radius_km": 25,
+   "aliases": [
+    "braulio carrillo",
+    "parque nacional braulio carrillo",
+    "parco nazionale braulio carrillo",
+    "quebrada gonzalez"
+   ],
+   "palette": {
+    "sky": "#B4D2EA",
+    "far": "#B3AC9E",
+    "mid": "#6E907E",
+    "ice": "#EEF0EC",
+    "water": "#6F8E8C",
+    "near": "#1D2A1F",
+    "sun": "#F3C340",
+    "leaf": "#4A7E3A",
+    "acc": "#DB9F2E",
+    "obj": "#2F5E2E"
    }
   },
   {
@@ -100,6 +156,38 @@
     "leaf": "#4E8C38",
     "acc": "#5C4A44",
     "obj": "#4B4A50"
+   }
+  },
+  {
+   "slug": "gandoca-manzanillo-national-wildlife-refuge",
+   "label": "The tree-topped rock stack off Punta Manzanillo, with the palm-fringed Caribbean coast",
+   "lat": 9.636,
+   "lon": -82.652,
+   "radius_km": 12,
+   "aliases": [
+    "gandoca manzanillo",
+    "refugio gandoca manzanillo",
+    "punta mona",
+    "punta manzanillo"
+   ],
+   "names": [
+    "manzanillo",
+    "manzanillo limon",
+    "manzanillo talamanca",
+    "manzanillo costa rica",
+    "gandoca"
+   ],
+   "palette": {
+    "sky": "#A6CDEE",
+    "far": "#C8B38B",
+    "mid": "#7E7465",
+    "ice": "#F1E8D2",
+    "water": "#38A9A9",
+    "near": "#1C2620",
+    "sun": "#F5C53A",
+    "leaf": "#3F7D36",
+    "acc": "#2A7E8C",
+    "obj": "#6B5A44"
    }
   },
   {
