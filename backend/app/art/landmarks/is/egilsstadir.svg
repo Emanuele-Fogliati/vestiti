@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="48" cy="28" r="11" fill="var(--il-sun)"/>
+<path d="M0 90Q60 80 130 78L150 70Q170 60 186 62L200 58Q214 56 226 62L240 58Q262 54 280 58Q292 60 300 62V96H0Z" fill="var(--il-far)"/>
+<path d="M0 130V88Q80 84 160 86Q240 84 300 86V130Z" fill="var(--il-leaf)"/>
+<path d="M30 92Q80 90 120 92M170 92Q220 90 280 94" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V100Q60 98 110 104Q160 102 200 108Q240 116 300 122V200Z" fill="var(--il-water)"/>
+<path d="M0 94Q30 98 52 104Q68 110 78 120Q50 126 20 126L0 128Z" fill="var(--il-leaf)"/>
+<path d="M20 110H34V122H20ZM50 112H62V123H50ZM64 114H74V124H64Z" fill="var(--il-ice)"/>
+<path d="M36 108H48V122H36ZM4 112H16V124H4Z" fill="var(--il-acc)"/>
+<path d="M18 110L27 103L36 110ZM34 108L42 102L50 108ZM48 112L56 106L64 112ZM62 114L69 109L76 114ZM2 112L10 106L18 112Z" fill="var(--il-near)"/>
+<path d="M0 104Q8 96 14 100Q20 94 28 99Q34 96 40 101Q46 98 52 104Q30 106 18 108Q8 110 0 110Z" fill="var(--il-leaf)"/>
+<path d="M76 120H290V124H76Z" fill="var(--il-obj)"/>
+<path d="M92 124V130M112 124V130M132 124V130M152 124V130M172 124V130M192 124V130M212 124V130M232 124V130M252 124V130M272 124V128" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M0 200V150Q20 152 40 160Q60 166 90 176Q120 186 150 200Z" fill="var(--il-acc)"/>
+<path d="M0 156Q20 156 40 164Q60 170 90 180Q114 188 134 200H160Q130 184 100 174Q70 164 50 156Q26 150 0 150Z" fill="var(--il-leaf)"/>
+<g transform="translate(50 184)"><path d="M-10 0L-9 -10M-6 0L-6 -10M6 0L6 -10M10 0L9 -10" stroke="var(--il-mid)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M-13 -9Q-14 -18 -5 -19H8Q12 -19 13 -23L15 -30L21 -31L23 -27L18 -24Q17 -14 12 -9Z" fill="var(--il-mid)"/><path d="M16 -30Q10 -38 4 -40M12 -35L8 -37M8 -38L8 -42M19 -31Q20 -40 26 -44M22 -38L27 -38M24 -42L23 -46" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M-6 -12Q2 -10 10 -12" stroke="var(--il-ice)" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M14 -24Q16 -20 16 -16" stroke="var(--il-ice)" stroke-width="2" fill="none" stroke-linecap="round"/></g>
