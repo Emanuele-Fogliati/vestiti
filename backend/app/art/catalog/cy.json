@@ -3,6 +3,209 @@
  "name": "Cyprus",
  "places": [
   {
+   "slug": "ayia-napa",
+   "label": "The white limestone sea caves of Ayia Napa, with Cape Greco behind",
+   "lat": 34.9675,
+   "lon": 34.0655,
+   "radius_km": 10,
+   "aliases": [
+    "ayia napa sea caves",
+    "agia napa sea caves",
+    "sea caves of ayia napa",
+    "sea caves ayia napa",
+    "grotte marine di ayia napa",
+    "grotte di ayia napa",
+    "ayia napa caves"
+   ],
+   "names": [
+    "ayia napa",
+    "agia napa",
+    "aya napa",
+    "ayia napa town",
+    "agia napa town"
+   ],
+   "palette": {
+    "sky": "#B4D5EE",
+    "far": "#D9C9A4",
+    "mid": "#C9BC9E",
+    "ice": "#F0EBDF",
+    "water": "#2A9DB2",
+    "near": "#26302F",
+    "sun": "#F4C542",
+    "leaf": "#7C8A4E",
+    "acc": "#BCA57C",
+    "obj": "#8E8A80"
+   }
+  },
+  {
+   "slug": "famagusta",
+   "label": "Lala Mustafa Pasha Mosque, the Gothic cathedral of Famagusta with its single minaret",
+   "lat": 35.1251,
+   "lon": 33.9415,
+   "radius_km": 12,
+   "aliases": [
+    "lala mustafa pasha",
+    "lala mustafa pasa",
+    "saint nicholas cathedral famagusta",
+    "st nicholas cathedral famagusta",
+    "cathedral of saint nicholas famagusta"
+   ],
+   "names": [
+    "famagusta",
+    "famagosta",
+    "gazimagusa",
+    "ammochostos",
+    "famagusta old town",
+    "old town famagusta",
+    "famagusta walled city"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#CDB894",
+    "mid": "#D8B47C",
+    "ice": "#E6CC9C",
+    "water": "#3E86B0",
+    "near": "#2B2420",
+    "sun": "#F4C542",
+    "leaf": "#4F7236",
+    "acc": "#D9CDB6",
+    "obj": "#A9B3BA"
+   }
+  },
+  {
+   "slug": "kolossi-castle",
+   "label": "Kolossi Castle, the square crusader keep with its cypresses",
+   "lat": 34.6653,
+   "lon": 32.9336,
+   "radius_km": 3,
+   "aliases": [
+    "kolossi castle",
+    "kolossi",
+    "castello di kolossi",
+    "kolossi fortress",
+    "colossi castle"
+   ],
+   "palette": {
+    "sky": "#A2CAF0",
+    "far": "#D6C7A6",
+    "mid": "#DCC69B",
+    "ice": "#F2ECDD",
+    "water": "#3E8DB4",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#3F6634",
+    "acc": "#C3AA7C",
+    "obj": "#8E8A80"
+   }
+  },
+  {
+   "slug": "kourion",
+   "label": "The Greco-Roman theatre of Kourion on its cliff above the sea",
+   "lat": 34.6646,
+   "lon": 32.8875,
+   "radius_km": 4,
+   "aliases": [
+    "kourion",
+    "curium",
+    "antica curio",
+    "sito archeologico di kourion",
+    "kourion theatre",
+    "kourion amphitheatre",
+    "kourion archaeological"
+   ],
+   "names": [
+    "curio",
+    "kourio",
+    "ancient kourion"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#CDBB96",
+    "mid": "#E0D2B4",
+    "ice": "#F5EFE2",
+    "water": "#2F86B8",
+    "near": "#2B2722",
+    "sun": "#F4C542",
+    "leaf": "#8A8E4E",
+    "acc": "#B79C74",
+    "obj": "#8E8A80"
+   }
+  },
+  {
+   "slug": "kyrenia",
+   "label": "Kyrenia Castle across the old harbour, with the Kyrenia range behind",
+   "lat": 35.3417,
+   "lon": 33.3214,
+   "radius_km": 12,
+   "aliases": [
+    "kyrenia castle",
+    "girne kalesi",
+    "girne castle",
+    "kyrenia harbour",
+    "kyrenia harbor",
+    "girne harbour",
+    "girne old harbour",
+    "kyrenia old harbour",
+    "castello di kyrenia",
+    "porto di kyrenia"
+   ],
+   "names": [
+    "kyrenia",
+    "girne",
+    "keryneia",
+    "kerynia",
+    "kyrenia old town",
+    "girne old town"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#93A0AE",
+    "mid": "#C9B48C",
+    "ice": "#F1EEE6",
+    "water": "#3FA5A6",
+    "near": "#262420",
+    "sun": "#F4C542",
+    "leaf": "#4F7A35",
+    "acc": "#C44A3A",
+    "obj": "#2F4D7A"
+   }
+  },
+  {
+   "slug": "larnaca",
+   "label": "The Church of Saint Lazarus in Larnaca, with its stone bell tower",
+   "lat": 34.9128,
+   "lon": 33.6347,
+   "radius_km": 15,
+   "aliases": [
+    "saint lazarus church",
+    "church of saint lazarus",
+    "st lazarus church",
+    "agios lazaros",
+    "ayios lazaros",
+    "chiesa di san lazzaro"
+   ],
+   "names": [
+    "larnaca",
+    "larnaka",
+    "larnaca city",
+    "larnaka city",
+    "larnaca old town",
+    "larnaca town"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#E4D6B4",
+    "mid": "#CBB792",
+    "ice": "#F1EEE7",
+    "water": "#3E8DB4",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#4E7B34",
+    "acc": "#B9694B",
+    "obj": "#8E8A80"
+   }
+  },
+  {
    "slug": "nicosia",
    "label": "Selimiye Mosque in Nicosia with the Kyrenia range behind",
    "lat": 35.1764,
@@ -32,6 +235,153 @@
     "leaf": "#56783C",
     "acc": "#C8643E",
     "obj": "#8E979E"
+   }
+  },
+  {
+   "slug": "paphos",
+   "label": "Paphos Castle at the end of the harbour, with the town's pelican",
+   "lat": 34.7536,
+   "lon": 32.4064,
+   "radius_km": 12,
+   "aliases": [
+    "paphos castle",
+    "pafos castle",
+    "paphos fort",
+    "pafos fort",
+    "paphos harbour",
+    "paphos harbor",
+    "pafos harbour",
+    "kato paphos harbour",
+    "castello di paphos",
+    "castello di pafos",
+    "porto di paphos"
+   ],
+   "names": [
+    "paphos",
+    "pafos",
+    "kato paphos",
+    "kato pafos",
+    "paphos old town",
+    "pafo"
+   ],
+   "palette": {
+    "sky": "#AFCDEB",
+    "far": "#BDB4A2",
+    "mid": "#CDA770",
+    "ice": "#F5F2EB",
+    "water": "#4C9DB5",
+    "near": "#2A231C",
+    "sun": "#F4C542",
+    "leaf": "#6E8A46",
+    "acc": "#AE8858",
+    "obj": "#E9A53C"
+   }
+  },
+  {
+   "slug": "paphos-archaeological-park",
+   "label": "The Odeon of Nea Paphos with the white Paphos lighthouse behind",
+   "lat": 34.7559,
+   "lon": 32.4069,
+   "radius_km": 2,
+   "aliases": [
+    "paphos archaeological park",
+    "pafos archaeological park",
+    "paphos archaeological site",
+    "nea paphos",
+    "nea pafos",
+    "parco archeologico di paphos",
+    "parco archeologico di pafos",
+    "parco archeologico di kato paphos",
+    "paphos odeon",
+    "pafos odeon",
+    "paphos lighthouse",
+    "paphos mosaics",
+    "mosaici di paphos",
+    "mosaici di pafos",
+    "house of dionysus",
+    "casa di dioniso"
+   ],
+   "palette": {
+    "sky": "#A6C8EC",
+    "far": "#E2DACA",
+    "mid": "#C9B48E",
+    "ice": "#F7F6F1",
+    "water": "#2F7FB5",
+    "near": "#2A2722",
+    "sun": "#F4C542",
+    "leaf": "#5F7038",
+    "acc": "#B9694B",
+    "obj": "#8E8A80"
+   }
+  },
+  {
+   "slug": "salamis",
+   "label": "The marble colonnade of the gymnasium at ancient Salamis",
+   "lat": 35.1847,
+   "lon": 33.9006,
+   "radius_km": 4,
+   "aliases": [
+    "salamis ruins",
+    "ancient salamis",
+    "salamis gymnasium",
+    "salamis archaeological",
+    "ruins of salamis",
+    "rovine di salamina",
+    "antica salamina",
+    "sito archeologico di salamina"
+   ],
+   "names": [
+    "salamis",
+    "salamina",
+    "salamis cyprus",
+    "salamina cipro"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#C9C2B2",
+    "mid": "#C9AE84",
+    "ice": "#E9E6DD",
+    "water": "#3E8DB4",
+    "near": "#2A2724",
+    "sun": "#F4C542",
+    "leaf": "#6F8F45",
+    "acc": "#C98A3E",
+    "obj": "#8E8A80"
+   }
+  },
+  {
+   "slug": "troodos-mountains",
+   "label": "Mount Olympus in the pine-clad Troodos Mountains, with its radar dome and a Cyprus mouflon",
+   "lat": 34.9364,
+   "lon": 32.8636,
+   "radius_km": 25,
+   "aliases": [
+    "troodos mountains",
+    "troodos mountain",
+    "monti troodos",
+    "troodos range",
+    "troodos massif",
+    "mount olympus cyprus",
+    "mount olympus troodos",
+    "chionistra",
+    "monte olimpo cipro"
+   ],
+   "names": [
+    "troodos",
+    "troodos square",
+    "troodos national forest park"
+   ],
+   "palette": {
+    "sky": "#B9D5EE",
+    "far": "#93A6B8",
+    "mid": "#A8957A",
+    "ice": "#F3F2EE",
+    "water": "#4A86B0",
+    "near": "#24261E",
+    "sun": "#F4C542",
+    "leaf": "#4D6E32",
+    "acc": "#B79C74",
+    "obj": "#8C5A34"
    }
   }
  ]
