@@ -57,6 +57,32 @@
    }
   },
   {
+   "slug": "asahikawa",
+   "label": "Asahibashi bridge over the Ishikari River, Asahikawa",
+   "lat": 43.78,
+   "lon": 142.36,
+   "radius_km": 15,
+   "aliases": [
+    "asahibashi",
+    "asahi bridge asahikawa"
+   ],
+   "names": [
+    "asahikawa"
+   ],
+   "palette": {
+    "sky": "#A9CCF0",
+    "far": "#8E9AB6",
+    "mid": "#86AE8E",
+    "ice": "#F4F4F0",
+    "water": "#6E94B0",
+    "near": "#262A2A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A50",
+    "acc": "#D8742E",
+    "obj": "#A8A294"
+   }
+  },
+  {
    "slug": "dotonbori",
    "label": "Dotonbori canal and the Ebisu Tower, Osaka",
    "lat": 34.6687,
@@ -453,6 +479,40 @@
    }
   },
   {
+   "slug": "lake-akan",
+   "label": "Mount Oakan above Lake Akan with the sightseeing cruise boat",
+   "lat": 43.44,
+   "lon": 144.11,
+   "radius_km": 15,
+   "aliases": [
+    "lake akan",
+    "akanko",
+    "akan ko",
+    "lago akan",
+    "lake akanko",
+    "mount oakan",
+    "mt oakan",
+    "oakan dake",
+    "akan kohan"
+   ],
+   "names": [
+    "akan",
+    "akan onsen"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#C9C2A2",
+    "mid": "#4A7A3A",
+    "ice": "#F7F7F4",
+    "water": "#4C7594",
+    "near": "#1E2820",
+    "sun": "#F2C14E",
+    "leaf": "#2E5A2C",
+    "acc": "#C8372D",
+    "obj": "#7A6A52"
+   }
+  },
+  {
    "slug": "lake-ashi",
    "label": "Lake Ashi with the Hakone Shrine torii and Mount Fuji",
    "lat": 35.2045,
@@ -485,6 +545,37 @@
    "names": [
     "hakone"
    ]
+  },
+  {
+   "slug": "lake-kawaguchi",
+   "label": "Mount Fuji across Lake Kawaguchi with cherry blossom",
+   "lat": 35.517,
+   "lon": 138.751,
+   "radius_km": 8,
+   "aliases": [
+    "lake kawaguchi",
+    "kawaguchiko",
+    "kawaguchi ko",
+    "lago kawaguchi",
+    "fujikawaguchiko",
+    "fuji five lakes",
+    "fujigoko"
+   ],
+   "names": [
+    "kawaguchi"
+   ],
+   "palette": {
+    "sky": "#B4CDEA",
+    "far": "#9AA8C0",
+    "mid": "#6F7FA2",
+    "ice": "#F6F6F4",
+    "water": "#6A8EB6",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E6E44",
+    "acc": "#F2C6D2",
+    "obj": "#6A4A3A"
+   }
   },
   {
    "slug": "meiji-shrine",
@@ -603,6 +694,35 @@
     "leaf": "#2F5E36",
     "acc": "#E04A24",
     "obj": "#2F7A5E"
+   }
+  },
+  {
+   "slug": "mount-misen",
+   "label": "Granite boulders on the summit of Mount Misen, Miyajima",
+   "lat": 34.279,
+   "lon": 132.32,
+   "radius_km": 3,
+   "aliases": [
+    "mount misen",
+    "mt misen",
+    "misen san",
+    "monte misen",
+    "misen ropeway"
+   ],
+   "names": [
+    "misen"
+   ],
+   "palette": {
+    "sky": "#B8D4EE",
+    "far": "#93A9BE",
+    "mid": "#B8AA92",
+    "ice": "#DCD2BE",
+    "water": "#6E9CC0",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#3E6436",
+    "acc": "#9A6A40",
+    "obj": "#D2B486"
    }
   },
   {
@@ -871,6 +991,66 @@
     "leaf": "#4E7A3A",
     "acc": "#B8682E",
     "obj": "#BDB7AC"
+   }
+  },
+  {
+   "slug": "shinsekai",
+   "label": "Tsutenkaku tower above Shinsekai's signboard street, Osaka",
+   "lat": 34.6525,
+   "lon": 135.5063,
+   "radius_km": 3,
+   "aliases": [
+    "shinsekai",
+    "shin sekai",
+    "tsutenkaku",
+    "tsuutenkaku",
+    "torre tsutenkaku",
+    "janjan yokocho",
+    "jan jan yokocho"
+   ],
+   "palette": {
+    "sky": "#BDD7EE",
+    "far": "#DCD5C6",
+    "mid": "#8F969E",
+    "ice": "#F5F3EE",
+    "water": "#3F78C0",
+    "near": "#22252A",
+    "sun": "#F2C14E",
+    "leaf": "#3E9450",
+    "acc": "#D23A2E",
+    "obj": "#B88A62"
+   }
+  },
+  {
+   "slug": "shirakawa-go",
+   "label": "Gassho-zukuri thatched farmhouses among rice paddies, Shirakawa-go",
+   "lat": 36.2577,
+   "lon": 136.9062,
+   "radius_km": 5,
+   "aliases": [
+    "shirakawa go",
+    "shirakawago",
+    "ogimachi village",
+    "shirakawa ogimachi",
+    "gassho zukuri village",
+    "gassho village",
+    "villaggio di shirakawa",
+    "shiroyama tenbodai"
+   ],
+   "names": [
+    "shirakawa village"
+   ],
+   "palette": {
+    "sky": "#C6DDEE",
+    "far": "#CBC6B8",
+    "mid": "#8C7A62",
+    "ice": "#E9E2D2",
+    "water": "#22402A",
+    "near": "#1E2119",
+    "sun": "#F2C14E",
+    "leaf": "#3A6A3A",
+    "acc": "#93BF4E",
+    "obj": "#5A3B27"
    }
   },
   {

@@ -3,6 +3,32 @@
  "name": "Bolivia",
  "places": [
   {
+   "slug": "arbol-de-piedra",
+   "label": "Árbol de Piedra, the stone tree of the Siloli Desert",
+   "lat": -22.0522,
+   "lon": -67.8869,
+   "radius_km": 4,
+   "aliases": [
+    "arbol de piedra",
+    "stone tree",
+    "albero di pietra",
+    "rock tree",
+    "siloli"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#9C7F7A",
+    "mid": "#C4A587",
+    "ice": "#F2EEE8",
+    "water": "#5F8FB0",
+    "near": "#2B2522",
+    "sun": "#F2C14E",
+    "leaf": "#8A8A5A",
+    "acc": "#D9C5A5",
+    "obj": "#B8895A"
+   }
+  },
+  {
    "slug": "cerro-rico",
    "label": "Cerro Rico above the colonial town of Potosi",
    "lat": -19.6197,
@@ -55,6 +81,61 @@
     "leaf": "#8E9A6A",
     "acc": "#B98A60",
     "obj": "#FAFAF8"
+   }
+  },
+  {
+   "slug": "copacabana",
+   "label": "Basilica of Our Lady of Copacabana, Lake Titicaca",
+   "lat": -16.1661,
+   "lon": -69.0861,
+   "radius_km": 10,
+   "aliases": [
+    "basilica de copacabana",
+    "basilica of our lady of copacabana",
+    "virgen de copacabana"
+   ],
+   "names": [
+    "copacabana bolivia",
+    "copacabana titicaca"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#C6CFD9",
+    "mid": "#F5F3ED",
+    "ice": "#CDBFA6",
+    "water": "#3F6FA0",
+    "near": "#2A2A2E",
+    "sun": "#F2C14E",
+    "leaf": "#8C8A5C",
+    "acc": "#B8643E",
+    "obj": "#4E8C7A"
+   }
+  },
+  {
+   "slug": "eduardo-avaroa-andean-fauna-national-reserve",
+   "label": "Laguna Colorada with flamingos, Eduardo Avaroa Reserve",
+   "lat": -22.2,
+   "lon": -67.78,
+   "radius_km": 30,
+   "aliases": [
+    "eduardo avaroa",
+    "reserva eduardo avaroa",
+    "reserva de eduardo avaroa",
+    "reserva nacional de fauna andina eduardo avaroa",
+    "riserva nazionale di fauna andina eduardo avaroa",
+    "laguna rossa"
+   ],
+   "palette": {
+    "sky": "#A6CAEE",
+    "far": "#B0939A",
+    "mid": "#9E7068",
+    "ice": "#F3F1EE",
+    "water": "#C9563E",
+    "near": "#2A2426",
+    "sun": "#F2C14E",
+    "leaf": "#B39A4E",
+    "acc": "#F2A3B4",
+    "obj": "#3E5F95"
    }
   },
   {
@@ -210,6 +291,32 @@
    }
   },
   {
+   "slug": "sol-de-manana",
+   "label": "Sol de Mañana geyser field",
+   "lat": -22.4333,
+   "lon": -67.75,
+   "radius_km": 5,
+   "aliases": [
+    "sol de manana",
+    "geiser sol de manana",
+    "geyser sol de manana",
+    "sol de manana geysers",
+    "geysers sol de manana"
+   ],
+   "palette": {
+    "sky": "#A2C8EE",
+    "far": "#A9785E",
+    "mid": "#D2B49C",
+    "ice": "#F6F5F2",
+    "water": "#9FAAB0",
+    "near": "#2B2624",
+    "sun": "#F2C14E",
+    "leaf": "#7E8A4E",
+    "acc": "#D9B83E",
+    "obj": "#E4D9C8"
+   }
+  },
+  {
    "slug": "sucre",
    "label": "The white twin towers of San Felipe Neri over Sucre",
    "lat": -19.0475,
@@ -264,6 +371,65 @@
     "leaf": "#C9AE62",
     "acc": "#B7826A",
     "obj": "#9E8C82"
+   }
+  },
+  {
+   "slug": "train-cemetery",
+   "label": "Rusted steam locomotives of the Uyuni Train Cemetery",
+   "lat": -20.4813,
+   "lon": -66.835,
+   "radius_km": 3,
+   "aliases": [
+    "train cemetery",
+    "cementerio de trenes",
+    "cimitero dei treni",
+    "train graveyard",
+    "uyuni train cemetery",
+    "cementerio de trenes de uyuni",
+    "uyuni train graveyard",
+    "great train graveyard",
+    "cemetery of trains",
+    "cimetiere des trains"
+   ],
+   "palette": {
+    "sky": "#92C4F0",
+    "far": "#AE8E78",
+    "mid": "#9A4E2E",
+    "ice": "#E3D6BF",
+    "water": "#7FA6B8",
+    "near": "#2A1E1A",
+    "sun": "#F2C14E",
+    "leaf": "#B9A88C",
+    "acc": "#B8653A",
+    "obj": "#6A3A26"
+   }
+  },
+  {
+   "slug": "tupiza",
+   "label": "The red organ-pipe spires of the Quebrada de Palala at Tupiza",
+   "lat": -21.42,
+   "lon": -65.725,
+   "radius_km": 15,
+   "aliases": [
+    "quebrada de palala",
+    "canon de palala",
+    "palala tupiza"
+   ],
+   "names": [
+    "tupiza",
+    "tupiza bolivia"
+   ],
+   "palette": {
+    "sky": "#92C2EC",
+    "far": "#A86A52",
+    "mid": "#C8653F",
+    "ice": "#DDD3C2",
+    "water": "#7FA9B0",
+    "near": "#2B1A14",
+    "sun": "#F2C14E",
+    "leaf": "#6F8F3E",
+    "acc": "#E3946A",
+    "obj": "#7E3523"
    }
   }
  ]
