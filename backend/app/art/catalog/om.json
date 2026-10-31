@@ -3,6 +3,179 @@
  "name": "Oman",
  "places": [
   {
+   "slug": "al-hamra",
+   "label": "Mud-brick tower houses of old Al Hamra above the palm oasis",
+   "lat": 23.122,
+   "lon": 57.286,
+   "radius_km": 8,
+   "aliases": [
+    "al hamra old town",
+    "old al hamra",
+    "bait al safah",
+    "bayt al safah",
+    "bait al safa"
+   ],
+   "names": [
+    "al hamra",
+    "al hamra oman",
+    "hamra"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#9C8A78",
+    "mid": "#D2B183",
+    "ice": "#E3D6C0",
+    "water": "#4F9AB8",
+    "near": "#2B2620",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#B08D62",
+    "obj": "#7A5A3E"
+   }
+  },
+  {
+   "slug": "bahla-fort",
+   "label": "Bahla Fort with its round watchtower",
+   "lat": 22.964,
+   "lon": 57.301,
+   "radius_km": 5,
+   "aliases": [
+    "bahla fort",
+    "forte di bahla",
+    "forte bahla",
+    "hisn tamah",
+    "bahla castle"
+   ],
+   "names": [
+    "bahla"
+   ],
+   "palette": {
+    "sky": "#9CC6EC",
+    "far": "#A08670",
+    "mid": "#D8C29A",
+    "ice": "#F2E8D2",
+    "water": "#5F8FB0",
+    "near": "#2B2620",
+    "sun": "#F2C14E",
+    "leaf": "#62803A",
+    "acc": "#BFA67D",
+    "obj": "#C9B48C"
+   }
+  },
+  {
+   "slug": "bimmah-sinkhole",
+   "label": "Bimmah sinkhole with its emerald pool",
+   "lat": 23.036,
+   "lon": 59.072,
+   "radius_km": 3,
+   "aliases": [
+    "bimmah sinkhole",
+    "bimah sinkhole",
+    "bimmah",
+    "hawiyat najm",
+    "dabab sinkhole"
+   ],
+   "names": [
+    "sinkhole"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#D8C29E",
+    "mid": "#C29E78",
+    "ice": "#EDE4D3",
+    "water": "#2C9C86",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#6E5A48",
+    "obj": "#4FA3C8"
+   }
+  },
+  {
+   "slug": "birkat-al-mouz",
+   "label": "Ruined mud village of Birkat al Mouz under the rock fold, above the date palms",
+   "lat": 22.918,
+   "lon": 57.667,
+   "radius_km": 4,
+   "aliases": [
+    "birkat al mouz",
+    "birkat al mauz",
+    "birkat al mawz",
+    "birkat almouz",
+    "harat al sibani",
+    "falaj al khatmeen"
+   ],
+   "names": [
+    "birkat"
+   ],
+   "palette": {
+    "sky": "#A9CFEE",
+    "far": "#9C7A62",
+    "mid": "#D9C6A4",
+    "ice": "#EFE6D6",
+    "water": "#4C8FB0",
+    "near": "#2B241F",
+    "sun": "#F4C542",
+    "leaf": "#3F6E3A",
+    "acc": "#C2A47C",
+    "obj": "#8F6A44"
+   }
+  },
+  {
+   "slug": "jabreen-castle",
+   "label": "Jabreen Castle",
+   "lat": 22.91,
+   "lon": 57.257,
+   "radius_km": 4,
+   "aliases": [
+    "jabreen",
+    "jabrin",
+    "castello di jabreen",
+    "forte jabreen",
+    "forte di jabreen",
+    "jibreen castle"
+   ],
+   "palette": {
+    "sky": "#9CC8EC",
+    "far": "#A89A86",
+    "mid": "#D3B58D",
+    "ice": "#ECE2CE",
+    "water": "#B39371",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F8A3A",
+    "acc": "#C8102E",
+    "obj": "#6B4A2E"
+   }
+  },
+  {
+   "slug": "jebel-shams",
+   "label": "Wadi Ghul canyon from the Jebel Shams rim",
+   "lat": 23.22,
+   "lon": 57.21,
+   "radius_km": 12,
+   "aliases": [
+    "jebel shams",
+    "jabal shams",
+    "wadi ghul",
+    "wadi nakhr",
+    "grand canyon of oman",
+    "balcony walk"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#BFC0C8",
+    "mid": "#CDB38E",
+    "ice": "#E6D9BE",
+    "water": "#5A4A3F",
+    "near": "#2A2521",
+    "sun": "#F2C14E",
+    "leaf": "#566A36",
+    "acc": "#8E7E6F",
+    "obj": "#A8A49C"
+   }
+  },
+  {
    "slug": "muscat",
    "label": "Old Muscat: Al Alam Palace between the Mirani and Jalali forts",
    "lat": 23.6145,
@@ -36,6 +209,42 @@
     "leaf": "#4F7D3A",
     "acc": "#E2A93C",
     "obj": "#2E9FCB"
+   }
+  },
+  {
+   "slug": "muttrah-souq",
+   "label": "Muttrah Corniche by the souq: blue-tiled minaret, merchant houses and the golden-dome pavilion",
+   "lat": 23.6182,
+   "lon": 58.5667,
+   "radius_km": 3,
+   "aliases": [
+    "muttrah souq",
+    "mutrah souq",
+    "muttrah souk",
+    "mutrah souk",
+    "matrah souq",
+    "souq di muttrah",
+    "suq di muttrah",
+    "muttrah corniche",
+    "mutrah corniche",
+    "corniche di muttrah"
+   ],
+   "names": [
+    "muttrah",
+    "mutrah",
+    "matrah"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#8E7E70",
+    "mid": "#E4DED2",
+    "ice": "#FAF8F3",
+    "water": "#3E9CC0",
+    "near": "#262A2E",
+    "sun": "#F4C542",
+    "leaf": "#4F7D3A",
+    "acc": "#D4A83A",
+    "obj": "#2F74B5"
    }
   },
   {
@@ -102,6 +311,37 @@
    }
   },
   {
+   "slug": "sur",
+   "label": "Al Ayjah watchtowers and dhow on the Sur lagoon",
+   "lat": 22.572,
+   "lon": 59.538,
+   "radius_km": 12,
+   "aliases": [
+    "al ayjah",
+    "ayjah",
+    "al ayja",
+    "sur dhow yard",
+    "dhow factory sur"
+   ],
+   "names": [
+    "sur",
+    "sur oman",
+    "sur city"
+   ],
+   "palette": {
+    "sky": "#AAD0EE",
+    "far": "#D9BC94",
+    "mid": "#C49A6C",
+    "ice": "#FFFFFF",
+    "water": "#4C9DB2",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#E3CDA6",
+    "obj": "#8C4A2C"
+   }
+  },
+  {
    "slug": "wadi-bani-khalid",
    "label": "The turquoise pools of Wadi Bani Khalid",
    "lat": 22.6114,
@@ -124,6 +364,29 @@
     "leaf": "#5B8A38",
     "acc": "#DDCFB6",
     "obj": "#8F6A44"
+   }
+  },
+  {
+   "slug": "wadi-shab",
+   "label": "Turquoise pool in the Wadi Shab gorge",
+   "lat": 22.836,
+   "lon": 59.235,
+   "radius_km": 4,
+   "aliases": [
+    "wadi shab",
+    "wadi ash shab"
+   ],
+   "palette": {
+    "sky": "#8EC2EC",
+    "far": "#EBDCBC",
+    "mid": "#C79E6A",
+    "ice": "#F3EAD8",
+    "water": "#3DB3A0",
+    "near": "#2B241E",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A34",
+    "acc": "#A67C4E",
+    "obj": "#D9C6A2"
    }
   },
   {
