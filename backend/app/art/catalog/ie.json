@@ -3,6 +3,54 @@
  "name": "Ireland",
  "places": [
   {
+   "slug": "adare",
+   "label": "Adare's thatched cottages on Main Street",
+   "lat": 52.5636,
+   "lon": -8.7894,
+   "radius_km": 10,
+   "aliases": [
+    "adare village"
+   ],
+   "names": [
+    "adare"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9C978A",
+    "mid": "#86705A",
+    "ice": "#F2F0EA",
+    "water": "#7FA858",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E34",
+    "acc": "#E3B54C",
+    "obj": "#B0392C"
+   }
+  },
+  {
+   "slug": "bunratty-castle",
+   "label": "Bunratty Castle",
+   "lat": 52.6993,
+   "lon": -8.8115,
+   "radius_km": 3,
+   "aliases": [
+    "bunratty",
+    "castello di bunratty"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#8E8A80",
+    "mid": "#A69C8E",
+    "ice": "#F2F0EA",
+    "water": "#5E8EA8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E34",
+    "acc": "#6E7072",
+    "obj": "#6E9E48"
+   }
+  },
+  {
    "slug": "cliffs-of-moher",
    "label": "Cliffs of Moher",
    "lat": 52.972,
@@ -23,6 +71,35 @@
     "leaf": "#5E9A44",
     "acc": "#7EA552",
     "obj": "#E8742A"
+   }
+  },
+  {
+   "slug": "cork",
+   "label": "Cork: St Fin Barre's Cathedral over the River Lee",
+   "lat": 51.8945,
+   "lon": -8.4806,
+   "radius_km": 15,
+   "aliases": [
+    "fin barre",
+    "finbarre",
+    "fin barr s cathedral"
+   ],
+   "names": [
+    "cork",
+    "cork city",
+    "city of cork"
+   ],
+   "palette": {
+    "sky": "#B4D0EC",
+    "far": "#E8D69A",
+    "mid": "#A09D94",
+    "ice": "#F2EFE6",
+    "water": "#557E84",
+    "near": "#2A2A2C",
+    "sun": "#F2C14E",
+    "leaf": "#5C8C44",
+    "acc": "#A84A3C",
+    "obj": "#DBA9B8"
    }
   },
   {
@@ -121,6 +198,33 @@
    }
   },
   {
+   "slug": "muckross-house",
+   "label": "Muckross House and its gardens, Killarney",
+   "lat": 52.0277,
+   "lon": -9.5036,
+   "radius_km": 3,
+   "aliases": [
+    "muckross house",
+    "muckross gardens",
+    "giardini di muckross"
+   ],
+   "names": [
+    "muckross"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8FA3AE",
+    "mid": "#B4AC9A",
+    "ice": "#E6E2D6",
+    "water": "#84AC58",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E34",
+    "acc": "#9A3B2C",
+    "obj": "#5F646C"
+   }
+  },
+  {
    "slug": "ring-of-kerry",
    "label": "Ring of Kerry: patchwork fields above Derrynane Bay from Coomakista",
    "lat": 51.93,
@@ -150,6 +254,57 @@
     "leaf": "#4A7E34",
     "acc": "#A08A56",
     "obj": "#9A9890"
+   }
+  },
+  {
+   "slug": "the-burren",
+   "label": "The Burren limestone pavement and Mullaghmore",
+   "lat": 53.0,
+   "lon": -9.05,
+   "radius_km": 25,
+   "aliases": [
+    "the burren",
+    "burren national park"
+   ],
+   "names": [
+    "burren"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#A9B4B8",
+    "mid": "#C8C6BC",
+    "ice": "#DCDBD4",
+    "water": "#7FA6B8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E3E",
+    "acc": "#8EA45E",
+    "obj": "#6A5644"
+   }
+  },
+  {
+   "slug": "trinity-college-dublin",
+   "label": "The Campanile of Trinity College Dublin",
+   "lat": 53.3441,
+   "lon": -6.2573,
+   "radius_km": 2,
+   "aliases": [
+    "trinity college",
+    "book of kells",
+    "long room",
+    "campanile trinity"
+   ],
+   "palette": {
+    "sky": "#A8CBEB",
+    "far": "#CFC8B8",
+    "mid": "#E2D9C4",
+    "ice": "#F3EFE6",
+    "water": "#5E8FB4",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3B",
+    "acc": "#77736E",
+    "obj": "#A7A29A"
    }
   }
  ]
