@@ -1,0 +1,22 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="204" cy="24" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-pe-la-raya-pass-clip"><path d="M80 142L96 113.4L110 92.6L122 77L132 64L140 51L147 39.3L153 45.8L159 41.9L167 52.3L177 49.7L187 62.7L199 69.2L212 87.4L226 110.8L236 142Z"/></clipPath></defs>
+<path d="M80 142L96 113.4L110 92.6L122 77L132 64L140 51L147 39.3L153 45.8L159 41.9L167 52.3L177 49.7L187 62.7L199 69.2L212 87.4L226 110.8L236 142Z" fill="var(--il-far)"/>
+<path d="M100 38H230V82L222 88L214 80L206 92L200 78L192 84L184 74L178 88L170 76L164 82L156 72L150 90L144 76L138 84L132 76L126 96L120 82L112 90L104 84L100 86Z" fill="var(--il-ice)" clip-path="url(#il-pe-la-raya-pass-clip)"/>
+<path d="M150 142L168 121.2L182 103L192 87.4L202 69.2L210 56.2L220 48.4L230 38L240 30.2L250 28.9L260 19.8L270 19.8L280 25L290 32.8L300 38V142Z" fill="var(--il-far)"/>
+<path d="M156 142Q186 118.6 214 105.6Q236 95.2 252 82.2Q270 77 300 79.6V142Z" fill="var(--il-mid)"/>
+<path d="M0 142V43.2L14 35.4L30 28.9L46 30.2L62 40.6L80 56.2L98 74.4L116 92.6L134 108.2L152 118.6L172 126.4L190 134.2V142Z" fill="var(--il-mid)"/>
+<path d="M46 30.2L62 40.6L80 56.2L98 74.4L116 92.6L134 108.2L152 118.6L172 126.4L190 134.2V142H120Q96 105.6 70 77Q58 53.6 46 30.2Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 200V136Q80 132 150 134Q220 131 300 136V200Z" fill="var(--il-leaf)"/>
+<g transform="translate(-160 20)"><path d="M210 135V118L212 115L214 118V122H222V118L224 115L226 118V135ZM226 135V124H246V135Z" fill="var(--il-ice)"/>
+<path d="M208 118L212 113L216 118ZM220 118L224 113L228 118ZM225 125L230 119H244L248 125Z" fill="var(--il-acc)"/>
+<path d="M216 135V129Q218 126 220 129V135Z" fill="var(--il-near)"/></g>
+<path d="M212 186V174M258 186V174" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M204 178V164H266V178Z" fill="var(--il-acc)"/>
+<path d="M205 168H265M205 174H265" stroke="var(--il-sun)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M205 171H265" stroke="var(--il-water)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M210 164V156H230V164ZM240 164V154H260V164Z" fill="var(--il-water)"/>
+<path d="M211 160H229M241 159H259" stroke="var(--il-sun)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M0 200V186Q80 180 160 184Q240 182 300 188V200Z" fill="var(--il-mid)"/>
+<g transform="translate(30 0)"><path d="M66 173.2Q66 168.8 72.6 168.8H81.4Q85.8 168.8 85.8 173.2Q85.8 176.5 82.5 176.5H69.3Q66 176.5 66 173.2ZM81.4 171L82.5 155.6H85.8L84.7 171ZM82.5 155.6Q84.7 152.3 89.1 153.4L91.3 155.6Q90.2 157.8 86.9 157.8H82.5ZM83.6 153.4L83.05 150.1L85.25 152.85ZM85.8 152.85L86.35 149.55L87.45 152.85Z" fill="var(--il-ice)"/><path d="M68.2 175.4V182M71.5 175.4V182M80.3 175.4V182M83.6 175.4V182M66.55 172.1Q63.8 172.1 64.35 176.5" stroke="var(--il-ice)" stroke-width="1.76" fill="none"/></g>
+<g transform="translate(70 4)"><path d="M66 173.2Q66 168.8 72.6 168.8H81.4Q85.8 168.8 85.8 173.2Q85.8 176.5 82.5 176.5H69.3Q66 176.5 66 173.2ZM81.4 171L82.5 155.6H85.8L84.7 171ZM82.5 155.6Q84.7 152.3 89.1 153.4L91.3 155.6Q90.2 157.8 86.9 157.8H82.5ZM83.6 153.4L83.05 150.1L85.25 152.85ZM85.8 152.85L86.35 149.55L87.45 152.85Z" fill="var(--il-obj)"/><path d="M68.2 175.4V182M71.5 175.4V182M80.3 175.4V182M83.6 175.4V182M66.55 172.1Q63.8 172.1 64.35 176.5" stroke="var(--il-obj)" stroke-width="1.76" fill="none"/></g>
