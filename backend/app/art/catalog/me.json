@@ -39,6 +39,35 @@
    }
   },
   {
+   "slug": "biogradska-gora-national-park",
+   "label": "Biogradsko Lake's boat jetty in the beech forest of Biogradska Gora",
+   "lat": 42.8975,
+   "lon": 19.6033,
+   "radius_km": 12,
+   "aliases": [
+    "biogradska gora",
+    "biogradsko jezero",
+    "biogradsko lake",
+    "biograd lake",
+    "lake biograd",
+    "lago biogradsko",
+    "lago di biograd",
+    "parco nazionale biogradska"
+   ],
+   "palette": {
+    "sky": "#9CCBF2",
+    "far": "#A4A89F",
+    "mid": "#7FA654",
+    "ice": "#CFCBBE",
+    "water": "#2D6E78",
+    "near": "#1E251B",
+    "sun": "#F3C340",
+    "leaf": "#3D6E2C",
+    "acc": "#9C7A55",
+    "obj": "#4D5E3B"
+   }
+  },
+  {
    "slug": "budva",
    "label": "Budva old town with St John's bell tower and the Citadel",
    "lat": 42.2779,
@@ -69,6 +98,37 @@
     "leaf": "#4F7A3C",
     "acc": "#D9693B",
     "obj": "#E4D2A8"
+   }
+  },
+  {
+   "slug": "cetinje",
+   "label": "Cetinje Monastery with its round tower, bell tower and arcade",
+   "lat": 42.3897,
+   "lon": 18.9178,
+   "radius_km": 10,
+   "aliases": [
+    "cetinje monastery",
+    "monastery of cetinje",
+    "monastero di cetinje",
+    "cetinjski manastir",
+    "manastir cetinje"
+   ],
+   "names": [
+    "cetinje",
+    "cettigne",
+    "cetigne"
+   ],
+   "palette": {
+    "sky": "#9CC6F0",
+    "far": "#A9A79E",
+    "mid": "#D2CDC2",
+    "ice": "#ECE8DF",
+    "water": "#5A8FB0",
+    "near": "#26282A",
+    "sun": "#F3C340",
+    "leaf": "#3F6B33",
+    "acc": "#646E76",
+    "obj": "#8F8B81"
    }
   },
   {
@@ -114,7 +174,18 @@
     "citta vecchia di kotor",
     "citta vecchia di cattaro",
     "centro storico di kotor",
-    "centro storico di cattaro"
+    "centro storico di cattaro",
+    "kotor fortress",
+    "fortress of st john",
+    "st john fortress",
+    "st john s fortress",
+    "fortress of sveti ivan",
+    "sveti ivan fortress",
+    "tvrdjava sveti ivan",
+    "fortezza di san giovanni",
+    "kotor city walls",
+    "walls of kotor",
+    "mura di kotor"
    ],
    "names": [
     "kotor",
@@ -134,6 +205,33 @@
    }
   },
   {
+   "slug": "ostrog-monastery",
+   "label": "Ostrog Monastery set into the cliff of Ostroska Greda",
+   "lat": 42.6748,
+   "lon": 19.0296,
+   "radius_km": 4,
+   "aliases": [
+    "ostrog",
+    "manastir ostrog",
+    "monastero di ostrog",
+    "ostrog monastery",
+    "monastery of ostrog",
+    "ostroski manastir"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#A8A49B",
+    "mid": "#C98E5C",
+    "ice": "#F5F3EE",
+    "water": "#5A8FB0",
+    "near": "#2A2521",
+    "sun": "#F3C340",
+    "leaf": "#5F7F3B",
+    "acc": "#9A958B",
+    "obj": "#5C4B3E"
+   }
+  },
+  {
    "slug": "perast",
    "label": "Perast's islets Our Lady of the Rocks and St George in front of the town",
    "lat": 42.4858,
@@ -145,7 +243,10 @@
     "madonna dello scalpello",
     "nostra signora dello scalpello",
     "sveti dorde",
-    "sveti djordje"
+    "sveti djordje",
+    "madonna delle rocce",
+    "our lady of the rock",
+    "gospa od skrpjel"
    ],
    "names": [
     "perast",
@@ -174,7 +275,8 @@
     "black lake",
     "crno jezero",
     "lago nero di durmitor",
-    "lago nero del durmitor"
+    "lago nero del durmitor",
+    "lago nero"
    ],
    "names": [
     "zabljak",
