@@ -1,0 +1,22 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="190" cy="22" r="10" fill="var(--il-sun)"/>
+<path d="M170 200L200 64L226 42L246 48L264 34L284 42L300 38V200Z" fill="var(--il-far)"/>
+<path d="M0 200V6L30 5L60 8L90 13L120 21L150 33L176 48L198 66L218 84L238 104L200 136L150 166L104 200Z" fill="var(--il-leaf)"/>
+<path d="M34 8L38 22L36 34L42 48L41 62L47 76L46 90L53 104L52 118L60 132L58 146L66 160L64 174L50 176L48 160L42 146L42 132L36 118L36 104L31 90L32 76L28 62L30 48L27 34L30 22Z" fill="var(--il-ice)"/>
+<path d="M300 200V40L290 46Q270 60 256 78L238 104L250 124Z" fill="var(--il-leaf)"/>
+<path d="M300 70L282 84L264 100L250 124L262 160L300 186Z" fill="var(--il-ice)"/>
+<path d="M300 70L282 84L264 100L250 124L262 160L274 168L270 134L284 104L300 92Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M64 150H74V202H64ZM147 112H153V170H147ZM222 98H225V134H222Z" fill="var(--il-obj)"/>
+<path d="M238 104L250 124L262 160L300 186V200H104L150 166L200 136Z" fill="var(--il-ice)"/>
+<path d="M236 110Q226 146 200 176Q184 190 176 200H190Q204 186 216 172Q238 144 240 112Z" fill="var(--il-water)"/>
+<path d="M-2 150L140 108Q150 105 160 104L268 90V93.5L160 113Q150 114.5 140 117.5L-2 174Z" fill="var(--il-obj)"/>
+<path d="M-2 157L140 110.5Q150 107.5 160 106.5L268 91.5V93.5L160 113Q150 114.5 140 117.5L-2 174Z" fill="var(--il-near)" opacity="0.3"/>
+<g transform="translate(78 10)">
+<path d="M66 200Q78 182 108 178L140 168Q170 162 200 170Q236 178 252 200Z" fill="var(--il-far)"/>
+<path d="M200 170Q236 178 252 200H214Q210 182 200 170Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M186 172L178 166Q174 154 168 146Q164 140 158 140Q153 141 152 145Q147 146 147 151Q147 154 149 154Q149 151 152 150Q154 154 155 158Q156 164 160 168L172 168Z" fill="var(--il-mid)"/>
+<path d="M152 145Q147 146 147 151Q147 154 149 154Q149 151 152 150Z" fill="var(--il-near)"/>
+<path d="M163 159Q170 161 177 166L172 168Q166 166 161 163Z" fill="var(--il-acc)"/>
+<path d="M169 148Q176 158 181 169M162 168V172M167 168V172" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.7"/>
+<circle cx="157" cy="145" r="1.2" fill="var(--il-near)"/>
+</g>
