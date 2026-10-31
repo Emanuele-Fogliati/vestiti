@@ -38,7 +38,9 @@
     "roman baths of bath",
     "great bath bath",
     "bath abbey",
-    "terme di bath"
+    "terme di bath",
+    "roman baths",
+    "terme romane"
    ],
    "names": [
     "bath",
@@ -106,12 +108,57 @@
     "far": "#9AA486",
     "mid": "#B8B0A2",
     "ice": "#ECEAE4",
-    "water": "#8A8C7A",
+    "water": "#6E8C9A",
     "near": "#26292C",
     "sun": "#F2C14E",
     "leaf": "#4E7A34",
     "acc": "#A0503A",
     "obj": "#8C8272"
+   }
+  },
+  {
+   "slug": "buckingham-palace",
+   "label": "Buckingham Palace and the Victoria Memorial",
+   "lat": 51.5014,
+   "lon": -0.1419,
+   "radius_km": 2,
+   "aliases": [
+    "buckingham palace",
+    "palazzo di buckingham"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#C9BBA4",
+    "mid": "#DCD5C4",
+    "ice": "#F4F2EC",
+    "water": "#6E9AB8",
+    "near": "#26282C",
+    "sun": "#F4C430",
+    "leaf": "#5E9A3E",
+    "acc": "#D8302A",
+    "obj": "#D9A92C"
+   }
+  },
+  {
+   "slug": "culloden-battlefield",
+   "label": "Culloden Memorial Cairn on Culloden Moor",
+   "lat": 57.4776,
+   "lon": -4.0949,
+   "radius_km": 3,
+   "aliases": [
+    "culloden"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#8492A4",
+    "mid": "#B0AA9C",
+    "ice": "#E6E1D4",
+    "water": "#3E5232",
+    "near": "#2A2824",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A44",
+    "acc": "#8C5A48",
+    "obj": "#9A8C78"
    }
   },
   {
@@ -200,9 +247,7 @@
    "lon": -6.256,
    "radius_km": 3,
    "aliases": [
-    "fairy pools",
-    "glen brittle",
-    "glenbrittle"
+    "fairy pools"
    ],
    "palette": {
     "sky": "#B8D2EC",
@@ -215,7 +260,11 @@
     "leaf": "#A08E52",
     "acc": "#B8A868",
     "obj": "#8E4E2E"
-   }
+   },
+   "names": [
+    "glen brittle",
+    "glenbrittle"
+   ]
   },
   {
    "slug": "giants-causeway",
