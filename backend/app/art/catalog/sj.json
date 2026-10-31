@@ -3,6 +3,116 @@
  "name": "Svalbard",
  "places": [
   {
+   "slug": "bear-island",
+   "label": "Bear Island's layered bird cliffs and sea stacks, with kittiwakes in flight",
+   "lat": 74.36,
+   "lon": 19.05,
+   "radius_km": 20,
+   "aliases": [
+    "bear island",
+    "bjornoya",
+    "bjoernoeya",
+    "bjornoeya"
+   ],
+   "palette": {
+    "sky": "#C3DBEE",
+    "far": "#AEB1B0",
+    "mid": "#7D6658",
+    "ice": "#F7F7F2",
+    "water": "#2F7A80",
+    "near": "#22201E",
+    "sun": "#F2C14E",
+    "leaf": "#7F8A4E",
+    "acc": "#B9B23E",
+    "obj": "#6B6C63"
+   }
+  },
+  {
+   "slug": "bellsund",
+   "label": "Bamsebu in Bellsund: the old beluga hunters' hut with its field of beluga whale bones",
+   "lat": 77.55,
+   "lon": 14.6,
+   "radius_km": 30,
+   "aliases": [
+    "bellsund",
+    "bamsebu",
+    "ahlstrandhalvoya",
+    "ahlstrandhalvoeya",
+    "recherchefjorden",
+    "van keulenfjorden"
+   ],
+   "palette": {
+    "sky": "#B8D3EA",
+    "far": "#A39C90",
+    "mid": "#5F6066",
+    "ice": "#EEEBE2",
+    "water": "#6E98A8",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#6F6A4C",
+    "acc": "#8E7C63",
+    "obj": "#46494E"
+   }
+  },
+  {
+   "slug": "hornsund",
+   "label": "Hornsundtind's jagged peaks and glaciers over the Hornsund fjord, with a polar bear on a floe",
+   "lat": 76.98,
+   "lon": 15.9,
+   "radius_km": 25,
+   "aliases": [
+    "hornsund",
+    "hornsundtind"
+   ],
+   "palette": {
+    "sky": "#A9CCEB",
+    "far": "#5E5850",
+    "mid": "#5C636F",
+    "ice": "#F3F6F9",
+    "water": "#3F6E93",
+    "near": "#1F2329",
+    "sun": "#F4C64A",
+    "leaf": "#6B7F5A",
+    "acc": "#BCD8E8",
+    "obj": "#474D58"
+   },
+   "names": [
+    "spitsbergen",
+    "spitzbergen",
+    "spitsbergen island",
+    "spitzbergen island",
+    "west spitsbergen",
+    "vestspitsbergen",
+    "spitsbergen svalbard"
+   ]
+  },
+  {
+   "slug": "kongsfjorden",
+   "label": "The Tre Kroner peaks over the Kronebreen glacier at the head of Kongsfjorden, with a Svalbard reindeer",
+   "lat": 78.87,
+   "lon": 12.4,
+   "radius_km": 20,
+   "aliases": [
+    "kongsfjorden",
+    "kongsfjord",
+    "kingsbay",
+    "kronebreen",
+    "tre kroner"
+   ],
+   "palette": {
+    "sky": "#B3D1EC",
+    "far": "#C9D2DB",
+    "mid": "#4F4A4B",
+    "ice": "#F4F6F8",
+    "water": "#4A7590",
+    "near": "#222326",
+    "sun": "#F2C14E",
+    "leaf": "#7C5E44",
+    "acc": "#B5D5E6",
+    "obj": "#5F5653"
+   }
+  },
+  {
    "slug": "longyearbyen",
    "label": "Longyearbyen's colourful pointed houses with a Svalbard reindeer",
    "lat": 78.2232,
@@ -14,7 +124,11 @@
    "names": [
     "longyearbyen",
     "longyearbyen svalbard",
-    "longyear city"
+    "longyear city",
+    "svalbard",
+    "svalbard islands",
+    "svalbard archipelago",
+    "svalbard norway"
    ],
    "palette": {
     "sky": "#B9D5EC",
@@ -27,6 +141,57 @@
     "leaf": "#5F8F57",
     "acc": "#B83A2E",
     "obj": "#E2B43A"
+   }
+  },
+  {
+   "slug": "northwest-spitsbergen-national-park",
+   "label": "Magdalenefjorden in Northwest Spitsbergen National Park: the Waggonwaybreen glacier between sharp peaks, with a walrus on a floe",
+   "lat": 79.56,
+   "lon": 11.0,
+   "radius_km": 40,
+   "aliases": [
+    "northwest spitsbergen",
+    "nordvest spitsbergen",
+    "magdalenefjorden",
+    "magdalenefjord",
+    "magdalena fjord",
+    "waggonwaybreen"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#9A7364",
+    "mid": "#465166",
+    "ice": "#F2F6FA",
+    "water": "#4D8BB0",
+    "near": "#1C2028",
+    "sun": "#F4C64A",
+    "leaf": "#6B7F5A",
+    "acc": "#AAD3E6",
+    "obj": "#56607A"
+   }
+  },
+  {
+   "slug": "ny-alesund",
+   "label": "Ny-Ålesund's Amundsen airship mast and colourful research village under pointed peaks, with an arctic fox",
+   "lat": 78.927,
+   "lon": 11.925,
+   "radius_km": 6,
+   "aliases": [
+    "ny alesund",
+    "ny aalesund",
+    "nyalesund"
+   ],
+   "palette": {
+    "sky": "#AFCFEC",
+    "far": "#9A8E7E",
+    "mid": "#6F6A6E",
+    "ice": "#F2F3F1",
+    "water": "#3E6F8E",
+    "near": "#22211F",
+    "sun": "#E8B83C",
+    "leaf": "#7F6A45",
+    "acc": "#A8382B",
+    "obj": "#5A2F1F"
    }
   }
  ]
