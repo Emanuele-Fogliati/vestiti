@@ -109,6 +109,30 @@
    }
   },
   {
+   "slug": "bardonecchia",
+   "label": "Bardonecchia and the Sant'Ippolito bell tower in their basin under the pale limestone peaks",
+   "lat": 45.078,
+   "lon": 6.704,
+   "radius_km": 10,
+   "aliases": [],
+   "names": [
+    "bardonecchia",
+    "bardonneche"
+   ],
+   "palette": {
+    "sky": "#A9D3F2",
+    "far": "#D8D1C5",
+    "mid": "#A69684",
+    "ice": "#F0ECE3",
+    "water": "#5E9FB8",
+    "near": "#262A26",
+    "sun": "#F6C431",
+    "leaf": "#4D7A3C",
+    "acc": "#B4573E",
+    "obj": "#7F848C"
+   }
+  },
+  {
    "slug": "bari",
    "label": "Basilica of San Nicola, Bari",
    "lat": 41.1306,
@@ -119,7 +143,8 @@
     "basilica of saint nicholas",
     "basilica of san nicola",
     "san nicola di bari",
-    "bari vecchia"
+    "bari vecchia",
+    "basilica of st nicholas"
    ],
    "names": [
     "bari"
@@ -387,10 +412,7 @@
    "lat": 39.1437,
    "lon": 8.3083,
    "radius_km": 10,
-   "aliases": [
-    "isola di san pietro",
-    "san pietro island"
-   ],
+   "aliases": [],
    "names": [
     "carloforte"
    ],
@@ -1129,6 +1151,33 @@
    }
   },
   {
+   "slug": "lampedusa",
+   "label": "Isola dei Conigli in its turquoise shallows with a loggerhead turtle, Lampedusa",
+   "lat": 35.512,
+   "lon": 12.556,
+   "radius_km": 10,
+   "aliases": [
+    "lampedusa",
+    "isola dei conigli",
+    "spiaggia dei conigli",
+    "rabbit beach",
+    "rabbit island",
+    "rabbit islet"
+   ],
+   "palette": {
+    "sky": "#B3D6F2",
+    "far": "#DCC48F",
+    "mid": "#E6D39F",
+    "ice": "#F5F1E6",
+    "water": "#4FC6C8",
+    "near": "#23292B",
+    "sun": "#F6C431",
+    "leaf": "#8B8B52",
+    "acc": "#A8784A",
+    "obj": "#1F5FA6"
+   }
+  },
+  {
    "slug": "lecce",
    "label": "Basilica di Santa Croce, Lecce",
    "lat": 40.3549,
@@ -1544,6 +1593,36 @@
     "leaf": "#4E7A3A",
     "acc": "#B5875C",
     "obj": "#5E5248"
+   }
+  },
+  {
+   "slug": "monopoli",
+   "label": "Monopoli's old harbour with fishing boats, the Carlo V castle and the cathedral bell tower",
+   "lat": 40.953,
+   "lon": 17.302,
+   "radius_km": 10,
+   "aliases": [
+    "porto antico di monopoli",
+    "porto vecchio monopoli",
+    "castello carlo v monopoli",
+    "madonna della madia",
+    "monopoli cathedral",
+    "cattedrale di monopoli"
+   ],
+   "names": [
+    "monopoli"
+   ],
+   "palette": {
+    "sky": "#BFDCF0",
+    "far": "#E2D6BE",
+    "mid": "#D3B27C",
+    "ice": "#F4F1EA",
+    "water": "#4AA39B",
+    "near": "#26302F",
+    "sun": "#F6C431",
+    "leaf": "#5E8A48",
+    "acc": "#2F6DB0",
+    "obj": "#3F9184"
    }
   },
   {
@@ -2066,6 +2145,31 @@
    }
   },
   {
+   "slug": "pantelleria",
+   "label": "The Arco dell'Elefante lava arch dipping into the sea at Cala Levante, Pantelleria",
+   "lat": 36.812,
+   "lon": 12.024,
+   "radius_km": 12,
+   "aliases": [
+    "pantelleria",
+    "arco dell elefante",
+    "elephant arch",
+    "cala levante"
+   ],
+   "palette": {
+    "sky": "#B8D8F0",
+    "far": "#9C948C",
+    "mid": "#6A625C",
+    "ice": "#F2EEE6",
+    "water": "#2E6F9E",
+    "near": "#211F1E",
+    "sun": "#F6C431",
+    "leaf": "#7F8C4B",
+    "acc": "#C9A86A",
+    "obj": "#E8E2D4"
+   }
+  },
+  {
    "slug": "pantheon",
    "label": "Pantheon, Rome",
    "lat": 41.8986,
@@ -2171,6 +2275,34 @@
     "leaf": "#8E8982",
     "acc": "#D9925A",
     "obj": "#C2A48A"
+   }
+  },
+  {
+   "slug": "piazza-pretoria",
+   "label": "The Fontana Pretoria with its statues and stairs, Santa Caterina's dome behind, Palermo",
+   "lat": 38.1153,
+   "lon": 13.3626,
+   "radius_km": 2,
+   "aliases": [
+    "piazza pretoria",
+    "fontana pretoria",
+    "pretoria fountain",
+    "praetorian fountain",
+    "fontana della vergogna",
+    "fountain of shame",
+    "piazza della vergogna"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#E3CFA8",
+    "mid": "#E0C9A2",
+    "ice": "#F1EEE6",
+    "water": "#6FB3C2",
+    "near": "#2C2620",
+    "sun": "#F6C431",
+    "leaf": "#6E8A4E",
+    "acc": "#D2A27E",
+    "obj": "#B9C0C6"
    }
   },
   {
@@ -2605,6 +2737,34 @@
    }
   },
   {
+   "slug": "san-pietro-island",
+   "label": "Le Colonne, the two trachyte sea stacks of San Pietro island off La Bobba beach",
+   "lat": 39.118,
+   "lon": 8.291,
+   "radius_km": 4,
+   "aliases": [
+    "colonne di carloforte",
+    "colonne carloforte",
+    "le colonne di san pietro",
+    "la bobba",
+    "isola san pietro",
+    "isola di san pietro",
+    "san pietro island"
+   ],
+   "palette": {
+    "sky": "#B4D5EE",
+    "far": "#D9D0B8",
+    "mid": "#D2C2A4",
+    "ice": "#F2EEE4",
+    "water": "#2D7FB0",
+    "near": "#24262A",
+    "sun": "#F6C431",
+    "leaf": "#7E8F4C",
+    "acc": "#B3A285",
+    "obj": "#1E4F8C"
+   }
+  },
+  {
    "slug": "san-vito-lo-capo",
    "label": "San Vito Lo Capo beach under Monte Monaco",
    "lat": 38.1745,
@@ -2885,7 +3045,8 @@
    "aliases": [
     "stromboli",
     "isola di stromboli",
-    "strombolicchio"
+    "strombolicchio",
+    "sciara del fuoco"
    ],
    "palette": {
     "sky": "#9CC4EC",
