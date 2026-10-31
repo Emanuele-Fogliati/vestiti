@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="46" cy="30" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-jp-lake-kawaguchi-fuji"><path d="M-10 128C40 124 64 108 84 92Q112 72 139 50H163Q190 72 218 92C238 108 262 124 310 128Z"/></clipPath></defs>
+<path d="M-10 128C40 124 64 108 84 92Q112 72 139 50H163Q190 72 218 92C238 108 262 124 310 128Z" fill="var(--il-mid)"/>
+<path d="M60 30H240V84L230 90L222 84L214 96L206 86L198 98L190 86L182 100L174 88L166 102L158 90L150 100L142 88L134 98L126 86L118 96L110 86L100 92L92 84L60 88Z" fill="var(--il-ice)" clip-path="url(#il-jp-lake-kawaguchi-fuji)"/>
+<path d="M146 56L140 74M156 56L160 76M130 66L120 80M172 66L182 80" stroke="var(--il-far)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M56 128V120H68V116H80V122H94V118H102V114H114V122H128V119H136V122H148V117H160V121H174V118H184V122H198V128Z" fill="var(--il-ice)"/>
+<path d="M60 123H64M72 120H76M84 125H90M106 118H110M106 122H110M118 125H124M140 125H144M152 121H156M164 124H170M178 122H182M188 125H194" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M0 134V108Q18 102 34 108Q52 116 64 126Q130 122 200 125Q240 122 300 126V134Z" fill="var(--il-leaf)"/>
+<path d="M0 200V132H300V200Z" fill="var(--il-water)"/>
+<path d="M272 196Q270 172 264 150M266 164Q276 154 290 150" stroke="var(--il-obj)" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M300 24Q286 20 280 28Q268 26 262 36Q250 38 250 48Q240 52 242 62Q232 68 236 78Q226 86 232 96Q222 104 228 114Q214 118 212 130Q204 138 212 146Q220 154 230 148Q240 156 250 148Q258 154 266 146Q276 152 284 144Q292 148 300 144Z" fill="var(--il-acc)"/>
+<path d="M300 60Q284 66 272 82Q262 98 262 140M288 40Q272 54 266 74M262 118Q246 122 228 134" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M178 200Q216 186 300 182V200Z" fill="var(--il-leaf)"/>
