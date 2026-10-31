@@ -64,7 +64,11 @@
    "lon": -3.588,
    "radius_km": 6,
    "aliases": [
-    "alhambra"
+    "alhambra",
+    "mirador de san nicolas",
+    "mirador san nicolas",
+    "san nicolas viewpoint",
+    "san nicolas lookout"
    ],
    "names": [
     "granada"
@@ -303,6 +307,59 @@
    }
   },
   {
+   "slug": "el-raval",
+   "label": "Botero's cat on the Rambla del Raval, Barcelona",
+   "lat": 41.3793,
+   "lon": 2.1694,
+   "radius_km": 2,
+   "aliases": [
+    "el raval",
+    "raval",
+    "rambla del raval",
+    "gat de botero",
+    "gato de botero",
+    "botero cat",
+    "gatto di botero"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#E9D9A6",
+    "mid": "#4C4236",
+    "ice": "#F3EEE2",
+    "water": "#BDBAB2",
+    "near": "#1D1A17",
+    "sun": "#F4C430",
+    "leaf": "#5C8A4A",
+    "acc": "#C9A243",
+    "obj": "#857256"
+   }
+  },
+  {
+   "slug": "fuerteventura",
+   "label": "A Majorero windmill among Fuerteventura's brown volcanic hills",
+   "lat": 28.36,
+   "lon": -14.05,
+   "radius_km": 50,
+   "aliases": [],
+   "names": [
+    "fuerteventura",
+    "isla de fuerteventura",
+    "fuerteventura island"
+   ],
+   "palette": {
+    "sky": "#A9CCEF",
+    "far": "#C9A47A",
+    "mid": "#A8714A",
+    "ice": "#F7F5F0",
+    "water": "#2E7FB8",
+    "near": "#2B231E",
+    "sun": "#F4C542",
+    "leaf": "#5F7A3A",
+    "acc": "#B98A62",
+    "obj": "#5E4330"
+   }
+  },
+  {
    "slug": "gothic-quarter",
    "label": "Pont del Bisbe in Barcelona's Gothic Quarter",
    "lat": 41.3833,
@@ -352,6 +409,34 @@
     "leaf": "#5E7E44",
     "acc": "#6E4830",
     "obj": "#C9A06C"
+   }
+  },
+  {
+   "slug": "jardin-de-cactus",
+   "label": "Jardin de Cactus windmill and cacti, Lanzarote",
+   "lat": 29.0815,
+   "lon": -13.4746,
+   "radius_km": 3,
+   "aliases": [
+    "jardin de cactus",
+    "cactus garden",
+    "giardino dei cactus",
+    "jardin de cactus lanzarote"
+   ],
+   "names": [
+    "guatiza"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#C9BBA2",
+    "mid": "#6F5E52",
+    "ice": "#F5F3EF",
+    "water": "#403C39",
+    "near": "#1E1C1A",
+    "sun": "#E2B33C",
+    "leaf": "#5E8C3A",
+    "acc": "#BF4E30",
+    "obj": "#8E9196"
    }
   },
   {
@@ -407,6 +492,36 @@
    }
   },
   {
+   "slug": "la-graciosa",
+   "label": "Playa de las Conchas and Montana Clara, La Graciosa",
+   "lat": 29.278,
+   "lon": -13.504,
+   "radius_km": 8,
+   "aliases": [
+    "la graciosa",
+    "isla graciosa",
+    "isola graciosa",
+    "playa de las conchas",
+    "caleta de sebo",
+    "caleta del sebo"
+   ],
+   "names": [
+    "graciosa"
+   ],
+   "palette": {
+    "sky": "#92C6F0",
+    "far": "#EBD8A6",
+    "mid": "#8C7867",
+    "ice": "#FFFFFF",
+    "water": "#1F6EA8",
+    "near": "#2A2522",
+    "sun": "#F6C431",
+    "leaf": "#7A8452",
+    "acc": "#A9533A",
+    "obj": "#38B6C2"
+   }
+  },
+  {
    "slug": "la-rambla",
    "label": "La Rambla and the Columbus Monument, Barcelona",
    "lat": 41.3809,
@@ -433,6 +548,32 @@
     "leaf": "#6F8F3A",
     "acc": "#2F5E46",
     "obj": "#4E4A44"
+   }
+  },
+  {
+   "slug": "logrono",
+   "label": "Twin towers of Santa Maria de la Redonda, Logrono",
+   "lat": 42.4657,
+   "lon": -2.4457,
+   "radius_km": 15,
+   "aliases": [
+    "santa maria de la redonda",
+    "la redonda"
+   ],
+   "names": [
+    "logrono"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#B88E4E",
+    "mid": "#DDB56C",
+    "ice": "#F2E3BE",
+    "water": "#4E8EB0",
+    "near": "#2C241C",
+    "sun": "#F2C14E",
+    "leaf": "#4A6E34",
+    "acc": "#E6D2A6",
+    "obj": "#CDBFA4"
    }
   },
   {
@@ -506,7 +647,9 @@
     "moschea di cordova",
     "moschea di cordoba",
     "mezquita cattedrale",
-    "moschea cattedrale"
+    "moschea cattedrale",
+    "mezquita of cordoba",
+    "moschea cattedrale di cordova"
    ],
    "palette": {
     "sky": "#F4E8D0",
@@ -519,6 +662,63 @@
     "leaf": "#D2A486",
     "acc": "#B4432E",
     "obj": "#6A6764"
+   }
+  },
+  {
+   "slug": "palas-de-rei",
+   "label": "Church of San Tirso on the Camino, Palas de Rei",
+   "lat": 42.8733,
+   "lon": -7.8686,
+   "radius_km": 8,
+   "aliases": [
+    "igrexa de san tirso",
+    "iglesia de san tirso"
+   ],
+   "names": [
+    "palas de rei",
+    "palas de rey",
+    "palas do rei"
+   ],
+   "palette": {
+    "sky": "#B2D5F2",
+    "far": "#DAD3C3",
+    "mid": "#9E9483",
+    "ice": "#F4F2EC",
+    "water": "#2F5FA8",
+    "near": "#24221F",
+    "sun": "#F2C230",
+    "leaf": "#5A8A3A",
+    "acc": "#6E4A30",
+    "obj": "#C8683E"
+   }
+  },
+  {
+   "slug": "pamplona",
+   "label": "Town hall on Plaza Consistorial, Pamplona",
+   "lat": 42.8181,
+   "lon": -1.644,
+   "radius_km": 15,
+   "aliases": [
+    "ayuntamiento de pamplona",
+    "pamplona town hall",
+    "pamplona city hall"
+   ],
+   "names": [
+    "pamplona",
+    "iruna",
+    "pamplona iruna"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#E2D6BE",
+    "mid": "#C9A46A",
+    "ice": "#F0E4C4",
+    "water": "#5B3B2A",
+    "near": "#2A221C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#C83A32",
+    "obj": "#EAC45E"
    }
   },
   {
@@ -809,7 +1009,8 @@
     "catedral de santiago",
     "santiago de compostela cathedral",
     "cathedral of santiago de compostela",
-    "cattedrale di santiago"
+    "cattedrale di santiago",
+    "catedral de santiago de compostela"
    ],
    "names": [
     "santiago de compostela",
@@ -839,7 +1040,8 @@
    "names": [
     "seville",
     "sevilla",
-    "siviglia"
+    "siviglia",
+    "plaza de espana"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -985,6 +1187,30 @@
     "leaf": "#587E36",
     "acc": "#C27A50",
     "obj": "#4C535C"
+   }
+  },
+  {
+   "slug": "torre-del-oro",
+   "label": "Torre del Oro on the Guadalquivir, Seville",
+   "lat": 37.3824,
+   "lon": -5.9963,
+   "radius_km": 2,
+   "aliases": [
+    "torre del oro",
+    "torre dell oro",
+    "tower of gold"
+   ],
+   "palette": {
+    "sky": "#90C3EE",
+    "far": "#E2D4B4",
+    "mid": "#CDB183",
+    "ice": "#F4F1EA",
+    "water": "#5E8C80",
+    "near": "#2A2620",
+    "sun": "#F4C430",
+    "leaf": "#4E7D3A",
+    "acc": "#D9A22B",
+    "obj": "#24427A"
    }
   }
  ]
