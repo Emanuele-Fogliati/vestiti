@@ -91,12 +91,16 @@
    "aliases": [
     "guggenheim bilbao",
     "guggenheim museum bilbao",
-    "museo guggenheim bilbao"
+    "museo guggenheim bilbao",
+    "museo guggenheim",
+    "bilboko guggenheim"
    ],
    "names": [
     "bilbao",
     "bilbo",
-    "bilbao city"
+    "bilbao city",
+    "guggenheim museum",
+    "guggenheim"
    ],
    "palette": {
     "sky": "#B4D2EE",
@@ -165,6 +169,29 @@
     "leaf": "#5E8C46",
     "acc": "#D69A48",
     "obj": "#EFD06A"
+   }
+  },
+  {
+   "slug": "caminito-del-rey",
+   "label": "Caminito del Rey hanging bridge, Desfiladero de los Gaitanes",
+   "lat": 36.928,
+   "lon": -4.785,
+   "radius_km": 5,
+   "aliases": [
+    "caminito del rey",
+    "desfiladero de los gaitanes"
+   ],
+   "palette": {
+    "sky": "#B6D4F0",
+    "far": "#9EAEBC",
+    "mid": "#C8925E",
+    "ice": "#E8E2D4",
+    "water": "#6EBAA8",
+    "near": "#2A2522",
+    "sun": "#F2C14E",
+    "leaf": "#6E8A46",
+    "acc": "#8C6A4C",
+    "obj": "#6C6A66"
    }
   },
   {
@@ -303,6 +330,31 @@
    }
   },
   {
+   "slug": "granada-cathedral",
+   "label": "Granada Cathedral main facade",
+   "lat": 37.1765,
+   "lon": -3.5993,
+   "radius_km": 1,
+   "aliases": [
+    "catedral de granada",
+    "granada cathedral",
+    "cattedrale di granada",
+    "catedral de la encarnacion"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#E6D2A6",
+    "mid": "#D4B47C",
+    "ice": "#DCD4C4",
+    "water": "#5E8EB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E44",
+    "acc": "#6E4830",
+    "obj": "#C9A06C"
+   }
+  },
+  {
    "slug": "jerez-de-la-frontera",
    "label": "Jerez Cathedral and its bell tower from the Plaza de la Encarnacion",
    "lat": 36.6817,
@@ -330,6 +382,28 @@
     "leaf": "#4E7E3A",
     "acc": "#3E4840",
     "obj": "#B0583E"
+   }
+  },
+  {
+   "slug": "la-barceloneta",
+   "label": "Barceloneta beach and the W Hotel, Barcelona",
+   "lat": 41.379,
+   "lon": 2.191,
+   "radius_km": 3,
+   "aliases": [
+    "barceloneta"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#C9C4B6",
+    "mid": "#5A86BC",
+    "ice": "#F4EEDC",
+    "water": "#2E7FB2",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#8A6A48",
+    "obj": "#DCBC8C"
    }
   },
   {
@@ -576,6 +650,37 @@
    }
   },
   {
+   "slug": "royal-chapel-of-granada",
+   "label": "Royal Chapel of Granada (Capilla Real), Calle Oficios facade",
+   "lat": 37.1762,
+   "lon": -3.5989,
+   "radius_km": 1,
+   "aliases": [
+    "capilla real de granada",
+    "royal chapel of granada",
+    "cappella reale di granada",
+    "capilla real granada",
+    "cappella reale granada"
+   ],
+   "names": [
+    "capilla real",
+    "royal chapel",
+    "cappella reale"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#CFC6B4",
+    "mid": "#DCD2BE",
+    "ice": "#F2EEE6",
+    "water": "#5E8EB0",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E44",
+    "acc": "#6A4630",
+    "obj": "#C8A47A"
+   }
+  },
+  {
    "slug": "royal-palace-of-madrid",
    "label": "Royal Palace of Madrid from Plaza de la Armeria",
    "lat": 40.4179,
@@ -631,6 +736,34 @@
     "leaf": "#5E8A3E",
     "acc": "#C8402A",
     "obj": "#C9AD84"
+   }
+  },
+  {
+   "slug": "salamanca",
+   "label": "Salamanca Cathedral above the Roman bridge",
+   "lat": 40.9604,
+   "lon": -5.6668,
+   "radius_km": 15,
+   "aliases": [
+    "catedral de salamanca",
+    "salamanca cathedral",
+    "catedral nueva de salamanca",
+    "puente romano de salamanca"
+   ],
+   "names": [
+    "salamanca"
+   ],
+   "palette": {
+    "sky": "#B2D2F0",
+    "far": "#E4CE9C",
+    "mid": "#D2AE74",
+    "ice": "#EEE4D0",
+    "water": "#6E8C88",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E8E40",
+    "acc": "#B8603E",
+    "obj": "#BCA27A"
    }
   },
   {
