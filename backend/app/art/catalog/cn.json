@@ -38,6 +38,65 @@
    ]
   },
   {
+   "slug": "chongqing",
+   "label": "Hongyadong stilt-house complex on the Jialing River, Chongqing",
+   "lat": 29.5631,
+   "lon": 106.5794,
+   "radius_km": 25,
+   "aliases": [
+    "hongyadong",
+    "hongya dong",
+    "hongya cave",
+    "hongyadong cave"
+   ],
+   "names": [
+    "chongqing",
+    "chungking"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#93A8BC",
+    "mid": "#7A4E32",
+    "ice": "#E8E2D6",
+    "water": "#5E8E80",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#557E3C",
+    "acc": "#D2382C",
+    "obj": "#D2662E"
+   }
+  },
+  {
+   "slug": "dali",
+   "label": "Three Pagodas of Chongsheng Temple, Dali",
+   "lat": 25.7066,
+   "lon": 100.1465,
+   "radius_km": 15,
+   "aliases": [
+    "dali old town",
+    "three pagodas",
+    "chongsheng temple",
+    "tre pagode",
+    "dali gucheng"
+   ],
+   "names": [
+    "dali",
+    "dali city"
+   ],
+   "palette": {
+    "sky": "#B0D0EE",
+    "far": "#7E93A8",
+    "mid": "#DCC59A",
+    "ice": "#F2E8D2",
+    "water": "#6E9CB4",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#6E8A4A",
+    "obj": "#B9B2A6"
+   }
+  },
+  {
    "slug": "forbidden-city",
    "label": "Hall of Supreme Harmony, Forbidden City, Beijing",
    "lat": 39.9155,
@@ -241,6 +300,33 @@
    }
   },
   {
+   "slug": "kuanzhai-alley",
+   "label": "Qing courtyard gate on the Kuanzhai Alleys, Chengdu",
+   "lat": 30.6696,
+   "lon": 104.056,
+   "radius_km": 2,
+   "aliases": [
+    "kuanzhai",
+    "kuan zhai",
+    "wide and narrow alley",
+    "wide and narrow alleys",
+    "vicoli kuanzhai",
+    "vicoli larghi e stretti"
+   ],
+   "palette": {
+    "sky": "#C4DAEC",
+    "far": "#62676A",
+    "mid": "#45362A",
+    "ice": "#ECE8DF",
+    "water": "#4A4D50",
+    "near": "#1F1E1C",
+    "sun": "#EDB940",
+    "leaf": "#5C8A42",
+    "acc": "#A63A2C",
+    "obj": "#A9A8A2"
+   }
+  },
+  {
    "slug": "kunming",
    "label": "Jinma Biji archways on Jinbi Square, Kunming",
    "lat": 25.0349,
@@ -362,6 +448,42 @@
    }
   },
   {
+   "slug": "ming-tombs",
+   "label": "Stone camels and elephants on the Sacred Way, Ming Tombs",
+   "lat": 40.2357,
+   "lon": 116.2427,
+   "radius_km": 8,
+   "aliases": [
+    "ming tombs",
+    "tombe ming",
+    "tombe della dinastia ming",
+    "tomba di chang",
+    "shisanling",
+    "thirteen tombs",
+    "ming dynasty tombs",
+    "changling tomb",
+    "dingling tomb",
+    "sacred way ming",
+    "spirit way ming"
+   ],
+   "names": [
+    "changling",
+    "dingling"
+   ],
+   "palette": {
+    "sky": "#C6DCEC",
+    "far": "#9AAAB0",
+    "mid": "#B8B3A6",
+    "ice": "#E2DDD0",
+    "water": "#7FA6B8",
+    "near": "#2C2C28",
+    "sun": "#F2C14E",
+    "leaf": "#6C9A3A",
+    "acc": "#86B04C",
+    "obj": "#CFC7B4"
+   }
+  },
+  {
    "slug": "muslim-quarter-xian",
    "label": "Drum Tower and Muslim Quarter, Xi'an",
    "lat": 34.2618,
@@ -376,7 +498,15 @@
     "huimin jie",
     "beiyuanmen",
     "quartiere musulmano di xi an",
-    "quartiere musulmano xi an"
+    "quartiere musulmano xi an",
+    "drum tower of xi an",
+    "drum tower of xian",
+    "xi an drum tower",
+    "xian drum tower",
+    "drum tower xi an",
+    "drum tower xian",
+    "torre del tamburo di xi an",
+    "torre del tamburo di xian"
    ],
    "names": [
     "muslim quarter",
@@ -420,6 +550,39 @@
     "leaf": "#4F7F3A",
     "acc": "#C8302C",
     "obj": "#C8457E"
+   }
+  },
+  {
+   "slug": "pingyao",
+   "label": "Market Tower over South Street, Pingyao",
+   "lat": 37.2009,
+   "lon": 112.1786,
+   "radius_km": 12,
+   "aliases": [
+    "pingyao ancient city",
+    "ancient city of pingyao",
+    "ancient city of ping yao",
+    "pingyao old town",
+    "pingyao gucheng",
+    "citta antica di pingyao",
+    "pingyao market tower",
+    "pingyao shilou"
+   ],
+   "names": [
+    "pingyao",
+    "ping yao"
+   ],
+   "palette": {
+    "sky": "#AACBEA",
+    "far": "#5E6266",
+    "mid": "#4A3A30",
+    "ice": "#E8E3D6",
+    "water": "#3E9A9C",
+    "near": "#1E1C1A",
+    "sun": "#F2C14E",
+    "leaf": "#A69B62",
+    "acc": "#D0342C",
+    "obj": "#A9A59C"
    }
   },
   {
@@ -485,7 +648,12 @@
    "lon": 121.49,
    "radius_km": 30,
    "aliases": [
-    "the bund"
+    "the bund",
+    "oriental pearl",
+    "pearl tower",
+    "torre della perla",
+    "torre perla d oriente",
+    "dongfang mingzhu"
    ],
    "names": [
     "shanghai",
@@ -876,6 +1044,30 @@
     "leaf": "#3E6E3A",
     "acc": "#D98C80",
     "obj": "#A8875A"
+   }
+  },
+  {
+   "slug": "zhujiajiao",
+   "label": "Fangsheng Bridge, Zhujiajiao water town",
+   "lat": 31.1085,
+   "lon": 121.0565,
+   "radius_km": 5,
+   "aliases": [
+    "zhujiajiao",
+    "fangsheng bridge",
+    "fangsheng qiao"
+   ],
+   "palette": {
+    "sky": "#B8D4EA",
+    "far": "#62666A",
+    "mid": "#A89E8A",
+    "ice": "#F1EEE6",
+    "water": "#7C9690",
+    "near": "#2A2A28",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A48",
+    "acc": "#D9B677",
+    "obj": "#7A4A2C"
    }
   }
  ]
