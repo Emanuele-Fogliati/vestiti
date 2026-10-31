@@ -55,6 +55,93 @@
    }
   },
   {
+   "slug": "alesund",
+   "label": "Alesund's Art Nouveau town seen from Aksla",
+   "lat": 62.472,
+   "lon": 6.152,
+   "radius_km": 12,
+   "aliases": [
+    "aksla",
+    "fjellstua",
+    "brosundet"
+   ],
+   "names": [
+    "alesund",
+    "aalesund",
+    "alesund city",
+    "alesund norway"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#8FA0B4",
+    "mid": "#6F7378",
+    "ice": "#F1EEE6",
+    "water": "#3F6E8E",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3C",
+    "acc": "#E8C25A",
+    "obj": "#C8463C"
+   }
+  },
+  {
+   "slug": "alta",
+   "label": "Northern Lights Cathedral, Alta",
+   "lat": 69.9686,
+   "lon": 23.2717,
+   "radius_km": 15,
+   "aliases": [
+    "northern lights cathedral",
+    "nordlyskatedralen",
+    "alta museum",
+    "cattedrale dell aurora boreale"
+   ],
+   "names": [
+    "alta"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#8E9AA8",
+    "mid": "#C4C6C8",
+    "ice": "#F4F6F8",
+    "water": "#34516E",
+    "near": "#24272C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9450",
+    "acc": "#B8956A",
+    "obj": "#D2CFC8"
+   }
+  },
+  {
+   "slug": "andenes",
+   "label": "Andenes lighthouse above the harbour houses, with a whale tail",
+   "lat": 69.3247,
+   "lon": 16.1281,
+   "radius_km": 12,
+   "aliases": [
+    "andenes fyr",
+    "andenes lighthouse",
+    "faro di andenes",
+    "vesteralen",
+    "isole vesteralen"
+   ],
+   "names": [
+    "andenes"
+   ],
+   "palette": {
+    "sky": "#C6DCEE",
+    "far": "#8E9AAA",
+    "mid": "#8A7A66",
+    "ice": "#F2EEE6",
+    "water": "#5D8DA8",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#7A9450",
+    "acc": "#9C3A2E",
+    "obj": "#C8432E"
+   }
+  },
+  {
    "slug": "bergen",
    "label": "Bryggen wharf houses, Bergen",
    "lat": 60.3975,
@@ -78,6 +165,37 @@
     "acc": "#B0402F",
     "obj": "#D0953A"
    }
+  },
+  {
+   "slug": "briksdalsbreen",
+   "label": "Briksdalsbreen glacier tongue above its lake",
+   "lat": 61.663,
+   "lon": 6.817,
+   "radius_km": 5,
+   "aliases": [
+    "briksdalsbreen",
+    "briksdalbreen",
+    "briksdal glacier",
+    "ghiacciaio briksdal",
+    "ghiacciaio di briksdal",
+    "briksdalsbre",
+    "briksdal"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#B3AEA4",
+    "mid": "#86827A",
+    "ice": "#EEF4F8",
+    "water": "#4C8A86",
+    "near": "#262728",
+    "sun": "#F2C14E",
+    "leaf": "#6A8A48",
+    "acc": "#B57E54",
+    "obj": "#9CC6DE"
+   },
+   "names": [
+    "olden"
+   ]
   },
   {
    "slug": "dalsnibba",
@@ -128,6 +246,39 @@
    }
   },
   {
+   "slug": "flam-railway",
+   "label": "The green Flåm Railway train at Kjosfossen falls",
+   "lat": 60.7445,
+   "lon": 7.1366,
+   "radius_km": 6,
+   "aliases": [
+    "flamsbana",
+    "flam railway",
+    "flaam railway",
+    "flam line",
+    "flamsbanen",
+    "ferrovia di flam",
+    "ferrovia flam",
+    "kjosfossen",
+    "myrdal stasjon"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#A9B6BC",
+    "mid": "#7D8278",
+    "ice": "#F6F8F8",
+    "water": "#4C7C86",
+    "near": "#1F2624",
+    "sun": "#F2C14E",
+    "leaf": "#4F7D36",
+    "acc": "#D9D3C2",
+    "obj": "#2C5A3E"
+   },
+   "names": [
+    "myrdal station"
+   ]
+  },
+  {
    "slug": "geirangerfjord",
    "label": "Geirangerfjord",
    "lat": 62.1,
@@ -147,6 +298,30 @@
     "leaf": "#4E7E3A",
     "acc": "#C8A040",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "hardangervidda",
+   "label": "Hardangervidda plateau with Harteigen and reindeer",
+   "lat": 60.19,
+   "lon": 7.07,
+   "radius_km": 45,
+   "aliases": [
+    "hardangervidda",
+    "harteigen",
+    "haarteigen"
+   ],
+   "palette": {
+    "sky": "#A9CBEB",
+    "far": "#A2A6A6",
+    "mid": "#6F7072",
+    "ice": "#F1F3F3",
+    "water": "#4E7FA6",
+    "near": "#262626",
+    "sun": "#F2C14E",
+    "leaf": "#7E8648",
+    "acc": "#A69C6C",
+    "obj": "#7A6650"
    }
   },
   {
@@ -172,6 +347,29 @@
     "leaf": "#4E9A3E",
     "acc": "#B03A2E",
     "obj": "#6E8A50"
+   }
+  },
+  {
+   "slug": "holmenkollen",
+   "label": "Holmenkollen ski jump",
+   "lat": 59.9638,
+   "lon": 10.6676,
+   "radius_km": 3,
+   "aliases": [
+    "holmenkollen",
+    "holmenkollbakken"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#35553A",
+    "mid": "#8A8B86",
+    "ice": "#E6E4DC",
+    "water": "#4D7FA6",
+    "near": "#23272B",
+    "sun": "#F4C64A",
+    "leaf": "#7FA046",
+    "acc": "#B03A2E",
+    "obj": "#B4BBC2"
    }
   },
   {
@@ -205,6 +403,32 @@
    }
   },
   {
+   "slug": "mount-floyen",
+   "label": "Bergen and its harbour seen from Mount Fløyen, with the Fløibanen funicular",
+   "lat": 60.3949,
+   "lon": 5.3434,
+   "radius_km": 3,
+   "aliases": [
+    "floyen",
+    "floien",
+    "floibanen",
+    "mount floyen",
+    "monte floyen"
+   ],
+   "palette": {
+    "sky": "#B9D4F0",
+    "far": "#8E9CA8",
+    "mid": "#6B7F68",
+    "ice": "#ECE6DA",
+    "water": "#3F6E9E",
+    "near": "#1E2422",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#B85A3E",
+    "obj": "#C8282E"
+   }
+  },
+  {
    "slug": "naeroyfjord",
    "label": "The narrow Nærøyfjord with a ferry and Bakka church",
    "lat": 60.88,
@@ -231,6 +455,33 @@
    "names": [
     "gudvangen"
    ]
+  },
+  {
+   "slug": "narvik",
+   "label": "Hålogaland Bridge over the Rombaksfjord at Narvik",
+   "lat": 68.4636,
+   "lon": 17.5139,
+   "radius_km": 15,
+   "aliases": [
+    "halogaland bridge",
+    "halogalandsbrua",
+    "ponte di halogaland"
+   ],
+   "names": [
+    "narvik"
+   ],
+   "palette": {
+    "sky": "#C2D8EC",
+    "far": "#7C8EA6",
+    "mid": "#9A8E80",
+    "ice": "#F2F5F8",
+    "water": "#6E8DA4",
+    "near": "#22282E",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E38",
+    "acc": "#B0453A",
+    "obj": "#C8CACA"
+   }
   },
   {
    "slug": "nidaros-cathedral",
@@ -281,7 +532,11 @@
     "leaf": "#6E7A4E",
     "acc": "#A39C8C",
     "obj": "#6B5848"
-   }
+   },
+   "names": [
+    "honningsvag",
+    "honningsvaag"
+   ]
   },
   {
    "slug": "nusfjord",
@@ -335,6 +590,156 @@
    }
   },
   {
+   "slug": "oslofjord",
+   "label": "Dyna lighthouse in the Oslofjord",
+   "lat": 59.8963,
+   "lon": 10.7226,
+   "radius_km": 4,
+   "aliases": [
+    "oslofjord",
+    "oslofjorden",
+    "oslo fjord",
+    "fiordo di oslo",
+    "dyna fyr",
+    "dyna lighthouse"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#7F95AE",
+    "mid": "#7C8084",
+    "ice": "#F5F4EF",
+    "water": "#3E6A8C",
+    "near": "#25282B",
+    "sun": "#F2C14E",
+    "leaf": "#5C8A44",
+    "acc": "#8C7466",
+    "obj": "#D23A40"
+   }
+  },
+  {
+   "slug": "preikestolen",
+   "label": "Preikestolen (Pulpit Rock) above Lysefjord",
+   "lat": 58.986,
+   "lon": 6.19,
+   "radius_km": 5,
+   "aliases": [
+    "preikestolen",
+    "prekestolen",
+    "pulpit rock"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#9AA6A6",
+    "mid": "#9A968C",
+    "ice": "#F2F2EE",
+    "water": "#3D6A7C",
+    "near": "#25292B",
+    "sun": "#F2C14E",
+    "leaf": "#5F7C4C",
+    "acc": "#C9C3B5",
+    "obj": "#D0D6DA"
+   }
+  },
+  {
+   "slug": "reinebringen",
+   "label": "View from Reinebringen over Reine",
+   "lat": 67.935,
+   "lon": 13.075,
+   "radius_km": 2,
+   "aliases": [
+    "reinebringen",
+    "reinebrinken"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#B8BEC4",
+    "mid": "#7E8784",
+    "ice": "#F4F4F2",
+    "water": "#1F5A8C",
+    "near": "#22282C",
+    "sun": "#F2C14E",
+    "leaf": "#6A9A48",
+    "acc": "#B8332A",
+    "obj": "#A8A69C"
+   }
+  },
+  {
+   "slug": "royal-palace-oslo",
+   "label": "Royal Palace, Oslo, with the Karl Johan statue",
+   "lat": 59.917,
+   "lon": 10.727,
+   "radius_km": 2,
+   "aliases": [
+    "royal palace oslo",
+    "oslo royal palace",
+    "slottet",
+    "det kongelige slott",
+    "palazzo reale di oslo",
+    "palazzo reale oslo",
+    "slottsplassen"
+   ],
+   "palette": {
+    "sky": "#A6CBF0",
+    "far": "#D7B9A6",
+    "mid": "#E5CC8C",
+    "ice": "#F3EFE4",
+    "water": "#1F3D7A",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#6F9547",
+    "acc": "#4F7062",
+    "obj": "#C8202E"
+   }
+  },
+  {
+   "slug": "senja",
+   "label": "Segla peak on Senja",
+   "lat": 69.505,
+   "lon": 17.61,
+   "radius_km": 40,
+   "aliases": [
+    "senja",
+    "segla"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8E9CA8",
+    "mid": "#9A9C98",
+    "ice": "#F2F2EE",
+    "water": "#3E6E8C",
+    "near": "#25292A",
+    "sun": "#F4C64A",
+    "leaf": "#6E8F42",
+    "acc": "#8A9A52",
+    "obj": "#7E6E5C"
+   }
+  },
+  {
+   "slug": "svartisen",
+   "label": "Svartisen's Engabreen glacier above the fjord",
+   "lat": 66.68,
+   "lon": 13.8,
+   "radius_km": 30,
+   "aliases": [
+    "svartisen",
+    "engabreen",
+    "engabrevatnet",
+    "holandsfjord"
+   ],
+   "palette": {
+    "sky": "#9EC8F0",
+    "far": "#9CC4E0",
+    "mid": "#6E6862",
+    "ice": "#F2F6F8",
+    "water": "#3F7FB8",
+    "near": "#252826",
+    "sun": "#F2C14E",
+    "leaf": "#78A04A",
+    "acc": "#9C6A58",
+    "obj": "#335C30"
+   }
+  },
+  {
    "slug": "svolvaer",
    "label": "Svolvaer harbour and Svolvaergeita",
    "lat": 68.234,
@@ -363,6 +768,28 @@
    }
   },
   {
+   "slug": "torghatten",
+   "label": "Torghatten, the mountain with a hole",
+   "lat": 65.397,
+   "lon": 12.09,
+   "radius_km": 5,
+   "aliases": [
+    "torghatten"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#9EAAB8",
+    "mid": "#A0948A",
+    "ice": "#F2F2EE",
+    "water": "#2F5F9E",
+    "near": "#262A2E",
+    "sun": "#F2C14E",
+    "leaf": "#6E8F4A",
+    "acc": "#B83A2E",
+    "obj": "#D6D0C2"
+   }
+  },
+  {
    "slug": "trollfjord",
    "label": "The narrow Trollfjord entrance between sheer granite walls",
    "lat": 68.358,
@@ -386,6 +813,32 @@
    }
   },
   {
+   "slug": "trollstigen",
+   "label": "Trollstigen hairpin road above Isterdalen",
+   "lat": 62.457,
+   "lon": 7.665,
+   "radius_km": 5,
+   "aliases": [
+    "trollstigen",
+    "troll s path",
+    "trolls path",
+    "troll road",
+    "strada dei troll"
+   ],
+   "palette": {
+    "sky": "#9CC6EC",
+    "far": "#A9B4BC",
+    "mid": "#7E8079",
+    "ice": "#F4F6F6",
+    "water": "#7FB5C8",
+    "near": "#24282A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9446",
+    "acc": "#CDD0D0",
+    "obj": "#D0D0D0"
+   }
+  },
+  {
    "slug": "tromso",
    "label": "Arctic Cathedral and Tromso Bridge, Tromso",
    "lat": 69.6479,
@@ -394,7 +847,9 @@
    "aliases": [
     "arctic cathedral",
     "ishavskatedralen",
-    "tromsdalen church"
+    "tromsdalen church",
+    "cattedrale artica",
+    "tromsdalen kirke"
    ],
    "names": [
     "tromso",
@@ -440,6 +895,37 @@
     "leaf": "#4A7A3E",
     "acc": "#B7332B",
     "obj": "#6E3A34"
+   }
+  },
+  {
+   "slug": "vigeland-park",
+   "label": "The Monolith in Vigeland Park, Oslo",
+   "lat": 59.927,
+   "lon": 10.7006,
+   "radius_km": 2,
+   "aliases": [
+    "vigeland park",
+    "vigelandsparken",
+    "vigeland sculpture park",
+    "vigeland installation",
+    "frogner park",
+    "frognerparken",
+    "parco frogner",
+    "parco vigeland",
+    "vigeland monolith",
+    "monolitten"
+   ],
+   "palette": {
+    "sky": "#B8D3EE",
+    "far": "#CFCAC0",
+    "mid": "#B9B2A6",
+    "ice": "#F2F0EA",
+    "water": "#5E8FB0",
+    "near": "#25282A",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A36",
+    "acc": "#A9A498",
+    "obj": "#6E6A62"
    }
   }
  ]
