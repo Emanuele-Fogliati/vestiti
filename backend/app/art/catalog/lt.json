@@ -3,6 +3,63 @@
  "name": "Lithuania",
  "places": [
   {
+   "slug": "gate-of-dawn",
+   "label": "The Gate of Dawn (Ausros Vartai), Vilnius",
+   "lat": 54.6741,
+   "lon": 25.2894,
+   "radius_km": 2,
+   "aliases": [
+    "gate of dawn",
+    "ausros vartai",
+    "porta dell aurora",
+    "gates of dawn",
+    "ostra brama"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D9B98C",
+    "mid": "#F0E6CC",
+    "ice": "#FAF8F2",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#E2B04A",
+    "leaf": "#5E7A3A",
+    "acc": "#B8382E",
+    "obj": "#8E8C88"
+   }
+  },
+  {
+   "slug": "gediminas-tower",
+   "label": "Gediminas' Tower on the castle hill, Vilnius",
+   "lat": 54.6867,
+   "lon": 25.2908,
+   "radius_km": 6,
+   "aliases": [
+    "gediminas tower",
+    "gediminas castle",
+    "gedimino pilies bokstas",
+    "gedimino pilis",
+    "gedimino bokstas",
+    "torre di gediminas",
+    "upper castle vilnius"
+   ],
+   "names": [
+    "vilniaus"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A8A296",
+    "mid": "#B8643E",
+    "ice": "#F2EEE4",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E3E",
+    "acc": "#C1272D",
+    "obj": "#3E6E34"
+   }
+  },
+  {
    "slug": "hill-of-crosses",
    "label": "The Hill of Crosses near Siauliai",
    "lat": 56.0153,
@@ -24,6 +81,90 @@
     "leaf": "#3B5E31",
     "acc": "#C59B5F",
     "obj": "#8E877D"
+   }
+  },
+  {
+   "slug": "kaunas",
+   "label": "Kaunas Town Hall (the White Swan) on Town Hall Square",
+   "lat": 54.8971,
+   "lon": 23.8862,
+   "radius_km": 15,
+   "aliases": [
+    "kaunas town hall",
+    "kauno rotuse",
+    "white swan kaunas"
+   ],
+   "names": [
+    "kaunas",
+    "kauno",
+    "kowno",
+    "kovno"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#E2C6AE",
+    "mid": "#F2EFE8",
+    "ice": "#FFFFFF",
+    "water": "#4E8EB0",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A44",
+    "acc": "#9A4E36",
+    "obj": "#B4AEA4"
+   }
+  },
+  {
+   "slug": "klaipeda",
+   "label": "The tall ship Meridianas on the Dane river, Klaipeda",
+   "lat": 55.7085,
+   "lon": 21.1355,
+   "radius_km": 15,
+   "aliases": [
+    "meridianas"
+   ],
+   "names": [
+    "klaipeda",
+    "memel",
+    "klaipeda old town"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#9A968C",
+    "mid": "#EEEDE8",
+    "ice": "#EFE5CF",
+    "water": "#4E6E78",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#8A5232",
+    "obj": "#B4553E"
+   }
+  },
+  {
+   "slug": "nida",
+   "label": "A Curonian fishermen's house in Nida",
+   "lat": 55.304,
+   "lon": 21.006,
+   "radius_km": 5,
+   "aliases": [
+    "neringa nida"
+   ],
+   "names": [
+    "nida",
+    "neringa",
+    "nidden"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8E7F68",
+    "mid": "#7E3A2C",
+    "ice": "#F4F2EC",
+    "water": "#2E58B8",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#B05A40",
+    "obj": "#B8A898"
    }
   },
   {
@@ -81,6 +222,31 @@
     "leaf": "#4E8A3C",
     "acc": "#6E827C",
     "obj": "#B5553C"
+   }
+  },
+  {
+   "slug": "vilnius-cathedral",
+   "label": "Vilnius Cathedral and its bell tower on Cathedral Square",
+   "lat": 54.6858,
+   "lon": 25.2877,
+   "radius_km": 2,
+   "aliases": [
+    "cattedrale di vilnius",
+    "vilniaus arkikatedra",
+    "vilnius archcathedral",
+    "cathedral square vilnius"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#D8B89A",
+    "mid": "#EEEBE2",
+    "ice": "#FFFFFF",
+    "water": "#4E5C5A",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#B8583A",
+    "obj": "#BDB8AE"
    }
   }
  ]

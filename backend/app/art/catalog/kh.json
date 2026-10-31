@@ -31,7 +31,11 @@
    "lon": 103.867,
    "radius_km": 12,
    "aliases": [
-    "angkor wat"
+    "angkor wat",
+    "angkor archaeological park",
+    "angkor park",
+    "parco archeologico di angkor",
+    "angkor archeological park"
    ],
    "names": [
     "angkor",
@@ -208,6 +212,30 @@
    }
   },
   {
+   "slug": "chong-kneas",
+   "label": "Chong Kneas floating village on Tonle Sap, Phnom Krom behind",
+   "lat": 13.262,
+   "lon": 103.824,
+   "radius_km": 5,
+   "aliases": [
+    "chhong kneas",
+    "chong knies",
+    "phnom krom"
+   ],
+   "palette": {
+    "sky": "#B6D2EE",
+    "far": "#7F8C6C",
+    "mid": "#4F8FCB",
+    "ice": "#ECEFF2",
+    "water": "#A8865A",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E3A",
+    "acc": "#9C5A3C",
+    "obj": "#2E4C74"
+   }
+  },
+  {
    "slug": "kampong-chhnang",
    "label": "Kampong Chhnang floating village and clay pots on the Tonle Sap river",
    "lat": 12.26,
@@ -258,6 +286,37 @@
     "leaf": "#4E8A3E",
     "acc": "#2F7FB5",
     "obj": "#8A8A84"
+   }
+  },
+  {
+   "slug": "kep",
+   "label": "Kep's giant crab statue in the sea",
+   "lat": 10.4836,
+   "lon": 104.3168,
+   "radius_km": 12,
+   "aliases": [
+    "kep crab statue",
+    "kep beach",
+    "kep crab market"
+   ],
+   "names": [
+    "kep",
+    "kep town",
+    "kep city",
+    "krong kep",
+    "kep province"
+   ],
+   "palette": {
+    "sky": "#C9DDEC",
+    "far": "#6F8E68",
+    "mid": "#C9BFAE",
+    "ice": "#F1ECE2",
+    "water": "#7FA9A8",
+    "near": "#262A2E",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3E",
+    "acc": "#C8553D",
+    "obj": "#6F9AD2"
    }
   },
   {
@@ -369,7 +428,12 @@
     "leaf": "#5E8A3C",
     "acc": "#D2C6AE",
     "obj": "#C9B282"
-   }
+   },
+   "names": [
+    "kampong thom",
+    "kompong thom",
+    "kampong thom province"
+   ]
   },
   {
    "slug": "sihanoukville",
