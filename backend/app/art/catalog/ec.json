@@ -3,6 +3,36 @@
  "name": "Ecuador",
  "places": [
   {
+   "slug": "amazon-rainforest",
+   "label": "A flooded Macrolobium tree in Cuyabeno's Laguna Grande, with a motor canoe and a hoatzin, Ecuadorian Amazon",
+   "lat": -0.35,
+   "lon": -76.6,
+   "radius_km": 65,
+   "aliases": [
+    "cuyabeno",
+    "laguna grande de cuyabeno",
+    "ecuadorian amazon",
+    "amazonia ecuatoriana",
+    "amazon ecuador",
+    "amazonia ecuador",
+    "ecuador amazon",
+    "amazzonia ecuadoriana",
+    "amazon rainforest ecuador"
+   ],
+   "palette": {
+    "sky": "#A9CEEE",
+    "far": "#6F9B52",
+    "mid": "#2F5A32",
+    "ice": "#E9E4DA",
+    "water": "#4E6A70",
+    "near": "#1B1D19",
+    "sun": "#F2C340",
+    "leaf": "#5C8F3A",
+    "acc": "#7A6A5C",
+    "obj": "#A8643A"
+   }
+  },
+  {
    "slug": "baltra-island",
    "label": "Baltra's arid shore with a land iguana over the Itabaca Channel",
    "lat": -0.45,
@@ -180,6 +210,39 @@
     "leaf": "#7AA448",
     "acc": "#363230",
     "obj": "#DDA83C"
+   }
+  },
+  {
+   "slug": "cerro-tijeretas",
+   "label": "The turquoise Tijeretas cove below Frigatebird Hill, with frigatebirds, San Cristobal",
+   "lat": -0.888,
+   "lon": -89.603,
+   "radius_km": 2,
+   "aliases": [
+    "cerro tijeretas",
+    "frigatebird hill",
+    "frigate bird hill",
+    "tijeretas hill",
+    "muelle tijeretas",
+    "bahia tijeretas",
+    "cerro de las tijeretas",
+    "collina delle fregate"
+   ],
+   "names": [
+    "tijeretas",
+    "las tijeretas"
+   ],
+   "palette": {
+    "sky": "#A9D0EE",
+    "far": "#C9BDA2",
+    "mid": "#7A6B5D",
+    "ice": "#A8865C",
+    "water": "#3DBDC2",
+    "near": "#1D1B1A",
+    "sun": "#F3C53E",
+    "leaf": "#A3A07E",
+    "acc": "#3D3936",
+    "obj": "#C8322A"
    }
   },
   {
@@ -433,6 +496,39 @@
    }
   },
   {
+   "slug": "guayaquil",
+   "label": "Cerro Santa Ana with the colourful houses of Las Penas, its lighthouse and chapel, from the Malecon 2000",
+   "lat": -2.1817,
+   "lon": -79.8778,
+   "radius_km": 20,
+   "aliases": [
+    "cerro santa ana",
+    "barrio las penas",
+    "las penas guayaquil",
+    "malecon 2000",
+    "malecon simon bolivar",
+    "santa ana hill"
+   ],
+   "names": [
+    "guayaquil",
+    "guayaquil ecuador",
+    "guayaquil city",
+    "santiago de guayaquil"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#3F6E34",
+    "mid": "#B4705E",
+    "ice": "#F2F0EA",
+    "water": "#4C8FD6",
+    "near": "#24211F",
+    "sun": "#F2C340",
+    "leaf": "#5E8C3E",
+    "acc": "#E07C92",
+    "obj": "#EDC74A"
+   }
+  },
+  {
    "slug": "isabela-island",
    "label": "Darwin Lake and Tagus Cove, Isabela Island",
    "lat": -0.268,
@@ -549,6 +645,31 @@
     "puerto villamil",
     "villamil"
    ]
+  },
+  {
+   "slug": "los-tuneles",
+   "label": "Lava arches over turquoise channels with candelabra cacti and a blue-footed booby, Los Tuneles, Isabela",
+   "lat": -1.031,
+   "lon": -91.104,
+   "radius_km": 3,
+   "aliases": [
+    "los tuneles",
+    "cabo rosa",
+    "tuneles de cabo rosa",
+    "lava tunnels isabela"
+   ],
+   "palette": {
+    "sky": "#9FCBEE",
+    "far": "#A3AA94",
+    "mid": "#4F4843",
+    "ice": "#F5F3EE",
+    "water": "#2F8FB0",
+    "near": "#1E1C1A",
+    "sun": "#F3C53E",
+    "leaf": "#82A845",
+    "acc": "#7A5C44",
+    "obj": "#3AA6D8"
+   }
   },
   {
    "slug": "mitad-del-mundo",
@@ -1022,6 +1143,34 @@
     "leaf": "#7E9844",
     "acc": "#B8473A",
     "obj": "#E2B43C"
+   }
+  },
+  {
+   "slug": "swing-at-the-end-of-the-world",
+   "label": "The treehouse swing of La Casa del Arbol facing Tungurahua volcano, Banos",
+   "lat": -1.4317,
+   "lon": -78.4243,
+   "radius_km": 3,
+   "aliases": [
+    "swing at the end of the world",
+    "end of the world swing",
+    "casa del arbol",
+    "columpio del fin del mundo",
+    "altalena alla fine del mondo",
+    "swing at the edge of the world",
+    "altalena della casa sull albero"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#7D7480",
+    "mid": "#4C7440",
+    "ice": "#D9D5CC",
+    "water": "#93B8A9",
+    "near": "#211F1C",
+    "sun": "#F2C340",
+    "leaf": "#8DBA55",
+    "acc": "#7A6A5A",
+    "obj": "#D23A36"
    }
   },
   {
