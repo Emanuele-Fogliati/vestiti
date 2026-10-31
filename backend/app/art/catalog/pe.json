@@ -376,6 +376,28 @@
    }
   },
   {
+   "slug": "chaparri-ecological-reserve",
+   "label": "A spectacled bear in the dry forest below Cerro Chaparri",
+   "lat": -6.55,
+   "lon": -79.42,
+   "radius_km": 15,
+   "aliases": [
+    "chaparri"
+   ],
+   "palette": {
+    "sky": "#B7D3EC",
+    "far": "#8E8A78",
+    "mid": "#8D8191",
+    "ice": "#ECE0C6",
+    "water": "#5D8FA8",
+    "near": "#1E1A19",
+    "sun": "#F3C443",
+    "leaf": "#7C9748",
+    "acc": "#CDB894",
+    "obj": "#6B5B4C"
+   }
+  },
+  {
    "slug": "chaullay",
    "label": "The Chaullay camp meadow on the Salkantay trek: tin-roof huts, eucalyptus and a pack mule below the green pyramid peak of the Santa Teresa valley",
    "lat": -13.322,
@@ -1554,7 +1576,10 @@
     "leaf": "#8E9A55",
     "acc": "#3E3833",
     "obj": "#7A6F64"
-   }
+   },
+   "names": [
+    "pastoruri glacier"
+   ]
   },
   {
    "slug": "perolniyoc-waterfall",
@@ -1582,6 +1607,31 @@
     "leaf": "#4F8E34",
     "acc": "#C08060",
     "obj": "#4A5A3A"
+   }
+  },
+  {
+   "slug": "pikillacta",
+   "label": "The long walled main street of the Wari city of Pikillacta, its grid of enclosures behind",
+   "lat": -13.6158,
+   "lon": -71.7108,
+   "radius_km": 3,
+   "aliases": [
+    "pikillacta",
+    "pikillaqta",
+    "piquillacta",
+    "piquillaqta"
+   ],
+   "palette": {
+    "sky": "#C3DAEE",
+    "far": "#BCA57E",
+    "mid": "#9C5B44",
+    "ice": "#E2D2AE",
+    "water": "#6E95A8",
+    "near": "#2A1E1A",
+    "sun": "#F3C443",
+    "leaf": "#9C9562",
+    "acc": "#C99474",
+    "obj": "#8E95A2"
    }
   },
   {
@@ -1904,7 +1954,11 @@
     "reserva nacional de salinas y aguada blanca",
     "laguna de salinas",
     "laguna salinas",
-    "lago salinas"
+    "lago salinas",
+    "salinas lagoon",
+    "salinas lake",
+    "lake salinas",
+    "lago di salinas"
    ],
    "palette": {
     "sky": "#9FC6F2",
@@ -2009,6 +2063,38 @@
     "leaf": "#7BAE47",
     "acc": "#C0643A",
     "obj": "#2F7EC2"
+   }
+  },
+  {
+   "slug": "sibayo",
+   "label": "Sibayo's suspension bridge over the Colca river, the stone-and-thatch village behind",
+   "lat": -15.4858,
+   "lon": -71.4544,
+   "radius_km": 6,
+   "aliases": [
+    "puente colgante de sibayo",
+    "sibayo bridge",
+    "sibayo hanging bridge",
+    "rumillacta"
+   ],
+   "names": [
+    "sibayo",
+    "sibayo village",
+    "sibayo town",
+    "pueblo de sibayo",
+    "sibayo peru"
+   ],
+   "palette": {
+    "sky": "#A9D1F0",
+    "far": "#C8A866",
+    "mid": "#857C76",
+    "ice": "#EFE6D6",
+    "water": "#3F7FA6",
+    "near": "#2A2522",
+    "sun": "#F4C542",
+    "leaf": "#A07E3C",
+    "acc": "#CF8848",
+    "obj": "#A0968A"
    }
   },
   {
@@ -2129,6 +2215,57 @@
     "leaf": "#6E7F3E",
     "acc": "#C9782F",
     "obj": "#D2BC78"
+   }
+  },
+  {
+   "slug": "toro-muerto",
+   "label": "A boulder carved with camelid, condor, sun and spiral petroglyphs in the Toro Muerto boulder field",
+   "lat": -16.22,
+   "lon": -72.5,
+   "radius_km": 5,
+   "aliases": [
+    "toro muerto",
+    "petroglifos de toro muerto",
+    "petroglyphs of toro muerto",
+    "petroglifi di toro muerto"
+   ],
+   "palette": {
+    "sky": "#C9DDEC",
+    "far": "#CFC6B8",
+    "mid": "#8E7C70",
+    "ice": "#EEDFC8",
+    "water": "#6E95A8",
+    "near": "#2B2420",
+    "sun": "#F4C542",
+    "leaf": "#7E9A52",
+    "acc": "#E3D8C6",
+    "obj": "#B4A391"
+   }
+  },
+  {
+   "slug": "tucume",
+   "label": "The eroded adobe pyramids of Tucume's Valley of the Pyramids, seen from Cerro Purgatorio",
+   "lat": -6.5133,
+   "lon": -79.8467,
+   "radius_km": 4,
+   "aliases": [
+    "tucume",
+    "cerro purgatorio",
+    "piramides de tucume",
+    "pyramids of tucume",
+    "piramidi di tucume"
+   ],
+   "palette": {
+    "sky": "#CFE1EF",
+    "far": "#DCCDA5",
+    "mid": "#C7AA78",
+    "ice": "#E6D7B4",
+    "water": "#6F9AA8",
+    "near": "#2E2620",
+    "sun": "#F4C542",
+    "leaf": "#6E8C43",
+    "acc": "#A3B56A",
+    "obj": "#A8735E"
    }
   },
   {
