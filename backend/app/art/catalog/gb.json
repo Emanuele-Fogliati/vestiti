@@ -3,6 +3,31 @@
  "name": "United Kingdom",
  "places": [
   {
+   "slug": "aberdeen",
+   "label": "Marischal College and the Mitchell Tower, Aberdeen",
+   "lat": 57.149,
+   "lon": -2.097,
+   "radius_km": 15,
+   "aliases": [
+    "marischal college"
+   ],
+   "names": [
+    "aberdeen"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A7ABB0",
+    "mid": "#D3D5D6",
+    "ice": "#EEF0F0",
+    "water": "#5A8EB4",
+    "near": "#24272B",
+    "sun": "#F2C14E",
+    "leaf": "#5E8E3A",
+    "acc": "#8E9196",
+    "obj": "#7A3E2C"
+   }
+  },
+  {
    "slug": "bath",
    "label": "The Great Bath of the Roman Baths with Bath Abbey behind",
    "lat": 51.381,
@@ -200,7 +225,10 @@
     "glencoe",
     "glen coe",
     "buachaille etive mor",
-    "buachaille"
+    "buachaille",
+    "scottish highlands",
+    "highlands scozzesi",
+    "highlands of scotland"
    ],
    "palette": {
     "sky": "#A9CCEE",
@@ -213,7 +241,12 @@
     "leaf": "#6E9446",
     "acc": "#B89A60",
     "obj": "#7E4E32"
-   }
+   },
+   "names": [
+    "highlands",
+    "the highlands",
+    "scotland highlands"
+   ]
   },
   {
    "slug": "glenfinnan-viaduct",
@@ -599,7 +632,10 @@
     "leaf": "#4C7E34",
     "acc": "#A8B464",
     "obj": "#5A5E66"
-   }
+   },
+   "names": [
+    "stirling"
+   ]
   },
   {
    "slug": "stonehenge",
@@ -621,6 +657,54 @@
     "leaf": "#7EA552",
     "acc": "#C8B060",
     "obj": "#8A6A4A"
+   }
+  },
+  {
+   "slug": "sumburgh-head",
+   "label": "Sumburgh Head lighthouse and puffins, Shetland",
+   "lat": 59.854,
+   "lon": -1.275,
+   "radius_km": 2,
+   "aliases": [
+    "sumburgh head",
+    "sumburgh lighthouse"
+   ],
+   "palette": {
+    "sky": "#C2D8EC",
+    "far": "#8A9AA6",
+    "mid": "#7E7468",
+    "ice": "#F4F2EC",
+    "water": "#5C8AAE",
+    "near": "#222428",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A40",
+    "acc": "#C9A35A",
+    "obj": "#E0552E"
+   }
+  },
+  {
+   "slug": "wallace-monument",
+   "label": "The National Wallace Monument on Abbey Craig, Stirling",
+   "lat": 56.139,
+   "lon": -3.917,
+   "radius_km": 2,
+   "aliases": [
+    "wallace monument",
+    "torre di wallace",
+    "abbey craig",
+    "monumento a wallace"
+   ],
+   "palette": {
+    "sky": "#B4D0EC",
+    "far": "#8E9A6A",
+    "mid": "#A8926C",
+    "ice": "#EEEAE0",
+    "water": "#5A8EB4",
+    "near": "#24272A",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E34",
+    "acc": "#8A8A80",
+    "obj": "#86AE52"
    }
   }
  ]
