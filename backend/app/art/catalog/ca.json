@@ -3,6 +3,31 @@
  "name": "Canada",
  "places": [
   {
+   "slug": "athabasca-falls",
+   "label": "Athabasca Falls and Mount Kerkeslin",
+   "lat": 52.664,
+   "lon": -117.884,
+   "radius_km": 4,
+   "aliases": [
+    "athabasca falls",
+    "chutes athabasca",
+    "cascate athabasca",
+    "cascate di athabasca"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#4E7A4A",
+    "mid": "#B6A390",
+    "ice": "#F4F8F8",
+    "water": "#6EC2C4",
+    "near": "#262A2C",
+    "sun": "#F2C14E",
+    "leaf": "#2E5A3A",
+    "acc": "#C4DDE0",
+    "obj": "#8C8E8A"
+   }
+  },
+  {
    "slug": "athabasca-glacier",
    "label": "Athabasca Glacier below the Columbia Icefield",
    "lat": 52.205,
@@ -57,6 +82,55 @@
    }
   },
   {
+   "slug": "bow-falls",
+   "label": "Bow Falls, the wide cascade of the Bow River in Banff",
+   "lat": 51.1666,
+   "lon": -115.5617,
+   "radius_km": 2,
+   "aliases": [
+    "bow falls",
+    "bow river falls",
+    "cascate bow",
+    "cascate del bow",
+    "chutes bow"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#A8A39C",
+    "mid": "#857D72",
+    "ice": "#FFFFFF",
+    "water": "#5DB0B0",
+    "near": "#1E2520",
+    "sun": "#F4C542",
+    "leaf": "#2F5B3B",
+    "acc": "#CFE6EC",
+    "obj": "#8C5B36"
+   }
+  },
+  {
+   "slug": "bow-lake",
+   "label": "Bow Lake below Crowfoot Mountain",
+   "lat": 51.675,
+   "lon": -116.45,
+   "radius_km": 5,
+   "aliases": [
+    "bow lake",
+    "num ti jah"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#C4BCB0",
+    "mid": "#9A8572",
+    "ice": "#F2F6F8",
+    "water": "#36BCC8",
+    "near": "#22272A",
+    "sun": "#F2C14E",
+    "leaf": "#2E5238",
+    "acc": "#B8452E",
+    "obj": "#C8A040"
+   }
+  },
+  {
    "slug": "calgary",
    "label": "Calgary skyline with the Saddledome and the Calgary Tower",
    "lat": 51.0447,
@@ -82,6 +156,64 @@
     "leaf": "#5E8A3E",
     "acc": "#C8282E",
     "obj": "#8EA4B6"
+   }
+  },
+  {
+   "slug": "charlevoix",
+   "label": "Charlevoix: a village church above the St. Lawrence and Isle-aux-Coudres",
+   "lat": 47.42,
+   "lon": -70.4,
+   "radius_km": 40,
+   "aliases": [
+    "charlevoix",
+    "isle aux coudres",
+    "ile aux coudres",
+    "les eboulements"
+   ],
+   "names": [
+    "baie saint paul",
+    "baie st paul"
+   ],
+   "palette": {
+    "sky": "#BED7EE",
+    "far": "#3E5E48",
+    "mid": "#8E8C86",
+    "ice": "#F0F1EE",
+    "water": "#6D97BE",
+    "near": "#222628",
+    "sun": "#F2C14A",
+    "leaf": "#8DB45A",
+    "acc": "#C9672E",
+    "obj": "#BAC3C8"
+   }
+  },
+  {
+   "slug": "citadelle-of-quebec",
+   "label": "The star-shaped Citadelle of Quebec above the St Lawrence",
+   "lat": 46.8078,
+   "lon": -71.2073,
+   "radius_km": 1,
+   "aliases": [
+    "citadelle de quebec",
+    "la citadelle",
+    "quebec citadel",
+    "citadel of quebec",
+    "cittadella di quebec"
+   ],
+   "names": [
+    "citadelle of quebec"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#8EBE5E",
+    "mid": "#8A7A68",
+    "ice": "#E8E6DE",
+    "water": "#5A6E7C",
+    "near": "#262A2C",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A44",
+    "acc": "#6AB0A0",
+    "obj": "#A6A49C"
    }
   },
   {
@@ -139,6 +271,30 @@
    "names": [
     "yoho"
    ]
+  },
+  {
+   "slug": "granville-island",
+   "label": "Granville Island Public Market under the Granville Street Bridge, Vancouver",
+   "lat": 49.2712,
+   "lon": -123.1346,
+   "radius_km": 2,
+   "aliases": [
+    "granville island",
+    "isola di granville",
+    "ile granville"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#8F9A98",
+    "mid": "#B9B2A3",
+    "ice": "#F5F4EE",
+    "water": "#4A7FA0",
+    "near": "#222527",
+    "sun": "#F2C14A",
+    "leaf": "#3F8A48",
+    "acc": "#C8332B",
+    "obj": "#8A6A48"
+   }
   },
   {
    "slug": "icefields-parkway",
@@ -200,6 +356,59 @@
    }
   },
   {
+   "slug": "johnston-canyon",
+   "label": "Johnston Canyon: waterfall into a turquoise pool with the cliff catwalk",
+   "lat": 51.2454,
+   "lon": -115.8396,
+   "radius_km": 3,
+   "aliases": [
+    "johnston canyon falls",
+    "johnston canyon lower falls",
+    "johnston canyon upper falls",
+    "ink pots"
+   ],
+   "names": [
+    "johnston canyon"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#7A7C7C",
+    "mid": "#D3C6AA",
+    "ice": "#FFFFFF",
+    "water": "#2FA3A8",
+    "near": "#232628",
+    "sun": "#F4C542",
+    "leaf": "#3E6B3A",
+    "acc": "#CFEAF0",
+    "obj": "#4F6B5A"
+   }
+  },
+  {
+   "slug": "kamloops",
+   "label": "Kamloops Lake between the dry hills and hoodoos",
+   "lat": 50.72,
+   "lon": -120.48,
+   "radius_km": 25,
+   "aliases": [
+    "kamloops lake"
+   ],
+   "names": [
+    "kamloops"
+   ],
+   "palette": {
+    "sky": "#92C4EE",
+    "far": "#A88A6A",
+    "mid": "#CBAE7C",
+    "ice": "#F2EEE4",
+    "water": "#2D5EAE",
+    "near": "#2C2420",
+    "sun": "#F2C14E",
+    "leaf": "#4A6638",
+    "acc": "#E2BC52",
+    "obj": "#7E5E44"
+   }
+  },
+  {
    "slug": "lake-louise",
    "label": "Lake Louise and the Victoria Glacier",
    "lat": 51.4167,
@@ -225,6 +434,28 @@
    }
   },
   {
+   "slug": "maligne-canyon",
+   "label": "Maligne Canyon footbridge over the limestone gorge",
+   "lat": 52.918,
+   "lon": -117.996,
+   "radius_km": 3,
+   "aliases": [
+    "maligne canyon"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#8E9AA8",
+    "mid": "#ABA69C",
+    "ice": "#F4F8F8",
+    "water": "#4FB8C0",
+    "near": "#22282A",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A3A",
+    "acc": "#B8956E",
+    "obj": "#7A5E44"
+   }
+  },
+  {
    "slug": "maligne-lake",
    "label": "Spirit Island on Maligne Lake",
    "lat": 52.7266,
@@ -233,7 +464,8 @@
    "aliases": [
     "maligne lake",
     "lake maligne",
-    "lago maligne"
+    "lago maligne",
+    "spirit island"
    ],
    "palette": {
     "sky": "#A9CFF0",
@@ -246,6 +478,31 @@
     "leaf": "#24432E",
     "acc": "#8A4E30",
     "obj": "#8FA650"
+   }
+  },
+  {
+   "slug": "montmorency-falls",
+   "label": "Montmorency Falls and its suspension bridge",
+   "lat": 46.89,
+   "lon": -71.147,
+   "radius_km": 4,
+   "aliases": [
+    "montmorency",
+    "chute montmorency",
+    "cascate montmorency",
+    "cascate di montmorency"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#7E9A6A",
+    "mid": "#6E655C",
+    "ice": "#F6F8F6",
+    "water": "#56646C",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E34",
+    "acc": "#C6D6DA",
+    "obj": "#9A9EA2"
    }
   },
   {
@@ -302,6 +559,32 @@
    }
   },
   {
+   "slug": "mount-edith-cavell",
+   "label": "Mount Edith Cavell, the Angel Glacier and Cavell Pond, Jasper",
+   "lat": 52.6667,
+   "lon": -118.0567,
+   "radius_km": 5,
+   "aliases": [
+    "edith cavell",
+    "angel glacier",
+    "cavell meadows",
+    "cavell pond",
+    "cavell glacier"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#B8A388",
+    "mid": "#6E6A69",
+    "ice": "#F4F7F8",
+    "water": "#8DC9B6",
+    "near": "#23252A",
+    "sun": "#F5C842",
+    "leaf": "#4C6E45",
+    "acc": "#C4DFE8",
+    "obj": "#A98D70"
+   }
+  },
+  {
    "slug": "niagara-falls",
    "label": "Horseshoe Falls, Niagara",
    "lat": 43.078,
@@ -321,6 +604,63 @@
     "leaf": "#4E7E3A",
     "acc": "#2E5EA8",
     "obj": "#6EC8A8"
+   }
+  },
+  {
+   "slug": "notre-dame-basilica-montreal",
+   "label": "Notre-Dame Basilica's twin-tower facade on Place d'Armes, Montreal",
+   "lat": 45.5045,
+   "lon": -73.5561,
+   "radius_km": 2,
+   "aliases": [
+    "notre dame basilica montreal",
+    "basilique notre dame de montreal",
+    "notre dame de montreal",
+    "basilica di notre dame di montreal",
+    "basilica di notre dame montreal"
+   ],
+   "names": [
+    "notre dame basilica",
+    "basilique notre dame",
+    "basilica notre dame",
+    "basilica di notre dame"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#A79E90",
+    "mid": "#C4BAAA",
+    "ice": "#ECE8E0",
+    "water": "#5A88A8",
+    "near": "#26231F",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#9A968F",
+    "obj": "#7A4E2C"
+   }
+  },
+  {
+   "slug": "ottawa",
+   "label": "Parliament Hill above the Ottawa River",
+   "lat": 45.4245,
+   "lon": -75.7,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "ottawa",
+    "ottawa city",
+    "ottawa ontario"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#545C64",
+    "mid": "#C8B48E",
+    "ice": "#F2EEE4",
+    "water": "#3E5E7A",
+    "near": "#24282C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E34",
+    "acc": "#B4452E",
+    "obj": "#6AAE96"
    }
   },
   {
@@ -345,6 +685,35 @@
     "leaf": "#2E5A3A",
     "acc": "#D8CBB0",
     "obj": "#6E7478"
+   }
+  },
+  {
+   "slug": "prince-edward-island",
+   "label": "White lighthouse above the red sandstone cliffs of Prince Edward Island",
+   "lat": 46.51,
+   "lon": -63.42,
+   "radius_km": 80,
+   "aliases": [
+    "prince edward island national park",
+    "pei national park",
+    "isola del principe edoardo",
+    "ile du prince edouard",
+    "pei"
+   ],
+   "names": [
+    "prince edward island"
+   ],
+   "palette": {
+    "sky": "#8EC2F2",
+    "far": "#8E9A92",
+    "mid": "#C0563A",
+    "ice": "#F8F8F4",
+    "water": "#1F5FA8",
+    "near": "#22201E",
+    "sun": "#F4C542",
+    "leaf": "#6EAF3E",
+    "acc": "#C4502E",
+    "obj": "#7A5A3E"
    }
   },
   {
@@ -408,6 +777,65 @@
    }
   },
   {
+   "slug": "saguenay-fjord",
+   "label": "Cap Trinité and the Notre-Dame-du-Saguenay statue, Saguenay Fjord",
+   "lat": 48.334,
+   "lon": -70.524,
+   "radius_km": 40,
+   "aliases": [
+    "saguenay fjord",
+    "fjord du saguenay",
+    "fiordo di saguenay",
+    "fiordo del saguenay",
+    "fiordo saguenay",
+    "cap trinite",
+    "baie eternite"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#6F8F86",
+    "mid": "#9A8A84",
+    "ice": "#FFFFFF",
+    "water": "#2E5878",
+    "near": "#232826",
+    "sun": "#F4C542",
+    "leaf": "#3B6334",
+    "acc": "#CDBFA8",
+    "obj": "#B03A2E"
+   }
+  },
+  {
+   "slug": "st-johns",
+   "label": "St. John's Jellybean Row houses with Signal Hill and Cabot Tower",
+   "lat": 47.5615,
+   "lon": -52.7126,
+   "radius_km": 15,
+   "aliases": [
+    "jellybean row",
+    "cabot tower",
+    "st john s newfoundland",
+    "st johns newfoundland",
+    "saint john s newfoundland"
+   ],
+   "names": [
+    "st john s",
+    "st johns",
+    "saint john s"
+   ],
+   "palette": {
+    "sky": "#9CC6F0",
+    "far": "#7E9A62",
+    "mid": "#8A2E4A",
+    "ice": "#F6F4EE",
+    "water": "#2F6E9A",
+    "near": "#1F2226",
+    "sun": "#F2C230",
+    "leaf": "#3E8A5A",
+    "acc": "#D2452E",
+    "obj": "#2F78C0"
+   }
+  },
+  {
    "slug": "stanley-park",
    "label": "The totem poles at Brockton Point, Stanley Park",
    "lat": 49.2992,
@@ -430,6 +858,103 @@
     "leaf": "#2E5A30",
     "acc": "#C83A2E",
     "obj": "#3EA0A0"
+   }
+  },
+  {
+   "slug": "sulphur-mountain",
+   "label": "Sanson Peak observatory and boardwalk, Sulphur Mountain",
+   "lat": 51.144,
+   "lon": -115.575,
+   "radius_km": 3,
+   "aliases": [
+    "sulphur mountain",
+    "banff gondola",
+    "sanson peak"
+   ],
+   "palette": {
+    "sky": "#A6CDF2",
+    "far": "#8E8478",
+    "mid": "#C9C3B8",
+    "ice": "#ECEFF0",
+    "water": "#4C86B0",
+    "near": "#25282A",
+    "sun": "#F4C542",
+    "leaf": "#2F5A38",
+    "acc": "#C2402E",
+    "obj": "#6E5843"
+   }
+  },
+  {
+   "slug": "sunwapta-falls",
+   "label": "Sunwapta Falls and its spruce island, Jasper",
+   "lat": 52.532,
+   "lon": -117.645,
+   "radius_km": 3,
+   "aliases": [
+    "sunwapta falls"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#8E8C8A",
+    "mid": "#B0A590",
+    "ice": "#F4F8F8",
+    "water": "#6CC4C4",
+    "near": "#1F2A26",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A3A",
+    "acc": "#C88A2E",
+    "obj": "#BFE3E6"
+   }
+  },
+  {
+   "slug": "tadoussac",
+   "label": "Hotel Tadoussac",
+   "lat": 48.1446,
+   "lon": -69.7155,
+   "radius_km": 10,
+   "aliases": [
+    "hotel tadoussac"
+   ],
+   "names": [
+    "tadoussac"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#3F6B48",
+    "mid": "#E6E2D8",
+    "ice": "#FFFFFF",
+    "water": "#3C78A8",
+    "near": "#26302A",
+    "sun": "#F4C542",
+    "leaf": "#5C9A3E",
+    "acc": "#D8423A",
+    "obj": "#A65A48"
+   }
+  },
+  {
+   "slug": "thousand-islands",
+   "label": "Zavikon Island and its tiny bridge, Thousand Islands",
+   "lat": 44.344,
+   "lon": -75.995,
+   "radius_km": 25,
+   "aliases": [
+    "thousand islands",
+    "1000 islands",
+    "1000 isole",
+    "mille isole",
+    "zavikon"
+   ],
+   "palette": {
+    "sky": "#9CCBF2",
+    "far": "#4E7458",
+    "mid": "#B0A89C",
+    "ice": "#F6F6F2",
+    "water": "#2E6EB4",
+    "near": "#2A2E34",
+    "sun": "#F2C14E",
+    "leaf": "#2F5E32",
+    "acc": "#8EAE4C",
+    "obj": "#6A5040"
    }
   },
   {
@@ -489,6 +1014,58 @@
     "leaf": "#3E6B48",
     "acc": "#9A6A52",
     "obj": "#2E5280"
+   }
+  },
+  {
+   "slug": "victoria",
+   "label": "BC Parliament Buildings on Victoria's Inner Harbour",
+   "lat": 48.4197,
+   "lon": -123.3703,
+   "radius_km": 15,
+   "aliases": [
+    "bc parliament",
+    "british columbia parliament",
+    "bc legislature",
+    "victoria inner harbour"
+   ],
+   "names": [
+    "victoria bc",
+    "victoria british columbia"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#8A8C88",
+    "mid": "#C2B8A4",
+    "ice": "#F6F6F2",
+    "water": "#4E7E98",
+    "near": "#262A2E",
+    "sun": "#E8B83A",
+    "leaf": "#5A9A44",
+    "acc": "#E0A82E",
+    "obj": "#5EB4A2"
+   }
+  },
+  {
+   "slug": "wells-gray-provincial-park",
+   "label": "Dawson Falls, Wells Gray Provincial Park",
+   "lat": 51.963,
+   "lon": -120.124,
+   "radius_km": 40,
+   "aliases": [
+    "wells gray",
+    "dawson falls"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#4F7A55",
+    "mid": "#857F74",
+    "ice": "#FFFFFF",
+    "water": "#4E6B78",
+    "near": "#1F2620",
+    "sun": "#F4C542",
+    "leaf": "#2C5434",
+    "acc": "#D3E4EC",
+    "obj": "#5F5A52"
    }
   },
   {
