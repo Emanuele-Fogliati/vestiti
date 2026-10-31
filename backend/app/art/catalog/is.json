@@ -287,7 +287,9 @@
    "lon": -16.3846,
    "radius_km": 5,
    "aliases": [
-    "dettifoss"
+    "dettifoss",
+    "jokulsargljufur",
+    "jokulsargljufur canyon"
    ],
    "palette": {
     "sky": "#A9CDEE",
@@ -322,6 +324,28 @@
     "leaf": "#8DC63F",
     "acc": "#9C9A58",
     "obj": "#7C7E80"
+   }
+  },
+  {
+   "slug": "drangey",
+   "label": "Drangey island and the Kerling sea stack in Skagafjordur",
+   "lat": 65.954,
+   "lon": -19.68,
+   "radius_km": 8,
+   "aliases": [
+    "drangey"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#9E9888",
+    "mid": "#A3957A",
+    "ice": "#F4F5F2",
+    "water": "#1F5F96",
+    "near": "#1F2124",
+    "sun": "#F3C547",
+    "leaf": "#6E9446",
+    "acc": "#C9B79A",
+    "obj": "#5E6A72"
    }
   },
   {
@@ -1218,7 +1242,10 @@
    "radius_km": 5,
    "aliases": [
     "hveravellir",
-    "blahver"
+    "blahver",
+    "kjolur",
+    "kjalvegur",
+    "kjolur highland road"
    ],
    "palette": {
     "sky": "#B8D3E8",
@@ -1663,6 +1690,32 @@
     "leaf": "#7E9A55",
     "acc": "#B0393A",
     "obj": "#6E6A62"
+   }
+  },
+  {
+   "slug": "myrdalssandur",
+   "label": "The Hjorleifshofdi headland rising from the black Myrdalssandur plain, with the Ring Road",
+   "lat": 63.45,
+   "lon": -18.76,
+   "radius_km": 15,
+   "aliases": [
+    "myrdalssandur",
+    "myrdalsandur"
+   ],
+   "names": [
+    "hjorleifshofdi"
+   ],
+   "palette": {
+    "sky": "#AFD0EE",
+    "far": "#6F7A8A",
+    "mid": "#5A5148",
+    "ice": "#F4F6F8",
+    "water": "#4E7FA8",
+    "near": "#1C1D1F",
+    "sun": "#F3C547",
+    "leaf": "#7FA046",
+    "acc": "#7B7E82",
+    "obj": "#3D3D3F"
    }
   },
   {
