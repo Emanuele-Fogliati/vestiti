@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="46" cy="34" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-is-hvolsvollur-cap"><path d="M118 132Q156 110 196 98Q228 89 252 91Q276 95 300 106V132Z"/></clipPath></defs>
+<path d="M118 132Q156 110 196 98Q228 89 252 91Q276 95 300 106V132Z" fill="var(--il-far)"/>
+<path d="M150 112Q170 106 182 108L192 104L204 106L214 100L226 104L238 100L250 104L262 102L276 108L300 110V80H150Z" fill="var(--il-ice)" clip-path="url(#il-is-hvolsvollur-cap)"/>
+<path d="M0 160V118Q30 110 60 114Q90 118 120 124Q160 128 200 126Q250 124 300 128V160Z" fill="var(--il-far)"/>
+<path d="M0 160V136Q150 132 300 136V160Z" fill="var(--il-leaf)" opacity="0.6"/>
+<path d="M0 160V128Q8 120 16 124Q24 116 32 122Q36 118 40 124V160ZM276 160V126Q282 118 288 124Q294 118 300 124V160Z" fill="var(--il-leaf)"/>
+<path d="M131 160L132 141Q138 117 173 116Q208 117 214 141L215 160Z" fill="var(--il-obj)"/>
+<path d="M159 160V126H187V160Z" fill="var(--il-ice)"/>
+<path d="M159 132H187M159 138H187M159 144H187M159 150H187M140 132V158M150 124V158M196 124V158M206 132V158" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M205 160L206 143Q214 121 248 120Q282 121 288 143L289 160Z" fill="var(--il-water)"/>
+<path d="M206 143Q212 126 232 121Q240 120 246 120Q226 130 216 148L205 152Z" fill="var(--il-ice)"/>
+<path d="M240 136V128H268V136ZM248 148V140H256V148Z" fill="var(--il-near)"/>
+<path d="M226 160V140H234V160ZM270 160V140H278V160Z" fill="var(--il-ice)"/>
+<path d="M37 160L38 139Q44 115 84 113Q124 115 130 139L131 160Z" fill="var(--il-acc)"/>
+<path d="M60 128H96V140H60Z" fill="var(--il-ice)"/>
+<path d="M44 146H56V154H44ZM104 146H118V154H104ZM74 160V146H82V160Z" fill="var(--il-near)"/>
+<path d="M50 128V158M68 120V126M90 118V126M110 124V158M122 134V158" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V156H300V200Z" fill="var(--il-mid)"/>
+<path d="M0 158H300" stroke="var(--il-leaf)" stroke-width="3" fill="none" stroke-linecap="round"/>
