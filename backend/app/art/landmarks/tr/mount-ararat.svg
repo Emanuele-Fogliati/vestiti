@@ -1,0 +1,11 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="256" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-tr-mount-ararat-clip"><path d="M0 152V136Q22 128 38 112Q48 104 56 94Q64 104 78 116Q86 120 94 122Q106 118 118 106Q132 90 146 74Q154 64 162 58Q170 54 178 55Q188 57 196 63Q206 66 216 67Q228 70 242 77Q262 86 280 93Q292 97 300 100V152Z"/></clipPath></defs>
+<path d="M0 152V136Q22 128 38 112Q48 104 56 94Q64 104 78 116Q86 120 94 122Q106 118 118 106Q132 90 146 74Q154 64 162 58Q170 54 178 55Q188 57 196 63Q206 66 216 67Q228 70 242 77Q262 86 280 93Q292 97 300 100V152Z" fill="var(--il-mid)"/>
+<path d="M128 40H300V100L288 95L280 90L272 96L262 84L254 88L246 80L236 90L228 76L220 80L212 72L204 88L196 70L188 92L182 74L174 100L168 76L160 90L154 78L146 94L140 84L128 40Z" fill="var(--il-ice)" clip-path="url(#il-tr-mount-ararat-clip)"/>
+<path d="M174 100L170 120M188 92L190 112M146 94L140 112M56 96L48 120M56 96L66 118" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V148Q80 142 150 146Q230 142 300 146V200Z" fill="var(--il-far)"/>
+<path d="M0 200V182Q90 176 180 179Q250 176 300 179V200Z" fill="var(--il-leaf)"/>
+<path d="M60 166a6 4 0 1 0 12 0a6 4 0 1 0 -12 0ZM78 168a6 4 0 1 0 12 0a6 4 0 1 0 -12 0ZM94 165a6 4 0 1 0 12 0a6 4 0 1 0 -12 0Z" fill="var(--il-ice)"/>
+<path d="M58 163a2.5 2 0 1 0 5 0a2.5 2 0 1 0 -5 0ZM76 165a2.5 2 0 1 0 5 0a2.5 2 0 1 0 -5 0ZM92 162a2.5 2 0 1 0 5 0a2.5 2 0 1 0 -5 0Z" fill="var(--il-near)"/>
+<path d="M63 169V174M69 169V174M81 171V176M87 171V176M97 168V173M103 168V173" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>

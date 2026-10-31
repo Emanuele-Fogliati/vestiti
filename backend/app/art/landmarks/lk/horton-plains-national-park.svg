@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V98H300V200Z" fill="var(--il-far)"/>
+<path d="M0 104Q16 94 32 98Q50 92 68 100Q86 94 104 102L110 106H0Z" fill="var(--il-leaf)" opacity="0.45"/>
+<path d="M0 124Q24 116 50 120Q74 112 100 118Q140 116 180 128Q240 146 300 166V200H0Z" fill="var(--il-leaf)" opacity="0.35"/>
+<path d="M300 56Q260 60 220 68Q180 76 150 86Q128 92 110 100L110 106Q140 112 170 122Q220 138 260 152Q284 160 300 162Z" fill="var(--il-acc)"/>
+<path d="M300 58Q290 70 292 100Q292 130 300 162Z M262 63Q256 90 262 150L256 148Q250 100 254 64Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M276 62L274 112M244 68L242 124M214 74L212 112M186 80L186 108M160 87L160 104" stroke="var(--il-leaf)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M300 44Q292 38 284 44Q276 38 266 46Q256 42 248 50Q238 46 230 54Q220 52 212 60Q200 58 192 66Q180 66 172 72Q160 72 152 78Q138 80 126 88Q116 90 108 100L110 102Q130 92 150 87Q180 77 220 69Q260 61 300 58Z" fill="var(--il-leaf)"/>
+<path d="M108 104Q150 112 190 126Q240 144 300 158V174Q262 168 230 158Q184 144 150 130Q124 118 108 110Z" fill="var(--il-leaf)"/>
+<path d="M0 200V144Q30 140 60 144Q100 150 128 166Q146 180 152 200Z" fill="var(--il-mid)"/>
+<path d="M0 144V128Q10 120 20 126Q30 118 40 126Q50 122 56 132Q58 140 50 144Q30 140 0 144Z" fill="var(--il-leaf)"/>
+<path d="M120 162Q140 172 150 190L156 200H164Q156 176 132 160Z" fill="var(--il-acc)"/>
+<g transform="translate(58 180) scale(1.2)">
+<path vector-effect="non-scaling-stroke" d="M9 -15L8 0M13 -15L14 0M29 -15L31 -8L30 0M33 -16L35 -8L34 0M36 -28L39 -22" stroke="var(--il-obj)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path vector-effect="non-scaling-stroke" d="M0 -42L1 -50L5 -57M1 -46L-4 -49M3 -54L1 -59M3 -42L6 -49L11 -55M6 -47L2 -51M9 -52L8 -58" stroke="var(--il-near)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0 -35L-9 -33L-11 -36L-3 -42L3 -43L8 -36L14 -33L29 -32Q37 -31 37 -24L36 -18Q35 -14 31 -14H10Q5 -15 5 -21L4 -27Z M2 -42L9 -45L7 -40Z" fill="var(--il-obj)"/>
+</g>
