@@ -10,7 +10,6 @@
    "radius_km": 15,
    "aliases": [
     "helsinki cathedral",
-    "tuomiokirkko",
     "senate square",
     "senaatintori",
     "cattedrale di helsinki",
@@ -53,7 +52,9 @@
     "anarjavri"
    ],
    "names": [
-    "inari"
+    "inari",
+    "ivalo",
+    "kaamanen"
    ],
    "palette": {
     "sky": "#CDE3F2",
@@ -66,6 +67,120 @@
     "leaf": "#6F9A3A",
     "acc": "#C9A03C",
     "obj": "#7A6550"
+   }
+  },
+  {
+   "slug": "kemi",
+   "label": "The icebreaker Sampo in the frozen sea off Kemi",
+   "lat": 65.6745,
+   "lon": 24.5185,
+   "radius_km": 15,
+   "aliases": [
+    "sampo icebreaker",
+    "icebreaker sampo",
+    "rompighiaccio sampo",
+    "jaanmurtaja sampo"
+   ],
+   "names": [
+    "kemi"
+   ],
+   "palette": {
+    "sky": "#A9CCEC",
+    "far": "#DCE6EF",
+    "mid": "#E3D5AE",
+    "ice": "#F5F8FB",
+    "water": "#3E6E93",
+    "near": "#1E2124",
+    "sun": "#F2C14E",
+    "leaf": "#6B7660",
+    "acc": "#E06A2E",
+    "obj": "#2E3033"
+   }
+  },
+  {
+   "slug": "market-square",
+   "label": "Helsinki's Kauppatori market stalls on the harbour, Cathedral domes behind",
+   "lat": 60.1675,
+   "lon": 24.9527,
+   "radius_km": 1,
+   "aliases": [
+    "helsinki market square",
+    "helsingin kauppatori",
+    "kauppatori helsinki",
+    "piazza del mercato di helsinki",
+    "mercato di helsinki",
+    "market square helsinki",
+    "helsinki kauppatori"
+   ],
+   "palette": {
+    "sky": "#B2D3F0",
+    "far": "#ADA595",
+    "mid": "#C99878",
+    "ice": "#F1EEE6",
+    "water": "#3F6E8E",
+    "near": "#262A2E",
+    "sun": "#F2C14E",
+    "leaf": "#5C9A80",
+    "acc": "#E8862E",
+    "obj": "#4E5458"
+   }
+  },
+  {
+   "slug": "porvoo",
+   "label": "Porvoo's red riverside storehouses below the Old Town and cathedral",
+   "lat": 60.3934,
+   "lon": 25.6646,
+   "radius_km": 12,
+   "aliases": [
+    "vanha porvoo",
+    "old porvoo",
+    "porvoo old town",
+    "porvoon tuomiokirkko"
+   ],
+   "names": [
+    "porvoo",
+    "borga"
+   ],
+   "palette": {
+    "sky": "#B4D3F0",
+    "far": "#A9A196",
+    "mid": "#B04530",
+    "ice": "#ECE8DF",
+    "water": "#5F7C88",
+    "near": "#2A211E",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3E",
+    "acc": "#E3C46A",
+    "obj": "#5C5853"
+   }
+  },
+  {
+   "slug": "ranua",
+   "label": "A polar bear at Ranua Wildlife Park in the Lapland spruce forest",
+   "lat": 65.93,
+   "lon": 26.51,
+   "radius_km": 10,
+   "aliases": [
+    "ranua wildlife park",
+    "ranua zoo",
+    "ranuan elainpuisto",
+    "ranua arctic zoo",
+    "zoo di ranua"
+   ],
+   "names": [
+    "ranua"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#C6D5E3",
+    "mid": "#EFE4C6",
+    "ice": "#F8FAFC",
+    "water": "#4F7FA0",
+    "near": "#1F2226",
+    "sun": "#F2C14E",
+    "leaf": "#2F5B40",
+    "acc": "#8E6A4A",
+    "obj": "#6E7A86"
    }
   },
   {
@@ -152,6 +267,34 @@
    }
   },
   {
+   "slug": "tampere",
+   "label": "Tammerkoski rapids between Tampere's red-brick mills and the Finlayson chimney",
+   "lat": 61.4995,
+   "lon": 23.7605,
+   "radius_km": 15,
+   "aliases": [
+    "tammerkoski",
+    "finlayson tampere",
+    "finlaysonin alue"
+   ],
+   "names": [
+    "tampere",
+    "tammerfors"
+   ],
+   "palette": {
+    "sky": "#A0C8EE",
+    "far": "#BDB4A6",
+    "mid": "#9C4936",
+    "ice": "#FFFFFF",
+    "water": "#3F68A6",
+    "near": "#2A2321",
+    "sun": "#F2C14E",
+    "leaf": "#4C8A3C",
+    "acc": "#B4644B",
+    "obj": "#D4E5F0"
+   }
+  },
+  {
    "slug": "temppeliaukio-church",
    "label": "Temppeliaukio Rock Church's copper dome on its granite outcrop",
    "lat": 60.173,
@@ -175,6 +318,59 @@
     "leaf": "#6E9A44",
     "acc": "#D8B46C",
     "obj": "#B5573D"
+   }
+  },
+  {
+   "slug": "turku",
+   "label": "Turku Cathedral's tower above the Aura river",
+   "lat": 60.4524,
+   "lon": 22.2781,
+   "radius_km": 15,
+   "aliases": [
+    "turku cathedral",
+    "turun tuomiokirkko",
+    "cattedrale di turku",
+    "aurajoki"
+   ],
+   "names": [
+    "turku",
+    "abo"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#6E9E89",
+    "mid": "#A85B44",
+    "ice": "#D9D3C6",
+    "water": "#567F8E",
+    "near": "#232826",
+    "sun": "#F2C14E",
+    "leaf": "#4E8040",
+    "acc": "#D4A936",
+    "obj": "#33403B"
+   }
+  },
+  {
+   "slug": "uspenski-cathedral",
+   "label": "Uspenski Cathedral, red brick with green and gold domes on its granite rock",
+   "lat": 60.1684,
+   "lon": 24.9599,
+   "radius_km": 2,
+   "aliases": [
+    "uspenski",
+    "uspensky cathedral",
+    "uspenskin katedraali"
+   ],
+   "palette": {
+    "sky": "#AACDF0",
+    "far": "#8F8A84",
+    "mid": "#A4513B",
+    "ice": "#ECE5D4",
+    "water": "#4A7EA0",
+    "near": "#2A1F1C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A4E",
+    "acc": "#DDAE32",
+    "obj": "#6FA693"
    }
   }
  ]
