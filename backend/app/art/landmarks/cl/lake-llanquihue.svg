@@ -1,0 +1,22 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 122V112Q30 106 60 110Q120 104 180 108Q240 104 300 108V122Z" fill="var(--il-mid)"/>
+<defs><clipPath id="il-cl-lake-llanquihue-osorno"><path d="M7.2 120L18 114.5L28.2 109L38 103.5L47.3 98L56 92.5L64.1 87L71.5 81.5L78.3 76L84.2 70.5L89.2 65L93.1 59.5L95.4 54L96.6 54L98.9 59.5L102.8 65L107.8 70.5L113.7 76L120.5 81.5L127.9 87L136 92.5L144.7 98L154 103.5L163.8 109L174 114.5L184.8 120Z"/></clipPath></defs>
+<path d="M7.2 120L18 114.5L28.2 109L38 103.5L47.3 98L56 92.5L64.1 87L71.5 81.5L78.3 76L84.2 70.5L89.2 65L93.1 59.5L95.4 54L96.6 54L98.9 59.5L102.8 65L107.8 70.5L113.7 76L120.5 81.5L127.9 87L136 92.5L144.7 98L154 103.5L163.8 109L174 114.5L184.8 120Z" fill="var(--il-mid)"/>
+<path d="M60 84L64.1 87L71.5 81.5L78.3 76L84.2 70.5L89.2 65L93.1 59.5L95.4 50L96.6 50L98.9 59.5L102.8 65L107.8 70.5L113.7 76L120.5 81.5L127.9 87L132 84L127.9 87L121.5 89.2L115.1 83.5L108.8 90.5L102.4 84.8L96 91.7L89.6 84.8L83.2 90.5L76.9 83.5L70.5 89.2L64.1 87Z" fill="var(--il-ice)" clip-path="url(#il-cl-lake-llanquihue-osorno)"/>
+<defs><clipPath id="il-cl-lake-llanquihue-calbuco"><path d="M140 120Q156 110 166 100L170 92L175 95L180 89L185 94L190 90Q196 102 206 112L214 120Z"/></clipPath></defs>
+<path d="M140 120Q156 110 166 100L170 92L175 95L180 89L185 94L190 90Q196 102 206 112L214 120Z" fill="var(--il-mid)"/>
+<path d="M160 86H200V100L194 104L188 99L182 106L176 100L170 104L164 100Z" fill="var(--il-ice)" clip-path="url(#il-cl-lake-llanquihue-calbuco)"/>
+<path d="M0 200V118H300V200Z" fill="var(--il-water)"/>
+<path d="M204 162V110L251 97V162Z" fill="var(--il-acc)"/>
+<path d="M251 162V97L273 80L295 97V162Z" fill="var(--il-acc)"/>
+<path d="M214 108V160M224 105V160M234 103V160M244 100V160M258 94V160M266 88V160M274 84V160M282 90V160M290 96V160" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M273 78L222 95L200 111L250 98Z" fill="var(--il-far)"/>
+<path d="M248 99L273 76L298 99L295 101L273 81L251 101Z" fill="var(--il-far)"/>
+<path d="M233 92V80H247V87Z" fill="var(--il-water)"/>
+<path d="M237 81V89M243 81V88" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M231.5 81Q240 72 248.5 81Z" fill="var(--il-far)"/>
+<path d="M198 138L246 120H300V128H251L204 142Z" fill="var(--il-obj)"/>
+<path d="M208 140V160M220 136V160M232 132V160M244 128V160M256 128V160M268 128V160M280 128V160M292 128V160" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M0 200V187Q90 183 160 175Q186 164 200 158H300V200Z" fill="var(--il-far)"/>
+<path d="M196 200Q240 182 300 178V200Z" fill="var(--il-leaf)"/>
