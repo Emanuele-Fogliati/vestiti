@@ -3,6 +3,34 @@
  "name": "Albania",
  "places": [
   {
+   "slug": "apollonia",
+   "label": "The Monument of the Agonothetes (Bouleuterion) facade at ancient Apollonia",
+   "lat": 40.7221,
+   "lon": 19.4728,
+   "radius_km": 4,
+   "aliases": [
+    "apollonia",
+    "apolonia",
+    "parco archeologico di apollonia",
+    "apollonia archaeological park",
+    "parku arkeologjik apolloni",
+    "monument of agonothetes",
+    "bouleuterion apollonia"
+   ],
+   "palette": {
+    "sky": "#9CCBF0",
+    "far": "#D8C99C",
+    "mid": "#D3CCBC",
+    "ice": "#E9E4D8",
+    "water": "#7FA8B8",
+    "near": "#2A2824",
+    "sun": "#F4C542",
+    "leaf": "#4F6B34",
+    "acc": "#B8643F",
+    "obj": "#95AA58"
+   }
+  },
+  {
    "slug": "berat",
    "label": "Berat's Mangalem quarter, the white Ottoman houses of the 'thousand windows' below the castle hill",
    "lat": 40.7058,
@@ -56,6 +84,201 @@
     "leaf": "#5E7A36",
     "acc": "#C8AB7E",
     "obj": "#6E5B3A"
+   }
+  },
+  {
+   "slug": "durres",
+   "label": "Venetian Tower of Durres",
+   "lat": 41.3127,
+   "lon": 19.4466,
+   "radius_km": 12,
+   "aliases": [
+    "venetian tower of durres",
+    "torra e durresit",
+    "durres castle",
+    "castello di durazzo",
+    "torre veneziana di durazzo"
+   ],
+   "names": [
+    "durres",
+    "durazzo",
+    "durres city",
+    "durres beach"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#CFC7B4",
+    "mid": "#B4A88E",
+    "ice": "#E2DACA",
+    "water": "#6E7276",
+    "near": "#2A2826",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#E3B4A8",
+    "obj": "#7A6248"
+   }
+  },
+  {
+   "slug": "himare",
+   "label": "Himare bay and town",
+   "lat": 40.101,
+   "lon": 19.745,
+   "radius_km": 8,
+   "aliases": [
+    "vecchia himara",
+    "old himara",
+    "himara bay",
+    "spile beach"
+   ],
+   "names": [
+    "himara",
+    "himare",
+    "himara town"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#9AA294",
+    "mid": "#7E9058",
+    "ice": "#F2EFE8",
+    "water": "#2E6FAE",
+    "near": "#26292C",
+    "sun": "#F2C14E",
+    "leaf": "#4E6E36",
+    "acc": "#45B6C4",
+    "obj": "#C8603A"
+   }
+  },
+  {
+   "slug": "kruje",
+   "label": "Skanderbeg Museum in Kruje Castle",
+   "lat": 41.5106,
+   "lon": 19.7929,
+   "radius_km": 5,
+   "aliases": [
+    "kruja castle",
+    "kruje castle",
+    "castle of kruje",
+    "kalaja e krujes",
+    "skanderbeg museum",
+    "castello di kruja",
+    "castello di kruje"
+   ],
+   "names": [
+    "kruja",
+    "kruje",
+    "kruja town",
+    "kruje town"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#A8A79E",
+    "mid": "#D8CCB0",
+    "ice": "#E8DFC9",
+    "water": "#3E8FB0",
+    "near": "#2A2A28",
+    "sun": "#F2C14E",
+    "leaf": "#6A7F44",
+    "acc": "#C8603A",
+    "obj": "#A9A060"
+   }
+  },
+  {
+   "slug": "ksamil",
+   "label": "The wooded Ksamil islets in the turquoise lagoon, with Corfu on the horizon",
+   "lat": 39.768,
+   "lon": 20.0,
+   "radius_km": 4,
+   "aliases": [
+    "ksamil islands",
+    "ishujt e ksamilit",
+    "isole di ksamil",
+    "ksamil beach",
+    "spiaggia di ksamil"
+   ],
+   "names": [
+    "ksamil",
+    "ksamili",
+    "ksamil town",
+    "ksamil albania"
+   ],
+   "palette": {
+    "sky": "#8DC2EE",
+    "far": "#A9B0BE",
+    "mid": "#7A5A3C",
+    "ice": "#F2EFE6",
+    "water": "#3EC3C1",
+    "near": "#1E2828",
+    "sun": "#F4C542",
+    "leaf": "#3E6B2F",
+    "acc": "#CDAE6A",
+    "obj": "#1F64A8"
+   }
+  },
+  {
+   "slug": "rozafa-castle",
+   "label": "The ruined church-mosque of St Stephen inside Rozafa Castle, above the Shkoder plain",
+   "lat": 42.0466,
+   "lon": 19.4936,
+   "radius_km": 2,
+   "aliases": [
+    "rozafa",
+    "rozafa castle",
+    "rozafa fortress",
+    "castello di rozafa",
+    "fortezza di rozafa",
+    "kalaja e rozafes",
+    "kalaja e rozafa",
+    "shkodra castle",
+    "shkoder castle",
+    "castello di scutari"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#9AA6B6",
+    "mid": "#A8A398",
+    "ice": "#E2DDD2",
+    "water": "#CDBE9A",
+    "near": "#2A2A28",
+    "sun": "#F4C542",
+    "leaf": "#7F9C4E",
+    "acc": "#9C6B4E",
+    "obj": "#A9B07C"
+   }
+  },
+  {
+   "slug": "sarande",
+   "label": "Sarande's apartment blocks climbing the hill around the bay, seen from the palm promenade",
+   "lat": 39.875,
+   "lon": 20.005,
+   "radius_km": 10,
+   "aliases": [
+    "saranda promenade",
+    "lungomare di saranda",
+    "saranda bay",
+    "baia di saranda"
+   ],
+   "names": [
+    "sarande",
+    "sarande city",
+    "sarande town",
+    "santi quaranta",
+    "porto edda",
+    "saranda",
+    "saranda city",
+    "saranda town",
+    "saranda albania"
+   ],
+   "palette": {
+    "sky": "#8FC4EE",
+    "far": "#A69E7C",
+    "mid": "#8A6A4A",
+    "ice": "#F4F2EC",
+    "water": "#2F86B8",
+    "near": "#232628",
+    "sun": "#F4C542",
+    "leaf": "#4D7A35",
+    "acc": "#EDC6A4",
+    "obj": "#C9C2B2"
    }
   },
   {
