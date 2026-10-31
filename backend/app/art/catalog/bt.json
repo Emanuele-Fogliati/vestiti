@@ -81,6 +81,83 @@
    }
   },
   {
+   "slug": "gangtey-monastery",
+   "label": "Gangtey Goemba main temple",
+   "lat": 27.4727,
+   "lon": 90.1647,
+   "radius_km": 3,
+   "aliases": [
+    "gangtey monastery",
+    "gangtey goemba",
+    "gangtey goempa",
+    "gangtey gonpa",
+    "gangteng",
+    "gangtey gompa",
+    "monastero di gangtey"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#CBC4B4",
+    "mid": "#7A3524",
+    "ice": "#F4F1EA",
+    "water": "#8E969C",
+    "near": "#261E1A",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A3E",
+    "acc": "#C8432C",
+    "obj": "#D9A630"
+   }
+  },
+  {
+   "slug": "khamsum-yulley-namgyal-chorten",
+   "label": "Khamsum Yulley Namgyal Chorten on its ridge above the Punakha valley",
+   "lat": 27.6,
+   "lon": 89.87,
+   "radius_km": 4,
+   "aliases": [
+    "khamsum yulley",
+    "khamsum yueley",
+    "khamsum chorten",
+    "khamsum yulley namgyal"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#7F9E8C",
+    "mid": "#8E8A82",
+    "ice": "#F3F0E8",
+    "water": "#A4BDB4",
+    "near": "#241C18",
+    "sun": "#E3AE3A",
+    "leaf": "#46703A",
+    "acc": "#9CBF55",
+    "obj": "#A3342A"
+   }
+  },
+  {
+   "slug": "kyichu-lhakhang",
+   "label": "Kyichu Lhakhang temple, Paro valley",
+   "lat": 27.4417,
+   "lon": 89.3767,
+   "radius_km": 2,
+   "aliases": [
+    "kyichu",
+    "kichu lhakhang",
+    "kyerchu"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8A9AAE",
+    "mid": "#3E2A20",
+    "ice": "#F5F2EA",
+    "water": "#A9A69C",
+    "near": "#2A211C",
+    "sun": "#F2C14E",
+    "leaf": "#456A38",
+    "acc": "#9A2E22",
+    "obj": "#D9A62A"
+   }
+  },
+  {
    "slug": "national-memorial-chorten",
    "label": "National Memorial Chorten, Thimphu",
    "lat": 27.4741,
@@ -133,6 +210,30 @@
    }
   },
   {
+   "slug": "phobjikha-valley",
+   "label": "Phobjikha Valley with black-necked cranes",
+   "lat": 27.455,
+   "lon": 90.18,
+   "radius_km": 12,
+   "aliases": [
+    "phobjikha",
+    "phobjika",
+    "gangtey valley"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#6F8E8C",
+    "mid": "#3E6A3C",
+    "ice": "#F4F2EC",
+    "water": "#6FA3C0",
+    "near": "#23261F",
+    "sun": "#F2C14E",
+    "leaf": "#A9A35A",
+    "acc": "#8E8240",
+    "obj": "#B8BCC0"
+   }
+  },
+  {
    "slug": "punakha-dzong",
    "label": "Punakha Dzong on the Mo Chhu with jacaranda trees",
    "lat": 27.5821,
@@ -159,6 +260,60 @@
    "names": [
     "punakha"
    ]
+  },
+  {
+   "slug": "rinpung-dzong",
+   "label": "Rinpung Dzong and the Nyamai Zam bridge, Paro",
+   "lat": 27.4288,
+   "lon": 89.4229,
+   "radius_km": 3,
+   "aliases": [
+    "rinpung",
+    "rimpung",
+    "paro dzong",
+    "nyamai zam"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#8C96A0",
+    "mid": "#5E4330",
+    "ice": "#F3F0E8",
+    "water": "#4E8C8A",
+    "near": "#2A221D",
+    "sun": "#F2C14E",
+    "leaf": "#5E7F44",
+    "acc": "#A8432F",
+    "obj": "#CFC2A6"
+   }
+  },
+  {
+   "slug": "tashichho-dzong",
+   "label": "Tashichho Dzong, Thimphu",
+   "lat": 27.4903,
+   "lon": 89.6338,
+   "radius_km": 3,
+   "aliases": [
+    "tashichho",
+    "tashichhoe",
+    "trashichhoe",
+    "trashi chhoe",
+    "tashichodzong",
+    "tashi chho dzong",
+    "thimphu dzong",
+    "trashichhoedzong"
+   ],
+   "palette": {
+    "sky": "#A8CCF0",
+    "far": "#56743F",
+    "mid": "#A3463E",
+    "ice": "#F4F1EA",
+    "water": "#8FB6C8",
+    "near": "#2A201C",
+    "sun": "#F2C14E",
+    "leaf": "#8DB25A",
+    "acc": "#7E2E22",
+    "obj": "#D4A537"
+   }
   }
  ]
 }
