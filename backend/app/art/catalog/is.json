@@ -35,7 +35,10 @@
    "lon": -19.225,
    "radius_km": 5,
    "aliases": [
-    "alftavatn"
+    "alftavatn",
+    "hvanngil hut",
+    "hvanngil huts",
+    "hvanngilsskali"
    ],
    "palette": {
     "sky": "#C6DBEC",
@@ -48,7 +51,10 @@
     "leaf": "#8CA348",
     "acc": "#C23B2C",
     "obj": "#4A403A"
-   }
+   },
+   "names": [
+    "hvanngil"
+   ]
   },
   {
    "slug": "arnarstapi",
@@ -730,7 +736,9 @@
    },
    "names": [
     "skagafjordur",
-    "skagafjoerdur"
+    "skagafjoerdur",
+    "saudarkrokur",
+    "saudarkrokur town"
    ]
   },
   {
@@ -1098,6 +1106,37 @@
     "leaf": "#8A9A56",
     "acc": "#B8483E",
     "obj": "#2B4FA8"
+   }
+  },
+  {
+   "slug": "holar",
+   "label": "Holar in Hjaltadalur: the red sandstone cathedral and its white bell tower below Holabyrda",
+   "lat": 65.7347,
+   "lon": -19.1124,
+   "radius_km": 5,
+   "aliases": [
+    "holar i hjaltadal",
+    "holar in hjaltadalur",
+    "holar hjaltadal",
+    "hjaltadalur",
+    "holadomkirkja",
+    "holar cathedral"
+   ],
+   "names": [
+    "holar",
+    "holar iceland"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#7F8C70",
+    "mid": "#9A4A3C",
+    "ice": "#F4F2EC",
+    "water": "#5E8FB0",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#C8705A",
+    "obj": "#4A4E54"
    }
   },
   {
@@ -1822,6 +1861,35 @@
     "patreksfjordur",
     "patreksfjordur town"
    ]
+  },
+  {
+   "slug": "laugaras",
+   "label": "Skalholt cathedral with the turf-roofed Thorlaksbud, 3 km from Laugaras",
+   "lat": 64.1264,
+   "lon": -20.5247,
+   "radius_km": 5,
+   "aliases": [
+    "skalholt",
+    "skalholtskirkja",
+    "skalholt cathedral",
+    "thorlaksbud"
+   ],
+   "names": [
+    "laugaras",
+    "laugaras iceland"
+   ],
+   "palette": {
+    "sky": "#A8D2EE",
+    "far": "#8FA2B4",
+    "mid": "#F1F2EE",
+    "ice": "#D6DCE0",
+    "water": "#3E434A",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#6BA33A",
+    "acc": "#4E8226",
+    "obj": "#5B4330"
+   }
   },
   {
    "slug": "laugarvatn",
