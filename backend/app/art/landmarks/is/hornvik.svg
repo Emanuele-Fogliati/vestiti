@@ -1,0 +1,19 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="258" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 160V108H300V160Z" fill="var(--il-water)"/>
+<path d="M190 100L208 92L228 89L248 82L268 84L300 78V110H190Z" fill="var(--il-far)"/>
+<path d="M46 156L51 134L49 116L55 98L63 82L72 68L80 58L83 46L86 30L88 20L91 14L95 13L97 19L98 34L100 44L103 50L108 43L113 36L117 31L120 26L123 28L126 24L130 29L136 37L146 49L158 59L172 67L190 75L210 80L232 84L254 88L276 92L300 96V156Z" fill="var(--il-mid)"/>
+<path d="M80 62L88 56L96 58L104 56L116 51L130 49L144 53L158 61L172 68L190 76L210 81L232 85L254 89L276 93L300 97V156H150Q132 124 112 100Q94 80 80 62Z" fill="var(--il-leaf)"/>
+<path d="M95 13L97 19L98 34L100 44L103 50L97 52L96 30Z M126 24L130 29L136 37L146 49L158 59L150 58L140 48L132 38Z M150 150Q132 122 112 100Q94 80 80 62L84 62Q100 82 118 102Q136 124 156 150Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M56 112L74 108M60 96L80 92M70 80L86 78M64 128L94 122M80 140L118 132M88 104L104 100M96 116L116 112" stroke="var(--il-leaf)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.8"/>
+<path d="M54 130L58 152M62 106L66 150M72 88L78 150M86 92L92 150M100 106L106 150M116 120L120 150M130 132L134 150" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M150 96Q190 104 230 104M170 116Q220 118 270 112M200 132Q240 134 290 128" stroke="var(--il-mid)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 200V150Q60 146 120 148Q200 150 300 146V200Z" fill="var(--il-water)"/>
+<path d="M0 200V178Q70 170 150 174Q220 178 300 170V200Z" fill="var(--il-acc)"/>
+<g transform="translate(192 190) scale(1.25)">
+<path d="M31 -13Q43 -17 48 -9Q50 -3 45 -1Q40 -6 31 -8Z" fill="var(--il-obj)"/>
+<path d="M10 -8H12.5V0H10ZM14.5 -8H17V0H14.5ZM25 -8H27.5V0H25ZM29 -9H31.5V0H29Z" fill="var(--il-obj)"/>
+<path d="M9 -12Q10 -18 18 -18L29 -17Q34 -15 33 -10Q32 -7 27 -7H12Q8 -8 9 -12Z" fill="var(--il-obj)"/>
+<path d="M15 -15Q14 -21 12 -22L13 -28L9.5 -24L7.5 -28L7 -22L0 -19Q3 -16 8 -16Q11 -13 15 -15Z" fill="var(--il-obj)"/>
+<circle cx="6.5" cy="-20.5" r="0.9" fill="var(--il-near)"/>
+</g>

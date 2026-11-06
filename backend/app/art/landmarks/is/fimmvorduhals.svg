@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="30" r="12" fill="var(--il-sun)"/>
+<g transform="translate(0 10)">
+<path d="M0 152V98Q30 78 70 72Q112 70 154 92V152Z" fill="var(--il-far)"/>
+<path d="M0 98Q30 78 70 72Q112 70 154 92L146 96L140 104L132 98L122 102L114 114L106 102L94 104L86 116L78 104L64 106L56 118L48 106L36 108L28 116L20 106L8 108L0 112Z" fill="var(--il-ice)"/>
+<path d="M146 152L168 112Q220 84 300 82V152Z" fill="var(--il-far)"/>
+<path d="M168 112Q220 84 300 82V104L292 106L286 116L278 104L266 106L258 118L250 104L238 108L232 120L224 106L212 110L204 120L198 108L186 112L180 118L172 112Z" fill="var(--il-ice)"/>
+<path d="M22 152Q44 134 60 120L72 112L82 113Q96 124 112 146Z" fill="var(--il-obj)"/>
+<path d="M82 113Q96 124 112 146H102Q92 126 80 114Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M56 152Q86 140 108 120Q126 102 142 95Q156 89 172 90Q188 93 200 106Q216 126 256 152Z" fill="var(--il-mid)"/>
+<path d="M188 95Q196 100 200 106Q216 126 256 152H226Q212 128 200 110Q194 102 188 95Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M146 96Q160 100 182 96" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M120 118Q126 130 124 142M150 104Q156 122 154 142M178 104Q184 120 186 140" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 190V146L12 142L22 147L36 141L50 145L62 139L76 145L90 141L104 146L118 140L134 146L150 142L166 147L182 141L198 146L214 141L230 147L246 142L262 146L278 140L290 144L300 141V190Z" fill="var(--il-acc)"/>
+<path d="M14 160L26 156M54 170L68 166M100 160L112 156M130 174L142 170M170 162L184 158M206 172L218 168M238 160L252 156M268 174L280 170" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.45"/>
+</g>
