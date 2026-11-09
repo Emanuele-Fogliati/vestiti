@@ -28,6 +28,35 @@
    }
   },
   {
+   "slug": "alumine",
+   "label": "The Río Aluminé winding past poplars and the red crag below the basalt mesas at Aluminé",
+   "lat": -39.24,
+   "lon": -70.92,
+   "radius_km": 15,
+   "aliases": [
+    "rio alumine",
+    "river alumine",
+    "alumine river"
+   ],
+   "names": [
+    "alumine",
+    "alumine neuquen",
+    "alumine argentina"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#76706E",
+    "mid": "#A88768",
+    "ice": "#EEEAE2",
+    "water": "#4E8FA8",
+    "near": "#241F1C",
+    "sun": "#F4C542",
+    "leaf": "#92B24F",
+    "acc": "#9C5B44",
+    "obj": "#3D6B2F"
+   }
+  },
+  {
    "slug": "antofagasta-de-la-sierra",
    "label": "Black volcano and flamingo lagoon at Antofagasta de la Sierra",
    "lat": -26.08,
@@ -327,6 +356,30 @@
    }
   },
   {
+   "slug": "el-pedral",
+   "label": "The turreted casco of Estancia El Pedral with Magellanic penguins, near Punta Ninfas",
+   "lat": -42.98,
+   "lon": -64.55,
+   "radius_km": 4,
+   "aliases": [
+    "el pedral",
+    "estancia el pedral",
+    "pinguinera el pedral"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#B9B08A",
+    "mid": "#F1EEE8",
+    "ice": "#FFFFFF",
+    "water": "#3C7FA6",
+    "near": "#1F2124",
+    "sun": "#F6C431",
+    "leaf": "#3E5E35",
+    "acc": "#A3262E",
+    "obj": "#8C877D"
+   }
+  },
+  {
    "slug": "fitz-roy",
    "label": "Monte Fitz Roy skyline",
    "lat": -49.2714,
@@ -391,7 +444,9 @@
     "garibaldi pass",
     "passo garibaldi",
     "mirador paso garibaldi",
-    "mirador garibaldi"
+    "mirador garibaldi",
+    "lago escondido",
+    "lake escondido"
    ],
    "palette": {
     "sky": "#A8CDEF",
@@ -521,6 +576,30 @@
    }
   },
   {
+   "slug": "isla-de-los-lobos",
+   "label": "South American sea lions crowding the rock of Isla de los Lobos, Beagle Channel",
+   "lat": -54.872,
+   "lon": -68.13,
+   "radius_km": 3,
+   "aliases": [
+    "isla de los lobos",
+    "isola de los lobos",
+    "isla de lobos beagle"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#5F6F88",
+    "mid": "#8E9192",
+    "ice": "#FFFFFF",
+    "water": "#2C5E8E",
+    "near": "#1E2226",
+    "sun": "#F6C431",
+    "leaf": "#3E5A3A",
+    "acc": "#C99E64",
+    "obj": "#4E3F33"
+   }
+  },
+  {
    "slug": "ituzaingo",
    "label": "Yacyretá dam powerhouse with its yellow gantry cranes, Ituzaingó",
    "lat": -27.48,
@@ -547,6 +626,35 @@
     "leaf": "#6E8F48",
     "acc": "#F2C31C",
     "obj": "#B0603A"
+   }
+  },
+  {
+   "slug": "jama",
+   "label": "Vicuñas on the golden puna below the snowy border volcanoes at Jama, on the Paso de Jama road",
+   "lat": -23.23,
+   "lon": -66.95,
+   "radius_km": 20,
+   "aliases": [
+    "paso de jama",
+    "paso jama",
+    "jama pass"
+   ],
+   "names": [
+    "jama",
+    "jama jujuy",
+    "jama argentina"
+   ],
+   "palette": {
+    "sky": "#9DC8F0",
+    "far": "#8B6B55",
+    "mid": "#8C8C96",
+    "ice": "#F6F6F4",
+    "water": "#5F86B0",
+    "near": "#25211F",
+    "sun": "#F4C542",
+    "leaf": "#C9A548",
+    "acc": "#C68A50",
+    "obj": "#7F7B78"
    }
   },
   {
@@ -939,6 +1047,39 @@
    }
   },
   {
+   "slug": "pampa",
+   "label": "Gaucho with criollo horses on the flat Pampas, an estancia and a windmill on the horizon",
+   "lat": -35.0,
+   "lon": -60.0,
+   "radius_km": 60,
+   "aliases": [
+    "pampas argentinas",
+    "pampa argentina",
+    "argentine pampas",
+    "pampa humeda",
+    "pampas argentine"
+   ],
+   "names": [
+    "pampa",
+    "pampas",
+    "the pampas",
+    "las pampas",
+    "la pampa"
+   ],
+   "palette": {
+    "sky": "#A7CBEF",
+    "far": "#8DB44E",
+    "mid": "#F2EEE6",
+    "ice": "#C9CCCF",
+    "water": "#6E9CC0",
+    "near": "#1F1F1C",
+    "sun": "#F6C431",
+    "leaf": "#2F5126",
+    "acc": "#B7392C",
+    "obj": "#8A5634"
+   }
+  },
+  {
    "slug": "perito-moreno",
    "label": "The white double entrance arch of the town of Perito Moreno, Santa Cruz, among poplars",
    "lat": -46.59,
@@ -996,6 +1137,30 @@
     "parco nazionale los glaciares",
     "los glaciares"
    ]
+  },
+  {
+   "slug": "piedra-del-molino",
+   "label": "Stone chapel of San Rafael and the cross at the Piedra del Molino pass",
+   "lat": -25.211,
+   "lon": -65.694,
+   "radius_km": 4,
+   "aliases": [
+    "piedra del molino",
+    "capilla san rafael piedra del molino",
+    "abra piedra del molino"
+   ],
+   "palette": {
+    "sky": "#8EC1F0",
+    "far": "#C9A963",
+    "mid": "#877C70",
+    "ice": "#E6E1D8",
+    "water": "#978579",
+    "near": "#28231F",
+    "sun": "#F4C542",
+    "leaf": "#AD8C4C",
+    "acc": "#BDB5AA",
+    "obj": "#3FA595"
+   }
   },
   {
    "slug": "plaza-de-mayo",
@@ -1153,6 +1318,31 @@
     "leaf": "#5E8A3E",
     "acc": "#D7CBB6",
     "obj": "#8F9599"
+   }
+  },
+  {
+   "slug": "punta-ninfas-lighthouse",
+   "label": "Black-and-yellow Punta Ninfas lighthouse on the cliffs above Golfo Nuevo, elephant seals on the beach",
+   "lat": -42.969,
+   "lon": -64.315,
+   "radius_km": 5,
+   "aliases": [
+    "punta ninfas",
+    "faro punta ninfas",
+    "faro di punta ninfas",
+    "faro de punta ninfas"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A79C8C",
+    "mid": "#D2C7B0",
+    "ice": "#FFFFFF",
+    "water": "#2E7A98",
+    "near": "#1E1E1C",
+    "sun": "#F6C431",
+    "leaf": "#9C9468",
+    "acc": "#E3C534",
+    "obj": "#6E6052"
    }
   },
   {
@@ -1408,6 +1598,31 @@
    }
   },
   {
+   "slug": "recta-del-tin-tin",
+   "label": "The dead-straight Recta del Tin Tin road through the cardon plain toward the Cachi range",
+   "lat": -25.17,
+   "lon": -65.93,
+   "radius_km": 6,
+   "aliases": [
+    "recta del tin tin",
+    "recta de tin tin",
+    "recta tin tin",
+    "tin tin"
+   ],
+   "palette": {
+    "sky": "#93C4EE",
+    "far": "#A4AFCB",
+    "mid": "#7B655B",
+    "ice": "#F4F2EC",
+    "water": "#A6937D",
+    "near": "#26221F",
+    "sun": "#F4C542",
+    "leaf": "#6E7A3E",
+    "acc": "#E9BE2C",
+    "obj": "#77787E"
+   }
+  },
+  {
    "slug": "rio-grande",
    "label": "Misión Salesiana La Candelaria chapel, Río Grande",
    "lat": -53.75,
@@ -1446,7 +1661,10 @@
    "radius_km": 50,
    "aliases": [
     "salar de arizaro",
-    "arizaro"
+    "arizaro",
+    "cono de arita",
+    "cono di arita",
+    "arita cone"
    ],
    "palette": {
     "sky": "#9CC6EE",
@@ -1761,6 +1979,35 @@
    }
   },
   {
+   "slug": "susques",
+   "label": "Thatched adobe church of Nuestra Señora de Belén with its white bell tower, Susques",
+   "lat": -23.401,
+   "lon": -66.367,
+   "radius_km": 12,
+   "aliases": [
+    "iglesia de susques",
+    "nuestra senora de belen susques",
+    "capilla de susques"
+   ],
+   "names": [
+    "susques",
+    "susques jujuy",
+    "susques argentina"
+   ],
+   "palette": {
+    "sky": "#9CC6F0",
+    "far": "#B4846C",
+    "mid": "#D4AE88",
+    "ice": "#F6EFE0",
+    "water": "#5D8FB8",
+    "near": "#27211D",
+    "sun": "#F4C542",
+    "leaf": "#2E7A40",
+    "acc": "#A8834C",
+    "obj": "#DCC4A2"
+   }
+  },
+  {
    "slug": "tafi-del-valle",
    "label": "Dique La Angostura lake in the Tafí valley, the town at the foot of the mountains",
    "lat": -26.83,
@@ -2043,6 +2290,36 @@
     "leaf": "#8A8A5C",
     "acc": "#CDBB98",
     "obj": "#363B45"
+   }
+  },
+  {
+   "slug": "villa-pehuenia",
+   "label": "Pehuen araucarias on the rocky shore of Lago Aluminé at Villa Pehuenia, Batea Mahuida behind",
+   "lat": -38.88,
+   "lon": -71.17,
+   "radius_km": 15,
+   "aliases": [
+    "lago alumine",
+    "lake alumine",
+    "batea mahuida"
+   ],
+   "names": [
+    "villa pehuenia",
+    "villa pehuenia neuquen",
+    "pehuenia",
+    "villa pehuenia moquehue"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#8DA5BE",
+    "mid": "#5D7D88",
+    "ice": "#C4CCD6",
+    "water": "#4F93C6",
+    "near": "#202421",
+    "sun": "#F4C542",
+    "leaf": "#355A30",
+    "acc": "#8E8B84",
+    "obj": "#5E4C3F"
    }
   },
   {
