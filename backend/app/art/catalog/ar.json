@@ -3,6 +3,33 @@
  "name": "Argentina",
  "places": [
   {
+   "slug": "antofagasta-de-la-sierra",
+   "label": "Black volcano and flamingo lagoon at Antofagasta de la Sierra",
+   "lat": -26.08,
+   "lon": -67.42,
+   "radius_km": 15,
+   "aliases": [
+    "laguna de antofagasta",
+    "volcan alumbrera",
+    "volcan antofagasta"
+   ],
+   "names": [
+    "antofagasta de la sierra"
+   ],
+   "palette": {
+    "sky": "#A8CBEF",
+    "far": "#CDB894",
+    "mid": "#5C4840",
+    "ice": "#F4F2EE",
+    "water": "#4F80B8",
+    "near": "#1E1A1A",
+    "sun": "#F4C542",
+    "leaf": "#8C925A",
+    "acc": "#EE8E9E",
+    "obj": "#45403E"
+   }
+  },
+  {
    "slug": "beagle-channel",
    "label": "Les Eclaireurs lighthouse, Beagle Channel",
    "lat": -54.873,
@@ -104,6 +131,34 @@
    }
   },
   {
+   "slug": "cuesta-de-lipan",
+   "label": "RN52 hairpins of the Cuesta de Lipán above Purmamarca",
+   "lat": -23.7,
+   "lon": -65.58,
+   "radius_km": 5,
+   "aliases": [
+    "cuesta de lipan",
+    "cuesta del lipan",
+    "cuesta lipan",
+    "mirador de lipan"
+   ],
+   "names": [
+    "lipan"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#8E7C98",
+    "mid": "#B07C68",
+    "ice": "#F2F0EA",
+    "water": "#5E8FB0",
+    "near": "#2E2324",
+    "sun": "#F6C431",
+    "leaf": "#9C9256",
+    "acc": "#9E4B3A",
+    "obj": "#8F8D8A"
+   }
+  },
+  {
    "slug": "fitz-roy",
    "label": "Monte Fitz Roy skyline",
    "lat": -49.2714,
@@ -193,6 +248,35 @@
    }
   },
   {
+   "slug": "ituzaingo",
+   "label": "Yacyretá dam powerhouse with its yellow gantry cranes, Ituzaingó",
+   "lat": -27.48,
+   "lon": -56.73,
+   "radius_km": 12,
+   "aliases": [
+    "yacyreta",
+    "yacireta",
+    "represa yacyreta",
+    "diga di yacyreta"
+   ],
+   "names": [
+    "ituzaingo",
+    "ituzaingo corrientes"
+   ],
+   "palette": {
+    "sky": "#B6D3F0",
+    "far": "#A4583A",
+    "mid": "#B8BCC0",
+    "ice": "#F2F2EE",
+    "water": "#6A9BC4",
+    "near": "#23262A",
+    "sun": "#F4C542",
+    "leaf": "#6E8F48",
+    "acc": "#F2C31C",
+    "obj": "#B0603A"
+   }
+  },
+  {
    "slug": "la-boca",
    "label": "Caminito, La Boca",
    "lat": -34.6345,
@@ -236,6 +320,33 @@
     "leaf": "#8A8656",
     "acc": "#A6DAEC",
     "obj": "#5BA4CC"
+   }
+  },
+  {
+   "slug": "lago-fagnano",
+   "label": "Lago Fagnano from the Tolhuin beach: pale cliffs, driftwood and the long lake to the snowy range",
+   "lat": -54.55,
+   "lon": -67.45,
+   "radius_km": 40,
+   "aliases": [
+    "fagnano",
+    "lago khami",
+    "lago cami"
+   ],
+   "names": [
+    "tolhuin"
+   ],
+   "palette": {
+    "sky": "#A4C8F0",
+    "far": "#8C9CB6",
+    "mid": "#55607A",
+    "ice": "#F4F6FA",
+    "water": "#2D6688",
+    "near": "#1E2226",
+    "sun": "#F4C542",
+    "leaf": "#4D5E36",
+    "acc": "#D3C5A6",
+    "obj": "#6E6A64"
    }
   },
   {
@@ -286,6 +397,31 @@
     "leaf": "#3D5C34",
     "acc": "#B79E7C",
     "obj": "#7E9F45"
+   }
+  },
+  {
+   "slug": "nahuel-huapi-lake",
+   "label": "Nahuel Huapi Lake with its islands below Cerro López, framed by cypress forest",
+   "lat": -41.0,
+   "lon": -71.5,
+   "radius_km": 25,
+   "aliases": [
+    "lago nahuel huapi",
+    "nahuel huapi",
+    "nahuel huapi lake",
+    "nahuelhuapi"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#8E9CB8",
+    "mid": "#6F7E9E",
+    "ice": "#F2F4F8",
+    "water": "#2F5FA8",
+    "near": "#1E2526",
+    "sun": "#F4C542",
+    "leaf": "#2E5A2C",
+    "acc": "#E3C327",
+    "obj": "#46604C"
    }
   },
   {
@@ -374,6 +510,30 @@
     "leaf": "#5E8F45",
     "acc": "#ECC0B2",
     "obj": "#8FA59C"
+   }
+  },
+  {
+   "slug": "puerto-frias",
+   "label": "Jetty of Puerto Frías on jade-green Laguna Frías, Cerro Tronador in the gap",
+   "lat": -41.0,
+   "lon": -71.85,
+   "radius_km": 3,
+   "aliases": [
+    "puerto frias",
+    "laguna frias",
+    "lago frias"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#C8A65C",
+    "mid": "#7A7F88",
+    "ice": "#F4F6F8",
+    "water": "#8DBFA6",
+    "near": "#1C2420",
+    "sun": "#F4C542",
+    "leaf": "#3E6A36",
+    "acc": "#8A5A36",
+    "obj": "#24402C"
    }
   },
   {
@@ -486,6 +646,37 @@
     "leaf": "#5E8A45",
     "acc": "#BCA889",
     "obj": "#55575C"
+   }
+  },
+  {
+   "slug": "rio-grande",
+   "label": "Misión Salesiana La Candelaria chapel, Río Grande",
+   "lat": -53.75,
+   "lon": -67.75,
+   "radius_km": 15,
+   "aliases": [
+    "mision salesiana la candelaria",
+    "mision salesiana de la candelaria",
+    "mision salesiana rio grande",
+    "mision la candelaria",
+    "candelaria mission"
+   ],
+   "names": [
+    "rio grande",
+    "rio grande tierra del fuego",
+    "rio grande argentina"
+   ],
+   "palette": {
+    "sky": "#B2D3F2",
+    "far": "#A6AE86",
+    "mid": "#EDEBE4",
+    "ice": "#FFFFFF",
+    "water": "#5A8DB0",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3E",
+    "acc": "#C9554A",
+    "obj": "#9A9890"
    }
   },
   {
@@ -615,6 +806,33 @@
     "leaf": "#2F7A5A",
     "acc": "#D99A80",
     "obj": "#B9BEC4"
+   }
+  },
+  {
+   "slug": "seven-lakes-route",
+   "label": "Ruta de los Siete Lagos along Lago Falkner, below the rock crest of Cerro Falkner",
+   "lat": -40.47,
+   "lon": -71.53,
+   "radius_km": 35,
+   "aliases": [
+    "siete lagos",
+    "7 lagos",
+    "seven lakes route",
+    "seven lakes road",
+    "strada dei sette laghi",
+    "lago falkner"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#6E7072",
+    "mid": "#CDBEA2",
+    "ice": "#F4F4F2",
+    "water": "#3F72A8",
+    "near": "#1E2422",
+    "sun": "#F4C542",
+    "leaf": "#557F3C",
+    "acc": "#F0C93A",
+    "obj": "#2F4F34"
    }
   },
   {

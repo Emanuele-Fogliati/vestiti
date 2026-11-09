@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="268" cy="26" r="13" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-putre-massif"><path d="M0 140V68L18 60L34 64L52 76L70 88L84 80L98 62L110 52L118 55L126 50L138 56L154 60L170 70L188 78L210 88L240 98L270 104L300 108V140Z"/></clipPath></defs>
+<path d="M0 140V68L18 60L34 64L52 76L70 88L84 80L98 62L110 52L118 55L126 50L138 56L154 60L170 70L188 78L210 88L240 98L270 104L300 108V140Z" fill="var(--il-far)"/>
+<path d="M0 40H220V90L210 98L196 94L186 99L176 90L166 95L158 85L148 91L140 80L132 87L124 78L116 88L108 80L100 94L94 88L84 96L74 100L66 99L56 96L48 88L38 92L28 84L18 89L10 82L0 86Z" fill="var(--il-ice)" clip-path="url(#il-cl-putre-massif)"/>
+<path d="M0 140V82L18 88L42 98L66 108L84 116L100 126V140Z" fill="var(--il-far)"/>
+<path d="M0 82L18 88L42 98L66 108L84 116L100 126V140H60Q40 110 0 96Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 160V130Q60 122 120 120Q180 116 300 120V160Z" fill="var(--il-leaf)"/>
+<path d="M150 154V114M150 122L142 112M150 118L158 108" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M134 108Q132 94 142 90Q146 80 156 84Q166 82 168 94Q172 104 164 112Q150 118 134 108Z" fill="var(--il-leaf)"/>
+<path d="M166 180V86H246V180Z" fill="var(--il-ice)"/>
+<path d="M172 88V50H240V88Z" fill="var(--il-ice)"/>
+<path d="M164 88V83H248V88Z" fill="var(--il-ice)"/>
+<path d="M160 53L188 37H224L252 53Z" fill="var(--il-acc)"/>
+<path d="M206 37V31" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M181 80V62Q187 54 193 62V80ZM219 80V62Q225 54 231 62V80ZM200 178V160Q206 152 212 160V178Z" fill="var(--il-near)"/>
+<path d="M183 72Q187 66 191 72ZM221 72Q225 66 229 72Z" fill="var(--il-obj)"/>
+<path d="M0 182V156H300V182Z" fill="var(--il-ice)"/>
+<path d="M90 182V124Q90 120 94 120L104 120Q116 100 128 120H138Q142 120 142 124V182Z" fill="var(--il-mid)"/>
+<path d="M101 182V134Q101 122 116 122Q131 122 131 134V182Z" fill="var(--il-near)"/>
+<path d="M103 182V150H129V182Z" fill="var(--il-obj)"/>
+<path d="M88 124H104M128 124H144M92 156H100M132 156H140" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M0 200V178H300V200Z" fill="var(--il-far)"/>
