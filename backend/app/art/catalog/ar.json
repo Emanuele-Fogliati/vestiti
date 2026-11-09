@@ -3,6 +3,31 @@
  "name": "Argentina",
  "places": [
   {
+   "slug": "aconcagua",
+   "label": "Aconcagua's south face above the Horcones valley",
+   "lat": -32.653,
+   "lon": -70.011,
+   "radius_km": 20,
+   "aliases": [
+    "aconcagua",
+    "laguna de horcones",
+    "laguna horcones",
+    "parque provincial aconcagua"
+   ],
+   "palette": {
+    "sky": "#A3C6EE",
+    "far": "#866B66",
+    "mid": "#8A8592",
+    "ice": "#FFFFFF",
+    "water": "#4A8FAE",
+    "near": "#2B2522",
+    "sun": "#F2C14E",
+    "leaf": "#AFA463",
+    "acc": "#A3825E",
+    "obj": "#C08A55"
+   }
+  },
+  {
    "slug": "antofagasta-de-la-sierra",
    "label": "Black volcano and flamingo lagoon at Antofagasta de la Sierra",
    "lat": -26.08,
@@ -78,6 +103,35 @@
     "leaf": "#7AA457",
     "acc": "#9C7CC4",
     "obj": "#9AA0A6"
+   }
+  },
+  {
+   "slug": "cachi",
+   "label": "Iglesia San Jose on the plaza of Cachi",
+   "lat": -25.1205,
+   "lon": -66.1621,
+   "radius_km": 12,
+   "aliases": [
+    "iglesia de cachi",
+    "iglesia san jose de cachi",
+    "church of cachi"
+   ],
+   "names": [
+    "cachi",
+    "cachi salta",
+    "cachi argentina"
+   ],
+   "palette": {
+    "sky": "#A8CDF0",
+    "far": "#D8CCB4",
+    "mid": "#EDD58C",
+    "ice": "#FFFFFF",
+    "water": "#5E8FB0",
+    "near": "#2A2A2A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#2F5A46",
+    "obj": "#8C7E6C"
    }
   },
   {
@@ -374,6 +428,32 @@
    }
   },
   {
+   "slug": "los-cardones-national-park",
+   "label": "Giant cardon cacti and guanacos on the plain of Los Cardones National Park",
+   "lat": -25.18,
+   "lon": -65.95,
+   "radius_km": 25,
+   "aliases": [
+    "los cardones",
+    "parque nacional los cardones",
+    "los cardones national park",
+    "parco nazionale los cardones",
+    "cardones national park"
+   ],
+   "palette": {
+    "sky": "#B4D2F0",
+    "far": "#8E98AE",
+    "mid": "#C9B48C",
+    "ice": "#F3EEE4",
+    "water": "#5E8FB0",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#6E7A45",
+    "acc": "#C9A55E",
+    "obj": "#B97A44"
+   }
+  },
+  {
    "slug": "mendoza",
    "label": "Vineyards below the snowy Andes, Mendoza",
    "lat": -32.98,
@@ -559,6 +639,52 @@
     "leaf": "#5E8A3E",
     "acc": "#D7CBB6",
     "obj": "#8F9599"
+   }
+  },
+  {
+   "slug": "punta-norte",
+   "label": "Orca beaching at the Punta Norte sea-lion colony, Peninsula Valdes",
+   "lat": -42.075,
+   "lon": -63.77,
+   "radius_km": 6,
+   "aliases": [
+    "punta norte",
+    "loberia punta norte"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#C9B48E",
+    "mid": "#8E7A66",
+    "ice": "#FFFFFF",
+    "water": "#3F8C9E",
+    "near": "#1E2328",
+    "sun": "#F2C14E",
+    "leaf": "#4F6B3A",
+    "acc": "#A98262",
+    "obj": "#8C5A36"
+   }
+  },
+  {
+   "slug": "punta-tombo",
+   "label": "Magellanic penguins and a guanaco at Punta Tombo",
+   "lat": -44.045,
+   "lon": -65.215,
+   "radius_km": 8,
+   "aliases": [
+    "punta tombo",
+    "punta trombo"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#CDBB9C",
+    "mid": "#B6A284",
+    "ice": "#FFFFFF",
+    "water": "#3F8DB0",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#7D8A50",
+    "acc": "#B0603C",
+    "obj": "#C47A3C"
    }
   },
   {
@@ -786,6 +912,35 @@
    }
   },
   {
+   "slug": "san-martin-de-los-andes",
+   "label": "San Martin de los Andes at the head of Lago Lacar",
+   "lat": -40.157,
+   "lon": -71.353,
+   "radius_km": 15,
+   "aliases": [
+    "lago lacar",
+    "lake lacar",
+    "lacar lake"
+   ],
+   "names": [
+    "san martin de los andes",
+    "san martin de los andes neuquen",
+    "san martin de los andes argentina"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#8E9BB0",
+    "mid": "#6E8A55",
+    "ice": "#F4F1EA",
+    "water": "#6E90B4",
+    "near": "#1F2620",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A36",
+    "acc": "#B5463A",
+    "obj": "#7E5E44"
+   }
+  },
+  {
    "slug": "san-telmo",
    "label": "Plaza Dorrego, San Telmo",
    "lat": -34.6212,
@@ -858,6 +1013,37 @@
     "leaf": "#5F8E3E",
     "acc": "#8DB5A6",
     "obj": "#C7C0B4"
+   }
+  },
+  {
+   "slug": "tigre",
+   "label": "Museo de Arte Tigre on the Lujan river, Tigre",
+   "lat": -34.4166,
+   "lon": -58.5884,
+   "radius_km": 10,
+   "aliases": [
+    "museo de arte tigre",
+    "museo de arte de tigre",
+    "tigre art museum",
+    "tigre club"
+   ],
+   "names": [
+    "tigre",
+    "tigre buenos aires",
+    "tigre argentina",
+    "ciudad de tigre"
+   ],
+   "palette": {
+    "sky": "#A8CEF2",
+    "far": "#9C968B",
+    "mid": "#EEE9DD",
+    "ice": "#FFFFFF",
+    "water": "#9C8160",
+    "near": "#24262B",
+    "sun": "#F2C14E",
+    "leaf": "#4F803F",
+    "acc": "#5D6E8C",
+    "obj": "#4B4945"
    }
   },
   {
