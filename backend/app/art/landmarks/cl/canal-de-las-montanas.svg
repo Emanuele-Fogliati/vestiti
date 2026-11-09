@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="110" cy="28" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-canal-de-las-montanas-end"><path d="M110 136L124 116L134 106L142 98L150 92L158 96L168 104L182 118L192 136Z"/></clipPath><clipPath id="il-cl-canal-de-las-montanas-l"><path d="M0 172V44L14 36L28 30L40 34L52 46L64 62L78 82L94 104L108 122L122 136Z"/></clipPath><clipPath id="il-cl-canal-de-las-montanas-r"><path d="M168 136L184 120L200 100L216 78L230 58L244 42L256 32L266 28L278 34L290 40L300 44V180Z"/></clipPath></defs>
+<path d="M110 136L124 116L134 106L142 98L150 92L158 96L168 104L182 118L192 136Z" fill="var(--il-far)"/>
+<path d="M120 112L134 106L142 98L150 92L158 96L168 104L178 112L168 114L160 108L154 116L146 108L138 116L130 110Z" fill="var(--il-ice)" clip-path="url(#il-cl-canal-de-las-montanas-end)"/>
+<path d="M168 136L184 120L200 100L216 78L230 58L244 42L256 32L266 28L278 34L290 40L300 44V180Z" fill="var(--il-mid)"/>
+<path d="M230 58L244 42L256 32L266 28L278 34L290 40L300 44V60L292 52L284 62L276 50L268 60L260 48L250 60L242 56L236 66Z" fill="var(--il-ice)" clip-path="url(#il-cl-canal-de-las-montanas-r)"/>
+<path d="M160 140L184 128L210 120L240 118L270 124L300 120V200H160Z" fill="var(--il-leaf)" clip-path="url(#il-cl-canal-de-las-montanas-r)"/>
+<path d="M0 172V44L14 36L28 30L40 34L52 46L64 62L78 82L94 104L108 122L122 136Z" fill="var(--il-mid)"/>
+<path d="M0 30H60V58L52 50L46 58L38 46L30 56L22 46L14 54L6 46L0 52Z" fill="var(--il-ice)" clip-path="url(#il-cl-canal-de-las-montanas-l)"/>
+<path d="M0 116L24 112L50 116L76 114L100 118L130 200H0Z" fill="var(--il-leaf)" clip-path="url(#il-cl-canal-de-las-montanas-l)"/>
+<path d="M0 200V172L122 134H170L300 180V200Z" fill="var(--il-water)"/>
+<path d="M136 156H168L164 162H140Z" fill="var(--il-acc)"/>
+<path d="M140 156V151H146V148H160V151H164V156Z" fill="var(--il-ice)"/>
+<path d="M143 153.5H161M149 150.5H157" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M152 148V144" stroke="var(--il-near)" stroke-width="1.5" fill="none" stroke-linecap="round"/>

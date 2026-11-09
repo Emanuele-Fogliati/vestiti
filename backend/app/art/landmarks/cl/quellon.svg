@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="34" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-quellon-clip"><path d="M0 118V98L16 96L40 100L60 98L74 101L110 86L128 75L137 66L142 66L150 75L173 88L191 92L209 96L227 99L245 92L281 86L300 84V118Z"/></clipPath></defs>
+<path d="M0 118V98L16 96L40 100L60 98L74 101L110 86L128 75L137 66L142 66L150 75L173 88L191 92L209 96L227 99L245 92L281 86L300 84V118Z" fill="var(--il-mid)"/>
+<path d="M0 60H300V104L290 100L280 105L270 99L258 104L246 98L236 104L226 102L214 106L204 101L194 107L184 100L172 106L160 98L150 104L142 112L138 100L128 106L118 98L106 104L94 101L82 106L70 102L58 106L46 102L34 106L22 102L10 105L0 102Z" fill="var(--il-ice)" clip-path="url(#il-cl-quellon-clip)"/>
+<path d="M0 124V110Q40 104 90 106Q150 106 200 112L236 118V124Z" fill="var(--il-leaf)"/>
+<path d="M0 200V118H300V200Z" fill="var(--il-water)"/>
+<path d="M206 134H230L227 140H210ZM244 130H264L261 135H247Z" fill="var(--il-acc)"/>
+<path d="M214 134V128H222V134ZM250 130V125H257V130Z" fill="var(--il-ice)"/>
+<path d="M92 138H140L135 148H98Z" fill="var(--il-obj)"/>
+<path d="M104 138V128H122V138Z" fill="var(--il-ice)"/>
+<path d="M150 156H214L208 168H156Z" fill="var(--il-sun)"/>
+<path d="M160 156V146H180V156Z" fill="var(--il-ice)"/>
+<path d="M14 150H96L90 166H24Z" fill="var(--il-acc)"/>
+<path d="M50 150V136H78V150Z" fill="var(--il-ice)"/>
+<path d="M54 140H60V145H54ZM66 140H72V145H66ZM108 131H113V135H108ZM164 149H169V153H164Z" fill="var(--il-near)"/>
+<path d="M30 150V128M130 138V122M200 156V140" stroke="var(--il-near)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M0 200V162Q60 162 120 172Q180 178 220 188Q250 194 270 200Z" fill="var(--il-far)"/>
