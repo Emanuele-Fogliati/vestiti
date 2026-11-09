@@ -1,0 +1,11 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="256" cy="30" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-ar-lanin-national-park-cone"><path d="M14 132Q70 116 104 80Q124 56 142 36Q152 26 160 25Q168 26 176 34Q196 56 216 82Q240 112 286 132Z"/></clipPath></defs>
+<path d="M14 132Q70 116 104 80Q124 56 142 36Q152 26 160 25Q168 26 176 34Q196 56 216 82Q240 112 286 132Z" fill="var(--il-mid)"/>
+<path d="M160 25Q168 26 176 34Q196 56 216 82Q240 112 286 132H206Q196 100 182 70Q172 44 160 25Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M90 10H240V 90L212 86L198 90L194 104L190 88L184 92L178 84L170 86L166 108L160 80L146 82L142 96L138 74L128 76L124 86L120 72L112 74L90 72Z" fill="var(--il-ice)" clip-path="url(#il-ar-lanin-national-park-cone)"/>
+<path d="M0 150V118Q20 110 40 113Q64 104 88 108Q110 114 128 124Q146 128 166 124Q196 118 224 116Q256 110 276 100Q290 94 300 94V150Z" fill="var(--il-far)"/>
+<path d="M0 200V146H300V200Z" fill="var(--il-water)"/>
+<path d="M0 200V176Q30 170 60 178Q80 186 90 200Z" fill="var(--il-far)"/>
+<path d="M30 182V92H34V182Z" fill="var(--il-obj)"/>
+<path d="M32 94Q24 94 20 88M32 94Q40 94 44 88M32 104Q18 106 13 97M32 104Q46 106 51 97M32 115Q15 118 8 108M32 115Q49 118 56 108M32 126Q17 128 11 120M32 126Q47 128 53 120M32 92V86" stroke="var(--il-leaf)" stroke-width="4" fill="none" stroke-linecap="round"/>
