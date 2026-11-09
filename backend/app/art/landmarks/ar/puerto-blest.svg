@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="26" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-ar-puerto-blest-dome"><path d="M64 150Q84 112 104 80Q122 46 146 28Q160 18 174 22Q190 30 202 50Q220 80 236 116L246 150Z"/></clipPath></defs>
+<path d="M60 150L80 104L96 96L112 104L120 150Z M180 150L196 100L212 92L230 104L240 150Z" fill="var(--il-far)"/>
+<path d="M64 150Q84 112 104 80Q122 46 146 28Q160 18 174 22Q190 30 202 50Q220 80 236 116L246 150Z" fill="var(--il-mid)"/>
+<path d="M116 50L196 8L214 70L210 108L203 74L195 98L187 62L179 106L171 68L163 92L155 60L147 102L140 64L132 86L125 58Z" fill="var(--il-acc)" clip-path="url(#il-ar-puerto-blest-dome)"/>
+<path d="M146 34L147 90M163 26L163 80M179 28L179 96M195 40L196 80" stroke="var(--il-far)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M0 160V36Q22 40 40 56Q66 80 88 112Q100 128 112 160Z" fill="var(--il-leaf)"/>
+<path d="M300 160V40Q278 44 260 60Q236 84 214 116Q202 132 192 160Z" fill="var(--il-leaf)"/>
+<path d="M84 152Q96 136 112 138Q130 128 150 134Q170 126 190 134Q206 130 222 152Z" fill="var(--il-leaf)"/>
+<path d="M0 200V150Q150 146 300 150V200Z" fill="var(--il-water)"/>
+<path d="M96 151Q150 147 214 151V154Q150 151 96 155Z" fill="var(--il-far)"/>
+<path d="M198 150H226V154H198Z" fill="var(--il-acc)"/>
+<path d="M210 154V164M222 154V164" stroke="var(--il-acc)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M140 152V146Q141 142 146 142H178Q183 142 184 146V152Z" fill="var(--il-ice)"/>
+<path d="M146 148V145H152V148Z M156 148V145H162V148Z M166 148V145H172V148Z M176 148V145H180V148Z" fill="var(--il-near)"/>
+<path d="M126 162V156Q127 151 134 151H192Q198 151 200 156V162Z" fill="var(--il-ice)"/>
+<path d="M132 159V154H140V159Z M144 159V154H152V159Z M156 159V154H164V159Z M168 159V154H176V159Z M180 159V154H188V159Z M191 159V154H196V159Z" fill="var(--il-near)"/>
+<path d="M120 162H204L200 168H124Z" fill="var(--il-obj)"/>
+<path d="M124 168H200L198 173H182L180 169H146L144 173H128Z" fill="var(--il-ice)"/>
+<path d="M162 142V134M126 151H200" stroke="var(--il-obj)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
