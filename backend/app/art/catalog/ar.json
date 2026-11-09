@@ -3,6 +3,58 @@
  "name": "Argentina",
  "places": [
   {
+   "slug": "aconcagua",
+   "label": "Aconcagua's south face above the Horcones valley",
+   "lat": -32.653,
+   "lon": -70.011,
+   "radius_km": 20,
+   "aliases": [
+    "aconcagua",
+    "laguna de horcones",
+    "laguna horcones",
+    "parque provincial aconcagua"
+   ],
+   "palette": {
+    "sky": "#A3C6EE",
+    "far": "#866B66",
+    "mid": "#8A8592",
+    "ice": "#FFFFFF",
+    "water": "#4A8FAE",
+    "near": "#2B2522",
+    "sun": "#F2C14E",
+    "leaf": "#AFA463",
+    "acc": "#A3825E",
+    "obj": "#C08A55"
+   }
+  },
+  {
+   "slug": "antofagasta-de-la-sierra",
+   "label": "Black volcano and flamingo lagoon at Antofagasta de la Sierra",
+   "lat": -26.08,
+   "lon": -67.42,
+   "radius_km": 15,
+   "aliases": [
+    "laguna de antofagasta",
+    "volcan alumbrera",
+    "volcan antofagasta"
+   ],
+   "names": [
+    "antofagasta de la sierra"
+   ],
+   "palette": {
+    "sky": "#A8CBEF",
+    "far": "#CDB894",
+    "mid": "#5C4840",
+    "ice": "#F4F2EE",
+    "water": "#4F80B8",
+    "near": "#1E1A1A",
+    "sun": "#F4C542",
+    "leaf": "#8C925A",
+    "acc": "#EE8E9E",
+    "obj": "#45403E"
+   }
+  },
+  {
    "slug": "beagle-channel",
    "label": "Les Eclaireurs lighthouse, Beagle Channel",
    "lat": -54.873,
@@ -54,6 +106,35 @@
    }
   },
   {
+   "slug": "cachi",
+   "label": "Iglesia San Jose on the plaza of Cachi",
+   "lat": -25.1205,
+   "lon": -66.1621,
+   "radius_km": 12,
+   "aliases": [
+    "iglesia de cachi",
+    "iglesia san jose de cachi",
+    "church of cachi"
+   ],
+   "names": [
+    "cachi",
+    "cachi salta",
+    "cachi argentina"
+   ],
+   "palette": {
+    "sky": "#A8CDF0",
+    "far": "#D8CCB4",
+    "mid": "#EDD58C",
+    "ice": "#FFFFFF",
+    "water": "#5E8FB0",
+    "near": "#2A2A2A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#2F5A46",
+    "obj": "#8C7E6C"
+   }
+  },
+  {
    "slug": "cafayate",
    "label": "Arcaded bodega among the vineyards of Cafayate",
    "lat": -26.066,
@@ -101,6 +182,34 @@
     "leaf": "#978776",
     "acc": "#A8D2E4",
     "obj": "#A9A6A6"
+   }
+  },
+  {
+   "slug": "cuesta-de-lipan",
+   "label": "RN52 hairpins of the Cuesta de Lipán above Purmamarca",
+   "lat": -23.7,
+   "lon": -65.58,
+   "radius_km": 5,
+   "aliases": [
+    "cuesta de lipan",
+    "cuesta del lipan",
+    "cuesta lipan",
+    "mirador de lipan"
+   ],
+   "names": [
+    "lipan"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#8E7C98",
+    "mid": "#B07C68",
+    "ice": "#F2F0EA",
+    "water": "#5E8FB0",
+    "near": "#2E2324",
+    "sun": "#F6C431",
+    "leaf": "#9C9256",
+    "acc": "#9E4B3A",
+    "obj": "#8F8D8A"
    }
   },
   {
@@ -193,6 +302,35 @@
    }
   },
   {
+   "slug": "ituzaingo",
+   "label": "Yacyretá dam powerhouse with its yellow gantry cranes, Ituzaingó",
+   "lat": -27.48,
+   "lon": -56.73,
+   "radius_km": 12,
+   "aliases": [
+    "yacyreta",
+    "yacireta",
+    "represa yacyreta",
+    "diga di yacyreta"
+   ],
+   "names": [
+    "ituzaingo",
+    "ituzaingo corrientes"
+   ],
+   "palette": {
+    "sky": "#B6D3F0",
+    "far": "#A4583A",
+    "mid": "#B8BCC0",
+    "ice": "#F2F2EE",
+    "water": "#6A9BC4",
+    "near": "#23262A",
+    "sun": "#F4C542",
+    "leaf": "#6E8F48",
+    "acc": "#F2C31C",
+    "obj": "#B0603A"
+   }
+  },
+  {
    "slug": "la-boca",
    "label": "Caminito, La Boca",
    "lat": -34.6345,
@@ -239,6 +377,33 @@
    }
   },
   {
+   "slug": "lago-fagnano",
+   "label": "Lago Fagnano from the Tolhuin beach: pale cliffs, driftwood and the long lake to the snowy range",
+   "lat": -54.55,
+   "lon": -67.45,
+   "radius_km": 40,
+   "aliases": [
+    "fagnano",
+    "lago khami",
+    "lago cami"
+   ],
+   "names": [
+    "tolhuin"
+   ],
+   "palette": {
+    "sky": "#A4C8F0",
+    "far": "#8C9CB6",
+    "mid": "#55607A",
+    "ice": "#F4F6FA",
+    "water": "#2D6688",
+    "near": "#1E2226",
+    "sun": "#F4C542",
+    "leaf": "#4D5E36",
+    "acc": "#D3C5A6",
+    "obj": "#6E6A64"
+   }
+  },
+  {
    "slug": "laguna-de-los-tres",
    "label": "Fitz Roy above the glacier and Laguna de los Tres",
    "lat": -49.271,
@@ -260,6 +425,32 @@
     "leaf": "#6E7D4A",
     "acc": "#BFD6E4",
     "obj": "#9A928B"
+   }
+  },
+  {
+   "slug": "los-cardones-national-park",
+   "label": "Giant cardon cacti and guanacos on the plain of Los Cardones National Park",
+   "lat": -25.18,
+   "lon": -65.95,
+   "radius_km": 25,
+   "aliases": [
+    "los cardones",
+    "parque nacional los cardones",
+    "los cardones national park",
+    "parco nazionale los cardones",
+    "cardones national park"
+   ],
+   "palette": {
+    "sky": "#B4D2F0",
+    "far": "#8E98AE",
+    "mid": "#C9B48C",
+    "ice": "#F3EEE4",
+    "water": "#5E8FB0",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#6E7A45",
+    "acc": "#C9A55E",
+    "obj": "#B97A44"
    }
   },
   {
@@ -286,6 +477,31 @@
     "leaf": "#3D5C34",
     "acc": "#B79E7C",
     "obj": "#7E9F45"
+   }
+  },
+  {
+   "slug": "nahuel-huapi-lake",
+   "label": "Nahuel Huapi Lake with its islands below Cerro López, framed by cypress forest",
+   "lat": -41.0,
+   "lon": -71.5,
+   "radius_km": 25,
+   "aliases": [
+    "lago nahuel huapi",
+    "nahuel huapi",
+    "nahuel huapi lake",
+    "nahuelhuapi"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#8E9CB8",
+    "mid": "#6F7E9E",
+    "ice": "#F2F4F8",
+    "water": "#2F5FA8",
+    "near": "#1E2526",
+    "sun": "#F4C542",
+    "leaf": "#2E5A2C",
+    "acc": "#E3C327",
+    "obj": "#46604C"
    }
   },
   {
@@ -377,6 +593,30 @@
    }
   },
   {
+   "slug": "puerto-frias",
+   "label": "Jetty of Puerto Frías on jade-green Laguna Frías, Cerro Tronador in the gap",
+   "lat": -41.0,
+   "lon": -71.85,
+   "radius_km": 3,
+   "aliases": [
+    "puerto frias",
+    "laguna frias",
+    "lago frias"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#C8A65C",
+    "mid": "#7A7F88",
+    "ice": "#F4F6F8",
+    "water": "#8DBFA6",
+    "near": "#1C2420",
+    "sun": "#F4C542",
+    "leaf": "#3E6A36",
+    "acc": "#8A5A36",
+    "obj": "#24402C"
+   }
+  },
+  {
    "slug": "puerto-madryn",
    "label": "Puerto Madryn beach and pier on Golfo Nuevo",
    "lat": -42.7692,
@@ -399,6 +639,52 @@
     "leaf": "#5E8A3E",
     "acc": "#D7CBB6",
     "obj": "#8F9599"
+   }
+  },
+  {
+   "slug": "punta-norte",
+   "label": "Orca beaching at the Punta Norte sea-lion colony, Peninsula Valdes",
+   "lat": -42.075,
+   "lon": -63.77,
+   "radius_km": 6,
+   "aliases": [
+    "punta norte",
+    "loberia punta norte"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#C9B48E",
+    "mid": "#8E7A66",
+    "ice": "#FFFFFF",
+    "water": "#3F8C9E",
+    "near": "#1E2328",
+    "sun": "#F2C14E",
+    "leaf": "#4F6B3A",
+    "acc": "#A98262",
+    "obj": "#8C5A36"
+   }
+  },
+  {
+   "slug": "punta-tombo",
+   "label": "Magellanic penguins and a guanaco at Punta Tombo",
+   "lat": -44.045,
+   "lon": -65.215,
+   "radius_km": 8,
+   "aliases": [
+    "punta tombo",
+    "punta trombo"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#CDBB9C",
+    "mid": "#B6A284",
+    "ice": "#FFFFFF",
+    "water": "#3F8DB0",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#7D8A50",
+    "acc": "#B0603C",
+    "obj": "#C47A3C"
    }
   },
   {
@@ -486,6 +772,37 @@
     "leaf": "#5E8A45",
     "acc": "#BCA889",
     "obj": "#55575C"
+   }
+  },
+  {
+   "slug": "rio-grande",
+   "label": "Misión Salesiana La Candelaria chapel, Río Grande",
+   "lat": -53.75,
+   "lon": -67.75,
+   "radius_km": 15,
+   "aliases": [
+    "mision salesiana la candelaria",
+    "mision salesiana de la candelaria",
+    "mision salesiana rio grande",
+    "mision la candelaria",
+    "candelaria mission"
+   ],
+   "names": [
+    "rio grande",
+    "rio grande tierra del fuego",
+    "rio grande argentina"
+   ],
+   "palette": {
+    "sky": "#B2D3F2",
+    "far": "#A6AE86",
+    "mid": "#EDEBE4",
+    "ice": "#FFFFFF",
+    "water": "#5A8DB0",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3E",
+    "acc": "#C9554A",
+    "obj": "#9A9890"
    }
   },
   {
@@ -595,6 +912,35 @@
    }
   },
   {
+   "slug": "san-martin-de-los-andes",
+   "label": "San Martin de los Andes at the head of Lago Lacar",
+   "lat": -40.157,
+   "lon": -71.353,
+   "radius_km": 15,
+   "aliases": [
+    "lago lacar",
+    "lake lacar",
+    "lacar lake"
+   ],
+   "names": [
+    "san martin de los andes",
+    "san martin de los andes neuquen",
+    "san martin de los andes argentina"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#8E9BB0",
+    "mid": "#6E8A55",
+    "ice": "#F4F1EA",
+    "water": "#6E90B4",
+    "near": "#1F2620",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A36",
+    "acc": "#B5463A",
+    "obj": "#7E5E44"
+   }
+  },
+  {
    "slug": "san-telmo",
    "label": "Plaza Dorrego, San Telmo",
    "lat": -34.6212,
@@ -615,6 +961,33 @@
     "leaf": "#2F7A5A",
     "acc": "#D99A80",
     "obj": "#B9BEC4"
+   }
+  },
+  {
+   "slug": "seven-lakes-route",
+   "label": "Ruta de los Siete Lagos along Lago Falkner, below the rock crest of Cerro Falkner",
+   "lat": -40.47,
+   "lon": -71.53,
+   "radius_km": 35,
+   "aliases": [
+    "siete lagos",
+    "7 lagos",
+    "seven lakes route",
+    "seven lakes road",
+    "strada dei sette laghi",
+    "lago falkner"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#6E7072",
+    "mid": "#CDBEA2",
+    "ice": "#F4F4F2",
+    "water": "#3F72A8",
+    "near": "#1E2422",
+    "sun": "#F4C542",
+    "leaf": "#557F3C",
+    "acc": "#F0C93A",
+    "obj": "#2F4F34"
    }
   },
   {
@@ -640,6 +1013,37 @@
     "leaf": "#5F8E3E",
     "acc": "#8DB5A6",
     "obj": "#C7C0B4"
+   }
+  },
+  {
+   "slug": "tigre",
+   "label": "Museo de Arte Tigre on the Lujan river, Tigre",
+   "lat": -34.4166,
+   "lon": -58.5884,
+   "radius_km": 10,
+   "aliases": [
+    "museo de arte tigre",
+    "museo de arte de tigre",
+    "tigre art museum",
+    "tigre club"
+   ],
+   "names": [
+    "tigre",
+    "tigre buenos aires",
+    "tigre argentina",
+    "ciudad de tigre"
+   ],
+   "palette": {
+    "sky": "#A8CEF2",
+    "far": "#9C968B",
+    "mid": "#EEE9DD",
+    "ice": "#FFFFFF",
+    "water": "#9C8160",
+    "near": "#24262B",
+    "sun": "#F2C14E",
+    "leaf": "#4F803F",
+    "acc": "#5D6E8C",
+    "obj": "#4B4945"
    }
   },
   {
