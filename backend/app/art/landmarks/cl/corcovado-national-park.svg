@@ -1,0 +1,11 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="30" r="13" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-corcovado-national-park-clip"><path d="M56 126L80 112L100 100L118 84L132 66L140 52L145 42L148 34L152 32L155 37L158 46L162 54L168 60L176 64L186 67L200 78L216 94L232 110L252 126Z"/></clipPath></defs>
+<path d="M56 126L80 112L100 100L118 84L132 66L140 52L145 42L148 34L152 32L155 37L158 46L162 54L168 60L176 64L186 67L200 78L216 94L232 110L252 126Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-cl-corcovado-national-park-clip)">
+<path d="M100 0H210V84L202 80L196 88L188 82L180 90L172 84L164 92L156 85L148 93L140 86L132 92L124 84L116 90L108 84Z" fill="var(--il-ice)"/>
+<path d="M152 32L155 37L158 46L162 54L168 60L176 64L186 67L192 72L180 74L170 70L162 62Z" fill="var(--il-near)" opacity="0.3"/>
+</g>
+<path d="M0 142V118Q30 110 60 116L96 122Q150 126 206 121L244 116Q276 110 300 116V142Z" fill="var(--il-leaf)"/>
+<path d="M0 200V138H300V200Z" fill="var(--il-water)"/>
+<path d="M64 172L68 162Q61 159 54 152Q63 155 71 158Q79 155 88 152Q81 159 74 162L78 172Z" fill="var(--il-obj)"/>

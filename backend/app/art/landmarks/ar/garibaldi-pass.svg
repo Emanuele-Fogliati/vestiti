@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="112" cy="30" r="11" fill="var(--il-sun)"/>
+<path d="M40 102L58 92L74 88L90 84L104 86L118 82L132 86L150 90L170 96L180 102Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-ar-garibaldi-pass-r"><path d="M96 112Q136 98 164 76L176 62L188 56L202 58L220 61L236 57L254 60L272 55L288 57L300 60V160H96Z"/></clipPath></defs>
+<path d="M96 112Q136 98 164 76L176 62L188 56L202 58L220 61L236 57L254 60L272 55L288 57L300 60V160H96Z" fill="var(--il-leaf)"/>
+<path d="M150 50H300V70Q290 76 280 72Q268 68 258 76Q246 80 236 72Q224 70 214 78Q204 82 194 74Q184 72 176 78L150 70Z" fill="var(--il-obj)" clip-path="url(#il-ar-garibaldi-pass-r)"/>
+<path d="M204 112Q244 104 300 98" stroke="var(--il-acc)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M60 200V148Q160 166 250 156L262 200Z" fill="var(--il-leaf)"/>
+<path d="M40 100H180Q204 112 222 126Q240 140 254 154Q204 160 160 158Q116 156 80 150Z" fill="var(--il-water)"/>
+<path d="M0 200V48Q30 58 56 78Q80 98 96 118Q110 134 120 152Q128 172 112 200Z" fill="var(--il-mid)"/>
+<path d="M0 200V60Q24 72 44 94Q60 116 70 140Q78 168 70 200Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M164 200Q186 174 220 164Q256 154 300 148V200Z" fill="var(--il-mid)"/>
+<path d="M226 194Q240 184 258 182Q278 178 268 170Q258 162 276 156Q290 152 300 150" stroke="var(--il-acc)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M0 200V190Q80 184 150 190Q220 196 300 188V200Z" fill="var(--il-leaf)"/>

@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="30" r="11" fill="var(--il-sun)"/>
+<path d="M112 150L124 102L138 92L152 88L166 90L182 96L198 106L206 150Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-ar-quebrada-de-escoipe-l"><path d="M0 156V30L14 34L32 46L56 56L80 66L96 76L108 86L120 98L132 112L144 128L156 146V156Z"/></clipPath><clipPath id="il-ar-quebrada-de-escoipe-r"><path d="M136 156L150 132L164 114L178 102L192 92L204 78L214 62L222 52Q234 44 248 48L264 54L280 60L292 66L300 70V156Z"/></clipPath></defs>
+<path d="M0 156V30L14 34L32 46L56 56L80 66L96 76L108 86L120 98L132 112L144 128L156 146V156Z" fill="var(--il-mid)"/>
+<path d="M0 120Q40 112 80 116Q112 122 134 128L170 160H0Z" fill="var(--il-obj)" clip-path="url(#il-ar-quebrada-de-escoipe-l)"/>
+<path d="M0 134Q18 124 36 132Q54 140 72 130Q90 122 112 134M0 144Q18 136 36 142Q54 150 72 140Q90 134 120 146M4 52L70 70M2 70L86 84" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M136 156L150 132L164 114L178 102L192 92L204 78L214 62L222 52Q234 44 248 48L264 54L280 60L292 66L300 70V156Z" fill="var(--il-mid)"/>
+<path d="M140 160L172 134Q200 128 240 126Q270 124 300 126V160Z" fill="var(--il-obj)" clip-path="url(#il-ar-quebrada-de-escoipe-r)"/>
+<path d="M200 86L300 100M190 98L300 118M216 66L300 84M184 110L234 114M250 140L300 144" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V150Q60 146 120 148Q180 146 240 150Q270 150 300 148V200Z" fill="var(--il-leaf)"/>
+<path d="M122 150Q128 140 138 143Q146 136 156 141Q166 136 174 142Q184 140 190 148Z" fill="var(--il-leaf)"/>
+<path d="M0 178Q50 170 100 164Q140 158 170 153L180 152Q150 160 112 168Q60 178 0 184Z" fill="var(--il-ice)"/>
+<path d="M120 200Q200 180 300 162V200Z" fill="var(--il-acc)"/>

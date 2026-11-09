@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="230" cy="20" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-queulat-hanging-glacier-l"><path d="M0 200V24L2 33L34 44L58 49L70 46L82 49L98 55L112 64L124 80L132 100L138 150H0Z"/></clipPath><clipPath id="il-cl-queulat-hanging-glacier-r"><path d="M300 200V30L266 38L234 46L202 55L184 66L174 80L166 100L160 150H120V200Z"/></clipPath></defs>
+<path d="M110 150V60H190V150Z" fill="var(--il-mid)"/>
+<path d="M110 150V60H190V150Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M96 60Q150 48 204 60L190 80L172 90L164 95L156 90L148 96L140 90L132 94L120 84Z" fill="var(--il-obj)"/>
+<path d="M96 60Q150 48 204 60L196 66L186 63L176 70L166 63L156 70L146 63L136 70L126 63L116 68L104 64Z" fill="var(--il-ice)"/>
+<path d="M144 93L151 93L154 150H145Z" fill="var(--il-ice)"/>
+<path d="M0 200V24L2 33L34 44L58 49L70 46L82 49L98 55L112 64L124 80L132 100L138 150H0Z" fill="var(--il-mid)"/>
+<path d="M300 200V30L266 38L234 46L202 55L184 66L174 80L166 100L160 150H120V200Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-cl-queulat-hanging-glacier-l)"><path d="M0 0H90L80 52L70 50L62 56L52 50L42 54L32 46L20 44L10 36L0 38Z" fill="var(--il-ice)"/></g>
+<g clip-path="url(#il-cl-queulat-hanging-glacier-r)"><path d="M300 0V36L290 40L282 36L272 44L262 40L254 48L246 44L236 50L228 46V0Z" fill="var(--il-ice)"/></g>
+<path d="M0 170V50L20 76L42 87L70 104L94 126L120 142L142 151L178 170Z" fill="var(--il-leaf)"/>
+<path d="M108 170L130 150L150 142L172 122L202 96L242 70L282 54L300 48V170Z" fill="var(--il-leaf)"/>
+<path d="M0 200V166H300V200Z" fill="var(--il-water)"/>
