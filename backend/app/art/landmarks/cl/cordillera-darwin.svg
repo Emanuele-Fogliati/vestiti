@@ -1,0 +1,9 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="26" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-cordillera-darwin-clip"><path d="M0 160V70L10 48L20 32L30 50L42 58L56 46L68 34L80 56L96 62L112 52L124 46L138 46L150 22L160 34L172 40L186 30L196 20L206 34L214 12L226 32L240 18L250 36L260 46L276 56L300 64V160Z"/></clipPath></defs>
+<path d="M0 160V70L10 48L20 32L30 50L42 58L56 46L68 34L80 56L96 62L112 52L124 46L138 46L150 22L160 34L172 40L186 30L196 20L206 34L214 12L226 32L240 18L250 36L260 46L276 56L300 64V160Z" fill="var(--il-mid)"/>
+<path d="M0 0H300V82L290 76L282 92L270 84L262 70L254 92L244 98L236 80L228 94L216 100L206 74L198 96L186 104L176 98L166 112L154 106L144 86L134 104L120 96L108 80L98 92L84 88L70 74L58 86L44 82L30 92L16 80L0 86Z" fill="var(--il-ice)" clip-path="url(#il-cl-cordillera-darwin-clip)"/>
+<path d="M88 150Q108 118 128 110Q150 118 176 150Z" fill="var(--il-leaf)"/>
+<path d="M0 160V94Q40 100 80 120Q120 136 160 142Q200 144 240 140Q270 138 300 134V160Z" fill="var(--il-leaf)"/>
+<path d="M0 200V152H300V200Z" fill="var(--il-water)"/>
+<path d="M0 152H300" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>

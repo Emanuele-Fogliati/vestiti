@@ -1,0 +1,11 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M20 119.8 Q44 109.4 64 99 L80 80.8 Q90 67.8 100 65.2 L112 67.8 L124 65.2 L140 60 L156 54.8 Q174 52.2 188 60 L206 73 Q232 88.6 258 101.6 Q276 109.4 296 117.2 V138 H20Z" fill="var(--il-mid)"/>
+<defs><clipPath id="il-cl-lake-puyehue-clip"><path d="M20 119.8 Q44 109.4 64 99 L80 80.8 Q90 67.8 100 65.2 L112 67.8 L124 65.2 L140 60 L156 54.8 Q174 52.2 188 60 L206 73 Q232 88.6 258 101.6 Q276 109.4 296 117.2 V138 H20Z"/></clipPath></defs>
+<path d="M84 60 L92 78 L98 74 L104 78.2 L110 73 L116 83.4 L122 70.4 L130 80.8 L140 65.2 L148 75.6 L156 60 L164 73 L172 60 L180 70.4 L188 62.6 L194 66 L200 48 H84Z" fill="var(--il-ice)" clip-path="url(#il-cl-lake-puyehue-clip)"/>
+<path d="M0 140 V110 Q20 104 46 106 Q70 102 92 108 Q120 112 150 116 Q180 112 210 118 Q240 124 260 126 V140Z" fill="var(--il-far)"/>
+<path d="M0 144 V124 Q20 118 40 120 Q60 110 80 112 Q96 112 110 122 Q130 128 160 130 Q180 128 200 132 Q210 128 218 132 L220 144Z" fill="var(--il-leaf)"/>
+<path d="M0 212 V140 H300 V212Z" fill="var(--il-water)"/>
+<path d="M232 154 Q244 146 270 146 Q290 146 300 148 V158 H236Z" fill="var(--il-obj)"/>
+<path d="M240 152 Q232 140 240 130 Q236 116 248 108 Q248 94 260 88 Q266 76 280 74 Q296 72 300 78 V150Z" fill="var(--il-leaf)"/>
+<path d="M276 148 L272 128 L264 116 M272 128 L282 112 M284 148 L286 124 L294 108" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.7"/>
