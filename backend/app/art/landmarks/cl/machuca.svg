@@ -1,0 +1,25 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="26" r="12" fill="var(--il-sun)"/>
+<path d="M0 124Q40 106 80 108Q140 98 200 102Q250 90 300 84V160H0Z" fill="var(--il-leaf)"/>
+<path d="M0 162V138H58V162ZM248 162V117H300V162Z" fill="var(--il-mid)"/>
+<path d="M0 145H58M248 128H300M248 142H300" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M54 162V72H138V162Z" fill="var(--il-ice)"/>
+<path d="M54 104H138" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M68 101V84Q68 77 76 77Q84 77 84 84V101ZM104 101V84Q104 77 112 77Q120 77 120 84V101Z" fill="var(--il-near)"/>
+<path d="M72 92Q76 85 80 92ZM108 92Q112 85 116 92Z" fill="var(--il-acc)"/>
+<path d="M76 85V88M112 85V88" stroke="var(--il-acc)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M136 162V94H152V162Z" fill="var(--il-ice)"/>
+<path d="M150 162V94L193 66L236 93V162Z" fill="var(--il-ice)"/>
+<path d="M236 162V93L254 97V162Z" fill="var(--il-ice)"/>
+<path d="M236 162V93L254 97V162Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M188 99V93Q188 88 193 88Q198 88 198 93V99Z" fill="var(--il-near)"/>
+<path d="M86 160V133H100V160ZM181 160V114H205V160Z" fill="var(--il-obj)"/>
+<path d="M193 114V160" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M48 74L70 56Q96 45 122 56L146 74Z" fill="var(--il-acc)"/>
+<path d="M136 98L193 55L259 96L253 103L193 66L142 104Z" fill="var(--il-acc)"/>
+<path d="M97 48V36M93 40H101M193 55V46M189 49H197" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M0 166V157H300V166Z" fill="var(--il-mid)"/>
+<path d="M0 200V162H300V200Z" fill="var(--il-far)"/>
+<g transform="translate(170 -117) scale(1.6)">
+<path d="M34 182.8Q34 179.2 39.4 179.2H46.6Q50.2 179.2 50.2 182.8Q50.2 185.5 47.5 185.5H36.7Q34 185.5 34 182.8ZM46.6 181L47.5 168.4H50.2L49.3 181ZM47.5 168.4Q49.3 165.7 52.9 166.6L54.7 168.4Q53.8 170.2 51.1 170.2H47.5ZM48.4 166.6L47.95 163.9L49.75 166.15ZM50.2 166.15L50.65 163.45L51.55 166.15Z" fill="var(--il-ice)"/><path d="M35.8 184.6V190M38.5 184.6V190M45.7 184.6V190M48.4 184.6V190M34.45 181.9Q32.2 181.9 32.65 185.5" stroke="var(--il-ice)" stroke-width="1.44" fill="none" vector-effect="non-scaling-stroke"/>
+</g>
