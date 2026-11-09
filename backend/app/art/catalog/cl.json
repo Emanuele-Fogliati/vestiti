@@ -77,6 +77,36 @@
    }
   },
   {
+   "slug": "antofagasta",
+   "label": "La Portada, the sea arch of Antofagasta",
+   "lat": -23.5,
+   "lon": -70.43,
+   "radius_km": 20,
+   "aliases": [
+    "la portada de antofagasta",
+    "la portada antofagasta",
+    "monumento natural la portada",
+    "la portada natural monument"
+   ],
+   "names": [
+    "antofagasta",
+    "antofagasta city",
+    "la portada"
+   ],
+   "palette": {
+    "sky": "#AFCDE6",
+    "far": "#D3BC93",
+    "mid": "#E6DAC4",
+    "ice": "#FFFFFF",
+    "water": "#2F7F8E",
+    "near": "#2A2724",
+    "sun": "#F4C542",
+    "leaf": "#7A8F4E",
+    "acc": "#E3D3AE",
+    "obj": "#5F5751"
+   }
+  },
+  {
    "slug": "arica",
    "label": "Morro de Arica above the waterfront palms",
    "lat": -18.48,
@@ -139,7 +169,12 @@
     "balmaceda glacier",
     "glaciar balmaceda",
     "ghiacciaio balmaceda",
-    "monte balmaceda"
+    "monte balmaceda",
+    "ultima esperanza sound",
+    "fiordo ultima esperanza",
+    "seno ultima esperanza",
+    "last hope sound",
+    "fiordo dell ultima speranza"
    ],
    "palette": {
     "sky": "#B4D6EE",
@@ -152,6 +187,30 @@
     "leaf": "#3F6234",
     "acc": "#A8805E",
     "obj": "#9FD4EC"
+   }
+  },
+  {
+   "slug": "cajon-del-maipo",
+   "label": "The Maipo river gorge under the snowy Andes, Cajon del Maipo",
+   "lat": -33.68,
+   "lon": -70.3,
+   "radius_km": 30,
+   "aliases": [
+    "cajon del maipo",
+    "cajon de maipo",
+    "san jose de maipo"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#9C8C7E",
+    "mid": "#6F6870",
+    "ice": "#F3F4F6",
+    "water": "#B9CCD6",
+    "near": "#262423",
+    "sun": "#F4C544",
+    "leaf": "#7F8F48",
+    "acc": "#8E7A61",
+    "obj": "#A79C8F"
    }
   },
   {
@@ -616,6 +675,38 @@
     "leaf": "#3F5A34",
     "acc": "#6FC3E6",
     "obj": "#8E7E6E"
+   }
+  },
+  {
+   "slug": "iquique",
+   "label": "The white clock tower of Plaza Prat, Iquique, under the coastal escarpment",
+   "lat": -20.2143,
+   "lon": -70.1517,
+   "radius_km": 12,
+   "aliases": [
+    "torre reloj de iquique",
+    "torre del reloj de iquique",
+    "reloj de iquique",
+    "plaza prat iquique",
+    "plaza arturo prat iquique",
+    "iquique clock tower"
+   ],
+   "names": [
+    "iquique",
+    "iquique city",
+    "iquique chile"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#B49D84",
+    "mid": "#DAD5CC",
+    "ice": "#F8F7F3",
+    "water": "#3D7FB0",
+    "near": "#2A2A2E",
+    "sun": "#F4C640",
+    "leaf": "#6E9E45",
+    "acc": "#E6C67A",
+    "obj": "#A3968A"
    }
   },
   {
@@ -1089,7 +1180,9 @@
     "piedras rojas",
     "salar de talar",
     "salar talar",
-    "laguna talar"
+    "laguna talar",
+    "salar de aguas calientes",
+    "salar aguas calientes"
    ],
    "palette": {
     "sky": "#9CC3EE",
@@ -1280,6 +1373,36 @@
    }
   },
   {
+   "slug": "punta-delgada",
+   "label": "Punta Delgada lighthouse on the Strait of Magellan at the Primera Angostura ferry crossing",
+   "lat": -52.4483,
+   "lon": -69.545,
+   "radius_km": 10,
+   "aliases": [
+    "faro punta delgada",
+    "punta delgada lighthouse",
+    "primera angostura",
+    "first narrows",
+    "boca oriental"
+   ],
+   "names": [
+    "punta delgada",
+    "punta delgada chile"
+   ],
+   "palette": {
+    "sky": "#A2C8EE",
+    "far": "#A99A72",
+    "mid": "#D7D3CB",
+    "ice": "#F6F5F1",
+    "water": "#2E7088",
+    "near": "#26292C",
+    "sun": "#F4C443",
+    "leaf": "#A9A15C",
+    "acc": "#D8322E",
+    "obj": "#8E8B87"
+   }
+  },
+  {
    "slug": "putre",
    "label": "Putre's church bell tower and stone gateway under the snowy Nevados de Putre",
    "lat": -18.1975,
@@ -1402,6 +1525,31 @@
     "leaf": "#8A8F4A",
     "acc": "#B2AFC2",
     "obj": "#9A857C"
+   }
+  },
+  {
+   "slug": "salar-de-surire",
+   "label": "The white Salar de Surire with flamingos and a vicuna under the altiplano mountains",
+   "lat": -18.85,
+   "lon": -69.05,
+   "radius_km": 20,
+   "aliases": [
+    "salar de surire",
+    "surire",
+    "monumento natural salar de surire",
+    "polloquere"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#9E8780",
+    "mid": "#A07C6A",
+    "ice": "#F4F2EC",
+    "water": "#86A3B6",
+    "near": "#2B2522",
+    "sun": "#F5C844",
+    "leaf": "#C4B169",
+    "acc": "#F0A3AE",
+    "obj": "#B97A44"
    }
   },
   {
@@ -1691,6 +1839,32 @@
     "leaf": "#6BA05A",
     "acc": "#C8463A",
     "obj": "#EDB93E"
+   }
+  },
+  {
+   "slug": "yerbas-buenas-petroglyphs",
+   "label": "Llama petroglyphs on the red rock walls of Yerbas Buenas",
+   "lat": -22.71,
+   "lon": -68.16,
+   "radius_km": 6,
+   "aliases": [
+    "yerbas buenas",
+    "hierbas buenas",
+    "petroglifos de yerbas buenas",
+    "petroglifi di yerbas buenas",
+    "yerba buena petroglyphs"
+   ],
+   "palette": {
+    "sky": "#A2CBF2",
+    "far": "#D09A80",
+    "mid": "#BC7A62",
+    "ice": "#F2E6DA",
+    "water": "#3F7FB0",
+    "near": "#2D2220",
+    "sun": "#F5C443",
+    "leaf": "#8A8F4E",
+    "acc": "#F0CDB8",
+    "obj": "#D8C6B2"
    }
   }
  ]
