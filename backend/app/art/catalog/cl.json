@@ -3,6 +3,51 @@
  "name": "Chile",
  "places": [
   {
+   "slug": "aguas-de-ramon-park",
+   "label": "Salto de Apoquindo waterfall in the Andean foothills of Parque Aguas de Ramon",
+   "lat": -33.4407,
+   "lon": -70.4927,
+   "radius_km": 4,
+   "aliases": [
+    "aguas de ramon",
+    "salto de apoquindo"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#AE9E7E",
+    "mid": "#827A6F",
+    "ice": "#FFFFFF",
+    "water": "#8EC3D6",
+    "near": "#26281F",
+    "sun": "#F5C842",
+    "leaf": "#4F7A2E",
+    "acc": "#C9B48A",
+    "obj": "#B9AE9E"
+   }
+  },
+  {
+   "slug": "ahu-akahanga",
+   "label": "Toppled moai and a red pukao before the ruined platform of Ahu Akahanga, Easter Island",
+   "lat": -27.1888,
+   "lon": -109.2925,
+   "radius_km": 2,
+   "aliases": [
+    "akahanga"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#B9A676",
+    "mid": "#8B7E6C",
+    "ice": "#F2F0EA",
+    "water": "#1F5FA8",
+    "near": "#22201E",
+    "sun": "#F4C430",
+    "leaf": "#7E9A48",
+    "acc": "#8C3A28",
+    "obj": "#4D4945"
+   }
+  },
+  {
    "slug": "ahu-akivi",
    "label": "The seven moai of Ahu Akivi, Easter Island",
    "lat": -27.115,
@@ -30,6 +75,31 @@
    }
   },
   {
+   "slug": "ahu-tahai",
+   "label": "Moai of Ahu Ko Te Riku with its red topknot, Tahai",
+   "lat": -27.1396,
+   "lon": -109.4268,
+   "radius_km": 1,
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#8C877D",
+    "mid": "#7E7464",
+    "ice": "#F5F2EA",
+    "water": "#2D6FA6",
+    "near": "#26231F",
+    "sun": "#F4C430",
+    "leaf": "#9DB257",
+    "acc": "#93412C",
+    "obj": "#6E4A30"
+   },
+   "aliases": [
+    "ahu tahai",
+    "tahai",
+    "ahu ko te riku",
+    "ko te riku"
+   ]
+  },
+  {
    "slug": "ahu-tongariki",
    "label": "The fifteen moai of Ahu Tongariki, Easter Island",
    "lat": -27.1258,
@@ -50,6 +120,51 @@
     "leaf": "#9AA650",
     "acc": "#7E3628",
     "obj": "#5B5650"
+   }
+  },
+  {
+   "slug": "ahu-vaihu",
+   "label": "Red pukao in the grass before the row of toppled moai at Ahu Vaihu, Easter Island",
+   "lat": -27.176,
+   "lon": -109.2755,
+   "radius_km": 2,
+   "aliases": [
+    "vaihu",
+    "hanga te e"
+   ],
+   "palette": {
+    "sky": "#AFD2F0",
+    "far": "#9AA08A",
+    "mid": "#8E887C",
+    "ice": "#F2F0EA",
+    "water": "#2A64A6",
+    "near": "#22201E",
+    "sun": "#F4C430",
+    "leaf": "#BDA868",
+    "acc": "#8C3426",
+    "obj": "#45413E"
+   }
+  },
+  {
+   "slug": "ahu-vinapu",
+   "label": "The fitted basalt wall of Ahu Vinapu with a fallen moai head, Easter Island",
+   "lat": -27.1745,
+   "lon": -109.4045,
+   "radius_km": 2,
+   "aliases": [
+    "vinapu"
+   ],
+   "palette": {
+    "sky": "#A7CDF0",
+    "far": "#C4B585",
+    "mid": "#55514C",
+    "ice": "#F2F0EA",
+    "water": "#2E6FA6",
+    "near": "#22201E",
+    "sun": "#F4C430",
+    "leaf": "#8FA650",
+    "acc": "#8E3A2C",
+    "obj": "#7A6B5C"
    }
   },
   {
@@ -351,6 +466,32 @@
     "leaf": "#8E8984",
     "acc": "#B9B3AA",
     "obj": "#C9C4BC"
+   }
+  },
+  {
+   "slug": "bellavista",
+   "label": "Mural-painted houses of Barrio Bellavista under Cerro San Cristobal, Santiago",
+   "lat": -33.4318,
+   "lon": -70.6355,
+   "radius_km": 2,
+   "aliases": [
+    "barrio bellavista"
+   ],
+   "names": [
+    "bellavista",
+    "bellavista santiago"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#9C9767",
+    "mid": "#8F8C87",
+    "ice": "#F4F1EA",
+    "water": "#3BAFA4",
+    "near": "#2A2827",
+    "sun": "#F5C842",
+    "leaf": "#4E7A37",
+    "acc": "#EEC33B",
+    "obj": "#3F79C0"
    }
   },
   {
@@ -711,6 +852,68 @@
    }
   },
   {
+   "slug": "castro",
+   "label": "The yellow and lilac wooden Church of San Francisco on the plaza of Castro, Chiloe",
+   "lat": -42.4815,
+   "lon": -73.7628,
+   "radius_km": 12,
+   "aliases": [
+    "iglesia san francisco de castro",
+    "iglesia de san francisco de castro",
+    "iglesia de san francisco castro",
+    "church of san francisco castro",
+    "san francisco church castro",
+    "chiesa di san francesco castro",
+    "chiesa di san francisco castro"
+   ],
+   "names": [
+    "castro",
+    "castro chiloe",
+    "castro chile",
+    "castro isla de chiloe"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C8404E",
+    "mid": "#8C8A86",
+    "ice": "#F3EEDD",
+    "water": "#3E7FB0",
+    "near": "#22202A",
+    "sun": "#F6C73A",
+    "leaf": "#3F6B34",
+    "acc": "#EDC22E",
+    "obj": "#7A5A9C"
+   }
+  },
+  {
+   "slug": "catarpe-valley",
+   "label": "The jagged red clay ridges of the Catarpe valley over the San Pedro river and its reeds, with a bicycle",
+   "lat": -22.86,
+   "lon": -68.2,
+   "radius_km": 4,
+   "aliases": [
+    "catarpe",
+    "valle de catarpe",
+    "catarpe valley",
+    "quebrada de catarpe",
+    "tambo de catarpe",
+    "tunel de catarpe",
+    "valle di catarpe"
+   ],
+   "palette": {
+    "sky": "#9AC4EE",
+    "far": "#D8B39C",
+    "mid": "#A9533F",
+    "ice": "#F1E4D6",
+    "water": "#6E93A8",
+    "near": "#2C1E19",
+    "sun": "#F6C431",
+    "leaf": "#7C9447",
+    "acc": "#C77E62",
+    "obj": "#2F6FB0"
+   }
+  },
+  {
    "slug": "cavancha-beach",
    "label": "The curved sand of Playa Cavancha in Iquique, with the peninsula's tower blocks and palms",
    "lat": -20.235,
@@ -759,6 +962,33 @@
     "leaf": "#8A8F4A",
     "acc": "#D29B48",
     "obj": "#C9A595"
+   }
+  },
+  {
+   "slug": "cerro-alegre",
+   "label": "The art nouveau Palacio Baburizza above the Paseo Yugoslavo terrace, Cerro Alegre, Valparaiso",
+   "lat": -33.0412,
+   "lon": -71.6296,
+   "radius_km": 2,
+   "aliases": [
+    "cerro alegre",
+    "palacio baburizza",
+    "baburizza palace",
+    "palazzo baburizza",
+    "museo baburizza",
+    "paseo yugoslavo"
+   ],
+   "palette": {
+    "sky": "#A9CAEC",
+    "far": "#D3CBBC",
+    "mid": "#F3EFE5",
+    "ice": "#FFFFFF",
+    "water": "#3F7FA8",
+    "near": "#22201E",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#B5413A",
+    "obj": "#6F9C80"
    }
   },
   {
@@ -1172,10 +1402,7 @@
     "leaf": "#3F6E42",
     "acc": "#9A6A52",
     "obj": "#2C4A2E"
-   },
-   "names": [
-    "melipeuco"
-   ]
+   }
   },
   {
    "slug": "copiapo",
@@ -1401,6 +1628,34 @@
    }
   },
   {
+   "slug": "death-valley-atacama",
+   "label": "The great sand dune of Valle de la Muerte between jagged rust ridges, with a sandboarder and Licancabur behind",
+   "lat": -22.913,
+   "lon": -68.24,
+   "radius_km": 3,
+   "aliases": [
+    "valle de la muerte",
+    "valle de marte",
+    "death valley atacama",
+    "death valley san pedro",
+    "mars valley",
+    "valley of mars",
+    "valle di marte"
+   ],
+   "palette": {
+    "sky": "#9CC6EC",
+    "far": "#8E8296",
+    "mid": "#B9794C",
+    "ice": "#D9C6AA",
+    "water": "#5C8FA8",
+    "near": "#2E231C",
+    "sun": "#F6C431",
+    "leaf": "#6B8A3C",
+    "acc": "#D9AC7C",
+    "obj": "#C2A585"
+   }
+  },
+  {
    "slug": "diego-ramirez-islands",
    "label": "Black-browed albatross nesting on the tussock slopes of the Diego Ramirez Islands",
    "lat": -56.48,
@@ -1427,15 +1682,10 @@
   },
   {
    "slug": "easter-island",
-   "label": "Moai of Ahu Ko Te Riku with its red topknot, Easter Island",
+   "label": "Poike peninsula over a turquoise bay, wild horses and a toppled moai on the lava, Easter Island",
    "lat": -27.1395,
    "lon": -109.4275,
    "radius_km": 25,
-   "aliases": [
-    "ahu ko te riku",
-    "ko te riku",
-    "ahu tahai"
-   ],
    "names": [
     "easter island",
     "isla de pascua",
@@ -1446,17 +1696,20 @@
     "osterinsel"
    ],
    "palette": {
-    "sky": "#9CC8EE",
-    "far": "#8C877D",
-    "mid": "#7E7464",
-    "ice": "#F5F2EA",
-    "water": "#2D6FA6",
-    "near": "#26231F",
+    "sky": "#A8CDEE",
+    "far": "#857B6E",
+    "mid": "#B4A766",
+    "ice": "#F4F1E8",
+    "water": "#1E9AC6",
+    "near": "#22201E",
     "sun": "#F4C430",
-    "leaf": "#9DB257",
-    "acc": "#93412C",
-    "obj": "#6E4A30"
-   }
+    "leaf": "#7FA244",
+    "acc": "#8A4A2E",
+    "obj": "#45403B"
+   },
+   "aliases": [
+    "poike"
+   ]
   },
   {
    "slug": "el-tatio",
@@ -1551,6 +1804,34 @@
    }
   },
   {
+   "slug": "ensenada",
+   "label": "Calbuco's jagged snowy summit above the forest and the dark beach of Lake Llanquihue at Ensenada",
+   "lat": -41.21,
+   "lon": -72.54,
+   "radius_km": 5,
+   "aliases": [
+    "playa ensenada llanquihue"
+   ],
+   "names": [
+    "ensenada",
+    "ensenada chile",
+    "ensenada llanquihue",
+    "ensenada lago llanquihue"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#55524E",
+    "mid": "#6E7787",
+    "ice": "#F7F9FB",
+    "water": "#3B79A8",
+    "near": "#1E1F1C",
+    "sun": "#F6C73A",
+    "leaf": "#3E6A34",
+    "acc": "#8B6C4A",
+    "obj": "#B5432F"
+   }
+  },
+  {
    "slug": "french-valley",
    "label": "Valle del Frances: the hanging Frances glacier on Paine Grande's flank, a dark-capped Cuerno wall, lenga forest and the river",
    "lat": -50.96,
@@ -1574,6 +1855,35 @@
     "leaf": "#3F6B35",
     "acc": "#A8D6EA",
     "obj": "#9C968E"
+   }
+  },
+  {
+   "slug": "frutillar",
+   "label": "The wooden pier and pavilion of Frutillar on Lake Llanquihue, Osorno across the water",
+   "lat": -41.1225,
+   "lon": -73.0525,
+   "radius_km": 8,
+   "aliases": [
+    "muelle de frutillar",
+    "muelle frutillar",
+    "frutillar pier"
+   ],
+   "names": [
+    "frutillar",
+    "frutillar bajo",
+    "frutillar alto"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#6C7792",
+    "mid": "#6B655C",
+    "ice": "#FFFFFF",
+    "water": "#4A7AA2",
+    "near": "#211C18",
+    "sun": "#F6C73A",
+    "leaf": "#4A7036",
+    "acc": "#A0603C",
+    "obj": "#7E4A30"
    }
   },
   {
@@ -1716,6 +2026,33 @@
     "leaf": "#5E6B34",
     "acc": "#C8AE6A",
     "obj": "#B97E46"
+   }
+  },
+  {
+   "slug": "hanga-roa",
+   "label": "Ahu Tautira moai beside the colourful fishing boats of Caleta Hanga Roa, Easter Island",
+   "lat": -27.1475,
+   "lon": -109.4305,
+   "radius_km": 4,
+   "aliases": [
+    "ahu tautira",
+    "caleta hanga roa"
+   ],
+   "names": [
+    "hanga roa",
+    "hangaroa"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#A99E90",
+    "mid": "#7A6655",
+    "ice": "#F2F0EA",
+    "water": "#2F86B8",
+    "near": "#24211E",
+    "sun": "#F4C430",
+    "leaf": "#6E9A3E",
+    "acc": "#B8402E",
+    "obj": "#2F6FB5"
    }
   },
   {
@@ -1974,6 +2311,30 @@
     "leaf": "#6CA144",
     "acc": "#D52B1E",
     "obj": "#D8C4A6"
+   }
+  },
+  {
+   "slug": "la-sebastiana",
+   "label": "Pablo Neruda's house La Sebastiana above the bay of Valparaiso",
+   "lat": -33.0466,
+   "lon": -71.6217,
+   "radius_km": 2,
+   "aliases": [
+    "la sebastiana",
+    "casa museo la sebastiana",
+    "neruda house valparaiso"
+   ],
+   "palette": {
+    "sky": "#A3CCF0",
+    "far": "#EFD58C",
+    "mid": "#EBAA8C",
+    "ice": "#F6F4EE",
+    "water": "#3474AE",
+    "near": "#28272A",
+    "sun": "#F5C842",
+    "leaf": "#3F6E36",
+    "acc": "#8E4A30",
+    "obj": "#BBA5D8"
    }
   },
   {
@@ -2294,6 +2655,32 @@
    }
   },
   {
+   "slug": "laguna-verde",
+   "label": "The vivid green Laguna Verde in the rainforest near Ensenada, seen from its wooden boardwalk",
+   "lat": -41.19,
+   "lon": -72.51,
+   "radius_km": 3,
+   "aliases": [
+    "laguna verde ensenada",
+    "laguna verde llanquihue",
+    "laguna verde petrohue",
+    "laguna verde vicente perez rosales",
+    "sendero laguna verde ensenada"
+   ],
+   "palette": {
+    "sky": "#CFE3EF",
+    "far": "#86B256",
+    "mid": "#A8A398",
+    "ice": "#F4F4F0",
+    "water": "#2EA84E",
+    "near": "#1C2418",
+    "sun": "#F6C73A",
+    "leaf": "#3B6B2C",
+    "acc": "#A67C4E",
+    "obj": "#5E9A33"
+   }
+  },
+  {
    "slug": "lagunas-escondidas-de-baltinache",
    "label": "A turquoise brine pool in the white salt of the Lagunas Escondidas de Baltinache, under the Cordillera Domeyko",
    "lat": -22.97,
@@ -2447,9 +2834,6 @@
     "lake llanquihue",
     "lago llanquihue",
     "teatro del lago"
-   ],
-   "names": [
-    "frutillar"
    ],
    "palette": {
     "sky": "#B7D3EE",
@@ -2657,6 +3041,31 @@
     "leaf": "#4E6A34",
     "acc": "#CDB16C",
     "obj": "#B97A40"
+   }
+  },
+  {
+   "slug": "lastarria",
+   "label": "The GAM cultural centre's corten roof and tower at Barrio Lastarria, Santiago",
+   "lat": -33.4395,
+   "lon": -70.6405,
+   "radius_km": 2,
+   "aliases": [
+    "lastarria",
+    "centro cultural gabriela mistral",
+    "centro gabriela mistral",
+    "centro gam"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#57524D",
+    "mid": "#B5612D",
+    "ice": "#EDE7DC",
+    "water": "#93B3C6",
+    "near": "#2B2522",
+    "sun": "#F5C842",
+    "leaf": "#4C7A36",
+    "acc": "#D9793A",
+    "obj": "#8E8B87"
    }
   },
   {
@@ -2940,6 +3349,58 @@
    }
   },
   {
+   "slug": "melipeuco",
+   "label": "Wooden houses and an araucaria on the main street of Melipeuco, Llaima volcano at the end",
+   "lat": -38.851,
+   "lon": -71.693,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "melipeuco",
+    "melipeuco chile",
+    "melipeuco araucania"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#56785E",
+    "mid": "#7B7880",
+    "ice": "#F6F6F4",
+    "water": "#5E9C9A",
+    "near": "#1E2220",
+    "sun": "#F4C542",
+    "leaf": "#4C8338",
+    "acc": "#B5443A",
+    "obj": "#E2B648"
+   }
+  },
+  {
+   "slug": "mercado-central-santiago",
+   "label": "The Mercado Central of Santiago with its lantern tower and awnings",
+   "lat": -33.4335,
+   "lon": -70.651,
+   "radius_km": 2,
+   "aliases": [
+    "mercado central de santiago",
+    "mercado central santiago",
+    "santiago central market"
+   ],
+   "names": [
+    "mercado central"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#C9C2B2",
+    "mid": "#A9A49B",
+    "ice": "#F4F0E7",
+    "water": "#8C9878",
+    "near": "#2C2722",
+    "sun": "#F5C842",
+    "leaf": "#4E7A36",
+    "acc": "#E8B68A",
+    "obj": "#8A7A5E"
+   }
+  },
+  {
    "slug": "mirador-britanico",
    "label": "Mirador Britanico: the cirque of pale granite walls and towers at the head of the French Valley above the lenga forest",
    "lat": -50.96,
@@ -3178,9 +3639,7 @@
    "aliases": [
     "osorno volcano",
     "volcan osorno",
-    "vulcano osorno",
-    "petrohue",
-    "saltos del petrohue"
+    "vulcano osorno"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -3314,6 +3773,29 @@
    }
   },
   {
+   "slug": "parque-bicentenario",
+   "label": "Flamingos and a black-necked swan on the Parque Bicentenario lagoon, Costanera Center behind",
+   "lat": -33.4005,
+   "lon": -70.6025,
+   "radius_km": 2,
+   "aliases": [
+    "parque bicentenario",
+    "bicentennial park"
+   ],
+   "palette": {
+    "sky": "#9EC8EE",
+    "far": "#B7BFC6",
+    "mid": "#6F8FAE",
+    "ice": "#F5F3EF",
+    "water": "#4C8C9E",
+    "near": "#23262A",
+    "sun": "#F5C842",
+    "leaf": "#5A8C3D",
+    "acc": "#F29A9C",
+    "obj": "#D8414A"
+   }
+  },
+  {
    "slug": "paso-john-gardner",
    "label": "From John Gardner Pass: the vast Grey Glacier ice field stretching to the horizon below the trail, a lone hiker",
    "lat": -50.936,
@@ -3337,6 +3819,63 @@
     "leaf": "#56703A",
     "acc": "#D2463C",
     "obj": "#B59C78"
+   }
+  },
+  {
+   "slug": "petrohue",
+   "label": "Petrohue's black sand beach and wooden lodges on Lago Todos los Santos below Osorno",
+   "lat": -41.137,
+   "lon": -72.405,
+   "radius_km": 4,
+   "aliases": [
+    "hotel petrohue",
+    "playa petrohue"
+   ],
+   "names": [
+    "petrohue",
+    "petrohue chile",
+    "puerto petrohue"
+   ],
+   "palette": {
+    "sky": "#9FC8F0",
+    "far": "#646C82",
+    "mid": "#57534F",
+    "ice": "#FFFFFF",
+    "water": "#2E9A86",
+    "near": "#1E1F1C",
+    "sun": "#F6C73A",
+    "leaf": "#466F35",
+    "acc": "#7A5236",
+    "obj": "#A8452F"
+   }
+  },
+  {
+   "slug": "petrohue-falls",
+   "label": "The Petrohue falls rushing between black basalt rocks below Osorno volcano",
+   "lat": -41.1575,
+   "lon": -72.4055,
+   "radius_km": 3,
+   "aliases": [
+    "saltos del petrohue",
+    "salto del petrohue",
+    "petrohue falls",
+    "petrohue waterfalls",
+    "petrohue waterfall",
+    "cascate del petrohue",
+    "cascadas del petrohue",
+    "salti del petrohue"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#5E667A",
+    "mid": "#46443F",
+    "ice": "#FFFFFF",
+    "water": "#3DB2C4",
+    "near": "#1E1F1C",
+    "sun": "#F6C73A",
+    "leaf": "#3F6A33",
+    "acc": "#B9E3EC",
+    "obj": "#E5C330"
    }
   },
   {
@@ -3434,9 +3973,7 @@
     "piedras rojas",
     "salar de talar",
     "salar talar",
-    "laguna talar",
-    "salar de aguas calientes",
-    "salar aguas calientes"
+    "laguna talar"
    ],
    "palette": {
     "sky": "#9CC3EE",
@@ -3485,32 +4022,32 @@
   },
   {
    "slug": "plaza-de-armas-santiago",
-   "label": "Santiago Cathedral on the Plaza de Armas",
+   "label": "Correo Central, the Real Audiencia clock tower and the Pedro de Valdivia statue on Santiago's Plaza de Armas",
    "lat": -33.4378,
    "lon": -70.6504,
    "radius_km": 2,
    "aliases": [
     "plaza de armas santiago",
     "plaza de armas de santiago",
-    "santiago metropolitan cathedral",
-    "metropolitan cathedral of santiago",
-    "catedral metropolitana de santiago",
-    "cattedrale metropolitana di santiago",
-    "cattedrale di santiago del cile",
-    "santiago de chile cathedral"
+    "correo central santiago",
+    "correo central de santiago",
+    "santiago central post office"
    ],
    "palette": {
-    "sky": "#A9CFF2",
-    "far": "#DCD5C6",
-    "mid": "#CDC4B1",
-    "ice": "#F3EFE6",
-    "water": "#6E8CA6",
-    "near": "#2C2A28",
+    "sky": "#A8CDEE",
+    "far": "#9FB4C6",
+    "mid": "#D9D3C4",
+    "ice": "#F4F1EA",
+    "water": "#5A6779",
+    "near": "#2A2B2E",
     "sun": "#F5C842",
-    "leaf": "#4E7D36",
-    "acc": "#7E6248",
-    "obj": "#BDB7AC"
-   }
+    "leaf": "#4F7F3A",
+    "acc": "#E5BC55",
+    "obj": "#C6C0B3"
+   },
+   "names": [
+    "plaza de armas"
+   ]
   },
   {
    "slug": "pucon",
@@ -3518,12 +4055,6 @@
    "lat": -39.27,
    "lon": -71.97,
    "radius_km": 15,
-   "aliases": [
-    "villarrica volcano",
-    "volcan villarrica",
-    "vulcano villarrica",
-    "rucapillan"
-   ],
    "names": [
     "pucon",
     "villarrica"
@@ -3539,7 +4070,8 @@
     "leaf": "#3E6F34",
     "acc": "#8FA857",
     "obj": "#4A4846"
-   }
+   },
+   "aliases": []
   },
   {
    "slug": "puerto-chacabuco",
@@ -3751,6 +4283,37 @@
    }
   },
   {
+   "slug": "pukara-de-quitor",
+   "label": "The terraced stone walls of the Pukara de Quitor fortress on its hill above the San Pedro oasis, Licancabur behind",
+   "lat": -22.8995,
+   "lon": -68.2105,
+   "radius_km": 3,
+   "aliases": [
+    "pukara de quitor",
+    "pucara de quitor",
+    "pukara quitor",
+    "pucara quitor",
+    "fortezza di quitor",
+    "fortaleza de quitor",
+    "quitor fortress"
+   ],
+   "names": [
+    "quitor"
+   ],
+   "palette": {
+    "sky": "#9FCBEE",
+    "far": "#8F8496",
+    "mid": "#C0915E",
+    "ice": "#F2E6D2",
+    "water": "#5C8FA8",
+    "near": "#2E2219",
+    "sun": "#F6C431",
+    "leaf": "#5E8A3C",
+    "acc": "#DDB585",
+    "obj": "#8A5A36"
+   }
+  },
+  {
    "slug": "pumalin-park",
    "label": "A giant alerce on the boardwalk of Pumalin Park's Sendero Los Alerces, with a pudu",
    "lat": -42.62,
@@ -3772,6 +4335,29 @@
     "leaf": "#5C9A3A",
     "acc": "#A85A42",
     "obj": "#8A5A36"
+   }
+  },
+  {
+   "slug": "puna-pau",
+   "label": "Red pukao topknots on the lawn below the Puna Pau scoria crater, Easter Island",
+   "lat": -27.131,
+   "lon": -109.392,
+   "radius_km": 2,
+   "aliases": [
+    "puna pau",
+    "punapau"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#A8836A",
+    "mid": "#8A7E6E",
+    "ice": "#F2F0EA",
+    "water": "#2E6FA6",
+    "near": "#24201E",
+    "sun": "#F4C430",
+    "leaf": "#8DBB3C",
+    "acc": "#8E3A2C",
+    "obj": "#5E504A"
    }
   },
   {
@@ -3961,6 +4547,41 @@
    }
   },
   {
+   "slug": "quinchao-island",
+   "label": "The grey shingled wooden church of Achao with its arched portico, Quinchao Island, Chiloe",
+   "lat": -42.4706,
+   "lon": -73.4895,
+   "radius_km": 15,
+   "aliases": [
+    "isla quinchao",
+    "isla de quinchao",
+    "quinchao island",
+    "isola di quinchao",
+    "iglesia de achao",
+    "achao church",
+    "church of achao",
+    "chiesa di achao",
+    "santa maria de loreto de achao"
+   ],
+   "names": [
+    "quinchao",
+    "achao",
+    "achao chiloe"
+   ],
+   "palette": {
+    "sky": "#A3C9EE",
+    "far": "#A8A398",
+    "mid": "#6E655C",
+    "ice": "#F2EEE6",
+    "water": "#3F7EAE",
+    "near": "#211D1A",
+    "sun": "#F6C73A",
+    "leaf": "#5C8F3E",
+    "acc": "#857A6E",
+    "obj": "#4F4842"
+   }
+  },
+  {
    "slug": "rainbow-valley",
    "label": "Rainbow Valley, the red rock canyon of Valle del Arcoiris near San Pedro de Atacama",
    "lat": -22.665,
@@ -4086,6 +4707,31 @@
     "leaf": "#C2A55C",
     "acc": "#C8884C",
     "obj": "#3E3532"
+   }
+  },
+  {
+   "slug": "salar-de-aguas-calientes",
+   "label": "The turquoise lagoon in the white salt of Salar de Aguas Calientes under a row of pink-brown volcanoes, above the golden puna",
+   "lat": -23.12,
+   "lon": -67.47,
+   "radius_km": 12,
+   "aliases": [
+    "salar de aguas calientes",
+    "salar aguas calientes",
+    "salar di aguas calientes",
+    "aguas calientes salt flat"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#BC9A93",
+    "mid": "#A2705E",
+    "ice": "#F3F1EA",
+    "water": "#7FCBC4",
+    "near": "#2B2420",
+    "sun": "#F6C431",
+    "leaf": "#C9A646",
+    "acc": "#C9784E",
+    "obj": "#8E7444"
    }
   },
   {
@@ -4323,6 +4969,33 @@
    ]
   },
   {
+   "slug": "santiago-metropolitan-cathedral",
+   "label": "Santiago Metropolitan Cathedral",
+   "lat": -33.4376,
+   "lon": -70.6505,
+   "radius_km": 1,
+   "aliases": [
+    "santiago metropolitan cathedral",
+    "metropolitan cathedral of santiago",
+    "catedral metropolitana de santiago",
+    "cattedrale metropolitana di santiago",
+    "cattedrale di santiago del cile",
+    "santiago de chile cathedral"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#DCD5C6",
+    "mid": "#CDC4B1",
+    "ice": "#F3EFE6",
+    "water": "#6E8CA6",
+    "near": "#2C2A28",
+    "sun": "#F5C842",
+    "leaf": "#4E7D36",
+    "acc": "#7E6248",
+    "obj": "#BDB7AC"
+   }
+  },
+  {
    "slug": "serrano-glacier",
    "label": "Serrano Glacier and its iceberg lagoon",
    "lat": -50.97,
@@ -4345,6 +5018,32 @@
     "leaf": "#47703A",
     "acc": "#A8805E",
     "obj": "#A5D8EE"
+   }
+  },
+  {
+   "slug": "simpson-river-national-reserve",
+   "label": "The Velo de la Novia waterfall in the forested gorge of the Rio Simpson reserve",
+   "lat": -45.62,
+   "lon": -72.13,
+   "radius_km": 15,
+   "aliases": [
+    "rio simpson",
+    "simpson river",
+    "reserva nacional rio simpson",
+    "riserva nazionale rio simpson",
+    "velo de la novia coyhaique"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#6F915A",
+    "mid": "#6B675F",
+    "ice": "#FFFFFF",
+    "water": "#4FA39A",
+    "near": "#1D2420",
+    "sun": "#F4C542",
+    "leaf": "#3D7133",
+    "acc": "#BCD9E6",
+    "obj": "#8C8270"
    }
   },
   {
@@ -4432,6 +5131,30 @@
     "leaf": "#7E8A4E",
     "acc": "#C8402F",
     "obj": "#6C7A86"
+   }
+  },
+  {
+   "slug": "te-pito-kura",
+   "label": "Te Pito o te Henua, the round navel stone inside its lava-stone ring at Te Pito Kura, Easter Island",
+   "lat": -27.0665,
+   "lon": -109.2845,
+   "radius_km": 2,
+   "aliases": [
+    "te pito kura",
+    "te pito o te henua",
+    "pito kura"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#9C8C7A",
+    "mid": "#6B5F57",
+    "ice": "#F2F0EA",
+    "water": "#2C6FB0",
+    "near": "#22201E",
+    "sun": "#F4C430",
+    "leaf": "#6E9B3C",
+    "acc": "#A8643A",
+    "obj": "#3E3A37"
    }
   },
   {
@@ -4763,6 +5486,90 @@
     "leaf": "#7E9A4C",
     "acc": "#C2453A",
     "obj": "#4E86C4"
+   }
+  },
+  {
+   "slug": "villarrica-volcano",
+   "label": "A climber with ice axe on the snow of Villarrica volcano below its steaming dark crater rim",
+   "lat": -39.42,
+   "lon": -71.94,
+   "radius_km": 6,
+   "aliases": [
+    "villarrica volcano",
+    "volcan villarrica",
+    "rucapillan",
+    "villarrica national park",
+    "parque nacional villarrica"
+   ],
+   "palette": {
+    "sky": "#A9CCEB",
+    "far": "#7C8DA4",
+    "mid": "#4A4542",
+    "ice": "#FFFFFF",
+    "water": "#3D7DB0",
+    "near": "#1F2023",
+    "sun": "#F6C73A",
+    "leaf": "#3F6B3A",
+    "acc": "#D2DCE7",
+    "obj": "#D2452E"
+   }
+  },
+  {
+   "slug": "vina-del-mar",
+   "label": "The Reloj de Flores, the giant flower clock on the hillside of Vina del Mar, with palms",
+   "lat": -33.0158,
+   "lon": -71.5527,
+   "radius_km": 12,
+   "aliases": [
+    "reloj de flores",
+    "flower clock vina",
+    "orologio di fiori"
+   ],
+   "names": [
+    "vina del mar",
+    "vina",
+    "vina del mar chile",
+    "vina del mar city"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#9A8660",
+    "mid": "#73B042",
+    "ice": "#FFFFFF",
+    "water": "#BCC948",
+    "near": "#1E2420",
+    "sun": "#F4C542",
+    "leaf": "#2F6A32",
+    "acc": "#D52F38",
+    "obj": "#E28DAE"
+   }
+  },
+  {
+   "slug": "vitacura",
+   "label": "The CEPAL building with its snail tower and reflecting pool under the Andes, Vitacura",
+   "lat": -33.3933,
+   "lon": -70.5885,
+   "radius_km": 4,
+   "aliases": [
+    "cepal",
+    "edificio de la cepal",
+    "eclac headquarters"
+   ],
+   "names": [
+    "vitacura",
+    "vitacura santiago"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#8E8C9A",
+    "mid": "#ABA79D",
+    "ice": "#E7E3DA",
+    "water": "#7DA5B8",
+    "near": "#2A2B2D",
+    "sun": "#F5C842",
+    "leaf": "#4E7638",
+    "acc": "#878278",
+    "obj": "#4B5761"
    }
   },
   {

@@ -223,27 +223,61 @@
   },
   {
    "slug": "buenos-aires",
-   "label": "Obelisco, Avenida 9 de Julio",
+   "label": "Palacio del Congreso with its green dome, Buenos Aires",
    "lat": -34.6037,
    "lon": -58.3816,
    "radius_km": 25,
-   "aliases": [
-    "obelisco"
-   ],
    "names": [
-    "buenos aires"
+    "buenos aires",
+    "ciudad de buenos aires",
+    "buenos aires city",
+    "caba"
    ],
    "palette": {
     "sky": "#AFCFF0",
-    "far": "#CFC7BA",
-    "mid": "#B2A998",
-    "ice": "#F4F1EA",
+    "far": "#DDD6C8",
+    "mid": "#C8BFAE",
+    "ice": "#F2EEE6",
     "water": "#4F8DB5",
     "near": "#2A2B2E",
     "sun": "#F6C431",
-    "leaf": "#7AA457",
+    "leaf": "#6E9A4E",
     "acc": "#9C7CC4",
-    "obj": "#9AA0A6"
+    "obj": "#7DB89C"
+   },
+   "aliases": [
+    "congreso de la nacion argentina",
+    "argentine national congress",
+    "argentinian national congress",
+    "palacio del congreso de la nacion",
+    "congreso argentino"
+   ]
+  },
+  {
+   "slug": "buenos-aires-metropolitan-cathedral",
+   "label": "Neoclassical twelve-column facade of the Catedral Metropolitana, Buenos Aires",
+   "lat": -34.6075,
+   "lon": -58.3731,
+   "radius_km": 2,
+   "aliases": [
+    "catedral metropolitana de buenos aires",
+    "buenos aires metropolitan cathedral",
+    "catedral de buenos aires",
+    "buenos aires cathedral",
+    "cattedrale di buenos aires",
+    "cattedrale metropolitana di buenos aires"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C2AE88",
+    "mid": "#DED0B0",
+    "ice": "#F0E8D6",
+    "water": "#5E93A8",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#5F8E3E",
+    "acc": "#7A5A3A",
+    "obj": "#B9C3CC"
    }
   },
   {
@@ -327,6 +361,55 @@
     "leaf": "#55703A",
     "acc": "#C4DFEC",
     "obj": "#6E655E"
+   }
+  },
+  {
+   "slug": "calchaqui-valleys",
+   "label": "Ruta 40 gravel road winding among cardon cacti and red and ochre mountains, Valles Calchaquies",
+   "lat": -25.6,
+   "lon": -66.1,
+   "radius_km": 60,
+   "aliases": [
+    "valles calchaquies",
+    "calchaqui valleys",
+    "calchaqui valley",
+    "valle calchaqui",
+    "valli calchaqui"
+   ],
+   "palette": {
+    "sky": "#A7CBF0",
+    "far": "#9C93A6",
+    "mid": "#B5664A",
+    "ice": "#FFFFFF",
+    "water": "#A98C6C",
+    "near": "#2C211D",
+    "sun": "#F3C232",
+    "leaf": "#5F8A3C",
+    "acc": "#C9A57E",
+    "obj": "#D69A78"
+   }
+  },
+  {
+   "slug": "caleta-valdes",
+   "label": "Gravel spits across the Caleta Valdes lagoon below the cliffs, elephant seals on the beach",
+   "lat": -42.37,
+   "lon": -63.63,
+   "radius_km": 15,
+   "aliases": [
+    "caleta valdes",
+    "caleta valdez"
+   ],
+   "palette": {
+    "sky": "#A9CBEC",
+    "far": "#CFC3A6",
+    "mid": "#A88E62",
+    "ice": "#F4F2EC",
+    "water": "#4A90AC",
+    "near": "#27241F",
+    "sun": "#F4C542",
+    "leaf": "#7E8250",
+    "acc": "#B24A36",
+    "obj": "#7A6B5E"
    }
   },
   {
@@ -444,6 +527,59 @@
    }
   },
   {
+   "slug": "casa-rosada",
+   "label": "Casa Rosada and the Piramide de Mayo",
+   "lat": -34.6081,
+   "lon": -58.3703,
+   "radius_km": 1,
+   "aliases": [
+    "casa rosada",
+    "pink house",
+    "casa rosada buenos aires"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CFC8BC",
+    "mid": "#D98C7E",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#2A2B2E",
+    "sun": "#F6C431",
+    "leaf": "#5E8F45",
+    "acc": "#ECC0B2",
+    "obj": "#8FA59C"
+   }
+  },
+  {
+   "slug": "cerro-de-los-siete-colores",
+   "label": "Cerro de los Siete Colores above Purmamarca",
+   "lat": -23.744,
+   "lon": -65.495,
+   "radius_km": 2,
+   "palette": {
+    "sky": "#9CC3EC",
+    "far": "#8E9B86",
+    "mid": "#C9694F",
+    "ice": "#F0E6DA",
+    "water": "#DCA2A0",
+    "near": "#2E2522",
+    "sun": "#F5C542",
+    "leaf": "#5B8A3A",
+    "acc": "#9A6684",
+    "obj": "#CDA47C"
+   },
+   "aliases": [
+    "cerro de los siete colores",
+    "cerro de los 7 colores",
+    "cerro siete colores",
+    "collina dei sette colori",
+    "hill of seven colors",
+    "hill of seven colours",
+    "hill of the seven colors",
+    "hill of the seven colours"
+   ]
+  },
+  {
    "slug": "cerro-frias",
    "label": "A saddled horse on the grassy top of Cerro Frías, Lago Argentino below and Fitz Roy tiny on the Andes horizon",
    "lat": -50.38,
@@ -544,6 +680,32 @@
     "leaf": "#7D8746",
     "acc": "#8C6A4E",
     "obj": "#C08048"
+   }
+  },
+  {
+   "slug": "cerro-san-bernardo",
+   "label": "Red cable-car cabins climbing the green Cerro San Bernardo above Salta's colonial roofs",
+   "lat": -24.7896,
+   "lon": -65.3962,
+   "radius_km": 3,
+   "aliases": [
+    "cerro san bernardo",
+    "teleferico san bernardo",
+    "teleferico de salta",
+    "teleferico salta",
+    "salta cable car"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#8DA3B8",
+    "mid": "#D9D0BE",
+    "ice": "#ECEDEC",
+    "water": "#5A8FB0",
+    "near": "#262522",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#B8452E",
+    "obj": "#E2A07C"
    }
   },
   {
@@ -790,6 +952,58 @@
    }
   },
   {
+   "slug": "devils-throat",
+   "label": "The horseshoe of falls closing round the misty Devil's Throat, seen from the catwalk railing",
+   "lat": -25.6953,
+   "lon": -54.4367,
+   "radius_km": 2,
+   "aliases": [
+    "devils throat",
+    "devil s throat",
+    "gola del diavolo",
+    "gola del diablo"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#BFE2DA",
+    "mid": "#4E443E",
+    "ice": "#FFFFFF",
+    "water": "#8F6E4A",
+    "near": "#25302A",
+    "sun": "#F5C542",
+    "leaf": "#3E6B35",
+    "acc": "#3E6C66",
+    "obj": "#8C9599"
+   }
+  },
+  {
+   "slug": "diego-armando-maradona-stadium",
+   "label": "The red-and-white stands of Argentinos Juniors' Estadio Diego Armando Maradona, La Paternal",
+   "lat": -34.6061,
+   "lon": -58.4733,
+   "radius_km": 2,
+   "aliases": [
+    "estadio diego armando maradona",
+    "diego armando maradona stadium",
+    "stadio dell argentinos juniors",
+    "estadio argentinos juniors",
+    "argentinos juniors stadium",
+    "stadio argentinos juniors"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#CDBFA6",
+    "mid": "#8E8A84",
+    "ice": "#F5F5F2",
+    "water": "#3E7FB0",
+    "near": "#23211F",
+    "sun": "#F4C542",
+    "leaf": "#4E9A3C",
+    "acc": "#C9282E",
+    "obj": "#2F5E2E"
+   }
+  },
+  {
    "slug": "el-anfiteatro",
    "label": "Folded red strata of El Anfiteatro, Quebrada de las Conchas",
    "lat": -25.7917,
@@ -959,6 +1173,42 @@
    }
   },
   {
+   "slug": "estadio-monumental",
+   "label": "River Plate's Estadio Monumental: the white oval bowl with its red band",
+   "lat": -34.5453,
+   "lon": -58.4498,
+   "radius_km": 2,
+   "aliases": [
+    "antonio vespucio liberti",
+    "monumental de nunez",
+    "estadio monumental river",
+    "estadio monumental de buenos aires",
+    "estadio monumental buenos aires",
+    "monumental river plate",
+    "river plate stadium",
+    "estadio river plate",
+    "stadio river plate",
+    "mas monumental"
+   ],
+   "names": [
+    "estadio monumental",
+    "monumental",
+    "el monumental"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#D4D0C8",
+    "mid": "#A3A19C",
+    "ice": "#F2F0EA",
+    "water": "#4F8DB5",
+    "near": "#24262A",
+    "sun": "#F6C431",
+    "leaf": "#5E8F45",
+    "acc": "#D52B30",
+    "obj": "#7A7D82"
+   }
+  },
+  {
    "slug": "estancia-cristina",
    "label": "The white, green-roofed farmhouses of Estancia Cristina among poplars under the snowy peaks",
    "lat": -49.985,
@@ -1085,6 +1335,29 @@
    }
   },
   {
+   "slug": "garganta-del-diablo",
+   "label": "The waterfall at the end of the narrow Garganta del Diablo gorge, Tilcara",
+   "lat": -23.5905,
+   "lon": -65.364,
+   "radius_km": 6,
+   "aliases": [],
+   "names": [
+    "garganta del diablo tilcara"
+   ],
+   "palette": {
+    "sky": "#B2D3F0",
+    "far": "#8E5F48",
+    "mid": "#C28660",
+    "ice": "#FFFFFF",
+    "water": "#A8CEE0",
+    "near": "#2B211C",
+    "sun": "#F3C232",
+    "leaf": "#8A9A4E",
+    "acc": "#D9BC98",
+    "obj": "#A6703F"
+   }
+  },
+  {
    "slug": "garganta-del-diablo-cafayate",
    "label": "The tall red cleft of the Garganta del Diablo, Quebrada de las Conchas",
    "lat": -25.79,
@@ -1195,6 +1468,33 @@
    }
   },
   {
+   "slug": "hornocal",
+   "label": "Serranía de Hornocal zigzag mountains",
+   "lat": -23.17,
+   "lon": -65.23,
+   "radius_km": 6,
+   "aliases": [
+    "hornocal",
+    "serrania del hornocal",
+    "serrania de hornocal",
+    "cerro de los 14 colores",
+    "cerro de los catorce colores",
+    "cerro 14 colores"
+   ],
+   "palette": {
+    "sky": "#A6CAEE",
+    "far": "#A88678",
+    "mid": "#C7999A",
+    "ice": "#E8DAC5",
+    "water": "#A3AB8E",
+    "near": "#2B2422",
+    "sun": "#F5C542",
+    "leaf": "#6E6A3E",
+    "acc": "#AE6A68",
+    "obj": "#CDB37C"
+   }
+  },
+  {
    "slug": "hualfin",
    "label": "The pink colonial chapel of Hualfín under the arid Catamarca hills",
    "lat": -27.227,
@@ -1247,6 +1547,38 @@
    }
   },
   {
+   "slug": "humahuaca",
+   "label": "The Monumento a los Heroes de la Independencia with its bronze figure above the long stone staircase, Humahuaca",
+   "lat": -23.2047,
+   "lon": -65.3489,
+   "radius_km": 10,
+   "aliases": [
+    "monumento a los heroes de la independencia",
+    "monumento a la independencia humahuaca",
+    "monumento al indio humahuaca",
+    "monumento de humahuaca"
+   ],
+   "names": [
+    "humahuaca",
+    "humahuaca jujuy",
+    "humahuaca argentina",
+    "pueblo de humahuaca",
+    "ciudad de humahuaca"
+   ],
+   "palette": {
+    "sky": "#A8CCF2",
+    "far": "#CDA58C",
+    "mid": "#B8735A",
+    "ice": "#E6D3BE",
+    "water": "#6A8FB0",
+    "near": "#2A2220",
+    "sun": "#F3C232",
+    "leaf": "#6C8A4A",
+    "acc": "#A8846C",
+    "obj": "#4D5548"
+   }
+  },
+  {
    "slug": "ibera-wetlands",
    "label": "Floating reed island, capybaras and a yacare caiman on Laguna Iberá",
    "lat": -28.54,
@@ -1289,11 +1621,7 @@
     "iguassu",
     "iguazu falls",
     "cataratas del iguazu",
-    "puerto iguazu",
-    "garganta del diablo",
-    "devil s throat",
-    "devils throat",
-    "gola del diavolo"
+    "garganta del diablo"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -1306,6 +1634,34 @@
     "leaf": "#4F8A3A",
     "acc": "#A8743E",
     "obj": "#DCE9EE"
+   }
+  },
+  {
+   "slug": "iguazu-national-park",
+   "label": "A cascade glimpsed through the Iguazu rainforest, with a toucan and a coati on the trail",
+   "lat": -25.682,
+   "lon": -54.454,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "iguazu national park",
+    "parque nacional iguazu",
+    "parque nacional del iguazu",
+    "parco nazionale iguazu",
+    "parco nazionale dell iguazu",
+    "cascate di iguazu lato argentino"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#77A363",
+    "mid": "#6A5038",
+    "ice": "#FFFFFF",
+    "water": "#7C8E7E",
+    "near": "#22281F",
+    "sun": "#F4A62A",
+    "leaf": "#3A6A2F",
+    "acc": "#8E6E4C",
+    "obj": "#C0874C"
    }
   },
   {
@@ -1470,6 +1826,33 @@
    }
   },
   {
+   "slug": "la-bombonera",
+   "label": "Blue-and-yellow curved stand wall of La Bombonera, Boca Juniors' stadium",
+   "lat": -34.6356,
+   "lon": -58.3649,
+   "radius_km": 2,
+   "aliases": [
+    "bombonera",
+    "estadio alberto j armando",
+    "estadio alberto jose armando",
+    "boca juniors stadium",
+    "estadio boca juniors",
+    "stadio boca juniors"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#D6D1C6",
+    "mid": "#F3C21C",
+    "ice": "#FFFFFF",
+    "water": "#4F8DB5",
+    "near": "#1F2430",
+    "sun": "#F6D04A",
+    "leaf": "#5E8F45",
+    "acc": "#1D4E9E",
+    "obj": "#8A9099"
+   }
+  },
+  {
    "slug": "la-caldera",
    "label": "The Cristo Penitente statue on its white hilltop chapel above La Caldera, Salta",
    "lat": -24.598,
@@ -1528,12 +1911,7 @@
     "leaf": "#C9B565",
     "acc": "#E8612A",
     "obj": "#6F757C"
-   },
-   "names": [
-    "san antonio de los cobres",
-    "s a de los cobres",
-    "san antonio de los cobres salta"
-   ]
+   }
   },
   {
    "slug": "la-quiaca",
@@ -2141,6 +2519,34 @@
    }
   },
   {
+   "slug": "lujan-de-cuyo",
+   "label": "The pyramid bodega of Catena Zapata among vineyards below the snowy Cordon del Plata, Lujan de Cuyo",
+   "lat": -33.04,
+   "lon": -68.88,
+   "radius_km": 12,
+   "aliases": [
+    "catena zapata",
+    "bodega catena"
+   ],
+   "names": [
+    "lujan de cuyo",
+    "lujan de cuyo mendoza",
+    "lujan de cuyo argentina"
+   ],
+   "palette": {
+    "sky": "#A8C9EE",
+    "far": "#7E8399",
+    "mid": "#D4BC93",
+    "ice": "#FFFFFF",
+    "water": "#5B8FB0",
+    "near": "#1E2124",
+    "sun": "#F4C542",
+    "leaf": "#4F8A36",
+    "acc": "#A8957C",
+    "obj": "#B08E68"
+   }
+  },
+  {
    "slug": "mar-de-ajo",
    "label": "The white-railed fishing pier of Mar de Ajó stretching into the brown Atlantic",
    "lat": -36.7236,
@@ -2414,6 +2820,60 @@
    }
   },
   {
+   "slug": "nicolas-avellaneda-bridge",
+   "label": "The old steel transporter bridge over the Riachuelo, with the red Nicolás Avellaneda road bridge behind",
+   "lat": -34.6375,
+   "lon": -58.3555,
+   "radius_km": 2,
+   "aliases": [
+    "nicolas avellaneda bridge",
+    "puente nicolas avellaneda",
+    "puente transbordador nicolas avellaneda",
+    "transbordador nicolas avellaneda",
+    "puente transbordador la boca",
+    "transporter bridge la boca",
+    "la boca transporter bridge"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#CFC9BC",
+    "mid": "#46524E",
+    "ice": "#EDEAE2",
+    "water": "#7C7460",
+    "near": "#202326",
+    "sun": "#F6C431",
+    "leaf": "#5E8F45",
+    "acc": "#CC4A3A",
+    "obj": "#A8A59C"
+   }
+  },
+  {
+   "slug": "obelisco-de-buenos-aires",
+   "label": "Obelisco, Avenida 9 de Julio",
+   "lat": -34.6037,
+   "lon": -58.3816,
+   "radius_km": 2,
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#CFC7BA",
+    "mid": "#B2A998",
+    "ice": "#F4F1EA",
+    "water": "#4F8DB5",
+    "near": "#2A2B2E",
+    "sun": "#F6C431",
+    "leaf": "#7AA457",
+    "acc": "#9C7CC4",
+    "obj": "#9AA0A6"
+   },
+   "aliases": [
+    "obelisco",
+    "obelisco de buenos aires",
+    "obelisk of buenos aires",
+    "buenos aires obelisk",
+    "avenida 9 de julio"
+   ]
+  },
+  {
    "slug": "ojo-del-albino-glacier",
    "label": "The Ojo del Albino glacier tongue ending in its iceberg lagoon ringed by ice, under dark jagged peaks",
    "lat": -54.711,
@@ -2590,6 +3050,33 @@
    }
   },
   {
+   "slug": "parque-general-san-martin",
+   "label": "The wrought-iron Portones del Parque with the condor crest, Parque General San Martin, Mendoza",
+   "lat": -32.8885,
+   "lon": -68.855,
+   "radius_km": 3,
+   "aliases": [
+    "parque general san martin",
+    "parque gral san martin",
+    "general san martin park",
+    "san martin park mendoza",
+    "parque san martin mendoza",
+    "portones del parque"
+   ],
+   "palette": {
+    "sky": "#A9CBEE",
+    "far": "#8E9BB0",
+    "mid": "#232C27",
+    "ice": "#ECE6D6",
+    "water": "#B48E7C",
+    "near": "#151513",
+    "sun": "#F4C542",
+    "leaf": "#4F7F3B",
+    "acc": "#C9A23F",
+    "obj": "#9A9894"
+   }
+  },
+  {
    "slug": "perito-moreno",
    "label": "The white double entrance arch of the town of Perito Moreno, Santa Cruz, among poplars",
    "lat": -46.59,
@@ -2720,7 +3207,7 @@
   },
   {
    "slug": "plaza-de-mayo",
-   "label": "Casa Rosada and the Piramide de Mayo, Plaza de Mayo",
+   "label": "The white colonial Cabildo with its bell tower, Plaza de Mayo",
    "lat": -34.6081,
    "lon": -58.3712,
    "radius_km": 2,
@@ -2728,20 +3215,22 @@
     "plaza de mayo",
     "piramide de mayo",
     "piazza di maggio",
-    "casa rosada",
-    "pink house"
+    "cabildo de buenos aires",
+    "cabildo of buenos aires",
+    "buenos aires cabildo",
+    "cabildo di buenos aires"
    ],
    "palette": {
-    "sky": "#AFCFF0",
-    "far": "#CFC8BC",
-    "mid": "#D98C7E",
-    "ice": "#F4F1EA",
+    "sky": "#A8CCF0",
+    "far": "#D9D3C6",
+    "mid": "#F1EEE6",
+    "ice": "#FFFFFF",
     "water": "#4F8DB5",
     "near": "#2A2B2E",
     "sun": "#F6C431",
-    "leaf": "#5E8F45",
-    "acc": "#ECC0B2",
-    "obj": "#8FA59C"
+    "leaf": "#4E8A3C",
+    "acc": "#B5643C",
+    "obj": "#8A7A5E"
    }
   },
   {
@@ -2913,6 +3402,62 @@
    }
   },
   {
+   "slug": "puerto-iguazu",
+   "label": "The blue-and-white Hito Tres Fronteras obelisk above the Iguazu-Parana confluence, Puerto Iguazu",
+   "lat": -25.5915,
+   "lon": -54.5927,
+   "radius_km": 10,
+   "aliases": [
+    "hito tres fronteras",
+    "hito de las tres fronteras",
+    "hito 3 fronteras",
+    "triple frontera"
+   ],
+   "names": [
+    "puerto iguazu",
+    "puerto iguazu misiones",
+    "puerto iguassu"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#6F9A5E",
+    "mid": "#A57C52",
+    "ice": "#F4F4F0",
+    "water": "#6F8F8C",
+    "near": "#262A22",
+    "sun": "#F2C230",
+    "leaf": "#3D6B34",
+    "acc": "#B4593A",
+    "obj": "#4A8DD0"
+   }
+  },
+  {
+   "slug": "puerto-madero",
+   "label": "Puente de la Mujer over the Puerto Madero dock, Buenos Aires",
+   "lat": -34.6081,
+   "lon": -58.3653,
+   "radius_km": 2,
+   "aliases": [
+    "puerto madero",
+    "puente de la mujer",
+    "woman s bridge",
+    "womans bridge",
+    "ponte della donna"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#D9CDB6",
+    "mid": "#8F949A",
+    "ice": "#FBFBF8",
+    "water": "#8C7A5C",
+    "near": "#26292C",
+    "sun": "#F6C431",
+    "leaf": "#5E8F45",
+    "acc": "#A5533A",
+    "obj": "#7EA4BD"
+   }
+  },
+  {
    "slug": "puerto-madryn",
    "label": "Puerto Madryn beach and pier on Golfo Nuevo",
    "lat": -42.7692,
@@ -3012,6 +3557,33 @@
    }
   },
   {
+   "slug": "punta-piramides",
+   "label": "A tractor launching the whale-watching boat from the beach under the cliffs of Puerto Piramides",
+   "lat": -42.5735,
+   "lon": -64.2826,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "punta piramides",
+    "punta piramide",
+    "puerto piramides",
+    "puerto piramide",
+    "puerto piramides chubut"
+   ],
+   "palette": {
+    "sky": "#AFCDEE",
+    "far": "#D8CDB6",
+    "mid": "#A89A82",
+    "ice": "#F7F7F4",
+    "water": "#2D7FA2",
+    "near": "#25231F",
+    "sun": "#F4C542",
+    "leaf": "#9AA85A",
+    "acc": "#CDBE98",
+    "obj": "#4F6F68"
+   }
+  },
+  {
    "slug": "punta-tombo",
    "label": "Magellanic penguins and a guanaco at Punta Tombo",
    "lat": -44.045,
@@ -3063,35 +3635,34 @@
   },
   {
    "slug": "purmamarca",
-   "label": "Cerro de los Siete Colores above Purmamarca",
+   "label": "The white adobe church of Santa Rosa de Lima with its algarrobo tree and a craft stall, Purmamarca",
    "lat": -23.745,
    "lon": -65.496,
    "radius_km": 6,
-   "aliases": [
-    "cerro de los siete colores",
-    "cerro de los 7 colores",
-    "cerro siete colores",
-    "collina dei sette colori",
-    "hill of seven colors",
-    "hill of seven colours",
-    "hill of the seven colors",
-    "hill of the seven colours"
-   ],
    "names": [
-    "purmamarca"
+    "purmamarca",
+    "purmamarca jujuy",
+    "purmamarca argentina",
+    "pueblo de purmamarca"
    ],
    "palette": {
-    "sky": "#9CC3EC",
-    "far": "#8E9B86",
-    "mid": "#C9694F",
-    "ice": "#F0E6DA",
-    "water": "#DCA2A0",
-    "near": "#2E2522",
-    "sun": "#F5C542",
-    "leaf": "#5B8A3A",
-    "acc": "#9A6684",
-    "obj": "#CDA47C"
-   }
+    "sky": "#A8CEF0",
+    "far": "#D3B994",
+    "mid": "#F4F1EA",
+    "ice": "#FFFFFF",
+    "water": "#8E6C8C",
+    "near": "#2A2420",
+    "sun": "#F2C230",
+    "leaf": "#5C8A3A",
+    "acc": "#C8603E",
+    "obj": "#2F6B4A"
+   },
+   "aliases": [
+    "iglesia de purmamarca",
+    "iglesia santa rosa de lima purmamarca",
+    "iglesia de santa rosa de lima de purmamarca",
+    "chiesa di purmamarca"
+   ]
   },
   {
    "slug": "quebrada-de-escoipe",
@@ -3124,7 +3695,7 @@
   },
   {
    "slug": "quebrada-de-humahuaca",
-   "label": "Serranía de Hornocal zigzag mountains, Quebrada de Humahuaca",
+   "label": "The wide Quebrada de Humahuaca valley: layered coloured mountains above the dry Rio Grande bed, poplars and cardon cacti",
    "lat": -23.18,
    "lon": -65.22,
    "radius_km": 25,
@@ -3132,23 +3703,20 @@
     "quebrada de humahuaca",
     "humahuaca gorge",
     "valle de humahuaca",
-    "hornocal",
-    "cerro de los 14 colores",
-    "cerro de los catorce colores",
-    "cerro 14 colores",
-    "serrania del hornocal"
+    "quebrada di humahuaca",
+    "gola di humahuaca"
    ],
    "palette": {
-    "sky": "#A6CAEE",
-    "far": "#A88678",
-    "mid": "#C7999A",
-    "ice": "#E8DAC5",
-    "water": "#A3AB8E",
-    "near": "#2B2422",
-    "sun": "#F5C542",
-    "leaf": "#6E6A3E",
-    "acc": "#AE6A68",
-    "obj": "#CDB37C"
+    "sky": "#A9CDEE",
+    "far": "#9E7C78",
+    "mid": "#C48766",
+    "ice": "#EFE6D6",
+    "water": "#8C8478",
+    "near": "#2E2420",
+    "sun": "#F4C430",
+    "leaf": "#5F8A3C",
+    "acc": "#DCC6A2",
+    "obj": "#A8503E"
    }
   },
   {
@@ -3210,6 +3778,33 @@
    }
   },
   {
+   "slug": "quebrada-de-las-senoritas",
+   "label": "Red eroded pinnacles at the mouth of the Quebrada de las Senoritas, Uquia",
+   "lat": -23.3,
+   "lon": -65.37,
+   "radius_km": 4,
+   "aliases": [
+    "quebrada de las senoritas",
+    "quebrada las senoritas",
+    "quebrada de las senoritas uquia"
+   ],
+   "names": [
+    "las senoritas"
+   ],
+   "palette": {
+    "sky": "#AACDF0",
+    "far": "#8E8E80",
+    "mid": "#C0583A",
+    "ice": "#FFFFFF",
+    "water": "#7FA6C4",
+    "near": "#2C1C17",
+    "sun": "#F3C232",
+    "leaf": "#A9A762",
+    "acc": "#D48A62",
+    "obj": "#E2A784"
+   }
+  },
+  {
    "slug": "quebrada-del-toro",
    "label": "The red steel railway trestle bridge across the gravel riverbed of the Quebrada del Toro gorge, below ochre mountains",
    "lat": -24.8,
@@ -3263,6 +3858,40 @@
     "leaf": "#6E8C48",
     "acc": "#D9C9AC",
     "obj": "#97897A"
+   }
+  },
+  {
+   "slug": "recoleta",
+   "label": "White colonial Basílica del Pilar with its bell tower, Recoleta",
+   "lat": -34.5875,
+   "lon": -58.3929,
+   "radius_km": 3,
+   "aliases": [
+    "barrio de recoleta",
+    "recoleta neighborhood",
+    "recoleta neighbourhood",
+    "quartiere recoleta",
+    "basilica del pilar recoleta",
+    "iglesia del pilar recoleta",
+    "pilar church recoleta",
+    "plaza francia"
+   ],
+   "names": [
+    "recoleta",
+    "recoleta buenos aires",
+    "la recoleta"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#D9D3C6",
+    "mid": "#F4F2EC",
+    "ice": "#FFFFFF",
+    "water": "#4F8DB5",
+    "near": "#262A30",
+    "sun": "#F6C431",
+    "leaf": "#4F873C",
+    "acc": "#A85A3C",
+    "obj": "#7F9DB8"
    }
   },
   {
@@ -3565,6 +4194,63 @@
    }
   },
   {
+   "slug": "san-antonio-de-los-cobres",
+   "label": "The blue Tren a las Nubes at the white railway station of San Antonio de los Cobres, low adobe houses and puna mountains behind",
+   "lat": -24.2236,
+   "lon": -66.3206,
+   "radius_km": 12,
+   "aliases": [
+    "estacion san antonio de los cobres",
+    "estacion de san antonio de los cobres"
+   ],
+   "names": [
+    "san antonio de los cobres",
+    "s a de los cobres",
+    "san antonio de los cobres salta",
+    "san antonio de los cobres argentina"
+   ],
+   "palette": {
+    "sky": "#B4D4F2",
+    "far": "#A9876E",
+    "mid": "#ECE6DA",
+    "ice": "#FFFFFF",
+    "water": "#3F80C6",
+    "near": "#26221F",
+    "sun": "#F4C430",
+    "leaf": "#9A9455",
+    "acc": "#C9AE90",
+    "obj": "#B9B2A6"
+   }
+  },
+  {
+   "slug": "san-carlos",
+   "label": "The twin-towered Iglesia de San Carlos Borromeo with its great arched porch, beside the plaza arcades, San Carlos, Salta",
+   "lat": -25.8957,
+   "lon": -65.93,
+   "radius_km": 8,
+   "aliases": [
+    "iglesia de san carlos borromeo",
+    "iglesia san carlos borromeo"
+   ],
+   "names": [
+    "san carlos",
+    "san carlos salta",
+    "san carlos argentina"
+   ],
+   "palette": {
+    "sky": "#A9CCF0",
+    "far": "#BFA78C",
+    "mid": "#F0E2C2",
+    "ice": "#FFFFFF",
+    "water": "#A6CDD2",
+    "near": "#2A2622",
+    "sun": "#F3C232",
+    "leaf": "#5E8A3E",
+    "acc": "#A8957E",
+    "obj": "#D9BE96"
+   }
+  },
+  {
    "slug": "san-carlos-de-bariloche",
    "label": "Centro Cívico clock tower, Bariloche",
    "lat": -41.1335,
@@ -3617,6 +4303,35 @@
     "leaf": "#63A040",
     "acc": "#D08C64",
     "obj": "#3F6E2E"
+   }
+  },
+  {
+   "slug": "san-isidro",
+   "label": "The neo-gothic Cathedral of San Isidro with its tall spire above the Rio de la Plata",
+   "lat": -34.4723,
+   "lon": -58.5115,
+   "radius_km": 8,
+   "aliases": [
+    "catedral de san isidro",
+    "san isidro cathedral",
+    "cattedrale di san isidro"
+   ],
+   "names": [
+    "san isidro",
+    "san isidro buenos aires",
+    "san isidro argentina"
+   ],
+   "palette": {
+    "sky": "#AACBEE",
+    "far": "#EFE2C6",
+    "mid": "#D6C29E",
+    "ice": "#FFFFFF",
+    "water": "#86A2AE",
+    "near": "#24201E",
+    "sun": "#F4C542",
+    "leaf": "#4D7E3A",
+    "acc": "#B4644A",
+    "obj": "#5F6B6F"
    }
   },
   {
@@ -4090,7 +4805,7 @@
    "label": "Pucará de Tilcara pyramid among cardón cacti",
    "lat": -23.578,
    "lon": -65.401,
-   "radius_km": 5,
+   "radius_km": 4,
    "aliases": [
     "pucara de tilcara",
     "pucara tilcara",
@@ -4301,6 +5016,35 @@
     "leaf": "#8A8A5C",
     "acc": "#CDBB98",
     "obj": "#363B45"
+   }
+  },
+  {
+   "slug": "villa-fiorito",
+   "label": "Maradona's birthplace in Villa Fiorito: a low house with a number 10 shirt mural and a football on the dirt street",
+   "lat": -34.7055,
+   "lon": -58.4472,
+   "radius_km": 4,
+   "aliases": [
+    "casa natal de maradona",
+    "casa natal de diego maradona",
+    "maradona birthplace",
+    "maradona s birthplace"
+   ],
+   "names": [
+    "villa fiorito",
+    "fiorito"
+   ],
+   "palette": {
+    "sky": "#AACBEE",
+    "far": "#D9B9A0",
+    "mid": "#A88B66",
+    "ice": "#F4F1EA",
+    "water": "#74ACDF",
+    "near": "#1F1E22",
+    "sun": "#F4C542",
+    "leaf": "#4F7D3B",
+    "acc": "#A65A40",
+    "obj": "#2E4278"
    }
   },
   {
