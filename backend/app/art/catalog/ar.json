@@ -551,6 +551,30 @@
    }
   },
   {
+   "slug": "cerro-catedral",
+   "label": "Granite spires of Cerro Catedral above the ski-lift towers, Lake Nahuel Huapi far below",
+   "lat": -41.17,
+   "lon": -71.44,
+   "radius_km": 4,
+   "aliases": [
+    "cerro catedral",
+    "catedral alta patagonia",
+    "villa catedral"
+   ],
+   "palette": {
+    "sky": "#A8CDEF",
+    "far": "#8FA0B4",
+    "mid": "#B49C86",
+    "ice": "#E9E6E0",
+    "water": "#3E7FB0",
+    "near": "#262422",
+    "sun": "#F5C842",
+    "leaf": "#4E7334",
+    "acc": "#CDB79A",
+    "obj": "#2F6B4A"
+   }
+  },
+  {
    "slug": "cerro-de-los-siete-colores",
    "label": "Cerro de los Siete Colores above Purmamarca",
    "lat": -23.744,
@@ -2927,6 +2951,30 @@
    }
   },
   {
+   "slug": "palacio-barolo",
+   "label": "Palacio Barolo on Avenida de Mayo: the cream tower with its domed lighthouse top above the green-roofed block",
+   "lat": -34.6096,
+   "lon": -58.3856,
+   "radius_km": 2,
+   "aliases": [
+    "palacio barolo",
+    "barolo palace",
+    "pasaje barolo"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#CBC3B6",
+    "mid": "#E9E0CC",
+    "ice": "#FFFFFF",
+    "water": "#6FA8D0",
+    "near": "#2A2A2E",
+    "sun": "#F5C842",
+    "leaf": "#5E8E34",
+    "acc": "#3F7E62",
+    "obj": "#8C8C8C"
+   }
+  },
+  {
    "slug": "palermo",
    "label": "Floralis Generica, Palermo",
    "lat": -34.5817,
@@ -3206,6 +3254,35 @@
    }
   },
   {
+   "slug": "plaza-argentina",
+   "label": "Orange dome tents of Plaza Argentina base camp under Aconcagua's east side and the Polish Glacier",
+   "lat": -32.627,
+   "lon": -69.983,
+   "radius_km": 4,
+   "aliases": [
+    "plaza argentina base camp",
+    "campo base plaza argentina",
+    "polish glacier",
+    "glaciar de los polacos"
+   ],
+   "names": [
+    "plaza argentina",
+    "plaza argentina aconcagua"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#9A9AA2",
+    "mid": "#7C7069",
+    "ice": "#F4F6FA",
+    "water": "#8FB6D0",
+    "near": "#231E1C",
+    "sun": "#F5C842",
+    "leaf": "#A6896E",
+    "acc": "#6E4B3C",
+    "obj": "#F28C1E"
+   }
+  },
+  {
    "slug": "plaza-de-mayo",
    "label": "The white colonial Cabildo with its bell tower, Plaza de Mayo",
    "lat": -34.6081,
@@ -3242,9 +3319,7 @@
    "aliases": [
     "plaza de mulas",
     "plaza mulas",
-    "campo base plaza de mulas",
-    "plaza argentina base camp",
-    "campo base plaza argentina"
+    "campo base plaza de mulas"
    ],
    "palette": {
     "sky": "#A6CCF2",
@@ -3257,11 +3332,7 @@
     "leaf": "#8A7262",
     "acc": "#D2283A",
     "obj": "#2E52A6"
-   },
-   "names": [
-    "plaza argentina",
-    "plaza argentina aconcagua"
-   ]
+   }
   },
   {
    "slug": "posadas",
@@ -3506,6 +3577,33 @@
     "leaf": "#857262",
     "acc": "#C4432F",
     "obj": "#77736F"
+   }
+  },
+  {
+   "slug": "punta-delgada",
+   "label": "Punta Delgada on Peninsula Valdes: the red lighthouse and white lighthouse-keepers' house on the cliff, elephant seals on the beach below",
+   "lat": -42.765,
+   "lon": -63.638,
+   "radius_km": 5,
+   "aliases": [
+    "punta delgada peninsula valdes",
+    "punta delgada valdes"
+   ],
+   "names": [
+    "punta delgada argentina",
+    "punta delgada chubut"
+   ],
+   "palette": {
+    "sky": "#B7D4F0",
+    "far": "#E3D3AE",
+    "mid": "#C9AE7E",
+    "ice": "#F5F4F0",
+    "water": "#2F7E98",
+    "near": "#26282A",
+    "sun": "#F4C430",
+    "leaf": "#7F8D58",
+    "acc": "#A8403A",
+    "obj": "#7E6A57"
    }
   },
   {
@@ -3946,6 +4044,32 @@
    }
   },
   {
+   "slug": "refugio-frey",
+   "label": "Refugio Frey stone hut by Laguna Toncek under the granite needle of Torre Principal, Cerro Catedral",
+   "lat": -41.2005,
+   "lon": -71.4545,
+   "radius_km": 2,
+   "aliases": [
+    "refugio frey",
+    "refugio emilio frey",
+    "laguna toncek",
+    "laguna tonchek",
+    "torre principal"
+   ],
+   "palette": {
+    "sky": "#A6CCEE",
+    "far": "#D8D0C2",
+    "mid": "#9E9690",
+    "ice": "#E4DFD6",
+    "water": "#4F8FA6",
+    "near": "#24221F",
+    "sun": "#F5C842",
+    "leaf": "#5E7E3A",
+    "acc": "#C2352A",
+    "obj": "#4A4E55"
+   }
+  },
+  {
    "slug": "rio-de-la-plata",
    "label": "The brown Río de la Plata from the Costanera Norte, with the Club de Pescadores on its pier",
    "lat": -34.5636,
@@ -4332,6 +4456,34 @@
     "leaf": "#4D7E3A",
     "acc": "#B4644A",
     "obj": "#5F6B6F"
+   }
+  },
+  {
+   "slug": "san-lorenzo",
+   "label": "The stone Castillo de San Lorenzo with palms and the green hills of the Quebrada de San Lorenzo, Salta",
+   "lat": -24.733,
+   "lon": -65.487,
+   "radius_km": 6,
+   "aliases": [
+    "villa san lorenzo",
+    "quebrada de san lorenzo",
+    "castillo de san lorenzo"
+   ],
+   "names": [
+    "san lorenzo",
+    "san lorenzo salta"
+   ],
+   "palette": {
+    "sky": "#B9D7EE",
+    "far": "#86A86C",
+    "mid": "#A8A193",
+    "ice": "#EFE9DC",
+    "water": "#6A93B0",
+    "near": "#2A2622",
+    "sun": "#F4C430",
+    "leaf": "#4D7C34",
+    "acc": "#B5523A",
+    "obj": "#7A4E2E"
    }
   },
   {
