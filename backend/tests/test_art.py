@@ -34,7 +34,7 @@ def test_name_beats_distance_and_far_places_get_nothing():
 def test_approved_places_match_their_stops_and_not_namesakes():
     m = lambda n, la=None, lo=None: (art.match(n, la, lo) or S(id=None)).id
     assert m("Reykjavik", 64.14, -21.94) == "is-reykjavik"
-    assert m("El Chaltén", -49.33, -72.89) == "ar-fitz-roy"
+    assert m("El Chaltén", -49.33, -72.89) == "ar-el-chalten"  # the village, not the mountain (Manu, 2026-11-09)
     assert m("Caminito, La Boca, Buenos Aires") == "ar-la-boca"
     assert m("Buenos Aires", -34.60, -58.38) == "ar-buenos-aires"
     assert m("Iguaçu") == "ar-iguazu-falls"

@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="138" cy="24" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-ar-huemul-glacier-m"><path d="M0 150V36L20 30L44 22L64 16L74 20L86 34L98 38L110 46L122 44L136 52L154 42L172 34L196 28L220 26L246 28L268 32L288 30L300 32V150Z"/></clipPath></defs>
+<path d="M0 150V36L20 30L44 22L64 16L74 20L86 34L98 38L110 46L122 44L136 52L154 42L172 34L196 28L220 26L246 28L268 32L288 30L300 32V150Z" fill="var(--il-mid)"/>
+<path d="M60 0L86 34L98 38L110 46L118 48L126 62L136 60L148 70L160 58L172 66L186 56L198 62L212 52L226 60L240 50L254 58L268 50L282 56L300 50V0Z" fill="var(--il-ice)" clip-path="url(#il-ar-huemul-glacier-m)"/>
+<path d="M118 48L136 60L148 70L160 58L172 66L186 56L190 62L184 72L178 82L170 92L162 98L154 96L146 102L138 96L130 98L124 86L120 70Z" fill="var(--il-acc)"/>
+<path d="M132 70L134 88M146 72L148 92M160 70L162 88M172 70L170 84" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M64 16L74 20L86 34L98 38L110 46L118 48L120 70L124 86L128 112L120 150H70L82 110L84 70Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M30 40L40 90M56 50L62 110" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M118 150L128 112L146 104L166 100L190 92L214 84L240 78L264 74L284 72L300 72V150Z" fill="var(--il-far)"/>
+<path d="M214 84L240 78L264 74L284 72L300 72V110Q280 104 262 108Q244 104 230 98Q220 92 214 84Z" fill="var(--il-leaf)"/>
+<path d="M150 100Q146 112 150 124Q146 134 148 146" stroke="var(--il-ice)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M150 120L176 112M168 132L198 122M206 116L232 112" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V144Q80 140 150 142Q230 140 300 144V200Z" fill="var(--il-water)"/>
+<path d="M0 200V184Q10 176 22 180Q30 172 42 178Q50 182 56 186Q90 188 120 186Q128 174 140 176Q150 170 160 178Q170 176 176 186Q220 186 240 184Q248 172 262 176Q272 170 282 178Q292 174 300 180V200Z" fill="var(--il-leaf)"/>

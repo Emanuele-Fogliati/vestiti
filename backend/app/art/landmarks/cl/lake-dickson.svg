@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="22" r="11" fill="var(--il-sun)"/>
+<path d="M146 60L152 44L158 36L165 33L171 37L177 44L184 60Z" fill="var(--il-mid)"/>
+<path d="M70 112L88 74L104 62L120 54L140 48L156 46L172 44L190 42L204 40L220 42L236 44L252 46L266 44L278 41L290 44L300 46V112Z" fill="var(--il-ice)"/>
+<path d="M112 98L128 88M118 106L134 96M128 112L142 102" stroke="var(--il-water)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M134 114L146 94L158 82L172 74L184 72L196 76L210 86L222 100L230 114Z" fill="var(--il-mid)"/>
+<defs><clipPath id="il-cl-lake-dickson-r"><path d="M196 116L216 96L236 82L254 70L266 62L276 64L288 56L300 54V120Z"/></clipPath><clipPath id="il-cl-lake-dickson-l"><path d="M0 120V50L8 46L18 50L30 58L48 68L70 80L92 92L112 104L130 114L136 120Z"/></clipPath><clipPath id="il-cl-lake-dickson-m"><path d="M20 158Q56 146 96 146Q136 148 168 158Q148 168 108 170Q66 172 20 166Z"/></clipPath></defs>
+<path d="M196 116L216 96L236 82L254 70L266 62L276 64L288 56L300 54V120Z" fill="var(--il-far)"/>
+<g clip-path="url(#il-cl-lake-dickson-r)">
+<path d="M278 66L288 54L300 52V64L294 66L288 62L282 70Z" fill="var(--il-ice)"/>
+<path d="M200 118L214 104L226 102L238 94L250 92L262 86L274 84L286 78L300 76V120Z" fill="var(--il-leaf)"/>
+</g>
+<path d="M0 120V50L8 46L18 50L30 58L48 68L70 80L92 92L112 104L130 114L136 120Z" fill="var(--il-leaf)"/>
+<path d="M0 60V50L8 46L18 50L30 58L38 64L30 66L22 62L14 63L6 58Z" fill="var(--il-far)" clip-path="url(#il-cl-lake-dickson-l)"/>
+<path d="M0 200V112H300V200Z" fill="var(--il-water)"/>
+<path d="M100 134Q130 124 170 120Q200 114 232 110L300 104V162Q272 164 244 158Q212 152 186 146Q156 140 124 138Z" fill="var(--il-leaf)"/>
+<path d="M20 158Q56 146 96 146Q136 148 168 158Q148 168 108 170Q66 172 20 166Z" fill="var(--il-acc)"/>
+<path d="M98 157V149H112V157ZM96 149L105 142L114 149Z" fill="var(--il-obj)"/>
+<path d="M101 151H104V157H101Z" fill="var(--il-near)"/>
+<path d="M0 155H300V180H0Z" fill="var(--il-acc)" clip-path="url(#il-cl-lake-dickson-m)"/>
+<path d="M0 200V156Q20 152 34 160Q60 172 100 178Q150 184 220 184Q260 182 300 176V200Z" fill="var(--il-leaf)"/>

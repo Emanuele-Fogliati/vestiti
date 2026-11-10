@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="168" cy="22" r="10" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-valle-ascencio-h"><path d="M84 90L94 44L104 46L113 44L124 50L131 50L142 49L150 51L160 50L172 53L184 90Z"/></clipPath></defs>
+<path d="M84 90L94 44L104 46L113 44L124 50L131 50L142 49L150 51L160 50L172 53L184 90Z" fill="var(--il-far)"/>
+<path d="M92 52L94 42L104 44L113 42L124 48L131 48L142 47L150 49L160 48L172 51L176 60L168 58L160 63L152 57L144 62L136 56L128 61L120 55L112 60L104 54L98 59Z" fill="var(--il-ice)" clip-path="url(#il-cl-valle-ascencio-h)"/>
+<path d="M0 120V0H24L60 14L86 30L104 46L122 64L150 84L156 120Z" fill="var(--il-far)"/>
+<path d="M300 112V9L269 9L250 16L219 28L188 44L163 59L148 74L144 92L150 112Z" fill="var(--il-far)"/>
+<path d="M300 200V34Q290 32 284 40Q274 40 268 48Q258 48 252 56Q242 56 236 62Q226 62 220 70Q210 70 204 76Q194 76 188 82Q178 82 172 88Q162 88 156 94L148 98L140 200Z" fill="var(--il-leaf)"/>
+<path d="M146 100Q151 112 150 122Q152 134 159 144Q165 156 173 166Q192 184 222 200H240Q204 182 183 164Q173 152 167 142Q160 128 157 118Q157 108 151 100Z" fill="var(--il-ice)"/>
+<path d="M0 82V6L40 28L80 52L110 72L134 90L150 104L148 112Q110 108 80 100Q40 92 0 82Z" fill="var(--il-mid)"/>
+<path d="M0 200V80Q40 90 80 98Q110 106 148 110L150 118Q144 150 140 200Z" fill="var(--il-acc)"/>
+<path d="M36 200Q42 188 52 186Q56 178 66 176Q70 168 80 166Q86 158 96 158Q102 150 112 150Q118 142 128 140Q132 132 140 128L148 116Q144 150 140 200Z" fill="var(--il-leaf)"/>
+<path d="M0 150Q20 146 36 142Q24 134 34 128Q56 116 76 108Q96 100 112 92Q124 86 134 80" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 32L28 70M50 46L54 80M84 62L86 92" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
