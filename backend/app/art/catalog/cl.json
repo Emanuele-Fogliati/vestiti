@@ -65,15 +65,7 @@
     "ainsworth",
     "marinelli glacier",
     "glaciar marinelli",
-    "ghiacciaio marinelli",
-    "brookes bay",
-    "bahia brookes",
-    "baia brookes",
-    "brookes glacier",
-    "glaciar brookes",
-    "ghiacciaio brookes",
-    "brookes fjord",
-    "fiordo brookes"
+    "ghiacciaio marinelli"
    ],
    "palette": {
     "sky": "#A9CBEA",
@@ -318,12 +310,7 @@
     "balmaceda glacier",
     "glaciar balmaceda",
     "ghiacciaio balmaceda",
-    "monte balmaceda",
-    "ultima esperanza sound",
-    "fiordo ultima esperanza",
-    "seno ultima esperanza",
-    "last hope sound",
-    "fiordo dell ultima speranza"
+    "monte balmaceda"
    ],
    "palette": {
     "sky": "#B4D6EE",
@@ -336,6 +323,34 @@
     "leaf": "#3F6234",
     "acc": "#A8805E",
     "obj": "#9FD4EC"
+   }
+  },
+  {
+   "slug": "base-de-las-torres",
+   "label": "The three granite Torres del Paine above their glacial lagoon (Base de las Torres)",
+   "lat": -50.942,
+   "lon": -72.968,
+   "radius_km": 3,
+   "aliases": [
+    "base de las torres",
+    "base of the towers",
+    "base torres",
+    "mirador base las torres",
+    "mirador las torres",
+    "torres del paine towers",
+    "las torres lookout"
+   ],
+   "palette": {
+    "sky": "#AFCFF0",
+    "far": "#B28A72",
+    "mid": "#4A4442",
+    "ice": "#FFFFFF",
+    "water": "#7EC2B6",
+    "near": "#23262A",
+    "sun": "#F6C431",
+    "leaf": "#8E8984",
+    "acc": "#B9B3AA",
+    "obj": "#C9C4BC"
    }
   },
   {
@@ -366,6 +381,36 @@
     "leaf": "#3C4634",
     "acc": "#6E8CA0",
     "obj": "#C8DCE8"
+   }
+  },
+  {
+   "slug": "brookes-bay",
+   "label": "Brookes Glacier descending from the Cordillera Darwin into its narrow fjord, a Zodiac among the floes",
+   "lat": -54.35,
+   "lon": -69.0,
+   "radius_km": 6,
+   "aliases": [
+    "brookes bay",
+    "bahia brookes",
+    "baia brookes",
+    "brookes glacier",
+    "glaciar brookes",
+    "ghiacciaio brookes",
+    "brookes fjord",
+    "fiordo brookes",
+    "seno brookes"
+   ],
+   "palette": {
+    "sky": "#C6DCEE",
+    "far": "#8C7A66",
+    "mid": "#7B7A74",
+    "ice": "#F2F6F8",
+    "water": "#4D8A82",
+    "near": "#22252A",
+    "sun": "#F4C542",
+    "leaf": "#6C7C40",
+    "acc": "#7FC6E2",
+    "obj": "#4A4F57"
    }
   },
   {
@@ -770,6 +815,29 @@
     "leaf": "#D8B93C",
     "acc": "#EE97A6",
     "obj": "#734A3E"
+   }
+  },
+  {
+   "slug": "cerro-dorotea",
+   "label": "Cerro Dorotea's flat-topped ridge and pale cliff band above lenga forest, behind Puerto Natales",
+   "lat": -51.665,
+   "lon": -72.405,
+   "radius_km": 4,
+   "aliases": [
+    "cerro dorotea",
+    "mirador cerro dorotea"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#B8B07A",
+    "mid": "#857A70",
+    "ice": "#F2EEE6",
+    "water": "#4A7EA6",
+    "near": "#24241F",
+    "sun": "#F4C542",
+    "leaf": "#476A3A",
+    "acc": "#D6C3A0",
+    "obj": "#B4473C"
    }
   },
   {
@@ -1261,9 +1329,6 @@
    "aliases": [
     "cuernos del paine",
     "los cuernos",
-    "lago pehoe",
-    "lake pehoe",
-    "nordenskjold",
     "mirador cuernos"
    ],
    "palette": {
@@ -1486,6 +1551,32 @@
    }
   },
   {
+   "slug": "french-valley",
+   "label": "Valle del Frances: the hanging Frances glacier on Paine Grande's flank, a dark-capped Cuerno wall, lenga forest and the river",
+   "lat": -50.96,
+   "lon": -73.06,
+   "radius_km": 6,
+   "aliases": [
+    "valle del frances",
+    "french valley",
+    "valle frances",
+    "mirador frances",
+    "valle francese"
+   ],
+   "palette": {
+    "sky": "#B3D3EE",
+    "far": "#D9D2C4",
+    "mid": "#5F5B62",
+    "ice": "#FFFFFF",
+    "water": "#9ACFD9",
+    "near": "#26262A",
+    "sun": "#F4C542",
+    "leaf": "#3F6B35",
+    "acc": "#A8D6EA",
+    "obj": "#9C968E"
+   }
+  },
+  {
    "slug": "futaleufu",
    "label": "A raft on the turquoise Futaleufu river in its rock gorge",
    "lat": -43.17,
@@ -1583,10 +1674,7 @@
    "aliases": [
     "grey glacier",
     "glaciar grey",
-    "ghiacciaio grey",
-    "lago grey",
-    "lake grey",
-    "grey lake"
+    "ghiacciaio grey"
    ],
    "palette": {
     "sky": "#B9D3EA",
@@ -2007,6 +2095,57 @@
    }
   },
   {
+   "slug": "laguna-amarga",
+   "label": "Chilean flamingos in the pale-turquoise saline Laguna Amarga, Almirante Nieto and the three Torres del Paine beyond",
+   "lat": -50.975,
+   "lon": -72.775,
+   "radius_km": 4,
+   "aliases": [
+    "laguna amarga",
+    "porteria laguna amarga",
+    "guarderia laguna amarga"
+   ],
+   "palette": {
+    "sky": "#B3D3EE",
+    "far": "#7E7C88",
+    "mid": "#8F8B5C",
+    "ice": "#FFFFFF",
+    "water": "#A6D8CF",
+    "near": "#23262A",
+    "sun": "#F5C842",
+    "leaf": "#6B7A44",
+    "acc": "#EE97A2",
+    "obj": "#EDEBE3"
+   }
+  },
+  {
+   "slug": "laguna-azul",
+   "label": "Deep blue Laguna Azul with the three Torres del Paine and a snowy summit seen from the north-east, golden grass and guanacos",
+   "lat": -50.86,
+   "lon": -72.73,
+   "radius_km": 6,
+   "aliases": [
+    "laguna azul torres del paine",
+    "laguna azul paine",
+    "sector laguna azul"
+   ],
+   "names": [
+    "laguna azul"
+   ],
+   "palette": {
+    "sky": "#A9CCEC",
+    "far": "#7D7F8D",
+    "mid": "#8B755E",
+    "ice": "#FFFFFF",
+    "water": "#2D6C9E",
+    "near": "#25262A",
+    "sun": "#F4C542",
+    "leaf": "#D4B86A",
+    "acc": "#B5733E",
+    "obj": "#CFC8BC"
+   }
+  },
+  {
    "slug": "laguna-chaxa",
    "label": "Flamingos feeding in Laguna Chaxa on the Salar de Atacama",
    "lat": -23.288,
@@ -2132,6 +2271,29 @@
    }
   },
   {
+   "slug": "laguna-sofia",
+   "label": "Laguna Sofia's turquoise lagoon under snowy peaks, Cerro Benitez cliffs and a soaring condor",
+   "lat": -51.56,
+   "lon": -72.59,
+   "radius_km": 3,
+   "aliases": [
+    "laguna sofia",
+    "lago sofia"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#55698A",
+    "mid": "#B7A57E",
+    "ice": "#F4F6F8",
+    "water": "#4BB0AE",
+    "near": "#24241E",
+    "sun": "#F4C542",
+    "leaf": "#7C9A4A",
+    "acc": "#C7B275",
+    "obj": "#3B3A36"
+   }
+  },
+  {
    "slug": "lagunas-escondidas-de-baltinache",
    "label": "A turquoise brine pool in the white salt of the Lagunas Escondidas de Baltinache, under the Cordillera Domeyko",
    "lat": -22.97,
@@ -2192,6 +2354,34 @@
    }
   },
   {
+   "slug": "lake-dickson",
+   "label": "Lago Dickson winding below the Dickson Glacier and the ice field, forest slopes and the refugio on its meadow",
+   "lat": -50.83,
+   "lon": -73.1,
+   "radius_km": 8,
+   "aliases": [
+    "lago dickson",
+    "lake dickson",
+    "refugio dickson",
+    "campamento dickson",
+    "camp dickson",
+    "glaciar dickson",
+    "dickson glacier"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#7D7570",
+    "mid": "#5A524F",
+    "ice": "#FFFFFF",
+    "water": "#A6BFB4",
+    "near": "#22261F",
+    "sun": "#F5C842",
+    "leaf": "#3F5E35",
+    "acc": "#C9A75A",
+    "obj": "#8A5A3A"
+   }
+  },
+  {
    "slug": "lake-general-carrera",
    "label": "The turquoise Lago General Carrera with its rocky islands under the snow-topped Andes",
    "lat": -46.55,
@@ -2218,6 +2408,32 @@
     "leaf": "#56803A",
     "acc": "#5F5249",
     "obj": "#A0A8B4"
+   }
+  },
+  {
+   "slug": "lake-grey",
+   "label": "A big blue iceberg stranded on the dark pebble beach of Lago Grey, the lake and Paine Grande's snowy west face behind",
+   "lat": -51.1,
+   "lon": -73.14,
+   "radius_km": 10,
+   "aliases": [
+    "lago grey",
+    "lake grey",
+    "grey lake",
+    "lago gray",
+    "lake gray"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#8F96A8",
+    "mid": "#6E6A5E",
+    "ice": "#FFFFFF",
+    "water": "#A3BCC0",
+    "near": "#232528",
+    "sun": "#F4C542",
+    "leaf": "#3F5D33",
+    "acc": "#9FD4EC",
+    "obj": "#4B4A4C"
    }
   },
   {
@@ -2249,6 +2465,58 @@
    }
   },
   {
+   "slug": "lake-nordenskjold",
+   "label": "Turquoise Lago Nordenskjold from the bushy north-shore trail, Almirante Nieto's icy jagged summit above",
+   "lat": -51.0,
+   "lon": -72.95,
+   "radius_km": 10,
+   "aliases": [
+    "lago nordenskjold",
+    "lake nordenskjold",
+    "nordenskjold",
+    "lago nordenskjoeld"
+   ],
+   "palette": {
+    "sky": "#AFD0EC",
+    "far": "#6F7480",
+    "mid": "#4F5646",
+    "ice": "#FFFFFF",
+    "water": "#5DB4B2",
+    "near": "#24262A",
+    "sun": "#F4C542",
+    "leaf": "#3F6232",
+    "acc": "#C8372D",
+    "obj": "#BDB39C"
+   }
+  },
+  {
+   "slug": "lake-pehoe",
+   "label": "Hosteria Pehoe on its island in turquoise Lago Pehoe, linked by its long footbridge, Paine Grande and the Cuernos behind",
+   "lat": -51.08,
+   "lon": -73.04,
+   "radius_km": 6,
+   "aliases": [
+    "lago pehoe",
+    "lake pehoe",
+    "hosteria pehoe"
+   ],
+   "names": [
+    "pehoe"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#565D72",
+    "mid": "#6B6E48",
+    "ice": "#FFFFFF",
+    "water": "#3DBCC8",
+    "near": "#25262B",
+    "sun": "#F4C542",
+    "leaf": "#4D7E37",
+    "acc": "#B5322D",
+    "obj": "#DAD4C8"
+   }
+  },
+  {
    "slug": "lake-puyehue",
    "label": "Lake Puyehue with the broad dome of Puyehue volcano behind its forested island",
    "lat": -40.67,
@@ -2275,6 +2543,32 @@
     "leaf": "#3C6834",
     "acc": "#6E7F4A",
     "obj": "#8A5A3C"
+   }
+  },
+  {
+   "slug": "lake-sarmiento",
+   "label": "White thrombolite rocks on the shore of turquoise Lago Sarmiento, the Paine massif across the water",
+   "lat": -51.06,
+   "lon": -72.72,
+   "radius_km": 15,
+   "aliases": [
+    "lago sarmiento",
+    "lake sarmiento",
+    "sarmiento lake",
+    "lago sarmiento de gamboa",
+    "lake sarmiento de gamboa"
+   ],
+   "palette": {
+    "sky": "#B5D4EE",
+    "far": "#6F7C92",
+    "mid": "#A47A4E",
+    "ice": "#FFFFFF",
+    "water": "#2FA3BD",
+    "near": "#24262B",
+    "sun": "#F5C842",
+    "leaf": "#6E7B45",
+    "acc": "#CDA45E",
+    "obj": "#E6E1D3"
    }
   },
   {
@@ -2622,6 +2916,56 @@
    }
   },
   {
+   "slug": "marta-island",
+   "label": "The sea lion colony on the pebble beach below Isla Marta's ochre sandstone bluff",
+   "lat": -52.93,
+   "lon": -70.64,
+   "radius_km": 3,
+   "aliases": [
+    "isla marta",
+    "marta island",
+    "isola marta"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#93A3AE",
+    "mid": "#D2B57E",
+    "ice": "#A9A69E",
+    "water": "#4F7688",
+    "near": "#262320",
+    "sun": "#F4C542",
+    "leaf": "#8E9154",
+    "acc": "#5A4230",
+    "obj": "#8F6A46"
+   }
+  },
+  {
+   "slug": "mirador-britanico",
+   "label": "Mirador Britanico: the cirque of pale granite walls and towers at the head of the French Valley above the lenga forest",
+   "lat": -50.96,
+   "lon": -73.095,
+   "radius_km": 3,
+   "aliases": [
+    "mirador britanico",
+    "british lookout",
+    "campamento britanico",
+    "british camp",
+    "mirador british"
+   ],
+   "palette": {
+    "sky": "#9FC8EE",
+    "far": "#9A918A",
+    "mid": "#DCD8D0",
+    "ice": "#FFFFFF",
+    "water": "#7FB6C8",
+    "near": "#22261F",
+    "sun": "#F5C842",
+    "leaf": "#4E7234",
+    "acc": "#C9A86A",
+    "obj": "#8E7A60"
+   }
+  },
+  {
    "slug": "miscanti-lagoon",
    "label": "Laguna Miscanti under Cerro Miscanti, with vicunas",
    "lat": -23.735,
@@ -2852,6 +3196,32 @@
    }
   },
   {
+   "slug": "paine-grande",
+   "label": "Paine Grande, the park's highest summit: a massive glaciated white mountain with dark rock buttresses over Lago Pehoe",
+   "lat": -51.0,
+   "lon": -73.07,
+   "radius_km": 6,
+   "aliases": [
+    "paine grande",
+    "cerro paine grande",
+    "monte paine grande",
+    "refugio paine grande",
+    "campamento paine grande"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#8C96A6",
+    "mid": "#58607A",
+    "ice": "#FFFFFF",
+    "water": "#79AFCB",
+    "near": "#23252A",
+    "sun": "#F4C542",
+    "leaf": "#6E6142",
+    "acc": "#C7D5E6",
+    "obj": "#45413F"
+   }
+  },
+  {
    "slug": "pampa-del-tamarugal-national-reserve",
    "label": "Tamarugo trees on the salt-crusted Pampa del Tamarugal, Atacama",
    "lat": -20.5,
@@ -2941,6 +3311,32 @@
     "leaf": "#A08A6A",
     "acc": "#9E3D2C",
     "obj": "#7A5638"
+   }
+  },
+  {
+   "slug": "paso-john-gardner",
+   "label": "From John Gardner Pass: the vast Grey Glacier ice field stretching to the horizon below the trail, a lone hiker",
+   "lat": -50.936,
+   "lon": -73.205,
+   "radius_km": 4,
+   "aliases": [
+    "paso john gardner",
+    "john gardner pass",
+    "paso john garner",
+    "john garner pass",
+    "paso gardner"
+   ],
+   "palette": {
+    "sky": "#9FC9EE",
+    "far": "#45506A",
+    "mid": "#6E6A4A",
+    "ice": "#FFFFFF",
+    "water": "#8CC3E0",
+    "near": "#22252B",
+    "sun": "#F5C842",
+    "leaf": "#56703A",
+    "acc": "#D2463C",
+    "obj": "#B59C78"
    }
   },
   {
@@ -3380,7 +3776,7 @@
   },
   {
    "slug": "punta-arenas",
-   "label": "Punta Arenas on the Strait of Magellan",
+   "label": "Punta Arenas from the Cerro de la Cruz lookout: signpost, colourful roofs, the Cathedral tower and the Strait of Magellan",
    "lat": -53.1638,
    "lon": -70.9171,
    "radius_km": 15,
@@ -3388,17 +3784,21 @@
     "punta arenas"
    ],
    "palette": {
-    "sky": "#AFCFF0",
-    "far": "#8C9AAA",
-    "mid": "#8C8A74",
-    "ice": "#F3F0EA",
-    "water": "#3F78A8",
-    "near": "#25292D",
-    "sun": "#F2C14E",
-    "leaf": "#4F7A44",
-    "acc": "#C8463A",
-    "obj": "#3F8F6A"
-   }
+    "sky": "#B5D3EE",
+    "far": "#A8B4BC",
+    "mid": "#9A8A74",
+    "ice": "#F2EFE6",
+    "water": "#2E5584",
+    "near": "#23252B",
+    "sun": "#F2C230",
+    "leaf": "#56884E",
+    "acc": "#C4443A",
+    "obj": "#4E86B8"
+   },
+   "names": [
+    "punta arenas city",
+    "punta arenas chile"
+   ]
   },
   {
    "slug": "punta-delgada",
@@ -3766,6 +4166,63 @@
    }
   },
   {
+   "slug": "salto-grande",
+   "label": "Salto Grande: the wide turquoise waterfall of the Paine river between Nordenskjold and Pehoe, the Cuernos above",
+   "lat": -51.056,
+   "lon": -73.002,
+   "radius_km": 3,
+   "aliases": [
+    "salto grande waterfall",
+    "cascada salto grande",
+    "mirador salto grande",
+    "salto grande paine",
+    "salto grande torres del paine"
+   ],
+   "names": [
+    "salto grande"
+   ],
+   "palette": {
+    "sky": "#AFD0EC",
+    "far": "#C4BEB4",
+    "mid": "#4B4945",
+    "ice": "#FFFFFF",
+    "water": "#5CC3BF",
+    "near": "#232528",
+    "sun": "#F4C542",
+    "leaf": "#7D9A44",
+    "acc": "#A9E2DB",
+    "obj": "#D04A2C"
+   }
+  },
+  {
+   "slug": "salto-paine",
+   "label": "Salto Paine: the wide falls of the Paine river behind its striped rock island, the Paine massif and the three Torres far away",
+   "lat": -51.02,
+   "lon": -72.93,
+   "radius_km": 4,
+   "aliases": [
+    "salto paine",
+    "cascada paine",
+    "cascada del paine",
+    "cascada rio paine",
+    "cascata del paine",
+    "paine waterfall",
+    "paine falls"
+   ],
+   "palette": {
+    "sky": "#B2D3F0",
+    "far": "#7F8494",
+    "mid": "#6B635A",
+    "ice": "#FFFFFF",
+    "water": "#9FCFCB",
+    "near": "#25262A",
+    "sun": "#F5C842",
+    "leaf": "#5E7A3E",
+    "acc": "#C9A86A",
+    "obj": "#8E7A60"
+   }
+  },
+  {
    "slug": "saltos-del-laja",
    "label": "The wide curtains of Salto del Laja falling off a basalt wall lined with poplars",
    "lat": -37.27,
@@ -4070,26 +4527,25 @@
   },
   {
    "slug": "torres-del-paine-national-park",
-   "label": "The three Torres del Paine",
+   "label": "The whole Paine massif (Paine Grande, Cuernos, Almirante Nieto, the Torres) across the golden steppe, with guanacos and the park road",
    "lat": -50.9423,
    "lon": -72.9686,
    "radius_km": 40,
    "aliases": [
     "torres del paine",
-    "parque nacional torres del paine",
-    "base de las torres"
+    "parque nacional torres del paine"
    ],
    "palette": {
-    "sky": "#AFCFF0",
-    "far": "#B28A72",
-    "mid": "#4A4442",
+    "sky": "#A9CDEE",
+    "far": "#B9B6B2",
+    "mid": "#6E7387",
     "ice": "#FFFFFF",
-    "water": "#7EC2B6",
-    "near": "#23262A",
-    "sun": "#F6C431",
-    "leaf": "#8E8984",
-    "acc": "#B9B3AA",
-    "obj": "#C9C4BC"
+    "water": "#3F82C4",
+    "near": "#26252B",
+    "sun": "#F4C542",
+    "leaf": "#D4B465",
+    "acc": "#B5733E",
+    "obj": "#C8BFAA"
    }
   },
   {
@@ -4122,6 +4578,32 @@
    }
   },
   {
+   "slug": "ultima-esperanza-sound",
+   "label": "Black-necked swans on the calm Ultima Esperanza fjord off Puerto Natales, snowy ridge across the water",
+   "lat": -51.76,
+   "lon": -72.62,
+   "radius_km": 15,
+   "aliases": [
+    "seno ultima esperanza",
+    "ultima esperanza sound",
+    "last hope sound",
+    "fiordo ultima esperanza",
+    "fiordo dell ultima speranza"
+   ],
+   "palette": {
+    "sky": "#C2DAEE",
+    "far": "#5F6A86",
+    "mid": "#76625C",
+    "ice": "#F6F7F8",
+    "water": "#8DAFC8",
+    "near": "#22232A",
+    "sun": "#F4C542",
+    "leaf": "#7E7A4A",
+    "acc": "#D8423A",
+    "obj": "#77706A"
+   }
+  },
+  {
    "slug": "valdivia",
    "label": "Valdivia's riverfront: the Feria Fluvial canopies, the Mercado Municipal and the cathedral spire, with a sea lion on the Calle-Calle river",
    "lat": -39.8135,
@@ -4146,6 +4628,33 @@
     "leaf": "#5E9274",
     "acc": "#E06A5A",
     "obj": "#2F5DA8"
+   }
+  },
+  {
+   "slug": "valle-ascencio",
+   "label": "The steep V of the Ascencio Valley from the trail, the white river below forested slopes and snowy peaks at its head",
+   "lat": -50.96,
+   "lon": -72.9,
+   "radius_km": 4,
+   "aliases": [
+    "valle ascencio",
+    "ascencio valley",
+    "valle del ascencio",
+    "refugio chileno",
+    "campamento chileno",
+    "paso de los vientos"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#5E6578",
+    "mid": "#9A968C",
+    "ice": "#FFFFFF",
+    "water": "#9FD0D8",
+    "near": "#22261F",
+    "sun": "#F5C842",
+    "leaf": "#3E6A2E",
+    "acc": "#8FB24E",
+    "obj": "#D8CDB4"
    }
   },
   {
@@ -4234,7 +4743,7 @@
   },
   {
    "slug": "villa-ohiggins",
-   "label": "Villa O'Higgins' grid of colourful roofs under the snowy Andes, from the Cerro Santiago lookout",
+   "label": "Wooden houses with colourful roofs on the valley floor of Villa O'Higgins, at the end of the Carretera Austral under snowy peaks",
    "lat": -48.468,
    "lon": -72.56,
    "radius_km": 15,
@@ -4244,14 +4753,14 @@
     "villa ohiggins"
    ],
    "palette": {
-    "sky": "#A6C8EE",
-    "far": "#A9B26E",
-    "mid": "#4E5E46",
-    "ice": "#F4F4F0",
-    "water": "#6E7480",
+    "sky": "#A9CBEE",
+    "far": "#45604A",
+    "mid": "#A87A4C",
+    "ice": "#F4F2EC",
+    "water": "#A9A497",
     "near": "#24261F",
-    "sun": "#F6C431",
-    "leaf": "#2F5030",
+    "sun": "#E8B83A",
+    "leaf": "#7E9A4C",
     "acc": "#C2453A",
     "obj": "#4E86C4"
    }

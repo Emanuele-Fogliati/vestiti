@@ -124,3 +124,16 @@ def test_sights_inside_a_city_have_their_own_spot():
     assert len(spots) == 5  # not one dot for all of them (the trip reading rounds to ~1 km)
     for p in b.values():  # an exact position never moves a place far from where the trips put it
         assert abs(p["lat"]) <= 90 and abs(p["lon"]) <= 180
+
+
+def test_extra_spots_show_with_their_own_picture():
+    """Hand-picked trekking spots (extras.json) join the globe at the lowest level, each with
+    its own scene, never one already used by another place of the same zoom."""
+    extras = json.loads((globe.HERE / "extras.json").read_text(encoding="utf-8"))["places"]
+    rows = {p[0]: p for p in globe.payload()["places"]}
+    base = {r[0] for r in json.loads((globe.HERE / "places.json").read_text(encoding="utf-8"))["places"]}
+    assert extras and not base & {r[0] for r in extras}
+    for pid, *_ in extras:
+        assert rows[pid][6] == 1 and rows[pid][7], pid
+    names = {r[1]: r for r in extras}
+    assert rows[names["Laguna Capri"][0]][7] != rows["ar-laguna-de-los-tres"][7]

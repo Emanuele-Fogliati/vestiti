@@ -49,8 +49,22 @@ def _exact() -> dict[str, list]:
 
 
 @lru_cache
-def payload() -> dict:
+def _rows() -> list[list]:
+    """places.json plus extras.json: hand-picked spots few organised trips name (the trekking
+    lakes and lookouts around El Chaltén or Torres del Paine), so zooming on a park shows more
+    than its two famous stops (Manu, 2026-11-09). Extras sit at the lowest level, after the rest."""
     doc = json.loads((HERE / "places.json").read_text(encoding="utf-8"))
+    rows = list(doc["places"])
+    f = HERE / "extras.json"
+    if f.is_file():
+        ids = {r[0] for r in rows}
+        rows += [r for r in json.loads(f.read_text(encoding="utf-8"))["places"] if r[0] not in ids]
+    return rows
+
+
+@lru_cache
+def payload() -> dict:
+    doc = {"fields": ["id", "name", "country", "kind", "lat", "lon", "trips"], "places": _rows()}
     its = list(inspire.itineraries())
     # place names each itinerary passes through (stops and the places visited from them)
     in_it: list[set[str]] = [
