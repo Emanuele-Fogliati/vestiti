@@ -962,6 +962,30 @@
    }
   },
   {
+   "slug": "cristo-blanco",
+   "label": "Cristo Blanco: the white Christ with open arms on the hill above Cusco's roofs",
+   "lat": -13.5105,
+   "lon": -71.977,
+   "radius_km": 1,
+   "aliases": [
+    "cristo blanco",
+    "white christ",
+    "cristo bianco"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#B8A88A",
+    "mid": "#9A8670",
+    "ice": "#F3EFE6",
+    "water": "#4F86A8",
+    "near": "#241E1A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#B4553A",
+    "obj": "#C2AE8A"
+   }
+  },
+  {
    "slug": "cusco-cathedral",
    "label": "Cusco Cathedral and Inca walls",
    "lat": -13.5165,
@@ -1070,6 +1094,31 @@
     "leaf": "#CDB892",
     "acc": "#B5543E",
     "obj": "#5E4A36"
+   }
+  },
+  {
+   "slug": "el-misti",
+   "label": "El Misti: the volcano's cone with the summit cross, above the Arequipa desert",
+   "lat": -16.294,
+   "lon": -71.409,
+   "radius_km": 4,
+   "aliases": [
+    "el misti",
+    "volcan misti",
+    "misti volcano",
+    "vulcano misti"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#8E7E6E",
+    "mid": "#7A6A60",
+    "ice": "#F3EFE6",
+    "water": "#4F86A8",
+    "near": "#241E1A",
+    "sun": "#F2C14E",
+    "leaf": "#8A9A4A",
+    "acc": "#B0805A",
+    "obj": "#C2AE8A"
    }
   },
   {
@@ -1296,6 +1345,30 @@
     "leaf": "#5E8A3E",
     "acc": "#B9614B",
     "obj": "#C8463A"
+   }
+  },
+  {
+   "slug": "huayllabamba",
+   "label": "Huayllabamba: the Inca Trail village with tin-roofed houses, fields and eucalyptus",
+   "lat": -13.23,
+   "lon": -72.42,
+   "radius_km": 1,
+   "aliases": [
+    "huayllabamba",
+    "wayllabamba",
+    "wayllabamba camp"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A8805A",
+    "mid": "#7A6E52",
+    "ice": "#B8BCC0",
+    "water": "#4F86A8",
+    "near": "#241E1A",
+    "sun": "#F2C14E",
+    "leaf": "#6EA03E",
+    "acc": "#4E7A3A",
+    "obj": "#9A8A5A"
    }
   },
   {
@@ -1833,6 +1906,29 @@
    }
   },
   {
+   "slug": "llachon",
+   "label": "Llachon: an adobe homestead on the Capachica terraces above Lake Titicaca, with sheep",
+   "lat": -15.67,
+   "lon": -69.75,
+   "radius_km": 3,
+   "aliases": [
+    "llachon",
+    "capachica"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#5E7A44",
+    "mid": "#A8805A",
+    "ice": "#F3EFE6",
+    "water": "#2F69A8",
+    "near": "#1E1C18",
+    "sun": "#F2C14E",
+    "leaf": "#8AA04A",
+    "acc": "#C8B068",
+    "obj": "#9A8A5A"
+   }
+  },
+  {
    "slug": "llactapata",
    "label": "Llactapata (Patallacta): the curved Inca terraces at the start of the Inca Trail, below the mountain",
    "lat": -13.22,
@@ -2229,6 +2325,30 @@
    }
   },
   {
+   "slug": "pachacamac",
+   "label": "Pachacamac: the stepped adobe Temple of the Sun above the Pacific",
+   "lat": -12.256,
+   "lon": -76.9,
+   "radius_km": 2,
+   "aliases": [
+    "pachacamac",
+    "pachacamac sanctuary",
+    "santuario de pachacamac"
+   ],
+   "palette": {
+    "sky": "#C8DCE8",
+    "far": "#C9AE84",
+    "mid": "#B48A62",
+    "ice": "#F3EFE6",
+    "water": "#5E8EA8",
+    "near": "#2A221C",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A4A",
+    "acc": "#B4553A",
+    "obj": "#D2BC94"
+   }
+  },
+  {
    "slug": "pampa-canahuas",
    "label": "Vicunas grazing on Pampa Canahuas below El Misti, on the Arequipa-Colca road",
    "lat": -15.95,
@@ -2367,12 +2487,7 @@
    "radius_km": 3,
    "aliases": [
     "perolniyoc",
-    "perolniyuq",
-    "qorimarca",
-    "q orimarca",
-    "corimarca",
-    "qurimarka",
-    "qorimarka"
+    "perolniyuq"
    ],
    "palette": {
     "sky": "#B4D4EE",
@@ -2461,6 +2576,35 @@
    }
   },
   {
+   "slug": "pisco",
+   "label": "Pisco: the old pier into the Pacific with pelicans",
+   "lat": -13.71,
+   "lon": -76.21,
+   "radius_km": 6,
+   "aliases": [
+    "pisco port",
+    "puerto de pisco"
+   ],
+   "names": [
+    "pisco",
+    "pisco peru",
+    "pisco city",
+    "pisco town"
+   ],
+   "palette": {
+    "sky": "#BFD9EC",
+    "far": "#D9B98A",
+    "mid": "#C9A57A",
+    "ice": "#E8E4DA",
+    "water": "#4E8EA8",
+    "near": "#2A221C",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A4A",
+    "acc": "#6E5A48",
+    "obj": "#8A6A4A"
+   }
+  },
+  {
    "slug": "plaza-mayor-lima",
    "label": "Plaza Mayor of Lima: the cathedral's twin towers, the balconied Archbishop's Palace and the bronze fountain",
    "lat": -12.0464,
@@ -2487,6 +2631,30 @@
     "leaf": "#4E8A34",
     "acc": "#6E5A3A",
     "obj": "#C2B6A2"
+   }
+  },
+  {
+   "slug": "potato-park",
+   "label": "The Potato Park: highland potato fields, an adobe house and a pile of native potatoes",
+   "lat": -13.43,
+   "lon": -71.9,
+   "radius_km": 3,
+   "aliases": [
+    "potato park",
+    "parque de la papa",
+    "parco della patata"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#7A7468",
+    "mid": "#A8805A",
+    "ice": "#F7F8FA",
+    "water": "#6A3E6E",
+    "near": "#241E1A",
+    "sun": "#E8C24A",
+    "leaf": "#6EA03E",
+    "acc": "#C8B068",
+    "obj": "#7A5A3E"
    }
   },
   {
@@ -2796,6 +2964,32 @@
    }
   },
   {
+   "slug": "qorimarca",
+   "label": "Q'orimarca: the row of Inca storehouses on the green ridge of the Lares trek, with a llama",
+   "lat": -13.3,
+   "lon": -72.18,
+   "radius_km": 1,
+   "aliases": [
+    "qorimarca",
+    "q orimarca",
+    "corimarca",
+    "qurimarka",
+    "qorimarka"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#7E7A5E",
+    "mid": "#8E857A",
+    "ice": "#F3EFE6",
+    "water": "#4F86A8",
+    "near": "#1E1C18",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#A8523A",
+    "obj": "#9AA04A"
+   }
+  },
+  {
    "slug": "rainbow-mountain",
    "label": "Vinicunca, the Rainbow Mountain",
    "lat": -13.8689,
@@ -2864,6 +3058,31 @@
     "sicuani town",
     "sicuani peru"
    ]
+  },
+  {
+   "slug": "red-valley",
+   "label": "The Red Valley beside the Rainbow Mountain, Ausangate's glaciers behind, with a llama",
+   "lat": -13.86,
+   "lon": -71.29,
+   "radius_km": 2,
+   "aliases": [
+    "red valley",
+    "valle rojo",
+    "valle roja",
+    "valle rosso"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#6E6E72",
+    "mid": "#7A2E26",
+    "ice": "#F7F8FA",
+    "water": "#4F86A8",
+    "near": "#241E1A",
+    "sun": "#F2C14E",
+    "leaf": "#8A9A4A",
+    "acc": "#B4402E",
+    "obj": "#C2AE8A"
+   }
   },
   {
    "slug": "revash",
@@ -3264,6 +3483,35 @@
    }
   },
   {
+   "slug": "santa-teresa",
+   "label": "Santa Teresa: the turquoise Cocalmayo hot springs below the jungle mountain and its waterfall",
+   "lat": -13.13,
+   "lon": -72.59,
+   "radius_km": 3,
+   "aliases": [
+    "cocalmayo",
+    "santa teresa hot springs",
+    "termas de cocalmayo"
+   ],
+   "names": [
+    "santa teresa",
+    "santa teresa peru",
+    "santa teresa cusco"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#B8A88A",
+    "mid": "#5E9A3A",
+    "ice": "#E8E4DA",
+    "water": "#5FC2C8",
+    "near": "#241E1A",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A34",
+    "acc": "#B4553A",
+    "obj": "#9A8E78"
+   }
+  },
+  {
    "slug": "sayacmarca",
    "label": "Sayacmarca: the curved Inca walls clinging to a cliff spur in the cloud forest",
    "lat": -13.21,
@@ -3524,6 +3772,35 @@
    }
   },
   {
+   "slug": "trujillo",
+   "label": "Trujillo: the yellow cathedral, colourful colonial houses and the Freedom monument on the Plaza de Armas",
+   "lat": -8.1116,
+   "lon": -79.0288,
+   "radius_km": 8,
+   "aliases": [
+    "plaza de armas trujillo",
+    "trujillo cathedral",
+    "catedral de trujillo"
+   ],
+   "names": [
+    "trujillo",
+    "trujillo peru",
+    "trujillo city"
+   ],
+   "palette": {
+    "sky": "#C2D8E8",
+    "far": "#E8C24A",
+    "mid": "#5E4A3A",
+    "ice": "#F3EFE6",
+    "water": "#4F86A8",
+    "near": "#2A1E18",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A34",
+    "acc": "#D86A5A",
+    "obj": "#5E9AC8"
+   }
+  },
+  {
    "slug": "tucume",
    "label": "The eroded adobe pyramids of Tucume's Valley of the Pyramids, seen from Cerro Purgatorio",
    "lat": -6.5133,
@@ -3713,6 +3990,29 @@
     "leaf": "#86B24E",
     "acc": "#B98B4E",
     "obj": "#B3AFA4"
+   }
+  },
+  {
+   "slug": "yanahuara",
+   "label": "Yanahuara: the white sillar arches of the lookout, El Misti behind",
+   "lat": -16.39,
+   "lon": -71.545,
+   "radius_km": 1,
+   "aliases": [
+    "yanahuara",
+    "mirador de yanahuara"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C8B898",
+    "mid": "#7A6A60",
+    "ice": "#F4F0E6",
+    "water": "#4F86A8",
+    "near": "#241E1A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#B0805A",
+    "obj": "#B8A890"
    }
   },
   {
