@@ -391,6 +391,30 @@
    }
   },
   {
+   "slug": "barranco",
+   "label": "Barranco: the wooden Bridge of Sighs over the stairway, colourful houses and La Ermita",
+   "lat": -12.149,
+   "lon": -77.022,
+   "radius_km": 2,
+   "aliases": [
+    "barranco",
+    "puente de los suspiros",
+    "bridge of sighs barranco"
+   ],
+   "palette": {
+    "sky": "#C2D8E8",
+    "far": "#D6B88A",
+    "mid": "#7A5034",
+    "ice": "#EDE6D8",
+    "water": "#C4307A",
+    "near": "#2A1E18",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A34",
+    "acc": "#E8C24A",
+    "obj": "#3E7AB8"
+   }
+  },
+  {
    "slug": "cachora",
    "label": "Choquequirao's plaza, kallankas and terraces above the Apurimac canyon, reached on the trek from Cachora",
    "lat": -13.3925,
@@ -794,6 +818,28 @@
    }
   },
   {
+   "slug": "chivay",
+   "label": "Chivay: the white church among the pre-Inca terraces of the Colca valley, with a llama",
+   "lat": -15.638,
+   "lon": -71.601,
+   "radius_km": 5,
+   "aliases": [
+    "chivay"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#B2A48A",
+    "mid": "#8A7A64",
+    "ice": "#E8E2D4",
+    "water": "#6E8E9A",
+    "near": "#1E1C18",
+    "sun": "#F2C14E",
+    "leaf": "#7EA04A",
+    "acc": "#A0603E",
+    "obj": "#5E7A34"
+   }
+  },
+  {
    "slug": "choquequilla",
    "label": "The carved Inca doorway rock of Choquequilla (Naupa Iglesia)",
    "lat": -13.271,
@@ -850,7 +896,6 @@
    "radius_km": 45,
    "aliases": [
     "colca",
-    "chivay",
     "cabanaconde",
     "cruz del condor"
    ],
@@ -1288,9 +1333,7 @@
     "camino inca",
     "camino inka",
     "inka trail",
-    "sentiero inca",
-    "inti punku",
-    "intipunku"
+    "sentiero inca"
    ],
    "palette": {
     "sky": "#A9CDF0",
@@ -1303,6 +1346,32 @@
     "leaf": "#5E8C40",
     "acc": "#B98B4E",
     "obj": "#B9B2A0"
+   }
+  },
+  {
+   "slug": "intipunku",
+   "label": "Intipunku, the Sun Gate: the stone doorway above Machu Picchu and Huayna Picchu",
+   "lat": -13.1735,
+   "lon": -72.5355,
+   "radius_km": 1,
+   "aliases": [
+    "inti punku",
+    "intipunku",
+    "sun gate",
+    "puerta del sol machu picchu",
+    "porta del sole"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#A8A296",
+    "mid": "#4E7A3A",
+    "ice": "#F3EFE6",
+    "water": "#4F86A8",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#3E7A34",
+    "acc": "#B4553A",
+    "obj": "#8A8A4A"
    }
   },
   {
@@ -1696,8 +1765,7 @@
    "lon": -77.03,
    "radius_km": 30,
    "aliases": [
-    "miraflores",
-    "barranco"
+    "miraflores"
    ],
    "names": [
     "lima"
@@ -2138,14 +2206,42 @@
    }
   },
   {
+   "slug": "paracas",
+   "label": "Paracas: the red beach (Playa Roja) below the desert cliffs of the reserve",
+   "lat": -13.89,
+   "lon": -76.31,
+   "radius_km": 12,
+   "aliases": [
+    "paracas",
+    "playa roja",
+    "red beach paracas",
+    "reserva nacional de paracas"
+   ],
+   "palette": {
+    "sky": "#BFD9EC",
+    "far": "#D9B98A",
+    "mid": "#C9A57A",
+    "ice": "#F3EFE6",
+    "water": "#3E8FA8",
+    "near": "#2A221C",
+    "sun": "#F2C14E",
+    "leaf": "#7A8A4A",
+    "acc": "#B4483A",
+    "obj": "#5E5A56"
+   }
+  },
+  {
    "slug": "paracas-ballestas",
    "label": "Ballestas Islands and the Candelabra",
    "lat": -13.79,
    "lon": -76.32,
    "radius_km": 30,
    "aliases": [
-    "paracas",
-    "ballestas"
+    "ballestas",
+    "paracas candelabra",
+    "candelabro de paracas",
+    "candelabra of the andes",
+    "candelabro"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -2287,6 +2383,35 @@
     "leaf": "#BCB46C",
     "acc": "#8DAA5E",
     "obj": "#6F6450"
+   }
+  },
+  {
+   "slug": "plaza-mayor-lima",
+   "label": "Plaza Mayor of Lima: the cathedral's twin towers, the balconied Archbishop's Palace and the bronze fountain",
+   "lat": -12.0464,
+   "lon": -77.03,
+   "radius_km": 1,
+   "aliases": [
+    "plaza mayor lima",
+    "plaza mayor de lima",
+    "plaza de armas lima",
+    "plaza de armas de lima",
+    "lima cathedral",
+    "catedral de lima",
+    "cattedrale di lima",
+    "basilica cathedral of lima"
+   ],
+   "palette": {
+    "sky": "#C7D8E4",
+    "far": "#E2C46A",
+    "mid": "#5A3A26",
+    "ice": "#E8D9A8",
+    "water": "#4F86A8",
+    "near": "#2A1E18",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A34",
+    "acc": "#6E5A3A",
+    "obj": "#C2B6A2"
    }
   },
   {
@@ -2479,6 +2604,34 @@
     "leaf": "#6B8A4A",
     "acc": "#B5583C",
     "obj": "#E3CF8E"
+   }
+  },
+  {
+   "slug": "qenqo",
+   "label": "Qenqo: the carved limestone outcrop with its cave, steps and zigzag channel, and the standing stone",
+   "lat": -13.5097,
+   "lon": -71.9719,
+   "radius_km": 1,
+   "aliases": [
+    "qenqo",
+    "kenko",
+    "q enqo",
+    "qenko",
+    "quenco",
+    "quenqo",
+    "k enko"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#E2DACA",
+    "mid": "#B9AE9C",
+    "ice": "#F3EFE6",
+    "water": "#4F86A8",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#B4553A",
+    "obj": "#9A8E78"
    }
   },
   {
