@@ -217,9 +217,10 @@ export function TripStarter({ compact }: { compact?: boolean }) {
         {speech.error && <p className="ask-hint err">{speech.error}</p>}
         {speech.insecure && (
           <p className="ask-hint err">
-            The browser only lets the microphone work on a secure address.{" "}
-            <a href={speech.insecure}>Open the secure version</a> (the first time it warns you: tap
-            “Advanced”, then “Proceed”). On the computer running the app, http://localhost:8000 works too.
+            The browser lets the microphone work only on a secure page.{" "}
+            <a href={speech.insecure}>Open the secure version</a>. The first time the browser warns that the
+            connection is not private: tap “Advanced”, then “Proceed” (on iPhone “Show details”, then
+            “visit this website”). Or use the microphone on your keyboard.
           </p>
         )}
         {!speech.listening && mode === "none" && (
