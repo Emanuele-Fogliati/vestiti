@@ -1,0 +1,9 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="26" r="12" fill="var(--il-sun)"/>
+<path d="M0 104H300V130H0Z" fill="var(--il-water)"/>
+<path d="M200 106Q210 94 226 96Q236 100 238 106ZM250 106Q256 100 264 102Q268 104 268 106Z" fill="var(--il-mid)"/>
+<path d="M0 200V124Q80 118 150 124Q230 118 300 124V200Z" fill="var(--il-far)"/>
+<path d="M50 160V144H250V160ZM70 144V128H230V144ZM90 128V112H210V128ZM110 112V100H190V112Z" fill="var(--il-mid)"/>
+<path d="M50 152H250M70 136H230M90 120H210M110 106H190" stroke="var(--il-near)" stroke-width="0.9" fill="none" opacity="0.4"/>
+<path d="M140 160V146H160V160Z" fill="var(--il-near)"/>
+<path d="M0 200V170Q150 162 300 170V200Z" fill="var(--il-obj)"/>

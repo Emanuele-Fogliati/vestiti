@@ -35,6 +35,9 @@ class Landmark:
     palette: tuple[tuple[str, str], ...] = ()
     # matched only when they are the whole name: "Rome" gets the Colosseum, "Catacombs of Rome" does not
     names: tuple[str, ...] = ()
+    # a gateway town shows the sight it is the base for ("Aguas Calientes" = Machu Picchu), unless the
+    # trip also has that sight as a stop of its own: then the town shows its own scene
+    gateway: str = ""
 
 
 # letters NFKD cannot split into base + accent: "Tromsø" must read "tromso", not "troms"
@@ -61,13 +64,19 @@ def landmarks() -> tuple[Landmark, ...]:
                                 lon=d["lon"], radius_km=d["radius_km"],
                                 aliases=tuple(_norm(a) for a in d["aliases"]),
                                 palette=tuple(d.get("palette", {}).items()),
-                                names=tuple(_norm(a) for a in d.get("names", []))))
+                                names=tuple(_norm(a) for a in d.get("names", [])),
+                                gateway=d.get("gateway", "")))
     return tuple(out)
 
 
 def svg_path(landmark_id: str) -> Path | None:
     m = re.fullmatch(r"([a-z]{2})-([a-z0-9-]+)", landmark_id)
     return SVG_DIR / m[1] / f"{m[2]}.svg" if m else None
+
+
+@lru_cache
+def by_id() -> dict[str, Landmark]:
+    return {lm.id: lm for lm in landmarks()}
 
 
 @lru_cache
@@ -125,13 +134,17 @@ def _nearest(lat: float, lon: float, country: str = "") -> Landmark | None:
 
 
 def match(name: str, lat: float | None, lon: float | None, notes: str | None = None,
-          taken: set[str] | frozenset[str] = frozenset(), country: str | None = None) -> Landmark | None:
+          taken: set[str] | frozenset[str] = frozenset(), country: str | None = None,
+          elsewhere: set[str] | frozenset[str] = frozenset(), gateway: bool = True) -> Landmark | None:
     """The landmark for one stop: named in the stop's name, else the nearest one within its radius.
 
     When that landmark is already used by an earlier stop of the trip (Cusco twice), a different
     landmark named in the stop's notes wins (the second Cusco stop is the Rainbow Mountain day).
     A stop in a known country never gets another country's landmark (Aguas Calientes, Mexico
-    is not Machu Picchu)."""
+    is not Machu Picchu).
+
+    A gateway town gets the sight it leads to, unless that sight is taken or is another stop's own
+    place (elsewhere): a trip with both "Aguas Calientes" and "Machu Picchu" shows the town and the ruins."""
     cc = (country or "").upper()
     named = [lm for lm in _named(name, lat, lon) if not cc or lm.country == cc]
     if lat is not None and lon is not None:  # a namesake far away is another place (Venice Beach)
@@ -139,6 +152,8 @@ def match(name: str, lat: float | None, lon: float | None, notes: str | None = N
     own = next(iter(named), None)
     if own is None and lat is not None and lon is not None:
         own = _nearest(lat, lon, cc)
+    if gateway and own is not None and own.gateway and own.gateway not in taken and own.gateway not in elsewhere:
+        own = by_id().get(own.gateway, own)
     if own is not None and own.id in taken and notes:
         other = next((lm for lm in _named(notes) if lm.id not in taken and (not cc or lm.country == cc)), None)
         if other is not None:
@@ -148,11 +163,15 @@ def match(name: str, lat: float | None, lon: float | None, notes: str | None = N
 
 def assign(stops) -> list[Landmark | None]:
     """One landmark (or None) per stop, in trip order. stops: objects with name, latitude, longitude, notes."""
+    stops = list(stops)
+    raw = [match(s.name, getattr(s, "latitude", None), getattr(s, "longitude", None),
+                 country=getattr(s, "country_code", None), gateway=False) for s in stops]
     taken: set[str] = set()
     out = []
-    for s in stops:
+    for i, s in enumerate(stops):
+        elsewhere = {lm.id for j, lm in enumerate(raw) if lm is not None and j != i}
         lm = match(s.name, getattr(s, "latitude", None), getattr(s, "longitude", None),
-                   getattr(s, "notes", None), taken, getattr(s, "country_code", None))
+                   getattr(s, "notes", None), taken, getattr(s, "country_code", None), elsewhere)
         if lm is not None:
             taken.add(lm.id)
         out.append(lm)

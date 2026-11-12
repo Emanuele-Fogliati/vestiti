@@ -52,7 +52,7 @@ def test_cusco_gets_its_picture_and_itinerary_but_not_its_neighbours():
     assert cusco[7] is not None and "cusco" in cusco[7]
     assert any(d["itineraries"][i]["slug"].startswith("peru") for i in cusco[8])
     # a place near Cusco with no scene of its own gets no picture (no borrowed landmark)
-    assert by_id["pe-sacsayhuaman"][7] is None
+    assert by_id["pe-plaza-de-armas-cusco"][7] is None
 
 
 # ---- places inside a city (Manu, 2026-10-26): Florence from far away, its sights up close
