@@ -29,13 +29,38 @@
    }
   },
   {
+   "slug": "aldeyjarfoss",
+   "label": "Aldeyjarfoss falling into its pool between basalt column walls",
+   "lat": 65.366,
+   "lon": -17.343,
+   "radius_km": 5,
+   "aliases": [
+    "aldeyjarfoss"
+   ],
+   "palette": {
+    "sky": "#BCD6EA",
+    "far": "#8E8B6C",
+    "mid": "#5E4D42",
+    "ice": "#F4F7F7",
+    "water": "#8DBDBB",
+    "near": "#1E1C1B",
+    "sun": "#F3C443",
+    "leaf": "#6E8A3E",
+    "acc": "#8C9196",
+    "obj": "#4A4D52"
+   }
+  },
+  {
    "slug": "alftavatn",
    "label": "Alftavatn lake on the Laugavegur trail, with the moss-green peaks and the red-roofed huts",
    "lat": 63.857,
    "lon": -19.225,
    "radius_km": 5,
    "aliases": [
-    "alftavatn"
+    "alftavatn",
+    "hvanngil hut",
+    "hvanngil huts",
+    "hvanngilsskali"
    ],
    "palette": {
     "sky": "#C6DBEC",
@@ -48,6 +73,37 @@
     "leaf": "#8CA348",
     "acc": "#C23B2C",
     "obj": "#4A403A"
+   },
+   "names": [
+    "hvanngil"
+   ]
+  },
+  {
+   "slug": "arnarfjordur",
+   "label": "Hrafnseyri on Arnarfjordur: the black turf-house gables and the red-roofed church below the mountain",
+   "lat": 65.7633,
+   "lon": -23.4569,
+   "radius_km": 10,
+   "aliases": [
+    "hrafnseyri",
+    "hrafnseyrarkirkja"
+   ],
+   "names": [
+    "arnarfjordur",
+    "arnarfjordur fjord",
+    "arnarfjord"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#6F6A66",
+    "mid": "#968676",
+    "ice": "#F4F2EE",
+    "water": "#3F78B8",
+    "near": "#1F1E1E",
+    "sun": "#F2C14E",
+    "leaf": "#79A645",
+    "acc": "#C4323A",
+    "obj": "#3A3533"
    }
   },
   {
@@ -149,6 +205,33 @@
    }
   },
   {
+   "slug": "blonduos",
+   "label": "Blonduoskirkja, the crater-shaped concrete church of Blonduos, with its free-standing cross",
+   "lat": 65.6597,
+   "lon": -20.2905,
+   "radius_km": 12,
+   "aliases": [
+    "blonduoskirkja",
+    "blonduos church"
+   ],
+   "names": [
+    "blonduos",
+    "blonduos town"
+   ],
+   "palette": {
+    "sky": "#9FC8EE",
+    "far": "#93A07E",
+    "mid": "#525966",
+    "ice": "#F2F2F0",
+    "water": "#4F7EA0",
+    "near": "#1C1E22",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A40",
+    "acc": "#A9C2CC",
+    "obj": "#A2A4A4"
+   }
+  },
+  {
    "slug": "blue-lagoon",
    "label": "The Blue Lagoon in the lava field, Svartsengi",
    "lat": 63.8804,
@@ -230,6 +313,32 @@
     "leaf": "#6E8E4A",
     "acc": "#C0392E",
     "obj": "#6F7650"
+   }
+  },
+  {
+   "slug": "breidafjordur",
+   "label": "Breidafjordur's islets seen from Sugandisey lighthouse",
+   "lat": 65.2,
+   "lon": -23.0,
+   "radius_km": 20,
+   "aliases": [
+    "sugandisey"
+   ],
+   "names": [
+    "breidafjordur",
+    "breidafjordur bay"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#8E98A6",
+    "mid": "#4A4036",
+    "ice": "#F4F3EE",
+    "water": "#2F6696",
+    "near": "#232220",
+    "sun": "#F2C14E",
+    "leaf": "#79A04E",
+    "acc": "#EE5A28",
+    "obj": "#A07E55"
    }
   },
   {
@@ -502,6 +611,59 @@
    }
   },
   {
+   "slug": "eldborg",
+   "label": "Eldborg spatter crater on the Eldborgarhraun lava field",
+   "lat": 64.7944,
+   "lon": -22.3214,
+   "radius_km": 5,
+   "aliases": [
+    "eldborg crater",
+    "eldborgarhraun",
+    "eldborg snaefellsnes",
+    "eldborg i hnappadal",
+    "eldborg hnappadalur"
+   ],
+   "names": [
+    "eldborg"
+   ],
+   "palette": {
+    "sky": "#C3D9EC",
+    "far": "#8D99A6",
+    "mid": "#5F4B44",
+    "ice": "#F2F2EE",
+    "water": "#5D8FB0",
+    "near": "#1E1B1A",
+    "sun": "#F2C14E",
+    "leaf": "#7FA046",
+    "acc": "#8E4636",
+    "obj": "#4F7A35"
+   }
+  },
+  {
+   "slug": "eldgja",
+   "label": "Ofaerufoss two-step falls inside the Eldgja fissure",
+   "lat": 63.97,
+   "lon": -18.6,
+   "radius_km": 15,
+   "aliases": [
+    "eldgja",
+    "ofaerufoss",
+    "eldgia"
+   ],
+   "palette": {
+    "sky": "#C3DAEC",
+    "far": "#8C8F70",
+    "mid": "#4C4845",
+    "ice": "#F3F6F6",
+    "water": "#86AAB4",
+    "near": "#1C1C1C",
+    "sun": "#F3C547",
+    "leaf": "#8AA23C",
+    "acc": "#A8B85A",
+    "obj": "#36332F"
+   }
+  },
+  {
    "slug": "eldhraun-lava-field",
    "label": "Eldhraun: moss-covered lava field below the Sida escarpment",
    "lat": 63.72,
@@ -602,6 +764,33 @@
    }
   },
   {
+   "slug": "fimmvorduhals",
+   "label": "Fimmvorduhals pass: the red Magni crater and dark Modi on black 2010 lava, between the Eyjafjallajokull and Myrdalsjokull ice caps",
+   "lat": 63.635,
+   "lon": -19.44,
+   "radius_km": 5,
+   "aliases": [
+    "fimmvorduhals",
+    "fimmvoerduhals",
+    "magni and modi",
+    "magni crater",
+    "modi crater",
+    "godahraun"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#6F7378",
+    "mid": "#9A4B30",
+    "ice": "#F4F6F7",
+    "water": "#5A86A8",
+    "near": "#1E1C1B",
+    "sun": "#F2C14E",
+    "leaf": "#6E7F4A",
+    "acc": "#3F3A37",
+    "obj": "#5B4A42"
+   }
+  },
+  {
    "slug": "fjadrargljufur",
    "label": "Fjadrargljufur canyon and river",
    "lat": 63.7713,
@@ -622,6 +811,35 @@
     "leaf": "#7EAE48",
     "acc": "#ABA796",
     "obj": "#5A7A3A"
+   }
+  },
+  {
+   "slug": "flatey",
+   "label": "Flatey in Breidafjordur: the old coloured timber houses above the little harbour with rowboats",
+   "lat": 65.3745,
+   "lon": -22.916,
+   "radius_km": 6,
+   "aliases": [
+    "flatey i breidafirdi",
+    "flatey breidafjordur",
+    "flatey island breidafjordur"
+   ],
+   "names": [
+    "flatey",
+    "flatey island",
+    "isola di flatey"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#8F959C",
+    "mid": "#8F8C86",
+    "ice": "#F3F1EC",
+    "water": "#3F6F8E",
+    "near": "#232528",
+    "sun": "#E8C23A",
+    "leaf": "#7FA04A",
+    "acc": "#B8343A",
+    "obj": "#4F8FCB"
    }
   },
   {
@@ -730,7 +948,9 @@
    },
    "names": [
     "skagafjordur",
-    "skagafjoerdur"
+    "skagafjoerdur",
+    "saudarkrokur",
+    "saudarkrokur town"
    ]
   },
   {
@@ -1075,6 +1295,33 @@
    }
   },
   {
+   "slug": "hnjotur",
+   "label": "The Hnjotur museum's Douglas C-117 in front of its hangar, Westfjords",
+   "lat": 65.55,
+   "lon": -24.05,
+   "radius_km": 5,
+   "aliases": [
+    "hnjotur museum",
+    "egill olafsson museum",
+    "minjasafn egils olafssonar"
+   ],
+   "names": [
+    "hnjotur"
+   ],
+   "palette": {
+    "sky": "#BDD7EC",
+    "far": "#93986C",
+    "mid": "#6B6A5C",
+    "ice": "#EEF0F1",
+    "water": "#A9BAC8",
+    "near": "#1F2226",
+    "sun": "#F2C548",
+    "leaf": "#7C9150",
+    "acc": "#C9CED3",
+    "obj": "#2F5E9C"
+   }
+  },
+  {
    "slug": "hofn",
    "label": "Hofn harbour town below the Vatnajokull glacier tongues",
    "lat": 64.2539,
@@ -1098,6 +1345,62 @@
     "leaf": "#8A9A56",
     "acc": "#B8483E",
     "obj": "#2B4FA8"
+   }
+  },
+  {
+   "slug": "hofsjokull",
+   "label": "Hofsjokull ice cap with Arnarfell above the Thjorsarver wetland and pink-footed geese",
+   "lat": 64.8,
+   "lon": -18.8,
+   "radius_km": 30,
+   "aliases": [
+    "hofsjokull",
+    "hofsjoekull",
+    "thjorsarver",
+    "mulajokull"
+   ],
+   "palette": {
+    "sky": "#C2D8EA",
+    "far": "#9A9286",
+    "mid": "#655D55",
+    "ice": "#F3F6F8",
+    "water": "#B4CCD8",
+    "near": "#1E1F22",
+    "sun": "#F2C547",
+    "leaf": "#7E9150",
+    "acc": "#E39A9A",
+    "obj": "#5E5852"
+   }
+  },
+  {
+   "slug": "holar",
+   "label": "Holar in Hjaltadalur: the red sandstone cathedral and its white bell tower below Holabyrda",
+   "lat": 65.7347,
+   "lon": -19.1124,
+   "radius_km": 5,
+   "aliases": [
+    "holar i hjaltadal",
+    "holar in hjaltadalur",
+    "holar hjaltadal",
+    "hjaltadalur",
+    "holadomkirkja",
+    "holar cathedral"
+   ],
+   "names": [
+    "holar",
+    "holar iceland"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#7F8C70",
+    "mid": "#9A4A3C",
+    "ice": "#F4F2EC",
+    "water": "#5E8FB0",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3C",
+    "acc": "#C8705A",
+    "obj": "#4A4E54"
    }
   },
   {
@@ -1125,6 +1428,40 @@
     "leaf": "#8C9450",
     "acc": "#C4412F",
     "obj": "#4A5058"
+   }
+  },
+  {
+   "slug": "hornvik",
+   "label": "Hornbjarg's sea cliffs and Kalfatindar horns above Hornvik bay, with an arctic fox on the beach",
+   "lat": 66.44,
+   "lon": -22.45,
+   "radius_km": 12,
+   "aliases": [
+    "hornvik",
+    "hornbjarg",
+    "kalfatindar",
+    "kalfatindur",
+    "hloduvik",
+    "hornstrandir",
+    "hornstrandir nature reserve",
+    "hornstrandir reserve",
+    "adalvik"
+   ],
+   "names": [
+    "hornvik bay",
+    "latrar"
+   ],
+   "palette": {
+    "sky": "#AFD0EE",
+    "far": "#93A08A",
+    "mid": "#5F6A4E",
+    "ice": "#F2F2EE",
+    "water": "#3D6C8C",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#7AA23E",
+    "acc": "#A39A88",
+    "obj": "#7A6248"
    }
   },
   {
@@ -1261,6 +1598,28 @@
    }
   },
   {
+   "slug": "hvammsvik-hot-springs",
+   "label": "Hvammsvik hot pools on the Hvalfjordur shore, with the turf-roofed bath house",
+   "lat": 64.3833,
+   "lon": -21.4597,
+   "radius_km": 3,
+   "aliases": [
+    "hvammsvik"
+   ],
+   "palette": {
+    "sky": "#B9D6F0",
+    "far": "#8F8C86",
+    "mid": "#6F6A56",
+    "ice": "#F4F4F0",
+    "water": "#4C9DB9",
+    "near": "#1E2124",
+    "sun": "#F2C14E",
+    "leaf": "#6F8F45",
+    "acc": "#C6A35E",
+    "obj": "#3B3532"
+   }
+  },
+  {
    "slug": "hveragerdi",
    "label": "Hveragerdi greenhouses and steaming hills",
    "lat": 64.0003,
@@ -1358,6 +1717,35 @@
     "leaf": "#4F7A3A",
     "acc": "#D7342C",
     "obj": "#E8C232"
+   }
+  },
+  {
+   "slug": "isafjardardjup",
+   "label": "Litlibaer turf house on Skotufjordur in Isafjardardjup, with a harbour seal on a skerry",
+   "lat": 65.957,
+   "lon": -22.787,
+   "radius_km": 25,
+   "aliases": [
+    "litlibaer",
+    "skotufjordur",
+    "hvitanes"
+   ],
+   "names": [
+    "isafjardardjup",
+    "isafjardardjupid",
+    "isafjardardjup fjord"
+   ],
+   "palette": {
+    "sky": "#AFCDE8",
+    "far": "#BEB08E",
+    "mid": "#8B877D",
+    "ice": "#F4F2EC",
+    "water": "#4D6F8C",
+    "near": "#1E2022",
+    "sun": "#F2C14E",
+    "leaf": "#6C963E",
+    "acc": "#8C8A50",
+    "obj": "#33393B"
    }
   },
   {
@@ -1624,8 +2012,7 @@
    "aliases": [
     "krafla",
     "viti crater krafla",
-    "krafla viti",
-    "leirhnjukur"
+    "krafla viti"
    ],
    "palette": {
     "sky": "#A9CDEB",
@@ -1824,6 +2211,35 @@
    ]
   },
   {
+   "slug": "laugaras",
+   "label": "Skalholt cathedral with the turf-roofed Thorlaksbud, 3 km from Laugaras",
+   "lat": 64.1264,
+   "lon": -20.5247,
+   "radius_km": 5,
+   "aliases": [
+    "skalholt",
+    "skalholtskirkja",
+    "skalholt cathedral",
+    "thorlaksbud"
+   ],
+   "names": [
+    "laugaras",
+    "laugaras iceland"
+   ],
+   "palette": {
+    "sky": "#A8D2EE",
+    "far": "#8FA2B4",
+    "mid": "#F1F2EE",
+    "ice": "#D6DCE0",
+    "water": "#3E434A",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#6BA33A",
+    "acc": "#4E8226",
+    "obj": "#5B4330"
+   }
+  },
+  {
    "slug": "laugarvatn",
    "label": "Laugarvatn: the green-roofed Heradsskolinn by the lake, with hot-spring steam on the shore",
    "lat": 64.2149,
@@ -1849,6 +2265,33 @@
     "leaf": "#6FA046",
     "acc": "#C9B37A",
     "obj": "#3E8C5A"
+   }
+  },
+  {
+   "slug": "leirhnjukur",
+   "label": "Leirhnjukur: milky blue hot pool on the coloured solfatara hill above the steaming black Krafla lava field",
+   "lat": 65.714,
+   "lon": -16.794,
+   "radius_km": 3,
+   "aliases": [
+    "leirhnjukur",
+    "leirhnukur",
+    "leirhnjukur lava field",
+    "leirhnjukur geothermal area",
+    "krafla lava field",
+    "krafla fires"
+   ],
+   "palette": {
+    "sky": "#D3E4F1",
+    "far": "#8C7762",
+    "mid": "#C98F58",
+    "ice": "#F2EFE8",
+    "water": "#BDE3DB",
+    "near": "#262321",
+    "sun": "#F3C64A",
+    "leaf": "#4E4842",
+    "acc": "#E3C887",
+    "obj": "#45403B"
    }
   },
   {
@@ -2527,6 +2970,33 @@
    }
   },
   {
+   "slug": "stokkseyri",
+   "label": "Stokkseyri harbour: the sheltered lagoon behind the lava breakwater, the pier with its white beacon and an eider",
+   "lat": 63.8335,
+   "lon": -21.0655,
+   "radius_km": 5,
+   "aliases": [
+    "fjorubordid",
+    "stokkseyrarhofn",
+    "stokkseyri harbour"
+   ],
+   "names": [
+    "stokkseyri"
+   ],
+   "palette": {
+    "sky": "#C0DDF4",
+    "far": "#C49A70",
+    "mid": "#4C4844",
+    "ice": "#F4F4F0",
+    "water": "#3F7FAE",
+    "near": "#232220",
+    "sun": "#F3C64A",
+    "leaf": "#8CA059",
+    "acc": "#8F8D88",
+    "obj": "#7DC1B6"
+   }
+  },
+  {
    "slug": "strandarkirkja",
    "label": "Strandarkirkja: the lone white church with its dark roof and spire by the sea, Selvogur",
    "lat": 63.8319,
@@ -2601,6 +3071,33 @@
     "leaf": "#8E8C5C",
     "acc": "#8C3B36",
     "obj": "#9C9182"
+   }
+  },
+  {
+   "slug": "sudureyri",
+   "label": "Sudureyri fishing village on its spit in Sugandafjordur, below the steep ledged mountainside",
+   "lat": 66.1305,
+   "lon": -23.528,
+   "radius_km": 10,
+   "aliases": [
+    "sugandafjordur",
+    "sugandafjord"
+   ],
+   "names": [
+    "sudureyri",
+    "sudureyri village"
+   ],
+   "palette": {
+    "sky": "#B4D2EC",
+    "far": "#80847A",
+    "mid": "#6E7A4C",
+    "ice": "#F2F0EA",
+    "water": "#3E6680",
+    "near": "#25282A",
+    "sun": "#F2C14E",
+    "leaf": "#6F9A3E",
+    "acc": "#C2423A",
+    "obj": "#8A8780"
    }
   },
   {
@@ -2815,6 +3312,31 @@
     "leaf": "#7E9A4E",
     "acc": "#8E5A48",
     "obj": "#AEB394"
+   }
+  },
+  {
+   "slug": "vidimyrarkirkja",
+   "label": "Vidimyrarkirkja, the black-gabled turf church of Vidimyri, Skagafjordur",
+   "lat": 65.5475,
+   "lon": -19.4935,
+   "radius_km": 3,
+   "aliases": [
+    "vidimyrarkirkja",
+    "vidimyri",
+    "vidimyri church",
+    "vidimyri turf church"
+   ],
+   "palette": {
+    "sky": "#AACCEC",
+    "far": "#8C7B62",
+    "mid": "#B9A564",
+    "ice": "#F2F0EA",
+    "water": "#4F7A5E",
+    "near": "#1A1A1C",
+    "sun": "#F2C14E",
+    "leaf": "#6F9A42",
+    "acc": "#B5453A",
+    "obj": "#353638"
    }
   },
   {
