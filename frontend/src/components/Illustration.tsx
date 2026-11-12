@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { loadLandmark } from "../lib/landmarks";
 import type { Terrain } from "../lib/terrain";
 import type { StopArt } from "../lib/types";
 
@@ -23,41 +24,32 @@ const ART: Record<Terrain, string> = {
     '<rect width="300" height="200" fill="var(--il-sky)"/><circle cx="210" cy="70" r="26" fill="var(--il-sun)"/><path d="M0 150Q150 136 300 150V200H0Z" fill="var(--il-far)"/><path d="M80 150V112M54 112Q80 92 106 112Z" fill="var(--il-near)" stroke="var(--il-near)" stroke-width="4"/><path d="M220 152V124M200 124Q220 108 240 124Z" fill="var(--il-near)" stroke="var(--il-near)" stroke-width="3"/><path d="M0 180Q150 168 300 182V200H0Z" fill="var(--il-mid)"/>',
 };
 
-// Landmark scenes (Machu Picchu, Cusco cathedral...) come from the API as SVG fragments drawn
-// with the same --il-* tokens. Each one is fetched once per page load and shared by every card.
-const landmarkCache = new Map<string, Promise<string | null>>();
-
-export function loadLandmark(id: string): Promise<string | null> {
-  let p = landmarkCache.get(id);
-  if (!p) {
-    p = fetch(`/api/art/landmarks/${encodeURIComponent(id)}.svg?v=${__BUILD_ID__}`)
-      .then((r) => (r.ok ? r.text() : null))
-      .catch(() => null);
-    landmarkCache.set(id, p);
-  }
-  return p;
-}
-
-function useLandmark(id?: string): string | null {
-  const [svg, setSvg] = useState<string | null>(null);
+/** The scene for a landmark id: undefined while it loads, null when there is none. */
+function useLandmark(id?: string): string | null | undefined {
+  const [svg, setSvg] = useState<string | null | undefined>(id ? undefined : null);
   useEffect(() => {
     let live = true;
-    setSvg(null);
-    if (id) loadLandmark(id).then((s) => { if (live) setSvg(s); });
+    setSvg(id ? undefined : null);
+    if (id) loadLandmark(id, true).then((s) => { if (live) setSvg(s); });
     return () => { live = false; };
   }, [id]);
   return svg;
 }
 
-/** A stop's scene: its landmark when we have one, otherwise (and while it loads) the generic terrain. */
-export function Illustration({ terrain, art, label }: { terrain: Terrain; art?: StopArt | null; label?: string }) {
+/** A stop's scene: its landmark when we have one, otherwise the generic terrain. While the landmark
+ *  loads the frame stays empty (never a generic scene that looks like the wrong place).
+ *  `fallback={false}`: show nothing at all when the landmark can't be had (the globe's place card). */
+export function Illustration({ terrain, art, label, fallback = true }: {
+  terrain: Terrain; art?: StopArt | null; label?: string; fallback?: boolean;
+}) {
   const landmark = useLandmark(art?.kind === "landmark" ? art.id : undefined);
+  if (landmark === null && art?.kind === "landmark" && !fallback) return null;
   const name = label ?? (landmark ? art?.label : undefined);
   return (
     <figure className="thumb">
       <svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" role={name ? "img" : undefined}
         aria-label={name} aria-hidden={name ? undefined : true}
-        dangerouslySetInnerHTML={{ __html: landmark ?? ART[terrain] }} />
+        dangerouslySetInnerHTML={{ __html: landmark === undefined ? "" : landmark ?? ART[terrain] }} />
     </figure>
   );
 }

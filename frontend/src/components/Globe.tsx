@@ -1,7 +1,7 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loadLandmark } from "./Illustration";
+import { loadLandmark } from "../lib/landmarks";
 import { PlaceCard } from "./PlaceCard";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
@@ -31,7 +31,7 @@ function fitZoom(el: HTMLElement): number {
 }
 
 /** A round thumbnail of one landmark scene, pinned on the globe. */
-function artMarker(art: string, onClick: () => void): { m: maplibregl.Marker; el: HTMLButtonElement } {
+function artMarker(art: string, onClick: () => void): { m: maplibregl.Marker; el: HTMLButtonElement; fill: () => void } {
   const el = document.createElement("button");
   el.type = "button";
   el.className = "gmark";
@@ -39,13 +39,19 @@ function artMarker(art: string, onClick: () => void): { m: maplibregl.Marker; el
   svg.setAttribute("viewBox", "50 0 200 200");
   svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
   el.appendChild(svg);
-  loadLandmark(art).then((s) => { if (s) svg.innerHTML = s; });
   el.addEventListener("click", (e) => { e.stopPropagation(); onClick(); });
-  return { m: new maplibregl.Marker({ element: el, anchor: "bottom", opacityWhenCovered: "0" }), el };
+  // the picture is fetched the first time the marker shows, not for all ~2,600 scenes at load
+  let asked = false;
+  const fill = () => {
+    if (asked) return;
+    asked = true;
+    loadLandmark(art).then((s) => { if (s) svg.innerHTML = s; else asked = false; });
+  };
+  return { m: new maplibregl.Marker({ element: el, anchor: "bottom", opacityWhenCovered: "0" }), el, fill };
 }
 
 /** One landmark scene and the places it shows (Rome and the Colosseum share one). */
-interface Scene { owners: GlobePlace[]; m: maplibregl.Marker; el: HTMLButtonElement; opens: GlobePlace | null; on: boolean }
+interface Scene { owners: GlobePlace[]; m: maplibregl.Marker; el: HTMLButtonElement; fill: () => void; opens: GlobePlace | null; on: boolean }
 
 /** The home's centrepiece: a globe of places, no routes. It turns slowly by itself; zoom in
  *  anywhere and the places worth seeing appear, the most visited first, with their pictures.
@@ -160,7 +166,7 @@ export default function Globe() {
             }
           }
         }
-        if (want !== s.on) { if (want) s.m.addTo(map); else s.m.remove(); s.on = want; }
+        if (want !== s.on) { if (want) { s.fill(); s.m.addTo(map); } else s.m.remove(); s.on = want; }
       }
     }
 
