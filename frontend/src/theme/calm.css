@@ -1,0 +1,10 @@
+/* Less "designed by an AI" (Manu, 2026-11-12): no yellow pill above every heading, no
+   letter-spaced capitals in a typewriter font on every label. Plain words in the body font,
+   numbers aligned. Loaded last, default theme only. */
+[data-theme="yellow-black"] .sh-k{background:none;padding:0;color:var(--ink-2);font-size:15px;font-weight:600;letter-spacing:0}
+[data-theme="yellow-black"] :is(.kicker,.label,.tag,.ai-src,table.simple th,.vd,.pc-h,.tips h4,.exc h4,.pg-fact b,.bd-blk .st,.secnav a,.plan .vd,.vday .vd){
+  font-family:var(--f-body);text-transform:none;letter-spacing:0}
+[data-theme="yellow-black"] .kicker{font-size:15px;font-weight:600}
+[data-theme="yellow-black"] .label{font-size:13px;font-weight:600}
+[data-theme="yellow-black"] .tag{font-size:12px;font-weight:600}
+[data-theme="yellow-black"] :is(.bd-day,.bd-sum,.places small,.prow .meta,.wx .d,.bd-leg button,.bd-blk .mt,.fl-time,.okline){font-family:var(--f-body);font-variant-numeric:tabular-nums;letter-spacing:0}

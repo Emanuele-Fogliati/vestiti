@@ -29,7 +29,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="stack" style={{ gap: 12 }}>
-            <OwnTripForm />
+            <OwnTripForm compact />
             <Link className="btn ghost hero-alt" to="/ideas">No trip yet? Start from a recommended one →</Link>
           </div>
         </div>

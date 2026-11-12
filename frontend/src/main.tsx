@@ -7,6 +7,8 @@ import "./theme/tokens.css";
 import "./theme/structure.css";
 import "./theme/app.css";
 import "./theme/board.css";
+import "./theme/start.css";
+import "./theme/calm.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

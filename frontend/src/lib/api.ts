@@ -1,4 +1,5 @@
 import type {
+  PlanProposal, PlanReading, PlanStep, PlanSuggestion,
   Airport, Board, FlightOffer, FlightOrder, FlightPrice, LegSaved, Passenger, TripFlights, PlanChoices, StopStatus,
   AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
 } from "./types";
@@ -151,6 +152,15 @@ export const api = {
     req<Trip>("POST", "/api/globe/trip", { places, month }),
   routeTrip: (id: string, opts: { start_date?: string; month?: number | null } = {}) =>
     req<Trip>("POST", `/api/globe/routes/${encodeURIComponent(id)}/trip`, { start_date: opts.start_date || null, month: opts.month ?? null }),
+
+  /** A sentence (typed or spoken): stops, a region with its proposed route, or a wish with ideas. */
+  planUnderstand: (text: string) => req<PlanReading>("POST", "/api/plan/understand", { text }),
+  planPropose: (body: { area: string; only?: string[]; days?: number | null; month?: number | null; keep?: string[]; drop?: string[] }) =>
+    req<PlanProposal>("POST", "/api/plan/propose", body),
+  planSuggest: (q: string) => req<PlanSuggestion[]>("GET", `/api/plan/suggest?q=${encodeURIComponent(q)}`),
+  planTrip: (body: { stops: PlanStep[]; start_date?: string | null; month?: number | null; area?: string | null;
+    home?: { lat: number; lon: number; country: string } | null; name?: string | null }) =>
+    req<Trip>("POST", "/api/plan/trip", body),
 
   /** countries: the trip's ISO codes, listed first. */
   geocode: (q: string, countries?: string[]) => req<{ results: Place[] }>("GET",
