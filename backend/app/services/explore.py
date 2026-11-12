@@ -29,7 +29,8 @@ BASE_KINDS = ("city", "town")
 TOWN_IN_CITY_KM = 15  # Ginza is Tokyo: a town this close to a bigger city is part of it
 SIGHT_RADIUS_KM = 120  # a sight is seen from the town it is nearest to, within this
 ROUTE_SHARE = 0.6
-CLUSTER_KM = 150  # when filling the days, a new place must be this far from the others  # a route belongs to a region when this share of its days is inside it
+CLUSTER_KM = 150
+FAR_KM, FAR_DAYS = 400, 5  # a place this far from the route is added only with this many days to spare  # when filling the days, a new place must be this far from the others  # a route belongs to a region when this share of its days is inside it
 MAX_STOP_DAYS = 6
 DEFAULT_DAYS = {"city": 2, "town": 2, "island": 3, "nature": 2, "region": 2, "landmark": 1}
 
@@ -237,8 +238,11 @@ def _insert(stops: list[dict], s: dict, keep_first: bool) -> None:
 
 
 def propose(a: dict, only: list[str] | None = None, days: int | None = None,
-            month: int | None = None, keep: list[str] | None = None, drop: list[str] | None = None) -> dict:
-    """A route through the area that fits the days: {stops, more, route, best_months, days}."""
+            month: int | None = None, keep: list[str] | None = None, drop: list[str] | None = None,
+            last: list[str] | None = None) -> dict:
+    """A route through the area that fits the days: {stops, more, route, best_months, days}.
+    `last`: places the traveller wants to end with ("e alla fine Ushuaia"), kept and moved last."""
+    keep = list(dict.fromkeys([*(keep or []), *(last or [])]))
     only = only or list(a["countries"])
     drop = set(drop or [])
     bs = bases(a, only)
@@ -264,8 +268,8 @@ def propose(a: dict, only: list[str] | None = None, days: int | None = None,
     if route:
         for j, s in enumerate(route["stops"]):
             b = _base_of(bs, s["lat"], s["lon"])
-            if not b and not (j == 0 and route.get("guide")):
-                continue  # outside the area; only a hand-made route's way in (Buenos Aires) stays
+            if not b:
+                continue  # outside the area: "Patagonia" is not 3 days in Buenos Aires (Manu, 2026-11-12)
             key = b["id"] if b else f"r-{norm(s['name'])}"
             if key in drop:
                 continue
@@ -304,6 +308,8 @@ def propose(a: dict, only: list[str] | None = None, days: int | None = None,
             continue
         if any(km(b["lat"], b["lon"], s["lat"], s["lon"]) <= CLUSTER_KM for s in stops):
             continue  # Trelew next to Puerto Madryn: the same corner, already in
+        if stops and want - total() < FAR_DAYS and min(km(b["lat"], b["lon"], s["lat"], s["lon"]) for s in stops) > FAR_KM:
+            continue  # 2 days left are not worth a flight to Valdés: they go to the places already in
         d = tdays.get(b["id"], 2)
         if total() + d <= want + 1 or total() + 1 <= want:
             _insert(stops, _stop_of_base(b, min(d, max(1, want - total()))), keep_first=bool(route))
@@ -331,6 +337,11 @@ def propose(a: dict, only: list[str] | None = None, days: int | None = None,
         if s["days"] < MAX_STOP_DAYS:
             s["days"] += 1
         i += 1
+    for k in last or []:
+        end = next((s for s in stops if s["key"] == k), None)
+        if end:
+            stops.remove(end)
+            stops.append(end)
     taken = {s["key"] for s in stops}
     more = [{**_stop_of_base(b, tdays.get(b["id"], 2))} for b in bs[:30]
             if b["id"] not in taken][:10]
