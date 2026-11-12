@@ -7,6 +7,10 @@ Rules (product decisions, not tuning):
   Medium = best fit in the middle price band. Premium = best fit in the top band.
 - If a tier leaves you cold somewhere, the optimizer applies the cheapest upgrade that
   closes the gap (never on slots the user locked by hand) and says what it changed.
+- Preferred brands (the traveller's own pick, e.g. Patagonia) win a slot only when one of
+  their pieces passes the trip's needs as well as the normal pick and stays within the
+  tier's budget (at most the next tier's price for that piece). Otherwise the normal pick
+  stays and the plan says why, piece by piece. A brand never buys a worse kit.
 - Rental is suggested when an item is needed for half the trip or less and renting
   costs under 70% of buying.
 """
@@ -191,6 +195,57 @@ def pick_for_tier(cands: list[CatalogItem], tier: str) -> CatalogItem | None:
     return max(band, key=lambda c: (round(c.fit.score, 2), c.rating or 0, c.price))
 
 
+def is_preferred(item: CatalogItem | None, prefer: frozenset[str]) -> bool:
+    return bool(item and prefer and item.source == "product" and item.brand.lower() in prefer)
+
+
+def preferred_pick(cands: list[CatalogItem], tier: str, prefer: frozenset[str],
+                   normal: CatalogItem | None) -> tuple[CatalogItem | None, str | None]:
+    """The tier's piece from a preferred brand, or (None, why not).
+
+    Honest by construction: the piece must pass the trip's needs, be rated at least as well
+    as the floor the normal pick met (3 stars, or what the catalog allowed), and cost no
+    more than the next tier's pick for this slot: a budget kit stays a budget kit."""
+    mine = [c for c in cands if c.brand.lower() in prefer]
+    if not mine:
+        return None, "none"
+    floor = min(3.0, normal.fit.stars) if normal and normal.fit else 3.0
+    good = [c for c in mine if c.fit and c.fit.passes and c.fit.stars >= floor]
+    if not good:
+        return None, "unfit"
+    nxt = {"cheap": "medium", "medium": "premium"}.get(tier)
+    cap = None
+    if nxt:
+        top = pick_for_tier(cands, nxt)
+        cap = max(top.price, normal.price if normal else 0.0) if top else None
+    ok = [c for c in good if cap is None or c.price <= cap + 1e-6]
+    if not ok:
+        return None, "budget"
+    if tier == "cheap":
+        return min(ok, key=lambda c: (c.price, -c.fit.score)), None
+    if tier == "medium":
+        best = max(c.fit.score for c in ok)
+        near = [c for c in ok if c.fit.score >= best - 0.05]
+        target = normal.price if normal else 0.0
+        return min(near, key=lambda c: (abs(c.price - target), -c.fit.score)), None
+    return max(ok, key=lambda c: (round(c.fit.score, 2), c.rating or 0, c.price)), None
+
+
+BRAND_WHY = {
+    "none": "{brands} doesn't make this piece in our catalog yet.",
+    "unfit": "{brands} has this piece, but not one that's right for this trip.",
+    "budget": "{brands}'s one costs more than this budget allows. It's in a higher budget.",
+    "swapped": "Swapped for a warmer piece to cover the coldest stop.",
+    "warmth": "{brands}'s one would leave you colder on this trip, so the kit keeps this one.",
+}
+
+
+def brand_names(prefer_names: list[str]) -> str:
+    if len(prefer_names) <= 1:
+        return "".join(prefer_names)
+    return ", ".join(prefer_names[:-1]) + " or " + prefer_names[-1]
+
+
 def rental_options(req: SlotRequirement, stages: list[StageInput],
                    partners: list[RentalPartnerData]) -> list[dict]:
     countries = {s.country_code for s in stages if s.index in req.stages and s.country_code}
@@ -256,6 +311,7 @@ def cheapest_upgrade(
     stages, conds, choices: dict[str, Choice], reqs, candidates: dict[str, list[CatalogItem]],
     stage_index: int, mode: str, ceiling: dict[str, float] | None = None,
     max_cost: float | None = None, min_value: float = 0.0,
+    prefer: frozenset[str] = frozenset(),
 ) -> dict | None:
     """The swap that buys the most warmth per euro for the gap (a fleece before a €400
     shell). When no swap helps any more, the cheapest extra layer the kit does not have
@@ -265,10 +321,19 @@ def cheapest_upgrade(
     cond, margin = _worst(stages, conds, kit, stage_index, mode)
     if cond is None or margin >= 0:
         return None
-    best = _best_change(conds, choices, reqs, candidates, kit, cond, margin, False, ceiling, max_cost,
-                        min_value) \
-        or _best_change(conds, choices, reqs, candidates, kit, cond, margin, True, ceiling, max_cost,
-                        min_value)
+    def find(cands):
+        return _best_change(conds, choices, reqs, cands, kit, cond, margin, False, ceiling,
+                            max_cost, min_value) \
+            or _best_change(conds, choices, reqs, cands, kit, cond, margin, True, ceiling,
+                            max_cost, min_value)
+
+    best = find(candidates)
+    if prefer and best and best["item"].brand.lower() not in prefer:
+        # a preferred brand's piece that also closes the gap beats a cheaper one that does
+        mine = find({k: [c for c in v if c.brand.lower() in prefer]
+                     for k, v in candidates.items()})
+        if mine and mine["closes"]:
+            best = mine
     if best is None:
         return None
     return {
@@ -325,7 +390,37 @@ def _best_change(conds, choices, reqs, candidates, kit, cond, margin, add: bool,
     return best
 
 
-def build_tier(
+_STATUS_RANK = {"cold": 0, "marginal": 1, "covered": 2}
+
+
+def build_tier(tier: str, stages, conds, reqs, candidates, owned, selections, partners,
+               max_auto_upgrades: int = 12, evenings: str = "sometimes",
+               prefer_names: list[str] | None = None) -> dict:
+    """The tier's kit. With preferred brands, the kit follows them piece by piece, but a
+    brand never makes the kit colder than it would be without it: if it does, the brand's
+    least warm pieces go back to the normal pick, one at a time, and say so."""
+    args = (tier, stages, conds, reqs, candidates, owned, selections, partners,
+            max_auto_upgrades, evenings)
+    if not prefer_names:
+        return _build_tier(*args)
+    base = _build_tier(*args)
+    target = _STATUS_RANK[base["warmth"]["status"]]
+    skip: set[str] = set()
+    while True:
+        out = _build_tier(*args, prefer_names=prefer_names, skip_brand=frozenset(skip))
+        if _STATUS_RANK[out["warmth"]["status"]] >= target:
+            return out
+        swapped = out["_brand_swaps"]  # slot -> clo the brand gave up against the normal pick
+        if not swapped:
+            pref = frozenset(b.lower() for b in prefer_names)
+            for i in base["items"]:
+                i["preferred_brand"] = i["kind"] == "product" and bool(i["item"]) \
+                    and i["item"]["brand"].lower() in pref
+            return base | {"brands": brand_summary(base["items"], prefer_names)}
+        skip.add(max(swapped, key=lambda k: swapped[k]))
+
+
+def _build_tier(
     tier: str,
     stages: list[StageInput],
     conds: list[Condition],
@@ -336,7 +431,12 @@ def build_tier(
     partners: list[RentalPartnerData],
     max_auto_upgrades: int = 12,
     evenings: str = "sometimes",
+    prefer_names: list[str] | None = None,
+    skip_brand: frozenset[str] = frozenset(),
 ) -> dict:
+    prefer = frozenset(b.lower() for b in (prefer_names or []))
+    brand_miss: dict[str, str] = {}  # slot -> why the preferred brand is not in it
+    swaps: dict[str, float] = {}  # slot -> clo lost by taking the brand's piece
     choices: dict[str, Choice] = {}
     owned_notes: list[dict] = []
     for slot, req in reqs.items():
@@ -382,6 +482,16 @@ def build_tier(
                                 "message": f"Your {mine[0].name} won't do here: "
                                            + "; ".join(mine[0].fit.issues) + "."})
         pick = pick_for_tier(cands, tier)
+        if prefer and pick and not is_preferred(pick, prefer):
+            alt, why = preferred_pick(cands, tier, prefer, pick)
+            if alt and slot in skip_brand:
+                brand_miss[slot] = "warmth"
+            elif alt:
+                swaps[slot] = float(pick.specs.get("clo", 0)) - float(alt.specs.get("clo", 0)) \
+                    + (pick.fit.score - alt.fit.score)
+                pick = alt
+            else:
+                brand_miss[slot] = why
         choices[slot] = Choice(slot, "product", pick) if pick else Choice(
             slot, "none", note="No product in the catalog fits this yet.")
 
@@ -416,7 +526,7 @@ def build_tier(
         soft = avoidable(_worst(stages, conds, kit_now, si, mode)[0], evenings)
         up = cheapest_upgrade(stages, conds, choices, reqs, candidates, si, mode, ceiling,
                               max_cost=evening_budget if soft else None,
-                              min_value=AVOIDABLE_MIN_VALUE if soft else 0.0)
+                              min_value=AVOIDABLE_MIN_VALUE if soft else 0.0, prefer=prefer)
         if not up:
             done.add((si, mode))
             continue
@@ -425,6 +535,11 @@ def build_tier(
         slot = up["slot"]
         new_item = next(c for c in candidates[slot] if c.id == up["item"]["id"])
         steps.append({**up, "stage_name": stages_name(stages, si)})
+        if is_preferred(choices[slot].item if slot in choices else None, prefer) \
+                and not is_preferred(new_item, prefer):
+            brand_miss[slot] = "swapped"
+        elif is_preferred(new_item, prefer):
+            brand_miss.pop(slot, None)
         choices[slot] = Choice(slot, "product", new_item,
                                note="added for warmth" if up["added"] else "auto-upgraded for warmth")
     auto = _merge_upgrades(steps, original, choices, tier)
@@ -476,6 +591,10 @@ def build_tier(
             "owned_alternatives": [o.as_dict() for o in owned.get(slot, [])],
             "requirement": requirement_json(req),
             "cost": round(ch.cost(), 2), "owned_verdict": verdict,
+            "preferred_brand": is_preferred(ch.item, prefer) if ch.kind == "product" else False,
+            "brand_note": (BRAND_WHY[brand_miss[slot]].format(brands=brand_names(prefer_names))
+                           if ch.kind == "product" and slot in brand_miss
+                           and not is_preferred(ch.item, prefer) else None),
         })
     owned_fine = len([n for n in owned_notes if n["verdict"] == "fine"])
     return {
@@ -496,8 +615,30 @@ def build_tier(
         "shortfall": shortfall(stages, conds, kit, ev, tier, evenings),
         "owned_notes": owned_notes,
         "owned_fine_count": owned_fine,
+        "brands": brand_summary(items, prefer_names or []),
+        "_brand_swaps": swaps,
         "_choices": choices,
     }
+
+
+def brand_summary(items: list[dict], prefer_names: list[str]) -> dict | None:
+    """How much of the shopping list follows the traveller's brands, in one line."""
+    if not prefer_names:
+        return None
+    buy = [i for i in items if i["kind"] == "product" and i["item"]]
+    used = [i for i in buy if i["preferred_brand"]]
+    names = brand_names(prefer_names)
+    if not buy:
+        msg = "Nothing to buy for this trip, so no brand to pick."
+    elif len(used) == len(buy):
+        msg = f"Every piece to buy is {names}."
+    elif not used:
+        msg = (f"No {names} piece fits this budget and this trip, so the list uses other "
+               "brands. Each piece says why.")
+    else:
+        msg = (f"{len(used)} of {len(buy)} pieces to buy are {names}. The others say why "
+               "they are a different brand.")
+    return {"preferred": prefer_names, "used": len(used), "to_buy": len(buy), "message": msg}
 
 
 def _merge_upgrades(steps: list[dict], original: dict, choices: dict[str, Choice], tier: str) -> list[dict]:

@@ -12,6 +12,7 @@ export interface User {
   thermal_offset: number;
   pace: Pace;
   evenings: Evenings;
+  preferred_brands: string[];
   profile_done_at: string | null;
   created_at: string;
 }
@@ -28,6 +29,9 @@ export interface Profile {
   owned: string[];
   done: boolean;
   basics: { key: string; label: string }[];
+  preferred_brands: string[];
+  catalog_brands: string[];
+  unknown_brands: string[];
 }
 
 export interface PlanDiff {
@@ -39,7 +43,7 @@ export interface PlanDiff {
 }
 
 export interface ProfileUndo {
-  profile: { thermal_offset: number; pace: Pace; evenings: Evenings };
+  profile: { thermal_offset: number; pace: Pace; evenings: Evenings; preferred_brands?: string[] };
   wardrobe_ids: string[];
 }
 
@@ -276,6 +280,7 @@ export interface Item {
   network: string;
   gender: string;
   fit: Fit | null;
+  preferred_brand?: boolean;
 }
 
 export interface Requirement {
@@ -331,6 +336,8 @@ export interface KitLine {
   requirement: Requirement;
   cost: number;
   owned_verdict: "fine" | "works" | null;
+  preferred_brand?: boolean;
+  brand_note?: string | null;
 }
 
 export interface MarginRow { required: number; provided: number; margin: number; status: Status }
@@ -351,6 +358,7 @@ export interface TierPlan {
   advice: { tier: Tier; extra_cost: number; message: string } | null;
   owned_notes: { slot: string; verdict: string; message: string; item: Item }[];
   owned_fine_count: number;
+  brands?: { preferred: string[]; used: number; to_buy: number; message: string } | null;
 }
 
 export interface Question { stop_id: string | null; field: string; question: string; options: string[] }

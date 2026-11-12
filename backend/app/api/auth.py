@@ -26,6 +26,7 @@ from app.security import (
     new_link_token,
     verify_password,
 )
+from app.services import brands
 
 router = APIRouter(prefix="/api", tags=["auth"])
 auth_limit = Depends(rate_limit("auth", "auth_rate_limit_per_minute"))
@@ -70,7 +71,8 @@ def merge_guest(db: Session, guest: User | None, into: User) -> int:
     db.execute(update(AffiliateClick).where(AffiliateClick.user_id == guest.id).values(user_id=into.id))
     if into.profile_done_at is None and guest.profile_done_at is not None:
         # the quiz answered as a guest is the traveller's own: keep it
-        for k in ("thermal_offset", "pace", "evenings", "gender_pref", "profile_done_at"):
+        for k in ("thermal_offset", "pace", "evenings", "gender_pref", "preferred_brands",
+                  "profile_done_at"):
             setattr(into, k, getattr(guest, k))
     db.flush()
     db.expire(guest, ["trips", "wardrobe"])
@@ -310,6 +312,8 @@ def me(user: User = Depends(current_user)):
 @router.patch("/me", response_model=UserOut)
 def update_me(body: ProfileIn, user: User = Depends(current_user), db: Session = Depends(get_db)):
     for k, v in body.model_dump(exclude_unset=True).items():
+        if k == "preferred_brands":
+            v = brands.canon(db, v)
         setattr(user, k, v)
     db.commit()
     return user

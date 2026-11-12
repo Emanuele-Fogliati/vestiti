@@ -41,7 +41,8 @@ def quiz(body: QuizIn, trip_id: str | None = None, tier: str = "medium",
         if trip is None or trip.user_id != user.id:
             raise HTTPException(404, "Trip not found")
     before = _plans(db, user, trip)
-    changes, undo = P.apply_quiz(db, user, body.cold, body.pace, body.evenings, body.owned)
+    changes, undo = P.apply_quiz(db, user, body.cold, body.pace, body.evenings, body.owned,
+                                body.brands)
     db.commit()
     db.refresh(user)
     after = _plans(db, user, trip)

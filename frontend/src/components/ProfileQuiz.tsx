@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { api } from "../lib/api";
+import { BrandPicker } from "./BrandPicker";
 import type { Cold, Evenings, Pace, Profile, QuizResult, Tier } from "../lib/types";
 
-type Answers = { cold: Cold | null; pace: Pace | null; evenings: Evenings | null; owned: string[] | null };
+type Answers = { cold: Cold | null; pace: Pace | null; evenings: Evenings | null; owned: string[] | null; brands?: string[] | null };
 
 const STEPS: { key: "cold" | "pace" | "evenings"; q: string; why: string; options: [string, string][] }[] = [
   {
@@ -19,7 +20,7 @@ const STEPS: { key: "cold" | "pace" | "evenings"; q: string; why: string; option
   },
 ];
 
-/** Four tap-to-answer questions before the plan. Every one can be skipped. */
+/** Five tap-to-answer questions before the plan. Every one can be skipped. */
 export function ProfileQuiz({ tripId, tier, onDone }: {
   tripId?: string; tier?: Tier; onDone: (r: QuizResult) => void;
 }) {
@@ -27,9 +28,10 @@ export function ProfileQuiz({ tripId, tier, onDone }: {
   const [step, setStep] = useState(0);
   const [a, setA] = useState<Answers>({ cold: null, pace: null, evenings: null, owned: null });
   const [owned, setOwned] = useState<string[]>([]);
+  const [brands, setBrands] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
 
-  useEffect(() => { api.profile().then((p) => { setProfile(p); setOwned(p.owned); }).catch(() => undefined); }, []);
+  useEffect(() => { api.profile().then((p) => { setProfile(p); setOwned(p.owned); setBrands(p.preferred_brands ?? []); }).catch(() => undefined); }, []);
   useEffect(() => {
     const esc = (e: KeyboardEvent) => { if (e.key === "Escape") skipAll(); };
     window.addEventListener("keydown", esc);
@@ -47,7 +49,8 @@ export function ProfileQuiz({ tripId, tier, onDone }: {
     setStep(step + 1);
   }
 
-  const total = STEPS.length + 1;
+  const total = STEPS.length + 2;
+  const ownedStep = step === STEPS.length;
   const cur = STEPS[step];
   const current = profile && cur ? (profile[cur.key] as string) : null;
 
@@ -75,7 +78,7 @@ export function ProfileQuiz({ tripId, tier, onDone }: {
               <button type="button" className="btn sm ghost" onClick={() => answer(cur.key, null)}>Skip this one</button>
             </div>
           </>
-        ) : (
+        ) : ownedStep ? (
           <>
             <h2 id="quiz-q">What do you already have?</h2>
             <p className="muted">Tap all that apply. We check each one against the trip and tell you if it isn't warm enough. Beanie, gloves and socks are already counted as yours.</p>
@@ -89,8 +92,20 @@ export function ProfileQuiz({ tripId, tier, onDone }: {
             <div className="quiz-foot">
               <button type="button" className="btn sm ghost" onClick={() => setStep(step - 1)}>← Back</button>
               <span className="spacer" />
-              <button type="button" className="btn sm ghost" disabled={busy} onClick={() => finish({ ...a, owned: null })}>Skip</button>
-              <button type="button" className="btn primary" disabled={busy} onClick={() => finish({ ...a, owned })}>{busy ? <span className="spin" /> : "Tailor my kit"}</button>
+              <button type="button" className="btn sm ghost" onClick={() => { setA({ ...a, owned: null }); setStep(step + 1); }}>Skip</button>
+              <button type="button" className="btn primary" onClick={() => { setA({ ...a, owned }); setStep(step + 1); }}>Next</button>
+            </div>
+          </>
+        ) : (
+          <>
+            <h2 id="quiz-q">Favourite brands?</h2>
+            <p className="muted">We use them when they fit the trip and the budget. If not, we say why.</p>
+            <BrandPicker catalog={profile?.catalog_brands ?? []} value={brands} onChange={setBrands} />
+            <div className="quiz-foot">
+              <button type="button" className="btn sm ghost" onClick={() => setStep(step - 1)}>← Back</button>
+              <span className="spacer" />
+              <button type="button" className="btn sm ghost" disabled={busy} onClick={() => finish({ ...a, brands: null })}>Skip</button>
+              <button type="button" className="btn primary" disabled={busy} onClick={() => finish({ ...a, brands })}>{busy ? <span className="spin" /> : "Tailor my kit"}</button>
             </div>
           </>
         )}

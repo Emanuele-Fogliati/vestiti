@@ -8,6 +8,7 @@ import { ProductArt } from "./ProductArt";
 import { specRows } from "../lib/specs";
 import { Stars } from "./Stars";
 import { SwapDrawer } from "./SwapDrawer";
+import { BrandPicker } from "./BrandPicker";
 
 function Card({ line, tripId, tier, onSwap, onChanged }: {
   line: KitLine; tripId: string; tier: Tier; onSwap: () => void; onChanged: () => void;
@@ -39,6 +40,7 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
         <span className="lt">{line.code} · {line.slot_name.toUpperCase()}</span>
         {chip}
         {line.locked && !have && <span className="chip lock">YOUR CHOICE</span>}
+        {line.preferred_brand && !line.locked && <span className="chip lock">♥ YOUR BRAND</span>}
       </div>
       <div className="body">
         {have ? (
@@ -66,6 +68,7 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
             <dl className="specs">{specRows(it, line.slot).map(([k, v]) => <div key={k} style={{ display: "contents" }}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
             {fit && fit.positives.length > 0 && <ul className="pos">{fit.positives.slice(0, 2).map((p) => <li key={p}>{p}</li>)}</ul>}
             {fit && fit.issues.length > 0 && <ul className="issues">{fit.issues.slice(0, 2).map((p) => <li key={p}>{p}</li>)}</ul>}
+            {line.brand_note && <p className="note">{line.brand_note}</p>}
             {owned ? (
               <p className="okline">{line.owned_verdict === "fine" ? "Already yours and fine for this trip. Nothing to buy." : "Yours. It works, but see the notes above."}</p>
             ) : (
@@ -127,6 +130,19 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
 }) {
   const { config, user, refreshUser, toast } = useApp();
   const [swap, setSwap] = useState<KitLine | null>(null);
+  const [brandOpen, setBrandOpen] = useState(false);
+  const [catalog, setCatalog] = useState<string[]>([]);
+  const mine = user?.preferred_brands ?? [];
+
+  async function openBrands() {
+    setBrandOpen(true);
+    if (!catalog.length) setCatalog((await api.profile()).catalog_brands);
+  }
+  async function setBrands(v: string[]) {
+    await api.updateMe({ preferred_brands: v });
+    await refreshUser();
+    onChanged();
+  }
   const pref = user?.gender_pref ?? "any";
   const genders = new Set(tp_genders(plans.tiers[tier].items));
   const mixed = pref === "any" && genders.has("men") && genders.has("women");
@@ -161,6 +177,9 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
                   {g === "men" ? "Men" : g === "women" ? "Women" : "Any"}</button>))}
             </div>
           </div>
+          <div className="tb-l"><span className="label">Brands</span>
+            <button type="button" className="btn sm ghost" onClick={openBrands}>{mine.length ? `♥ ${mine.join(", ")}` : "Any"}</button>
+          </div>
           <div className="tsum" aria-live="polite"><span className="label">Kit total</span>
             <span className="big">{money(tp.totals.total)}</span>
             {tp.totals.owned_value_saved > 0 && <span className="sv">−{money(tp.totals.owned_value_saved)} thanks to what you own</span>}
@@ -168,6 +187,7 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
         </div>
       </div>
       <div className="wrap stack">
+        {tp.brands && <div className={`banner ${tp.brands.used ? "ok" : "info"}`}>{tp.brands.message}</div>}
         {assumed.length > 0 && (
           <div className="banner ok"><b>{assumed.length} basics counted as yours: {assumed.map((l) => l.slot_name.toLowerCase()).join(", ")}.</b>{" "}
             Most people already have them, so they are not in the total. Missing one? Tap “I need one” on its card.</div>
@@ -254,6 +274,18 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
           </div>
         </div>
       </section>
+      {brandOpen && (
+        <>
+          <div className="scrim" onClick={() => setBrandOpen(false)} />
+          <div className="quiz" role="dialog" aria-modal="true" aria-labelledby="brand-q">
+            <h2 id="brand-q">Favourite brands</h2>
+            <p className="muted">Used when they fit the trip and the budget. If not, the piece says why.</p>
+            <BrandPicker catalog={catalog} value={mine} onChange={setBrands} />
+            <div className="quiz-foot"><span className="spacer" />
+              <button type="button" className="btn primary" onClick={() => setBrandOpen(false)}>Done</button></div>
+          </div>
+        </>
+      )}
       {swap && <SwapDrawer tripId={tripId} tier={tier} line={swap} onClose={() => setSwap(null)} onChanged={() => { setSwap(null); onChanged(); }} />}
     </>
   );
