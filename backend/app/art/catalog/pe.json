@@ -62,6 +62,30 @@
    }
   },
   {
+   "slug": "aguas-calientes",
+   "label": "Aguas Calientes: the blue train through the town in the Urubamba gorge",
+   "lat": -13.155,
+   "lon": -72.525,
+   "radius_km": 3,
+   "aliases": [
+    "aguas calientes",
+    "machu picchu pueblo",
+    "machupicchu pueblo"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#5F8A5C",
+    "mid": "#8A8580",
+    "ice": "#F2EEE4",
+    "water": "#8E8A76",
+    "near": "#1D1E1B",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A34",
+    "acc": "#D9A35A",
+    "obj": "#2E4F9C"
+   }
+  },
+  {
    "slug": "alpamayo",
    "label": "Alpamayo's fluted ice pyramid above its glacier, Cordillera Blanca",
    "lat": -8.879,
@@ -1525,6 +1549,28 @@
    }
   },
   {
+   "slug": "lake-titicaca",
+   "label": "Lake Titicaca: deep blue water, a terraced island and the snowy Cordillera Real",
+   "lat": -15.75,
+   "lon": -69.55,
+   "radius_km": 8,
+   "aliases": [
+    "titicaca"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#B49A6A",
+    "mid": "#6F7A88",
+    "ice": "#F7F8FA",
+    "water": "#2F69A8",
+    "near": "#1C1D20",
+    "sun": "#F2C14E",
+    "leaf": "#7D9440",
+    "acc": "#C6553E",
+    "obj": "#C9AF72"
+   }
+  },
+  {
    "slug": "lares",
    "label": "The steaming hot spring pools of Lares in their green Andean valley",
    "lat": -13.106,
@@ -1648,7 +1694,6 @@
    "aliases": [
     "machu picchu",
     "machupicchu",
-    "aguas calientes",
     "huayna picchu",
     "inca jungle",
     "inka jungle"
@@ -2240,6 +2285,35 @@
    ]
   },
   {
+   "slug": "puno",
+   "label": "Puno Cathedral with its two stone towers above the steps, and the plaza fountain",
+   "lat": -15.8402,
+   "lon": -70.0219,
+   "radius_km": 10,
+   "aliases": [
+    "catedral de puno",
+    "puno cathedral"
+   ],
+   "names": [
+    "puno",
+    "puno city",
+    "puno peru",
+    "city of puno"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A88A66",
+    "mid": "#A07F68",
+    "ice": "#D9D2C6",
+    "water": "#3E79A8",
+    "near": "#2A201C",
+    "sun": "#F2C14E",
+    "leaf": "#3F7F5A",
+    "acc": "#C6553E",
+    "obj": "#B9B2A6"
+   }
+  },
+  {
    "slug": "punta-union-pass",
    "label": "Taulliraju's ice-fluted granite peak above turquoise Laguna Taullicocha, seen through the Punta Union pass on the Santa Cruz trek",
    "lat": -8.97,
@@ -2338,6 +2412,34 @@
     "leaf": "#7E9446",
     "acc": "#D2AE5A",
     "obj": "#A89A84"
+   }
+  },
+  {
+   "slug": "qorikancha",
+   "label": "Qorikancha: Santo Domingo church and tower on the curved Inca wall",
+   "lat": -13.5199,
+   "lon": -71.975,
+   "radius_km": 1,
+   "aliases": [
+    "qorikancha",
+    "coricancha",
+    "koricancha",
+    "qoricancha",
+    "korikancha",
+    "santo domingo cusco",
+    "temple of the sun cusco"
+   ],
+   "palette": {
+    "sky": "#A8CDF0",
+    "far": "#9A8C7A",
+    "mid": "#6E6A64",
+    "ice": "#E8D9BC",
+    "water": "#4F86A8",
+    "near": "#1F1C1A",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3A",
+    "acc": "#B4553A",
+    "obj": "#C9B48E"
    }
   },
   {
@@ -2490,6 +2592,33 @@
    }
   },
   {
+   "slug": "sacsayhuaman",
+   "label": "Sacsayhuaman: the three zigzag terraces of giant Inca stones, with llamas",
+   "lat": -13.5094,
+   "lon": -71.9817,
+   "radius_km": 1.5,
+   "aliases": [
+    "sacsayhuaman",
+    "saqsaywaman",
+    "sacsahuaman",
+    "saksaywaman",
+    "sacsaywaman",
+    "saqsayhuaman"
+   ],
+   "palette": {
+    "sky": "#A8CDF0",
+    "far": "#9A8C7A",
+    "mid": "#9B958B",
+    "ice": "#F3EFE6",
+    "water": "#4F86A8",
+    "near": "#1E1C1A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A3E",
+    "acc": "#B4553A",
+    "obj": "#8A5A3A"
+   }
+  },
+  {
    "slug": "salinas-and-aguada-blanca-national-reserve",
    "label": "Flamingos in the salt-rimmed Laguna de Salinas below the Pichu Pichu massif, Salinas y Aguada Blanca reserve",
    "lat": -16.33,
@@ -2614,6 +2743,33 @@
     "leaf": "#6F9C3F",
     "acc": "#A8845A",
     "obj": "#4A3626"
+   }
+  },
+  {
+   "slug": "santa-catalina-monastery",
+   "label": "Santa Catalina Monastery, Arequipa: red and blue walls, white arch and geraniums",
+   "lat": -16.3955,
+   "lon": -71.537,
+   "radius_km": 1,
+   "aliases": [
+    "santa catalina monastery",
+    "monasterio de santa catalina",
+    "convento de santa catalina",
+    "monastero di santa catalina",
+    "santa catalina convent",
+    "monastery of santa catalina"
+   ],
+   "palette": {
+    "sky": "#A8D0F2",
+    "far": "#B8A88E",
+    "mid": "#B5653E",
+    "ice": "#F3EEE4",
+    "water": "#D8343A",
+    "near": "#2A2220",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A34",
+    "acc": "#C2563A",
+    "obj": "#2F55A8"
    }
   },
   {
@@ -2971,9 +3127,7 @@
    "lon": -69.969,
    "radius_km": 30,
    "aliases": [
-    "puno",
-    "uros",
-    "titicaca"
+    "uros"
    ],
    "palette": {
     "sky": "#AFCFF0",
