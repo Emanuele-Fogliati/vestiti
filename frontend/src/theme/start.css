@@ -56,6 +56,11 @@
 .step-when{display:flex;align-items:center;gap:8px;color:var(--ink-2);font-size:14px;position:relative}
 .step-date{width:30px;padding:2px;border:0;background:transparent;color:transparent;cursor:pointer}
 .step-date::-webkit-datetime-edit{display:none}
+.step-days{font-size:13px;color:var(--ink-2)}
+.step-days summary{cursor:pointer;color:var(--ink-3);font-size:13px;width:max-content}
+.step-days ol{list-style:none;margin:6px 0 2px;padding:0;display:grid;gap:3px}
+.step-days li b{display:inline-block;min-width:44px;font-weight:600;color:var(--ink-3)}
+.step-days .sd-free{color:var(--ink-3)}
 .step-sights{font-size:13px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .step-ctl{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 .stepper{display:inline-flex;align-items:center;border-radius:999px;background:var(--surface-2)}

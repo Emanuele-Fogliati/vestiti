@@ -120,6 +120,29 @@ def suggest(q: str = "", _user: User = Depends(current_user)):
     return explore.suggest(q[:60])
 
 
+class PlanDayIn(BaseModel):
+    """One day of a proposed stop: the things to see that day."""
+    day: int = Field(ge=1, le=60)
+    sights: list[Annotated[str, Field(max_length=120)]] = Field(default_factory=list, max_length=8)
+
+
+def _visits(s: "PlanStopIn", start: date) -> list[dict]:
+    """The places seen at a stop, on their day when the plan gives one (several a day)."""
+    out, seen = [], set()
+    for d in s.plan:
+        if d.day > s.days:
+            continue
+        for n in d.sights:
+            if n not in seen:
+                seen.add(n)
+                out.append({"name": n, "date": start + timedelta(days=d.day - 1)})
+    for n in s.sights:
+        if n not in seen and len(out) < 30:
+            seen.add(n)
+            out.append({"name": n})
+    return out[:30]
+
+
 class PlanStopIn(BaseModel):
     name: str = Field(min_length=1, max_length=200)
     country: str | None = Field(default=None, max_length=2)
@@ -132,6 +155,7 @@ class PlanStopIn(BaseModel):
     elevation_m: float | None = Field(default=None, ge=-500, le=9000)
     activities: list[dict] | None = Field(default=None, max_length=20)
     sights: list[Annotated[str, Field(max_length=120)]] = Field(default_factory=list, max_length=12)
+    plan: list[PlanDayIn] = Field(default_factory=list, max_length=60)
 
     _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v) if v else v))
 
@@ -194,7 +218,7 @@ def make_trip(body: PlanTripIn, user: User = Depends(current_user), db: Session 
         stops.append(_stop_from(StopIn(
             name=s.name[:200], country_code=s.country, latitude=s.lat, longitude=s.lon,
             elevation_m=_elevation(s), start_date=cur, end_date=end, activities=acts,
-            visits=[{"name": n} for n in s.sights[:12]], days_estimated=False,
+            visits=_visits(s, cur), days_estimated=False,
             place_confirmed=bool(s.place_id)), i))
         cur = end + timedelta(days=1)
     a = explore.area(body.area) if body.area else None

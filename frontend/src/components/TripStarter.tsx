@@ -4,6 +4,7 @@
    to the clothes. */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { dayText, daysOf } from "../lib/plandays";
 import { api, ApiError } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { MONTH_LONG, MONTHS, today } from "../lib/format";
@@ -306,6 +307,16 @@ export function TripStarter({ compact }: { compact?: boolean }) {
                           onChange={(e) => setSteps(steps.map((x, j) => (j === i ? { ...x, start_date: e.target.value || null, fixed_dates: !!e.target.value } : x)))} />
                       </span>
                       {s.sights.length > 0 && <span className="step-sights">{s.sights.slice(0, 3).join(" · ")}</span>}
+                      {!!s.plan?.length && (
+                        <details className="step-days">
+                          <summary>Day by day</summary>
+                          <ol>
+                            {daysOf(s).map((d) => (
+                              <li key={d.day} className={`sd-${d.kind}`}><b>Day {d.day}</b> {dayText(d, i === 0 && d.day === 1)}</li>
+                            ))}
+                          </ol>
+                        </details>
+                      )}
                       {d && d.gap > 0 && <span className="step-gap">after {d.gap} free day{d.gap > 1 ? "s" : ""}</span>}
                     </div>
                     <div className="step-ctl">
