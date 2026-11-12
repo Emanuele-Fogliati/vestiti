@@ -175,3 +175,77 @@ def test_api_open_wish_gives_ideas(client):
     assert j["mode"] == "open" and j["ideas"] and "where" in j["missing"]
     assert client.get("/api/plan/suggest?q=tosc").json()[0]["id"] == "tuscany"
     assert client.post("/api/plan/propose", json={"area": "nowhere"}).status_code == 404
+
+
+# ---------------------------------------------------------------- routes merged from organised trips (2026-11-12)
+
+def _names(p):
+    return [s["name"] for s in p["stops"]]
+
+
+def test_every_stop_has_its_days_planned_with_several_things_a_day():
+    a, only = explore.best_area("Perù")
+    p = explore.propose(a, only, 14)
+    assert p["days"] == 14
+    seen = []
+    for s in p["stops"]:
+        assert [d["day"] for d in s["plan"]] == list(range(1, s["days"] + 1))
+        seen += [n for d in s["plan"] for n in d["sights"]]
+    assert len(seen) == len(set(seen)), "a sight is planned once"
+    cusco = next(s for s in p["stops"] if s["name"] == "Cusco")
+    assert any(len(d["sights"]) >= 3 for d in cusco["plan"]), "a city day sees several things"
+    assert "Machu Picchu" in seen and "Colca Canyon" in seen
+    # the order trips follow: the coast and Arequipa, then the lake, then Cusco and Machu Picchu
+    n = _names(p)
+    assert n.index("Arequipa") < n.index("Puno") < n.index("Cusco") < n.index("Aguas Calientes")
+
+
+def test_order_follows_the_trips_not_a_random_walk():
+    a, only = explore.best_area("Italia")
+    n = _names(explore.propose(a, only, 10))
+    assert {"Rome", "Florence", "Venice"} <= set(n)
+    if "Siena" in n:  # Siena sits between Florence and Rome, not after Rome
+        assert abs(n.index("Siena") - n.index("Florence")) == 1
+    a, only = explore.best_area("Giappone")
+    n = _names(explore.propose(a, only, 10))
+    assert n.index("Tokyo") < n.index("Kyoto") and n.count("Hiroshima") <= 1
+
+
+def test_a_ring_starts_and_ends_where_the_flights_are():
+    a, only = explore.best_area("Islanda")
+    for days in (9, 14):
+        p = explore.propose(a, only, days)
+        n = _names(p)
+        assert n[0] == n[-1] == "Reykjavik", n
+        assert p["stops"][-1]["key"] == "is-reykjavik~back"
+        assert p["days"] == days
+        # round the island, no jumping across the highlands
+        assert "Akureyri" in n and ("Höfn" in n or days < 9)
+
+
+def test_no_trip_counts_in_a_proposal():
+    a, only = explore.best_area("Patagonia")
+    p = explore.propose(a, only, 14)
+    import json
+    text = json.dumps(p)
+    assert '"trips"' not in text and '"programs"' not in text and '"score"' not in text
+
+
+def test_stop_panel_shows_what_trips_do_from_a_town():
+    from app.guide.todo import todo_for
+    t = todo_for("Cusco", "PE", -13.53, -71.97)
+    assert t.source == "trips"
+    assert any("Sacsayhuamán" in it.name and " · " in it.name for it in t.items)
+
+
+def test_api_trip_keeps_the_day_of_each_visit(client):
+    client.post("/api/auth/guest")
+    p = client.post("/api/plan/propose", json={"area": "c-pe", "days": 10}).json()
+    stops = p["stops"]
+    r = client.post("/api/plan/trip", json={"area": "c-pe", "start_date": "2027-05-03",
+                                            "stops": [{**s, "elevation_m": s["elevation_m"] or 100} for s in stops]})
+    assert r.status_code == 201, r.text
+    t = r.json()
+    cusco = next(s for s in t["stops"] if s["name"] == "Cusco")
+    dated = [v for v in cusco["visits"] if v.get("date")]
+    assert dated and all(cusco["start_date"] <= v["date"] <= cusco["end_date"] for v in dated)

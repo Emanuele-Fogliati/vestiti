@@ -6,11 +6,14 @@ Paine, Ushuaia... Nothing here is invented:
 - the region is hand-written geography (app/guide/regions.json) or a whole country;
 - the places come from the globe (app.globe), grouped around the towns you sleep in: the
   Perito Moreno glacier and Lago Argentino are seen from El Calafate;
-- how much a place matters is how many organised trips go there (the counts stay on the
-  server: the traveller sees an order, never a number);
-- how many days a place takes is what the organised routes give it (a hand-written
-  itinerary counts double); a route that fits the region and the days is the backbone of
-  the proposal, the next places by importance fill the days left.
+- the route merges the organised trips that go through the area (app.guide.patterns, built
+  from the inventory by tools/guide/build_patterns.py): the places most trips of about this
+  length sleep in, the days they give them, the order most of them follow, and for each stop
+  the days out they take from it, several sights a day (Manu, 2026-11-12: "the trips you
+  propose are random"). No single tour is copied;
+- the counts stay on the server: the traveller sees an order, never a number;
+- an area with too few organised trips falls back to one read route filled with the most
+  visited places.
 """
 from __future__ import annotations
 
@@ -237,11 +240,11 @@ def _insert(stops: list[dict], s: dict, keep_first: bool) -> None:
     stops.insert(at, s)
 
 
-def propose(a: dict, only: list[str] | None = None, days: int | None = None,
-            month: int | None = None, keep: list[str] | None = None, drop: list[str] | None = None,
-            last: list[str] | None = None) -> dict:
-    """A route through the area that fits the days: {stops, more, route, best_months, days}.
-    `last`: places the traveller wants to end with ("e alla fine Ushuaia"), kept and moved last."""
+def _propose_from_route(a: dict, only: list[str] | None = None, days: int | None = None,
+                        month: int | None = None, keep: list[str] | None = None, drop: list[str] | None = None,
+                        last: list[str] | None = None) -> dict:
+    """The old way, for areas with too few organised trips to merge: one read route as the
+    backbone, filled with the most visited places."""
     keep = list(dict.fromkeys([*(keep or []), *(last or [])]))
     only = only or list(a["countries"])
     drop = set(drop or [])
@@ -347,6 +350,492 @@ def propose(a: dict, only: list[str] | None = None, days: int | None = None,
             if b["id"] not in taken][:10]
     return {"stops": stops, "more": more, "route": route["title"] if route else None,
             "best_months": best_months, "days": total()}
+
+
+# ---------------------------------------------------------------- the proposal: merged organised trips
+
+MIN_AREA_TRIPS = 4      # fewer organised trips than this in an area: the old way
+START_KM = 500          # starting where few trips start costs as much as this much road
+HOP_KM = 60             # each move costs at least this much: fewer, longer stays
+FOLLOW = 0.85           # a move most trips make costs this much less road
+IN_TOWN_KM = 15         # sights this close to where you sleep can share a day
+DAY_MAX = 4             # things in one day at most, when they are close together
+NEW_PLACE = 0.8         # a day somewhere new is worth a bit less: you spend part of it moving
+DETOUR_KM = 300         # a move trips with both places never make costs this much more
+SAME_PLACE_KM = 25       # a place to sleep this close to one chosen is the same stop
+NEAR_BASE_KM = 40        # a town this close to a stop is a day out from it
+FEW = 1.0               # a move one or two trips make is not yet "what trips do"
+BRIDGE_KM = 150         # two stops this far apart that no trip joins directly need a night between
+FLY_KM = 500            # farther than this you fly
+RING_SHARE = 0.3        # trips that come back to where they started, from this share up
+EXACT_ORDER_MAX = 11    # up to this many places the best order is searched exactly
+
+
+def _area_trips(a: dict, only: list[str]) -> list[tuple[str, int, list[tuple[str, int]]]]:
+    """The organised trips that go through the area, cut to what they do inside it:
+    (operator, days inside, [(place, days)])."""
+    from app import globe
+    from app.guide import patterns
+    P = globe.by_id()
+    out = []
+    for t in patterns.trips():
+        tot = sum(d for _, d in t.stays) or 1
+        inn: list[tuple[str, int]] = []
+        for pid, d in t.stays:
+            p = P.get(pid)
+            if not p or not inside(a, p["lat"], p["lon"], p["country"], only):
+                continue
+            if inn and inn[-1][0] == pid:
+                inn[-1] = (pid, inn[-1][1] + d)
+            else:
+                inn.append((pid, d))
+        days = sum(d for _, d in inn)
+        if len({p for p, _ in inn}) < 2 or days < 3:
+            continue  # one town only: an extension, it says nothing about a route
+        if days / tot < 0.5 and days < 6:
+            continue  # a few days of a much longer trip elsewhere
+        out.append((t.operator, days, inn))
+    return out
+
+
+class _Merge:
+    """The trips of an area weighted by how close their length is to the days asked, each
+    operator counting about as much as the others (a hundred variants of one operator's tour
+    are still one way of doing it)."""
+
+    def __init__(self, trips: list, target: int):
+        from collections import Counter
+        per_op = Counter(o for o, _, _ in trips)
+        self.recs = []
+        for o, n, stays in trips:
+            w = math.exp(-((n - target) / (0.25 * target + 2)) ** 2) / math.sqrt(per_op[o])
+            days: dict[str, int] = {}
+            for pid, d in stays:
+                days[pid] = days.get(pid, 0) + d
+            self.recs.append({"w": max(w, 1e-4), "days": days, "seq": [pid for pid, _ in stays]})
+        self.places = sorted({p for r in self.recs for p in r["days"]})
+        self.imp = {p: sum(r["w"] for r in self.recs if p in r["days"]) for p in self.places}
+
+    def typical(self, p: str) -> int:
+        """The days trips like this one give a place (weighted median)."""
+        xs = sorted((r["days"][p], r["w"]) for r in self.recs if p in r["days"])
+        if not xs:
+            return 2
+        half, acc = sum(w for _, w in xs) / 2, 0.0
+        for d, w in xs:
+            acc += w
+            if acc >= half:
+                return max(1, min(MAX_STOP_DAYS, d))
+        return xs[-1][0]
+
+    def value(self, p: str, nth_day: int, chosen: list[str]) -> float:
+        """How many (weighted) trips like this one, and like the places already chosen, give the
+        place at least this many days."""
+        v = 0.0
+        for r in self.recs:
+            d = r["days"].get(p, 0)
+            if d >= nth_day:
+                share = (1 + sum(1 for c in chosen if c in r["days"])) / (1 + len(chosen))
+                v += r["w"] * share
+        return v
+
+    def hub(self, chosen: list[str]) -> tuple[str | None, float]:
+        """Where trips like this start, and how often they come back there at the end (Reykjavik,
+        Lima, Buenos Aires: the flights home leave from there)."""
+        firsts: dict[str, float] = {}
+        for r in self.recs:
+            seq = [p for p in r["seq"] if p in chosen]
+            if seq:
+                firsts[seq[0]] = firsts.get(seq[0], 0) + r["w"]
+        if not firsts:
+            return None, 0.0
+        h = max(firsts, key=firsts.get)
+        back = sum(r["w"] for r in self.recs if r["seq"] and r["seq"][0] == h and r["seq"][-1] == h)
+        start = sum(r["w"] for r in self.recs if r["seq"] and r["seq"][0] == h)
+        return h, back / start if start else 0.0
+
+    def order(self, chosen: list[str], end: str | None, ring: str | None = None) -> list[str]:
+        """The order most trips follow, with as little road as possible. ring: the trip starts
+        there and comes back to it, so it should end close to it."""
+        from app import globe
+        P = globe.by_id()
+        n = len(chosen)
+        if n <= 2 and not end and not ring:
+            return self._two(chosen)
+        idx = {p: i for i, p in enumerate(chosen)}
+        move = [[0.0] * n for _ in range(n)]
+        both = [[0.0] * n for _ in range(n)]
+        first, lastw, pres = [0.0] * n, [0.0] * n, [0.0] * n
+        for r in self.recs:
+            seq = [p for p in r["seq"] if p in idx]
+            if not seq:
+                continue
+            ids = {idx[p] for p in seq}
+            for i in ids:
+                pres[i] += r["w"]
+                for j in ids:
+                    both[i][j] += r["w"]
+            first[idx[seq[0]]] += r["w"]
+            lastw[idx[seq[-1]]] += r["w"]
+            for x, y in zip(seq, seq[1:]):
+                if x != y:
+                    move[idx[x]][idx[y]] += r["w"]
+
+        def km_(i: int, j: int) -> float:
+            """Road, or a flight: past FLY_KM a longer flight costs little more."""
+            a, b = P[chosen[i]], P[chosen[j]]
+            d = km(a["lat"], a["lon"], b["lat"], b["lon"])
+            return d if d <= FLY_KM else FLY_KM + (d - FLY_KM) * 0.3
+
+        cost = [[0.0] * n for _ in range(n)]
+        for i in range(n):
+            for j in range(n):
+                if i != j:
+                    # most trips go this way (half as much if they go the other way round)
+                    follow = min(1.0, (move[i][j] + 0.5 * move[j][i]) / (both[i][j] + FEW))
+                    cost[i][j] = HOP_KM + km_(i, j) * (1 - FOLLOW * follow) + DETOUR_KM * (1 - follow)
+        start = [START_KM * (1 - (first[i] / pres[i] if pres[i] else 0)) for i in range(n)]
+        stop = [START_KM / 2 * (1 - (lastw[i] / pres[i] if pres[i] else 0)) for i in range(n)]
+        if end in idx:
+            stop = [0.0 if i == idx[end] else math.inf for i in range(n)]
+        elif ring in idx:
+            h = idx[ring]
+            start = [0.0 if i == h else math.inf for i in range(n)]
+            stop = [km_(i, h) * 0.7 if i != h else 0.0 for i in range(n)]
+        if n <= EXACT_ORDER_MAX:
+            best = self._exact(n, cost, start, stop)
+        else:
+            best = self._greedy(n, cost, start, stop)
+        return [chosen[i] for i in best]
+
+    def direct(self, a: str, b: str) -> float:
+        """How often trips with both places go straight from one to the other (either way)."""
+        mv = both = 0.0
+        for r in self.recs:
+            if a in r["days"] and b in r["days"]:
+                both += r["w"]
+                seq = r["seq"]
+                if any({x, y} == {a, b} for x, y in zip(seq, seq[1:])):
+                    mv += r["w"]
+        return mv / (both + FEW)
+
+    def bridge(self, a: str, b: str, skip: set[str]) -> str | None:
+        """The place trips sleep in between two places they never go straight between (Höfn
+        between Vík and the north of Iceland)."""
+        got: dict[str, float] = {}
+        for r in self.recs:
+            seq = r["seq"]
+            for x, c, y in zip(seq, seq[1:], seq[2:]):
+                if {x, y} == {a, b} and c not in skip:
+                    got[c] = got.get(c, 0) + r["w"]
+        return max(got, key=got.get) if got else None
+
+    def _two(self, chosen: list[str]) -> list[str]:
+        if len(chosen) < 2:
+            return list(chosen)
+        a, b = chosen
+        ab = sum(r["w"] for r in self.recs if a in r["seq"] and b in r["seq"] and r["seq"].index(a) < r["seq"].index(b))
+        ba = sum(r["w"] for r in self.recs if a in r["seq"] and b in r["seq"] and r["seq"].index(b) < r["seq"].index(a))
+        return [a, b] if ab >= ba else [b, a]
+
+    @staticmethod
+    def _exact(n: int, cost, start, stop) -> list[int]:
+        full = (1 << n) - 1
+        dp = [[math.inf] * n for _ in range(1 << n)]
+        back = [[-1] * n for _ in range(1 << n)]
+        for i in range(n):
+            dp[1 << i][i] = start[i]
+        for mask in range(1, 1 << n):
+            row = dp[mask]
+            for j in range(n):
+                c = row[j]
+                if c == math.inf:
+                    continue
+                for k in range(n):
+                    if mask & (1 << k):
+                        continue
+                    m2 = mask | (1 << k)
+                    v = c + cost[j][k]
+                    if v < dp[m2][k]:
+                        dp[m2][k] = v
+                        back[m2][k] = j
+        j = min(range(n), key=lambda i: dp[full][i] + stop[i])
+        out, mask = [], full
+        while j != -1:
+            out.append(j)
+            j, mask = back[mask][j], mask & ~(1 << j)
+        return out[::-1]
+
+    @staticmethod
+    def _greedy(n: int, cost, start, stop) -> list[int]:
+        cur = min(range(n), key=lambda i: start[i])
+        out, left = [cur], set(range(n)) - {cur}
+        while left:
+            cur = min(left, key=lambda k: cost[out[-1]][k])
+            out.append(cur)
+            left.remove(cur)
+        if stop[out[-1]] == math.inf:  # the place to end with goes last
+            e = next(i for i in range(n) if stop[i] == 0.0)
+            out.remove(e)
+            out.append(e)
+        return out
+
+
+def _anchor(pid: str, cands: list[str]) -> str | None:
+    """The place to sleep that a kept place stands for: itself, the same place under another
+    name, or the town a sight is seen from (Perito Moreno is El Calafate)."""
+    from app import globe
+    from app.guide import patterns
+    if pid in cands:
+        return pid
+    P = globe.by_id()
+    p = P.get(pid)
+    if not p:
+        return None
+    near = sorted((km(p["lat"], p["lon"], P[c]["lat"], P[c]["lon"]), c) for c in cands if c in P)
+    if near and near[0][0] <= 5:
+        return near[0][1]
+    outs = patterns.outings()
+    from_ = [c for c in cands if any(pid in g for g, _, _ in outs.get(c, ()))]
+    if from_:
+        return min(from_, key=lambda c: km(p["lat"], p["lon"], P[c]["lat"], P[c]["lon"]))
+    if p["kind"] not in BASE_KINDS and near and near[0][0] <= 40:
+        return near[0][1]
+    return None
+
+
+def _days_of(stops: list[dict]) -> None:
+    """What to do each day at each stop, from what organised trips do there: the days out they
+    take from it (several sights in one day when trips see them together), what they see on the
+    way in. Each sight once, with the stop it is closest to."""
+    from app import globe
+    from app.guide import patterns
+    P = globe.by_id()
+    outs, way = patterns.outings(), patterns.way()
+    used: set[str] = {s["place_id"] for s in stops if s.get("place_id")}
+
+    # a sight goes with the stop trips see it from most (Perito Moreno is El Calafate, even if
+    # Torres del Paine is closer as the crow flies); one no trip names goes with the closest stop
+    from_stop: dict[str, tuple[float, int]] = {}
+    for k, o in enumerate(stops):
+        mine = outs.get(o.get("place_id"), ())
+        top = max((w for _, w, _ in mine), default=1) or 1
+        for g, w, _ in mine:
+            w = w / top  # how much of what trips do there
+            for x in g:
+                q = P.get(x)
+                if not q:
+                    continue
+                # trips that see it from there, the closer the better (Colca is Chivay's)
+                v = w / (1 + km(q["lat"], q["lon"], o["lat"], o["lon"]) / 30) ** 2
+                if v > from_stop.get(x, (0, -1))[0]:
+                    from_stop[x] = (v, k)
+
+    def closest_is(sid: str, s: dict) -> bool:
+        q = P.get(sid)
+        if not q:
+            return False
+        if sid in from_stop:
+            return stops[from_stop[sid][1]] is s
+        mine = km(q["lat"], q["lon"], s["lat"], s["lon"])
+        return all(km(q["lat"], q["lon"], o["lat"], o["lon"]) >= mine - 5 for o in stops if o is not s)
+
+    def in_town(sids: list[str], s: dict) -> bool:
+        return all(km(P[x]["lat"], P[x]["lon"], s["lat"], s["lon"]) <= IN_TOWN_KM for x in sids)
+
+    for i, s in enumerate(stops):
+        b = s.get("place_id")
+        groups: list[tuple[list[str], int]] = []
+        # places to sleep close by that are not stops are seen from here (Purmamarca from Tilcara)
+        near = [c for c in outs if c != b and c in P and c not in used
+                and km(P[c]["lat"], P[c]["lon"], s["lat"], s["lon"]) <= NEAR_BASE_KM and closest_is(c, s)]
+        sources = [(g, n) for g, _, n in outs.get(b, ())]
+        for c in sorted(near, key=lambda c: -sum(w for _, w, _ in outs[c])):
+            sources.append(((c,), 1))
+            sources += [(g, n) for g, _, n in outs[c]]
+        for g, n in sources:
+            ids = [x for x in g if x not in used and x in P and closest_is(x, s)]
+            if ids:
+                used.update(ids)
+                groups.append((ids, n))
+        on_way: list[str] = []
+        if i > 0 and b and stops[i - 1].get("place_id"):
+            on_way = [x for x in way.get((stops[i - 1]["place_id"], b), ()) if x not in used and x in P]
+            used.update(on_way)
+        plan: list[dict] = []
+        later: list[tuple[list[str], int]] = []
+        d = 1
+        while d <= s["days"]:
+            if d == 1 and (i > 0 or s["days"] > 1):
+                things = list(on_way)
+                if s["days"] == 1:
+                    while groups and groups[0][1] > 1:
+                        later.append(groups.pop(0))
+                    if groups:
+                        things += groups.pop(0)[0]
+                plan.append({"day": 1, "kind": "arrive", "sights": [P[x]["name"] for x in things]})
+                d += 1
+                continue
+            # the next day out that fits the days left (a 3-day trek needs 3)
+            while groups and groups[0][1] > s["days"] - d + 1:
+                later.append(groups.pop(0))
+            if not groups and later:  # a longer trip out done in the days there are
+                g, n = later.pop(0)
+                groups.append((g, min(n, s["days"] - d + 1)))
+            if not groups:
+                plan.append({"day": d, "kind": "free", "sights": []})
+                d += 1
+                continue
+            things, n = groups.pop(0)
+            if n > 1:
+                name = P[things[0]]["name"]
+                plan.append({"day": d, "kind": "day", "sights": [P[x]["name"] for x in things], "days": n})
+                for k in range(1, n):
+                    plan.append({"day": d + k, "kind": "more", "sights": [], "of": name})
+                d += n
+                continue
+            # short visits in town share the day
+            while groups and groups[0][1] == 1 and len(things) < DAY_MAX and in_town(things, s) \
+                    and in_town(groups[0][0], s) and len(things) + len(groups[0][0]) <= DAY_MAX:
+                things += groups.pop(0)[0]
+            plan.append({"day": d, "kind": "day", "sights": [P[x]["name"] for x in things]})
+            d += 1
+        s["plan"] = plan
+        extra = [P[x]["name"] for g, _ in later + groups for x in g]
+        s["also"] = extra[:6]  # more days out from here, if you add a day
+        s["sights"] = ([n for p in plan for n in p["sights"]] + extra)[:12]
+
+
+def propose(a: dict, only: list[str] | None = None, days: int | None = None,
+            month: int | None = None, keep: list[str] | None = None, drop: list[str] | None = None,
+            last: list[str] | None = None) -> dict:
+    """A route through the area that fits the days: {stops, more, route, best_months, days}.
+
+    Made by merging the organised trips of the area (Manu, 2026-11-12: "not one trip copied,
+    the places that matter, in a good order, several things a day"):
+    - the places to sleep in, chosen a day at a time: each next day goes where most trips of
+      about this length (and with the places already chosen) spend it, a new place or one more
+      day somewhere already in;
+    - in the order most trips follow, with the least road;
+    - each stop with its days planned from what trips do there.
+    `last`: places the traveller wants to end with ("e alla fine Ushuaia"), kept and moved last.
+    """
+    only = only or list(a["countries"])
+    trips = _area_trips(a, only)
+    if len(trips) < MIN_AREA_TRIPS:
+        p = _propose_from_route(a, only, days, month, keep, drop, last)
+        _days_of(p["stops"])
+        return p
+    from app import globe
+    P = globe.by_id()
+    if not days:
+        lengths = sorted(n for _, n, _ in trips)
+        days = max(5, min(21, lengths[len(lengths) // 2]))
+    m = _Merge(trips, days)
+    drop_set = set(drop or [])
+    cands = [p for p in m.places if p in P and p not in drop_set]
+    forced: list[str] = []
+    extra_stops: dict[str, dict] = {}
+    for k in [*(keep or []), *(last or [])]:
+        b = _anchor(k, cands)
+        if b is None and k in P and k not in drop_set:  # a place no trip sleeps in: the traveller wants it
+            b = k
+            extra_stops[k] = P[k]
+        if b and b not in forced:
+            forced.append(b)
+    ends = [_anchor(k, cands) or k for k in (last or [])]
+    end = ends[-1] if ends else None
+
+    chosen: list[str] = []
+    alloc: dict[str, int] = {}
+    for b in forced:
+        chosen.append(b)
+        alloc[b] = m.typical(b) if b in m.imp else DEFAULT_DAYS.get(P[b]["kind"], 2)
+    top = max(m.imp.values()) if m.imp else 1.0
+
+    def total() -> int:
+        return sum(alloc.values())
+
+    while total() < days:
+        left = days - total()
+        best, pick = 0.0, None
+        for b in chosen:
+            if alloc[b] < MAX_STOP_DAYS and b in m.imp:
+                v = m.value(b, alloc[b] + 1, chosen)
+                if v > best:
+                    best, pick = v, (b, False)
+        for b in cands:
+            if b in alloc or m.imp[b] < 0.04 * top:
+                continue
+            if any(km(P[b]["lat"], P[b]["lon"], P[c]["lat"], P[c]["lon"]) <= SAME_PLACE_KM for c in chosen):
+                continue  # Iguazu Falls is Puerto Iguazú
+            # a new place comes with the days trips give it (no one-night hops), and moving costs
+            n = max(1, min(m.typical(b), left))
+            v = NEW_PLACE * sum(m.value(b, k, chosen) for k in range(1, n + 1)) / n
+            if v > best:
+                best, pick = v, (b, True)
+        if not pick or best < 1e-6:
+            break
+        b, new = pick
+        if new:
+            chosen.append(b)
+            alloc[b] = max(1, min(m.typical(b), days - total()))
+        else:
+            alloc[b] += 1
+    # days nobody spends anywhere else: more time where it matters most
+    i = 0
+    while total() < days and chosen and i < 200:
+        b = sorted(chosen, key=lambda c: -m.imp.get(c, 0))[i % len(chosen)]
+        if alloc[b] < MAX_STOP_DAYS:
+            alloc[b] += 1
+        i += 1
+    # more than the days (the places kept take more): trim where trips spend the least
+    while total() > days and len(chosen) > 1:
+        many = [c for c in chosen if alloc[c] > 1]
+        if many:
+            c = min(many, key=lambda c: m.value(c, alloc[c], chosen) if c in m.imp else 0)
+            alloc[c] -= 1
+            continue
+        free = [c for c in chosen if c not in forced] or [c for c in chosen if c != end]
+        if not free:
+            break
+        c = min(free, key=lambda c: m.imp.get(c, 0))
+        chosen.remove(c)
+        del alloc[c]
+    # two places trips never go straight between: add the night they spend in between
+    order0 = m.order(chosen, end, None) if len(chosen) >= 2 else list(chosen)
+    for x, y in list(zip(order0, order0[1:])):
+        d_xy = km(P[x]["lat"], P[x]["lon"], P[y]["lat"], P[y]["lon"])
+        if not BRIDGE_KM <= d_xy <= FLY_KM or m.direct(x, y) >= 0.15:  # farther: you fly
+            continue
+        c = m.bridge(x, y, set(chosen) | drop_set)
+        donor = max(chosen, key=lambda k: alloc[k])
+        if c and c in P and alloc[donor] >= 3:
+            alloc[donor] -= 1
+            chosen.append(c)
+            alloc[c] = 1
+    ring, back = (m.hub(chosen) if not end and len(chosen) >= 3 else (None, 0.0))
+    ring = ring if back >= RING_SHARE and P[ring]["kind"] == "city" else None
+    order = m.order(chosen, end, ring)
+    stops = [{**_stop_of_base({**P[b], "sights": []}, alloc[b]), "key": b} for b in order]
+    if ring and alloc[ring] >= 2 and stops[-1]["kind"] != "city" \
+            and km(P[ring]["lat"], P[ring]["lon"], stops[-1]["lat"], stops[-1]["lon"]) > 120:
+        # back where the flights leave from: the last night there
+        stops[0]["days"] -= 1
+        stops.append({**_stop_of_base({**P[ring], "sights": []}, 1), "key": f"{ring}~back"})
+    _days_of(stops)
+    taken = set(order)
+    more = []
+    for b in sorted(cands, key=lambda c: -m.imp[c]):
+        if b in taken or any(km(P[b]["lat"], P[b]["lon"], P[c]["lat"], P[c]["lon"]) <= TOWN_IN_CITY_KM for c in taken):
+            continue
+        more.append(_stop_of_base({**P[b], "sights": []}, m.typical(b)))
+        if len(more) >= 10:
+            break
+    _days_of(more)  # what you would do there, if you add it
+    routes = area_routes(a, only)
+    best_months = sorted({mo for r in routes[:6] for mo in r.get("best_months") or []})
+    return {"stops": stops, "more": more, "route": None, "best_months": best_months, "days": total()}
 
 
 def start_for(month: int | None, best: list[int], today: date | None = None) -> date:

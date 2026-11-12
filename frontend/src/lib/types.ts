@@ -127,7 +127,7 @@ export interface BoardStop {
   status: StopStatus; fixed_note: string | null; sleep: string | null; days_estimated: boolean;
   arrival: BoardLeg;
   todo: {
-    source: "guide" | "nearby" | "none"; area: string | null; items: TodoItem[];
+    source: "guide" | "trips" | "nearby" | "none"; area: string | null; items: TodoItem[];
     rain: { name: string; hours: string; why: string } | null;
     routes: { id: string; name: string; summary: string; book: string; days: { title: string; note: string; rain: string }[] }[];
     season: string; sleep_tip: string; sources: string[];
@@ -157,6 +157,13 @@ export interface PlanStep {
   key: string; place_id?: string | null; name: string; country: string | null; lat: number; lon: number;
   kind?: string | null; days: number; start_date?: string | null; fixed_dates?: boolean;
   elevation_m?: number | null; activities?: Activity[] | null; sights: string[];
+  /** What to do each day there, from what organised trips do (several things a day). */
+  plan?: PlanDay[]; also?: string[];
+}
+export interface PlanDay {
+  day: number; kind: "arrive" | "day" | "more" | "free"; sights: string[];
+  /** a trip out of several days (a trek): how many */ days?: number;
+  /** "more" days: the trip out they belong to */ of?: string;
 }
 export interface PlanArea { id: string; name: string; kind: "region" | "country" }
 export interface PlanProposal {

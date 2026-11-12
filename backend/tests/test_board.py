@@ -51,7 +51,8 @@ def test_a_stop_finds_its_area_by_name_or_by_distance():
 
 def test_other_places_get_their_most_visited_sights_without_numbers():
     t = todo.todo_for("Florence", "IT", 43.7696, 11.2558)
-    assert t.source == "nearby" and len(t.items) >= 5
+    # what organised trips do from Florence first (days of several sights), then other sights
+    assert t.source == "trips" and len(t.items) >= 5
     assert "Florence" not in [i.name for i in t.items]
     dumped = str([i.model_dump() for i in t.items])
     assert "trips" not in dumped  # how many organised trips go there never leaves the server

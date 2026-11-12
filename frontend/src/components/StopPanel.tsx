@@ -156,8 +156,9 @@ export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, on
         <div className="bp-side">
           {todo.items.length > 0 && (
             <div className="stack" style={{ gap: 6 }}>
-              <h4>{todo.source === "guide" ? "Best things to do, in order" : "Most visited near here"}</h4>
+              <h4>{todo.source === "guide" ? "Best things to do, in order" : todo.source === "trips" ? "What travellers do from here, one day each" : "Most visited near here"}</h4>
               {todo.source === "nearby" && <p className="small muted">In order of how many travellers go. No times or weather advice for this place yet.</p>}
+              {todo.source === "trips" && <p className="small muted">The days out most trips take from here, the things on one line seen the same day. No times yet.</p>}
               <ol className="bp-rank">
                 {todo.items.map((it) => (
                   <li key={it.id} className={skip.has(it.id) ? "skipped" : ""}>

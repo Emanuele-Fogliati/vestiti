@@ -162,8 +162,45 @@ def nearby(name: str, country: str | None, lat: float, lon: float) -> list[Item]
     return items
 
 
+TRIP_ITEMS_MAX = 8
+
+
+def from_trips(name: str, country: str | None, lat: float, lon: float) -> list[Item]:
+    """The days out organised trips take from this place, each a day of several things seen
+    together ("Pisac · Ollantaytambo · Chinchero"), most taken first (tools/guide/build_patterns.py).
+    No times: the operators' pages don't give them."""
+    from app import globe
+    from app.guide import patterns
+    outs = patterns.outings()
+    P = globe.by_id()
+    me = _norm(name or "")
+    near = [(km(lat, lon, P[b]["lat"], P[b]["lon"]), b) for b in outs if b in P
+            and (country is None or P[b]["country"] == country)]
+    near = [x for x in near if x[0] <= 25]
+    if not near:
+        return []
+    named = [x for x in near if _norm(P[x[1]]["name"]) == me]
+    base = min(named or near)[1]
+    items = []
+    for g, _, n in outs[base][:TRIP_ITEMS_MAX]:
+        ps = [P[x] for x in g if x in P]
+        if not ps:
+            continue
+        far = max(km(lat, lon, p["lat"], p["lon"]) for p in ps)
+        label = " · ".join(p["name"] for p in ps[:4])
+        if len(label) > 80:
+            label = label[:79].rsplit(" · ", 1)[0]
+        items.append(Item(
+            id="t-" + ps[0]["id"][:70].lower(), name=label,
+            hours=f"{n} days" if n > 1 else ("" if far < 3 else f"up to {round(far)} km away"),
+            length="full" if n > 1 or far >= 25 or len(ps) >= 3 else ("half" if far >= 8 or len(ps) == 2 else "short"),
+            need="dry" if any(p["kind"] in ("nature", "island") for p in ps) else "any",
+            why="", act=None))
+    return items
+
+
 class Todo(BaseModel):
-    source: Literal["guide", "nearby", "none"]
+    source: Literal["guide", "trips", "nearby", "none"]
     area: str | None = None
     items: list[Item] = Field(default_factory=list)
     rain: Rain | None = None
@@ -178,5 +215,10 @@ def todo_for(name: str, country: str | None, lat: float, lon: float) -> Todo:
     if a:
         return Todo(source="guide", area=a.id, items=a.items, rain=a.rain, routes=a.routes,
                     season=a.season, sleep=a.sleep, sources=[str(s) for s in a.sources])
+    trips = from_trips(name, country, lat, lon)
+    if trips:
+        seen = {n for it in trips for n in it.name.split(" · ")}
+        rest = [it for it in nearby(name, country, lat, lon) if it.name not in seen]
+        return Todo(source="trips", items=trips + rest[:max(0, NEARBY_MAX - len(trips))])
     items = nearby(name, country, lat, lon)
     return Todo(source="nearby" if items else "none", items=items)
