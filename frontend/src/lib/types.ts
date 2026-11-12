@@ -148,6 +148,26 @@ export interface TripFlights { legs: FlightLeg[]; all_legs_link: string | null; 
 export interface Passenger { title: "mr" | "ms" | "mrs" | "miss" | "dr"; given_name: string; family_name: string; gender: "m" | "f"; born_on: string; email: string; phone_number: string }
 export interface FlightOrder { order_id: string; booking_reference: string | null; price: number; currency: string; slices: FlightSlice[]; test: boolean }
 
+/** One stop of a trip being started (a proposal, a sentence read, or a row typed). */
+export interface PlanStep {
+  key: string; place_id?: string | null; name: string; country: string | null; lat: number; lon: number;
+  kind?: string | null; days: number; start_date?: string | null; fixed_dates?: boolean;
+  elevation_m?: number | null; activities?: Activity[] | null; sights: string[];
+}
+export interface PlanArea { id: string; name: string; kind: "region" | "country" }
+export interface PlanProposal {
+  area: PlanArea; only: string[]; stops: PlanStep[]; more: PlanStep[]; route: string | null;
+  best_months: number[]; days: number; suggested_start: string;
+}
+export interface PlanIdea { id: string; title: string; days: number; countries: string[]; weather: string; guide: string | null }
+export interface PlanReading {
+  text: string; mode: "stops" | "region" | "open"; area: PlanArea | null; only: string[]; month: number | null;
+  start_date: string | null; start_part?: string; days: number | null; stops: PlanStep[];
+  home: { name: string; country: string; lat: number; lon: number } | null; wishes: string[];
+  missing: ("where" | "when" | "how_long")[]; keep?: string[]; proposal: PlanProposal | null; ideas: PlanIdea[];
+}
+export interface PlanSuggestion { type: "region" | "country"; id: string; name: string; sub: string }
+
 export interface PlaceGuide { blurb: string; fun_fact: string; source: string }
 
 export interface Visit {

@@ -1,0 +1,1213 @@
+{
+ "_doc": "Regions travellers name instead of a place or a country (\"Patagonia\"): the countries they lie in and rough boxes [south, west, north, east] in degrees. Written by hand from common geography; the places inside come from the globe. A region with no box is its countries. Used by app/services/explore.py.",
+ "regions": [
+  {
+   "id": "patagonia",
+   "name": "Patagonia",
+   "names": [
+    "patagonia"
+   ],
+   "countries": [
+    "AR",
+    "CL"
+   ],
+   "boxes": [
+    [
+     -56,
+     -76,
+     -39,
+     -62
+    ]
+   ]
+  },
+  {
+   "id": "tierra-del-fuego",
+   "name": "Tierra del Fuego",
+   "names": [
+    "tierra del fuego",
+    "terra del fuoco"
+   ],
+   "countries": [
+    "AR",
+    "CL"
+   ],
+   "boxes": [
+    [
+     -56,
+     -75,
+     -52.5,
+     -63.5
+    ]
+   ]
+  },
+  {
+   "id": "carretera-austral",
+   "name": "Carretera Austral",
+   "names": [
+    "carretera austral"
+   ],
+   "countries": [
+    "CL"
+   ],
+   "boxes": [
+    [
+     -48.5,
+     -74.5,
+     -41.4,
+     -71.5
+    ]
+   ]
+  },
+  {
+   "id": "atacama",
+   "name": "Atacama Desert",
+   "names": [
+    "atacama",
+    "deserto di atacama",
+    "atacama desert",
+    "desierto de atacama"
+   ],
+   "countries": [
+    "CL"
+   ],
+   "boxes": [
+    [
+     -27.5,
+     -70.8,
+     -21,
+     -67
+    ]
+   ]
+  },
+  {
+   "id": "easter-island",
+   "name": "Easter Island",
+   "names": [
+    "isola di pasqua",
+    "easter island",
+    "rapa nui",
+    "isla de pascua"
+   ],
+   "countries": [
+    "CL"
+   ],
+   "boxes": [
+    [
+     -27.3,
+     -109.6,
+     -27,
+     -109.1
+    ]
+   ]
+  },
+  {
+   "id": "uyuni",
+   "name": "Uyuni salt flats",
+   "names": [
+    "uyuni",
+    "salar de uyuni",
+    "salar di uyuni"
+   ],
+   "countries": [
+    "BO"
+   ],
+   "boxes": [
+    [
+     -22.9,
+     -68.5,
+     -19.5,
+     -66.3
+    ]
+   ]
+  },
+  {
+   "id": "sacred-valley",
+   "name": "Sacred Valley",
+   "names": [
+    "valle sacra",
+    "sacred valley",
+    "valle sagrado"
+   ],
+   "countries": [
+    "PE"
+   ],
+   "boxes": [
+    [
+     -13.6,
+     -72.7,
+     -13.1,
+     -71.8
+    ]
+   ]
+  },
+  {
+   "id": "amazon",
+   "name": "Amazon",
+   "names": [
+    "amazzonia",
+    "amazon",
+    "amazonia",
+    "amazzonia peruviana"
+   ],
+   "countries": [
+    "BR",
+    "PE",
+    "EC",
+    "CO",
+    "BO"
+   ],
+   "boxes": [
+    [
+     -10,
+     -79,
+     2,
+     -50
+    ]
+   ]
+  },
+  {
+   "id": "galapagos",
+   "name": "Galápagos",
+   "names": [
+    "galapagos",
+    "isole galapagos",
+    "galapagos islands",
+    "islas galapagos"
+   ],
+   "countries": [
+    "EC"
+   ],
+   "boxes": [
+    [
+     -1.6,
+     -92.1,
+     1.7,
+     -89
+    ]
+   ]
+  },
+  {
+   "id": "yucatan",
+   "name": "Yucatán",
+   "names": [
+    "yucatan",
+    "penisola dello yucatan",
+    "riviera maya"
+   ],
+   "countries": [
+    "MX"
+   ],
+   "boxes": [
+    [
+     17.8,
+     -90.6,
+     21.65,
+     -86.7
+    ]
+   ]
+  },
+  {
+   "id": "caribbean",
+   "name": "Caribbean",
+   "names": [
+    "caraibi",
+    "caribbean",
+    "caribe",
+    "mar dei caraibi"
+   ],
+   "countries": [
+    "CU",
+    "JM",
+    "DO",
+    "HT",
+    "BS",
+    "BB",
+    "LC",
+    "AG",
+    "DM",
+    "GD",
+    "KN",
+    "VC",
+    "TT",
+    "PR",
+    "AW",
+    "CW",
+    "BQ",
+    "SX",
+    "MF",
+    "BL",
+    "GP",
+    "MQ",
+    "KY",
+    "TC",
+    "VG",
+    "VI",
+    "AI",
+    "MS"
+   ],
+   "boxes": [
+    [
+     10,
+     -86,
+     27,
+     -59
+    ]
+   ]
+  },
+  {
+   "id": "california",
+   "name": "California",
+   "names": [
+    "california"
+   ],
+   "countries": [
+    "US"
+   ],
+   "boxes": [
+    [
+     32.5,
+     -124.5,
+     42,
+     -114.1
+    ]
+   ]
+  },
+  {
+   "id": "florida",
+   "name": "Florida",
+   "names": [
+    "florida"
+   ],
+   "countries": [
+    "US"
+   ],
+   "boxes": [
+    [
+     24.4,
+     -87.7,
+     31,
+     -80
+    ]
+   ]
+  },
+  {
+   "id": "hawaii",
+   "name": "Hawaii",
+   "names": [
+    "hawaii",
+    "hawai"
+   ],
+   "countries": [
+    "US"
+   ],
+   "boxes": [
+    [
+     18.8,
+     -160.6,
+     22.4,
+     -154.7
+    ]
+   ]
+  },
+  {
+   "id": "alaska",
+   "name": "Alaska",
+   "names": [
+    "alaska"
+   ],
+   "countries": [
+    "US"
+   ],
+   "boxes": [
+    [
+     51,
+     -170,
+     71.5,
+     -129.9
+    ]
+   ]
+  },
+  {
+   "id": "lapland",
+   "name": "Lapland",
+   "names": [
+    "lapponia",
+    "lapland",
+    "laponia",
+    "lappi"
+   ],
+   "countries": [
+    "FI",
+    "SE",
+    "NO"
+   ],
+   "boxes": [
+    [
+     66,
+     14,
+     71.2,
+     30
+    ]
+   ]
+  },
+  {
+   "id": "lofoten",
+   "name": "Lofoten",
+   "names": [
+    "lofoten",
+    "isole lofoten"
+   ],
+   "countries": [
+    "NO"
+   ],
+   "boxes": [
+    [
+     67.7,
+     12.5,
+     68.6,
+     16.2
+    ]
+   ]
+  },
+  {
+   "id": "fjords",
+   "name": "Norwegian fjords",
+   "names": [
+    "fiordi",
+    "fiordi norvegesi",
+    "fjords",
+    "norwegian fjords"
+   ],
+   "countries": [
+    "NO"
+   ],
+   "boxes": [
+    [
+     58,
+     4.5,
+     63.5,
+     8.5
+    ]
+   ]
+  },
+  {
+   "id": "svalbard",
+   "name": "Svalbard",
+   "names": [
+    "svalbard",
+    "isole svalbard"
+   ],
+   "countries": [
+    "SJ"
+   ],
+   "boxes": [
+    [
+     76.4,
+     10,
+     80.9,
+     33.5
+    ]
+   ]
+  },
+  {
+   "id": "scotland",
+   "name": "Scotland",
+   "names": [
+    "scozia",
+    "scotland",
+    "escocia",
+    "highlands",
+    "highlands scozzesi",
+    "scottish highlands"
+   ],
+   "countries": [
+    "GB"
+   ],
+   "boxes": [
+    [
+     54.6,
+     -7.7,
+     60.9,
+     -0.7
+    ]
+   ]
+  },
+  {
+   "id": "normandy",
+   "name": "Normandy",
+   "names": [
+    "normandia",
+    "normandy",
+    "normandie"
+   ],
+   "countries": [
+    "FR"
+   ],
+   "boxes": [
+    [
+     48.2,
+     -1.95,
+     50.1,
+     1.8
+    ]
+   ]
+  },
+  {
+   "id": "brittany",
+   "name": "Brittany",
+   "names": [
+    "bretagna",
+    "brittany",
+    "bretagne"
+   ],
+   "countries": [
+    "FR"
+   ],
+   "boxes": [
+    [
+     47.2,
+     -5.2,
+     48.95,
+     -1
+    ]
+   ]
+  },
+  {
+   "id": "provence",
+   "name": "Provence",
+   "names": [
+    "provenza",
+    "provence"
+   ],
+   "countries": [
+    "FR"
+   ],
+   "boxes": [
+    [
+     43.1,
+     4.2,
+     44.4,
+     6.4
+    ]
+   ]
+  },
+  {
+   "id": "cote-d-azur",
+   "name": "French Riviera",
+   "names": [
+    "costa azzurra",
+    "cote d azur",
+    "french riviera",
+    "riviera francese"
+   ],
+   "countries": [
+    "FR",
+    "MC"
+   ],
+   "boxes": [
+    [
+     43.4,
+     6.5,
+     43.85,
+     7.55
+    ]
+   ]
+  },
+  {
+   "id": "corsica",
+   "name": "Corsica",
+   "names": [
+    "corsica",
+    "corse"
+   ],
+   "countries": [
+    "FR"
+   ],
+   "boxes": [
+    [
+     41.3,
+     8.5,
+     43.05,
+     9.6
+    ]
+   ]
+  },
+  {
+   "id": "andalusia",
+   "name": "Andalusia",
+   "names": [
+    "andalusia",
+    "andalucia",
+    "andalucía"
+   ],
+   "countries": [
+    "ES"
+   ],
+   "boxes": [
+    [
+     36,
+     -7.55,
+     38.75,
+     -1.6
+    ]
+   ]
+  },
+  {
+   "id": "canary-islands",
+   "name": "Canary Islands",
+   "names": [
+    "canarie",
+    "isole canarie",
+    "canary islands",
+    "canarias",
+    "islas canarias"
+   ],
+   "countries": [
+    "ES"
+   ],
+   "boxes": [
+    [
+     27.6,
+     -18.2,
+     29.5,
+     -13.3
+    ]
+   ]
+  },
+  {
+   "id": "balearic-islands",
+   "name": "Balearic Islands",
+   "names": [
+    "baleari",
+    "isole baleari",
+    "balearic islands",
+    "baleares",
+    "islas baleares"
+   ],
+   "countries": [
+    "ES"
+   ],
+   "boxes": [
+    [
+     38.6,
+     1.15,
+     40.1,
+     4.35
+    ]
+   ]
+  },
+  {
+   "id": "algarve",
+   "name": "Algarve",
+   "names": [
+    "algarve"
+   ],
+   "countries": [
+    "PT"
+   ],
+   "boxes": [
+    [
+     36.95,
+     -9.0,
+     37.55,
+     -7.4
+    ]
+   ]
+  },
+  {
+   "id": "azores",
+   "name": "Azores",
+   "names": [
+    "azzorre",
+    "isole azzorre",
+    "azores",
+    "acores"
+   ],
+   "countries": [
+    "PT"
+   ],
+   "boxes": [
+    [
+     36.9,
+     -31.3,
+     39.8,
+     -24.9
+    ]
+   ]
+  },
+  {
+   "id": "madeira",
+   "name": "Madeira",
+   "names": [
+    "madeira"
+   ],
+   "countries": [
+    "PT"
+   ],
+   "boxes": [
+    [
+     32.6,
+     -17.3,
+     33.15,
+     -16.25
+    ]
+   ]
+  },
+  {
+   "id": "dolomites",
+   "name": "Dolomites",
+   "names": [
+    "dolomiti",
+    "dolomites",
+    "dolomitas"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     46.2,
+     10.9,
+     46.95,
+     12.6
+    ]
+   ]
+  },
+  {
+   "id": "italian-lakes",
+   "name": "Italian lakes",
+   "names": [
+    "laghi",
+    "laghi del nord",
+    "lago di como",
+    "lago di garda",
+    "lago maggiore",
+    "italian lakes"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     45.4,
+     8.4,
+     46.2,
+     11
+    ]
+   ]
+  },
+  {
+   "id": "liguria",
+   "name": "Liguria and Cinque Terre",
+   "names": [
+    "liguria",
+    "cinque terre"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     43.75,
+     7.5,
+     44.65,
+     10.1
+    ]
+   ]
+  },
+  {
+   "id": "tuscany",
+   "name": "Tuscany",
+   "names": [
+    "toscana",
+    "tuscany"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     42.35,
+     9.9,
+     44.5,
+     12.4
+    ]
+   ]
+  },
+  {
+   "id": "amalfi-coast",
+   "name": "Amalfi Coast",
+   "names": [
+    "costiera amalfitana",
+    "costa amalfitana",
+    "amalfi coast"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     40.55,
+     14.3,
+     40.75,
+     14.8
+    ]
+   ]
+  },
+  {
+   "id": "puglia",
+   "name": "Puglia",
+   "names": [
+    "puglia",
+    "apulia"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     39.8,
+     14.9,
+     42.2,
+     18.6
+    ]
+   ]
+  },
+  {
+   "id": "salento",
+   "name": "Salento",
+   "names": [
+    "salento"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     39.8,
+     17.9,
+     40.6,
+     18.55
+    ]
+   ]
+  },
+  {
+   "id": "sicily",
+   "name": "Sicily",
+   "names": [
+    "sicilia",
+    "sicily"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     36.6,
+     12.3,
+     38.35,
+     15.7
+    ]
+   ]
+  },
+  {
+   "id": "sardinia",
+   "name": "Sardinia",
+   "names": [
+    "sardegna",
+    "sardinia",
+    "cerdena"
+   ],
+   "countries": [
+    "IT"
+   ],
+   "boxes": [
+    [
+     38.85,
+     8.1,
+     41.3,
+     9.85
+    ]
+   ]
+  },
+  {
+   "id": "dalmatia",
+   "name": "Dalmatia",
+   "names": [
+    "dalmazia",
+    "dalmatia",
+    "dalmacija",
+    "costa croata"
+   ],
+   "countries": [
+    "HR"
+   ],
+   "boxes": [
+    [
+     42.35,
+     15.2,
+     44.2,
+     18.6
+    ]
+   ]
+  },
+  {
+   "id": "crete",
+   "name": "Crete",
+   "names": [
+    "creta",
+    "crete",
+    "kriti"
+   ],
+   "countries": [
+    "GR"
+   ],
+   "boxes": [
+    [
+     34.8,
+     23.4,
+     35.75,
+     26.4
+    ]
+   ]
+  },
+  {
+   "id": "cyclades",
+   "name": "Cyclades",
+   "names": [
+    "cicladi",
+    "cyclades",
+    "isole greche",
+    "greek islands"
+   ],
+   "countries": [
+    "GR"
+   ],
+   "boxes": [
+    [
+     36.3,
+     24.3,
+     37.9,
+     26.0
+    ]
+   ]
+  },
+  {
+   "id": "cappadocia",
+   "name": "Cappadocia",
+   "names": [
+    "cappadocia",
+    "kapadokya"
+   ],
+   "countries": [
+    "TR"
+   ],
+   "boxes": [
+    [
+     38.2,
+     34.5,
+     38.9,
+     35.3
+    ]
+   ]
+  },
+  {
+   "id": "balkans",
+   "name": "Balkans",
+   "names": [
+    "balcani",
+    "balkans",
+    "balcanes"
+   ],
+   "countries": [
+    "AL",
+    "BA",
+    "ME",
+    "MK",
+    "RS",
+    "XK",
+    "HR",
+    "SI",
+    "BG"
+   ],
+   "boxes": []
+  },
+  {
+   "id": "scandinavia",
+   "name": "Scandinavia",
+   "names": [
+    "scandinavia"
+   ],
+   "countries": [
+    "NO",
+    "SE",
+    "DK"
+   ],
+   "boxes": []
+  },
+  {
+   "id": "southeast-asia",
+   "name": "Southeast Asia",
+   "names": [
+    "sud est asiatico",
+    "sudest asiatico",
+    "southeast asia",
+    "sud-est asiatico"
+   ],
+   "countries": [
+    "TH",
+    "VN",
+    "KH",
+    "LA",
+    "MY",
+    "ID",
+    "PH",
+    "SG",
+    "MM"
+   ],
+   "boxes": []
+  },
+  {
+   "id": "himalaya",
+   "name": "Himalaya",
+   "names": [
+    "himalaya",
+    "himalayas"
+   ],
+   "countries": [
+    "NP",
+    "IN",
+    "BT"
+   ],
+   "boxes": [
+    [
+     26.3,
+     80,
+     30.5,
+     88.3
+    ],
+    [
+     26.7,
+     88.7,
+     28.4,
+     92.2
+    ],
+    [
+     30.5,
+     75.5,
+     35.5,
+     79.5
+    ],
+    [
+     27,
+     88,
+     28.2,
+     89
+    ]
+   ]
+  },
+  {
+   "id": "tibet",
+   "name": "Tibet",
+   "names": [
+    "tibet"
+   ],
+   "countries": [
+    "CN"
+   ],
+   "boxes": [
+    [
+     27.5,
+     78,
+     36.5,
+     99
+    ]
+   ]
+  },
+  {
+   "id": "rajasthan",
+   "name": "Rajasthan",
+   "names": [
+    "rajasthan"
+   ],
+   "countries": [
+    "IN"
+   ],
+   "boxes": [
+    [
+     23,
+     69.5,
+     30.2,
+     78.3
+    ]
+   ]
+  },
+  {
+   "id": "kerala",
+   "name": "Kerala",
+   "names": [
+    "kerala"
+   ],
+   "countries": [
+    "IN"
+   ],
+   "boxes": [
+    [
+     8.2,
+     74.8,
+     12.8,
+     77.4
+    ]
+   ]
+  },
+  {
+   "id": "bali",
+   "name": "Bali",
+   "names": [
+    "bali"
+   ],
+   "countries": [
+    "ID"
+   ],
+   "boxes": [
+    [
+     -8.9,
+     114.4,
+     -8.05,
+     115.75
+    ]
+   ]
+  },
+  {
+   "id": "borneo",
+   "name": "Borneo",
+   "names": [
+    "borneo"
+   ],
+   "countries": [
+    "MY",
+    "ID",
+    "BN"
+   ],
+   "boxes": [
+    [
+     -4.2,
+     108.8,
+     7.4,
+     119.3
+    ]
+   ]
+  },
+  {
+   "id": "kilimanjaro",
+   "name": "Kilimanjaro",
+   "names": [
+    "kilimanjaro",
+    "kilimangiaro"
+   ],
+   "countries": [
+    "TZ"
+   ],
+   "boxes": [
+    [
+     -3.3,
+     37,
+     -2.9,
+     37.6
+    ]
+   ]
+  },
+  {
+   "id": "serengeti",
+   "name": "Serengeti and Ngorongoro",
+   "names": [
+    "serengeti",
+    "ngorongoro"
+   ],
+   "countries": [
+    "TZ"
+   ],
+   "boxes": [
+    [
+     -3.6,
+     34,
+     -1.5,
+     35.9
+    ]
+   ]
+  },
+  {
+   "id": "zanzibar",
+   "name": "Zanzibar",
+   "names": [
+    "zanzibar"
+   ],
+   "countries": [
+    "TZ"
+   ],
+   "boxes": [
+    [
+     -6.5,
+     39.1,
+     -5.7,
+     39.6
+    ]
+   ]
+  },
+  {
+   "id": "tasmania",
+   "name": "Tasmania",
+   "names": [
+    "tasmania"
+   ],
+   "countries": [
+    "AU"
+   ],
+   "boxes": [
+    [
+     -43.7,
+     143.8,
+     -39.5,
+     148.5
+    ]
+   ]
+  },
+  {
+   "id": "nz-south-island",
+   "name": "New Zealand South Island",
+   "names": [
+    "isola del sud",
+    "south island"
+   ],
+   "countries": [
+    "NZ"
+   ],
+   "boxes": [
+    [
+     -47.4,
+     166.3,
+     -40.4,
+     174.5
+    ]
+   ]
+  },
+  {
+   "id": "siberia",
+   "name": "Siberia",
+   "names": [
+    "siberia"
+   ],
+   "countries": [
+    "RU"
+   ],
+   "boxes": [
+    [
+     50,
+     60,
+     77,
+     180
+    ]
+   ]
+  }
+ ]
+}
