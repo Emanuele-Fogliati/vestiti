@@ -84,6 +84,8 @@ EXONYMS = {
     "rodi": "rhodes", "corfu": "corfu", "malaga": "malaga", "saragozza": "zaragoza", "granata": "granada",
     "lucca": "lucca", "pisa": "pisa", "siena": "siena", "assisi": "assisi",
 }
+END_LEAD = re.compile(r"\b(?:alla fine|per finire|infine|finendo|finire|finale|ultimo|ultima|at the end|ending|end|finish|finishing|"
+                      r"finally|lastly|al final|terminando|terminar|acabando)\b(?:\s+\w+){0,2}\s+$")
 HOME_LEAD = re.compile(r"\b(?:parto da|partendo da|partenza da|parto dall|volo da|from|leaving from|flying from|salgo da|desde)\s+$")
 
 
@@ -188,14 +190,32 @@ def read(text: str, today: date | None = None) -> dict:
             continue
         keep_places.append((s, e, p))
     places = keep_places
+    # "e alla fine Ushuaia", "ending in Ushuaia": this place closes the trip
+    last = [p["id"] for s, e, p in places if END_LEAD.search(" ".join(nw[max(0, s - 4):s]) + " ")]
 
     # ---- dates and lengths, each with where it sits
     spans: list[dict] = []
+    mw = "|".join(MONTH_OF)
+    # ranges with a month on both ends: "dal 16 gennaio 2027 al 30 gennaio 2027", "dal 28 gennaio al 5 febbraio"
+    for m in re.finditer(r"\b(?:dal |from |del |tra il |between )?(\d{1,2}) (?:de )?(%s)(?: (?:de |del )?(20\d\d))? "
+                         r"(?:al |to |all |a |till |until |e |and |y |hasta el |hasta |al dia )?(?:il |el |the )?"
+                         r"(\d{1,2}) (?:de )?(%s)(?: (?:de |del )?(20\d\d))?\b" % (mw, mw), t):
+        try:
+            y1 = int(m.group(3)) if m.group(3) else None
+            y2 = int(m.group(6)) if m.group(6) else y1
+            m1, m2 = MONTH_OF[m.group(2)], MONTH_OF[m.group(5)]
+            a1 = date(y1, m1, int(m.group(1))) if y1 else _year_for(m1, int(m.group(1)), today)
+            a2 = date(y2, m2, int(m.group(4))) if y2 else _year_for(m2, int(m.group(4)), a1)
+        except ValueError:
+            continue
+        if a1 <= a2 <= a1 + timedelta(days=120):
+            spans.append({"at": m.start(), "end": m.end(), "kind": "range", "start": a1, "stop": a2})
+    taken = [(s["at"], s["end"]) for s in spans]
     # ranges: "dal 6 al 20 gennaio", "6-8 gennaio", "from 6 to 20 january", "6 al 8 de enero"
     for m in re.finditer(r"\b(?:dal |from |del )?(\d{1,2}) (?:al |to |all |a |till |until |-|e )?(\d{1,2}) (?:de )?(%s)\b"
                          % "|".join(MONTH_OF), t):
         d1, d2, mo = int(m.group(1)), int(m.group(2)), MONTH_OF[m.group(3)]
-        if 1 <= d1 <= 31 and 1 <= d2 <= 31 and d2 >= d1:
+        if 1 <= d1 <= 31 and 1 <= d2 <= 31 and d2 >= d1 and all(m.end() <= a0 or m.start() >= b0 for a0, b0 in taken):
             a1 = _year_for(mo, d1, today)
             spans.append({"at": m.start(), "end": m.end(), "kind": "range", "start": a1,
                           "stop": a1 + timedelta(days=d2 - d1)})
@@ -227,7 +247,13 @@ def read(text: str, today: date | None = None) -> dict:
         if 1 <= d <= 31:
             spans.append({"at": m.start(), "end": m.end(), "kind": "date", "start": _year_for(mo, d, today)})
             taken.append((m.start(), m.end()))
-    for m in re.finditer(r"\b(%s) (\d{1,2})\b" % "|".join(MONTH_OF), t):  # "january 6"
+    for m in re.finditer(r"\b(%s) (\d{1,2}) (?:to |till |until |through |thru |and |)(\d{1,2})\b(?! (?:%s)\b)" % (mw, "|".join(UNIT)), t):  # "january 16 to 30"
+        d1, d2 = int(m.group(2)), int(m.group(3))
+        if free(m.start(), m.end()) and 1 <= d1 <= d2 <= 31:
+            a1 = _year_for(MONTH_OF[m.group(1)], d1, today)
+            spans.append({"at": m.start(), "end": m.end(), "kind": "range", "start": a1, "stop": a1 + timedelta(days=d2 - d1)})
+            taken.append((m.start(), m.end()))
+    for m in re.finditer(r"\b(%s) (\d{1,2})\b(?! (?:%s)\b)" % ("|".join(MONTH_OF), "|".join(UNIT)), t):  # "january 6", not "gennaio 10 giorni"
         if free(m.start(), m.end()) and 1 <= int(m.group(2)) <= 31:
             spans.append({"at": m.start(), "end": m.end(), "kind": "date",
                           "start": _year_for(MONTH_OF[m.group(1)], int(m.group(2)), today)})
@@ -333,11 +359,24 @@ def read(text: str, today: date | None = None) -> dict:
 
     # ---- what kind of trip this is
     inside_area = a is not None and all(explore.inside(a, p["lat"], p["lon"], p["country"], only) for _, _, p in places)
-    if a is not None and (not places or inside_area) and not any(si["start"] for si in stop_info):
+    dated = [si for si in stop_info if si["start"]]
+    if a is not None and (not places or inside_area) and len(dated) <= 1:
+        # "Patagonia ... e alla fine Ushuaia dal 16 al 30 gennaio": with a region named, the
+        # dates of a single place are the trip's own (Manu, 2026-11-12)
+        for si in dated:
+            out["start_date"] = out["start_date"] or si["start"]
+            if si["stop"] and not trip_len:
+                trip_len = out["days"] = (si["stop"] - si["start"]).days + 1
+        if out["start_date"]:
+            out["month"] = out["start_date"].month
+            out.pop("start_part", None)
+        if out["days"] is None and trip_len:
+            out["days"] = trip_len
         out["mode"] = "region"
         out["area"] = {"id": a["id"], "name": a["name"], "kind": a["kind"]}
         out["only"] = only
         out["keep"] = [p["id"] for _, _, p in places]
+        out["last"] = last
     elif places:
         out["mode"] = "stops"
         out["stops"] = _stops(stop_info, out["start_date"], trip_len)

@@ -31,6 +31,28 @@ def test_region_with_places_keeps_them():
     assert r["start_date"] == date(2027, 1, 20) and "how_long" in r["missing"]
 
 
+def test_region_with_dates_and_an_end():
+    # Manu's own sentence, 2026-11-12: it gave only Ushuaia
+    for text in ("patagonia tra cile e argentina  e alla fine all ushuaia dal 16 gennaio 2027 al 30 gennaio 2027",
+                 "Patagonia tra Cile e Argentina e alla fine a Ushuaia dal 16 al 30 gennaio",
+                 "Patagonia, end in Ushuaia, January 16 to 30"):
+        r = read(text, TODAY)
+        assert r["mode"] == "region" and r["area"]["id"] == "patagonia", text
+        assert r["start_date"] == date(2027, 1, 16) and r["days"] == 15 and r["missing"] == [], text
+        assert r["last"] == ["ar-ushuaia"], text
+    p = explore.propose(explore.area("patagonia"), r["only"], 15, 1, r["keep"], None, r["last"])
+    names = [s["name"] for s in p["stops"]]
+    assert p["days"] == 15 and names[-1] == "Ushuaia"
+    assert "El Chaltén" in names and any("Torres del Paine" in n for n in names)
+    # Patagonia is not Buenos Aires, and 15 days are not worth a flight up to Valdés
+    assert "Buenos Aires" not in names and "Punta Pirámides" not in names
+
+
+def test_a_length_after_a_month_is_not_a_day():
+    r = read("Patagonia a gennaio, 10 giorni", TODAY)
+    assert r["days"] == 10 and r["start_date"] is None and r["month"] == 1
+
+
 def test_reads_a_wish_and_asks_where():
     r = read("non so, qualcosa di caldo a febbraio con il mare, 10 giorni", TODAY)
     assert r["mode"] == "open" and r["missing"] == ["where"]
@@ -109,6 +131,10 @@ def test_api_understand_region_then_trip(client):
     assert r.status_code == 200, r.text
     j = r.json()
     assert j["mode"] == "region" and j["proposal"]["days"] == 21
+    j2 = client.post("/api/plan/understand", json={"text": "Patagonia, alla fine Ushuaia, dal 16 al 30 gennaio"}).json()
+    assert j2["proposal"]["stops"][-1]["name"] == "Ushuaia" and j2["proposal"]["last"] == ["ar-ushuaia"]
+    r = client.post("/api/plan/propose", json={"area": "patagonia", "days": 12, "month": 1, "last": ["ar-ushuaia"]})
+    assert r.json()["stops"][-1]["name"] == "Ushuaia"
     stops = j["proposal"]["stops"]
     r = client.post("/api/plan/propose", json={"area": "patagonia", "days": 12, "month": 1,
                                                 "drop": [stops[-1]["key"]]})

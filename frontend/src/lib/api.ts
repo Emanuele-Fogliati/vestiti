@@ -155,7 +155,7 @@ export const api = {
 
   /** A sentence (typed or spoken): stops, a region with its proposed route, or a wish with ideas. */
   planUnderstand: (text: string) => req<PlanReading>("POST", "/api/plan/understand", { text }),
-  planPropose: (body: { area: string; only?: string[]; days?: number | null; month?: number | null; keep?: string[]; drop?: string[] }) =>
+  planPropose: (body: { area: string; only?: string[]; days?: number | null; month?: number | null; keep?: string[]; drop?: string[]; last?: string[] }) =>
     req<PlanProposal>("POST", "/api/plan/propose", body),
   planSuggest: (q: string) => req<PlanSuggestion[]>("GET", `/api/plan/suggest?q=${encodeURIComponent(q)}`),
   planTrip: (body: { stops: PlanStep[]; start_date?: string | null; month?: number | null; area?: string | null;

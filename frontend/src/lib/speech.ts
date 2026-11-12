@@ -19,11 +19,21 @@ export function speechSupported(): boolean {
   return typeof window !== "undefined" && !!ctor();
 }
 
+/** Browsers let a page use the microphone only on https or on localhost. Opened from a phone at
+ * http://192.168.x.x:8000 the mic is refused: the same app also answers on https at port 8443
+ * (docker/entrypoint.sh). null when this page can already listen. */
+export function secureAddress(loc: Pick<Location, "protocol" | "hostname" | "pathname" | "search" | "hash"> = window.location,
+                              secure: boolean = window.isSecureContext): string | null {
+  if (secure || loc.protocol === "https:") return null;
+  return `https://${loc.hostname}:8443${loc.pathname}${loc.search}${loc.hash}`;
+}
+
 /** Listen once: interim words while you speak, then onDone with the whole sentence. */
 export function useSpeech(onDone: (text: string) => void) {
   const [listening, setListening] = useState(false);
   const [heard, setHeard] = useState("");
   const [error, setError] = useState("");
+  const [insecure, setInsecure] = useState<string | null>(null);
   const rec = useRef<Rec | null>(null);
   const finalText = useRef("");
   const done = useRef(onDone);
@@ -33,6 +43,8 @@ export function useSpeech(onDone: (text: string) => void) {
 
   const start = useCallback(() => {
     const C = ctor();
+    const safe = secureAddress();
+    if (safe) { setInsecure(safe); setError(""); return; }
     if (!C) { setError("Your browser can't listen. Try Chrome, Edge or Safari, or type it."); return; }
     rec.current?.abort();
     const r = new C();
@@ -67,5 +79,7 @@ export function useSpeech(onDone: (text: string) => void) {
   }, []);
 
   const stop = useCallback(() => rec.current?.stop(), []);
-  return { listening, heard, error, start, stop, supported: speechSupported() };
+  // shown even where this browser hides the API on plain http (Safari), so the way out is clear
+  return { listening, heard, error, insecure, start, stop,
+           supported: speechSupported() || secureAddress() !== null };
 }

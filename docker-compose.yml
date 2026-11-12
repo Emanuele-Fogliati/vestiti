@@ -1,4 +1,6 @@
 # Local run:  docker compose up --build    ->  http://localhost:8000
+# From a phone on the same wifi: https://<this PC's IP>:8443 (voice input needs https there;
+# the first time the browser warns about the certificate: "Advanced" -> "Proceed")
 # With the AI model inside Docker too:  docker compose --profile ollama up --build
 # (see docs/AI_SETUP.md; on Windows, running Ollama natively is faster and uses your GPU)
 
@@ -33,8 +35,12 @@ services:
       LLM_BASE_URL: ${LLM_BASE_URL:-http://host.docker.internal:11434/v1}
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    init: true  # stops the https server too when the app stops
+    volumes:
+      - certs:/app/certs  # the https certificate, kept so the phone warns only once
     ports:
       - "8000:8000"
+      - "8443:8443"
     restart: unless-stopped
 
   ollama:
@@ -59,3 +65,4 @@ services:
 volumes:
   pgdata:
   ollama:
+  certs:

@@ -164,7 +164,7 @@ export interface PlanReading {
   text: string; mode: "stops" | "region" | "open"; area: PlanArea | null; only: string[]; month: number | null;
   start_date: string | null; start_part?: string; days: number | null; stops: PlanStep[];
   home: { name: string; country: string; lat: number; lon: number } | null; wishes: string[];
-  missing: ("where" | "when" | "how_long")[]; keep?: string[]; proposal: PlanProposal | null; ideas: PlanIdea[];
+  missing: ("where" | "when" | "how_long")[]; keep?: string[]; last?: string[]; proposal: PlanProposal | null; ideas: PlanIdea[];
 }
 export interface PlanSuggestion { type: "region" | "country"; id: string; name: string; sub: string }
 

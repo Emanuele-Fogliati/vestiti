@@ -55,12 +55,13 @@ export function TripStarter({ compact }: { compact?: boolean }) {
   const [area, setArea] = useState<PlanArea | null>(null);
   const [only, setOnly] = useState<string[]>([]);
   const [more, setMore] = useState<PlanStep[]>([]);
-  const [route, setRoute] = useState<string | null>(null);
+  const [, setRoute] = useState<string | null>(null);
   const [best, setBest] = useState<number[]>([]);
   const [start, setStart] = useState("");
   const [month, setMonth] = useState<number | null>(null);
   const [target, setTarget] = useState<number | null>(null);
   const [keep, setKeep] = useState<string[]>([]);
+  const [endWith, setEndWith] = useState<string[]>([]);  // "e alla fine Ushuaia": stays the last stop
   const [drop, setDrop] = useState<string[]>([]);
   const [ideas, setIdeas] = useState<PlanIdea[]>([]);
   const [home, setHome] = useState<PlanReading["home"]>(null);
@@ -82,7 +83,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
   }, [text, speech.listening]);
 
   function reset() {
-    setErr(""); setIdeas([]); setMore([]); setRoute(null); setBest([]); setKeep([]); setDrop([]); setArea(null); setOnly([]);
+    setErr(""); setIdeas([]); setMore([]); setRoute(null); setBest([]); setKeep([]); setEndWith([]); setDrop([]); setArea(null); setOnly([]);
   }
 
   async function read(t: string) {
@@ -96,7 +97,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
       if (r.mode === "region" && r.proposal) {
         const p = r.proposal;
         setMode("region"); setArea(p.area); setOnly(p.only); setSteps(p.stops); setMore(p.more);
-        setRoute(p.route); setBest(p.best_months); setTarget(r.days ?? p.days); setKeep(r.keep ?? []);
+        setRoute(p.route); setBest(p.best_months); setTarget(r.days ?? p.days); setKeep(r.keep ?? []); setEndWith(r.last ?? []);
       } else if (r.mode === "stops") {
         setMode("stops"); setSteps(r.stops); setTarget(null);
       } else {
@@ -121,7 +122,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
     setBusy(true);
     try {
       const p = await api.planPropose({ area: area.id, only, days: patch.days ?? target, month: patch.month ?? month,
-        keep: patch.keep ?? keep, drop: patch.drop ?? drop });
+        keep: patch.keep ?? keep, drop: patch.drop ?? drop, last: endWith.filter((k) => !(patch.drop ?? drop).includes(k)) });
       setSteps(p.stops); setMore(p.more); setRoute(p.route); setBest(p.best_months);
     } catch (e) { setErr(e instanceof ApiError ? e.message : String(e)); } finally { setBusy(false); }
   }
@@ -214,6 +215,13 @@ export function TripStarter({ compact }: { compact?: boolean }) {
         </div>
         {speech.listening && <p className="ask-hint live">Listening… say where, when and how long. Tap Done when you finish.</p>}
         {speech.error && <p className="ask-hint err">{speech.error}</p>}
+        {speech.insecure && (
+          <p className="ask-hint err">
+            The browser only lets the microphone work on a secure address.{" "}
+            <a href={speech.insecure}>Open the secure version</a> (the first time it warns you: tap
+            “Advanced”, then “Proceed”). On the computer running the app, http://localhost:8000 works too.
+          </p>
+        )}
         {!speech.listening && mode === "none" && (
           <div className="ask-ex">
             {EXAMPLES.map((x) => <button key={x} type="button" onClick={() => { setText(x); read(x); }}>{x}</button>)}
@@ -232,7 +240,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
           <header className="plan-head">
             <h2>{title}</h2>
             {steps.length > 0 && last && (
-              <p>{total} days · {estimate ? "≈ " : ""}{short(dates[0]!.start)} – {short(last.end)}{route ? ` · based on “${route}”` : ""}</p>
+              <p>{total} days · {estimate ? "≈ " : ""}{short(dates[0]!.start)} – {short(last.end)}</p>
             )}
             {steps.length > 0 && !last && <p>{total} days · dates to choose</p>}
           </header>
@@ -244,7 +252,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
                 <div className="pq-c">
                   <select value={month ?? ""} aria-label="Month" onChange={(e) => chooseMonth(e.target.value ? Number(e.target.value) : null)}>
                     <option value="">Pick a month</option>
-                    {MONTH_LONG.map((m, i) => <option key={m} value={i + 1}>{m}{best.includes(i + 1) ? " · best" : ""}</option>)}
+                    {MONTH_LONG.map((m, i) => <option key={m} value={i + 1}>{m}{best.length <= 5 && best.includes(i + 1) ? " · best" : ""}</option>)}
                   </select>
                   <span className="muted small">or</span>
                   <input type="date" value={start} min={today()} aria-label="Exact start date"
