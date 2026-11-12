@@ -1,0 +1,148 @@
+{
+"_doc": "Things to do per area, written by hand with sources (Manu, 2026-11-12: 'cosa fare' must be concrete, never invented). Each item: how long (length: full = a whole day, half = half a day, short = an hour or two), effort, what weather it needs (clear = only worth it with a clear view, dry = better without rain, calm = cancelled by strong wind, any = fine in bad weather), best time, what to book, why, and what it means for the clothes (act, an ActivityIn). months = only in these months. Items are in order: the first is the one not to miss. Add areas only with checked sources. Places elsewhere fall back to the most visited sights near the stop (app.guide.todo).",
+"areas": [
+{
+ "id": "ar-buenos-aires", "names": ["Buenos Aires", "CABA", "Ciudad de Buenos Aires", "Palermo", "San Telmo", "Recoleta"],
+ "country": "AR", "lat": -34.6037, "lon": -58.3816, "radius_km": 25,
+ "season": "December to February is hot and humid, often above 30 °C. Spring (October, November) and autumn (March, April) are the easiest months to walk the city.",
+ "sleep": "Palermo for restaurants and parks, San Telmo for the old town. Recoleta is quieter.",
+ "sources": ["https://en.wikivoyage.org/wiki/Buenos_Aires", "https://teatrocolon.org.ar/en/guided-tours"],
+ "items": [
+  {"id": "san-telmo", "name": "San Telmo and its Sunday market", "hours": "Half a day", "length": "half", "effort": "easy", "need": "any", "best": "Sunday, when the street market fills Calle Defensa", "book": "", "weekdays": [6], "why": "The oldest part of the city: cobbled streets, antique shops and street tango on Plaza Dorrego.", "act": {"type": "city"}},
+  {"id": "recoleta", "name": "Recoleta Cemetery", "hours": "1–2 h", "length": "short", "effort": "easy", "need": "dry", "best": "Morning, before the heat", "book": "", "why": "A city of marble tombs, Eva Perón's among them.", "act": {"type": "city"}},
+  {"id": "colon", "name": "Teatro Colón guided tour", "hours": "1 h", "length": "short", "effort": "easy", "need": "any", "best": "Any day", "book": "Buy the tour online a few days ahead", "why": "One of the great opera houses of the world, inside and out.", "act": {"type": "city"}},
+  {"id": "milonga", "name": "A milonga, a local tango dance hall", "hours": "Evening", "length": "short", "effort": "easy", "need": "any", "best": "After 23:00", "book": "", "why": "Where people from Buenos Aires actually dance. More real than a tango dinner show.", "act": {"type": "city"}},
+  {"id": "plaza-de-mayo", "name": "Plaza de Mayo and the Casa Rosada", "hours": "1–2 h", "length": "short", "effort": "easy", "need": "any", "best": "Daytime", "book": "", "why": "The square where Argentina's history happened, with the pink presidential palace.", "act": {"type": "city"}},
+  {"id": "la-boca", "name": "La Boca and Caminito", "hours": "2–3 h", "length": "half", "effort": "easy", "need": "dry", "best": "Daytime, stay on the main streets", "book": "", "why": "Painted tin houses and the Boca Juniors stadium.", "act": {"type": "city"}},
+  {"id": "palermo-parks", "name": "Palermo parks and the rose garden", "hours": "2–3 h", "length": "half", "effort": "easy", "need": "dry", "best": "Late afternoon", "book": "", "why": "Lakes, rose garden and the city's green side.", "act": {"type": "city"}}
+ ],
+ "rain": {"name": "Museums: Bellas Artes or MALBA", "hours": "2–3 h", "why": "The national fine arts museum is free; MALBA has Latin American art. Both under a roof."}
+},
+{
+ "id": "ar-el-calafate", "names": ["El Calafate", "Perito Moreno", "Perito Moreno Glacier", "Glaciar Perito Moreno", "Los Glaciares"],
+ "country": "AR", "lat": -50.3379, "lon": -72.2648, "radius_km": 60,
+ "season": "November to March: long days, 5 to 20 °C, often windy. The glacier walkways are open all year.",
+ "sleep": "In town. The glacier is 80 km away, about 1 h 20 by road: buses and tours leave in the morning.",
+ "sources": ["https://www.argentina.gob.ar/interior/ambiente/parquesnacionales/losglaciares", "https://en.wikivoyage.org/wiki/El_Calafate", "https://www.nomades.com/en/el-calafate/perito-moreno-glacier-minitrek-id379"],
+ "items": [
+  {"id": "walkways", "name": "Perito Moreno Glacier walkways", "hours": "Half a day, plus 1 h 20 each way", "length": "full", "effort": "easy", "need": "any", "best": "Stay at least two hours: chunks of ice fall off the front every so often", "book": "Park entry fee at the gate", "why": "Walkways right in front of a 60 m wall of ice. Worth it in any weather.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 300}},
+  {"id": "minitrekking", "name": "Minitrekking on the glacier", "hours": "Full day with the transfer", "length": "full", "effort": "moderate", "need": "calm", "best": "Book the first date you can", "book": "Book weeks ahead in summer. Ages about 8 to 65", "why": "Crampons on, walking on the ice with a guide. A boat crosses the lake first.", "act": {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 300, "glacier": true}},
+  {"id": "boat-face", "name": "Boat to the glacier's face", "hours": "1 h", "length": "short", "effort": "easy", "need": "calm", "best": "Same day as the walkways", "book": "Buy at the port or ahead", "why": "Seen from the water the ice wall looks twice as high.", "act": {"type": "boat"}},
+  {"id": "upsala", "name": "Boat to the Upsala and Spegazzini glaciers", "hours": "Full day", "length": "full", "effort": "easy", "need": "calm", "best": "A calm day", "book": "Book ahead", "why": "Icebergs and two more glaciers on Lago Argentino.", "act": {"type": "boat"}},
+  {"id": "nimez", "name": "Laguna Nimez bird reserve", "hours": "1–2 h", "length": "short", "effort": "easy", "need": "any", "best": "Early morning or evening", "book": "", "why": "Flamingos and black-necked swans at the edge of town.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 250}}
+ ],
+ "rain": {"name": "Glaciarium, the ice museum", "hours": "2 h", "why": "How glaciers work, under a roof, with a bar made of ice."}
+},
+{
+ "id": "ar-el-chalten", "names": ["El Chaltén", "El Chalten", "Fitz Roy", "Monte Fitz Roy", "Cerro Torre", "Laguna de los Tres"],
+ "country": "AR", "lat": -49.3315, "lon": -72.8863, "radius_km": 30,
+ "season": "November to March. Fitz Roy hides in cloud on many days and the wind is strong: give it at least three days to catch a clear one.",
+ "sleep": "In town: every trail starts from the street, no transport needed.",
+ "sources": ["https://en.wikivoyage.org/wiki/El_Chalt%C3%A9n", "https://www.switchbacktravel.com/el-chalten-hikes", "https://chaltenmountainguides.com/en/activity/laguna-de-los-tres-day-hike/"],
+ "items": [
+  {"id": "laguna-de-los-tres", "name": "Laguna de los Tres, under Fitz Roy", "hours": "8–10 h · about 20–25 km", "length": "full", "effort": "hard", "need": "clear", "best": "The first clear day, leave at first light", "book": "", "why": "Fitz Roy right above a glacier lake. The last hour climbs about 400 m on loose rock. In cloud you see a grey wall: keep it for the clear day.", "act": {"type": "hiking", "difficulty": "hard", "max_altitude_m": 1200}},
+  {"id": "laguna-torre", "name": "Laguna Torre", "hours": "6–8 h · about 18–20 km", "length": "full", "effort": "moderate", "need": "clear", "best": "Morning", "book": "", "why": "Cerro Torre and its glacier over a lake with icebergs. Often hidden, still a good walk.", "act": {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 650}},
+  {"id": "pliegue-tumbado", "name": "Loma del Pliegue Tumbado", "hours": "7–9 h · about 20 km", "length": "full", "effort": "hard", "need": "clear", "best": "A clear, not too windy day", "book": "", "why": "The one lookout with Fitz Roy and Cerro Torre side by side. Very exposed to wind at the top.", "act": {"type": "hiking", "difficulty": "hard", "max_altitude_m": 1500}},
+  {"id": "laguna-capri", "name": "Laguna Capri", "hours": "4–5 h · about 8 km", "length": "half", "effort": "moderate", "need": "clear", "best": "A short clear spell", "book": "", "why": "Fitz Roy over a lake for half the effort of Laguna de los Tres.", "act": {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 750}},
+  {"id": "condores", "name": "Mirador de los Cóndores and Las Águilas", "hours": "1–2 h", "length": "short", "effort": "easy", "need": "any", "best": "Sunset", "book": "", "why": "A short climb from town with the whole valley below. Condors often fly over.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 600}},
+  {"id": "chorrillo", "name": "Chorrillo del Salto waterfall", "hours": "2–3 h on foot", "length": "short", "effort": "easy", "need": "any", "best": "A grey day", "book": "", "why": "A waterfall in the forest, fine in drizzle.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 450}}
+ ],
+ "rain": {"name": "Rest day in town", "hours": "", "why": "Bakeries, a brewery, gear shops. Keep your legs for the clear day."}
+},
+{
+ "id": "cl-torres-del-paine", "names": ["Torres del Paine", "Torres del Paine National Park", "Parque Nacional Torres del Paine", "Base Torres", "W Trek", "Paine"],
+ "country": "CL", "lat": -51.0, "lon": -73.05, "radius_km": 40,
+ "season": "October to April. In January 3 to 15 °C, wind often above 60 km/h, and roughly one day in three is wet.",
+ "sleep": "Inside the park (refugios, campsites, hotels) saves 3 to 4 hours of driving a day. Puerto Natales is cheaper but 1 h 30 to 2 h each way.",
+ "sources": ["https://parquetorresdelpaine.cl/wp-content/uploads/2025/10/Version-en-ingles-Boletin-informativo-pntp-1.pdf", "https://torresdelpaine.com/en/tour/base-las-torres-hiking/", "https://lastorres.com/en/news/conaf-informs-that-as-of-september-1-it-will-no-longer-be-mandatory-to-enter-the-park-with-certified-guides", "https://en.wikivoyage.org/wiki/Torres_del_Paine_National_Park"],
+ "items": [
+  {"id": "base-torres", "name": "Base Torres lookout", "hours": "8–10 h · about 19 km return", "length": "full", "effort": "hard", "need": "clear", "best": "Early start; the ticket gives you a time slot", "book": "Park ticket online with a time slot for Base Torres", "why": "The three granite towers over a glacier lake: the picture of the park. Only worth it when the towers are out of the cloud. The last hour is on boulders.", "act": {"type": "hiking", "difficulty": "hard", "max_altitude_m": 900}},
+  {"id": "french-valley", "name": "French Valley, Mirador Francés", "hours": "7–9 h · catamaran Pudeto to Paine Grande", "length": "full", "effort": "hard", "need": "clear", "best": "First boat out, and check the last boat back", "book": "Catamaran: check the timetable the day before", "why": "Hanging glaciers on one side, the Cuernos on the other. The best view inside the W.", "act": {"type": "hiking", "difficulty": "hard", "max_altitude_m": 800}},
+  {"id": "grey-boat", "name": "Grey Glacier by boat", "hours": "3 h", "length": "half", "effort": "easy", "need": "calm", "best": "Morning, before the wind picks up", "book": "Book a day or two ahead", "why": "Up to the glacier's blue face among icebergs. Cancelled when it blows hard.", "act": {"type": "boat"}},
+  {"id": "salto-grande", "name": "Salto Grande and Mirador Cuernos", "hours": "2–3 h · about 6 km return from Pudeto", "length": "short", "effort": "easy", "need": "any", "best": "Any time; a good one for a grey day", "book": "", "why": "A powerful waterfall and the Cuernos up close, for little effort. Fine in light rain, very windy.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 200}},
+  {"id": "pumas", "name": "Puma tracking with a local guide", "hours": "Half a day, at dawn", "length": "half", "effort": "easy", "need": "any", "best": "Dawn, near Laguna Amarga", "book": "Licensed guide, book ahead", "why": "Pumas are seen on many mornings in the east of the park. Weather barely matters.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 200}},
+  {"id": "condor", "name": "Mirador Cóndor over Lago Pehoé", "hours": "1–2 h", "length": "short", "effort": "moderate", "need": "clear", "best": "Late afternoon light", "book": "", "why": "A short steep climb with the whole massif over the turquoise lake.", "act": {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 300}}
+ ],
+ "rain": {"name": "Drive the park roads, or the Milodón Cave", "hours": "2–3 h", "why": "Lakes and guanacos from the car. The Milodón Cave, on the road to Puerto Natales, is a huge cave with a roof over your head."},
+ "routes": [
+  {"id": "w-trek", "name": "W Trek, nights booked", "summary": "4 nights, east to west, sleeping in refugios or campsites booked for each night.", "book": "Every night must be booked before you enter: Las Torres runs the east, Vertice the west.", "days": [
+   {"title": "Welcome Center to Chileno", "note": "3 hours up the Ascencio valley. Sleep at Chileno or Central.", "rain": "Walk anyway: it is short."},
+   {"title": "Base Torres at dawn, then to Los Cuernos", "note": "Up to the towers early, back down and along Lago Nordenskjöld.", "rain": "If the towers are in cloud at 7:00, skip the lookout and keep walking."},
+   {"title": "French Valley, then Paine Grande", "note": "Leave the bags at Italiano, up the valley and back.", "rain": "In strong wind stop at Mirador Italiano and skip the upper valley."},
+   {"title": "Grey Glacier lookout and back", "note": "Along Lago Grey to the glacier.", "rain": "Fine in rain, waterproof trousers on."},
+   {"title": "Catamaran out from Paine Grande", "note": "Morning walk, boat to Pudeto, bus out.", "rain": "Boats don't sail in a storm: keep the afternoon free."}
+  ]}
+ ]
+},
+{
+ "id": "cl-puerto-natales", "names": ["Puerto Natales", "Natales", "Última Esperanza"],
+ "country": "CL", "lat": -51.7308, "lon": -72.5068, "radius_km": 25,
+ "season": "October to April. Cool and windy all summer.",
+ "sleep": "In town, near the bus terminal if you leave early for the park.",
+ "sources": ["https://en.wikivoyage.org/wiki/Puerto_Natales"],
+ "items": [
+  {"id": "tdp-day-tour", "name": "Day tour to Torres del Paine", "hours": "About 12 h by van", "length": "full", "effort": "easy", "need": "clear", "best": "A clear day", "book": "Book a day ahead", "why": "The park's lakes and lookouts in one long day, if you don't sleep inside it.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 300}},
+  {"id": "fjord-boat", "name": "Boat to the Balmaceda and Serrano glaciers", "hours": "About 8 h", "length": "full", "effort": "easy", "need": "calm", "best": "A calm day", "book": "Book ahead", "why": "Up the Última Esperanza fjord to two glaciers, with a short walk to the Serrano.", "act": {"type": "boat"}},
+  {"id": "milodon", "name": "Cueva del Milodón", "hours": "1–2 h", "length": "short", "effort": "easy", "need": "any", "best": "Any day", "book": "", "why": "A huge cave where remains of a giant ground sloth were found.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 200}},
+  {"id": "waterfront", "name": "The waterfront at sunset", "hours": "1 h", "length": "short", "effort": "easy", "need": "any", "best": "Evening", "book": "", "why": "Black-necked swans and the mountains across the fjord.", "act": {"type": "city"}}
+ ],
+ "rain": {"name": "Cueva del Milodón and a long lunch", "hours": "2 h", "why": "The cave has a roof; the town has good restaurants."}
+},
+{
+ "id": "cl-punta-arenas", "names": ["Punta Arenas"],
+ "country": "CL", "lat": -53.1638, "lon": -70.9171, "radius_km": 25,
+ "season": "October to March for the penguins. Very windy, 5 to 15 °C in summer.",
+ "sleep": "In the centre, near the main square.",
+ "sources": ["https://en.wikivoyage.org/wiki/Punta_Arenas"],
+ "items": [
+  {"id": "magdalena", "name": "Magdalena Island penguins by boat", "hours": "4–5 h", "length": "half", "effort": "easy", "need": "calm", "best": "Morning", "book": "Book ahead; cancelled in strong wind", "why": "A colony of Magellanic penguins in the Strait of Magellan.", "months": [10, 11, 12, 1, 2, 3], "act": {"type": "boat"}},
+  {"id": "cerro-la-cruz", "name": "Cerro de la Cruz lookout", "hours": "1 h", "length": "short", "effort": "easy", "need": "any", "best": "Any time", "book": "", "why": "Coloured roofs and the Strait below.", "act": {"type": "city"}},
+  {"id": "cemetery", "name": "The municipal cemetery", "hours": "1 h", "length": "short", "effort": "easy", "need": "any", "best": "Daytime", "book": "", "why": "Cypress avenues and the grand tombs of the sheep-farming families.", "act": {"type": "city"}},
+  {"id": "nao-victoria", "name": "Nao Victoria museum", "hours": "1–2 h", "length": "short", "effort": "easy", "need": "any", "best": "Any day", "book": "", "why": "Full-size replicas of Magellan's ship and the Beagle.", "act": {"type": "city"}}
+ ],
+ "rain": {"name": "Museo Regional de Magallanes", "hours": "1–2 h", "why": "A wool baron's mansion, furnished as it was."}
+},
+{
+ "id": "ar-ushuaia", "names": ["Ushuaia", "Tierra del Fuego", "Tierra del Fuego National Park", "Beagle Channel", "Canal Beagle"],
+ "country": "AR", "lat": -54.8019, "lon": -68.303, "radius_km": 30,
+ "season": "November to March: 5 to 15 °C, rain or snow possible any day, long daylight.",
+ "sleep": "In town, on the slope above the port.",
+ "sources": ["https://en.wikivoyage.org/wiki/Ushuaia", "https://www.argentina.gob.ar/interior/ambiente/parquesnacionales/tierradelfuego"],
+ "items": [
+  {"id": "beagle", "name": "Beagle Channel boat", "hours": "3 h", "length": "half", "effort": "easy", "need": "calm", "best": "Morning", "book": "Book a day ahead at the port", "why": "Sea lions, cormorants and the Les Eclaireurs lighthouse.", "act": {"type": "boat"}},
+  {"id": "martillo", "name": "Walk with the penguins on Martillo Island", "hours": "About 6 h with the transfer", "length": "full", "effort": "easy", "need": "calm", "best": "Book the first date you can", "book": "One operator lands on the island: book weeks ahead", "why": "You walk among Magellanic and gentoo penguins.", "months": [10, 11, 12, 1, 2, 3], "act": {"type": "boat"}},
+  {"id": "tdf-park", "name": "Tierra del Fuego National Park, coastal path", "hours": "4–5 h", "length": "half", "effort": "moderate", "need": "dry", "best": "A dry day", "book": "Park entry fee at the gate", "why": "Forest, bays and the end of the Pan-American road.", "act": {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 100}},
+  {"id": "esmeralda", "name": "Laguna Esmeralda", "hours": "4–5 h · about 9 km return", "length": "half", "effort": "moderate", "need": "dry", "best": "After a few dry days: the path crosses a bog", "book": "", "why": "A green lake under a glacier, through beech forest and peat.", "act": {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 450}},
+  {"id": "martial", "name": "Martial Glacier", "hours": "3–4 h", "length": "half", "effort": "moderate", "need": "clear", "best": "Clear afternoon", "book": "", "why": "Above the town, with the Beagle Channel below.", "act": {"type": "hiking", "difficulty": "moderate", "max_altitude_m": 900}}
+ ],
+ "rain": {"name": "Maritime Museum in the old prison", "hours": "2–3 h", "why": "The prison that founded the town, under a roof."}
+},
+{
+ "id": "ar-bariloche", "names": ["Bariloche", "San Carlos de Bariloche", "Nahuel Huapi", "Llao Llao"],
+ "country": "AR", "lat": -41.1335, "lon": -71.3103, "radius_km": 35,
+ "season": "December to March for walking, 8 to 25 °C. Ski season June to September.",
+ "sleep": "In town for restaurants, or on the Llao Llao road for the lakes.",
+ "sources": ["https://en.wikivoyage.org/wiki/San_Carlos_de_Bariloche"],
+ "items": [
+  {"id": "campanario", "name": "Cerro Campanario chairlift", "hours": "1–2 h", "length": "short", "effort": "easy", "need": "clear", "best": "Late afternoon", "book": "", "why": "The whole lake district from the top: lakes, islands and the Andes.", "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 1050}},
+  {"id": "circuito-chico", "name": "Circuito Chico by bike or car", "hours": "Half a day", "length": "half", "effort": "moderate", "need": "dry", "best": "A dry day", "book": "Rent a bike in town", "why": "A loop along the lakes past the Llao Llao hotel.", "act": {"type": "cycling"}},
+  {"id": "frey", "name": "Refugio Frey hike", "hours": "7–8 h", "length": "full", "effort": "hard", "need": "clear", "best": "A clear day", "book": "", "why": "Granite spires over a mountain lake, from Cerro Catedral.", "act": {"type": "hiking", "difficulty": "hard", "max_altitude_m": 1700}},
+  {"id": "victoria", "name": "Isla Victoria and the Arrayanes forest by boat", "hours": "Full day", "length": "full", "effort": "easy", "need": "calm", "best": "A calm day", "book": "Book ahead at Puerto Pañuelo", "why": "A forest of cinnamon-coloured myrtle trees on Lake Nahuel Huapi.", "act": {"type": "boat"}}
+ ],
+ "rain": {"name": "Chocolate shops and the Patagonia Museum", "hours": "2–3 h", "why": "The town is famous for its chocolate; the museum tells the region's history."}
+},
+{
+ "id": "ar-puerto-madryn", "names": ["Puerto Madryn", "Península Valdés", "Peninsula Valdes", "Puerto Pirámides"],
+ "country": "AR", "lat": -42.7692, "lon": -65.0385, "radius_km": 110,
+ "season": "Southern right whales from June to December, best September and October. Penguins September to March.",
+ "sleep": "Puerto Madryn, or Puerto Pirámides on the peninsula to be closer to the whales.",
+ "sources": ["https://en.wikivoyage.org/wiki/Puerto_Madryn", "https://en.wikivoyage.org/wiki/Pen%C3%ADnsula_Vald%C3%A9s"],
+ "items": [
+  {"id": "whales", "name": "Whale watching from Puerto Pirámides", "hours": "2 h on the boat", "length": "half", "effort": "easy", "need": "calm", "best": "Morning, when the sea is calmer", "book": "Book at Puerto Pirámides", "why": "Southern right whales come to the bay to calve, often right next to the boat.", "months": [6, 7, 8, 9, 10, 11, 12], "act": {"type": "boat"}},
+  {"id": "valdes", "name": "Península Valdés by car or tour", "hours": "Full day", "length": "full", "effort": "easy", "need": "dry", "best": "A dry day: the roads are gravel", "book": "Reserve entry fee at the gate", "why": "Elephant seals, sea lions, penguins and guanacos along the coast.", "act": {"type": "safari"}},
+  {"id": "punta-tombo", "name": "Punta Tombo penguin colony", "hours": "Full day, 2 h each way", "length": "full", "effort": "easy", "need": "dry", "best": "Any dry day in season", "book": "", "why": "One of the largest Magellanic penguin colonies in South America.", "months": [9, 10, 11, 12, 1, 2, 3, 4], "act": {"type": "hiking", "difficulty": "easy", "max_altitude_m": 50}}
+ ],
+ "rain": {"name": "Ecocentro", "hours": "2 h", "why": "A sea-life centre on the cliff, with a tower to watch for whales."}
+}
+]
+}

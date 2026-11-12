@@ -1,4 +1,5 @@
 import type {
+  Airport, Board, FlightOffer, FlightOrder, FlightPrice, LegSaved, Passenger, TripFlights, PlanChoices, StopStatus,
   AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
 } from "./types";
 
@@ -93,7 +94,29 @@ export const api = {
   /** Firm up guessed dates: a start date moves the trip, a length spreads the guessed stops. */
   setDates: (id: string, body: { start_date?: string; total_days?: number; confirm?: boolean }) =>
     req<Trip>("POST", `/api/trips/${id}/dates`, body),
-  patchTrip: (id: string, patch: { name?: string; notes?: string }) => req<Trip>("PATCH", `/api/trips/${id}`, patch),
+  patchTrip: (id: string, patch: { name?: string; notes?: string; home_airport?: string | null; return_leg?: LegSaved | null }) =>
+    req<Trip>("PATCH", `/api/trips/${id}`, patch),
+  board: (id: string) => req<Board>("GET", `/api/trips/${id}/board`),
+  /** New order, days and status of every stop; the dates follow. 409 when something booked would move. */
+  layout: (id: string, stops: { id: string; days: number; status?: StopStatus; gap_before?: number }[], start_date?: string) =>
+    req<Trip>("PUT", `/api/trips/${id}/layout`, { stops, start_date }),
+  patchBoardStop: (id: string, stopId: string, patch: { status?: StopStatus; fixed_note?: string | null; sleep?: string | null;
+    arrival?: LegSaved | null; plan?: PlanChoices; activities?: import("./types").Activity[] }) =>
+    req<Stop>("PATCH", `/api/trips/${id}/stops/${stopId}`, patch),
+  airports: (q: string) => req<Airport[]>("GET", `/api/travel/airports?q=${encodeURIComponent(q)}`),
+  flightPrices: (origin: string, destination: string, date: string) =>
+    req<{ available: boolean; prices: FlightPrice[]; note: string }>("GET",
+      `/api/travel/prices?origin=${origin}&destination=${destination}&date=${date}`),
+  /** Every flight leg of the trip, with links; search/book say what the flight service allows. */
+  tripFlights: (id: string) => req<TripFlights>("GET", `/api/trips/${id}/flights`),
+  /** Every flight of one day for one leg, in departure order. */
+  searchFlights: (origin: string, destination: string, date: string, adults = 1) =>
+    req<{ offers: FlightOffer[]; test: boolean }>("POST", "/api/travel/flights", { origin, destination, date, adults }),
+  /** All legs priced as one ticket. */
+  flightsTogether: (slices: { origin: string; destination: string; date: string }[], adults = 1) =>
+    req<{ offers: FlightOffer[]; test: boolean }>("POST", "/api/travel/flights/together", { slices, adults }),
+  bookFlight: (id: string, offer_id: string, stop_id: string | null, passengers: Passenger[]) =>
+    req<FlightOrder>("POST", `/api/trips/${id}/flights/book`, { offer_id, stop_id, passengers }),
   deleteTrip: (id: string) => req<void>("DELETE", `/api/trips/${id}`),
   duplicateTrip: (id: string) => req<Trip>("POST", `/api/trips/${id}/duplicate`),
   addStop: (id: string, stop: StopInput) => req<Stop>("POST", `/api/trips/${id}/stops`, stop),

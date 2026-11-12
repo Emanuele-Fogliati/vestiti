@@ -38,6 +38,18 @@ class Settings(BaseSettings):
     climate_years: int = 5
     weather_cache_hours: int = 6
 
+    # --- Flights (app.travel): links always work; prices only with a Travelpayouts account ---
+    # Sign up free at travelpayouts.com, join the Aviasales program, copy the API token and
+    # the partner marker. Empty = no prices and plain links.
+    travelpayouts_token: str = ""
+    travelpayouts_marker: str = ""
+    travelpayouts_timeout_s: float = 6.0
+    # Duffel (duffel.com): every flight of a day per leg, and booking. A test token
+    # (duffel_test_...) searches sample airlines and books for free; booking stays off with a
+    # live token until payments are set up (docs/FLIGHTS.md). Empty = links only.
+    duffel_access_token: str = ""
+    duffel_timeout_s: float = 30.0
+
     # --- LLM: any OpenAI-compatible server (Ollama, llama.cpp, vLLM, LM Studio) ---
     llm_enabled: bool = True
     llm_base_url: str = "http://localhost:11434/v1"
