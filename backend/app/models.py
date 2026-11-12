@@ -45,6 +45,8 @@ class User(Base):
     pace: Mapped[str] = mapped_column(String(10), default="average")
     # Evenings outdoors in town: early (back inside) | sometimes | late (out after dark)
     evenings: Mapped[str] = mapped_column(String(10), default="sometimes")
+    # brands the traveller prefers (catalog spelling, e.g. ["Patagonia"]); [] = no preference
+    preferred_brands: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
     # Set when the traveller answered or skipped the profile quiz (it is not shown again)
     profile_done_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)

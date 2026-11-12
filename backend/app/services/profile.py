@@ -7,6 +7,7 @@ becomes a few structured settings the engine already understands:
 - pace      -> User.pace (heat made on the move)
 - evenings  -> User.evenings (how much to spend on cold town evenings)
 - owned     -> WardrobeItem rows (rated against the spec like any owned piece)
+- brands    -> User.preferred_brands (the kit uses them when they fit the trip and budget)
 
 No model ever picks a product here. The chat's model only fills the same fields the quiz
 does, and a rule-based reader does the same when the model is offline.
@@ -22,6 +23,7 @@ from sqlalchemy.orm import Session
 
 from app.engine.garments import FOOTWEAR_TYPES, LEVELS, SLOT_BY_KEY, SLOT_KEYS
 from app.models import User, WardrobeItem
+from app.services import brands as B
 
 COLD_OFFSET = {"very_cold": 0.3, "bit_cold": 0.15, "average": 0.0, "warm": -0.3}
 COLD_LABEL = {"very_cold": "always cold", "bit_cold": "a bit cold", "average": "average",
@@ -66,7 +68,15 @@ def profile_json(db: Session, user: User) -> dict:
         "owned": [k for k, b in BASICS.items() if b["category"] in cats],
         "done": user.profile_done_at is not None,
         "basics": [{"key": k, "label": b["label"]} for k, b in BASICS.items()],
+        **brands_json(db, user),
     }
+
+
+def brands_json(db: Session, user: User) -> dict:
+    catalog = B.catalog_brands(db)
+    mine = list(user.preferred_brands or [])
+    return {"preferred_brands": mine, "catalog_brands": catalog,
+            "unknown_brands": B.unknown(mine, catalog)}
 
 
 def user_wardrobe(db: Session, user: User) -> list[WardrobeItem]:
@@ -117,22 +127,51 @@ class Updates:
     evenings: str | None = None
     owned: list[OwnedPiece] = field(default_factory=list)
     question: bool = False
+    # preferred brands: None = not mentioned, [] = "no preference"; add = "also X"
+    brands: list[str] | None = None
+    brands_add: bool = False
 
     def empty(self) -> bool:
-        return not (self.cold or self.pace or self.evenings or self.owned)
+        return not (self.cold or self.pace or self.evenings or self.owned
+                    or self.brands is not None)
 
     def merge(self, other: "Updates") -> "Updates":
         """self wins on every field it sets; other fills the gaps."""
         cats = {o.category for o in self.owned}
+        mine = self.brands is not None
         return Updates(cold=self.cold or other.cold, pace=self.pace or other.pace,
                        evenings=self.evenings or other.evenings,
                        owned=self.owned + [o for o in other.owned if o.category not in cats],
-                       question=self.question or other.question)
+                       question=self.question or other.question,
+                       brands=self.brands if mine else other.brands,
+                       brands_add=self.brands_add if mine else other.brands_add)
 
 
 def _snapshot_profile(user: User) -> dict:
     return {"thermal_offset": user.thermal_offset or 0.0, "pace": user.pace or "average",
-            "evenings": user.evenings or "sometimes"}
+            "evenings": user.evenings or "sometimes",
+            "preferred_brands": list(user.preferred_brands or [])}
+
+
+def _brand_list(names: list[str]) -> str:
+    return ", ".join(names) if names else "none"
+
+
+def set_brands(db: Session, user: User, names: list[str], add: bool = False) -> list[str]:
+    """Write the preferred brands; returns the change lines (empty when nothing changed)."""
+    from app.schemas import MAX_BRANDS
+    catalog = B.catalog_brands(db)
+    before = list(user.preferred_brands or [])
+    new = B.canon(db, (before + names) if add else names, catalog)[:MAX_BRANDS]
+    if [b.lower() for b in new] == [b.lower() for b in before]:
+        return []
+    user.preferred_brands = new
+    out = [f"Preferred brands: {_brand_list(before)} → {_brand_list(new)}"]
+    missing = B.unknown(new, catalog)
+    if missing:
+        out.append(f"{_brand_list(missing)} isn't in our catalog yet, so it can't change "
+                   "the list. We'll use it as soon as we sell it.")
+    return out
 
 
 def apply_updates(db: Session, user: User, up: Updates, note: str = CHAT_NOTE) -> tuple[list[str], dict]:
@@ -152,6 +191,8 @@ def apply_updates(db: Session, user: User, up: Updates, note: str = CHAT_NOTE) -
         changes.append(f"Evenings: {EVENING_LABEL[user.evenings or 'sometimes']} → "
                        f"{EVENING_LABEL[up.evenings]}")
         user.evenings = up.evenings
+    if up.brands is not None:
+        changes += set_brands(db, user, up.brands, up.brands_add)
     existing = user_wardrobe(db, user)
     for piece in up.owned:
         p = piece.clean()
@@ -174,8 +215,9 @@ def apply_updates(db: Session, user: User, up: Updates, note: str = CHAT_NOTE) -
 
 
 def apply_quiz(db: Session, user: User, cold: str | None, pace: str | None,
-               evenings: str | None, owned: list[str] | None) -> tuple[list[str], dict]:
-    up = Updates(cold=cold, pace=pace, evenings=evenings)
+               evenings: str | None, owned: list[str] | None,
+               brands: list[str] | None = None) -> tuple[list[str], dict]:
+    up = Updates(cold=cold, pace=pace, evenings=evenings, brands=brands)
     removed: list[str] = []
     if owned is not None:
         keys = [k for k in owned if k in BASICS]
@@ -277,7 +319,20 @@ _BRANDS = ["Decathlon", "Quechua", "Forclaz", "Simond", "Wedze", "Kalenji", "The
            "Mountain Warehouse", "Rab", "Helly Hansen", "Icebreaker", "Smartwool", "Zara", "H&M",
            "Moncler", "Colmar", "CMP", "Karpos", "Millet", "Lowa", "Meindl", "Asolo", "Timberland",
            "Nike", "Adidas", "Ferrino", "Dolomite", "Garmont", "Vaude", "Fjallraven", "Fjällräven",
-           "Haglofs", "Ortovox", "Dynafit", "Kathmandu", "Regatta", "Trespass", "Craghoppers"]
+           "Haglofs", "Ortovox", "Dynafit", "Kathmandu", "Regatta", "Trespass", "Craghoppers",
+           "Outdoor Research", "Marmot", "Montbell", "Teva", "Hoka", "Black Diamond", "Tilley",
+           "Bridgedale", "Darn Tough", "Uniqlo", "Arcteryx", "Helly Hansen"]
+# a preference, not a piece they own: "preferisco Patagonia", "I only wear Arc'teryx"
+_PREFER = re.compile(
+    r"\b(prefer\w*|preferisc\w*|preferirei|mi piace|mi piacciono|adoro|love|i like|fan (of|di)"
+    r"|favou?rite|preferit\w*|(only|always) (wear|buy)|(wear|buy) only"
+    r"|(indosso|vesto|compro|metto) (solo|sempre)|solo (vestiti|roba|capi|marca|brand))\b", re.I)
+_PREFER_ADD = re.compile(r"\b(anche|pure|also|too|as well|in più|oltre a)\b", re.I)
+_NO_BRAND = re.compile(
+    r"(nessun[ao]? (brand|marca|marche)|non ho (un |una )?(brand|marca|marche) preferit"
+    r"|qualsiasi (brand|marca)|any brand|no (brand )?preference|no favou?rite brand"
+    r"|(brand|marca) non (mi )?importa|non mi importa (la marca|il brand|del brand|della marca)"
+    r"|don'?t care (about|which) (the )?brand)", re.I)
 _BRAND_RE = re.compile(r"\b(" + "|".join(re.escape(b) for b in sorted(_BRANDS, key=len, reverse=True))
                        + r")\b", re.I)
 _LIGHT = re.compile(r"\b(legger\w*|light(weight)?|thin|sottile|fin[eo])\b", re.I)
@@ -334,6 +389,19 @@ def read_rules(text: str) -> Updates:
             piece = OwnedPiece(category=cat, name=name[:1].upper() + name[1:], brand=brand,
                                warmth=warmth, **{k: v for k, v in defaults.items() if k != "warmth"})
             up.owned.append(piece)
+    if _NO_BRAND.search(t):
+        up.brands = []
+    else:
+        for clause in re.split(r"[.;!\n]|,\s*(?=(?:ma|but|e|and|ho|i have|però)\b)", text):
+            pm = _PREFER.search(clause or "")
+            if not pm:
+                continue
+            # the brands named after the preference word: "ho un pile Decathlon ma preferisco
+            # Patagonia" prefers Patagonia only
+            found = [_canon_brand(m.group(1)) for m in _BRAND_RE.finditer(clause, pm.start())]
+            if found:
+                up.brands = list(dict.fromkeys((up.brands or []) + found))
+                up.brands_add = up.brands_add or bool(_PREFER_ADD.search(clause))
     up.question = bool(_QUESTION.search(text))
     return up
 

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
+import { BrandPicker } from "../components/BrandPicker";
 
 export default function Account() {
   const { user, setUser, toast } = useApp();
@@ -10,6 +11,8 @@ export default function Account() {
   const [curPw, setCurPw] = useState("");
   const [newPw, setNewPw] = useState("");
   const [pwErr, setPwErr] = useState<string | null>(null);
+  const [catalog, setCatalog] = useState<string[]>([]);
+  useEffect(() => { if (user) api.profile().then((p) => setCatalog(p.catalog_brands)).catch(() => undefined); }, [user?.id]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!user) return <main className="page"><div className="wrap"><p>You're not signed in. <Link to="/login">Sign in</Link> or <Link to="/trips/new">start as a guest</Link>.</p></div></main>;
 
   async function patch(p: Parameters<typeof api.updateMe>[0]) {
@@ -87,6 +90,9 @@ export default function Account() {
                 <option value="sometimes">Out some evenings: spend a little on them</option>
                 <option value="late">Out late most evenings: cover them fully</option>
               </select></div>
+            <div className="field"><label>Favourite brands</label>
+              <BrandPicker catalog={catalog} value={user.preferred_brands ?? []} onChange={(v) => patch({ preferred_brands: v })} />
+              <span className="small muted">Used when they fit the trip and the budget. None picked = any brand.</span></div>
           </section>
           {!user.is_guest && (
             <section className="panel form">

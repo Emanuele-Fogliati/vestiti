@@ -26,6 +26,8 @@ turn it into profile settings. Reply with JSON only:
              "brand": string or null, "warmth": one of {LEVELS}, "waterproof": true/false,
              "material": "merino"|"synthetic"|"fleece"|"down"|"cotton"|"other"|null,
              "footwear_type": one of {FOOTWEAR_TYPES} or null}}],
+  "prefer_brands": ["brand names they say they prefer or only wear"] or null,
+  "no_brand_preference": true/false,
   "question": true/false}}
 Meaning:
 - cold: how easily they feel cold. "I'm always cold", "sono freddoloso" = very_cold; "a bit chilly
@@ -38,6 +40,9 @@ Meaning:
   jacket/piumino = insulation_top; rain jacket/k-way/hardshell = shell_top; rain trousers =
   shell_bottom; hiking trousers/jeans = trousers; thermal top/merino base layer = base_top;
   thermal leggings = base_bottom; boots/scarponi = footwear (hiking_boot); beanie = headwear.
+- prefer_brands: clothing brands they PREFER ("preferisco Patagonia", "I only wear Arc'teryx").
+  A brand of a piece they merely own is not a preference. no_brand_preference: true only when
+  they say any brand is fine or they have no favourite.
 - question: true when the message asks something.
 Use null or [] for anything the message does not say. Do not guess."""
 
@@ -73,6 +78,12 @@ def read_message(text: str, client: LLMClient | None = None) -> tuple[Updates, s
                  pace=data.get("pace") if data.get("pace") in PACES else None,
                  evenings=data.get("evenings") if data.get("evenings") in EVENINGS else None,
                  owned=_pieces(data.get("owned")), question=data.get("question") is True)
+    pb = data.get("prefer_brands")
+    if data.get("no_brand_preference") is True:
+        up.brands = []
+    elif isinstance(pb, list) and any(isinstance(b, str) and b.strip() for b in pb):
+        up.brands = [b.strip()[:60] for b in pb if isinstance(b, str) and b.strip()][:8]
+        up.brands_add = rules.brands_add
     # "average" from the model usually means "not mentioned": only the rules may set it back
     if up.cold == "average" and not rules.cold:
         up.cold = None

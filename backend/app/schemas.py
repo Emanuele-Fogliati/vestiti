@@ -50,6 +50,21 @@ class LoginIn(BaseModel):
     password: str = Field(max_length=200)  # argon2 on a megabyte "password" would burn CPU
 
 
+MAX_BRANDS = 8
+
+
+def clean_brand_list(v: list[str] | None) -> list[str] | None:
+    """Trimmed, de-duplicated (case-insensitive), at most MAX_BRANDS names of 60 chars."""
+    if v is None:
+        return None
+    out: list[str] = []
+    for b in v:
+        b = " ".join(str(b).split())[:60]
+        if b and b.lower() not in {x.lower() for x in out}:
+            out.append(b)
+    return out[:MAX_BRANDS]
+
+
 class UserOut(ORM):
     id: str
     email: str | None
@@ -60,6 +75,7 @@ class UserOut(ORM):
     thermal_offset: float
     pace: str = "average"
     evenings: str = "sometimes"
+    preferred_brands: list[str] = []
     profile_done_at: datetime | None = None
     created_at: datetime
 
@@ -70,6 +86,7 @@ class ProfileIn(BaseModel):
     thermal_offset: float | None = Field(default=None, ge=-0.5, le=0.5)
     pace: str | None = None
     evenings: str | None = None
+    preferred_brands: list[str] | None = Field(default=None, max_length=20)
 
     @field_validator("pace")
     @classmethod
@@ -84,6 +101,11 @@ class ProfileIn(BaseModel):
         if v is not None and v not in EVENINGS:
             raise ValueError(f"evenings must be one of {EVENINGS}")
         return v
+
+    @field_validator("preferred_brands")
+    @classmethod
+    def _b(cls, v):
+        return clean_brand_list(v)
 
     @field_validator("gender_pref")
     @classmethod
@@ -639,6 +661,13 @@ class QuizIn(BaseModel):
     evenings: str | None = None
     # basics the traveller already owns (keys of services.profile.BASICS); None = skipped
     owned: list[str] | None = Field(default=None, max_length=30)
+    # brands they prefer; None = skipped, [] = no preference
+    brands: list[str] | None = Field(default=None, max_length=20)
+
+    @field_validator("brands")
+    @classmethod
+    def _b(cls, v):
+        return clean_brand_list(v)
 
     @field_validator("cold")
     @classmethod

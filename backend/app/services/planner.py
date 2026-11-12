@@ -65,6 +65,8 @@ class Planner:
         self.trip = trip
         self.weather = weather or WeatherService(db)
         self._computed: Computed | None = None
+        self.prefer_names: list[str] = list(user.preferred_brands or [])
+        self.prefer = frozenset(b.lower() for b in self.prefer_names)
 
     # ------------------------------------------------------------ inputs
     def stage_inputs(self) -> list[StageInput]:
@@ -126,7 +128,8 @@ class Planner:
         sels = self.selections()
         partners = self.partners()
         tiers = {t: O.build_tier(t, c.stages, c.conds, c.reqs, cands, owned, sels, partners,
-                                 evenings=self.user.evenings or "sometimes")
+                                 evenings=self.user.evenings or "sometimes",
+                                 prefer_names=self.prefer_names)
                  for t in O.TIERS}
         return c, {"tiers": tiers, "candidates": cands, "owned": owned}
 
@@ -137,6 +140,7 @@ class Planner:
         tiers = data["tiers"]
         for t in tiers.values():
             t.pop("_choices", None)
+            t.pop("_brand_swaps", None)
         tier_advice(tiers)
         return {
             "empty": False,
@@ -156,6 +160,7 @@ class Planner:
         c, data = self.tiers()
         t = data["tiers"][tier]
         choices = t.pop("_choices")
+        t.pop("_brand_swaps", None)
         kit = O._kit(choices, c.reqs)
         ev = evaluate(c.stages, c.conds, kit)
         for st in ev["stages"]:
@@ -163,7 +168,8 @@ class Planner:
             for mode in ("moving", "rest"):
                 if st["modes"][mode]["margin"] < 0:
                     st["upgrades"][mode] = O.cheapest_upgrade(
-                        c.stages, c.conds, choices, c.reqs, data["candidates"], st["index"], mode)
+                        c.stages, c.conds, choices, c.reqs, data["candidates"], st["index"], mode,
+                        prefer=self.prefer)
                 else:
                     st["upgrades"][mode] = None
         ev.pop("dresses", None)
@@ -206,7 +212,8 @@ class Planner:
         keys = {
             "price_asc": lambda i: (i.price, -i.fit.score),
             "price_desc": lambda i: (-i.price, -i.fit.score),
-            "fit": lambda i: (-i.fit.score, i.price),
+            # best fit first, the traveller's brands ahead of equally good ones
+            "fit": lambda i: (-round(i.fit.score, 2), i.brand.lower() not in self.prefer, i.price),
             "warmth": lambda i: (-float(i.specs.get("clo", 0)), i.price),
             "weight": lambda i: (i.specs.get("weight_g") or 99999, i.price),
             "rating": lambda i: (-(i.rating or 0), -i.review_count),
@@ -215,7 +222,9 @@ class Planner:
         items.sort(key=keys.get(sort, keys["fit"]))
         return {"slot": slot, "slot_name": SLOT_BY_KEY[slot].name,
                 "requirement": O.requirement_json(req), "brands": brands,
-                "items": [i.as_dict() for i in items]}
+                "preferred_brands": self.prefer_names,
+                "items": [{**i.as_dict(), "preferred_brand": i.brand.lower() in self.prefer}
+                          for i in items]}
 
     def _catalog_note(self) -> str | None:
         seed = self.db.scalar(select(Product.id).where(Product.source == "seed",
