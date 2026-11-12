@@ -11,6 +11,7 @@ import { MONTH_LONG, MONTHS, today } from "../lib/format";
 import { dated, firstOf, LENGTHS, move, setDays, short, span, totalDays } from "../lib/plan";
 import { useSpeech } from "../lib/speech";
 import type { Place, PlanArea, PlanIdea, PlanReading, PlanStep, PlanSuggestion } from "../lib/types";
+import HourByHour from "./HourByHour";
 import { PlaceSearch } from "./PlaceSearch";
 
 export const DRESS_ME_LABEL = "Dress me for this trip";
@@ -313,7 +314,13 @@ export function TripStarter({ compact }: { compact?: boolean }) {
                           <summary>Day by day</summary>
                           <ol>
                             {daysOf(s).map((d) => (
-                              <li key={d.day} className={`sd-${d.kind}`}><b>Day {d.day}</b> {dayText(d, i === 0 && d.day === 1)}</li>
+                              <li key={d.day} className={`sd-${d.kind}`}>
+                                <b>Day {d.day}</b> {dayText(d, i === 0 && d.day === 1)}
+                                {d.items?.map((t) => (
+                                  <HourByHour key={t.id} steps={t.steps} extras={t.extras} book={t.book}
+                                    label={d.items!.length > 1 ? `${t.name}: hour by hour` : "Hour by hour"} />
+                                ))}
+                              </li>
                             ))}
                           </ol>
                         </details>

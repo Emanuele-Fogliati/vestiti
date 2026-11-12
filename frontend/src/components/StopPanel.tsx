@@ -4,6 +4,7 @@ import { activitiesFrom, sameActivities } from "../lib/board";
 import { activityText, addDays } from "../lib/format";
 import { terrainFor } from "../lib/terrain";
 import type { BoardStop, LegMode, PlanChoices, PlanDayOut, Sky, StopStatus, TodoItem, Trip } from "../lib/types";
+import HourByHour from "./HourByHour";
 import { Illustration } from "./Illustration";
 import { PlaceGuide } from "./PlaceGuide";
 import { PlaceQuestion } from "./PlaceQuestion";
@@ -172,6 +173,7 @@ export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, on
                         {it.best && <span className="tag">{it.best}</span>}
                         {it.book && <span className="tag book">{it.book}</span>}
                       </div>
+                      {!planned.some((p) => p.id === it.id) && <HourByHour steps={it.steps} extras={it.extras} />}
                       <div className="row" style={{ gap: 8, marginTop: 6, flexWrap: "wrap" }}>
                         <button type="button" className="link small" onClick={() => toggleSkip(it)}>{skip.has(it.id) ? "Add back" : "Skip"}</button>
                         {!skip.has(it.id) && (
@@ -185,6 +187,12 @@ export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, on
                   </li>
                 ))}
               </ol>
+              {!!todo.extras?.length && (
+                <div className="bp-box hours-extras">
+                  <span className="label">Off the programme</span>
+                  <ul>{todo.extras.map((e, i) => <li key={i} className="small">{e}</li>)}</ul>
+                </div>
+              )}
               {todo.sources.length > 0 && (
                 <p className="small muted">Sources: {todo.sources.map((u, i) => <a key={u} href={u} target="_blank" rel="noopener noreferrer">{i + 1}</a>).reduce<React.ReactNode[]>((a, x, i) => (i ? [...a, " · ", x] : [x]), [])}</p>
               )}
@@ -257,6 +265,7 @@ function DayRow({ d, open, onSky, onSet }: { d: PlanDayOut; open: boolean; onSky
             {t.note && <p className="small warnline">{t.note}</p>}
             {t.moved && <p className="small okline">Moved here for the weather</p>}
             {t.pinned && <p className="small muted">You chose this day</p>}
+            <HourByHour steps={t.steps} extras={t.extras} />
           </div>
         ))}
         {!d.things.length && <div className="bp-thing"><b>{d.title}</b>{d.note && <p className="small muted">{d.note}</p>}</div>}

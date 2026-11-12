@@ -117,7 +117,12 @@ export interface TodoItem {
   id: string; name: string; hours: string; length: "full" | "half" | "short"; effort: "easy" | "moderate" | "hard";
   need: Need; need_text: string; best: string; book: string; why: string; months: number[]; weekdays?: number[]; act: Activity | null;
   note?: string; moved?: boolean; pinned?: boolean;
+  /** the day hour by hour, and what tour programmes leave out */
+  steps?: HourStep[]; extras?: string[]; sights?: string[];
 }
+export interface HourStep { at: string; what: string; note: string }
+/** A thing to do from a hand-written guide, as a proposal carries it. */
+export interface PlanThing { id: string; name: string; hours: string; book: string; need: Need; steps: HourStep[]; extras: string[] }
 export interface PlanDayOut {
   date: string; sky: Sky; rain_chance: number; source: string; kind: "plan" | "rain" | "free" | "spare" | "route";
   title: string; note: string; override: boolean; tmin: number; tmax: number; wind_kmh: number; things: TodoItem[];
@@ -130,7 +135,7 @@ export interface BoardStop {
     source: "guide" | "trips" | "nearby" | "none"; area: string | null; items: TodoItem[];
     rain: { name: string; hours: string; why: string } | null;
     routes: { id: string; name: string; summary: string; book: string; days: { title: string; note: string; rain: string }[] }[];
-    season: string; sleep_tip: string; sources: string[];
+    season: string; sleep_tip: string; sources: string[]; extras?: string[];
   };
   plan: { mode: string | null; choices: PlanChoices; days: PlanDayOut[]; waiting: TodoItem[]; out_of_season: string[]; advice: string[] };
   weather_sources: string[];
@@ -159,11 +164,14 @@ export interface PlanStep {
   elevation_m?: number | null; activities?: Activity[] | null; sights: string[];
   /** What to do each day there, from what organised trips do (several things a day). */
   plan?: PlanDay[]; also?: string[];
+  /** where a guide is written: the things left for days added, hours and all */
+  more_things?: PlanThing[];
 }
 export interface PlanDay {
   day: number; kind: "arrive" | "day" | "more" | "free"; sights: string[];
   /** a trip out of several days (a trek): how many */ days?: number;
   /** "more" days: the trip out they belong to */ of?: string;
+  /** where a guide is written: the things of the day, hour by hour */ items?: PlanThing[];
 }
 export interface PlanArea { id: string; name: string; kind: "region" | "country" }
 export interface PlanProposal {

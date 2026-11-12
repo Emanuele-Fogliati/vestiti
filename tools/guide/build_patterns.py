@@ -49,6 +49,7 @@ WAY_SHARE = 0.15  # a sight on the way: seen by this share of the trips making t
 PARK_TOWN_KM = 60
 TREK_FAR_KM = 20     # days out this far from where you slept, next to each other, are one trek
 TREK_STEP_KM = 35
+TREK_SHARE = 0.35  # a sight seen this often on treks belongs to the trek
 DAY_OUT_KM = 180  # Colca from Arequipa is about as far as a day out goes
 
 
@@ -269,9 +270,19 @@ def build(manifest: dict) -> dict:
                 way[(prev, s["p"])].update({x for x in s["way"]
                                             if km(a_, places[x]) + km(places[x], c_) <= 1.25 * direct + 30})
             prev = s["p"]
+    # a sight seen mostly on treks (days in a row away from any bed: the Salkantay or Inca Trail
+    # camps) is part of a trek, never a day out of its own nor something seen on the way
+    in_trek: Counter = Counter()
+    seen_all: Counter = Counter()
+    for (base_, x), ns in sight_days.items():
+        seen_all[x] += len(ns)
+        in_trek[x] += sum(1 for n in ns if n > 1)
+    trekky = {x for x, n in seen_all.items() if in_trek[x] >= TREK_SHARE * n}
     outings: dict[str, list] = {}
     for base, cnt in sight_trips.items():
-        left = [x for x, n in cnt.most_common() if n >= MIN_GROUP_TRIPS and x != base]
+        multi = {x for x in cnt if sorted(sight_days[(base, x)])[len(sight_days[(base, x)]) // 2] > 1}
+        left = [x for x, n in cnt.most_common() if n >= MIN_GROUP_TRIPS and x != base
+                and (x not in trekky or x in multi)]
         done: set[str] = set()
         groups = []
         def co(x: str, y: str) -> int:
@@ -301,7 +312,7 @@ def build(manifest: dict) -> dict:
     ways = {}
     for (a, c), cnt in way.items():
         least = max(MIN_GROUP_TRIPS, WAY_SHARE * moves[(a, c)])
-        top = [x for x, n in cnt.most_common(WAY_MAX) if n >= least and x not in (a, c)]
+        top = [x for x, n in cnt.most_common(WAY_MAX + 4) if n >= least and x not in (a, c) and x not in trekky][:WAY_MAX]
         if top:
             ways[f"{ix(a)}>{ix(c)}"] = [ix(x) for x in top]
     out_trips = [[ops.index(t["src"]), t["len"], [[ix(s["p"]), s["d"]] for s in t["stays"]]] for t in trips]

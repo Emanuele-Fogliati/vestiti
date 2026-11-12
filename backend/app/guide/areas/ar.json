@@ -1,0 +1,645 @@
+{
+ "_doc": "Argentina, written by hand for the plans hour by hour (Manu, 2026-11-12). Buenos Aires and Patagonia are in todo.json.",
+ "areas": [
+  {
+   "id": "ar-iguazu",
+   "names": [
+    "Puerto Iguazú",
+    "Puerto Iguazu",
+    "Iguazú",
+    "Iguazu",
+    "Iguazu Falls",
+    "Iguazú Falls",
+    "Cataratas del Iguazú"
+   ],
+   "country": "AR",
+   "lat": -25.65,
+   "lon": -54.5,
+   "radius_km": 30,
+   "season": "Subtropical: hot and humid, 30–35 °C from December to February with storms; mild from April to October. The falls are fullest after rain.",
+   "sleep": "Puerto Iguazú town, 20 minutes from the park by bus or taxi; a hotel inside the park lets you see the falls before the gates open.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Iguazu_Falls",
+    "https://iguazuargentina.com/en/"
+   ],
+   "items": [
+    {
+     "id": "tres-fronteras",
+     "name": "Three Borders landmark at sunset",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "Argentina, Brazil and Paraguay meet where the Iguazú joins the Paraná.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true
+    },
+    {
+     "id": "argentine",
+     "name": "The Argentine side: Devil's Throat, Upper and Lower circuits",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Be at the gate when it opens at 08:00",
+     "book": "Park ticket online; the boat under the falls (Gran Aventura) a day ahead",
+     "why": "Walkways right over and under 275 falls; at the Devil's Throat half the river drops into the mist at your feet.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Through the gate"
+      },
+      {
+       "at": "08:15",
+       "what": "Jungle train to Garganta station",
+       "note": "first trains go before the groups"
+      },
+      {
+       "at": "08:45",
+       "what": "Devil's Throat walkway",
+       "note": "1.1 km over the river"
+      },
+      {
+       "at": "10:30",
+       "what": "Train back; Upper circuit",
+       "note": "1 h 30, falls from above"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch"
+      },
+      {
+       "at": "13:30",
+       "what": "Lower circuit",
+       "note": "2 h, falls from below, rainbows in the spray"
+      },
+      {
+       "at": "15:30",
+       "what": "Boat under the falls (optional)",
+       "note": "you come out soaked"
+      },
+      {
+       "at": "18:00",
+       "what": "The park closes"
+      }
+     ],
+     "extras": [
+      "Validate your ticket at the exit for half price on a second day in a row.",
+      "A dry bag for the phone; quick-dry clothes and sandals with straps.",
+      "Coatis snatch food out of hands and bags: eat inside the fenced areas."
+     ],
+     "sights": [
+      "Iguazu Falls",
+      "Devil's Throat",
+      "Iguazú National Park"
+     ]
+    },
+    {
+     "id": "brazil",
+     "name": "The Brazilian side, the panorama",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning",
+     "book": "Park ticket online (Brazil)",
+     "why": "The whole width of the falls in one view, the Argentine side opposite. Passport for the border.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Cross the border with your passport",
+       "note": "30 min to 1 h"
+      },
+      {
+       "at": "09:00",
+       "what": "Bus into the park"
+      },
+      {
+       "at": "09:30",
+       "what": "The 1.2 km trail along the canyon"
+      },
+      {
+       "at": "11:00",
+       "what": "Platform into the Devil's Throat spray"
+      },
+      {
+       "at": "12:30",
+       "what": "Back in Argentina"
+      }
+     ],
+     "extras": [
+      "Parque das Aves, a bird park by the Brazilian gate, is an easy extra hour."
+     ]
+    },
+    {
+     "id": "moon",
+     "name": "Full moon walk to the Devil's Throat",
+     "hours": "2 h, at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Few places: book well ahead",
+     "why": "A few nights a month, around full moon, a guided night walk to the falls in moonlight.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     }
+    }
+   ],
+   "extras": [
+    "Pesos in cash help in town; the park takes cards.",
+    "The falls are the same price both sides, but different money: Argentine pesos one side, Brazilian reais the other."
+   ]
+  },
+  {
+   "id": "ar-salta",
+   "names": [
+    "Salta",
+    "Salta la Linda"
+   ],
+   "country": "AR",
+   "lat": -24.79,
+   "lon": -65.41,
+   "radius_km": 25,
+   "season": "Dry and sunny from April to November; rain and storms from December to March. The city is at 1,150 m.",
+   "sleep": "In the centre, near Plaza 9 de Julio, or a farmhouse on the edge of town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Salta",
+    "https://www.maam.gob.ar/"
+   ],
+   "items": [
+    {
+     "id": "pena",
+     "name": "A peña: folk music over dinner",
+     "hours": "Evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "From 21:30",
+     "book": "",
+     "why": "Guitars, bombos and zambas at the tables, empanadas and local wine. Salta's best night out.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true
+    },
+    {
+     "id": "city",
+     "name": "Salta's centre, the MAAM, and San Bernardo hill by cable car",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Tuesday to Sunday: the MAAM closes on Mondays",
+     "book": "",
+     "why": "Colonial churches, the museum of the Inca children found on Llullaillaco, and the city from its hill, then a peña.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Plaza 9 de Julio and the Cathedral"
+      },
+      {
+       "at": "10:45",
+       "what": "MAAM, the high mountain archaeology museum",
+       "note": "1 h 30"
+      },
+      {
+       "at": "12:30",
+       "what": "San Francisco church"
+      },
+      {
+       "at": "13:30",
+       "what": "Lunch: empanadas salteñas and locro"
+      },
+      {
+       "at": "16:30",
+       "what": "Cable car up Cerro San Bernardo",
+       "note": "walk down the 1,070 steps if your knees agree"
+      },
+      {
+       "at": "18:30",
+       "what": "Sunset from the top"
+      },
+      {
+       "at": "21:30",
+       "what": "Dinner on Calle Balcarce"
+      }
+     ],
+     "sights": [
+      "Cerro San Bernardo"
+     ]
+    },
+    {
+     "id": "cafayate",
+     "name": "Cafayate through the Quebrada de las Conchas",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Leave at 08:00",
+     "book": "",
+     "why": "Red rock canyons, the Garganta del Diablo and the Anfiteatro, then high-altitude wine (torrontés) in Cafayate.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1700
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Leave Salta"
+      },
+      {
+       "at": "10:30",
+       "what": "Quebrada de las Conchas: the Garganta del Diablo and the Anfiteatro"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in Cafayate"
+      },
+      {
+       "at": "14:00",
+       "what": "A winery: torrontés"
+      },
+      {
+       "at": "15:30",
+       "what": "Back through the canyon"
+      },
+      {
+       "at": "19:00",
+       "what": "Back in Salta"
+      }
+     ],
+     "extras": [
+      "The Anfiteatro has great acoustics: musicians often play there.",
+      "Better still: sleep in Cafayate and return through Cachi on the Ruta 40."
+     ],
+     "sights": [
+      "Quebrada de las Conchas",
+      "Garganta del Diablo (Cafayate)",
+      "Cafayate"
+     ]
+    },
+    {
+     "id": "cachi",
+     "name": "Cachi by the Cuesta del Obispo and the cactus park",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Leave at 08:00",
+     "book": "",
+     "why": "A road of hairpins into the clouds, forests of giant cardón cactus, and a white village at 2,280 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3350
+     },
+     "sights": [
+      "Cuesta del Obispo",
+      "Los Cardones National Park",
+      "Cachi"
+     ]
+    },
+    {
+     "id": "salinas",
+     "name": "Salinas Grandes and Purmamarca",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A white salt flat at 3,450 m and the Hill of Seven Colours. Better from a night in the Quebrada.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4170
+     },
+     "sights": [
+      "Salinas Grandes",
+      "Purmamarca"
+     ]
+    }
+   ],
+   "extras": [
+    "Siesta: many shops close from about 13:00 to 17:00. Dinner starts after 21:00.",
+    "The Tren a las Nubes now runs only a short section from San Antonio de los Cobres; check the days."
+   ]
+  },
+  {
+   "id": "ar-quebrada",
+   "names": [
+    "Tilcara",
+    "Purmamarca",
+    "Humahuaca",
+    "Quebrada de Humahuaca",
+    "Maimará"
+   ],
+   "country": "AR",
+   "lat": -23.58,
+   "lon": -65.4,
+   "radius_km": 45,
+   "season": "Dry and sunny from April to November; summer rain from December to March. Tilcara is at 2,460 m, Humahuaca at 2,940 m.",
+   "sleep": "Tilcara has the most life; Purmamarca is tiny and lovely under its hill.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Quebrada_de_Humahuaca",
+    "https://en.wikivoyage.org/wiki/Tilcara",
+    "https://whc.unesco.org/en/list/1116/"
+   ],
+   "items": [
+    {
+     "id": "pucara",
+     "name": "Pucará de Tilcara and the Garganta del Diablo walk",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A rebuilt pre-Inca hill fort with cactus, then a walk up a red gorge to a waterfall.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2900
+     },
+     "sights": [
+      "Quebrada de Humahuaca"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "purmamarca",
+     "name": "Purmamarca's Hill of Seven Colours and the Salinas Grandes",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Be in Purmamarca early: the hill gets the morning sun",
+     "book": "",
+     "why": "The striped hill in the morning light, then up the Cuesta de Lipán to a white salt flat at 3,450 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4170
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Paseo de los Colorados",
+       "note": "3 km loop around the coloured hills"
+      },
+      {
+       "at": "10:00",
+       "what": "Market in Purmamarca's square"
+      },
+      {
+       "at": "10:30",
+       "what": "Up the Cuesta de Lipán, 4,170 m"
+      },
+      {
+       "at": "12:00",
+       "what": "Salinas Grandes",
+       "note": "the salt is blinding: sunglasses"
+      },
+      {
+       "at": "14:00",
+       "what": "Lunch back in Purmamarca: llama, quinoa"
+      },
+      {
+       "at": "16:00",
+       "what": "Back in Tilcara"
+      }
+     ],
+     "sights": [
+      "Purmamarca",
+      "Cerro de los Siete Colores",
+      "Salinas Grandes"
+     ]
+    },
+    {
+     "id": "hornocal",
+     "name": "Hornocal, the Fourteen Colours, from Humahuaca",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Afternoon, when the sun lights the face",
+     "book": "",
+     "why": "A ridge of zigzag pink, green and ochre stripes at 4,350 m, above Humahuaca.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4350
+     },
+     "steps": [
+      {
+       "at": "13:30",
+       "what": "Humahuaca: the stairs to the Independence monument"
+      },
+      {
+       "at": "14:30",
+       "what": "Up the gravel road to Hornocal",
+       "note": "45 min"
+      },
+      {
+       "at": "15:30",
+       "what": "The viewpoint; walk down a little for the close view"
+      },
+      {
+       "at": "17:00",
+       "what": "Back down"
+      }
+     ],
+     "sights": [
+      "Hornocal",
+      "Humahuaca"
+     ]
+    },
+    {
+     "id": "maimara",
+     "name": "Maimará's Painter's Palette",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Painted hills over a hillside cemetery, from the main road.",
+     "act": {
+      "type": "city"
+     }
+    }
+   ],
+   "extras": [
+    "Carnival in the Quebrada (February or March) is wild and joyful: book rooms early.",
+    "The altitude climbs fast: Tilcara 2,460 m, the salt flats 3,450 m, Hornocal 4,350 m."
+   ]
+  },
+  {
+   "id": "ar-mendoza",
+   "names": [
+    "Mendoza",
+    "Maipú",
+    "Luján de Cuyo",
+    "Valle de Uco",
+    "Uco Valley"
+   ],
+   "country": "AR",
+   "lat": -32.89,
+   "lon": -68.84,
+   "radius_km": 40,
+   "season": "Sunny almost every day; hot summers, cold dry winters. The harvest festival (Vendimia) is in early March.",
+   "sleep": "Mendoza city for restaurants, or a winery lodge in Luján de Cuyo or the Uco valley.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Mendoza",
+    "https://en.wikivoyage.org/wiki/Aconcagua"
+   ],
+   "items": [
+    {
+     "id": "park",
+     "name": "Parque San Martín and Cerro de la Gloria",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Late afternoon",
+     "book": "",
+     "why": "A huge park of plane trees and canals, and the hill with the monument to the Andes army.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Parque General San Martín"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "maipu",
+     "name": "Wine by bike in Maipú",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Not Sunday: many wineries close",
+     "book": "Book the tastings",
+     "why": "Flat roads between wineries and olive oil makers, on a rented bike.",
+     "act": {
+      "type": "cycling",
+      "difficulty": "easy"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Rent a bike in Maipú"
+      },
+      {
+       "at": "10:30",
+       "what": "First winery: malbec tasting"
+      },
+      {
+       "at": "12:00",
+       "what": "Olive oil and chocolate makers"
+      },
+      {
+       "at": "13:30",
+       "what": "Lunch at a winery"
+      },
+      {
+       "at": "16:00",
+       "what": "Last tasting"
+      },
+      {
+       "at": "18:00",
+       "what": "Return the bike"
+      }
+     ]
+    },
+    {
+     "id": "uco",
+     "name": "Uco Valley wineries under the Andes",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book the wineries and lunch",
+     "why": "Modern wineries at 1,000–1,500 m with the snowy Andes behind the vines. Long lunches.",
+     "act": {
+      "type": "city"
+     }
+    },
+    {
+     "id": "aconcagua",
+     "name": "The high Andes road to Aconcagua",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "A clear day; the pass closes with snow in winter",
+     "book": "",
+     "why": "Up the old road to Chile: Potrerillos lake, Uspallata, the Puente del Inca and the highest peak outside Asia.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3000
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Leave Mendoza"
+      },
+      {
+       "at": "09:00",
+       "what": "Potrerillos reservoir"
+      },
+      {
+       "at": "10:30",
+       "what": "Uspallata"
+      },
+      {
+       "at": "12:30",
+       "what": "Puente del Inca"
+      },
+      {
+       "at": "13:15",
+       "what": "Aconcagua park, Laguna de Horcones walk",
+       "note": "1 h at 2,950 m"
+      },
+      {
+       "at": "15:00",
+       "what": "Lunch"
+      },
+      {
+       "at": "19:30",
+       "what": "Back in Mendoza"
+      }
+     ]
+    }
+   ],
+   "extras": [
+    "Siesta: shops close from about 13:00 to 17:00; dinner after 21:00.",
+    "Most wineries need a booking, even for a tasting."
+   ]
+  }
+ ]
+}
