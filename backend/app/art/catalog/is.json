@@ -180,6 +180,31 @@
    }
   },
   {
+   "slug": "barnafoss",
+   "label": "Barnafoss: the Hvita rushing through its narrow turquoise basalt gorge",
+   "lat": 64.7016,
+   "lon": -20.972,
+   "radius_km": 1,
+   "aliases": [
+    "barnafoss"
+   ],
+   "names": [
+    "barnafossar"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#8A9070",
+    "mid": "#4A4846",
+    "ice": "#F3F7F7",
+    "water": "#5FB8C2",
+    "near": "#1C1C1E",
+    "sun": "#F2C14E",
+    "leaf": "#6E8F3E",
+    "acc": "#A8522E",
+    "obj": "#7A6A55"
+   }
+  },
+  {
    "slug": "blafjoll",
    "label": "Thrihnukagigur crater cone with its lift gantry, below the Blafjoll ridge",
    "lat": 63.998,
@@ -342,6 +367,28 @@
    }
   },
   {
+   "slug": "brimketill",
+   "label": "Brimketill: the round lava rock pool on the Reykjanes shore, with sea spray",
+   "lat": 63.8178,
+   "lon": -22.5355,
+   "radius_km": 1,
+   "aliases": [
+    "brimketill"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#6E7E8C",
+    "mid": "#3E3E40",
+    "ice": "#F3F5F6",
+    "water": "#3E7A9C",
+    "near": "#1A1A1C",
+    "sun": "#F2C14E",
+    "leaf": "#6A7F45",
+    "acc": "#A8522E",
+    "obj": "#7A6A55"
+   }
+  },
+  {
    "slug": "bruarfoss",
    "label": "Bruarfoss: many small cascades falling into the turquoise crack of the Bruara river",
    "lat": 64.2647,
@@ -480,6 +527,30 @@
     "leaf": "#8DC63F",
     "acc": "#9C9A58",
     "obj": "#7C7E80"
+   }
+  },
+  {
+   "slug": "djupalonssandur",
+   "label": "Djupalonssandur: black pebble beach between lava cliffs, with the rusty shipwreck iron",
+   "lat": 64.75,
+   "lon": -23.9,
+   "radius_km": 2,
+   "aliases": [
+    "djupalonssandur",
+    "djupalon",
+    "dritvik"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#4A4A4E",
+    "mid": "#3E3E40",
+    "ice": "#F3F5F6",
+    "water": "#3E6E8C",
+    "near": "#1A1A1C",
+    "sun": "#F2C14E",
+    "leaf": "#6A7F45",
+    "acc": "#A8522E",
+    "obj": "#7A6A55"
    }
   },
   {
@@ -687,6 +758,28 @@
    }
   },
   {
+   "slug": "eldfell",
+   "label": "Eldfell: the red 1973 volcano rising above the houses of Heimaey",
+   "lat": 63.433,
+   "lon": -20.248,
+   "radius_km": 1.5,
+   "aliases": [
+    "eldfell"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#6E8A4E",
+    "mid": "#8E4E3A",
+    "ice": "#F3F1EA",
+    "water": "#3E6E8C",
+    "near": "#1C1C1E",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3A",
+    "acc": "#C2423A",
+    "obj": "#E8E2D4"
+   }
+  },
+  {
    "slug": "eldgja",
    "label": "Ofaerufoss two-step falls inside the Eldgja fissure",
    "lat": 63.97,
@@ -858,6 +951,29 @@
     "leaf": "#7EAE48",
     "acc": "#ABA796",
     "obj": "#5A7A3A"
+   }
+  },
+  {
+   "slug": "fjallsarlon",
+   "label": "Fjallsarlon: the crevassed glacier tongue calving into its iceberg lagoon",
+   "lat": 64.0158,
+   "lon": -16.372,
+   "radius_km": 3,
+   "aliases": [
+    "fjallsarlon",
+    "fjallsjokull"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#7E7A72",
+    "mid": "#4E5258",
+    "ice": "#F3F7FA",
+    "water": "#7FA8B8",
+    "near": "#1C1C1E",
+    "sun": "#F2C14E",
+    "leaf": "#6E8F3E",
+    "acc": "#8CC8E0",
+    "obj": "#7A6A55"
    }
   },
   {
@@ -1122,6 +1238,28 @@
     "leaf": "#A9A465",
     "acc": "#E8692C",
     "obj": "#6E5A46"
+   }
+  },
+  {
+   "slug": "grjotagja",
+   "label": "Grjotagja: the turquoise hot-water pool inside the lava fissure cave",
+   "lat": 65.6262,
+   "lon": -16.8829,
+   "radius_km": 1,
+   "aliases": [
+    "grjotagja"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#7E766C",
+    "mid": "#5A524C",
+    "ice": "#F3F7F7",
+    "water": "#3FB0C8",
+    "near": "#1A1918",
+    "sun": "#F2C14E",
+    "leaf": "#6E8F3E",
+    "acc": "#8CC8E0",
+    "obj": "#7A6A55"
    }
   },
   {
@@ -1563,12 +1701,10 @@
    "radius_km": 3,
    "aliases": [
     "hraunfossar",
-    "barnafoss",
     "hraunfoss"
    ],
    "names": [
-    "lava falls",
-    "barnafossar"
+    "lava falls"
    ],
    "palette": {
     "sky": "#A9CDEE",
@@ -2658,9 +2794,6 @@
    "aliases": [
     "hallgrimskirkja"
    ],
-   "names": [
-    "reykjavik"
-   ],
    "palette": {
     "sky": "#AFCFF0",
     "far": "#8E9AA6",
@@ -3233,6 +3366,33 @@
     "leaf": "#6F9A3E",
     "acc": "#C2423A",
     "obj": "#8A8780"
+   }
+  },
+  {
+   "slug": "sun-voyager",
+   "label": "Reykjavik: the Sun Voyager steel ship on the shore, Mount Esja across the bay",
+   "lat": 64.1476,
+   "lon": -21.9222,
+   "radius_km": 20,
+   "aliases": [
+    "sun voyager",
+    "solfar",
+    "solfarid"
+   ],
+   "names": [
+    "reykjavik"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#6E7E8C",
+    "mid": "#7E8288",
+    "ice": "#E4E9EE",
+    "water": "#3E6E9C",
+    "near": "#1C1E22",
+    "sun": "#F2C14E",
+    "leaf": "#6A7F45",
+    "acc": "#8CC8E0",
+    "obj": "#A8A49C"
    }
   },
   {
