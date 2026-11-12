@@ -39,7 +39,7 @@ def _stop_from(body: StopIn, position: int) -> Stop:
                 activities=[a.model_dump() for a in body.activities], notes=body.notes,
                 visits=[v.model_dump(mode="json") for v in body.visits],
                 days_estimated=body.days_estimated, position=position,
-                place_status="confirmed" if body.place_confirmed else None)
+                place_status="confirmed" if body.place_confirmed else None, status=body.status)
 
 
 def _verify(trip: Trip) -> None:
@@ -94,7 +94,12 @@ def get_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
 
 @router.patch("/{trip_id}", response_model=TripOut)
 def patch_trip(body: TripPatch, trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
-    for k, v in body.model_dump(exclude_unset=True).items():
+    data = body.model_dump(exclude_unset=True)
+    if "return_leg" in data:
+        data["return_leg"] = body.return_leg.stored() if body.return_leg else None
+    for k, v in data.items():
+        if k == "name" and v is None:
+            continue
         setattr(trip, k, v)
     db.commit()
     db.refresh(trip)
@@ -117,7 +122,10 @@ def duplicate_trip(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)
                        end_date=s.end_date, activities=list(s.activities or []), notes=s.notes,
                        visits=list(s.visits or []), days_estimated=s.days_estimated,
                        position=s.position, place_status=s.place_status,
-                       place_note=s.place_note) for s in trip.stops]
+                       place_note=s.place_note, status=s.status, fixed_note=s.fixed_note,
+                       sleep=s.sleep, arrival=dict(s.arrival) if s.arrival else None,
+                       plan=dict(s.plan or {})) for s in trip.stops]
+    copy.home_airport, copy.return_leg = trip.home_airport, trip.return_leg
     db.add(copy)
     db.commit()
     db.refresh(copy)
@@ -163,8 +171,18 @@ def patch_stop(stop_id: str, body: StopPatch, trip: Trip = Depends(own_trip),
     if (end - start).days > MAX_STOP_DAYS:
         # without this a guest could stretch one stop over centuries and freeze the server
         raise HTTPException(422, f"a single stop can be at most {MAX_STOP_DAYS} days")
-    if any(k in data and data[k] != getattr(stop, k) for k in ("start_date", "end_date")):
+    dates_change = any(k in data and data[k] != getattr(stop, k) for k in ("start_date", "end_date"))
+    if dates_change and stop.status == "fixed" and data.get("status", "fixed") == "fixed":
+        raise HTTPException(409, f"{stop.name} is fixed ({stop.fixed_note or 'booked'}): unlock it "
+                                 "before changing its dates.")
+    if dates_change:
         data["days_estimated"] = False  # the traveller chose this stop's days
+    if "arrival" in data:
+        data["arrival"] = body.arrival.stored() if body.arrival else None
+    if "plan" in data:
+        data["plan"] = body.plan.stored() if body.plan else {}
+    if data.get("status") and data["status"] != "fixed" and "fixed_note" not in data:
+        data["fixed_note"] = None
     confirm = data.pop("place_confirmed", None)
     moved = any(k in data and data[k] != getattr(stop, k)
                 for k in ("name", "country_code", "latitude", "longitude"))
@@ -186,6 +204,9 @@ def delete_stop(stop_id: str, trip: Trip = Depends(own_trip), db: Session = Depe
     stop = next((s for s in trip.stops if s.id == stop_id), None)
     if stop is None:
         raise HTTPException(404, "Stop not found")
+    if stop.status == "fixed":
+        raise HTTPException(409, f"{stop.name} is fixed ({stop.fixed_note or 'booked'}): unlock it "
+                                 "before removing it.")
     trip.stops.remove(stop)
     db.delete(stop)
     _renumber(trip)
@@ -235,6 +256,9 @@ def set_dates(body: TripDatesIn, trip: Trip = Depends(own_trip), db: Session = D
             s.start_date, s.end_date, s.days_estimated = a, b, False
     elif body.start_date is not None:
         shift = start - min(s.start_date for s in stops)
+        if shift and any(s.status == "fixed" or (s.arrival or {}).get("booked") for s in stops):
+            raise HTTPException(409, "Part of this trip is booked: moving the start would move it. "
+                                     "Unlock it first.")
         for s in stops:
             _move_visits(s, s.start_date, s.start_date + shift, s.end_date + shift)
             s.start_date, s.end_date = s.start_date + shift, s.end_date + shift

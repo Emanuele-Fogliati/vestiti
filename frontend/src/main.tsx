@@ -6,6 +6,7 @@ import { AppProvider } from "./lib/app-context";
 import "./theme/tokens.css";
 import "./theme/structure.css";
 import "./theme/app.css";
+import "./theme/board.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

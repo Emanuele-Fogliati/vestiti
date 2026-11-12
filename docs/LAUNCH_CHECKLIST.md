@@ -25,6 +25,10 @@ Ordered by how badly it would hurt.
 
 ## Needed soon after
 
+- [ ] **Flights.** The flight page works with links today. Every flight of the day needs a
+  Duffel token; booking inside the app needs a company, Duffel live approval and Duffel
+  Payments. See [FLIGHTS.md](FLIGHTS.md). Recent prices need a free Travelpayouts token.
+
 - [ ] **Email sending (password reset and sign-in links).** Built; needs a mail provider.
   Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASSWORD`, `MAIL_FROM` (Brevo, Mailgun,
   Amazon SES...: free tiers cover a launch) and set up SPF/DKIM on the domain so the links

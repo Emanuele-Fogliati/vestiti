@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ItineraryCards, useItineraries } from "../components/ItineraryCards";
-import { MONTHS } from "../lib/format";
+import { PlaceSearch } from "../components/PlaceSearch";
+import { api } from "../lib/api";
+import { useApp } from "../lib/app-context";
+import { addDays, MONTHS, today } from "../lib/format";
+import type { Place } from "../lib/types";
 
 export const DRESS_ME = "Dress me for this trip";
 
@@ -9,26 +13,48 @@ const LENGTHS: [string, (d: number) => boolean][] = [
   ["Any length", () => true], ["Up to 10 days", (d) => d <= 10], ["11–14 days", (d) => d > 10 && d <= 14], ["15+ days", (d) => d >= 15],
 ];
 
-const EXAMPLE = "From 12 June 2027: 3 days in Reykjavik, then 4 days hard trekking in Landmannalaugar up to 1100 m, then 2 days in Vík";
-
-/** Your own trip: describe it, we read it and dress it. */
+/** Your own trip, the way people actually plan one: first where and when, the rest later on the
+ * trip's board (Manu, 2026-11-12: a text box to fill in was the wrong first step). */
 export function OwnTripForm({ compact }: { compact?: boolean }) {
   const nav = useNavigate();
-  const [text, setText] = useState("");
-  function go(e: React.FormEvent) {
+  const { ensureUser } = useApp();
+  const [place, setPlace] = useState<Place | null>(null);
+  const [start, setStart] = useState("");
+  const [days, setDays] = useState(3);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState<string | null>(null);
+
+  async function go(e: React.FormEvent) {
     e.preventDefault();
-    nav("/trips/new", { state: { text: text.trim() || EXAMPLE } });
+    if (!place) { setErr("Pick your first place from the list."); return; }
+    setBusy(true); setErr(null);
+    try {
+      await ensureUser();
+      const first = start || addDays(today(), 60);
+      const t = await api.createTrip(place.name, [{
+        name: place.name, country_code: place.country_code ?? null, latitude: place.latitude, longitude: place.longitude,
+        elevation_m: place.elevation_m ?? 0, start_date: first, end_date: addDays(first, days - 1),
+        activities: [{ type: "unknown" }], notes: null, visits: [], status: "flex",
+      }], !start, place.country_code ? [place.country_code] : []);
+      nav(`/trips/${t.id}#days`);
+    } catch (e2) { setErr((e2 as Error).message); } finally { setBusy(false); }
   }
+
   return (
-    <form className="brief" onSubmit={go} aria-label="Describe your trip">
-      {!compact && <div className="row"><h2>Your trip</h2><span className="spacer" /><span className="label">Plain words are fine</span></div>}
-      <div className="field">
-        <label htmlFor="trip-text">Where, when, what you'll do</label>
-        <textarea id="trip-text" value={text} maxLength={50_000} onChange={(e) => setText(e.target.value)} placeholder={EXAMPLE} rows={5} />
+    <form className="brief quick" onSubmit={go} aria-label="Start your trip">
+      {!compact && <div className="row"><h2>Your trip</h2><span className="spacer" /><span className="label">Flights and beds later</span></div>}
+      <div className="qrow">
+        <div className="field"><label htmlFor="q-place">Where do you start?</label>
+          <PlaceSearch id="q-place" value={place} onPick={setPlace} /></div>
+        <div className="field"><label htmlFor="q-start">From (if you know)</label>
+          <input id="q-start" type="date" value={start} min={today()} onChange={(e) => setStart(e.target.value)} /></div>
+        <div className="field"><label htmlFor="q-days">Days there</label>
+          <input id="q-days" type="number" min={1} max={60} value={days} onChange={(e) => setDays(Math.max(1, Math.min(60, Number(e.target.value) || 1)))} /></div>
       </div>
-      <p className="small muted">Not sure what you'll do somewhere? Write "don't know yet" and we cover both easy and technical days. Or paste your agency's day-by-day program.</p>
-      <button className="btn primary big" type="submit">{DRESS_ME}</button>
-      <Link className="btn" to="/trips/new">Or add stops one by one</Link>
+      <p className="small muted">Then add the next places on your trip's days, mark what you book as fixed, and see what to do in each place day by day.</p>
+      {err && <p className="err">{err}</p>}
+      <button className="btn primary big" type="submit" disabled={busy}>{busy ? <span className="spin" /> : "Start my trip"}</button>
+      <Link className="btn" to="/trips/new">Already have a plan? Paste it</Link>
     </form>
   );
 }
@@ -50,14 +76,14 @@ export default function Start({ tab }: { tab: "own" | "ideas" }) {
             <h1>{tab === "own" ? "Where are you going?" : "Recommended trips, day by day"}</h1>
             <p className="lede" style={{ marginTop: 12, maxWidth: "62ch" }}>
               {tab === "own"
-                ? "Tell us your route in your own words. We read the weather at every stop and dress you for all of it, at three budgets."
+                ? "Start with the first place. Then lay the trip out on its days: what is booked stays put, the rest can move, and each place shows what to do there with the weather."
                 : "Routes built from the places travellers visit most, with what is worth it and what to skip. Pick one, change anything you like, and we dress you for it."}
             </p>
           </div>
         </div>
         <div className="doors" role="tablist" aria-label="How do you want to start?">
           <button type="button" role="tab" aria-selected={tab === "own"} className="door" onClick={() => nav("/start")}>
-            <b>I have a trip in mind</b><span>Write it, paste it or add stops one by one</span>
+            <b>I have a trip in mind</b><span>Pick the places and the days, the rest comes later</span>
           </button>
           <button type="button" role="tab" aria-selected={tab === "ideas"} className="door" onClick={() => nav("/ideas")}>
             <b>Inspire me</b><span>Start from a recommended trip and make it yours</span>

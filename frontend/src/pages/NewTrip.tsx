@@ -9,13 +9,12 @@ import { useApp } from "../lib/app-context";
 import { activityText, nights } from "../lib/format";
 import { redate } from "../lib/spread";
 import type { DraftStop, Place, TripEstimate } from "../lib/types";
-import { DRESS_ME } from "./Start";
 
 const MAX_TEXT = 50_000; // same limit as the API (ParseIn.text)
 const LONG_TEXT = 5_000;
 
 export default function NewTrip() {
-  const { config, ensureUser, toast } = useApp();
+  const { ensureUser, toast } = useApp();
   const loc = useLocation();
   const nav = useNavigate();
   const initial = (loc.state as { text?: string } | null)?.text ?? "";
@@ -23,7 +22,6 @@ export default function NewTrip() {
   const [name, setName] = useState("");
   const [draft, setDraft] = useState<DraftStop[] | null>(null);
   const [questions, setQuestions] = useState<string[]>([]);
-  const [parser, setParser] = useState<string | null>(null);
   // what of the dates is still a guess; the form above the stops asks for it
   const [estimate, setEstimate] = useState<TripEstimate | null>(null);
   const [askDates, setAskDates] = useState(false);
@@ -42,7 +40,6 @@ export default function NewTrip() {
       const r = await api.parseItinerary(t);
       setDraft(r.stops);
       setQuestions(r.questions);
-      setParser(r.parser);
       setEstimate(r.estimate);
       setCountries(r.countries ?? []);
       setAskDates(!!r.estimate);
@@ -71,7 +68,7 @@ export default function NewTrip() {
         !!(withStops && estimate?.start), withStops ? countries : []);
       const dropped = withStops && draft ? draft.length - stops.length : 0;
       if (dropped) toast(`${dropped} stop(s) without a map match were left out. Add them on the trip page.`);
-      nav(`/trips/${t.id}`);
+      nav(`/trips/${t.id}#days`);
     } catch (e) {
       setErr((e as Error).message);
     } finally { setBusy(false); }
@@ -90,7 +87,6 @@ export default function NewTrip() {
     });
     setAskDates(false);
   }
-  const ai = config?.ai;
   const unsure = draft?.filter((s) => s.place && s.check?.status === "check").length ?? 0;
   const confirm = (i: number, place?: Place) => setDraft((d) => d && d.map((s, j) => j !== i ? s : {
     ...s, place: place ?? s.place, check: { status: "confirmed", codes: [], issues: [] },
@@ -100,12 +96,12 @@ export default function NewTrip() {
     <main className="page">
       <div className="wrap">
         <div className="page-head">
-          <div><p className="kicker">New trip</p><h1>Describe your trip</h1></div>
-          <span className="tag">{ai?.available ? `AI: ${ai.model.split("/").pop()} (local)` : "AI offline: rule-based reader"}</span>
+          <div><p className="kicker">New trip</p><h1>Paste your plan</h1>
+            <p className="lede" style={{ marginTop: 10 }}>From a chat, an agency or your notes. We turn it into places on days, then you change anything on the board.</p></div>
         </div>
         <div className="cols">
           <div className="stack">
-            <div className="field"><label htmlFor="desc">Stops, dates, activities. Any language.</label>
+            <div className="field"><label htmlFor="desc">Places, dates, what you'll do. Any language.</label>
               <textarea id="desc" rows={5} value={text} maxLength={MAX_TEXT} onChange={(e) => setText(e.target.value)}
                 placeholder="From 12 June 2027: 3 days in Reykjavik, then 4 days hard trekking in Landmannalaugar up to 1100 m, then 2 days in Rome. Or paste the full day-by-day program from your travel agency." />
               <p className="small muted" aria-live="polite">
@@ -114,15 +110,14 @@ export default function NewTrip() {
               </p>
             </div>
             <div className="row">
-              <button className="btn primary" type="button" disabled={busy} onClick={() => parse()}>{busy ? <><span className="spin" />{text.length > LONG_TEXT ? " Reading, this can take a minute" : ""}</> : "Read my trip"}</button>
-              <button className="btn" type="button" disabled={busy} onClick={() => create(false)}>Skip, add stops by hand</button>
+              <button className="btn primary" type="button" disabled={busy} onClick={() => parse()}>{busy ? <><span className="spin" />{text.length > LONG_TEXT ? " Reading, this can take a minute" : ""}</> : "Read my plan"}</button>
+              <button className="btn" type="button" disabled={busy} onClick={() => create(false)}>Skip, add places on the board</button>
             </div>
             {err && <p className="err">{err}</p>}
 
             {draft && draft.length > 0 && (
               <div className="draft">
-                <div className="row"><h2 style={{ fontSize: 22 }}>Check the stops</h2><span className="spacer" />
-                  <span className="ai-src">{parser === "llm" ? "read by the local AI model" : "read by the rule-based parser"}</span></div>
+                <div className="row"><h2 style={{ fontSize: 22 }}>Check the places</h2></div>
                 {estimate && askDates && first && last && (
                   <EstimateForm start={estimate.start} days={estimate.days} firstDay={first} totalDays={nights(first, last)}
                     keepLabel="Skip, I don't know yet" onApply={applyDates} onKeep={() => setAskDates(false)} />
@@ -164,7 +159,7 @@ export default function NewTrip() {
                 <div className="field"><label htmlFor="tname">Trip name</label>
                   <input id="tname" type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Patagonia, May 2027" /></div>
                 {unsure > 0 && <p className="small muted">{unsure === 1 ? "One place needs" : `${unsure} places need`} a yes or a fix above. If you skip it, the trip page asks again.</p>}
-                <button className="btn primary big" type="button" disabled={busy} onClick={() => create(true)}>{DRESS_ME}</button>
+                <button className="btn primary big" type="button" disabled={busy} onClick={() => create(true)}>Lay it out on the days</button>
               </div>
             )}
           </div>

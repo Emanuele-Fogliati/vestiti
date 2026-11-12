@@ -48,6 +48,7 @@ class DayWeather:
     gust_kmh: float | None = None
     uv: float | None = None
     tmin_p10: float | None = None  # climate only: a cold night (10th percentile)
+    cloud: float | None = None  # forecast only: mean cloud cover, 0-100 (the trip board's sky)
 
 
 @dataclass

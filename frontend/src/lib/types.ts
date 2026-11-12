@@ -86,7 +86,67 @@ export interface Stop {
   days_estimated?: boolean;
   /** What the place is and a fun fact, when we know the place. */
   guide?: PlaceGuide | null;
+  /** The trip board: idea (maybe), flex (decided, days can change), fixed (booked). */
+  status?: StopStatus;
+  fixed_note?: string | null;
+  sleep?: string | null;
+  arrival?: LegSaved | null;
+  plan?: PlanChoices;
 }
+
+export type StopStatus = "idea" | "flex" | "fixed";
+export type LegMode = "flight" | "bus" | "car" | "train" | "boat" | "local" | "other";
+export interface LegSaved { mode: LegMode; booked: boolean; ref?: string | null; from?: string | null; to?: string | null; note?: string | null }
+export interface PlanChoices { skip?: string[]; pins?: Record<string, string>; weather?: Record<string, Sky>; mode?: string | null }
+export type Sky = "clear" | "cloud" | "rain" | "wind" | "unknown";
+export type Need = "clear" | "dry" | "calm" | "any";
+
+export interface Airport { iata: string; name: string; city: string; country: string }
+export interface FlightLink { label: string; url: string; airline?: boolean; partner?: boolean }
+export interface BoardLeg {
+  from_name: string; to_name: string; date: string;
+  guess: "local" | "road" | "road_or_flight" | "flight"; km: number | null; hours: number | null; border: boolean;
+  mode: LegMode; chosen: boolean; booked: boolean; ref: string | null; note: string | null;
+  from_airport: Airport | null; to_airport: Airport | null; links: FlightLink[];
+}
+export interface TodoItem {
+  id: string; name: string; hours: string; length: "full" | "half" | "short"; effort: "easy" | "moderate" | "hard";
+  need: Need; need_text: string; best: string; book: string; why: string; months: number[]; weekdays?: number[]; act: Activity | null;
+  note?: string; moved?: boolean; pinned?: boolean;
+}
+export interface PlanDayOut {
+  date: string; sky: Sky; rain_chance: number; source: string; kind: "plan" | "rain" | "free" | "spare" | "route";
+  title: string; note: string; override: boolean; tmin: number; tmax: number; wind_kmh: number; things: TodoItem[];
+}
+export interface BoardStop {
+  id: string; name: string; country_code: string | null; start_date: string; end_date: string; days: number;
+  status: StopStatus; fixed_note: string | null; sleep: string | null; days_estimated: boolean;
+  arrival: BoardLeg;
+  todo: {
+    source: "guide" | "nearby" | "none"; area: string | null; items: TodoItem[];
+    rain: { name: string; hours: string; why: string } | null;
+    routes: { id: string; name: string; summary: string; book: string; days: { title: string; note: string; rain: string }[] }[];
+    season: string; sleep_tip: string; sources: string[];
+  };
+  plan: { mode: string | null; choices: PlanChoices; days: PlanDayOut[]; waiting: TodoItem[]; out_of_season: string[]; advice: string[] };
+  weather_sources: string[];
+}
+export interface Board {
+  trip_id: string; start_date: string | null; end_date: string | null; total_days: number; start_estimated: boolean;
+  home_airport: Airport | null; stops: BoardStop[]; return_leg: BoardLeg | null; prices: boolean;
+}
+export interface FlightPrice { date: string; price: number | null; currency: string; airline: string | null; transfers: number | null; url: string | null }
+
+export interface FlightSeg { from: string; to: string; departs: string; arrives: string; airline: string | null; flight: string }
+export interface FlightSlice { origin: string; destination: string; departs: string | null; arrives: string | null; minutes: number | null; stops: number; segments: FlightSeg[] }
+export interface FlightOffer {
+  id: string; price: number; currency: string; airline: string | null; expires_at: string | null;
+  slices: FlightSlice[]; passenger_ids: string[]; changeable: boolean | null; refundable: boolean | null; bags: number | null;
+}
+export interface FlightLeg extends BoardLeg { stop_id: string | null }
+export interface TripFlights { legs: FlightLeg[]; all_legs_link: string | null; search: boolean; book: boolean; test: boolean }
+export interface Passenger { title: "mr" | "ms" | "mrs" | "miss" | "dr"; given_name: string; family_name: string; gender: "m" | "f"; born_on: string; email: string; phone_number: string }
+export interface FlightOrder { order_id: string; booking_reference: string | null; price: number; currency: string; slices: FlightSlice[]; test: boolean }
 
 export interface PlaceGuide { blurb: string; fun_fact: string; source: string }
 
@@ -122,6 +182,8 @@ export interface Trip {
   countries?: string[];
   /** Slug of the recommended trip it started from; null = the traveller's own. */
   source_itinerary?: string | null;
+  home_airport?: string | null;
+  return_leg?: LegSaved | null;
 }
 
 export interface TripSummary {
@@ -432,7 +494,7 @@ export interface ItineraryCard {
 export interface ExcursionLink { provider: string; label: string; href: string }
 
 /** One stop of an itinerary: the same shape as a trip stop, plus the day plan and tips. */
-export interface ItineraryStop extends Stop {
+export interface ItineraryStop extends Omit<Stop, "plan"> {
   plan: string[];
   do: string[];
   skip: string[];

@@ -9,7 +9,7 @@ import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, monthRange, monthYear, nights, today } from "../lib/format";
 import { terrainFor } from "../lib/terrain";
-import type { Itinerary, ItineraryStop } from "../lib/types";
+import type { Itinerary, ItineraryStop, Stop } from "../lib/types";
 import { DRESS_ME } from "./Start";
 
 const COUNTRY: Record<string, string> = { PE: "Peru", AR: "Argentina", CL: "Chile", IS: "Iceland", VN: "Vietnam" };
@@ -69,7 +69,7 @@ function StopBlock({ stop, index, dayFrom }: { stop: ItineraryStop; index: numbe
           {stop.plan.map((p, i) => <li key={i}><span className="vd">Day {dayFrom + i}</span>{p}</li>)}
         </ol>
         {/* the day plan already names every place: only the ones with their own picture come back here */}
-        <Visits stop={{ ...stop, visits: (stop.visits ?? []).filter((v) => v.art && v.art.id !== stop.art?.id) }}
+        <Visits stop={{ ...stop, plan: undefined, visits: (stop.visits ?? []).filter((v) => v.art && v.art.id !== stop.art?.id) }}
           dayFrom={dayFrom} terrain={terrain} />
         {(stop.do.length > 0 || stop.skip.length > 0) && (
           <div className="tips">
@@ -138,8 +138,8 @@ export default function ItineraryPage() {
         <div className="wrap">
           <header className="sh"><p className="sh-k">Day by day</p><h2>The route</h2>
             <p>Stops in the order that works best. Tap a stop on the map to zoom in and see what is around it.</p></header>
-          <TripMap stops={it.stops} />
-          <ElevationProfile stops={it.stops} selected={sel} onSelect={pick} />
+          <TripMap stops={it.stops as unknown as Stop[]} />
+          <ElevationProfile stops={it.stops as unknown as Stop[]} selected={sel} onSelect={pick} />
           <ol className="stops" style={{ marginTop: 24 }}>
             {it.stops.map((s, i) => <StopBlock key={s.id} stop={s} index={i} dayFrom={starts[i]} />)}
           </ol>

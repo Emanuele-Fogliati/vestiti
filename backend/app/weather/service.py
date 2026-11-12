@@ -140,7 +140,7 @@ class WeatherService:
                     "latitude": lat, "longitude": lon, "elevation": elev,
                     "daily": "temperature_2m_max,temperature_2m_min,precipitation_sum,"
                              "precipitation_probability_max,wind_speed_10m_max,"
-                             "wind_gusts_10m_max,uv_index_max",
+                             "wind_gusts_10m_max,uv_index_max,cloud_cover_mean",
                     "start_date": start.isoformat(), "end_date": end.isoformat(),
                     "timezone": "auto", "wind_speed_unit": "kmh",
                 })
@@ -164,7 +164,7 @@ class WeatherService:
                 if prob else (80.0 if precip >= 1 else 10.0),
                 wind_kmh=round(v("wind_speed_10m_max"), 0),
                 gust_kmh=v("wind_gusts_10m_max", None), uv=v("uv_index_max", None),
-                source="forecast"))
+                cloud=v("cloud_cover_mean", None), source="forecast"))
         return out
 
     def _archive(self, lat, lon, elev, start: date, end: date) -> dict:

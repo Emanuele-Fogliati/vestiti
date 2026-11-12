@@ -124,6 +124,138 @@ class VisitIn(BaseModel):
     _d = field_validator("date")(classmethod(lambda cls, v: check_date(v)))
 
 
+STATUSES = ("idea", "flex", "fixed")
+LEG_MODES = ("flight", "bus", "car", "train", "boat", "local", "other")
+
+
+class LegIn(BaseModel):
+    """How the traveller gets to a stop (or home): the mode, whether it is booked, and for a
+    flight the airports (IATA) and the flight number."""
+    mode: str = "other"
+    booked: bool = False
+    ref: str | None = Field(default=None, max_length=40)  # "AR 1872"
+    from_: str | None = Field(default=None, alias="from", max_length=3)
+    to: str | None = Field(default=None, max_length=3)
+    note: str | None = Field(default=None, max_length=200)
+
+    model_config = {"populate_by_name": True}
+
+    @field_validator("mode")
+    @classmethod
+    def _m(cls, v):
+        if v not in LEG_MODES:
+            raise ValueError(f"mode must be one of {LEG_MODES}")
+        return v
+
+    @field_validator("from_", "to")
+    @classmethod
+    def _code(cls, v):
+        if v in (None, ""):
+            return None
+        v = v.upper()
+        from app.travel import by_code
+        if v not in by_code():
+            raise ValueError(f"unknown airport code {v}")
+        return v
+
+    def stored(self) -> dict:
+        return {"mode": self.mode, "booked": self.booked, "ref": self.ref, "from": self.from_,
+                "to": self.to, "note": self.note}
+
+
+class PlanChoicesIn(BaseModel):
+    """The traveller's choices on a stop's day plan."""
+    skip: list[str] = Field(default_factory=list, max_length=60)
+    pins: dict[str, _dt.date] = Field(default_factory=dict, max_length=60)
+    weather: dict[_dt.date, str] = Field(default_factory=dict, max_length=60)
+    mode: str | None = Field(default=None, max_length=40)
+
+    @field_validator("weather")
+    @classmethod
+    def _w(cls, v):
+        for k in v.values():
+            if k not in ("clear", "cloud", "rain", "wind"):
+                raise ValueError("weather must be clear, cloud, rain or wind")
+        return v
+
+    def stored(self) -> dict:
+        return {"skip": self.skip, "pins": {k: d.isoformat() for k, d in self.pins.items()},
+                "weather": {d.isoformat(): w for d, w in self.weather.items()}, "mode": self.mode}
+
+
+class LayoutStopIn(BaseModel):
+    id: str
+    days: int = Field(ge=1, le=MAX_STOP_DAYS + 1)
+    status: str | None = None
+    gap_before: int = Field(default=0, ge=0, le=60)  # free days left before this stop
+
+    @field_validator("status")
+    @classmethod
+    def _s(cls, v):
+        if v is not None and v not in STATUSES:
+            raise ValueError(f"status must be one of {STATUSES}")
+        return v
+
+
+class LayoutIn(BaseModel):
+    """The board: every stop in its new order with its days; the dates follow back to back."""
+    start_date: date | None = None
+    stops: list[LayoutStopIn] = Field(min_length=1, max_length=MAX_STOPS)
+
+    _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v)))
+
+
+class _Iata(BaseModel):
+    @staticmethod
+    def code(v: str) -> str:
+        v = (v or "").upper()
+        from app.travel import by_code
+        if v not in by_code():
+            raise ValueError(f"unknown airport code {v}")
+        return v
+
+
+class FlightSliceIn(BaseModel):
+    origin: str
+    destination: str
+    date: date
+
+    _c = field_validator("origin", "destination")(classmethod(lambda cls, v: _Iata.code(v)))
+
+    @field_validator("date")
+    @classmethod
+    def _d(cls, v):
+        check_date(v)
+        if v < _dt.date.today():
+            raise ValueError("that day is in the past")
+        return v
+
+
+class FlightSearchIn(FlightSliceIn):
+    adults: int = Field(default=1, ge=1, le=9)
+
+
+class FlightsTogetherIn(BaseModel):
+    slices: list[FlightSliceIn] = Field(min_length=2, max_length=6)
+    adults: int = Field(default=1, ge=1, le=9)
+
+
+class PassengerIn(BaseModel):
+    title: str = Field(pattern=r"^(mr|ms|mrs|miss|dr)$")
+    given_name: str = Field(min_length=1, max_length=60)
+    family_name: str = Field(min_length=1, max_length=60)
+    gender: str = Field(pattern=r"^(m|f)$")
+    born_on: date
+    email: EmailStr
+    phone_number: str = Field(pattern=r"^\+[1-9][0-9]{6,14}$")
+
+
+class FlightBookIn(BaseModel):
+    offer_id: str = Field(min_length=3, max_length=80)
+    stop_id: str | None = None  # the stop this flight takes you to; None = the flight home
+    passengers: list[PassengerIn] = Field(min_length=1, max_length=9)
+
+
 class StopIn(BaseModel):
     name: str = Field(min_length=1, max_length=200)
     country_code: str | None = Field(default=None, max_length=2)
@@ -138,9 +270,17 @@ class StopIn(BaseModel):
     visits: list[VisitIn] = Field(default_factory=list, max_length=30)
     days_estimated: bool = False  # the traveller did not say how long: the days are a guess
     place_confirmed: bool = False  # the traveller said "yes, this is the place"
+    status: str = "flex"
 
     _cc = field_validator("country_code")(classmethod(lambda cls, v: check_country(v)))
     _sd = field_validator("start_date", "end_date")(classmethod(lambda cls, v: check_date(v)))
+
+    @field_validator("status")
+    @classmethod
+    def _st(cls, v):
+        if v not in STATUSES:
+            raise ValueError(f"status must be one of {STATUSES}")
+        return v
 
     @model_validator(mode="after")
     def _dates(self):
@@ -163,9 +303,21 @@ class StopPatch(BaseModel):
     notes: str | None = Field(default=None, max_length=2000)
     visits: list[VisitIn] | None = Field(default=None, max_length=30)
     place_confirmed: bool | None = None  # true: "yes, this is the place"
+    status: str | None = None
+    fixed_note: str | None = Field(default=None, max_length=120)
+    sleep: str | None = Field(default=None, max_length=200)
+    arrival: LegIn | None = None
+    plan: PlanChoicesIn | None = None
 
     _cc = field_validator("country_code")(classmethod(lambda cls, v: check_country(v)))
     _sd = field_validator("start_date", "end_date")(classmethod(lambda cls, v: check_date(v)))
+
+    @field_validator("status")
+    @classmethod
+    def _st(cls, v):
+        if v is not None and v not in STATUSES:
+            raise ValueError(f"status must be one of {STATUSES}")
+        return v
 
 
 class StopArt(BaseModel):
@@ -207,6 +359,21 @@ class StopOut(ORM):
     place_note: str | None = None
     # what the place is and a fun fact, when we know the place (app.guide)
     guide: dict | None = None
+    status: str = "flex"  # idea | flex | fixed
+    fixed_note: str | None = None
+    sleep: str | None = None
+    arrival: dict | None = None
+    plan: dict = Field(default_factory=dict)
+
+    @field_validator("status", mode="before")
+    @classmethod
+    def _stt(cls, v):
+        return v or "flex"
+
+    @field_validator("plan", mode="before")
+    @classmethod
+    def _pl(cls, v):
+        return v or {}
 
     @field_validator("visits", mode="before")
     @classmethod
@@ -257,6 +424,19 @@ class TripIn(BaseModel):
 class TripPatch(BaseModel):
     name: str | None = Field(default=None, min_length=1, max_length=200)
     notes: str | None = Field(default=None, max_length=4000)
+    home_airport: str | None = Field(default=None, max_length=3)
+    return_leg: LegIn | None = None
+
+    @field_validator("home_airport")
+    @classmethod
+    def _ha(cls, v):
+        if v in (None, ""):
+            return None
+        v = v.upper()
+        from app.travel import by_code
+        if v not in by_code():
+            raise ValueError(f"unknown airport code {v}")
+        return v
 
 
 class TripOut(ORM):
@@ -275,6 +455,8 @@ class TripOut(ORM):
     def _cs(cls, v):
         return v or []
     source_itinerary: str | None = None  # slug of the recommended trip it started from
+    home_airport: str | None = None
+    return_leg: dict | None = None
 
     @field_validator("start_estimated", mode="before")
     @classmethod

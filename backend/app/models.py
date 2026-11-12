@@ -74,6 +74,10 @@ class Trip(Base):
     countries: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
     # slug of the recommended itinerary this trip started from (None = the traveller's own)
     source_itinerary: Mapped[str | None] = mapped_column(String(80))
+    # the traveller's home airport (IATA), for the flights out and back
+    home_airport: Mapped[str | None] = mapped_column(String(3))
+    # how the traveller gets home after the last stop, same shape as Stop.arrival
+    return_leg: Mapped[dict | None] = mapped_column(JSON)
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, onupdate=utcnow
@@ -113,6 +117,17 @@ class Stop(Base):
     # ok | check (the app asks "Is this the place?") | confirmed (the traveller said yes) | null (older stop)
     place_status: Mapped[str | None] = mapped_column(String(10))
     place_note: Mapped[str | None] = mapped_column(Text)  # why it is asked about
+    # the trip board (Manu, 2026-11-12): idea (maybe) | flex (decided, days can change) |
+    # fixed (booked: changes elsewhere may not move it)
+    status: Mapped[str] = mapped_column(String(8), default="flex", server_default="flex")
+    fixed_note: Mapped[str | None] = mapped_column(String(120))  # what is booked
+    sleep: Mapped[str | None] = mapped_column(String(200))  # where the traveller sleeps
+    # how the traveller gets here from the previous stop (or from home):
+    # {"mode": "flight", "booked": true, "ref": "AR 1872", "from": "AEP", "to": "FTE", "note": ""}
+    arrival: Mapped[dict | None] = mapped_column(JSON)
+    # the day plan's choices: {"skip": [item ids], "pins": {item id: "YYYY-MM-DD"},
+    # "weather": {"YYYY-MM-DD": "rain"}, "mode": route id or null}
+    plan: Mapped[dict] = mapped_column(JSON, default=dict, server_default="{}")
 
     trip: Mapped[Trip] = relationship(back_populates="stops")
 

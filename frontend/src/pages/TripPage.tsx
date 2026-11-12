@@ -9,10 +9,12 @@ import { EstimateForm } from "../components/Estimate";
 import { PlanChange } from "../components/PlanChange";
 import { ProfileQuiz } from "../components/ProfileQuiz";
 import { TailorChat } from "../components/TailorChat";
-import { StopCard, StopForm } from "../components/Stops";
+import { TripBoard } from "../components/Board";
+import { FlightsPlanner } from "../components/Flights";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { addDays, dayMonth, daysBetween, minus, money, today } from "../lib/format";
+import { dayMonth, daysBetween, minus, money } from "../lib/format";
+import { DRESS_ME } from "./Start";
 import type { Plans, QuizResult, Strategy, Tier, Trip, User } from "../lib/types";
 
 const COLD_TXT: [number, string][] = [[0.3, "always cold"], [0.15, "a bit cold"], [0, "average with cold"], [-0.3, "rarely cold"]];
@@ -35,7 +37,6 @@ export default function TripPage() {
   const [plans, setPlans] = useState<Plans | null>(null);
   const [tier, setTier] = useState<Tier>("medium");
   const [stageIdx, setStageIdx] = useState(0);
-  const [editing, setEditing] = useState<string | "new" | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [planning, setPlanning] = useState(false);
   const itineraries = useItineraries();
@@ -93,24 +94,6 @@ export default function TripPage() {
     setTrip(await api.patchTrip(trip.id, { name: name.trim() }));
   }
 
-  async function removeStop(stopId: string) {
-    if (!window.confirm("Remove this stop? Its weather and layers go with it.")) return;
-    await api.deleteStop(id, stopId);
-    toast("Stop removed.");
-    setStageIdx(0);
-    loadAll();
-  }
-
-  async function move(i: number, dir: -1 | 1) {
-    const ids = stops.map((s) => s.id);
-    const j = i + dir;
-    [ids[i], ids[j]] = [ids[j], ids[i]];
-    setTrip(await api.reorder(id, ids));
-    loadPlans(tier);
-  }
-
-  const last = stops[stops.length - 1];
-  const nextStart = last ? addDays(last.end_date, 1) : addDays(today(), 30);
   const totalDays = stops.length && t0 ? daysBetween(t0, stops.reduce((m, s) => (s.end_date > m ? s.end_date : m), stops[0].end_date)) + 1 : 0;
   const coldest = strategy?.stages?.length ? Math.min(...strategy.stages.map((s) => s.modes.rest.condition.feels_like_c)) : null;
   const tp = plans && !plans.empty ? plans.tiers[tier] : null;
@@ -129,7 +112,7 @@ export default function TripPage() {
       <nav className="secnav" aria-label="Trip sections">
         <div className="wrap">
           <span className="tname">{trip.name}</span>
-          <a href="#trip">Trip</a><a href="#layers">Layers</a><a href="#kit">Kit</a><a href="#total">Total</a><a href="#ask">Chat</a>
+          <a href="#days">Days</a>{stops.length > 0 && <a href="#flights">Flights</a>}<a href="#trip">Map</a><a href="#layers">Layers</a><a href="#kit">Kit</a><a href="#total">Total</a><a href="#ask">Chat</a>
           {planning && <span className="spin" aria-label="Updating plan" />}
         </div>
       </nav>
@@ -188,49 +171,53 @@ export default function TripPage() {
         </div>
       </section>
 
+      <section className="band" id="days">
+        <div className="wrap">
+          <header className="sh"><p className="sh-k">Your days</p><h2>{stops.length ? "Plan it day by day" : "Where do you start?"}</h2>
+            <p>Places on their days. Mark what you booked as fixed and the rest can still move. Open a place to see what to do there, in order, with the weather of each day.</p></header>
+          <TripBoard trip={trip} onChanged={loadAll} />
+          {stops.length > 0 && (
+            <div className="bd-cta" style={{ marginTop: 24 }}>
+              <p><b>Ready to pack?</b> The clothes follow your days: change the plan and they change too.</p>
+              <a className="btn primary" href="#layers">{DRESS_ME}</a>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {stops.length > 0 && (
+        <section className="band" id="flights" style={{ paddingTop: 0 }}>
+          <div className="wrap">
+            <header className="sh"><p className="sh-k">Flights</p><h2>Every leg, every flight of the day</h2>
+              <p>All the flights of your trip in one place. For each leg, every flight of its day in time order: an hour earlier or later is one look away. Pick one per leg and see if they fit your days.</p></header>
+            <FlightsPlanner trip={trip} onChanged={loadAll} />
+          </div>
+        </section>
+      )}
+
       <section className="band alt" id="trip">
         <div className="wrap">
-          <header className="sh"><p className="sh-k">The trip</p><h2>{stops.length ? `${stops.length} ${stops.length === 1 ? "stop" : "stops"}, ${weatherHeadline}` : "Add your first stop"}</h2>
+          <header className="sh"><p className="sh-k">Map and altitude</p><h2>{stops.length ? `${stops.length} ${stops.length === 1 ? "place" : "places"}, ${weatherHeadline}` : "Add your first place"}</h2>
             {sources.has("estimate") && (
               <div className="banner warn" style={{ margin: "12px 0" }}>
-                The weather service could not be reached, so some stops use a <b>rough estimate</b> from latitude and season.
+                The weather service could not be reached, so some places use a <b>rough estimate</b> from latitude and season.
                 Reload later for real data before you trust the kit.
               </div>
             )}
             {trip.estimate && t0 && (
               <div style={{ margin: "12px 0" }}>
                 <EstimateForm start={trip.estimate.start} days={trip.estimate.days} firstDay={t0} totalDays={totalDays}
-                  onApply={async (v) => { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated. The plan is recalculated."); loadPlans(tier); }}
+                  onApply={async (v) => { try { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated. The plan is recalculated."); loadPlans(tier); } catch (e) { toast((e as Error).message); } }}
                   onKeep={async () => { setTrip(await api.setDates(id, { confirm: true })); }} />
               </div>
             )}
-            <p>Each stop sets its own conditions. One kit has to cover all of them, so we size it to the hardest hour of the whole trip. Edit, add or remove stops any time: the plan follows.</p></header>
+            <p>One kit has to cover every place, so we size it to the hardest hour of the whole trip.</p></header>
           <TripMap stops={stops} />
           <ElevationProfile stops={stops} selected={stageIdx} onSelect={(i) => { setStageIdx(i); document.getElementById("layers")?.scrollIntoView({ behavior: "smooth" }); }} />
-          <ol className="stops">
-            {stops.map((s, i) => editing === s.id ? (
-              <li key={s.id} style={{ padding: "16px 0" }}><StopForm tripId={id} stop={s} defaultStart={s.start_date} countries={trip.countries}
-                onDone={() => { setEditing(null); loadAll(); }} onCancel={() => setEditing(null)} /></li>
-            ) : (
-              <StopCard key={s.id} stop={s} index={i} count={stops.length} stage={strategy?.stages.find((x) => x.stop_id === s.id)}
-                selected={i === stageIdx} dayFrom={t0 ? daysBetween(t0, s.start_date) + 1 : 1}
-                onSelect={() => setStageIdx(i)} onEdit={() => setEditing(s.id)} onDelete={() => removeStop(s.id)} onMove={(d) => move(i, d)}
-                onConfirm={async () => { await api.patchStop(id, s.id, { place_confirmed: true }); toast(`${s.name} confirmed.`); loadAll(); }} />
-            ))}
-          </ol>
-          <div className="addstop">
-            {editing === "new" ? (
-              <StopForm tripId={id} defaultStart={nextStart} countries={trip.countries} onDone={() => { setEditing(null); loadAll(); }} onCancel={() => setEditing(null)} />
-            ) : <button type="button" className="btn primary" onClick={() => setEditing("new")}>+ Add a stop</button>}
-          </div>
           {strategy && strategy.questions.length > 0 && (
             <div style={{ marginTop: 28 }}>
               <h3 className="subh" style={{ marginTop: 0 }}>A few questions that change the plan</h3>
-              <ul className="qs">{strategy.questions.map((q, i) => (
-                <li key={i}>{q.question}
-                  {q.stop_id && <div className="opts"><button type="button" className="btn sm" onClick={() => setEditing(q.stop_id!)}>Edit that stop</button></div>}
-                </li>
-              ))}</ul>
+              <ul className="qs">{strategy.questions.map((q, i) => <li key={i}>{q.question}</li>)}</ul>
             </div>
           )}
         </div>
