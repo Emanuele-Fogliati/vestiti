@@ -1,0 +1,1382 @@
+{
+ "_doc": "Iceland, written by hand for the plans hour by hour (Manu, 2026-11-12). Same format as todo.json.",
+ "areas": [
+  {
+   "id": "is-reykjavik",
+   "names": [
+    "Reykjavik",
+    "Reykjavík"
+   ],
+   "country": "IS",
+   "lat": 64.14,
+   "lon": -21.9,
+   "radius_km": 25,
+   "season": "Cool all year: 10–14 °C in summer with near-endless daylight in June, around 0 °C and 4–5 hours of light in December. Wind and showers any time.",
+   "sleep": "Downtown near Laugavegur, on foot to everything; tours pick up at numbered bus stops.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Reykjavík",
+    "https://en.wikivoyage.org/wiki/Southwest_Iceland",
+    "https://www.thingvellir.is/en/",
+    "https://safetravel.is/"
+   ],
+   "items": [
+    {
+     "id": "town",
+     "name": "Reykjavík on foot: Hallgrímskirkja, Harpa, the Old Harbour",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The church tower over coloured roofs, the glass concert hall by the sea, and the harbour's fish shacks.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "14:00",
+       "what": "Up Hallgrímskirkja's tower",
+       "note": "lift, small fee"
+      },
+      {
+       "at": "15:00",
+       "what": "Down Skólavörðustígur, the rainbow street"
+      },
+      {
+       "at": "15:45",
+       "what": "The Sun Voyager sculpture and the shore path"
+      },
+      {
+       "at": "16:30",
+       "what": "Harpa: the glass facade inside"
+      },
+      {
+       "at": "17:30",
+       "what": "The Old Harbour: fish soup or a hot dog at Bæjarins Beztu"
+      }
+     ],
+     "sights": [
+      "Hallgrímskirkja",
+      "Harpa",
+      "Reykjavik Old Harbour"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "golden",
+     "name": "The Golden Circle: Þingvellir, Geysir, Gullfoss",
+     "hours": "A whole day · about 230 km",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave by 08:30 to be ahead of the coaches",
+     "book": "",
+     "why": "Walk in the rift between two continents, a geyser that blows every few minutes, and a waterfall falling into a canyon.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Leave Reykjavík",
+       "note": "45 min"
+      },
+      {
+       "at": "09:15",
+       "what": "Þingvellir: Almannagjá rift and Öxarárfoss",
+       "note": "parking fee"
+      },
+      {
+       "at": "11:30",
+       "what": "Geysir: Strokkur erupts every 5–10 minutes"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch"
+      },
+      {
+       "at": "13:30",
+       "what": "Gullfoss",
+       "note": "both viewpoints"
+      },
+      {
+       "at": "15:00",
+       "what": "Kerið crater, or the Secret Lagoon in Flúðir"
+      },
+      {
+       "at": "17:30",
+       "what": "Back in Reykjavík"
+      }
+     ],
+     "extras": [
+      "Snorkel Silfra, the rift full of glacier water at Þingvellir, in a drysuit: book ahead.",
+      "Lunch among tomato plants at the Friðheimar greenhouse: book a table.",
+      "Strokkur's spray drifts with the wind: stand upwind."
+     ],
+     "sights": [
+      "Thingvellir National Park",
+      "Öxarárfoss",
+      "Geysir",
+      "Gullfoss",
+      "Kerið"
+     ]
+    },
+    {
+     "id": "reykjanes",
+     "name": "Reykjanes: lava fields, cliffs and the lagoon",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Before your flight home: it's next to the airport",
+     "book": "",
+     "why": "Steaming ground, sea cliffs, the bridge between continents and the newest lava in Iceland. Ends in a lagoon.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "extras": [
+      "Eruptions have closed roads near Grindavík: check safetravel.is that morning."
+     ],
+     "sights": [
+      "Reykjanes Peninsula",
+      "Brimketill",
+      "Blue Lagoon"
+     ]
+    },
+    {
+     "id": "lagoon",
+     "name": "Blue Lagoon or Sky Lagoon",
+     "hours": "2–3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed tickets, book ahead",
+     "why": "Warm milky-blue water in a lava field, or an infinity pool facing the ocean in town.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Blue Lagoon",
+      "Sky Lagoon"
+     ]
+    },
+    {
+     "id": "whales",
+     "name": "Whale watching from the Old Harbour",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Minke whales and dolphins in Faxaflói bay; puffin islands from May to August.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Reykjavik Old Harbour"
+     ]
+    },
+    {
+     "id": "aurora",
+     "name": "Northern lights outside the city",
+     "hours": "3–4 h at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Clear nights; check the aurora forecast at vedur.is",
+     "book": "",
+     "why": "Away from the lights on a clear night, with the aurora forecast.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "extras": [
+    "Check road.is (umferdin.is) and safetravel.is every morning: wind closes roads more often than snow.",
+    "Tap water is excellent: no need to buy bottles.",
+    "Alcohol is sold only in Vínbúðin shops, with short hours."
+   ]
+  },
+  {
+   "id": "is-snaefellsnes",
+   "names": [
+    "Snæfellsnes",
+    "Snaefellsnes",
+    "Grundarfjörður",
+    "Grundarfjordur",
+    "Stykkishólmur",
+    "Stykkisholmur",
+    "Arnarstapi",
+    "Ólafsvík",
+    "Hellnar"
+   ],
+   "country": "IS",
+   "lat": 64.88,
+   "lon": -23.3,
+   "radius_km": 50,
+   "season": "Mild and windy for Iceland; the glacier often hides in cloud. Summer days are long, winter roads can ice.",
+   "sleep": "Grundarfjörður by Kirkjufell, or Stykkishólmur for the harbour and the boats.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Snæfellsjökull_National_Park",
+    "https://en.wikivoyage.org/wiki/Stykkishólmur",
+    "https://en.wikivoyage.org/wiki/West_Iceland",
+    "https://safetravel.is/"
+   ],
+   "items": [
+    {
+     "id": "kirkjufell",
+     "name": "Kirkjufell and its waterfalls at sunset",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Late light",
+     "book": "",
+     "why": "The arrow-shaped mountain behind small falls: Iceland's most photographed view.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "sights": [
+      "Kirkjufell"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "loop",
+     "name": "Around the peninsula: Búðir, Arnarstapi, Djúpalónssandur",
+     "hours": "A whole day · about 200 km",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A black church in a lava field, sea arches, black pebble beaches with shipwreck iron and the Snæfellsjökull glacier.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Leave Grundarfjörður"
+      },
+      {
+       "at": "10:00",
+       "what": "Búðir's black church"
+      },
+      {
+       "at": "11:00",
+       "what": "Arnarstapi to Hellnar cliff path",
+       "note": "2.5 km, 1 h"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in Hellnar"
+      },
+      {
+       "at": "13:30",
+       "what": "Vatnshellir lava cave",
+       "note": "guided, 45 min"
+      },
+      {
+       "at": "15:00",
+       "what": "Djúpalónssandur: the lifting stones and the shipwreck"
+      },
+      {
+       "at": "16:00",
+       "what": "Saxhóll crater steps"
+      },
+      {
+       "at": "17:30",
+       "what": "Back via Ólafsvík"
+      }
+     ],
+     "sights": [
+      "Búðakirkja",
+      "Arnarstapi",
+      "Djupalonssandur",
+      "Snæfellsjökull"
+     ]
+    },
+    {
+     "id": "breidafjordur",
+     "name": "Breiðafjörður islands by boat from Stykkishólmur",
+     "hours": "2–3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Hundreds of islets with puffins and eagles; scallops pulled from the sea and eaten raw on board.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Breiðafjörður",
+      "Stykkishólmur"
+     ]
+    }
+   ],
+   "extras": [
+    "From Reykjavík it's about 2 h 30: the peninsula is a possible long day trip, but a night makes it easy."
+   ]
+  },
+  {
+   "id": "is-south-coast",
+   "names": [
+    "Vík í Mýrdal",
+    "Vík",
+    "Vik",
+    "Skógar",
+    "Hvolsvöllur",
+    "Hella"
+   ],
+   "country": "IS",
+   "lat": 63.48,
+   "lon": -19.4,
+   "radius_km": 60,
+   "season": "Mild and wet for Iceland, and very windy: gusts between Vík and Kirkjubæjarklaustur can close the road. Summer 10–14 °C.",
+   "sleep": "Vík, or a farm between Skógar and Vík.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Vík",
+    "https://en.wikivoyage.org/wiki/Skógar",
+    "https://safetravel.is/",
+    "https://umferdin.is/en"
+   ],
+   "items": [
+    {
+     "id": "waterfalls",
+     "name": "Seljalandsfoss, Gljúfrabúi and Skógafoss on the way",
+     "hours": "3–4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "On the drive from Reykjavík",
+     "book": "",
+     "why": "Walk behind one waterfall, squeeze into a gorge for the second, climb the 500 steps above the third.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "steps": [
+      {
+       "at": "10:30",
+       "what": "Seljalandsfoss: the path behind the water",
+       "note": "waterproofs"
+      },
+      {
+       "at": "11:15",
+       "what": "Gljúfrabúi, 5 minutes on, inside a cleft"
+      },
+      {
+       "at": "12:15",
+       "what": "Skógafoss, and the steps to the top"
+      },
+      {
+       "at": "13:00",
+       "what": "Kvernufoss, a hidden fall 20 minutes' walk from Skógar"
+      }
+     ],
+     "extras": [
+      "You get soaked behind Seljalandsfoss: waterproof trousers too, not just a jacket."
+     ],
+     "sights": [
+      "Seljalandsfoss",
+      "Gljufrabui",
+      "Skógafoss",
+      "Kvernufoss"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "vik-day",
+     "name": "Glacier walk on Sólheimajökull, Dyrhólaey, Reynisfjara",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "The glacier walk with a certified guide",
+     "why": "Crampons on a blue-ice glacier tongue, then the sea arch of Dyrhólaey and the black beach with basalt columns.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 400,
+      "glacier": true
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Sólheimajökull glacier walk",
+       "note": "3 h with crampons and a guide"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Vík"
+      },
+      {
+       "at": "14:30",
+       "what": "Dyrhólaey: the arch and the lighthouse"
+      },
+      {
+       "at": "16:00",
+       "what": "Reynisfjara: basalt columns and the sea stacks"
+      },
+      {
+       "at": "17:30",
+       "what": "Vík church above the town"
+      }
+     ],
+     "extras": [
+      "Reynisfjara's sneaker waves kill: stay well back from the water, watch the warning lights.",
+      "Part of Dyrhólaey closes in the nesting season (May to late June)."
+     ],
+     "sights": [
+      "Solheimajokull",
+      "Dyrhólaey",
+      "Reynisfjara",
+      "Reynisdrangar"
+     ]
+    },
+    {
+     "id": "katla",
+     "name": "Katla ice cave under Mýrdalsjökull",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "With a guide only",
+     "why": "A cave of black-banded ice under a glacier on a volcano; super-jeeps from Vík.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 700,
+      "glacier": true
+     }
+    },
+    {
+     "id": "fjadrargljufur",
+     "name": "Fjaðrárgljúfur canyon",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A mossy serpentine canyon, from the rim path. On the way east.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "extras": [
+      "The rim path can close in spring to protect the moss."
+     ],
+     "sights": [
+      "Fjaðrárgljúfur"
+     ]
+    },
+    {
+     "id": "thorsmork",
+     "name": "Þórsmörk by highland bus",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A green valley between three glaciers, reached by fording rivers in a 4x4 bus.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 800
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Þórsmörk"
+     ]
+    }
+   ],
+   "extras": [
+    "Rented cars must not cross rivers: the highland buses do it for you.",
+    "Westman Islands: a ferry from Landeyjahöfn (about 35 min) to puffins and a 1973 lava town."
+   ]
+  },
+  {
+   "id": "is-vatnajokull",
+   "names": [
+    "Höfn",
+    "Hofn",
+    "Skaftafell",
+    "Jökulsárlón",
+    "Jokulsarlon",
+    "Vatnajökull National Park",
+    "Vatnajökull",
+    "Hof",
+    "Fagurhólsmýri"
+   ],
+   "country": "IS",
+   "lat": 64.05,
+   "lon": -16.3,
+   "radius_km": 60,
+   "season": "Under Europe's biggest glacier: cold wind off the ice. Glacier walks all year; blue ice caves only in winter (about November to March).",
+   "sleep": "Near Skaftafell or Jökulsárlón to be first at the lagoon; Höfn has the most beds and restaurants.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Vatnajökull_National_Park",
+    "https://en.wikivoyage.org/wiki/Höfn",
+    "https://www.vatnajokulsthjodgardur.is/en",
+    "https://safetravel.is/"
+   ],
+   "items": [
+    {
+     "id": "lagoon",
+     "name": "Jökulsárlón, the iceberg lagoon, and Diamond Beach",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Early morning or evening light",
+     "book": "The boats run from about April to October",
+     "why": "Blue icebergs drifting to the sea, seals in the channel, and ice shining on a black beach.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Fjallsárlón, the quieter lagoon"
+      },
+      {
+       "at": "09:00",
+       "what": "Jökulsárlón: walk the shore"
+      },
+      {
+       "at": "10:00",
+       "what": "Amphibian boat or zodiac among the icebergs",
+       "note": "40 min to 1 h"
+      },
+      {
+       "at": "11:30",
+       "what": "Diamond Beach across the road"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at the lagoon café"
+      }
+     ],
+     "extras": [
+      "Seals fish in the channel under the bridge: look down from the lagoon side."
+     ],
+     "sights": [
+      "Jökulsárlón",
+      "Diamond Beach",
+      "Fjallsárlón"
+     ]
+    },
+    {
+     "id": "svartifoss",
+     "name": "Skaftafell: Svartifoss and the glacier tongue",
+     "hours": "3–4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A waterfall framed by black basalt organ pipes, then the snout of Skaftafellsjökull.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 300
+     },
+     "steps": [
+      {
+       "at": "14:00",
+       "what": "Skaftafell visitor centre"
+      },
+      {
+       "at": "14:15",
+       "what": "Up to Svartifoss",
+       "note": "1 h 30 return"
+      },
+      {
+       "at": "16:00",
+       "what": "Flat walk to the glacier tongue",
+       "note": "1 h"
+      },
+      {
+       "at": "17:30",
+       "what": "Svínafellsjökull from its car park"
+      }
+     ],
+     "sights": [
+      "Skaftafell",
+      "Svartifoss",
+      "Svínafellsjökull"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "glacier-walk",
+     "name": "Glacier walk on Falljökull",
+     "hours": "3–4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Certified guides at Skaftafell",
+     "why": "Crevasses, moulins and blue ice with crampons and an axe. Never on a glacier without a guide.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 400,
+      "glacier": true
+     },
+     "sights": [
+      "Vatnajökull"
+     ]
+    },
+    {
+     "id": "ice-cave",
+     "name": "Blue ice cave",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Only with a guide; tours go when the cave is safe",
+     "why": "Inside the glacier in natural caves of blue ice that change every winter.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300,
+      "glacier": true
+     },
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "sights": [
+      "Vatnajökull ice caves"
+     ]
+    },
+    {
+     "id": "hofn",
+     "name": "Höfn: the harbour and a langoustine dinner",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Evening",
+     "book": "",
+     "why": "A fishing town known for its langoustine, with the glacier across the bay.",
+     "act": {
+      "type": "city"
+     }
+    }
+   ],
+   "extras": [
+    "From here to Vík is 2 h 30 without stops; to Seyðisfjörður about 4 h on the fjords road."
+   ]
+  },
+  {
+   "id": "is-eastfjords",
+   "names": [
+    "Seyðisfjörður",
+    "Seydisfjordur",
+    "Egilsstaðir",
+    "Egilsstadir",
+    "East Fjords",
+    "Eastfjords",
+    "Djúpivogur",
+    "Borgarfjörður eystri"
+   ],
+   "country": "IS",
+   "lat": 65.26,
+   "lon": -14.3,
+   "radius_km": 70,
+   "season": "Cooler and often cloudy, but the sunniest summer days in Iceland come here. Pass roads can ice in any season but summer.",
+   "sleep": "Seyðisfjörður for the fjord and the art; Egilsstaðir for the services.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Seyðisfjörður",
+    "https://en.wikivoyage.org/wiki/Egilsstaðir",
+    "https://umferdin.is/en"
+   ],
+   "items": [
+    {
+     "id": "seydis",
+     "name": "Seyðisfjörður: the blue church and the fjord",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Over a mountain pass into a fjord village of wooden houses, art studios and a rainbow street.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 620
+     },
+     "steps": [
+      {
+       "at": "14:00",
+       "what": "Over Fjarðarheiði pass from Egilsstaðir",
+       "note": "620 m, 30 min"
+      },
+      {
+       "at": "14:30",
+       "what": "The blue church and the rainbow street"
+      },
+      {
+       "at": "15:30",
+       "what": "The fjord path to the Tvísöngur sound sculpture",
+       "note": "1 h return"
+      },
+      {
+       "at": "17:00",
+       "what": "Coffee in the old houses"
+      }
+     ],
+     "sights": [
+      "Seyðisfjörður"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "studlagil",
+     "name": "Stuðlagil basalt canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "Before the reservoir upstream overflows (usually from August) and turns the river grey",
+     "book": "",
+     "why": "Basalt columns lining a turquoise glacial river. The east-side path goes down to the water.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 400
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Leave Egilsstaðir",
+       "note": "1 h"
+      },
+      {
+       "at": "10:00",
+       "what": "East side car park: 2.5 km walk to the canyon floor"
+      },
+      {
+       "at": "11:30",
+       "what": "On the columns by the water"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch back in Egilsstaðir"
+      }
+     ],
+     "sights": [
+      "Stuðlagil Canyon"
+     ]
+    },
+    {
+     "id": "hengifoss",
+     "name": "Hengifoss and Litlanesfoss",
+     "hours": "2–3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A 128 m waterfall against red-striped cliffs, and a smaller one in basalt columns on the way up.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 400
+     },
+     "sights": [
+      "Hengifoss"
+     ]
+    },
+    {
+     "id": "puffins",
+     "name": "Puffins at Borgarfjörður eystri",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A boardwalk on a puffin rock so close you hear them.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   ],
+   "extras": [
+    "The ferry from Denmark arrives in Seyðisfjörður: the village is busy those mornings."
+   ]
+  },
+  {
+   "id": "is-myvatn",
+   "names": [
+    "Mývatn",
+    "Myvatn",
+    "Lake Mývatn",
+    "Reykjahlíð",
+    "Reykjahlid",
+    "Skútustaðir"
+   ],
+   "country": "IS",
+   "lat": 65.63,
+   "lon": -16.92,
+   "radius_km": 25,
+   "season": "Drier and sunnier than the south; cold winters, snow from October. Midges swarm on calm summer days.",
+   "sleep": "Reykjahlíð on the north shore, near the baths and the geothermal fields.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Mývatn",
+    "https://www.vatnajokulsthjodgardur.is/en",
+    "https://safetravel.is/"
+   ],
+   "items": [
+    {
+     "id": "baths",
+     "name": "Mývatn Nature Baths",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Evening",
+     "book": "",
+     "why": "The north's blue lagoon: quieter, cheaper, with a view of the lava.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Mývatn Nature Baths"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "lake",
+     "name": "Around Lake Mývatn: craters, lava castles, hot springs",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Pseudo-craters, the lava labyrinth of Dimmuborgir, a crater rim walk, boiling mud and a warm cave.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 450
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Skútustaðagígar pseudo-craters",
+       "note": "30 min loop"
+      },
+      {
+       "at": "10:00",
+       "what": "Dimmuborgir lava labyrinth",
+       "note": "1 h"
+      },
+      {
+       "at": "11:30",
+       "what": "Up Hverfjall crater, round the rim",
+       "note": "1 h 30"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch: geysir bread baked in the ground"
+      },
+      {
+       "at": "14:15",
+       "what": "Grjótagjá cave",
+       "note": "look, don't bathe"
+      },
+      {
+       "at": "15:00",
+       "what": "Hverir mud pots at Námaskarð"
+      },
+      {
+       "at": "16:00",
+       "what": "Krafla and the Víti crater"
+      },
+      {
+       "at": "18:00",
+       "what": "The nature baths if not done yet"
+      }
+     ],
+     "sights": [
+      "Lake Mývatn",
+      "Skútustaðagígar",
+      "Dimmuborgir",
+      "Hverfjall",
+      "Grjótagjá",
+      "Námaskarð",
+      "Hverir",
+      "Krafla"
+     ]
+    },
+    {
+     "id": "dettifoss",
+     "name": "Dettifoss and Selfoss",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "From the paved west side (road 862)",
+     "book": "",
+     "why": "Europe's most powerful waterfall, grey glacier water roaring into a canyon, and wide Selfoss upstream.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "sights": [
+      "Dettifoss",
+      "Selfoss"
+     ]
+    },
+    {
+     "id": "asbyrgi",
+     "name": "Ásbyrgi canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A horseshoe of cliffs with a birch forest inside, said to be the hoofprint of Odin's horse.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "sights": [
+      "Ásbyrgi"
+     ]
+    }
+   ],
+   "extras": [
+    "A midge head net (a few euros) saves summer walks around the lake: they don't bite, but they swarm.",
+    "Goðafoss is 40 minutes west, on the road to Akureyri."
+   ]
+  },
+  {
+   "id": "is-akureyri",
+   "names": [
+    "Akureyri",
+    "Eyjafjörður",
+    "Eyjafjordur"
+   ],
+   "country": "IS",
+   "lat": 65.68,
+   "lon": -18.09,
+   "radius_km": 30,
+   "season": "Sheltered at the head of a long fjord: often the warmest summer days in the north; snowy winters with a ski hill.",
+   "sleep": "In town, on foot to the harbour and the church.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Akureyri",
+    "https://safetravel.is/"
+   ],
+   "items": [
+    {
+     "id": "godafoss",
+     "name": "Goðafoss on the way in",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The waterfall of the gods, where the old idols were thrown in when Iceland chose Christianity.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "sights": [
+      "Goðafoss"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "myvatn-day",
+     "name": "Lake Mývatn and Dettifoss in a day",
+     "hours": "A whole day · about 250 km",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave by 08:30",
+     "book": "",
+     "why": "Lava castles, craters, boiling mud, and Europe's most powerful waterfall, with a warm bath at the end.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 450
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Leave Akureyri; Goðafoss on the way if not seen"
+      },
+      {
+       "at": "10:00",
+       "what": "Skútustaðagígar pseudo-craters"
+      },
+      {
+       "at": "11:00",
+       "what": "Dimmuborgir lava labyrinth"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at Mývatn"
+      },
+      {
+       "at": "13:30",
+       "what": "Hverir mud pots at Námaskarð"
+      },
+      {
+       "at": "15:00",
+       "what": "Dettifoss by the west road",
+       "note": "1 h on foot"
+      },
+      {
+       "at": "17:30",
+       "what": "Mývatn Nature Baths"
+      },
+      {
+       "at": "20:00",
+       "what": "Back in Akureyri"
+      }
+     ],
+     "extras": [
+      "A midge head net for calm summer days at the lake."
+     ],
+     "sights": [
+      "Lake Mývatn",
+      "Dimmuborgir",
+      "Hverfjall",
+      "Námaskarð",
+      "Hverir",
+      "Dettifoss"
+     ]
+    },
+    {
+     "id": "town",
+     "name": "Akureyri: the church steps, the botanical garden, Forest Lagoon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The world's northernmost botanical garden, the church above the main street, and a forest spa across the fjord.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Akureyri"
+     ]
+    },
+    {
+     "id": "whales",
+     "name": "Whale watching in Eyjafjörður",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Humpbacks feeding in the fjord, from Akureyri or Hauganes.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Eyjafjörður",
+      "Hauganes"
+     ]
+    },
+    {
+     "id": "trollaskagi",
+     "name": "The Troll Peninsula: Siglufjörður",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Tunnels and fjords to the old herring town, its museum and the edge of the Arctic.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Siglufjörður",
+      "Dalvík"
+     ]
+    }
+   ],
+   "extras": [
+    "The Mývatn lake circuit is 1 h east: a stop there saves driving back and forth."
+   ]
+  },
+  {
+   "id": "is-husavik",
+   "names": [
+    "Húsavík",
+    "Husavik"
+   ],
+   "country": "IS",
+   "lat": 66.04,
+   "lon": -17.34,
+   "radius_km": 20,
+   "season": "Cool summers; boats run from about April to October.",
+   "sleep": "In town by the harbour.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Húsavík"
+   ],
+   "items": [
+    {
+     "id": "whales",
+     "name": "Whale watching from Húsavík",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "Morning",
+     "book": "A day ahead",
+     "why": "The whale capital of Iceland: humpbacks most summer days, sometimes blue whales.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "At the harbour; overalls handed out on board"
+      },
+      {
+       "at": "09:30",
+       "what": "Into Skjálfandi bay"
+      },
+      {
+       "at": "12:30",
+       "what": "Back in port"
+      }
+     ],
+     "extras": [
+      "Even in July you'll be cold on deck: hat and gloves."
+     ]
+    },
+    {
+     "id": "geosea",
+     "name": "GeoSea sea baths",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hot seawater pools on the cliff over the bay.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true
+    },
+    {
+     "id": "diamond",
+     "name": "Ásbyrgi and Dettifoss",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The horseshoe canyon and Europe's most powerful waterfall on the Diamond Circle.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "sights": [
+      "Ásbyrgi",
+      "Dettifoss"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "is-westfjords",
+   "names": [
+    "Ísafjörður",
+    "Isafjordur",
+    "Westfjords"
+   ],
+   "country": "IS",
+   "lat": 66.07,
+   "lon": -23.13,
+   "radius_km": 70,
+   "season": "Remote and mountainous; roads mostly gravel beyond the main routes. Summer is the season (June to August).",
+   "sleep": "Ísafjörður, the only town of size.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ísafjörður",
+    "https://en.wikivoyage.org/wiki/Westfjords",
+    "https://umferdin.is/en"
+   ],
+   "items": [
+    {
+     "id": "town",
+     "name": "Ísafjörður's old town and the maritime museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Wooden 18th-century houses on the spit, and a fish lunch at Tjöruhúsið.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true
+    },
+    {
+     "id": "vigur",
+     "name": "Vigur island: puffins and eider ducks",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A small farm island with thousands of puffins, by boat from Ísafjörður.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "sights": [
+      "Vigur"
+     ]
+    },
+    {
+     "id": "dynjandi",
+     "name": "Dynjandi",
+     "hours": "A whole day with the drive",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A waterfall spreading like a bridal veil down 100 m of rock, and six smaller ones under it.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Leave Ísafjörður through the Dýrafjörður tunnel"
+      },
+      {
+       "at": "09:30",
+       "what": "Þingeyri, an old trading post"
+      },
+      {
+       "at": "10:30",
+       "what": "Dynjandi: the path past the lower falls to the foot of the big one",
+       "note": "15–20 min up"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in Þingeyri on the way back"
+      },
+      {
+       "at": "17:00",
+       "what": "Back in Ísafjörður"
+      }
+     ],
+     "extras": [
+      "The Dynjandisheiði road is gravel in parts: check umferdin.is the day before."
+     ],
+     "sights": [
+      "Dynjandi"
+     ]
+    }
+   ],
+   "extras": [
+    "Hornstrandir, the roadless nature reserve, is reached by boat from Ísafjörður in summer."
+   ]
+  }
+ ]
+}

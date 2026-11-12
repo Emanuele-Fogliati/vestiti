@@ -97,3 +97,12 @@
 .step input[type=date].step-date{width:28px;min-width:0;height:28px;padding:0;border:0;background:transparent;color:transparent;box-shadow:none;cursor:pointer}
 .pq-c input[type=date],.pq-c input[type=number],.pq-c select{width:auto;padding:8px 12px;border-radius:999px}
 @media (max-width:560px){.step .step-ctl{grid-column:2;grid-row:2}}
+
+/* Hour by hour (a hand-written guide's day), folded under a day or a thing to do */
+.hours{margin:4px 0 2px;font-size:13px;color:var(--ink-2)}
+.hours summary{cursor:pointer;color:var(--ink-2);font-size:13px;width:max-content;text-decoration:underline dotted;text-underline-offset:3px}
+.hours-steps{list-style:none;margin:6px 0;padding:0 0 0 2px;display:grid;gap:4px;border-left:2px dotted var(--ink-3)}
+.hours-steps li{display:grid;grid-template-columns:48px 1fr;gap:6px;padding-left:8px}
+.hours-steps time{font-variant-numeric:tabular-nums;color:var(--ink-3);font-weight:600}
+.hours-extras{margin-top:6px}
+.hours-extras ul{margin:4px 0 0;padding-left:18px;display:grid;gap:3px}

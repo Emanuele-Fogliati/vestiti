@@ -1,0 +1,1639 @@
+{
+ "_doc": "Peru, written by hand for the plans hour by hour (Manu, 2026-11-12). Same format as todo.json; steps = the day hour by hour, extras = what the tour programmes leave out, sights = places of the globe each thing covers.",
+ "areas": [
+  {
+   "id": "pe-lima",
+   "names": [
+    "Lima",
+    "Miraflores",
+    "Barranco",
+    "Lima Metropolitana"
+   ],
+   "country": "PE",
+   "lat": -12.08,
+   "lon": -77.04,
+   "radius_km": 25,
+   "season": "It almost never rains. June to October is grey and cool under the garúa mist (15–19 °C); December to March is sunny and warm (25–29 °C).",
+   "sleep": "Miraflores or Barranco: by the sea, safe to walk, near the restaurants. See the historic centre by day.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lima",
+    "https://www.museolarco.org/en/",
+    "https://en.wikivoyage.org/wiki/Lima/Miraflores"
+   ],
+   "items": [
+    {
+     "id": "malecon",
+     "name": "Miraflores clifftops and Barranco at sunset",
+     "hours": "3–4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Late afternoon into the evening",
+     "book": "",
+     "why": "The Pacific from the cliffs, then the old bohemian quarter, its bridge and its bars. The easiest first evening in Peru.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Walk the Malecón from Parque Kennedy to Parque del Amor",
+       "note": "30 min, flat, along the cliff"
+      },
+      {
+       "at": "17:30",
+       "what": "Sunset over the Pacific from the clifftop or Larcomar"
+      },
+      {
+       "at": "18:30",
+       "what": "Taxi to Barranco (10 min)",
+       "note": "Puente de los Suspiros and the steps down to the sea"
+      },
+      {
+       "at": "20:00",
+       "what": "Dinner in Barranco",
+       "note": "Peruvians dine late; book the popular places"
+      }
+     ],
+     "sights": [
+      "Malecón de Miraflores",
+      "Parque del Amor",
+      "Barranco"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "centro",
+     "name": "Historic centre: Plaza Mayor, the Cathedral and San Francisco's catacombs",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning; the guard changes at the Government Palace around noon",
+     "book": "",
+     "why": "The colonial heart of the viceroyalty: balconies, the Cathedral with Pizarro's tomb, and the bone-lined crypts under San Francisco.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Taxi from Miraflores to Plaza Mayor",
+       "note": "30–45 min, more at rush hour"
+      },
+      {
+       "at": "10:00",
+       "what": "Lima Cathedral",
+       "note": "about 1 h"
+      },
+      {
+       "at": "11:00",
+       "what": "San Francisco monastery and its catacombs",
+       "note": "guided visits in English and Spanish, about 45 min"
+      },
+      {
+       "at": "11:45",
+       "what": "Changing of the guard at the Government Palace, Plaza Mayor"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch: ceviche back in Miraflores or near the centre"
+      }
+     ],
+     "extras": [
+      "Walk down Jirón de la Unión to Plaza San Martín: the art deco square few tours bother with.",
+      "Keep the phone in the pocket around the centre's busy streets."
+     ],
+     "sights": [
+      "Plaza Mayor, Lima",
+      "Lima Cathedral",
+      "San Francisco Monastery, Lima"
+     ]
+    },
+    {
+     "id": "larco",
+     "name": "Larco Museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Late afternoon; it stays open into the evening",
+     "book": "",
+     "why": "Pre-Columbian Peru in one house: gold, textiles and thousands of Moche pots. The best start before Cusco.",
+     "act": {
+      "type": "city"
+     },
+     "extras": [
+      "The garden café is one of the city's nicest lunches."
+     ]
+    },
+    {
+     "id": "pucllana",
+     "name": "Huaca Pucllana, an adobe pyramid in Miraflores",
+     "hours": "1 h with a guide",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Daytime visits are guided",
+     "book": "",
+     "why": "A 1,500-year-old pyramid of mud bricks in the middle of the city's smartest district.",
+     "act": {
+      "type": "city"
+     }
+    },
+    {
+     "id": "pachacamac",
+     "name": "Pachacamac",
+     "hours": "Half a day · 30 km south",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Morning, before the sun is high",
+     "book": "",
+     "why": "A huge sanctuary of temples and pyramids used for a thousand years before the Incas, at the edge of the desert.",
+     "act": {
+      "type": "city"
+     }
+    },
+    {
+     "id": "fountains",
+     "name": "The Magic Water Circuit",
+     "hours": "1–2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "After dark",
+     "book": "",
+     "why": "Lit fountains and a water show in the Parque de la Reserva. Locals love it.",
+     "act": {
+      "type": "city"
+     },
+     "weekdays": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "sights": [
+      "Circuito Mágico del Agua"
+     ]
+    }
+   ],
+   "extras": [
+    "Ceviche is lunch in Lima: the classic cevicherías close in the late afternoon.",
+    "From the airport to Miraflores takes 45 min to 1 h 30. Before a domestic flight at rush hour, leave 3 h ahead.",
+    "Surquillo market, next to Miraflores, is where cooks shop: fruit you have never seen, cheap lunch counters."
+   ]
+  },
+  {
+   "id": "pe-paracas",
+   "names": [
+    "Paracas",
+    "Pisco",
+    "Ballestas Islands",
+    "Paracas National Reserve",
+    "Huacachina",
+    "Ica"
+   ],
+   "country": "PE",
+   "lat": -13.86,
+   "lon": -76.25,
+   "radius_km": 70,
+   "season": "Desert: sunny almost all year, hazier and cooler from June to September. A strong wind (the paraca) often rises in the afternoon.",
+   "sleep": "In Paracas by the bay for the morning boat, or at the Huacachina oasis for the dunes. Ica, 5 km from Huacachina, has more choice.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Paracas",
+    "https://en.wikivoyage.org/wiki/Huacachina",
+    "https://en.wikivoyage.org/wiki/Ica"
+   ],
+   "items": [
+    {
+     "id": "ballestas",
+     "name": "Ballestas Islands by boat",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "First boat around 08:00: the sea is calm in the morning",
+     "book": "Book the day before; boats leave from El Chaco pier",
+     "why": "Sea lions, Humboldt penguins and boobies by the thousand on bare rock islands, and the giant Candelabra drawn on the hill on the way.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "07:30",
+       "what": "At El Chaco pier",
+       "note": "pay the small port fee and the island fee in cash"
+      },
+      {
+       "at": "08:00",
+       "what": "Boat out; stop at the Candelabra geoglyph"
+      },
+      {
+       "at": "08:40",
+       "what": "Around the islands: sea lions, penguins, boobies",
+       "note": "boats don't land"
+      },
+      {
+       "at": "10:00",
+       "what": "Back on the pier; breakfast by the bay"
+      }
+     ],
+     "extras": [
+      "Wear a hat: thousands of birds fly over the boat.",
+      "A windproof layer: the boat is fast and the morning is cool."
+     ],
+     "sights": [
+      "Ballestas Islands",
+      "Paracas Candelabra"
+     ]
+    },
+    {
+     "id": "reserve",
+     "name": "Paracas National Reserve: red beach and cliffs",
+     "hours": "3–4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Late morning, after the boat; the wind rises in the afternoon",
+     "book": "",
+     "why": "Pink and ochre desert falling into the ocean, the red beach and fishing villages where you eat what came in that morning.",
+     "act": {
+      "type": "desert"
+     },
+     "steps": [
+      {
+       "at": "10:30",
+       "what": "Drive into the reserve; visitor centre"
+      },
+      {
+       "at": "11:15",
+       "what": "La Catedral viewpoint",
+       "note": "its arch fell in the 2007 earthquake"
+      },
+      {
+       "at": "12:00",
+       "what": "Playa Roja viewpoint"
+      },
+      {
+       "at": "13:00",
+       "what": "Fish lunch at Lagunillas"
+      },
+      {
+       "at": "15:00",
+       "what": "Back in Paracas"
+      }
+     ],
+     "sights": [
+      "Paracas National Reserve"
+     ]
+    },
+    {
+     "id": "huacachina",
+     "name": "Huacachina: dune buggy and sandboarding",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Late afternoon, for the sunset from the dunes",
+     "book": "Any agency at the oasis; choose one with seat belts",
+     "why": "A lagoon in a ring of giant dunes. The buggy is a roller coaster; the boards go down on your belly.",
+     "act": {
+      "type": "desert"
+     },
+     "steps": [
+      {
+       "at": "15:30",
+       "what": "At the oasis"
+      },
+      {
+       "at": "16:00",
+       "what": "Buggy into the dunes; sandboarding on 3–4 slopes"
+      },
+      {
+       "at": "18:00",
+       "what": "Sunset from the top of the dunes"
+      },
+      {
+       "at": "19:00",
+       "what": "Dinner by the lagoon or in Ica"
+      }
+     ],
+     "extras": [
+      "Ica is pisco country: a bodega tasting on the way costs little and few tours stop.",
+      "Sand gets into everything: a cheap bag for the phone."
+     ],
+     "sights": [
+      "Huacachina",
+      "Ica"
+     ],
+     "arrive": true
+    }
+   ],
+   "extras": [
+    "Many tours do Ballestas, the reserve and Huacachina in one day from Lima: it works, but it is 12 hours on the move.",
+    "Bring cash in soles: the pier, the reserve and the oasis rarely take cards."
+   ]
+  },
+  {
+   "id": "pe-nazca",
+   "names": [
+    "Nazca",
+    "Nasca",
+    "Nazca Lines"
+   ],
+   "country": "PE",
+   "lat": -14.83,
+   "lon": -74.94,
+   "radius_km": 35,
+   "season": "Hot and dry all year. Flights are best in the morning, before the wind and the heat haze.",
+   "sleep": "One night in town is enough. Many take the lines in the morning and leave for Arequipa by night bus.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Nazca",
+    "https://whc.unesco.org/en/list/700/"
+   ],
+   "items": [
+    {
+     "id": "lines",
+     "name": "Nazca Lines from the air",
+     "hours": "35 min flight · 2–3 h with the waiting",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "Morning, before the wind",
+     "book": "Book with an operator with a good safety record; bring the passport",
+     "why": "The hummingbird, the monkey, the spider: figures hundreds of metres long, only readable from the sky.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "At María Reiche airfield: passport and weighing"
+      },
+      {
+       "at": "07:30",
+       "what": "Wait for your slot",
+       "note": "flights go by weight and wind"
+      },
+      {
+       "at": "08:30",
+       "what": "Flight, about 35 min",
+       "note": "the plane banks left and right so both sides see"
+      },
+      {
+       "at": "09:30",
+       "what": "Back on the ground"
+      }
+     ],
+     "extras": [
+      "A light breakfast only: the small plane turns hard.",
+      "Not flying? The roadside tower on the Panamericana shows the Hands and the Tree from the ground for a few soles."
+     ],
+     "sights": [
+      "Nazca Lines"
+     ]
+    },
+    {
+     "id": "chauchilla",
+     "name": "Chauchilla Cemetery",
+     "hours": "2 h · 30 km south",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning or late afternoon",
+     "book": "",
+     "why": "Mummies still sitting in their open tombs in the desert, with hair and cloth after a thousand years.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Chauchilla Cemetery"
+     ]
+    },
+    {
+     "id": "cantalloc",
+     "name": "Cantalloc aqueducts",
+     "hours": "1–2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Afternoon",
+     "book": "",
+     "why": "Spiral stone wells the Nazca people built to reach water underground. Some still run.",
+     "act": {
+      "type": "desert"
+     }
+    }
+   ],
+   "extras": [
+    "The night bus to Arequipa takes about 9–10 hours: book a semi-cama or cama seat."
+   ]
+  },
+  {
+   "id": "pe-arequipa",
+   "names": [
+    "Arequipa",
+    "Yanahuara"
+   ],
+   "country": "PE",
+   "lat": -16.4,
+   "lon": -71.54,
+   "radius_km": 20,
+   "season": "Sunny almost every day; cool nights. A little rain from January to March. The city is at 2,335 m.",
+   "sleep": "In the historic centre, within walking distance of the Plaza de Armas.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Arequipa",
+    "https://santacatalina.org.pe/"
+   ],
+   "items": [
+    {
+     "id": "yanahuara",
+     "name": "Yanahuara viewpoint and El Misti at sunset",
+     "hours": "1–2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Late afternoon",
+     "book": "",
+     "why": "White stone arches framing the perfect cone of El Misti. The classic Arequipa view.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Yanahuara",
+      "El Misti"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "centre",
+     "name": "Santa Catalina Monastery, the Plaza de Armas and Juanita",
+     "hours": "A whole day, at an easy pace",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Start at Santa Catalina in the morning",
+     "book": "",
+     "why": "A walled city of nuns in red and blue streets, the white-stone square, and Juanita, the Inca girl found frozen on Ampato.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Santa Catalina Monastery",
+       "note": "2 h; take a guide at the door (paid on top)"
+      },
+      {
+       "at": "11:15",
+       "what": "Plaza de Armas and the Cathedral"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in a picantería",
+       "note": "rocoto relleno, chupe de camarones; they serve lunch only"
+      },
+      {
+       "at": "15:00",
+       "what": "Museo Santuarios Andinos: Juanita, the ice maiden",
+       "note": "guided, about 1 h"
+      },
+      {
+       "at": "16:30",
+       "what": "San Camilo market",
+       "note": "fruit juices, cheese, local bread"
+      },
+      {
+       "at": "17:30",
+       "what": "Sunset from Yanahuara if not done yet"
+      }
+     ],
+     "sights": [
+      "Santa Catalina Monastery",
+      "Plaza de Armas, Arequipa",
+      "Arequipa Cathedral"
+     ]
+    },
+    {
+     "id": "colca-day",
+     "name": "Colca Canyon in a day",
+     "hours": "15 h · leaves around 03:00",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "Only if you can't sleep in Chivay; two days is much better",
+     "book": "",
+     "why": "The condors at Cruz del Cóndor without sleeping in the canyon. A very long day, over a 4,900 m pass.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4900
+     },
+     "sights": [
+      "Colca Canyon",
+      "Cruz del Cóndor"
+     ]
+    }
+   ],
+   "extras": [
+    "Arequipa (2,335 m) is a good step up before Colca (3,600 m and a 4,900 m pass) and Puno (3,830 m).",
+    "Queso helado, a cinnamon ice cream sold by the Santa Catalina wall, is the local snack."
+   ]
+  },
+  {
+   "id": "pe-colca",
+   "names": [
+    "Chivay",
+    "Colca Canyon",
+    "Colca Valley",
+    "Yanque",
+    "Cabanaconde",
+    "Colca"
+   ],
+   "country": "PE",
+   "lat": -15.64,
+   "lon": -71.6,
+   "radius_km": 45,
+   "season": "Dry and sunny from April to November, freezing nights. Rain from December to March. Chivay is at 3,630 m.",
+   "sleep": "In Chivay or Yanque: a lodge with hot springs makes the cold night easy.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Colca Canyon",
+    "https://www.colcaperu.gob.pe/"
+   ],
+   "items": [
+    {
+     "id": "condor",
+     "name": "Cruz del Cóndor at dawn, the terraced valley on the way back",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "08:00–10:00, when the condors rise on the warm air",
+     "book": "",
+     "why": "Andean condors riding the morning air out of one of the deepest canyons on Earth, a few metres over your head.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3800
+     },
+     "steps": [
+      {
+       "at": "06:00",
+       "what": "Leave Chivay",
+       "note": "1 h 30 by road"
+      },
+      {
+       "at": "06:45",
+       "what": "Yanque square: morning dances, then Maca's church"
+      },
+      {
+       "at": "08:00",
+       "what": "Cruz del Cóndor",
+       "note": "stay at least an hour; walk the rim path away from the crowd"
+      },
+      {
+       "at": "10:00",
+       "what": "Back along the canyon; terraces viewpoints at Pinchollo and Antahuilque"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in Chivay"
+      }
+     ],
+     "extras": [
+      "Fewer condors in the rainy months (December to March).",
+      "The tourist ticket (boleto) for the canyon is checked on the road: carry cash soles."
+     ],
+     "sights": [
+      "Cruz del Cóndor",
+      "Colca Canyon",
+      "Yanque",
+      "Maca"
+     ]
+    },
+    {
+     "id": "calera",
+     "name": "La Calera hot springs",
+     "hours": "1–2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Evening of the day you arrive",
+     "book": "",
+     "why": "Hot pools by the river after the long drive from Arequipa.",
+     "act": {
+      "type": "city"
+     },
+     "extras": [
+      "The road from Arequipa crosses Patapampa at about 4,900 m: coca tea, little food, no alcohol that day."
+     ],
+     "arrive": true
+    },
+    {
+     "id": "yanque",
+     "name": "Uyo Uyo ruins and a walk in Yanque",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Afternoon",
+     "book": "",
+     "why": "Stone houses of the Collagua people and terraces still farmed, ten minutes from Chivay.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3500
+     },
+     "sights": [
+      "Yanque"
+     ]
+    }
+   ],
+   "extras": [
+    "Fit and with time: the two-day trek down to the Sangalle oasis from Cabanaconde, 1,000 m down and up again at dawn.",
+    "From Chivay to Puno is about 6 hours over the altiplano, with flamingos at Lagunillas."
+   ]
+  },
+  {
+   "id": "pe-puno",
+   "names": [
+    "Puno",
+    "Lake Titicaca",
+    "Uros floating islands",
+    "Taquile Island",
+    "Titicaca"
+   ],
+   "country": "PE",
+   "lat": -15.84,
+   "lon": -70.02,
+   "radius_km": 40,
+   "season": "At 3,830 m: sunny days and freezing nights all year. Rain in the afternoon from December to March.",
+   "sleep": "In Puno near the Plaza de Armas, or a lodge on the lake. One night with a family on Amantaní is the real thing.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Puno",
+    "https://en.wikivoyage.org/wiki/Lake Titicaca"
+   ],
+   "items": [
+    {
+     "id": "sillustani",
+     "name": "Sillustani burial towers at sunset",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Late afternoon",
+     "book": "",
+     "why": "Stone towers of the Colla lords on a peninsula over Lake Umayo. The late light makes them glow.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3900
+     },
+     "sights": [
+      "Sillustani"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "lake",
+     "name": "Uros and Taquile by boat",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave around 07:00",
+     "book": "A day ahead in Puno",
+     "why": "Islands made of reeds, then Taquile, where the men knit and the textiles are on UNESCO's list.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "06:45",
+       "what": "Pick-up at the hotel"
+      },
+      {
+       "at": "07:30",
+       "what": "Boat from Puno's port"
+      },
+      {
+       "at": "08:00",
+       "what": "Uros floating islands",
+       "note": "about 1 h; they show how the islands are built"
+      },
+      {
+       "at": "09:15",
+       "what": "Boat to Taquile",
+       "note": "about 2 h 30"
+      },
+      {
+       "at": "12:00",
+       "what": "Walk up to Taquile's square",
+       "note": "steep at 3,950 m: go slow"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch with a family: lake trout"
+      },
+      {
+       "at": "14:30",
+       "what": "Down the long stone stairway to the other port"
+      },
+      {
+       "at": "17:00",
+       "what": "Back in Puno"
+      }
+     ],
+     "extras": [
+      "The sun on the lake is strong: hat and sun cream even when it feels cold.",
+      "Bring small coins for the islands' boat rides and crafts."
+     ],
+     "sights": [
+      "Uros floating islands",
+      "Taquile Island",
+      "Lake Titicaca"
+     ]
+    },
+    {
+     "id": "amantani",
+     "name": "A night with a family on Amantaní",
+     "hours": "2 days, 1 night",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave Puno in the morning",
+     "book": "Through a Puno agency or a community tour",
+     "why": "Sleep in a farmhouse, eat what the family eats, sunset from the Pachatata temple. Taquile on the way back.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Amantaní"
+     ]
+    }
+   ],
+   "extras": [
+    "Puno is at 3,830 m: the first evening, rest, coca tea, light dinner.",
+    "Candelaria, one of South America's biggest festivals, fills Puno with dancers in the first half of February.",
+    "The tourist bus to Cusco (about 10 h) stops at Pukará, La Raya pass (4,335 m), Raqchi and Andahuaylillas: a sightseeing day, not just a transfer."
+   ]
+  },
+  {
+   "id": "pe-cusco",
+   "names": [
+    "Cusco",
+    "Cuzco",
+    "Qosqo"
+   ],
+   "country": "PE",
+   "lat": -13.52,
+   "lon": -71.97,
+   "radius_km": 15,
+   "season": "Dry and sunny from May to September, below 0 °C at night. Rain most afternoons from December to March. The city is at 3,400 m.",
+   "sleep": "San Blas or near the Plaza de Armas, on foot to everything. San Blas is steep: think of it with luggage.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Cusco",
+    "https://tuboleto.cultura.pe/"
+   ],
+   "items": [
+    {
+     "id": "first",
+     "name": "A slow first afternoon in San Blas",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "The afternoon you land",
+     "book": "",
+     "why": "The altitude needs a gentle first day: craft workshops, the twelve-angled stone and the view over the roofs.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "15:00",
+       "what": "Coca tea, then walk down Hatun Rumiyoc to the twelve-angled stone"
+      },
+      {
+       "at": "16:00",
+       "what": "San Blas square and its workshops",
+       "note": "the church pulpit is carved from one cedar"
+      },
+      {
+       "at": "17:30",
+       "what": "Sunset from the San Blas viewpoint"
+      },
+      {
+       "at": "19:00",
+       "what": "Light dinner, no alcohol the first night"
+      }
+     ],
+     "sights": [
+      "Plaza de Armas, Cusco"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "centre",
+     "name": "Cusco on foot: market, Qorikancha, the Cathedral",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Start at the market, before the crowds",
+     "book": "",
+     "why": "The Inca capital under the Spanish one: walls of the Sun temple inside a convent, and a cathedral full of Andean paintings.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "San Pedro market",
+       "note": "fruit juice at the counters, the stalls of herbs and bread"
+      },
+      {
+       "at": "09:30",
+       "what": "Qorikancha, the Sun temple",
+       "note": "about 1 h 15"
+      },
+      {
+       "at": "11:00",
+       "what": "Plaza de Armas and the Cathedral",
+       "note": "about 1 h 30; look for the guinea pig on the Last Supper"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch: a set menu of the day in a local place"
+      },
+      {
+       "at": "15:00",
+       "what": "Pre-Columbian Art Museum or the Inka Museum"
+      },
+      {
+       "at": "17:30",
+       "what": "Evening walk in the lit square; pisco on a balcony"
+      }
+     ],
+     "extras": [
+      "Qorikancha and the Cathedral are not on the tourist ticket: pay at the door.",
+      "Many churches let you in free for the morning mass: quiet, no ticket, no photos."
+     ],
+     "sights": [
+      "Qorikancha",
+      "Cusco Cathedral",
+      "Plaza de Armas, Cusco"
+     ]
+    },
+    {
+     "id": "ruins",
+     "name": "Sacsayhuamán and the ruins above town, walking down",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Afternoon; take a taxi up and walk down",
+     "book": "Tourist ticket (boleto turístico)",
+     "why": "The giant zigzag walls of Sacsayhuamán and three smaller Inca sites, done downhill as the locals do.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3750
+     },
+     "steps": [
+      {
+       "at": "13:30",
+       "what": "Taxi to Tambomachay, the highest of the four",
+       "note": "20 min"
+      },
+      {
+       "at": "14:00",
+       "what": "Tambomachay's water channels, Puka Pukara across the road"
+      },
+      {
+       "at": "15:00",
+       "what": "Walk down to Qenqo, a carved rock shrine",
+       "note": "about 45 min on foot"
+      },
+      {
+       "at": "16:00",
+       "what": "Sacsayhuamán",
+       "note": "walls of stones over 100 tonnes; 1 h 30"
+      },
+      {
+       "at": "17:45",
+       "what": "Down the old stone path into San Blas at sunset"
+      }
+     ],
+     "extras": [
+      "Above Sacsayhuamán, the White Christ (Cristo Blanco) has the best free view over the city."
+     ],
+     "sights": [
+      "Sacsayhuamán",
+      "Qenqo",
+      "Puka Pukara",
+      "Tambomachay"
+     ]
+    },
+    {
+     "id": "valley",
+     "name": "Sacred Valley by road: Pisac, Moray, Maras, Chinchero",
+     "hours": "A whole day · 10 h",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Leave at 07:00",
+     "book": "Tourist ticket for Pisac, Moray and Chinchero; Maras salt pans paid at the gate",
+     "why": "Terraces on a mountain, the circular Inca terraces of Moray and 3,000 salt pools on a hillside.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3800
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Leave Cusco"
+      },
+      {
+       "at": "08:00",
+       "what": "Pisac ruins",
+       "note": "enter from the top car park and walk down"
+      },
+      {
+       "at": "10:30",
+       "what": "Pisac market"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in Urubamba"
+      },
+      {
+       "at": "14:00",
+       "what": "Moray"
+      },
+      {
+       "at": "15:15",
+       "what": "Maras salt pans"
+      },
+      {
+       "at": "16:30",
+       "what": "Chinchero: weavers' demonstration"
+      },
+      {
+       "at": "18:00",
+       "what": "Back in Cusco"
+      }
+     ],
+     "extras": [
+      "Sunday is the big market day in Pisac.",
+      "Better still: sleep a night in the valley and go on to Machu Picchu from Ollantaytambo."
+     ],
+     "sights": [
+      "Sacred Valley",
+      "Pisac",
+      "Moray",
+      "Maras",
+      "Chinchero"
+     ]
+    },
+    {
+     "id": "rainbow",
+     "name": "Rainbow Mountain (Vinicunca)",
+     "hours": "A whole day · 04:00 to 17:00",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "After 2–3 days in Cusco, not before",
+     "book": "A day or two ahead; cash for the community fee",
+     "why": "Striped red, yellow and green slopes at about 5,000 m. Unforgettable when clear, hard on the lungs.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 5100
+     },
+     "steps": [
+      {
+       "at": "04:00",
+       "what": "Pick-up"
+      },
+      {
+       "at": "07:00",
+       "what": "Breakfast in Cusipata"
+      },
+      {
+       "at": "08:30",
+       "what": "Start walking at about 4,600 m"
+      },
+      {
+       "at": "10:00",
+       "what": "The top",
+       "note": "horses can take you most of the way up, paid in cash"
+      },
+      {
+       "at": "12:00",
+       "what": "Back at the trailhead; lunch"
+      },
+      {
+       "at": "16:30",
+       "what": "Back in Cusco"
+      }
+     ],
+     "extras": [
+      "Palccoyo, another rainbow mountain, is about 1 h of easy walking with far fewer people.",
+      "The Red Valley next to Vinicunca is worth the extra 30 minutes if your legs hold."
+     ],
+     "sights": [
+      "Rainbow Mountain"
+     ]
+    },
+    {
+     "id": "humantay",
+     "name": "Humantay Lake",
+     "hours": "A whole day · 04:30 to 17:00",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "After acclimatising",
+     "book": "",
+     "why": "A turquoise lake under the Salkantay glacier, after a steep 1 h 30 climb to 4,200 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 4250
+     },
+     "sights": [
+      "Humantay Lake"
+     ]
+    }
+   ],
+   "extras": [
+    "The tourist ticket (boleto turístico) costs S/130 and covers 16 sites for 10 days, not Machu Picchu, Qorikancha, the Cathedral or Maras.",
+    "Machu Picchu tickets are sold by the hour (06:00 to 15:00) and by circuit at tuboleto.cultura.pe: in high season buy weeks ahead.",
+    "The Inca Trail needs a permit bought through an agency, months ahead; the trail closes every February.",
+    "Inti Raymi, the Inca sun festival, fills Sacsayhuamán on 24 June: book everything early that week."
+   ]
+  },
+  {
+   "id": "pe-sacred-valley",
+   "names": [
+    "Ollantaytambo",
+    "Urubamba",
+    "Sacred Valley",
+    "Valle Sagrado",
+    "Pisac",
+    "Pisaq"
+   ],
+   "country": "PE",
+   "lat": -13.27,
+   "lon": -72.2,
+   "radius_km": 25,
+   "season": "Lower and warmer than Cusco (2,800–2,900 m). Dry from May to September; rain in the afternoon from December to March.",
+   "sleep": "Ollantaytambo for the trains to Machu Picchu and the Inca streets; Urubamba for lodges with gardens.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ollantaytambo",
+    "https://en.wikivoyage.org/wiki/Sacred Valley",
+    "https://www.perurail.com/"
+   ],
+   "items": [
+    {
+     "id": "ollanta",
+     "name": "Ollantaytambo fortress at opening time, then the Inca town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "07:00, before the tour buses arrive mid-morning",
+     "book": "Tourist ticket",
+     "why": "Terraces and the unfinished Sun temple over a town whose Inca canals still run down the streets.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2900
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Up the terraces to the Sun temple",
+       "note": "about 1 h 30"
+      },
+      {
+       "at": "08:45",
+       "what": "Across town, up to the Pinkuylluna storehouses",
+       "note": "free, steep, 45 min"
+      },
+      {
+       "at": "10:00",
+       "what": "The Inca blocks of the old town",
+       "note": "doorways and running canals"
+      },
+      {
+       "at": "11:00",
+       "what": "Coffee in the square"
+      }
+     ],
+     "sights": [
+      "Ollantaytambo"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "moray-maras",
+     "name": "Moray and the Maras salt pans, walking down to the river",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Afternoon light on the salt pans",
+     "book": "Moray on the tourist ticket; Maras paid at the gate",
+     "why": "Circular Inca terraces, then thousands of salt pools on a hillside, still worked by local families.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3500
+     },
+     "steps": [
+      {
+       "at": "13:30",
+       "what": "Taxi to Moray",
+       "note": "45 min from Ollantaytambo"
+      },
+      {
+       "at": "14:30",
+       "what": "Moray's circles"
+      },
+      {
+       "at": "15:45",
+       "what": "Maras salt pans"
+      },
+      {
+       "at": "16:30",
+       "what": "Walk down from the salt pans to the Urubamba river",
+       "note": "about 1 h; a taxi waits at the bridge"
+      }
+     ],
+     "extras": [
+      "The walk down from the salt pans is not in most tours: the best view of the pools."
+     ],
+     "sights": [
+      "Moray",
+      "Maras"
+     ]
+    },
+    {
+     "id": "pisac",
+     "name": "Pisac ruins from the top, walking down to the market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Morning; Sunday is the big market",
+     "book": "Tourist ticket",
+     "why": "Some of the finest Inca terraces anywhere, then the market. Done top-down, it's all downhill.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3500
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Taxi to the upper car park"
+      },
+      {
+       "at": "08:30",
+       "what": "Walk the ridge: Intihuatana, the terraces"
+      },
+      {
+       "at": "10:30",
+       "what": "Down the stairs to the village",
+       "note": "about 1 h"
+      },
+      {
+       "at": "11:30",
+       "what": "Pisac market"
+      }
+     ],
+     "sights": [
+      "Pisac"
+     ]
+    },
+    {
+     "id": "chinchero",
+     "name": "Chinchero: weavers and the Sunday market",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunday morning",
+     "book": "",
+     "why": "A colonial church on Inca walls and women who dye wool with plants in front of you.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Chinchero"
+     ]
+    }
+   ],
+   "extras": [
+    "Trains to Machu Picchu leave from Ollantaytambo (PeruRail, Inca Rail), about 1 h 30 to Aguas Calientes.",
+    "On the train only a small bag (about 5 kg): leave the big one at the hotel in Ollantaytambo or Cusco.",
+    "Fit and keen: the one-day Inca Trail from km 104 reaches Machu Picchu through the Sun Gate; it needs a permit too."
+   ]
+  },
+  {
+   "id": "pe-machu-picchu",
+   "names": [
+    "Aguas Calientes",
+    "Machu Picchu",
+    "Machu Picchu Pueblo"
+   ],
+   "country": "PE",
+   "lat": -13.16,
+   "lon": -72.53,
+   "radius_km": 10,
+   "season": "Cloud forest at 2,000–2,400 m: humid, warm by day. Rain most afternoons from November to March; early clouds often lift by 9–10.",
+   "sleep": "One night in Aguas Calientes lets you take an early bus up and miss the day trippers.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Machu Picchu",
+    "https://tuboleto.cultura.pe/",
+    "https://www.machupicchu.gob.pe/"
+   ],
+   "items": [
+    {
+     "id": "springs",
+     "name": "Aguas Calientes hot springs",
+     "hours": "1–2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Evening",
+     "book": "",
+     "why": "Simple hot pools at the end of the town's main street, after the train.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true
+    },
+    {
+     "id": "mapi",
+     "name": "Machu Picchu on the first buses",
+     "hours": "4–5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "An early slot, or a 9–10 slot when the morning is cloudy",
+     "book": "Ticket with time slot and circuit, bus ticket, passport",
+     "why": "The Inca city on its ridge, mist rising off the peaks. Circuits are one-way: you walk the route on your ticket once.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2500
+     },
+     "steps": [
+      {
+       "at": "05:00",
+       "what": "Queue for the Consettur bus",
+       "note": "the first leaves at 05:30; 25 min up"
+      },
+      {
+       "at": "06:00",
+       "what": "Through the gate with your guide",
+       "note": "passport and ticket checked"
+      },
+      {
+       "at": "06:15",
+       "what": "The postcard view from the upper terraces"
+      },
+      {
+       "at": "07:00",
+       "what": "Temple of the Sun, the royal quarter, the Intihuatana (depending on circuit)"
+      },
+      {
+       "at": "09:00",
+       "what": "Out",
+       "note": "no re-entry"
+      },
+      {
+       "at": "09:30",
+       "what": "Bus down; breakfast in Aguas Calientes"
+      }
+     ],
+     "extras": [
+      "Toilets are only outside the gate: go before you enter.",
+      "Big backpacks stay in the lockers at the entrance.",
+      "Insect repellent: tiny biting flies by the ruins.",
+      "Some circuits include the walk to the Sun Gate (Intipunku), where the Inca Trail arrives: about 2 h return, worth it if yours does."
+     ],
+     "sights": [
+      "Machu Picchu"
+     ]
+    },
+    {
+     "id": "huayna",
+     "name": "Huayna Picchu or Machu Picchu Mountain",
+     "hours": "2–3 h",
+     "length": "short",
+     "effort": "hard",
+     "need": "clear",
+     "best": "Its own time slot on the ticket",
+     "book": "Buy with the Machu Picchu ticket: few places a day",
+     "why": "The peak in the photos, climbed on Inca stairs, looking down on the whole city. Huayna is steep and exposed.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 3080
+     },
+     "sights": [
+      "Huayna Picchu"
+     ]
+    },
+    {
+     "id": "mandor",
+     "name": "Mandor gardens and waterfall",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Afternoon after Machu Picchu",
+     "book": "",
+     "why": "Flat walk along the railway into a private garden with orchids, birds and a waterfall.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2000
+     }
+    }
+   ],
+   "extras": [
+    "Entry is with a licensed guide; guides wait at the bridge and the gate.",
+    "Buses down run all day; walking down the steps takes about 1 h 30."
+   ]
+  },
+  {
+   "id": "pe-tambopata",
+   "names": [
+    "Puerto Maldonado",
+    "Tambopata",
+    "Tambopata National Reserve",
+    "Madre de Dios"
+   ],
+   "country": "PE",
+   "lat": -12.59,
+   "lon": -69.19,
+   "radius_km": 70,
+   "season": "Rainforest: 25–33 °C and humid. Wettest from December to March, when trails are mud; drier May to October.",
+   "sleep": "In a lodge up the Tambopata or Madre de Dios river. Lodges run the days: boats, guides and meals included.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Puerto_Maldonado"
+   ],
+   "items": [
+    {
+     "id": "night",
+     "name": "Night walk in the forest",
+     "hours": "1 h 30",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "After dinner",
+     "book": "",
+     "why": "Tarantulas, frogs and stick insects by torchlight, a few minutes from the lodge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "arrive": true
+    },
+    {
+     "id": "sandoval",
+     "name": "Lake Sandoval by canoe",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave at dawn",
+     "book": "",
+     "why": "An oxbow lake with giant river otters, caimans, hoatzins and macaws flying over.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "steps": [
+      {
+       "at": "05:30",
+       "what": "Boat from the lodge"
+      },
+      {
+       "at": "06:15",
+       "what": "Walk 3 km into the forest"
+      },
+      {
+       "at": "07:00",
+       "what": "Paddle the lake: otters fish early"
+      },
+      {
+       "at": "10:00",
+       "what": "Back for lunch"
+      }
+     ],
+     "sights": [
+      "Lake Sandoval"
+     ]
+    },
+    {
+     "id": "clay-lick",
+     "name": "Macaws at the clay lick",
+     "hours": "Half a day, before dawn",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Leave at 04:30",
+     "book": "",
+     "why": "Hundreds of red and green macaws and parrots landing on a river cliff to eat clay. Dry mornings only.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "04:30",
+       "what": "Boat upriver"
+      },
+      {
+       "at": "05:45",
+       "what": "In the hide, in silence"
+      },
+      {
+       "at": "06:00",
+       "what": "Parrots, then the macaws on the clay"
+      },
+      {
+       "at": "08:30",
+       "what": "Breakfast on the river bank"
+      }
+     ],
+     "sights": [
+      "Tambopata National Reserve",
+      "Tambopata River"
+     ]
+    },
+    {
+     "id": "tower",
+     "name": "Canopy tower at sunrise or sunset",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Dawn or late afternoon",
+     "book": "",
+     "why": "Above the trees, toucans and monkeys at eye level.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     }
+    }
+   ],
+   "extras": [
+    "Long sleeves and long trousers in light colours, against the mosquitoes. Lodges lend rubber boots.",
+    "Yellow fever vaccination is recommended for this region: check with a travel clinic weeks ahead.",
+    "Flights from Cusco take under an hour: an easy add-on to Machu Picchu."
+   ]
+  },
+  {
+   "id": "pe-huaraz",
+   "names": [
+    "Huaraz",
+    "Cordillera Blanca",
+    "Huascarán National Park",
+    "Huascaran"
+   ],
+   "country": "PE",
+   "lat": -9.53,
+   "lon": -77.53,
+   "radius_km": 60,
+   "season": "Dry and sunny from May to September, the trekking season. Rain from December to March. Huaraz is at 3,050 m.",
+   "sleep": "In Huaraz town; agencies pick up from hotels for all day trips.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Huaraz",
+    "https://en.wikivoyage.org/wiki/Huascarán_National_Park"
+   ],
+   "items": [
+    {
+     "id": "churup",
+     "name": "Laguna Churup, the acclimatisation hike",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "Day 2 in Huaraz",
+     "book": "",
+     "why": "A green lake under a peak at 4,450 m: the classic test before Laguna 69.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4450
+     }
+    },
+    {
+     "id": "laguna-69",
+     "name": "Laguna 69",
+     "hours": "A whole day · 05:00 to 18:00",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "After two days at altitude",
+     "book": "Agency transport the day before",
+     "why": "A turquoise lake under the glaciers of Chacraraju, past the Llanganuco lakes. One of Peru's great day hikes.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 4600
+     },
+     "steps": [
+      {
+       "at": "05:00",
+       "what": "Pick-up"
+      },
+      {
+       "at": "07:30",
+       "what": "Breakfast in Yungay"
+      },
+      {
+       "at": "08:00",
+       "what": "Llanganuco lakes from the road"
+      },
+      {
+       "at": "08:30",
+       "what": "Start walking at Cebollapampa, 3,900 m"
+      },
+      {
+       "at": "11:30",
+       "what": "Laguna 69, 4,600 m",
+       "note": "1 h at the lake"
+      },
+      {
+       "at": "15:00",
+       "what": "Back at the bus"
+      },
+      {
+       "at": "18:00",
+       "what": "Back in Huaraz"
+      }
+     ],
+     "extras": [
+      "The last hour is steep and the air is thin: start at the front of the group."
+     ],
+     "sights": [
+      "Laguna 69",
+      "Llanganuco Lakes"
+     ]
+    },
+    {
+     "id": "pastoruri",
+     "name": "Pastoruri glacier and the Puya raimondii",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A retreating glacier at 5,000 m and giant puya plants that flower once in a century.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 5000
+     },
+     "sights": [
+      "Pastoruri"
+     ]
+    },
+    {
+     "id": "chavin",
+     "name": "Chavín de Huántar",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Tunnels and carved stone heads of a culture 3,000 years old, across the Cordillera.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Chavín de Huántar"
+     ]
+    }
+   ],
+   "extras": [
+    "Huaraz is at 3,050 m and Laguna 69 at 4,600 m: two easy days first is not optional."
+   ]
+  }
+ ]
+}

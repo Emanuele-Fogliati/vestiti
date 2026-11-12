@@ -33,6 +33,14 @@ NEED_TEXT = {
 }
 
 
+class Step(BaseModel):
+    """One moment of the day, as a good local guide would run it (Manu, 2026-11-12: "quasi ora
+    per ora, a livello di un tour operator"). `at` is when, as 24-hour HH:MM."""
+    at: str = Field(pattern=r"^([01][0-9]|2[0-3]):[0-5][0-9]$")
+    what: str = Field(min_length=3, max_length=140)
+    note: str = Field(default="", max_length=240)
+
+
 class Item(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9-]+$")
     name: str = Field(min_length=3, max_length=80)
@@ -46,6 +54,18 @@ class Item(BaseModel):
     months: list[int] = Field(default_factory=list)  # empty = all year
     weekdays: list[int] = Field(default_factory=list)  # 0 Monday .. 6 Sunday; empty = any day
     act: dict | None = None  # what it means for the clothes (an ActivityIn)
+    # the day hour by hour, and what tour programmes leave out ("i fuori programma")
+    steps: list[Step] = Field(default_factory=list, max_length=16)
+    extras: list[str] = Field(default_factory=list, max_length=8)
+    sights: list[str] = Field(default_factory=list, max_length=8)  # the places of the globe it covers
+    arrive: bool = False  # fits the afternoon you arrive
+
+    @field_validator("steps")
+    @classmethod
+    def _in_order(cls, v):
+        if [x.at for x in v] != sorted(x.at for x in v):
+            raise ValueError("steps must be in time order")
+        return v
 
     @field_validator("act")
     @classmethod
@@ -90,6 +110,7 @@ class Area(BaseModel):
     items: list[Item] = Field(min_length=1)
     rain: Rain | None = None
     routes: list[Route] = Field(default_factory=list)
+    extras: list[str] = Field(default_factory=list, max_length=10)  # off the programme, for the place
 
 
 def km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -101,8 +122,14 @@ def km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 @lru_cache
 def areas() -> tuple[Area, ...]:
-    doc = json.loads((HERE / "todo.json").read_text(encoding="utf-8"))
-    return tuple(Area.model_validate(a) for a in doc["areas"])
+    """todo.json, then one file per country in areas/ (pe.json, cl.json, ar.json, is.json)."""
+    files = [HERE / "todo.json", *sorted((HERE / "areas").glob("*.json"))]
+    out = [Area.model_validate(a) for f in files
+           for a in json.loads(f.read_text(encoding="utf-8"))["areas"]]
+    ids = [a.id for a in out]
+    if len(ids) != len(set(ids)):
+        raise ValueError(f"area written twice: {sorted({i for i in ids if ids.count(i) > 1})}")
+    return tuple(out)
 
 
 def area_for(name: str, country: str | None, lat: float | None, lon: float | None) -> Area | None:
@@ -208,13 +235,15 @@ class Todo(BaseModel):
     season: str = ""
     sleep: str = ""
     sources: list[str] = Field(default_factory=list)
+    extras: list[str] = Field(default_factory=list)
 
 
 def todo_for(name: str, country: str | None, lat: float, lon: float) -> Todo:
     a = area_for(name, country, lat, lon)
     if a:
         return Todo(source="guide", area=a.id, items=a.items, rain=a.rain, routes=a.routes,
-                    season=a.season, sleep=a.sleep, sources=[str(s) for s in a.sources])
+                    season=a.season, sleep=a.sleep, sources=[str(s) for s in a.sources],
+                    extras=a.extras)
     trips = from_trips(name, country, lat, lon)
     if trips:
         seen = {n for it in trips for n in it.name.split(" · ")}

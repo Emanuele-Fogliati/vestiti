@@ -1,0 +1,825 @@
+{
+ "_doc": "Chile, written by hand for the plans hour by hour (Manu, 2026-11-12). Patagonia (Torres del Paine, Puerto Natales, Punta Arenas) is in todo.json.",
+ "areas": [
+  {
+   "id": "cl-santiago",
+   "names": [
+    "Santiago",
+    "Santiago de Chile"
+   ],
+   "country": "CL",
+   "lat": -33.44,
+   "lon": -70.65,
+   "radius_km": 25,
+   "season": "Mediterranean: hot dry summers (December to February, above 30 °C), cool winters with smog that can hide the Andes. Spring and autumn are best.",
+   "sleep": "Lastarria or Providencia: on the metro, walkable, full of cafés.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Santiago_(Chile)",
+    "https://precolombino.cl/en/"
+   ],
+   "items": [
+    {
+     "id": "hill",
+     "name": "Cerro San Cristóbal by funicular at sunset",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Late afternoon, on a clear day",
+     "book": "",
+     "why": "The whole city under the wall of the Andes, then dinner in Bellavista below.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Cerro San Cristóbal"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "centre",
+     "name": "Santiago on foot: the Plaza de Armas, the market, La Moneda, Santa Lucía",
+     "hours": "A whole day at an easy pace",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Tuesday to Sunday: most museums close on Mondays",
+     "book": "",
+     "why": "The old centre in one loop: the cathedral square, a fish lunch at the Mercado Central, the presidential palace and a garden hill.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Plaza de Armas and the Metropolitan Cathedral"
+      },
+      {
+       "at": "10:45",
+       "what": "Museo Chileno de Arte Precolombino",
+       "note": "1 h 30, one of the best in South America"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at the Mercado Central",
+       "note": "seafood; the counters inside cost less than the big restaurants"
+      },
+      {
+       "at": "14:30",
+       "what": "La Moneda palace and its square"
+      },
+      {
+       "at": "15:30",
+       "what": "Up Santa Lucía hill",
+       "note": "gardens and a small fort"
+      },
+      {
+       "at": "17:00",
+       "what": "Coffee and bookshops in Lastarria"
+      }
+     ],
+     "sights": [
+      "Plaza de Armas, Santiago",
+      "La Moneda Palace",
+      "Santa Lucía Hill",
+      "Lastarria"
+     ]
+    },
+    {
+     "id": "wine",
+     "name": "A winery day in the Maipo or Casablanca valley",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Harvest from March to April",
+     "book": "Wineries need booking",
+     "why": "Carmenère in the Maipo under the Andes, or white wines in Casablanca on the way to the coast.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Casablanca Valley"
+     ]
+    },
+    {
+     "id": "cajon",
+     "name": "Cajón del Maipo and the mountains",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "October to April",
+     "book": "",
+     "why": "A canyon into the Andes an hour from the city: hot springs, a hike, or El Yeso reservoir.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2600
+     }
+    }
+   ],
+   "extras": [
+    "After a rainy day the smog clears and the Andes show: go up a hill that day.",
+    "The Mercado Central's touts push the big restaurants; walk to the smaller counters inside."
+   ]
+  },
+  {
+   "id": "cl-valparaiso",
+   "names": [
+    "Valparaíso",
+    "Valparaiso",
+    "Viña del Mar",
+    "Vina del Mar"
+   ],
+   "country": "CL",
+   "lat": -33.05,
+   "lon": -71.61,
+   "radius_km": 20,
+   "season": "Mild all year by the sea; foggy mornings in summer. Rain in the winter months (June to August).",
+   "sleep": "On Cerro Alegre or Cerro Concepción, the walkable hills with the views.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Valparaíso",
+    "https://fundacionneruda.org/en/la-sebastiana/"
+   ],
+   "items": [
+    {
+     "id": "casablanca",
+     "name": "Casablanca valley wineries on the way from Santiago",
+     "hours": "2–3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "On the way in",
+     "book": "Book the tasting",
+     "why": "White wines grown in the sea fog, on the road to the coast.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Casablanca Valley"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "hills",
+     "name": "The hills on foot: funiculars, street art, Neruda's house",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Tuesday to Sunday: La Sebastiana closes on Mondays",
+     "book": "",
+     "why": "A port city on 40 hills, linked by old funicular lifts and staircases covered in murals.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Plaza Sotomayor; free walking tours start here (tip-based)"
+      },
+      {
+       "at": "10:30",
+       "what": "Up by the Ascensor Reina Victoria or Concepción"
+      },
+      {
+       "at": "11:00",
+       "what": "Murals and viewpoints of Cerro Alegre and Concepción"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch with a view over the bay"
+      },
+      {
+       "at": "15:00",
+       "what": "La Sebastiana, Neruda's house",
+       "note": "1 h"
+      },
+      {
+       "at": "17:00",
+       "what": "The lower town and the port by trolleybus"
+      },
+      {
+       "at": "18:30",
+       "what": "Sunset from Paseo Gervasoni"
+      }
+     ],
+     "sights": [
+      "Cerro Alegre",
+      "Cerro Concepcion",
+      "La Sebastiana"
+     ]
+    },
+    {
+     "id": "vina",
+     "name": "Viña del Mar and the coast",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Beaches, gardens and the flower clock, 15 minutes by metro train along the sea.",
+     "act": {
+      "type": "city"
+     }
+    }
+   ],
+   "extras": [
+    "Keep the phone in the pocket in the port and the lower town.",
+    "New Year's Eve fireworks over the bay are among the biggest in South America."
+   ]
+  },
+  {
+   "id": "cl-atacama",
+   "names": [
+    "San Pedro de Atacama",
+    "Atacama",
+    "Atacama Desert"
+   ],
+   "country": "CL",
+   "lat": -22.91,
+   "lon": -68.2,
+   "radius_km": 70,
+   "season": "Desert at 2,400 m: hot, very dry days, cold nights; below −10 °C at El Tatio at dawn. Storms can close roads in January and February (the 'altiplanic winter').",
+   "sleep": "In San Pedro; all tours pick up there. Cash helps: few cash machines.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/San_Pedro_de_Atacama",
+    "https://www.conaf.cl/"
+   ],
+   "items": [
+    {
+     "id": "stars",
+     "name": "Stargazing in the desert",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Around new moon",
+     "book": "Book a day ahead",
+     "why": "Some of the clearest skies on Earth, with telescopes and a guide.",
+     "act": {
+      "type": "desert"
+     },
+     "arrive": true
+    },
+    {
+     "id": "moon",
+     "name": "Valle de la Luna at sunset",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "From 15:30 to sunset",
+     "book": "Time-slot ticket online",
+     "why": "Salt-crusted ridges, a giant dune and the Licancabur volcano going pink.",
+     "act": {
+      "type": "desert"
+     },
+     "steps": [
+      {
+       "at": "15:30",
+       "what": "Into the valley"
+      },
+      {
+       "at": "16:00",
+       "what": "Salt caves and Duna Mayor"
+      },
+      {
+       "at": "17:30",
+       "what": "Tres Marías rocks"
+      },
+      {
+       "at": "19:00",
+       "what": "Sunset from Kari viewpoint"
+      }
+     ],
+     "sights": [
+      "Valle de la Luna"
+     ]
+    },
+    {
+     "id": "tatio",
+     "name": "El Tatio geysers at sunrise",
+     "hours": "Half a day · leaves around 05:00",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave around 05:00",
+     "book": "A day ahead",
+     "why": "Columns of steam over 80 geysers at 4,300 m, at their best as the sun comes up. A hot pool on site.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4320
+     },
+     "steps": [
+      {
+       "at": "05:00",
+       "what": "Pick-up"
+      },
+      {
+       "at": "06:30",
+       "what": "The geyser field at sunrise",
+       "note": "−10 °C; stay on the paths"
+      },
+      {
+       "at": "07:30",
+       "what": "Breakfast by the van"
+      },
+      {
+       "at": "08:15",
+       "what": "Swim in the hot pool"
+      },
+      {
+       "at": "10:00",
+       "what": "Machuca village: llama skewers"
+      },
+      {
+       "at": "12:30",
+       "what": "Back in San Pedro"
+      }
+     ],
+     "extras": [
+      "Dress in layers you peel off: −10 °C at dawn, 25 °C by noon.",
+      "Swimwear under the clothes for the pool."
+     ],
+     "sights": [
+      "El Tatio"
+     ]
+    },
+    {
+     "id": "lagoons",
+     "name": "High lagoons and Piedras Rojas",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Leave at 07:00",
+     "book": "A day ahead",
+     "why": "Flamingos on the Salar de Atacama, two blue lakes under volcanoes at 4,100 m, and red rocks by a turquoise lagoon.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4200
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Pick-up"
+      },
+      {
+       "at": "08:30",
+       "what": "Laguna Chaxa: flamingos"
+      },
+      {
+       "at": "10:30",
+       "what": "Miscanti and Miñiques lagoons"
+      },
+      {
+       "at": "12:00",
+       "what": "Piedras Rojas"
+      },
+      {
+       "at": "13:30",
+       "what": "Lunch in Socaire"
+      },
+      {
+       "at": "15:30",
+       "what": "Toconao"
+      },
+      {
+       "at": "17:00",
+       "what": "Back in San Pedro"
+      }
+     ],
+     "sights": [
+      "Laguna Chaxa",
+      "Salar de Atacama",
+      "Piedras Rojas",
+      "Toconao"
+     ]
+    },
+    {
+     "id": "cejar",
+     "name": "Floating in Cejar Lagoon, sunset at Tebinquiche",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Afternoon",
+     "book": "",
+     "why": "Float in water saltier than the sea, then a pink sunset on the salt flats.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Cejar Lagoon"
+     ]
+    },
+    {
+     "id": "rainbow",
+     "name": "Rainbow Valley and the Yerbas Buenas rock art",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hills of green, red and white minerals, and carvings of llamas and flamingos.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Rainbow Valley"
+     ]
+    },
+    {
+     "id": "quitor",
+     "name": "Pukará de Quitor",
+     "hours": "1–2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Late afternoon",
+     "book": "",
+     "why": "A stone fort of the Atacameño people on a hill above the oasis.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2600
+     },
+     "sights": [
+      "Pukará de Quitor"
+     ]
+    }
+   ],
+   "extras": [
+    "San Pedro is at 2,400 m: do the 4,000 m trips (El Tatio, lagoons) after a day or two.",
+    "Lip balm, sunglasses and a hat: the air here is among the driest on Earth.",
+    "Park and community entrance fees are paid in cash pesos at each site."
+   ]
+  },
+  {
+   "id": "cl-puerto-varas",
+   "names": [
+    "Puerto Varas",
+    "Puerto Montt",
+    "Lake Llanquihue",
+    "Frutillar"
+   ],
+   "country": "CL",
+   "lat": -41.32,
+   "lon": -72.99,
+   "radius_km": 35,
+   "season": "Rain in any month (temperate rainforest); December to March is mildest. The volcano shows best in the morning.",
+   "sleep": "Puerto Varas, on the lake facing the volcano.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Puerto_Varas",
+    "https://www.conaf.cl/"
+   ],
+   "items": [
+    {
+     "id": "frutillar",
+     "name": "Frutillar and its lake theatre",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "German settlers' houses, cakes (kuchen) and a concert hall on stilts in the lake.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Lake Llanquihue"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "osorno",
+     "name": "Osorno volcano and the Petrohué falls",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "A clear morning",
+     "book": "",
+     "why": "A perfect snow cone over the lake, emerald rapids on black lava and the lake of Todos los Santos.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1200
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Drive around the lake to Ensenada"
+      },
+      {
+       "at": "10:00",
+       "what": "Petrohué falls",
+       "note": "1 h on the walkways"
+      },
+      {
+       "at": "11:30",
+       "what": "Lake Todos los Santos: short boat or the beach"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch"
+      },
+      {
+       "at": "14:30",
+       "what": "Up the volcano road to the ski centre; chairlift if running"
+      },
+      {
+       "at": "17:30",
+       "what": "Back in Puerto Varas"
+      }
+     ],
+     "sights": [
+      "Osorno Volcano",
+      "Lake Todos los Santos"
+     ]
+    },
+    {
+     "id": "chiloe-day",
+     "name": "Chiloé in a day: Ancud, the penguins, Castro",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave at 08:00",
+     "book": "",
+     "why": "Ferry to the island, penguins at Puñihuil (September to March), wooden churches and houses on stilts in Castro.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Chiloé Island"
+     ]
+    }
+   ],
+   "extras": [
+    "A rain jacket every day here, even in summer.",
+    "The Cruce Andino crosses to Bariloche in a day by boats and buses over three lakes: a scenic way into Argentina."
+   ]
+  },
+  {
+   "id": "cl-chiloe",
+   "names": [
+    "Castro",
+    "Chiloé",
+    "Chiloé Island",
+    "Chiloe",
+    "Ancud",
+    "Dalcahue"
+   ],
+   "country": "CL",
+   "lat": -42.48,
+   "lon": -73.76,
+   "radius_km": 60,
+   "season": "Wet and mild all year; the driest months are January and February.",
+   "sleep": "Castro, ideally in a palafito: a house on stilts over the water.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Chiloé_Island",
+    "https://whc.unesco.org/en/list/971/"
+   ],
+   "items": [
+    {
+     "id": "castro",
+     "name": "Castro: the stilt houses and the yellow church",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Colourful houses on stilts and the wooden San Francisco church, one of the island's UNESCO churches.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Chiloé Island"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "dalcahue",
+     "name": "Dalcahue market and the Achao church by ferry",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunday for Dalcahue's market",
+     "book": "",
+     "why": "A market of wool and smoked seafood, then a short ferry to Quinchao island and its oldest church.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Dalcahue market and church"
+      },
+      {
+       "at": "11:30",
+       "what": "Ferry to Quinchao",
+       "note": "10 min"
+      },
+      {
+       "at": "12:30",
+       "what": "Achao and its wooden church"
+      },
+      {
+       "at": "13:30",
+       "what": "Curanto lunch: shellfish and meat cooked in an earth oven"
+      },
+      {
+       "at": "16:00",
+       "what": "Back in Castro"
+      }
+     ]
+    },
+    {
+     "id": "penguins",
+     "name": "Penguins at Puñihuil",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Humboldt and Magellanic penguins on islets off the beach, by small boat.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "id": "cucao",
+     "name": "Chiloé National Park at Cucao",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Wild Pacific beaches and boardwalks through the rainforest.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     }
+    }
+   ],
+   "extras": [
+    "The ferry from Pargua takes about 30 minutes and runs often all day."
+   ]
+  },
+  {
+   "id": "cl-rapa-nui",
+   "names": [
+    "Hanga Roa",
+    "Easter Island",
+    "Rapa Nui",
+    "Isla de Pascua"
+   ],
+   "country": "CL",
+   "lat": -27.13,
+   "lon": -109.38,
+   "radius_km": 30,
+   "season": "Subtropical: 20–28 °C, short showers any time. The Tapati festival is in the first half of February.",
+   "sleep": "Hanga Roa, the only town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Easter_Island",
+    "https://whc.unesco.org/en/list/715/"
+   ],
+   "items": [
+    {
+     "id": "tahai",
+     "name": "Ahu Tahai at sunset",
+     "hours": "1–2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "Moai against the setting sun, a walk from town.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Ahu Tahai"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "east",
+     "name": "Sunrise at Tongariki, the Rano Raraku quarry, Anakena beach",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave Hanga Roa an hour before sunrise (sunrise is late here)",
+     "book": "Park ticket and a certified local guide",
+     "why": "Fifteen moai on one platform at dawn, the quarry where hundreds lie half carved, and a white beach with palms.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "steps": [
+      {
+       "at": "06:45",
+       "what": "Leave Hanga Roa"
+      },
+      {
+       "at": "07:30",
+       "what": "Sunrise behind Ahu Tongariki"
+      },
+      {
+       "at": "09:00",
+       "what": "Rano Raraku",
+       "note": "the quarry is once per ticket"
+      },
+      {
+       "at": "11:30",
+       "what": "Ahu Akahanga on the south coast"
+      },
+      {
+       "at": "13:00",
+       "what": "Anakena beach: swim and lunch"
+      },
+      {
+       "at": "16:30",
+       "what": "Back in town"
+      }
+     ],
+     "sights": [
+      "Ahu Tongariki",
+      "Rano Raraku",
+      "Anakena",
+      "Ahu Akahanga"
+     ]
+    },
+    {
+     "id": "orongo",
+     "name": "Rano Kau crater and Orongo",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "Orongo is once per ticket",
+     "why": "A crater lake and the village of the birdman cult on the cliff edge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 330
+     },
+     "sights": [
+      "Orongo",
+      "Rano Kau",
+      "Vinapu"
+     ]
+    },
+    {
+     "id": "akivi",
+     "name": "Ahu Akivi, the seven moai facing the sea",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The only moai that look out to sea, and lava caves nearby.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "sights": [
+      "Ahu Akivi"
+     ]
+    }
+   ],
+   "extras": [
+    "Inside the national park you must be with a certified local guide; the park ticket lasts 10 days.",
+    "Rano Raraku and Orongo can be entered only once each on the ticket: plan them on good days.",
+    "Everything is flown in: prices are high; bring pesos."
+   ]
+  }
+ ]
+}

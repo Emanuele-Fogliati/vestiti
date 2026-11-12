@@ -233,9 +233,99 @@ def test_no_trip_counts_in_a_proposal():
 
 def test_stop_panel_shows_what_trips_do_from_a_town():
     from app.guide.todo import todo_for
-    t = todo_for("Cusco", "PE", -13.53, -71.97)
+    t = todo_for("Kyoto", "JP", 35.01, 135.77)
     assert t.source == "trips"
-    assert any("Sacsayhuamán" in it.name and " · " in it.name for it in t.items)
+    assert any("Kinkaku-ji" in it.name and " · " in it.name for it in t.items)
+
+
+# --- the guide written by hand: hour by hour, with what the programmes leave out (Manu, 2026-11-12)
+
+def test_guides_cover_the_four_countries_with_hours_and_sources():
+    from app.guide.todo import areas
+    by = {}
+    for a in areas():
+        by.setdefault(a.country, []).append(a)
+        assert a.sources
+        for it in a.items:
+            ats = [x.at for x in it.steps]
+            assert ats == sorted(ats), (a.id, it.id)
+    for c, n in (("PE", 10), ("CL", 8), ("AR", 9), ("IS", 8)):
+        areas_c = by[c]
+        assert len(areas_c) >= n, c
+        # every area has at least one day hour by hour, and things off the programme somewhere
+        assert all(any(it.steps for it in a.items) for a in areas_c), c
+        assert sum(len(a.extras) + sum(len(it.extras) for it in a.items) for a in areas_c) >= 2 * n, c
+
+
+def test_guide_sights_are_places_of_the_globe():
+    from app import globe
+    from app.guide.todo import areas
+    names = {(p["country"], p["name"]) for p in globe.by_id().values()}
+    missing = [(a.id, n) for a in areas() for it in a.items for n in it.sights if (a.country, n) not in names]
+    assert not missing
+
+
+def test_peru_days_come_from_the_guide_hour_by_hour():
+    a, only = explore.best_area("Perù")
+    p = explore.propose(a, only, 21)
+    by = {s["name"]: s for s in p["stops"]}
+    cusco = by["Cusco"]
+    items = [t for d in cusco["plan"] for t in d.get("items", [])]
+    assert items and all(t["steps"] for t in items[:3])
+    # the dirty data of the trek legs is gone: no Llactapata or Nevado Veronica as a day
+    seen = [n for s in p["stops"] for d in s["plan"] for n in d["sights"]]
+    assert "Llactapata" not in seen and "Nevado Veronica" not in seen
+    # with nights in Ollantaytambo, the Sacred Valley is seen from there, not from Cusco
+    if by.get("Ollantaytambo", {}).get("days", 0) >= 2:
+        assert not any("Sacred Valley" in t["name"] for t in items)
+        valley = [t["name"] for d in by["Ollantaytambo"]["plan"] for t in d.get("items", [])]
+        assert any("Pisac" in n for n in valley) and any("Moray" in n for n in valley)
+    mapi = by["Aguas Calientes"]
+    assert any(t["id"] == "mapi" for d in mapi["plan"] for t in d.get("items", []))
+
+
+def test_half_days_share_a_day_only_when_their_hours_fit():
+    from app.guide.todo import Item
+    from app.services.explore import _fits
+    am = Item.model_validate({"id": "a", "name": "Boat", "steps": [{"at": "09:30", "what": "Boat out"}, {"at": "13:00", "what": "Boat back"}]})
+    pm = Item.model_validate({"id": "b", "name": "Park", "steps": [{"at": "13:30", "what": "Go in"}, {"at": "18:30", "what": "Go out"}]})
+    dawn = Item.model_validate({"id": "c", "name": "Lick", "steps": [{"at": "04:30", "what": "Boat up"}, {"at": "10:00", "what": "Boat back"}]})
+    loose = Item.model_validate({"id": "d", "name": "Museum"})
+    assert _fits([am], pm) and _fits([pm], am)
+    assert not _fits([am], dawn)
+    assert _fits([am, pm], loose)
+
+
+def test_no_day_tour_to_where_the_trip_sleeps():
+    stops = [
+        {"name": "Puerto Natales", "country": "CL", "lat": -51.72, "lon": -72.51, "days": 2, "plan": []},
+        {"name": "Torres del Paine National Park", "country": "CL", "lat": -51.0, "lon": -73.05, "days": 3, "plan": []},
+    ]
+    explore._guide_days(stops)
+    natales = [t["id"] for d in stops[0]["plan"] for t in d["items"]]
+    park = [t["id"] for d in stops[1]["plan"] for t in d["items"]]
+    assert "tdp-day-tour" not in natales
+    assert "base-torres" in park
+    # a stop of one night gets the thing not to miss, not the evening extra
+    one = [{"name": "Höfn", "country": "IS", "lat": 64.25, "lon": -15.21, "days": 1, "plan": []}]
+    explore._guide_days([{"name": "Vík í Mýrdal", "country": "IS", "lat": 63.42, "lon": -19.01, "days": 2, "plan": []}, *one])
+    assert one[0]["plan"][0]["items"][0]["id"] == "lagoon"
+
+
+def test_iceland_months_and_whales():
+    a, only = explore.best_area("Islanda")
+    p = explore.propose(a, only, 14, month=1)
+    # whales are out of season in January
+    husavik = next((s for s in p["stops"] if s["name"] == "Húsavík"), None)
+    if husavik:
+        assert not any(t["id"] == "whales" for d in husavik["plan"] for t in d.get("items", []))
+
+
+def test_board_shows_hours_and_extras_of_the_guide():
+    from app.guide.todo import todo_for
+    t = todo_for("Cusco", "PE", -13.53, -71.97)
+    assert t.source == "guide" and t.extras
+    assert any(it.steps for it in t.items)
 
 
 def test_api_trip_keeps_the_day_of_each_visit(client):

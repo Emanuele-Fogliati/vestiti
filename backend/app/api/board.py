@@ -113,7 +113,8 @@ def board(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
                      "items": [_item_out(i) for i in todo.items],
                      "rain": todo.rain.model_dump() if todo.rain else None,
                      "routes": [r.model_dump() for r in todo.routes],
-                     "season": todo.season, "sleep_tip": todo.sleep, "sources": todo.sources},
+                     "season": todo.season, "sleep_tip": todo.sleep, "sources": todo.sources,
+                     "extras": todo.extras},
             "plan": {
                 "mode": p.mode,
                 "choices": s.plan or {},

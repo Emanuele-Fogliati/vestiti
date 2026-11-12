@@ -30,3 +30,24 @@ describe("days of a step", () => {
     expect(dayText({ day: 3, kind: "more", sights: [], of: "Inca Trail" }, false)).toContain("Inca Trail");
   });
 });
+
+describe("days from a guide written by hand", () => {
+  const t = (id: string, name: string) => ({ id, name, hours: "", book: "", need: "any" as const, steps: [{ at: "08:00", what: "Start", note: "" }], extras: [] });
+  const s: PlanStep = {
+    key: "pe-cusco", name: "Cusco", country: "PE", lat: -13.5, lon: -72, days: 2, sights: [],
+    plan: [
+      { day: 1, kind: "arrive", sights: ["Plaza de Armas, Cusco"], items: [t("first", "A slow first afternoon")] },
+      { day: 2, kind: "day", sights: ["Qorikancha"], items: [t("centre", "Cusco on foot")] },
+    ],
+    also: ["Rainbow Mountain (Vinicunca)"], more_things: [t("rainbow", "Rainbow Mountain (Vinicunca)")],
+  };
+  it("names the things, not the places", () => {
+    expect(dayText(s.plan![1], false)).toBe("Cusco on foot");
+    expect(dayText(s.plan![0], false)).toBe("Arrive · then A slow first afternoon");
+  });
+  it("a day added takes the next thing, with its hours", () => {
+    const three = daysOf({ ...s, days: 3 });
+    expect(three[2].items?.[0].id).toBe("rainbow");
+    expect(three[2].items?.[0].steps.length).toBe(1);
+  });
+});
