@@ -180,3 +180,12 @@ def test_names_with_unsplittable_letters_fold_to_ascii():
     assert art._norm("Łódź") == "lodz"
     assert art._norm("Þingvellir") == "thingvellir"
     assert art._norm("Straße") == "strasse"
+
+
+def test_a_gateway_town_shows_its_sight_unless_the_trip_also_visits_the_sight():
+    def ids(*names):
+        return [lm.id if lm else None for lm in art.assign([S(name=n, latitude=None, longitude=None, notes=None)
+                                                            for n in names])]
+    assert ids("Aguas Calientes") == ["pe-machu-picchu"]
+    assert ids("Aguas Calientes", "Machu Picchu") == ["pe-aguas-calientes", "pe-machu-picchu"]
+    assert ids("Puno", "Uros Islands") == ["pe-puno", "pe-uros-titicaca"]
