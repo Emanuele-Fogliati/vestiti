@@ -64,9 +64,13 @@ export function useSpeech(onDone: (text: string) => void) {
       setHeard((finalText.current + interim).trim());
     };
     r.onerror = (e) => {
-      setError(e.error === "not-allowed" || e.error === "service-not-allowed"
-        ? "The microphone is blocked: allow it in the browser's address bar, or type it."
-        : e.error === "no-speech" ? "I didn't hear anything. Try again, a bit closer." : "Listening stopped. Try again or type it.");
+      setError(e.error === "not-allowed"
+        ? "The microphone is blocked for this page: allow it from the icon in the address bar (and in Windows: Settings › Privacy › Microphone), or type it."
+        : e.error === "service-not-allowed" || e.error === "network"
+          ? "This browser can't turn speech into text here (Brave, Firefox and in-app browsers can't). Use Chrome, Edge or Safari, or the microphone on your keyboard."
+          : e.error === "audio-capture" ? "No microphone found. Plug one in, or type it."
+            : e.error === "no-speech" ? "I didn't hear anything. Try again, a bit closer."
+              : `Listening stopped (${e.error}). Try again or type it.`);
     };
     r.onend = () => {
       setListening(false);
