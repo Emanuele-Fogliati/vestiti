@@ -1,0 +1,64 @@
+{
+ "id": "is-studlagil",
+ "country": "IS",
+ "name": "Stuðlagil canyon from Klaustursel",
+ "base": "Egilsstaðir",
+ "region": "Jökuldalur, East Iceland",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 10,
+  "gain_m": 150,
+  "source": "https://east.is/en/blog/studlagil-canyon-hike"
+ },
+ "why": "Walk down the Jökla past Stuðlafoss to the floor of the basalt column canyon, the only side where you stand among the columns by the turquoise river.",
+ "book": "Free; parking 1,000 ISK (Parka app). Road 923 from the Ring Road, 14 km to Klaustursel. A high-clearance car can go 2 km further to the upper car park and halve the walk.",
+ "water": "No drinking water; carry 1.5 litres.",
+ "dangers": [
+  "Ropes and steep steps down into the canyon; wet rock at the bottom.",
+  "Never swim: the glacier river is near 0 °C with a strong current."
+ ],
+ "turnaround": "In spring or after rain, if water covers the canyon floor, stay on the rim.",
+ "sources": [
+  "https://east.is/en/blog/studlagil-canyon-hike",
+  "https://east.is/en/place/studlagil-canyon"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Klaustursel bridge car park",
+   "lat": 65.18934,
+   "lon": -15.2509,
+   "role": "start",
+   "note": "Leave the car by the bridge over the Jökla at Klaustursel farm and cross to the east bank."
+  },
+  {
+   "id": "studlafoss",
+   "name": "Stuðlafoss",
+   "lat": 65.17389,
+   "lon": -15.27288,
+   "role": "point",
+   "note": "Halfway: a small fall over a ring of basalt columns, just off the track by the upper car park."
+  },
+  {
+   "id": "goal",
+   "name": "Stuðlagil canyon floor",
+   "lat": 65.1649,
+   "lon": -15.3023,
+   "role": "goal",
+   "note": "Down the ropes to the river: hexagonal columns rise straight from the turquoise water on both sides."
+  }
+ ]
+}

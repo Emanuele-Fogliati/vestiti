@@ -1,0 +1,72 @@
+{
+ "id": "is-kristinartindar",
+ "country": "IS",
+ "name": "Kristínartindar",
+ "base": "Skaftafell",
+ "region": "Vatnajökull National Park, Skaftafell",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 17.9,
+  "gain_m": 1100,
+  "source": "https://www.vatnajokulsthjodgardur.is/en/kristinartindar-s4"
+ },
+ "why": "The 1126 m top between two glacier tongues, looking across at Hvannadalshnúkur, Iceland's highest peak; back over the heath to Sjónarnípa above Skaftafellsjökull.",
+ "book": "Free, no permit. Ask at Skaftafellsstofa that morning: the park closes the trail in spring and sometimes into June while the ground thaws. Only in clear weather.",
+ "water": "No water above Svartifoss; carry 2 litres.",
+ "dangers": [
+  "Steep loose scree to the ridge and an exposed final ridge.",
+  "Fog and wind come in fast: the summit is 1100 m above the visitor centre.",
+  "Snow patches on the ridge until July."
+ ],
+ "turnaround": "In fog or strong wind turn back at the foot of the scree; be on the summit by 14:00.",
+ "sources": [
+  "https://www.vatnajokulsthjodgardur.is/en/kristinartindar-s4",
+  "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/sjonarnipa-s5"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Skaftafellsstofa visitor centre",
+   "lat": 64.01655,
+   "lon": -16.96662,
+   "role": "start",
+   "note": "Up the Svartifoss path, across the bridge by Magnúsarfoss, then north to Sjónarsker."
+  },
+  {
+   "id": "heath",
+   "name": "Skaftafellsheiði, at the foot of Kristínartindar",
+   "lat": 64.055,
+   "lon": -16.94,
+   "role": "point",
+   "note": "The open heath of moss and gravel under the peak. From here the steep scree climbs left to the ridge."
+  },
+  {
+   "id": "goal",
+   "name": "Kristínartindar summit",
+   "lat": 64.06926,
+   "lon": -16.92611,
+   "role": "goal",
+   "note": "1126 m. Skaftafellsjökull and Morsárjökull on either side, Hvannadalshnúkur (2110 m) across the ice to the east."
+  },
+  {
+   "id": "sjonarnipa",
+   "name": "Sjónarnípa",
+   "lat": 64.03044,
+   "lon": -16.93679,
+   "role": "point",
+   "note": "On the way down by Gláma: the cliff edge straight above the Skaftafellsjökull tongue and its lagoon. Then down by Austurbrekkur to the campsite."
+  }
+ ]
+}

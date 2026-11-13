@@ -1,0 +1,66 @@
+{
+ "id": "is-hengifoss",
+ "country": "IS",
+ "name": "Hengifoss and Litlanesfoss",
+ "base": "Egilsstaðir",
+ "region": "Fljótsdalur, East Iceland",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 5,
+  "gain_m": 300,
+  "source": "https://east.is/en/unsorted/nature/hengifossargil-gorge"
+ },
+ "why": "Up a gorge to Litlanesfoss in its basalt columns, then to Hengifoss, a 128 m fall on a cliff striped with red clay.",
+ "book": "Free; paid parking by Lagarfljót, 35 km south of Egilsstaðir on road 931. Café and toilets at the car park.",
+ "water": "Tap at the car park; carry 0.5 litre.",
+ "dangers": [
+  "The first part is steep; muddy after rain.",
+  "Do not walk to the foot of Hengifoss: falling rocks."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://east.is/en/unsorted/nature/hengifossargil-gorge"
+ ],
+ "osm": 6173453,
+ "points": [
+  {
+   "id": "start",
+   "name": "Hengifoss car park by Lagarfljót",
+   "lat": 65.0733,
+   "lon": -14.88114,
+   "role": "start",
+   "note": "By the long lake Lagarfljót; steps lead up the slope from the café."
+  },
+  {
+   "id": "litlanesfoss",
+   "name": "Litlanesfoss",
+   "lat": 65.08207,
+   "lon": -14.88338,
+   "role": "point",
+   "note": "After 30 minutes: a 30 m fall framed by tall basalt columns."
+  },
+  {
+   "id": "goal",
+   "name": "Hengifoss viewpoint",
+   "lat": 65.09133,
+   "lon": -14.8875,
+   "role": "goal",
+   "note": "Hengifoss falls 128 m down a black basalt cliff with thin red clay layers between the lava flows."
+  }
+ ]
+}
