@@ -4,7 +4,8 @@
    to the clothes. */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { dayText, daysOf } from "../lib/plandays";
+import { dayText, daysOf, firstDays } from "../lib/plandays";
+import { guessLeg, legText, legWeight } from "../lib/travel";
 import { api, ApiError } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { MONTH_LONG, MONTHS, today } from "../lib/format";
@@ -181,6 +182,9 @@ export function TripStarter({ compact }: { compact?: boolean }) {
   const base = start || (month ? firstOf(month, today()) : "");
   const dates = useMemo(() => dated(steps, base || null), [steps, base]);
   const total = totalDays(steps);
+  // days counted across the whole trip (stop 3 starts on day 15, not day 1) and the leg into each stop
+  const day0 = firstDays(steps, dates.map((d) => d?.gap ?? 0));
+  const legs = useMemo(() => steps.map((s, i) => (i ? guessLeg({ lat: steps[i - 1].lat, lon: steps[i - 1].lon, country: steps[i - 1].country }, s) : null)), [steps]);
   const estimate = !start && !steps.some((s) => s.start_date);
   const last = dates[dates.length - 1];
   const title = mode === "region" && area ? area.name : mode === "open" ? "Where could that be?" : "Your stops";
@@ -298,10 +302,18 @@ export function TripStarter({ compact }: { compact?: boolean }) {
             <ol className="steps">
               {steps.map((s, i) => {
                 const d = dates[i];
+                const leg = legs[i];
+                const how = leg ? legText(leg) : "";
+                const full = !!leg && legWeight(leg) === "full";
                 return (
                   <li key={s.key} className="step">
                     <span className="step-dot" aria-hidden="true">{i + 1}</span>
                     <div className="step-main">
+                      {how && (
+                        <span className={`step-leg${full ? " full" : ""}`} title={`From ${steps[i - 1].name}${leg?.km ? `, ${leg.km} km` : ""}`}>
+                          {how}{full ? " · travel day" : ""}
+                        </span>
+                      )}
                       <b className="step-name">{s.name}</b>
                       <span className="step-when">
                         {d ? `${estimate ? "≈ " : ""}${span(d)}` : "Dates later"}
@@ -315,7 +327,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
                           <ol>
                             {daysOf(s).map((d) => (
                               <li key={d.day} className={`sd-${d.kind}`}>
-                                <b>Day {d.day}</b> {dayText(d, i === 0 && d.day === 1)}
+                                <b>Day {day0[i] + d.day - 1}</b> {dayText(d, i === 0 && d.day === 1, leg ? { from: steps[i - 1].name, leg } : undefined)}
                                 {d.items?.map((t) => (
                                   <HourByHour key={t.id} steps={t.steps} extras={t.extras} book={t.book}
                                     label={d.items!.length > 1 ? `${t.name}: hour by hour` : "Hour by hour"} />
@@ -325,6 +337,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
                           </ol>
                         </details>
                       )}
+                      {full && s.days === 1 && <span className="step-warn">Only the travel day here: add a day to see it.</span>}
                       {d && d.gap > 0 && <span className="step-gap">after {d.gap} free day{d.gap > 1 ? "s" : ""}</span>}
                     </div>
                     <div className="step-ctl">

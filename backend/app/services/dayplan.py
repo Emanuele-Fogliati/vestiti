@@ -35,6 +35,8 @@ SIZE = {"full": 2.0, "half": 1.0, "short": 0.5}
 DAY = 2.0
 # the day you arrive: half a day after a flight or a long road, a full day otherwise
 ARRIVAL_DAY = 1.0
+# from this many hours on the road in, the first day is a travel day (frontend lib/travel.ts too)
+TRAVEL_DAY_H = 6
 # chance of a wet day (climate) from which the plan keeps a spare day for the walks with a view
 SPARE_WET = 30
 
@@ -78,7 +80,7 @@ class PlanDay:
     rain_chance: float
     source: str
     things: list[Slot] = field(default_factory=list)
-    kind: str = "plan"  # plan | rain | free | spare | route
+    kind: str = "plan"  # plan | rain | free | spare | route | travel
     title: str = ""  # for rain / free / spare / route days
     note: str = ""
     override: bool = False  # the traveller said what the sky does that day
@@ -94,11 +96,13 @@ class DayPlan:
 
 
 def _place(items: list[Item], skies: list[Sky], pins: dict[str, int], arrival_light: bool,
-           dates: list[date] | None = None, spare: int | None = None
+           dates: list[date] | None = None, spare: int | None = None, travel_day: bool = False
            ) -> tuple[dict[int, list[Slot]], list[Item]]:
     room = [DAY] * len(skies)
     if skies and arrival_light:
         room[0] = ARRIVAL_DAY
+    if skies and travel_day:
+        room[0] = 0.0
     if spare is not None:
         room[spare] = 0.0  # kept free to move a walk when its day is bad
     out: dict[int, list[Slot]] = {i: [] for i in range(len(skies))}
@@ -136,8 +140,10 @@ def _place(items: list[Item], skies: list[Sky], pins: dict[str, int], arrival_li
 
 def plan_days(weather: list[DayWeather], items: list[Item], rain: Rain | None = None,
               routes: list[Route] | None = None, choices: dict | None = None,
-              arrival_light: bool = False) -> DayPlan:
-    """Plan a stop's days. choices: the stop's saved plan (skip, pins, weather, mode)."""
+              arrival_light: bool = False, travel_day: bool = False) -> DayPlan:
+    """Plan a stop's days. choices: the stop's saved plan (skip, pins, weather, mode).
+    travel_day: a long road in (6 h or more) takes the first day; nothing else goes there
+    unless the traveller pins it (Manu, 2026-11-13: a plan always keeps time for the travel)."""
     choices = choices or {}
     skip = set(choices.get("skip") or [])
     overrides = {k: v for k, v in (choices.get("weather") or {}).items() if v in SKIES}
@@ -188,10 +194,12 @@ def plan_days(weather: list[DayWeather], items: list[Item], rain: Rain | None = 
         if (all(s == "unknown" for s in sub_skies) and wet >= SPARE_WET and len(rest) >= 3
                 and len(views) >= 2 and (len(rest) - 1) not in sub_pins.values()):
             spare = len(rest) - 1
-        placed, waiting = _place(todo, sub_skies, sub_pins, arrival_light and start == 0, sub_dates, spare)
+        travel = travel_day and start == 0
+        placed, waiting = _place(todo, sub_skies, sub_pins, arrival_light and start == 0, sub_dates, spare,
+                                 travel)
         # where the order alone would put them: what moved, moved for the weather
         base, _ = _place(todo, ["unknown"] * len(sub_skies), sub_pins, arrival_light and start == 0,
-                         sub_dates, spare)
+                         sub_dates, spare, travel)
         where = {s.item.id: i for i, ss in base.items() for s in ss}
         for j, slots in placed.items():
             for s in slots:
@@ -203,7 +211,10 @@ def plan_days(weather: list[DayWeather], items: list[Item], rain: Rain | None = 
             pd = days[rest[j]]
             if pd.things:
                 continue
-            if pd.sky in ("rain", "wind") and rain:
+            if travel and j == 0:
+                pd.kind, pd.title = "travel", "Travel day"
+                pd.note = "Most of the day on the road. Nothing else planned."
+            elif pd.sky in ("rain", "wind") and rain:
                 pd.kind, pd.title, pd.note = "rain", rain.name, rain.why
             elif spare is not None and j == spare:
                 pd.kind, pd.title = "spare", "Spare day for the weather"

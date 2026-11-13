@@ -23,7 +23,7 @@ from app.guide.todo import NEED_TEXT, todo_for
 from app.models import Stop, Trip
 from app.schemas import FlightBookIn, FlightSearchIn, FlightsTogetherIn, LayoutIn, TripOut, check_date
 from app.travel import duffel
-from app.services.dayplan import plan_days
+from app.services.dayplan import TRAVEL_DAY_H, plan_days
 from app.weather.service import WeatherService
 
 router = APIRouter(tags=["board"])
@@ -100,8 +100,10 @@ def board(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
         todo = todo_for(s.name, s.country_code, s.latitude, s.longitude)
         weather = ws.days_for(s.latitude, s.longitude, s.elevation_m, s.start_date, s.end_date)
         light = prev is None or leg["mode"] == "flight" or (leg["hours"] or 0) >= 3
+        # a long road in takes the whole first day (a flight, half of it)
+        long_road = prev is not None and leg["mode"] not in ("flight", "local") and (leg["hours"] or 0) >= TRAVEL_DAY_H
         p = plan_days(weather, list(todo.items), todo.rain, todo.routes,
-                      _plan_pins(s, todo.items), arrival_light=light)
+                      _plan_pins(s, todo.items), arrival_light=light, travel_day=long_road)
         sources = sorted({d.source for d in weather})
         out.append({
             "id": s.id, "name": s.name, "country_code": s.country_code,

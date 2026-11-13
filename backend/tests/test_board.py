@@ -77,6 +77,15 @@ def test_months_ahead_the_plan_follows_the_order():
     assert any("forecast arrives" in x for x in p.advice)
 
 
+def test_a_long_road_in_makes_the_first_day_a_travel_day():
+    a = tdp()
+    p = plan_days([day(i) for i in range(4)], a.items, a.rain, a.routes, travel_day=True)
+    assert p.days[0].kind == "travel" and not p.days[0].things
+    assert p.days[1].things  # the walks start the day after
+    short = plan_days([day(i) for i in range(4)], a.items, a.rain, a.routes)
+    assert short.days[0].kind != "travel"
+
+
 def test_a_walk_that_needs_a_view_moves_to_the_clear_day():
     a = tdp()
     skies = ["rain", "cloud", "clear", "wind", "cloud"]

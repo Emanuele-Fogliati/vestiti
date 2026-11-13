@@ -2,6 +2,7 @@ import { useState } from "react";
 import { api } from "../lib/api";
 import { activitiesFrom, sameActivities } from "../lib/board";
 import { activityText, addDays } from "../lib/format";
+import { arrivalText } from "../lib/travel";
 import type { BoardStop, LegMode, PlanChoices, PlanDayOut, Sky, StopStatus, TodoItem, Trip } from "../lib/types";
 import HourByHour from "./HourByHour";
 import { Illustration } from "./Illustration";
@@ -38,8 +39,8 @@ function NeedTag({ it }: { it: TodoItem }) {
   return <span className={`tag need-${it.need}`}>{it.need_text}</span>;
 }
 
-export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, onRemove, onStatus, onChanged, onMsg }: {
-  trip: Trip; stop: BoardStop; index: number; count: number; busy: boolean;
+export function StopPanel({ trip, stop, tripStart, index, count, busy, onResize, onMove, onRemove, onStatus, onChanged, onMsg }: {
+  trip: Trip; stop: BoardStop; tripStart?: string; index: number; count: number; busy: boolean;
   onResize: (d: number) => void; onMove: (d: -1 | 1) => void; onRemove: () => void;
   onStatus: (s: StopStatus, note?: string) => void; onChanged: () => void;
   onMsg: (text: string, kind: "ok" | "bad") => void;
@@ -92,13 +93,17 @@ export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, on
   }
   const dates = Array.from({ length: stop.days }, (_, i) => addDays(stop.start_date, i));
   const route = todo.routes.find((r) => r.id === stop.plan.mode);
+  // days count across the whole trip: the third stop may start on day 15
+  const t0 = tripStart ?? trip.stops.map((s) => s.start_date).filter(Boolean).sort()[0] ?? stop.start_date;
+  const dayN = (d: string) => Math.round((Date.parse(d) - Date.parse(t0)) / 86400000) + 1;
+  const way = arrivalText(stop.arrival);
 
   return (
     <section className="bd-panel" aria-label={stop.name}>
       <div className="bp-head">
         <div>
           <h3>{stop.name}</h3>
-          <p className="muted small">{dayLabel(stop.start_date)} – {dayLabel(stop.end_date)} · {stop.days} day{stop.days > 1 ? "s" : ""}</p>
+          <p className="muted small">{stop.days > 1 ? `Days ${dayN(stop.start_date)}–${dayN(stop.end_date)}` : `Day ${dayN(stop.start_date)}`} · {dayLabel(stop.start_date)} – {dayLabel(stop.end_date)}</p>
         </div>
         <div className="bp-ctrl">
           <div className="seg" role="group" aria-label="Status">
@@ -140,7 +145,7 @@ export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, on
           <h4>Your days</h4>
           <ol className="bp-daylist">
             {stop.plan.days.map((d) => (
-              <DayRow key={d.date} d={d} open={skyMenu === d.date} onSky={() => setSkyMenu(skyMenu === d.date ? null : d.date)} onSet={(s) => setSky(d.date, s)} />
+              <DayRow key={d.date} d={d} n={dayN(d.date)} way={d.date === stop.start_date ? way : null} open={skyMenu === d.date} onSky={() => setSkyMenu(skyMenu === d.date ? null : d.date)} onSet={(s) => setSky(d.date, s)} />
             ))}
           </ol>
           {stop.plan.advice.map((a, i) => <p key={i} className="small muted">{a}</p>)}
@@ -239,12 +244,13 @@ export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, on
   );
 }
 
-function DayRow({ d, open, onSky, onSet }: { d: PlanDayOut; open: boolean; onSky: () => void; onSet: (s: Sky | null) => void }) {
+function DayRow({ d, n, way, open, onSky, onSet }: { d: PlanDayOut; n: number; way: { text: string; full: boolean } | null; open: boolean; onSky: () => void; onSet: (s: Sky | null) => void }) {
   const known = d.sky !== "unknown";
   return (
     <li className={`bp-day k-${d.kind}${d.things.some((t) => t.moved) ? " moved" : ""}`}>
       <div className="bp-when">
-        <b>{dayLabel(d.date)}</b>
+        <b className="bp-n">Day {n}</b>
+        <span className="small muted">{dayLabel(d.date)}</span>
         <button type="button" className={`skychip ${d.sky}`} onClick={onSky} aria-expanded={open}
           aria-label={`Weather ${SKY_TEXT[d.sky]}, change it`}>
           <SkyIcon sky={d.sky} />{known ? SKY_TEXT[d.sky] : `${d.rain_chance}% wet`}
@@ -258,6 +264,7 @@ function DayRow({ d, open, onSky, onSet }: { d: PlanDayOut; open: boolean; onSky
         )}
       </div>
       <div className="bp-what">
+        {way?.text && <div className={`bp-way${way.full ? " full" : ""}`}><LegIcon mode={way.text.startsWith("Flight") ? "flight" : "bus"} />{way.text}</div>}
         {d.things.map((t) => (
           <div key={t.id} className="bp-thing">
             <b>{t.name}</b>{t.hours && <span className="small muted"> · {t.hours}</span>}
