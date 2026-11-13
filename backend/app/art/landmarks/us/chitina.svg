@@ -1,0 +1,22 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="268" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M40 110L62 90L84 70L104 54L124 42L140 35L150 31L160 33L176 38L196 50L216 64L240 82L272 110Z" fill="var(--il-mid)"/>
+<path d="M84 70L104 54L124 42L140 35L150 31L160 33L176 38L196 50L216 64L224 78L212 74L204 84L194 72L184 82L174 70L164 80L154 70L144 80L134 70L124 80L114 72L104 82L94 74Z" fill="var(--il-ice)"/>
+<path d="M0 134V102Q60 92 120 98Q180 92 240 96Q272 94 300 98V134Z" fill="var(--il-far)"/>
+<path d="M170 132V112Q200 104 240 108Q270 104 300 108V132Z" fill="var(--il-acc)"/>
+<path d="M186 112L190 128M206 108L210 128M228 108L232 128M252 106L256 128M276 106L280 128" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M170 132V118Q220 112 300 116V132Z" fill="var(--il-leaf)"/>
+<path d="M0 140L0 56L3 49L7 57L10 50L13 57L17 51L20 58L23 52L27 61L30 55L33 63L37 58L40 66L44 61L48 70L52 65L56 74L60 70L63 79L66 74L70 84L75 83L80 96Q96 110 120 130L132 140Z" fill="var(--il-leaf)"/>
+<path d="M0 200V132H300V200Z" fill="var(--il-water)"/>
+<path d="M120 142Q170 136 230 138Q270 138 300 140V146Q240 146 170 146Q130 148 120 142Z" fill="var(--il-acc)"/>
+<defs><clipPath id="il-us-chitina-clip"><rect width="300" height="165"/></clipPath></defs>
+<g clip-path="url(#il-us-chitina-clip)">
+<path d="M206 166L224 134L242 166" stroke="var(--il-near)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<path d="M223 128L218 94Q196 99 187 119L218 132ZM225 140L230 174Q252 169 261 149L230 136Z" fill="var(--il-far)"/>
+<path d="M221 126L210 95M220 127L202 98M218 128L195 104M217 130L189 111M221 116Q212 118 207 127M220 104Q204 108 196 123" stroke="var(--il-near)" stroke-width="0.7" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M238 126L255 116Q253 113 252 111L236 124ZM210 142L193 152Q195 155 196 157L212 144Z" fill="var(--il-obj)"/>
+<path d="M224 134L218 94M224 134L187 119M224 134L257 111M224 134L191 157M224 134L230 174M224 134L261 149" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<circle cx="224" cy="134" r="3" fill="var(--il-near)"/>
+</g><path d="M174 170V162H270V170Z" fill="var(--il-obj)"/>
+<path d="M180 162V150H196V162Z" fill="var(--il-ice)"/>
+<path d="M178 151L188 144L198 151Z" fill="var(--il-obj)"/>
