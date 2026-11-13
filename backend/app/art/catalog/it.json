@@ -174,6 +174,28 @@
    }
   },
   {
+   "slug": "alicudi",
+   "label": "Alicudi, the round volcanic island with its white village",
+   "lat": 38.543,
+   "lon": 14.352,
+   "radius_km": 5.0,
+   "aliases": [
+    "alicudi"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#B8A68A",
+    "mid": "#7E7462",
+    "ice": "#F6F2EA",
+    "water": "#1F64A8",
+    "near": "#26241F",
+    "sun": "#F4C542",
+    "leaf": "#7E9A4A",
+    "acc": "#B8483A",
+    "obj": "#3E8EC4"
+   }
+  },
+  {
    "slug": "alpe-di-siusi",
    "label": "Alpe di Siusi meadows and huts below the Sassolungo and Sassopiatto",
    "lat": 46.545,
@@ -1676,6 +1698,31 @@
     "leaf": "#5E8A3E",
     "acc": "#C8504A",
     "obj": "#E8B04A"
+   }
+  },
+  {
+   "slug": "cisternino",
+   "label": "Cisternino: the clock tower on Piazza Vittorio Emanuele among white houses",
+   "lat": 40.7413,
+   "lon": 17.4252,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "cisternino",
+    "cisternino old town",
+    "cisternino centro storico"
+   ],
+   "palette": {
+    "sky": "#A7CBEE",
+    "far": "#D9D3C3",
+    "mid": "#A69E8E",
+    "ice": "#F7F5F0",
+    "water": "#4C8FB8",
+    "near": "#2A2622",
+    "sun": "#F3C64A",
+    "leaf": "#2F8A57",
+    "acc": "#E6DDC8",
+    "obj": "#B08A5A"
    }
   },
   {
@@ -3992,7 +4039,9 @@
     "cascate del nardis",
     "cascata del nardis",
     "nardis falls",
-    "nardis waterfall"
+    "nardis waterfall",
+    "val genova",
+    "val di genova"
    ],
    "names": [
     "nardis"
@@ -4664,6 +4713,35 @@
     "leaf": "#6E8A4E",
     "acc": "#78736C",
     "obj": "#A29E96"
+   }
+  },
+  {
+   "slug": "paola",
+   "label": "The Sanctuary of Saint Francis of Paola: old basilica facade, convent and the new basilica arch",
+   "lat": 39.3586,
+   "lon": 16.0469,
+   "radius_km": 10,
+   "aliases": [
+    "santuario di paola",
+    "santuario di san francesco di paola",
+    "santuario san francesco di paola",
+    "sanctuary of saint francis of paola",
+    "sanctuary of st francis of paola"
+   ],
+   "names": [
+    "paola"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#B8A684",
+    "mid": "#DCD5C3",
+    "ice": "#ECE6DA",
+    "water": "#8D9094",
+    "near": "#26262A",
+    "sun": "#F4C542",
+    "leaf": "#3E6A33",
+    "acc": "#B9673F",
+    "obj": "#5E8FA0"
    }
   },
   {
@@ -7325,29 +7403,6 @@
     "leaf": "#2E5A34",
     "acc": "#ABA08F",
     "obj": "#97B862"
-   }
-  },
-  {
-   "slug": "val-genova",
-   "label": "The twin Nardis waterfalls in Val Genova",
-   "lat": 46.1806,
-   "lon": 10.7133,
-   "radius_km": 10,
-   "aliases": [
-    "val genova",
-    "val di genova"
-   ],
-   "palette": {
-    "sky": "#A8CCEC",
-    "far": "#6E8F5A",
-    "mid": "#8F8F8B",
-    "ice": "#FFFFFF",
-    "water": "#BFD8E6",
-    "near": "#24282A",
-    "sun": "#F2C14E",
-    "leaf": "#2F5A30",
-    "acc": "#7FA34E",
-    "obj": "#77756F"
    }
   },
   {
