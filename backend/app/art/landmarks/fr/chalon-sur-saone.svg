@@ -1,0 +1,25 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="258" cy="26" r="10" fill="var(--il-sun)"/>
+<path d="M0 156V136Q20 130 40 132Q60 128 80 132L104 134V156Z" fill="var(--il-leaf)"/>
+<g transform="translate(0 12)">
+<path d="M104 134V88H190V134Z" fill="var(--il-mid)"/>
+<path d="M100 90L108 76H186L194 90Z" fill="var(--il-obj)"/>
+<path d="M112 84V78H118V84ZM132 84V78H138V84ZM152 84V78H158V84ZM172 84V78H178V84Z" fill="var(--il-ice)"/>
+<path d="M112 104V94H118V104ZM126 104V94H132V104ZM140 104V94H146V104ZM154 104V94H160V104ZM168 104V94H174V104ZM112 124V114H118V124ZM126 124V114H132V124ZM140 124V114H146V124ZM154 124V114H160V124ZM168 124V114H174V124Z" fill="var(--il-near)" opacity="0.7"/>
+<path d="M226 136Q212 128 216 108Q214 88 224 74Q226 56 238 48Q250 40 260 50Q274 56 276 76Q288 92 284 112Q290 128 278 136Z" fill="var(--il-leaf)"/>
+<path d="M230 120V86M250 124V70M268 120V88" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M194 134V66H214V134Z" fill="var(--il-acc)"/>
+<path d="M194 70H214M194 84H214M194 98H214M194 112H214M194 126H214M198 66V134M210 66V134" stroke="var(--il-ice)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+<path d="M190 66V60H218V66Z" fill="var(--il-ice)"/>
+<path d="M194 60Q194 44 204 44Q214 44 214 60Z" fill="var(--il-obj)"/>
+<path d="M201 44V36H207V44Z" fill="var(--il-ice)"/>
+<path d="M200 36L204 30L208 36Z" fill="var(--il-obj)"/>
+<path d="M204 30V24" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M100 146V128H300V146Z" fill="var(--il-far)"/>
+<path d="M100 132H300" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 146V112H104V146H90V136Q66 120 42 120Q18 120 0 130Z" fill="var(--il-far)"/>
+<path d="M0 112H104" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M30 112L34 64L40 64L44 112ZM78 150V112L82 46L90 46L94 112V150Z" fill="var(--il-far)"/>
+<path d="M33 64L37 56L41 64ZM81 46L86 36L91 46Z" fill="var(--il-far)"/>
+</g>
+<path d="M0 200V154H300V200Z" fill="var(--il-water)"/>
