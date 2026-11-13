@@ -3,6 +3,29 @@
  "name": "Mauritania",
  "places": [
   {
+   "slug": "azougui",
+   "label": "The Almoravid ruins and palm grove of Azougui below the Adrar escarpment",
+   "lat": 20.54,
+   "lon": -13.08,
+   "radius_km": 3,
+   "aliases": [
+    "azougui",
+    "azugi"
+   ],
+   "palette": {
+    "sky": "#A9CBE8",
+    "far": "#E5C27C",
+    "mid": "#8C6845",
+    "ice": "#EED9AE",
+    "water": "#4F86B0",
+    "near": "#2A2018",
+    "sun": "#F5C640",
+    "leaf": "#4E7A33",
+    "acc": "#7A4C34",
+    "obj": "#B88A5A"
+   }
+  },
+  {
    "slug": "chinguetti",
    "label": "Chinguetti's stone minaret above the old town",
    "lat": 20.4636,
@@ -30,6 +53,35 @@
     "leaf": "#5E8A3E",
     "acc": "#E4AE6E",
     "obj": "#7A5E44"
+   }
+  },
+  {
+   "slug": "terjit",
+   "label": "The Terjit oasis: date palms and a spring pool in a red sandstone gorge, with a dromedary",
+   "lat": 20.25,
+   "lon": -13.05,
+   "radius_km": 5,
+   "aliases": [
+    "terjit oasis",
+    "oasis de terjit",
+    "oasi di terjit",
+    "tergit",
+    "terjitt"
+   ],
+   "names": [
+    "terjit"
+   ],
+   "palette": {
+    "sky": "#CFE2F0",
+    "far": "#B39A82",
+    "mid": "#9A5E44",
+    "ice": "#F1E6D2",
+    "water": "#5E9A8E",
+    "near": "#2B211C",
+    "sun": "#F4C443",
+    "leaf": "#5E8A3C",
+    "acc": "#E0B27A",
+    "obj": "#A2704A"
    }
   }
  ]

@@ -1,0 +1,94 @@
+{
+ "id": "is-fimmvorduhals",
+ "country": "IS",
+ "name": "Fimmvörðuháls pass",
+ "base": "Skógar",
+ "region": "Between Eyjafjallajökull and Mýrdalsjökull, south Iceland",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  8,
+  12
+ ],
+ "start_by": "07:30",
+ "published": {
+  "km": 25,
+  "gain_m": null,
+  "source": "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals"
+ },
+ "why": "Up the Skógá past twenty-six waterfalls, across the still-warm lava of the 2010 eruption between two ice caps, and down a narrow ridge into the green of Þórsmörk.",
+ "book": "Free. Take the highland bus back from Básar (Þórsmörk), booked ahead; the Baldvinsskáli hut on the pass can be booked through Ferðafélag Íslands to split the walk in two.",
+ "water": "Fill up from the Skógá before the footbridge: from there to Þórsmörk there is only snowmelt, the hut on the pass has no running water.",
+ "dangers": [
+  "The pass is above 1,000 m: fog, snow and gale-force wind even in July. Turn back to Skógar if it closes in.",
+  "Snowfields of about 200 m on the pass all summer: follow the poles.",
+  "Heljarkambur and Kattahryggir are narrow ridges with drops on both sides; a chain helps on Heljarkambur."
+ ],
+ "turnaround": "Be at the footbridge over the Skógá by 12:00; if you see no poles ahead on the pass, go back down.",
+ "sources": [
+  "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
+  "https://en.wikivoyage.org/wiki/Laugavegur",
+  "https://hiking.waymarkedtrails.org/#route?id=396940"
+ ],
+ "osm": 396940,
+ "points": [
+  {
+   "id": "start",
+   "name": "Skógafoss, Skógar",
+   "lat": 63.5321,
+   "lon": -19.5113,
+   "role": "start",
+   "note": "The stairs on the right of the 60 m fall lead to the top, where the path follows the river north.",
+   "scene": "is-skogafoss"
+  },
+  {
+   "id": "waterfalls",
+   "name": "The Skógá waterfalls",
+   "lat": 63.538,
+   "lon": -19.502,
+   "role": "point",
+   "note": "Twenty-six falls in the first 8 km above Skógafoss, each different; the path keeps to the east rim.",
+   "scene": "is-skoga-waterfalls"
+  },
+  {
+   "id": "baldvinsskali",
+   "name": "Baldvinsskáli hut",
+   "lat": 63.611,
+   "lon": -19.4412,
+   "role": "point",
+   "note": "The A-frame hut where the pass begins, about 920 m, after the footbridge and the long gravel climb; no running water.",
+   "scene": "is-baldvinsskali"
+  },
+  {
+   "id": "craters",
+   "name": "Magni and Móði craters",
+   "lat": 63.6372,
+   "lon": -19.444,
+   "role": "point",
+   "note": "The two red cinder cones of the 2010 eruption on the pass; the black Goðahraun lava is still warm under the surface in places.",
+   "scene": "is-fimmvorduhals"
+  },
+  {
+   "id": "heljarkambur",
+   "name": "Heljarkambur ridge",
+   "lat": 63.6483,
+   "lon": -19.4319,
+   "role": "point",
+   "note": "The narrow ridge down to Morinsheiði, with a chain on the worst step. Þórsmörk opens below."
+  },
+  {
+   "id": "goal",
+   "name": "Básar hut, Þórsmörk",
+   "lat": 63.6777,
+   "lon": -19.4818,
+   "role": "goal",
+   "note": "The Útivist hut in the birch woods of Goðaland, where the highland buses stop."
+  }
+ ]
+}

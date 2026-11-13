@@ -3,6 +3,34 @@
  "name": "Indonesia",
  "places": [
   {
+   "slug": "amed",
+   "label": "Jemeluk Bay at Amed with jukung boats below Mount Agung",
+   "lat": -8.336,
+   "lon": 115.66,
+   "radius_km": 10,
+   "aliases": [
+    "jemeluk",
+    "amed beach",
+    "pantai amed"
+   ],
+   "names": [
+    "amed",
+    "amed bali"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#9AA6B4",
+    "mid": "#7E8584",
+    "ice": "#F5F3EE",
+    "water": "#2D7FA8",
+    "near": "#22262A",
+    "sun": "#F5C842",
+    "leaf": "#3F7A36",
+    "acc": "#C4623E",
+    "obj": "#3D3936"
+   }
+  },
+  {
    "slug": "bali",
    "label": "Bali: the Lempuyang split gate framing Mount Agung",
    "lat": -8.3906,
@@ -247,6 +275,91 @@
    }
   },
   {
+   "slug": "bunaken-marine-park",
+   "label": "Bunaken island and the Manado Tua volcano, with a green turtle",
+   "lat": 1.6205,
+   "lon": 124.7625,
+   "radius_km": 15,
+   "aliases": [
+    "bunaken",
+    "manado tua",
+    "siladen",
+    "parco marino di bunaken"
+   ],
+   "palette": {
+    "sky": "#A7CDEB",
+    "far": "#A9A46C",
+    "mid": "#4E7B4C",
+    "ice": "#F2EEE2",
+    "water": "#2F80AE",
+    "near": "#1C2622",
+    "sun": "#F4C640",
+    "leaf": "#3F7A34",
+    "acc": "#E9D8AA",
+    "obj": "#7E5E40"
+   }
+  },
+  {
+   "slug": "candi-cetho",
+   "label": "The split gate of Candi Cetho between its shingle-roofed pavilions, on the slopes of Mount Lawu",
+   "lat": -7.5953,
+   "lon": 111.1572,
+   "radius_km": 3,
+   "aliases": [
+    "candi cetho",
+    "candi ceto",
+    "candi cheto",
+    "cetho temple",
+    "ceto temple",
+    "cheto temple",
+    "tempio di cetho",
+    "cetho"
+   ],
+   "names": [
+    "ceto",
+    "cheto"
+   ],
+   "palette": {
+    "sky": "#B9D8F0",
+    "far": "#8DAFC4",
+    "mid": "#5E5B56",
+    "ice": "#ECE8DF",
+    "water": "#6FA0C0",
+    "near": "#1F1E1C",
+    "sun": "#F2C14E",
+    "leaf": "#4C8A3C",
+    "acc": "#8A6845",
+    "obj": "#8F8B83"
+   }
+  },
+  {
+   "slug": "candi-sukuh",
+   "label": "The pyramid temple of Candi Sukuh on the slopes of Mount Lawu",
+   "lat": -7.6273,
+   "lon": 111.1311,
+   "radius_km": 3,
+   "aliases": [
+    "candi sukuh",
+    "sukuh temple",
+    "tempio di sukuh"
+   ],
+   "names": [
+    "sukuh"
+   ],
+   "palette": {
+    "sky": "#CFE2EE",
+    "far": "#7F9C86",
+    "mid": "#706960",
+    "ice": "#E8E3D6",
+    "water": "#5D8FA6",
+    "near": "#24261F",
+    "sun": "#F2C14E",
+    "leaf": "#43703A",
+    "acc": "#8C7462",
+    "obj": "#B0AB9E"
+   }
+  },
+  {
    "slug": "candidasa",
    "label": "Candidasa lagoon with coconut palms",
    "lat": -8.5094,
@@ -402,6 +515,29 @@
     "leaf": "#4E8A3E",
     "acc": "#6E6236",
     "obj": "#5CC9C6"
+   }
+  },
+  {
+   "slug": "gili-nanggu",
+   "label": "Gili Nanggu's casuarina-covered islet and white beach, with a jukung outrigger",
+   "lat": -8.735,
+   "lon": 116.028,
+   "radius_km": 3,
+   "aliases": [
+    "gili nanggu",
+    "nanggu"
+   ],
+   "palette": {
+    "sky": "#9CCBEE",
+    "far": "#8C9FA6",
+    "mid": "#8C6E4E",
+    "ice": "#F6F1E4",
+    "water": "#2FAAB8",
+    "near": "#1E2B2A",
+    "sun": "#F4C542",
+    "leaf": "#4E7D3A",
+    "acc": "#A8573A",
+    "obj": "#2E78C2"
    }
   },
   {
@@ -591,6 +727,34 @@
    }
   },
   {
+   "slug": "harau-valley",
+   "label": "The streaked granite walls of Lembah Harau above the rice fields, West Sumatra",
+   "lat": -0.106,
+   "lon": 100.665,
+   "radius_km": 8,
+   "aliases": [
+    "harau valley",
+    "lembah harau",
+    "valle di harau",
+    "harau canyon"
+   ],
+   "names": [
+    "harau"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#E2C6AE",
+    "mid": "#B98468",
+    "ice": "#F2EEE8",
+    "water": "#5E9AA8",
+    "near": "#2B2620",
+    "sun": "#F6C431",
+    "leaf": "#4D7A33",
+    "acc": "#93C246",
+    "obj": "#5A5048"
+   }
+  },
+  {
    "slug": "jakarta",
    "label": "Monas, the National Monument of Jakarta, on Medan Merdeka",
    "lat": -6.1754,
@@ -675,6 +839,29 @@
     "leaf": "#6E7E4A",
     "acc": "#A8583C",
     "obj": "#E6CF3A"
+   }
+  },
+  {
+   "slug": "kawah-putih",
+   "label": "Kawah Putih's milky turquoise crater lake under its grey forest-topped wall, with dead trees on the sulphur shore",
+   "lat": -7.166,
+   "lon": 107.402,
+   "radius_km": 5,
+   "aliases": [
+    "kawah putih",
+    "cratere kawah putih"
+   ],
+   "palette": {
+    "sky": "#B5D3EC",
+    "far": "#A39C8E",
+    "mid": "#8F8C84",
+    "ice": "#F1EFE6",
+    "water": "#A6DCD2",
+    "near": "#23262A",
+    "sun": "#F5C842",
+    "leaf": "#3E5E36",
+    "acc": "#E6DC9C",
+    "obj": "#6D6258"
    }
   },
   {
@@ -976,6 +1163,33 @@
    }
   },
   {
+   "slug": "lemukih",
+   "label": "The Sekumpul and Lemukih jungle waterfalls of north Bali, near Lemukih",
+   "lat": -8.172,
+   "lon": 115.181,
+   "radius_km": 8,
+   "aliases": [
+    "sekumpul",
+    "lemukih waterfall",
+    "fiji waterfall bali"
+   ],
+   "names": [
+    "lemukih"
+   ],
+   "palette": {
+    "sky": "#CFE6F2",
+    "far": "#BFDCE6",
+    "mid": "#76705F",
+    "ice": "#FAFCFC",
+    "water": "#5DA4B4",
+    "near": "#22281F",
+    "sun": "#F4C84A",
+    "leaf": "#4E9A3A",
+    "acc": "#C8452F",
+    "obj": "#5F5B54"
+   }
+  },
+  {
    "slug": "lombok",
    "label": "Mount Rinjani above the Segara Anak crater lake and the Barujari cone, Lombok",
    "lat": -8.411,
@@ -1129,6 +1343,33 @@
    }
   },
   {
+   "slug": "manado",
+   "label": "The volcanic cone of Manado Tua over Manado Bay, with Bunaken island's palms and church in front",
+   "lat": 1.56,
+   "lon": 124.78,
+   "radius_km": 25,
+   "aliases": [
+    "pulau manado tua"
+   ],
+   "names": [
+    "manado",
+    "kota manado",
+    "manado city"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#E2D2A2",
+    "mid": "#55804C",
+    "ice": "#F3F1EA",
+    "water": "#3A86B4",
+    "near": "#1E2A22",
+    "sun": "#F2C14E",
+    "leaf": "#3C7034",
+    "acc": "#C4553F",
+    "obj": "#8A6E4A"
+   }
+  },
+  {
    "slug": "mangkunegaran-palace",
    "label": "Pendopo Ageng of the Mangkunegaran Palace, Surakarta",
    "lat": -7.5664,
@@ -1175,6 +1416,35 @@
     "leaf": "#4E8A3A",
     "acc": "#C8423A",
     "obj": "#8A6440"
+   }
+  },
+  {
+   "slug": "mount-agung",
+   "label": "The great cone of Mount Agung above Balinese rice terraces and a meru shrine",
+   "lat": -8.343,
+   "lon": 115.508,
+   "radius_km": 6,
+   "aliases": [
+    "mount agung",
+    "gunung agung",
+    "agung volcano",
+    "monte agung",
+    "mt agung"
+   ],
+   "names": [
+    "agung"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#5E8C46",
+    "mid": "#8A8070",
+    "ice": "#EDE6D6",
+    "water": "#3E86B4",
+    "near": "#232A20",
+    "sun": "#F2C14E",
+    "leaf": "#3F7A30",
+    "acc": "#9CC45C",
+    "obj": "#5A4636"
    }
   },
   {
@@ -1313,6 +1583,38 @@
     "leaf": "#78A33E",
     "acc": "#C9B48E",
     "obj": "#1E64A8"
+   }
+  },
+  {
+   "slug": "padang",
+   "label": "Padang's Grand Mosque of West Sumatra with its Minangkabau horn roof",
+   "lat": -0.9246,
+   "lon": 100.3626,
+   "radius_km": 15,
+   "aliases": [
+    "masjid raya sumatera barat",
+    "masjid raya sumbar",
+    "grand mosque of west sumatra",
+    "west sumatra grand mosque",
+    "masjid raya syekh ahmad khatib"
+   ],
+   "names": [
+    "padang",
+    "pandang",
+    "padang city",
+    "kota padang"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#5E8A78",
+    "mid": "#A3A6A8",
+    "ice": "#F3F0E6",
+    "water": "#3C8DB0",
+    "near": "#221D1A",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3C",
+    "acc": "#C9A044",
+    "obj": "#3E2C24"
    }
   },
   {
@@ -1465,6 +1767,36 @@
    }
   },
   {
+   "slug": "riung",
+   "label": "Riung's Seventeen Islands: white-sand islet, tour boat and the flying foxes of Ontoloe",
+   "lat": -8.43,
+   "lon": 121.03,
+   "radius_km": 20,
+   "aliases": [
+    "17 islands",
+    "seventeen islands",
+    "17 pulau",
+    "pulau ontoloe",
+    "ontoloe island",
+    "pulau rutong"
+   ],
+   "names": [
+    "riung"
+   ],
+   "palette": {
+    "sky": "#B6D6F0",
+    "far": "#6E8866",
+    "mid": "#C9B274",
+    "ice": "#F6F0E2",
+    "water": "#2F5F9E",
+    "near": "#22262A",
+    "sun": "#F4C430",
+    "leaf": "#3F6E36",
+    "acc": "#93D2CB",
+    "obj": "#2F62B8"
+   }
+  },
+  {
    "slug": "ruteng",
    "label": "The Lingko spiderweb rice fields of Cancar near Ruteng",
    "lat": -8.6175,
@@ -1500,6 +1832,33 @@
     "leaf": "#4E7D36",
     "acc": "#D2BC6A",
     "obj": "#B07E52"
+   }
+  },
+  {
+   "slug": "sam-poo-kong",
+   "label": "The triple-roofed red main hall of Sam Poo Kong temple, Semarang",
+   "lat": -6.9963,
+   "lon": 110.3983,
+   "radius_km": 3,
+   "aliases": [
+    "sam poo kong",
+    "sam po kong",
+    "klenteng sam poo kong",
+    "klenteng gedung batu",
+    "gedung batu sam poo kong",
+    "kuil sam poo kong"
+   ],
+   "palette": {
+    "sky": "#BFDAEE",
+    "far": "#BDB8B0",
+    "mid": "#D2342E",
+    "ice": "#F0EEE8",
+    "water": "#4F8DB0",
+    "near": "#2A1C1C",
+    "sun": "#E8B83A",
+    "leaf": "#3F7A3A",
+    "acc": "#7E2A32",
+    "obj": "#9A9690"
    }
   },
   {
@@ -1555,6 +1914,30 @@
     "leaf": "#3E8A3A",
     "acc": "#D8382E",
     "obj": "#F2B820"
+   }
+  },
+  {
+   "slug": "selong-belanak",
+   "label": "Water buffalo on Selong Belanak beach, Lombok",
+   "lat": -8.873,
+   "lon": 116.158,
+   "radius_km": 4,
+   "aliases": [
+    "selong belanak",
+    "selong blanak",
+    "selong belanak beach"
+   ],
+   "palette": {
+    "sky": "#BEDBF1",
+    "far": "#8FA488",
+    "mid": "#6E6560",
+    "ice": "#F6F2E8",
+    "water": "#2685B8",
+    "near": "#1E201E",
+    "sun": "#F4C542",
+    "leaf": "#4E7B35",
+    "acc": "#8E6D58",
+    "obj": "#3FC2C9"
    }
   },
   {
@@ -1637,6 +2020,57 @@
    }
   },
   {
+   "slug": "siberut",
+   "label": "A Mentawai uma longhouse on stilts in the Siberut rainforest, with a pig",
+   "lat": -1.45,
+   "lon": 98.95,
+   "radius_km": 50,
+   "aliases": [
+    "siberut",
+    "mentawai",
+    "uma mentawai",
+    "mentawai uma",
+    "madobag",
+    "butui",
+    "muara siberut",
+    "ugai village"
+   ],
+   "palette": {
+    "sky": "#C9E0EE",
+    "far": "#3F6E3C",
+    "mid": "#A88A5C",
+    "ice": "#F0EEE6",
+    "water": "#4F8A88",
+    "near": "#221F1B",
+    "sun": "#F4C542",
+    "leaf": "#6EA544",
+    "acc": "#D4BC8C",
+    "obj": "#6A4A2F"
+   }
+  },
+  {
+   "slug": "sibetan",
+   "label": "Salak snake-fruit gardens of Sibetan below Mount Agung",
+   "lat": -8.452,
+   "lon": 115.509,
+   "radius_km": 4,
+   "aliases": [
+    "sibetan"
+   ],
+   "palette": {
+    "sky": "#B8DAF2",
+    "far": "#A9C66A",
+    "mid": "#5F6A78",
+    "ice": "#F2F0E8",
+    "water": "#3F8FB0",
+    "near": "#22261F",
+    "sun": "#F6C431",
+    "leaf": "#4F8A3E",
+    "acc": "#6E3322",
+    "obj": "#2F6A34"
+   }
+  },
+  {
    "slug": "sipiso-piso-waterfall",
    "label": "Sipiso-piso waterfall dropping into its gorge",
    "lat": 2.9175,
@@ -1658,6 +2092,73 @@
     "leaf": "#86A83E",
     "acc": "#BE9260",
     "obj": "#3E6E36"
+   }
+  },
+  {
+   "slug": "sorong",
+   "label": "Sorong's stilt-house waterfront with a phinisi liveaboard",
+   "lat": -0.875,
+   "lon": 131.25,
+   "radius_km": 15,
+   "aliases": [
+    "pelabuhan sorong",
+    "sorong harbour",
+    "sorong harbor",
+    "sorong port"
+   ],
+   "names": [
+    "sorong",
+    "kota sorong",
+    "sorong city"
+   ],
+   "palette": {
+    "sky": "#A9D3EE",
+    "far": "#8DB872",
+    "mid": "#7A4A2C",
+    "ice": "#F2EFE6",
+    "water": "#3E9E9A",
+    "near": "#1E2326",
+    "sun": "#F4C430",
+    "leaf": "#3E7A36",
+    "acc": "#C4473A",
+    "obj": "#3D78B8"
+   }
+  },
+  {
+   "slug": "sumba",
+   "label": "Tall-roofed uma mbatangu houses and a stone tomb in a Sumbanese village (Ratenggaro), with a grazing Sumba pony",
+   "lat": -9.65,
+   "lon": 119.6,
+   "radius_km": 60,
+   "aliases": [
+    "sumba island",
+    "isola di sumba",
+    "ratenggaro",
+    "praijing",
+    "tarung village",
+    "kampung tarung",
+    "sumba barat",
+    "west sumba",
+    "sumba timur",
+    "east sumba"
+   ],
+   "names": [
+    "sumba",
+    "waikabubak",
+    "tambolaka",
+    "waingapu"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#C9B48E",
+    "mid": "#857560",
+    "ice": "#EDE4D0",
+    "water": "#3E6B34",
+    "near": "#2A241E",
+    "sun": "#F4C430",
+    "leaf": "#7DAA48",
+    "acc": "#8B6B45",
+    "obj": "#A7A295"
    }
   },
   {
@@ -1880,6 +2381,34 @@
    }
   },
   {
+   "slug": "tomohon",
+   "label": "Mount Lokon above Tomohon, with a Minahasa wooden stilt house",
+   "lat": 1.358,
+   "lon": 124.792,
+   "radius_km": 12,
+   "aliases": [
+    "gunung lokon",
+    "mount lokon",
+    "woloan"
+   ],
+   "names": [
+    "tomohon",
+    "kota tomohon"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#8FAFA6",
+    "mid": "#86AE4E",
+    "ice": "#F2EEE4",
+    "water": "#4F8FA8",
+    "near": "#22281E",
+    "sun": "#F4C542",
+    "leaf": "#3F6E33",
+    "acc": "#B5402E",
+    "obj": "#9A6A3E"
+   }
+  },
+  {
    "slug": "ubud",
    "label": "Rice terraces of Ubud",
    "lat": -8.507,
@@ -2046,6 +2575,41 @@
     "leaf": "#8DBB52",
     "acc": "#C9A266",
     "obj": "#3B6331"
+   },
+   "names": [
+    "dintor",
+    "dintor village",
+    "desa dintor",
+    "dintor flores"
+   ]
+  },
+  {
+   "slug": "wonosobo",
+   "label": "Mount Sindoro and Mount Sumbing over the roofs of Wonosobo",
+   "lat": -7.36,
+   "lon": 109.9,
+   "radius_km": 15,
+   "aliases": [
+    "gunung sindoro",
+    "mount sindoro",
+    "gunung sumbing",
+    "mount sumbing",
+    "sindoro sumbing"
+   ],
+   "names": [
+    "wonosobo"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#8E8478",
+    "mid": "#7D8FA6",
+    "ice": "#F2EEE6",
+    "water": "#4A8FB8",
+    "near": "#22262A",
+    "sun": "#F6C431",
+    "leaf": "#5E9444",
+    "acc": "#B4553A",
+    "obj": "#356B30"
    }
   },
   {

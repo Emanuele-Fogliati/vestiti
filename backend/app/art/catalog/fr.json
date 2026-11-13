@@ -3,6 +3,30 @@
  "name": "France",
  "places": [
   {
+   "slug": "aiguille-du-midi",
+   "label": "The Aiguille du Midi granite spire with its cable-car station and summit mast",
+   "lat": 45.8786,
+   "lon": 6.8874,
+   "radius_km": 4,
+   "aliases": [
+    "aiguille du midi",
+    "aiguille du midi cable car",
+    "telepherique de l aiguille du midi"
+   ],
+   "palette": {
+    "sky": "#9EC9F0",
+    "far": "#8C8478",
+    "mid": "#C4A27C",
+    "ice": "#F5F8FA",
+    "water": "#4C86B0",
+    "near": "#25211E",
+    "sun": "#F4C542",
+    "leaf": "#4F7A3A",
+    "acc": "#7A4B36",
+    "obj": "#C9443A"
+   }
+  },
+  {
    "slug": "aix-en-provence",
    "label": "Fontaine de la Rotonde, Aix-en-Provence",
    "lat": 43.5263,
@@ -147,6 +171,35 @@
     "leaf": "#7D8F55",
     "acc": "#BCAE94",
     "obj": "#6E6152"
+   }
+  },
+  {
+   "slug": "autun",
+   "label": "Saint-Lazare cathedral and its spire above the old town of Autun",
+   "lat": 46.9452,
+   "lon": 4.2994,
+   "radius_km": 12,
+   "aliases": [
+    "autun cathedral",
+    "cathedrale d autun",
+    "cathedrale saint lazare d autun",
+    "saint lazare d autun",
+    "cattedrale di autun"
+   ],
+   "names": [
+    "autun"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#DDD3BC",
+    "mid": "#C9BB98",
+    "ice": "#F2EEE4",
+    "water": "#6F737C",
+    "near": "#2B2A28",
+    "sun": "#F4C542",
+    "leaf": "#6F9450",
+    "acc": "#A85B3E",
+    "obj": "#5E6A4A"
    }
   },
   {
@@ -373,6 +426,71 @@
    }
   },
   {
+   "slug": "brest",
+   "label": "Brest's Tour Tanguy and the Pont de Recouvrance over the Penfeld",
+   "lat": 48.383,
+   "lon": -4.496,
+   "radius_km": 15,
+   "aliases": [
+    "pont de recouvrance",
+    "recouvrance bridge",
+    "tour tanguy",
+    "tanguy tower",
+    "ponte di recouvrance"
+   ],
+   "names": [
+    "brest",
+    "brest france",
+    "brest finistere"
+   ],
+   "palette": {
+    "sky": "#B6D3EC",
+    "far": "#9A8C7A",
+    "mid": "#C9C5BB",
+    "ice": "#F1F0EB",
+    "water": "#3E6E85",
+    "near": "#23262B",
+    "sun": "#F3C24A",
+    "leaf": "#5F8A3E",
+    "acc": "#4F5866",
+    "obj": "#5B8DC2"
+   }
+  },
+  {
+   "slug": "burgundy-2",
+   "label": "Château du Clos de Vougeot behind its stone wall among the Burgundy vineyards",
+   "lat": 47.1747,
+   "lon": 4.9551,
+   "radius_km": 50,
+   "aliases": [
+    "clos de vougeot",
+    "clos vougeot",
+    "chateau du clos de vougeot",
+    "vougeot",
+    "route des grands crus",
+    "cote de nuits"
+   ],
+   "names": [
+    "burgundy",
+    "bourgogne",
+    "borgogna",
+    "burgundy region",
+    "burgundy vineyards"
+   ],
+   "palette": {
+    "sky": "#B8D4EE",
+    "far": "#8DB063",
+    "mid": "#D8CBAA",
+    "ice": "#EDE5D2",
+    "water": "#6E9AB0",
+    "near": "#24221F",
+    "sun": "#F4C542",
+    "leaf": "#4E8A32",
+    "acc": "#93604A",
+    "obj": "#4B4D53"
+   }
+  },
+  {
    "slug": "calvi",
    "label": "Citadel of Calvi above the marina",
    "lat": 42.567,
@@ -433,6 +551,58 @@
    }
   },
   {
+   "slug": "cancale",
+   "label": "Cancale: the granite houses of La Houle along the harbour, the church on the hill above",
+   "lat": 48.68,
+   "lon": -1.85,
+   "radius_km": 6,
+   "aliases": [
+    "port de la houle"
+   ],
+   "names": [
+    "cancale"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#5F6B78",
+    "mid": "#B5AB9A",
+    "ice": "#E9E2D2",
+    "water": "#7DB8B6",
+    "near": "#24272A",
+    "sun": "#F2C14E",
+    "leaf": "#6A9E48",
+    "acc": "#B3A78E",
+    "obj": "#3F7A3A"
+   }
+  },
+  {
+   "slug": "cap-frehel",
+   "label": "The Cap Frehel lighthouse and Vauban tower above the pink sandstone cliffs",
+   "lat": 48.6847,
+   "lon": -2.3175,
+   "radius_km": 5,
+   "aliases": [
+    "cap frehel",
+    "phare du cap frehel",
+    "cape frehel"
+   ],
+   "names": [
+    "frehel"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#B7ADA2",
+    "mid": "#A0705F",
+    "ice": "#F2EFE8",
+    "water": "#2E7DA4",
+    "near": "#2A2523",
+    "sun": "#F2C14E",
+    "leaf": "#6F8F3F",
+    "acc": "#C8A08F",
+    "obj": "#3E8F6C"
+   }
+  },
+  {
    "slug": "carcassonne",
    "label": "La Cité de Carcassonne, the walled medieval city",
    "lat": 43.2065,
@@ -458,6 +628,67 @@
     "leaf": "#A6A35E",
     "acc": "#B8643C",
     "obj": "#5B6370"
+   }
+  },
+  {
+   "slug": "carnac",
+   "label": "Carnac standing stones (Ménec alignments)",
+   "lat": 47.5925,
+   "lon": -3.0823,
+   "radius_km": 8,
+   "aliases": [
+    "carnac stones",
+    "alignements de carnac",
+    "carnac alignments",
+    "menec alignments",
+    "alignements du menec",
+    "kermario",
+    "kerlescan",
+    "menhirs de carnac",
+    "allineamenti di carnac"
+   ],
+   "names": [
+    "carnac",
+    "carnac plage"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#A8996E",
+    "mid": "#C2BFB4",
+    "ice": "#F2F0E8",
+    "water": "#6FA3BF",
+    "near": "#2A2B26",
+    "sun": "#F2C14E",
+    "leaf": "#3F5E34",
+    "acc": "#8A6A9A",
+    "obj": "#5E4532"
+   }
+  },
+  {
+   "slug": "chalon-sur-saone",
+   "label": "The Île Saint-Laurent's old hospital tower and the obelisk bridge over the Saône, Chalon-sur-Saône",
+   "lat": 46.781,
+   "lon": 4.857,
+   "radius_km": 12,
+   "aliases": [
+    "ile saint laurent chalon",
+    "pont saint laurent chalon"
+   ],
+   "names": [
+    "chalon sur saone",
+    "chalon"
+   ],
+   "palette": {
+    "sky": "#B3D3EE",
+    "far": "#D3C5A2",
+    "mid": "#E6DBC0",
+    "ice": "#F4F0E6",
+    "water": "#6F9088",
+    "near": "#25272A",
+    "sun": "#F4C23E",
+    "leaf": "#3E6A34",
+    "acc": "#A85A40",
+    "obj": "#5E6672"
    }
   },
   {
@@ -639,6 +870,32 @@
    }
   },
   {
+   "slug": "domme",
+   "label": "The Dordogne valley from the clifftop belvedere of Domme",
+   "lat": 44.8022,
+   "lon": 1.2158,
+   "radius_km": 6,
+   "aliases": [
+    "belvedere de la barre",
+    "porte des tours domme"
+   ],
+   "names": [
+    "domme"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#93AA9E",
+    "mid": "#A2C162",
+    "ice": "#E2D5B8",
+    "water": "#4E6F7C",
+    "near": "#2B2A25",
+    "sun": "#F4C542",
+    "leaf": "#4C7432",
+    "acc": "#D7BA76",
+    "obj": "#A8745A"
+   }
+  },
+  {
    "slug": "etretat",
    "label": "Aiguille and Porte d'Aval chalk cliffs, Etretat",
    "lat": 49.7065,
@@ -775,6 +1032,203 @@
     "leaf": "#5E8A4C",
     "acc": "#B4664E",
     "obj": "#3F4B60"
+   }
+  },
+  {
+   "slug": "lake-annecy",
+   "label": "Chateau de Duingt on Lake Annecy below the Dents de Lanfon",
+   "lat": 45.827,
+   "lon": 6.199,
+   "radius_km": 12,
+   "aliases": [
+    "lake annecy",
+    "lac d annecy",
+    "lago di annecy",
+    "chateau de duingt",
+    "chateau de chateauvieux",
+    "duingt"
+   ],
+   "palette": {
+    "sky": "#9CC7EE",
+    "far": "#A3ADA4",
+    "mid": "#5F7748",
+    "ice": "#ECE6D8",
+    "water": "#45A8B8",
+    "near": "#22262A",
+    "sun": "#F4C23E",
+    "leaf": "#3E6B35",
+    "acc": "#C6C1B4",
+    "obj": "#5B6570"
+   }
+  },
+  {
+   "slug": "le-havre",
+   "label": "Le Havre: Perret's St Joseph's Church tower over the white concrete waterfront and marina",
+   "lat": 49.49,
+   "lon": 0.11,
+   "radius_km": 15,
+   "aliases": [
+    "eglise saint joseph le havre",
+    "saint joseph du havre"
+   ],
+   "names": [
+    "le havre",
+    "havre"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#A9A398",
+    "mid": "#C9BFA8",
+    "ice": "#EFEDE6",
+    "water": "#3E6E94",
+    "near": "#24272A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A48",
+    "acc": "#D9A441",
+    "obj": "#C0392B"
+   }
+  },
+  {
+   "slug": "le-panier",
+   "label": "La Vieille Charite chapel and arcaded courtyard in Le Panier, Marseille",
+   "lat": 43.2995,
+   "lon": 5.3683,
+   "radius_km": 2,
+   "aliases": [
+    "le panier",
+    "quartier du panier",
+    "vieille charite",
+    "la vieille charite",
+    "centre de la vieille charite"
+   ],
+   "names": [
+    "panier"
+   ],
+   "palette": {
+    "sky": "#A8CEF0",
+    "far": "#D6C8B0",
+    "mid": "#D2A882",
+    "ice": "#F0E3CC",
+    "water": "#4D8FB5",
+    "near": "#2E2622",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3E",
+    "acc": "#BC6440",
+    "obj": "#B8B6B0"
+   }
+  },
+  {
+   "slug": "les-andelys",
+   "label": "Chateau Gaillard's ruins on the chalk cliffs above the Seine, Les Andelys",
+   "lat": 49.2381,
+   "lon": 1.4033,
+   "radius_km": 8,
+   "aliases": [
+    "chateau gaillard",
+    "castello gaillard",
+    "castle gaillard"
+   ],
+   "names": [
+    "les andelys",
+    "andelys",
+    "le petit andely",
+    "le grand andely"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#A9BC94",
+    "mid": "#D8D1C0",
+    "ice": "#F1EEE6",
+    "water": "#5E7F62",
+    "near": "#232A22",
+    "sun": "#F6C431",
+    "leaf": "#7FA84A",
+    "acc": "#E3A7B0",
+    "obj": "#3F6B2E"
+   }
+  },
+  {
+   "slug": "les-baux-de-provence",
+   "label": "The castle ruins and village of Les Baux-de-Provence on their white limestone spur",
+   "lat": 43.744,
+   "lon": 4.795,
+   "radius_km": 4,
+   "aliases": [
+    "les baux de provence",
+    "baux de provence",
+    "chateau des baux",
+    "castello di les baux",
+    "citadelle des baux"
+   ],
+   "names": [
+    "les baux",
+    "baux"
+   ],
+   "palette": {
+    "sky": "#BFDDF3",
+    "far": "#B7C2B0",
+    "mid": "#DCD4C0",
+    "ice": "#ECE4D2",
+    "water": "#5B8FB0",
+    "near": "#2B2A24",
+    "sun": "#F4C542",
+    "leaf": "#6A8A3E",
+    "acc": "#C8673E",
+    "obj": "#CDA978"
+   }
+  },
+  {
+   "slug": "les-chapieux",
+   "label": "The hamlet of Les Chapieux with Tarentaise cows below the Vallée des Glaciers",
+   "lat": 45.6964,
+   "lon": 6.7347,
+   "radius_km": 6,
+   "aliases": [
+    "chapieux",
+    "vallee des glaciers",
+    "ville des glaciers"
+   ],
+   "palette": {
+    "sky": "#A6CEF0",
+    "far": "#B4C86A",
+    "mid": "#8E8F92",
+    "ice": "#E2DCCB",
+    "water": "#9CC2D6",
+    "near": "#20241E",
+    "sun": "#F2C14E",
+    "leaf": "#5E9440",
+    "acc": "#B07440",
+    "obj": "#55585E"
+   }
+  },
+  {
+   "slug": "les-eyzies",
+   "label": "Les Eyzies: the prehistory museum under its overhanging cliff",
+   "lat": 44.9375,
+   "lon": 1.0115,
+   "radius_km": 6,
+   "aliases": [
+    "musee national de prehistoire",
+    "national museum of prehistory",
+    "national prehistory museum",
+    "museo nazionale della preistoria",
+    "eyzies de tayac"
+   ],
+   "names": [
+    "les eyzies",
+    "eyzies"
+   ],
+   "palette": {
+    "sky": "#9FC8F0",
+    "far": "#DDD5C2",
+    "mid": "#9E9585",
+    "ice": "#F2EEE4",
+    "water": "#4F86A8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A35",
+    "acc": "#D8BF8C",
+    "obj": "#B85C3C"
    }
   },
   {
@@ -947,6 +1401,65 @@
    }
   },
   {
+   "slug": "metz",
+   "label": "Metz: the Temple Neuf on its Moselle island and the golden Cathedral of Saint-Etienne above the quay, with swans",
+   "lat": 49.121,
+   "lon": 6.172,
+   "radius_km": 15,
+   "aliases": [
+    "temple neuf de metz",
+    "metz cathedral",
+    "cathedrale de metz",
+    "cathedrale saint etienne de metz",
+    "cattedrale di metz"
+   ],
+   "names": [
+    "metz"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#C9BC9C",
+    "mid": "#D2A85C",
+    "ice": "#EFE6CF",
+    "water": "#4C7A8F",
+    "near": "#24252A",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A35",
+    "acc": "#5D6672",
+    "obj": "#6E9E88"
+   }
+  },
+  {
+   "slug": "mont-blanc",
+   "label": "Mont Blanc's snow dome, the Aiguille du Midi and the Bossons glacier above Chamonix",
+   "lat": 45.8326,
+   "lon": 6.8652,
+   "radius_km": 25,
+   "aliases": [
+    "mont blanc",
+    "monte bianco",
+    "massif du mont blanc",
+    "glacier des bossons",
+    "bossons glacier"
+   ],
+   "names": [
+    "chamonix",
+    "chamonix mont blanc"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#7F8892",
+    "mid": "#8FB06C",
+    "ice": "#FFFFFF",
+    "water": "#C4D7E6",
+    "near": "#1E2226",
+    "sun": "#F4C542",
+    "leaf": "#2F5232",
+    "acc": "#8A6A48",
+    "obj": "#A39C90"
+   }
+  },
+  {
    "slug": "mont-saint-michel",
    "label": "Mont-Saint-Michel",
    "lat": 48.636,
@@ -992,6 +1505,37 @@
     "leaf": "#4E7E3A",
     "acc": "#6E9E88",
     "obj": "#8AB85A"
+   }
+  },
+  {
+   "slug": "nantes",
+   "label": "Entrance towers of the Chateau des ducs de Bretagne, Nantes",
+   "lat": 47.2161,
+   "lon": -1.5497,
+   "radius_km": 15,
+   "aliases": [
+    "chateau des ducs de bretagne",
+    "castle of the dukes of brittany",
+    "chateau des ducs",
+    "castello dei duchi di bretagna"
+   ],
+   "names": [
+    "nantes",
+    "nantes city",
+    "nantes centre",
+    "ville de nantes"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#B9AE9C",
+    "mid": "#8F8576",
+    "ice": "#F2EEE3",
+    "water": "#5E7F72",
+    "near": "#24232A",
+    "sun": "#F6C431",
+    "leaf": "#5F9446",
+    "acc": "#C27556",
+    "obj": "#5B6470"
    }
   },
   {
@@ -1107,6 +1651,36 @@
    }
   },
   {
+   "slug": "orleans",
+   "label": "Sainte-Croix cathedral at the end of Rue Jeanne-d'Arc, Orleans",
+   "lat": 47.9016,
+   "lon": 1.9097,
+   "radius_km": 15,
+   "aliases": [
+    "orleans cathedral",
+    "cathedrale sainte croix",
+    "cathedrale d orleans",
+    "sainte croix cathedral",
+    "cattedrale di orleans"
+   ],
+   "names": [
+    "orleans",
+    "orleans city"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#E6DCC8",
+    "mid": "#DED3BC",
+    "ice": "#F3EFE6",
+    "water": "#5E8FB0",
+    "near": "#2A2A2E",
+    "sun": "#F4C542",
+    "leaf": "#5E7E3E",
+    "acc": "#C4B79E",
+    "obj": "#6E7176"
+   }
+  },
+  {
    "slug": "palace-of-versailles",
    "label": "Royal Gate and Marble Court, Palace of Versailles",
    "lat": 48.8049,
@@ -1190,6 +1764,35 @@
    }
   },
   {
+   "slug": "piana",
+   "label": "Piana's campanile and village under the red granite of the Calanche, Corsica",
+   "lat": 42.2375,
+   "lon": 8.6372,
+   "radius_km": 8,
+   "aliases": [
+    "piana corse",
+    "piana corsica",
+    "piana corse du sud",
+    "village de piana",
+    "piana village"
+   ],
+   "names": [
+    "piana"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#8F9BAE",
+    "mid": "#C27A5C",
+    "ice": "#F1E4D8",
+    "water": "#3E86A8",
+    "near": "#2B2420",
+    "sun": "#F2C14E",
+    "leaf": "#5A7A3C",
+    "acc": "#D8BC94",
+    "obj": "#B85E3C"
+   }
+  },
+  {
    "slug": "pointe-du-hoc",
    "label": "Pointe du Hoc cliffs and Ranger Monument",
    "lat": 49.396,
@@ -1213,6 +1816,33 @@
    }
   },
   {
+   "slug": "pont-aven",
+   "label": "Pont-Aven's watermill and granite boulders on the Aven",
+   "lat": 47.855,
+   "lon": -3.747,
+   "radius_km": 8,
+   "aliases": [
+    "moulin du grand poulguin",
+    "moulin de rosmadec"
+   ],
+   "names": [
+    "pont aven",
+    "pontaven"
+   ],
+   "palette": {
+    "sky": "#A9D0F0",
+    "far": "#CFC8B8",
+    "mid": "#B39A78",
+    "ice": "#F4F2EE",
+    "water": "#4E7F8A",
+    "near": "#26282A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7E36",
+    "acc": "#C2352E",
+    "obj": "#4A5560"
+   }
+  },
+  {
    "slug": "pont-du-gard",
    "label": "Pont du Gard Roman aqueduct",
    "lat": 43.9475,
@@ -1233,6 +1863,42 @@
     "leaf": "#5C7E38",
     "acc": "#C8A060",
     "obj": "#B04A30"
+   }
+  },
+  {
+   "slug": "provence",
+   "label": "Lavender rows and a stone farmhouse on the Valensole plateau, Provence",
+   "lat": 43.84,
+   "lon": 5.98,
+   "radius_km": 40,
+   "aliases": [
+    "plateau de valensole",
+    "valensole plateau",
+    "altopiano di valensole",
+    "provence lavender",
+    "lavender fields of provence",
+    "campi di lavanda della provenza",
+    "lavande de provence"
+   ],
+   "names": [
+    "provence",
+    "provenza",
+    "la provence",
+    "provence region",
+    "haute provence",
+    "valensole"
+   ],
+   "palette": {
+    "sky": "#B6D6F3",
+    "far": "#7F95B8",
+    "mid": "#7A64A6",
+    "ice": "#E4D6BC",
+    "water": "#5A8FC0",
+    "near": "#262230",
+    "sun": "#F2C14E",
+    "leaf": "#4E7334",
+    "acc": "#E2BE84",
+    "obj": "#B9603E"
    }
   },
   {
@@ -1322,6 +1988,37 @@
    }
   },
   {
+   "slug": "rouffignac-cave",
+   "label": "Entrance of the Rouffignac cave with its mammoth sculpture",
+   "lat": 45.0072,
+   "lon": 0.9822,
+   "radius_km": 5,
+   "aliases": [
+    "grotte de rouffignac",
+    "rouffignac cave",
+    "cave of the hundred mammoths",
+    "grotte aux cent mammouths",
+    "grotta di rouffignac",
+    "cueva de rouffignac"
+   ],
+   "names": [
+    "rouffignac",
+    "rouffignac saint cernin de reilhac"
+   ],
+   "palette": {
+    "sky": "#B4D6EE",
+    "far": "#8DB24E",
+    "mid": "#C9AE84",
+    "ice": "#E2DDD2",
+    "water": "#4E8FB0",
+    "near": "#2A2620",
+    "sun": "#F2C14E",
+    "leaf": "#4A7A34",
+    "acc": "#B0603A",
+    "obj": "#A88C6C"
+   }
+  },
+  {
    "slug": "saint-emilion",
    "label": "Saint-Emilion bell tower above the old town",
    "lat": 44.8936,
@@ -1372,6 +2069,124 @@
     "leaf": "#5E7E44",
     "acc": "#C8693E",
     "obj": "#DCA89C"
+   }
+  },
+  {
+   "slug": "saint-remy-de-provence",
+   "label": "Les Antiques: the Mausoleum of the Julii and the Roman arch of Glanum, Saint-Remy-de-Provence",
+   "lat": 43.774,
+   "lon": 4.832,
+   "radius_km": 10,
+   "aliases": [
+    "les antiques",
+    "glanum",
+    "mausoleum of the julii",
+    "mausolee des jules",
+    "saint remy de provence",
+    "st remy de provence",
+    "saint remi de provence"
+   ],
+   "names": [
+    "saint remy",
+    "st remy",
+    "saint remy en provence"
+   ],
+   "palette": {
+    "sky": "#A0CAF2",
+    "far": "#8E9A70",
+    "mid": "#DCD2BA",
+    "ice": "#E9E3D3",
+    "water": "#4E8EB0",
+    "near": "#2A2722",
+    "sun": "#F2C14E",
+    "leaf": "#557F3A",
+    "acc": "#C9A86A",
+    "obj": "#BDB298"
+   }
+  },
+  {
+   "slug": "santenay",
+   "label": "Chateau de Santenay with its glazed Burgundy tile roofs above the vineyards",
+   "lat": 46.9089,
+   "lon": 4.6939,
+   "radius_km": 5,
+   "aliases": [
+    "chateau de santenay",
+    "chateau philippe le hardi",
+    "castello di santenay"
+   ],
+   "names": [
+    "santenay"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#E3BE4A",
+    "mid": "#D6C29A",
+    "ice": "#E2D3AE",
+    "water": "#4E5966",
+    "near": "#2B2620",
+    "sun": "#F6C431",
+    "leaf": "#5E8A3C",
+    "acc": "#9E4A2C",
+    "obj": "#2F7A52"
+   }
+  },
+  {
+   "slug": "souillac",
+   "label": "The domed Romanesque abbey church of Sainte-Marie in Souillac, seen from its apse",
+   "lat": 44.8972,
+   "lon": 1.4781,
+   "radius_km": 10,
+   "aliases": [
+    "abbaye de souillac",
+    "souillac abbey",
+    "abbatiale sainte marie de souillac",
+    "abbatiale de souillac",
+    "abbazia di souillac"
+   ],
+   "names": [
+    "souillac",
+    "souillac lot",
+    "souillac france"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#CFC5B2",
+    "mid": "#C9BBA0",
+    "ice": "#ECE6D8",
+    "water": "#4E86A8",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A38",
+    "acc": "#A85A3E",
+    "obj": "#6C6862"
+   }
+  },
+  {
+   "slug": "three-valleys",
+   "label": "Les 3 Vallees: Val Thorens' wood-clad resort in its snowy bowl, with a chairlift and an alpine chough",
+   "lat": 45.298,
+   "lon": 6.58,
+   "radius_km": 25,
+   "aliases": [
+    "3 vallees",
+    "trois vallees",
+    "three valleys",
+    "3 valleys",
+    "tre valli",
+    "val thorens"
+   ],
+   "palette": {
+    "sky": "#A9CFF2",
+    "far": "#C8D7E8",
+    "mid": "#7C7670",
+    "ice": "#FBFCFD",
+    "water": "#5C8EC0",
+    "near": "#22252A",
+    "sun": "#F4C93E",
+    "leaf": "#3F5E3A",
+    "acc": "#8C5C3A",
+    "obj": "#4E4E54"
    }
   },
   {

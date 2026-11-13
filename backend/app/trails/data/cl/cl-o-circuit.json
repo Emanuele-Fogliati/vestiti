@@ -16,16 +16,16 @@
   3
  ],
  "hours": [
-  50,
-  60
+  38,
+  46
  ],
  "start_by": "08:00",
  "published": {
-  "km": 110,
-  "gain_m": 4500,
-  "source": "https://www.torresdelpaine.com"
+  "km": 93,
+  "gain_m": null,
+  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
  },
- "why": "Eight days all the way round the massif: the empty north side, John Gardner Pass and the Southern Ice Field, then the W.",
+ "why": "Eight days all the way round the massif: the empty north side, John Gardner Pass over the Southern Ice Field, then the W back to the start.",
  "book": "Only counter-clockwise, and every camp must be booked in order before you enter (Las Torres, Vertice, CONAF). The back side opens around November and closes in early April.",
  "water": "Streams and camps; food at the huts on the W part only.",
  "dangers": [
@@ -34,46 +34,71 @@
  ],
  "turnaround": "Leave Los Perros camp at first light: the pass must be crossed before the afternoon wind.",
  "sources": [
+  "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/",
   "https://www.torresdelpaine.com",
   "https://www.verticepatagonia.cl",
-  "https://hiking.waymarkedtrails.org/#route?id=7705906"
+  "https://www.openstreetmap.org/relation/7705906"
  ],
- "osm": 7705906,
  "points": [
   {
    "id": "start",
-   "name": "Refugio Dickson on Lago Dickson",
-   "lat": -50.879,
-   "lon": -73.1167,
+   "name": "Hotel Las Torres, Torres del Paine",
+   "lat": -50.97316,
+   "lon": -72.87498,
    "role": "start",
-   "note": "Day 2-3: the back side opens up; the hut stands on a meadow with the Dickson glacier at the end of the lake.",
-   "night": true
+   "note": "Day 1: north along the Paine river to Serón camp (13 km, 4 h). The loop is walked only counter-clockwise.",
+   "night": true,
+   "scene": "cl-hotel-las-torres"
+  },
+  {
+   "id": "dickson",
+   "name": "Refugio Dickson on Lago Dickson",
+   "lat": -50.87943,
+   "lon": -73.07476,
+   "role": "point",
+   "note": "Day 2: 18 km from Serón. The hut stands on a meadow, the Dickson glacier at the end of the lake.",
+   "night": true,
+   "scene": "cl-lake-dickson"
   },
   {
    "id": "perros",
    "name": "Glaciar Los Perros",
-   "lat": -50.9149,
-   "lon": -73.1823,
+   "lat": -50.9323,
+   "lon": -73.1343,
    "role": "point",
-   "note": "Day 3-4: the glacier lake right above the camp.",
-   "night": true
+   "note": "Day 3: 11.8 km up the forest to Los Perros camp; the glacier lake is 5 minutes above it.",
+   "night": true,
+   "scene": "cl-glaciar-los-perros"
   },
   {
    "id": "gardner",
    "name": "John Gardner Pass, Southern Ice Field view",
-   "lat": -50.9381,
-   "lon": -73.208,
-   "role": "point",
-   "note": "Day 4-5: at the top the Grey glacier and the Ice Field fill the whole west."
+   "lat": -50.94111,
+   "lon": -73.18416,
+   "role": "goal",
+   "note": "Day 4: 1,180 m, the top of the loop: Glaciar Grey and the Southern Ice Field fill the whole west. Then down to Paso camp.",
+   "scene": "cl-paso-john-gardner"
   },
   {
-   "id": "goal",
+   "id": "bridges",
    "name": "Glaciar Grey hanging bridges",
-   "lat": -50.969,
-   "lon": -73.205,
-   "role": "goal",
-   "note": "The steep descent along the glacier and its hanging bridges; then the W back east.",
-   "night": true
+   "lat": -50.99076,
+   "lon": -73.17962,
+   "role": "point",
+   "note": "Day 5: the steep path along the glacier and over its hanging bridges to Refugio Grey.",
+   "night": true,
+   "scene": "cl-grey-hanging-bridges"
+  },
+  {
+   "id": "paine-grande",
+   "name": "Refugio Paine Grande on Lago Pehoé",
+   "lat": -51.07265,
+   "lon": -73.09378,
+   "role": "point",
+   "note": "Day 6: along Lago Grey to Paine Grande; then the W back east by Italiano and Los Cuernos to the start, 2-3 more days.",
+   "night": true,
+   "scene": "cl-refugio-paine-grande"
   }
- ]
+ ],
+ "router": "local"
 }

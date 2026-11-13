@@ -17,14 +17,14 @@
   4
  ],
  "hours": [
-  8,
-  10
+  9,
+  11
  ],
  "start_by": "08:00",
  "published": {
-  "km": 22,
-  "gain_m": 800,
-  "source": "https://www.torresdelpaine.com"
+  "km": 26,
+  "gain_m": null,
+  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
  },
  "why": "Into the heart of the massif: avalanches off the Paine Grande glacier, then an amphitheatre of granite at the top.",
  "book": "Catamaran Pudeto–Paine Grande (pay on board in cash or card; no booking). The park entry ticket online.",
@@ -42,34 +42,38 @@
   {
    "id": "start",
    "name": "Refugio Paine Grande on Lago Pehoé",
-   "lat": -51.0623,
-   "lon": -73.1103,
+   "lat": -51.07265,
+   "lon": -73.09378,
    "role": "start",
-   "note": "Off the catamaran from Pudeto. East along Lago Skottsberg for 2 h."
+   "note": "Off the catamaran from Pudeto. East along Lago Skottsberg for 2 h.",
+   "scene": "cl-refugio-paine-grande"
   },
   {
    "id": "italiano",
    "name": "Campamento Italiano",
-   "lat": -51.0035,
-   "lon": -73.0436,
+   "lat": -51.02692,
+   "lon": -73.04043,
    "role": "point",
-   "note": "Leave anything heavy at the ranger post; the valley climbs from here."
+   "note": "Leave anything heavy at the ranger post; the valley climbs from here.",
+   "scene": "cl-campamento-italiano"
   },
   {
    "id": "frances",
    "name": "Mirador Francés",
-   "lat": -50.99,
-   "lon": -73.056,
+   "lat": -51.00816,
+   "lon": -73.05299,
    "role": "point",
-   "note": "Under the hanging glacier of Paine Grande: listen for the avalanches."
+   "note": "Under the hanging glacier of Paine Grande: listen for the avalanches.",
+   "scene": "cl-french-valley"
   },
   {
    "id": "goal",
    "name": "Mirador Británico",
-   "lat": -50.9617,
-   "lon": -73.056,
+   "lat": -50.98268,
+   "lon": -73.05375,
    "role": "goal",
-   "note": "About 1,100 m: the ring of towers, from the Cuernos to Fortaleza."
+   "note": "About 1,100 m: the ring of towers, from the Cuernos to Fortaleza.",
+   "scene": "cl-mirador-britanico"
   }
  ]
 }

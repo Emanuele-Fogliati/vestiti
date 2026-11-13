@@ -3,6 +3,34 @@
  "name": "Georgia",
  "places": [
   {
+   "slug": "abudelauri-lakes",
+   "label": "Abudelauri Blue Lake among boulders below the Chaukhi spires",
+   "lat": 42.51,
+   "lon": 45.08,
+   "radius_km": 5,
+   "aliases": [
+    "abudelauri",
+    "abudelauri lakes",
+    "abudelauri lake",
+    "laghi di abudelauri",
+    "abudelauri blue lake",
+    "abudelauri green lake",
+    "abudelauri white lake"
+   ],
+   "palette": {
+    "sky": "#A4CCF0",
+    "far": "#8D8B8E",
+    "mid": "#A9AC62",
+    "ice": "#F4F4F2",
+    "water": "#2FA8CF",
+    "near": "#262624",
+    "sun": "#F4C542",
+    "leaf": "#7EA04E",
+    "acc": "#C7AE86",
+    "obj": "#B2AFA8"
+   }
+  },
+  {
    "slug": "alaverdi-monastery",
    "label": "Alaverdi Cathedral with its tall drum above the monastery walls",
    "lat": 42.0326,
@@ -102,6 +130,32 @@
     "telavi town",
     "telawi"
    ]
+  },
+  {
+   "slug": "batumi-botanical-garden",
+   "label": "Batumi Botanical Garden: the Green Cape slope over the Black Sea and the coastal railway",
+   "lat": 41.6935,
+   "lon": 41.7085,
+   "radius_km": 4,
+   "aliases": [
+    "batumi botanical garden",
+    "batumi botanic garden",
+    "green cape",
+    "mtsvane kontskhi",
+    "botanical garden of batumi"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#93A9A2",
+    "mid": "#3F7A35",
+    "ice": "#E4E0D6",
+    "water": "#3F86A6",
+    "near": "#1F2A1E",
+    "sun": "#F3CB4C",
+    "leaf": "#74AC48",
+    "acc": "#8A6448",
+    "obj": "#7D9BE0"
+   }
   },
   {
    "slug": "borjomi",
@@ -415,6 +469,34 @@
    }
   },
   {
+   "slug": "meskheti",
+   "label": "Sapara Monastery's conical domes in the forested hills of Meskheti",
+   "lat": 41.5878,
+   "lon": 43.0186,
+   "radius_km": 8,
+   "aliases": [
+    "sapara",
+    "safara monastery"
+   ],
+   "names": [
+    "meskheti",
+    "samtskhe javakheti",
+    "samtskhe"
+   ],
+   "palette": {
+    "sky": "#D6E6EE",
+    "far": "#A3B0BA",
+    "mid": "#BC9378",
+    "ice": "#F4F0E8",
+    "water": "#4A7444",
+    "near": "#26221F",
+    "sun": "#F4C430",
+    "leaf": "#6F9C46",
+    "acc": "#9E7A62",
+    "obj": "#8E8E88"
+   }
+  },
+  {
    "slug": "mestia",
    "label": "The Svan towers of Mestia below the Caucasus",
    "lat": 43.045,
@@ -457,6 +539,28 @@
     "leaf": "#56803E",
     "acc": "#8E5B45",
     "obj": "#97795A"
+   }
+  },
+  {
+   "slug": "mutso",
+   "label": "Mutso's stone towers on their rocky crag in Khevsureti",
+   "lat": 42.5936,
+   "lon": 45.3486,
+   "radius_km": 5,
+   "aliases": [
+    "mutso"
+   ],
+   "palette": {
+    "sky": "#8EC3EE",
+    "far": "#8DAA5E",
+    "mid": "#7E776C",
+    "ice": "#D4CEC0",
+    "water": "#6A9FBF",
+    "near": "#2A2824",
+    "sun": "#F4C542",
+    "leaf": "#7C9A46",
+    "acc": "#A49D8E",
+    "obj": "#655E55"
    }
   },
   {
@@ -593,6 +697,56 @@
     "leaf": "#3F6B32",
     "acc": "#B24A34",
     "obj": "#6FBFC0"
+   }
+  },
+  {
+   "slug": "tetnuldi",
+   "label": "The snow pyramid of Mount Tetnuldi, Svaneti",
+   "lat": 43.035,
+   "lon": 42.983,
+   "radius_km": 15,
+   "aliases": [
+    "tetnuldi"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#7E7468",
+    "mid": "#8E8478",
+    "ice": "#F7F8FA",
+    "water": "#6FA3C8",
+    "near": "#22211F",
+    "sun": "#F4C430",
+    "leaf": "#3E6E34",
+    "acc": "#7FAE4C",
+    "obj": "#5A4A3C"
+   }
+  },
+  {
+   "slug": "tserovani",
+   "label": "Tserovani's Trinity Church and the rows of IDP cottages",
+   "lat": 41.81,
+   "lon": 44.66,
+   "radius_km": 6,
+   "aliases": [
+    "tserovani idp",
+    "tserovani settlement",
+    "tserovani refugee"
+   ],
+   "names": [
+    "tserovani",
+    "tserovani village"
+   ],
+   "palette": {
+    "sky": "#9ACAF0",
+    "far": "#8A9AAE",
+    "mid": "#C9A66A",
+    "ice": "#F2EEE6",
+    "water": "#4E8FB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#C2AE7A",
+    "acc": "#C8603A",
+    "obj": "#A88652"
    }
   },
   {

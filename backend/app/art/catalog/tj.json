@@ -3,6 +3,35 @@
  "name": "Tajikistan",
  "places": [
   {
+   "slug": "ayni",
+   "label": "The Varz-i-Minor mud-brick minaret in its glass casing, Ayni",
+   "lat": 39.395,
+   "lon": 68.54,
+   "radius_km": 10,
+   "aliases": [
+    "varzi minor",
+    "varz i minor",
+    "varzi manor"
+   ],
+   "names": [
+    "ayni",
+    "aini",
+    "ainy"
+   ],
+   "palette": {
+    "sky": "#B9D4EE",
+    "far": "#B49C7C",
+    "mid": "#A9784C",
+    "ice": "#F0EAD4",
+    "water": "#B8BEC4",
+    "near": "#24201C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A34",
+    "acc": "#C8463A",
+    "obj": "#7E6A58"
+   }
+  },
+  {
    "slug": "dushanbe",
    "label": "Ismoil Somoni Monument on Dousti Square, Dushanbe",
    "lat": 38.5764,
@@ -372,6 +401,33 @@
     "leaf": "#6F8A55",
     "acc": "#BDB6AA",
     "obj": "#5C4A3C"
+   }
+  },
+  {
+   "slug": "yagnob-valley",
+   "label": "The Yagnob valley at Margib: pale rock massif above poplars, the turquoise river and grazing sheep",
+   "lat": 39.12,
+   "lon": 68.95,
+   "radius_km": 30,
+   "aliases": [
+    "yagnob",
+    "yaghnob",
+    "jagnob",
+    "iagnob",
+    "yaghnob valley",
+    "margib"
+   ],
+   "palette": {
+    "sky": "#AFD1EE",
+    "far": "#A88B6C",
+    "mid": "#B9B5AF",
+    "ice": "#EFE9DE",
+    "water": "#6FB4B8",
+    "near": "#2A2620",
+    "sun": "#F4C542",
+    "leaf": "#356B33",
+    "acc": "#D8C2AA",
+    "obj": "#8E9C55"
    }
   }
  ]

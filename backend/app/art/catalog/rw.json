@@ -3,6 +3,32 @@
  "name": "Rwanda",
  "places": [
   {
+   "slug": "kibuye",
+   "label": "Lake Kivu's terraced green hills and a pole-rigged fishing pirogue at Kibuye",
+   "lat": -2.06,
+   "lon": 29.35,
+   "radius_km": 12,
+   "aliases": [],
+   "names": [
+    "kibuye",
+    "karongi",
+    "kibuye karongi",
+    "karongi kibuye"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#8EAA9C",
+    "mid": "#73A04A",
+    "ice": "#F2EFE6",
+    "water": "#3C7C8C",
+    "near": "#232A22",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E30",
+    "acc": "#C0603E",
+    "obj": "#5E4128"
+   }
+  },
+  {
    "slug": "kigali",
    "label": "Kigali Convention Centre dome, Kigali",
    "lat": -1.954,
@@ -60,6 +86,34 @@
     "leaf": "#3E7A3A",
     "acc": "#C4673F",
     "obj": "#8A7B6E"
+   }
+  },
+  {
+   "slug": "lake-kivu",
+   "label": "Lake Kivu fishing boats with their long arching poles under the green hills",
+   "lat": -2.05,
+   "lon": 29.2,
+   "radius_km": 40,
+   "aliases": [
+    "lake kivu",
+    "lac kivu",
+    "lago kivu",
+    "kivu lake"
+   ],
+   "names": [
+    "kivu"
+   ],
+   "palette": {
+    "sky": "#C4DCF0",
+    "far": "#8FA8B8",
+    "mid": "#86A85E",
+    "ice": "#EDE8DE",
+    "water": "#5A88AE",
+    "near": "#22251F",
+    "sun": "#F2C14E",
+    "leaf": "#4E7D38",
+    "acc": "#CBAA78",
+    "obj": "#8A623E"
    }
   },
   {

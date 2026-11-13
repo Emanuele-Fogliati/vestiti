@@ -1,0 +1,73 @@
+{
+ "id": "is-blahnukur",
+ "country": "IS",
+ "name": "Bláhnúkur and Laugahraun loop",
+ "base": "Landmannalaugar",
+ "region": "Fjallabak Nature Reserve, south highlands",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "10:00",
+ "why": "Through the black obsidian lava, past the steaming coloured slopes of Brennisteinsalda, to the blue-grey summit that looks down on all of Landmannalaugar.",
+ "book": "Free. Highland bus to Landmannalaugar from about mid June; parking must be reserved (Parka app) from 20 June to 13 September.",
+ "water": "Fill up at the hut; the streams near the vents are warm and mineral, not for drinking.",
+ "dangers": [
+  "The descent on the west side is steep loose scree: poles help, keep to the marked line.",
+  "Steam vents and boiling mud on Brennisteinsalda: stay on the path.",
+  "Wind on the summit is strong and cold even on sunny days."
+ ],
+ "turnaround": "In fog or wind, turn at Brennisteinsalda and come back through the lava.",
+ "sources": [
+  "https://www.fi.is/en/hiking-trails/trails/blahnukur-i-laugum",
+  "https://www.fi.is/en/hiking-trails/landmannalaugar",
+  "https://hiking.waymarkedtrails.org/#route?id=6133108"
+ ],
+ "osm": 6133108,
+ "points": [
+  {
+   "id": "start",
+   "name": "Landmannalaugar hot spring",
+   "lat": 63.991,
+   "lon": -19.062,
+   "role": "start",
+   "note": "The warm pool at the foot of the lava, next to the hut: keep it for the way back.",
+   "scene": "is-landmannalaugar-hot-spring"
+  },
+  {
+   "id": "laugahraun",
+   "name": "Laugahraun lava field",
+   "lat": 63.9873,
+   "lon": -19.0729,
+   "role": "point",
+   "note": "The path climbs onto the black obsidian lava of an eruption around 1477, between glassy blocks and steam vents.",
+   "scene": "is-laugahraun"
+  },
+  {
+   "id": "brennisteinsalda",
+   "name": "Brennisteinsalda",
+   "lat": 63.9809,
+   "lon": -19.094,
+   "role": "point",
+   "note": "The 'sulphur wave': red, yellow and green slopes with steam coming out of the ground.",
+   "scene": "is-landmannalaugar"
+  },
+  {
+   "id": "goal",
+   "name": "Bláhnúkur summit",
+   "lat": 63.97677,
+   "lon": -19.06917,
+   "role": "goal",
+   "note": "945 m, the blue-grey peak, with a view dial over the coloured hills, the lava and the braided rivers.",
+   "scene": "is-blahnukur"
+  }
+ ]
+}

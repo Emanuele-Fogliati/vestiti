@@ -3,6 +3,41 @@
  "name": "Czechia",
  "places": [
   {
+   "slug": "ceske-budejovice",
+   "label": "The Black Tower and the Samson Fountain on Premysl Otakar II Square, Ceske Budejovice",
+   "lat": 48.9747,
+   "lon": 14.4745,
+   "radius_km": 15,
+   "aliases": [
+    "cerna vez",
+    "black tower ceske budejovice",
+    "black tower of ceske budejovice",
+    "samson fountain",
+    "samsonova kasna",
+    "namesti premysla otakara ii",
+    "premysl otakar ii square",
+    "square of premysl otakar ii"
+   ],
+   "names": [
+    "ceske budejovice",
+    "budweis",
+    "budejovice",
+    "ceske budejovice old town"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C6BFB2",
+    "mid": "#7A6E64",
+    "ice": "#F1EADB",
+    "water": "#7FB0AA",
+    "near": "#262322",
+    "sun": "#E8B830",
+    "leaf": "#6A8F45",
+    "acc": "#B9583E",
+    "obj": "#EBD3A4"
+   }
+  },
+  {
    "slug": "cesky-krumlov",
    "label": "Cesky Krumlov's painted castle tower above the old town",
    "lat": 48.8127,
@@ -69,6 +104,62 @@
     "leaf": "#5E8A4A",
     "acc": "#C0583A",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "hrensko",
+   "label": "Hrensko village at the mouth of the Kamenice gorge on the Elbe",
+   "lat": 50.8743,
+   "lon": 14.2414,
+   "radius_km": 5,
+   "aliases": [
+    "herrnskretschen"
+   ],
+   "names": [
+    "hrensko",
+    "hrensko village"
+   ],
+   "palette": {
+    "sky": "#AECBEA",
+    "far": "#7FA654",
+    "mid": "#A69A86",
+    "ice": "#F2EEE4",
+    "water": "#5E7F72",
+    "near": "#24261F",
+    "sun": "#F4C542",
+    "leaf": "#3C6A34",
+    "acc": "#B24A3C",
+    "obj": "#E6A99C"
+   }
+  },
+  {
+   "slug": "karlovy-vary",
+   "label": "The Mill Colonnade, Karlovy Vary",
+   "lat": 50.2238,
+   "lon": 12.8822,
+   "radius_km": 12,
+   "aliases": [
+    "mill colonnade",
+    "mlynska kolonada",
+    "mlynska colonnade",
+    "colonnato del mulino"
+   ],
+   "names": [
+    "karlovy vary",
+    "carlsbad",
+    "karlsbad"
+   ],
+   "palette": {
+    "sky": "#AFD3F0",
+    "far": "#D2CCC1",
+    "mid": "#E0CFA8",
+    "ice": "#F5EFE2",
+    "water": "#6FA7C4",
+    "near": "#2B2620",
+    "sun": "#F2C14E",
+    "leaf": "#40703A",
+    "acc": "#6E5444",
+    "obj": "#EBD9B8"
    }
   },
   {
@@ -180,6 +271,33 @@
    }
   },
   {
+   "slug": "pravcice-gate",
+   "label": "Pravčice Gate, the great sandstone arch of Bohemian Switzerland",
+   "lat": 50.8847,
+   "lon": 14.2817,
+   "radius_km": 4,
+   "aliases": [
+    "pravcice gate",
+    "pravcicka brana",
+    "pravcicka gate",
+    "pravcice arch",
+    "prebischtor",
+    "porta di pravcice"
+   ],
+   "palette": {
+    "sky": "#C2DCF0",
+    "far": "#94A6BC",
+    "mid": "#A69E90",
+    "ice": "#EDE6D6",
+    "water": "#B83A32",
+    "near": "#2A2A28",
+    "sun": "#F4C430",
+    "leaf": "#3E6A3A",
+    "acc": "#5E9A3E",
+    "obj": "#2F5532"
+   }
+  },
+  {
    "slug": "sedlec-ossuary",
    "label": "The Cemetery Church of All Saints over the Sedlec Ossuary, Kutna Hora",
    "lat": 49.9617,
@@ -220,6 +338,38 @@
     "leaf": "#4F7F3C",
     "acc": "#C4573A",
     "obj": "#474D57"
+   }
+  },
+  {
+   "slug": "telc",
+   "label": "Telc's square: pastel gabled arcade houses and the twin Jesuit church towers",
+   "lat": 49.1844,
+   "lon": 15.4533,
+   "radius_km": 6,
+   "aliases": [
+    "namesti zachariase z hradce",
+    "zachariase z hradce square",
+    "zacharias of hradec square",
+    "telc square",
+    "telc main square",
+    "piazza di telc"
+   ],
+   "names": [
+    "telc",
+    "telc town",
+    "telc czech republic"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C9D3C2",
+    "mid": "#B8B2A8",
+    "ice": "#F3EEE2",
+    "water": "#5A8FB0",
+    "near": "#2A2624",
+    "sun": "#F4C542",
+    "leaf": "#5E4A44",
+    "acc": "#E6B8A2",
+    "obj": "#E7D08E"
    }
   }
  ]

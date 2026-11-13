@@ -3,6 +3,33 @@
  "name": "Slovakia",
  "places": [
   {
+   "slug": "banska-bystrica",
+   "label": "The Clock Tower on SNP Square, Banská Bystrica",
+   "lat": 48.7358,
+   "lon": 19.1462,
+   "radius_km": 12,
+   "aliases": [
+    "namestie snp banska",
+    "hodinova veza banska"
+   ],
+   "names": [
+    "banska bystrica",
+    "banska bystrica old town"
+   ],
+   "palette": {
+    "sky": "#9CC6EF",
+    "far": "#E8D58E",
+    "mid": "#D9BC7A",
+    "ice": "#F6F3EC",
+    "water": "#6E9E86",
+    "near": "#2B2C30",
+    "sun": "#F5C542",
+    "leaf": "#5B8A48",
+    "acc": "#C25A3A",
+    "obj": "#C9C4BA"
+   }
+  },
+  {
    "slug": "banska-stiavnica-calvary",
    "label": "Banska Stiavnica Calvary hill with its upper and lower churches",
    "lat": 48.4603,
@@ -78,6 +105,96 @@
     "leaf": "#4D7A35",
     "acc": "#D8613A",
     "obj": "#6E6A5E"
+   }
+  },
+  {
+   "slug": "hrebienok",
+   "label": "Hrebienok funicular in the High Tatras forest",
+   "lat": 49.1555,
+   "lon": 20.2235,
+   "radius_km": 3,
+   "aliases": [
+    "hrebienok",
+    "hrebienok funicular",
+    "funicolare hrebienok",
+    "lanovka hrebienok"
+   ],
+   "palette": {
+    "sky": "#CBE2F4",
+    "far": "#B7B8B0",
+    "mid": "#86A06C",
+    "ice": "#F4F4F2",
+    "water": "#5E8FB0",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#2F5B35",
+    "acc": "#2457B0",
+    "obj": "#D8332C"
+   }
+  },
+  {
+   "slug": "spis-castle",
+   "label": "The white ruins of Spis Castle on their travertine hill",
+   "lat": 48.9997,
+   "lon": 20.7681,
+   "radius_km": 5,
+   "aliases": [
+    "spis castle",
+    "spissky hrad",
+    "spisky hrad",
+    "castello di spis",
+    "spiski hrad",
+    "szepes castle",
+    "szepesi var"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#A9C48A",
+    "mid": "#D8D0BC",
+    "ice": "#E6E0D0",
+    "water": "#5A8FB5",
+    "near": "#2B2A26",
+    "sun": "#F6C431",
+    "leaf": "#6FA03E",
+    "acc": "#C2BAA6",
+    "obj": "#3F6B2E"
+   }
+  },
+  {
+   "slug": "tatra-mountains",
+   "label": "Strbske Pleso and Hotel Patria under the High Tatras peaks",
+   "lat": 49.12,
+   "lon": 20.06,
+   "radius_km": 30,
+   "aliases": [
+    "tatra mountains",
+    "high tatras",
+    "high tatra",
+    "vysoke tatry",
+    "tatry",
+    "monti tatra",
+    "alti tatra",
+    "strbske pleso",
+    "strbske lake",
+    "lago strbske",
+    "hotel patria"
+   ],
+   "names": [
+    "tatra",
+    "tatras",
+    "the tatras"
+   ],
+   "palette": {
+    "sky": "#9ED0EE",
+    "far": "#62783E",
+    "mid": "#B09A8A",
+    "ice": "#F4F2EE",
+    "water": "#2F6A8E",
+    "near": "#22261E",
+    "sun": "#F4C542",
+    "leaf": "#2E5A30",
+    "acc": "#A8673C",
+    "obj": "#C9C3B8"
    }
   }
  ]

@@ -3,6 +3,31 @@
  "name": "Iran",
  "places": [
   {
+   "slug": "abyaneh",
+   "label": "The red mud-brick terraced houses of Abyaneh below the Karkas mountains",
+   "lat": 33.5797,
+   "lon": 51.604,
+   "radius_km": 5,
+   "aliases": [
+    "abyaneh",
+    "abyane",
+    "abyaneh village",
+    "abyanah"
+   ],
+   "palette": {
+    "sky": "#D6E4EE",
+    "far": "#CDB596",
+    "mid": "#B0604C",
+    "ice": "#F1ECE4",
+    "water": "#6FA8C8",
+    "near": "#2C211D",
+    "sun": "#F2C14E",
+    "leaf": "#88A040",
+    "acc": "#BE8670",
+    "obj": "#97503F"
+   }
+  },
+  {
    "slug": "isfahan",
    "label": "Shah (Imam) Mosque on Naqsh-e Jahan Square, Isfahan",
    "lat": 32.6545,
@@ -39,6 +64,37 @@
     "leaf": "#4E7D3A",
     "acc": "#3FAFB8",
     "obj": "#2D4F97"
+   }
+  },
+  {
+   "slug": "meybod",
+   "label": "Narin Castle, the mud-brick citadel of Meybod",
+   "lat": 32.2318,
+   "lon": 54.0128,
+   "radius_km": 10,
+   "aliases": [
+    "narin castle",
+    "narin qaleh",
+    "narin qal eh",
+    "narin ghaleh",
+    "narenj qaleh"
+   ],
+   "names": [
+    "meybod",
+    "maybod",
+    "meibod"
+   ],
+   "palette": {
+    "sky": "#B6D6EE",
+    "far": "#E0C69C",
+    "mid": "#C99A66",
+    "ice": "#E8CFA2",
+    "water": "#4E8FB0",
+    "near": "#2E241C",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A3A",
+    "acc": "#B78656",
+    "obj": "#9E7A50"
    }
   },
   {

@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="28" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-laguna-el-morado-m"><path d="M60 134L86 96L104 80L116 64L124 44L130 30L136 20L142 26L148 38L156 44L166 50L176 62L190 78L206 94L226 134Z"/></clipPath></defs>
+<path d="M60 134L86 96L104 80L116 64L124 44L130 30L136 20L142 26L148 38L156 44L166 50L176 62L190 78L206 94L226 134Z" fill="var(--il-far)"/>
+<g clip-path="url(#il-cl-laguna-el-morado-m)">
+<path d="M70 100L96 84L112 76L124 66L132 72L142 62L152 70L164 66L176 74L190 82L210 98L226 110V122H60Z" fill="var(--il-ice)"/>
+<path d="M132 30L126 54L116 78L108 100L114 100L122 80L130 58ZM140 40L140 70L138 96L144 96L146 70L144 46ZM150 44L160 62L170 82L176 100L182 98L176 78L164 58Z" fill="var(--il-far)"/>
+<path d="M136 20L142 26L148 38L144 54L138 36Z" fill="var(--il-near)" opacity="0.3"/>
+</g>
+<path d="M0 132V30L20 42L40 60L60 80L80 98L100 112L114 124L120 132Z" fill="var(--il-mid)"/>
+<path d="M300 132V34L280 46L260 62L240 78L222 94L204 108L190 122L182 132Z" fill="var(--il-mid)"/>
+<path d="M20 60L40 88M44 72L62 98M260 76L246 98M284 62L268 92" stroke="var(--il-acc)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M90 132L104 124L130 120L160 120L190 124L206 132Z" fill="var(--il-acc)"/>
+<path d="M0 200V130H300V200Z" fill="var(--il-water)"/>
+<path d="M0 200V184Q60 178 120 186Q180 194 230 186Q270 180 300 184V200Z" fill="var(--il-acc)"/>
+<path d="M30 192L34 186L44 185L48 192ZM250 194L254 187L264 186L268 194Z" fill="var(--il-mid)"/>

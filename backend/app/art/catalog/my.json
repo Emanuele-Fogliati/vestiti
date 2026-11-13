@@ -3,6 +3,35 @@
  "name": "Malaysia",
  "places": [
   {
+   "slug": "bako-national-park",
+   "label": "Bako's sea stack off the beach, with a proboscis monkey",
+   "lat": 1.715,
+   "lon": 110.47,
+   "radius_km": 12,
+   "aliases": [
+    "bako national park",
+    "bako np",
+    "parco nazionale di bako",
+    "taman negara bako",
+    "bako sea stack"
+   ],
+   "names": [
+    "bako"
+   ],
+   "palette": {
+    "sky": "#8EC4EC",
+    "far": "#8CA396",
+    "mid": "#A27E58",
+    "ice": "#EDE0BF",
+    "water": "#5DAFB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#3C7032",
+    "acc": "#6E5038",
+    "obj": "#C2763A"
+   }
+  },
+  {
    "slug": "batu-caves",
    "label": "Batu Caves: the golden Murugan statue and rainbow stairs",
    "lat": 3.2379,
@@ -28,6 +57,29 @@
    }
   },
   {
+   "slug": "beaufort",
+   "label": "The steel truss bridge over the Padas River, Beaufort",
+   "lat": 5.346,
+   "lon": 115.746,
+   "radius_km": 10,
+   "aliases": [
+    "beaufort sabah",
+    "padas river bridge"
+   ],
+   "palette": {
+    "sky": "#BAD6EE",
+    "far": "#5E8E4A",
+    "mid": "#8E8F88",
+    "ice": "#F2F2EE",
+    "water": "#A98A5C",
+    "near": "#23262A",
+    "sun": "#F4C542",
+    "leaf": "#4F8A3A",
+    "acc": "#C93A34",
+    "obj": "#4B5856"
+   }
+  },
+  {
    "slug": "bornean-sun-bear-conservation-centre",
    "label": "Sun bear on a log at the Bornean Sun Bear Conservation Centre, Sepilok",
    "lat": 5.865,
@@ -48,6 +100,62 @@
     "leaf": "#3E7432",
     "acc": "#8A5634",
     "obj": "#5E554C"
+   }
+  },
+  {
+   "slug": "bukit-merah-orang-utan-island",
+   "label": "Stilt houses and an orangutan on Orang Utan Island, Bukit Merah Lake",
+   "lat": 5.0172,
+   "lon": 100.6612,
+   "radius_km": 6,
+   "aliases": [
+    "orang utan island",
+    "orangutan island",
+    "pulau orang utan",
+    "bukit merah orang utan",
+    "bukit merah orangutan",
+    "bukit merah lake",
+    "tasik bukit merah",
+    "bukit merah laketown"
+   ],
+   "names": [
+    "bukit merah"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#8FA7A8",
+    "mid": "#7A5534",
+    "ice": "#EDE6D6",
+    "water": "#6B93A3",
+    "near": "#22231E",
+    "sun": "#F2C14E",
+    "leaf": "#3F7232",
+    "acc": "#D9A47A",
+    "obj": "#B4522A"
+   }
+  },
+  {
+   "slug": "bukit-teresek",
+   "label": "The rainforest view from Bukit Teresek in Taman Negara, with a rhinoceros hornbill",
+   "lat": 4.3836,
+   "lon": 102.4044,
+   "radius_km": 4,
+   "aliases": [
+    "bukit teresek",
+    "teresek hill",
+    "teresek"
+   ],
+   "palette": {
+    "sky": "#C2DEF3",
+    "far": "#8DA6B4",
+    "mid": "#5F8F5E",
+    "ice": "#ECEAE2",
+    "water": "#D8572E",
+    "near": "#22261F",
+    "sun": "#F4C443",
+    "leaf": "#3D6B34",
+    "acc": "#F0CB45",
+    "obj": "#6E5038"
    }
   },
   {
@@ -76,6 +184,60 @@
     "leaf": "#7CB43C",
     "acc": "#A8643E",
     "obj": "#6E8A94"
+   }
+  },
+  {
+   "slug": "crocker-range",
+   "label": "Misty ridges of the Crocker Range with a Rafflesia flower",
+   "lat": 5.6,
+   "lon": 116.2,
+   "radius_km": 35,
+   "aliases": [
+    "crocker range",
+    "banjaran crocker",
+    "crocker range park",
+    "rafflesia forest reserve",
+    "rafflesia information centre",
+    "taman banjaran crocker"
+   ],
+   "names": [
+    "crocker"
+   ],
+   "palette": {
+    "sky": "#B6D2EA",
+    "far": "#7F93A8",
+    "mid": "#64837A",
+    "ice": "#F1F2F2",
+    "water": "#4E8FB0",
+    "near": "#262A24",
+    "sun": "#F2C14E",
+    "leaf": "#3E7034",
+    "acc": "#C8573A",
+    "obj": "#4F6E4C"
+   }
+  },
+  {
+   "slug": "dinawan-island",
+   "label": "Dinawan Island's white beach and green lagoon below its wooded headland, Sabah",
+   "lat": 5.87,
+   "lon": 115.88,
+   "radius_km": 5,
+   "aliases": [
+    "dinawan",
+    "pulau dinawan",
+    "ara dinawan"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#A6D9BC",
+    "mid": "#3C7436",
+    "ice": "#F4F0E2",
+    "water": "#3FAEA4",
+    "near": "#1F2A22",
+    "sun": "#F4C542",
+    "leaf": "#6CA444",
+    "acc": "#8C7A60",
+    "obj": "#2F78C8"
    }
   },
   {
@@ -438,7 +600,10 @@
    "aliases": [
     "perhentian",
     "isole perhentian",
-    "pulau perhentian"
+    "pulau perhentian",
+    "kuala besut jetty",
+    "jetty di kuala besut",
+    "molo di kuala besut"
    ],
    "palette": {
     "sky": "#A6D2F0",
@@ -451,7 +616,11 @@
     "leaf": "#3B7A34",
     "acc": "#6FD3CC",
     "obj": "#6B5038"
-   }
+   },
+   "names": [
+    "kuala besut",
+    "kuala besut terengganu"
+   ]
   },
   {
    "slug": "petronas-towers",
@@ -528,6 +697,65 @@
     "leaf": "#5E9A3E",
     "acc": "#9A8E7E",
     "obj": "#B04E24"
+   }
+  },
+  {
+   "slug": "turtle-islands-park",
+   "label": "A green sea turtle and hatchlings on the beach of Selingan, Turtle Islands Park",
+   "lat": 6.18,
+   "lon": 118.06,
+   "radius_km": 10,
+   "aliases": [
+    "turtle islands park",
+    "turtle islands national park",
+    "turtle island park",
+    "selingan",
+    "pulau penyu"
+   ],
+   "names": [
+    "turtle island",
+    "turtle islands",
+    "turtle island sabah"
+   ],
+   "palette": {
+    "sky": "#A9D4F0",
+    "far": "#7F9C92",
+    "mid": "#EADBB4",
+    "ice": "#FFFFFF",
+    "water": "#4FB0B8",
+    "near": "#24302A",
+    "sun": "#F6C431",
+    "leaf": "#3F7A3A",
+    "acc": "#8C8A5E",
+    "obj": "#6A5434"
+   }
+  },
+  {
+   "slug": "ubudiah-mosque",
+   "label": "The golden dome and striped minarets of Ubudiah Mosque, Kuala Kangsar",
+   "lat": 4.7755,
+   "lon": 100.9475,
+   "radius_km": 4,
+   "aliases": [
+    "ubudiah mosque",
+    "masjid ubudiah",
+    "moschea ubudiah",
+    "royal mosque kuala kangsar"
+   ],
+   "names": [
+    "kuala kangsar"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#B8AFA2",
+    "mid": "#E2DED6",
+    "ice": "#F6F4EF",
+    "water": "#4A8DB8",
+    "near": "#2B2A2C",
+    "sun": "#F7D25A",
+    "leaf": "#4B8A36",
+    "acc": "#D19A24",
+    "obj": "#A65A44"
    }
   }
  ]

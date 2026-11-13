@@ -1,0 +1,70 @@
+{
+ "id": "is-reykjadalur",
+ "country": "IS",
+ "name": "Reykjadalur hot river",
+ "base": "Hveragerði",
+ "region": "Hengill area, above Hveragerði, south Iceland",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "",
+ "published": {
+  "km": 7,
+  "gain_m": null,
+  "source": "https://www.iceland-dream.com/guide/west/reykjadalur"
+ },
+ "why": "An hour up a steaming green valley to a warm river where you bathe in the open, with changing screens on the boardwalk.",
+ "book": "Free walk, paid parking at the trailhead north of Hveragerði. The Environment Agency closes the path in wet spring weeks to save it: check before you go.",
+ "water": "None to drink on the way: carry it. The river is warm, not drinking water.",
+ "dangers": [
+  "Boiling springs and mud pots beside the path: never step off it, the ground can be a thin crust.",
+  "The water is hotter upstream: test it before you get in, move downstream to cool down.",
+  "Icy and dark in winter."
+ ],
+ "turnaround": "Back down before dark: the path is unlit and slippery when frozen.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Hveragerði",
+  "https://www.iceland-dream.com/guide/west/reykjadalur"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Reykjadalur trailhead, Hveragerði",
+   "lat": 64.02115,
+   "lon": -21.21115,
+   "role": "start",
+   "note": "The car park and café at the end of the road north of town; the path climbs the first hill at once.",
+   "scene": "is-hveragerdi"
+  },
+  {
+   "id": "valley",
+   "name": "Djúpagilsfoss and the steaming valley",
+   "lat": 64.03654,
+   "lon": -21.222,
+   "role": "point",
+   "note": "Over the ridge the valley opens, green and steaming, with the Djúpagil waterfall on the left.",
+   "scene": "is-reykjadalur"
+  },
+  {
+   "id": "goal",
+   "name": "Reykjadalsá bathing boardwalk",
+   "lat": 64.04797,
+   "lon": -21.22218,
+   "role": "goal",
+   "note": "The wooden boardwalk with screens along the warm river; the best water is where a hot spring joins it.",
+   "scene": "is-reykjadalsa"
+  }
+ ]
+}

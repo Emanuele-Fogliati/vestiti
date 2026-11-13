@@ -3,6 +3,28 @@
  "name": "Antarctica",
  "places": [
   {
+   "slug": "antarctic-circle-2",
+   "label": "Icebergs at the Antarctic Circle crossing in Crystal Sound, Adélie penguins on a floe",
+   "lat": -66.56,
+   "lon": -66.0,
+   "radius_km": 60,
+   "aliases": [
+    "crystal sound"
+   ],
+   "palette": {
+    "sky": "#BFDBF2",
+    "far": "#9CC6E2",
+    "mid": "#3F86C0",
+    "ice": "#FAFCFE",
+    "water": "#1F4E78",
+    "near": "#1E2228",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A48",
+    "acc": "#D9622B",
+    "obj": "#7A8A96"
+   }
+  },
+  {
    "slug": "antarctic-peninsula",
    "label": "Gentoo penguins and the glacier front at Neko Harbour, Antarctic Peninsula",
    "lat": -64.84,
@@ -28,6 +50,32 @@
     "leaf": "#6FAAC8",
     "acc": "#EE6A2C",
     "obj": "#D7E3EA"
+   }
+  },
+  {
+   "slug": "antarctic-sound",
+   "label": "A tabular iceberg in Antarctic Sound with Adelie penguins on a floe",
+   "lat": -63.4,
+   "lon": -56.5,
+   "radius_km": 30,
+   "aliases": [
+    "antarctic sound",
+    "iceberg alley",
+    "estrecho antartico",
+    "canal antartico",
+    "stretto antartico"
+   ],
+   "palette": {
+    "sky": "#CFE3F2",
+    "far": "#B7CCDB",
+    "mid": "#5E5550",
+    "ice": "#F6FAFC",
+    "water": "#4F6F87",
+    "near": "#1E2428",
+    "sun": "#F4C431",
+    "leaf": "#6E8A5A",
+    "acc": "#E0703A",
+    "obj": "#A9CBE0"
    }
   },
   {

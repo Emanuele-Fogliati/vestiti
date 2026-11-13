@@ -18,14 +18,14 @@
   4
  ],
  "hours": [
-  30,
-  36
+  26,
+  32
  ],
  "start_by": "08:00",
  "published": {
-  "km": 80,
-  "gain_m": 3500,
-  "source": "https://www.torresdelpaine.com"
+  "km": 65,
+  "gain_m": null,
+  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
  },
  "why": "Five days, the three great sights of the park in one line: Base Torres, the French Valley and Grey Glacier, sleeping in huts or camps.",
  "book": "Every night must be booked before you enter the park: Las Torres (Fantástico Sur) runs the east huts and camps, Vertice the west ones, CONAF the free camps. In high season they sell out months ahead.",
@@ -46,46 +46,51 @@
   {
    "id": "start",
    "name": "Hotel Las Torres, Torres del Paine",
-   "lat": -50.9525,
-   "lon": -72.8644,
+   "lat": -50.97316,
+   "lon": -72.87498,
    "role": "start",
    "note": "Day 1: up the Ascencio valley to Refugio Chileno or Campamento Torres; Base Torres at sunrise on day 2.",
-   "night": true
+   "night": true,
+   "scene": "cl-hotel-las-torres"
   },
   {
    "id": "cuernos",
    "name": "Refugio Los Cuernos on Lago Nordenskjöld",
-   "lat": -51.0103,
-   "lon": -72.9965,
+   "lat": -51.02385,
+   "lon": -72.98537,
    "role": "point",
    "note": "Day 2: along Lago Nordenskjöld under the Cuernos to the hut on the shore.",
-   "night": true
+   "night": true,
+   "scene": "cl-refugio-los-cuernos"
   },
   {
    "id": "frances",
    "name": "Valle del Francés, Mirador Británico",
-   "lat": -50.9617,
-   "lon": -73.056,
+   "lat": -50.98268,
+   "lon": -73.05375,
    "role": "point",
    "note": "Day 3: up the French Valley without your pack, back down to Paine Grande.",
-   "night": true
+   "night": true,
+   "scene": "cl-mirador-britanico"
   },
   {
    "id": "paine-grande",
    "name": "Refugio Paine Grande on Lago Pehoé",
-   "lat": -51.0623,
-   "lon": -73.1103,
+   "lat": -51.07265,
+   "lon": -73.09378,
    "role": "point",
    "note": "The hut by the catamaran pier: where you leave if you end here.",
-   "night": true
+   "night": true,
+   "scene": "cl-refugio-paine-grande"
   },
   {
    "id": "goal",
-   "name": "Glaciar Grey",
-   "lat": -50.969,
-   "lon": -73.205,
+   "name": "Glaciar Grey lookout, Refugio Grey",
+   "lat": -51.00217,
+   "lon": -73.18263,
    "role": "goal",
-   "note": "Day 4-5: to Refugio Grey and the hanging bridges over the glacier, then back to the Paine Grande catamaran."
+   "note": "Day 4-5: to Refugio Grey and the hanging bridges over the glacier, then back to the Paine Grande catamaran.",
+   "scene": "cl-grey-glacier"
   }
  ]
 }

@@ -1,0 +1,68 @@
+{
+ "id": "is-valahnukur",
+ "country": "IS",
+ "name": "Valahnúkur, Þórsmörk",
+ "base": "Þórsmörk",
+ "region": "Þórsmörk, south highlands",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
+ "start_by": "",
+ "published": {
+  "km": 2.2,
+  "gain_m": null,
+  "source": "https://www.fi.is/static/files/Skilti-PDF/Laugavegur/tho-rsmo-rk-2.pdf"
+ },
+ "why": "The hut's own hill: an hour up and down for the view over the braided Krossá, three glaciers and the whole of Þórsmörk.",
+ "book": "Free. Þórsmörk is reached by highland bus (fords no rental car may cross); sleep at Langidalur (Ferðafélag Íslands) or Húsadalur.",
+ "water": "Fill up at the hut; nothing on the hill.",
+ "dangers": [
+  "The last stretch to the summit is steep loose tuff: slippery when wet."
+ ],
+ "turnaround": "In fog the view is gone: keep it for a clear evening.",
+ "sources": [
+  "https://www.fi.is/static/files/Skilti-PDF/Laugavegur/tho-rsmo-rk-2.pdf",
+  "https://www.fi.is/en/hiking-trails/thorsmork-and-fimmvorduhals",
+  "https://hiking.waymarkedtrails.org/#route?id=21086235"
+ ],
+ "osm": 21086235,
+ "points": [
+  {
+   "id": "start",
+   "name": "Langidalur hut (Skagfjörðsskáli)",
+   "lat": 63.685,
+   "lon": -19.5127,
+   "role": "start",
+   "note": "The Ferðafélag Íslands hut in the birches, the path starts behind it.",
+   "scene": "is-langidalur"
+  },
+  {
+   "id": "krossa",
+   "name": "Krossá view on the ridge",
+   "lat": 63.6845,
+   "lon": -19.52,
+   "role": "point",
+   "note": "Halfway up the birch slope: the grey braids of the Krossá below Eyjafjallajökull.",
+   "scene": "is-thorsmork"
+  },
+  {
+   "id": "goal",
+   "name": "Valahnúkur summit",
+   "lat": 63.68327,
+   "lon": -19.53114,
+   "role": "goal",
+   "note": "458 m, with a view dial: Eyjafjallajökull, Mýrdalsjökull and Tindfjallajökull, the Markarfljót plain to the west.",
+   "scene": "is-valahnukur"
+  }
+ ]
+}

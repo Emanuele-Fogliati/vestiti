@@ -3,6 +3,33 @@
  "name": "Canada",
  "places": [
   {
+   "slug": "admiralty-inlet",
+   "label": "Admiralty Inlet's sheer cliffs above the sea-ice floe edge, with narwhals and a polar bear",
+   "lat": 72.8,
+   "lon": -85.8,
+   "radius_km": 60,
+   "aliases": [
+    "admiralty inlet",
+    "arctic bay floe edge",
+    "ikpiarjuk"
+   ],
+   "names": [
+    "arctic bay"
+   ],
+   "palette": {
+    "sky": "#C4DEF0",
+    "far": "#A08A78",
+    "mid": "#7E5848",
+    "ice": "#F4F6F6",
+    "water": "#2D5E76",
+    "near": "#1E2226",
+    "sun": "#F4D25A",
+    "leaf": "#7D7A55",
+    "acc": "#E8E0CC",
+    "obj": "#6A7378"
+   }
+  },
+  {
    "slug": "algonquin-provincial-park",
    "label": "A red canoe, granite, white pines and a moose on an Algonquin lake",
    "lat": 45.55,
@@ -134,6 +161,85 @@
    }
   },
   {
+   "slug": "beechey-island",
+   "label": "The Franklin expedition graves on the gravel beach of Beechey Island, below its flat-topped cliff",
+   "lat": 74.7128,
+   "lon": -91.8483,
+   "radius_km": 8,
+   "aliases": [
+    "beechey island",
+    "isola beechey",
+    "isla beechey",
+    "franklin graves",
+    "franklin expedition graves",
+    "franklin camp beechey"
+   ],
+   "names": [
+    "beechey"
+   ],
+   "palette": {
+    "sky": "#D2E3F1",
+    "far": "#BDB6AA",
+    "mid": "#857B70",
+    "ice": "#F2F0EA",
+    "water": "#5D7E96",
+    "near": "#24252A",
+    "sun": "#F4C431",
+    "leaf": "#3F6E58",
+    "acc": "#D4CEC2",
+    "obj": "#8C929B"
+   }
+  },
+  {
+   "slug": "blue-rocks",
+   "label": "Red fishing shed on the slate rocks of Blue Rocks",
+   "lat": 44.342,
+   "lon": -64.296,
+   "radius_km": 3,
+   "aliases": [
+    "blue rocks nova scotia"
+   ],
+   "names": [
+    "blue rocks"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#BF9840",
+    "mid": "#7C8088",
+    "ice": "#F4F2EC",
+    "water": "#3D6B88",
+    "near": "#23262B",
+    "sun": "#F2C14E",
+    "leaf": "#2E5634",
+    "acc": "#C2302C",
+    "obj": "#2F62B0"
+   }
+  },
+  {
+   "slug": "bonaventure-island",
+   "label": "The northern gannet colony on the cliff-top of Bonaventure Island",
+   "lat": 48.4997,
+   "lon": -64.1583,
+   "radius_km": 4,
+   "aliases": [
+    "bonaventure island",
+    "ile bonaventure",
+    "parc national de l ile bonaventure"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#8C9AA6",
+    "mid": "#9A5A3E",
+    "ice": "#F7F6F0",
+    "water": "#1F5F9E",
+    "near": "#1E1F22",
+    "sun": "#E9C766",
+    "leaf": "#2F5636",
+    "acc": "#C46A3A",
+    "obj": "#8C4E36"
+   }
+  },
+  {
    "slug": "bow-falls",
    "label": "Bow Falls, the wide cascade of the Bow River in Banff",
    "lat": 51.1666,
@@ -234,6 +340,109 @@
     "leaf": "#5E8A3E",
     "acc": "#C8282E",
     "obj": "#8EA4B6"
+   }
+  },
+  {
+   "slug": "campbell-river",
+   "label": "Elk Falls and its suspension bridge over the gorge, Campbell River",
+   "lat": 50.039,
+   "lon": -125.317,
+   "radius_km": 15,
+   "aliases": [
+    "elk falls",
+    "elk falls suspension bridge",
+    "elk falls provincial park"
+   ],
+   "names": [
+    "campbell river"
+   ],
+   "palette": {
+    "sky": "#A9D2F0",
+    "far": "#6E8F6A",
+    "mid": "#76736C",
+    "ice": "#F4F8F8",
+    "water": "#3F6E68",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A36",
+    "acc": "#A07E58",
+    "obj": "#B9D3DE"
+   }
+  },
+  {
+   "slug": "cape-breton-highlands-national-park",
+   "label": "The Cabot Trail winding over the red-cliffed headland of Cape Breton Highlands, with a moose",
+   "lat": 46.7,
+   "lon": -60.92,
+   "radius_km": 45,
+   "aliases": [
+    "cape breton highlands",
+    "skyline trail cape breton",
+    "french mountain",
+    "parco nazionale cape breton highlands"
+   ],
+   "names": [
+    "cape breton highlands national park"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#B3B06A",
+    "mid": "#4F7D3E",
+    "ice": "#E8E6DE",
+    "water": "#2E6AA2",
+    "near": "#1E2820",
+    "sun": "#F2C14E",
+    "leaf": "#3B6630",
+    "acc": "#C27A62",
+    "obj": "#4A3324"
+   }
+  },
+  {
+   "slug": "cape-breton-island",
+   "label": "The Cabot Trail on the forested Cape Breton Highlands above red sea cliffs, with a moose",
+   "lat": 46.65,
+   "lon": -60.9,
+   "radius_km": 60,
+   "aliases": [
+    "cape breton",
+    "cabot trail",
+    "isola di capo bretone",
+    "capo bretone"
+   ],
+   "palette": {
+    "sky": "#AFCDEB",
+    "far": "#9DB27A",
+    "mid": "#4E7A3E",
+    "ice": "#F2EFE6",
+    "water": "#2E5F9A",
+    "near": "#22271E",
+    "sun": "#F4C542",
+    "leaf": "#5E9A3E",
+    "acc": "#B87862",
+    "obj": "#C8C4BA"
+   }
+  },
+  {
+   "slug": "cape-norton-shaw",
+   "label": "An ice-capped Arctic headland with an iceberg and a walrus at Cape Norton Shaw, Ellesmere Island",
+   "lat": 76.46,
+   "lon": -78.39,
+   "radius_km": 30,
+   "aliases": [
+    "cape norton shaw",
+    "norton shaw"
+   ],
+   "palette": {
+    "sky": "#BFD9F0",
+    "far": "#9ED6E6",
+    "mid": "#5E544C",
+    "ice": "#F4F8FA",
+    "water": "#1F3F6E",
+    "near": "#1A1C22",
+    "sun": "#F6CF4A",
+    "leaf": "#6E7F5A",
+    "acc": "#C9A07E",
+    "obj": "#8C6A58"
    }
   },
   {
@@ -341,6 +550,30 @@
    }
   },
   {
+   "slug": "elk-island-national-park",
+   "label": "A plains bison and calf in the aspen parkland of Elk Island National Park",
+   "lat": 53.6,
+   "lon": -112.86,
+   "radius_km": 25,
+   "aliases": [
+    "elk island",
+    "parco nazionale elk island",
+    "astotin lake"
+   ],
+   "palette": {
+    "sky": "#B5D8EE",
+    "far": "#4F7A3A",
+    "mid": "#4A3427",
+    "ice": "#ECE8DC",
+    "water": "#5E8FB0",
+    "near": "#231A15",
+    "sun": "#F4C542",
+    "leaf": "#86B44E",
+    "acc": "#B5683A",
+    "obj": "#9DBA62"
+   }
+  },
+  {
    "slug": "emerald-lake",
    "label": "Emerald Lake and its lodge, Yoho",
    "lat": 51.443,
@@ -372,6 +605,30 @@
    "names": [
     "yoho"
    ]
+  },
+  {
+   "slug": "fundy-national-park",
+   "label": "Point Wolfe covered bridge in Fundy National Park",
+   "lat": 45.5594,
+   "lon": -65.0247,
+   "radius_km": 20.0,
+   "aliases": [
+    "fundy national park",
+    "fundy park",
+    "point wolfe"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#4E6E4E",
+    "mid": "#9A8E80",
+    "ice": "#C9C2B4",
+    "water": "#6E8E92",
+    "near": "#22201E",
+    "sun": "#F4C542",
+    "leaf": "#3E6440",
+    "acc": "#B83A2E",
+    "obj": "#5E4A40"
+   }
   },
   {
    "slug": "gander",
@@ -453,6 +710,54 @@
    }
   },
   {
+   "slug": "grise-fjord",
+   "label": "Grise Fiord's houses and church below the rock massif, with an inuksuk and a polar bear on the ice",
+   "lat": 76.418,
+   "lon": -82.894,
+   "radius_km": 20,
+   "aliases": [
+    "grise fiord",
+    "grise fjord",
+    "ausuittuq",
+    "aujuittuq"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#B9AD98",
+    "mid": "#7E6E62",
+    "ice": "#F4F6F8",
+    "water": "#3F6E8C",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#4F8A6A",
+    "acc": "#B8402E",
+    "obj": "#3E6E9E"
+   }
+  },
+  {
+   "slug": "gros-morne-national-park",
+   "label": "Western Brook Pond's granite fjord with Pissing Mare Falls and a moose, Gros Morne National Park",
+   "lat": 49.78,
+   "lon": -57.83,
+   "radius_km": 40,
+   "aliases": [
+    "gros morne",
+    "western brook pond"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#BCC4C6",
+    "mid": "#8C9091",
+    "ice": "#F4F6F6",
+    "water": "#2F5C7A",
+    "near": "#1E2624",
+    "sun": "#F5C842",
+    "leaf": "#3F7A3A",
+    "acc": "#5A3D28",
+    "obj": "#C8452F"
+   }
+  },
+  {
    "slug": "icefields-parkway",
    "label": "The Icefields Parkway at the Big Bend",
    "lat": 52.17,
@@ -509,6 +814,38 @@
     "leaf": "#24432E",
     "acc": "#8C5034",
     "obj": "#C2AA84"
+   }
+  },
+  {
+   "slug": "joffre-lakes",
+   "label": "Turquoise Joffre Lake under the Matier Glacier, with the fallen log",
+   "lat": 50.355,
+   "lon": -122.49,
+   "radius_km": 6,
+   "aliases": [
+    "joffre lakes",
+    "joffre lake",
+    "upper joffre lake",
+    "middle joffre lake",
+    "lower joffre lake",
+    "matier glacier",
+    "laghi joffre",
+    "lago joffre"
+   ],
+   "names": [
+    "joffre"
+   ],
+   "palette": {
+    "sky": "#BCDCF2",
+    "far": "#ADA9A0",
+    "mid": "#8C887E",
+    "ice": "#F3F7FA",
+    "water": "#2FA9AE",
+    "near": "#1B2420",
+    "sun": "#F6C431",
+    "leaf": "#2F5236",
+    "acc": "#D9A441",
+    "obj": "#8B6A48"
    }
   },
   {
@@ -645,6 +982,61 @@
    }
   },
   {
+   "slug": "lake-magog",
+   "label": "Mount Assiniboine's horn above Lake Magog",
+   "lat": 50.885,
+   "lon": -115.63,
+   "radius_km": 8,
+   "aliases": [
+    "lake magog",
+    "magog lake",
+    "lago magog",
+    "mount assiniboine",
+    "mt assiniboine",
+    "assiniboine provincial park",
+    "monte assiniboine"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#8B8C8E",
+    "mid": "#6E6966",
+    "ice": "#F4F7F8",
+    "water": "#3FB0B6",
+    "near": "#23282B",
+    "sun": "#F2C14E",
+    "leaf": "#2E5236",
+    "acc": "#B9B0A4",
+    "obj": "#C8322E"
+   }
+  },
+  {
+   "slug": "lobster-cove-head-lighthouse",
+   "label": "Lobster Cove Head lighthouse and keeper's house, Gros Morne National Park",
+   "lat": 49.6014,
+   "lon": -57.9547,
+   "radius_km": 3,
+   "aliases": [
+    "lobster cove head",
+    "lobster cove lighthouse",
+    "faro di lobster cove"
+   ],
+   "names": [
+    "lobster cove"
+   ],
+   "palette": {
+    "sky": "#C4DDF0",
+    "far": "#3F5F3B",
+    "mid": "#8E8981",
+    "ice": "#F7F7F4",
+    "water": "#3F6F8F",
+    "near": "#22201E",
+    "sun": "#F4C542",
+    "leaf": "#74A23C",
+    "acc": "#9B2B25",
+    "obj": "#3E4246"
+   }
+  },
+  {
    "slug": "maligne-canyon",
    "label": "Maligne Canyon footbridge over the limestone gorge",
    "lat": 52.918,
@@ -770,6 +1162,34 @@
    }
   },
   {
+   "slug": "moricetown-canyon",
+   "label": "A Wet'suwet'en fisherman on his plank over the falls of Moricetown Canyon, with a leaping salmon",
+   "lat": 55.0397,
+   "lon": -127.3373,
+   "radius_km": 5,
+   "aliases": [
+    "moricetown canyon",
+    "moricetown falls",
+    "witset canyon"
+   ],
+   "names": [
+    "moricetown",
+    "witset"
+   ],
+   "palette": {
+    "sky": "#CFE6F2",
+    "far": "#B6D2DA",
+    "mid": "#706759",
+    "ice": "#F7FAFA",
+    "water": "#4E9A94",
+    "near": "#22231F",
+    "sun": "#F4C430",
+    "leaf": "#4C7A36",
+    "acc": "#C4513A",
+    "obj": "#B9BDBE"
+   }
+  },
+  {
    "slug": "mount-edith-cavell",
    "label": "Mount Edith Cavell, the Angel Glacier and Cavell Pond, Jasper",
    "lat": 52.6667,
@@ -817,6 +1237,32 @@
     "leaf": "#2C4A32",
     "acc": "#B8452E",
     "obj": "#C8A040"
+   }
+  },
+  {
+   "slug": "natural-bridge",
+   "label": "The Natural Bridge over the Kicking Horse River, Yoho",
+   "lat": 51.4007,
+   "lon": -116.5216,
+   "radius_km": 9,
+   "aliases": [
+    "natural bridge yoho",
+    "yoho natural bridge",
+    "kicking horse natural bridge",
+    "natural bridge kicking horse",
+    "natural bridge field bc"
+   ],
+   "palette": {
+    "sky": "#A9CFEE",
+    "far": "#A3A9AC",
+    "mid": "#B3A58D",
+    "ice": "#F3F7F6",
+    "water": "#8CCBC6",
+    "near": "#252B26",
+    "sun": "#F2C14E",
+    "leaf": "#2F5B3C",
+    "acc": "#D3C6AA",
+    "obj": "#8A7F6C"
    }
   },
   {
@@ -899,6 +1345,34 @@
    }
   },
   {
+   "slug": "perce",
+   "label": "Percé Rock with its sea arch and the detached obelisk, Gaspé",
+   "lat": 48.5236,
+   "lon": -64.2009,
+   "radius_km": 8,
+   "aliases": [
+    "rocher perce",
+    "perce rock",
+    "pierced rock",
+    "parc national de l ile bonaventure et du rocher perce"
+   ],
+   "names": [
+    "perce"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#DCC3A2",
+    "mid": "#BE8C6C",
+    "ice": "#FFFFFF",
+    "water": "#2F5F96",
+    "near": "#26201E",
+    "sun": "#F2C14E",
+    "leaf": "#6E9046",
+    "acc": "#E8C860",
+    "obj": "#8C9AAA"
+   }
+  },
+  {
    "slug": "peyto-lake",
    "label": "Peyto Lake from Bow Summit",
    "lat": 51.72,
@@ -920,6 +1394,32 @@
     "leaf": "#2E5A3A",
     "acc": "#D8CBB0",
     "obj": "#6E7478"
+   }
+  },
+  {
+   "slug": "pictou",
+   "label": "The Ship Hector replica at the Hector Heritage Quay, Pictou",
+   "lat": 45.676,
+   "lon": -62.709,
+   "radius_km": 12,
+   "aliases": [
+    "ship hector",
+    "hector heritage quay"
+   ],
+   "names": [
+    "pictou"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#5E8A55",
+    "mid": "#2C3644",
+    "ice": "#F2F0EA",
+    "water": "#5D8DB2",
+    "near": "#1E2228",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A40",
+    "acc": "#5B84B8",
+    "obj": "#9A7A56"
    }
   },
   {
@@ -1065,6 +1565,30 @@
    }
   },
   {
+   "slug": "rocky-harbour",
+   "label": "Lobster Cove Head lighthouse and keeper's house at Rocky Harbour",
+   "lat": 49.6,
+   "lon": -57.95,
+   "radius_km": 10,
+   "aliases": [],
+   "names": [
+    "rocky harbour",
+    "rocky harbor"
+   ],
+   "palette": {
+    "sky": "#BCD8EF",
+    "far": "#2F5A34",
+    "mid": "#8E8A84",
+    "ice": "#F4F5F2",
+    "water": "#4F7896",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#73A23C",
+    "acc": "#9C2A22",
+    "obj": "#4A4E54"
+   }
+  },
+  {
    "slug": "rogers-pass",
    "label": "The red double-arch Summit Monument of Rogers Pass below the glaciated Selkirks",
    "lat": 51.301,
@@ -1114,6 +1638,96 @@
     "leaf": "#3B6334",
     "acc": "#CDBFA8",
     "obj": "#B03A2E"
+   }
+  },
+  {
+   "slug": "saint-john",
+   "label": "The Reversing Falls steel arch bridge over the Saint John River gorge, Saint John",
+   "lat": 45.2627,
+   "lon": -66.0909,
+   "radius_km": 15,
+   "aliases": [
+    "reversing falls",
+    "reversing rapids",
+    "chutes reversibles",
+    "reversing falls bridge",
+    "skywalk saint john",
+    "saint john new brunswick",
+    "saint john nb",
+    "saint john n b"
+   ],
+   "names": [
+    "saint john",
+    "city of saint john",
+    "port of saint john"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#B8BCB4",
+    "mid": "#9E9C94",
+    "ice": "#F0F0EC",
+    "water": "#3E6E8C",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#3A6EA8",
+    "obj": "#7F95A6"
+   }
+  },
+  {
+   "slug": "smithers",
+   "label": "Hudson Bay Mountain above the Bulkley Valley ranches at Smithers",
+   "lat": 54.78,
+   "lon": -127.22,
+   "radius_km": 20,
+   "aliases": [
+    "hudson bay mountain"
+   ],
+   "names": [
+    "smithers"
+   ],
+   "palette": {
+    "sky": "#A6CCEE",
+    "far": "#9DB060",
+    "mid": "#7C8494",
+    "ice": "#F6F8FA",
+    "water": "#4F86AE",
+    "near": "#20242A",
+    "sun": "#F2C14E",
+    "leaf": "#2F5A38",
+    "acc": "#A8322C",
+    "obj": "#8A6A48"
+   }
+  },
+  {
+   "slug": "squamish",
+   "label": "The Stawamus Chief granite wall above the water at Squamish, with a bald eagle",
+   "lat": 49.68,
+   "lon": -123.14,
+   "radius_km": 12,
+   "aliases": [
+    "stawamus chief",
+    "stawamus",
+    "squamish chief",
+    "sea to sky gondola",
+    "brackendale"
+   ],
+   "names": [
+    "squamish",
+    "squamish bc",
+    "squamish town"
+   ],
+   "palette": {
+    "sky": "#B4D2EE",
+    "far": "#7F948C",
+    "mid": "#A8ADAA",
+    "ice": "#F4F4F0",
+    "water": "#4F8486",
+    "near": "#22282A",
+    "sun": "#F2C14E",
+    "leaf": "#3A5A38",
+    "acc": "#6F8A4A",
+    "obj": "#6B5038"
    }
   },
   {
@@ -1322,6 +1936,60 @@
    }
   },
   {
+   "slug": "trinity",
+   "label": "St Paul's Anglican Church above the harbour, Trinity, Newfoundland",
+   "lat": 48.3697,
+   "lon": -53.3585,
+   "radius_km": 8,
+   "aliases": [
+    "trinity newfoundland",
+    "trinity nl",
+    "trinity bight",
+    "st paul s anglican church trinity"
+   ],
+   "names": [
+    "trinity"
+   ],
+   "palette": {
+    "sky": "#A4CDF0",
+    "far": "#6F9467",
+    "mid": "#EEF0EC",
+    "ice": "#C9C7BE",
+    "water": "#3E6F94",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3C",
+    "acc": "#B8302C",
+    "obj": "#36443E"
+   }
+  },
+  {
+   "slug": "ucluelet",
+   "label": "Amphitrite Point Lighthouse at Ucluelet",
+   "lat": 48.921,
+   "lon": -125.541,
+   "radius_km": 10.0,
+   "aliases": [
+    "amphitrite point",
+    "wild pacific trail"
+   ],
+   "names": [
+    "ucluelet"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#5E7A62",
+    "mid": "#5A4636",
+    "ice": "#F3F3F0",
+    "water": "#2E6496",
+    "near": "#1E2022",
+    "sun": "#F4C542",
+    "leaf": "#3E6A44",
+    "acc": "#C8302C",
+    "obj": "#5E5852"
+   }
+  },
+  {
    "slug": "vancouver",
    "label": "Canada Place and the Vancouver waterfront",
    "lat": 49.2888,
@@ -1349,6 +2017,58 @@
     "leaf": "#3E6B48",
     "acc": "#9A6A52",
     "obj": "#2E5280"
+   }
+  },
+  {
+   "slug": "vancouver-island",
+   "label": "An orca surfacing in Johnstone Strait below the forested hills of Vancouver Island",
+   "lat": 49.65,
+   "lon": -125.45,
+   "radius_km": 60,
+   "aliases": [
+    "vancouver island",
+    "isola di vancouver",
+    "johnstone strait"
+   ],
+   "palette": {
+    "sky": "#C2DDF2",
+    "far": "#9DB2C9",
+    "mid": "#8B847A",
+    "ice": "#F6F7F8",
+    "water": "#5D8FC2",
+    "near": "#1E2226",
+    "sun": "#F5C744",
+    "leaf": "#355E3B",
+    "acc": "#B9C1C9",
+    "obj": "#2B2E34"
+   }
+  },
+  {
+   "slug": "vernon",
+   "label": "Kalamalka Lake's turquoise shallows below the Okanagan hills, Vernon",
+   "lat": 50.21,
+   "lon": -119.28,
+   "radius_km": 15,
+   "aliases": [
+    "kalamalka"
+   ],
+   "names": [
+    "vernon",
+    "vernon bc",
+    "vernon british columbia",
+    "coldstream"
+   ],
+   "palette": {
+    "sky": "#9CCAEE",
+    "far": "#8AA3B4",
+    "mid": "#CDAA68",
+    "ice": "#F2EFE6",
+    "water": "#1E6FA0",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#4C7340",
+    "acc": "#B5402E",
+    "obj": "#43C4BE"
    }
   },
   {
@@ -1429,6 +2149,33 @@
     "leaf": "#33503E",
     "acc": "#C8402E",
     "obj": "#4E4C4A"
+   }
+  },
+  {
+   "slug": "winnipeg",
+   "label": "Winnipeg's Esplanade Riel bridge and the Canadian Museum for Human Rights on the Red River",
+   "lat": 49.8915,
+   "lon": -97.1285,
+   "radius_km": 20,
+   "aliases": [
+    "esplanade riel",
+    "canadian museum for human rights"
+   ],
+   "names": [
+    "winnipeg",
+    "winnipeg city"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#3E5E86",
+    "mid": "#CDB98E",
+    "ice": "#F6F7F8",
+    "water": "#6A7F94",
+    "near": "#1E2228",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A36",
+    "acc": "#A9C3D8",
+    "obj": "#2F6FAE"
    }
   }
  ]
