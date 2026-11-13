@@ -3,6 +3,31 @@
  "name": "Canada",
  "places": [
   {
+   "slug": "annapolis-royal",
+   "label": "The Officers' Quarters with its three tall chimneys on the earthworks of Fort Anne, Annapolis Royal",
+   "lat": 44.7413,
+   "lon": -65.5181,
+   "radius_km": 10,
+   "aliases": [
+    "fort anne"
+   ],
+   "names": [
+    "annapolis royal"
+   ],
+   "palette": {
+    "sky": "#9CC6F0",
+    "far": "#6B8A62",
+    "mid": "#8E7E6A",
+    "ice": "#F6F6F2",
+    "water": "#4F86A8",
+    "near": "#25262A",
+    "sun": "#F2C14E",
+    "leaf": "#6FA34A",
+    "acc": "#9C2A2E",
+    "obj": "#3D6236"
+   }
+  },
+  {
    "slug": "athabasca-falls",
    "label": "Athabasca Falls and Mount Kerkeslin",
    "lat": 52.664,
@@ -490,6 +515,37 @@
    }
   },
   {
+   "slug": "kootenay-national-park",
+   "label": "The orange ochre beds of the Paint Pots below the Rockies, with an elk, Kootenay National Park",
+   "lat": 51.17,
+   "lon": -116.15,
+   "radius_km": 35,
+   "aliases": [
+    "kootenay national park",
+    "kootenay np",
+    "kootenay park",
+    "parco nazionale di kootenay",
+    "parco nazionale kootenay",
+    "paint pots",
+    "ochre beds"
+   ],
+   "names": [
+    "kootenay"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#5C7258",
+    "mid": "#D8763A",
+    "ice": "#CFCDC4",
+    "water": "#A88C3C",
+    "near": "#24261F",
+    "sun": "#F2C14E",
+    "leaf": "#2E4B32",
+    "acc": "#B5B072",
+    "obj": "#7A5638"
+   }
+  },
+  {
    "slug": "lake-louise",
    "label": "Lake Louise and the Victoria Glacier",
    "lat": 51.4167,
@@ -909,6 +965,30 @@
     "leaf": "#2E5644",
     "acc": "#7E9E4A",
     "obj": "#5A4632"
+   }
+  },
+  {
+   "slug": "rogers-pass",
+   "label": "The red double-arch Summit Monument of Rogers Pass below the glaciated Selkirks",
+   "lat": 51.301,
+   "lon": -117.519,
+   "radius_km": 10,
+   "aliases": [
+    "rogers pass",
+    "roger pass",
+    "passo rogers"
+   ],
+   "palette": {
+    "sky": "#AFCDEA",
+    "far": "#8D949A",
+    "mid": "#53784F",
+    "ice": "#EEEFEC",
+    "water": "#8CB2D2",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#2D4A33",
+    "acc": "#D0602C",
+    "obj": "#A79D8E"
    }
   },
   {
