@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="56" cy="30" r="11" fill="var(--il-sun)"/>
+<path d="M0 116V100Q16 94 30 96Q50 86 70 90Q92 82 112 88Q134 80 156 86Q176 92 196 88Q220 82 244 90Q266 86 284 92L300 94V116Z" fill="var(--il-far)"/>
+<path d="M0 200V112H300V200Z" fill="var(--il-water)"/>
+<path d="M114 136V142M128 136V142M100 156V166M136 156V166M86 178V190M146 178V190" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M72 128Q73 133 79 134H106Q111 133 113 127Z" fill="var(--il-ice)"/>
+<path d="M84 127V122H100V127Z" fill="var(--il-obj)"/>
+<path d="M116 124H130L160 194H60Z" fill="var(--il-mid)"/>
+<path d="M112 136H134M104 150H140M94 166H146M82 182H154" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M131 124V116M137 140V128M145 160V144M154 184V164M131 117L154 165M115 124V116M108 140V128M98 160V144M86 184V164M115 117L86 165" stroke="var(--il-acc)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M0 200V190Q60 184 120 188L160 186Q220 166 300 150V200Z" fill="var(--il-mid)"/>
+<path d="M238 166Q246 130 244 70L254 70Q254 130 264 166ZM247 104Q226 102 196 104L196 107Q226 106 248 109ZM252 82Q268 78 290 72L291 75Q270 82 253 87Z" fill="var(--il-mid)"/>
+<path d="M178 78Q186 62 206 62Q216 50 238 52Q252 40 270 46Q290 42 300 50V98Q284 92 270 86Q260 80 250 80Q236 76 226 80Q204 76 178 78ZM186 102Q194 92 210 92Q222 86 236 92Q244 98 238 102Q216 98 186 102Z" fill="var(--il-leaf)"/>
+<g transform="translate(-66 -32) scale(1.3)">
+<path d="M210 102L216 126L213 126L207 103ZM230 102L236 126L233 126L227 103Z" fill="var(--il-acc)"/>
+<path d="M207 104Q201 96 203 86Q204 79 210 79Q215 80 215 87Q216 98 213 104ZM227 104Q221 96 223 86Q224 79 230 79Q235 80 235 87Q236 98 233 104Z" fill="var(--il-acc)"/>
+<path d="M215 87Q211 90 210 98Q213 102 216 98ZM235 87Q231 90 230 98Q233 102 236 98Z" fill="var(--il-obj)"/>
+<path d="M214 89Q212 92 212 96Q214 95 215 93ZM234 89Q232 92 232 96Q234 95 235 93Z" fill="var(--il-sun)"/>
+<path d="M204 81Q199 82 201 87Q203 85 205 85ZM224 81Q219 82 221 87Q223 85 225 85Z" fill="var(--il-ice)"/>
+<path d="M205 80h3v3h-3ZM225 80h3v3h-3Z" fill="var(--il-ice)"/>
+</g>
