@@ -22,11 +22,6 @@
   4
  ],
  "start_by": "08:00",
- "published": {
-  "km": 9,
-  "gain_m": 450,
-  "source": "https://en.wikivoyage.org/wiki/Vinicunca"
- },
  "why": "Striped red, yellow and green slopes at 5,000 m, with the Ausangate glacier behind: short, but at an altitude that hurts.",
  "book": "Tours leave Cusco at 04:00; a community fee at the trailhead (cash, soles). Horses can carry you most of the way up.",
  "water": "Bring 1.5 litres; the women at the trailhead sell coca tea.",
@@ -36,40 +31,44 @@
  ],
  "turnaround": "Any headache, dizziness or breathlessness at rest: go down at once.",
  "sources": [
-  "https://en.wikivoyage.org/wiki/Vinicunca"
+  "https://en.wikivoyage.org/wiki/Vinicunca",
+  "https://en.wikipedia.org/wiki/Vinicunca",
+  "https://www.openstreetmap.org/node/4783622720"
  ],
  "points": [
   {
    "id": "start",
    "name": "Vinicunca trailhead with alpacas",
-   "lat": -13.858,
-   "lon": -71.283,
+   "lat": -13.8832,
+   "lon": -71.2645,
    "role": "start",
-   "note": "The Quesiuno car park at about 4,600 m: horses and alpacas wait here."
+   "note": "The trailhead by Quesiuno at about 4,300 m, past the community ticket booth: horses and alpacas wait here."
   },
   {
    "id": "valley",
    "name": "Vinicunca valley with Ausangate",
-   "lat": -13.864,
-   "lon": -71.294,
+   "lat": -13.8703,
+   "lon": -71.2835,
    "role": "point",
-   "note": "The gentle valley; the Ausangate glacier appears to the east."
+   "note": "The gentle valley floor, past the upper car park; the Ausangate glacier shows behind you to the east."
   },
   {
    "id": "goal",
-   "name": "Vinicunca",
-   "lat": -13.8697,
-   "lon": -71.3028,
+   "name": "Vinicunca viewpoint",
+   "lat": -13.86934,
+   "lon": -71.30295,
    "role": "goal",
-   "note": "5,036 m: the striped mountain from the top of the last zigzags."
+   "note": "About 5,000 m on the ridge facing the striped slope: the steep last 200 m are the hardest.",
+   "scene": "pe-rainbow-mountain"
   },
   {
    "id": "red",
    "name": "Red Valley (Valle Rojo)",
-   "lat": -13.866,
-   "lon": -71.309,
+   "lat": -13.87616,
+   "lon": -71.30798,
    "role": "point",
-   "note": "10 minutes past the top: a whole valley of red earth, often empty."
+   "note": "15 minutes past the top (small extra fee): a whole valley of red earth, often empty.",
+   "scene": "pe-red-valley"
   }
  ]
 }

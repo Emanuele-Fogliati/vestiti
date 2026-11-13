@@ -3,6 +3,31 @@
  "name": "Tunisia",
  "places": [
   {
+   "slug": "bulla-regia",
+   "label": "The underground peristyle of the House of the Hunt at Bulla Regia",
+   "lat": 36.5583,
+   "lon": 8.7561,
+   "radius_km": 4,
+   "aliases": [
+    "bulla regia",
+    "maison de la chasse bulla regia",
+    "house of the hunt bulla regia",
+    "casa della caccia bulla regia"
+   ],
+   "palette": {
+    "sky": "#CFE2F2",
+    "far": "#E0D0B0",
+    "mid": "#BC9E76",
+    "ice": "#F1E9D8",
+    "water": "#6FA3C0",
+    "near": "#2B241D",
+    "sun": "#F4C431",
+    "leaf": "#7E9A55",
+    "acc": "#D2BC94",
+    "obj": "#6E5C48"
+   }
+  },
+  {
    "slug": "carthage",
    "label": "Antonine Baths of Carthage by the sea",
    "lat": 36.853,
@@ -405,6 +430,31 @@
    }
   },
   {
+   "slug": "ksar-guermessa",
+   "label": "Old Berber hill village of Guermessa with its rock crown",
+   "lat": 32.97,
+   "lon": 10.17,
+   "radius_km": 4,
+   "aliases": [
+    "guermessa",
+    "guermassa",
+    "garmassa",
+    "ghermessa"
+   ],
+   "palette": {
+    "sky": "#BFD9F0",
+    "far": "#E4C796",
+    "mid": "#C8955A",
+    "ice": "#F7F5EE",
+    "water": "#4D8FB5",
+    "near": "#3A2A1E",
+    "sun": "#F4C542",
+    "leaf": "#6F8A3A",
+    "acc": "#A26A3A",
+    "obj": "#8C6A48"
+   }
+  },
+  {
    "slug": "matmata",
    "label": "Troglodyte pit house of Matmata",
    "lat": 33.5446,
@@ -434,6 +484,36 @@
     "leaf": "#5E8A3A",
     "acc": "#D9B98C",
     "obj": "#9A6A3A"
+   }
+  },
+  {
+   "slug": "medenine",
+   "label": "Ghorfas of Ksar Medenine with the town minaret",
+   "lat": 33.3547,
+   "lon": 10.5053,
+   "radius_km": 12,
+   "aliases": [
+    "ksar medenine",
+    "ghorfas of medenine",
+    "ghorfa medenine",
+    "ksar de medenine"
+   ],
+   "names": [
+    "medenine",
+    "medenin",
+    "madanin"
+   ],
+   "palette": {
+    "sky": "#BAD7F0",
+    "far": "#E3D0AA",
+    "mid": "#CDAE85",
+    "ice": "#F2EADB",
+    "water": "#4D8FB5",
+    "near": "#3A2C20",
+    "sun": "#F4C542",
+    "leaf": "#6F8A3A",
+    "acc": "#8E4E2E",
+    "obj": "#4E9CB8"
    }
   },
   {

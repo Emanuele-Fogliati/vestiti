@@ -60,6 +60,32 @@
    }
   },
   {
+   "slug": "acadia-national-park",
+   "label": "Bass Harbor Head Light on the pink granite cliffs of Acadia National Park",
+   "lat": 44.2219,
+   "lon": -68.3372,
+   "radius_km": 25,
+   "aliases": [
+    "acadia",
+    "bass harbor head light",
+    "bass harbor lighthouse",
+    "bass harbor head lighthouse",
+    "mount desert island"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#8E8C88",
+    "mid": "#D9A48A",
+    "ice": "#F6F5F1",
+    "water": "#3E78A8",
+    "near": "#1E2522",
+    "sun": "#F6C431",
+    "leaf": "#2F5B3B",
+    "acc": "#B23A2E",
+    "obj": "#B7A36C"
+   }
+  },
+  {
    "slug": "alcatraz-island",
    "label": "Alcatraz Island from San Francisco Bay",
    "lat": 37.8267,
@@ -305,6 +331,33 @@
    }
   },
   {
+   "slug": "bar-harbor",
+   "label": "Bar Harbor waterfront under Cadillac Mountain, with the red-sailed schooner",
+   "lat": 44.3912,
+   "lon": -68.2034,
+   "radius_km": 12,
+   "aliases": [
+    "margaret todd"
+   ],
+   "names": [
+    "bar harbor",
+    "bar harbour",
+    "bar harbor maine"
+   ],
+   "palette": {
+    "sky": "#A8CFEE",
+    "far": "#A8A296",
+    "mid": "#55764C",
+    "ice": "#F2F2EE",
+    "water": "#4C7E92",
+    "near": "#1E2224",
+    "sun": "#F2C14E",
+    "leaf": "#3C6638",
+    "acc": "#B4432E",
+    "obj": "#8C8578"
+   }
+  },
+  {
    "slug": "beale-street",
    "label": "Beale Street with its neon signs, Memphis",
    "lat": 35.139,
@@ -402,6 +455,32 @@
     "leaf": "#5E8A3E",
     "acc": "#D4875A",
     "obj": "#4E6E36"
+   }
+  },
+  {
+   "slug": "boise",
+   "label": "The Idaho State Capitol in Boise, the foothills behind",
+   "lat": 43.6178,
+   "lon": -116.1996,
+   "radius_km": 20,
+   "aliases": [
+    "idaho state capitol",
+    "idaho capitol"
+   ],
+   "names": [
+    "boise"
+   ],
+   "palette": {
+    "sky": "#A6CCF0",
+    "far": "#B09772",
+    "mid": "#CDBD9E",
+    "ice": "#ECE5D6",
+    "water": "#4E8EB0",
+    "near": "#2A2724",
+    "sun": "#F2C14E",
+    "leaf": "#5C8E3E",
+    "acc": "#B08A3C",
+    "obj": "#5E6872"
    }
   },
   {
@@ -613,6 +692,30 @@
    }
   },
   {
+   "slug": "byodo-in-temple",
+   "label": "The red Byodo-In temple across its pond under the Ko'olau cliffs, Oahu",
+   "lat": 21.4304,
+   "lon": -157.8318,
+   "radius_km": 3,
+   "aliases": [
+    "byodo in",
+    "byodo in temple",
+    "byodoin"
+   ],
+   "palette": {
+    "sky": "#CDE3F2",
+    "far": "#6F9A66",
+    "mid": "#7FA24A",
+    "ice": "#F1EEE6",
+    "water": "#4F7F78",
+    "near": "#261F1C",
+    "sun": "#E8B43A",
+    "leaf": "#2F6234",
+    "acc": "#C8432E",
+    "obj": "#6B6E72"
+   }
+  },
+  {
    "slug": "canyonlands-national-park",
    "label": "Mesa Arch framing the canyon, Canyonlands National Park",
    "lat": 38.3893,
@@ -765,6 +868,34 @@
     "leaf": "#3E6E3A",
     "acc": "#F4DB8E",
     "obj": "#B9D9BE"
+   }
+  },
+  {
+   "slug": "cheyenne",
+   "label": "Union Pacific Depot with its clock tower, Cheyenne",
+   "lat": 41.1323,
+   "lon": -104.8147,
+   "radius_km": 15,
+   "aliases": [
+    "cheyenne depot",
+    "union pacific depot cheyenne"
+   ],
+   "names": [
+    "cheyenne",
+    "cheyenne wyoming",
+    "cheyenne wy"
+   ],
+   "palette": {
+    "sky": "#9CC6EC",
+    "far": "#DDB896",
+    "mid": "#C0603A",
+    "ice": "#E8E2D6",
+    "water": "#5A8CA8",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E7E44",
+    "acc": "#A85A44",
+    "obj": "#4E545C"
    }
   },
   {
@@ -1514,7 +1645,8 @@
     "wild goose island"
    ],
    "names": [
-    "glacier"
+    "glacier",
+    "kalispell"
    ],
    "palette": {
     "sky": "#AACFEF",
@@ -1725,6 +1857,34 @@
     "leaf": "#86A85A",
     "acc": "#A86A3E",
     "obj": "#5C4A3C"
+   }
+  },
+  {
+   "slug": "great-falls",
+   "label": "The Great Falls of the Missouri at Ryan Dam, Great Falls, Montana",
+   "lat": 47.5717,
+   "lon": -111.1215,
+   "radius_km": 20,
+   "aliases": [
+    "ryan dam",
+    "great falls of the missouri"
+   ],
+   "names": [
+    "great falls",
+    "great falls montana",
+    "great falls mt"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#C9B78C",
+    "mid": "#8E8170",
+    "ice": "#F4F6F6",
+    "water": "#6E9088",
+    "near": "#26272A",
+    "sun": "#F4C430",
+    "leaf": "#7E8E4E",
+    "acc": "#A85C42",
+    "obj": "#C9C5BB"
    }
   },
   {
@@ -1993,6 +2153,32 @@
     "leaf": "#4C7A3A",
     "acc": "#D8D1C2",
     "obj": "#8FA3B3"
+   }
+  },
+  {
+   "slug": "idaho-falls",
+   "label": "Idaho Falls on the Snake River below the Idaho Falls Temple",
+   "lat": 43.495,
+   "lon": -112.044,
+   "radius_km": 15,
+   "aliases": [
+    "idaho falls temple",
+    "idhao falls"
+   ],
+   "names": [
+    "idaho falls"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#CFE1EA",
+    "mid": "#C9C6BE",
+    "ice": "#FFFFFF",
+    "water": "#5E8C84",
+    "near": "#24282A",
+    "sun": "#E8B830",
+    "leaf": "#5A9040",
+    "acc": "#8C7A64",
+    "obj": "#2E5636"
    }
   },
   {
@@ -2467,6 +2653,30 @@
    }
   },
   {
+   "slug": "lowell-observatory",
+   "label": "Clark Telescope dome at Lowell Observatory, Flagstaff",
+   "lat": 35.2029,
+   "lon": -111.6646,
+   "radius_km": 4,
+   "aliases": [
+    "lowell observatory",
+    "clark telescope",
+    "clark dome"
+   ],
+   "palette": {
+    "sky": "#92C3EC",
+    "far": "#CBC3B4",
+    "mid": "#E2E6EA",
+    "ice": "#F8F9FA",
+    "water": "#6FA3BF",
+    "near": "#24272A",
+    "sun": "#F2C14E",
+    "leaf": "#3C5A33",
+    "acc": "#7E5B3E",
+    "obj": "#8A8F94"
+   }
+  },
+  {
    "slug": "matanuska-glacier",
    "label": "Matanuska Glacier spreading out of the Chugach Mountains, with a moose",
    "lat": 61.78,
@@ -2749,6 +2959,36 @@
    }
   },
   {
+   "slug": "nantucket",
+   "label": "Brant Point Light at the entrance of Nantucket harbour",
+   "lat": 41.2898,
+   "lon": -70.0903,
+   "radius_km": 15,
+   "aliases": [
+    "brant point",
+    "brant point light",
+    "brant point lighthouse"
+   ],
+   "names": [
+    "nantucket",
+    "nantucket island",
+    "nantucket town",
+    "isola di nantucket"
+   ],
+   "palette": {
+    "sky": "#B4D3F0",
+    "far": "#9AA3AA",
+    "mid": "#E3D3AE",
+    "ice": "#F6F6F2",
+    "water": "#2F5F9E",
+    "near": "#1F2328",
+    "sun": "#F4C542",
+    "leaf": "#4F7A3C",
+    "acc": "#A8342E",
+    "obj": "#8E8F8C"
+   }
+  },
+  {
    "slug": "nashville",
    "label": "Nashville skyline with the Batman Building over the Cumberland River",
    "lat": 36.1655,
@@ -2898,6 +3138,37 @@
    }
   },
   {
+   "slug": "oklahoma-city",
+   "label": "Oklahoma City's Devon Tower skyline over the Bricktown canal",
+   "lat": 35.4676,
+   "lon": -97.5164,
+   "radius_km": 20,
+   "aliases": [
+    "bricktown canal",
+    "devon tower",
+    "devon energy center",
+    "bricktown okc"
+   ],
+   "names": [
+    "oklahoma city",
+    "okc",
+    "oklahoma city ok",
+    "bricktown"
+   ],
+   "palette": {
+    "sky": "#B5D6F2",
+    "far": "#D8C9AE",
+    "mid": "#5F86B4",
+    "ice": "#EEF2F6",
+    "water": "#3E6F6C",
+    "near": "#22252B",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3C",
+    "acc": "#A4513A",
+    "obj": "#EDB72C"
+   }
+  },
+  {
    "slug": "old-faithful",
    "label": "Old Faithful erupting, Yellowstone",
    "lat": 44.4605,
@@ -3003,6 +3274,34 @@
     "leaf": "#3F5E3A",
     "acc": "#C8867E",
     "obj": "#E9E4D8"
+   }
+  },
+  {
+   "slug": "provincetown",
+   "label": "Provincetown's waterfront with the Pilgrim Monument above the Town Hall",
+   "lat": 42.0526,
+   "lon": -70.1885,
+   "radius_km": 10,
+   "aliases": [
+    "pilgrim monument",
+    "provincetown harbor",
+    "provincetown harbour"
+   ],
+   "names": [
+    "provincetown",
+    "ptown"
+   ],
+   "palette": {
+    "sky": "#B5D6EE",
+    "far": "#A3A7AA",
+    "mid": "#BCB19B",
+    "ice": "#F4F3EE",
+    "water": "#3F86A8",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#3F6B3A",
+    "acc": "#E3D2AE",
+    "obj": "#5E7F72"
    }
   },
   {

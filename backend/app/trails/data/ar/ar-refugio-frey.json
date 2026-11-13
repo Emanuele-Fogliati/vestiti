@@ -15,7 +15,7 @@
   4
  ],
  "hours": [
-  7,
+  6.5,
   8
  ],
  "start_by": "08:00",
@@ -33,6 +33,7 @@
  ],
  "turnaround": "Reach the hut by 14:00 to come down in daylight.",
  "sources": [
+  "https://en.wikivoyage.org/wiki/Bariloche",
   "https://www.refugiofrey.com",
   "https://www.clubandino.org"
  ],
@@ -43,23 +44,26 @@
    "lat": -41.1684,
    "lon": -71.4405,
    "role": "start",
-   "note": "Start at the ski base; the path follows Lago Gutiérrez before turning up the valley."
+   "note": "The Cerro Catedral ski base. The path runs south along Lago Gutiérrez before turning up the valley.",
+   "scene": "ar-cerro-catedral"
   },
   {
    "id": "valley",
    "name": "Arroyo Van Titter valley",
-   "lat": -41.183,
-   "lon": -71.472,
+   "lat": -41.20038,
+   "lon": -71.4693,
    "role": "point",
-   "note": "Lenga forest along the stream: the long middle of the day."
+   "note": "The Van Titter stream in lenga forest, near the small Petricek shelter: the long middle of the day.",
+   "scene": "ar-van-titter-valley"
   },
   {
    "id": "goal",
    "name": "Refugio Frey",
-   "lat": -41.1997,
-   "lon": -71.4875,
+   "lat": -41.19825,
+   "lon": -71.48628,
    "role": "goal",
-   "note": "About 1,700 m: the hut, Laguna Toncek and the Torre Principal."
+   "note": "About 1,700 m: the stone hut, Laguna Toncek and the granite needles of Cerro Catedral.",
+   "scene": "ar-refugio-frey"
   }
  ]
 }

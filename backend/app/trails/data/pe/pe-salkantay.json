@@ -23,11 +23,11 @@
  ],
  "start_by": "06:00",
  "published": {
-  "km": 72,
-  "gain_m": 2700,
-  "source": "https://en.wikivoyage.org/wiki/Salkantay_Trek"
+  "km": 54,
+  "gain_m": 2000,
+  "source": "https://en.wikivoyage.org/wiki/Salkantay_trail"
  },
- "why": "The wild way to Machu Picchu, no permit needed: over a 4,600 m pass under a glacier peak and down into the cloud forest.",
+ "why": "The wild way to Machu Picchu, no permit needed: over a 4,600 m pass under the Salkantay glacier and down through cloud forest and coffee farms.",
  "book": "No permit. Most go with an agency from Cusco (camps or lodges, mules for the bags); book the Machu Picchu entry and the train back separately.",
  "water": "Camps boil water; small shops in the villages from day 3.",
  "dangers": [
@@ -36,43 +36,64 @@
  ],
  "turnaround": "If you feel altitude sickness at Soraypampa, take the horse over the pass or go back to Mollepata.",
  "sources": [
-  "https://en.wikivoyage.org/wiki/Salkantay_Trek"
+  "https://en.wikivoyage.org/wiki/Salkantay_trail",
+  "https://www.openstreetmap.org/node/497118622"
  ],
  "points": [
   {
    "id": "start",
    "name": "Soraypampa under Nevado Salkantay",
-   "lat": -13.3866,
-   "lon": -72.5644,
+   "lat": -13.3916,
+   "lon": -72.5745,
    "role": "start",
-   "note": "Day 1: from the road end, with Humantay lake in the afternoon.",
-   "night": true
+   "note": "Day 1: by car from Cusco (or a long day on foot from Mollepata); the coldest night, at 3,900 m. Humantay lake in the afternoon.",
+   "night": true,
+   "scene": "pe-salkantay"
   },
   {
    "id": "pass",
    "name": "Salkantay Pass",
-   "lat": -13.3536,
-   "lon": -72.5736,
+   "lat": -13.3485,
+   "lon": -72.5636,
    "role": "point",
-   "note": "Day 2: about 4,600 m, the glacier just above; then a long descent to Chaullay.",
-   "night": true
+   "note": "Day 2: about 4,600 m, stone cairns and the glacier just above; then 800 m down to Huaracmachay."
+  },
+  {
+   "id": "collpapampa",
+   "name": "Collpapampa and Chaullay",
+   "lat": -13.31849,
+   "lon": -72.66925,
+   "role": "point",
+   "note": "Night 2: the first warm villages, at about 2,900 m, after a long descent into the green valley.",
+   "night": true,
+   "scene": "pe-chaullay"
   },
   {
    "id": "forest",
-   "name": "Santa Teresa valley cloud forest",
-   "lat": -13.24,
-   "lon": -72.59,
+   "name": "La Playa, Santa Teresa valley",
+   "lat": -13.23288,
+   "lon": -72.63169,
    "role": "point",
-   "note": "Day 3: coffee farms, passion fruit and waterfalls.",
+   "note": "Day 3: down the river through cloud forest, waterfalls, coffee and passion fruit farms.",
    "night": true
   },
   {
-   "id": "goal",
+   "id": "llactapata",
    "name": "Llactapata ruins, Machu Picchu view",
-   "lat": -13.1987,
-   "lon": -72.563,
+   "lat": -13.18591,
+   "lon": -72.58474,
+   "role": "point",
+   "note": "Day 4: 800 m up an old Inca path; from the ruins, Machu Picchu is seen side-on across the valley."
+  },
+  {
+   "id": "goal",
+   "name": "Aguas Calientes",
+   "lat": -13.15462,
+   "lon": -72.52531,
    "role": "goal",
-   "note": "Day 4: Machu Picchu seen side-on across the valley, then down to Hidroeléctrica and Aguas Calientes."
+   "note": "Steep down to Hidroeléctrica, then 2.5 hours along the railway; Machu Picchu on day 5.",
+   "night": true,
+   "scene": "pe-aguas-calientes"
   }
  ]
 }
