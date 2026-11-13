@@ -1,0 +1,69 @@
+{
+ "id": "is-mulagljufur",
+ "country": "IS",
+ "name": "Múlagljúfur canyon",
+ "base": "Skaftafell",
+ "region": "Öræfi, south of Vatnajökull",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 5.8,
+  "gain_m": 410,
+  "source": "https://thephotohikes.com/the-mulagljufur-canyon-hike/"
+ },
+ "why": "A green, hidden canyon under Öræfajökull where Hangandifoss drops over 100 m, with almost nobody else on the path.",
+ "book": "Free, but parking is paid (Parka app). Turn off the Ring Road about 30 km east of Skaftafell, then 2 km of rough gravel to the car park.",
+ "water": "A creek halfway; carry 1 litre.",
+ "dangers": [
+  "Unfenced viewpoints close to the canyon edge.",
+  "A creek crossing on stones, harder after rain.",
+  "After Hangandifoss the path is steep and very slippery when wet."
+ ],
+ "turnaround": "If the creek is high or the upper path is wet, stop at the Hangandifoss viewpoint.",
+ "sources": [
+  "https://thephotohikes.com/the-mulagljufur-canyon-hike/",
+  "https://icelandtravelguide.is/locations/mulagljufur-canyon-waterfalls"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Múlagljúfur car park",
+   "lat": 63.99055,
+   "lon": -16.42547,
+   "role": "start",
+   "note": "Small gravel car park with toilets, under the black slopes of Öræfajökull.",
+   "scene": "is-mulagljufur-trailhead"
+  },
+  {
+   "id": "hangandifoss",
+   "name": "Hangandifoss viewpoint",
+   "lat": 63.98901,
+   "lon": -16.46428,
+   "role": "point",
+   "note": "The classic view: Hangandifoss falling down the far wall of the green canyon, a second fall further back.",
+   "scene": "is-hangandifoss"
+  },
+  {
+   "id": "goal",
+   "name": "Upper rim of Múlagljúfur",
+   "lat": 63.98746,
+   "lon": -16.48026,
+   "role": "goal",
+   "note": "Higher up the rim, looking down the whole canyon toward the sea and the glacier plain.",
+   "scene": "is-mulagljufur"
+  }
+ ]
+}
