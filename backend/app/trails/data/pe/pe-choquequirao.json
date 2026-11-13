@@ -23,8 +23,8 @@
  ],
  "start_by": "06:00",
  "published": {
-  "km": 62,
-  "gain_m": 3600,
+  "km": 64,
+  "gain_m": null,
   "source": "https://en.wikivoyage.org/wiki/Choquequirao"
  },
  "why": "Machu Picchu's 'sister' with almost nobody there: four days down and up the Apurímac canyon to Inca terraces decorated with white llamas.",
@@ -41,29 +41,40 @@
  "points": [
   {
    "id": "start",
-   "name": "Capuliyoc viewpoint over the Apurímac canyon",
-   "lat": -13.473,
-   "lon": -72.835,
+   "name": "Cachora",
+   "lat": -13.51214,
+   "lon": -72.81286,
    "role": "start",
-   "note": "The canyon opens 1,500 m below; Choquequirao is on the far slope."
+   "note": "The village at 2,900 m where muleteers wait; a dirt road (taxi possible) leads on to Capuliyoc."
+  },
+  {
+   "id": "capuliyoc",
+   "name": "Capuliyoc viewpoint over the Apurímac canyon",
+   "lat": -13.4853,
+   "lon": -72.8144,
+   "role": "point",
+   "note": "The canyon opens 1,500 m below; Choquequirao is on the far slope. From here it is all downhill to the river.",
+   "scene": "pe-apurimac-river"
   },
   {
    "id": "river",
    "name": "Playa Rosalina on the Apurímac river",
-   "lat": -13.432,
-   "lon": -72.863,
+   "lat": -13.4219,
+   "lon": -72.8537,
    "role": "point",
-   "note": "The bridge at the bottom, about 1,500 m: camp here or push on.",
+   "note": "The camp and bridge at the bottom, about 1,500 m: camp here, then climb 1,600 m in the early cool.",
    "night": true
   },
   {
    "id": "goal",
    "name": "Choquequirao",
-   "lat": -13.3933,
-   "lon": -72.8742,
+   "lat": -13.39298,
+   "lon": -72.8738,
    "role": "goal",
-   "note": "About 3,050 m: the plaza, the terraces and the white llamas in stone.",
-   "night": true
+   "note": "About 3,050 m: the plaza, the terraces and the white llamas in stone. Camp by the site and see it the next day.",
+   "night": true,
+   "scene": "pe-cachora"
   }
- ]
+ ],
+ "router": "local"
 }
