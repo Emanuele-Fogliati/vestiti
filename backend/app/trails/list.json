@@ -1215,22 +1215,22 @@
    "slot": "IS-B",
    "base": "Skaftafell",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Skaftafell visitor centre",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "hundafoss",
      "name": "Hundafoss",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Svartifoss basalt columns",
-     "reuse": null
+     "reuse": "is-svartifoss"
     }
    ]
   },
@@ -1241,20 +1241,20 @@
    "slot": "IS-B",
    "base": "Skaftafell",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "sjonarnipa",
      "name": "Sjónarnípa over Skaftafellsjökull",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Kristínartindar summit with Hvannadalshnúkur",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "heath",
      "name": "Skaftafell heath",
      "reuse": null
     }
@@ -1267,20 +1267,20 @@
    "slot": "IS-B",
    "base": "Skaftafell",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Múlagljúfur trailhead under Öræfajökull",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "hangandifoss",
      "name": "Hangandifoss in Múlagljúfur",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Múlagljúfur canyon rim",
      "reuse": null
     }
@@ -1293,22 +1293,22 @@
    "slot": "IS-B",
    "base": "Egilsstaðir",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Klaustursel bridge",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "studlafoss",
      "name": "Stuðlafoss",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Stuðlagil basalt canyon floor",
-     "reuse": null
+     "reuse": "is-studlagil-canyon"
     }
    ]
   },
@@ -1319,22 +1319,22 @@
    "slot": "IS-B",
    "base": "Egilsstaðir",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Hengifoss car park by Lagarfljót",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "litlanesfoss",
      "name": "Litlanesfoss basalt columns",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Hengifoss red layers",
-     "reuse": null
+     "reuse": "is-hengifoss"
     }
    ]
   },
@@ -1345,20 +1345,20 @@
    "slot": "IS-B",
    "base": "Reykjavík",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Esjustofa",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "halfway",
      "name": "Esja slopes over Reykjavík",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Steinn stone on Esja",
      "reuse": null
     }
