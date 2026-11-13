@@ -1599,7 +1599,7 @@
    "slot": "IT-B",
    "base": "Cinque Terre",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -1609,12 +1609,12 @@
     {
      "point": "vernazza",
      "name": "Vernazza from the path",
-     "reuse": null
+     "reuse": "it-vernazza"
     },
     {
      "point": "goal",
      "name": "Corniglia",
-     "reuse": null
+     "reuse": "it-corniglia"
     }
    ]
   },
