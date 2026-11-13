@@ -3,6 +3,32 @@
  "name": "Switzerland",
  "places": [
   {
+   "slug": "champex-lac",
+   "label": "Lac de Champex with its chalets and the snowy Combin massif",
+   "lat": 46.03,
+   "lon": 7.115,
+   "radius_km": 5,
+   "aliases": [
+    "lac de champex"
+   ],
+   "names": [
+    "champex",
+    "champex lac"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#958A82",
+    "mid": "#7B6B5C",
+    "ice": "#F5F6F7",
+    "water": "#2D6C8C",
+    "near": "#1E2226",
+    "sun": "#F6C843",
+    "leaf": "#2F5C34",
+    "acc": "#C9362C",
+    "obj": "#8A5A3A"
+   }
+  },
+  {
    "slug": "geneva",
    "label": "Geneva's Jet d'Eau on Lake Geneva",
    "lat": 46.2074,
@@ -123,6 +149,33 @@
     "leaf": "#3F6436",
     "acc": "#8DB35A",
     "obj": "#7B4A2B"
+   }
+  },
+  {
+   "slug": "oeschinensee",
+   "label": "Turquoise Oeschinensee below the Blüemlisalp cliffs, seen from the Heuberg trail",
+   "lat": 46.498,
+   "lon": 7.727,
+   "radius_km": 4,
+   "aliases": [
+    "oeschinensee",
+    "oeschinen lake",
+    "lake oeschinen",
+    "oeschinen",
+    "lago oeschinen",
+    "lac d oeschinen"
+   ],
+   "palette": {
+    "sky": "#9FC9F0",
+    "far": "#B9B6AA",
+    "mid": "#8C8E8C",
+    "ice": "#F4F6F8",
+    "water": "#38AEBF",
+    "near": "#22262A",
+    "sun": "#F3C844",
+    "leaf": "#6E9E3E",
+    "acc": "#9A5530",
+    "obj": "#2E5A36"
    }
   }
  ]

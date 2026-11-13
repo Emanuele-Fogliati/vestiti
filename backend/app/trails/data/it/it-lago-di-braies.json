@@ -1,0 +1,62 @@
+{
+ "id": "it-lago-di-braies",
+ "country": "IT",
+ "name": "Lago di Braies loop (Pragser Wildsee)",
+ "base": "Braies",
+ "region": "Fanes-Senes-Braies Nature Park, South Tyrol",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 3.6,
+  "gain_m": 37,
+  "source": "https://www.dolomitisuperski.com/it/outdoor~Familienwanderung-Rundwanderung-Pragser-Wildsee_810054672~"
+ },
+ "why": "An easy hour round the emerald lake under the Croda del Becco walls, with the wooden boathouse at one end and a scree beach at the other.",
+ "book": "Free path. From 10 July to 10 September the road to the lake is closed to cars 9:30-16:00 unless you booked a parking slot online; otherwise take the bus from Dobbiaco or Villabassa (booking needed in peak season). Rowing boats are rented at the boathouse.",
+ "water": "Drinking fountains and a bar at the hotel end; nothing along the far shore.",
+ "dangers": [
+  "The west shore has some steps and roots: slippery when wet.",
+  "In winter the far shore is icy and the full loop is often closed."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.dolomitisuperski.com/it/outdoor~Familienwanderung-Rundwanderung-Pragser-Wildsee_810054672~",
+  "https://www.dolomiti.it/it/itinerari/camminate/giro-del-lago-di-braies",
+  "https://hiking.waymarkedtrails.org/#route?id=12043472"
+ ],
+ "osm": 12043472,
+ "points": [
+  {
+   "id": "boathouse",
+   "name": "Lago di Braies boathouse",
+   "lat": 46.6985,
+   "lon": 12.0858,
+   "role": "start",
+   "note": "1,494 m, the wooden boathouse with the rowing boats, by the hotel. Go round clockwise: the east shore is flat, the west has the steps.",
+   "scene": "it-lago-di-braies"
+  },
+  {
+   "id": "south",
+   "name": "Lago di Braies south shore",
+   "lat": 46.6893,
+   "lon": 12.0837,
+   "role": "goal",
+   "note": "The far end of the lake: a white gravel beach under the Croda del Becco, looking back at the hotel. Path 1 of the Alta Via 1 climbs from here.",
+   "scene": "it-braies-south-shore"
+  }
+ ]
+}
