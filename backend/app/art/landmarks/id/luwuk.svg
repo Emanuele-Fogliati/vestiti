@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V88H300V200Z" fill="var(--il-water)"/>
+<path d="M0 98V80Q40 74 82 82L106 92Q60 94 0 98Z" fill="var(--il-far)"/>
+<path d="M96 112Q104 104 132 104Q190 100 300 98V114Q240 112 200 116Q140 118 96 112Z" fill="var(--il-far)"/>
+<path d="M140 104h22v5h-22ZM132 109H172L168 116H136Z" fill="var(--il-ice)"/>
+<path d="M60 128L66 122H82L86 128ZM58 130V128H86V130Z" fill="var(--il-ice)"/>
+<path d="M72 122V108M72 108L80 120" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M0 200V140Q40 132 90 138Q130 134 170 138Q220 130 300 136V200Z" fill="var(--il-leaf)"/>
+<defs><clipPath id="il-id-luwuk-tower"><path d="M92 156L100 58H104L112 156Z"/></clipPath></defs>
+<path d="M92 156L100 58H104L112 156Z" fill="var(--il-ice)"/>
+<path d="M90 58h24v12h-24ZM90 82h24v12h-24ZM90 106h24v12h-24ZM90 130h24v12h-24Z" fill="var(--il-acc)" clip-path="url(#il-id-luwuk-tower)"/>
+<path d="M95 150L109 120M109 150L95 120M97 118L107 94M107 118L97 94M99 92L105 70M105 92L99 70" stroke="var(--il-near)" stroke-width="0.6" fill="none" opacity="0.5"/>
+<path d="M102 58V48" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M120 158V132H172V158ZM180 158V94L184 86L188 94V158Z" fill="var(--il-ice)"/>
+<path d="M178 104H190V108H178ZM178 124H190V128H178Z" fill="var(--il-mid)"/>
+<path d="M128 132Q128 112 146 110Q164 112 164 132Z" fill="var(--il-sun)"/>
+<path d="M145 110V102M182 86L184 78L186 86" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M126 156V144Q129 138 132 144V156ZM138 156V144Q141 138 144 144V156ZM150 156V144Q153 138 156 144V156ZM162 156V144Q165 138 168 144V156Z" fill="var(--il-near)" opacity="0.7"/>
+<path d="M14 170V154H44V170ZM50 168V152H76V168ZM202 170V154H230V170ZM238 168V150H268V168ZM272 170V156H296V170Z" fill="var(--il-mid)"/>
+<path d="M10 156L18 146H40L48 156ZM202 156L208 148H224L232 156ZM268 158L276 150H292L298 158Z" fill="var(--il-acc)"/>
+<path d="M46 154L54 144H72L80 154ZM234 152L242 142H264L272 152Z" fill="var(--il-obj)"/>
+<path d="M0 200V182Q16 172 34 178Q52 168 72 178Q96 172 116 180Q140 170 160 178Q184 172 204 180Q226 170 248 178Q270 170 300 176V200Z" fill="var(--il-leaf)"/>

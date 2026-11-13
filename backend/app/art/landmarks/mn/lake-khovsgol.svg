@@ -1,0 +1,12 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 118L16 112L36 113L58 104L78 107L100 96L118 98L136 86L150 78L160 72L170 78L184 84L198 92L214 98L232 104L250 108V124H0Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-mn-lake-khovsgol-peak"><path d="M118 98L136 86L150 78L160 72L170 78L184 84L198 92V124H118Z"/></clipPath></defs>
+<path d="M140 84L150 78L160 72L170 78L182 84L174 86L168 81L162 87L156 81L149 86L144 83Z" fill="var(--il-ice)" clip-path="url(#il-mn-lake-khovsgol-peak)"/>
+<path d="M0 200V118H300V200Z" fill="var(--il-water)"/>
+<path d="M166 168L218 124L300 100V200H166Z" fill="var(--il-acc)"/>
+<path d="M214 128L227 80L232 100L236 74L240 95L244 50L249 81L253 39L257 74L261 62L266 85L271 47L276 76L280 47L285 74L289 38L293 68L297 54L302 76L300 40V112Z" fill="var(--il-leaf)"/>
+<path d="M0 200V188Q60 178 130 172L200 164Q240 160 300 158V200Z" fill="var(--il-obj)"/>
+<g transform="translate(-6 8)"><path d="M190 178Q186 172 188 166L194 162Q202 154 212 155L228 156Q238 158 238 168L237 178L234 178L233 186H229L228 179H210L209 186H205L204 179L198 177Z" fill="var(--il-near)"/>
+<path d="M193 163Q187 160 188 154M197 161Q199 156 203 155" stroke="var(--il-ice)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M237 162Q243 167 242 178" stroke="var(--il-near)" stroke-width="1.8" fill="none" stroke-linecap="round"/></g>
