@@ -1,7 +1,7 @@
 {
  "id": "ar-glaciar-martial",
  "country": "AR",
- "name": "Martial Glacier",
+ "name": "Martial Glacier: Mirador de los Cóndores",
  "base": "Ushuaia",
  "region": "Martial range above Ushuaia",
  "kind": "day",
@@ -16,50 +16,54 @@
   4
  ],
  "hours": [
-  3,
-  4
+  2.5,
+  3.5
  ],
  "start_by": "10:00",
  "published": {
-  "km": 7,
-  "gain_m": 550,
-  "source": "https://turismoushuaia.com"
+  "km": 6.2,
+  "gain_m": null,
+  "source": "https://turismoushuaia.com/actividad/senda-glaciar-martial/"
  },
- "why": "From the edge of town to a small glacier in an hour and a half, with the Beagle Channel below you all the way.",
- "book": "Free. Taxi or walk up the road to the Cumbres del Martial teahouse.",
+ "why": "From the edge of town to the moraine under the Martial Glacier in about an hour and a half, with the Beagle Channel below you all the way.",
+ "book": "Free path ('Circuito de las Nubes' of the Cerro Martial park). Taxi or minivan from Ushuaia to the Refugio Base at the end of the Martial road; a return taxi for two costs less than the minivan.",
  "water": "Meltwater streams; the teahouse at the start.",
  "dangers": [
-  "Loose scree under the glacier: don't walk onto the ice."
+  "Loose scree on the moraine: don't walk onto the ice.",
+  "Weather turns fast: a warm layer and a shell even in January."
  ],
- "turnaround": "",
+ "turnaround": "In wind or rain, stop at the lower glacier lookout (Mirador del Glaciar) above the old chairlift.",
  "sources": [
-  "https://turismoushuaia.com",
+  "https://turismoushuaia.com/actividad/senda-glaciar-martial/",
   "https://en.wikivoyage.org/wiki/Ushuaia"
  ],
  "points": [
   {
    "id": "start",
-   "name": "Cumbres del Martial teahouse",
-   "lat": -54.7858,
-   "lon": -68.3961,
+   "name": "Refugio Base, Cerro Martial",
+   "lat": -54.79896,
+   "lon": -68.3705,
    "role": "start",
-   "note": "At the top of the road, about 7 km above the town centre."
+   "note": "The end of the Martial road, about 7 km above the town centre, with the teahouse. Take the Sendero de los Pioneros.",
+   "scene": "ar-martial-teahouse"
   },
   {
    "id": "view",
    "name": "Lookout over Ushuaia and the Beagle Channel",
-   "lat": -54.7782,
-   "lon": -68.406,
+   "lat": -54.79321,
+   "lon": -68.38512,
    "role": "point",
-   "note": "Where the old chairlift ended: the whole bay and the Chilean islands across the channel."
+   "note": "Where the old chairlift ended: the whole bay of Ushuaia and the Chilean islands across the channel.",
+   "scene": "ar-martial-lookout"
   },
   {
    "id": "goal",
-   "name": "Martial Glacier",
-   "lat": -54.7717,
-   "lon": -68.415,
+   "name": "Mirador de los Cóndores, Martial Glacier",
+   "lat": -54.7869,
+   "lon": -68.40273,
    "role": "goal",
-   "note": "About 1,000 m, at the foot of the glacier cirque."
+   "note": "At 850 m on top of the frontal moraine: the glacier's ice and cirque right above you.",
+   "scene": "ar-martial-glacier"
   }
  ]
 }
