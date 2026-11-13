@@ -853,13 +853,8 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
-    {
-     "point": "llanganuco",
-     "name": "Lagunas de Llanganuco",
-     "reuse": "pe-llanganuco-lakes"
-    },
     {
      "point": "start",
      "name": "Cebollapampa meadow",
@@ -884,7 +879,7 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -910,7 +905,7 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -920,15 +915,15 @@
     {
      "point": "union",
      "name": "Punta Unión pass with Taulliraju",
-     "reuse": null
+     "reuse": "pe-punta-union-pass"
     },
     {
      "point": "alpamayo",
-     "name": "Alpamayo from the Arhuaycocha valley",
-     "reuse": null
+     "name": "Alpamayo from the Santa Cruz valley",
+     "reuse": "pe-alpamayo"
     },
     {
-     "point": "goal",
+     "point": "jatuncocha",
      "name": "Laguna Jatuncocha",
      "reuse": null
     }
@@ -941,7 +936,7 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -959,9 +954,9 @@
      "reuse": null
     },
     {
-     "point": "goal",
+     "point": "jahuacocha",
      "name": "Laguna Jahuacocha",
-     "reuse": null
+     "reuse": "pe-laguna-jahuacocha"
     }
    ]
   },
@@ -972,12 +967,12 @@
    "slot": "PE-B",
    "base": "Cabanaconde",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
      "name": "Mirador San Miguel, Cabanaconde",
-     "reuse": null
+     "reuse": "pe-colca-canyon"
     },
     {
      "point": "bridge",
@@ -1003,12 +998,12 @@
    "slot": "PE-B",
    "base": "Cachora",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
-     "point": "start",
+     "point": "capuliyoc",
      "name": "Capuliyoc viewpoint over the Apurímac canyon",
-     "reuse": null
+     "reuse": "pe-apurimac-river"
     },
     {
      "point": "river",
