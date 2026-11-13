@@ -334,8 +334,15 @@ def build(t: dict) -> dict:
     # the key points on the line, in order
     marks = []
     lo = 0
-    for p in t["points"]:
-        i = min(range(lo, len(samp)), key=lambda k: km(samp[k], (p["lat"], p["lon"])))
+    for n, p in enumerate(t["points"]):
+        here = (p["lat"], p["lon"])
+        if n == 0 and km(samp[0], here) <= 0.8:
+            i = 0  # the line starts at the start (a loop also ends there: never take its end)
+        else:
+            # the first pass within 100 m, so a loop or a there-and-back line that comes by the
+            # same place twice keeps the walking order; else the nearest sample after the last
+            near = [k for k in range(lo, len(samp)) if km(samp[k], here) <= 0.1]
+            i = near[0] if near else min(range(lo, len(samp)), key=lambda k: km(samp[k], here))
         off = km(samp[i], (p["lat"], p["lon"]))
         if off > 0.8:
             print(f"  ! point {p['id']} is {off:.2f} km off the path")
@@ -353,6 +360,8 @@ def build(t: dict) -> dict:
     total_down = down + (up if t["shape"] == "out_and_back" else 0)
     pub = t.get("published") or {}
     for name, ours, theirs in (("km", total_km, pub.get("km")), ("gain", total_up, pub.get("gain_m"))):
+        if name == "gain" and (theirs or 0) < 200:
+            continue  # flat walks: a 90 m DEM's noise is bigger than the climb (the test skips it too)
         if theirs and abs(ours - theirs) / theirs > 0.3:
             print(f"  ! {name}: computed {ours:.0f} vs published {theirs}")
 

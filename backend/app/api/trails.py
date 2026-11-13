@@ -49,6 +49,11 @@ def _cover(t: trails.Trail) -> dict | None:
         s = _scene(p.scene)
         if s:
             return s
+    # until its scenes are linked: the drawing of the goal itself, when the library has it
+    for p in goal:
+        lm = art.match(p.name, p.lat, p.lon, country=t.country, gateway=False)
+        if lm and trails.km(p.lat, p.lon, lm.lat, lm.lon) <= 1.5:
+            return _scene(lm.id)
     return None
 
 

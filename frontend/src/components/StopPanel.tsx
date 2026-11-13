@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { activitiesFrom, sameActivities } from "../lib/board";
 import { activityText, addDays } from "../lib/format";
@@ -9,6 +10,7 @@ import { Illustration } from "./Illustration";
 import { PlaceGuide } from "./PlaceGuide";
 import { PlaceQuestion } from "./PlaceQuestion";
 import { StopForm } from "./Stops";
+import { TrailCards } from "./TrailCards";
 
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -171,6 +173,7 @@ export function StopPanel({ trip, stop, tripStart, index, count, busy, onResize,
                       <b>{it.name}</b>
                       {it.hours && <span className="small muted"> · {it.hours}</span>}
                       {it.why && <p className="small">{it.why}</p>}
+                      {it.trail && <p className="small"><Link to={`/trails/${it.trail}?trip=${trip.id}&stop=${stop.id}&month=${Number(stop.start_date.slice(5, 7))}`}>The trail: map, step by step, what to wear →</Link></p>}
                       <div className="tags">
                         {todo.source === "guide" && <NeedTag it={it} />}
                         {todo.source === "guide" && <span className="tag">{EFFORT[it.effort]}</span>}
@@ -200,6 +203,12 @@ export function StopPanel({ trip, stop, tripStart, index, count, busy, onResize,
               {todo.sources.length > 0 && (
                 <p className="small muted">Sources: {todo.sources.map((u, i) => <a key={u} href={u} target="_blank" rel="noopener noreferrer">{i + 1}</a>).reduce<React.ReactNode[]>((a, x, i) => (i ? [...a, " · ", x] : [x]), [])}</p>
               )}
+            </div>
+          )}
+          {!!stop.trails?.length && (
+            <div className="stack bp-trails" style={{ gap: 6 }}>
+              <h4>Trekking from here</h4>
+              <TrailCards trails={stop.trails} query={`?trip=${trip.id}&stop=${stop.id}&month=${Number(stop.start_date.slice(5, 7))}`} />
             </div>
           )}
           {todo.source === "none" && <p className="small muted">We don't know this place's sights yet. Add what you plan to do with "Change the place or what you do".</p>}
