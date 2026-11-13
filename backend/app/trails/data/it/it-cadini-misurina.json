@@ -1,0 +1,70 @@
+{
+ "id": "it-cadini-misurina",
+ "country": "IT",
+ "name": "Cadini di Misurina viewpoint from Misurina",
+ "base": "Misurina",
+ "region": "Cadini di Misurina, Auronzo di Cadore, Belluno",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "why": "From the lake of Misurina up to the needle-sharp Cadini spires: the narrow rock rib in front of them is one of the most photographed spots of the Dolomites.",
+ "book": "Free. Walk up from Misurina (path from Lago d'Antorno, CAI 'Misurina Casello - Rifugio Auronzo') and come back down on the summer shuttle bus from Rifugio Auronzo, or walk back the same way (add 2 hours).",
+ "water": "Fill up in Misurina. Rifugio Auronzo sells drinks; nothing at the viewpoint.",
+ "dangers": [
+  "The last 10 minutes to the viewpoint are on a narrow, exposed path with steep drops: stay on the wider part, never step onto the rib for a photo when it is wet or windy.",
+  "Queues of people on the narrow ledge in summer mornings."
+ ],
+ "turnaround": "If you reach Rifugio Auronzo after 14:00 or clouds sit on the Cadini, skip the viewpoint: it is only worth it in the clear.",
+ "sources": [
+  "https://hiking.waymarkedtrails.org/#route?id=7406119",
+  "https://hiking.waymarkedtrails.org/#route?id=1067616",
+  "https://it.wikivoyage.org/wiki/Misurina"
+ ],
+ "osm": null,
+ "points": [
+  {
+   "id": "misurina",
+   "name": "Lago di Misurina",
+   "lat": 46.5822,
+   "lon": 12.2538,
+   "role": "start",
+   "note": "1,754 m. Walk the east shore north, with the Sorapis mirrored in the lake behind you."
+  },
+  {
+   "id": "antorno",
+   "name": "Lago d'Antorno",
+   "lat": 46.595,
+   "lon": 12.2652,
+   "role": "point",
+   "note": "1,866 m, a small lake with the Tre Cime above the trees, at the toll gate of the Tre Cime road. The CAI path to Rifugio Auronzo starts here."
+  },
+  {
+   "id": "auronzo",
+   "name": "Rifugio Auronzo",
+   "lat": 46.6122,
+   "lon": 12.2961,
+   "role": "point",
+   "note": "2,320 m, under the south walls of the Tre Cime: bus stop for the way down. Take path 117 south-west towards the Cadini."
+  },
+  {
+   "id": "viewpoint",
+   "name": "Cadini di Misurina viewpoint",
+   "lat": 46.6009,
+   "lon": 12.2955,
+   "role": "goal",
+   "note": "About 2,300 m: the rock rib pointing at the Cadini spires, Lago di Misurina far below. Come back to Rifugio Auronzo the same way (20 minutes)."
+  }
+ ]
+}

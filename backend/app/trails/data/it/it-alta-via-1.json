@@ -1,0 +1,113 @@
+{
+ "id": "it-alta-via-1",
+ "country": "IT",
+ "name": "Alta Via 1 of the Dolomites",
+ "base": "Braies",
+ "region": "Dolomites: South Tyrol and Belluno",
+ "kind": "multiday",
+ "days": 11,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  50,
+  60
+ ],
+ "start_by": "08:00",
+ "why": "Eleven days hut to hut across the heart of the Dolomites, from Lago di Braies to Belluno, under Lagazuoi, the Cinque Torri, Pelmo and the great wall of the Civetta, with no technical climbing.",
+ "book": "No permit. Book every hut (rifugio) months ahead, each one separately; a deposit of about 40 EUR a night is normal and many huts take cash only. Bring a sleeping-bag liner. Start: bus from Dobbiaco to Lago di Braies; end: Belluno, with trains and buses.",
+ "water": "Limestone: few streams, most dry by late summer, worst between Tissi and Pian de Fontana. Fill up at every hut and carry 2 l on the southern stages.",
+ "dangers": [
+  "Forcella del Lago (stage 3) is steep, loose and can hold snow until mid-July.",
+  "Afternoon thunderstorms on the high passes in July and August: be at the hut by 15:00.",
+  "Short sections with iron handrails and steep gullies: sure feet needed, poles strongly advised.",
+  "Some huts have no mobile signal: tell the next hut if you change plans."
+ ],
+ "turnaround": "Every stage has an exit to a road (Passo Falzarego, Passo Giau, Pescul, Listolade): if a pass is snowed in or the forecast is for storms, take it rather than pushing on.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Alta_Via_1",
+  "https://hiking.waymarkedtrails.org/#route?id=177743"
+ ],
+ "osm": 177743,
+ "points": [
+  {
+   "id": "braies",
+   "name": "Lago di Braies",
+   "lat": 46.6893,
+   "lon": 12.0837,
+   "role": "start",
+   "note": "1,494 m. Day 1 climbs from the south end of the lake to Rifugio Biella; day 2 crosses the Senes plateau to Rifugio Fanes."
+  },
+  {
+   "id": "fanes",
+   "name": "Rifugio Fanes",
+   "lat": 46.6122,
+   "lon": 12.0142,
+   "role": "point",
+   "night": true,
+   "note": "2,060 m, night 2, on the green Fanes plateau. Next day: Forcella del Lago, the hardest pass of the north half."
+  },
+  {
+   "id": "lagazuoi",
+   "name": "Rifugio Lagazuoi",
+   "lat": 46.5278,
+   "lon": 12.0081,
+   "role": "point",
+   "night": true,
+   "note": "2,752 m, night 3, the highest hut of the route, with the whole Dolomites around. WWI tunnels lead down to Passo Falzarego."
+  },
+  {
+   "id": "nuvolau",
+   "name": "Rifugio Nuvolau",
+   "lat": 46.4953,
+   "lon": 12.0457,
+   "role": "point",
+   "night": true,
+   "note": "2,574 m, night 4, on a summit above the Cinque Torri. Then Passo Giau, Citta di Fiume under the Pelmo and Palafavera (nights 5-6)."
+  },
+  {
+   "id": "coldai",
+   "name": "Lago Coldai",
+   "lat": 46.3987,
+   "lon": 12.0614,
+   "role": "point",
+   "note": "2,143 m, the lake under the Civetta, 10 minutes past Rifugio Coldai (night 7). Over Forcella Coldai the great north-west wall appears."
+  },
+  {
+   "id": "tissi",
+   "name": "Rifugio Tissi",
+   "lat": 46.3881,
+   "lon": 12.0333,
+   "role": "point",
+   "night": true,
+   "note": "2,250 m, night 8, face to face with the 1,000 m wall of the Civetta. Then Vazzoler and the long, dry stages south."
+  },
+  {
+   "id": "pian-fontana",
+   "name": "Rifugio Pian de Fontana",
+   "lat": 46.2619,
+   "lon": 12.1759,
+   "role": "point",
+   "night": true,
+   "note": "1,632 m, night 10, in the Schiara group. The last day descends 1,000 m to the Piave valley."
+  },
+  {
+   "id": "belluno",
+   "name": "Belluno",
+   "lat": 46.138,
+   "lon": 12.2168,
+   "role": "goal",
+   "note": "The end of the Alta Via 1 in the old town of Belluno, after the long descent from the Schiara (stage 11). Trains and buses from here."
+  }
+ ],
+ "published": {
+  "km": 120,
+  "gain_m": null,
+  "source": "https://en.wikivoyage.org/wiki/Alta_Via_1"
+ }
+}

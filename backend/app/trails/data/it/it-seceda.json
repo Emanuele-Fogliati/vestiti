@@ -1,0 +1,69 @@
+{
+ "id": "it-seceda",
+ "country": "IT",
+ "name": "Seceda ridge and the Pieralongia meadows",
+ "base": "Ortisei",
+ "region": "Puez-Odle Nature Park, Val Gardena, South Tyrol",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "why": "Up by cable car to the Seceda ridge, where green meadows end in a sheer drop under the Odle spires, then mostly downhill through the Pieralongia meadows to Col Raiser.",
+ "book": "Free path. Up with the Ortisei-Furnes-Seceda cable car, down with the Col Raiser gondola to Santa Cristina, then the Val Gardena bus back to Ortisei. Lifts run from about late May to early November; check the prices and hours on the lift sites.",
+ "water": "Huts everywhere: Seceda, Baita Sofie, Malga Pieralongia, Col Raiser. No need to carry more than 0.5 l.",
+ "dangers": [
+  "The ridge ends in a vertical drop: stay behind the fence at the viewpoint.",
+  "Thunderstorms in summer afternoons on the open ridge: the cable car stops in storms."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.val-gardena.com/it/escursioni/dettaglio/escursione-dal-col-raiser-alla-malga-pieralongia/",
+  "https://www.suedtirol.info/en/en/experiences-and-events/plp-experiences/experiences-south-tyrol/pdp-experience.smgpoid219139423c32313f1510b254d89e3a7.seceda---ridge-line-from-col-raiser-mountain-station.selva-selva-di-val-gardena"
+ ],
+ "osm": null,
+ "points": [
+  {
+   "id": "station",
+   "name": "Seceda cable car top station",
+   "lat": 46.5979,
+   "lon": 11.7244,
+   "role": "start",
+   "note": "2,456 m, top of the Ortisei-Furnes-Seceda cable car. Walk 10 minutes up the grass to the cross."
+  },
+  {
+   "id": "ridge",
+   "name": "Seceda ridge with the Odle",
+   "lat": 46.6006,
+   "lon": 11.7258,
+   "role": "point",
+   "note": "2,519 m, the famous view: the meadow tilts up to a knife edge and drops straight down, the Odle spires lined up behind."
+  },
+  {
+   "id": "pieralongia",
+   "name": "Pieralongia",
+   "lat": 46.5975,
+   "lon": 11.7478,
+   "role": "point",
+   "note": "About 2,300 m, two tall rock needles in the meadows and a small hut, after an hour downhill on path 2A/1."
+  },
+  {
+   "id": "col-raiser",
+   "name": "Col Raiser",
+   "lat": 46.5848,
+   "lon": 11.7453,
+   "role": "goal",
+   "note": "2,107 m, the top of the gondola to Santa Cristina, with the Sassolungo across the valley."
+  }
+ ]
+}
