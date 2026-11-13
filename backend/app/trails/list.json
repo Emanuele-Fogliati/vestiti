@@ -345,7 +345,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -355,7 +355,7 @@
     {
      "point": "vientos",
      "name": "Paso de los Vientos, Valle Ascencio",
-     "reuse": null
+     "reuse": "cl-valle-ascencio"
     },
     {
      "point": "chileno",
@@ -376,7 +376,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -390,8 +390,8 @@
     },
     {
      "point": "frances",
-     "name": "Valle del Francés, Mirador Británico",
-     "reuse": "cl-french-valley"
+     "name": "Mirador Británico, Valle del Francés",
+     "reuse": null
     },
     {
      "point": "paine-grande",
@@ -400,8 +400,8 @@
     },
     {
      "point": "goal",
-     "name": "Glaciar Grey",
-     "reuse": null
+     "name": "Glaciar Grey from Refugio Grey",
+     "reuse": "cl-grey-glacier"
     }
    ]
   },
@@ -412,12 +412,17 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
-     "name": "Refugio Dickson on Lago Dickson",
+     "name": "Hotel Las Torres, Torres del Paine",
      "reuse": null
+    },
+    {
+     "point": "dickson",
+     "name": "Refugio Dickson on Lago Dickson",
+     "reuse": "cl-lake-dickson"
     },
     {
      "point": "perros",
@@ -430,8 +435,13 @@
      "reuse": "cl-paso-john-gardner"
     },
     {
-     "point": "goal",
+     "point": "bridges",
      "name": "Glaciar Grey hanging bridges",
+     "reuse": null
+    },
+    {
+     "point": "paine-grande",
+     "name": "Refugio Paine Grande on Lago Pehoé",
      "reuse": null
     }
    ]
@@ -443,7 +453,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -458,7 +468,7 @@
     {
      "point": "frances",
      "name": "Mirador Francés",
-     "reuse": null
+     "reuse": "cl-french-valley"
     },
     {
      "point": "goal",
@@ -474,7 +484,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -489,7 +499,7 @@
     {
      "point": "goal",
      "name": "Mirador Cuernos",
-     "reuse": null
+     "reuse": "cl-cuernos-del-paine"
     }
    ]
   },
@@ -500,12 +510,12 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
      "name": "Camping Pehoé",
-     "reuse": null
+     "reuse": "cl-lake-pehoe"
     },
     {
      "point": "goal",
