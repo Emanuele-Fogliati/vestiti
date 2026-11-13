@@ -3,6 +3,34 @@
  "name": "Italy",
  "places": [
   {
+   "slug": "abbey-of-san-vittore-alle-chiuse",
+   "label": "The Romanesque abbey of San Vittore alle Chiuse below the Frasassi gorge cliffs",
+   "lat": 43.419,
+   "lon": 12.963,
+   "radius_km": 3,
+   "aliases": [
+    "san vittore alle chiuse",
+    "san vittore delle chiuse",
+    "abbazia di san vittore alle chiuse"
+   ],
+   "names": [
+    "abbazia di san vittore",
+    "abbey of san vittore"
+   ],
+   "palette": {
+    "sky": "#A5CAEC",
+    "far": "#C4C1B6",
+    "mid": "#CDBFA6",
+    "ice": "#DDD3C0",
+    "water": "#5A8FB0",
+    "near": "#2A2724",
+    "sun": "#F4C53A",
+    "leaf": "#4E7634",
+    "acc": "#B46A4A",
+    "obj": "#86AE4C"
+   }
+  },
+  {
    "slug": "abbey-of-santantimo",
    "label": "Abbey of Sant'Antimo with its bell tower and olive trees",
    "lat": 42.9995,
@@ -149,6 +177,32 @@
     "leaf": "#5E8046",
     "acc": "#C9744A",
     "obj": "#E5CC94"
+   }
+  },
+  {
+   "slug": "albaretto-della-torre",
+   "label": "The medieval tower of Albaretto della Torre with its spiral stair, Alta Langa hills and the Alps behind",
+   "lat": 44.585,
+   "lon": 8.064,
+   "radius_km": 4,
+   "aliases": [
+    "torre di albaretto"
+   ],
+   "names": [
+    "albaretto della torre",
+    "albaretto torre"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#9FB0C2",
+    "mid": "#A99784",
+    "ice": "#F2EFE8",
+    "water": "#A9583E",
+    "near": "#2A2622",
+    "sun": "#F4C53A",
+    "leaf": "#6E9447",
+    "acc": "#E5C462",
+    "obj": "#87776A"
    }
   },
   {
@@ -359,6 +413,39 @@
     "leaf": "#56803E",
     "acc": "#E3A08A",
     "obj": "#E8C468"
+   }
+  },
+  {
+   "slug": "anchiano",
+   "label": "Leonardo da Vinci's birth house, the stone farmhouse among olive trees at Anchiano",
+   "lat": 43.8061,
+   "lon": 10.9186,
+   "radius_km": 3,
+   "aliases": [
+    "casa natale di leonardo",
+    "casa natale leonardo",
+    "leonardo da vinci birthplace",
+    "birthplace of leonardo",
+    "leonardo s birthplace",
+    "leonardos birthplace",
+    "leonardo birth house",
+    "casa di leonardo"
+   ],
+   "names": [
+    "anchiano",
+    "anchiano vinci"
+   ],
+   "palette": {
+    "sky": "#B7D6F0",
+    "far": "#9FB3A2",
+    "mid": "#B8955F",
+    "ice": "#E6DCC6",
+    "water": "#5E8FB0",
+    "near": "#2A2420",
+    "sun": "#F4C430",
+    "leaf": "#6F8B40",
+    "acc": "#B4603C",
+    "obj": "#8C9A6E"
    }
   },
   {
@@ -613,6 +700,34 @@
    }
   },
   {
+   "slug": "badesi",
+   "label": "Badesi on its hill above the long beach of the Gulf of Asinara, Isola Rossa offshore",
+   "lat": 40.966,
+   "lon": 8.882,
+   "radius_km": 8,
+   "aliases": [
+    "li junchi",
+    "spiaggia di badesi",
+    "badesi mare",
+    "baia delle mimose"
+   ],
+   "names": [
+    "badesi"
+   ],
+   "palette": {
+    "sky": "#B6D7F2",
+    "far": "#9E9890",
+    "mid": "#D1B47E",
+    "ice": "#F0E2C2",
+    "water": "#2C7DB4",
+    "near": "#262420",
+    "sun": "#F4C430",
+    "leaf": "#5D7D42",
+    "acc": "#B5513B",
+    "obj": "#5FC0C4"
+   }
+  },
+  {
    "slug": "badolo",
    "label": "Rocca di Badolo sandstone crag with its chapel, Contrafforte Pliocenico",
    "lat": 44.4127,
@@ -716,6 +831,61 @@
     "leaf": "#6E8A4E",
     "acc": "#E2B06E",
     "obj": "#B4ACA0"
+   }
+  },
+  {
+   "slug": "barile",
+   "label": "Barile's Sheshe wine cellars below the town, Monte Vulture behind",
+   "lat": 40.946,
+   "lon": 15.672,
+   "radius_km": 6,
+   "aliases": [
+    "sheshe",
+    "cantine di barile",
+    "parco urbano delle cantine"
+   ],
+   "names": [
+    "barile"
+   ],
+   "palette": {
+    "sky": "#B4D3EF",
+    "far": "#5F7F5E",
+    "mid": "#C6AE84",
+    "ice": "#EEE6D4",
+    "water": "#5A8DB5",
+    "near": "#2A2622",
+    "sun": "#F4C430",
+    "leaf": "#86A04E",
+    "acc": "#B9603F",
+    "obj": "#E2C88E"
+   }
+  },
+  {
+   "slug": "barletta",
+   "label": "The bronze Colossus of Barletta before the Basilica of the Santo Sepolcro",
+   "lat": 41.3196,
+   "lon": 16.2836,
+   "radius_km": 12,
+   "aliases": [
+    "colosso di barletta",
+    "colossus of barletta",
+    "eraclio",
+    "santo sepolcro barletta"
+   ],
+   "names": [
+    "barletta"
+   ],
+   "palette": {
+    "sky": "#A6CDF0",
+    "far": "#E8DFCC",
+    "mid": "#D3C6AA",
+    "ice": "#EFE8DA",
+    "water": "#3E8FC0",
+    "near": "#262420",
+    "sun": "#F6C431",
+    "leaf": "#4F7A3A",
+    "acc": "#C9BCA4",
+    "obj": "#4E5A4C"
    }
   },
   {
@@ -911,6 +1081,29 @@
     "obj": "#2E5EAA"
    },
    "names": []
+  },
+  {
+   "slug": "bisacquino",
+   "label": "Bisacquino at the foot of its pine-topped mountain, the domed Chiesa Madre among the roofs",
+   "lat": 37.705,
+   "lon": 13.26,
+   "radius_km": 6,
+   "aliases": [],
+   "names": [
+    "bisacquino"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#D6BC7C",
+    "mid": "#B09666",
+    "ice": "#EFE6D2",
+    "water": "#5A8DB5",
+    "near": "#2A2520",
+    "sun": "#F4C430",
+    "leaf": "#4A6A3A",
+    "acc": "#C0744C",
+    "obj": "#7E9C6A"
+   }
   },
   {
    "slug": "boboli-gardens",
@@ -1305,6 +1498,38 @@
    }
   },
   {
+   "slug": "brescia",
+   "label": "Brescia's Piazza Paolo VI: the round Duomo Vecchio before the domed Duomo Nuovo and the Broletto tower",
+   "lat": 45.5395,
+   "lon": 10.2215,
+   "radius_km": 15,
+   "aliases": [
+    "duomo vecchio di brescia",
+    "duomo vecchio brescia",
+    "duomo nuovo di brescia",
+    "duomo nuovo brescia",
+    "rotonda di brescia",
+    "piazza paolo vi"
+   ],
+   "names": [
+    "brescia",
+    "brescia city",
+    "brescia old town"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#C8C0B2",
+    "mid": "#D3C29C",
+    "ice": "#F3EFE6",
+    "water": "#5A8DB5",
+    "near": "#2A2622",
+    "sun": "#F4C430",
+    "leaf": "#4F7A40",
+    "acc": "#A8573A",
+    "obj": "#86B29C"
+   }
+  },
+  {
    "slug": "bridge-of-sighs",
    "label": "Bridge of Sighs over the Rio di Palazzo, Venice",
    "lat": 45.434,
@@ -1609,6 +1834,29 @@
    }
   },
   {
+   "slug": "cala-janculla",
+   "label": "The pebble cove of Cala Janculla under the steep Costa Viola cliffs",
+   "lat": 38.28,
+   "lon": 15.76,
+   "radius_km": 3,
+   "aliases": [
+    "janculla",
+    "ianculla"
+   ],
+   "palette": {
+    "sky": "#B3D6F2",
+    "far": "#8FA6BC",
+    "mid": "#5F8A4F",
+    "ice": "#ECE8DE",
+    "water": "#1F5DA6",
+    "near": "#21262A",
+    "sun": "#F4C430",
+    "leaf": "#3F6B35",
+    "acc": "#A89C88",
+    "obj": "#45B6C2"
+   }
+  },
+  {
    "slug": "cala-sisine",
    "label": "Cala Sisine beach at the mouth of its limestone gorge, Gulf of Orosei",
    "lat": 40.179,
@@ -1862,6 +2110,29 @@
    }
   },
   {
+   "slug": "capo-colonna",
+   "label": "The lone Doric column of the Temple of Hera Lacinia at Capo Colonna, with the lighthouse",
+   "lat": 39.0256,
+   "lon": 17.2036,
+   "radius_km": 5,
+   "aliases": [
+    "capo colonna",
+    "hera lacinia"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#E6DAB0",
+    "mid": "#C6A673",
+    "ice": "#F5F3EC",
+    "water": "#2D76A6",
+    "near": "#2B2A26",
+    "sun": "#F4C542",
+    "leaf": "#7E9E48",
+    "acc": "#B5603C",
+    "obj": "#A89A84"
+   }
+  },
+  {
    "slug": "capo-monte-santo",
    "label": "Capo Monte Santu's sheer limestone cliffs dropping into the Gulf of Orosei",
    "lat": 40.08,
@@ -1884,6 +2155,30 @@
     "leaf": "#4F6E38",
     "acc": "#C8A27C",
     "obj": "#6FB3C9"
+   }
+  },
+  {
+   "slug": "capo-tindari",
+   "label": "The Tindari sanctuary on its cliff above the Marinello sand spit",
+   "lat": 38.1428,
+   "lon": 15.0405,
+   "radius_km": 5,
+   "aliases": [
+    "tindari",
+    "baia di tindari",
+    "laghetti di marinello"
+   ],
+   "palette": {
+    "sky": "#BCD9F0",
+    "far": "#93A6BC",
+    "mid": "#D2C6AA",
+    "ice": "#EDE3CF",
+    "water": "#1F6EA6",
+    "near": "#2A2622",
+    "sun": "#F6C53A",
+    "leaf": "#5E7F3A",
+    "acc": "#D58A44",
+    "obj": "#E0B23A"
    }
   },
   {
@@ -2039,6 +2334,29 @@
     "leaf": "#93B451",
     "acc": "#E2BC8C",
     "obj": "#C0623E"
+   }
+  },
+  {
+   "slug": "castagnole-delle-lanze",
+   "label": "Castagnole delle Lanze on its hill, with the Saint Robert tower and the parish church above the Moscato vineyards",
+   "lat": 44.7547,
+   "lon": 8.1497,
+   "radius_km": 5,
+   "aliases": [
+    "castagnole delle lanze",
+    "castagnole lanze"
+   ],
+   "palette": {
+    "sky": "#C2DBEF",
+    "far": "#DCC08E",
+    "mid": "#93A65C",
+    "ice": "#EFE6D4",
+    "water": "#5B8FB8",
+    "near": "#2B2622",
+    "sun": "#F4C542",
+    "leaf": "#4F7A34",
+    "acc": "#B9563A",
+    "obj": "#A3653F"
    }
   },
   {
@@ -2363,6 +2681,29 @@
    }
   },
   {
+   "slug": "castiglione-di-garfagnana",
+   "label": "The walled village of Castiglione di Garfagnana with its Rocca and bell tower, the Apuan Alps behind",
+   "lat": 44.1494,
+   "lon": 10.4122,
+   "radius_km": 5,
+   "aliases": [
+    "castiglione di garfagnana",
+    "castiglione garfagnana"
+   ],
+   "palette": {
+    "sky": "#BEDCF2",
+    "far": "#A8ADBC",
+    "mid": "#B9AC94",
+    "ice": "#E9E1D1",
+    "water": "#5A8EB5",
+    "near": "#2A2723",
+    "sun": "#F4C542",
+    "leaf": "#466A37",
+    "acc": "#A85E44",
+    "obj": "#7C9150"
+   }
+  },
+  {
    "slug": "castro",
    "label": "Castro in Salento: the hilltop castle and walls above the white houses and the turquoise cove of Castro Marina",
    "lat": 40.0005,
@@ -2656,6 +2997,33 @@
    }
   },
   {
+   "slug": "certosa-di-padula",
+   "label": "The Great Cloister of the Certosa di Padula with the town of Padula on its hill",
+   "lat": 40.3393,
+   "lon": 15.6713,
+   "radius_km": 4,
+   "aliases": [
+    "certosa di padula",
+    "certosa di san lorenzo",
+    "padula charterhouse"
+   ],
+   "names": [
+    "padula"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#8DAE78",
+    "mid": "#EAD59C",
+    "ice": "#F4EFE0",
+    "water": "#4A86B8",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#6EA63B",
+    "acc": "#B76A4A",
+    "obj": "#C9A46A"
+   }
+  },
+  {
    "slug": "cesana-torinese",
    "label": "Cesana Torinese's Romanesque church of San Giovanni Battista and its stone spire bell tower under the mountains",
    "lat": 44.9531,
@@ -2814,6 +3182,29 @@
    }
   },
   {
+   "slug": "chiavenna",
+   "label": "Chiavenna's old houses and stone bridge over the Mera, with the San Lorenzo bell tower",
+   "lat": 46.3206,
+   "lon": 9.4003,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "chiavenna"
+   ],
+   "palette": {
+    "sky": "#B9D7F0",
+    "far": "#A1A7B1",
+    "mid": "#B8AE9F",
+    "ice": "#F1EBDD",
+    "water": "#6FB4B2",
+    "near": "#2A2826",
+    "sun": "#F4C542",
+    "leaf": "#4D7A35",
+    "acc": "#E0A47C",
+    "obj": "#7E7C79"
+   }
+  },
+  {
    "slug": "chiusi",
    "label": "The Torre di San Secondiano and the cathedral on Piazza Duomo, Chiusi",
    "lat": 43.017,
@@ -2916,6 +3307,29 @@
     "leaf": "#2F8A57",
     "acc": "#E6DDC8",
     "obj": "#B08A5A"
+   }
+  },
+  {
+   "slug": "citerna",
+   "label": "The walled village of Citerna with its round tower and covered walkway above the Tiber valley",
+   "lat": 43.4978,
+   "lon": 12.1153,
+   "radius_km": 5,
+   "aliases": [],
+   "names": [
+    "citerna"
+   ],
+   "palette": {
+    "sky": "#B5D6F2",
+    "far": "#A6B8C8",
+    "mid": "#A8A08F",
+    "ice": "#E8DCC5",
+    "water": "#5A8EB5",
+    "near": "#2B2622",
+    "sun": "#F4C542",
+    "leaf": "#56763A",
+    "acc": "#B8744B",
+    "obj": "#97AC5E"
    }
   },
   {
@@ -3233,6 +3647,57 @@
    }
   },
   {
+   "slug": "costa-dei-gelsomini",
+   "label": "Roccella Ionica castle on its crag above the Costa dei Gelsomini beach",
+   "lat": 38.3216,
+   "lon": 16.4039,
+   "radius_km": 40,
+   "aliases": [
+    "costa dei gelsomini",
+    "castello di roccella"
+   ],
+   "names": [
+    "roccella ionica",
+    "roccella jonica"
+   ],
+   "palette": {
+    "sky": "#A9D0EE",
+    "far": "#E4D8BC",
+    "mid": "#D3BE96",
+    "ice": "#EFE6D2",
+    "water": "#3F93B0",
+    "near": "#2B2824",
+    "sun": "#F4C430",
+    "leaf": "#5C8A3E",
+    "acc": "#C99E60",
+    "obj": "#B7AE9F"
+   }
+  },
+  {
+   "slug": "costa-rei",
+   "label": "The long white beach of Costa Rei with the granite Scoglio di Peppino",
+   "lat": 39.245,
+   "lon": 9.575,
+   "radius_km": 8,
+   "aliases": [
+    "costa rei",
+    "scoglio di peppino",
+    "spiaggia di costa rei"
+   ],
+   "palette": {
+    "sky": "#BFDFF4",
+    "far": "#95A6B6",
+    "mid": "#7E8656",
+    "ice": "#F4EFE2",
+    "water": "#3EC2C4",
+    "near": "#25302A",
+    "sun": "#F6C431",
+    "leaf": "#62803E",
+    "acc": "#D9CBBE",
+    "obj": "#1E6FAE"
+   }
+  },
+  {
    "slug": "crotone",
    "label": "The round tower of the Castello di Carlo V, Crotone",
    "lat": 39.0814,
@@ -3315,6 +3780,29 @@
     "leaf": "#2F5C36",
     "acc": "#7FA452",
     "obj": "#8A5A3A"
+   }
+  },
+  {
+   "slug": "doganaccia",
+   "label": "Doganaccia cable car over the fir forest of the Pistoia Apennines",
+   "lat": 44.1247,
+   "lon": 10.7005,
+   "radius_km": 6,
+   "aliases": [
+    "doganaccia",
+    "croce arcana"
+   ],
+   "palette": {
+    "sky": "#C9E0F2",
+    "far": "#9FB3BE",
+    "mid": "#8FAE5E",
+    "ice": "#C9CDD0",
+    "water": "#4F8FB0",
+    "near": "#22281F",
+    "sun": "#F3C53A",
+    "leaf": "#2F5B36",
+    "acc": "#C8352C",
+    "obj": "#5E8A3C"
    }
   },
   {
@@ -3456,6 +3944,31 @@
    }
   },
   {
+   "slug": "elva",
+   "label": "Santa Maria Assunta church with its stone spire at Elva, Valle Maira",
+   "lat": 44.5397,
+   "lon": 7.0893,
+   "radius_km": 8,
+   "aliases": [
+    "vallone di elva"
+   ],
+   "names": [
+    "elva"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#6D9150",
+    "mid": "#A69C8B",
+    "ice": "#ECE3C6",
+    "water": "#8C8F92",
+    "near": "#25241F",
+    "sun": "#F3C53A",
+    "leaf": "#2F5636",
+    "acc": "#D8B45E",
+    "obj": "#5B5E62"
+   }
+  },
+  {
    "slug": "erice",
    "label": "Castello di Venere and Torretta Pepoli, Erice",
    "lat": 38.0372,
@@ -3582,6 +4095,32 @@
     "leaf": "#5A8442",
     "acc": "#5C6064",
     "obj": "#2F5034"
+   }
+  },
+  {
+   "slug": "ferla",
+   "label": "Rock-cut tombs of the Pantalica necropolis near Ferla",
+   "lat": 37.1452,
+   "lon": 15.0265,
+   "radius_km": 8,
+   "aliases": [
+    "pantalica",
+    "valle dell anapo"
+   ],
+   "names": [
+    "ferla"
+   ],
+   "palette": {
+    "sky": "#B8D6EF",
+    "far": "#B7B08A",
+    "mid": "#D3CEBE",
+    "ice": "#F2EFE6",
+    "water": "#4C8C8A",
+    "near": "#24231F",
+    "sun": "#F2C433",
+    "leaf": "#5E7F3A",
+    "acc": "#C9BC82",
+    "obj": "#46672F"
    }
   },
   {
@@ -3781,6 +4320,33 @@
    }
   },
   {
+   "slug": "forli",
+   "label": "San Mercuriale bell tower on Piazza Saffi, Forli",
+   "lat": 44.2226,
+   "lon": 12.041,
+   "radius_km": 12,
+   "aliases": [
+    "piazza saffi",
+    "piazza aurelio saffi",
+    "abbazia di san mercuriale"
+   ],
+   "names": [
+    "forli"
+   ],
+   "palette": {
+    "sky": "#BFD8EE",
+    "far": "#E4D3AF",
+    "mid": "#A8563C",
+    "ice": "#F0EDE5",
+    "water": "#CFC6B6",
+    "near": "#2A1E1A",
+    "sun": "#F3C53A",
+    "leaf": "#3F6B35",
+    "acc": "#B8653F",
+    "obj": "#B44B3A"
+   }
+  },
+  {
    "slug": "forno-di-zoldo",
    "label": "Forno di Zoldo's slender needle bell tower in the Val di Zoldo, Dolomites behind",
    "lat": 46.3478,
@@ -3965,6 +4531,31 @@
    }
   },
   {
+   "slug": "francavilla-fontana",
+   "label": "Castello Imperiali of Francavilla Fontana",
+   "lat": 40.5309,
+   "lon": 17.5852,
+   "radius_km": 10,
+   "aliases": [
+    "castello imperiali"
+   ],
+   "names": [
+    "francavilla fontana"
+   ],
+   "palette": {
+    "sky": "#97C4EC",
+    "far": "#E2CDA0",
+    "mid": "#CDAF7A",
+    "ice": "#EBDCB6",
+    "water": "#BEB6A5",
+    "near": "#2A2418",
+    "sun": "#F3C53A",
+    "leaf": "#3E5F33",
+    "acc": "#B89C69",
+    "obj": "#6B5B45"
+   }
+  },
+  {
    "slug": "franciacorta",
    "label": "Franciacorta vineyard rows below the Santissima di Gussago on its hilltop",
    "lat": 45.5968,
@@ -4127,6 +4718,33 @@
     "leaf": "#4E8A3A",
     "acc": "#E2DACA",
     "obj": "#B9B09A"
+   }
+  },
+  {
+   "slug": "gemona-del-friuli",
+   "label": "Gemona Cathedral and its bell tower below the mountain, Gemona del Friuli",
+   "lat": 46.2805,
+   "lon": 13.1385,
+   "radius_km": 10,
+   "aliases": [
+    "duomo di gemona",
+    "gemona cathedral"
+   ],
+   "names": [
+    "gemona del friuli",
+    "gemona"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#CFC9BA",
+    "mid": "#D3CAB4",
+    "ice": "#EFEBE1",
+    "water": "#9EA2A3",
+    "near": "#262420",
+    "sun": "#F3C53A",
+    "leaf": "#41693A",
+    "acc": "#B4603E",
+    "obj": "#E8D5A6"
    }
   },
   {
@@ -4293,6 +4911,31 @@
    }
   },
   {
+   "slug": "gragnano",
+   "label": "Pasta drying on racks along Via Roma, Gragnano",
+   "lat": 40.693,
+   "lon": 14.5195,
+   "radius_km": 8,
+   "aliases": [
+    "valle dei mulini di gragnano"
+   ],
+   "names": [
+    "gragnano"
+   ],
+   "palette": {
+    "sky": "#B9D7F0",
+    "far": "#E5C48A",
+    "mid": "#E2A58C",
+    "ice": "#F0E6CF",
+    "water": "#BEB5A5",
+    "near": "#2A241E",
+    "sun": "#F3C53A",
+    "leaf": "#5E8547",
+    "acc": "#EBC75A",
+    "obj": "#7A5634"
+   }
+  },
+  {
    "slug": "gran-paradiso-national-park",
    "label": "Alpine ibex below the glaciated Gran Paradiso massif, Gran Paradiso National Park",
    "lat": 45.517,
@@ -4400,6 +5043,31 @@
     "leaf": "#2F4D2C",
     "acc": "#E3C47A",
     "obj": "#7A4B2E"
+   }
+  },
+  {
+   "slug": "grotta-del-diavolo",
+   "label": "Grotta del Diavolo sea cave at Punta Ristola, Santa Maria di Leuca",
+   "lat": 39.7905,
+   "lon": 18.3448,
+   "radius_km": 3,
+   "aliases": [
+    "grotta del diavolo",
+    "devil s grotto",
+    "devils grotto",
+    "devil s cave leuca"
+   ],
+   "palette": {
+    "sky": "#BFE1F3",
+    "far": "#E4D9C2",
+    "mid": "#CDBB98",
+    "ice": "#FFFFFF",
+    "water": "#2E9FA6",
+    "near": "#26221E",
+    "sun": "#F4C430",
+    "leaf": "#6E7F3C",
+    "acc": "#8C8880",
+    "obj": "#2E66A0"
    }
   },
   {
@@ -4604,6 +5272,35 @@
    }
   },
   {
+   "slug": "hermitage-of-santonofrio",
+   "label": "Hermitage of Sant'Onofrio al Morrone on its cliff above Sulmona",
+   "lat": 42.0794,
+   "lon": 13.9561,
+   "radius_km": 3,
+   "aliases": [
+    "sant onofrio al morrone",
+    "santonofrio al morrone",
+    "eremo di sant onofrio",
+    "eremo di santonofrio",
+    "eremo di s onofrio",
+    "hermitage of sant onofrio",
+    "hermitage of santonofrio",
+    "eremo celestiniano"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#D8CFBE",
+    "mid": "#BDB29C",
+    "ice": "#E6DCC6",
+    "water": "#6FA8C8",
+    "near": "#26231F",
+    "sun": "#F3C238",
+    "leaf": "#3E5C34",
+    "acc": "#B7AA90",
+    "obj": "#8C7F6A"
+   }
+  },
+  {
    "slug": "infreschi-bay",
    "label": "The turquoise Infreschi cove under limestone cliffs with sea caves",
    "lat": 39.988,
@@ -4623,6 +5320,29 @@
     "leaf": "#55753A",
     "acc": "#C99A6A",
     "obj": "#2B6DA6"
+   }
+  },
+  {
+   "slug": "is-arutas",
+   "label": "The white quartz beach of Is Arutas with its ochre sandstone rocks",
+   "lat": 39.952,
+   "lon": 8.4,
+   "radius_km": 5,
+   "aliases": [
+    "is arutas",
+    "spiaggia di is arutas"
+   ],
+   "palette": {
+    "sky": "#8DC3F0",
+    "far": "#C9A9A0",
+    "mid": "#8E6F4E",
+    "ice": "#ECE9E2",
+    "water": "#58C4CF",
+    "near": "#2A2420",
+    "sun": "#F6C431",
+    "leaf": "#6E8A4A",
+    "acc": "#C98A3E",
+    "obj": "#2C6FB4"
    }
   },
   {
@@ -4681,6 +5401,38 @@
     "leaf": "#4E7D3A",
     "acc": "#B4573D",
     "obj": "#C25550"
+   }
+  },
+  {
+   "slug": "julian-prealps-nature-park",
+   "label": "Monte Sart and the Canin group above Val Resia, Julian Prealps Nature Park",
+   "lat": 46.355,
+   "lon": 13.37,
+   "radius_km": 15,
+   "aliases": [
+    "julian prealps",
+    "prealpi giulie",
+    "parco naturale delle prealpi giulie",
+    "parco delle prealpi giulie",
+    "val resia",
+    "resia valley",
+    "valle di resia",
+    "stolvizza"
+   ],
+   "names": [
+    "resia"
+   ],
+   "palette": {
+    "sky": "#ADD0F0",
+    "far": "#AEB4BA",
+    "mid": "#CBC7BD",
+    "ice": "#F1EDE4",
+    "water": "#5A9BB8",
+    "near": "#23261F",
+    "sun": "#F4C430",
+    "leaf": "#3F5B2E",
+    "acc": "#9A5A36",
+    "obj": "#8EA64C"
    }
   },
   {
@@ -4948,6 +5700,35 @@
     "obj": "#D6D3CB"
    },
    "names": []
+  },
+  {
+   "slug": "lago-di-antrona",
+   "label": "Lago di Antrona and its pointed peak, Valle Antrona",
+   "lat": 46.0605,
+   "lon": 8.1155,
+   "radius_km": 5,
+   "aliases": [
+    "lago di antrona",
+    "lake antrona",
+    "antrona lake",
+    "lago d antrona"
+   ],
+   "names": [
+    "antrona",
+    "antrona schieranco"
+   ],
+   "palette": {
+    "sky": "#9DC8F0",
+    "far": "#A6AAA6",
+    "mid": "#9A9A7C",
+    "ice": "#F2F0EA",
+    "water": "#2E5F86",
+    "near": "#1E241F",
+    "sun": "#F4C430",
+    "leaf": "#2E5A2C",
+    "acc": "#B3AE9E",
+    "obj": "#CFC6AE"
+   }
   },
   {
    "slug": "lago-di-braies",
@@ -5637,6 +6418,36 @@
    }
   },
   {
+   "slug": "li-galli",
+   "label": "The three Li Galli islets off Positano",
+   "lat": 40.5806,
+   "lon": 14.4306,
+   "radius_km": 3,
+   "aliases": [
+    "li galli",
+    "gallo lungo",
+    "isole li galli",
+    "isolotti li galli",
+    "li galli islands"
+   ],
+   "names": [
+    "galli islands",
+    "the sirenuse islands"
+   ],
+   "palette": {
+    "sky": "#B8D8F2",
+    "far": "#CEC4AC",
+    "mid": "#A89C82",
+    "ice": "#FFFFFF",
+    "water": "#1F6FC0",
+    "near": "#1E2328",
+    "sun": "#F4C430",
+    "leaf": "#4E6E34",
+    "acc": "#D9BE3A",
+    "obj": "#FFFFFF"
+   }
+  },
+  {
    "slug": "limina-pass",
    "label": "Meadows and beech woods of the Passo della Limina, Calabria",
    "lat": 38.35,
@@ -5823,6 +6634,31 @@
    }
   },
   {
+   "slug": "lys-glacier",
+   "label": "The Lys Glacier on Monte Rosa above the Gressoney valley",
+   "lat": 45.88,
+   "lon": 7.84,
+   "radius_km": 6,
+   "aliases": [
+    "ghiacciaio del lys",
+    "lys glacier",
+    "lysgletscher",
+    "glacier du lys"
+   ],
+   "palette": {
+    "sky": "#A6CEF2",
+    "far": "#A39280",
+    "mid": "#6F6052",
+    "ice": "#F5F7FA",
+    "water": "#C4D6E4",
+    "near": "#1F1F22",
+    "sun": "#F4C430",
+    "leaf": "#6E8B3D",
+    "acc": "#8B6A45",
+    "obj": "#6B6249"
+   }
+  },
+  {
    "slug": "madonna-di-campiglio",
    "label": "The Brenta Dolomites above Madonna di Campiglio's meadows and spruce forest",
    "lat": 46.23,
@@ -5938,6 +6774,33 @@
    }
   },
   {
+   "slug": "maranello",
+   "label": "The Museo Ferrari in Maranello: steel pavilion, white monolith and a red Ferrari",
+   "lat": 44.5296,
+   "lon": 10.8614,
+   "radius_km": 6,
+   "aliases": [
+    "museo ferrari",
+    "ferrari museum",
+    "ferrari museo"
+   ],
+   "names": [
+    "maranello"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#C9C7C1",
+    "mid": "#9AA1A8",
+    "ice": "#F2F1EC",
+    "water": "#4E5C68",
+    "near": "#232325",
+    "sun": "#F2C14E",
+    "leaf": "#5F7F48",
+    "acc": "#D4271C",
+    "obj": "#F4CF1A"
+   }
+  },
+  {
    "slug": "maratea",
    "label": "Christ the Redeemer statue and the Basilica di San Biagio on Monte San Biagio, Maratea",
    "lat": 39.986,
@@ -6037,6 +6900,31 @@
     "leaf": "#6F8048",
     "acc": "#A85E44",
     "obj": "#EF8CA0"
+   }
+  },
+  {
+   "slug": "marina-di-ragusa",
+   "label": "Torre Cabrera on the seafront of Marina di Ragusa",
+   "lat": 36.7826,
+   "lon": 14.5512,
+   "radius_km": 6,
+   "aliases": [
+    "torre cabrera"
+   ],
+   "names": [
+    "marina di ragusa"
+   ],
+   "palette": {
+    "sky": "#9FCBEF",
+    "far": "#E6DCC6",
+    "mid": "#B8925C",
+    "ice": "#F2EBD8",
+    "water": "#3E95C2",
+    "near": "#2B2620",
+    "sun": "#F6C431",
+    "leaf": "#3F6E46",
+    "acc": "#C8603C",
+    "obj": "#D8BE94"
    }
   },
   {
@@ -6253,6 +7141,32 @@
     "obj": "#8C5038"
    },
    "names": []
+  },
+  {
+   "slug": "mausoleum-of-theodoric",
+   "label": "The Mausoleum of Theodoric in Ravenna, with its monolithic dome",
+   "lat": 44.4255,
+   "lon": 12.2094,
+   "radius_km": 2,
+   "aliases": [
+    "mausoleum of theodoric",
+    "mausoleo di teodorico",
+    "theodoric s mausoleum",
+    "theodoric mausoleum",
+    "tomb of theodoric"
+   ],
+   "palette": {
+    "sky": "#92C4EE",
+    "far": "#D8D2C2",
+    "mid": "#C9C5B9",
+    "ice": "#E4E1D7",
+    "water": "#4F8DB5",
+    "near": "#26262A",
+    "sun": "#F2C14E",
+    "leaf": "#5D8A3C",
+    "acc": "#A08F72",
+    "obj": "#A7A295"
+   }
   },
   {
    "slug": "mazara-del-vallo",
@@ -8893,6 +9807,35 @@
    }
   },
   {
+   "slug": "piscinas-dunes",
+   "label": "The golden Piscinas sand dunes by the sea, with the old mine wagons and a Sardinian deer, Costa Verde",
+   "lat": 39.54,
+   "lon": 8.45,
+   "radius_km": 6,
+   "aliases": [
+    "dune di piscinas",
+    "piscinas dunes",
+    "piscinas dune",
+    "spiaggia di piscinas",
+    "piscinas beach"
+   ],
+   "names": [
+    "piscinas"
+   ],
+   "palette": {
+    "sky": "#A9CBEB",
+    "far": "#5F7E4E",
+    "mid": "#E6BC7C",
+    "ice": "#F1DBAC",
+    "water": "#2D6EA6",
+    "near": "#2B241E",
+    "sun": "#F4C53A",
+    "leaf": "#56703A",
+    "acc": "#CC9558",
+    "obj": "#8E4A26"
+   }
+  },
+  {
    "slug": "pitti-palace",
    "label": "Palazzo Pitti facade, Florence",
    "lat": 43.7651,
@@ -9098,6 +10041,33 @@
    }
   },
   {
+   "slug": "ponte-a-cappiano",
+   "label": "The Medici covered bridge of Ponte a Cappiano over the Usciana canal",
+   "lat": 43.793,
+   "lon": 10.773,
+   "radius_km": 4,
+   "aliases": [
+    "ponte a cappiano",
+    "ponte mediceo di cappiano",
+    "ponte di cappiano"
+   ],
+   "names": [
+    "cappiano"
+   ],
+   "palette": {
+    "sky": "#C9E0F2",
+    "far": "#7D9A58",
+    "mid": "#EADDBB",
+    "ice": "#F2ECDD",
+    "water": "#5D7F7A",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#5E8236",
+    "acc": "#B4613E",
+    "obj": "#9A6448"
+   }
+  },
+  {
    "slug": "ponte-in-valtellina",
    "label": "The church of San Maurizio and its bell tower on the square of Ponte in Valtellina",
    "lat": 46.1755,
@@ -9189,6 +10159,34 @@
     "leaf": "#4F7C3E",
     "acc": "#E6A3A6",
     "obj": "#EBC360"
+   }
+  },
+  {
+   "slug": "porto-cervo",
+   "label": "The Stella Maris church of Porto Cervo with its tapering white bell tower",
+   "lat": 41.1352,
+   "lon": 9.5368,
+   "radius_km": 6,
+   "aliases": [
+    "stella maris porto cervo",
+    "porto cervo marina",
+    "marina di porto cervo"
+   ],
+   "names": [
+    "porto cervo",
+    "costa smeralda"
+   ],
+   "palette": {
+    "sky": "#8EC2EE",
+    "far": "#D6DCE4",
+    "mid": "#9C8A74",
+    "ice": "#FAFAF6",
+    "water": "#2F7FC0",
+    "near": "#2A2623",
+    "sun": "#F6C431",
+    "leaf": "#5E7E44",
+    "acc": "#D26A3E",
+    "obj": "#D8C8AE"
    }
   },
   {
@@ -9577,6 +10575,30 @@
     "leaf": "#3C5E2E",
     "acc": "#E3CC9E",
     "obj": "#2F6FB0"
+   }
+  },
+  {
+   "slug": "punta-secca",
+   "label": "The white Punta Secca lighthouse over the little harbour, with Montalbano's house on the beach",
+   "lat": 36.788,
+   "lon": 14.493,
+   "radius_km": 3,
+   "aliases": [
+    "punta secca",
+    "casa di montalbano",
+    "casa del commissario montalbano"
+   ],
+   "palette": {
+    "sky": "#A6C8EA",
+    "far": "#DCBC80",
+    "mid": "#F1ECDF",
+    "ice": "#FFFFFF",
+    "water": "#3A7EA8",
+    "near": "#262A2E",
+    "sun": "#F4C53A",
+    "leaf": "#3E6A3C",
+    "acc": "#BC5E3C",
+    "obj": "#2F6DB0"
    }
   },
   {
@@ -10526,6 +11548,30 @@
    "names": []
   },
   {
+   "slug": "san-martino-di-castrozza",
+   "label": "San Martino di Castrozza village below the jagged Pale di San Martino",
+   "lat": 46.262,
+   "lon": 11.802,
+   "radius_km": 10,
+   "aliases": [
+    "san martino di castrozza",
+    "s martino di castrozza",
+    "pale di san martino"
+   ],
+   "palette": {
+    "sky": "#A6CDEF",
+    "far": "#8DB35A",
+    "mid": "#D6D0C5",
+    "ice": "#F4F1EA",
+    "water": "#5A9CC4",
+    "near": "#25241F",
+    "sun": "#F4C542",
+    "leaf": "#2E5632",
+    "acc": "#A9A398",
+    "obj": "#6A4330"
+   }
+  },
+  {
    "slug": "san-miniato",
    "label": "San Miniato's hilltop with the Rocca di Federico II tower and the cathedral bell tower",
    "lat": 43.68,
@@ -10899,6 +11945,29 @@
     "leaf": "#6A8E44",
     "acc": "#7E4229",
     "obj": "#6A6560"
+   }
+  },
+  {
+   "slug": "santo-stefano-di-sessanio",
+   "label": "The stone hill village of Santo Stefano di Sessanio crowned by its round Medici tower, Gran Sasso",
+   "lat": 42.343,
+   "lon": 13.645,
+   "radius_km": 5,
+   "aliases": [
+    "santo stefano di sessanio",
+    "s stefano di sessanio"
+   ],
+   "palette": {
+    "sky": "#A8C9E8",
+    "far": "#C8B47E",
+    "mid": "#C6B79C",
+    "ice": "#DCD1BA",
+    "water": "#6A8FB0",
+    "near": "#2C2824",
+    "sun": "#F4C53A",
+    "leaf": "#66773F",
+    "acc": "#9A6E58",
+    "obj": "#A99A7C"
    }
   },
   {
@@ -11579,6 +12648,33 @@
    }
   },
   {
+   "slug": "spello",
+   "label": "Porta Venere, the Roman gate of Spello between the two twelve-sided Properzio towers",
+   "lat": 42.99,
+   "lon": 12.667,
+   "radius_km": 5,
+   "aliases": [
+    "porta venere",
+    "porta di venere",
+    "torri di properzio"
+   ],
+   "names": [
+    "spello"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#A8A08C",
+    "mid": "#DCC3A6",
+    "ice": "#E9E3D5",
+    "water": "#6A8FB0",
+    "near": "#2A2622",
+    "sun": "#F4C53A",
+    "leaf": "#5E7D3E",
+    "acc": "#B79A7E",
+    "obj": "#C4A688"
+   }
+  },
+  {
    "slug": "spianata-castelletto",
    "label": "Genoa from the Spianata di Castelletto: old-town roofs, the harbour and the Lanterna",
    "lat": 44.4153,
@@ -12173,6 +13269,34 @@
    "names": []
   },
   {
+   "slug": "temple-of-jupiter-anxur",
+   "label": "The twelve-arched terrace of the Temple of Jupiter Anxur on Monte Sant'Angelo above the sea, Terracina",
+   "lat": 41.2871,
+   "lon": 13.258,
+   "radius_km": 4,
+   "aliases": [
+    "jupiter anxur",
+    "giove anxur",
+    "temple of jupiter terracina",
+    "monte sant angelo terracina"
+   ],
+   "names": [
+    "terracina"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#DCD5C4",
+    "mid": "#C8BEA8",
+    "ice": "#E9E4D6",
+    "water": "#3E8DB4",
+    "near": "#2B2925",
+    "sun": "#F4C542",
+    "leaf": "#6F8C47",
+    "acc": "#A99678",
+    "obj": "#E4D3A8"
+   }
+  },
+  {
    "slug": "temple-of-valadier",
    "label": "Tempio del Valadier in its cave, Frasassi gorge",
    "lat": 43.4031,
@@ -12329,6 +13453,30 @@
     "leaf": "#5C8848",
     "acc": "#E59AA8",
     "obj": "#8C6A48"
+   }
+  },
+  {
+   "slug": "torre-dellorso",
+   "label": "Le Due Sorelle sea stacks off Torre dell'Orso",
+   "lat": 40.2715,
+   "lon": 18.4306,
+   "radius_km": 5,
+   "aliases": [
+    "torre dell orso",
+    "torre dellorso",
+    "faraglioni di torre dell orso"
+   ],
+   "palette": {
+    "sky": "#C2DDF0",
+    "far": "#9FB6C6",
+    "mid": "#E3D2A2",
+    "ice": "#FFFFFF",
+    "water": "#34C0BC",
+    "near": "#2A2A24",
+    "sun": "#F6C431",
+    "leaf": "#5E7A3A",
+    "acc": "#C46A3A",
+    "obj": "#1E86B4"
    }
   },
   {
@@ -12692,6 +13840,34 @@
     "leaf": "#4C7236",
     "acc": "#E6A48C",
     "obj": "#E6C878"
+   }
+  },
+  {
+   "slug": "vajolet-towers",
+   "label": "The slender Vajolet Towers above the scree and the Re Alberto hut, Catinaccio (Rosengarten)",
+   "lat": 46.457,
+   "lon": 11.627,
+   "radius_km": 5,
+   "aliases": [
+    "torri del vajolet",
+    "vajolet towers",
+    "vajolet tower",
+    "vajolettuerme",
+    "rifugio re alberto",
+    "gartlhutte",
+    "rifugio vajolet"
+   ],
+   "palette": {
+    "sky": "#A3C8EE",
+    "far": "#DCD5C7",
+    "mid": "#C9BFAE",
+    "ice": "#ECE6DA",
+    "water": "#5A9AB8",
+    "near": "#2A2724",
+    "sun": "#F6C944",
+    "leaf": "#7A5A3C",
+    "acc": "#D9C28E",
+    "obj": "#A99D8A"
    }
   },
   {
