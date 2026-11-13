@@ -1,0 +1,79 @@
+{
+ "id": "it-lago-sorapis",
+ "country": "IT",
+ "name": "Lago di Sorapis (Sorapiss)",
+ "base": "Cortina d'Ampezzo",
+ "region": "Sorapis group, Cortina d'Ampezzo, Belluno",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 10,
+  "gain_m": 556,
+  "source": "https://www.berghotel.com/CustomerData/557/files/Documents/aktiv-sommer/wandervorschlaege-sommer/32-lago-sorapis.pdf"
+ },
+ "why": "A milky turquoise lake under the Sorapis walls and the slender Dito di Dio, reached by a forest path that turns into ledges with steel cables.",
+ "book": "Free. Roadside parking at Passo Tre Croci is small and full by 08:00 in summer: take the Dolomitibus/Cortina Express bus from Cortina or Misurina to Passo Tre Croci.",
+ "water": "No reliable water on the way: carry 1.5 l. Rifugio Vandelli by the lake sells drinks and food.",
+ "dangers": [
+  "Short exposed ledges with steel cables and metal steps above a drop: not for anyone with vertigo, keep children by the hand.",
+  "Wet rock on the ledges after rain is slippery.",
+  "Very crowded in July-August: queues at the cable sections."
+ ],
+ "turnaround": "If the first cabled section feels too exposed, turn back there: the rest of the path is steeper and the last part harder.",
+ "sources": [
+  "https://it.wikivoyage.org/wiki/Escursione_al_lago_di_Sorapiss",
+  "https://www.berghotel.com/CustomerData/557/files/Documents/aktiv-sommer/wandervorschlaege-sommer/32-lago-sorapis.pdf",
+  "https://www.planetmountain.com/it/itinerari/lago-del-sorapis-dal-passo-tre-croci-al-rifugio-vandelli.html",
+  "https://hiking.waymarkedtrails.org/#route?id=3985745"
+ ],
+ "osm": 3985745,
+ "points": [
+  {
+   "id": "tre-croci",
+   "name": "Passo Tre Croci",
+   "lat": 46.557,
+   "lon": 12.2019,
+   "role": "start",
+   "note": "1,805 m, on the road between Cortina and Misurina. Path 215 starts a few hundred metres east of the pass and runs flat through the forest.",
+   "scene": "it-passo-tre-croci"
+  },
+  {
+   "id": "ledges",
+   "name": "Cabled ledges on path 215",
+   "lat": 46.53,
+   "lon": 12.227,
+   "role": "point",
+   "note": "After about an hour the path is cut into the rock: steel cables and metal steps for some minutes, with a big drop on the left.",
+   "scene": "it-sorapis-ledge"
+  },
+  {
+   "id": "vandelli",
+   "name": "Rifugio Vandelli",
+   "lat": 46.5217,
+   "lon": 12.2266,
+   "role": "point",
+   "note": "1,928 m, the hut 5 minutes before the lake: toilets, drinks and food."
+  },
+  {
+   "id": "lake",
+   "name": "Lago di Sorapis",
+   "lat": 46.5206,
+   "lon": 12.2235,
+   "role": "goal",
+   "note": "1,923 m, the turquoise lake with the Dito di Dio spire above it. Swimming is forbidden; walk the shore path for the best view.",
+   "scene": "it-lago-di-sorapis"
+  }
+ ]
+}

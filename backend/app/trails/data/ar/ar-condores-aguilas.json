@@ -29,6 +29,7 @@
  ],
  "turnaround": "",
  "sources": [
+  "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf",
   "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
   "https://hiking.waymarkedtrails.org/#route?id=9063573",
   "https://de.wikivoyage.org/wiki/El_Chalt%C3%A9n"
@@ -40,7 +41,8 @@
    "lat": -49.33738,
    "lon": -72.88142,
    "role": "start",
-   "note": "The path leaves from behind the ranger station."
+   "note": "The path leaves from behind the ranger station.",
+   "scene": "ar-el-chalten"
   },
   {
    "id": "condores",
@@ -48,7 +50,8 @@
    "lat": -49.33952,
    "lon": -72.88036,
    "role": "point",
-   "note": "20-30 minutes up: the village under Fitz Roy. Condors nest on the cliff."
+   "note": "20-30 minutes up: the village under Fitz Roy. Condors nest on the cliff.",
+   "scene": "ar-mirador-de-los-condores"
   },
   {
    "id": "goal",
@@ -56,7 +59,13 @@
    "lat": -49.35033,
    "lon": -72.87099,
    "role": "goal",
-   "note": "30 minutes more over open steppe: Lago Viedma and its glacier to the south."
+   "note": "30 minutes more over open steppe: Lago Viedma and its glacier to the south.",
+   "scene": "ar-mirador-de-las-aguilas"
   }
- ]
+ ],
+ "published": {
+  "km": 6,
+  "gain_m": null,
+  "source": "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf"
+ }
 }

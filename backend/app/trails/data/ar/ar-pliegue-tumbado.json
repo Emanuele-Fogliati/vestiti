@@ -21,8 +21,8 @@
  "start_by": "08:00",
  "published": {
   "km": 20,
-  "gain_m": 1100,
-  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+  "gain_m": null,
+  "source": "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf"
  },
  "why": "The one viewpoint with Fitz Roy and Cerro Torre side by side, and Lago Viedma behind you.",
  "book": "Free, no permit. It starts at the park visitor centre at the entrance of the village.",
@@ -33,6 +33,7 @@
  ],
  "turnaround": "If the summit is in cloud at the edge of the forest, turn back: the view is the whole point.",
  "sources": [
+  "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf",
   "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
   "https://hiking.waymarkedtrails.org/#route?id=9095170"
  ],
@@ -44,7 +45,8 @@
    "lat": -49.33753,
    "lon": -72.88134,
    "role": "start",
-   "note": "Start behind the ranger station; the path climbs through lenga forest from the first minute."
+   "note": "Start behind the ranger station; the path climbs through lenga forest from the first minute.",
+   "scene": "ar-el-chalten"
   },
   {
    "id": "ridge",
@@ -52,7 +54,8 @@
    "lat": -49.36356,
    "lon": -72.93081,
    "role": "point",
-   "note": "The trees end: Laguna Toro and the Southern Ice Field appear to the west."
+   "note": "The trees end: a bare slope of scree, cushion plants and pools, and Fitz Roy back in view to the north. From here on there is no shelter from the wind.",
+   "scene": "ar-pliegue-tumbado-ridge"
   },
   {
    "id": "goal",
@@ -60,7 +63,8 @@
    "lat": -49.35679,
    "lon": -72.95999,
    "role": "goal",
-   "note": "About 1,270 m, the end of the marked path: Fitz Roy to the right, Cerro Torre to the left, Lago Viedma behind. The summit (1,500 m) is 30 minutes more on scree."
+   "note": "About 1,270 m, the end of the marked path: Fitz Roy to the right, Cerro Torre to the left, Lago Viedma behind. The summit (1,500 m) is 30 minutes more on scree.",
+   "scene": "ar-loma-del-pliegue-tumbado"
   }
  ]
 }
