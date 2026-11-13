@@ -22,11 +22,6 @@
   4
  ],
  "start_by": "07:00",
- "published": {
-  "km": 5,
-  "gain_m": 650,
-  "source": "https://www.machupicchu.gob.pe"
- },
  "why": "Higher and quieter than Huayna Picchu: the citadel, Huayna Picchu and the Urubamba loop seen from 3,082 m.",
  "book": "A Machu Picchu ticket that includes the Mountain (limited per time slot).",
  "water": "Carry 1.5 litres.",
@@ -35,32 +30,35 @@
  ],
  "turnaround": "Respect the time on your ticket.",
  "sources": [
-  "https://www.machupicchu.gob.pe"
+  "https://en.wikivoyage.org/wiki/Machu_Picchu",
+  "https://www.machupicchu.gob.pe",
+  "https://www.openstreetmap.org/way/130848843"
  ],
  "points": [
   {
    "id": "start",
-   "name": "Machu Picchu",
-   "lat": -13.1631,
-   "lon": -72.545,
+   "name": "Machu Picchu, Mountain control",
+   "lat": -13.16667,
+   "lon": -72.54427,
    "role": "start",
-   "note": "Enter the citadel and follow the signs to the Mountain control."
+   "note": "By the Guardhouse above the citadel, on the path to the Sun Gate: sign in at the Machu Picchu Mountain control.",
+   "scene": "pe-machu-picchu"
   },
   {
    "id": "stairs",
    "name": "Machu Picchu Mountain stone stairway",
-   "lat": -13.169,
-   "lon": -72.548,
+   "lat": -13.1705,
+   "lon": -72.5426,
    "role": "point",
-   "note": "Inca stairs through cloud forest."
+   "note": "Endless Inca stairs through cloud forest, with orchids and drops on one side."
   },
   {
    "id": "goal",
    "name": "Machu Picchu Mountain",
-   "lat": -13.1735,
-   "lon": -72.5532,
+   "lat": -13.17473,
+   "lon": -72.54188,
    "role": "goal",
-   "note": "3,082 m: the citadel and Huayna Picchu far below."
+   "note": "3,061 m: the citadel tiny below, Huayna Picchu, and the Urubamba looping around them."
   }
  ]
 }
