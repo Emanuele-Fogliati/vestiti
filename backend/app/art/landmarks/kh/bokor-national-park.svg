@@ -1,0 +1,22 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="52" cy="30" r="11" fill="var(--il-sun)"/>
+<path d="M0 118H300V140H0Z" fill="var(--il-water)"/>
+<path d="M0 124Q40 116 80 120Q120 114 160 120V140H0Z" fill="var(--il-far)"/>
+<path d="M0 150Q60 136 140 140Q220 134 300 138V200H0Z" fill="var(--il-leaf)"/>
+<g transform="translate(-26 -30) scale(1.2)">
+<path d="M40 150V112L196 100V150Z" fill="var(--il-mid)"/>
+<path d="M38 113Q40 98 60 96L196 86V101Z" fill="var(--il-acc)"/>
+<path d="M50 146V124Q56 116 62 124V146M68 146V123Q74 115 80 123V146M86 146V121Q92 113 98 121V146M104 146V120Q110 112 116 120V146M122 146V118Q128 110 134 118V146M140 146V117Q146 109 152 117V146M158 146V116Q164 108 170 116V146M176 146V114Q182 106 188 114V146" stroke="var(--il-obj)" stroke-width="1.2" fill="none"/>
+<path d="M40 128L196 120" stroke="var(--il-obj)" stroke-width="1.6" fill="none"/>
+<path d="M40 150V114Q26 118 24 132V150Z" fill="var(--il-obj)"/>
+<path d="M190 150V76H226V150Z" fill="var(--il-mid)"/>
+<path d="M226 150V76L236 80V150Z" fill="var(--il-obj)"/>
+<path d="M186 78L208 36L238 80Z" fill="var(--il-acc)"/>
+<path d="M208 36V27M204 31H212" stroke="var(--il-near)" stroke-width="1.6" fill="none"/>
+<path d="M202 88h12v14h-12Z M200 124h16v26h-16Z" fill="var(--il-near)" opacity="0.7"/>
+<path d="M202 88Q208 82 214 88Z M200 124Q208 116 216 124Z" fill="var(--il-near)" opacity="0.7"/>
+<path d="M190 108H226M190 112H226" stroke="var(--il-obj)" stroke-width="1" fill="none"/>
+<path d="M196 92h8M214 96h8M196 134h4M220 140h4M60 136h8M120 132h8M160 128h8" stroke="var(--il-obj)" stroke-width="0.8" fill="none" opacity="0.5"/>
+</g>
+<path d="M0 200V164Q10 150 24 156Q34 144 48 154Q58 148 66 160Q78 156 84 170Q90 180 88 200Z M226 200V170Q236 154 252 160Q262 146 278 154Q290 148 300 156V200Z M110 200Q112 184 126 182Q136 172 150 180Q162 176 168 186Q176 190 176 200Z" fill="var(--il-far)"/>
+<path d="M30 168Q36 160 44 166M250 166Q258 158 266 164M132 188Q140 180 148 186" stroke="var(--il-leaf)" stroke-width="1.5" fill="none"/>

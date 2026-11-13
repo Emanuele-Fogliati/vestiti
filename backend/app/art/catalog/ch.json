@@ -3,6 +3,38 @@
  "name": "Switzerland",
  "places": [
   {
+   "slug": "aletsch-glacier",
+   "label": "The Great Aletsch Glacier curving down its valley with its dark moraine stripes",
+   "lat": 46.45,
+   "lon": 8.06,
+   "radius_km": 15,
+   "aliases": [
+    "aletsch glacier",
+    "great aletsch",
+    "grosser aletschgletscher",
+    "aletschgletscher",
+    "ghiacciaio dell aletsch",
+    "eggishorn",
+    "bettmerhorn",
+    "moosfluh"
+   ],
+   "names": [
+    "aletsch"
+   ],
+   "palette": {
+    "sky": "#A4CAF2",
+    "far": "#8A8278",
+    "mid": "#7A7A74",
+    "ice": "#ECEEF0",
+    "water": "#3F93B8",
+    "near": "#1E2022",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A44",
+    "acc": "#D9C49A",
+    "obj": "#9A7450"
+   }
+  },
+  {
    "slug": "champex-lac",
    "label": "Lac de Champex with its chalets and the snowy Combin massif",
    "lat": 46.03,
@@ -59,6 +91,33 @@
     "leaf": "#4A7A45",
     "acc": "#D3E3F0",
     "obj": "#E0B04A"
+   }
+  },
+  {
+   "slug": "grindelwald",
+   "label": "Grindelwald church below the Wetterhorn",
+   "lat": 46.6245,
+   "lon": 8.0369,
+   "radius_km": 10,
+   "aliases": [
+    "wetterhorn"
+   ],
+   "names": [
+    "grindelwald",
+    "grindelwald village",
+    "grindelwald town"
+   ],
+   "palette": {
+    "sky": "#C9DFF1",
+    "far": "#4E6B3C",
+    "mid": "#8E8C96",
+    "ice": "#F3F5F8",
+    "water": "#6FA8C8",
+    "near": "#2A2422",
+    "sun": "#F4C542",
+    "leaf": "#7DAA48",
+    "acc": "#6B3A28",
+    "obj": "#EFE7D2"
    }
   },
   {

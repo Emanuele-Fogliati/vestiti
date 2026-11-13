@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="26" r="12" fill="var(--il-sun)"/>
+<path d="M30 90L60 80L76 66L90 70L104 58L118 62L130 54L146 50L160 56L176 40L192 46L206 36L222 48L240 56V140H30Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-tj-bartang-valley-c"><path d="M30 90L60 80L76 66L90 70L104 58L118 62L130 54L146 50L160 56L176 40L192 46L206 36L222 48L240 56V140H30Z"/></clipPath></defs>
+<path d="M60 80L76 66L90 70L84 76L74 74Z M96 64L104 58L118 62L130 54L146 50L160 56L150 60L138 58L126 64L112 66Z M168 46L176 40L192 46L206 36L222 48L210 50L200 46L188 52L176 48Z" fill="var(--il-ice)" clip-path="url(#il-tj-bartang-valley-c)"/>
+<path d="M62 120L100 92L130 100L160 84L190 100L210 116L200 150H70Z" fill="var(--il-mid)" opacity="0.6"/>
+<path d="M120 152L170 120L210 90L240 64L262 40L284 22L300 14V160H120Z" fill="var(--il-mid)"/>
+<path d="M190 112Q214 100 238 84Q262 66 300 54M230 110Q250 98 270 92Q286 88 300 80M210 130Q240 118 262 120" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M150 150Q200 122 240 98Q270 82 300 74V80Q270 88 242 104Q204 128 160 152Z" fill="var(--il-far)"/>
+<path d="M0 40L18 56L30 80L48 100L66 118L84 132L98 148L104 158H0Z" fill="var(--il-obj)"/>
+<path d="M18 60L22 120M32 84L36 140M50 104L52 148M66 120L68 150" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 156Q60 150 120 152Q170 150 200 154L300 158V200H0Z" fill="var(--il-far)"/>
+<path d="M0 170Q50 160 100 154L122 151L130 152Q112 162 92 176Q66 192 50 200H0Z" fill="var(--il-water)"/>
+<path d="M60 200Q120 184 180 172Q240 168 300 170V200Z" fill="var(--il-acc)"/>
+<path d="M284 176V140" stroke="var(--il-near)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M270 172Q262 150 266 130Q262 110 274 96Q280 82 290 80Q300 84 300 96V172Z" fill="var(--il-leaf)"/>

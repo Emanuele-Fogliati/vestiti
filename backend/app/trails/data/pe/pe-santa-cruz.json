@@ -16,14 +16,14 @@
   9
  ],
  "hours": [
-  22,
-  26
+  17,
+  23
  ],
  "start_by": "08:00",
  "published": {
-  "km": 50,
-  "gain_m": 2300,
-  "source": "https://www.sernanp.gob.pe/huascaran"
+  "km": 47,
+  "gain_m": 1500,
+  "source": "https://en.wikivoyage.org/wiki/Santa_Cruz_Trek"
  },
  "why": "The classic of the Cordillera Blanca: four days among 6,000 m peaks, over Punta Unión with Taulliraju above a turquoise lake.",
  "book": "Huascarán park multi-day ticket. Most go with an agency from Huaraz (donkeys, cook, transfer).",
@@ -34,44 +34,53 @@
  ],
  "turnaround": "",
  "sources": [
-  "https://www.sernanp.gob.pe/huascaran",
+  "https://en.wikivoyage.org/wiki/Santa_Cruz_Trek",
   "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park"
  ],
  "points": [
   {
    "id": "start",
    "name": "Vaquería",
-   "lat": -9.031,
-   "lon": -77.547,
+   "lat": -9.0105,
+   "lon": -77.5317,
    "role": "start",
-   "note": "Day 1: after the pass road; down to the Huaripampa valley.",
-   "night": true
+   "note": "Day 1: the trek leaves the Portachuelo road at 3,700 m and goes down to the Huaripampa valley; first camp at Paria."
   },
   {
    "id": "union",
    "name": "Punta Unión pass with Taulliraju",
-   "lat": -8.901,
-   "lon": -77.593,
+   "lat": -8.91257,
+   "lon": -77.58174,
    "role": "point",
-   "note": "Day 2-3: 4,750 m, Taulliraju above the lake below the pass.",
-   "night": true
+   "note": "Day 2: the 4,750 m notch in the rock wall, Taulliraju above the turquoise Taullicocha; camp at Taullipampa below.",
+   "scene": "pe-punta-union-pass"
   },
   {
    "id": "alpamayo",
-   "name": "Alpamayo from the Arhuaycocha valley",
-   "lat": -8.88,
-   "lon": -77.63,
+   "name": "Alpamayo viewpoint",
+   "lat": -8.91061,
+   "lon": -77.62377,
    "role": "point",
-   "note": "Day 3: a side trip to the 'most beautiful mountain in the world'.",
+   "note": "Day 3: the fluted ice pyramid of Alpamayo up the Arhuaycocha side valley (a 3-4 h side trip to its lake).",
+   "scene": "pe-alpamayo"
+  },
+  {
+   "id": "jatuncocha",
+   "name": "Laguna Jatuncocha",
+   "lat": -8.93114,
+   "lon": -77.658,
+   "role": "point",
+   "note": "Day 3: the long lake of the Santa Cruz valley; camp at its end or at Llamacorral.",
    "night": true
   },
   {
    "id": "goal",
-   "name": "Laguna Jatuncocha",
-   "lat": -8.905,
-   "lon": -77.675,
+   "name": "Cashapampa",
+   "lat": -8.95413,
+   "lon": -77.77911,
    "role": "goal",
-   "note": "Day 3-4: the long lakes of the Santa Cruz valley, then down to Cashapampa."
+   "note": "Day 4: down the narrow Santa Cruz gorge to the village at 2,900 m, transport to Caraz."
   }
- ]
+ ],
+ "osm": 1732163
 }
