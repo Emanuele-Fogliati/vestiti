@@ -3,6 +3,37 @@
  "name": "Turkey",
  "places": [
   {
+   "slug": "afyonkarahisar",
+   "label": "Afyonkarahisar Castle on its craggy rock above the old town",
+   "lat": 38.7587,
+   "lon": 30.5385,
+   "radius_km": 15,
+   "aliases": [
+    "afyon castle",
+    "afyonkarahisar castle",
+    "afyon kalesi",
+    "afyonkarahisar kalesi",
+    "castello di afyon"
+   ],
+   "names": [
+    "afyonkarahisar",
+    "afyon",
+    "afyon karahisar"
+   ],
+   "palette": {
+    "sky": "#A6CEF2",
+    "far": "#B49E84",
+    "mid": "#9E8878",
+    "ice": "#EFE8DC",
+    "water": "#5A8EC0",
+    "near": "#2A2522",
+    "sun": "#F2C14E",
+    "leaf": "#5E7A3A",
+    "acc": "#C2553A",
+    "obj": "#CDBFA6"
+   }
+  },
+  {
    "slug": "akdamar-island",
    "label": "The Armenian Church of the Holy Cross on Akdamar Island, Lake Van, with Mount Artos",
    "lat": 38.3406,
@@ -855,6 +886,35 @@
     "leaf": "#5A7E3C",
     "acc": "#B06A4E",
     "obj": "#BFAE8C"
+   }
+  },
+  {
+   "slug": "esrefoglu-mosque",
+   "label": "Esrefoglu Mosque in Beysehir with its conical tomb and brick minaret",
+   "lat": 37.6786,
+   "lon": 31.7272,
+   "radius_km": 3,
+   "aliases": [
+    "esrefoglu mosque",
+    "esrefoglu camii",
+    "esrefoglu cami",
+    "moschea di esrefoglu",
+    "esrefoglu suleyman bey"
+   ],
+   "names": [
+    "beysehir"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#DCCDB2",
+    "mid": "#BFA889",
+    "ice": "#E8E3D8",
+    "water": "#4F93B5",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#4C7A3C",
+    "acc": "#A85F44",
+    "obj": "#4E5866"
    }
   },
   {
