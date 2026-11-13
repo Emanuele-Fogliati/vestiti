@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { MAX_PARALLEL, _inFlight, _resetForTests, loadLandmark } from "../landmarks";
+import { MAX_PARALLEL, _inFlight, _resetForTests, cancelLandmark, loadLandmark } from "../landmarks";
 
 /** A fake server: each request waits until the test answers it. */
 function server() {
@@ -32,6 +32,17 @@ describe("loadLandmark", () => {
     await tick();
     expect(srv.calls.slice(MAX_PARALLEL, MAX_PARALLEL + 2)).toEqual(["xx-40", "is-gardskagi-lighthouse"]);
     void card; void again;
+  });
+
+  it("drops a globe thumbnail still waiting when the globe moved on, never one a card asked for", async () => {
+    for (let i = 0; i < 10; i++) loadLandmark(`xx-${i}`);
+    expect(cancelLandmark("xx-0")).toBe(false); // already being fetched
+    expect(cancelLandmark("xx-8")).toBe(true);
+    expect(_inFlight().queued).toBe(10 - MAX_PARALLEL - 1);
+    loadLandmark("xx-9", true);
+    expect(cancelLandmark("xx-9")).toBe(false);
+    loadLandmark("xx-8"); // asked again: queued afresh
+    expect(_inFlight().queued).toBe(10 - MAX_PARALLEL);
   });
 
   it("asks once per scene and shares the answer", async () => {

@@ -73,3 +73,20 @@ describe("picks for your own trip", () => {
     expect(groupPicks(["pantheon"], parent)).toEqual([{ id: "rome", whole: false, inside: ["pantheon"] }]);
   });
 });
+
+import { globeDotZoom, globePicZoom } from "../worldmap";
+
+describe("home globe ladder", () => {
+  it("shows only the most visited pictures from space, more as you get closer", () => {
+    expect(globePicZoom({ level: 6, parent: null })).toBe(0);
+    for (let l = 1; l <= 5; l++) {
+      // every place is a dot before it becomes a picture
+      expect(globeDotZoom({ level: l, parent: null })).toBeLessThan(globePicZoom({ level: l, parent: null }));
+    }
+    // a less visited place turns into a picture later than a more visited one
+    expect(globePicZoom({ level: 5, parent: null })).toBeLessThan(globePicZoom({ level: 3, parent: null }));
+    expect(globePicZoom({ level: 3, parent: null })).toBeLessThan(globePicZoom({ level: 1, parent: null }));
+    // the places inside a city: once you are on the city
+    expect(globePicZoom({ level: 6, parent: "it-florence" })).toBeGreaterThan(10);
+  });
+});

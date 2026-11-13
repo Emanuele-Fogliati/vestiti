@@ -1,21 +1,24 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { loadLandmark } from "../lib/landmarks";
+import { cancelLandmark, loadLandmark } from "../lib/landmarks";
 import { PlaceCard } from "./PlaceCard";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { groupPicks, pickStore, usePicks } from "../lib/picks";
 import { DRESS_ME } from "../pages/Start";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
+import { PICTURE_ROOM, pictureRoomLayer } from "../lib/worldmap";
 import {
-  baseStyle, insideOf, insideZoom, km, loadPlaces, mapColors, placeLayers, placesGeoJSON, reducedMotion, sceneAnchor,
+  baseStyle, globeDotZoom, globePicZoom, insideOf, insideZoom, km, loadPlaces, mapColors, placeLayers, placesGeoJSON,
+  reducedMotion, sceneAnchor,
 } from "../lib/worldmap";
 
 const SPIN_DEG_PER_S = 3; // one turn in two minutes
 const RESUME_AFTER_MS = 1500; // the globe starts turning again this long after you let go
 const SPIN_UNTIL_ZOOM = 3; // closer than this you are exploring: the globe stays still
-const PICTURES_FROM_ZOOM = 2.2; // from space only the names of the big places; pictures once you get closer
+const TERRAIN_FROM_ZOOM = 7; // mountains stand up in 3D once you are this close
+const SHADE_UNTIL_ZOOM = 4; // the sphere's light and shadow fade out as the globe fills the screen
 
 const narrow = (el: HTMLElement) => el.clientWidth < 600;
 
@@ -30,28 +33,38 @@ function fitZoom(el: HTMLElement): number {
   return Math.max(0.2, Math.log2(side / 512) + (narrow(el) ? 1.75 : 1.62));
 }
 
-/** A round thumbnail of one landmark scene, pinned on the globe. */
-function artMarker(art: string, onClick: () => void): { m: maplibregl.Marker; el: HTMLButtonElement; fill: () => void } {
+/** A round thumbnail of one landmark scene, centred on its place (the map writes its name beside it). */
+function artMarker(art: string, onClick: () => void) {
   const el = document.createElement("button");
   el.type = "button";
   el.className = "gmark";
+  const pic = document.createElement("span");
+  pic.className = "gmark-pic";
   const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   svg.setAttribute("viewBox", "50 0 200 200");
   svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
-  el.appendChild(svg);
+  pic.appendChild(svg);
+  el.append(pic);
   el.addEventListener("click", (e) => { e.stopPropagation(); onClick(); });
-  // the picture is fetched the first time the marker shows, not for all ~2,600 scenes at load
-  let asked = false;
+  // the picture is fetched the first time the marker shows, never for all ~3,500 scenes at load;
+  // if the globe moves on before its turn in the queue comes, the request is dropped
+  let state: "no" | "asked" | "done" = "no";
   const fill = () => {
-    if (asked) return;
-    asked = true;
-    loadLandmark(art).then((s) => { if (s) svg.innerHTML = s; else asked = false; });
+    if (state !== "no") return;
+    state = "asked";
+    loadLandmark(art).then((s) => { if (s) { svg.innerHTML = s; state = "done"; } else state = "no"; });
   };
-  return { m: new maplibregl.Marker({ element: el, anchor: "bottom", opacityWhenCovered: "0" }), el, fill };
+  const drop = () => { if (state === "asked" && cancelLandmark(art)) state = "no"; };
+  return { m: new maplibregl.Marker({ element: el, anchor: "center", opacityWhenCovered: "0" }), el, fill, drop };
 }
 
-/** One landmark scene and the places it shows (Rome and the Colosseum share one). */
-interface Scene { owners: GlobePlace[]; m: maplibregl.Marker; el: HTMLButtonElement; fill: () => void; opens: GlobePlace | null; on: boolean }
+/** One landmark scene and the places it shows (Rome and the Colosseum share one). `minPic`: the
+ *  closest zoom at which any of its places could show it, to skip it quickly when far away.
+ *  `dot`: the place whose dot (and map name) the picture hides right now. */
+interface Scene {
+  owners: GlobePlace[]; m: maplibregl.Marker; el: HTMLButtonElement;
+  fill: () => void; drop: () => void; opens: GlobePlace | null; on: boolean; minPic: number; dot: number;
+}
 
 /** The home's centrepiece: a globe of places, no routes. It turns slowly by itself; zoom in
  *  anywhere and the places worth seeing appear, the most visited first, with their pictures.
@@ -115,9 +128,12 @@ export default function Globe() {
     map.on("load", () => {
       // small screens: credits behind the (i) button, so they don't cover the globe
       if (narrow(el)) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
-      map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places) });
+      map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places, { zoomOf: globeDotZoom }) });
       // from space only the big places have a name; more appear as you get closer
+      // the room a picture takes (46 px), so other names keep off it
+      map.addImage(PICTURE_ROOM, { width: 50, height: 50, data: new Uint8Array(50 * 50 * 4) });
       for (const l of placeLayers(c)) map.addLayer(l);
+      map.addLayer(pictureRoomLayer());
       map.addLayer({ id: "pl-sel", type: "circle", source: "places", filter: ["==", ["get", "i"], -1],
         paint: { "circle-radius": 13, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": c.ink, "circle-stroke-width": 2.5 } });
 
@@ -129,46 +145,119 @@ export default function Globe() {
         if (l) l.push(p); else byArt.set(p.art, [p]);
       }
       for (const owners of byArt.values()) {
-        const s = { owners, opens: null, on: false } as unknown as Scene;
+        const city = owners[0].parent ? places.get(owners[0].parent) : undefined;
+        const minPic = Math.min(...owners.map(globePicZoom), city ? globePicZoom(city) : Infinity);
+        const s = { owners, opens: null, on: false, minPic, dot: -1 } as unknown as Scene;
         Object.assign(s, artMarker(owners[0].art!, () => { if (s.opens) handlers.current.pickPlace(s.opens); }));
         scenes.push(s);
       }
+      // 3D: the mountains stand up when you are close (a second copy of the elevation source,
+      // as MapLibre wants one for the hill shading and one for the terrain)
+      map.addSource("dem3d", { type: "raster-dem", encoding: "terrarium", tileSize: 256, maxzoom: 12,
+        tiles: ["https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"] });
       showMarkers();
       setReady(true);
     });
 
-    // pictures once you are close, never on top of each other: where two would overlap, the
-    // place's own picture beats one shown for a place inside it, then the more visited place
-    // wins. Only pictures on the side of the globe you see and on screen: a hidden one on the
-    // far side still took taps (Ho Chi Minh City sits right behind Cusco).
-    const GAP_PX = 54;
+    // Pictures by a ladder (see globePicZoom): from space only the most visited places, every
+    // step closer more dots turn into pictures. Never on top of each other: where two would
+    // overlap, the place's own picture beats one shown for a place inside it, then the more
+    // visited place wins and the other stays a dot. Only pictures on the side of the globe you
+    // see and on screen: a hidden one on the far side still took taps (Ho Chi Minh City sits
+    // right behind Cusco). A picture sits on its place's point and hides its dot.
+    const index = new Map(data.places.map((p, i) => [p.id, i]));
+    const MAX_PICTURES = 60;
+    // places whose dot became a picture or back, sent to the map in one go (p = 1: picture)
+    let flips = new Map<number, number>();
+    const setDot = (s: Scene, i: number) => {
+      if (s.dot === i) return;
+      if (s.dot >= 0) flips.set(s.dot, 0);
+      if (i >= 0) flips.set(i, 1);
+      s.dot = i;
+    };
+    const sendFlips = () => {
+      if (!flips.size) return;
+      const src = map.getSource("places") as maplibregl.GeoJSONSource | undefined;
+      src?.updateData({ update: [...flips].map(([id, p]) => ({ id, addOrUpdateProperties: [{ key: "p", value: p }] })) });
+      flips = new Map();
+    };
     function showMarkers() {
       const z = map.getZoom();
-      const far = z < PICTURES_FROM_ZOOM;
+      const gap = z < 3.5 ? 78 : 62; // far away the pictures keep more room around them
       const kept: { x: number; y: number }[] = [];
       const c = map.getCenter();
       const { clientWidth: w, clientHeight: h } = map.getContainer();
-      const placed = scenes.map((s) => ({ s, a: far ? null : sceneAnchor(s.owners, z, places) }))
-        .sort((x, y) => (x.a && y.a ? Number(y.a.own) - Number(x.a.own) || y.a.at.level - x.a.at.level : 0));
-      for (const { s, a } of placed) {
-        let want = !!a && km(c.lat, c.lng, a.at.lat, a.at.lon) < 7000;
-        if (want && a) {
-          const pt = map.project([a.at.lon, a.at.lat]);
-          want = pt.x > -GAP_PX && pt.y > -GAP_PX && pt.x < w + GAP_PX && pt.y < h + GAP_PX
-            && !kept.some((o) => Math.abs(o.x - pt.x) < GAP_PX && Math.abs(o.y - pt.y) < GAP_PX);
-          if (want) {
-            kept.push(pt);
-            s.m.setLngLat([a.at.lon, a.at.lat]);
-            if (s.opens !== a.opens) {
-              s.opens = a.opens;
-              s.el.setAttribute("aria-label", a.opens.name);
-              s.el.title = a.opens.name;
-            }
-          }
-        }
-        if (want !== s.on) { if (want) { s.fill(); s.m.addTo(map); } else s.m.remove(); s.on = want; }
+      const want = new Set<Scene>();
+      const placed: { s: Scene; a: NonNullable<ReturnType<typeof sceneAnchor>> }[] = [];
+      for (const s of scenes) {
+        if (z < s.minPic) continue;
+        const a = sceneAnchor(s.owners, z, places);
+        if (a && z >= globePicZoom(a.at) && km(c.lat, c.lng, a.at.lat, a.at.lon) < 7000) placed.push({ s, a });
       }
+      placed.sort((x, y) => Number(y.a.own) - Number(x.a.own) || y.a.at.level - x.a.at.level);
+      for (const { s, a } of placed) {
+        if (kept.length >= MAX_PICTURES) break;
+        const pt = map.project([a.at.lon, a.at.lat]);
+        const fits = pt.x > -gap && pt.y > -gap && pt.x < w + gap && pt.y < h + gap
+          && !kept.some((o) => Math.abs(o.x - pt.x) < gap && Math.abs(o.y - pt.y) < gap);
+        if (!fits) continue;
+        kept.push(pt);
+        want.add(s);
+        s.m.setLngLat([a.at.lon, a.at.lat]);
+        setDot(s, index.get(a.at.id) ?? -1);
+        if (s.opens !== a.opens) {
+          s.opens = a.opens;
+          s.el.setAttribute("aria-label", a.opens.name);
+        }
+      }
+      for (const s of scenes) {
+        const on = want.has(s);
+        if (on === s.on) continue;
+        s.on = on;
+        if (on) { s.fill(); s.m.addTo(map); } else { s.drop(); s.m.remove(); setDot(s, -1); }
+      }
+      sendFlips();
     }
+    // while the globe turns by itself it moves every frame: look again a few times a second only
+    let spinning = false;
+    let later = 0;
+    const showSoon = () => { if (!later) later = window.setTimeout(() => { later = 0; showMarkers(); }, 300); };
+
+    // 3D: light and shadow on the sphere from far away; mountains in relief from close by
+    const shade = document.createElement("div");
+    shade.className = "globe-shade";
+    shade.setAttribute("aria-hidden", "true");
+    function placeShade() {
+      const z = map.getZoom();
+      const o = Math.max(0, Math.min(1, SHADE_UNTIL_ZOOM - z));
+      shade.style.opacity = String(o);
+      if (!o) return;
+      // the globe's edge on screen: the farthest point of a quarter turn east of the centre
+      const ctr = map.getCenter();
+      const at = map.project(ctr);
+      const la = (ctr.lat * Math.PI) / 180;
+      let r = 0;
+      for (let d = 70; d <= 90; d += 1) {
+        const t = (d * Math.PI) / 180;
+        const lat = Math.asin(Math.sin(la) * Math.cos(t));
+        const lon = ctr.lng + (Math.atan2(Math.sin(t) * Math.cos(la), Math.cos(t) - Math.sin(la) * Math.sin(lat)) * 180) / Math.PI;
+        const q = map.project([lon, (lat * 180) / Math.PI]);
+        r = Math.max(r, Math.hypot(q.x - at.x, q.y - at.y));
+      }
+      const cx = at.x;
+      const cy = at.y;
+      shade.style.transform = `translate(${cx - r}px, ${cy - r}px)`;
+      shade.style.width = shade.style.height = `${2 * r}px`;
+    }
+    map.on("load", () => { map.getCanvas().after(shade); placeShade(); });
+    map.on("move", placeShade);
+    let terrain = false;
+    map.on("zoomend", () => {
+      const close = map.getZoom() >= TERRAIN_FROM_ZOOM;
+      if (close === terrain || !map.getSource("dem3d")) return;
+      terrain = close;
+      map.setTerrain(close ? { source: "dem3d", exaggeration: 1.4 } : null);
+    });
 
     // a tap on a place (or right next to one) opens it; on nothing: close
     const around = (e: maplibregl.MapMouseEvent, r: number): [maplibregl.PointLike, maplibregl.PointLike] =>
@@ -196,7 +285,7 @@ export default function Globe() {
     map.on("mousedown", hold); map.on("touchstart", hold); map.on("wheel", hold);
     map.on("moveend", (e) => { if ((e as { originalEvent?: Event }).originalEvent || busyUntil === Infinity) release(); });
     map.on("zoom", () => setClose(map.getZoom() >= SPIN_UNTIL_ZOOM));
-    map.on("moveend", showMarkers);
+    map.on("moveend", () => { if (spinning) showSoon(); else showMarkers(); });
     const io = new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; });
     io.observe(el);
 
@@ -208,7 +297,9 @@ export default function Globe() {
       if (!still && onScreen && !document.hidden && now > busyUntil && !map.isMoving()
         && map.getZoom() < SPIN_UNTIL_ZOOM && map.loaded()) {
         const ctr = map.getCenter();
+        spinning = true;
         map.jumpTo({ center: [ctr.lng - SPIN_DEG_PER_S * dt, ctr.lat] });
+        spinning = false;
       }
       raf = requestAnimationFrame(tick);
     };
@@ -216,6 +307,7 @@ export default function Globe() {
 
     return () => {
       cancelAnimationFrame(raf);
+      clearTimeout(later);
       io.disconnect();
       for (const s of scenes) s.m.remove();
       map.remove();
@@ -290,7 +382,7 @@ export default function Globe() {
   const selZoom = !sel ? undefined
     : selInside.length ? () => zoomInside(sel)
       : sel.parent ? (zoomNow < 14 ? () => mapRef.current?.flyTo({ center: [sel.lon, sel.lat], zoom: 15, speed: 1.4, essential: true }) : undefined)
-        : zoomNow < 8 ? () => mapRef.current?.flyTo({ center: [sel.lon, sel.lat], zoom: 9, speed: 1.4, essential: true }) : undefined;
+        : zoomNow < 8 ? () => mapRef.current?.flyTo({ center: [sel.lon, sel.lat], zoom: 9, pitch: 45, speed: 1.4, essential: true }) : undefined;
 
   return (
     <section className={`globe${close ? " close" : ""}${open ? " open" : ""}${trip.length ? " has-trip" : ""}`} aria-label="Explore the world">
