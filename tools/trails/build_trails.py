@@ -323,7 +323,7 @@ def build(t: dict) -> dict:
     elif how == "osm" and t["shape"] == "loop" and km(line[0], line[-1]) > 0.3:
         line += route([line[-1], line[0]], t.get("router", "auto"))[0][1:]
 
-    samp = resample(line, 0.04 if sum(km(a, b) for a, b in zip(line, line[1:])) < 30 else 0.1)
+    samp = resample(line, 0.04)
     ele = smooth(elevations(samp))
     dists = [0.0]
     for a, b in zip(samp, samp[1:]):
@@ -360,8 +360,8 @@ def build(t: dict) -> dict:
     total_down = down + (up if t["shape"] == "out_and_back" else 0)
     pub = t.get("published") or {}
     for name, ours, theirs in (("km", total_km, pub.get("km")), ("gain", total_up, pub.get("gain_m"))):
-        if name == "gain" and (theirs or 0) < 200:
-            continue  # flat walks: a 90 m DEM's noise is bigger than the climb (the test skips it too)
+        if name == "gain" and ((theirs or 0) < 200 or t["kind"] == "multiday"):
+            continue  # flat walks (DEM noise > climb) and long treks (a 90 m DEM misses the many small ups): the test skips them too
         if theirs and abs(ours - theirs) / theirs > 0.3:
             print(f"  ! {name}: computed {ours:.0f} vs published {theirs}")
 

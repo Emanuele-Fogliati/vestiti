@@ -64,7 +64,7 @@ OSM paths of the area through the points (local router: mountain paths included;
 foot router skips `sac_scale=mountain_hiking` paths and is only the fallback for long trails),
 then reads the altitude (Open-Meteo, Copernicus DEM 90 m).
 It prints `!` when a point is more than 0.8 km off the path, or when the distance or climb is more
-than 30% off the published numbers. **Fix every `!`** (coordinates, `via`, the right relation,
+than 30% off the published numbers (the climb only for day trails with a published climb of 200 m or more: a 90 m DEM is noise on flat walks and misses the small ups of long treks; the page shows the published numbers). **Fix every `!`** (coordinates, `via`, the right relation,
 or the published numbers if you used the wrong source) before you mark the trail `checked`.
 The tests (`tests/test_trails.py`) fail on the same conditions.
 
