@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="26" r="13" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cn-lake-rakshastal-m"><path d="M0 110V74L10 66L20 60L28 64L38 56L46 58L56 66L68 62L80 66L92 62L104 54L116 44L126 36L136 31L146 28L156 30L166 34L178 36L190 38L204 44L218 48L232 56L248 66L264 74L280 82L300 90V110Z"/></clipPath></defs>
+<path d="M0 110V74L10 66L20 60L28 64L38 56L46 58L56 66L68 62L80 66L92 62L104 54L116 44L126 36L136 31L146 28L156 30L166 34L178 36L190 38L204 44L218 48L232 56L248 66L264 74L280 82L300 90V110Z" fill="var(--il-mid)"/>
+<path clip-path="url(#il-cn-lake-rakshastal-m)" d="M0 0H300V88L290 84L280 88L268 80L258 82L248 72L238 76L228 64L218 70L208 58L198 66L188 56L178 64L168 54L158 62L148 52L140 60L130 52L122 62L114 56L106 66L98 62L90 70L82 66L72 72L62 68L52 74L44 66L36 72L26 66L16 72L8 68L0 74Z" fill="var(--il-ice)"/>
+<path d="M0 112V98Q30 92 60 96Q90 90 120 96Q160 92 200 94Q240 90 270 96Q290 94 300 98V112Z" fill="var(--il-far)"/>
+<path d="M0 200V108H300V200Z" fill="var(--il-water)"/>
+<path d="M0 200V146Q40 150 76 162Q110 174 140 184Q180 194 230 194Q270 192 300 190V200Z" fill="var(--il-far)"/>
+<path d="M0 200V182Q60 184 110 192Q140 197 170 200Z" fill="var(--il-leaf)"/>
+<g transform="translate(14 46) scale(0.75)">
+<path d="M50 184H55V196H50ZM58 184H63V196H58ZM78 184H83V196H78ZM86 184H91V196H86Z" fill="var(--il-acc)" vector-effect="non-scaling-stroke"/>
+<path d="M42 178Q40 166 50 162Q58 154 70 154Q78 155 82 162L90 164Q98 166 100 172L98 182L94 180L92 188L86 184L82 189L76 184L70 189L64 184L58 189L52 184L46 188Z" fill="var(--il-acc)" vector-effect="non-scaling-stroke"/>
+<path d="M94 166Q104 164 108 172Q109 180 102 181L96 178Z" fill="var(--il-acc)" vector-effect="non-scaling-stroke"/>
+<path d="M98 166Q94 160 98 156M104 167Q109 163 112 158" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M42 170Q36 176 38 188M102 172V173" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+</g>
