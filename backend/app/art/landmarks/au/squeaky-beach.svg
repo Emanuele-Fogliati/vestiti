@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="268" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 112V86Q20 70 44 62Q70 50 96 46Q112 44 124 48Q150 56 176 62Q200 58 222 56Q250 56 272 66Q288 72 300 80V140H0Z" fill="var(--il-mid)"/>
+<path d="M60 70Q66 90 60 110M130 54Q136 80 132 106M200 64Q206 86 200 110M262 66Q270 90 266 116" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V108Q30 110 60 112Q90 114 110 120L150 140Q170 156 190 200Z" fill="var(--il-water)"/>
+<path d="M60 112Q90 114 110 120L150 140Q166 152 180 176Q150 150 120 132Q96 120 60 112Z" fill="var(--il-obj)"/>
+<path d="M60 112Q92 112 130 116Q190 120 240 122Q270 124 300 124V200H186Q170 160 150 142Q130 126 108 120Q86 114 60 112Z" fill="var(--il-ice)"/>
+<path d="M240 122Q256 114 272 116Q288 112 300 114V126Q270 124 240 122Z" fill="var(--il-leaf)"/>
+<path d="M30 112Q34 104 42 104Q48 100 54 106Q60 104 64 112ZM6 112Q8 106 14 106Q20 104 24 112Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-au-squeaky-beach-c0"><path d="M62 172Q60 136 80 122Q98 112 116 122Q128 134 128 172Z"/></clipPath><clipPath id="il-au-squeaky-beach-c1"><path d="M108 174Q104 128 130 110Q156 96 184 108Q204 122 206 152Q206 164 204 174Z"/></clipPath><clipPath id="il-au-squeaky-beach-c2"><path d="M194 174Q194 150 208 142Q224 138 232 152Q236 162 234 174Z"/></clipPath></defs>
+<path d="M62 172Q60 136 80 122Q98 112 116 122Q128 134 128 172Z" fill="var(--il-acc)"/>
+<path d="M40 154Q94 160 140 154V180H40Z" fill="var(--il-far)" clip-path="url(#il-au-squeaky-beach-c0)"/>
+<path d="M108 174Q104 128 130 110Q156 96 184 108Q204 122 206 152Q206 164 204 174Z" fill="var(--il-acc)"/>
+<path d="M100 152Q156 162 210 152V180H100Z" fill="var(--il-far)" clip-path="url(#il-au-squeaky-beach-c1)"/>
+<path d="M194 174Q194 150 208 142Q224 138 232 152Q236 162 234 174Z" fill="var(--il-acc)"/>
+<path d="M190 160Q214 164 240 160V180H190Z" fill="var(--il-far)" clip-path="url(#il-au-squeaky-beach-c2)"/>
+<path d="M0 200V170Q60 166 120 170Q200 172 300 168V200Z" fill="var(--il-ice)"/>
+<path d="M0 200V182Q20 176 40 180Q54 176 64 184Q70 190 72 200ZM236 200Q246 184 264 180Q282 176 300 178V200Z" fill="var(--il-leaf)"/>
