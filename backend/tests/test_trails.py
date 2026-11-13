@@ -74,3 +74,39 @@ def test_trails_near_a_stop():
     names = [t.id for t in trails.near(-49.331, -72.886, "AR", "El Chaltén")]
     assert "ar-laguna-de-los-tres" in names and "ar-laguna-torre" in names
     assert not any(n.startswith("cl-") for n in names)
+
+
+# ---------------------------------------------------------------- the API
+
+def test_api_lists_and_filters(client):
+    r = client.get("/api/trails", params={"country": "AR"}).json()
+    assert r["trails"] and all(t["country"] == "AR" for t in r["trails"])
+    assert {"AR", "CL", "PE"} <= set(r["countries"])
+    near = client.get("/api/trails", params={"lat": -49.331, "lon": -72.886, "name": "El Chaltén",
+                                              "month": 7}).json()["trails"]
+    ldt = next(t for t in near if t["id"] == "ar-laguna-de-los-tres")
+    assert ldt["in_season"] is False and ldt["months_text"] == "Nov–Apr"
+    assert ldt["km"] == 22 and ldt["gain_m"] == 1000  # the park's numbers come first
+
+
+def test_api_one_trail_and_wear(client):
+    t = client.get("/api/trails/cl-base-torres").json()
+    assert t["points"][0]["role"] == "start" and t["points"][-1]["role"] == "goal"
+    assert t["difficulty_text"].startswith("Hard") and t["dangers"]
+    assert t["activity"]["type"] == "hiking" and t["activity"]["difficulty"] == "hard"
+    assert client.get("/api/trails/xx-nothing").status_code == 404
+    w = client.get("/api/trails/cl-villarrica/wear", params={"month": 1}).json()
+    slots = {p["slot"]: p for p in w["pieces"]}
+    assert w["in_season"] is True
+    assert slots["footwear"]["footwear_type"] in ("hiking_boot", "mountaineering_boot")
+    assert slots["footwear"]["waterproof"]  # glacier: crampon-ready boots
+    assert "shell_top" in slots
+
+
+def test_gpx_needs_a_line(client):
+    for t in trails.trails():
+        r = client.get(f"/api/trails/{t.id}.gpx")
+        if trails.geo(t.id):
+            assert r.status_code == 200 and r.text.startswith("<?xml") and "<trkpt" in r.text
+        else:
+            assert r.status_code == 404
