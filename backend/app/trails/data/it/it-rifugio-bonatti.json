@@ -1,0 +1,57 @@
+{
+ "id": "it-rifugio-bonatti",
+ "country": "IT",
+ "name": "Rifugio Bonatti, Val Ferret",
+ "base": "Courmayeur",
+ "region": "Val Ferret, Mont Blanc",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2,
+  2.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 6.0,
+  "gain_m": 320,
+  "source": "https://inalto.org/en/reports/hiking/hut-bonatti-from-parking-after-lavachey"
+ },
+ "why": "A short climb through larches to the hut with the best front-row view of the Grandes Jorasses and the Mont Blanc glaciers.",
+ "book": "Nothing for a day walk. Val Ferret road is closed to cars above Planpincieux on summer days: shuttle bus from Courmayeur to Lavachey. Book the hut weeks ahead to sleep (it is a Tour du Mont Blanc stage).",
+ "water": "At the hut (drinks and meals June to September); streams on the way.",
+ "dangers": [
+  "Afternoon storms on the open balcony.",
+  "Snow patches above the hut until early July."
+ ],
+ "turnaround": "With dark clouds over Mont Blanc, stay at the hut or go back down by the same path.",
+ "sources": [
+  "https://inalto.org/en/reports/hiking/hut-bonatti-from-parking-after-lavachey",
+  "https://www.lovevda.it/en/database/7/one-day-excursions/courmayeur/lavachey-rifugio-bonatti-col-entre-deux-sauts/2250",
+  "https://www.rifugiobonatti.it/en/"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Val Ferret meadows at Lavachey",
+   "lat": 45.85338,
+   "lon": 7.027772,
+   "role": "start",
+   "note": "1,700 m: the flat floor of the valley, the Dora river and larches. Path 42 starts by the Malatrà stream."
+  },
+  {
+   "id": "goal",
+   "name": "Rifugio Bonatti",
+   "lat": 45.84691,
+   "lon": 7.033639,
+   "role": "goal",
+   "note": "2,025 m: the stone hut on its open balcony, the Grandes Jorasses and its glaciers straight across the valley. Meals and beds."
+  }
+ ]
+}

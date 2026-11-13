@@ -21,9 +21,9 @@
  ],
  "start_by": "07:00",
  "published": {
-  "km": 22,
-  "gain_m": 1000,
-  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+  "km": 20,
+  "gain_m": null,
+  "source": "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf"
  },
  "why": "The classic Patagonian day: forest, two lakes and, after a brutal last hour, Fitz Roy's granite straight above a glacier lake.",
  "book": "Free, no permit. Read the trail status at the national park visitor centre the day before.",
@@ -35,6 +35,7 @@
  ],
  "turnaround": "If you reach Campamento Poincenot after 13:00, stop at the river: the climb and the way back take 5 more hours.",
  "sources": [
+  "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf",
   "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
   "https://en.wikivoyage.org/wiki/El_Chalt%C3%A9n",
   "https://hiking.waymarkedtrails.org/#route?id=4485261",
@@ -48,7 +49,8 @@
    "lat": -49.32111,
    "lon": -72.89459,
    "role": "start",
-   "note": "At the north end of Avenida San Martín, by the park sign. The first hour climbs above the Río de las Vueltas."
+   "note": "At the north end of Avenida San Martín, by the park sign. The first hour climbs above the Río de las Vueltas.",
+   "scene": "ar-el-chalten"
   },
   {
    "id": "mirador",
@@ -56,7 +58,8 @@
    "lat": -49.30023,
    "lon": -72.92007,
    "role": "point",
-   "note": "First full view of the massif, after about 4 km. On a cloudy morning this may be all you see: decide here."
+   "note": "First full view of the massif, after about 4 km. On a cloudy morning this may be all you see: decide here.",
+   "scene": "ar-mirador-fitz-roy"
   },
   {
    "id": "capri",
@@ -64,7 +67,8 @@
    "lat": -49.30285,
    "lon": -72.92968,
    "role": "point",
-   "note": "A short detour to the lake; its camp is the quiet alternative to Poincenot."
+   "note": "A short detour to the lake; its camp is the quiet alternative to Poincenot.",
+   "scene": "ar-laguna-capri"
   },
   {
    "id": "poincenot",
@@ -72,7 +76,8 @@
    "lat": -49.28123,
    "lon": -72.96091,
    "role": "point",
-   "note": "Last flat ground, toilets and water. Leave anything heavy here; the climb starts across the Río Blanco bridge."
+   "note": "Last flat ground, toilets and water. Leave anything heavy here; the climb starts across the Río Blanco bridge.",
+   "scene": "ar-campamento-poincenot"
   },
   {
    "id": "goal",
@@ -80,7 +85,8 @@
    "lat": -49.27979,
    "lon": -72.98572,
    "role": "goal",
-   "note": "1,170 m. Walk 5 minutes to the left for Laguna Sucia far below."
+   "note": "1,170 m. Walk 5 minutes to the left for Laguna Sucia far below.",
+   "scene": "ar-laguna-de-los-tres"
   }
  ]
 }
