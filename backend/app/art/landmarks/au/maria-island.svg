@@ -1,0 +1,19 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M150 112V104Q180 100 210 96Q240 92 270 95Q288 97 300 98V112Z" fill="var(--il-far)"/>
+<path d="M0 200V110H300V200Z" fill="var(--il-water)"/>
+<defs><clipPath id="il-au-maria-island-clip"><path d="M0 182V70Q40 60 90 58Q140 56 170 64Q200 70 214 84L204 90Q192 93 184 100L190 106Q172 112 168 126Q168 142 186 152Q196 158 196 164L204 170V182Z"/></clipPath></defs>
+<path d="M0 182V70Q40 60 90 58Q140 56 170 64Q200 70 214 84L204 90Q192 93 184 100L190 106Q172 112 168 126Q168 142 186 152Q196 158 196 164L204 170V182Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-au-maria-island-clip)">
+<path d="M0 82Q100 70 190 78Q160 96 150 122Q148 146 172 162Q186 172 190 182M0 100Q90 88 168 92Q138 108 136 126Q136 150 160 166Q172 176 176 182M0 120Q80 104 146 108Q122 120 122 134Q124 156 146 172M0 144Q60 126 118 130Q106 142 112 160Q118 174 130 182" stroke="var(--il-acc)" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M0 90Q96 78 180 86Q152 102 144 124Q142 148 166 164M0 110Q86 96 156 100Q130 114 129 130Q130 152 152 168M0 132Q70 114 132 118Q116 130 117 146Q120 166 138 180" stroke="var(--il-ice)" stroke-width="3" fill="none" stroke-linecap="round"/>
+</g>
+<path d="M190 106Q172 112 168 126Q168 142 186 152Q196 158 196 164L204 170V182H194Q190 168 176 158Q156 142 158 124Q160 110 184 100Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 72Q20 52 44 56Q60 40 84 50Q104 40 124 52Q146 48 160 62Q120 60 80 62Q40 64 0 74Z" fill="var(--il-leaf)"/>
+<path d="M0 200V178Q60 174 120 178Q180 176 230 182Q270 186 300 184V200Z" fill="var(--il-ice)"/>
+<g transform="translate(232 188)">
+<path d="M2 0Q-2 -10 6 -18Q16 -26 30 -25Q44 -23 48 -12Q50 -5 48 0H42V-3H36V0H18V-3H12V0Z" fill="var(--il-obj)"/>
+<path d="M10 -16Q0 -19 -5 -12Q-8 -6 -4 -3Q2 -1 8 -4Z" fill="var(--il-obj)"/>
+<path d="M0 -16Q0 -21 4 -20Q5 -17 3 -15ZM5 -18Q6 -22 9 -21Q10 -18 8 -16Z" fill="var(--il-obj)"/>
+<path d="M-7 -9a2.5 2 0 1 0 5 0a2.5 2 0 1 0 -5 0ZM2 -12a1.2 1.2 0 1 0 2.4 0a1.2 1.2 0 1 0 -2.4 0Z" fill="var(--il-near)"/>
+</g>
