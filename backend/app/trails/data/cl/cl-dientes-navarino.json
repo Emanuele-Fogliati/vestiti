@@ -6,7 +6,7 @@
  "region": "Navarino Island",
  "kind": "multiday",
  "days": 4,
- "shape": "loop",
+ "shape": "one_way",
  "difficulty": "technical",
  "months": [
   12,
@@ -15,17 +15,17 @@
   3
  ],
  "hours": [
-  26,
-  32
+  20,
+  28
  ],
  "start_by": "08:00",
  "published": {
-  "km": 53,
-  "gain_m": 2800,
-  "source": "https://en.wikivoyage.org/wiki/Navarino_Island"
+  "km": 37.6,
+  "gain_m": 1990,
+  "source": "https://www.wikiexplora.com/Dientes_de_Navarino"
  },
  "why": "The southernmost trek on Earth: jagged rock teeth, empty lakes and Cape Horn's islands on the horizon.",
- "book": "Register with the Carabineros in Puerto Williams before and after. No huts, no services: full camping kit and food for 5 days.",
+ "book": "Register with the Carabineros in Puerto Williams before and after. No huts, no services: full camping kit and food for a spare day. Bring stove fuel from Punta Arenas (none in Puerto Williams).",
  "water": "Lakes and streams.",
  "dangers": [
   "The route is marked only by cairns: you need a map, GPS and navigation skills.",
@@ -34,43 +34,61 @@
  ],
  "turnaround": "Wait out a storm in the forest camps rather than crossing a pass in it.",
  "sources": [
+  "https://www.wikiexplora.com/Dientes_de_Navarino",
   "https://en.wikivoyage.org/wiki/Navarino_Island"
  ],
  "points": [
   {
    "id": "start",
-   "name": "Cerro Bandera, Puerto Williams",
-   "lat": -54.9554,
-   "lon": -67.645,
+   "name": "Trailhead above Puerto Williams",
+   "lat": -54.9482,
+   "lon": -67.64,
    "role": "start",
-   "note": "Day 1: the steep climb to the Chilean flag above the Beagle Channel.",
-   "night": true
+   "note": "The track leaves the road at the end of Puerto Williams, by the Virgin shrine on the way to the waterfall."
+  },
+  {
+   "id": "bandera",
+   "name": "Cerro Bandera, Puerto Williams",
+   "lat": -54.9614,
+   "lon": -67.634,
+   "role": "point",
+   "note": "About 1.5 h of steep forest: the Chilean flag at 610 m, the Beagle Channel and Ushuaia's mountains below."
   },
   {
    "id": "salto",
    "name": "Laguna del Salto, Navarino",
-   "lat": -54.99,
-   "lon": -67.66,
+   "lat": -54.99082,
+   "lon": -67.67913,
    "role": "point",
-   "note": "The first lake under the teeth.",
-   "night": true
+   "night": true,
+   "note": "Night 1: the camp by the first lake, under the first towers."
   },
   {
    "id": "teeth",
-   "name": "Dientes de Navarino from Paso Australia",
-   "lat": -55.005,
-   "lon": -67.7,
+   "name": "Dientes de Navarino over Laguna Escondida",
+   "lat": -55.01404,
+   "lon": -67.69802,
    "role": "point",
-   "note": "The towers in full, Cape Horn's islands to the south.",
-   "night": true
+   "night": true,
+   "note": "Night 2: the rock teeth stand straight over the lake; Paso Ventarrón, the windiest pass, comes next."
+  },
+  {
+   "id": "martillo",
+   "name": "Laguna Martillo, Navarino",
+   "lat": -55.00545,
+   "lon": -67.76164,
+   "role": "point",
+   "night": true,
+   "note": "Night 3: the long hammer-shaped lake, after Paso Guerrico."
   },
   {
    "id": "goal",
-   "name": "Laguna Martillo, Navarino",
-   "lat": -54.96,
-   "lon": -67.75,
+   "name": "Bahía Virginia road end",
+   "lat": -54.9423,
+   "lon": -67.7041,
    "role": "goal",
-   "note": "The last lake before the road back to Puerto Williams."
+   "note": "Down from Paso Virginia to the coast road, 6 km west of Puerto Williams: walk, hitch or book a taxi."
   }
- ]
+ ],
+ "osm": 2683305
 }

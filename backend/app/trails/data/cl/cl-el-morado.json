@@ -22,12 +22,12 @@
  ],
  "start_by": "08:30",
  "published": {
-  "km": 16,
+  "km": 12,
   "gain_m": 700,
-  "source": "https://www.conaf.cl/parques/monumento-natural-el-morado/"
+  "source": "https://www.conaf.cl/parque_nacionales/monumento-natural-el-morado/"
  },
- "why": "The Andes in a day from Santiago: a mountain lagoon under a hanging glacier at 2,500 m.",
- "book": "CONAF entry ticket online. Entry closes around midday; the road needs 2 h from Santiago (tours leave early).",
+ "why": "The Andes in a day from Santiago: a mountain lagoon at 2,400 m under Cerro El Morado, then the foot of a glacier.",
+ "book": "CONAF entry ticket online (Pases Parques). 93 km and 2.5 h from Santiago by the G-25; in season Metrobús 72 leaves Bellavista de La Florida from 7:30.",
  "water": "Streams; nothing to buy after Baños Morales.",
  "dangers": [
   "Altitude 1,900-2,500 m: go slowly the first hour.",
@@ -35,32 +35,32 @@
  ],
  "turnaround": "Rangers ask you to start back from the glacier by 15:00.",
  "sources": [
-  "https://www.conaf.cl/parques/monumento-natural-el-morado/"
+  "https://www.conaf.cl/parque_nacionales/monumento-natural-el-morado/"
  ],
  "points": [
   {
    "id": "start",
    "name": "Baños Morales",
-   "lat": -33.816,
-   "lon": -70.064,
+   "lat": -33.82244,
+   "lon": -70.06344,
    "role": "start",
-   "note": "The ranger post at the end of the village."
+   "note": "The CONAF ranger post at the top of Baños Morales, 1,880 m."
   },
   {
    "id": "laguna",
    "name": "Laguna El Morado",
-   "lat": -33.78,
-   "lon": -70.057,
+   "lat": -33.7841,
+   "lon": -70.0726,
    "role": "point",
-   "note": "About 2 h: the lagoon with Cerro El Morado and its glacier behind."
+   "note": "About 2.5 h: the lagoon with Cerro El Morado and its hanging glacier behind."
   },
   {
    "id": "goal",
-   "name": "El Morado glacier foot",
-   "lat": -33.76,
-   "lon": -70.055,
+   "name": "San Francisco glacier foot, El Morado",
+   "lat": -33.7707,
+   "lon": -70.0735,
    "role": "goal",
-   "note": "About 2,500 m, under the San Francisco glacier."
+   "note": "About 2,500 m, the grey moraine under the San Francisco glacier. Don't walk on the ice."
   }
  ]
 }

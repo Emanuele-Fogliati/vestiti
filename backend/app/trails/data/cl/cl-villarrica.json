@@ -16,17 +16,17 @@
   3
  ],
  "hours": [
-  8,
-  10
+  5,
+  7
  ],
  "start_by": "07:00",
  "published": {
-  "km": 10,
+  "km": 6.6,
   "gain_m": 1400,
-  "source": "https://www.conaf.cl/parques/parque-nacional-villarrica/"
+  "source": "https://www.conaf.cl/parque_nacionales/parque-nacional-villarrica/"
  },
  "why": "Climb an active volcano on snow with crampons and look into a smoking crater, Lake Villarrica far below.",
- "book": "Only with a certified guide (CONAF rule); agencies in Pucón provide crampons, axe, helmet and gas mask. The summit closes whenever the volcanic alert rises.",
+ "book": "Go with a guide from a Pucón agency: they bring crampons, axe, helmet and gas mask and check CONAF's rules for the day. The summit closes whenever the volcanic alert rises above green.",
  "water": "None: carry 2 litres.",
  "dangers": [
   "Volcanic gas at the crater rim: the gas mask is not optional.",
@@ -35,30 +35,30 @@
  ],
  "turnaround": "Your guide decides; most groups turn back at 13:00 wherever they are.",
  "sources": [
-  "https://www.conaf.cl/parques/parque-nacional-villarrica/"
+  "https://www.conaf.cl/parque_nacionales/parque-nacional-villarrica/"
  ],
  "points": [
   {
    "id": "start",
    "name": "Villarrica ski centre",
-   "lat": -39.399,
-   "lon": -71.955,
+   "lat": -39.392,
+   "lon": -71.9563,
    "role": "start",
-   "note": "About 1,400 m. A chairlift saves the first 400 m when it runs."
+   "note": "Pucón ski centre base, about 1,450 m. A chairlift saves the first 400 m when it runs."
   },
   {
    "id": "snow",
    "name": "Villarrica snow slopes above Lake Villarrica",
-   "lat": -39.411,
-   "lon": -71.945,
+   "lat": -39.4092,
+   "lon": -71.9431,
    "role": "point",
-   "note": "Crampons on: zigzag up the snow, the lake and Pucón below."
+   "note": "Crampons on: zigzag up the snow, Lake Villarrica and Pucón below."
   },
   {
    "id": "goal",
    "name": "Villarrica crater rim",
-   "lat": -39.4206,
-   "lon": -71.9392,
+   "lat": -39.4191,
+   "lon": -71.9393,
    "role": "goal",
    "note": "2,847 m. The crater smokes; on a lucky day you hear the lava."
   }

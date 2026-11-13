@@ -22,47 +22,43 @@
   1.5,
   2.5
  ],
- "start_by": "10:00",
- "published": {
-  "km": 4,
-  "gain_m": 50,
-  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
- },
+ "start_by": "14:00",
  "why": "Over a swinging bridge to a grey beach covered in blue icebergs, with the glacier at the end of the lake.",
- "book": "Park entry online. Boat to the glacier face from Hotel Lago Grey (book ahead).",
+ "book": "Park entry online (Pases Parques). Lago Grey sector by car or tour; the boat to the glacier face leaves from Hotel Lago Grey (book ahead).",
  "water": "None.",
  "dangers": [
   "The bridge takes 6 people at a time.",
   "Wind on the beach and the peninsula."
  ],
- "turnaround": "",
+ "turnaround": "Last entry to Playa Grey 16:00; the beach closes at 19:00 (park rules 2026-27).",
  "sources": [
-  "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+  "https://www.conaf.cl/parque_nacionales/parque-nacional-torres-del-paine/",
+  "https://parquetorresdelpaine.cl/boletin-informativo-temporada-2026-2027/"
  ],
  "points": [
   {
    "id": "start",
    "name": "Pingo river hanging bridge",
-   "lat": -51.117,
-   "lon": -73.129,
+   "lat": -51.12338,
+   "lon": -73.1302,
    "role": "start",
-   "note": "From the Lago Grey ranger post car park, over the bridge."
+   "note": "From the Lago Grey ranger post (Guardería Pingo) over the hanging footbridge on the Pingo river."
   },
   {
    "id": "beach",
    "name": "Lago Grey beach with icebergs",
-   "lat": -51.105,
-   "lon": -73.135,
+   "lat": -51.1165,
+   "lon": -73.1262,
    "role": "point",
-   "note": "Grey pebbles and stranded blue ice, the glacier far up the lake."
+   "note": "A long grey-pebble beach; icebergs run aground here, the glacier far up the lake."
   },
   {
    "id": "goal",
-   "name": "Grey Glacier lookout on the peninsula",
-   "lat": -51.096,
-   "lon": -73.143,
+   "name": "Grey Glacier lookout, Isla de los Hielos",
+   "lat": -51.11098,
+   "lon": -73.11594,
    "role": "goal",
-   "note": "Up the wooded peninsula for the full glacier front."
+   "note": "Up the wooded peninsula at the end of the beach: the lookout faces the glacier front across the lake."
   }
  ]
 }
