@@ -33,9 +33,10 @@
   "Summer heat and no shade low down: go in spring or autumn.",
   "Snow, wind and lightning on the summit in winter."
  ],
- "turnaround": "Leave the summit by 14:30.",
+ "turnaround": "CONAF's timetable: start up the Andinista trail by 09:30 at the latest and leave the summit by 14:00.",
  "sources": [
-  "https://www.conaf.cl/parque_nacionales/parque-nacional-la-campana/"
+  "https://www.conaf.cl/parque_nacionales/parque-nacional-la-campana/",
+  "https://www.wikiexplora.com/Cerro_La_Campana"
  ],
  "points": [
   {
@@ -44,7 +45,8 @@
    "lat": -32.98804,
    "lon": -71.14256,
    "role": "start",
-   "note": "The CONAF entrance and ranger post at Granizo, Olmué, about 400 m; the Andinista trail leaves the road above the campsites."
+   "note": "The CONAF entrance and ranger post at Granizo, Olmué, about 400 m; the Andinista trail leaves the road above the campsites.",
+   "scene": "cl-la-campana-granizo"
   },
   {
    "id": "darwin",
@@ -52,7 +54,8 @@
    "lat": -32.95709,
    "lon": -71.12273,
    "role": "point",
-   "note": "About 1,530 m, past the old La Pronosticada mine: the plaque for Darwin's climb of 17 August 1834."
+   "note": "About 1,530 m, past the old La Pronosticada mine: the plaque for Darwin's climb of 17 August 1834.",
+   "scene": "cl-darwin-plaque"
   },
   {
    "id": "goal",
@@ -60,7 +63,8 @@
    "lat": -32.95398,
    "lon": -71.12053,
    "role": "goal",
-   "note": "1,880 m: the Pacific to the west, Aconcagua to the east."
+   "note": "1,880 m: the Pacific to the west, Aconcagua to the east.",
+   "scene": "cl-la-campana-summit"
   }
  ]
 }
