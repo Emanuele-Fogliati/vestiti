@@ -1,0 +1,25 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="56" cy="30" r="11" fill="var(--il-sun)"/>
+<path d="M0 200V100H300V200Z" fill="var(--il-water)"/>
+<path d="M196 101L202 93Q230 86 260 92L268 101Z" fill="var(--il-far)"/>
+<path d="M136 116L140 52H160L164 116Z" fill="var(--il-ice)"/>
+<path d="M136 56V50H164V56Z" fill="var(--il-ice)"/>
+<path d="M134 52H166" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M142 50V34H158V50Z" fill="var(--il-near)"/>
+<path d="M146 48V36M150 48V36M154 48V36M142 42H158" stroke="var(--il-ice)" stroke-width="1" fill="none"/>
+<path d="M140 35Q140 26 150 25Q160 26 160 35Z" fill="var(--il-ice)"/>
+<path d="M150 25V15" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M141 98H146V108H141Z" fill="var(--il-near)" opacity="0.6"/>
+<path d="M0 200V128Q30 120 70 116Q110 110 150 110Q196 112 230 120Q250 124 262 130L270 150L262 172L250 200Z" fill="var(--il-mid)"/>
+<path d="M262 130L276 142L286 160L282 176L290 200H250L262 172L270 150Z" fill="var(--il-acc)"/>
+<path d="M270 148L276 168M280 160L284 184M262 176L268 196" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M150 112Q148 126 140 142Q132 156 122 170" stroke="var(--il-far)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<path d="M0 200V164Q20 158 40 160Q70 156 100 162Q130 166 160 168Q200 170 240 176L254 200Z" fill="var(--il-leaf)"/>
+<path d="M70 178Q56 182 40 186L42 189Q58 187 72 183Z" fill="var(--il-obj)"/>
+<path d="M68 182Q60 168 66 154Q70 146 76 148Q84 152 84 164Q86 176 82 182Z" fill="var(--il-obj)"/>
+<path d="M72 152Q68 142 74 138Q80 136 82 141L89 144Q86 149 78 150Z" fill="var(--il-obj)"/>
+<path d="M73 140L71 129L77 137ZM78 138L80 128L82 138Z" fill="var(--il-obj)"/>
+<path d="M76 182H92V185H76Z" fill="var(--il-obj)"/>
+<path d="M82 158L86 164" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<circle cx="81" cy="142" r="1.1" fill="var(--il-near)"/>
+
