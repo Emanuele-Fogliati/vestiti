@@ -10,7 +10,7 @@ from app.affiliates.networks import network_for, program_id_for
 from app.config import get_settings
 from app.db import get_db
 from app.deps import optional_user
-from app.engine.garments import SLOT_KEYS
+from app.engine.garments import known_slot
 from app.models import AffiliateClick, Product, RentalPartner, Trip, User
 from app.security import ua_hash
 
@@ -34,7 +34,7 @@ def go_product(product_id: str, request: Request, trip_id: str | None = None,
     click = AffiliateClick(user_id=user.id if user else None, trip_id=_trip_id(db, trip_id, user),
                            product_id=p.id, kind="buy", network=p.network,
                            tier=tier if tier in ("cheap", "medium", "premium") else None,
-                           slot=slot if slot in SLOT_KEYS else None, price=p.price,
+                           slot=slot if slot and known_slot(slot) else None, price=p.price,
                            destination_url="", referrer=request.headers.get("referer"),
                            user_agent_hash=ua_hash(request.headers.get("user-agent")))
     db.add(click)

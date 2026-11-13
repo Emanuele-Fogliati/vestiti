@@ -10,6 +10,11 @@
 .x-k{font-size:12px;font-weight:600;color:var(--ink-3);letter-spacing:.02em}
 .x-h2{font-family:var(--f-display);font-weight:800;font-size:26px;letter-spacing:-.02em;margin:0 0 14px}
 .x-sub{font-size:13.5px;color:var(--ink-2)}
+.x-h3{font-family:var(--f-display);font-weight:800;font-size:19px;letter-spacing:-.01em;margin:26px 0 0}
+.x-h3 small{font-family:var(--f-body,inherit);font-weight:500;font-size:14px;color:var(--ink-2);margin-left:8px;letter-spacing:0}
+.x-h3+.x-sub{margin:4px 0 0}
+.x-onebag{font-size:15px;color:var(--ink-2);margin:0 0 14px;max-width:760px}
+.x-onebag b{color:var(--ink)}
 .x-link{background:none;border:0;padding:0;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer;color:var(--ink)}
 .x-list{margin:8px 0 0;padding-left:18px;display:grid;gap:6px;font-size:14px;color:var(--ink-2)}
 .x-list.warn{color:var(--warn-text)}

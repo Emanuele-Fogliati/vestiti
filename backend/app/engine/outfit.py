@@ -17,19 +17,22 @@ Rules (product decisions, not tuning):
 from __future__ import annotations
 
 import contextvars
+from collections import Counter
 
 from dataclasses import dataclass, field
 from datetime import date
 
 from app.engine import thermal
 from app.engine.fit import FitResult, ItemSpec, score_item
-from app.engine.garments import SLOT_BY_KEY, SLOTS, KitItem, reference_item
+from app.engine.garments import SLOT_BY_KEY, SLOTS, KitItem, ref_clo, reference_item
 from app.engine.strategy import (
     Condition,
     SlotRequirement,
     StageInput,
     dress,
     evaluate,
+    zone_key,
+    zone_name,
 )
 
 TIERS = ["cheap", "medium", "premium"]
@@ -623,6 +626,87 @@ def _build_tier(
         "_brand_swaps": swaps,
         "_choices": choices,
     }
+
+
+def zone_lines(tier: str, zone: dict, candidates: dict[str, list[CatalogItem]],
+               owned: dict[str, list[CatalogItem]], selections: dict[tuple[str, str], dict],
+               prefer_names: list[str] | None = None, main_items: list[dict] | None = None,
+               ) -> tuple[list[dict], dict[str, Choice]]:
+    """The few lighter pieces the hot places need on top of the one bag, chosen like the
+    main pieces: the traveller's own pick, then a piece they own, then the tier's pick.
+    Only pieces really lighter than the main ones, cut like the rest of the bag."""
+    prefer = frozenset(b.lower() for b in (prefer_names or []))
+    cuts = Counter(i["item"]["gender"] for i in (main_items or [])
+                   if i.get("kind") == "product" and i.get("item")
+                   and i["item"].get("gender") in ("men", "women"))
+    cut = cuts.most_common(1)[0][0] if cuts else None
+    lines, choices = [], {}
+    where = ", ".join(zone["names"][:3]) + ("…" if len(zone["names"]) > 3 else "")
+    for slot in zone["slots"]:
+        req = zone["reqs"][slot]
+        key = zone_key(slot, zone["key"])
+        sel = selections.get((tier, key))
+        cands = [c for c in candidates.get(slot, []) if slot == "footwear"
+                 or float(c.specs.get("clo") or 0) <= 1.5 * ref_clo(slot, "light")]
+        if cut:
+            cands = [c for c in cands if c.gender in (cut, "unisex", None)] or cands
+        mine = sorted(owned.get(slot, []), key=lambda c: -c.fit.score)
+        ch = None
+        if sel:
+            kind = sel["choice"]
+            if kind == "product":
+                item = next((c for c in cands if c.id == sel.get("product_id")), None)
+                ch = Choice(slot, "product", item, locked=True) if item else None
+            elif kind == "owned":
+                item = next((o for o in mine if o.id == sel.get("wardrobe_item_id")), None)
+                ch = Choice(slot, "owned", item, locked=True) if item else None
+            elif kind == "skip":
+                ch = Choice(slot, "none", locked=True, note="You chose to skip this item.")
+            elif kind == "have":
+                ch = Choice(slot, "have", locked=True, note="Yours: the one you wear on hot days.")
+        if ch is None:
+            best = next((o for o in mine if o.fit.passes), None)
+            if best:
+                ch = Choice(slot, "owned", best)
+            else:
+                pick = pick_for_tier(cands, tier)
+                if prefer and pick and not is_preferred(pick, prefer):
+                    alt, _ = preferred_pick(cands, tier, prefer, pick)
+                    pick = alt or pick
+                ch = Choice(slot, "product", pick) if pick else Choice(
+                    key, "none", note="No product in the catalog fits this yet.")
+        if ch.kind == "none" and not ch.locked:
+            continue  # nothing light enough in the catalog today: the main piece will do
+        choices[slot] = ch
+        s = SLOT_BY_KEY[slot]
+        lines.append({
+            "slot": key, "base_slot": slot, "zone": zone["key"], "zone_where": where,
+            "code": s.code, "slot_name": zone_name(slot, req), "kind": ch.kind,
+            "locked": ch.locked, "note": ch.note, "assumed": False,
+            "item": ch.item.as_dict() if ch.item else None, "rental": None,
+            "rent_suggestion": None, "rental_options": [],
+            "alternatives": len(cands),
+            "owned_alternatives": [o.as_dict() for o in owned.get(slot, [])],
+            "requirement": requirement_json(req), "cost": round(ch.cost(), 2),
+            "owned_verdict": None,
+            "preferred_brand": is_preferred(ch.item, prefer) if ch.kind == "product" else False,
+            "brand_note": None,
+        })
+    return lines, choices
+
+
+def add_zone_lines(t: dict, lines: list[dict]) -> None:
+    """Hot-day pieces join the bag and its totals."""
+    t["items"] += lines
+    tot = t["totals"]
+    for ln in lines:
+        if ln["kind"] == "product":
+            tot["buy"] = round(tot["buy"] + ln["cost"], 2)
+            tot["items_to_buy"] += 1
+            tot["weight_g"] += round((ln["item"] or {}).get("specs", {}).get("weight_g") or 0)
+        elif ln["kind"] in ("owned", "have"):
+            tot["items_owned"] += 1
+    tot["total"] = round(tot["buy"] + tot["rent"], 2)
 
 
 def brand_summary(items: list[dict], prefer_names: list[str]) -> dict | None:

@@ -36,6 +36,12 @@ SLOTS: list[Slot] = [
 ]
 SLOT_BY_KEY = {s.key: s for s in SLOTS}
 SLOT_KEYS = [s.key for s in SLOTS]
+# the lighter pieces only hot places get (see strategy.warm_zone): "<slot>@warm"
+ZONE_SLOT_KEYS = [f"{k}@warm" for k in ("base_top", "trousers", "footwear")]
+
+
+def known_slot(key: str) -> bool:
+    return key in SLOT_KEYS or key in ZONE_SLOT_KEYS
 
 REF_CLO: dict[str, dict[str, float]] = {
     "base_top": {"light": 0.09, "medium": 0.15, "warm": 0.22, "very_warm": 0.28},

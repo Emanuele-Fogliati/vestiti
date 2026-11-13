@@ -6,7 +6,7 @@ from datetime import date, datetime
 from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator, model_validator
 
 from app.engine.activities import ACTIVITY_TYPES, DIFFICULTIES
-from app.engine.garments import FOOTWEAR_TYPES, LEVELS, SLOT_KEYS
+from app.engine.garments import FOOTWEAR_TYPES, LEVELS, SLOT_KEYS, known_slot
 
 
 PACES = ("relaxed", "average", "brisk")
@@ -565,7 +565,7 @@ class SelectionIn(BaseModel):
     @field_validator("slot")
     @classmethod
     def _slot(cls, v):
-        if v not in SLOT_KEYS:
+        if not known_slot(v):
             raise ValueError("unknown slot")
         return v
 

@@ -441,6 +441,78 @@ def reference_kit(reqs: dict[str, SlotRequirement]) -> dict[str, KitItem]:
     return kit
 
 
+# ---------------------------------------------------------------- warm places
+
+# One bag for the whole trip. Only places that are clearly hot (a beach in July after the
+# Alps) get a few lighter pieces of their own: the jackets, fleece and boots are the same
+# everywhere, so two mountains never get two outfits.
+WARM = "warm"
+ZONE_SLOTS = ("base_top", "trousers", "footwear")
+WARM_DAY_C = 24.0  # a typical day's high from which shorts and a T-shirt are the norm
+WARM_MOVING_C = 16.0  # ...unless the day's activity climbs where it is cool
+
+
+def zone_key(slot: str, zone: str = WARM) -> str:
+    return f"{slot}@{zone}"
+
+
+def base_slot(key: str) -> str:
+    return key.split("@", 1)[0]
+
+
+def warm_stages(stages: list[StageInput], conds: list[Condition]) -> list[int]:
+    out = []
+    for st in stages:
+        highs = sorted(d.tmax for d in st.days)
+        moving = [c.temp_c for c in conds if c.stage_index == st.index and c.mode == "moving"]
+        if not highs or not moving:
+            continue
+        if highs[len(highs) // 2] >= WARM_DAY_C and min(moving) >= WARM_MOVING_C:
+            out.append(st.index)
+    return out
+
+
+def zone_name(slot: str, req: SlotRequirement) -> str:
+    if slot == "trousers":
+        return "Shorts" if req.level == "light" else "Light trousers"
+    if slot == "base_top":
+        return "T-shirt"
+    return "Sandals" if req.footwear_type == "sandal" else "Light shoes"
+
+
+def warm_zone(stages: list[StageInput], conds: list[Condition],
+              reqs: dict[str, SlotRequirement]) -> dict | None:
+    """The hot places of a trip and the lighter pieces they need, or None when the main
+    bag already suits them (all-hot trips, or nothing hot)."""
+    idx = warm_stages(stages, conds)
+    if not idx or len(idx) == len(stages):
+        return None
+    ws = [s for s in stages if s.index in idx]
+    wc = [c for c in conds if c.stage_index in idx]
+    wr = requirements(ws, wc)
+    for slot in ("trousers", "base_top"):  # hot days: shorts and a T-shirt
+        wr[slot].level, wr[slot].ref_clo = "light", ref_clo(slot, "light")
+        wr[slot].needed = True
+    slots = []
+    for slot in ZONE_SLOTS:
+        main, warm = reqs.get(slot), wr[slot]
+        if not main or not main.needed:
+            continue
+        if slot == "footwear":
+            lighter = FOOTWEAR_TYPES.index(main.footwear_type or "sneaker") \
+                - FOOTWEAR_TYPES.index(warm.footwear_type or "sneaker") >= 2
+            warm.ankle_support = False
+        else:
+            lighter = LEVELS.index(main.level) > LEVELS.index(warm.level)
+        if lighter:
+            warm.reasons = [f"{s.name}: hot days" for s in ws][:3]
+            slots.append(slot)
+    if not slots:
+        return None
+    return {"key": WARM, "stages": idx, "names": [s.name for s in ws], "slots": slots,
+            "reqs": {s: wr[s] for s in slots}}
+
+
 # ---------------------------------------------------------------- evaluation (pass 2)
 
 def _fmt_day(d: date) -> str:
@@ -451,15 +523,30 @@ def evaluate(
     stages: list[StageInput],
     conds: list[Condition],
     kit: dict[str, KitItem],
+    zone: dict | None = None,
 ) -> dict:
-    """Dress every condition with a concrete kit; aggregate per stage and per trip."""
+    """Dress every condition with a concrete kit; aggregate per stage and per trip.
+
+    zone: the hot places and their lighter pieces ({"stages": [...], "kit": {slot: item}}):
+    there the day out is spent in them, the evening in the main bag."""
     dresses: dict[tuple, Dress] = {}
+    light = (zone or {}).get("kit") or {}
+    hot = set((zone or {}).get("stages") or []) if light else set()
+
+    def kit_for(c: Condition) -> dict[str, KitItem]:
+        return {**kit, **light} if c.stage_index in hot and c.mode == "moving" else kit
+
+    def key_for(c: Condition, slot: str) -> str:
+        return zone_key(slot) if slot in light and c.stage_index in hot \
+            and c.mode == "moving" else slot
+
     for c in sorted(conds, key=lambda c: c.mode != "moving"):
         start = None
         if c.mode == "rest":
             mv = dresses.get((c.stage_index, c.date, c.activity.key, "moving"))
             start = mv.worn if mv else None
-        dresses[c.key()] = dress(kit, c, start)
+        dresses[c.key()] = dress(kit_for(c), c, start)
+    all_keys = list(kit) + [zone_key(s) for s in light]
 
     stage_out = []
     for st in stages:
@@ -468,15 +555,17 @@ def evaluate(
             continue
         day_status: dict[date, dict[str, str]] = {}
         day_reasons: dict[date, dict[str, str]] = {}
+        keys = all_keys if st.index in hot else list(kit)
         for c in sc:
             d = dresses[c.key()]
-            ds = day_status.setdefault(c.date, {s: "none" for s in kit})
+            ds = day_status.setdefault(c.date, {s: "none" for s in keys})
             dr = day_reasons.setdefault(c.date, {})
             for slot in d.worn:
+                k = key_for(c, slot)
                 new = "worn" if c.mode == "moving" else "stops"
-                if STATUS_RANK[new] > STATUS_RANK[ds[slot]]:
-                    ds[slot] = new
-                    dr[slot] = d.reasons.get(slot, "")
+                if STATUS_RANK[new] > STATUS_RANK[ds[k]]:
+                    ds[k] = new
+                    dr[k] = d.reasons.get(slot, "")
         for slot in kit:
             why = precaution(slot, sc)
             if why:
@@ -486,7 +575,7 @@ def evaluate(
                         day_reasons[dte][slot] = why
 
         slots = {}
-        for slot in kit:
+        for slot in keys:
             statuses = [ds[slot] for ds in day_status.values()]
             best = max(statuses, key=lambda s: STATUS_RANK[s])
             slots[slot] = {
@@ -494,7 +583,8 @@ def evaluate(
                 "days_worn": statuses.count("worn"),
                 "days_stops": statuses.count("stops"),
                 "days_total": len(statuses),
-                "why": _slot_why(slot, best, sc, dresses, day_status, day_reasons, kit),
+                "why": _slot_why(slot, best, sc, dresses, day_status, day_reasons,
+                                 {**kit, **{zone_key(k): v for k, v in light.items()}}),
             }
 
         modes = {}
@@ -510,7 +600,7 @@ def evaluate(
                 "status": d.status,
                 "penalties": d.penalties,
                 "worn": d.worn,
-                "cross_section": _cross_section(kit, d, worst),
+                "cross_section": _cross_section(kit_for(worst), d, worst),
             }
 
         # day-specific exceptions: days whose layering differs from the typical day
@@ -522,8 +612,8 @@ def evaluate(
             ds = day_status[dte]
             if vectors[dte] == typical:
                 continue
-            more = [s for s in kit if STATUS_RANK[ds[s]] > STATUS_RANK[typical_map[s]]]
-            less = [s for s in kit if STATUS_RANK[ds[s]] < STATUS_RANK[typical_map[s]]]
+            more = [s for s in keys if STATUS_RANK[ds[s]] > STATUS_RANK[typical_map[s]]]
+            less = [s for s in keys if STATUS_RANK[ds[s]] < STATUS_RANK[typical_map[s]]]
             if not more and not less:
                 continue
             day_conds = [c for c in sc if c.date == dte]
@@ -596,8 +686,13 @@ def _cross_section(kit: dict[str, KitItem], d: Dress, c: Condition) -> dict:
             "interfaces": list(reversed(temps)), "wind_kmh": c.wind_kmh, "precip_mm": c.precip_mm}
 
 
+def _slot_label(key: str) -> str:
+    name = SLOT_BY_KEY[base_slot(key)].name
+    return f"{name} for the hot days" if "@" in key else name
+
+
 def _slot_why(slot, status, sc, dresses, day_status, day_reasons, kit) -> str:
-    name = SLOT_BY_KEY[slot].name
+    name = _slot_label(slot)
     days = sorted(day_status)
     if status == "none":
         mc = [c for c in sc if c.mode == "rest"]
@@ -628,10 +723,10 @@ def _exception_summary(dte, more, less, ds, day_conds) -> str:
     parts = []
     if more:
         parts.append("also " + ", ".join(
-            f"{SLOT_BY_KEY[s].name.lower()} {'on' if ds[s] == 'worn' else 'at stops' if ds[s] == 'stops' else 'in the pack'}"
+            f"{_slot_label(s).lower()} {'on' if ds[s] == 'worn' else 'at stops' if ds[s] == 'stops' else 'in the pack'}"
             for s in more))
     if less:
-        parts.append("no need for " + ", ".join(SLOT_BY_KEY[s].name.lower() for s in less))
+        parts.append("no need for " + ", ".join(_slot_label(s).lower() for s in less))
     return f"{_fmt_day(dte)}: " + "; ".join(parts) + f" ({', '.join(weather)})."
 
 

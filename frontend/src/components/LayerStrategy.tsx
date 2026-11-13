@@ -161,7 +161,7 @@ export function LayerStrategy({ tripId, strategy, tier, stageIdx, setStageIdx, o
     setApplying(true);
     try {
       await api.select(tripId, { tier, slot: up.slot, choice: "product", product_id: up.item.id });
-      toast(`Upgrade added to your bag: ${up.item.brand} ${up.item.name}.`);
+      toast(`Added to your bag for the whole trip: ${up.item.brand} ${up.item.name}.`);
       onChanged();
     } finally { setApplying(false); }
   }
@@ -179,8 +179,15 @@ export function LayerStrategy({ tripId, strategy, tier, stageIdx, setStageIdx, o
   const cname = cell ? strategy.slots.find((s) => s.key === cell.slot)?.name : undefined;
   const title = `${st.name} · ${mode === "moving" ? "moving" : "resting"} · feels ${minus(Math.round(m.condition.feels_like_c))}°`;
 
+  const hot = strategy.zones?.[0];
+  const and = (xs: string[]) => xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`;
+  const hotNames = strategy.slots.filter((s) => s.zone).map((s) => s.name === "T-shirt" ? "a T-shirt" : s.name.toLowerCase());
   return (
     <>
+      <p className="x-onebag x-rise">
+        <b>One bag for the whole trip.</b> Every stop uses the same clothes; this shows what you wear where.
+        {hot && hotNames.length > 0 && <> In {and(hot.names)} you add {and(hotNames)} for the day.</>}
+      </p>
       <div className="x-ctrl x-rise">
         <div className="x-scroller">
           <div className="x-seg" role="tablist" aria-label="Place">
@@ -224,7 +231,7 @@ export function LayerStrategy({ tripId, strategy, tier, stageIdx, setStageIdx, o
             <tbody>
               {strategy.slots.map((sl) => (
                 <tr key={sl.key}>
-                  <td className="x-mn"><ProductArt slot={sl.key} className="x-mart" /><span>{sl.name}<small>{kit[sl.key]?.name}</small></span></td>
+                  <td className="x-mn"><ProductArt slot={sl.key.split("@")[0]} className="x-mart" /><span>{sl.name}<small>{kit[sl.key]?.name}</small></span></td>
                   {stages.map((s, i) => {
                     const status = (s.slots[sl.key]?.status ?? "none") as SlotStatus;
                     const on = cell?.slot === sl.key && cell.stage === i;
