@@ -6,7 +6,7 @@
  "region": "Cordillera Huayhuash",
  "kind": "multiday",
  "days": 10,
- "shape": "loop",
+ "shape": "one_way",
  "difficulty": "hard",
  "months": [
   6,
@@ -15,14 +15,14 @@
   9
  ],
  "hours": [
-  60,
-  75
+  55,
+  70
  ],
  "start_by": "07:00",
  "published": {
-  "km": 115,
-  "gain_m": 7000,
-  "source": "https://en.wikivoyage.org/wiki/Cordillera_Huayhuash"
+  "km": 120,
+  "gain_m": null,
+  "source": "https://www.huayhuash.com/huayhuash_circuit.html"
  },
  "why": "One of the great treks on Earth: ten days round a wall of ice peaks, over passes at 5,000 m, camping by lakes.",
  "book": "Each community you cross charges a fee in cash (soles): carry the full amount. Agencies in Huaraz run it with donkeys and a cook.",
@@ -33,43 +33,104 @@
  ],
  "turnaround": "",
  "sources": [
-  "https://en.wikivoyage.org/wiki/Cordillera_Huayhuash"
+  "https://www.huayhuash.com/huayhuash_circuit.html",
+  "https://en.wikipedia.org/wiki/Cordillera_Huayhuash"
  ],
  "points": [
   {
    "id": "start",
    "name": "Quartelhuain",
-   "lat": -10.116,
-   "lon": -76.925,
+   "lat": -10.15417,
+   "lon": -76.92327,
    "role": "start",
-   "note": "Day 1 camp at the road end, after 6-7 h by road from Huaraz.",
+   "note": "Day 1: the camp at the road end, 4,170 m, 6-7 h by road from Huaraz via Chiquián.",
    "night": true
   },
   {
    "id": "carhuacocha",
    "name": "Laguna Carhuacocha with Yerupajá",
-   "lat": -10.2347,
-   "lon": -76.8941,
+   "lat": -10.24092,
+   "lon": -76.86016,
    "role": "point",
-   "note": "Day 3: the most famous camp, Yerupajá and Siula Grande over the lake.",
+   "note": "Day 3: the most famous camp, Yerupajá, Siula Grande and Jirishanca over the lake.",
    "night": true
   },
   {
    "id": "tres",
    "name": "Siula pass and the Tres Lagunas",
-   "lat": -10.255,
-   "lon": -76.88,
+   "lat": -10.28502,
+   "lon": -76.86464,
    "role": "point",
-   "note": "Day 4: three glacier lakes one above the other from the pass."
+   "note": "Day 4: three glacier lakes in a row under Siula Grande, on the way up to the 4,800 m Siula pass."
+  },
+  {
+   "id": "jahuacocha",
+   "name": "Laguna Jahuacocha",
+   "lat": -10.23644,
+   "lon": -76.96596,
+   "role": "point",
+   "note": "The last great camp, under the west face of Yerupajá and the spire of Jirishanca.",
+   "night": true,
+   "scene": "pe-laguna-jahuacocha"
   },
   {
    "id": "goal",
-   "name": "Laguna Jahuacocha",
-   "lat": -10.227,
-   "lon": -76.953,
+   "name": "Llamac",
+   "lat": -10.198,
+   "lon": -77.03193,
    "role": "goal",
-   "note": "The last great camp, under the west face of Yerupajá.",
-   "night": true
+   "note": "Over the Pampa Llamac pass and down to the village at 3,300 m: the road back to Chiquián."
   }
+ ],
+ "router": "local",
+ "via": [
+  [
+   -10.35999,
+   -76.84752
+  ],
+  [
+   -10.26893,
+   -76.98205
+  ],
+  [
+   -10.32082,
+   -76.9941
+  ],
+  [
+   -10.23034,
+   -76.99974
+  ],
+  [
+   -10.21654,
+   -77.0269
+  ],
+  [
+   -10.35903,
+   -76.9613
+  ],
+  [
+   -10.17485,
+   -76.90632
+  ],
+  [
+   -10.3758,
+   -76.91777
+  ],
+  [
+   -10.32514,
+   -76.84305
+  ],
+  [
+   -10.41279,
+   -76.84919
+  ],
+  [
+   -10.39727,
+   -76.87476
+  ],
+  [
+   -10.35276,
+   -76.99942
+  ]
  ]
 }

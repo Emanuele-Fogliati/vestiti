@@ -24,9 +24,9 @@
  ],
  "start_by": "07:00",
  "published": {
-  "km": 18,
-  "gain_m": 1300,
-  "source": "https://en.wikivoyage.org/wiki/Colca_Canyon"
+  "km": 20,
+  "gain_m": 1500,
+  "source": "https://www.22places.com/colca-canyon/"
  },
  "why": "Down 1,100 m into one of the deepest canyons on Earth, a night by the pools of a palm oasis, and back up at dawn.",
  "book": "The Colca tourist ticket (boleto turístico), checked on the road. Lodges in San Juan de Chuccho and Sangalle need no booking out of July-August.",
@@ -37,41 +37,54 @@
  ],
  "turnaround": "",
  "sources": [
-  "https://en.wikivoyage.org/wiki/Colca_Canyon"
+  "https://en.wikivoyage.org/wiki/Colca_Canyon",
+  "https://www.22places.com/colca-canyon/"
  ],
  "points": [
   {
    "id": "start",
    "name": "Mirador San Miguel, Cabanaconde",
-   "lat": -15.617,
-   "lon": -71.97,
+   "lat": -15.61079,
+   "lon": -71.97169,
    "role": "start",
-   "note": "Day 1: the descent starts at the canyon rim, 3,290 m."
+   "note": "Day 1: the descent starts at the canyon rim, 3,290 m.",
+   "scene": "pe-colca-canyon"
   },
   {
    "id": "bridge",
    "name": "Colca river bridge",
-   "lat": -15.615,
-   "lon": -71.945,
+   "lat": -15.59888,
+   "lon": -71.9415,
    "role": "point",
-   "note": "The bottom of the canyon, about 2,200 m: cross the river."
+   "note": "The footbridge over the Colca river at the bottom, about 2,200 m, after 1,100 m of zigzags."
   },
   {
    "id": "chuccho",
    "name": "San Juan de Chuccho",
-   "lat": -15.615,
-   "lon": -71.935,
+   "lat": -15.59261,
+   "lon": -71.9478,
    "role": "point",
    "note": "A village of fruit trees; lunch, then along the canyon to the oasis."
   },
   {
    "id": "goal",
    "name": "Sangalle oasis",
-   "lat": -15.618,
-   "lon": -71.953,
+   "lat": -15.59673,
+   "lon": -71.97572,
    "role": "goal",
    "note": "Night by the pools; day 2 climbs straight back to Cabanaconde.",
    "night": true
   }
+ ],
+ "router": "local",
+ "via": [
+  [
+   -15.58442,
+   -71.96294
+  ],
+  [
+   -15.5855,
+   -71.9627
+  ]
  ]
 }
