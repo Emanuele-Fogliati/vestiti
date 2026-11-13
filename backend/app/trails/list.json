@@ -531,7 +531,7 @@
    "slot": "CL-B",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -545,23 +545,23 @@
     },
     {
      "point": "goal",
-     "name": "Grey Glacier lookout on the peninsula",
-     "reuse": null
+     "name": "Grey Glacier lookout, Isla de los Hielos",
+     "reuse": "cl-grey-glacier"
     }
    ]
   },
   {
    "id": "cl-cerro-castillo",
-   "name": "Laguna Cerro Castillo",
+   "name": "Laguna Cerro Castillo by the Estero Parada",
    "country": "CL",
    "slot": "CL-B",
    "base": "Villa Cerro Castillo",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
-     "name": "Villa Cerro Castillo",
+     "name": "Estero Parada trailhead, Villa Cerro Castillo",
      "reuse": null
     },
     {
@@ -583,7 +583,7 @@
    "slot": "CL-B",
    "base": "Pucón",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -598,7 +598,7 @@
     {
      "point": "goal",
      "name": "Villarrica crater rim",
-     "reuse": "cl-villarrica-volcano"
+     "reuse": null
     }
    ]
   },
@@ -609,7 +609,7 @@
    "slot": "CL-B",
    "base": "Santiago",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -623,19 +623,19 @@
     },
     {
      "point": "goal",
-     "name": "El Morado glacier foot",
+     "name": "San Francisco glacier foot, El Morado",
      "reuse": null
     }
    ]
   },
   {
    "id": "cl-la-campana",
-   "name": "Cerro La Campana, Darwin's summit",
+   "name": "Cerro La Campana by the Andinista trail",
    "country": "CL",
    "slot": "CL-B",
    "base": "Valparaíso",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -661,10 +661,10 @@
    "slot": "CL-B",
    "base": "Puerto Williams",
    "kind": "multiday",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
-     "point": "start",
+     "point": "bandera",
      "name": "Cerro Bandera, Puerto Williams",
      "reuse": null
     },
@@ -675,11 +675,11 @@
     },
     {
      "point": "teeth",
-     "name": "Dientes de Navarino from Paso Australia",
+     "name": "Dientes de Navarino over Laguna Escondida",
      "reuse": null
     },
     {
-     "point": "goal",
+     "point": "martillo",
      "name": "Laguna Martillo, Navarino",
      "reuse": null
     }
