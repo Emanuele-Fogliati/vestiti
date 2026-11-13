@@ -22,11 +22,11 @@
  "start_by": "09:00",
  "published": {
   "km": 9,
-  "gain_m": 300,
-  "source": "https://turismoushuaia.com"
+  "gain_m": 220,
+  "source": "https://turismoushuaia.com/actividad/laguna-esmeralda/"
  },
  "why": "The most-walked trail near Ushuaia: lenga forest, a beaver-dammed peat bog and an emerald lake under the Albino glacier.",
- "book": "Free. Minibuses leave from Ushuaia's port road; the trailhead is 19 km north on Ruta 3.",
+ "book": "Free. Minivans leave from the lot at Maipú and Fadul in Ushuaia; the trailhead car park is 18 km out on Ruta 3, on the left heading north.",
  "water": "Streams along the way.",
  "dangers": [
   "Deep mud in the peat bog after rain: waterproof boots or you will be wet to the ankle.",
@@ -34,34 +34,34 @@
  ],
  "turnaround": "",
  "sources": [
-  "https://turismoushuaia.com",
-  "https://hiking.waymarkedtrails.org/#route?id=8861474"
+  "https://turismoushuaia.com/actividad/laguna-esmeralda/",
+  "https://hiking.waymarkedtrails.org/#route?id=8861474",
+  "https://en.wikivoyage.org/wiki/Ushuaia"
  ],
- "osm": 8861474,
  "points": [
   {
    "id": "start",
    "name": "Laguna Esmeralda trailhead, Ruta 3",
-   "lat": -54.7212,
-   "lon": -68.0911,
+   "lat": -54.72182,
+   "lon": -68.12202,
    "role": "start",
-   "note": "Through the lenga forest for the first 40 minutes."
+   "note": "The car park on Ruta 3. Through the lenga forest for the first 40 minutes."
   },
   {
    "id": "bog",
    "name": "Peat bog and beaver dams of the Esmeralda valley",
-   "lat": -54.703,
-   "lon": -68.1195,
+   "lat": -54.69915,
+   "lon": -68.12938,
    "role": "point",
    "note": "The open bog: walk on the boardwalks and roots, beaver dams on the stream."
   },
   {
    "id": "goal",
    "name": "Laguna Esmeralda",
-   "lat": -54.683,
-   "lon": -68.1374,
+   "lat": -54.69231,
+   "lon": -68.12884,
    "role": "goal",
-   "note": "About 450 m. The Albino glacier sits in the cirque above."
+   "note": "The lake at about 400 m, with the Ojo del Albino glacier in the cirque above."
   }
  ]
 }
