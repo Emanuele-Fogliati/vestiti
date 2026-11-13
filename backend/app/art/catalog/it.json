@@ -482,13 +482,10 @@
     "apennine mountains",
     "appennini",
     "appennino",
-    "monte vettore",
     "monti sibillini",
     "sibillini mountains",
     "sibillini national park",
-    "parco nazionale dei monti sibillini",
-    "piano grande",
-    "pian grande"
+    "parco nazionale dei monti sibillini"
    ],
    "palette": {
     "sky": "#B3D3EE",
@@ -501,7 +498,8 @@
     "leaf": "#6F9E3F",
     "acc": "#DCD24C",
     "obj": "#8C6C50"
-   }
+   },
+   "names": []
   },
   {
    "slug": "apuan-alps",
@@ -911,7 +909,8 @@
     "leaf": "#3F5E31",
     "acc": "#E8D3A2",
     "obj": "#2E5EAA"
-   }
+   },
+   "names": []
   },
   {
    "slug": "boboli-gardens",
@@ -1256,7 +1255,8 @@
     "leaf": "#3F6A32",
     "acc": "#B0603E",
     "obj": "#8E8B78"
-   }
+   },
+   "names": []
   },
   {
    "slug": "braies-south-shore",
@@ -3750,7 +3750,8 @@
     "leaf": "#3C6A35",
     "acc": "#86AA4A",
     "obj": "#CDE0E8"
-   }
+   },
+   "names": []
   },
   {
    "slug": "forcella-lavaredo",
@@ -4126,11 +4127,7 @@
     "leaf": "#4E8A3A",
     "acc": "#E2DACA",
     "obj": "#B9B09A"
-   },
-   "names": [
-    "gargano national park",
-    "parco nazionale del gargano"
-   ]
+   }
   },
   {
    "slug": "genga",
@@ -4949,7 +4946,8 @@
     "leaf": "#3F6634",
     "acc": "#93A853",
     "obj": "#D6D3CB"
-   }
+   },
+   "names": []
   },
   {
    "slug": "lago-di-braies",
@@ -5139,7 +5137,8 @@
     "leaf": "#3F6A34",
     "acc": "#B86A45",
     "obj": "#A2493A"
-   }
+   },
+   "names": []
   },
   {
    "slug": "lake-coldai",
@@ -5432,7 +5431,8 @@
     "leaf": "#3E5F34",
     "acc": "#BC6A45",
     "obj": "#C6B279"
-   }
+   },
+   "names": []
   },
   {
    "slug": "lame-rosse",
@@ -7057,7 +7057,8 @@
     "leaf": "#4E6E38",
     "acc": "#B06A48",
     "obj": "#9A958A"
-   }
+   },
+   "names": []
   },
   {
    "slug": "monte-volturino",
@@ -7699,7 +7700,8 @@
     "leaf": "#3F6B45",
     "acc": "#D8B886",
     "obj": "#7E6A58"
-   }
+   },
+   "names": []
   },
   {
    "slug": "orbetello",
@@ -8332,9 +8334,7 @@
     "santuario di san francesco di paola",
     "santuario san francesco di paola",
     "sanctuary of saint francis of paola",
-    "sanctuary of st francis of paola",
-    "san francesco di paola sanctuary",
-    "sanctuary of san francesco di paola"
+    "sanctuary of st francis of paola"
    ],
    "names": [
     "paola"
@@ -9070,7 +9070,8 @@
     "leaf": "#687D45",
     "acc": "#D8754A",
     "obj": "#CDB88E"
-   }
+   },
+   "names": []
   },
   {
    "slug": "pompeii",
@@ -10137,7 +10138,8 @@
     "leaf": "#5E9A3A",
     "acc": "#B7765A",
     "obj": "#7A4E32"
-   }
+   },
+   "names": []
   },
   {
    "slug": "roccascalegna-castle",
@@ -10520,7 +10522,8 @@
     "leaf": "#3E7448",
     "acc": "#E2BF6E",
     "obj": "#E3A98C"
-   }
+   },
+   "names": []
   },
   {
    "slug": "san-miniato",
@@ -12166,7 +12169,8 @@
     "leaf": "#3E5E34",
     "acc": "#A85C40",
     "obj": "#5C3E2E"
-   }
+   },
+   "names": []
   },
   {
    "slug": "temple-of-valadier",
@@ -12851,7 +12855,8 @@
     "leaf": "#2F4E2C",
     "acc": "#8FB04C",
     "obj": "#8A5A34"
-   }
+   },
+   "names": []
   },
   {
    "slug": "valdobbiadene",
@@ -13406,9 +13411,7 @@
    "radius_km": 6,
    "aliases": [
     "museo leonardiano",
-    "castello dei conti guidi",
-    "leonardo museum vinci",
-    "museo leonardiano vinci"
+    "castello dei conti guidi"
    ],
    "names": [
     "vinci"
@@ -13557,6 +13560,60 @@
     "leaf": "#41713A",
     "acc": "#D98670",
     "obj": "#E6BF58"
+   }
+  },
+  {
+   "slug": "castelluccio-di-norcia",
+   "label": "Castelluccio on its hill above the flowering Pian Grande, Monte Vettore behind",
+   "lat": 42.828,
+   "lon": 13.205,
+   "radius_km": 8,
+   "aliases": [
+    "castelluccio",
+    "pian grande",
+    "piano grande",
+    "piani di castelluccio",
+    "fioritura di castelluccio",
+    "monte vettore"
+   ],
+   "palette": {
+    "sky": "#AFD2F2",
+    "far": "#C9CF86",
+    "mid": "#A89A82",
+    "ice": "#E8DCC4",
+    "water": "#5F72C8",
+    "near": "#262420",
+    "sun": "#F5C842",
+    "leaf": "#6E9E3E",
+    "acc": "#D2382B",
+    "obj": "#E8CF3A"
+   }
+  },
+  {
+   "slug": "segesta",
+   "label": "The Doric temple of Segesta alone on its hill, Monte Barbaro behind",
+   "lat": 37.9413,
+   "lon": 12.8317,
+   "radius_km": 5,
+   "aliases": [
+    "segesta",
+    "tempio di segesta",
+    "temple of segesta",
+    "segesta temple",
+    "tempio dorico di segesta",
+    "parco archeologico di segesta"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#8C9A7C",
+    "mid": "#D7B57E",
+    "ice": "#F5EFE2",
+    "water": "#4A8CB8",
+    "near": "#2A241C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A48",
+    "acc": "#D9CBAE",
+    "obj": "#9C7C50"
    }
   },
   {

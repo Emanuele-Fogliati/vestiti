@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="268" cy="26" r="12" fill="var(--il-sun)"/>
+<path d="M0 120L30 96L60 104L90 90L120 100L200 98L230 86L260 96L300 88V160H0Z" fill="var(--il-far)" opacity="0.7"/>
+<path d="M20 150L60 118L96 84L124 54L140 34L150 24L160 34L178 56L204 86L240 116L280 150Z" fill="var(--il-mid)"/>
+<path d="M96 84L124 54L140 34L150 24L160 34L178 56L204 86L192 92L184 80L176 96L166 84L158 108L150 92L142 110L134 84L124 96L116 80L106 92Z" fill="var(--il-ice)"/>
+<path d="M150 24L150 92M140 34L134 84M160 34L166 84M128 50L116 80M172 50L184 80M146 30L142 70M154 30L158 70" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M142 110L146 100L150 92L158 108L160 124L154 134L146 134L140 124Z" fill="var(--il-ice)"/>
+<path d="M60 118L84 112L96 120M240 116L216 112L204 120M106 92L100 116M192 92L198 116M124 96L126 124M176 96L174 124" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M0 200V140L24 136L50 130L80 132L104 126L130 130L160 124L190 130L220 126L250 132L276 128L300 132V200Z" fill="var(--il-acc)"/>
+<path d="M30 140l4-3l4 3ZM70 136l3-2l3 2ZM114 132l4-3l4 3ZM200 134l3-2l3 2ZM238 136l4-3l4 3ZM268 134l3-2l3 2ZM52 148l4-3l4 3ZM222 146l4-3l4 3Z" fill="var(--il-far)"/>
+<path d="M152 128L130 138L170 146L120 156L176 166L118 178L160 190L146 200" stroke="var(--il-ice)" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M0 200V156Q30 148 60 156Q80 162 90 176Q96 188 94 200Z M300 200V152Q270 146 246 156Q228 166 224 180L226 200Z" fill="var(--il-leaf)"/>
+<path d="M30 186Q26 170 40 164Q54 160 62 170Q66 180 60 190Z" fill="var(--il-far)"/>
+<path d="M0 200V186Q30 180 60 184Q80 188 86 200Z M300 200V182Q270 178 250 186L244 200Z" fill="var(--il-leaf)"/>
+<g transform="translate(196 170)"><path d="M-10 -14Q-12 -20 -4 -21H8Q14 -21 14 -15Q14 -10 10 -10H-6Q-10 -10 -10 -14ZM-8 -19L-16 -25L-21 -25L-23 -22L-21 -20L-16 -20L-10 -15Z" fill="var(--il-obj)"/><path d="M-6 -11V0M-2 -11V0M7 -11V0M11 -11V0M14 -18Q18 -14 17 -8" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round"/></g>

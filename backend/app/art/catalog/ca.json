@@ -1360,7 +1360,8 @@
     "yoho natural bridge",
     "kicking horse natural bridge",
     "natural bridge kicking horse",
-    "natural bridge field bc"
+    "natural bridge field bc",
+    "kicking horse river"
    ],
    "palette": {
     "sky": "#A9CFEE",
@@ -1373,7 +1374,10 @@
     "leaf": "#2F5B3C",
     "acc": "#D3C6AA",
     "obj": "#8A7F6C"
-   }
+   },
+   "names": [
+    "fiume kicking horse"
+   ]
   },
   {
    "slug": "niagara-falls",
@@ -2337,6 +2341,59 @@
     "leaf": "#4C7A36",
     "acc": "#A9C3D8",
     "obj": "#2F6FAE"
+   }
+  },
+  {
+   "slug": "edmonton",
+   "label": "Alberta Legislature Building, Edmonton",
+   "lat": 53.5335,
+   "lon": -113.5065,
+   "radius_km": 20,
+   "aliases": [
+    "alberta legislature",
+    "legislative building of alberta"
+   ],
+   "names": [
+    "edmonton"
+   ],
+   "palette": {
+    "sky": "#AACDEC",
+    "far": "#D8D0BF",
+    "mid": "#CDB383",
+    "ice": "#EADCBB",
+    "water": "#7BAFC2",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#5B8C3C",
+    "acc": "#A8987C",
+    "obj": "#5C5044"
+   }
+  },
+  {
+   "slug": "dawson-city",
+   "label": "Gold-rush false-front wooden buildings on a dirt street of Dawson City, the Midnight Dome behind",
+   "lat": 64.0605,
+   "lon": -139.4325,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "dawson city",
+    "dawson",
+    "dawson city yukon",
+    "dawson yukon",
+    "dawson city yt"
+   ],
+   "palette": {
+    "sky": "#C9DDEE",
+    "far": "#C8B48C",
+    "mid": "#B33A2F",
+    "ice": "#F3F0E7",
+    "water": "#7FA2BE",
+    "near": "#2A2624",
+    "sun": "#F4C640",
+    "leaf": "#56703C",
+    "acc": "#8C6A48",
+    "obj": "#9AA3A6"
    }
   }
  ]
