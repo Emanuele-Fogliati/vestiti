@@ -1,0 +1,77 @@
+{
+ "id": "cl-base-torres",
+ "country": "CL",
+ "name": "Base Torres lookout",
+ "base": "Torres del Paine",
+ "region": "Torres del Paine National Park, east sector",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  8,
+  10
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 19,
+  "gain_m": 900,
+  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+ },
+ "why": "The three granite towers over their glacier lake: the picture of Patagonia, earned in one long day.",
+ "book": "Buy the park entry online before you arrive (pasesparques.cl); rangers check it at the gate. Refugio Chileno sells food and must be booked to sleep.",
+ "water": "Streams and Refugio Chileno half way.",
+ "dangers": [
+  "Paso de los Vientos, after the first hour, is named for its gusts: hold on to your poles.",
+  "The last hour is a steep boulder moraine; in snow or ice turn back.",
+  "Rangers close the moraine to people going up in the afternoon in high season."
+ ],
+ "turnaround": "Be at Refugio Chileno by 11:30, or stop at the Chileno valley: the moraine and the way back take 5 more hours.",
+ "sources": [
+  "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/",
+  "https://www.torresdelpaine.com",
+  "https://hiking.waymarkedtrails.org/#route?id=2203617"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Hotel Las Torres, Torres del Paine",
+   "lat": -50.9525,
+   "lon": -72.8644,
+   "role": "start",
+   "note": "The Welcome Centre and park bus stop are 10 minutes before the hotel."
+  },
+  {
+   "id": "vientos",
+   "name": "Paso de los Vientos, Valle Ascencio",
+   "lat": -50.9352,
+   "lon": -72.8954,
+   "role": "point",
+   "note": "After 1 h of climbing: the trail turns into the Ascencio valley above the river."
+  },
+  {
+   "id": "chileno",
+   "name": "Refugio Chileno",
+   "lat": -50.93,
+   "lon": -72.912,
+   "role": "point",
+   "note": "Hut, toilets and water. Then 1 h of forest to Campamento Torres."
+  },
+  {
+   "id": "goal",
+   "name": "Mirador Base Las Torres",
+   "lat": -50.942,
+   "lon": -72.9683,
+   "role": "goal",
+   "note": "About 870 m, after 45-60 min on the boulder moraine: the towers over the lake."
+  }
+ ]
+}

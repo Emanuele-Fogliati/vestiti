@@ -1,0 +1,65 @@
+{
+ "id": "ar-refugio-frey",
+ "country": "AR",
+ "name": "Refugio Frey",
+ "base": "Bariloche",
+ "region": "Nahuel Huapi National Park, Cerro Catedral",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  7,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 22,
+  "gain_m": 900,
+  "source": "https://www.refugiofrey.com"
+ },
+ "why": "Bariloche's great hike: a stone hut by a lake ringed by granite towers. Sleep there to see them at sunrise.",
+ "book": "Free trail. To sleep at the hut, book with the Club Andino Bariloche.",
+ "water": "Streams along the Van Titter valley; food and drinks at the hut.",
+ "dangers": [
+  "The last hour is steep and rocky.",
+  "Snow lies around the lake until December."
+ ],
+ "turnaround": "Reach the hut by 14:00 to come down in daylight.",
+ "sources": [
+  "https://www.refugiofrey.com",
+  "https://www.clubandino.org"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Villa Catedral",
+   "lat": -41.1684,
+   "lon": -71.4405,
+   "role": "start",
+   "note": "Start at the ski base; the path follows Lago Gutiérrez before turning up the valley."
+  },
+  {
+   "id": "valley",
+   "name": "Arroyo Van Titter valley",
+   "lat": -41.183,
+   "lon": -71.472,
+   "role": "point",
+   "note": "Lenga forest along the stream: the long middle of the day."
+  },
+  {
+   "id": "goal",
+   "name": "Refugio Frey",
+   "lat": -41.1997,
+   "lon": -71.4875,
+   "role": "goal",
+   "note": "About 1,700 m: the hut, Laguna Toncek and the Torre Principal."
+  }
+ ]
+}

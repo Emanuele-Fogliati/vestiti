@@ -1,0 +1,68 @@
+{
+ "id": "cl-glaciar-grey",
+ "country": "CL",
+ "name": "Lago Grey beach and the Grey Glacier lookout",
+ "base": "Torres del Paine",
+ "region": "Torres del Paine National Park, west",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  9,
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 4,
+  "gain_m": 50,
+  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+ },
+ "why": "Over a swinging bridge to a grey beach covered in blue icebergs, with the glacier at the end of the lake.",
+ "book": "Park entry online. Boat to the glacier face from Hotel Lago Grey (book ahead).",
+ "water": "None.",
+ "dangers": [
+  "The bridge takes 6 people at a time.",
+  "Wind on the beach and the peninsula."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Pingo river hanging bridge",
+   "lat": -51.117,
+   "lon": -73.129,
+   "role": "start",
+   "note": "From the Lago Grey ranger post car park, over the bridge."
+  },
+  {
+   "id": "beach",
+   "name": "Lago Grey beach with icebergs",
+   "lat": -51.105,
+   "lon": -73.135,
+   "role": "point",
+   "note": "Grey pebbles and stranded blue ice, the glacier far up the lake."
+  },
+  {
+   "id": "goal",
+   "name": "Grey Glacier lookout on the peninsula",
+   "lat": -51.096,
+   "lon": -73.143,
+   "role": "goal",
+   "note": "Up the wooded peninsula for the full glacier front."
+  }
+ ]
+}

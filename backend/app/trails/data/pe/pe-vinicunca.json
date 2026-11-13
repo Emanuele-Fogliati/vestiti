@@ -1,0 +1,75 @@
+{
+ "id": "pe-vinicunca",
+ "country": "PE",
+ "name": "Rainbow Mountain (Vinicunca)",
+ "base": "Cusco",
+ "region": "Vilcanota range",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 9,
+  "gain_m": 450,
+  "source": "https://en.wikivoyage.org/wiki/Vinicunca"
+ },
+ "why": "Striped red, yellow and green slopes at 5,000 m, with the Ausangate glacier behind: short, but at an altitude that hurts.",
+ "book": "Tours leave Cusco at 04:00; a community fee at the trailhead (cash, soles). Horses can carry you most of the way up.",
+ "water": "Bring 1.5 litres; the women at the trailhead sell coca tea.",
+ "dangers": [
+  "You walk between 4,600 and 5,036 m: never on your first days in Cusco.",
+  "Snow and hail possible any afternoon; the colours fade under cloud."
+ ],
+ "turnaround": "Any headache, dizziness or breathlessness at rest: go down at once.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Vinicunca"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Vinicunca trailhead with alpacas",
+   "lat": -13.858,
+   "lon": -71.283,
+   "role": "start",
+   "note": "The Quesiuno car park at about 4,600 m: horses and alpacas wait here."
+  },
+  {
+   "id": "valley",
+   "name": "Vinicunca valley with Ausangate",
+   "lat": -13.864,
+   "lon": -71.294,
+   "role": "point",
+   "note": "The gentle valley; the Ausangate glacier appears to the east."
+  },
+  {
+   "id": "goal",
+   "name": "Vinicunca",
+   "lat": -13.8697,
+   "lon": -71.3028,
+   "role": "goal",
+   "note": "5,036 m: the striped mountain from the top of the last zigzags."
+  },
+  {
+   "id": "red",
+   "name": "Red Valley (Valle Rojo)",
+   "lat": -13.866,
+   "lon": -71.309,
+   "role": "point",
+   "note": "10 minutes past the top: a whole valley of red earth, often empty."
+  }
+ ]
+}

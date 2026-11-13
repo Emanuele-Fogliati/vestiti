@@ -1,0 +1,75 @@
+{
+ "id": "cl-valle-frances",
+ "country": "CL",
+ "name": "French Valley to Mirador Británico",
+ "base": "Torres del Paine",
+ "region": "Torres del Paine National Park, centre",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  8,
+  10
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 22,
+  "gain_m": 800,
+  "source": "https://www.torresdelpaine.com"
+ },
+ "why": "Into the heart of the massif: avalanches off the Paine Grande glacier, then an amphitheatre of granite at the top.",
+ "book": "Catamaran Pudeto–Paine Grande (pay on board in cash or card; no booking). The park entry ticket online.",
+ "water": "Streams and Campamento Italiano.",
+ "dangers": [
+  "The upper valley is closed by rangers in strong wind or late in the day.",
+  "A long day: the catamaran back has fixed times."
+ ],
+ "turnaround": "Leave Mirador Británico by 15:00 to catch the last catamaran from Paine Grande.",
+ "sources": [
+  "https://www.torresdelpaine.com",
+  "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Refugio Paine Grande on Lago Pehoé",
+   "lat": -51.0623,
+   "lon": -73.1103,
+   "role": "start",
+   "note": "Off the catamaran from Pudeto. East along Lago Skottsberg for 2 h."
+  },
+  {
+   "id": "italiano",
+   "name": "Campamento Italiano",
+   "lat": -51.0035,
+   "lon": -73.0436,
+   "role": "point",
+   "note": "Leave anything heavy at the ranger post; the valley climbs from here."
+  },
+  {
+   "id": "frances",
+   "name": "Mirador Francés",
+   "lat": -50.99,
+   "lon": -73.056,
+   "role": "point",
+   "note": "Under the hanging glacier of Paine Grande: listen for the avalanches."
+  },
+  {
+   "id": "goal",
+   "name": "Mirador Británico",
+   "lat": -50.9617,
+   "lon": -73.056,
+   "role": "goal",
+   "note": "About 1,100 m: the ring of towers, from the Cuernos to Fortaleza."
+  }
+ ]
+}

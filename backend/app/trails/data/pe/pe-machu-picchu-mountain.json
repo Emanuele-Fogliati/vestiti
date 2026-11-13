@@ -1,0 +1,66 @@
+{
+ "id": "pe-machu-picchu-mountain",
+ "country": "PE",
+ "name": "Machu Picchu Mountain",
+ "base": "Machu Picchu",
+ "region": "Machu Picchu Historical Sanctuary",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 5,
+  "gain_m": 650,
+  "source": "https://www.machupicchu.gob.pe"
+ },
+ "why": "Higher and quieter than Huayna Picchu: the citadel, Huayna Picchu and the Urubamba loop seen from 3,082 m.",
+ "book": "A Machu Picchu ticket that includes the Mountain (limited per time slot).",
+ "water": "Carry 1.5 litres.",
+ "dangers": [
+  "An hour and a half of Inca steps up; hard on the knees down."
+ ],
+ "turnaround": "Respect the time on your ticket.",
+ "sources": [
+  "https://www.machupicchu.gob.pe"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Machu Picchu",
+   "lat": -13.1631,
+   "lon": -72.545,
+   "role": "start",
+   "note": "Enter the citadel and follow the signs to the Mountain control."
+  },
+  {
+   "id": "stairs",
+   "name": "Machu Picchu Mountain stone stairway",
+   "lat": -13.169,
+   "lon": -72.548,
+   "role": "point",
+   "note": "Inca stairs through cloud forest."
+  },
+  {
+   "id": "goal",
+   "name": "Machu Picchu Mountain",
+   "lat": -13.1735,
+   "lon": -72.5532,
+   "role": "goal",
+   "note": "3,082 m: the citadel and Huayna Picchu far below."
+  }
+ ]
+}

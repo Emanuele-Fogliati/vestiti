@@ -1,0 +1,63 @@
+{
+ "id": "cl-cerro-castillo",
+ "country": "CL",
+ "name": "Laguna Cerro Castillo",
+ "base": "Villa Cerro Castillo",
+ "region": "Cerro Castillo National Park, Aysén",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  8,
+  10
+ ],
+ "start_by": "07:30",
+ "published": {
+  "km": 16,
+  "gain_m": 1100,
+  "source": "https://www.conaf.cl/parques/parque-nacional-cerro-castillo/"
+ },
+ "why": "The Torres del Paine of the Carretera Austral: basalt spires and a hanging glacier over a green lake, with a fraction of the people.",
+ "book": "CONAF entry fee, plus a private-land fee at the start. Register at the ranger post.",
+ "water": "Streams in the forest; nothing above it.",
+ "dangers": [
+  "The last 400 m climb is steep scree.",
+  "Snow and closed trail until December."
+ ],
+ "turnaround": "Leave the lake by 15:00.",
+ "sources": [
+  "https://www.conaf.cl/parques/parque-nacional-cerro-castillo/"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Villa Cerro Castillo",
+   "lat": -46.1226,
+   "lon": -72.1555,
+   "role": "start",
+   "note": "Trailhead on the road above the village, at the private gate."
+  },
+  {
+   "id": "forest",
+   "name": "Estero Parada lenga forest",
+   "lat": -46.101,
+   "lon": -72.191,
+   "role": "point",
+   "note": "The long forest climb along the stream."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Cerro Castillo",
+   "lat": -46.0811,
+   "lon": -72.1813,
+   "role": "goal",
+   "note": "About 1,300 m: the lake under the spires and the glacier."
+  }
+ ]
+}

@@ -1,0 +1,66 @@
+{
+ "id": "cl-el-morado",
+ "country": "CL",
+ "name": "El Morado glacier",
+ "base": "Santiago",
+ "region": "El Morado Natural Monument, Cajón del Maipo",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 16,
+  "gain_m": 700,
+  "source": "https://www.conaf.cl/parques/monumento-natural-el-morado/"
+ },
+ "why": "The Andes in a day from Santiago: a mountain lagoon under a hanging glacier at 2,500 m.",
+ "book": "CONAF entry ticket online. Entry closes around midday; the road needs 2 h from Santiago (tours leave early).",
+ "water": "Streams; nothing to buy after Baños Morales.",
+ "dangers": [
+  "Altitude 1,900-2,500 m: go slowly the first hour.",
+  "Strong sun, no shade."
+ ],
+ "turnaround": "Rangers ask you to start back from the glacier by 15:00.",
+ "sources": [
+  "https://www.conaf.cl/parques/monumento-natural-el-morado/"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Baños Morales",
+   "lat": -33.816,
+   "lon": -70.064,
+   "role": "start",
+   "note": "The ranger post at the end of the village."
+  },
+  {
+   "id": "laguna",
+   "name": "Laguna El Morado",
+   "lat": -33.78,
+   "lon": -70.057,
+   "role": "point",
+   "note": "About 2 h: the lagoon with Cerro El Morado and its glacier behind."
+  },
+  {
+   "id": "goal",
+   "name": "El Morado glacier foot",
+   "lat": -33.76,
+   "lon": -70.055,
+   "role": "goal",
+   "note": "About 2,500 m, under the San Francisco glacier."
+  }
+ ]
+}

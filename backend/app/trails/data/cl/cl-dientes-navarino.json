@@ -1,0 +1,76 @@
+{
+ "id": "cl-dientes-navarino",
+ "country": "CL",
+ "name": "Dientes de Navarino circuit",
+ "base": "Puerto Williams",
+ "region": "Navarino Island",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "loop",
+ "difficulty": "technical",
+ "months": [
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  26,
+  32
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 53,
+  "gain_m": 2800,
+  "source": "https://en.wikivoyage.org/wiki/Navarino_Island"
+ },
+ "why": "The southernmost trek on Earth: jagged rock teeth, empty lakes and Cape Horn's islands on the horizon.",
+ "book": "Register with the Carabineros in Puerto Williams before and after. No huts, no services: full camping kit and food for 5 days.",
+ "water": "Lakes and streams.",
+ "dangers": [
+  "The route is marked only by cairns: you need a map, GPS and navigation skills.",
+  "Snow possible every month; storms off the Southern Ocean.",
+  "Steep scree passes (Paso Australia, Paso Ventarrón)."
+ ],
+ "turnaround": "Wait out a storm in the forest camps rather than crossing a pass in it.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Navarino_Island"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Cerro Bandera, Puerto Williams",
+   "lat": -54.9554,
+   "lon": -67.645,
+   "role": "start",
+   "note": "Day 1: the steep climb to the Chilean flag above the Beagle Channel.",
+   "night": true
+  },
+  {
+   "id": "salto",
+   "name": "Laguna del Salto, Navarino",
+   "lat": -54.99,
+   "lon": -67.66,
+   "role": "point",
+   "note": "The first lake under the teeth.",
+   "night": true
+  },
+  {
+   "id": "teeth",
+   "name": "Dientes de Navarino from Paso Australia",
+   "lat": -55.005,
+   "lon": -67.7,
+   "role": "point",
+   "note": "The towers in full, Cape Horn's islands to the south.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Martillo, Navarino",
+   "lat": -54.96,
+   "lon": -67.75,
+   "role": "goal",
+   "note": "The last lake before the road back to Puerto Williams."
+  }
+ ]
+}
