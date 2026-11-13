@@ -458,6 +458,34 @@
    }
   },
   {
+   "slug": "bishop",
+   "label": "Mount Tom and a Buttermilks granite boulder above the Owens Valley, Bishop",
+   "lat": 37.363,
+   "lon": -118.395,
+   "radius_km": 15,
+   "aliases": [
+    "buttermilks bishop",
+    "buttermilk country"
+   ],
+   "names": [
+    "bishop",
+    "bishop california",
+    "bishop ca"
+   ],
+   "palette": {
+    "sky": "#A8CFF2",
+    "far": "#9AA0AA",
+    "mid": "#C2B7A3",
+    "ice": "#FFFFFF",
+    "water": "#4A86B5",
+    "near": "#23231F",
+    "sun": "#F4C542",
+    "leaf": "#8E9C78",
+    "acc": "#D8C9A6",
+    "obj": "#B4946E"
+   }
+  },
+  {
    "slug": "boise",
    "label": "The Idaho State Capitol in Boise, the foothills behind",
    "lat": 43.6178,
@@ -1505,6 +1533,31 @@
    }
   },
   {
+   "slug": "first-peoples-buffalo-jump-state-park",
+   "label": "The sandstone-rimmed bluff of First Peoples Buffalo Jump over the Montana prairie, with a teepee and bison",
+   "lat": 47.475,
+   "lon": -111.524,
+   "radius_km": 6,
+   "aliases": [
+    "first peoples buffalo jump",
+    "first people s buffalo jump",
+    "ulm pishkun",
+    "ulm pishkin"
+   ],
+   "palette": {
+    "sky": "#B2D3F0",
+    "far": "#D9C68E",
+    "mid": "#B7A77C",
+    "ice": "#F2ECDD",
+    "water": "#9FB1C4",
+    "near": "#2A2420",
+    "sun": "#F4C542",
+    "leaf": "#98A35C",
+    "acc": "#9C9282",
+    "obj": "#5C4030"
+   }
+  },
+  {
    "slug": "fishermans-wharf",
    "label": "Fisherman's Wharf crab wheel sign, San Francisco",
    "lat": 37.808,
@@ -2014,6 +2067,38 @@
     "leaf": "#4E7E3E",
     "acc": "#D3322E",
     "obj": "#8E8B86"
+   }
+  },
+  {
+   "slug": "hawaii-volcanoes-national-park",
+   "label": "Halemaumau crater's lava lake and steam plume, Hawaii Volcanoes National Park",
+   "lat": 19.406,
+   "lon": -155.281,
+   "radius_km": 30,
+   "aliases": [
+    "hawaii volcanoes",
+    "kilauea",
+    "halemaumau",
+    "vulcani delle hawaii"
+   ],
+   "names": [
+    "volcano",
+    "volcano village",
+    "volcano hawaii",
+    "big island",
+    "hawaii island"
+   ],
+   "palette": {
+    "sky": "#A9D0F0",
+    "far": "#9A9A96",
+    "mid": "#6F5546",
+    "ice": "#FFFFFF",
+    "water": "#4B4648",
+    "near": "#1C1A1A",
+    "sun": "#F4C542",
+    "leaf": "#4A6F38",
+    "acc": "#F0602A",
+    "obj": "#86685C"
    }
   },
   {
@@ -4332,6 +4417,34 @@
    }
   },
   {
+   "slug": "utqiagvik",
+   "label": "The whale-bone arch on the Arctic shore at Utqiagvik",
+   "lat": 71.2906,
+   "lon": -156.7886,
+   "radius_km": 20,
+   "aliases": [
+    "utqiagvik",
+    "point barrow",
+    "barrow alaska",
+    "whale bone arch barrow"
+   ],
+   "names": [
+    "barrow"
+   ],
+   "palette": {
+    "sky": "#CFE2F0",
+    "far": "#AFA593",
+    "mid": "#E9E0CC",
+    "ice": "#F7F9FA",
+    "water": "#5D8DA8",
+    "near": "#262A2E",
+    "sun": "#F4C430",
+    "leaf": "#8C8F5A",
+    "acc": "#B5523A",
+    "obj": "#7A6248"
+   }
+  },
+  {
    "slug": "valdez",
    "label": "Port Valdez and the Alyeska oil terminal under the Chugach Mountains",
    "lat": 61.125,
@@ -4426,7 +4539,9 @@
    "aliases": [
     "waikiki",
     "diamond head",
-    "leahi"
+    "leahi",
+    "honolulu hawaii",
+    "honolulu oahu"
    ],
    "palette": {
     "sky": "#A7D0F2",
@@ -4439,7 +4554,12 @@
     "leaf": "#3B7533",
     "acc": "#B4683F",
     "obj": "#7A5E44"
-   }
+   },
+   "names": [
+    "honolulu",
+    "oahu",
+    "oahu island"
+   ]
   },
   {
    "slug": "waimea-canyon",
