@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 160V128L20 120L40 124L62 114L84 120L110 112L140 118L170 110L200 116L230 108L256 116L280 112L300 118V160Z" fill="var(--il-far)"/>
+<g transform="translate(-38 -5) scale(1.25)">
+<path d="M168 82V38H192V82Z" fill="var(--il-mid)"/>
+<path d="M164 40L180 31L196 40Z" fill="var(--il-acc)"/>
+<path d="M180 31V22M176 25H184" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M172 60V51a3 3 0 0 1 6 0V60ZM182 60V51a3 3 0 0 1 6 0V60Z" fill="var(--il-near)"/>
+<path d="M168 64H192" stroke="var(--il-near)" stroke-width="1" fill="none" opacity="0.5" vector-effect="non-scaling-stroke"/>
+<path d="M126 124V78H204V124Z" fill="var(--il-ice)"/>
+<path d="M122 80L146 62H192L208 80Z" fill="var(--il-acc)"/>
+<path d="M126 81L146 64L166 81" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.35" vector-effect="non-scaling-stroke"/>
+<path d="M60 124V96H128V124ZM202 124V98H244V124Z" fill="var(--il-ice)"/>
+<path d="M54 98L66 86H126L134 98ZM198 100L206 90H242L250 100Z" fill="var(--il-acc)"/>
+<path d="M138 124V100H180V124Z" fill="var(--il-mid)"/>
+<path d="M135 101Q159 88 183 101Z" fill="var(--il-acc)"/>
+<path d="M70 104h4v6h-4ZM84 104h4v6h-4ZM98 104h4v6h-4ZM112 104h4v6h-4ZM190 88h4v6h-4ZM210 106h4v6h-4ZM224 106h4v6h-4ZM236 106h4v6h-4ZM154 108h6v10h-6ZM132 88h4v6h-4Z" fill="var(--il-near)" opacity="0.8"/>
+<path d="M40 126Q42 96 48 78Q54 96 56 126ZM248 126Q250 100 255 84Q260 100 262 126Z" fill="var(--il-obj)"/>
+</g>
+<path d="M0 200V158Q40 146 80 146H230Q266 148 300 156V200Z" fill="var(--il-leaf)"/>
+<path d="M14 156Q22 176 12 200M38 150Q48 174 40 200M62 147Q76 172 70 200M88 146Q104 172 102 200M116 146Q132 172 134 200M146 146Q160 172 166 200M174 146Q188 172 198 200M202 146Q216 170 230 200M228 147Q244 168 262 200M256 150Q270 168 290 200M282 155Q292 166 300 178" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round"/>
