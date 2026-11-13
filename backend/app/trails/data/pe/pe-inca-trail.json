@@ -25,8 +25,8 @@
  "start_by": "07:00",
  "published": {
   "km": 42,
-  "gain_m": 2300,
-  "source": "https://www.machupicchu.gob.pe"
+  "gain_m": 2500,
+  "source": "https://en.wikipedia.org/wiki/Inca_Trail_to_Machu_Picchu"
  },
  "why": "Four days on the Incas' own stone path, through cloud forest and ruins nobody else sees, to enter Machu Picchu through the Sun Gate at dawn.",
  "book": "Only with a licensed operator, and permits are limited per day: book 4-6 months ahead for May-September. Closed every February for maintenance. Bring your passport.",
@@ -38,44 +38,76 @@
  ],
  "turnaround": "Your guide sets the pace; the group must reach Wiñay Wayna on night 3.",
  "sources": [
-  "https://www.machupicchu.gob.pe",
-  "https://en.wikivoyage.org/wiki/Inca_Trail"
+  "https://visitaareasnaturales.sernanp.gob.pe/en/anps/historic-sanctuary-of-machupicchu/",
+  "https://en.wikivoyage.org/wiki/Inca_Trail",
+  "https://en.wikipedia.org/wiki/Inca_Trail_to_Machu_Picchu",
+  "https://www.openstreetmap.org/relation/15703494"
  ],
  "points": [
   {
    "id": "start",
    "name": "Km 82, Piscacucho bridge",
-   "lat": -13.2547,
-   "lon": -72.3608,
+   "lat": -13.21421,
+   "lon": -72.38065,
    "role": "start",
-   "note": "Day 1: permit check at the bridge over the Urubamba, then easy valley to Wayllabamba.",
-   "night": true
+   "note": "Day 1: permit and passport check, then the suspension bridge over the Urubamba and an easy valley walk past Llactapata (Patallacta)."
+  },
+  {
+   "id": "wayllabamba",
+   "name": "Wayllabamba",
+   "lat": -13.26375,
+   "lon": -72.44629,
+   "role": "point",
+   "note": "Night 1: the last village on the trail, at about 3,000 m; some groups camp an hour higher at Ayapata.",
+   "night": true,
+   "scene": "pe-huayllabamba"
   },
   {
    "id": "pass",
    "name": "Dead Woman's Pass (Warmiwañusca)",
-   "lat": -13.2389,
-   "lon": -72.4886,
+   "lat": -13.24308,
+   "lon": -72.48397,
    "role": "point",
-   "note": "Day 2: 1,200 m of climbing to 4,215 m, then down to Pacaymayo camp.",
+   "note": "Day 2: the hardest climb, about 1,200 m up to 4,215 m, the highest point of the trail.",
+   "scene": "pe-dead-womans-pass"
+  },
+  {
+   "id": "pacaymayo",
+   "name": "Pacaymayo camp",
+   "lat": -13.2338,
+   "lon": -72.49821,
+   "role": "point",
+   "note": "Night 2: the camp at about 3,600 m in the valley below the pass; cold at night.",
    "night": true
   },
   {
    "id": "winay",
    "name": "Wiñay Wayna terraces",
-   "lat": -13.1928,
-   "lon": -72.5394,
+   "lat": -13.19215,
+   "lon": -72.53655,
    "role": "point",
-   "note": "Day 3: the most beautiful ruins of the trail, by the last camp.",
-   "night": true
+   "note": "Day 3: past Runkurakay, Sayacmarca and Phuyupatamarca to the biggest ruins of the trail, by the last camp.",
+   "night": true,
+   "scene": "pe-winay-wayna"
+  },
+  {
+   "id": "sungate",
+   "name": "Inti Punku, the Sun Gate",
+   "lat": -13.16966,
+   "lon": -72.53389,
+   "role": "point",
+   "note": "Day 4: up the steep 'gringo killer' steps before dawn; Machu Picchu appears below.",
+   "scene": "pe-intipunku"
   },
   {
    "id": "goal",
-   "name": "Inti Punku, the Sun Gate",
-   "lat": -13.1681,
-   "lon": -72.5378,
+   "name": "Machu Picchu",
+   "lat": -13.16434,
+   "lon": -72.54501,
    "role": "goal",
-   "note": "Day 4: the gate opens at 05:30; Machu Picchu appears below."
+   "note": "Another hour down past small ruins into the citadel, through the guardhouse terraces.",
+   "scene": "pe-machu-picchu"
   }
- ]
+ ],
+ "router": "local"
 }

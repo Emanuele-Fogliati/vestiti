@@ -3,6 +3,30 @@
  "name": "Maldives",
  "places": [
   {
+   "slug": "dhigurah",
+   "label": "Dhigurah's long island and sandbank in South Ari Atoll",
+   "lat": 3.53,
+   "lon": 72.925,
+   "radius_km": 8,
+   "aliases": [
+    "dhigurah",
+    "dhigura",
+    "dhigurashu"
+   ],
+   "palette": {
+    "sky": "#A8D4F2",
+    "far": "#4E8C52",
+    "mid": "#2C6A34",
+    "ice": "#FBF7EC",
+    "water": "#38C6C6",
+    "near": "#1C2A2E",
+    "sun": "#F2C14E",
+    "leaf": "#3F8C3E",
+    "acc": "#A4E8DE",
+    "obj": "#1B5EA6"
+   }
+  },
+  {
    "slug": "maldives",
    "label": "Overwater villas in the Maldives",
    "lat": 4.175,
@@ -55,6 +79,37 @@
     "leaf": "#4F8A3E",
     "acc": "#C9503E",
     "obj": "#7FB4D2"
+   }
+  },
+  {
+   "slug": "meemu-atoll",
+   "label": "A palm island on its reef in Meemu Atoll, seen from the seaplane",
+   "lat": 2.95,
+   "lon": 73.53,
+   "radius_km": 35,
+   "aliases": [
+    "meemu",
+    "mulaku atoll",
+    "mulakatholhu",
+    "atollo di meemu",
+    "atollo meemu",
+    "malaku"
+   ],
+   "names": [
+    "muli",
+    "muli maldives"
+   ],
+   "palette": {
+    "sky": "#C4DCEE",
+    "far": "#8CC4B8",
+    "mid": "#2F6A34",
+    "ice": "#F6F0DE",
+    "water": "#24548C",
+    "near": "#1E2A30",
+    "sun": "#F2C14E",
+    "leaf": "#4E9A3E",
+    "acc": "#9A7448",
+    "obj": "#5ED2C8"
    }
   },
   {
