@@ -10,23 +10,29 @@ export default function HourByHour({ steps, extras, book, label = "Hour by hour"
   return (
     <details className="hours">
       <summary>{label}</summary>
-      {!!steps?.length && (
-        <ol className="hours-steps">
-          {steps.map((x, i) => (
-            <li key={i}>
-              <time>{x.at}</time>
-              <span><b>{x.what}</b>{x.note && <span className="small muted"> {x.note}</span>}</span>
-            </li>
-          ))}
-        </ol>
-      )}
-      {book && <p className="small"><b>Book:</b> {book}</p>}
-      {!!extras?.length && (
-        <div className="hours-extras">
-          <span className="label">Off the programme</span>
-          <ul>{extras.map((e, i) => <li key={i} className="small">{e}</li>)}</ul>
-        </div>
-      )}
+      <div className="hours-body">
+        {!!steps?.length && (
+          <ol className="hours-steps">
+            {steps.map((x, i) => (
+              <li key={i}>
+                <time>{x.at}</time>
+                <span><b>{x.what}</b>{x.note && <span className="hours-note">{x.note}</span>}</span>
+              </li>
+            ))}
+          </ol>
+        )}
+        {(book || !!extras?.length) && (
+          <aside className="hours-side">
+            {book && <p className="hours-book"><b>Book</b>{book}</p>}
+            {!!extras?.length && (
+              <div className="hours-extras">
+                <b>Off the programme</b>
+                <ul>{extras.map((e, i) => <li key={i}>{e}</li>)}</ul>
+              </div>
+            )}
+          </aside>
+        )}
+      </div>
     </details>
   );
 }

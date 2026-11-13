@@ -41,7 +41,13 @@ function insertAt(steps: PlanStep[], s: PlanStep): PlanStep[] {
   return [...steps.slice(0, at), s, ...steps.slice(at)];
 }
 
-const stepOf = (p: Place): PlanStep => ({
+const plusDays = (iso: string, n: number) => {
+  const x = new Date(iso + "T12:00:00Z");
+  x.setUTCDate(x.getUTCDate() + n);
+  return x.toISOString().slice(0, 10);
+};
+
+const stepOf =(p: Place): PlanStep => ({
   key: `p-${p.latitude.toFixed(3)},${p.longitude.toFixed(3)}`, place_id: null, name: p.name,
   country: p.country_code ?? null, lat: p.latitude, lon: p.longitude, kind: "town", days: 2,
   elevation_m: p.elevation_m ?? null, sights: [],
@@ -242,7 +248,7 @@ export function TripStarter({ compact }: { compact?: boolean }) {
       {err && <p className="err">{err}</p>}
 
       {mode !== "none" && (
-        <section className="plan" ref={resultRef} aria-live="polite">
+        <section className="tplan" ref={resultRef} aria-live="polite">
           {heardText && <p className="plan-heard">“{heardText}”</p>}
           <header className="plan-head">
             <h2>{title}</h2>
@@ -321,22 +327,6 @@ export function TripStarter({ compact }: { compact?: boolean }) {
                           onChange={(e) => setSteps(steps.map((x, j) => (j === i ? { ...x, start_date: e.target.value || null, fixed_dates: !!e.target.value } : x)))} />
                       </span>
                       {s.sights.length > 0 && <span className="step-sights">{s.sights.slice(0, 3).join(" · ")}</span>}
-                      {!!s.plan?.length && (
-                        <details className="step-days">
-                          <summary>Day by day</summary>
-                          <ol>
-                            {daysOf(s).map((d) => (
-                              <li key={d.day} className={`sd-${d.kind}`}>
-                                <b>Day {day0[i] + d.day - 1}</b> {dayText(d, i === 0 && d.day === 1, leg ? { from: steps[i - 1].name, leg } : undefined)}
-                                {d.items?.map((t) => (
-                                  <HourByHour key={t.id} steps={t.steps} extras={t.extras} book={t.book}
-                                    label={d.items!.length > 1 ? `${t.name}: hour by hour` : "Hour by hour"} />
-                                ))}
-                              </li>
-                            ))}
-                          </ol>
-                        </details>
-                      )}
                       {full && s.days === 1 && <span className="step-warn">Only the travel day here: add a day to see it.</span>}
                       {d && d.gap > 0 && <span className="step-gap">after {d.gap} free day{d.gap > 1 ? "s" : ""}</span>}
                     </div>
@@ -352,6 +342,28 @@ export function TripStarter({ compact }: { compact?: boolean }) {
                         <button type="button" onClick={() => removeStep(i)} aria-label={`Remove ${s.name}`}>✕</button>
                       </span>
                     </div>
+                    {!!s.plan?.length && (
+                      <details className="step-days">
+                        <summary>Day by day <span>{s.days} {s.days === 1 ? "day" : "days"}</span></summary>
+                        <ol className="dayrows">
+                          {daysOf(s).map((dd) => (
+                            <li key={dd.day} className={`dayrow sd-${dd.kind}`}>
+                              <div className="dayrow-n">
+                                <b>Day {day0[i] + dd.day - 1}</b>
+                                {d && <span>{(estimate ? "≈ " : "") + short(plusDays(d.start, dd.day - 1))}</span>}
+                              </div>
+                              <div className="dayrow-body">
+                                <p className="dayrow-t">{dayText(dd, i === 0 && dd.day === 1, leg ? { from: steps[i - 1].name, leg } : undefined)}</p>
+                                {dd.items?.map((t) => (
+                                  <HourByHour key={t.id} steps={t.steps} extras={t.extras} book={t.book}
+                                    label={dd.items!.length > 1 ? `${t.name}: hour by hour` : "Hour by hour"} />
+                                ))}
+                              </div>
+                            </li>
+                          ))}
+                        </ol>
+                      </details>
+                    )}
                   </li>
                 );
               })}

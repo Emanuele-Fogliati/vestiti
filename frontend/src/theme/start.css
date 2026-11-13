@@ -28,7 +28,7 @@
 .ask-ex button:hover{background:var(--el-sel)}
 .ask-alt{margin:0;font-size:15px}
 
-.plan{background:var(--surface);border-radius:26px;box-shadow:0 1px 2px rgba(13,13,13,.05),0 10px 30px rgba(13,13,13,.07);padding:24px;display:grid;gap:18px;scroll-margin-top:90px}
+.tplan{background:var(--surface);border-radius:26px;box-shadow:0 1px 2px rgba(13,13,13,.05),0 10px 30px rgba(13,13,13,.07);padding:24px;display:grid;gap:18px;scroll-margin-top:90px}
 .plan-heard{margin:0;color:var(--ink-2);font-style:italic}
 .plan-head{display:grid;gap:4px}
 .plan-head h2{font-size:clamp(26px,3.4vw,36px);font-weight:800}
@@ -56,11 +56,6 @@
 .step-when{display:flex;align-items:center;gap:8px;color:var(--ink-2);font-size:14px;position:relative}
 .step-date{width:30px;padding:2px;border:0;background:transparent;color:transparent;cursor:pointer}
 .step-date::-webkit-datetime-edit{display:none}
-.step-days{font-size:13px;color:var(--ink-2)}
-.step-days summary{cursor:pointer;color:var(--ink-3);font-size:13px;width:max-content}
-.step-days ol{list-style:none;margin:6px 0 2px;padding:0;display:grid;gap:3px}
-.step-days li b{display:inline-block;min-width:44px;font-weight:600;color:var(--ink-3)}
-.step-days .sd-free{color:var(--ink-3)}
 .step-sights{font-size:13px;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .step-ctl{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
 .stepper{display:inline-flex;align-items:center;border-radius:999px;background:var(--surface-2)}
@@ -82,7 +77,7 @@
 .ideas li{display:flex;gap:12px;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:18px;background:var(--surface-2)}
 .ideas li div{display:grid;gap:2px}
 @media (max-width:560px){
-  .plan{padding:18px 14px;border-radius:22px}
+  .tplan{padding:18px 14px;border-radius:22px}
   .step{grid-template-columns:34px minmax(0,1fr)}
   .step-ctl{grid-column:2;flex-direction:row;justify-content:space-between;align-items:center}
   .ask-box textarea{font-size:17px}
@@ -98,19 +93,79 @@
 .pq-c input[type=date],.pq-c input[type=number],.pq-c select{width:auto;padding:8px 12px;border-radius:999px}
 @media (max-width:560px){.step .step-ctl{grid-column:2;grid-row:2}}
 
-/* Hour by hour (a hand-written guide's day), folded under a day or a thing to do */
-.hours{margin:4px 0 2px;font-size:13px;color:var(--ink-2)}
-.hours summary{cursor:pointer;color:var(--ink-2);font-size:13px;width:max-content;max-width:100%;text-decoration:underline dotted;text-underline-offset:3px}
-.hours-steps{list-style:none;margin:6px 0;padding:0 0 0 2px;display:grid;gap:4px;border-left:2px dotted var(--ink-3)}
-.hours-steps li{display:grid;grid-template-columns:48px 1fr;gap:6px;padding-left:8px}
-.hours-steps time{font-variant-numeric:tabular-nums;color:var(--ink-3);font-weight:600}
-.hours-extras{margin-top:6px}
-.hours-extras ul{margin:4px 0 0;padding-left:18px;display:grid;gap:3px}
 /* the way here: every stop after the first says how you get there and how long (Manu, 2026-11-13) */
 .step-leg{justify-self:start;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--ink-2);background:var(--surface-2);border-radius:999px;padding:3px 10px;margin-bottom:2px}
 .step-leg::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink-3)}
 .step-leg.full{background:var(--accent);color:var(--accent-ink)}
 .step-leg.full::before{background:var(--accent-ink)}
 .step-warn{font-size:13px;font-weight:600;color:var(--warn-text)}
-.step-days li b{min-width:52px}
-.step-days li > .hours{grid-column:2}
+
+/* Plan a trip, redesigned (Manu, 2026-11-13: "tutto sulla sinistra, testo piccolo"). Once a
+   plan is on screen it takes the whole width; the days read like a list, not footnotes. */
+.start-cols:has(.tplan){grid-template-columns:minmax(0,1fr)}
+.start-cols:has(.tplan) .start-aside{display:none}
+.starter:has(.tplan){max-width:none}
+.starter .ask{max-width:760px}
+.tplan{padding:32px 36px;gap:24px}
+.plan-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 18px}
+.plan-head h2{font-size:clamp(30px,4vw,46px)}
+.plan-head p{font-size:17px;color:var(--ink)}
+.plan-heard{font-size:15px}
+@media (min-width:900px){.plan-q{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}}
+.pq{padding:16px 18px;align-content:start}
+.pq-l{font-size:16px}
+
+.step{grid-template-columns:40px minmax(0,1fr) auto;column-gap:18px;padding:20px 0}
+.step::before{left:19px}
+.step:first-child::before{top:30px}
+.step-dot{width:40px;height:40px;font-size:17px}
+.step-name{font-size:26px;line-height:1.15}
+.step-when{font-size:16px;color:var(--ink)}
+.step-sights{font-size:15px;color:var(--ink-2);white-space:normal}
+.step-gap,.step-warn{font-size:14px}
+.step-ctl{flex-direction:row;align-items:center;gap:10px}
+.step-more button{font-size:15px;padding:6px 9px}
+
+.step-days{grid-column:2 / -1;grid-row:2;margin-top:6px;color:var(--ink)}
+.step-days > summary{list-style:none;display:inline-flex;align-items:center;gap:10px;cursor:pointer;font-weight:700;font-size:15px;color:var(--ink);background:var(--surface-2);border-radius:999px;padding:9px 16px}
+.step-days > summary::-webkit-details-marker{display:none}
+.step-days > summary span{font-weight:500;color:var(--ink-2)}
+.step-days > summary::after,.hours > summary::before{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+.step-days[open] > summary::after,.hours[open] > summary::before{transform:translateY(1px) rotate(225deg)}
+.step-days > summary:hover{background:var(--el-sel)}
+.dayrows{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--rule)}
+.dayrow{display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.dayrow-n{display:grid;gap:2px;align-content:start}
+.dayrow-n b{font-family:var(--f-display);font-weight:800;font-size:17px;color:var(--ink)}
+.dayrow-n span{font-size:14px;color:var(--ink-2)}
+.dayrow-body{display:grid;gap:10px;min-width:0;justify-items:start}
+.dayrow-t{margin:0;font-size:17px;line-height:1.45;color:var(--ink);max-width:70ch}
+.dayrow.sd-free .dayrow-t{color:var(--ink-2)}
+
+/* Hour by hour: the timeline on the left, what to book and what tours skip on the right */
+.hours{font-size:15px;color:var(--ink);width:100%}
+.hours > summary{list-style:none;display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:600;font-size:14px;color:var(--ink);border:1.5px solid var(--rule-strong);border-radius:999px;padding:6px 14px;max-width:100%}
+.hours > summary::-webkit-details-marker{display:none}
+.hours > summary:hover{border-color:var(--ink)}
+.hours[open] > summary{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+.hours-body{display:flex;flex-wrap:wrap;gap:16px 32px;margin-top:14px;align-items:flex-start}
+.hours-steps{flex:1.6 1 320px;list-style:none;margin:0;padding:0;display:grid;position:relative}
+.hours-steps::before{content:"";position:absolute;left:61px;top:14px;bottom:14px;border-left:2px dotted var(--rule-strong)}
+.hours-steps li{display:grid;grid-template-columns:52px minmax(0,1fr);gap:22px;padding:7px 0;position:relative;line-height:1.45}
+.hours-steps li::before{content:"";position:absolute;left:57px;top:15px;width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--surface)}
+.hours-steps time{font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink-2)}
+.hours-steps b{font-weight:600}
+.hours-note{display:block;font-size:14px;color:var(--ink-2)}
+.hours-side{flex:1 1 240px;display:grid;gap:16px;background:var(--surface-2);border-radius:18px;padding:18px 20px;line-height:1.5}
+.hours-side b{display:block;font-size:14px;font-weight:700;margin-bottom:4px}
+.hours-book{margin:0}
+.hours-extras ul{margin:0;padding-left:18px;display:grid;gap:8px}
+
+@media (max-width:560px){
+  .tplan{padding:20px 16px}
+  .step{grid-template-columns:40px minmax(0,1fr)}
+  .step-days{grid-column:1 / -1;grid-row:3;position:relative;z-index:1;background:var(--surface)}
+  .dayrow{grid-template-columns:minmax(0,1fr);gap:4px}
+  .dayrow-n{display:flex;gap:10px;align-items:baseline}
+  .step-name{font-size:22px}
+}
