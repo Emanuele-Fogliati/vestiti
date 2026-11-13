@@ -1,0 +1,91 @@
+{
+ "id": "is-glymur",
+ "country": "IS",
+ "name": "Glymur waterfall",
+ "base": "Hvalfjörður",
+ "region": "Botnsdalur, at the head of Hvalfjörður, west Iceland",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 7,
+  "gain_m": null,
+  "source": "https://icelandtravelguide.is/locations/glymur-waterfall"
+ },
+ "why": "Through a cave, over the river on a log, and up the edge of a 198 m gorge to look straight down Iceland's second-highest fall.",
+ "book": "Free, car park at the end of the Botnsdalur road (off Route 47). The log and its cable over the Botnsá are in place only from about June to September.",
+ "water": "The Botnsá above the fall is clean; carry water for the climb.",
+ "dangers": [
+  "Steep drops at the gorge edge with no railing; slippery after rain.",
+  "Ropes on the steepest rocky steps.",
+  "The upper ford above the fall is knee-deep and cold, impossible after heavy rain: if so, go back the way you came."
+ ],
+ "turnaround": "If the Botnsá runs high at the log, do not cross: the view from the cave side ends there.",
+ "sources": [
+  "https://www.west.is/en/place/glymur",
+  "https://icelandtravelguide.is/locations/glymur-waterfall",
+  "https://hiking.waymarkedtrails.org/#route?id=6125533"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Glymur car park, Botnsdalur",
+   "lat": 64.38526,
+   "lon": -21.29415,
+   "role": "start",
+   "note": "At the end of the valley road; the path follows the Botnsá east through birch scrub."
+  },
+  {
+   "id": "cave",
+   "name": "Þvottahellir cave",
+   "lat": 64.38265,
+   "lon": -21.26912,
+   "role": "point",
+   "note": "The path drops through a lava cave down to the river."
+  },
+  {
+   "id": "log",
+   "name": "Log crossing on the Botnsá",
+   "lat": 64.3826,
+   "lon": -21.2685,
+   "role": "point",
+   "note": "A log with a steel cable to hold on to, just above the water; then the climb up the west rim begins."
+  },
+  {
+   "id": "goal",
+   "name": "Glymur gorge viewpoint",
+   "lat": 64.39,
+   "lon": -21.252,
+   "role": "goal",
+   "note": "From the rim the 198 m fall plunges into a narrow mossy gorge; ford the river above it and come down the east side."
+  }
+ ],
+ "osm_ways": [
+  37844653,
+  298942144,
+  369001156,
+  1305621649,
+  369001157,
+  369001159,
+  409269525,
+  409269526,
+  409269531,
+  369001158,
+  521195671,
+  966207166,
+  409269527,
+  64525881,
+  37844653
+ ]
+}
