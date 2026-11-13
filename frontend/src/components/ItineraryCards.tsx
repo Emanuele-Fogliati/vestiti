@@ -5,8 +5,6 @@ import { monthRange } from "../lib/format";
 import type { ItineraryCard } from "../lib/types";
 import { Illustration } from "./Illustration";
 
-const TERR = ["alpine", "glacier", "coast", "city"] as const;
-
 export function useItineraries() {
   const [items, setItems] = useState<ItineraryCard[] | null>(null);
   useEffect(() => { api.itineraries().then(setItems).catch(() => setItems([])); }, []);
@@ -24,9 +22,9 @@ export function ItineraryCards({ limit, filter, items: given, empty }: {
   if (!shown.length) return <>{empty ?? null}</>;
   return (
     <div className="tlist icards">
-      {shown.map((it, i) => (
+      {shown.map((it) => (
         <Link className="tcard" to={`/ideas/${it.slug}`} key={it.slug}>
-          <Illustration terrain={TERR[i % TERR.length]} art={it.art} />
+          <Illustration art={it.art} />
           <div className="b">
             <span className="label">{it.days} days · best {monthRange(it.best_months)}</span>
             <h3>{it.title}</h3>

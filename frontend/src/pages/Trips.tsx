@@ -6,7 +6,6 @@ import { useApp } from "../lib/app-context";
 import { dayMonth } from "../lib/format";
 import type { TripSummary } from "../lib/types";
 
-const TERR = ["alpine", "coast", "glacier", "city", "hills", "snow"] as const;
 
 export default function Trips() {
   const { user, loading } = useApp();
@@ -36,9 +35,9 @@ export default function Trips() {
             {!user && <p className="small muted" style={{ marginTop: 12 }}>Planned trips before? <Link to="/login" state={{ from: "/trips" }}>Sign in</Link> to see them.</p>}</div>
         ) : (
           <div className="tlist">
-            {trips.map((t, i) => (
+            {trips.map((t) => (
               <Link className="tcard" to={`/trips/${t.id}`} key={t.id}>
-                <Illustration terrain={TERR[i % TERR.length]} art={t.art} />
+                <Illustration art={t.art} />
                 <div className="b">
                   <h3>{t.name}</h3>
                   <span className="small muted">{t.start_date ? `${t.estimated ? "≈ " : ""}${dayMonth(t.start_date)} – ${dayMonth(t.end_date!)}` : "No dates"} · {t.stop_count} stops{t.estimated ? " · dates are a guess" : ""}</span>

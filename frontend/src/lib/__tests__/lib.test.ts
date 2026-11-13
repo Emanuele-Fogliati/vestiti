@@ -3,7 +3,6 @@ import { friendlyError } from "../api";
 import { buildProfile, monoPath, niceMax } from "../elevation";
 import { activityText, addDays, minus, monthRange, monthRuns, nights, signed } from "../format";
 import { layOut, redate, spread } from "../spread";
-import { terrainFor } from "../terrain";
 import type { Stop } from "../types";
 
 const stop = (p: Partial<Stop>): Stop => ({
@@ -51,14 +50,6 @@ describe("elevation profile", () => {
   });
   it("handles an empty trip", () => {
     expect(buildProfile([]).points).toEqual([]);
-  });
-});
-
-describe("terrain", () => {
-  it("picks a city for city stops and mountains for high hikes", () => {
-    expect(terrainFor(stop({ activities: [{ type: "city" }] }))).toBe("city");
-    expect(["alpine", "glacier", "snow", "hills"]).toContain(
-      terrainFor(stop({ elevation_m: 1500, activities: [{ type: "hiking", difficulty: "hard", max_altitude_m: 3500 }] })));
   });
 });
 

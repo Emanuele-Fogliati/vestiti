@@ -2,7 +2,6 @@ import { useState } from "react";
 import { api } from "../lib/api";
 import { activitiesFrom, sameActivities } from "../lib/board";
 import { activityText, addDays } from "../lib/format";
-import { terrainFor } from "../lib/terrain";
 import type { BoardStop, LegMode, PlanChoices, PlanDayOut, Sky, StopStatus, TodoItem, Trip } from "../lib/types";
 import HourByHour from "./HourByHour";
 import { Illustration } from "./Illustration";
@@ -219,7 +218,7 @@ export function StopPanel({ trip, stop, index, count, busy, onResize, onMove, on
 
           {full && (
             <div className="bp-place">
-              <Illustration terrain={terrainFor(full, index)} art={full.art} />
+              <Illustration art={full.art} />
               <PlaceGuide guide={full.guide} />
               {full.place_status === "check" && (
                 <PlaceQuestion place={{ name: full.name, country_code: full.country_code }} issues={full.place_note ? [full.place_note] : []}
