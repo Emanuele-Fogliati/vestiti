@@ -35,3 +35,17 @@ describe("stop labels under the elevation profile", () => {
     expect(labels.every((l) => l.full)).toBe(true);
   });
 });
+
+describe("sampleProfile", () => {
+  it("passes through the points and stays between neighbours", async () => {
+    const { sampleProfile } = await import("../elevation");
+    const pts = [{ x: 0, e: 100 }, { x: 2, e: 1000 }, { x: 4, e: 200 }];
+    expect(sampleProfile(pts, 0)).toBeCloseTo(100);
+    expect(sampleProfile(pts, 2)).toBeCloseTo(1000);
+    expect(sampleProfile(pts, 4)).toBeCloseTo(200);
+    const mid = sampleProfile(pts, 1);
+    expect(mid).toBeGreaterThan(100);
+    expect(mid).toBeLessThanOrEqual(1000);
+    expect(sampleProfile(pts, -3)).toBe(100);
+  });
+});

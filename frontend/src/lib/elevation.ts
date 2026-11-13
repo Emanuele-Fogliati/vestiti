@@ -68,3 +68,25 @@ export function niceMax(v: number): number {
   const steps = [500, 1000, 1500, 2000, 3000, 4000, 5000, 6000, 7000, 9000];
   return steps.find((s) => s >= v * 1.1) ?? Math.ceil(v / 1000) * 1000;
 }
+
+/** Elevation at day x on the same monotone curve monoPath draws (for the 3D ribbon). */
+export function sampleProfile(pts: ProfilePoint[], x: number): number {
+  const n = pts.length;
+  if (!n) return 0;
+  if (x <= pts[0].x) return pts[0].e;
+  if (x >= pts[n - 1].x) return pts[n - 1].e;
+  const xs = pts.map((p) => p.x), ys = pts.map((p) => p.e), d: number[] = [], m: number[] = [];
+  for (let i = 0; i < n - 1; i++) d[i] = (ys[i + 1] - ys[i]) / (xs[i + 1] - xs[i]);
+  m[0] = d[0];
+  m[n - 1] = d[n - 2];
+  for (let i = 1; i < n - 1; i++) m[i] = d[i - 1] * d[i] <= 0 ? 0 : (d[i - 1] + d[i]) / 2;
+  for (let i = 0; i < n - 1; i++) {
+    if (d[i] === 0) { m[i] = m[i + 1] = 0; continue; }
+    const a = m[i] / d[i], b = m[i + 1] / d[i], s = a * a + b * b;
+    if (s > 9) { const t = 3 / Math.sqrt(s); m[i] = t * a * d[i]; m[i + 1] = t * b * d[i]; }
+  }
+  let i = 0;
+  while (i < n - 2 && x > xs[i + 1]) i++;
+  const h = xs[i + 1] - xs[i], t = (x - xs[i]) / h, t2 = t * t, t3 = t2 * t;
+  return (2 * t3 - 3 * t2 + 1) * ys[i] + (t3 - 2 * t2 + t) * h * m[i] + (-2 * t3 + 3 * t2) * ys[i + 1] + (t3 - t2) * h * m[i + 1];
+}

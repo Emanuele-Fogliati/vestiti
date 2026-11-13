@@ -1,6 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { ElevationProfile } from "../components/ElevationProfile";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { TripMap } from "../components/Maps";
 import { useItineraries } from "../components/ItineraryCards";
 import { Kit } from "../components/Kit";
@@ -11,24 +10,32 @@ import { ProfileQuiz } from "../components/ProfileQuiz";
 import { TailorChat } from "../components/TailorChat";
 import { TripBoard } from "../components/Board";
 import { FlightsPlanner } from "../components/Flights";
+import { Ribbon3D } from "../components/Ribbon3D";
+import { Sheet } from "../components/Sheet";
+import { WeatherTab } from "../components/WeatherTab";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { dayMonth, daysBetween, minus, money } from "../lib/format";
-import { DRESS_ME } from "./Start";
-import type { Plans, QuizResult, Strategy, Tier, Trip, User } from "../lib/types";
+import { dayMonth, daysBetween, money } from "../lib/format";
+import type { Plans, QuizResult, Strategy, Tier, Trip } from "../lib/types";
 
-const COLD_TXT: [number, string][] = [[0.3, "always cold"], [0.15, "a bit cold"], [0, "average with cold"], [-0.3, "rarely cold"]];
-const PACE_TXT = { relaxed: "slow pace", average: "average pace", brisk: "fast pace" };
-const EVE_TXT = { early: "inside after dinner", sometimes: "out some evenings", late: "out late" };
+type Tab = "trip" | "weather" | "layers" | "bag";
+const TABS: { id: Tab; label: string; icon: string }[] = [
+  { id: "trip", label: "Trip", icon: "M3 18l5-9 4 6 3-4 6 7" },
+  { id: "weather", label: "Weather", icon: "M3 9h11a3 3 0 1 0-3-3M3 14h15a3 3 0 1 1-3 3M3 19h6" },
+  { id: "layers", label: "Layers", icon: "M12 3l9 5-9 5-9-5zM3 13l9 5 9-5" },
+  { id: "bag", label: "Bag", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
+];
+// old section anchors still land in the right tab
+const HASH: Record<string, Tab> = { trip: "trip", days: "trip", flights: "trip", map: "trip", weather: "weather", layers: "layers", bag: "bag", kit: "bag", total: "bag", ask: "trip" };
 
-function profileText(u: User): string {
-  const cold = COLD_TXT.reduce((b, c) => (Math.abs(c[0] - u.thermal_offset) < Math.abs(b[0] - u.thermal_offset) ? c : b))[1];
-  return [cold, PACE_TXT[u.pace] ?? "average pace", EVE_TXT[u.evenings] ?? "out some evenings"].join(" · ");
+function TabIcon({ d }: { d: string }) {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>;
 }
 
 export default function TripPage() {
   const { id = "" } = useParams();
   const nav = useNavigate();
+  const loc = useLocation();
   const { toast, user, refreshUser } = useApp();
   const [quizOpen, setQuizOpen] = useState(false);
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
@@ -39,6 +46,13 @@ export default function TripPage() {
   const [stageIdx, setStageIdx] = useState(0);
   const [err, setErr] = useState<string | null>(null);
   const [planning, setPlanning] = useState(false);
+  const [tab, setTab] = useState<Tab>(HASH[loc.hash.slice(1)] ?? "trip");
+  const [view, setView] = useState<"3d" | "map">("3d");
+  const [askOpen, setAskOpen] = useState(loc.hash === "#ask");
+  const [flightsOpen, setFlightsOpen] = useState(loc.hash === "#flights");
+  const [menu, setMenu] = useState(false);
+  const tabsRef = useRef<HTMLElement>(null);
+  const pillRef = useRef<HTMLSpanElement>(null);
   const itineraries = useItineraries();
 
   const loadPlans = useCallback(async (t: Tier) => {
@@ -65,6 +79,40 @@ export default function TripPage() {
   useEffect(() => {
     if (trip && trip.stops.length && user && !user.profile_done_at) setQuizOpen(true);
   }, [trip, user]);
+
+  useEffect(() => {
+    const t = HASH[loc.hash.slice(1)];
+    if (t) setTab(t);
+  }, [loc.hash]);
+
+  // the yellow pill slides under the chosen tab
+  const placePill = useCallback(() => {
+    const bar = tabsRef.current, pill = pillRef.current;
+    const b = bar?.querySelector<HTMLButtonElement>(`[data-tab="${tab}"]`);
+    if (!b || !pill) return;
+    pill.style.width = `${b.offsetWidth}px`;
+    pill.style.transform = `translateX(${b.offsetLeft}px)`;
+  }, [tab]);
+  useEffect(() => {
+    placePill();
+    addEventListener("resize", placePill);
+    document.fonts?.ready.then(placePill);
+    return () => removeEventListener("resize", placePill);
+  }, [placePill, trip]);
+
+  function go(t: Tab) {
+    setTab(t);
+    nav(`#${t}`, { replace: true, preventScrollReset: true });
+    const bar = tabsRef.current;
+    if (bar && innerWidth > 760) {
+      const top = bar.getBoundingClientRect().top + scrollY - 1;
+      if (scrollY > top) scrollTo({ top });
+    } else if (bar) {
+      const head = document.querySelector(".x-head");
+      const top = head ? head.getBoundingClientRect().bottom + scrollY - 8 : 0;
+      if (scrollY > top) scrollTo({ top });
+    }
+  }
 
   async function quizDone(r: QuizResult) {
     setQuizOpen(false);
@@ -94,160 +142,179 @@ export default function TripPage() {
     setTrip(await api.patchTrip(trip.id, { name: name.trim() }));
   }
 
-  const totalDays = stops.length && t0 ? daysBetween(t0, stops.reduce((m, s) => (s.end_date > m ? s.end_date : m), stops[0].end_date)) + 1 : 0;
-  const coldest = strategy?.stages?.length ? Math.min(...strategy.stages.map((s) => s.modes.rest.condition.feels_like_c)) : null;
+  const tEnd = stops.length ? stops.reduce((m, s) => (s.end_date > m ? s.end_date : m), stops[0].end_date) : null;
+  const totalDays = t0 && tEnd ? daysBetween(t0, tEnd) + 1 : 0;
   const tp = plans && !plans.empty ? plans.tiers[tier] : null;
-
   const source = trip.source_itinerary ? itineraries?.find((it) => it.slug === trip.source_itinerary) : undefined;
-  // your own trip to a country we have a recommended route for: point to it
   const countries = new Set(stops.map((s) => s.country_code).filter(Boolean));
   const related = !trip.source_itinerary ? itineraries?.find((it) => it.countries.some((c) => countries.has(c))) : undefined;
-
-  const sources = new Set(strategy?.stages.flatMap((s) => s.weather_sources) ?? []);
-  const weatherHeadline = !sources.size ? "weather loading" : sources.has("estimate") ? "estimated weather"
-    : sources.has("forecast") ? "real forecast" : "climate averages";
+  const estimateWeather = strategy?.stages.some((s) => s.weather_sources.includes("estimate"));
+  const sel = Math.min(stageIdx, Math.max(0, stops.length - 1));
 
   return (
-    <main>
-      <nav className="secnav" aria-label="Trip sections">
+    <main className="x-trip">
+      <header className="x-head">
         <div className="wrap">
-          <span className="tname">{trip.name}</span>
-          <a href="#days">Days</a>{stops.length > 0 && <a href="#flights">Flights</a>}<a href="#trip">Map</a><a href="#layers">Layers</a><a href="#kit">Kit</a><a href="#total">Total</a><a href="#ask">Chat</a>
-          {planning && <span className="spin" aria-label="Updating plan" />}
-        </div>
-      </nav>
-      <section className="thero">
-        <div className="wrap">
-          <p className="kicker">{t0 ? `${trip.estimate ? "≈ " : ""}${dayMonth(t0)} · ${totalDays} days · ${stops.length} stops${trip.estimate ? " · estimate" : ""}` : "No stops yet"}</p>
-          <h1><textarea className="titleedit" rows={1} defaultValue={trip.name} aria-label="Trip name" onBlur={(e) => rename(e.target.value.replace(/\s+/g, " ").trim())}
-            onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); (e.target as HTMLTextAreaElement).blur(); } }} /></h1>
-          <div className="facts">
-            <div className="fact"><b>{coldest !== null ? `${minus(Math.round(coldest))} °C` : "—"}</b><span>Coldest feels-like</span></div>
-            <div className="fact"><b>{totalDays || "—"}</b><span>Days</span></div>
-            <div className="fact"><b>{tp ? `${tp.totals.items_owned} of ${tp.items.length}` : "—"}</b><span>Pieces you own</span></div>
-            <div className="fact"><b>{tp ? money(tp.totals.total) : "—"}</b><span>{tier} kit total</span></div>
+          <div className="x-head-in">
+            <div className="x-head-t">
+              <p className="x-meta">
+                {t0 && tEnd ? <><b>{trip.estimate ? "≈ " : ""}{dayMonth(t0)} – {dayMonth(tEnd)}</b><span>{totalDays} days</span><span>{stops.length} {stops.length === 1 ? "place" : "places"}</span></> : <span>No places yet</span>}
+                {planning && <span className="spin" aria-label="Updating" />}
+              </p>
+              <h1><textarea className="x-title" rows={1} ref={(el) => { if (el) { el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; } }} onInput={(e) => { const el = e.currentTarget; el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; }} defaultValue={trip.name} aria-label="Trip name" onBlur={(e) => rename(e.target.value.replace(/\s+/g, " ").trim())}
+                onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); (e.target as HTMLTextAreaElement).blur(); } }} /></h1>
+            </div>
+            <div className="x-head-a">
+              {user && (
+                <button type="button" className="x-round" onClick={() => setQuizOpen(true)} aria-label={user.profile_done_at ? "About you: change" : "4 quick questions about you"} title="About you">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4" /><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg>
+                  {!user.profile_done_at && <i className="x-dot" />}
+                </button>
+              )}
+              <div className="x-menu-w">
+                <button type="button" className="x-round" aria-label="More" aria-expanded={menu} onClick={() => setMenu(!menu)}>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="5" cy="12" r="2" /><circle cx="12" cy="12" r="2" /><circle cx="19" cy="12" r="2" /></svg>
+                </button>
+                {menu && (
+                  <div className="x-menu" role="menu">
+                    <button type="button" role="menuitem" onClick={async () => { setMenu(false); const c = await api.duplicateTrip(id); nav(`/trips/${c.id}`); }}>Duplicate</button>
+                    <button type="button" role="menuitem" className="danger" onClick={async () => { setMenu(false); if (window.confirm("Delete this trip?")) { await api.deleteTrip(id); nav("/trips"); } }}>Delete trip</button>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
-          {user && (
-            <div className="tailored">
-              <span className="kicker">Tailored to you</span>
-              <span>{user.profile_done_at ? profileText(user) : "not yet: answer 4 quick questions"}</span>
-              <button type="button" className="link small" onClick={() => setQuizOpen(true)}>{user.profile_done_at ? "Change" : "Start"}</button>
-              <a className="link small" href="#ask">or tell us in the chat</a>
-            </div>
-          )}
-          {quizResult && (
-            <div className="banner ok quizres">
-              <div className="row"><b>{quizResult.plan.pieces.length || quizResult.plan.status ? "Your answers changed the kit" : "Saved. Your kit already fit you"}</b><span className="spacer" />
-                <button type="button" className="btn sm ghost" aria-label="Close" onClick={() => setQuizResult(null)}>✕</button></div>
-              <PlanChange changes={quizResult.changes} plan={quizResult.plan} />
-            </div>
-          )}
-          {trip.source_itinerary && (
-            <p className="from-rec small">
-              <span className="label">From a recommended trip</span>
-              <span>It's yours now: change stops, days and activities, the kit follows.</span>
-              <Link to={`/ideas/${trip.source_itinerary}`}>Day-by-day guide and tours{source ? `: ${source.title}` : ""} →</Link>
-            </p>
-          )}
-          {related && (
-            <p className="from-rec small">
-              <span className="label">Ideas for this trip</span>
-              <Link to={`/ideas/${related.slug}`}>See our recommended route: {related.title} →</Link>
+          {(source || related) && (
+            <p className="x-from">
+              <Link to={`/ideas/${(source ?? related)!.slug}`}>{source ? "Day-by-day guide" : "Our route"}: {(source ?? related)!.title} →</Link>
             </p>
           )}
           {user?.is_guest && tp && (
-            <div className="banner info save-nudge">
-              <span><b>Keep this trip.</b> You're a guest: it lives only in this browser. A free account keeps it on any device.</span>
-              <span className="row">
-                <Link className="btn sm primary" to="/register" state={{ from: `/trips/${id}` }}>Create free account</Link>
-                <Link className="btn sm" to="/login" state={{ from: `/trips/${id}` }}>Sign in</Link>
-              </span>
+            <p className="x-from">
+              <Link to="/register" state={{ from: `/trips/${id}` }}>Save this trip with a free account →</Link>
+            </p>
+          )}
+          {quizResult && (
+            <div className="x-alert x-quizres">
+              <div className="x-row"><b>{quizResult.plan.pieces.length || quizResult.plan.status ? "Your answers changed the bag" : "Saved. Your bag already fit you"}</b>
+                <button type="button" className="x-close" aria-label="Close" onClick={() => setQuizResult(null)}>✕</button></div>
+              <PlanChange changes={quizResult.changes} plan={quizResult.plan} />
             </div>
           )}
-          <div className="row" style={{ marginTop: 18 }}>
-            <button type="button" className="btn sm" onClick={async () => { const c = await api.duplicateTrip(id); nav(`/trips/${c.id}`); }}>Duplicate</button>
-            <button type="button" className="btn sm danger" onClick={async () => { if (window.confirm("Delete this trip?")) { await api.deleteTrip(id); nav("/trips"); } }}>Delete trip</button>
+        </div>
+      </header>
+
+      <nav className="x-tabs" aria-label="Trip" ref={tabsRef}>
+        <div className="wrap">
+          <div className="x-tabs-in" role="tablist">
+            <span className="x-pill" ref={pillRef} aria-hidden="true" />
+            {TABS.map((t) => (
+              <button key={t.id} type="button" role="tab" data-tab={t.id} aria-selected={tab === t.id} aria-controls={`p-${t.id}`} onClick={() => go(t.id)}>
+                <TabIcon d={t.icon} />{t.label}
+              </button>
+            ))}
           </div>
         </div>
-      </section>
+      </nav>
 
-      <section className="band" id="days">
-        <div className="wrap">
-          <header className="sh"><p className="sh-k">Your days</p><h2>{stops.length ? "Plan it day by day" : "Where do you start?"}</h2>
-            <p>Places on their days. Mark what you booked as fixed and the rest can still move. Open a place to see what to do there, in order, with the weather of each day.</p></header>
-          <TripBoard trip={trip} onChanged={loadAll} />
-          {stops.length > 0 && (
-            <div className="bd-cta" style={{ marginTop: 24 }}>
-              <p><b>Ready to pack?</b> The clothes follow your days: change the plan and they change too.</p>
-              <a className="btn primary" href="#layers">{DRESS_ME}</a>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {stops.length > 0 && (
-        <section className="band" id="flights" style={{ paddingTop: 0 }}>
+      {tab === "trip" && (
+        <section className="x-panel" id="p-trip" role="tabpanel" key="trip">
           <div className="wrap">
-            <header className="sh"><p className="sh-k">Flights</p><h2>Every leg, every flight of the day</h2>
-              <p>All the flights of your trip in one place. For each leg, every flight of its day in time order: an hour earlier or later is one look away. Pick one per leg and see if they fit your days.</p></header>
-            <FlightsPlanner trip={trip} onChanged={loadAll} />
+            {stops.length > 0 && (
+              <div className="x-stage x-rise">
+                {view === "3d" ? <Ribbon3D stops={stops} active={sel} onPick={setStageIdx} /> : <div className="x-map"><TripMap stops={stops} /></div>}
+                <div className="x-stage-ctl">
+                  <div className="x-seg sm" role="group" aria-label="View">
+                    <button type="button" aria-pressed={view === "3d"} onClick={() => setView("3d")}>3D</button>
+                    <button type="button" aria-pressed={view === "map"} onClick={() => setView("map")}>Map</button>
+                  </div>
+                  <button type="button" className="x-btn y" onClick={() => setFlightsOpen(true)}>
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21 15.5l-8-4.5V5.5a1.5 1.5 0 0 0-3 0V11l-8 4.5V17l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-4.5l8 2.5z" /></svg>
+                    Flights
+                  </button>
+                </div>
+              </div>
+            )}
+            <div className="x-rise">
+              <TripBoard trip={trip} onChanged={loadAll} selected={sel} onSelect={setStageIdx} />
+            </div>
+            {stops.length > 0 && (
+              <div className="x-cta x-rise">
+                <b>Ready to pack?</b>
+                <button type="button" className="x-btn y" onClick={() => go("layers")}>Dress me</button>
+              </div>
+            )}
           </div>
         </section>
       )}
 
-      <section className="band alt" id="trip">
-        <div className="wrap">
-          <header className="sh"><p className="sh-k">Map and altitude</p><h2>{stops.length ? `${stops.length} ${stops.length === 1 ? "place" : "places"}, ${weatherHeadline}` : "Add your first place"}</h2>
-            {sources.has("estimate") && (
-              <div className="banner warn" style={{ margin: "12px 0" }}>
-                The weather service could not be reached, so some places use a <b>rough estimate</b> from latitude and season.
-                Reload later for real data before you trust the kit.
-              </div>
-            )}
+      {tab === "weather" && (
+        <section className="x-panel" id="p-weather" role="tabpanel" key="weather">
+          <div className="wrap">
+            {estimateWeather && <p className="x-alert warn">The weather service could not be reached: some places use a rough estimate. Reload later.</p>}
             {trip.estimate && t0 && (
-              <div style={{ margin: "12px 0" }}>
+              <div className="x-alert">
                 <EstimateForm start={trip.estimate.start} days={trip.estimate.days} firstDay={t0} totalDays={totalDays}
-                  onApply={async (v) => { try { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated. The plan is recalculated."); loadPlans(tier); } catch (e) { toast((e as Error).message); } }}
+                  onApply={async (v) => { try { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated."); loadPlans(tier); } catch (e) { toast((e as Error).message); } }}
                   onKeep={async () => { setTrip(await api.setDates(id, { confirm: true })); }} />
               </div>
             )}
-            <p>One kit has to cover every place, so we size it to the hardest hour of the whole trip.</p></header>
-          <TripMap stops={stops} />
-          <ElevationProfile stops={stops} selected={stageIdx} onSelect={(i) => { setStageIdx(i); document.getElementById("layers")?.scrollIntoView({ behavior: "smooth" }); }} />
-          {strategy && strategy.questions.length > 0 && (
-            <div style={{ marginTop: 28 }}>
-              <h3 className="subh" style={{ marginTop: 0 }}>A few questions that change the plan</h3>
-              <ul className="qs">{strategy.questions.map((q, i) => <li key={i}>{q.question}</li>)}</ul>
-            </div>
-          )}
-        </div>
-      </section>
+            {strategy && !strategy.empty ? <WeatherTab strategy={strategy} /> : <Empty planning={planning} onAdd={() => go("trip")} />}
+            {strategy && strategy.questions.length > 0 && (
+              <div className="x-qs">
+                <h2 className="x-h2">This would change the plan</h2>
+                <ul className="x-list">{strategy.questions.map((q, i) => <li key={i}>{q.question}</li>)}</ul>
+                <button type="button" className="x-link" onClick={() => setAskOpen(true)}>Answer in the chat</button>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
-      <section className="band" id="layers">
-        <div className="wrap">
-          <header className="sh"><p className="sh-k">Layer strategy</p><h2>What to wear at each stop</h2>
-            <p>Pick a stop and whether you're moving or resting. We stack the layers that stop needs for its coldest feels-like moment, check the warmth against what your body loses, and tell you what to change if it falls short.</p></header>
-          {strategy && !strategy.empty ? (
-            <LayerStrategy tripId={id} strategy={strategy} tier={tier} stageIdx={Math.min(stageIdx, strategy.stages.length - 1)} setStageIdx={setStageIdx} onChanged={() => loadPlans(tier)} />
-          ) : <div className="empty">{planning ? <span className="spin" /> : "Add a stop to see the layer strategy."}</div>}
-        </div>
-      </section>
+      {tab === "layers" && (
+        <section className="x-panel" id="p-layers" role="tabpanel" key="layers">
+          <div className="wrap">
+            {strategy && !strategy.empty ? (
+              <LayerStrategy tripId={id} strategy={strategy} tier={tier} stageIdx={Math.min(stageIdx, strategy.stages.length - 1)} setStageIdx={setStageIdx} onChanged={() => loadPlans(tier)} />
+            ) : <Empty planning={planning} onAdd={() => go("trip")} />}
+            {tp && (
+              <div className="x-cta">
+                <b>{money(tp.totals.total)} for everything you still need</b>
+                <button type="button" className="x-btn y" onClick={() => go("bag")}>See the bag</button>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
-      <section className="band alt" id="kit" style={{ paddingBottom: 0 }}>
-        <div className="wrap"><header className="sh"><p className="sh-k">The kit</p><h2>{tp ? `${tp.items.length} pieces, three budgets` : "The kit"}</h2>
-          <p>Every piece is checked against the layer spec and rated for this trip. PASS meets it, CHECK misses something (read why). Switch budget, swap any piece, use what you own, or rent.</p></header></div>
-        {plans && !plans.empty ? <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={() => loadPlans(tier)} />
-          : <div className="wrap" style={{ paddingBottom: 72 }}><div className="empty">{planning ? <span className="spin" /> : "Add a stop to see the kit."}</div></div>}
-      </section>
+      {tab === "bag" && (
+        <section className="x-panel" id="p-bag" role="tabpanel" key="bag">
+          <div className="wrap">
+            {plans && !plans.empty ? <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={() => loadPlans(tier)} />
+              : <Empty planning={planning} onAdd={() => go("trip")} />}
+          </div>
+        </section>
+      )}
 
-      <section className="band alt" id="ask">
-        <div className="wrap">
-          <header className="sh"><p className="sh-k">Chat</p><h2>Tell us about you, or ask</h2>
-            <p>"I'm always cold", "I have an old Decathlon fleece", "I walk slowly": the kit is recomputed for you and you see exactly what changed. Questions about the plan are answered from its numbers.</p></header>
-          <TailorChat tripId={id} tier={tier} onChanged={profileChanged} />
-        </div>
-      </section>
+      <button type="button" className="x-fab" onClick={() => setAskOpen(true)}>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" /></svg>
+        <span>Ask</span>
+      </button>
+      <Sheet open={askOpen} onClose={() => setAskOpen(false)} title="Tell us, or ask">
+        <TailorChat tripId={id} tier={tier} onChanged={profileChanged} />
+      </Sheet>
+      <Sheet open={flightsOpen} onClose={() => setFlightsOpen(false)} title="Flights" wide>
+        <FlightsPlanner trip={trip} onChanged={loadAll} />
+      </Sheet>
       {quizOpen && <ProfileQuiz tripId={id} tier={tier} onDone={quizDone} />}
     </main>
+  );
+}
+
+function Empty({ planning, onAdd }: { planning: boolean; onAdd: () => void }) {
+  return (
+    <div className="x-empty">
+      {planning ? <span className="spin" /> : <><b>Add a place first.</b><button type="button" className="x-btn y" onClick={onAdd}>Go to Trip</button></>}
+    </div>
   );
 }
