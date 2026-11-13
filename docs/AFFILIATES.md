@@ -73,12 +73,32 @@ For each row we:
 
 Run feeds daily (cron or a scheduled task); prices drift.
 
-## Sample catalog
+## The catalog today (before any network approves us)
 
-`backend/seed/products.json`: 169 real product names from real brands, with **indicative
-prices and approximate specs**, no images, and links to Amazon / Google Shopping
-searches. It exists so the app works end to end on day one. Replace it with real feeds
-before launch.
+`backend/seed/products.json`, rebuilt with `tools/catalog/refresh_seed.py`:
+
+| Shop | Products | Link | Price, picture, stock | Network when approved |
+|---|---|---|---|---|
+| Bergfreunde IT | ~80 (Patagonia, Arc'teryx, Rab, Salomon, Lowa...) | the real product page | read from the page (schema.org data), re-read at every app start if older than `PRICE_REFRESH_HOURS` (default 20) | Awin, advertiser 125902 |
+| Decathlon IT | ~90 | Decathlon's own search for the model | **indicative**, no picture: decathlon.it blocks automated requests | Awin, advertiser 9643 |
+| Uniqlo, Mountain Warehouse | ~30 | the shop's own search | **indicative**, no picture | none yet (direct) |
+
+- The kit says under every product which shop it is and either "checked 13 Nov" or
+  "indicative price".
+- A page that shows nothing in stock switches the product off; it comes back when it is
+  back in stock. A model no partner sells any more stays in the file with
+  `"active": false` and the reason, so the kit never recommends what can't be bought.
+- Specs (warmth, waterproofing) are still the app team's estimates.
+- Only shops in `READABLE_HOSTS` (`backend/app/catalog/refresh.py`) are read: one plain
+  request per page, an honest user agent, no bot-check workarounds. Pictures come from the
+  shop: fine for the local app; on a public site use them only once the shop's affiliate
+  program has accepted us (the feed licence covers them).
+- Manually: `docker compose exec app python -m app.cli refresh-prices` (all) or
+  `--hours 20` (only stale ones).
+
+Once Awin accepts us, set `AWIN_PUBLISHER_ID` and every Bergfreunde and Decathlon link
+becomes a tracked deep link with no other change. Importing the Awin feeds (`ingest`) then
+replaces the indicative Decathlon prices with real ones.
 
 ## Rental partners
 

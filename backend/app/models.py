@@ -209,6 +209,9 @@ class Product(Base):
     review_count: Mapped[int] = mapped_column(Integer, default=0)
     active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
     source: Mapped[str] = mapped_column(String(20), default="seed")  # seed | feed | manual
+    # When price and stock were last read from the shop (feed import or its product page).
+    # None = indicative price, never checked: the kit says so next to the price.
+    checked_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=utcnow, onupdate=utcnow
     )

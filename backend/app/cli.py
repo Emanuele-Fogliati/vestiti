@@ -6,6 +6,7 @@
     python -m app.cli create-admin --email you@example.com --password '...'
     python -m app.cli check-ai                     # is the local model reachable? try a parse
     python -m app.cli prune-guests --days 30       # delete guests with no trips, idle 30+ days
+    python -m app.cli refresh-prices --hours 20    # re-read price/stock from shop pages
 """
 import argparse
 import json
@@ -29,6 +30,9 @@ def main(argv=None):
     sub.add_parser("check-ai")
     p = sub.add_parser("prune-guests")
     p.add_argument("--days", type=int, default=30)
+    p = sub.add_parser("refresh-prices")
+    p.add_argument("--hours", type=float, default=0,
+                   help="only products not checked in the last N hours (0 = all)")
     args = ap.parse_args(argv)
 
     if args.cmd == "migrate":
@@ -66,6 +70,11 @@ def main(argv=None):
             u.is_guest = False
             db.commit()
             print(f"admin ready: {email}")
+        elif args.cmd == "refresh-prices":
+            from datetime import timedelta
+            from app.catalog.refresh import refresh_prices
+            older = timedelta(hours=args.hours) if args.hours > 0 else None
+            print(json.dumps(refresh_prices(db, older_than=older)))
         elif args.cmd == "prune-guests":
             from app.services.accounts import prune_guests
             print(json.dumps({"deleted_guests": prune_guests(db, args.days)}))

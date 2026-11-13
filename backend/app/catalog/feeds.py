@@ -132,7 +132,8 @@ def read_feed(raw: bytes, network: str) -> Iterator[dict]:
                    "gender": p.get("gender"), "rating": p.get("rating"),
                    "review_count": p.get("review_count", 0), "in_stock": "1",
                    "_category": p.get("category"), "_specs": p.get("specs"),
-                   "_network": p.get("network")}
+                   "_network": p.get("network"), "_checked_at": p.get("checked_at"),
+                   "_active": p.get("active", True)}
         return
     mapping = MAPPINGS.get(network, MAPPINGS["generic"])
     sample = text[:4096]

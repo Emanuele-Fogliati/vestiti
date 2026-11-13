@@ -4,6 +4,11 @@ python -m app.cli migrate
 if [ "${SEED_ON_START:-true}" = "true" ]; then
   python -m app.cli seed
 fi
+# Prices and stock of products with a readable shop page, at most once every
+# PRICE_REFRESH_HOURS (0 = never). In the background: the app starts without waiting.
+if [ "${PRICE_REFRESH_HOURS:-20}" != "0" ]; then
+  python -m app.cli refresh-prices --hours "${PRICE_REFRESH_HOURS:-20}" >/dev/null 2>&1 &
+fi
 if [ -n "$ADMIN_EMAIL" ] && [ -n "$ADMIN_PASSWORD" ]; then
   python -m app.cli create-admin --email "$ADMIN_EMAIL" --password "$ADMIN_PASSWORD"
 fi

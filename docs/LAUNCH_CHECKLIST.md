@@ -9,8 +9,10 @@ Ordered by how badly it would hurt.
       product needs their paid plan (or another provider). The code only needs new URLs.
 - [ ] **Real affiliate accounts.** None configured: every click today earns nothing.
       Apply to Amazon Associates, Awin (outdoor merchants), maybe Impact/CJ/AvantLink.
-- [ ] **Real product data.** The 169 seed products have indicative prices and approximate
-      specs and no images. Connect at least one real feed per market.
+- [ ] **Real product data.** ~80 products have a real shop page (Bergfreunde IT) with price,
+      picture and stock read from it and refreshed daily; ~120 (Decathlon, Uniqlo, Mountain
+      Warehouse) still have indicative prices and no picture. Import the Awin feeds once
+      accepted. See [AFFILIATES.md](AFFILIATES.md).
 - [ ] **Rental partners** are placeholders (example.com). No deals exist.
 - [ ] **Legal pages** (privacy, terms, affiliate disclosure) are drafts, not reviewed by
       a lawyer. Cookie banner not needed today (one essential cookie, no trackers) but
