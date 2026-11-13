@@ -1,7 +1,7 @@
 {
  "id": "cl-cerro-castillo",
  "country": "CL",
- "name": "Laguna Cerro Castillo",
+ "name": "Laguna Cerro Castillo by the Estero Parada",
  "base": "Villa Cerro Castillo",
  "region": "Cerro Castillo National Park, Aysén",
  "kind": "day",
@@ -14,50 +14,54 @@
   3
  ],
  "hours": [
-  8,
-  10
+  7,
+  8
  ],
  "start_by": "07:30",
  "published": {
-  "km": 16,
-  "gain_m": 1100,
-  "source": "https://www.conaf.cl/parques/parque-nacional-cerro-castillo/"
+  "km": 12,
+  "gain_m": null,
+  "source": "https://www.conaf.cl/parque_nacionales/parque-nacional-cerro-castillo/"
  },
  "why": "The Torres del Paine of the Carretera Austral: basalt spires and a hanging glacier over a green lake, with a fraction of the people.",
- "book": "CONAF entry fee, plus a private-land fee at the start. Register at the ranger post.",
- "water": "Streams in the forest; nothing above it.",
+ "book": "Since 29 May 2026 CONAF allows this trail only with a certified guide and an authorisation from its regional office. Register at the park administration (Laguna Chiguay, km 57 of Ruta 7) and pay at the ticket booth at the trailhead.",
+ "water": "The Estero Parada in the forest; nothing above the tree line.",
  "dangers": [
-  "The last 400 m climb is steep scree.",
-  "Snow and closed trail until December."
+  "The last climb to the lake is steep loose scree.",
+  "Snow is possible even in summer; the trail closes May to September.",
+  "Hantavirus: keep food closed, don't sleep in old huts."
  ],
  "turnaround": "Leave the lake by 15:00.",
  "sources": [
-  "https://www.conaf.cl/parques/parque-nacional-cerro-castillo/"
+  "https://www.conaf.cl/parque_nacionales/parque-nacional-cerro-castillo/"
  ],
  "points": [
   {
    "id": "start",
-   "name": "Villa Cerro Castillo",
-   "lat": -46.1226,
-   "lon": -72.1555,
+   "name": "Estero Parada trailhead, Villa Cerro Castillo",
+   "lat": -46.11231,
+   "lon": -72.20024,
    "role": "start",
-   "note": "Trailhead on the road above the village, at the private gate."
+   "note": "CONAF ticket booth on the road 4 km west of the village, where the Estero Parada leaves the valley.",
+   "scene": "cl-villa-cerro-castillo"
   },
   {
    "id": "forest",
    "name": "Estero Parada lenga forest",
-   "lat": -46.101,
-   "lon": -72.191,
+   "lat": -46.0995,
+   "lon": -72.1905,
    "role": "point",
-   "note": "The long forest climb along the stream."
+   "note": "Lenga forest along the Estero Parada: the shade ends after about 2 km.",
+   "scene": "cl-estero-parada"
   },
   {
    "id": "goal",
    "name": "Laguna Cerro Castillo",
-   "lat": -46.0811,
-   "lon": -72.1813,
+   "lat": -46.079,
+   "lon": -72.1899,
    "role": "goal",
-   "note": "About 1,300 m: the lake under the spires and the glacier."
+   "note": "About 1,350 m: the green lake under the basalt spires and the hanging glacier.",
+   "scene": "cl-laguna-cerro-castillo"
   }
  ]
 }
