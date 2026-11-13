@@ -172,6 +172,7 @@ class Planner:
         c, data = self.tiers()
         tiers = data["tiers"]
         for t in tiers.values():
+            self._where(c, t)
             t.pop("_choices", None)
             t.pop("_brand_swaps", None)
             t.pop("_zone_choices", None)
@@ -189,6 +190,26 @@ class Planner:
             "catalog_note": self._catalog_note(),
         }
 
+    def _zone_kit(self, c: Computed, t: dict) -> dict | None:
+        zch = t.get("_zone_choices") or {}
+        if not (c.zone and zch):
+            return None
+        light = {s: ch.kit_item(c.zone["reqs"][s]) for s, ch in zch.items()}
+        return {"stages": c.zone["stages"], "kit": {s: k for s, k in light.items() if k}}
+
+    def _where(self, c: Computed, t: dict) -> None:
+        """Each piece of the bag says where it is used: one status per stop, in trip
+        order (worn / on at stops / in the bag / not needed), and a sentence."""
+        kit = O._kit(t["_choices"], c.reqs)
+        ev = evaluate(c.stages, c.conds, kit, self._zone_kit(c, t))
+        stages = ev["stages"]
+        t["stops"] = [{"index": s["index"], "name": s["name"], "start": s["start"],
+                       "end": s["end"]} for s in stages]
+        for line in t["items"]:
+            use = [s["slots"].get(line["slot"], {}).get("status", "none") for s in stages]
+            line["where"] = use
+            line["where_text"] = where_text(use, [s["name"] for s in stages])
+
     def strategy(self, tier: str = "medium") -> dict:
         if not self.trip.stops:
             return self._empty()
@@ -196,12 +217,9 @@ class Planner:
         t = data["tiers"][tier]
         choices = t.pop("_choices")
         t.pop("_brand_swaps", None)
-        zch = t.pop("_zone_choices", None) or {}
+        zone = self._zone_kit(c, t)
+        t.pop("_zone_choices", None)
         kit = O._kit(choices, c.reqs)
-        zone = None
-        if c.zone and zch:
-            light = {s: ch.kit_item(c.zone["reqs"][s]) for s, ch in zch.items()}
-            zone = {"stages": c.zone["stages"], "kit": {s: k for s, k in light.items() if k}}
         ev = evaluate(c.stages, c.conds, kit, zone)
         for st in ev["stages"]:
             st["upgrades"] = {}
@@ -294,6 +312,36 @@ class Planner:
 
 
 _RANK = {"covered": 2, "marginal": 1, "cold": 0}
+
+
+def _names(xs: list[str]) -> str:
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
+
+def where_text(use: list[str], names: list[str]) -> str:
+    """'On every day of the trip.' / 'On in Cortina and Val Gardena; in the bag the rest
+    of the trip.' One sentence a traveller can pack by."""
+    if not use:
+        return ""
+    if all(u == "worn" for u in use):
+        return "Worn every day of the trip."
+    if all(u == "none" for u in use):
+        return "Not needed on this trip."
+    if all(u in ("worn", "stops") for u in use) and "stops" in use and "worn" not in use:
+        return "On at stops and in the evening, every day of the trip."
+    if len(set(use)) == 1 and use[0] == "pack":
+        return "In the bag the whole trip, just in case."
+    parts = []
+    for status, label in (("worn", "worn"), ("stops", "on at stops and in the evening"),
+                          ("pack", "in the bag, just in case,")):
+        at = [n for n, u in zip(names, use) if u == status]
+        if at:
+            parts.append(f"{label} in {_names(at)}")
+    rest = [n for n, u in zip(names, use) if u == "none"]
+    text = "; ".join(parts)
+    if rest:
+        text += "; not needed in " + _names(rest) if len(rest) <= 2 else "; not needed elsewhere"
+    return text[0].upper() + text[1:] + "."
 
 
 def tier_advice(tiers: dict) -> None:

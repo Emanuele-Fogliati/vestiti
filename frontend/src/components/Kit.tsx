@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { api, buyUrl, rentUrl } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { dayMonth, money } from "../lib/format";
-import { TIER_LABEL, TIERS, type KitLine, type Plans, type Tier } from "../lib/types";
+import { TIER_LABEL, TIERS, type KitLine, type Plans, type SlotStatus, type Tier, type TierPlan } from "../lib/types";
 import { ProductArt } from "./ProductArt";
 import { specRows } from "../lib/specs";
 import { Stars } from "./Stars";
@@ -33,8 +33,27 @@ function useTween(value: number, ms = 650): number {
   return shown;
 }
 
-function Card({ line, tripId, tier, onSwap, onChanged }: {
-  line: KitLine; tripId: string; tier: Tier; onSwap: () => void; onChanged: () => void;
+const WHERE: Record<SlotStatus, string> = {
+  worn: "worn", stops: "on at stops and in the evening", pack: "in the bag, just in case", none: "not needed",
+};
+
+/** Where a piece is used: one numbered dot per stop, in trip order, and one sentence. */
+function Where({ line, stops }: { line: KitLine; stops: NonNullable<TierPlan["stops"]> }) {
+  if (!line.where || !stops.length) return null;
+  return (
+    <div className="x-where">
+      {stops.length > 1 && (
+        <div className="x-way" aria-hidden="true">
+          {line.where.map((u, i) => <span key={i} className={`w ${u}`} title={`${stops[i]?.name}: ${WHERE[u]}`}>{i + 1}</span>)}
+        </div>
+      )}
+      <p>{line.where_text}</p>
+    </div>
+  );
+}
+
+function Card({ line, tripId, tier, stops, onSwap, onChanged }: {
+  line: KitLine; tripId: string; tier: Tier; stops: NonNullable<TierPlan["stops"]>; onSwap: () => void; onChanged: () => void;
 }) {
   const { toast } = useApp();
   const [more, setMore] = useState(false);
@@ -75,6 +94,7 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
         <div className="x-shop" title={it.checked_at ? "Price and stock read from the shop's page that day" : "Not checked with the shop yet: the real price may differ"}>
           {it.merchant} · {it.checked_at ? `checked ${dayMonth(it.checked_at)}` : "indicative price"}
         </div>)}
+      <Where line={line} stops={stops} />
       <div className="x-row">
         <span className="x-price">{price !== null ? money(price, it?.currency) : "—"}</span>
         {badge}
@@ -155,6 +175,7 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
   const tp = plans.tiers[tier];
   const haves = tp.items.filter((l) => l.kind === "have");
   const hot = plans.zones?.[0];
+  const stops = tp.stops ?? [];
   const mainLines = tp.items.filter((l) => !l.zone && l.kind !== "have");
   const hotLines = tp.items.filter((l) => l.zone && l.kind !== "have");
   async function needOne(slot: string, name: string) {
@@ -217,16 +238,32 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
       {alerts.length > 0 && (
         <div className="x-alerts">{alerts.map((a) => <p key={a.k} className={`x-alert${a.warn ? " warn" : ""}`}>{a.text}</p>)}</div>
       )}
-      {hot && <h3 className="x-h3">One bag for every stop</h3>}
+      <section className="x-onebag-h">
+        <h3 className="x-h3">One bag for the whole trip</h3>
+        <p className="x-sub">Every piece you need, and where you wear it. The numbers are your stops, in order.</p>
+        {stops.length > 1 && (
+          <ol className="x-route">
+            {stops.map((s, i) => <li key={s.index}><span className="n">{i + 1}</span>{s.name}<small>{dayMonth(s.start)}{s.end !== s.start ? `–${dayMonth(s.end)}` : ""}</small></li>)}
+          </ol>
+        )}
+        {stops.length > 1 && (
+          <div className="x-legend">
+            <span><span className="w worn">1</span>Worn</span>
+            <span><span className="w stops">1</span>At stops / evening</span>
+            <span><span className="w pack">1</span>In the bag</span>
+            <span><span className="w none">1</span>Not needed</span>
+          </div>
+        )}
+      </section>
       <div className="x-items">
-        {mainLines.map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} onSwap={() => setSwap(l)} onChanged={onChanged} />)}
+        {mainLines.map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} stops={stops} onSwap={() => setSwap(l)} onChanged={onChanged} />)}
       </div>
       {hot && hotLines.length > 0 && (
         <>
           <h3 className="x-h3">Plus, for the hot days <small>{hot.names.join(", ")}</small></h3>
           <p className="x-sub">Light pieces for the day out. Jackets, fleece and the rest of the bag stay the same.</p>
           <div className="x-items">
-            {hotLines.map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} onSwap={() => setSwap(l)} onChanged={onChanged} />)}
+            {hotLines.map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} stops={stops} onSwap={() => setSwap(l)} onChanged={onChanged} />)}
           </div>
         </>
       )}

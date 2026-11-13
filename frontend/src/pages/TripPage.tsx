@@ -3,7 +3,6 @@ import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { TripMap } from "../components/Maps";
 import { useItineraries } from "../components/ItineraryCards";
 import { Kit } from "../components/Kit";
-import { LayerStrategy } from "../components/LayerStrategy";
 import { EstimateForm } from "../components/Estimate";
 import { PlanChange } from "../components/PlanChange";
 import { ProfileQuiz } from "../components/ProfileQuiz";
@@ -15,18 +14,17 @@ import { Sheet } from "../components/Sheet";
 import { WeatherTab } from "../components/WeatherTab";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { dayMonth, daysBetween, money } from "../lib/format";
+import { dayMonth, daysBetween } from "../lib/format";
 import type { Plans, QuizResult, Strategy, Tier, Trip } from "../lib/types";
 
-type Tab = "trip" | "weather" | "layers" | "bag";
+type Tab = "trip" | "weather" | "bag";
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: "trip", label: "Trip", icon: "M3 18l5-9 4 6 3-4 6 7" },
   { id: "weather", label: "Weather", icon: "M3 9h11a3 3 0 1 0-3-3M3 14h15a3 3 0 1 1-3 3M3 19h6" },
-  { id: "layers", label: "Layers", icon: "M12 3l9 5-9 5-9-5zM3 13l9 5 9-5" },
-  { id: "bag", label: "Bag", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
+  { id: "bag", label: "Clothes", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
 ];
 // old section anchors still land in the right tab
-const HASH: Record<string, Tab> = { trip: "trip", days: "trip", flights: "trip", map: "trip", weather: "weather", layers: "layers", bag: "bag", kit: "bag", total: "bag", ask: "trip" };
+const HASH: Record<string, Tab> = { trip: "trip", days: "trip", flights: "trip", map: "trip", weather: "weather", layers: "bag", bag: "bag", kit: "bag", total: "bag", ask: "trip" };
 
 function TabIcon({ d }: { d: string }) {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>;
@@ -241,7 +239,7 @@ export default function TripPage() {
             {stops.length > 0 && (
               <div className="x-cta x-rise">
                 <b>Ready to pack?</b>
-                <button type="button" className="x-btn y" onClick={() => go("layers")}>Dress me</button>
+                <button type="button" className="x-btn y" onClick={() => go("bag")}>Dress me</button>
               </div>
             )}
           </div>
@@ -265,22 +263,6 @@ export default function TripPage() {
                 <h2 className="x-h2">This would change the plan</h2>
                 <ul className="x-list">{strategy.questions.map((q, i) => <li key={i}>{q.question}</li>)}</ul>
                 <button type="button" className="x-link" onClick={() => setAskOpen(true)}>Answer in the chat</button>
-              </div>
-            )}
-          </div>
-        </section>
-      )}
-
-      {tab === "layers" && (
-        <section className="x-panel" id="p-layers" role="tabpanel" key="layers">
-          <div className="wrap">
-            {strategy && !strategy.empty ? (
-              <LayerStrategy tripId={id} strategy={strategy} tier={tier} stageIdx={Math.min(stageIdx, strategy.stages.length - 1)} setStageIdx={setStageIdx} onChanged={() => loadPlans(tier)} />
-            ) : <Empty planning={planning} onAdd={() => go("trip")} />}
-            {tp && (
-              <div className="x-cta">
-                <b>{money(tp.totals.total)} for everything you still need</b>
-                <button type="button" className="x-btn y" onClick={() => go("bag")}>See the bag</button>
               </div>
             )}
           </div>
