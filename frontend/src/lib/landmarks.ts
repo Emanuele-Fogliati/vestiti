@@ -12,7 +12,7 @@ const RETRIES = 2;
 
 /** null = the server has no such scene (404); undefined = it could not be fetched now. */
 type Result = string | null | undefined;
-interface Job { id: string; done: (r: Result) => void }
+interface Job { id: string; urgent: boolean; done: (r: Result) => void }
 
 const cache = new Map<string, Promise<string | null>>();
 const queue: Job[] = [];
@@ -45,12 +45,14 @@ export function loadLandmark(id: string, urgent = false): Promise<string | null>
   const known = cache.get(id);
   if (known) {
     const at = urgent ? queue.findIndex((j) => j.id === id) : -1;
+    if (at >= 0) queue[at].urgent = true;
     if (at > 0) queue.unshift(...queue.splice(at, 1));
     return known;
   }
   const p = new Promise<string | null>((resolve) => {
     const job: Job = {
       id,
+      urgent,
       done: (r) => {
         if (r === undefined) cache.delete(id);  // not "no picture": the next card asks again
         resolve(r ?? null);
@@ -61,6 +63,17 @@ export function loadLandmark(id: string, urgent = false): Promise<string | null>
   cache.set(id, p);
   pump();
   return p;
+}
+
+/** The globe turned or zoomed away before this thumbnail's turn came: don't fetch it. Only a
+ *  thumbnail still waiting is dropped (never one a card asked for); its promise never settles,
+ *  and the next loadLandmark for it starts afresh. True when it was dropped. */
+export function cancelLandmark(id: string): boolean {
+  const at = queue.findIndex((j) => j.id === id && !j.urgent);
+  if (at < 0) return false;
+  queue.splice(at, 1);
+  cache.delete(id);
+  return true;
 }
 
 /** Tests only: swap the network call and forget everything. */

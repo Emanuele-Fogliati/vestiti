@@ -161,9 +161,29 @@ export function sceneAnchor(owners: GlobePlace[], zoom: number, byId: Map<string
   return city ? { at: city, opens: owners[0], own: false } : null;
 }
 
+/** Home globe ladder, by popularity (level 1..6): the zoom from which a place shows as a dot.
+ *  From space only the most visited places, as pictures; every step closer, dots become pictures
+ *  and empty land gets new dots, so the globe never fills up at once. */
+const GLOBE_DOT = [5.6, 4.8, 4.0, 3.2, 2.5, 0];
+const PICTURE_AFTER = 0.9; // a place's dot turns into its picture this much closer
+
+const lvl = (level: number) => Math.min(6, Math.max(1, Math.round(level)));
+
+export function globeDotZoom(p: Pick<GlobePlace, "level" | "parent">): number {
+  return p.parent ? insideZoom(p.level) : GLOBE_DOT[lvl(p.level) - 1];
+}
+
+/** The zoom from which a place's picture shows on the home globe (the most visited from space). */
+export function globePicZoom(p: Pick<GlobePlace, "level" | "parent">): number {
+  if (p.parent) return insideZoom(p.level) + 0.6;
+  return lvl(p.level) === 6 ? 0 : GLOBE_DOT[lvl(p.level) - 1] + PICTURE_AFTER;
+}
+
 export const SIGHT_KINDS: PlaceKind[] = ["landmark", "nature", "island", "region"];
 
-export function placesGeoJSON(places: GlobePlace[], opts: { boost?: (p: GlobePlace) => number } = {}): FeatureCollection {
+export function placesGeoJSON(places: GlobePlace[],
+  opts: { boost?: (p: GlobePlace) => number; zoomOf?: (p: GlobePlace) => number } = {}): FeatureCollection {
+  const zoomOf = opts.zoomOf ?? placeZoom;
   return {
     type: "FeatureCollection",
     features: places.map((p, i) => ({
@@ -174,7 +194,7 @@ export function placesGeoJSON(places: GlobePlace[], opts: { boost?: (p: GlobePla
         i, name: p.name, kind: p.kind, level: p.level, art: p.art ? 1 : 0,
         sight: SIGHT_KINDS.includes(p.kind) ? 1 : 0,
         top: p.parent ? 0 : 1, // a city's name wins over the names of the places inside it
-        z: Math.max(0, placeZoom(p) - (opts.boost?.(p) ?? 0)),
+        z: Math.max(0, zoomOf(p) - (opts.boost?.(p) ?? 0)),
       },
     })),
   };
@@ -300,6 +320,18 @@ export function baseStyle(c: MapColors, opts: { globe: boolean }): StyleSpecific
   };
 }
 
+/** Name of an empty image the size of a globe picture: a place showing its picture reserves that
+ *  room, so no name (not even its own) is written under a picture. The map adds the image. */
+export const PICTURE_ROOM = "picture-room";
+
+/** The room the globe's pictures take, as a layer above the names: symbols on top are placed
+ *  first, so the rooms are kept before any name is placed. */
+export function pictureRoomLayer(source = "places"): StyleSpecification["layers"][number] {
+  return { id: "pl-room", type: "symbol", source, filter: ["==", ["coalesce", ["get", "p"], 0], 1],
+    layout: { "icon-image": PICTURE_ROOM, "icon-allow-overlap": true } };
+}
+const PIC_HIDES: ExpressionSpecification = ["case", ["==", ["coalesce", ["get", "p"], 0], 1], 0, 1];
+
 /** Our places on top of the base map: dots sized by popularity, names that never overlap
  *  (the most visited win), each place only once you are close enough. */
 export function placeLayers(c: MapColors, source = "places"): StyleSpecification["layers"] {
@@ -311,13 +343,18 @@ export function placeLayers(c: MapColors, source = "places"): StyleSpecification
         "circle-color": ["case", ["==", ["get", "sight"], 1], c.accent, c.ink],
         "circle-stroke-color": ["case", ["==", ["get", "sight"], 1], c.ink, c.halo],
         "circle-stroke-width": 1.6,
+        // a place showing its picture (p = 1): the picture sits on the point, no dot peeking out
+        "circle-opacity": PIC_HIDES,
+        "circle-stroke-opacity": PIC_HIDES,
       } },
     { id: "pl-name", type: "symbol", source, filter: shown,
       layout: {
         "text-field": ["get", "name"], "text-font": FONT_BOLD,
         "text-size": ["interpolate", ["linear"], ["get", "level"], 1, 11, 6, 13.5],
-        "text-variable-anchor": ["left", "right", "top", "bottom"], "text-radial-offset": 0.75,
-        "text-justify": "auto", "text-max-width": 9, "symbol-sort-key": ["-", 0, ["+", ["get", "level"], ["*", 10, ["coalesce", ["get", "top"], 1]]]],
+        "text-variable-anchor": ["left", "right", "top", "bottom"],
+        // a place showing its picture: the name goes beside the picture, not under it
+        "text-radial-offset": ["case", ["==", ["get", "p"], 1], 2.4, 0.75],
+        "text-justify": "auto", "text-max-width": 9, "symbol-sort-key": ["-", 0, ["+", ["get", "level"], ["*", 10, ["coalesce", ["get", "top"], 1]], ["*", 100, ["coalesce", ["get", "p"], 0]]]],
         "text-optional": true,
       },
       paint: { "text-color": c.ink, "text-halo-color": c.halo, "text-halo-width": 1.6 } },

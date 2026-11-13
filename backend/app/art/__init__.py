@@ -91,7 +91,7 @@ def rendered(landmark_id: str) -> str | None:
     if body is None:
         return None
     from app.art.render import render
-    lm = next((x for x in landmarks() if x.id == landmark_id), None)
+    lm = by_id().get(landmark_id)
     return render(landmark_id, body, dict(lm.palette) if lm else None)
 
 
@@ -105,6 +105,23 @@ def _km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 NAMESAKE_KM = 250  # a stop named after a landmark but farther than this is a different place
 
 
+@lru_cache
+def _alias_index() -> tuple[dict[str, list[tuple[int, Landmark]]], dict[str, list[tuple[int, Landmark]]], int]:
+    """Every alias and every exact name -> the landmarks that use it (with their catalog order),
+    and the most words an alias has. Looking a text's word runs up here is what makes matching
+    6,900 globe places take milliseconds instead of 20 seconds (one scan of 5,000 landmarks each)."""
+    aliases: dict[str, list[tuple[int, Landmark]]] = {}
+    names: dict[str, list[tuple[int, Landmark]]] = {}
+    longest = 1
+    for i, lm in enumerate(landmarks()):
+        for a in lm.aliases:
+            aliases.setdefault(a, []).append((i, lm))
+            longest = max(longest, a.count(" ") + 1)
+        for a in lm.names:
+            names.setdefault(a, []).append((i, lm))
+    return aliases, names, longest
+
+
 def _named(text: str, lat: float | None = None, lon: float | None = None) -> list[Landmark]:
     """Landmarks whose alias appears as whole words in the text, in order of appearance.
 
@@ -112,14 +129,24 @@ def _named(text: str, lat: float | None = None, lon: float | None = None) -> lis
     then the longer, more specific alias ("golden temple of dambulla" beats "golden temple")."""
     n = _norm(text)
     t = f" {n} "
-    hits = []
-    for lm in landmarks():
-        found = [(t.find(f" {a} "), -len(a)) for a in lm.aliases if f" {a} " in t]
-        found += [(0, -len(a)) for a in lm.names if a == n]
-        if found:
-            hits.append((*min(found), lm))
+    aliases, names, longest = _alias_index()
+    best: dict[int, tuple[int, int, Landmark]] = {}  # catalog order -> (position, -length, landmark)
+
+    def hit(i: int, lm: Landmark, at: tuple[int, int]) -> None:
+        if i not in best or at < best[i][:2]:
+            best[i] = (*at, lm)
+
+    words = n.split(" ") if n else []
+    for i in range(len(words)):
+        for j in range(i + 1, min(len(words), i + longest) + 1):
+            a = " ".join(words[i:j])
+            for k, lm in aliases.get(a, ()):
+                hit(k, lm, (t.find(f" {a} "), -len(a)))
+    for k, lm in names.get(n, ()):
+        hit(k, lm, (0, -len(n)))
     near = (lambda lm: _km(lat, lon, lm.lat, lm.lon)) if lat is not None and lon is not None else (lambda lm: 0)
-    return [lm for _, _, lm in sorted(hits, key=lambda h: (h[0], near(h[2]), h[1]))]
+    hits = sorted(best.items())  # catalog order first, as the plain scan found them
+    return [lm for _, _, lm in sorted((h for _, h in hits), key=lambda h: (h[0], near(h[2]), h[1]))]
 
 
 def _nearest(lat: float, lon: float, country: str = "") -> Landmark | None:
