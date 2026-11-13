@@ -360,6 +360,8 @@ def build(t: dict) -> dict:
     total_down = down + (up if t["shape"] == "out_and_back" else 0)
     pub = t.get("published") or {}
     for name, ours, theirs in (("km", total_km, pub.get("km")), ("gain", total_up, pub.get("gain_m"))):
+        if name == "gain" and (theirs or 0) < 200:
+            continue  # flat walks: a 90 m DEM's noise is bigger than the climb (the test skips it too)
         if theirs and abs(ours - theirs) / theirs > 0.3:
             print(f"  ! {name}: computed {ours:.0f} vs published {theirs}")
 
