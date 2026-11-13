@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 126V78L4 65L8 80L14 68L20 89L24 58L28 73L31 68L35 90L39 57L44 74L49 73L55 92L59 61L64 76L68 62L73 76L79 64L85 82L89 61L93 79L97 76L102 95L105 75L109 94L115 68L121 90L125 61L129 78L134 64L139 79L144 65L150 79L154 74L159 92L164 62L170 82L175 75L180 93L185 70L190 86L194 65L198 83L201 58L205 72L210 76L215 94L220 73L226 94L232 66L238 82L244 62L250 77L255 62L260 83L264 61L269 80L274 74L279 93L285 73L291 90L295 59L300 73V126Z" fill="var(--il-leaf)"/>
+<path d="M0 200V120Q80 116 150 117Q230 115 300 118V200Z" fill="var(--il-far)"/>
+<path d="M196 118L204 112H236L244 117L240 120H200Z" fill="var(--il-mid)"/>
+<path d="M205 113Q212 104 220 103Q229 104 235 113Z" fill="var(--il-ice)"/>
+<path d="M256 120V110H272V120Z" fill="var(--il-acc)"/>
+<path d="M254 111L264 107L274 111Z" fill="var(--il-ice)"/>
+<g transform="translate(-6 12) scale(1.04)">
+<path d="M30 150L58 128H206L236 140L222 152H40Z" fill="var(--il-mid)"/>
+<path d="M30 150L58 128L64 131L40 152ZM236 140L222 152L218 148L228 140Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M150 128L176 120H212L236 140H206Z" fill="var(--il-mid)"/>
+<path d="M176 120H212L236 140H230L208 124H180Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M66 140H214M90 128L80 150M130 128L126 151M180 134L184 151" vector-effect="non-scaling-stroke" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M62 138Q66 116 92 104Q114 94 140 94Q166 94 186 104Q210 116 214 138Z" fill="var(--il-ice)"/>
+<path d="M186 104Q210 116 214 138H198Q196 118 176 102Z" fill="var(--il-near)" opacity="0.3"/>
+</g>
+<path d="M0 200V164H300V200Z" fill="var(--il-far)"/>
+<path d="M300 200H232Q246 168 244 150Q240 132 214 121L222 120Q250 128 266 140Q284 154 300 158Z" fill="var(--il-acc)"/>
+<path d="M243 140L256 136M245 154L272 148M243 170L288 162M238 186L300 178M256 136L276 200M266 143L296 200" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.35"/>
