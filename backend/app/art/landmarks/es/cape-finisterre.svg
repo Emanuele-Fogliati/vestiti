@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="252" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V62H300V200Z" fill="var(--il-water)"/>
+<path d="M84 116V94H120V116Z" fill="var(--il-ice)"/>
+<path d="M80 95L88 84H116L124 95Z" fill="var(--il-mid)"/>
+<path d="M89 99h5v6h-5ZM99 99h6v6h-6ZM110 99h5v6h-5Z" fill="var(--il-near)" opacity="0.8"/>
+<path d="M128 116V86H206V116Z" fill="var(--il-ice)"/>
+<path d="M156 88V58H178V88Z" fill="var(--il-far)"/>
+<path d="M154 60H180V55H154ZM126 87H208V83H126Z" fill="var(--il-acc)"/>
+<path d="M159 55V44H175V55Z" fill="var(--il-ice)"/>
+<path d="M158 45Q167 34 176 45Z" fill="var(--il-mid)"/>
+<path d="M167 37V30" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M163 45V54M167 45V54M171 45V54" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M156 66H178M156 74H178M156 82H178" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M134 92h5v7h-5ZM144 92h5v7h-5ZM186 92h5v7h-5ZM196 92h5v7h-5ZM134 104h5v7h-5ZM144 104h5v7h-5ZM186 104h5v7h-5ZM196 104h5v7h-5ZM164 66h6v8h-6Z" fill="var(--il-near)" opacity="0.8"/>
+<path d="M163 104h8v12h-8Z" fill="var(--il-leaf)"/>
+<path d="M129 86V116M205 86V116" stroke="var(--il-far)" stroke-width="2.5" fill="none"/>
+<path d="M0 200V146Q30 130 66 120Q84 114 100 114H214L226 120L232 118L244 130L252 128L262 142L270 140L280 156L290 158L300 170V200Z" fill="var(--il-leaf)"/>
+<path d="M206 114L226 120L232 118L244 130L252 128L262 142L270 140L280 156L290 158L300 170V200H212Q204 186 214 174Q198 166 206 152Q190 142 200 130Q190 122 206 114Z" fill="var(--il-mid)"/>
+<path d="M214 130L224 138M232 146L244 150M220 160L236 166M250 170L262 176M228 186L242 190M270 184L282 190M206 140L214 148" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.45"/>
+<path d="M100 114Q90 126 80 140Q70 156 66 170" stroke="var(--il-ice)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
