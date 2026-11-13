@@ -1,0 +1,30 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="62" cy="32" r="13" fill="var(--il-sun)"/>
+<defs><clipPath id="il-au-port-pirie-dome"><path d="M35 113C35 95 44 85 59 83C74 85 83 95 83 113ZM126 113C126 95 135 85 150 83C165 85 174 95 174 113ZM217 113C217 95 226 85 241 83C256 85 265 95 265 113Z"/></clipPath></defs>
+<path d="M0 166V150Q40 146 80 150H220Q260 146 300 150V166Z" fill="var(--il-far)"/>
+<path d="M276 166L279 30H285L288 166Z" fill="var(--il-water)"/>
+<path d="M42 136H258V170H42Z" fill="var(--il-far)"/>
+<path d="M50 146H60V170H50ZM88 146H100V170H88ZM112 148H120V170H112ZM142 144H158V170H142ZM180 148H188V170H180ZM200 146H212V170H200ZM240 146H250V170H240Z" fill="var(--il-near)"/>
+<path d="M82 113L86 100H128V113ZM172 113V100H214L218 113Z" fill="var(--il-acc)"/>
+<path d="M34 112H266V138H34Z" fill="var(--il-mid)"/>
+<path d="M90 114H126M174 114H210" stroke="var(--il-near)" stroke-width="3" fill="none" stroke-dasharray="2 2" opacity="0.5"/>
+<path d="M36 126H264" stroke="var(--il-ice)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<path d="M42 139L50 145L58 139L66 145L74 139M86 139L94 145L102 139L110 145L118 139M182 139L190 145L198 139L206 145L214 139M226 139L234 145L242 139L250 145L258 139" stroke="var(--il-acc)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M36 138H41V170H36ZM76 138H81V170H76ZM124 138H129V170H124ZM133 138H138V170H133ZM162 138H167V170H162ZM171 138H176V170H171ZM219 138H224V170H219ZM259 138H264V170H259Z" fill="var(--il-mid)"/>
+<path d="M35 113C35 95 44 85 59 83C74 85 83 95 83 113ZM126 113C126 95 135 85 150 83C165 85 174 95 174 113ZM217 113C217 95 226 85 241 83C256 85 265 95 265 113Z" fill="var(--il-ice)"/>
+<g clip-path="url(#il-au-port-pirie-dome)"><path d="M20 80L60 120M30 80L70 120M40 80L80 120M50 80L90 120M60 80L100 120M20 120L60 80M30 120L70 80M40 120L80 80M50 120L90 80M60 120L100 80M110 80L150 120M120 80L160 120M130 80L170 120M140 80L180 120M110 120L150 80M120 120L160 80M130 120L170 80M140 120L180 80M202 80L242 120M212 80L252 120M222 80L262 120M232 80L272 120M242 80L282 120M202 120L242 80M212 120L252 80M222 120L262 80M232 120L272 80M242 120L282 80" stroke="var(--il-mid)" stroke-width="0.8" fill="none"/></g>
+<path d="M52 86H66V80H52ZM234 86H248V80H234Z" fill="var(--il-mid)"/>
+<path d="M50 80V70H68V80ZM232 80V70H250V80Z" fill="var(--il-acc)"/>
+<path d="M55 72V79M59 72V79M63 72V79M237 72V79M241 72V79M245 72V79" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M139 98V60H161V98Z" fill="var(--il-mid)"/>
+<path d="M135 61V55H165V61ZM136 100V95H164V100Z" fill="var(--il-ice)"/>
+<path d="M135 55Q138 46 150 44Q162 46 165 55Z" fill="var(--il-mid)"/>
+<path d="M149 44V36H151V44Z" fill="var(--il-near)"/>
+<circle cx="150" cy="35" r="2.5" fill="var(--il-acc)"/>
+<circle cx="150" cy="77" r="8.5" fill="var(--il-ice)"/>
+<circle cx="150" cy="77" r="6" fill="var(--il-near)"/>
+<circle cx="150" cy="104" r="4" fill="var(--il-near)"/>
+<path d="M14 172Q18 120 21 72H27Q25 120 24 172Z" fill="var(--il-obj)"/>
+<path d="M24 72Q6 60 2 74Q12 66 22 74ZM24 72Q8 52 0 52Q16 56 22 70ZM24 72Q20 50 30 42Q26 56 26 70ZM24 72Q40 54 52 58Q38 62 27 72ZM24 72Q44 68 50 82Q38 72 26 74ZM24 72Q16 82 12 96Q20 82 25 75Z" fill="var(--il-leaf)"/>
+<path d="M0 200V166H300V200Z" fill="var(--il-far)"/>
+<path d="M0 200V180H300V200Z" fill="var(--il-obj)"/>
