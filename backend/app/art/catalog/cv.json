@@ -3,6 +3,36 @@
  "name": "Cape Verde",
  "places": [
   {
+   "slug": "assomada",
+   "label": "Assomada's square and the church of Nossa Senhora de Fatima with its red spire",
+   "lat": 15.0995,
+   "lon": -23.6835,
+   "radius_km": 8,
+   "aliases": [
+    "assomada santiago",
+    "assomada market",
+    "mercado de assomada"
+   ],
+   "names": [
+    "assomada",
+    "santa catarina santiago",
+    "assomada cape verde",
+    "assomada capo verde"
+   ],
+   "palette": {
+    "sky": "#A9CBEB",
+    "far": "#8E9682",
+    "mid": "#C9C6C0",
+    "ice": "#F2F1EC",
+    "water": "#3E6EB0",
+    "near": "#262423",
+    "sun": "#F4C542",
+    "leaf": "#5E7A3A",
+    "acc": "#C9553A",
+    "obj": "#E8C368"
+   }
+  },
+  {
    "slug": "cidade-velha",
    "label": "The marble pelourinho on Cidade Velha's cobbled square, palms and the fortress cliff behind",
    "lat": 14.9152,
@@ -116,6 +146,36 @@
    }
   },
   {
+   "slug": "paul-valley",
+   "label": "The green Paul valley on Santo Antao, steep cliff walls, palm and sugarcane",
+   "lat": 17.11,
+   "lon": -25.03,
+   "radius_km": 8,
+   "aliases": [
+    "paul valley",
+    "vale do paul",
+    "ribeira do paul",
+    "valle de paul",
+    "valle del paul"
+   ],
+   "names": [
+    "paul",
+    "paul santo antao"
+   ],
+   "palette": {
+    "sky": "#B4D6EE",
+    "far": "#A6B98A",
+    "mid": "#7E9560",
+    "ice": "#F0EADE",
+    "water": "#4F8FB0",
+    "near": "#22301E",
+    "sun": "#F4C542",
+    "leaf": "#4E8A2E",
+    "acc": "#8C7A5E",
+    "obj": "#A3C45C"
+   }
+  },
+  {
    "slug": "povoacao-velha",
    "label": "The white church of Povoação Velha under Rocha Estância, Boa Vista",
    "lat": 16.038,
@@ -170,6 +230,94 @@
     "leaf": "#5E8E3A",
     "acc": "#BFA27A",
     "obj": "#B8664A"
+   }
+  },
+  {
+   "slug": "ribeira-grande",
+   "label": "Ribeira Grande on Santo Antao: the pastel town between red cliffs and the Atlantic",
+   "lat": 17.182,
+   "lon": -25.068,
+   "radius_km": 8,
+   "aliases": [
+    "ribeira grande santo antao",
+    "ribeira grande de santo antao"
+   ],
+   "names": [
+    "ribeira grande",
+    "povoacao",
+    "ribeira grande cape verde",
+    "ribeira grande capo verde"
+   ],
+   "palette": {
+    "sky": "#CFE0EE",
+    "far": "#B3A99B",
+    "mid": "#8A5A44",
+    "ice": "#F2EEE6",
+    "water": "#2F6A93",
+    "near": "#2A2420",
+    "sun": "#F4C542",
+    "leaf": "#6E8C3E",
+    "acc": "#EBA39E",
+    "obj": "#EDBE4E"
+   }
+  },
+  {
+   "slug": "sal",
+   "label": "The Pedra de Lume salt pans in the crater, Sal",
+   "lat": 16.7605,
+   "lon": -22.8925,
+   "radius_km": 30,
+   "aliases": [
+    "pedra de lume",
+    "pedra lume",
+    "salinas de pedra de lume",
+    "saline di pedra de lume",
+    "pedra de lume salt"
+   ],
+   "names": [
+    "sal",
+    "isola di sal",
+    "ilha do sal",
+    "sal island",
+    "sal cape verde",
+    "sal cabo verde"
+   ],
+   "palette": {
+    "sky": "#B4D5EE",
+    "far": "#8E7C6C",
+    "mid": "#A8664A",
+    "ice": "#F6F3EF",
+    "water": "#6C93C2",
+    "near": "#2A211C",
+    "sun": "#F2C14E",
+    "leaf": "#9A8470",
+    "acc": "#6E5038",
+    "obj": "#EBCFD0"
+   }
+  },
+  {
+   "slug": "terra-boa",
+   "label": "Monte Grande over the Terra Boa desert plain and its mirage, Sal",
+   "lat": 16.775,
+   "lon": -22.94,
+   "radius_km": 6,
+   "aliases": [
+    "terra boa",
+    "miragem de terra boa",
+    "terra boa mirage",
+    "miraggio di terra boa"
+   ],
+   "palette": {
+    "sky": "#B4CFEA",
+    "far": "#D9C49C",
+    "mid": "#A9876A",
+    "ice": "#FFFFFF",
+    "water": "#94BEDF",
+    "near": "#2E2620",
+    "sun": "#F6C431",
+    "leaf": "#8A8F4E",
+    "acc": "#BE7E52",
+    "obj": "#B3A898"
    }
   }
  ]
