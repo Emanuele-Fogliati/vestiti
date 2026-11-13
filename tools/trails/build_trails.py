@@ -5,9 +5,10 @@ Input:  backend/app/trails/data/<cc>/<trail id>.json  (written by hand, with sou
 Output: backend/app/trails/geo/<trail id>.json
 
 Open data only (AllTrails, Komoot and co. are proprietary and are never copied):
-- the path: the OpenStreetMap hiking relation when the trail has one (through the Waymarked
-  Trails API, which returns its ways in order), else a walking route on OpenStreetMap paths
-  through the key points (the FOSSGIS OSRM foot router);
+- the path, first that applies: the OpenStreetMap hiking relation when it covers start and goal
+  (Waymarked Trails API, ways in order); the OSM ways listed in `osm_ways`, in walking order; a
+  shortest walk on all OSM paths of the area through the key points (local router, mountain
+  paths included); for long trails the FOSSGIS OSRM foot router (it skips sac_scale paths).
 - the altitude: Copernicus DEM 90 m through the Open-Meteo elevation API.
 The numbers we compute are checked against the ones the park or the hut publishes ("published"
 in the data): a difference over 30% is printed, and the page shows the published figures when
@@ -101,6 +102,88 @@ def routed(points: list[tuple[float, float]]) -> list[tuple[float, float]]:
     if d.get("code") != "Ok":
         raise RuntimeError(d)
     return [(lat, lon) for lon, lat in d["routes"][0]["geometry"]["coordinates"]]
+
+
+def from_ways(ids: list[int]) -> list[tuple[float, float]]:
+    """OSM ways given by id, in walking order (each flipped to follow on from the last)."""
+    ways = []
+    for wid in ids:
+        d = get(f"https://www.openstreetmap.org/api/0.6/way/{wid}/full.json")
+        nodes = {e["id"]: (e["lat"], e["lon"]) for e in d["elements"] if e["type"] == "node"}
+        way = next(e for e in d["elements"] if e["type"] == "way")
+        ways.append([nodes[n] for n in way["nodes"]])
+        time.sleep(0.3)
+    return chain(ways)
+
+
+# roads cost more than paths, so the local router keeps to the trail where both go
+ROAD_COST = {"motorway": 9, "trunk": 6, "primary": 4, "secondary": 3, "tertiary": 2,
+             "unclassified": 1.6, "residential": 1.6, "service": 1.4, "track": 1.1}
+
+
+def local_route(points: list[tuple[float, float]]) -> list[tuple[float, float]]:
+    """Shortest walk on every OSM highway in the area, mountain paths included (the public OSRM
+    foot router leaves out paths with sac_scale=mountain_hiking and harder)."""
+    import heapq
+    pad = 0.01
+    s, w = min(p[0] for p in points) - pad, min(p[1] for p in points) - pad
+    n, e = max(p[0] for p in points) + pad, max(p[1] for p in points) + pad
+    if (n - s) * (e - w) > 0.25:
+        raise RuntimeError("area too large for the local router: add osm_ways or split with via")
+    d = get(f"https://www.openstreetmap.org/api/0.6/map.json?bbox={w},{s},{e},{n}")
+    nodes = {x["id"]: (x["lat"], x["lon"]) for x in d["elements"] if x["type"] == "node"}
+    graph: dict[int, list[tuple[int, float]]] = {}
+    for x in d["elements"]:
+        tags = x.get("tags") or {}
+        hw = tags.get("highway")
+        if x["type"] != "way" or not hw or tags.get("foot") == "no" or tags.get("access") == "private":
+            continue
+        cost = ROAD_COST.get(hw, 1.0)
+        nd = [i for i in x["nodes"] if i in nodes]
+        for a, b in zip(nd, nd[1:]):
+            c = km(nodes[a], nodes[b]) * cost
+            graph.setdefault(a, []).append((b, c))
+            graph.setdefault(b, []).append((a, c))
+    if not graph:
+        raise RuntimeError("no OSM paths in the area")
+
+    def snap(p):
+        return min(graph, key=lambda i: km(nodes[i], p))
+
+    out: list[tuple[float, float]] = []
+    for a, b in zip(points, points[1:]):
+        src, dst = snap(a), snap(b)
+        dist, prev, pq = {src: 0.0}, {}, [(0.0, src)]
+        while pq:
+            c, u = heapq.heappop(pq)
+            if u == dst:
+                break
+            if c > dist.get(u, 1e18):
+                continue
+            for v, wv in graph[u]:
+                if c + wv < dist.get(v, 1e18):
+                    dist[v], prev[v] = c + wv, u
+                    heapq.heappush(pq, (c + wv, v))
+        if dst not in dist:
+            raise RuntimeError("the OSM paths here don't connect these two points")
+        path = [dst]
+        while path[-1] != src:
+            path.append(prev[path[-1]])
+        seg = [nodes[i] for i in reversed(path)]
+        out += seg[1:] if out else seg
+    return out
+
+
+def route(points, how: str):
+    """local (OSM paths, every difficulty) for compact trails, OSRM for long ones."""
+    if how != "osrm":
+        try:
+            return local_route(points), "local"
+        except RuntimeError as e:
+            if how == "local":
+                raise
+            print(f"  local router: {e}; trying OSRM")
+    return routed(points), "osrm"
 
 
 def nearest(line, p) -> tuple[int, float]:
@@ -223,6 +306,11 @@ def build(t: dict) -> dict:
                 print(f"  osm {t['osm']} misses start ({ds:.1f} km) or goal ({dg:.1f} km): routing")
         except Exception as e:
             print(f"  osm {t['osm']} failed: {e}")
+    if line is None and t.get("osm_ways"):
+        line = from_ways(t["osm_ways"])
+        how = "osm_ways"
+        if t["shape"] == "loop" and km(line[0], line[-1]) > 0.3:
+            line += route([line[-1], line[0]], t.get("router", "auto"))[0][1:]
     if line is None:
         order = list(pts)
         for v in t.get("via") or []:  # extra routing points, placed where they fit best
@@ -231,9 +319,9 @@ def build(t: dict) -> dict:
             order.insert(k, v)
         if t["shape"] == "loop" and km(order[0], order[-1]) > 0.2:
             order.append(order[0])
-        line = routed(order)
-    elif t["shape"] == "loop" and km(line[0], line[-1]) > 0.3:
-        line += routed([line[-1], line[0]])[1:]
+        line, how = route(order, t.get("router", "auto"))
+    elif how == "osm" and t["shape"] == "loop" and km(line[0], line[-1]) > 0.3:
+        line += route([line[-1], line[0]], t.get("router", "auto"))[0][1:]
 
     samp = resample(line, 0.04 if sum(km(a, b) for a, b in zip(line, line[1:])) < 30 else 0.1)
     ele = smooth(elevations(samp))

@@ -42,6 +42,8 @@ lists its `sources`.
 | `water`, `dangers`, `turnaround` | short, concrete, true. `turnaround` = the rule to turn back (time or place) |
 | `osm` | OpenStreetMap hiking relation id of THIS trail, if one exists (find it at hiking.waymarkedtrails.org) |
 | `points` | 3-5 key points in walking order: first `role: start`, last `role: goal`; multiday: `night: true` where you sleep. Each has a `note` (what you find there, 1-2 sentences) and later its `scene` |
+| `osm_ways` | OSM way ids of the path in walking order, when there is no relation and the router goes wrong |
+| `router` | `auto` (default: local router on all OSM paths for compact trails, OSRM for long ones), `local`, `osrm` |
 | `via` | `[[lat, lon], …]` extra routing points, only if the router takes a wrong path |
 
 ## Coordinates: check every one
@@ -57,8 +59,10 @@ OSM feature with that name and its distance; also look at osm.org). Put the poin
 python tools/trails/build_trails.py <trail id>
 ```
 
-It takes the OSM relation when it covers start and goal, else routes on OSM footpaths through the
-points (FOSSGIS OSRM foot router), then reads the altitude (Open-Meteo, Copernicus DEM 90 m).
+It takes the OSM relation when it covers start and goal, else the `osm_ways`, else routes on all
+OSM paths of the area through the points (local router: mountain paths included; the public OSRM
+foot router skips `sac_scale=mountain_hiking` paths and is only the fallback for long trails),
+then reads the altitude (Open-Meteo, Copernicus DEM 90 m).
 It prints `!` when a point is more than 0.8 km off the path, or when the distance or climb is more
 than 30% off the published numbers. **Fix every `!`** (coordinates, `via`, the right relation,
 or the published numbers if you used the wrong source) before you mark the trail `checked`.
