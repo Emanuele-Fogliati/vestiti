@@ -70,6 +70,8 @@ class Trail(BaseModel):
     turnaround: str = Field(default="", max_length=260)
     sources: list[HttpUrl] = Field(min_length=1, max_length=8)
     osm: int | None = None  # OpenStreetMap hiking relation, when there is one for this exact trail
+    osm_ways: list[int] = Field(default_factory=list, max_length=200)  # OSM ways in walking order
+    router: Literal["auto", "local", "osrm"] = "auto"  # how build_trails routes when no OSM line
     points: list[Point] = Field(min_length=2, max_length=8)
     via: list[tuple[float, float]] = Field(default_factory=list, max_length=12)  # routing only
 
