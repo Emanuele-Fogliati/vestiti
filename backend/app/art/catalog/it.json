@@ -216,7 +216,11 @@
     "rione monti"
    ],
    "names": [
-    "alberobello"
+    "alberobello",
+    "apulia",
+    "puglia",
+    "puglia region",
+    "apulia region"
    ],
    "palette": {
     "sky": "#B4D4F0",
@@ -459,7 +463,10 @@
     "cattedrale di san ciriaco",
     "san ciriaco cathedral",
     "ancona cathedral",
-    "duomo di san ciriaco"
+    "duomo di san ciriaco",
+    "cathedral of san ciriaco",
+    "cattedrale di ancona",
+    "basilica di san ciriaco"
    ],
    "names": [
     "ancona",
@@ -10999,7 +11006,8 @@
     "ponte di tiberio",
     "bridge of tiberius",
     "tiberius bridge",
-    "ponte tiberio"
+    "ponte tiberio",
+    "ponte d augusto e tiberio"
    ],
    "names": [
     "rimini"
@@ -16135,6 +16143,656 @@
     "leaf": "#3F7A3A",
     "acc": "#E3B867",
     "obj": "#D98C6E"
+   }
+  },
+  {
+   "slug": "barrea",
+   "label": "Barrea village on its spur above the Lago di Barrea, with a red deer, Abruzzo National Park",
+   "lat": 41.7555,
+   "lon": 13.9918,
+   "radius_km": 6,
+   "aliases": [
+    "lago di barrea",
+    "lake barrea",
+    "barrea lake"
+   ],
+   "names": [
+    "barrea"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#45653A",
+    "mid": "#B3AE9F",
+    "ice": "#EFE6D2",
+    "water": "#3F9AA5",
+    "near": "#24281F",
+    "sun": "#F4C542",
+    "leaf": "#6C9246",
+    "acc": "#C8714D",
+    "obj": "#8A5532"
+   }
+  },
+  {
+   "slug": "formia",
+   "label": "Torre di Mola among the stone pines on Formia's seafront, Monti Aurunci behind",
+   "lat": 41.2552,
+   "lon": 13.6085,
+   "radius_km": 8,
+   "aliases": [
+    "torre di mola",
+    "torre mola formia"
+   ],
+   "names": [
+    "formia"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#D6CFBE",
+    "mid": "#A99D88",
+    "ice": "#E6E2D8",
+    "water": "#2F7FA0",
+    "near": "#232622",
+    "sun": "#F4C542",
+    "leaf": "#3E6A2E",
+    "acc": "#73904F",
+    "obj": "#6B4A34"
+   }
+  },
+  {
+   "slug": "monti-lucretili",
+   "label": "Il Pratone meadow with grazing horses below Monte Gennaro, Monti Lucretili",
+   "lat": 42.065,
+   "lon": 12.835,
+   "radius_km": 15,
+   "aliases": [
+    "monti lucretili",
+    "parco dei monti lucretili",
+    "parco naturale regionale dei monti lucretili",
+    "monte gennaro",
+    "pratone di monte gennaro",
+    "monte zappi"
+   ],
+   "names": [
+    "lucretili"
+   ],
+   "palette": {
+    "sky": "#9FCBEA",
+    "far": "#C8A867",
+    "mid": "#CDC9BC",
+    "ice": "#F2EFE8",
+    "water": "#4A86A8",
+    "near": "#262A22",
+    "sun": "#F4C542",
+    "leaf": "#3F6B2E",
+    "acc": "#6F9045",
+    "obj": "#7A4A2C"
+   }
+  },
+  {
+   "slug": "roccaraso",
+   "label": "Roccaraso on its hill with the church tower, above the stone railway viaduct",
+   "lat": 41.8483,
+   "lon": 14.0789,
+   "radius_km": 8,
+   "aliases": [
+    "aremogna"
+   ],
+   "names": [
+    "roccaraso"
+   ],
+   "palette": {
+    "sky": "#A6CCEE",
+    "far": "#3E6046",
+    "mid": "#8F8E89",
+    "ice": "#F2F0EA",
+    "water": "#5A87A6",
+    "near": "#262624",
+    "sun": "#F4C542",
+    "leaf": "#5F8A3E",
+    "acc": "#C25A3A",
+    "obj": "#D9A23A"
+   }
+  },
+  {
+   "slug": "sulmona",
+   "label": "Sulmona's Annunziata bell tower and dome over the roofs, Monte Morrone behind",
+   "lat": 42.0466,
+   "lon": 13.9264,
+   "radius_km": 10,
+   "aliases": [
+    "santissima annunziata sulmona",
+    "annunziata di sulmona",
+    "complesso dell annunziata"
+   ],
+   "names": [
+    "sulmona"
+   ],
+   "palette": {
+    "sky": "#A9CBEA",
+    "far": "#B3AC9C",
+    "mid": "#8F8B83",
+    "ice": "#ECE8DE",
+    "water": "#6C767C",
+    "near": "#2A2826",
+    "sun": "#F4C542",
+    "leaf": "#6A8048",
+    "acc": "#E3CB72",
+    "obj": "#C47650"
+   }
+  },
+  {
+   "slug": "trevignano-romano",
+   "label": "Trevignano Romano on Lake Bracciano, with the Rocca Orsini ruins on the hill above the church and lakefront",
+   "lat": 42.1553,
+   "lon": 12.2453,
+   "radius_km": 5,
+   "aliases": [
+    "rocca orsini trevignano",
+    "rocca di trevignano"
+   ],
+   "names": [
+    "trevignano romano",
+    "trevignano"
+   ],
+   "palette": {
+    "sky": "#C6DCF0",
+    "far": "#CFC6B4",
+    "mid": "#A99A82",
+    "ice": "#F3EEE2",
+    "water": "#35617F",
+    "near": "#28282A",
+    "sun": "#F4C542",
+    "leaf": "#5F7F3C",
+    "acc": "#E4BE78",
+    "obj": "#D98E72"
+   }
+  },
+  {
+   "slug": "moliterno",
+   "label": "Moliterno's castle and Chiesa Madre above the town",
+   "lat": 40.2425,
+   "lon": 15.868,
+   "radius_km": 8,
+   "aliases": [
+    "castello di moliterno",
+    "moliterno castle"
+   ],
+   "names": [
+    "moliterno"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#D2BC9C",
+    "mid": "#8A857D",
+    "ice": "#E6CFBC",
+    "water": "#3F8FB0",
+    "near": "#27231F",
+    "sun": "#F4C543",
+    "leaf": "#7E9A4C",
+    "acc": "#B5654A",
+    "obj": "#8B5A45"
+   }
+  },
+  {
+   "slug": "noci",
+   "label": "Noci's clock bell tower above the white old town",
+   "lat": 40.7915,
+   "lon": 17.127,
+   "radius_km": 8,
+   "aliases": [
+    "centro storico di noci"
+   ],
+   "names": [
+    "noci"
+   ],
+   "palette": {
+    "sky": "#AFCDEB",
+    "far": "#EADFCB",
+    "mid": "#B05A3E",
+    "ice": "#F4F1EA",
+    "water": "#3F8FB0",
+    "near": "#2A2420",
+    "sun": "#F4C543",
+    "leaf": "#7E8F5A",
+    "acc": "#D27552",
+    "obj": "#A88458"
+   }
+  },
+  {
+   "slug": "pioppi",
+   "label": "Palazzo Vinciprova on the Pioppi seafront",
+   "lat": 40.174,
+   "lon": 15.083,
+   "radius_km": 4,
+   "aliases": [
+    "palazzo vinciprova",
+    "castello vinciprova",
+    "museo vivo del mare"
+   ],
+   "names": [
+    "pioppi",
+    "marina di pioppi"
+   ],
+   "palette": {
+    "sky": "#9FCBF0",
+    "far": "#BFB5A2",
+    "mid": "#9E968A",
+    "ice": "#DAD5CB",
+    "water": "#2F8DB8",
+    "near": "#26231F",
+    "sun": "#F4C543",
+    "leaf": "#5E8040",
+    "acc": "#D7A85C",
+    "obj": "#8A5A3E"
+   }
+  },
+  {
+   "slug": "ponte-alla-luna",
+   "label": "Ponte alla Luna Tibetan bridge from Sasso di Castalda across the gorge",
+   "lat": 40.486,
+   "lon": 15.679,
+   "radius_km": 4,
+   "aliases": [
+    "ponte alla luna",
+    "ponte tibetano di sasso di castalda",
+    "ponte tibetano sasso di castalda",
+    "bridge to the moon"
+   ],
+   "names": [
+    "sasso di castalda"
+   ],
+   "palette": {
+    "sky": "#A6CBEB",
+    "far": "#86A05E",
+    "mid": "#A89F8E",
+    "ice": "#D8D3C4",
+    "water": "#3F8FB0",
+    "near": "#27241F",
+    "sun": "#F4C543",
+    "leaf": "#5F7A3F",
+    "acc": "#B4613F",
+    "obj": "#5B5E62"
+   }
+  },
+  {
+   "slug": "savelletri",
+   "label": "Savelletri's fishing harbour with the white Case Bianche",
+   "lat": 40.878,
+   "lon": 17.409,
+   "radius_km": 4,
+   "aliases": [
+    "porto di savelletri",
+    "savelletri harbour",
+    "savelletri di fasano"
+   ],
+   "names": [
+    "savelletri"
+   ],
+   "palette": {
+    "sky": "#A9CDEA",
+    "far": "#9AA3AB",
+    "mid": "#D8CBB0",
+    "ice": "#F5F3EE",
+    "water": "#4C93B8",
+    "near": "#23262B",
+    "sun": "#F2C230",
+    "leaf": "#6E8B4F",
+    "acc": "#C23A2E",
+    "obj": "#2F6FB4"
+   }
+  },
+  {
+   "slug": "torre-guaceto",
+   "label": "The Aragonese watchtower of Torre Guaceto on its grassy promontory",
+   "lat": 40.716,
+   "lon": 17.795,
+   "radius_km": 5,
+   "aliases": [
+    "torre guaceto",
+    "riserva di torre guaceto",
+    "riserva naturale di torre guaceto"
+   ],
+   "palette": {
+    "sky": "#9CC7EC",
+    "far": "#D8C285",
+    "mid": "#B8A07C",
+    "ice": "#EEE8DA",
+    "water": "#2F7DB0",
+    "near": "#2A2520",
+    "sun": "#F4C543",
+    "leaf": "#6F7E52",
+    "acc": "#A88A5A",
+    "obj": "#2E6FA8"
+   }
+  },
+  {
+   "slug": "capo-mannu",
+   "label": "The pale cliffs of Capo Mannu with its ruined Spanish tower, Sinis peninsula",
+   "lat": 40.035,
+   "lon": 8.384,
+   "radius_km": 5,
+   "aliases": [
+    "capo mannu",
+    "torre di capo mannu"
+   ],
+   "palette": {
+    "sky": "#C9E2F2",
+    "far": "#D6CCB8",
+    "mid": "#D9C39A",
+    "ice": "#F4F1EA",
+    "water": "#2F8FA8",
+    "near": "#262420",
+    "sun": "#F6C431",
+    "leaf": "#6E8A45",
+    "acc": "#B98A5E",
+    "obj": "#A79F92"
+   }
+  },
+  {
+   "slug": "grotta-delle-tre-porte",
+   "label": "The three sea-cave mouths of the Grotta delle Tre Porte in the limestone cliffs of Leuca",
+   "lat": 39.806,
+   "lon": 18.372,
+   "radius_km": 2,
+   "aliases": [
+    "grotta delle tre porte",
+    "grotta tre porte",
+    "grotte delle tre porte"
+   ],
+   "palette": {
+    "sky": "#C4E0F4",
+    "far": "#E6DCC6",
+    "mid": "#CDBFA3",
+    "ice": "#F6F3EC",
+    "water": "#1FA3B5",
+    "near": "#262220",
+    "sun": "#F6C431",
+    "leaf": "#8A9558",
+    "acc": "#D08A4A",
+    "obj": "#3A6FA8"
+   }
+  },
+  {
+   "slug": "fort-bard",
+   "label": "Forte di Bard's stone tiers on their rock spur, Aosta Valley",
+   "lat": 45.6086,
+   "lon": 7.7445,
+   "radius_km": 4,
+   "aliases": [
+    "fort bard",
+    "forte di bard",
+    "fort de bard",
+    "bard fortress",
+    "fortezza di bard",
+    "forte bard"
+   ],
+   "names": [
+    "bard"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#93A592",
+    "mid": "#B9B2A6",
+    "ice": "#E4DFD5",
+    "water": "#6FA8A0",
+    "near": "#2B2A28",
+    "sun": "#F3C23A",
+    "leaf": "#4F7D38",
+    "acc": "#78726A",
+    "obj": "#C3352C"
+   }
+  },
+  {
+   "slug": "val-veny",
+   "label": "Lago del Miage below the Aiguille Noire de Peuterey, Val Veny",
+   "lat": 45.787,
+   "lon": 6.876,
+   "radius_km": 8,
+   "aliases": [
+    "val veny",
+    "lago del miage",
+    "lac du miage",
+    "miage lake",
+    "lago di miage",
+    "miage glacier",
+    "ghiacciaio del miage",
+    "aiguille noire de peuterey"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#ABA69E",
+    "mid": "#857F78",
+    "ice": "#F4F6F8",
+    "water": "#7CCBB9",
+    "near": "#2A2826",
+    "sun": "#F5C33B",
+    "leaf": "#5E8A3C",
+    "acc": "#7A6A58",
+    "obj": "#BDB9B1"
+   }
+  },
+  {
+   "slug": "barumini",
+   "label": "The Nuraghe Su Nuraxi with its central tower, bastion and hut village, Barumini",
+   "lat": 39.7058,
+   "lon": 8.9908,
+   "radius_km": 5,
+   "aliases": [
+    "su nuraxi",
+    "nuraghe su nuraxi",
+    "nuraghe di barumini",
+    "nuraxi di barumini"
+   ],
+   "names": [
+    "barumini"
+   ],
+   "palette": {
+    "sky": "#B6D5EF",
+    "far": "#8FA36E",
+    "mid": "#857B6E",
+    "ice": "#E4DCCB",
+    "water": "#6FA0C0",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#86A84C",
+    "acc": "#9C907E",
+    "obj": "#A39782"
+   }
+  },
+  {
+   "slug": "castelbuono",
+   "label": "The Castello dei Ventimiglia above its grass-stepped ramp, with a donkey, Castelbuono",
+   "lat": 37.9306,
+   "lon": 14.0886,
+   "radius_km": 8,
+   "aliases": [
+    "castello dei ventimiglia",
+    "castello di castelbuono",
+    "ventimiglia castle castelbuono"
+   ],
+   "names": [
+    "castelbuono"
+   ],
+   "palette": {
+    "sky": "#93C2EC",
+    "far": "#8D9C74",
+    "mid": "#C18E5C",
+    "ice": "#E3D6BF",
+    "water": "#6FA0C0",
+    "near": "#2B2119",
+    "sun": "#F4C542",
+    "leaf": "#7E9A4A",
+    "acc": "#BE5E3A",
+    "obj": "#7F766C"
+   }
+  },
+  {
+   "slug": "isola-di-capo-rizzuto",
+   "label": "The Aragonese fortress of Le Castella on its islet and causeway, Isola di Capo Rizzuto",
+   "lat": 38.9077,
+   "lon": 17.0251,
+   "radius_km": 10,
+   "aliases": [
+    "le castella",
+    "fortezza di le castella",
+    "castello di le castella",
+    "castello aragonese di le castella",
+    "fortezza aragonese le castella",
+    "capo rizzuto"
+   ],
+   "names": [
+    "isola di capo rizzuto",
+    "isola capo rizzuto"
+   ],
+   "palette": {
+    "sky": "#A3CDF0",
+    "far": "#A9B39A",
+    "mid": "#C99E66",
+    "ice": "#F2EBDD",
+    "water": "#2D9CC4",
+    "near": "#2C241C",
+    "sun": "#F4C542",
+    "leaf": "#7C9A4E",
+    "acc": "#DDC495",
+    "obj": "#776A5A"
+   }
+  },
+  {
+   "slug": "badia-prataglia",
+   "label": "Badia Prataglia's abbey church and village among the fir forests of the Casentino, with a red deer",
+   "lat": 43.7867,
+   "lon": 11.8817,
+   "radius_km": 6,
+   "aliases": [
+    "badia a prataglia"
+   ],
+   "names": [
+    "badia prataglia"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#9DBA68",
+    "mid": "#5E8A45",
+    "ice": "#EFE8D8",
+    "water": "#4A86B0",
+    "near": "#22261E",
+    "sun": "#F6C431",
+    "leaf": "#2E5131",
+    "acc": "#A85A38",
+    "obj": "#A39580"
+   }
+  },
+  {
+   "slug": "empoli",
+   "label": "The green-and-white marble Collegiata di Sant'Andrea and its brick bell tower, Empoli",
+   "lat": 43.7194,
+   "lon": 10.9459,
+   "radius_km": 10,
+   "aliases": [
+    "collegiata di empoli",
+    "collegiata sant andrea empoli",
+    "collegiata di sant andrea empoli",
+    "piazza farinata degli uberti"
+   ],
+   "names": [
+    "empoli"
+   ],
+   "palette": {
+    "sky": "#A6CBF0",
+    "far": "#E2C79B",
+    "mid": "#EFEBE2",
+    "ice": "#D3CFC6",
+    "water": "#4A86B0",
+    "near": "#262624",
+    "sun": "#F6C431",
+    "leaf": "#3F6A4A",
+    "acc": "#A9553A",
+    "obj": "#3C5449"
+   }
+  },
+  {
+   "slug": "filottrano",
+   "label": "The brick baroque Collegiata dell'Assunta and its bell tower, Filottrano",
+   "lat": 43.4337,
+   "lon": 13.3517,
+   "radius_km": 8,
+   "aliases": [
+    "collegiata di filottrano"
+   ],
+   "names": [
+    "filottrano"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#C6BFB3",
+    "mid": "#CE9F82",
+    "ice": "#EAD8C4",
+    "water": "#4A86B0",
+    "near": "#2E2420",
+    "sun": "#F6C431",
+    "leaf": "#566E50",
+    "acc": "#B0603F",
+    "obj": "#878C90"
+   }
+  },
+  {
+   "slug": "sansepolcro",
+   "label": "The cathedral's pointed bell tower over Piazza Torre di Berta, Sansepolcro",
+   "lat": 43.5717,
+   "lon": 12.1395,
+   "radius_km": 10,
+   "aliases": [
+    "piazza torre di berta",
+    "duomo di sansepolcro",
+    "cattedrale di sansepolcro"
+   ],
+   "names": [
+    "sansepolcro",
+    "san sepolcro",
+    "borgo sansepolcro",
+    "borgo san sepolcro"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#B7AD9E",
+    "mid": "#A88E72",
+    "ice": "#EFE6CF",
+    "water": "#4A86B0",
+    "near": "#2C2622",
+    "sun": "#F6C431",
+    "leaf": "#5C7A3E",
+    "acc": "#B05A3A",
+    "obj": "#E6CB86"
+   }
+  },
+  {
+   "slug": "sirolo",
+   "label": "Monte Conero's forested headland and white cliffs over the turquoise sea, seen from Sirolo",
+   "lat": 43.5236,
+   "lon": 13.6178,
+   "radius_km": 6,
+   "aliases": [
+    "monte conero",
+    "parco del conero",
+    "conero park",
+    "riviera del conero",
+    "belvedere di sirolo",
+    "spiaggia urbani"
+   ],
+   "names": [
+    "sirolo"
+   ],
+   "palette": {
+    "sky": "#B9D8F0",
+    "far": "#8FA866",
+    "mid": "#55783F",
+    "ice": "#F1EFE6",
+    "water": "#34A8B0",
+    "near": "#1F2A1C",
+    "sun": "#F6C431",
+    "leaf": "#3B6A2C",
+    "acc": "#C46A44",
+    "obj": "#2F6FA8"
    }
   }
  ]
