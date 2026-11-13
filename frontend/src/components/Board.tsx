@@ -26,10 +26,14 @@ type Msg = { text: string; kind: "ok" | "bad"; fixes?: Fix[]; onFix?: (f: Fix) =
 
 /** The trip on its days: what is decided, what is booked, how you get from one place to the next
  * and the weather, with one place open below to plan its days. */
-export function TripBoard({ trip, onChanged }: { trip: Trip; onChanged: () => void }) {
+export function TripBoard({ trip, onChanged, selected, onSelect }: {
+  trip: Trip; onChanged: () => void; selected?: number; onSelect?: (i: number) => void;
+}) {
   const [board, setBoard] = useState<Board | null>(null);
   const [err, setErr] = useState<string | null>(null);
-  const [sel, setSel] = useState(0);
+  const [sel, setSelRaw] = useState(selected ?? 0);
+  const setSel = useCallback((i: number) => { setSelRaw(i); onSelect?.(i); }, [onSelect]);
+  useEffect(() => { if (selected !== undefined) setSelRaw(selected); }, [selected]);
   const [openLeg, setOpenLeg] = useState<number | null>(null); // stop index, or -1 = the flight home
   const [msg, setMsg] = useState<Msg | null>(null);
   const [busy, setBusy] = useState(false);
@@ -166,11 +170,6 @@ export function TripBoard({ trip, onChanged }: { trip: Trip; onChanged: () => vo
         </div>
         <p className="bd-sum">{stops.length ? `${total} days · ${stops.length} place${stops.length > 1 ? "s" : ""} · ${nFixed} fixed · ${nBooked} booked` : "No places yet"}</p>
         {busy && <span className="spin" aria-label="Saving" />}
-      </div>
-      <div className="bd-legend" aria-hidden="true">
-        <span><i className="lg fixed" />Fixed: booked, won't move</span>
-        <span><i className="lg flex" />Flexible: decided, days can change</span>
-        <span><i className="lg idea" />Idea: maybe</span>
       </div>
 
       {stops.length > 0 && start && (

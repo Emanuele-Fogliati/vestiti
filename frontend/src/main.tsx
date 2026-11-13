@@ -9,6 +9,7 @@ import "./theme/app.css";
 import "./theme/board.css";
 import "./theme/start.css";
 import "./theme/calm.css";
+import "./theme/tabs.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

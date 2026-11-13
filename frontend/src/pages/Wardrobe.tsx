@@ -287,13 +287,11 @@ export default function Wardrobe() {
       <div className="wrap">
         <div className="page-head"><div><p className="kicker">What you already own</p><h1>Wardrobe</h1></div></div>
         <p className="muted" style={{ maxWidth: "64ch", marginBottom: 16 }}>
-          Add the clothes you have once. Every trip uses them first, at zero cost, and tells you honestly if they're up to it.
-          Start with the pieces that save the most: rain jacket, warm jacket, fleece, shoes.
+          Add what you own once. Every trip uses it first, for free.
         </p>
         {user?.is_guest && (
           <div className="panel row" style={{ marginBottom: 20, justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-            <span className="small" style={{ maxWidth: "60ch" }}><b>Keep your wardrobe.</b> You're on a guest account that lives only in this browser.
-              Create a free account and your clothes are there for every trip, on any device. What you added so far comes with you.</span>
+            <span className="small" style={{ maxWidth: "60ch" }}><b>Keep your wardrobe.</b> As a guest it lives only in this browser.</span>
             <Link className="btn sm primary" to="/register">Create account</Link>
           </div>
         )}
