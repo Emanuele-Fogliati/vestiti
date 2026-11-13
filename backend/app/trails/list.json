@@ -1542,22 +1542,22 @@
    "slot": "IT-B",
    "base": "Val di Funes",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Malga Zannes under the Odle",
-     "reuse": null
+     "reuse": "it-malga-zannes"
     },
     {
      "point": "munkel",
      "name": "Adolf Munkel path under the Odle walls",
-     "reuse": null
+     "reuse": "it-adolf-munkel-path"
     },
     {
      "point": "goal",
      "name": "Malga Geisler under the Odle",
-     "reuse": null
+     "reuse": "it-geisleralm"
     }
    ]
   },
@@ -1568,12 +1568,12 @@
    "slot": "IT-B",
    "base": "Positano",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Bomerano, Agerola",
-     "reuse": null
+     "reuse": "it-bomerano"
     },
     {
      "point": "praiano",
@@ -1583,7 +1583,7 @@
     {
      "point": "goal",
      "name": "Nocelle over Positano",
-     "reuse": null
+     "reuse": "it-nocelle"
     }
    ]
   },
@@ -1620,7 +1620,7 @@
    "slot": "IT-B",
    "base": "Catania",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -1630,12 +1630,12 @@
     {
      "point": "cablecar",
      "name": "Etna cable car top and ash slopes",
-     "reuse": null
+     "reuse": "it-etna-cable-car"
     },
     {
      "point": "goal",
      "name": "Etna summit craters",
-     "reuse": null
+     "reuse": "it-etna-summit-craters"
     }
    ]
   },
@@ -1646,17 +1646,17 @@
    "slot": "IT-B",
    "base": "Courmayeur",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Val Ferret meadows",
-     "reuse": null
+     "reuse": "it-val-ferret"
     },
     {
      "point": "goal",
      "name": "Rifugio Bonatti under the Grandes Jorasses",
-     "reuse": null
+     "reuse": "it-rifugio-bonatti"
     }
    ]
   },
@@ -1667,22 +1667,22 @@
    "slot": "IT-B",
    "base": "Valsavarenche",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Pont, Valsavarenche",
-     "reuse": null
+     "reuse": "it-pont-valsavarenche"
     },
     {
      "point": "moraine",
      "name": "Gran Paradiso from the moraine",
-     "reuse": null
+     "reuse": "it-gran-paradiso-national-park"
     },
     {
      "point": "goal",
      "name": "Rifugio Vittorio Emanuele II",
-     "reuse": null
+     "reuse": "it-rifugio-vittorio-emanuele"
     }
    ]
   }
