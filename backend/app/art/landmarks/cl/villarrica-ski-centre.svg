@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="256" cy="30" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-cl-villarrica-ski-centre-m"><path d="M0 176V170Q60 150 90 110Q112 66 136 30L144 24H158L166 30Q190 66 212 110Q242 150 300 170V176Z"/></clipPath></defs>
+<path d="M0 176V170Q60 150 90 110Q112 66 136 30L144 24H158L166 30Q190 66 212 110Q242 150 300 170V176Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-cl-villarrica-ski-centre-m)">
+<path d="M0 0H300V96L282 100L262 92L244 102L226 92L210 104L196 94L182 106L168 96L154 108L140 96L126 106L112 94L98 104L84 96L66 104L44 96L20 102L0 96Z" fill="var(--il-ice)"/>
+<path d="M144 24H158L156 30H146Z" fill="var(--il-near)"/>
+</g>
+<path d="M146 26Q142 16 150 10Q158 4 172 6Q186 8 194 4Q188 14 176 14Q166 16 160 26Z" fill="var(--il-ice)" opacity="0.8"/>
+<path d="M166 30Q190 66 212 110L200 104Q182 66 160 34Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M118 172L152 86" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
+<path d="M124 158V146H130V158ZM132 138V126H138V138ZM140 118V106H146V118ZM147 100V90H152V100Z" fill="var(--il-obj)"/>
+<path d="M120 146H134M128 126H142M136 106H150M144 90H155" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M0 200V150Q20 136 40 142Q56 128 72 140Q86 132 96 150Q104 160 110 172H0ZM300 200V146Q280 132 262 140Q246 128 232 140Q218 134 206 150Q196 160 190 172H300Z" fill="var(--il-leaf)"/>
+<path d="M104 176V164H126V176ZM132 176V166H146V176Z" fill="var(--il-acc)"/>
+<path d="M102 164L115 156L128 164ZM130 166L139 160L148 166Z" fill="var(--il-near)"/>
+<path d="M0 200V172H300V200Z" fill="var(--il-far)"/>
