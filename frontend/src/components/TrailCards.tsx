@@ -31,7 +31,7 @@ export function TrailCards({ trails, query = "" }: { trails: Card[]; query?: str
       {trails.map((t) => (
         <li key={t.id} className={`tcard${t.in_season === false ? " off" : ""}`}>
           <Link to={`/trails/${t.id}${query}`}>
-            {t.art ? <Illustration art={t.art} label={t.name} /> : <div className="tcard-noart" aria-hidden="true" />}
+            {t.art && <Illustration art={t.art} label={t.name} />}
             <div className="tcard-body">
               <div className="tags">
                 <span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
