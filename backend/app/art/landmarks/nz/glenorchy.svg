@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="34" cy="20" r="10" fill="var(--il-sun)"/>
+<defs><clipPath id="il-nz-glenorchy-clip"><path d="M0 130V54L14 38L26 42L42 32L60 28L76 30L86 38L96 34L108 32L120 30L132 36L146 26L158 20L170 30L186 34L210 36L234 28L250 32L266 34L282 40L300 48V130Z"/></clipPath></defs>
+<path d="M0 130V54L14 38L26 42L42 32L60 28L76 30L86 38L96 34L108 32L120 30L132 36L146 26L158 20L170 30L186 34L210 36L234 28L250 32L266 34L282 40L300 48V130Z" fill="var(--il-far)"/>
+<path d="M60 28L76 30L70 50L60 70L52 52ZM146 26L158 20L150 44L138 60ZM234 28L250 32L240 52L226 60Z" fill="var(--il-near)" opacity="0.3"/>
+<g clip-path="url(#il-nz-glenorchy-clip)"><path d="M40 20H80L76 36L70 34L64 40L56 34L48 38L42 34ZM136 14H176L172 34L166 32L160 40L154 34L148 38L140 34ZM220 20H300V50L290 44L282 48L272 40L262 44L252 38L244 42L236 36L226 40Z" fill="var(--il-ice)"/></g>
+<path d="M0 132V112H300V132Z" fill="var(--il-water)"/>
+<path d="M0 132V60Q14 60 20 80Q26 100 20 132ZM48 132Q46 102 68 92Q78 66 102 66Q120 50 144 56Q170 46 190 60Q214 58 228 76L238 132ZM258 132Q258 98 276 90Q286 72 300 68V132Z" fill="var(--il-leaf)"/>
+<path d="M26 125L112 121L114 126L26 130Z" fill="var(--il-mid)"/>
+<path d="M28 121L110 117M44 116V124M62 115V123M80 114V122M98 113V121" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M0 200V128Q150 124 300 130V200Z" fill="var(--il-mid)"/>
+<path d="M124 160V115L196 106V160Z" fill="var(--il-acc)"/>
+<path d="M124 160V115L196 106V160Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M196 160V106L229 76L262 106V160Z" fill="var(--il-acc)"/>
+<path d="M118 118L196 107L229 73L153 83Z" fill="var(--il-obj)"/>
+<path d="M192 109L229 72L266 109L262 111L229 78L196 111Z" fill="var(--il-obj)"/>
+<path d="M216 160V124H242V160ZM138 130H144V138H138ZM154 158V126H166V157Z" fill="var(--il-near)"/>
+<path d="M208 118V111H250V118Z" fill="var(--il-ice)"/>
+<path d="M120 164V158L196 158H266V164Z" fill="var(--il-far)"/>
+<path d="M0 200V182Q150 176 300 182V200Z" fill="var(--il-leaf)"/>
