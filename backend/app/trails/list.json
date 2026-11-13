@@ -8,17 +8,17 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Fitz Roy trailhead, El Chaltén",
-     "reuse": null
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "mirador",
      "name": "Mirador del Fitz Roy",
-     "reuse": null
+     "reuse": "ar-mirador-fitz-roy"
     },
     {
      "point": "capri",
@@ -28,7 +28,7 @@
     {
      "point": "poincenot",
      "name": "Campamento Poincenot",
-     "reuse": "ar-loma-del-pliegue-tumbado"
+     "reuse": "ar-campamento-poincenot"
     },
     {
      "point": "goal",
@@ -44,27 +44,27 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Laguna Torre trailhead, El Chaltén",
-     "reuse": null
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "mirador",
      "name": "Mirador del Torre",
-     "reuse": null
+     "reuse": "ar-mirador-del-torre"
     },
     {
      "point": "agostini",
      "name": "Campamento De Agostini",
-     "reuse": null
+     "reuse": "ar-campamento-de-agostini"
     },
     {
      "point": "goal",
      "name": "Laguna Torre",
-     "reuse": null
+     "reuse": "ar-laguna-torre"
     }
    ]
   },
@@ -75,22 +75,22 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Los Glaciares visitor centre, El Chaltén",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "ridge",
      "name": "Pliegue Tumbado ridge, above the forest",
-     "reuse": null
+     "reuse": "ar-pliegue-tumbado-ridge"
     },
     {
      "point": "goal",
      "name": "Loma del Pliegue Tumbado",
-     "reuse": null
+     "reuse": "ar-loma-del-pliegue-tumbado"
     }
    ]
   },
@@ -101,17 +101,17 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Fitz Roy trailhead, El Chaltén",
-     "reuse": null
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "river",
      "name": "Mirador del Río de las Vueltas",
-     "reuse": null
+     "reuse": "ar-rio-de-las-vueltas"
     },
     {
      "point": "goal",
@@ -127,12 +127,12 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Los Glaciares visitor centre, El Chaltén",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "condores",
@@ -142,7 +142,7 @@
     {
      "point": "goal",
      "name": "Mirador de las Águilas",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-mirador-de-las-aguilas"
     }
    ]
   },
@@ -153,32 +153,32 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Los Glaciares visitor centre, El Chaltén",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "toro",
      "name": "Laguna Toro",
-     "reuse": null
+     "reuse": "ar-laguna-toro"
     },
     {
      "point": "paso-viento",
      "name": "Paso del Viento, Southern Ice Field view",
-     "reuse": null
+     "reuse": "ar-paso-del-viento"
     },
     {
      "point": "paso-huemul",
      "name": "Paso Huemul above the Viedma glacier",
-     "reuse": null
+     "reuse": "ar-paso-huemul"
     },
     {
      "point": "goal",
      "name": "Bahía Túnel on Lago Viedma",
-     "reuse": null
+     "reuse": "ar-bahia-tunel"
     }
    ]
   },
