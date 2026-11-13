@@ -243,12 +243,13 @@ i.x-cell::after{transform:scale(.7)}
 .x-item{position:relative;display:flex;flex-direction:column;gap:8px;padding:14px;border-radius:var(--x-r);background:var(--x-paper);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;min-width:0}
 .x-item:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(13,13,13,.08)}
 .x-ic{position:relative;height:110px;display:grid;place-items:center;border-radius:16px;background:var(--surface);overflow:hidden;color:var(--ink)}
-.x-ic img{max-height:100%;max-width:100%;object-fit:contain}
+.x-ic img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;padding:6px;box-sizing:border-box}
 .x-art{height:76px;width:76px}
 .x-lay{position:absolute;top:10px;left:10px;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;background:var(--ink);color:var(--accent)}
 .x-fav{position:absolute;top:10px;right:10px;font-size:11px;font-weight:800;padding:3px 8px;border-radius:999px;background:var(--accent);color:var(--accent-ink)}
 .x-pc{font-family:var(--f-display);font-weight:800;font-size:18px;letter-spacing:-.01em;line-height:1.1;margin-top:4px}
 .x-pn{font-size:13.5px;color:var(--ink-2);min-height:38px}
+.x-shop{font-size:11.5px;color:var(--ink-3, var(--ink-2));opacity:.85;margin-top:-6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .x-item .x-row{margin-top:2px}
 .x-price{font-family:var(--f-display);font-weight:800;font-size:21px;font-variant-numeric:tabular-nums}
 .x-item.owned .x-price{color:var(--ink-3)}

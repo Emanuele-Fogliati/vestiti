@@ -48,7 +48,8 @@ def product_item(p: Product) -> O.CatalogItem:
     return O.CatalogItem(id=p.id, slot=p.category, name=p.name, brand=p.brand, price=p.price,
                          specs=p.specs or {}, merchant=p.merchant, currency=p.currency,
                          url=p.url, image_url=p.image_url, rating=p.rating,
-                         review_count=p.review_count, network=p.network, gender=p.gender)
+                         review_count=p.review_count, network=p.network, gender=p.gender,
+                         checked_at=p.checked_at.date().isoformat() if p.checked_at else None)
 
 
 @dataclass

@@ -294,6 +294,8 @@ export interface Item {
   review_count: number;
   network: string;
   gender: string;
+  /** ISO date the shop's price and stock were read; null = indicative price */
+  checked_at?: string | null;
   fit: Fit | null;
   preferred_brand?: boolean;
 }

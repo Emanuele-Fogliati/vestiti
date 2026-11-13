@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { api, buyUrl, rentUrl } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { money } from "../lib/format";
+import { dayMonth, money } from "../lib/format";
 import { TIER_LABEL, TIERS, type KitLine, type Plans, type Tier } from "../lib/types";
 import { ProductArt } from "./ProductArt";
 import { specRows } from "../lib/specs";
@@ -71,6 +71,10 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
       </div>
       <div className="x-pc">{line.slot_name}</div>
       <div className="x-pn">{name}</div>
+      {it && line.kind === "product" && (
+        <div className="x-shop" title={it.checked_at ? "Price and stock read from the shop's page that day" : "Not checked with the shop yet: the real price may differ"}>
+          {it.merchant} · {it.checked_at ? `checked ${dayMonth(it.checked_at)}` : "indicative price"}
+        </div>)}
       <div className="x-row">
         <span className="x-price">{price !== null ? money(price, it?.currency) : "—"}</span>
         {badge}

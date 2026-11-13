@@ -72,6 +72,7 @@ class CatalogItem:
     review_count: int = 0
     network: str = "direct"
     gender: str = "unisex"
+    checked_at: str | None = None  # ISO date the shop's price/stock was read; None = indicative
     fit: FitResult | None = None
 
     def spec(self) -> ItemSpec:
@@ -106,7 +107,8 @@ class CatalogItem:
             "brand": self.brand, "merchant": self.merchant, "price": round(self.price, 2),
             "currency": self.currency, "image_url": self.image_url, "specs": self.specs,
             "rating": self.rating, "review_count": self.review_count, "network": self.network,
-            "gender": self.gender, "fit": self.fit.as_dict() if self.fit else None,
+            "gender": self.gender, "checked_at": self.checked_at,
+            "fit": self.fit.as_dict() if self.fit else None,
         }
 
 

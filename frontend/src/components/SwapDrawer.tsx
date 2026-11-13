@@ -93,7 +93,7 @@ export function SwapDrawer({ tripId, tier, line, onClose, onChanged }: {
             <div className={`prow${line.item?.id === it.id ? " cur" : ""}${it.fit && !it.fit.passes ? " fail" : ""}`} key={it.id}>
               <div className="ph-s">{it.image_url ? <img src={it.image_url} alt="" /> : <ProductArt slot={line.slot} />}</div>
               <div style={{ minWidth: 0 }}>
-                <div className="brandline">{it.preferred_brand ? "♥ " : ""}{it.brand} · {it.merchant}</div>
+                <div className="brandline">{it.preferred_brand ? "♥ " : ""}{it.brand} · {it.merchant}{it.checked_at ? "" : " · indicative price"}</div>
                 <div className="nm">{it.name}</div>
                 {it.fit && <Stars value={it.fit.stars} label="fit" />}
                 <div className="meta">{specRows(it, line.slot).map(([k, v]) => `${k} ${v}`).join(" · ")}</div>

@@ -23,9 +23,25 @@ def _web_url(u) -> bool:
     return isinstance(u, str) and u.lower().startswith(("https://", "http://")) and len(u) < 4000
 
 
+def _aware(d: datetime | None) -> datetime | None:
+    return d.replace(tzinfo=timezone.utc) if d is not None and d.tzinfo is None else d
+
+
+def _when(v) -> datetime | None:
+    """A date or datetime from a file ("2026-11-13") as an aware datetime, else None."""
+    if not v:
+        return None
+    try:
+        d = datetime.fromisoformat(str(v))
+    except ValueError:
+        return None
+    return _aware(d)
+
+
 def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
                 deactivate_missing: bool = True, source: str = "feed") -> FeedImport:
     job = FeedImport(network=network, filename=filename, errors=[])
+    now = datetime.now(timezone.utc)  # a feed row is the shop's own data: checked now
     db.add(job)
     db.flush()
     seen: set[str] = set()
@@ -58,8 +74,15 @@ def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
             row_network = r.get("_network") or network
             seen.add(ext)
             merchants.add(r.get("merchant") or "")
-            p = db.scalar(select(Product).where(Product.network == row_network,
-                                                Product.external_id == ext))
+            if source == "seed":
+                # a seed product keeps its row (and the trips that picked it) when the file
+                # moves it to another shop or network
+                p = db.scalars(select(Product).where(Product.source == "seed",
+                                                     Product.external_id == ext)
+                               .order_by(Product.active.desc())).first()
+            else:
+                p = db.scalar(select(Product).where(Product.network == row_network,
+                                                    Product.external_id == ext))
             fields = dict(
                 name=name[:300], brand=(r.get("brand") or "Unknown")[:120],
                 merchant=(r.get("merchant") or row_network)[:120], program_id=(str(r["program_id"])[:80] if r.get("program_id") else None),
@@ -69,10 +92,20 @@ def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
                 image_url=r.get("image_url") if _web_url(r.get("image_url")) else None, specs=specs, rating=r.get("rating"),
                 review_count=int(r.get("review_count") or 0), active=True, source=source,
             )
+            checked = _when(r.get("_checked_at")) if "_checked_at" in r else now
+            fields["checked_at"] = checked
             if p is None:
                 db.add(Product(network=row_network, external_id=ext, **fields))
                 job.created += 1
             else:
+                fields["network"] = row_network
+                if (_aware(p.checked_at) and p.url == url
+                        and (checked is None or _aware(p.checked_at) > checked)):
+                    # the database read the shop more recently than this file was written:
+                    # keep its price, stock, picture and rating, take only the rest
+                    for k in ("price", "currency", "image_url", "rating", "review_count",
+                              "active", "checked_at"):
+                        fields.pop(k)
                 for k, v in fields.items():
                     setattr(p, k, v)
                 job.updated += 1
@@ -104,7 +137,9 @@ def ingest_bytes(db: Session, raw: bytes, network: str, filename: str,
 
 def seed_products(db: Session) -> FeedImport:
     raw = (SEED_DIR / "products.json").read_bytes()
-    rows = list(read_feed(raw, "json"))
+    # products switched off in the file (no shop sells them today) are left out, and so
+    # switched off below like products taken out of the file
+    rows = [r for r in read_feed(raw, "json") if r.get("_active", True)]
     job = ingest_rows(db, rows, "seed", "seed/products.json", deactivate_missing=False,
                       source="seed")
     # a product taken out of the seed file must not keep being picked from an old database
