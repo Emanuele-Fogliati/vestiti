@@ -16,6 +16,7 @@ from app.models import FeedImport, Product, RentalPartner
 
 log = logging.getLogger(__name__)
 SEED_DIR = Path(__file__).resolve().parents[2] / "seed"
+SEED_FILES = ("products.json", "products_us.json")
 OUT_OF_STOCK = {"0", "false", "no", "out of stock", "outofstock", "out_of_stock"}
 
 
@@ -38,8 +39,12 @@ def _when(v) -> datetime | None:
     return _aware(d)
 
 
+MARKETS = ("us", "eu")
+
+
 def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
-                deactivate_missing: bool = True, source: str = "feed") -> FeedImport:
+                deactivate_missing: bool = True, source: str = "feed",
+                market: str = "eu") -> FeedImport:
     job = FeedImport(network=network, filename=filename, errors=[])
     now = datetime.now(timezone.utc)  # a feed row is the shop's own data: checked now
     db.add(job)
@@ -91,6 +96,7 @@ def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
                 currency=(r.get("currency") or "EUR")[:3].upper(), url=url,
                 image_url=r.get("image_url") if _web_url(r.get("image_url")) else None, specs=specs, rating=r.get("rating"),
                 review_count=int(r.get("review_count") or 0), active=True, source=source,
+                market=r.get("_market") if r.get("_market") in MARKETS else market,
             )
             checked = _when(r.get("_checked_at")) if "_checked_at" in r else now
             fields["checked_at"] = checked
@@ -131,16 +137,21 @@ def ingest_rows(db: Session, rows, network: str, filename: str = "upload",
 
 
 def ingest_bytes(db: Session, raw: bytes, network: str, filename: str,
-                 deactivate_missing: bool = True) -> FeedImport:
-    return ingest_rows(db, read_feed(raw, network), network, filename, deactivate_missing)
+                 deactivate_missing: bool = True, market: str = "eu") -> FeedImport:
+    return ingest_rows(db, read_feed(raw, network), network, filename, deactivate_missing,
+                       market=market)
 
 
 def seed_products(db: Session) -> FeedImport:
-    raw = (SEED_DIR / "products.json").read_bytes()
-    # products switched off in the file (no shop sells them today) are left out, and so
-    # switched off below like products taken out of the file
-    rows = [r for r in read_feed(raw, "json") if r.get("_active", True)]
-    job = ingest_rows(db, rows, "seed", "seed/products.json", deactivate_missing=False,
+    # products.json = EU shops (EUR), products_us.json = US shops (USD). Products switched
+    # off in a file (no shop sells them today) are left out, and so switched off below like
+    # products taken out of the file
+    rows = []
+    for name in SEED_FILES:
+        f = SEED_DIR / name
+        if f.exists():
+            rows += [r for r in read_feed(f.read_bytes(), "json") if r.get("_active", True)]
+    job = ingest_rows(db, rows, "seed", "seed/" + "+".join(SEED_FILES), deactivate_missing=False,
                       source="seed")
     # a product taken out of the seed file must not keep being picked from an old database
     keep = {r.get("external_id") for r in rows}

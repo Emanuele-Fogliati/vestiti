@@ -17,6 +17,7 @@ from app.engine.strategy import (
     evaluate,
     requirements,
 )
+from app.config import get_settings
 from app.models import Product, RentalPartner, Trip, TripSelection, User, WardrobeItem
 from app.weather.service import WeatherService
 
@@ -52,6 +53,14 @@ def product_item(p: Product) -> O.CatalogItem:
                          checked_at=p.checked_at.date().isoformat() if p.checked_at else None)
 
 
+MARKET_CURRENCY = {"us": "USD", "eu": "EUR"}
+
+
+def market_of(user: User | None) -> str:
+    m = (user.market if user else None) or get_settings().default_market
+    return m if m in MARKET_CURRENCY else "us"
+
+
 @dataclass
 class Computed:
     stages: list[StageInput]
@@ -68,6 +77,9 @@ class Planner:
         self._computed: Computed | None = None
         self.prefer_names: list[str] = list(user.preferred_brands or [])
         self.prefer = frozenset(b.lower() for b in self.prefer_names)
+        self.market = market_of(user)
+        self.currency = MARKET_CURRENCY[self.market]
+        O.CURRENCY.set(self.currency)
 
     # ------------------------------------------------------------ inputs
     def stage_inputs(self) -> list[StageInput]:
@@ -93,7 +105,7 @@ class Planner:
         return self._computed
 
     def candidates(self, reqs) -> dict[str, list[O.CatalogItem]]:
-        q = select(Product).where(Product.active.is_(True))
+        q = select(Product).where(Product.active.is_(True), Product.market == self.market)
         pref = self.user.gender_pref or "any"
         if pref in ("men", "women"):
             q = q.where(Product.gender.in_([pref, "unisex"]))
@@ -110,7 +122,9 @@ class Planner:
                                    "wardrobe_item_id": r.wardrobe_item_id} for r in rows}
 
     def partners(self) -> list[O.RentalPartnerData]:
-        rows = self.db.scalars(select(RentalPartner).where(RentalPartner.active.is_(True))).all()
+        # a kit has one currency: rentals priced in another one are left out
+        rows = self.db.scalars(select(RentalPartner).where(
+            RentalPartner.active.is_(True), RentalPartner.currency == self.currency)).all()
         return [O.RentalPartnerData(id=r.id, slug=r.slug, name=r.name, url_template=r.url_template,
                                     countries=r.countries or [], categories=r.categories or [],
                                     daily_rates=r.daily_rates or {}, min_days=r.min_days,
@@ -231,8 +245,9 @@ class Planner:
         seed = self.db.scalar(select(Product.id).where(Product.source == "seed",
                                                        Product.active.is_(True)).limit(1))
         if seed:
-            return ("Sample catalog: real product names, indicative prices and approximate "
-                    "specs. Check the retailer page before you buy.")
+            return ("Real products from real shops: price and stock were read from the shop's "
+                    "page on the date shown under each piece (\"indicative price\" = not "
+                    "checked yet). Warmth and waterproofing figures are our estimates.")
         return None
 
 
@@ -254,6 +269,6 @@ def tier_advice(tiers: dict) -> None:
         name = high.capitalize()
         a["advice"] = {"tier": high, "extra_cost": gap,
                        "message": f"With the warmth upgrades this kit costs almost as much as "
-                                  f"{name}: {name} is only €{gap:,.0f} more and its pieces are "
+                                  f"{name}: {name} is only {O._money(gap)} more and its pieces are "
                                   f"better. Consider {name}."}
     tiers["premium"]["advice"] = None

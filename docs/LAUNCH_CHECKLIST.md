@@ -8,8 +8,9 @@ Ordered by how badly it would hurt.
 - [ ] **Weather licence.** Open-Meteo's free API is for non-commercial use. A commercial
       product needs their paid plan (or another provider). The code only needs new URLs.
 - [ ] **Real affiliate accounts.** None configured: every click today earns nothing.
-      Apply to Amazon Associates, Awin (outdoor merchants), maybe Impact/CJ/AvantLink.
-- [ ] **Real product data.** ~80 products have a real shop page (Bergfreunde IT) with price,
+      US: AvantLink (evo, later Patagonia, REI), FlexOffers (Decathlon US, The North Face).
+      EU: Awin (Bergfreunde IT, Decathlon IT). Then set the ids in `.env`.
+- [ ] **Real product data.** US: ~100 products with a real evo or Decathlon US page. EU: ~80 products have a real shop page (Bergfreunde IT) with price,
       picture and stock read from it and refreshed daily; ~120 (Decathlon, Uniqlo, Mountain
       Warehouse) still have indicative prices and no picture. Import the Awin feeds once
       accepted. See [AFFILIATES.md](AFFILIATES.md).

@@ -70,6 +70,10 @@ class Settings(BaseSettings):
     vision_base_url: str = ""
     vision_timeout_s: float = 180.0
 
+    # --- Shops ---
+    # market of a traveller who hasn't picked one: "us" (US shops, USD) or "eu" (EUR)
+    default_market: str = "us"
+
     # --- Affiliate networks (empty = link goes out untracked, click still logged) ---
     amazon_associate_tag: str = ""
     amazon_domain: str = "www.amazon.com"
@@ -77,6 +81,12 @@ class Settings(BaseSettings):
     impact_account_sid: str = ""
     cj_publisher_id: str = ""
     avantlink_affiliate_id: str = ""
+    # FlexOffers deep link from its link builder, with {url} and {click} where the
+    # destination and our click id go, e.g. https://track.flexlinkspro.com/g.ashx?foid=...&fos={click}&url={url}
+    flexoffers_link_template: str = ""
+    # program ids the network gives once a merchant accepts you, by merchant name:
+    # "evo=12345;Decathlon US=678". They fill products whose program_id is empty.
+    merchant_program_ids: str = ""
     # tours and excursions at each stop of the ready-made itineraries
     getyourguide_partner_id: str = ""
     viator_pid: str = ""

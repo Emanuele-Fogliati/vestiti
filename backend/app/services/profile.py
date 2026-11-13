@@ -21,6 +21,7 @@ from datetime import datetime, timezone
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
+from app.engine.outfit import _money
 from app.engine.garments import FOOTWEAR_TYPES, LEVELS, SLOT_BY_KEY, SLOT_KEYS
 from app.models import User, WardrobeItem
 from app.services import brands as B
@@ -436,10 +437,10 @@ def _piece(p: dict | None) -> str:
     if p["kind"] == "have":
         return "yours"
     if p["kind"] == "rent":
-        return f"rent (€{p['cost']:,.0f})"
+        return f"rent ({_money(p['cost'])})"
     if p["kind"] == "none":
         return "nothing"
-    return f"{p['name']} (€{p['cost']:,.0f})"
+    return f"{p['name']} ({_money(p['cost'])})"
 
 
 STATUS_LABEL = {"covered": "warm enough everywhere", "marginal": "borderline somewhere",
@@ -466,7 +467,7 @@ def _owned_use(after: dict, wardrobe: list[WardrobeItem], tier: str) -> list[str
             out.append(f"Your {line['name']} fits better than your {w.name}, so the kit uses that.")
         elif line and line["kind"] == "product" and line.get("note") in ("auto-upgraded for warmth", "added for warmth"):
             out.append(f"Your {w.name} works, but the {name} kit swaps it for a warmer one "
-                       f"({line['name']}, €{line['cost']:,.0f}) to cover the coldest stop. "
+                       f"({line['name']}, {_money(line['cost'])}) to cover the coldest stop. "
                        "Keep yours if you'd rather not spend that.")
         elif line and line["kind"] == "product":
             out.append(f"Your {w.name} isn't used in the {name} kit: you chose to buy this piece.")

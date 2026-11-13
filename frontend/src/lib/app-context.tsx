@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { api } from "./api";
+import { setShopMarket } from "./format";
 import type { AppConfig, User } from "./types";
 
 interface Ctx {
@@ -38,6 +39,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => { document.documentElement.dataset.theme = theme; }, [theme]);
+  // before children render with the new user, so every price reads in their shops' currency
+  setShopMarket(user?.market);
 
   const setTheme = useCallback((t: string) => {
     setThemeState(t);

@@ -144,6 +144,14 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
     toast(g === "any" ? "Showing all cuts." : `Showing ${g}'s cuts and unisex pieces.`);
     onChanged();
   }
+  const market = user?.market ?? "us";
+  async function setMarket(m: "us" | "eu") {
+    if (m === market) return;
+    await api.updateMe({ market: m });
+    await refreshUser();
+    toast(m === "us" ? "Shopping in US stores, prices in $." : "Shopping in European stores, prices in €.");
+    onChanged();
+  }
   const tp = plans.tiers[tier];
   const haves = tp.items.filter((l) => l.kind === "have");
   async function needOne(slot: string, name: string) {
@@ -194,6 +202,10 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
         <div className="x-seg sm" role="group" aria-label="Cut">
           {(["men", "women", "any"] as const).map((g) => (
             <button key={g} type="button" aria-pressed={g === pref} onClick={() => setCut(g)}>{g === "men" ? "Men" : g === "women" ? "Women" : "Any cut"}</button>))}
+        </div>
+        <div className="x-seg sm" role="group" aria-label="Shops">
+          {(["us", "eu"] as const).map((m) => (
+            <button key={m} type="button" aria-pressed={m === market} onClick={() => setMarket(m)}>{m === "us" ? "US shops $" : "EU shops €"}</button>))}
         </div>
         <button type="button" className={`x-chip${mine.length ? " on" : ""}`} onClick={openBrands}>
           {mine.length ? `♥ ${mine.join(", ")}` : "Brands you like"}

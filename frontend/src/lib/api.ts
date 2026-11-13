@@ -74,7 +74,7 @@ export const api = {
   verifyEmailLink: (token: string) => req<User>("POST", "/api/auth/email-link/verify", { token }),
   changePassword: (new_password: string, current_password?: string) =>
     req<User>("POST", "/api/me/password", { new_password, current_password: current_password || null }),
-  updateMe: (patch: Partial<Pick<User, "display_name" | "gender_pref" | "thermal_offset" | "pace" | "evenings" | "preferred_brands">>) =>
+  updateMe: (patch: Partial<Pick<User, "display_name" | "gender_pref" | "thermal_offset" | "pace" | "evenings" | "preferred_brands" | "market">>) =>
     req<User>("PATCH", "/api/me", patch),
   profile: () => req<Profile>("GET", "/api/me/profile"),
   quiz: (answers: { cold?: string | null; pace?: string | null; evenings?: string | null; owned?: string[] | null; brands?: string[] | null }, tripId?: string, tier?: Tier) => {

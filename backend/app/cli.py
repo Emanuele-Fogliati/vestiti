@@ -24,6 +24,8 @@ def main(argv=None):
     p.add_argument("--network", required=True)
     p.add_argument("--file", required=True)
     p.add_argument("--keep-missing", action="store_true", help="do not deactivate missing products")
+    p.add_argument("--market", choices=("us", "eu"), default="eu",
+                   help="shops of this feed: us (USD) or eu (EUR)")
     p = sub.add_parser("create-admin")
     p.add_argument("--email", required=True)
     p.add_argument("--password", required=True)
@@ -52,7 +54,8 @@ def main(argv=None):
         elif args.cmd == "ingest":
             from app.catalog.ingest import ingest_bytes
             raw = Path(args.file).read_bytes()
-            job = ingest_bytes(db, raw, args.network, Path(args.file).name, not args.keep_missing)
+            job = ingest_bytes(db, raw, args.network, Path(args.file).name, not args.keep_missing,
+                               market=args.market)
             print(json.dumps({"rows": job.rows, "created": job.created, "updated": job.updated,
                               "skipped": job.skipped, "deactivated": job.deactivated,
                               "errors": job.errors[:10]}, indent=1))

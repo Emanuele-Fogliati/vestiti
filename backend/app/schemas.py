@@ -76,8 +76,15 @@ class UserOut(ORM):
     pace: str = "average"
     evenings: str = "sometimes"
     preferred_brands: list[str] = []
+    market: str = "us"  # where the kit shops: the user's choice, else the app's default
     profile_done_at: datetime | None = None
     created_at: datetime
+
+    @field_validator("market", mode="before")
+    @classmethod
+    def _market(cls, v):
+        from app.config import get_settings
+        return v if v in ("us", "eu") else get_settings().default_market
 
 
 class ProfileIn(BaseModel):
@@ -87,6 +94,14 @@ class ProfileIn(BaseModel):
     pace: str | None = None
     evenings: str | None = None
     preferred_brands: list[str] | None = Field(default=None, max_length=20)
+    market: str | None = None
+
+    @field_validator("market")
+    @classmethod
+    def _m(cls, v):
+        if v is not None and v not in ("us", "eu"):
+            raise ValueError("market must be us or eu")
+        return v
 
     @field_validator("pace")
     @classmethod

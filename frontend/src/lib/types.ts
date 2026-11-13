@@ -13,6 +13,7 @@ export interface User {
   pace: Pace;
   evenings: Evenings;
   preferred_brands: string[];
+  market: "us" | "eu";
   profile_done_at: string | null;
   created_at: string;
 }

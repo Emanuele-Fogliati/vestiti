@@ -39,6 +39,8 @@ class User(Base):
     is_admin: Mapped[bool] = mapped_column(Boolean, default=False)
     # Product fit preference: "men", "women" or "any"
     gender_pref: Mapped[str] = mapped_column(String(10), default="any")
+    # where the traveller shops: "us" (USD shops) or "eu" (EUR shops); None = DEFAULT_MARKET
+    market: Mapped[str | None] = mapped_column(String(2))
     # Personal comfort offset in clo: +0.3 means "I run cold", -0.3 "I run warm"
     thermal_offset: Mapped[float] = mapped_column(Float, default=0.0)
     # Pace on the move: relaxed | average | brisk (changes the heat you make walking)
@@ -197,6 +199,8 @@ class Product(Base):
     brand: Mapped[str] = mapped_column(String(120), index=True)
     name: Mapped[str] = mapped_column(String(300))
     category: Mapped[str] = mapped_column(String(40), index=True)
+    # the shops' market: "us" (USD) or "eu" (EUR); a kit only mixes products of one market
+    market: Mapped[str] = mapped_column(String(2), default="eu", index=True)
     gender: Mapped[str] = mapped_column(String(10), default="unisex")
     price: Mapped[float] = mapped_column(Float)
     currency: Mapped[str] = mapped_column(String(3), default="EUR")
