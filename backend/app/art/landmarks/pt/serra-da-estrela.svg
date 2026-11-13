@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="168" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M40 110L60 94L90 90L120 94L150 88L180 92L210 88L250 86L280 92L300 90V165H40Z" fill="var(--il-far)"/>
+<path d="M60 165V128Q90 102 130 104Q160 108 178 118Q200 102 230 98Q260 94 290 100V165Z" fill="var(--il-far)"/>
+<path d="M60 165V128Q90 102 130 104Q160 108 178 118Q200 102 230 98Q260 94 290 100V165Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M100 200Q120 170 134 156Q150 150 168 156Q186 172 206 200Z" fill="var(--il-acc)"/>
+<path d="M0 200V34L8 30L16 36L24 34L32 42Q48 56 62 78Q78 104 94 128Q108 146 124 152Q134 156 140 158Q120 174 110 200Z" fill="var(--il-mid)"/>
+<path d="M8 30L16 36L24 34L32 42L28 48L18 46L10 42ZM40 58Q46 54 52 62L48 66Q42 64 40 58ZM18 92Q24 88 30 94L26 98Q20 98 18 92ZM56 118Q62 114 68 120L64 124Q58 124 56 118Z" fill="var(--il-obj)"/>
+<path d="M4 60Q40 74 66 98Q80 112 92 124" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M300 200V50Q280 58 262 74Q240 96 220 120Q202 140 184 150Q170 156 160 158Q182 176 194 200Z" fill="var(--il-leaf)"/>
+<path d="M300 92Q286 92 276 104Q266 100 258 112Q248 112 242 124Q232 126 228 138Q220 140 216 150Q232 146 250 134Q272 116 300 110Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M150 154Q144 164 154 174Q164 186 152 200" stroke="var(--il-water)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M128 194V188H138V194ZM166 178V172H176V178Z" fill="var(--il-ice)"/>
+<path d="M126 189L133 184L140 189ZM164 173L171 168L178 173Z" fill="var(--il-obj)"/>
+<path d="M0 200V178Q30 172 60 176Q80 182 96 200Z" fill="var(--il-mid)"/>
+<path d="M30 186V192M38 186V192M58 182V188M66 182V188" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M28 188Q26 180 34 179Q42 179 42 186Q40 189 34 189Z M56 184Q54 176 62 175Q70 175 70 182Q68 185 62 185Z" fill="var(--il-ice)"/>
+<path d="M28 183Q22 182 23 178Q26 176 30 180ZM56 179Q50 178 51 174Q54 172 58 176Z" fill="var(--il-near)"/>
