@@ -3,6 +3,30 @@
  "name": "Taiwan",
  "places": [
   {
+   "slug": "anping-tree-house",
+   "label": "Anping Tree House, a warehouse engulfed by banyan roots",
+   "lat": 23.0025,
+   "lon": 120.1594,
+   "radius_km": 2,
+   "aliases": [
+    "anping tree house",
+    "anping treehouse",
+    "anping banyan tree house"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#B9B79B",
+    "mid": "#9C8468",
+    "ice": "#ECE8DC",
+    "water": "#A9A9A2",
+    "near": "#2B2722",
+    "sun": "#F4C430",
+    "leaf": "#4E8A34",
+    "acc": "#B25E3E",
+    "obj": "#6E6558"
+   }
+  },
+  {
    "slug": "jiufen",
    "label": "Jiufen's dark wooden teahouses hung with red lanterns",
    "lat": 25.109,
@@ -43,12 +67,16 @@
     "lotus pond kaohsiung",
     "lianchitan",
     "longhu pagodas",
-    "pagode del drago e della tigre"
+    "pagode del drago e della tigre",
+    "dragon and tiger pagoda",
+    "kaohsiung lotus pond",
+    "lotus lake kaohsiung"
    ],
    "names": [
     "kaohsiung",
     "kaohsiung city",
-    "gaoxiong"
+    "gaoxiong",
+    "lotus pond"
    ],
    "palette": {
     "sky": "#CCE2F4",

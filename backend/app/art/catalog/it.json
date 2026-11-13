@@ -3,6 +3,34 @@
  "name": "Italy",
  "places": [
   {
+   "slug": "abetone",
+   "label": "The twin stone pyramids of Passo dell'Abetone with the chalet and the fir forest",
+   "lat": 44.1435,
+   "lon": 10.6638,
+   "radius_km": 8,
+   "aliases": [
+    "passo dell abetone",
+    "abetone pass",
+    "piramidi dell abetone"
+   ],
+   "names": [
+    "abetone",
+    "abetone cutigliano"
+   ],
+   "palette": {
+    "sky": "#B6D6F0",
+    "far": "#8DA59C",
+    "mid": "#A08C70",
+    "ice": "#ECE8E0",
+    "water": "#5E8FB0",
+    "near": "#2A2622",
+    "sun": "#F4C443",
+    "leaf": "#3E6438",
+    "acc": "#5A4030",
+    "obj": "#7C7C7A"
+   }
+  },
+  {
    "slug": "aci-trezza",
    "label": "The Cyclops sea stacks and Isola Lachea off Aci Trezza",
    "lat": 37.562,
@@ -226,6 +254,33 @@
    }
   },
   {
+   "slug": "arezzo",
+   "label": "Piazza Grande in Arezzo with the apse of the Pieve and the Palazzo della Fraternita",
+   "lat": 43.4637,
+   "lon": 11.8818,
+   "radius_km": 12,
+   "aliases": [
+    "piazza grande arezzo",
+    "piazza grande di arezzo",
+    "pieve di santa maria arezzo"
+   ],
+   "names": [
+    "arezzo"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#8E8C88",
+    "mid": "#C9B48C",
+    "ice": "#EFE9DA",
+    "water": "#5E8FB0",
+    "near": "#2A2420",
+    "sun": "#F4C443",
+    "leaf": "#5E7E44",
+    "acc": "#B97A5C",
+    "obj": "#E3C980"
+   }
+  },
+  {
    "slug": "assisi",
    "label": "The Basilica of San Francesco and the Sacro Convento above the plain, Assisi",
    "lat": 43.0748,
@@ -285,6 +340,32 @@
    }
   },
   {
+   "slug": "badolo",
+   "label": "Rocca di Badolo sandstone crag with its chapel, Contrafforte Pliocenico",
+   "lat": 44.4127,
+   "lon": 11.2878,
+   "radius_km": 4,
+   "aliases": [
+    "rocca di badolo",
+    "contrafforte pliocenico"
+   ],
+   "names": [
+    "badolo"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#C8B48C",
+    "mid": "#CDBE9E",
+    "ice": "#ECE6D8",
+    "water": "#5E8FB0",
+    "near": "#2A2520",
+    "sun": "#F4C443",
+    "leaf": "#6A7A3E",
+    "acc": "#A8362E",
+    "obj": "#2F4A2E"
+   }
+  },
+  {
    "slug": "bardonecchia",
    "label": "Bardonecchia and the Sant'Ippolito bell tower in their basin under the pale limestone peaks",
    "lat": 45.078,
@@ -336,6 +417,35 @@
     "leaf": "#6E8A4E",
     "acc": "#E2B06E",
     "obj": "#B4ACA0"
+   }
+  },
+  {
+   "slug": "basilica-of-san-vitale",
+   "label": "The octagonal brick Basilica of San Vitale, Ravenna",
+   "lat": 44.4206,
+   "lon": 12.1964,
+   "radius_km": 4,
+   "aliases": [
+    "basilica of san vitale",
+    "basilica di san vitale",
+    "san vitale ravenna",
+    "san vitale basilica"
+   ],
+   "names": [
+    "ravenna",
+    "san vitale"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#BDB6AA",
+    "mid": "#B37C5C",
+    "ice": "#E2DFD8",
+    "water": "#5E8FB0",
+    "near": "#2A201C",
+    "sun": "#F4C443",
+    "leaf": "#3E6A34",
+    "acc": "#B4583C",
+    "obj": "#8C5A44"
    }
   },
   {
@@ -821,6 +931,29 @@
    }
   },
   {
+   "slug": "casabona",
+   "label": "Casabona's hilltop village above olive groves and sandstone crags, Calabria",
+   "lat": 39.2497,
+   "lon": 16.9527,
+   "radius_km": 5,
+   "aliases": [],
+   "names": [
+    "casabona"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#9AAE84",
+    "mid": "#D8C69C",
+    "ice": "#F3EEE3",
+    "water": "#4A90B8",
+    "near": "#2B2A26",
+    "sun": "#F4C430",
+    "leaf": "#93B451",
+    "acc": "#E2BC8C",
+    "obj": "#C0623E"
+   }
+  },
+  {
    "slug": "castagnole-monferrato",
    "label": "Castagnole Monferrato and its brick church of San Martino above the Ruche vineyards",
    "lat": 44.981,
@@ -1135,6 +1268,32 @@
    }
   },
   {
+   "slug": "cava-grande-del-cassibile",
+   "label": "The emerald pools and limestone ledges of Cavagrande del Cassibile",
+   "lat": 36.965,
+   "lon": 15.07,
+   "radius_km": 6,
+   "aliases": [
+    "cavagrande del cassibile",
+    "cava grande del cassibile",
+    "cavagrande",
+    "laghetti di cavagrande",
+    "cava grande cassibile"
+   ],
+   "palette": {
+    "sky": "#B5D5F0",
+    "far": "#CFD0C6",
+    "mid": "#E4DECF",
+    "ice": "#FFFFFF",
+    "water": "#3C8C7E",
+    "near": "#26302B",
+    "sun": "#F4C430",
+    "leaf": "#4A7333",
+    "acc": "#E58AB2",
+    "obj": "#97A158"
+   }
+  },
+  {
    "slug": "cefalu",
    "label": "Cefalu with La Rocca and the Norman cathedral",
    "lat": 38.039,
@@ -1188,6 +1347,35 @@
    }
   },
   {
+   "slug": "chiusi",
+   "label": "The Torre di San Secondiano and the cathedral on Piazza Duomo, Chiusi",
+   "lat": 43.017,
+   "lon": 11.949,
+   "radius_km": 8,
+   "aliases": [
+    "duomo di chiusi",
+    "torre di san secondiano",
+    "cattedrale di san secondiano",
+    "chiusi cathedral"
+   ],
+   "names": [
+    "chiusi",
+    "chiusi scalo"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#B8704E",
+    "mid": "#C6BAA2",
+    "ice": "#E8E3D7",
+    "water": "#C2BBAE",
+    "near": "#2A2420",
+    "sun": "#F4C443",
+    "leaf": "#5E7E44",
+    "acc": "#E6C878",
+    "obj": "#E4B6A6"
+   }
+  },
+  {
    "slug": "cinque-terre",
    "label": "Manarola, Cinque Terre",
    "lat": 44.107,
@@ -1208,6 +1396,32 @@
     "leaf": "#5E8A3E",
     "acc": "#C8504A",
     "obj": "#E8B04A"
+   }
+  },
+  {
+   "slug": "colonnata",
+   "label": "Colonnata's bell tower and square under the white Carrara marble quarries",
+   "lat": 44.0835,
+   "lon": 10.1497,
+   "radius_km": 5,
+   "aliases": [
+    "colonnata",
+    "carrara marble quarries",
+    "cave di marmo di carrara",
+    "marble quarries of carrara",
+    "cave di carrara"
+   ],
+   "palette": {
+    "sky": "#9EC6EE",
+    "far": "#A9AAA6",
+    "mid": "#8D857A",
+    "ice": "#F3F2EE",
+    "water": "#C6D6E6",
+    "near": "#2A2622",
+    "sun": "#F4C443",
+    "leaf": "#3F7A4E",
+    "acc": "#EBCF6A",
+    "obj": "#DDAE8C"
    }
   },
   {
@@ -1262,6 +1476,34 @@
     "leaf": "#3E6A3A",
     "acc": "#5E9A80",
     "obj": "#7A5034"
+   }
+  },
+  {
+   "slug": "crotone",
+   "label": "The round tower of the Castello di Carlo V, Crotone",
+   "lat": 39.0814,
+   "lon": 17.1272,
+   "radius_km": 12,
+   "aliases": [
+    "castello di carlo v crotone",
+    "castello carlo v crotone",
+    "castello di crotone",
+    "crotone castle"
+   ],
+   "names": [
+    "crotone"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#B3A27E",
+    "mid": "#D3BF95",
+    "ice": "#F2EBDD",
+    "water": "#2F8FB8",
+    "near": "#2C2925",
+    "sun": "#F4C430",
+    "leaf": "#4F7A3A",
+    "acc": "#E8D8B0",
+    "obj": "#8E8B86"
    }
   },
   {
@@ -1454,6 +1696,29 @@
    }
   },
   {
+   "slug": "fiumalbo",
+   "label": "Fiumalbo's San Bartolomeo bell tower over the village's stone roofs, Modena Apennines",
+   "lat": 44.1785,
+   "lon": 10.6475,
+   "radius_km": 5,
+   "aliases": [],
+   "names": [
+    "fiumalbo"
+   ],
+   "palette": {
+    "sky": "#B8D6F0",
+    "far": "#A8A271",
+    "mid": "#8F8B82",
+    "ice": "#EEE6D6",
+    "water": "#5E9C8A",
+    "near": "#2A2724",
+    "sun": "#F4C443",
+    "leaf": "#3D5E36",
+    "acc": "#E2AE8E",
+    "obj": "#6A6866"
+   }
+  },
+  {
    "slug": "florence",
    "label": "Duomo and red roofs of Florence",
    "lat": 43.773,
@@ -1578,6 +1843,32 @@
    }
   },
   {
+   "slug": "gargano",
+   "label": "The Gargano coast: the white faraglioni of Baia delle Zagare, one arched, below the green headland",
+   "lat": 41.7517,
+   "lon": 16.161,
+   "radius_km": 40,
+   "aliases": [
+    "gargano",
+    "baia delle zagare",
+    "baia dei faraglioni",
+    "faraglioni di mattinata",
+    "arco delle zagare"
+   ],
+   "palette": {
+    "sky": "#C4E2F6",
+    "far": "#7F9E78",
+    "mid": "#EEEADF",
+    "ice": "#FFFFFF",
+    "water": "#2A93BE",
+    "near": "#22302A",
+    "sun": "#F4C443",
+    "leaf": "#4E8A3A",
+    "acc": "#E2DACA",
+    "obj": "#B9B09A"
+   }
+  },
+  {
    "slug": "gerace",
    "label": "Gerace's Norman castle ruins on the sandstone cliff above the village",
    "lat": 38.2712,
@@ -1602,6 +1893,36 @@
     "leaf": "#6F8A45",
     "acc": "#B8673F",
     "obj": "#BBA77F"
+   }
+  },
+  {
+   "slug": "gibellina",
+   "label": "Burri's Grande Cretto over the ruins of old Gibellina",
+   "lat": 37.7908,
+   "lon": 13.0128,
+   "radius_km": 10,
+   "aliases": [
+    "cretto di burri",
+    "grande cretto",
+    "ruderi di gibellina",
+    "gibellina vecchia",
+    "burri cretto"
+   ],
+   "names": [
+    "gibellina",
+    "gibellina nuova"
+   ],
+   "palette": {
+    "sky": "#A8CDEF",
+    "far": "#B9B07E",
+    "mid": "#A99A5E",
+    "ice": "#E6E4DD",
+    "water": "#C2BFB6",
+    "near": "#2A2826",
+    "sun": "#F4C430",
+    "leaf": "#6E8A3E",
+    "acc": "#CDAE76",
+    "obj": "#8E8B84"
    }
   },
   {
@@ -2061,6 +2382,33 @@
     "leaf": "#8C9658",
     "acc": "#C9B38A",
     "obj": "#3C74B4"
+   }
+  },
+  {
+   "slug": "limina-pass",
+   "label": "Meadows and beech woods of the Passo della Limina, Calabria",
+   "lat": 38.35,
+   "lon": 16.22,
+   "radius_km": 8,
+   "aliases": [
+    "passo della limina",
+    "limina pass",
+    "piani della limina"
+   ],
+   "names": [
+    "limina"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#9AB0A8",
+    "mid": "#3F6B33",
+    "ice": "#E9E5DC",
+    "water": "#4A8DB0",
+    "near": "#262A22",
+    "sun": "#F4C430",
+    "leaf": "#6FA43E",
+    "acc": "#BDB7A8",
+    "obj": "#8C6A44"
    }
   },
   {
@@ -3936,6 +4284,33 @@
    }
   },
   {
+   "slug": "rocche-del-crasto",
+   "label": "The limestone rocks of Monte Kratas above Caltabellotta, Sicily",
+   "lat": 37.5767,
+   "lon": 13.2173,
+   "radius_km": 6,
+   "aliases": [
+    "rocche del kratas",
+    "monte kratas",
+    "rocca di caltabellotta"
+   ],
+   "names": [
+    "caltabellotta"
+   ],
+   "palette": {
+    "sky": "#9FC6EE",
+    "far": "#A6B4C2",
+    "mid": "#D3CDBF",
+    "ice": "#F1EDE4",
+    "water": "#4A8DB0",
+    "near": "#2A2926",
+    "sun": "#F4C430",
+    "leaf": "#517B36",
+    "acc": "#E0D2B6",
+    "obj": "#A79F8E"
+   }
+  },
+  {
    "slug": "roman-forum",
    "label": "Roman Forum with the Temple of Saturn",
    "lat": 41.8925,
@@ -4457,6 +4832,29 @@
     "leaf": "#6E9E86",
     "acc": "#D9AA3C",
     "obj": "#4B4640"
+   }
+  },
+  {
+   "slug": "staiti",
+   "label": "Staiti's stone village stacked on its Aspromonte hillside",
+   "lat": 37.9997,
+   "lon": 16.0333,
+   "radius_km": 5,
+   "aliases": [],
+   "names": [
+    "staiti"
+   ],
+   "palette": {
+    "sky": "#AFD0F0",
+    "far": "#7F9C55",
+    "mid": "#CFC8B6",
+    "ice": "#ECE6DA",
+    "water": "#4A8DB0",
+    "near": "#2A2A26",
+    "sun": "#F4C430",
+    "leaf": "#3E6A31",
+    "acc": "#C46A44",
+    "obj": "#B3AA9B"
    }
   },
   {
@@ -5071,6 +5469,32 @@
     "leaf": "#5F7F3F",
     "acc": "#D6A3B3",
     "obj": "#B9AA92"
+   }
+  },
+  {
+   "slug": "vinci",
+   "label": "Vinci's Castello dei Conti Guidi and the Santa Croce bell tower above the olive groves",
+   "lat": 43.7869,
+   "lon": 10.9264,
+   "radius_km": 6,
+   "aliases": [
+    "museo leonardiano",
+    "castello dei conti guidi"
+   ],
+   "names": [
+    "vinci"
+   ],
+   "palette": {
+    "sky": "#B4D4EE",
+    "far": "#C2BE84",
+    "mid": "#9C8B74",
+    "ice": "#ECE6D6",
+    "water": "#5E8FB0",
+    "near": "#2A2622",
+    "sun": "#F4C443",
+    "leaf": "#8B9C6C",
+    "acc": "#BC6A4A",
+    "obj": "#355236"
    }
   },
   {
