@@ -48,7 +48,7 @@ CSP = ("default-src 'self'; script-src 'self'; "
        "font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; "
        # maps (MapLibre): vector tiles and fonts from OpenFreeMap, relief from AWS terrain
        # tiles, and a worker the library starts from a blob: URL
-       "connect-src 'self' https://tiles.openfreemap.org https://s3.amazonaws.com; "
+       "connect-src 'self' https://tiles.openfreemap.org https://s3.amazonaws.com https://gibs.earthdata.nasa.gov; "
        "worker-src 'self' blob:; child-src 'self' blob:; "
        "object-src 'none'; base-uri 'self'; form-action 'self'; "
        "frame-ancestors 'none'")

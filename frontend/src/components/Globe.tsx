@@ -132,7 +132,7 @@ export default function Globe() {
       // from space only the big places have a name; more appear as you get closer
       // the room a picture takes (46 px), so other names keep off it
       map.addImage(PICTURE_ROOM, { width: 50, height: 50, data: new Uint8Array(50 * 50 * 4) });
-      for (const l of placeLayers(c)) map.addLayer(l);
+      for (const l of placeLayers(c, "places", { photo: true })) map.addLayer(l);
       map.addLayer(pictureRoomLayer());
       map.addLayer({ id: "pl-sel", type: "circle", source: "places", filter: ["==", ["get", "i"], -1],
         paint: { "circle-radius": 13, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": c.ink, "circle-stroke-width": 2.5 } });
