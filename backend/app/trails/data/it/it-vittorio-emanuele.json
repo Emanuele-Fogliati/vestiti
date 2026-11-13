@@ -1,0 +1,64 @@
+{
+ "id": "it-vittorio-emanuele",
+ "country": "IT",
+ "name": "Rifugio Vittorio Emanuele II, Gran Paradiso",
+ "base": "Valsavarenche",
+ "region": "Gran Paradiso National Park, Aosta Valley",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  4.5
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 10,
+  "gain_m": 760,
+  "source": "https://www.volpidelvajolet.it/2026/08/rifugio-vittorio-emanuele-ii-escursione.html"
+ },
+ "why": "A mule track through larches and ibex pastures to the silver-roofed hut of the Gran Paradiso climbers, under the glaciers of Ciarforon.",
+ "book": "Nothing for a day walk. Park at Pont (end of the road). Sleeping: book the hut (CAI Turin) well ahead, it is the base for the Gran Paradiso climb.",
+ "water": "Streams on the lower half; the hut sells drinks April to September.",
+ "dangers": [
+  "Above 2,700 m: cold, and snow on the path until late June.",
+  "Storms in the afternoon: the upper part is open moraine."
+ ],
+ "turnaround": "If you are not at the hut by 13:00, turn back.",
+ "sources": [
+  "https://www.volpidelvajolet.it/2026/08/rifugio-vittorio-emanuele-ii-escursione.html",
+  "https://lovevda.it/en/database/22/mountain-refuges/valsavarenche/vittorio-emanuele-ii/3735"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Pont, Valsavarenche",
+   "lat": 45.52453,
+   "lon": 7.201544,
+   "role": "start",
+   "note": "1,960 m: the end of the road, meadows by the river. Cross the bridge and take path 1."
+  },
+  {
+   "id": "moraine",
+   "name": "Gran Paradiso from the moraine",
+   "lat": 45.511,
+   "lon": 7.224,
+   "role": "point",
+   "note": "Out of the larches the track zigzags up open ground; the glaciers of the Gran Paradiso group come into view."
+  },
+  {
+   "id": "goal",
+   "name": "Rifugio Vittorio Emanuele II",
+   "lat": 45.51268,
+   "lon": 7.22961,
+   "role": "goal",
+   "note": "2,735 m: the half-barrel silver hut by Lago di Moncorvé, ibex around it."
+  }
+ ]
+}

@@ -1557,20 +1557,20 @@
    "slot": "IT-B",
    "base": "Val di Funes",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
-     "name": "San Giovanni in Ranui church",
+     "point": "start",
+     "name": "Malga Zannes under the Odle",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Malga Zannes",
+     "point": "munkel",
+     "name": "Adolf Munkel path under the Odle walls",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Malga Geisler under the Odle",
      "reuse": null
     }
@@ -1583,20 +1583,20 @@
    "slot": "IT-B",
    "base": "Positano",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Bomerano, Agerola",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "praiano",
      "name": "Sentiero degli Dei above Praiano",
-     "reuse": null
+     "reuse": "it-path-of-the-gods"
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Nocelle over Positano",
      "reuse": null
     }
@@ -1609,20 +1609,20 @@
    "slot": "IT-B",
    "base": "Cinque Terre",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Monterosso al Mare",
-     "reuse": null
+     "reuse": "it-monterosso-al-mare"
     },
     {
-     "point": null,
+     "point": "vernazza",
      "name": "Vernazza from the path",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Corniglia",
      "reuse": null
     }
@@ -1635,20 +1635,20 @@
    "slot": "IT-B",
    "base": "Catania",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Crateri Silvestri at Rifugio Sapienza",
-     "reuse": null
+     "reuse": "it-silvestri-craters"
     },
     {
-     "point": null,
+     "point": "cablecar",
      "name": "Etna cable car top and ash slopes",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Etna summit craters",
      "reuse": null
     }
@@ -1661,21 +1661,16 @@
    "slot": "IT-B",
    "base": "Courmayeur",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Val Ferret meadows",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Bonatti",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Grandes Jorasses from Rifugio Bonatti",
+     "point": "goal",
+     "name": "Rifugio Bonatti under the Grandes Jorasses",
      "reuse": null
     }
    ]
@@ -1687,20 +1682,20 @@
    "slot": "IT-B",
    "base": "Valsavarenche",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Pont, Valsavarenche",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "moraine",
      "name": "Gran Paradiso from the moraine",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Rifugio Vittorio Emanuele II",
      "reuse": null
     }
