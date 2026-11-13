@@ -3,6 +3,33 @@
  "name": "Canada",
  "places": [
   {
+   "slug": "algonquin-provincial-park",
+   "label": "A red canoe, granite, white pines and a moose on an Algonquin lake",
+   "lat": 45.55,
+   "lon": -78.6,
+   "radius_km": 50,
+   "aliases": [
+    "algonquin park",
+    "algonquin provincial park",
+    "parc algonquin"
+   ],
+   "names": [
+    "algonquin"
+   ],
+   "palette": {
+    "sky": "#B6D7F0",
+    "far": "#4A3426",
+    "mid": "#A8928A",
+    "ice": "#F4EFE4",
+    "water": "#4E7FA2",
+    "near": "#1F2420",
+    "sun": "#F4C542",
+    "leaf": "#2E5230",
+    "acc": "#B5302B",
+    "obj": "#D8C59D"
+   }
+  },
+  {
    "slug": "annapolis-royal",
    "label": "The Officers' Quarters with its three tall chimneys on the earthworks of Fort Anne, Annapolis Royal",
    "lat": 44.7413,
@@ -535,6 +562,30 @@
     "leaf": "#4A6638",
     "acc": "#E2BC52",
     "obj": "#7E5E44"
+   }
+  },
+  {
+   "slug": "kananaskis",
+   "label": "Mount Kidd above Highway 40 with bighorn sheep, Kananaskis Country",
+   "lat": 50.865,
+   "lon": -115.205,
+   "radius_km": 40,
+   "aliases": [
+    "kananaskis",
+    "mount kidd",
+    "mt kidd"
+   ],
+   "palette": {
+    "sky": "#92C3F0",
+    "far": "#7FA24E",
+    "mid": "#B9B8B0",
+    "ice": "#F6F3EA",
+    "water": "#5BA6C4",
+    "near": "#22261F",
+    "sun": "#F4C542",
+    "leaf": "#2F5A2E",
+    "acc": "#B4936B",
+    "obj": "#6D6E72"
    }
   },
   {
