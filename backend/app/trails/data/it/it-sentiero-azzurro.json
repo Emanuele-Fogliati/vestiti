@@ -1,0 +1,68 @@
+{
+ "id": "it-sentiero-azzurro",
+ "country": "IT",
+ "name": "Sentiero Azzurro, Monterosso to Corniglia",
+ "base": "Cinque Terre",
+ "region": "Cinque Terre National Park, Liguria",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  9,
+  10
+ ],
+ "hours": [
+  3.5,
+  4
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 7.8,
+  "gain_m": 490,
+  "source": "https://www.parconazionale5terre.it/Eiti_dettaglio.php?id_iti=3578"
+ },
+ "why": "The old mule path between three of the five villages, through terraced vineyards and olive groves, with Vernazza's harbour below you.",
+ "book": "Cinque Terre Trekking Card or Train Card, compulsory on this path (checkpoints at both ends). Paths close after heavy rain: check the park's page the same morning. Train back from Corniglia.",
+ "water": "Only in the villages: fill up in Monterosso and Vernazza.",
+ "dangers": [
+  "Narrow steps with drops and no barrier; slippery after rain.",
+  "Very hot and crowded from June to August: start early."
+ ],
+ "turnaround": "The park closes the path when rain is forecast: if it is closed, take the train. From Vernazza, the train is always the way out.",
+ "sources": [
+  "https://www.parconazionale5terre.it/Esentieri-outdoor.php",
+  "https://www.parconazionale5terre.it/Eiti_dettaglio.php?id_iti=3578",
+  "https://www.parconazionale5terre.it/Eiti_dettaglio.php?id_iti=3577"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Monterosso al Mare",
+   "lat": 44.1446,
+   "lon": 9.6555,
+   "role": "start",
+   "note": "Start from the old town at the east end of the beach; the steps of path 592-4 climb at once among olive groves.",
+   "scene": "it-monterosso-al-mare"
+  },
+  {
+   "id": "vernazza",
+   "name": "Vernazza from the path",
+   "lat": 44.1362,
+   "lon": 9.6823,
+   "role": "point",
+   "note": "The path drops to Vernazza from the north: the harbour, the castle tower and Santa Margherita church below you."
+  },
+  {
+   "id": "goal",
+   "name": "Corniglia",
+   "lat": 44.11996,
+   "lon": 9.708687,
+   "role": "goal",
+   "note": "The only village on a cliff, 100 m above the sea. Station below: 382 steps or the shuttle bus."
+  }
+ ]
+}
