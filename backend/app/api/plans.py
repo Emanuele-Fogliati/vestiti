@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.db import get_db
 from app.deps import current_user, own_trip
-from app.engine.garments import SLOT_KEYS
+from app.engine.garments import known_slot
 from app.models import Product, Trip, TripSelection, User, WardrobeItem
 from app.schemas import SelectionIn
 from app.services.planner import Planner
@@ -50,7 +50,7 @@ def slot_products(slot: str, q: str | None = None, brand: str | None = None,
                   max_price: float | None = None, only_passing: bool = False,
                   trip: Trip = Depends(own_trip), user: User = Depends(current_user),
                   db: Session = Depends(get_db)):
-    if slot not in SLOT_KEYS:
+    if not known_slot(slot):
         raise HTTPException(404, "Unknown slot")
     return Planner(db, user, trip).slot_products(slot, q, brand, sort, max_price, only_passing)
 
@@ -87,11 +87,11 @@ def set_selection(body: SelectionIn, trip: Trip = Depends(own_trip),
         return {"ok": True, "choice": "auto"}
     if body.choice == "product":
         p = db.get(Product, body.product_id) if body.product_id else None
-        if p is None or p.category != body.slot:
+        if p is None or p.category != body.slot.split("@")[0]:
             raise HTTPException(422, "product not found for this slot")
     if body.choice == "owned":
         w = db.get(WardrobeItem, body.wardrobe_item_id) if body.wardrobe_item_id else None
-        if w is None or w.user_id != user.id or w.category != body.slot:
+        if w is None or w.user_id != user.id or w.category != body.slot.split("@")[0]:
             raise HTTPException(422, "wardrobe item not found for this slot")
     if row is None:
         row = TripSelection(trip_id=trip.id, tier=body.tier, slot=body.slot)

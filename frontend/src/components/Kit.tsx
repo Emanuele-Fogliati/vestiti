@@ -64,7 +64,7 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
   return (
     <article className={`x-item${owned || have ? " owned" : ""}${line.preferred_brand ? " fav" : ""}`}>
       <div className="x-ic">
-        {it?.image_url ? <img src={it.image_url} alt="" loading="lazy" /> : <ProductArt slot={line.slot} className="x-art" />}
+        {it?.image_url ? <img src={it.image_url} alt="" loading="lazy" /> : <ProductArt slot={line.base_slot ?? line.slot} className="x-art" />}
         <span className="x-lay">{line.code}</span>
         {line.preferred_brand && !line.locked && <span className="x-fav">Your brand</span>}
         {line.locked && !have && <span className="x-fav">Your pick</span>}
@@ -93,14 +93,14 @@ function Card({ line, tripId, tier, onSwap, onChanged }: {
           <div className="x-acts">
             <button type="button" className="x-btn" onClick={onSwap}>Swap{line.alternatives ? ` (${line.alternatives})` : ""}</button>
             {line.owned_alternatives.length > 0 && !owned && <button type="button" className="x-btn" onClick={() => choose("owned", { wardrobe_item_id: line.owned_alternatives[0].id })}>Use mine</button>}
-            {have && <Link className="x-btn" to={`/wardrobe?slot=${line.slot}`}>Check mine</Link>}
+            {have && <Link className="x-btn" to={`/wardrobe?slot=${line.base_slot ?? line.slot}`}>Check mine</Link>}
             {(line.rent_suggestion || line.rental_options.length > 0) && !rent && <button type="button" className="x-btn" onClick={() => choose("rent")}>Rent{line.rent_suggestion ? ` · save ${money(line.rent_suggestion.saving ?? 0)}` : ""}</button>}
             {(line.locked || (have && !line.assumed)) && <button type="button" className="x-btn" onClick={() => choose("auto")}>Auto</button>}
-            {!line.locked && line.kind !== "none" && ["headwear", "gloves", "sun_hat", "shell_bottom", "base_bottom"].includes(line.slot) && (
+            {!line.locked && line.kind !== "none" && (!!line.zone || ["headwear", "gloves", "sun_hat", "shell_bottom", "base_bottom"].includes(line.slot)) && (
               <button type="button" className="x-btn" onClick={() => choose("skip")}>Skip it</button>)}
           </div>
           {it && fit && <Stars value={fit.stars} label="fit for this trip" />}
-          {it && <dl className="x-specs">{specRows(it, line.slot).map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>}
+          {it && <dl className="x-specs">{specRows(it, line.base_slot ?? line.slot).map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>}
           {fit && fit.issues.length > 0 && <ul className="x-list warn">{fit.issues.slice(0, 2).map((p) => <li key={p}>{p}</li>)}</ul>}
           {fit && fit.positives.length > 0 && <ul className="x-list">{fit.positives.slice(0, 2).map((p) => <li key={p}>{p}</li>)}</ul>}
           {(line.brand_note || (have && line.note)) && <p className="x-sub">{line.brand_note ?? line.note}</p>}
@@ -154,6 +154,9 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
   }
   const tp = plans.tiers[tier];
   const haves = tp.items.filter((l) => l.kind === "have");
+  const hot = plans.zones?.[0];
+  const mainLines = tp.items.filter((l) => !l.zone && l.kind !== "have");
+  const hotLines = tp.items.filter((l) => l.zone && l.kind !== "have");
   async function needOne(slot: string, name: string) {
     await api.select(tripId, { tier, slot, choice: "buy" });
     toast(`${name}: back on the list.`);
@@ -214,9 +217,19 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
       {alerts.length > 0 && (
         <div className="x-alerts">{alerts.map((a) => <p key={a.k} className={`x-alert${a.warn ? " warn" : ""}`}>{a.text}</p>)}</div>
       )}
+      {hot && <h3 className="x-h3">One bag for every stop</h3>}
       <div className="x-items">
-        {tp.items.filter((l) => l.kind !== "have").map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} onSwap={() => setSwap(l)} onChanged={onChanged} />)}
+        {mainLines.map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} onSwap={() => setSwap(l)} onChanged={onChanged} />)}
       </div>
+      {hot && hotLines.length > 0 && (
+        <>
+          <h3 className="x-h3">Plus, for the hot days <small>{hot.names.join(", ")}</small></h3>
+          <p className="x-sub">Light pieces for the day out. Jackets, fleece and the rest of the bag stay the same.</p>
+          <div className="x-items">
+            {hotLines.map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} onSwap={() => setSwap(l)} onChanged={onChanged} />)}
+          </div>
+        </>
+      )}
       {haves.length > 0 && (
         <div className="x-yours">
           <b>Already yours</b>

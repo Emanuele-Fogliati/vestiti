@@ -338,7 +338,11 @@ export interface Rental {
 }
 
 export interface KitLine {
+  /** "trousers", or "trousers@warm" for a lighter piece only the hot places get */
   slot: string;
+  base_slot?: string;
+  zone?: string;
+  zone_where?: string;
   code: string;
   slot_name: string;
   kind: "product" | "owned" | "have" | "rent" | "none";
@@ -388,10 +392,14 @@ export interface Plans {
   comparison: { tier: Tier; total: number; status: Status }[];
   requirements: Record<string, Requirement>;
   questions: Question[];
+  zones?: Zone[];
   currency: string;
   model_note: string;
   catalog_note: string | null;
 }
+
+/** Clearly hot places of a trip: the one bag, plus a few light pieces for them. */
+export interface Zone { key: string; stages: number[]; names: string[]; slots: string[] }
 
 export interface Condition {
   date: string; mode: string; activity: string; temp_c: number; feels_like_c: number;
@@ -437,7 +445,7 @@ export interface Strategy {
   empty: boolean;
   message?: string;
   tier: Tier;
-  slots: { key: string; code: string; name: string; torso: boolean }[];
+  slots: { key: string; code: string; name: string; torso: boolean; zone?: string }[];
   kit: Record<string, { name: string; clo: number; source: string; ref_id: string | null; waterproof: boolean; windproof: boolean }>;
   stages: Stage[];
   margins: { moving: number; rest: number };
@@ -445,6 +453,7 @@ export interface Strategy {
   requirements: Record<string, Requirement>;
   questions: Question[];
   totals: TierPlan["totals"];
+  zones?: Zone[];
   model_note: string;
 }
 

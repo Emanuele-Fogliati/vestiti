@@ -79,7 +79,7 @@ export function SwapDrawer({ tripId, tier, line, onClose, onChanged }: {
         <div className="dbody">
           {line.owned_alternatives.map((o) => (
             <div className={`prow${line.item?.id === o.id ? " cur" : ""}`} key={o.id}>
-              <div className="ph-s"><ProductArt slot={line.slot} /></div>
+              <div className="ph-s"><ProductArt slot={line.base_slot ?? line.slot} /></div>
               <div><div className="nm">{o.name}<span className="tag">yours</span></div>
                 {o.fit && <Stars value={o.fit.stars} label="fit" />}
                 {o.fit?.issues.length ? <div className="note">{o.fit.issues[0]}</div> : null}</div>
@@ -91,12 +91,12 @@ export function SwapDrawer({ tripId, tier, line, onClose, onChanged }: {
             <p className="empty">Nothing matches. Clear the filters or untick "only items that meet the trip's needs".</p>
           ) : items.map((it) => (
             <div className={`prow${line.item?.id === it.id ? " cur" : ""}${it.fit && !it.fit.passes ? " fail" : ""}`} key={it.id}>
-              <div className="ph-s">{it.image_url ? <img src={it.image_url} alt="" /> : <ProductArt slot={line.slot} />}</div>
+              <div className="ph-s">{it.image_url ? <img src={it.image_url} alt="" /> : <ProductArt slot={line.base_slot ?? line.slot} />}</div>
               <div style={{ minWidth: 0 }}>
                 <div className="brandline">{it.preferred_brand ? "♥ " : ""}{it.brand} · {it.merchant}{it.checked_at ? "" : " · indicative price"}</div>
                 <div className="nm">{it.name}</div>
                 {it.fit && <Stars value={it.fit.stars} label="fit" />}
-                <div className="meta">{specRows(it, line.slot).map(([k, v]) => `${k} ${v}`).join(" · ")}</div>
+                <div className="meta">{specRows(it, line.base_slot ?? line.slot).map(([k, v]) => `${k} ${v}`).join(" · ")}</div>
                 {it.fit?.issues.length ? <div className="note">{it.fit.issues[0]}</div> : null}
               </div>
               <div className="right">

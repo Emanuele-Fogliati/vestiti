@@ -16,6 +16,9 @@ from app.engine.strategy import (
     conditions_for_stage,
     evaluate,
     requirements,
+    warm_zone,
+    zone_key,
+    zone_name,
 )
 from app.config import get_settings
 from app.models import Product, RentalPartner, Trip, TripSelection, User, WardrobeItem
@@ -66,6 +69,7 @@ class Computed:
     stages: list[StageInput]
     conds: list[Condition]
     reqs: dict[str, SlotRequirement]
+    zone: dict | None = None  # hot places and their lighter pieces (strategy.warm_zone)
 
 
 class Planner:
@@ -101,7 +105,8 @@ class Planner:
                 conds += conditions_for_stage(st, personal_offset=self.user.thermal_offset or 0.0,
                                               pace=self.user.pace or "average")
             reqs = requirements(stages, conds) if conds else {}
-            self._computed = Computed(stages, conds, reqs)
+            zone = warm_zone(stages, conds, reqs) if conds else None
+            self._computed = Computed(stages, conds, reqs, zone)
         return self._computed
 
     def candidates(self, reqs) -> dict[str, list[O.CatalogItem]]:
@@ -146,7 +151,20 @@ class Planner:
                                  evenings=self.user.evenings or "sometimes",
                                  prefer_names=self.prefer_names)
                  for t in O.TIERS}
+        if c.zone:
+            zc, zo = self.candidates(c.zone["reqs"]), self.owned(c.zone["reqs"])
+            for t, tp in tiers.items():
+                lines, zch = O.zone_lines(t, c.zone, zc, zo, sels, self.prefer_names,
+                                          main_items=tp["items"])
+                O.add_zone_lines(tp, lines)
+                tp["_zone_choices"] = zch
         return c, {"tiers": tiers, "candidates": cands, "owned": owned}
+
+    def zones(self, c: Computed) -> list[dict]:
+        if not c.zone:
+            return []
+        return [{"key": c.zone["key"], "stages": c.zone["stages"], "names": c.zone["names"],
+                 "slots": [zone_key(s) for s in c.zone["slots"]]}]
 
     def plans(self) -> dict:
         if not self.trip.stops:
@@ -156,6 +174,7 @@ class Planner:
         for t in tiers.values():
             t.pop("_choices", None)
             t.pop("_brand_swaps", None)
+            t.pop("_zone_choices", None)
         tier_advice(tiers)
         return {
             "empty": False,
@@ -164,7 +183,8 @@ class Planner:
                             "status": tiers[t]["warmth"]["status"]} for t in O.TIERS],
             "requirements": {k: O.requirement_json(r) for k, r in c.reqs.items() if r.needed},
             "questions": clarifying_questions(c.stages),
-            "currency": "EUR",
+            "zones": self.zones(c),
+            "currency": self.currency,
             "model_note": MODEL_NOTE,
             "catalog_note": self._catalog_note(),
         }
@@ -176,8 +196,13 @@ class Planner:
         t = data["tiers"][tier]
         choices = t.pop("_choices")
         t.pop("_brand_swaps", None)
+        zch = t.pop("_zone_choices", None) or {}
         kit = O._kit(choices, c.reqs)
-        ev = evaluate(c.stages, c.conds, kit)
+        zone = None
+        if c.zone and zch:
+            light = {s: ch.kit_item(c.zone["reqs"][s]) for s, ch in zch.items()}
+            zone = {"stages": c.zone["stages"], "kit": {s: k for s, k in light.items() if k}}
+        ev = evaluate(c.stages, c.conds, kit, zone)
         for st in ev["stages"]:
             st["upgrades"] = {}
             for mode in ("moving", "rest"):
@@ -188,15 +213,22 @@ class Planner:
                 else:
                     st["upgrades"][mode] = None
         ev.pop("dresses", None)
-        slots = [{"key": s.key, "code": s.code, "name": s.name, "torso": s.torso}
-                 for s in SLOTS if s.key in kit]
+        light = (zone or {}).get("kit") or {}
+        slots = []
+        for s in SLOTS:  # a hot-day piece sits right under the piece it stands in for
+            if s.key in kit:
+                slots.append({"key": s.key, "code": s.code, "name": s.name, "torso": s.torso})
+            if s.key in light:
+                slots.append({"key": zone_key(s.key), "code": s.code, "zone": c.zone["key"],
+                              "name": zone_name(s.key, c.zone["reqs"][s.key]), "torso": s.torso})
         return {
             "empty": False,
             "tier": tier,
             "slots": slots,
             "kit": {k: {"name": v.name, "clo": v.clo, "source": v.source, "ref_id": v.ref_id,
                         "waterproof": v.waterproof, "windproof": v.windproof}
-                    for k, v in kit.items()},
+                    for k, v in {**kit, **{zone_key(s): x for s, x in light.items()}}.items()},
+            "zones": self.zones(c),
             "stages": ev["stages"],
             "margins": ev["margins"],
             "status": ev["status"],
@@ -210,10 +242,19 @@ class Planner:
                       sort: str = "fit", max_price: float | None = None,
                       only_passing: bool = False) -> dict:
         c = self.compute()
-        req = c.reqs.get(slot)
-        if req is None:
-            return {"items": [], "brands": []}
-        items = self.candidates(c.reqs).get(slot, [])
+        base = slot.split("@")[0]
+        if "@" in slot:  # a hot-day piece: rated against the hot places' needs, light only
+            zreqs = (c.zone or {}).get("reqs") or {}
+            req = zreqs.get(base)
+            if req is None:
+                return {"items": [], "brands": []}
+            items = [i for i in self.candidates(zreqs).get(base, []) if base == "footwear"
+                     or float(i.specs.get("clo") or 0) <= 1.5 * REF_CLO[base]["light"]]
+        else:
+            req = c.reqs.get(slot)
+            if req is None:
+                return {"items": [], "brands": []}
+            items = self.candidates(c.reqs).get(slot, [])
         brands = sorted({i.brand for i in items})
         if q:
             ql = q.lower()
@@ -235,7 +276,8 @@ class Planner:
             "waterproof": lambda i: (-(i.specs.get("waterproof_mm") or 0), i.price),
         }
         items.sort(key=keys.get(sort, keys["fit"]))
-        return {"slot": slot, "slot_name": SLOT_BY_KEY[slot].name,
+        return {"slot": slot, "slot_name": (zone_name(base, req) if "@" in slot
+                                            else SLOT_BY_KEY[slot].name),
                 "requirement": O.requirement_json(req), "brands": brands,
                 "preferred_brands": self.prefer_names,
                 "items": [{**i.as_dict(), "preferred_brand": i.brand.lower() in self.prefer}
