@@ -1,0 +1,63 @@
+{
+ "id": "ar-cerro-guanaco",
+ "country": "AR",
+ "name": "Cerro Guanaco",
+ "base": "Ushuaia",
+ "region": "Tierra del Fuego National Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 8,
+  "gain_m": 950,
+  "source": "https://www.argentina.gob.ar/parquesnacionales/tierradelfuego"
+ },
+ "why": "The hardest hike in the park and its best view: the Beagle Channel, Lapataia bay and Lago Acigami from 970 m.",
+ "book": "Park entry ticket at the gate. Register at the Lago Acigami ranger post.",
+ "water": "Only at the start: carry 2 litres.",
+ "dangers": [
+  "A peat bog half way that swallows boots after rain.",
+  "The summit ridge is slate scree in strong wind; snow possible all summer."
+ ],
+ "turnaround": "Start up from the bog by 12:00, or you will come down in the dark in March.",
+ "sources": [
+  "https://www.argentina.gob.ar/parquesnacionales/tierradelfuego"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Lago Acigami (Lago Roca)",
+   "lat": -54.8237,
+   "lon": -68.5624,
+   "role": "start",
+   "note": "Start at the ranger post by the lake; the path enters the forest at once and climbs."
+  },
+  {
+   "id": "bog",
+   "name": "Cerro Guanaco peat bog",
+   "lat": -54.83,
+   "lon": -68.555,
+   "role": "point",
+   "note": "A flat, wet valley half way up: the last easy ground."
+  },
+  {
+   "id": "goal",
+   "name": "Cerro Guanaco",
+   "lat": -54.8368,
+   "lon": -68.5554,
+   "role": "goal",
+   "note": "970 m. Beagle Channel, Lapataia bay and the Chilean border mountains."
+  }
+ ]
+}

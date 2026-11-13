@@ -1,0 +1,71 @@
+{
+ "id": "ar-pliegue-tumbado",
+ "country": "AR",
+ "name": "Loma del Pliegue Tumbado",
+ "base": "El Chaltén",
+ "region": "Los Glaciares National Park, north sector",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  7,
+  9
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 20,
+  "gain_m": 1100,
+  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+ },
+ "why": "The one viewpoint with Fitz Roy and Cerro Torre side by side, and Lago Viedma behind you.",
+ "book": "Free, no permit. It starts at the park visitor centre at the entrance of the village.",
+ "water": "Only in the forest at the start: carry 2 litres.",
+ "dangers": [
+  "The top is a bare ridge with no shelter: the wind is the strongest of any El Chaltén trail.",
+  "Only worth it on a clear day."
+ ],
+ "turnaround": "If the summit is in cloud at the edge of the forest, turn back: the view is the whole point.",
+ "sources": [
+  "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
+  "https://hiking.waymarkedtrails.org/#route?id=9095170"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Los Glaciares visitor centre, El Chaltén",
+   "lat": -49.3384,
+   "lon": -72.8784,
+   "role": "start",
+   "note": "Start behind the ranger station; the path climbs through lenga forest from the first minute."
+  },
+  {
+   "id": "ridge",
+   "name": "Pliegue Tumbado ridge, above the forest",
+   "lat": -49.3488,
+   "lon": -72.9405,
+   "role": "point",
+   "note": "The trees end: Laguna Toro and the Southern Ice Field appear to the west."
+  },
+  {
+   "id": "goal",
+   "name": "Loma del Pliegue Tumbado",
+   "lat": -49.3555,
+   "lon": -72.9671,
+   "role": "goal",
+   "note": "About 1,500 m. Fitz Roy to the right, Cerro Torre to the left, Lago Viedma behind."
+  }
+ ],
+ "via": [
+  [
+   -49.35,
+   -72.93
+  ]
+ ]
+}

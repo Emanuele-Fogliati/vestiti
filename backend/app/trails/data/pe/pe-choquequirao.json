@@ -1,0 +1,69 @@
+{
+ "id": "pe-choquequirao",
+ "country": "PE",
+ "name": "Choquequirao trek",
+ "base": "Cachora",
+ "region": "Apurímac canyon",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  26,
+  30
+ ],
+ "start_by": "06:00",
+ "published": {
+  "km": 62,
+  "gain_m": 3600,
+  "source": "https://en.wikivoyage.org/wiki/Choquequirao"
+ },
+ "why": "Machu Picchu's 'sister' with almost nobody there: four days down and up the Apurímac canyon to Inca terraces decorated with white llamas.",
+ "book": "Entry ticket at the site. Mules and muleteers from Cachora.",
+ "water": "Camps have water; buy at the campsites.",
+ "dangers": [
+  "1,500 m down to the river and 1,500 m up the other side, in the heat: the hardest day of any Peru trek.",
+  "No shade at midday in the canyon."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Choquequirao"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Capuliyoc viewpoint over the Apurímac canyon",
+   "lat": -13.473,
+   "lon": -72.835,
+   "role": "start",
+   "note": "The canyon opens 1,500 m below; Choquequirao is on the far slope."
+  },
+  {
+   "id": "river",
+   "name": "Playa Rosalina on the Apurímac river",
+   "lat": -13.432,
+   "lon": -72.863,
+   "role": "point",
+   "note": "The bridge at the bottom, about 1,500 m: camp here or push on.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Choquequirao",
+   "lat": -13.3933,
+   "lon": -72.8742,
+   "role": "goal",
+   "note": "About 3,050 m: the plaza, the terraces and the white llamas in stone.",
+   "night": true
+  }
+ ]
+}

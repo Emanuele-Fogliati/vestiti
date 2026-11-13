@@ -1,0 +1,91 @@
+{
+ "id": "cl-w-trek",
+ "country": "CL",
+ "name": "W Trek",
+ "base": "Torres del Paine",
+ "region": "Torres del Paine National Park",
+ "kind": "multiday",
+ "days": 5,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  30,
+  36
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 80,
+  "gain_m": 3500,
+  "source": "https://www.torresdelpaine.com"
+ },
+ "why": "Five days, the three great sights of the park in one line: Base Torres, the French Valley and Grey Glacier, sleeping in huts or camps.",
+ "book": "Every night must be booked before you enter the park: Las Torres (Fantástico Sur) runs the east huts and camps, Vertice the west ones, CONAF the free camps. In high season they sell out months ahead.",
+ "water": "At every hut and from streams; meals can be booked at the huts.",
+ "dangers": [
+  "Wind: gusts over 100 km/h around Paine Grande and Lago Pehoé several days a summer; rangers close sections.",
+  "The weather changes four times a day: waterproofs on top of the pack, always."
+ ],
+ "turnaround": "On the days with the side valleys (Base Torres, French Valley) leave your big pack at the hut and decide at the junction.",
+ "sources": [
+  "https://www.torresdelpaine.com",
+  "https://www.verticepatagonia.cl",
+  "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/",
+  "https://hiking.waymarkedtrails.org/#route?id=2203617"
+ ],
+ "osm": 2203617,
+ "points": [
+  {
+   "id": "start",
+   "name": "Hotel Las Torres, Torres del Paine",
+   "lat": -50.9525,
+   "lon": -72.8644,
+   "role": "start",
+   "note": "Day 1: up the Ascencio valley to Refugio Chileno or Campamento Torres; Base Torres at sunrise on day 2.",
+   "night": true
+  },
+  {
+   "id": "cuernos",
+   "name": "Refugio Los Cuernos on Lago Nordenskjöld",
+   "lat": -51.0103,
+   "lon": -72.9965,
+   "role": "point",
+   "note": "Day 2: along Lago Nordenskjöld under the Cuernos to the hut on the shore.",
+   "night": true
+  },
+  {
+   "id": "frances",
+   "name": "Valle del Francés, Mirador Británico",
+   "lat": -50.9617,
+   "lon": -73.056,
+   "role": "point",
+   "note": "Day 3: up the French Valley without your pack, back down to Paine Grande.",
+   "night": true
+  },
+  {
+   "id": "paine-grande",
+   "name": "Refugio Paine Grande on Lago Pehoé",
+   "lat": -51.0623,
+   "lon": -73.1103,
+   "role": "point",
+   "note": "The hut by the catamaran pier: where you leave if you end here.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Glaciar Grey",
+   "lat": -50.969,
+   "lon": -73.205,
+   "role": "goal",
+   "note": "Day 4-5: to Refugio Grey and the hanging bridges over the glacier, then back to the Paine Grande catamaran."
+  }
+ ]
+}

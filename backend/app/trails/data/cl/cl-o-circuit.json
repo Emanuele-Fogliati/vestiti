@@ -1,0 +1,79 @@
+{
+ "id": "cl-o-circuit",
+ "country": "CL",
+ "name": "O Circuit, round the Paine massif",
+ "base": "Torres del Paine",
+ "region": "Torres del Paine National Park",
+ "kind": "multiday",
+ "days": 8,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  50,
+  60
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 110,
+  "gain_m": 4500,
+  "source": "https://www.torresdelpaine.com"
+ },
+ "why": "Eight days all the way round the massif: the empty north side, John Gardner Pass and the Southern Ice Field, then the W.",
+ "book": "Only counter-clockwise, and every camp must be booked in order before you enter (Las Torres, Vertice, CONAF). The back side opens around November and closes in early April.",
+ "water": "Streams and camps; food at the huts on the W part only.",
+ "dangers": [
+  "John Gardner Pass (1,200 m) is the most exposed point of the park: rangers open it only in the morning and close it in storms.",
+  "Deep mud and fallen trees on the descent to Paso camp."
+ ],
+ "turnaround": "Leave Los Perros camp at first light: the pass must be crossed before the afternoon wind.",
+ "sources": [
+  "https://www.torresdelpaine.com",
+  "https://www.verticepatagonia.cl",
+  "https://hiking.waymarkedtrails.org/#route?id=7705906"
+ ],
+ "osm": 7705906,
+ "points": [
+  {
+   "id": "start",
+   "name": "Refugio Dickson on Lago Dickson",
+   "lat": -50.879,
+   "lon": -73.1167,
+   "role": "start",
+   "note": "Day 2-3: the back side opens up; the hut stands on a meadow with the Dickson glacier at the end of the lake.",
+   "night": true
+  },
+  {
+   "id": "perros",
+   "name": "Glaciar Los Perros",
+   "lat": -50.9149,
+   "lon": -73.1823,
+   "role": "point",
+   "note": "Day 3-4: the glacier lake right above the camp.",
+   "night": true
+  },
+  {
+   "id": "gardner",
+   "name": "John Gardner Pass, Southern Ice Field view",
+   "lat": -50.9381,
+   "lon": -73.208,
+   "role": "point",
+   "note": "Day 4-5: at the top the Grey glacier and the Ice Field fill the whole west."
+  },
+  {
+   "id": "goal",
+   "name": "Glaciar Grey hanging bridges",
+   "lat": -50.969,
+   "lon": -73.205,
+   "role": "goal",
+   "note": "The steep descent along the glacier and its hanging bridges; then the W back east.",
+   "night": true
+  }
+ ]
+}

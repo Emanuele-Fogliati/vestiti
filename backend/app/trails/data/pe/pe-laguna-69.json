@@ -1,0 +1,73 @@
+{
+ "id": "pe-laguna-69",
+ "country": "PE",
+ "name": "Laguna 69",
+ "base": "Huaraz",
+ "region": "Huascarán National Park, Cordillera Blanca",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  7
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 14,
+  "gain_m": 800,
+  "source": "https://www.sernanp.gob.pe/huascaran"
+ },
+ "why": "The Cordillera Blanca's famous blue lake under Chacraraju's glacier, past waterfalls and the Llanganuco lakes on the way.",
+ "book": "Huascarán National Park ticket (day or multi-day) at the Llanganuco gate. Tours from Huaraz at 05:00.",
+ "water": "Streams (treat them); carry 2 litres.",
+ "dangers": [
+  "From 3,900 to 4,600 m: acclimatise first with Laguna Churup.",
+  "The last climb comes after 3 hours of walking: keep energy for it."
+ ],
+ "turnaround": "Tour groups turn back at a fixed time (usually 13:00): if you are not at the lake by then, turn back too.",
+ "sources": [
+  "https://www.sernanp.gob.pe/huascaran",
+  "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park"
+ ],
+ "points": [
+  {
+   "id": "llanganuco",
+   "name": "Lagunas de Llanganuco",
+   "lat": -9.073,
+   "lon": -77.645,
+   "role": "start",
+   "note": "The turquoise lakes on the drive in, under Huascarán's walls."
+  },
+  {
+   "id": "start",
+   "name": "Cebollapampa meadow",
+   "lat": -9.048,
+   "lon": -77.605,
+   "role": "point",
+   "note": "The trailhead at about 3,900 m: cows, a river and Chacraraju ahead."
+  },
+  {
+   "id": "falls",
+   "name": "Laguna 69 waterfalls",
+   "lat": -9.027,
+   "lon": -77.61,
+   "role": "point",
+   "note": "The zigzags beside the waterfalls; a small lake on the flat above."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna 69",
+   "lat": -9.0119,
+   "lon": -77.6118,
+   "role": "goal",
+   "note": "About 4,600 m, under the Chacraraju glacier."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "id": "pe-salkantay",
+ "country": "PE",
+ "name": "Salkantay trek to Machu Picchu",
+ "base": "Cusco",
+ "region": "Vilcabamba range",
+ "kind": "multiday",
+ "days": 5,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  30,
+  36
+ ],
+ "start_by": "06:00",
+ "published": {
+  "km": 72,
+  "gain_m": 2700,
+  "source": "https://en.wikivoyage.org/wiki/Salkantay_Trek"
+ },
+ "why": "The wild way to Machu Picchu, no permit needed: over a 4,600 m pass under a glacier peak and down into the cloud forest.",
+ "book": "No permit. Most go with an agency from Cusco (camps or lodges, mules for the bags); book the Machu Picchu entry and the train back separately.",
+ "water": "Camps boil water; small shops in the villages from day 3.",
+ "dangers": [
+  "The pass at about 4,600 m on day 2: frost at night at Soraypampa.",
+  "From hot jungle to snow in 24 hours: layers, not one big coat."
+ ],
+ "turnaround": "If you feel altitude sickness at Soraypampa, take the horse over the pass or go back to Mollepata.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Salkantay_Trek"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Soraypampa under Nevado Salkantay",
+   "lat": -13.3866,
+   "lon": -72.5644,
+   "role": "start",
+   "note": "Day 1: from the road end, with Humantay lake in the afternoon.",
+   "night": true
+  },
+  {
+   "id": "pass",
+   "name": "Salkantay Pass",
+   "lat": -13.3536,
+   "lon": -72.5736,
+   "role": "point",
+   "note": "Day 2: about 4,600 m, the glacier just above; then a long descent to Chaullay.",
+   "night": true
+  },
+  {
+   "id": "forest",
+   "name": "Santa Teresa valley cloud forest",
+   "lat": -13.24,
+   "lon": -72.59,
+   "role": "point",
+   "note": "Day 3: coffee farms, passion fruit and waterfalls.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Llactapata ruins, Machu Picchu view",
+   "lat": -13.1987,
+   "lon": -72.563,
+   "role": "goal",
+   "note": "Day 4: Machu Picchu seen side-on across the valley, then down to Hidroeléctrica and Aguas Calientes."
+  }
+ ]
+}

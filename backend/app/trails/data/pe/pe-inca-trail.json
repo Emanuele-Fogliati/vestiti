@@ -1,0 +1,81 @@
+{
+ "id": "pe-inca-trail",
+ "country": "PE",
+ "name": "Classic Inca Trail to Machu Picchu",
+ "base": "Cusco",
+ "region": "Machu Picchu Historical Sanctuary",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  24,
+  30
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 42,
+  "gain_m": 2300,
+  "source": "https://www.machupicchu.gob.pe"
+ },
+ "why": "Four days on the Incas' own stone path, through cloud forest and ruins nobody else sees, to enter Machu Picchu through the Sun Gate at dawn.",
+ "book": "Only with a licensed operator, and permits are limited per day: book 4-6 months ahead for May-September. Closed every February for maintenance. Bring your passport.",
+ "water": "Your operator boils water at camp; buy bottles at the last village on day 1.",
+ "dangers": [
+  "Dead Woman's Pass at 4,215 m: arrive with 2-3 days in Cusco first.",
+  "Endless stone steps on day 3: knees and poles.",
+  "Rain from November to March; the trail is muddy and the views close."
+ ],
+ "turnaround": "Your guide sets the pace; the group must reach Wiñay Wayna on night 3.",
+ "sources": [
+  "https://www.machupicchu.gob.pe",
+  "https://en.wikivoyage.org/wiki/Inca_Trail"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Km 82, Piscacucho bridge",
+   "lat": -13.2547,
+   "lon": -72.3608,
+   "role": "start",
+   "note": "Day 1: permit check at the bridge over the Urubamba, then easy valley to Wayllabamba.",
+   "night": true
+  },
+  {
+   "id": "pass",
+   "name": "Dead Woman's Pass (Warmiwañusca)",
+   "lat": -13.2389,
+   "lon": -72.4886,
+   "role": "point",
+   "note": "Day 2: 1,200 m of climbing to 4,215 m, then down to Pacaymayo camp.",
+   "night": true
+  },
+  {
+   "id": "winay",
+   "name": "Wiñay Wayna terraces",
+   "lat": -13.1928,
+   "lon": -72.5394,
+   "role": "point",
+   "note": "Day 3: the most beautiful ruins of the trail, by the last camp.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Inti Punku, the Sun Gate",
+   "lat": -13.1681,
+   "lon": -72.5378,
+   "role": "goal",
+   "note": "Day 4: the gate opens at 05:30; Machu Picchu appears below."
+  }
+ ]
+}

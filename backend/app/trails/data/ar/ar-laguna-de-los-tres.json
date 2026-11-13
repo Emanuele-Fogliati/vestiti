@@ -1,0 +1,85 @@
+{
+ "id": "ar-laguna-de-los-tres",
+ "country": "AR",
+ "name": "Laguna de los Tres, under Fitz Roy",
+ "base": "El Chaltén",
+ "region": "Los Glaciares National Park, north sector",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  8,
+  10
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 22,
+  "gain_m": 1000,
+  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+ },
+ "why": "The classic Patagonian day: forest, two lakes and, after a brutal last hour, Fitz Roy's granite straight above a glacier lake.",
+ "book": "Free, no permit. Read the trail status at the national park visitor centre the day before.",
+ "water": "Streams are drinkable along the way; nothing to buy after the village.",
+ "dangers": [
+  "The last kilometre climbs 400 m on loose rock: slow, steep and exposed to the wind.",
+  "Gusts over 80 km/h are common on the top: stay back from the edge.",
+  "Snow on the last climb until late November."
+ ],
+ "turnaround": "If you reach Campamento Poincenot after 13:00, stop at the river: the climb and the way back take 5 more hours.",
+ "sources": [
+  "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
+  "https://en.wikivoyage.org/wiki/El_Chalt%C3%A9n",
+  "https://hiking.waymarkedtrails.org/#route?id=4485261"
+ ],
+ "osm": 4485261,
+ "points": [
+  {
+   "id": "start",
+   "name": "Fitz Roy trailhead, El Chaltén",
+   "lat": -49.3223,
+   "lon": -72.8886,
+   "role": "start",
+   "note": "At the north end of Avenida San Martín, by the park sign. The first hour climbs above the Río de las Vueltas."
+  },
+  {
+   "id": "mirador",
+   "name": "Mirador del Fitz Roy",
+   "lat": -49.3027,
+   "lon": -72.9275,
+   "role": "point",
+   "note": "First full view of the massif, after about 4 km. On a cloudy morning this may be all you see: decide here."
+  },
+  {
+   "id": "capri",
+   "name": "Laguna Capri",
+   "lat": -49.3013,
+   "lon": -72.9424,
+   "role": "point",
+   "note": "A short detour to the lake; its camp is the quiet alternative to Poincenot."
+  },
+  {
+   "id": "poincenot",
+   "name": "Campamento Poincenot",
+   "lat": -49.2894,
+   "lon": -72.9786,
+   "role": "point",
+   "note": "Last flat ground, toilets and water. Leave anything heavy here; the climb starts across the Río Blanco bridge."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna de los Tres",
+   "lat": -49.2739,
+   "lon": -73.0012,
+   "role": "goal",
+   "note": "1,170 m. Walk 5 minutes to the left for Laguna Sucia far below."
+  }
+ ]
+}

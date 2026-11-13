@@ -1,0 +1,65 @@
+{
+ "id": "ar-glaciar-martial",
+ "country": "AR",
+ "name": "Martial Glacier",
+ "base": "Ushuaia",
+ "region": "Martial range above Ushuaia",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 7,
+  "gain_m": 550,
+  "source": "https://turismoushuaia.com"
+ },
+ "why": "From the edge of town to a small glacier in an hour and a half, with the Beagle Channel below you all the way.",
+ "book": "Free. Taxi or walk up the road to the Cumbres del Martial teahouse.",
+ "water": "Meltwater streams; the teahouse at the start.",
+ "dangers": [
+  "Loose scree under the glacier: don't walk onto the ice."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://turismoushuaia.com",
+  "https://en.wikivoyage.org/wiki/Ushuaia"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Cumbres del Martial teahouse",
+   "lat": -54.7858,
+   "lon": -68.3961,
+   "role": "start",
+   "note": "At the top of the road, about 7 km above the town centre."
+  },
+  {
+   "id": "view",
+   "name": "Lookout over Ushuaia and the Beagle Channel",
+   "lat": -54.7782,
+   "lon": -68.406,
+   "role": "point",
+   "note": "Where the old chairlift ended: the whole bay and the Chilean islands across the channel."
+  },
+  {
+   "id": "goal",
+   "name": "Martial Glacier",
+   "lat": -54.7717,
+   "lon": -68.415,
+   "role": "goal",
+   "note": "About 1,000 m, at the foot of the glacier cirque."
+  }
+ ]
+}
