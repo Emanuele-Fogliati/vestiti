@@ -100,9 +100,17 @@
 
 /* Hour by hour (a hand-written guide's day), folded under a day or a thing to do */
 .hours{margin:4px 0 2px;font-size:13px;color:var(--ink-2)}
-.hours summary{cursor:pointer;color:var(--ink-2);font-size:13px;width:max-content;text-decoration:underline dotted;text-underline-offset:3px}
+.hours summary{cursor:pointer;color:var(--ink-2);font-size:13px;width:max-content;max-width:100%;text-decoration:underline dotted;text-underline-offset:3px}
 .hours-steps{list-style:none;margin:6px 0;padding:0 0 0 2px;display:grid;gap:4px;border-left:2px dotted var(--ink-3)}
 .hours-steps li{display:grid;grid-template-columns:48px 1fr;gap:6px;padding-left:8px}
 .hours-steps time{font-variant-numeric:tabular-nums;color:var(--ink-3);font-weight:600}
 .hours-extras{margin-top:6px}
 .hours-extras ul{margin:4px 0 0;padding-left:18px;display:grid;gap:3px}
+/* the way here: every stop after the first says how you get there and how long (Manu, 2026-11-13) */
+.step-leg{justify-self:start;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--ink-2);background:var(--surface-2);border-radius:999px;padding:3px 10px;margin-bottom:2px}
+.step-leg::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink-3)}
+.step-leg.full{background:var(--accent);color:var(--accent-ink)}
+.step-leg.full::before{background:var(--accent-ink)}
+.step-warn{font-size:13px;font-weight:600;color:var(--warn-text)}
+.step-days li b{min-width:52px}
+.step-days li > .hours{grid-column:2}

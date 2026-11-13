@@ -125,7 +125,7 @@ export interface HourStep { at: string; what: string; note: string }
 /** A thing to do from a hand-written guide, as a proposal carries it. */
 export interface PlanThing { id: string; name: string; hours: string; book: string; need: Need; steps: HourStep[]; extras: string[] }
 export interface PlanDayOut {
-  date: string; sky: Sky; rain_chance: number; source: string; kind: "plan" | "rain" | "free" | "spare" | "route";
+  date: string; sky: Sky; rain_chance: number; source: string; kind: "plan" | "rain" | "free" | "spare" | "route" | "travel";
   title: string; note: string; override: boolean; tmin: number; tmax: number; wind_kmh: number; things: TodoItem[];
 }
 export interface BoardStop {

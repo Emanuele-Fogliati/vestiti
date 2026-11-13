@@ -254,7 +254,7 @@ export function TripBoard({ trip, onChanged, selected, onSelect }: {
       )}
 
       {selStop && (
-        <StopPanel key={selStop.id} trip={trip} stop={selStop} index={selIdx} count={stops.length} busy={busy}
+        <StopPanel key={selStop.id} trip={trip} stop={selStop} tripStart={stops[0]?.start_date} index={selIdx} count={stops.length} busy={busy}
           onResize={(d) => actions.resize(selIdx, d)} onMove={(d) => actions.move(selIdx, d)} onRemove={() => actions.remove(selIdx)}
           onStatus={(s, note) => actions.status(selIdx, s, note)}
           onChanged={onChanged} onMsg={(text, kind) => setMsg({ text, kind })} />

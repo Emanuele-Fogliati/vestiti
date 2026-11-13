@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { dayText, daysOf } from "../plandays";
+import { dayText, daysOf, firstDays } from "../plandays";
 import type { PlanStep } from "../types";
 
 const cusco: PlanStep = {
@@ -49,5 +49,29 @@ describe("days from a guide written by hand", () => {
     const three = daysOf({ ...s, days: 3 });
     expect(three[2].items?.[0].id).toBe("rainbow");
     expect(three[2].items?.[0].steps.length).toBe(1);
+  });
+});
+
+describe("travel and trip days", () => {
+  const arrive = { day: 1, kind: "arrive" as const, sights: ["Raqchi"] };
+  it("a long road makes the arrival a travel day", () => {
+    const t = dayText(arrive, false, { from: "Puno", leg: { guess: "road", km: 390, hours: 8.5, border: false } });
+    expect(t).toContain("From Puno: bus ≈ 9 h");
+    expect(t).toContain("Travel day");
+    expect(t).toContain("if you arrive early: Raqchi");
+  });
+  it("a short road says how long, then the day", () => {
+    expect(dayText({ ...arrive, sights: [] }, false, { from: "El Calafate", leg: { guess: "road", km: 180, hours: 2.8, border: false } }))
+      .toBe("From El Calafate: bus ≈ 3 h · settle in");
+  });
+  it("close by says nothing about travel", () => {
+    expect(dayText(arrive, false, { from: "X", leg: { guess: "local", km: 5, hours: null, border: false } })).toBe("Arrive · on the way: Raqchi");
+  });
+  it("the first day of the trip stays the start", () => {
+    expect(dayText({ ...arrive, sights: [] }, true, { from: "Home", leg: { guess: "flight", km: null, hours: null, border: false } })).toBe("Start");
+  });
+  it("counts days across the whole trip", () => {
+    expect(firstDays([{ days: 3 }, { days: 11 }, { days: 3 }])).toEqual([1, 4, 15]);
+    expect(firstDays([{ days: 2 }, { days: 2 }], [0, 3])).toEqual([1, 6]);
   });
 });
