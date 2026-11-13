@@ -3,6 +3,38 @@
  "name": "Haiti",
  "places": [
   {
+   "slug": "cap-haitien",
+   "label": "The Citadelle Laferrière on its mountain above Milot, near Cap-Haïtien",
+   "lat": 19.5733,
+   "lon": -72.2436,
+   "radius_km": 10,
+   "aliases": [
+    "citadelle laferriere",
+    "citadel laferriere",
+    "citadelle henry",
+    "citadelle henri christophe",
+    "la citadelle haiti",
+    "bonnet a l eveque"
+   ],
+   "names": [
+    "cap haitien",
+    "okap",
+    "milot"
+   ],
+   "palette": {
+    "sky": "#C4DCEE",
+    "far": "#9FB2B6",
+    "mid": "#9C9082",
+    "ice": "#DAD2C4",
+    "water": "#3E7A36",
+    "near": "#262420",
+    "sun": "#F2C14E",
+    "leaf": "#62A042",
+    "acc": "#8E5A44",
+    "obj": "#736A5E"
+   }
+  },
+  {
    "slug": "port-au-prince",
    "label": "The Iron Market (Marché en Fer), Port-au-Prince",
    "lat": 18.5483,
@@ -28,6 +60,31 @@
     "leaf": "#4E8A3A",
     "acc": "#B87050",
     "obj": "#2E6660"
+   }
+  },
+  {
+   "slug": "bassin-bleu",
+   "label": "The waterfall and turquoise pool of Bassin Bleu in its limestone gorge above Jacmel",
+   "lat": 18.2342,
+   "lon": -72.5881,
+   "radius_km": 5,
+   "aliases": [
+    "bassin bleu",
+    "bassins bleus",
+    "bassin blue",
+    "bassin clair jacmel"
+   ],
+   "palette": {
+    "sky": "#BCDDEF",
+    "far": "#D3BE86",
+    "mid": "#B39858",
+    "ice": "#F4FAFA",
+    "water": "#1FB2C2",
+    "near": "#1F2A22",
+    "sun": "#F6C431",
+    "leaf": "#4F7A35",
+    "acc": "#A9DCE6",
+    "obj": "#6E5F3E"
    }
   }
  ]

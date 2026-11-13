@@ -31,6 +31,29 @@
    }
   },
   {
+   "slug": "amakhala-game-reserve",
+   "label": "Giraffes above the Bushmans River valley in Amakhala Game Reserve",
+   "lat": -33.47,
+   "lon": 26.46,
+   "radius_km": 15,
+   "aliases": [
+    "amakhala",
+    "amakala game reserve"
+   ],
+   "palette": {
+    "sky": "#B7D6EE",
+    "far": "#8FA796",
+    "mid": "#9C6A3A",
+    "ice": "#F4F1EA",
+    "water": "#79A9BA",
+    "near": "#23261F",
+    "sun": "#F6C431",
+    "leaf": "#3F6A34",
+    "acc": "#9DBB5A",
+    "obj": "#DCA85C"
+   }
+  },
+  {
    "slug": "bettys-bay",
    "label": "African penguins on the rocks of Stony Point below the Kogelberg mountains, Betty's Bay",
    "lat": -34.373,
@@ -335,6 +358,35 @@
    }
   },
   {
+   "slug": "cintsa",
+   "label": "The Cintsa lagoon and sand bar on the Wild Coast",
+   "lat": -32.836,
+   "lon": 28.106,
+   "radius_km": 10,
+   "aliases": [
+    "chintsa",
+    "cintsa east",
+    "cintsa west",
+    "cintsa bay",
+    "chintsa east"
+   ],
+   "names": [
+    "cintsa"
+   ],
+   "palette": {
+    "sky": "#A8CBEE",
+    "far": "#E4D4AE",
+    "mid": "#7E9AA6",
+    "ice": "#F4F4EE",
+    "water": "#4A82B0",
+    "near": "#1F2A22",
+    "sun": "#F4C542",
+    "leaf": "#4F8A3C",
+    "acc": "#B4553C",
+    "obj": "#2F5C2E"
+   }
+  },
+  {
    "slug": "drakensberg",
    "label": "The Amphitheatre wall of the Drakensberg above the Tugela River, Royal Natal",
    "lat": -28.69,
@@ -392,6 +444,37 @@
    }
   },
   {
+   "slug": "elands-bay",
+   "label": "Baboon Point's sandstone cliff above the beach at Elands Bay, with an ore train at its foot",
+   "lat": -32.312,
+   "lon": 18.335,
+   "radius_km": 10,
+   "aliases": [
+    "elandsbaai",
+    "baboon point",
+    "bobbejaansberg",
+    "elands bay cave"
+   ],
+   "names": [
+    "elands bay",
+    "eland s bay",
+    "elands bay town",
+    "elands bay beach"
+   ],
+   "palette": {
+    "sky": "#AFD0EE",
+    "far": "#8E8C62",
+    "mid": "#C48A56",
+    "ice": "#F1EDE2",
+    "water": "#5DA8BC",
+    "near": "#2B2620",
+    "sun": "#F4C542",
+    "leaf": "#6E8848",
+    "acc": "#A8784A",
+    "obj": "#9A4E34"
+   }
+  },
+  {
    "slug": "franschhoek",
    "label": "Huguenot Monument under the Franschhoek mountains",
    "lat": -33.917,
@@ -416,6 +499,36 @@
     "leaf": "#4F7A3A",
     "acc": "#D9C9A6",
     "obj": "#86AE52"
+   }
+  },
+  {
+   "slug": "garden-route",
+   "label": "The Kaaimans River railway bridge below the fynbos headland at Wilderness, Garden Route",
+   "lat": -33.989,
+   "lon": 22.552,
+   "radius_km": 30,
+   "aliases": [
+    "kaaimans",
+    "route des jardins",
+    "kaaiman"
+   ],
+   "names": [
+    "wilderness",
+    "wilderness national park",
+    "the wilderness",
+    "garden route national park"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#E6D3A6",
+    "mid": "#9C7A55",
+    "ice": "#E4E0D6",
+    "water": "#3F8E99",
+    "near": "#22281E",
+    "sun": "#F2C14E",
+    "leaf": "#4F7C3C",
+    "acc": "#7FA05A",
+    "obj": "#6E5A44"
    }
   },
   {
@@ -544,6 +657,36 @@
    }
   },
   {
+   "slug": "jeffreys-bay",
+   "label": "The Supertubes boardwalk through flowering aloes above the reef, Jeffreys Bay",
+   "lat": -34.045,
+   "lon": 24.93,
+   "radius_km": 12,
+   "aliases": [
+    "supertubes",
+    "j bay"
+   ],
+   "names": [
+    "jeffreys bay",
+    "jeffrey s bay",
+    "jeffreysbaai",
+    "jeffrey bay",
+    "jeffreys bay town"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#E8D4AC",
+    "mid": "#8C6A4C",
+    "ice": "#F6F2EA",
+    "water": "#2E8EA6",
+    "near": "#262420",
+    "sun": "#F4C542",
+    "leaf": "#5C8A40",
+    "acc": "#E5602A",
+    "obj": "#4A4C4E"
+   }
+  },
+  {
    "slug": "johannesburg",
    "label": "Ponte City and the Hillbrow Tower over Johannesburg",
    "lat": -26.19,
@@ -580,7 +723,9 @@
    "lon": 30.99,
    "radius_km": 12,
    "aliases": [
-    "karongwe"
+    "karongwe",
+    "pridelands conservancy",
+    "pridelands game reserve"
    ],
    "palette": {
     "sky": "#B2D0F0",
@@ -1157,6 +1302,33 @@
     "leaf": "#6A8A3E",
     "acc": "#D2602E",
     "obj": "#34497A"
+   }
+  },
+  {
+   "slug": "springbok",
+   "label": "Namaqualand's spring carpet of orange daisies below the granite koppies near Springbok, with a springbok",
+   "lat": -29.664,
+   "lon": 17.886,
+   "radius_km": 25,
+   "aliases": [
+    "goegap",
+    "namaqualand",
+    "namakwaland"
+   ],
+   "names": [
+    "springbok"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#C9A27C",
+    "mid": "#A58466",
+    "ice": "#F6F1E6",
+    "water": "#5E8EA8",
+    "near": "#2A2420",
+    "sun": "#F6CB3A",
+    "leaf": "#7E9A5A",
+    "acc": "#F0862A",
+    "obj": "#F5CF3A"
    }
   },
   {

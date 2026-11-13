@@ -1,0 +1,13 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="252" cy="34" r="12" fill="var(--il-sun)"/>
+<path d="M264 146L274 140L286 138L300 140V146ZM0 146V142L8 141L16 144Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-gr-atokos-isl"><path d="M18 146Q40 132 62 118Q90 96 112 82Q128 70 140 70Q152 70 164 80Q174 90 182 96Q190 90 200 92Q210 94 220 106Q226 114 234 116Q248 114 256 120Q272 132 290 146Z"/></clipPath></defs>
+<path d="M18 146Q40 132 62 118Q90 96 112 82Q128 70 140 70Q152 70 164 80Q174 90 182 96Q190 90 200 92Q210 94 220 106Q226 114 234 116Q248 114 256 120Q272 132 290 146Z" fill="var(--il-mid)"/>
+<path d="M182 96Q190 90 200 92Q210 94 220 106Q226 114 234 116Q248 114 256 120Q272 132 290 146H164Q170 118 182 96Z" fill="var(--il-leaf)" clip-path="url(#il-gr-atokos-isl)"/>
+<path d="M96 146L98 138L110 137L114 134L128 135L134 132L150 134L156 131L168 135L172 146Z" fill="var(--il-acc)" clip-path="url(#il-gr-atokos-isl)"/>
+<path d="M14 146L36 142L58 143L78 140L98 142V146ZM172 146V140L178 136L186 139L198 140L204 141L210 128L216 118L224 130L232 140L242 141L248 132L256 130L262 138L272 143L292 146Z" fill="var(--il-ice)" clip-path="url(#il-gr-atokos-isl)"/>
+<path d="M66 120L80 134M126 84L122 112M154 84L164 112M200 100L196 120M240 122L236 132M114 136V145M134 133V145M156 132V145" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V145H300V200Z" fill="var(--il-water)"/>
+<path d="M226 170H254L250 176H230Z" fill="var(--il-ice)"/>
+<path d="M241 168V142L252 166ZM239 168V148L229 166Z" fill="var(--il-ice)"/>
+<path d="M240 170V140" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>

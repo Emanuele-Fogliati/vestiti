@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M-2 152V134Q12 126 26 128Q34 130 40 136L44 152Z" fill="var(--il-ice)"/>
+<defs><clipPath id="il-sj-tempelfjorden-m"><path d="M6 152Q22 140 34 126L40 120L44 118L46 108L50 106L52 96L56 94L58 86L64 80L70 77L130 76L180 74L230 72L262 70L302 70V152Z"/></clipPath></defs>
+<path d="M6 152Q22 140 34 126L40 120L44 118L46 108L50 106L52 96L56 94L58 86L64 80L70 77L130 76L180 74L230 72L262 70L302 70V152Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-sj-tempelfjorden-m)">
+<path d="M58 88H302V96H52Z" fill="var(--il-far)"/>
+<path d="M46 108H302V112H45Z" fill="var(--il-far)"/>
+<path d="M2 152Q24 140 40 124L46 120L58 124L72 118L88 123L104 117L120 122L136 116L152 121L168 116L184 122L200 116L216 121L232 115L248 120L264 115L280 121L302 116V152Z" fill="var(--il-acc)"/>
+<path d="M64 80L70 77L130 76L180 74L230 72L262 70L302 70V78L292 75L284 80L272 76L262 81L250 77L238 82L226 78L214 81L200 78L188 82L172 79L160 83L146 79L134 82L120 79L108 83L94 80L80 84L70 83Z" fill="var(--il-ice)"/>
+</g>
+<path d="M58 124Q52 136 44 150M88 123Q84 138 80 152M120 122Q118 138 114 152M152 121Q150 136 148 152M184 122Q184 138 182 152M216 121Q218 136 216 152M248 120Q250 136 252 152M280 121Q284 136 288 152" stroke="var(--il-mid)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5" clip-path="url(#il-sj-tempelfjorden-m)"/>
+<path d="M86 96Q84 104 87 112M134 96Q136 104 133 114M176 88Q178 98 175 110M222 96Q224 106 221 116M268 90Q266 100 269 112M104 124Q100 134 102 144M200 124Q204 134 200 146" stroke="var(--il-ice)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M66 96V108M100 96V108M150 96V108M200 96V108M244 96V108M286 96V108M120 88V96M184 88V96M262 88V96" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M-2 200V150H302V200Z" fill="var(--il-water)"/>
+<path d="M196 178Q200 173 216 173Q232 173 236 178Z" fill="var(--il-ice)"/>
+<path d="M206 176Q206 171 213 170Q220 170 225 173Q229 175 227 176Z" fill="var(--il-mid)"/>
+<path d="M225 172L228 170" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round"/>
