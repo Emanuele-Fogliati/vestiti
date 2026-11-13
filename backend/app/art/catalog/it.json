@@ -1520,6 +1520,32 @@
    }
   },
   {
+   "slug": "caltagirone",
+   "label": "The majolica staircase of Santa Maria del Monte climbing to its church, Caltagirone",
+   "lat": 37.2385,
+   "lon": 14.5153,
+   "radius_km": 8.0,
+   "aliases": [
+    "scalinata di santa maria del monte",
+    "caltagirone staircase"
+   ],
+   "names": [
+    "caltagirone"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#D9CBB0",
+    "mid": "#C9A672",
+    "ice": "#EDE2C8",
+    "water": "#2E62B0",
+    "near": "#2A2420",
+    "sun": "#F6C844",
+    "leaf": "#4E7A3A",
+    "acc": "#E8C23A",
+    "obj": "#B08E60"
+   }
+  },
+  {
    "slug": "caminia",
    "label": "The bay of Caminia: turquoise water and a curved beach below the green Copanello headland",
    "lat": 38.76,
@@ -2059,33 +2085,6 @@
     "leaf": "#3E5A2E",
     "acc": "#B4644A",
     "obj": "#86A055"
-   }
-  },
-  {
-   "slug": "castelluccio-di-norcia",
-   "label": "Castelluccio on its hill above the flowering Pian Grande, Monte Vettore behind",
-   "lat": 42.828,
-   "lon": 13.205,
-   "radius_km": 8,
-   "aliases": [
-    "castelluccio",
-    "pian grande",
-    "piano grande",
-    "piani di castelluccio",
-    "fioritura di castelluccio",
-    "monte vettore"
-   ],
-   "palette": {
-    "sky": "#AFD2F2",
-    "far": "#C9CF86",
-    "mid": "#A89A82",
-    "ice": "#E8DCC4",
-    "water": "#5F72C8",
-    "near": "#262420",
-    "sun": "#F5C842",
-    "leaf": "#6E9E3E",
-    "acc": "#D2382B",
-    "obj": "#E8CF3A"
    }
   },
   {
@@ -10107,33 +10106,6 @@
    }
   },
   {
-   "slug": "segesta",
-   "label": "The Doric temple of Segesta alone on its hill, Monte Barbaro behind",
-   "lat": 37.9413,
-   "lon": 12.8317,
-   "radius_km": 5,
-   "aliases": [
-    "segesta",
-    "tempio di segesta",
-    "temple of segesta",
-    "segesta temple",
-    "tempio dorico di segesta",
-    "parco archeologico di segesta"
-   ],
-   "palette": {
-    "sky": "#9CC8F0",
-    "far": "#8C9A7C",
-    "mid": "#D7B57E",
-    "ice": "#F5EFE2",
-    "water": "#4A8CB8",
-    "near": "#2A241C",
-    "sun": "#F2C14E",
-    "leaf": "#6E9A48",
-    "acc": "#D9CBAE",
-    "obj": "#9C7C50"
-   }
-  },
-  {
    "slug": "selinunte",
    "label": "Temple E (Temple of Hera) at Selinunte by the sea",
    "lat": 37.5878,
@@ -12410,6 +12382,60 @@
     "leaf": "#41713A",
     "acc": "#D98670",
     "obj": "#E6BF58"
+   }
+  },
+  {
+   "slug": "castelluccio-di-norcia",
+   "label": "Castelluccio on its hill above the flowering Pian Grande, Monte Vettore behind",
+   "lat": 42.828,
+   "lon": 13.205,
+   "radius_km": 8,
+   "aliases": [
+    "castelluccio",
+    "pian grande",
+    "piano grande",
+    "piani di castelluccio",
+    "fioritura di castelluccio",
+    "monte vettore"
+   ],
+   "palette": {
+    "sky": "#AFD2F2",
+    "far": "#C9CF86",
+    "mid": "#A89A82",
+    "ice": "#E8DCC4",
+    "water": "#5F72C8",
+    "near": "#262420",
+    "sun": "#F5C842",
+    "leaf": "#6E9E3E",
+    "acc": "#D2382B",
+    "obj": "#E8CF3A"
+   }
+  },
+  {
+   "slug": "segesta",
+   "label": "The Doric temple of Segesta alone on its hill, Monte Barbaro behind",
+   "lat": 37.9413,
+   "lon": 12.8317,
+   "radius_km": 5,
+   "aliases": [
+    "segesta",
+    "tempio di segesta",
+    "temple of segesta",
+    "segesta temple",
+    "tempio dorico di segesta",
+    "parco archeologico di segesta"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#8C9A7C",
+    "mid": "#D7B57E",
+    "ice": "#F5EFE2",
+    "water": "#4A8CB8",
+    "near": "#2A241C",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A48",
+    "acc": "#D9CBAE",
+    "obj": "#9C7C50"
    }
   }
  ]

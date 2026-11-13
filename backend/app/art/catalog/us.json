@@ -307,32 +307,6 @@
    }
   },
   {
-   "slug": "avenue-of-the-giants",
-   "label": "The road through the giant coast redwoods, Avenue of the Giants",
-   "lat": 40.3,
-   "lon": -123.92,
-   "radius_km": 25,
-   "aliases": [
-    "avenue of the giants",
-    "viale dei giganti",
-    "humboldt redwoods",
-    "founders grove",
-    "rockefeller forest"
-   ],
-   "palette": {
-    "sky": "#E4EFE6",
-    "far": "#6F8E5C",
-    "mid": "#8A4E30",
-    "ice": "#E6E2D8",
-    "water": "#A77656",
-    "near": "#22201C",
-    "sun": "#F4D35E",
-    "leaf": "#355F2E",
-    "acc": "#E8B82E",
-    "obj": "#6B6A68"
-   }
-  },
-  {
    "slug": "badlands-national-park",
    "label": "Badlands spires and prairie with a bison",
    "lat": 43.75,
@@ -894,37 +868,6 @@
     "leaf": "#4E7A44",
     "acc": "#C04A2E",
     "obj": "#2F5A38"
-   }
-  },
-  {
-   "slug": "camden",
-   "label": "Windjammer schooners in Camden Harbor under Mount Battie, Maine",
-   "lat": 44.2098,
-   "lon": -69.0648,
-   "radius_km": 10,
-   "aliases": [
-    "camden harbor",
-    "camden harbour",
-    "mount battie",
-    "mt battie",
-    "camden hills",
-    "camden maine"
-   ],
-   "names": [
-    "camden",
-    "camden me"
-   ],
-   "palette": {
-    "sky": "#AFD3F0",
-    "far": "#B3A994",
-    "mid": "#8F8577",
-    "ice": "#F6F4EF",
-    "water": "#2F6A8E",
-    "near": "#1F2227",
-    "sun": "#F6C84A",
-    "leaf": "#4E7A3E",
-    "acc": "#B5372E",
-    "obj": "#D9C9A3"
    }
   },
   {
@@ -2748,37 +2691,6 @@
    }
   },
   {
-   "slug": "juneau",
-   "label": "Mendenhall Glacier and Nugget Falls over Mendenhall Lake, Juneau",
-   "lat": 58.4166,
-   "lon": -134.5455,
-   "radius_km": 10,
-   "aliases": [
-    "mendenhall glacier",
-    "mendenhall lake",
-    "nugget falls",
-    "ghiacciaio mendenhall",
-    "ghiacciaio di mendenhall"
-   ],
-   "names": [
-    "juneau",
-    "juneau alaska",
-    "juneau ak"
-   ],
-   "palette": {
-    "sky": "#B6D4EE",
-    "far": "#8D98A6",
-    "mid": "#706C66",
-    "ice": "#F4F7FA",
-    "water": "#8EAAA8",
-    "near": "#22262A",
-    "sun": "#F5C842",
-    "leaf": "#3E6541",
-    "acc": "#BCDCEB",
-    "obj": "#5EA6CC"
-   }
-  },
-  {
    "slug": "kauai",
    "label": "The fluted cliffs of the Na Pali Coast, Kauai",
    "lat": 22.17,
@@ -4366,6 +4278,36 @@
    }
   },
   {
+   "slug": "sandwich",
+   "label": "Dexter Grist Mill with its waterwheel and willow, Sandwich, Cape Cod",
+   "lat": 41.7587,
+   "lon": -70.4967,
+   "radius_km": 10,
+   "aliases": [
+    "dexter grist mill",
+    "dexter s grist mill",
+    "dexters grist mill",
+    "shawme pond"
+   ],
+   "names": [
+    "sandwich",
+    "sandwich ma",
+    "sandwich massachusetts"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#78AE4C",
+    "mid": "#A39C90",
+    "ice": "#ECE8DF",
+    "water": "#3E5D6C",
+    "near": "#25291F",
+    "sun": "#F5C842",
+    "leaf": "#3F7F30",
+    "acc": "#BFAE92",
+    "obj": "#5C4532"
+   }
+  },
+  {
    "slug": "santa-barbara",
    "label": "Old Mission Santa Barbara",
    "lat": 34.4383,
@@ -5549,6 +5491,94 @@
     "leaf": "#5A8E3E",
     "acc": "#A9563E",
     "obj": "#9C7A5A"
+   }
+  },
+  {
+   "slug": "avenue-of-the-giants",
+   "label": "The road through the giant coast redwoods, Avenue of the Giants",
+   "lat": 40.3,
+   "lon": -123.92,
+   "radius_km": 25,
+   "aliases": [
+    "avenue of the giants",
+    "viale dei giganti",
+    "humboldt redwoods",
+    "founders grove",
+    "rockefeller forest"
+   ],
+   "palette": {
+    "sky": "#E4EFE6",
+    "far": "#6F8E5C",
+    "mid": "#8A4E30",
+    "ice": "#E6E2D8",
+    "water": "#A77656",
+    "near": "#22201C",
+    "sun": "#F4D35E",
+    "leaf": "#355F2E",
+    "acc": "#E8B82E",
+    "obj": "#6B6A68"
+   }
+  },
+  {
+   "slug": "camden",
+   "label": "Windjammer schooners in Camden Harbor under Mount Battie, Maine",
+   "lat": 44.2098,
+   "lon": -69.0648,
+   "radius_km": 10,
+   "aliases": [
+    "camden harbor",
+    "camden harbour",
+    "mount battie",
+    "mt battie",
+    "camden hills",
+    "camden maine"
+   ],
+   "names": [
+    "camden",
+    "camden me"
+   ],
+   "palette": {
+    "sky": "#AFD3F0",
+    "far": "#B3A994",
+    "mid": "#8F8577",
+    "ice": "#F6F4EF",
+    "water": "#2F6A8E",
+    "near": "#1F2227",
+    "sun": "#F6C84A",
+    "leaf": "#4E7A3E",
+    "acc": "#B5372E",
+    "obj": "#D9C9A3"
+   }
+  },
+  {
+   "slug": "juneau",
+   "label": "Mendenhall Glacier and Nugget Falls over Mendenhall Lake, Juneau",
+   "lat": 58.4166,
+   "lon": -134.5455,
+   "radius_km": 10,
+   "aliases": [
+    "mendenhall glacier",
+    "mendenhall lake",
+    "nugget falls",
+    "ghiacciaio mendenhall",
+    "ghiacciaio di mendenhall"
+   ],
+   "names": [
+    "juneau",
+    "juneau alaska",
+    "juneau ak"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#8D98A6",
+    "mid": "#706C66",
+    "ice": "#F4F7FA",
+    "water": "#8EAAA8",
+    "near": "#22262A",
+    "sun": "#F5C842",
+    "leaf": "#3E6541",
+    "acc": "#BCDCEB",
+    "obj": "#5EA6CC"
    }
   }
  ]

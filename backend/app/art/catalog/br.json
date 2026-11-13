@@ -28,6 +28,31 @@
    }
   },
   {
+   "slug": "angra-dos-reis",
+   "label": "A schooner among the green islands of the bay of Angra dos Reis",
+   "lat": -23.0,
+   "lon": -44.3,
+   "radius_km": 12.0,
+   "aliases": [
+    "angra dos reis"
+   ],
+   "names": [
+    "angra"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#7E98B4",
+    "mid": "#C8B48C",
+    "ice": "#F4F2EA",
+    "water": "#2FA39A",
+    "near": "#1E2422",
+    "sun": "#F2C844",
+    "leaf": "#2F6A34",
+    "acc": "#5E9A42",
+    "obj": "#8A5434"
+   }
+  },
+  {
    "slug": "bonito",
    "label": "Piraputanga fish in a crystal-clear river at Bonito",
    "lat": -21.13,
@@ -479,38 +504,6 @@
     "leaf": "#3E7F3A",
     "acc": "#E3BC3A",
     "obj": "#2F8A57"
-   }
-  },
-  {
-   "slug": "mandacaru",
-   "label": "The banded Farol Preguicas lighthouse over Mandacaru village on the Preguicas river",
-   "lat": -2.5895,
-   "lon": -42.7064,
-   "radius_km": 5,
-   "aliases": [
-    "farol preguicas",
-    "farol de preguicas",
-    "farol das preguicas",
-    "preguicas lighthouse",
-    "farol do mandacaru",
-    "farol de mandacaru",
-    "povoado mandacaru",
-    "mandacaru lighthouse"
-   ],
-   "names": [
-    "mandacaru"
-   ],
-   "palette": {
-    "sky": "#A6D2F0",
-    "far": "#5E8A4C",
-    "mid": "#F4F3EE",
-    "ice": "#F0EEE6",
-    "water": "#5E8F8C",
-    "near": "#1E2220",
-    "sun": "#F2C14E",
-    "leaf": "#3C7A36",
-    "acc": "#E0843A",
-    "obj": "#232425"
    }
   },
   {
@@ -1014,6 +1007,38 @@
     "leaf": "#64A040",
     "acc": "#E6D3A0",
     "obj": "#2F5E2A"
+   }
+  },
+  {
+   "slug": "mandacaru",
+   "label": "The banded Farol Preguicas lighthouse over Mandacaru village on the Preguicas river",
+   "lat": -2.5895,
+   "lon": -42.7064,
+   "radius_km": 5,
+   "aliases": [
+    "farol preguicas",
+    "farol de preguicas",
+    "farol das preguicas",
+    "preguicas lighthouse",
+    "farol do mandacaru",
+    "farol de mandacaru",
+    "povoado mandacaru",
+    "mandacaru lighthouse"
+   ],
+   "names": [
+    "mandacaru"
+   ],
+   "palette": {
+    "sky": "#A6D2F0",
+    "far": "#5E8A4C",
+    "mid": "#F4F3EE",
+    "ice": "#F0EEE6",
+    "water": "#5E8F8C",
+    "near": "#1E2220",
+    "sun": "#F2C14E",
+    "leaf": "#3C7A36",
+    "acc": "#E0843A",
+    "obj": "#232425"
    }
   }
  ]

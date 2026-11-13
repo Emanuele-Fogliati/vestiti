@@ -527,33 +527,6 @@
    }
   },
   {
-   "slug": "dawson-city",
-   "label": "Gold-rush false-front wooden buildings on a dirt street of Dawson City, the Midnight Dome behind",
-   "lat": 64.0605,
-   "lon": -139.4325,
-   "radius_km": 15,
-   "aliases": [],
-   "names": [
-    "dawson city",
-    "dawson",
-    "dawson city yukon",
-    "dawson yukon",
-    "dawson city yt"
-   ],
-   "palette": {
-    "sky": "#C9DDEE",
-    "far": "#C8B48C",
-    "mid": "#B33A2F",
-    "ice": "#F3F0E7",
-    "water": "#7FA2BE",
-    "near": "#2A2624",
-    "sun": "#F4C640",
-    "leaf": "#56703C",
-    "acc": "#8C6A48",
-    "obj": "#9AA3A6"
-   }
-  },
-  {
    "slug": "deer-lake",
    "label": "Deer Lake under the flat-topped Long Range hills, with a moose on the shore",
    "lat": 49.19,
@@ -574,32 +547,6 @@
     "leaf": "#3B5E3A",
     "acc": "#D9C8A0",
     "obj": "#4A3424"
-   }
-  },
-  {
-   "slug": "edmonton",
-   "label": "Alberta Legislature Building, Edmonton",
-   "lat": 53.5335,
-   "lon": -113.5065,
-   "radius_km": 20,
-   "aliases": [
-    "alberta legislature",
-    "legislative building of alberta"
-   ],
-   "names": [
-    "edmonton"
-   ],
-   "palette": {
-    "sky": "#AACDEC",
-    "far": "#D8D0BF",
-    "mid": "#CDB383",
-    "ice": "#EADCBB",
-    "water": "#7BAFC2",
-    "near": "#2B2622",
-    "sun": "#F2C14E",
-    "leaf": "#5B8C3C",
-    "acc": "#A8987C",
-    "obj": "#5C5044"
    }
   },
   {
@@ -658,6 +605,30 @@
    "names": [
     "yoho"
    ]
+  },
+  {
+   "slug": "forillon-national-park",
+   "label": "Forillon's sea cliffs from Cap Bon-Ami, with a whale",
+   "lat": 48.88,
+   "lon": -64.35,
+   "radius_km": 25,
+   "aliases": [
+    "forillon",
+    "cap bon ami",
+    "cap gaspe"
+   ],
+   "palette": {
+    "sky": "#CDE2F2",
+    "far": "#5E7E4C",
+    "mid": "#8E8F87",
+    "ice": "#EEF0EA",
+    "water": "#4C8DAE",
+    "near": "#1F2828",
+    "sun": "#F4CC4A",
+    "leaf": "#3C6A33",
+    "acc": "#BDB09A",
+    "obj": "#2E3A44"
+   }
   },
   {
    "slug": "fundy-national-park",
@@ -736,6 +707,36 @@
     "leaf": "#5F8F3E",
     "acc": "#A8503A",
     "obj": "#5A4330"
+   }
+  },
+  {
+   "slug": "gibsons",
+   "label": "Gibsons Landing harbour with Molly's Reach",
+   "lat": 49.3998,
+   "lon": -123.5068,
+   "radius_km": 10,
+   "aliases": [
+    "gibsons landing",
+    "gibson s landing",
+    "molly s reach",
+    "mollys reach"
+   ],
+   "names": [
+    "gibsons",
+    "gibsons bc",
+    "gibsons british columbia"
+   ],
+   "palette": {
+    "sky": "#B7D6EE",
+    "far": "#76848A",
+    "mid": "#A4693E",
+    "ice": "#F4F2EC",
+    "water": "#3A6E8E",
+    "near": "#1F2428",
+    "sun": "#F4C94A",
+    "leaf": "#2F5A36",
+    "acc": "#E8C64A",
+    "obj": "#4F9A94"
    }
   },
   {
@@ -2340,6 +2341,59 @@
     "leaf": "#4C7A36",
     "acc": "#A9C3D8",
     "obj": "#2F6FAE"
+   }
+  },
+  {
+   "slug": "edmonton",
+   "label": "Alberta Legislature Building, Edmonton",
+   "lat": 53.5335,
+   "lon": -113.5065,
+   "radius_km": 20,
+   "aliases": [
+    "alberta legislature",
+    "legislative building of alberta"
+   ],
+   "names": [
+    "edmonton"
+   ],
+   "palette": {
+    "sky": "#AACDEC",
+    "far": "#D8D0BF",
+    "mid": "#CDB383",
+    "ice": "#EADCBB",
+    "water": "#7BAFC2",
+    "near": "#2B2622",
+    "sun": "#F2C14E",
+    "leaf": "#5B8C3C",
+    "acc": "#A8987C",
+    "obj": "#5C5044"
+   }
+  },
+  {
+   "slug": "dawson-city",
+   "label": "Gold-rush false-front wooden buildings on a dirt street of Dawson City, the Midnight Dome behind",
+   "lat": 64.0605,
+   "lon": -139.4325,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "dawson city",
+    "dawson",
+    "dawson city yukon",
+    "dawson yukon",
+    "dawson city yt"
+   ],
+   "palette": {
+    "sky": "#C9DDEE",
+    "far": "#C8B48C",
+    "mid": "#B33A2F",
+    "ice": "#F3F0E7",
+    "water": "#7FA2BE",
+    "near": "#2A2624",
+    "sun": "#F4C640",
+    "leaf": "#56703C",
+    "acc": "#8C6A48",
+    "obj": "#9AA3A6"
    }
   }
  ]

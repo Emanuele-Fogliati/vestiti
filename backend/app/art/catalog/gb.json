@@ -1212,6 +1212,30 @@
    }
   },
   {
+   "slug": "nevis-range",
+   "label": "The Nevis Range gondola climbing Aonach Mor above the forest",
+   "lat": 56.8435,
+   "lon": -5.0,
+   "radius_km": 5,
+   "aliases": [
+    "nevis range",
+    "aonach mor",
+    "nevis range gondola"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#8E9DAE",
+    "mid": "#7D7F5A",
+    "ice": "#D9DCDE",
+    "water": "#5A7FA0",
+    "near": "#22231F",
+    "sun": "#F2C14E",
+    "leaf": "#2F4E2E",
+    "acc": "#BDB3A2",
+    "obj": "#5F666B"
+   }
+  },
+  {
    "slug": "old-man-of-storr",
    "label": "The Old Man of Storr pinnacles above the Sound of Raasay",
    "lat": 57.507,
@@ -1777,32 +1801,6 @@
    }
   },
   {
-   "slug": "troon",
-   "label": "Troon: Royal Troon links with Ailsa Craig on the horizon",
-   "lat": 55.5326,
-   "lon": -4.6514,
-   "radius_km": 12,
-   "aliases": [
-    "royal troon",
-    "troon golf"
-   ],
-   "names": [
-    "troon"
-   ],
-   "palette": {
-    "sky": "#C4DCF0",
-    "far": "#7E8EA6",
-    "mid": "#596C35",
-    "ice": "#F5F5F2",
-    "water": "#5D8DAE",
-    "near": "#1E2320",
-    "sun": "#F4C542",
-    "leaf": "#79A04C",
-    "acc": "#C8372E",
-    "obj": "#E3D3A4"
-   }
-  },
-  {
    "slug": "urquhart-castle",
    "label": "Urquhart Castle's Grant Tower on Loch Ness",
    "lat": 57.324,
@@ -1885,6 +1883,32 @@
     "leaf": "#557F36",
     "acc": "#C9A24A",
     "obj": "#A0533A"
+   }
+  },
+  {
+   "slug": "troon",
+   "label": "Troon: Royal Troon links with Ailsa Craig on the horizon",
+   "lat": 55.5326,
+   "lon": -4.6514,
+   "radius_km": 12,
+   "aliases": [
+    "royal troon",
+    "troon golf"
+   ],
+   "names": [
+    "troon"
+   ],
+   "palette": {
+    "sky": "#C4DCF0",
+    "far": "#7E8EA6",
+    "mid": "#596C35",
+    "ice": "#F5F5F2",
+    "water": "#5D8DAE",
+    "near": "#1E2320",
+    "sun": "#F4C542",
+    "leaf": "#79A04C",
+    "acc": "#C8372E",
+    "obj": "#E3D3A4"
    }
   }
  ]

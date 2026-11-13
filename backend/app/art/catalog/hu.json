@@ -73,6 +73,31 @@
    }
   },
   {
+   "slug": "debrecen",
+   "label": "The yellow Great Reformed Church on Debrecen's main square",
+   "lat": 47.531,
+   "lon": 21.625,
+   "radius_km": 10.0,
+   "aliases": [
+    "debrecen",
+    "nagytemplom",
+    "great reformed church debrecen",
+    "reformatus nagytemplom"
+   ],
+   "palette": {
+    "sky": "#9EC8F0",
+    "far": "#4E7A44",
+    "mid": "#D8D2C4",
+    "ice": "#F6F2E6",
+    "water": "#5A9AC8",
+    "near": "#22262A",
+    "sun": "#F2C844",
+    "leaf": "#3E7A3A",
+    "acc": "#EDCB48",
+    "obj": "#3E4E48"
+   }
+  },
+  {
    "slug": "dohany-street-synagogue",
    "label": "Dohany Street Synagogue facade, Budapest",
    "lat": 47.496,
@@ -99,39 +124,6 @@
     "leaf": "#5E8A4A",
     "acc": "#B5553C",
     "obj": "#363B42"
-   }
-  },
-  {
-   "slug": "eger-castle",
-   "label": "Eger castle walls and bastion above the town, with the Ottoman minaret",
-   "lat": 47.9036,
-   "lon": 20.3786,
-   "radius_km": 8,
-   "aliases": [
-    "eger castle",
-    "egri var",
-    "castello di eger",
-    "fortezza di eger",
-    "eger minaret",
-    "minareto di eger"
-   ],
-   "names": [
-    "eger",
-    "eger city",
-    "eger hungary",
-    "egri"
-   ],
-   "palette": {
-    "sky": "#CBE2F3",
-    "far": "#8F8371",
-    "mid": "#CBBDA0",
-    "ice": "#F1E8D4",
-    "water": "#6B9BB5",
-    "near": "#2A2622",
-    "sun": "#F3C443",
-    "leaf": "#6B8846",
-    "acc": "#B5533A",
-    "obj": "#E1A27E"
    }
   },
   {
@@ -278,6 +270,39 @@
     "leaf": "#2F6B4A",
     "acc": "#D2463C",
     "obj": "#56605E"
+   }
+  },
+  {
+   "slug": "eger-castle",
+   "label": "Eger castle walls and bastion above the town, with the Ottoman minaret",
+   "lat": 47.9036,
+   "lon": 20.3786,
+   "radius_km": 8,
+   "aliases": [
+    "eger castle",
+    "egri var",
+    "castello di eger",
+    "fortezza di eger",
+    "eger minaret",
+    "minareto di eger"
+   ],
+   "names": [
+    "eger",
+    "eger city",
+    "eger hungary",
+    "egri"
+   ],
+   "palette": {
+    "sky": "#CBE2F3",
+    "far": "#8F8371",
+    "mid": "#CBBDA0",
+    "ice": "#F1E8D4",
+    "water": "#6B9BB5",
+    "near": "#2A2622",
+    "sun": "#F3C443",
+    "leaf": "#6B8846",
+    "acc": "#B5533A",
+    "obj": "#E1A27E"
    }
   }
  ]

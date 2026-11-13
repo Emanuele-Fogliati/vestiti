@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="252" cy="32" r="13" fill="var(--il-sun)"/>
+<path d="M0 132V104Q20 98 40 88Q52 84 62 92Q76 104 96 116L110 132Z" fill="var(--il-acc)"/>
+<path d="M40 88Q52 84 62 92Q76 104 96 116L110 132H70Q62 108 40 88Z" fill="var(--il-obj)"/>
+<path d="M170 132L196 112Q214 98 232 92Q244 88 254 96Q274 108 300 112V132Z" fill="var(--il-acc)"/>
+<path d="M232 92Q244 88 254 96Q274 108 300 112V132H262Q256 108 232 92Z" fill="var(--il-obj)"/>
+<path d="M0 200V128Q60 124 120 128Q200 126 300 130V200Z" fill="var(--il-acc)"/>
+<path d="M84 144L86 120L90 110L92 92L98 84L102 72L110 66L116 68L122 60L132 62L140 58L148 62L156 60L162 68L166 80L168 96L172 112L178 124L182 134L184 144Z" fill="var(--il-mid)"/>
+<path d="M100 82Q98 110 102 140M114 70Q110 104 116 140M130 64Q128 100 132 140M146 62Q144 100 148 140M90 116Q96 128 94 140" stroke="var(--il-near)" stroke-width="1.1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M156 60L162 68L166 80L168 96L172 112L178 124L182 134L184 144H164Q170 104 156 60Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M186 144L188 116L192 106L196 104L200 110L202 144Z" fill="var(--il-mid)"/>
+<path d="M0 200V150Q40 140 80 142Q120 140 160 144Q200 142 240 138Q270 136 300 140V200Z" fill="var(--il-acc)"/>
+<path d="M0 200V176Q60 160 130 158Q170 156 200 168Q240 182 300 176V200Z" fill="var(--il-ice)"/>
+<path d="M130 158Q170 156 200 168Q240 182 300 176V200H230Q210 176 130 158Z" fill="var(--il-obj)"/>
+<path d="M40 150Q36 142 32 140M40 150Q42 142 46 138M40 150V140" stroke="var(--il-leaf)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<g transform="translate(238 160)"><path d="M-12 0L-11 -12M-8 0L-7 -12M7 0L6 -12M11 0L10 -12" stroke="var(--il-far)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M-14 -11Q-16 -16 -10 -18Q-6 -28 1 -24Q6 -20 10 -20Q14 -18 14 -13Q13 -10 8 -10H-10Q-14 -10 -14 -11Z" fill="var(--il-far)"/><path d="M12 -17Q17 -18 18 -24Q19 -30 23 -30Q27 -30 28 -27L27 -25Q23 -26 22 -22Q21 -14 14 -12Z" fill="var(--il-far)"/></g>

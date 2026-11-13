@@ -754,37 +754,6 @@
    }
   },
   {
-   "slug": "jbel-saghro",
-   "label": "The volcanic rock spires of Bab n'Ali in the Jbel Saghro",
-   "lat": 31.25,
-   "lon": -5.76,
-   "radius_km": 35,
-   "aliases": [
-    "jbel saghro",
-    "jebel saghro",
-    "djebel saghro",
-    "jbel sarho",
-    "jebel sarho",
-    "jebel sahro",
-    "jbel sahro",
-    "saghro",
-    "bab n ali",
-    "bab nali"
-   ],
-   "palette": {
-    "sky": "#B7D3EE",
-    "far": "#B99D86",
-    "mid": "#8C6650",
-    "ice": "#C9A588",
-    "water": "#6FA0B8",
-    "near": "#2C211C",
-    "sun": "#F2C14E",
-    "leaf": "#B5A458",
-    "acc": "#A27E64",
-    "obj": "#6C4C3C"
-   }
-  },
-  {
    "slug": "jemaa-el-fnaa",
    "label": "Jemaa el-Fnaa square with its food stalls and the Koutoubia",
    "lat": 31.6258,
@@ -1305,36 +1274,6 @@
    }
   },
   {
-   "slug": "sidi-kaouki",
-   "label": "The white marabout of Sidi Kaouki on its rocks above the beach, with a dromedary",
-   "lat": 31.355,
-   "lon": -9.796,
-   "radius_km": 8,
-   "aliases": [
-    "sidi kaouki beach",
-    "plage de sidi kaouki",
-    "plage sidi kaouki",
-    "marabout sidi kaouki",
-    "marabout of sidi kaouki"
-   ],
-   "names": [
-    "sidi kaouki",
-    "sidi kaoki"
-   ],
-   "palette": {
-    "sky": "#9CC8F0",
-    "far": "#DDB57E",
-    "mid": "#A8957A",
-    "ice": "#F3F0E8",
-    "water": "#2F78B8",
-    "near": "#2A2420",
-    "sun": "#F5C23E",
-    "leaf": "#6E8F48",
-    "acc": "#A8784A",
-    "obj": "#4A8FC8"
-   }
-  },
-  {
    "slug": "skoura",
    "label": "Kasbah Amridil in the Skoura palm oasis",
    "lat": 31.056,
@@ -1502,6 +1441,38 @@
     "leaf": "#5D7F4B",
     "acc": "#8D5BB0",
     "obj": "#A99060"
+   }
+  },
+  {
+   "slug": "tamegroute",
+   "label": "The Zaouia Naciria of Tamegroute with its green-tiled roofs and green-glazed pottery",
+   "lat": 30.262,
+   "lon": -5.68,
+   "radius_km": 8,
+   "aliases": [
+    "zaouia naciria",
+    "zawiya naciria",
+    "zaouia nassiria",
+    "zawiya nasiriyya"
+   ],
+   "names": [
+    "tamegroute",
+    "tamgrout",
+    "tamegrout",
+    "tamgroute",
+    "tamgrute"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#E8C690",
+    "mid": "#D99E78",
+    "ice": "#F5F2EA",
+    "water": "#2C5552",
+    "near": "#2A2320",
+    "sun": "#F4C64A",
+    "leaf": "#2E7A4C",
+    "acc": "#D2A27A",
+    "obj": "#6E4329"
    }
   },
   {
@@ -1768,6 +1739,67 @@
     "leaf": "#4E7A36",
     "acc": "#CFA27C",
     "obj": "#8E5A42"
+   }
+  },
+  {
+   "slug": "sidi-kaouki",
+   "label": "The white marabout of Sidi Kaouki on its rocks above the beach, with a dromedary",
+   "lat": 31.355,
+   "lon": -9.796,
+   "radius_km": 8,
+   "aliases": [
+    "sidi kaouki beach",
+    "plage de sidi kaouki",
+    "plage sidi kaouki",
+    "marabout sidi kaouki",
+    "marabout of sidi kaouki"
+   ],
+   "names": [
+    "sidi kaouki",
+    "sidi kaoki"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#DDB57E",
+    "mid": "#A8957A",
+    "ice": "#F3F0E8",
+    "water": "#2F78B8",
+    "near": "#2A2420",
+    "sun": "#F5C23E",
+    "leaf": "#6E8F48",
+    "acc": "#A8784A",
+    "obj": "#4A8FC8"
+   }
+  },
+  {
+   "slug": "jbel-saghro",
+   "label": "The volcanic rock spires of Bab n'Ali in the Jbel Saghro",
+   "lat": 31.25,
+   "lon": -5.76,
+   "radius_km": 35,
+   "aliases": [
+    "jbel saghro",
+    "jebel saghro",
+    "djebel saghro",
+    "jbel sarho",
+    "jebel sarho",
+    "jebel sahro",
+    "jbel sahro",
+    "saghro",
+    "bab n ali",
+    "bab nali"
+   ],
+   "palette": {
+    "sky": "#B7D3EE",
+    "far": "#B99D86",
+    "mid": "#8C6650",
+    "ice": "#C9A588",
+    "water": "#6FA0B8",
+    "near": "#2C211C",
+    "sun": "#F2C14E",
+    "leaf": "#B5A458",
+    "acc": "#A27E64",
+    "obj": "#6C4C3C"
    }
   }
  ]
