@@ -21,11 +21,6 @@
   2.5
  ],
  "start_by": "18:00",
- "published": {
-  "km": 5,
-  "gain_m": 300,
-  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
- },
  "why": "The walk for the afternoon you arrive: El Chaltén from above, Fitz Roy at sunset, condors on the cliff.",
  "book": "Free, no permit.",
  "water": "None on the way: carry a bottle.",
@@ -35,30 +30,31 @@
  "turnaround": "",
  "sources": [
   "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
-  "https://hiking.waymarkedtrails.org/#route?id=9063573"
+  "https://hiking.waymarkedtrails.org/#route?id=9063573",
+  "https://de.wikivoyage.org/wiki/El_Chalt%C3%A9n"
  ],
  "points": [
   {
    "id": "start",
    "name": "Los Glaciares visitor centre, El Chaltén",
-   "lat": -49.3384,
-   "lon": -72.8784,
+   "lat": -49.33738,
+   "lon": -72.88142,
    "role": "start",
    "note": "The path leaves from behind the ranger station."
   },
   {
    "id": "condores",
    "name": "Mirador de los Cóndores",
-   "lat": -49.3398,
-   "lon": -72.8861,
+   "lat": -49.33952,
+   "lon": -72.88036,
    "role": "point",
    "note": "20-30 minutes up: the village under Fitz Roy. Condors nest on the cliff."
   },
   {
    "id": "goal",
    "name": "Mirador de las Águilas",
-   "lat": -49.3478,
-   "lon": -72.8917,
+   "lat": -49.35033,
+   "lon": -72.87099,
    "role": "goal",
    "note": "30 minutes more over open steppe: Lago Viedma and its glacier to the south."
   }
