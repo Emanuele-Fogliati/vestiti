@@ -3,6 +3,30 @@
  "name": "Mozambique",
  "places": [
   {
+   "slug": "bazaruto-island",
+   "label": "Bazaruto's sand dunes over the turquoise shallows, with a dhow",
+   "lat": -21.67,
+   "lon": 35.47,
+   "radius_km": 20,
+   "aliases": [
+    "bazaruto",
+    "ilha de bazaruto",
+    "isola di bazaruto"
+   ],
+   "palette": {
+    "sky": "#BFDDF2",
+    "far": "#F0E0BC",
+    "mid": "#DDB47E",
+    "ice": "#F7F4EC",
+    "water": "#56BDB6",
+    "near": "#2A2620",
+    "sun": "#F5C842",
+    "leaf": "#5E8A4A",
+    "acc": "#8A5A3A",
+    "obj": "#2F86A8"
+   }
+  },
+  {
    "slug": "cuamba",
    "label": "Cuamba railway station with the granite inselbergs behind",
    "lat": -14.8031,
@@ -165,6 +189,37 @@
     "leaf": "#557F3C",
     "acc": "#2F7FB2",
     "obj": "#7A5636"
+   }
+  },
+  {
+   "slug": "vilanculos",
+   "label": "A dhow with its lateen sail on the turquoise bay at Vilanculos, the Bazaruto islands behind",
+   "lat": -22.0,
+   "lon": 35.32,
+   "radius_km": 15,
+   "aliases": [
+    "vilanculos beach",
+    "vilankulo beach",
+    "vilanculos bay"
+   ],
+   "names": [
+    "vilanculos",
+    "vilankulo",
+    "vilankulos",
+    "vilanculo",
+    "vilanculos town"
+   ],
+   "palette": {
+    "sky": "#9FCBEF",
+    "far": "#EADBB8",
+    "mid": "#D2774E",
+    "ice": "#F4EFE2",
+    "water": "#52BDB6",
+    "near": "#2A2724",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3C",
+    "acc": "#2E79AE",
+    "obj": "#86563A"
    }
   }
  ]

@@ -35,6 +35,34 @@
    }
   },
   {
+   "slug": "bamboo",
+   "label": "Bamboo's blue-roofed lodges in the Modi Khola gorge below Hiunchuli",
+   "lat": 28.476,
+   "lon": 83.846,
+   "radius_km": 3,
+   "aliases": [
+    "bamboo annapurna",
+    "bamboo village annapurna"
+   ],
+   "names": [
+    "bamboo",
+    "bamboo village",
+    "bamboo nepal"
+   ],
+   "palette": {
+    "sky": "#BCD6EE",
+    "far": "#B7A48C",
+    "mid": "#3D5A30",
+    "ice": "#F6F4EE",
+    "water": "#5D86A6",
+    "near": "#1F241C",
+    "sun": "#F2C440",
+    "leaf": "#7EA846",
+    "acc": "#9C7A55",
+    "obj": "#2F7FCF"
+   }
+  },
+  {
    "slug": "bandipur",
    "label": "Bindabasini temple in Bandipur's bazaar",
    "lat": 27.938,
@@ -386,6 +414,31 @@
    }
   },
   {
+   "slug": "dole",
+   "label": "Dole's trekking lodges below Kangtega and Thamserku on the Gokyo trail",
+   "lat": 27.876,
+   "lon": 86.723,
+   "radius_km": 3,
+   "aliases": [],
+   "names": [
+    "dole",
+    "dhole",
+    "dole village"
+   ],
+   "palette": {
+    "sky": "#9CC3E6",
+    "far": "#8E7458",
+    "mid": "#8A8890",
+    "ice": "#F6F8FB",
+    "water": "#5A8FBF",
+    "near": "#24211F",
+    "sun": "#F4C430",
+    "leaf": "#BFA266",
+    "acc": "#3D8A6C",
+    "obj": "#D6CEBD"
+   }
+  },
+  {
    "slug": "everest-base-camp",
    "label": "Everest Base Camp: expedition tents on the Khumbu glacier below the Icefall, the West Shoulder and Nuptse",
    "lat": 28.0026,
@@ -437,6 +490,34 @@
     "leaf": "#86A24C",
     "acc": "#CDB45E",
     "obj": "#5C5F66"
+   }
+  },
+  {
+   "slug": "gokyo",
+   "label": "Gokyo's lodges on the turquoise Gokyo lake below Cho Oyu, with a yak",
+   "lat": 27.953,
+   "lon": 86.695,
+   "radius_km": 6,
+   "aliases": [
+    "gokyo lake",
+    "gokyo lakes",
+    "gokyo ri",
+    "dudh pokhari"
+   ],
+   "names": [
+    "gokyo"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#93764F",
+    "mid": "#8C8682",
+    "ice": "#F7F8FA",
+    "water": "#3FA6AE",
+    "near": "#22201E",
+    "sun": "#F6C640",
+    "leaf": "#857A4A",
+    "acc": "#2F62AE",
+    "obj": "#4E8A5E"
    }
   },
   {
@@ -547,6 +628,30 @@
     "leaf": "#7DBB2F",
     "acc": "#B5532E",
     "obj": "#2F5E22"
+   }
+  },
+  {
+   "slug": "island-peak",
+   "label": "Island Peak (Imja Tse): the fluted snow pyramid with its dark rock face, rising from the Chhukung moraine",
+   "lat": 27.9225,
+   "lon": 86.9353,
+   "radius_km": 6,
+   "aliases": [
+    "island peak",
+    "imja tse",
+    "island peak base camp"
+   ],
+   "palette": {
+    "sky": "#A6CEF0",
+    "far": "#9C9488",
+    "mid": "#6E6A66",
+    "ice": "#F3F6F8",
+    "water": "#6A9CC0",
+    "near": "#22242A",
+    "sun": "#F4C542",
+    "leaf": "#6E7A44",
+    "acc": "#A08A5E",
+    "obj": "#C9BFA8"
    }
   },
   {
@@ -679,6 +784,33 @@
     "leaf": "#7E8A48",
     "acc": "#3F8C62",
     "obj": "#B3A893"
+   }
+  },
+  {
+   "slug": "kodari",
+   "label": "The Friendship Bridge over the Bhote Koshi gorge at Kodari",
+   "lat": 27.9637,
+   "lon": 85.9606,
+   "radius_km": 6,
+   "aliases": [
+    "kodari border",
+    "miteri pul",
+    "miteri bridge"
+   ],
+   "names": [
+    "kodari"
+   ],
+   "palette": {
+    "sky": "#B2D3EC",
+    "far": "#7F9A6B",
+    "mid": "#8E887A",
+    "ice": "#EEF0EE",
+    "water": "#A8CBC6",
+    "near": "#232622",
+    "sun": "#F4C542",
+    "leaf": "#4B7A39",
+    "acc": "#3F7FB8",
+    "obj": "#B8C6CE"
    }
   },
   {
@@ -1451,6 +1583,28 @@
    }
   },
   {
+   "slug": "thorong-la",
+   "label": "Thorong La, the 5,416 m pass of the Annapurna Circuit: prayer flags fanning from the summit cairn between snow peaks",
+   "lat": 28.7936,
+   "lon": 83.9394,
+   "radius_km": 6,
+   "aliases": [
+    "thorung la pass"
+   ],
+   "palette": {
+    "sky": "#9CC9F0",
+    "far": "#8E8478",
+    "mid": "#B3A794",
+    "ice": "#F6F7F8",
+    "water": "#6A9CC0",
+    "near": "#22242A",
+    "sun": "#F4C542",
+    "leaf": "#3C9A4A",
+    "acc": "#D7342E",
+    "obj": "#2F62C4"
+   }
+  },
+  {
    "slug": "thorong-la-pass",
    "label": "Prayer flags and the pass sign at Thorong La",
    "lat": 28.7939,
@@ -1460,7 +1614,9 @@
     "thorong la",
     "thorung la",
     "thorong pass",
-    "thorung pass"
+    "thorung pass",
+    "annapurna circuit",
+    "annapurna region"
    ],
    "palette": {
     "sky": "#A8CFF2",
@@ -1473,6 +1629,36 @@
     "leaf": "#3E8E4A",
     "acc": "#C8352E",
     "obj": "#2E5BA8"
+   },
+   "names": [
+    "annapurna conservation area"
+   ]
+  },
+  {
+   "slug": "tilicho-lake",
+   "label": "Tilicho Lake below the ice wall of Tilicho Peak, with prayer flags",
+   "lat": 28.684,
+   "lon": 83.853,
+   "radius_km": 8,
+   "aliases": [
+    "tilicho lake",
+    "tilicho tal",
+    "lake tilicho",
+    "lago tilicho",
+    "tilicho base camp",
+    "tilicho"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#C4A67E",
+    "mid": "#8A6E58",
+    "ice": "#F5F7FA",
+    "water": "#1F72A8",
+    "near": "#232327",
+    "sun": "#F6C431",
+    "leaf": "#5E9A4E",
+    "acc": "#C8402E",
+    "obj": "#857C70"
    }
   },
   {
@@ -1553,6 +1739,61 @@
     "leaf": "#4E7D36",
     "acc": "#A67C2C",
     "obj": "#9A9893"
+   }
+  },
+  {
+   "slug": "ghami",
+   "label": "The long Ghami mani wall and chorten below the red cliffs of Upper Mustang",
+   "lat": 29.105,
+   "lon": 83.94,
+   "radius_km": 6,
+   "aliases": [
+    "ghami mani wall",
+    "ghemi",
+    "mani wall of ghami"
+   ],
+   "names": [
+    "ghami",
+    "ghami village"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#D9CFBE",
+    "mid": "#D8B482",
+    "ice": "#F4F2EC",
+    "water": "#5E8FB0",
+    "near": "#2C2622",
+    "sun": "#F4C542",
+    "leaf": "#6E7A44",
+    "acc": "#C4643A",
+    "obj": "#8C8476"
+   }
+  },
+  {
+   "slug": "thulo-syabru",
+   "label": "Thulo Syabru's lodges and chorten stepping down a terraced ridge, Langtang",
+   "lat": 28.155,
+   "lon": 85.33,
+   "radius_km": 5,
+   "aliases": [
+    "thulo syabru",
+    "thulo shyabru",
+    "thula syaphru",
+    "thulo syaphru",
+    "syabru gaon",
+    "syabrugaon"
+   ],
+   "palette": {
+    "sky": "#A6CCEE",
+    "far": "#8F96A8",
+    "mid": "#4F6E5A",
+    "ice": "#F4F2EC",
+    "water": "#6C9FBF",
+    "near": "#22231F",
+    "sun": "#E8B83A",
+    "leaf": "#7FA04C",
+    "acc": "#C0453A",
+    "obj": "#3F78B5"
    }
   }
  ]

@@ -173,6 +173,35 @@
    }
   },
   {
+   "slug": "atlantic-road",
+   "label": "Storseisundet Bridge on the Atlantic Road, the deck that seems to end in mid-air",
+   "lat": 63.0177,
+   "lon": 7.3537,
+   "radius_km": 8,
+   "aliases": [
+    "atlantic road",
+    "atlantic ocean road",
+    "atlanterhavsveien",
+    "atlanterhavsvegen",
+    "storseisundet",
+    "strada atlantica",
+    "strada dell atlantico",
+    "strada oceanica atlantica"
+   ],
+   "palette": {
+    "sky": "#AFCDEB",
+    "far": "#5F7381",
+    "mid": "#8E9296",
+    "ice": "#ECEDEA",
+    "water": "#4C78A0",
+    "near": "#22262A",
+    "sun": "#F6C431",
+    "leaf": "#7C9A4C",
+    "acc": "#A0699A",
+    "obj": "#C6C3B8"
+   }
+  },
+  {
    "slug": "batsfjord",
    "label": "Batsfjord harbour with a trawler, red warehouses and bare Arctic hills",
    "lat": 70.635,
@@ -520,6 +549,38 @@
    }
   },
   {
+   "slug": "kirkenes",
+   "label": "A Hurtigruten ship at the Kirkenes quay, with a king crab on the shore rocks",
+   "lat": 69.7265,
+   "lon": 30.049,
+   "radius_km": 12,
+   "aliases": [
+    "kirkenes harbour",
+    "kirkenes harbor",
+    "kirkenes port",
+    "kirkenes hurtigruten",
+    "porto di kirkenes"
+   ],
+   "names": [
+    "kirkenes",
+    "kirkenes norway",
+    "kirkenes town",
+    "kirkenes city"
+   ],
+   "palette": {
+    "sky": "#A8CBEA",
+    "far": "#7D8F79",
+    "mid": "#9A9893",
+    "ice": "#F6F5F2",
+    "water": "#3F6F98",
+    "near": "#1E2226",
+    "sun": "#F4C542",
+    "leaf": "#6E8A4C",
+    "acc": "#C8382E",
+    "obj": "#EB7A2E"
+   }
+  },
+  {
    "slug": "lake-mjosa",
    "label": "The paddle steamer Skibladner on Lake Mjøsa",
    "lat": 60.78,
@@ -772,6 +833,35 @@
     "leaf": "#3F6E38",
     "acc": "#B0453A",
     "obj": "#C8CACA"
+   }
+  },
+  {
+   "slug": "nesseby",
+   "label": "Nesseby's white wooden church on its spit in the Varangerfjord",
+   "lat": 70.1655,
+   "lon": 28.8525,
+   "radius_km": 12,
+   "aliases": [
+    "nesseby church",
+    "nesseby kirke",
+    "unjargga",
+    "unjarga"
+   ],
+   "names": [
+    "nesseby",
+    "nesseby norway"
+   ],
+   "palette": {
+    "sky": "#C4DAEC",
+    "far": "#8F9A8E",
+    "mid": "#C9CFCD",
+    "ice": "#F7F7F4",
+    "water": "#8DA8B8",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#7F9A56",
+    "acc": "#B5402F",
+    "obj": "#7C7166"
    }
   },
   {
@@ -1039,6 +1129,37 @@
    }
   },
   {
+   "slug": "stryn",
+   "label": "The turf-roofed boathouse on Strynsvatnet above Stryn",
+   "lat": 61.918,
+   "lon": 6.82,
+   "radius_km": 15,
+   "aliases": [
+    "strynsvatn",
+    "strynsvatnet",
+    "strynevatnet",
+    "oppstrynsvatnet",
+    "oppstryn"
+   ],
+   "names": [
+    "stryn",
+    "stryn norway",
+    "stryn village"
+   ],
+   "palette": {
+    "sky": "#B8D6EE",
+    "far": "#9EAAB0",
+    "mid": "#5F7D5C",
+    "ice": "#F4F6F6",
+    "water": "#4F8FA6",
+    "near": "#222624",
+    "sun": "#F4C542",
+    "leaf": "#4F7F3A",
+    "acc": "#93A646",
+    "obj": "#8A8479"
+   }
+  },
+  {
    "slug": "svartisen",
    "label": "Svartisen's Engabreen glacier above the fjord",
    "lat": 66.68,
@@ -1248,6 +1369,35 @@
    }
   },
   {
+   "slug": "vadso",
+   "label": "Vadsø church with its slab tower",
+   "lat": 70.0738,
+   "lon": 29.7497,
+   "radius_km": 12,
+   "aliases": [
+    "vadso kirke",
+    "vadso church",
+    "chiesa di vadso"
+   ],
+   "names": [
+    "vadso",
+    "vadsoe",
+    "vadso finnmark"
+   ],
+   "palette": {
+    "sky": "#BCD7EE",
+    "far": "#B9BDBD",
+    "mid": "#DADCD8",
+    "ice": "#FFFFFF",
+    "water": "#4F7FA6",
+    "near": "#22252A",
+    "sun": "#F4C542",
+    "leaf": "#5F8F3E",
+    "acc": "#6F7378",
+    "obj": "#D4A84A"
+   }
+  },
+  {
    "slug": "vaeroya-island",
    "label": "Red boathouses on Vaeroya islet off Kalvag",
    "lat": 61.77,
@@ -1445,6 +1595,79 @@
     "leaf": "#5C7D45",
     "acc": "#C4552F",
     "obj": "#C7C3B8"
+   }
+  },
+  {
+   "slug": "kongsfjord",
+   "label": "The fishing village of Kongsfjord on the bare Varanger tundra coast, with a reindeer",
+   "lat": 70.722,
+   "lon": 29.35,
+   "radius_km": 15,
+   "aliases": [
+    "kongsfjord gjestehus",
+    "kongsfjord finnmark",
+    "kongsfjord varanger"
+   ],
+   "palette": {
+    "sky": "#C6D9E8",
+    "far": "#8E8A82",
+    "mid": "#7A7A5E",
+    "ice": "#F2F0EA",
+    "water": "#4C7E94",
+    "near": "#24221F",
+    "sun": "#E8C23E",
+    "leaf": "#8A9A56",
+    "acc": "#A8322E",
+    "obj": "#6A6E78"
+   }
+  },
+  {
+   "slug": "sortland",
+   "label": "Sortland Bridge over Sortlandsundet with the Vesteralen mountains",
+   "lat": 68.6995,
+   "lon": 15.43,
+   "radius_km": 12,
+   "aliases": [
+    "sortland bridge",
+    "sortlandsbrua"
+   ],
+   "names": [
+    "sortland"
+   ],
+   "palette": {
+    "sky": "#CFE3F2",
+    "far": "#A9A196",
+    "mid": "#B79761",
+    "ice": "#ECEAE4",
+    "water": "#6FA4CC",
+    "near": "#25282B",
+    "sun": "#F4C542",
+    "leaf": "#6F7F3E",
+    "acc": "#3E6FAE",
+    "obj": "#B8322C"
+   }
+  },
+  {
+   "slug": "uttakleiv-beach",
+   "label": "Uttakleiv beach in Lofoten: white sand, round boulders and the stone heart on the grass, jagged peaks across the bay",
+   "lat": 68.2186,
+   "lon": 13.5167,
+   "radius_km": 3,
+   "aliases": [
+    "uttakleiv",
+    "utakleiv"
+   ],
+   "palette": {
+    "sky": "#9DCBF0",
+    "far": "#6F6A66",
+    "mid": "#8C8579",
+    "ice": "#F3F1EA",
+    "water": "#3E9BB0",
+    "near": "#1F2326",
+    "sun": "#F4C542",
+    "leaf": "#5E9A3E",
+    "acc": "#C9B48A",
+    "obj": "#A7A49C"
    }
   }
  ]

@@ -60,6 +60,29 @@
    }
   },
   {
+   "slug": "almograve",
+   "label": "Almograve beach below the dune cliffs, with dark slate reefs running into the Atlantic",
+   "lat": 37.6533,
+   "lon": -8.8025,
+   "radius_km": 5,
+   "aliases": [
+    "almograve",
+    "praia do almograve"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#E6D2A8",
+    "mid": "#C9A877",
+    "ice": "#F6F4EE",
+    "water": "#2F7EA6",
+    "near": "#3A3A3C",
+    "sun": "#F4C542",
+    "leaf": "#7A8A4A",
+    "acc": "#C46A40",
+    "obj": "#5A5A5E"
+   }
+  },
+  {
    "slug": "anjos-waterfall",
    "label": "Cascata dos Anjos falling onto the old coast road near Ponta do Sol, Madeira",
    "lat": 32.6806,
@@ -273,6 +296,28 @@
     "leaf": "#6E8E3E",
     "acc": "#B85A40",
     "obj": "#8B8580"
+   }
+  },
+  {
+   "slug": "caldeira-velha",
+   "label": "The iron-stained waterfall and thermal pool of Caldeira Velha among tree ferns, Sao Miguel",
+   "lat": 37.7836,
+   "lon": -25.4986,
+   "radius_km": 3,
+   "aliases": [
+    "caldeira velha"
+   ],
+   "palette": {
+    "sky": "#CFE5F2",
+    "far": "#6E9E48",
+    "mid": "#6A604C",
+    "ice": "#F4F3EC",
+    "water": "#A49C6E",
+    "near": "#22261C",
+    "sun": "#F4C542",
+    "leaf": "#3E7032",
+    "acc": "#C9642F",
+    "obj": "#9A9384"
    }
   },
   {
@@ -788,7 +833,10 @@
     "furnas lake",
     "lake furnas",
     "nossa senhora das vitorias",
-    "ermida de jose do canto"
+    "ermida de jose do canto",
+    "caldeiras das furnas",
+    "vale das furnas",
+    "valle das furnas"
    ],
    "palette": {
     "sky": "#A6CCF2",
@@ -801,7 +849,10 @@
     "leaf": "#4A7C34",
     "acc": "#7FA0DC",
     "obj": "#8E949A"
-   }
+   },
+   "names": [
+    "furnas"
+   ]
   },
   {
    "slug": "lagos",
@@ -945,6 +996,31 @@
     "leaf": "#3F7A4A",
     "acc": "#B0232E",
     "obj": "#4A2C18"
+   }
+  },
+  {
+   "slug": "manteigas",
+   "label": "Manteigas town below the Serra da Estrela slopes at the mouth of the Zezere glacial valley",
+   "lat": 40.4026,
+   "lon": -7.5389,
+   "radius_km": 10,
+   "aliases": [
+    "vila de manteigas"
+   ],
+   "names": [
+    "manteigas"
+   ],
+   "palette": {
+    "sky": "#BFD9EE",
+    "far": "#86A08E",
+    "mid": "#4C6A3C",
+    "ice": "#F3EFE6",
+    "water": "#5A8FA8",
+    "near": "#25281E",
+    "sun": "#F4C542",
+    "leaf": "#86A052",
+    "acc": "#C25A3C",
+    "obj": "#2F4A2B"
    }
   },
   {
@@ -1380,6 +1456,36 @@
    }
   },
   {
+   "slug": "praia-de-mira",
+   "label": "The black wooden palheiro and a moliceiro boat on the Barrinha lagoon, Praia de Mira",
+   "lat": 40.4552,
+   "lon": -8.8015,
+   "radius_km": 8,
+   "aliases": [
+    "palheiros de mira",
+    "palheiro de mira",
+    "barrinha de mira",
+    "museu etnografico da praia de mira"
+   ],
+   "names": [
+    "praia de mira",
+    "mira beach",
+    "spiaggia di mira"
+   ],
+   "palette": {
+    "sky": "#A8D0F2",
+    "far": "#E8E2D2",
+    "mid": "#3C4048",
+    "ice": "#F7F6F1",
+    "water": "#3E7FB4",
+    "near": "#1C1D20",
+    "sun": "#F4C542",
+    "leaf": "#5E8A3A",
+    "acc": "#B85A3A",
+    "obj": "#8C6C4A"
+   }
+  },
+  {
    "slug": "quinta-da-regaleira",
    "label": "Initiation Well of Quinta da Regaleira, Sintra",
    "lat": 38.7963,
@@ -1403,6 +1509,34 @@
     "leaf": "#4C7232",
     "acc": "#8DA552",
     "obj": "#5F6352"
+   }
+  },
+  {
+   "slug": "ribeira-dos-caldeiroes",
+   "label": "The Ribeira dos Caldeirões waterfall in its lush park on São Miguel, with blue hydrangeas, the stone weir and an old watermill",
+   "lat": 37.799,
+   "lon": -25.197,
+   "radius_km": 3,
+   "aliases": [
+    "ribeira dos caldeiroes",
+    "caldeiroes waterfall",
+    "cascata dos caldeiroes",
+    "parque natural da ribeira dos caldeiroes"
+   ],
+   "names": [
+    "caldeiroes"
+   ],
+   "palette": {
+    "sky": "#BFDDF0",
+    "far": "#9BBF5A",
+    "mid": "#5E5952",
+    "ice": "#F6F8F8",
+    "water": "#5F8E86",
+    "near": "#1F2A1E",
+    "sun": "#F4C542",
+    "leaf": "#3E7A34",
+    "acc": "#7E8EDC",
+    "obj": "#B4553A"
    }
   },
   {
@@ -1624,9 +1758,6 @@
     "terra nostra garden",
     "terra nostra gardens"
    ],
-   "names": [
-    "furnas"
-   ],
    "palette": {
     "sky": "#B8D4F0",
     "far": "#3E5E34",
@@ -1813,6 +1944,141 @@
     "leaf": "#6E8A45",
     "acc": "#E07A45",
     "obj": "#E6CFA0"
+   }
+  },
+  {
+   "slug": "ovar",
+   "label": "The azulejo-tiled Igreja Matriz of Ovar",
+   "lat": 40.8606,
+   "lon": -8.6255,
+   "radius_km": 10,
+   "aliases": [
+    "igreja matriz de ovar",
+    "matriz de ovar"
+   ],
+   "names": [
+    "ovar"
+   ],
+   "palette": {
+    "sky": "#A6C9EE",
+    "far": "#E2EAF2",
+    "mid": "#D3BC8E",
+    "ice": "#F4F1E8",
+    "water": "#4C74B0",
+    "near": "#262420",
+    "sun": "#F2C230",
+    "leaf": "#4F7E36",
+    "acc": "#B0533A",
+    "obj": "#B9B4A8"
+   }
+  },
+  {
+   "slug": "vila-praia-de-ancora",
+   "label": "Forte da Lagarteira's granite bastion and sentry box on the beach of Vila Praia de Ancora",
+   "lat": 41.8156,
+   "lon": -8.8656,
+   "radius_km": 5,
+   "aliases": [
+    "vila praia de ancora",
+    "praia de ancora",
+    "forte da lagarteira",
+    "fort of lagarteira"
+   ],
+   "names": [
+    "ancora"
+   ],
+   "palette": {
+    "sky": "#AFD3F2",
+    "far": "#EAE3D5",
+    "mid": "#A69F90",
+    "ice": "#F4F2EE",
+    "water": "#3C7FB0",
+    "near": "#23211E",
+    "sun": "#F4C542",
+    "leaf": "#6FA040",
+    "acc": "#C4A450",
+    "obj": "#7D776C"
+   }
+  },
+  {
+   "slug": "serra-da-boa-viagem",
+   "label": "The Cabo Mondego lighthouse on the forested Serra da Boa Viagem above the Atlantic",
+   "lat": 40.19,
+   "lon": -8.905,
+   "radius_km": 7,
+   "aliases": [
+    "serra da boa viagem",
+    "cabo mondego",
+    "cape mondego",
+    "farol do cabo mondego"
+   ],
+   "palette": {
+    "sky": "#A4C8EA",
+    "far": "#CFC2A2",
+    "mid": "#7E844A",
+    "ice": "#F6F5F0",
+    "water": "#2F6E9E",
+    "near": "#23241F",
+    "sun": "#F6C431",
+    "leaf": "#3F6A36",
+    "acc": "#D8673C",
+    "obj": "#D22A2E"
+   }
+  },
+  {
+   "slug": "aljezur",
+   "label": "Aljezur: the Moorish castle ruin on its green hill above the white, tile-roofed old town",
+   "lat": 37.3196,
+   "lon": -8.8037,
+   "radius_km": 8,
+   "aliases": [
+    "castelo de aljezur",
+    "aljezur castle"
+   ],
+   "names": [
+    "aljezur"
+   ],
+   "palette": {
+    "sky": "#A6CEF0",
+    "far": "#8FA07A",
+    "mid": "#B49A74",
+    "ice": "#F6F4EE",
+    "water": "#5E8C80",
+    "near": "#262420",
+    "sun": "#F4C542",
+    "leaf": "#56703A",
+    "acc": "#D2683E",
+    "obj": "#8EA458"
+   }
+  },
+  {
+   "slug": "setubal",
+   "label": "Forte de São Filipe above the Sado estuary, with a dolphin, Setúbal",
+   "lat": 38.5205,
+   "lon": -8.9065,
+   "radius_km": 12,
+   "aliases": [
+    "forte de sao filipe",
+    "fortaleza de sao filipe",
+    "castelo de sao filipe",
+    "forte di sao filipe",
+    "sado estuary",
+    "estuario do sado"
+   ],
+   "names": [
+    "setubal"
+   ],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#8E9CA6",
+    "mid": "#8C7552",
+    "ice": "#F3EFE6",
+    "water": "#2D5E8C",
+    "near": "#24221E",
+    "sun": "#F4C542",
+    "leaf": "#4A7036",
+    "acc": "#BE5A3C",
+    "obj": "#C4B08E"
    }
   }
  ]

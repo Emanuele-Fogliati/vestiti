@@ -261,6 +261,38 @@
    }
   },
   {
+   "slug": "begur",
+   "label": "Begur's castle on its rocky pine-covered hill above the village and the Costa Brava sea",
+   "lat": 41.9555,
+   "lon": 3.2075,
+   "radius_km": 6,
+   "aliases": [
+    "castell de begur",
+    "castillo de begur",
+    "begur castle",
+    "castello di begur"
+   ],
+   "names": [
+    "begur",
+    "begur village",
+    "begur town",
+    "begur costa brava",
+    "bagur"
+   ],
+   "palette": {
+    "sky": "#B8D4EC",
+    "far": "#8FA6AE",
+    "mid": "#B09C80",
+    "ice": "#F1E8D6",
+    "water": "#3F7FA8",
+    "near": "#2A2520",
+    "sun": "#F4C542",
+    "leaf": "#4D6C37",
+    "acc": "#C46C44",
+    "obj": "#DDBB86"
+   }
+  },
+  {
    "slug": "bilbao",
    "label": "Guggenheim Museum on the Nervion, Bilbao",
    "lat": 43.2687,
@@ -573,6 +605,36 @@
    "names": [
     "valencia"
    ]
+  },
+  {
+   "slug": "ciutadella-de-menorca",
+   "label": "Ciutadella's crenellated town hall on the bastion above the port, Menorca",
+   "lat": 40.0015,
+   "lon": 3.838,
+   "radius_km": 10,
+   "aliases": [
+    "ciutadella de menorca",
+    "ciudadela de menorca",
+    "port de ciutadella",
+    "puerto de ciudadela"
+   ],
+   "names": [
+    "ciutadella",
+    "ciudadela",
+    "ciutadella menorca"
+   ],
+   "palette": {
+    "sky": "#A9C8EA",
+    "far": "#DDCB9F",
+    "mid": "#C4AF84",
+    "ice": "#F5F3EE",
+    "water": "#3F7F8A",
+    "near": "#2A2824",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A34",
+    "acc": "#B04A3A",
+    "obj": "#3D5F86"
+   }
   },
   {
    "slug": "cofete",
@@ -1348,7 +1410,11 @@
    "aliases": [
     "pulchra leonina",
     "santa maria de regla",
-    "plaza de regla"
+    "plaza de regla",
+    "santa maria de leon",
+    "catedral de santa maria de leon",
+    "leon cathedral spain",
+    "cattedrale di leon spagna"
    ],
    "names": [
     "leon",
@@ -1550,6 +1616,31 @@
     "leaf": "#4A7A34",
     "acc": "#C8583A",
     "obj": "#6E7E9A"
+   }
+  },
+  {
+   "slug": "mijas",
+   "label": "Mijas Pueblo's white houses under the Sierra de Mijas, the church tower and a burro-taxi",
+   "lat": 36.5958,
+   "lon": -4.6378,
+   "radius_km": 6,
+   "aliases": [
+    "mijas pueblo"
+   ],
+   "names": [
+    "mijas"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#B8A486",
+    "mid": "#8E857A",
+    "ice": "#F6F4EE",
+    "water": "#4E8EB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#4A6E36",
+    "acc": "#B5603E",
+    "obj": "#A8694A"
    }
   },
   {
@@ -1815,6 +1906,31 @@
     "leaf": "#4E7A3A",
     "acc": "#C4A57A",
     "obj": "#B03A2E"
+   }
+  },
+  {
+   "slug": "pampaneira",
+   "label": "Pampaneira's white houses and Santa Cruz church in the Poqueira gorge, Alpujarra",
+   "lat": 36.9394,
+   "lon": -3.3614,
+   "radius_km": 4,
+   "aliases": [],
+   "names": [
+    "pampaneira",
+    "pampaneira alpujarra",
+    "pampaneira granada"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#8E8F98",
+    "mid": "#6F6A48",
+    "ice": "#F6F4EE",
+    "water": "#8C8C88",
+    "near": "#29261F",
+    "sun": "#F2C14E",
+    "leaf": "#4D6E34",
+    "acc": "#B4553A",
+    "obj": "#C2A266"
    }
   },
   {
@@ -2972,6 +3088,147 @@
     "leaf": "#8A9A72",
     "acc": "#C8423A",
     "obj": "#4C9BD2"
+   }
+  },
+  {
+   "slug": "arzua",
+   "label": "The granite Capela da Madalena and a Camino waymark, Arzua",
+   "lat": 42.9277,
+   "lon": -8.1608,
+   "radius_km": 10,
+   "aliases": [
+    "capela da madalena arzua",
+    "capilla de la magdalena arzua"
+   ],
+   "names": [
+    "arzua"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#CBC4B6",
+    "mid": "#8E8478",
+    "ice": "#F2EFE8",
+    "water": "#5A8FB0",
+    "near": "#2A2622",
+    "sun": "#F4C542",
+    "leaf": "#3F6B33",
+    "acc": "#B5543A",
+    "obj": "#2F5DA8"
+   }
+  },
+  {
+   "slug": "sierra-de-grazalema-natural-park",
+   "label": "Grazalema's white village below the limestone crags of the Sierra de Grazalema",
+   "lat": 36.76,
+   "lon": -5.37,
+   "radius_km": 25,
+   "aliases": [
+    "sierra de grazalema",
+    "parque natural sierra de grazalema",
+    "grazalema natural park",
+    "grazalema nature park",
+    "parco naturale della sierra de grazalema"
+   ],
+   "names": [
+    "grazalema",
+    "grazalema village"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#8E959A",
+    "mid": "#9A968E",
+    "ice": "#F6F4EF",
+    "water": "#5E93B8",
+    "near": "#262420",
+    "sun": "#F3C643",
+    "leaf": "#6F9440",
+    "acc": "#BE7A52",
+    "obj": "#2F5634"
+   }
+  },
+  {
+   "slug": "ubeda",
+   "label": "Ubeda's Sacra Capilla del Salvador on Plaza Vazquez de Molina",
+   "lat": 38.0076,
+   "lon": -3.3688,
+   "radius_km": 10,
+   "aliases": [
+    "sacra capilla del salvador",
+    "capilla del salvador ubeda",
+    "plaza vazquez de molina"
+   ],
+   "names": [
+    "ubeda",
+    "ubeda old town",
+    "ubeda town"
+   ],
+   "palette": {
+    "sky": "#A6CFF2",
+    "far": "#E4D3AC",
+    "mid": "#CDAF7C",
+    "ice": "#EEE6D4",
+    "water": "#5C8FB0",
+    "near": "#2A2520",
+    "sun": "#F2C14E",
+    "leaf": "#4E7F34",
+    "acc": "#8F918D",
+    "obj": "#A99068"
+   }
+  },
+  {
+   "slug": "baeza",
+   "label": "Baeza Cathedral and the Fuente de Santa Maria in the Plaza de Santa Maria",
+   "lat": 37.9927,
+   "lon": -3.4687,
+   "radius_km": 10,
+   "aliases": [
+    "catedral de baeza",
+    "baeza cathedral",
+    "cattedrale di baeza",
+    "plaza de santa maria baeza"
+   ],
+   "names": [
+    "baeza"
+   ],
+   "palette": {
+    "sky": "#9CC8F2",
+    "far": "#E2D5B6",
+    "mid": "#CDAE78",
+    "ice": "#F3F0E8",
+    "water": "#5A9EC0",
+    "near": "#2A2622",
+    "sun": "#F6C431",
+    "leaf": "#3F5E31",
+    "acc": "#A4987F",
+    "obj": "#B08A5A"
+   }
+  },
+  {
+   "slug": "playa-de-amadores",
+   "label": "The turquoise crescent of Playa de Amadores below the brown cliffs, Gran Canaria",
+   "lat": 27.7895,
+   "lon": -15.7155,
+   "radius_km": 3,
+   "aliases": [
+    "playa de amadores",
+    "playa de los amadores",
+    "amadores beach",
+    "spiaggia di amadores"
+   ],
+   "names": [
+    "amadores"
+   ],
+   "palette": {
+    "sky": "#9EC8EE",
+    "far": "#8E887C",
+    "mid": "#8A6A50",
+    "ice": "#F2F0EA",
+    "water": "#1F5C9C",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3A",
+    "acc": "#40B6BE",
+    "obj": "#E8D4A6"
    }
   }
  ]

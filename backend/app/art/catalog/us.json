@@ -86,6 +86,35 @@
    }
   },
   {
+   "slug": "acoma-pueblo",
+   "label": "San Esteban del Rey mission above the adobe houses of Acoma Sky City",
+   "lat": 34.8962,
+   "lon": -107.5817,
+   "radius_km": 6,
+   "aliases": [
+    "acoma pueblo",
+    "acoma sky city",
+    "sky city acoma",
+    "san esteban del rey",
+    "pueblo di acoma"
+   ],
+   "names": [
+    "acoma"
+   ],
+   "palette": {
+    "sky": "#AFCDEB",
+    "far": "#D6BE98",
+    "mid": "#C9A06C",
+    "ice": "#F3EEE2",
+    "water": "#6A9CC4",
+    "near": "#2A221C",
+    "sun": "#F4C542",
+    "leaf": "#8A8C6A",
+    "acc": "#7E5232",
+    "obj": "#B4865E"
+   }
+  },
+  {
    "slug": "albuquerque",
    "label": "Balloon Fiesta hot-air balloons over the Sandia Mountains, Albuquerque",
    "lat": 35.196,
@@ -186,6 +215,31 @@
     "leaf": "#3E5E40",
     "acc": "#A8643A",
     "obj": "#2E5E9E"
+   }
+  },
+  {
+   "slug": "angel-oak",
+   "label": "The Angel Oak on Johns Island, a giant live oak with sprawling limbs resting on the ground",
+   "lat": 32.7171,
+   "lon": -80.0809,
+   "radius_km": 3,
+   "aliases": [
+    "angel oak",
+    "angel oak tree",
+    "angel oak park",
+    "quercia angel oak"
+   ],
+   "palette": {
+    "sky": "#D8E8F0",
+    "far": "#9DB58A",
+    "mid": "#45683A",
+    "ice": "#EEF0E8",
+    "water": "#6FA3C0",
+    "near": "#25221C",
+    "sun": "#F4C542",
+    "leaf": "#6E9A4C",
+    "acc": "#8E5E44",
+    "obj": "#5E5446"
    }
   },
   {
@@ -932,7 +986,8 @@
     "cape cod",
     "nauset light",
     "nauset lighthouse",
-    "capo cod"
+    "capo cod",
+    "nauset beach light"
    ],
    "palette": {
     "sky": "#A6CBEE",
@@ -978,7 +1033,8 @@
    "radius_km": 15,
    "aliases": [
     "carlsbad caverns",
-    "carlsbad cavern"
+    "carlsbad cavern",
+    "carlsbad caverns national park"
    ],
    "palette": {
     "sky": "#BFDDF5",
@@ -991,7 +1047,11 @@
     "leaf": "#6F8A4C",
     "acc": "#B2905E",
     "obj": "#86827D"
-   }
+   },
+   "names": [
+    "carlsbad nm",
+    "carlsbad new mexico"
+   ]
   },
   {
    "slug": "carmel-by-the-sea",
@@ -1387,6 +1447,34 @@
    }
   },
   {
+   "slug": "dallas",
+   "label": "Reunion Tower and the downtown Dallas skyline from the Trinity levee",
+   "lat": 32.7755,
+   "lon": -96.8089,
+   "radius_km": 20,
+   "aliases": [
+    "reunion tower"
+   ],
+   "names": [
+    "dallas",
+    "dallas tx",
+    "dallas texas",
+    "downtown dallas"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#A9B5BF",
+    "mid": "#C9A57A",
+    "ice": "#E6E1D6",
+    "water": "#5C8FAE",
+    "near": "#222529",
+    "sun": "#F4C542",
+    "leaf": "#6E9440",
+    "acc": "#C4CCD0",
+    "obj": "#3D6C88"
+   }
+  },
+  {
    "slug": "deadwood",
    "label": "Historic Main Street of Deadwood in its Black Hills gulch",
    "lat": 44.3767,
@@ -1535,6 +1623,32 @@
     "leaf": "#5FA48E",
     "acc": "#8FAAC2",
     "obj": "#A65C3E"
+   }
+  },
+  {
+   "slug": "disneyland",
+   "label": "Sleeping Beauty Castle over its moat, Disneyland, Anaheim",
+   "lat": 33.8128,
+   "lon": -117.919,
+   "radius_km": 3,
+   "aliases": [
+    "disneyland",
+    "sleeping beauty castle"
+   ],
+   "names": [
+    "anaheim"
+   ],
+   "palette": {
+    "sky": "#A6CDF2",
+    "far": "#A9B1C8",
+    "mid": "#8A92AE",
+    "ice": "#F5ECEA",
+    "water": "#4E8EA0",
+    "near": "#22243A",
+    "sun": "#E9B840",
+    "leaf": "#4C7A3C",
+    "acc": "#EEB9C2",
+    "obj": "#2F55B8"
    }
   },
   {
@@ -2447,6 +2561,35 @@
    }
   },
   {
+   "slug": "healy",
+   "label": "The Into the Wild bus 142 among the spruce at Healy, Alaska",
+   "lat": 63.86,
+   "lon": -148.97,
+   "radius_km": 12,
+   "aliases": [
+    "into the wild bus",
+    "bus 142",
+    "magic bus",
+    "stampede trail",
+    "49th state brewing"
+   ],
+   "names": [
+    "healy"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#BDB298",
+    "mid": "#7F9A6E",
+    "ice": "#F0ECE0",
+    "water": "#5A8FA8",
+    "near": "#1F2420",
+    "sun": "#F6C431",
+    "leaf": "#2E5034",
+    "acc": "#4E9A86",
+    "obj": "#9C5432"
+   }
+  },
+  {
    "slug": "high-line",
    "label": "The High Line elevated park, Chelsea, New York",
    "lat": 40.748,
@@ -2611,6 +2754,31 @@
    }
   },
   {
+   "slug": "iao-valley",
+   "label": "The Iao Needle in Maui's Iao Valley",
+   "lat": 20.8817,
+   "lon": -156.5458,
+   "radius_km": 5,
+   "aliases": [
+    "iao valley",
+    "iao needle",
+    "kukaemoku",
+    "iao state"
+   ],
+   "palette": {
+    "sky": "#BCDCF2",
+    "far": "#94AE7E",
+    "mid": "#5E8434",
+    "ice": "#F2F2EC",
+    "water": "#6E9E8C",
+    "near": "#1E2A17",
+    "sun": "#F6C431",
+    "leaf": "#3E6A2A",
+    "acc": "#7C6A46",
+    "obj": "#9BB85E"
+   }
+  },
+  {
    "slug": "idaho-falls",
    "label": "Idaho Falls on the Snake River below the Idaho Falls Temple",
    "lat": 43.495,
@@ -2668,6 +2836,34 @@
    }
   },
   {
+   "slug": "johnson-space-center",
+   "label": "Shuttle Independence on the NASA 747 at Space Center Houston",
+   "lat": 29.5519,
+   "lon": -95.0981,
+   "radius_km": 4,
+   "aliases": [
+    "johnson space center",
+    "space center houston",
+    "independence plaza"
+   ],
+   "names": [
+    "centro spaziale della nasa",
+    "nasa houston"
+   ],
+   "palette": {
+    "sky": "#B4D6F4",
+    "far": "#CFC8B8",
+    "mid": "#EEF0F2",
+    "ice": "#FBFBFB",
+    "water": "#3C78B0",
+    "near": "#1E2227",
+    "sun": "#F6C431",
+    "leaf": "#5E8F3E",
+    "acc": "#9A9A96",
+    "obj": "#2A5BA8"
+   }
+  },
+  {
    "slug": "joshua-tree-national-park",
    "label": "Joshua trees and boulder piles, Joshua Tree National Park",
    "lat": 34.012,
@@ -2688,6 +2884,37 @@
     "leaf": "#6E8A3C",
     "acc": "#6C5B46",
     "obj": "#C8B184"
+   }
+  },
+  {
+   "slug": "kahului",
+   "label": "A kitesurfer at Kanaha Beach below the West Maui Mountains, Kahului",
+   "lat": 20.896,
+   "lon": -156.44,
+   "radius_km": 10,
+   "aliases": [
+    "kanaha beach",
+    "kanaha",
+    "kite beach maui",
+    "kahului harbor",
+    "kahului bay"
+   ],
+   "names": [
+    "kahului",
+    "kahului maui",
+    "kahului hawaii"
+   ],
+   "palette": {
+    "sky": "#A9D2F0",
+    "far": "#7FA090",
+    "mid": "#4E7E4C",
+    "ice": "#F4F1EA",
+    "water": "#2FB0B4",
+    "near": "#22261F",
+    "sun": "#F5C842",
+    "leaf": "#5F9640",
+    "acc": "#EADBB4",
+    "obj": "#D8417E"
    }
   },
   {
@@ -2997,6 +3224,30 @@
    }
   },
   {
+   "slug": "lava-tree-state-park",
+   "label": "Lava tree molds in the forest of Lava Tree State Monument",
+   "lat": 19.4828,
+   "lon": -154.9036,
+   "radius_km": 3,
+   "aliases": [
+    "lava tree state",
+    "lava tree monument",
+    "lava trees"
+   ],
+   "palette": {
+    "sky": "#C6DFEF",
+    "far": "#7F9468",
+    "mid": "#4A4640",
+    "ice": "#EDEDE6",
+    "water": "#5E8FA8",
+    "near": "#1E1F1A",
+    "sun": "#F6C431",
+    "leaf": "#3C6A30",
+    "acc": "#93AE4C",
+    "obj": "#7C7A72"
+   }
+  },
+  {
    "slug": "little-bighorn-battlefield",
    "label": "The 7th Cavalry memorial on Last Stand Hill above the white marble markers, Little Bighorn",
    "lat": 45.5703,
@@ -3158,6 +3409,38 @@
     "leaf": "#3C5A33",
     "acc": "#7E5B3E",
     "obj": "#8A8F94"
+   }
+  },
+  {
+   "slug": "marthas-vineyard",
+   "label": "The clay cliffs of Aquinnah and Gay Head Light, Martha's Vineyard",
+   "lat": 41.3487,
+   "lon": -70.835,
+   "radius_km": 20,
+   "aliases": [
+    "martha s vineyard",
+    "marthas vineyard",
+    "aquinnah cliffs",
+    "gay head cliffs",
+    "gay head light",
+    "gay head lighthouse",
+    "aquinnah lighthouse"
+   ],
+   "names": [
+    "aquinnah",
+    "gay head"
+   ],
+   "palette": {
+    "sky": "#A9CFEA",
+    "far": "#E3C68E",
+    "mid": "#C98A4A",
+    "ice": "#EEE4CE",
+    "water": "#2F6E9A",
+    "near": "#2A2320",
+    "sun": "#F4C542",
+    "leaf": "#5E7E3E",
+    "acc": "#A3482F",
+    "obj": "#E8DABD"
    }
   },
   {
@@ -3849,6 +4132,29 @@
    }
   },
   {
+   "slug": "old-town-albuquerque",
+   "label": "San Felipe de Neri Church behind its adobe portal, Old Town Albuquerque",
+   "lat": 35.0963,
+   "lon": -106.6699,
+   "radius_km": 4,
+   "aliases": [
+    "old town albuquerque",
+    "san felipe de neri"
+   ],
+   "palette": {
+    "sky": "#9FCBF2",
+    "far": "#E3BD8C",
+    "mid": "#D29C68",
+    "ice": "#F8F6EF",
+    "water": "#5A8FB0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7F3A",
+    "acc": "#B4544A",
+    "obj": "#34485E"
+   }
+  },
+  {
    "slug": "orlando",
    "label": "Lake Eola fountain and downtown Orlando",
    "lat": 28.5435,
@@ -3874,6 +4180,33 @@
     "leaf": "#3F6E38",
     "acc": "#3E9A86",
     "obj": "#5B8EBA"
+   }
+  },
+  {
+   "slug": "palm-springs",
+   "label": "Palm-lined avenue below the San Jacinto mountains, Palm Springs",
+   "lat": 33.82,
+   "lon": -116.546,
+   "radius_km": 15,
+   "aliases": [
+    "palm canyon drive"
+   ],
+   "names": [
+    "palm springs",
+    "palm springs california",
+    "palm springs ca"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#E3D5B8",
+    "mid": "#B4A891",
+    "ice": "#F6F3EC",
+    "water": "#3FB7B0",
+    "near": "#25231F",
+    "sun": "#F4C542",
+    "leaf": "#4E7A3A",
+    "acc": "#8A6E50",
+    "obj": "#6E6C6A"
    }
   },
   {
@@ -3904,6 +4237,34 @@
     "leaf": "#4C7A3C",
     "acc": "#C9B79A",
     "obj": "#7A6A58"
+   }
+  },
+  {
+   "slug": "portage-glacier",
+   "label": "Portage Glacier calving into Portage Lake, Alaska",
+   "lat": 60.765,
+   "lon": -148.86,
+   "radius_km": 6,
+   "aliases": [
+    "portage glacier",
+    "portage lake",
+    "ghiacciaio portage",
+    "begich boggs"
+   ],
+   "names": [
+    "portage"
+   ],
+   "palette": {
+    "sky": "#B7D3EC",
+    "far": "#7E766A",
+    "mid": "#66665A",
+    "ice": "#F2F7FA",
+    "water": "#6E8B8C",
+    "near": "#20262A",
+    "sun": "#F2C14E",
+    "leaf": "#62804A",
+    "acc": "#93CBE6",
+    "obj": "#45463F"
    }
   },
   {
@@ -3986,6 +4347,29 @@
     "leaf": "#3E7A38",
     "acc": "#8C705A",
     "obj": "#8F857A"
+   }
+  },
+  {
+   "slug": "ragged-point",
+   "label": "The ragged Big Sur headland from the Ragged Point overlook",
+   "lat": 35.7786,
+   "lon": -121.3283,
+   "radius_km": 5,
+   "aliases": [
+    "ragged point",
+    "ragged point inn"
+   ],
+   "palette": {
+    "sky": "#AFCFEE",
+    "far": "#B8B39A",
+    "mid": "#958A78",
+    "ice": "#F4F4EE",
+    "water": "#2F6EA8",
+    "near": "#22251F",
+    "sun": "#F4C542",
+    "leaf": "#7FA346",
+    "acc": "#C9A65E",
+    "obj": "#2F5A30"
    }
   },
   {
@@ -4245,6 +4629,30 @@
     "leaf": "#4E8A3A",
     "acc": "#3C7DB8",
     "obj": "#B79E78"
+   }
+  },
+  {
+   "slug": "san-jacinto-monument",
+   "label": "The San Jacinto Monument with its Lone Star above the reflecting pool",
+   "lat": 29.7499,
+   "lon": -95.0806,
+   "radius_km": 4,
+   "aliases": [
+    "san jacinto monument",
+    "san jacinto battleground",
+    "battaglia di san jacinto"
+   ],
+   "palette": {
+    "sky": "#B5D6F0",
+    "far": "#C8B27E",
+    "mid": "#D9CFB8",
+    "ice": "#F3EFE4",
+    "water": "#78AACB",
+    "near": "#22262A",
+    "sun": "#F4C64A",
+    "leaf": "#3F5A34",
+    "acc": "#BFA066",
+    "obj": "#A3A49E"
    }
   },
   {
@@ -4536,7 +4944,10 @@
    "names": [
     "seligman",
     "seligman arizona",
-    "seligman az"
+    "seligman az",
+    "route 66",
+    "historic route 66",
+    "route 66 arizona"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -4589,7 +5000,9 @@
     "pigeon key",
     "marathon key",
     "marathon fl",
-    "marathon florida"
+    "marathon florida",
+    "overseas highway",
+    "florida keys overseas highway"
    ],
    "palette": {
     "sky": "#8EC3EE",
@@ -4633,6 +5046,34 @@
     "leaf": "#3E5E48",
     "acc": "#2F6FB8",
     "obj": "#8C7A62"
+   }
+  },
+  {
+   "slug": "sheridan",
+   "label": "The Sheridan Inn, Buffalo Bill's hotel with its rows of dormers, Sheridan",
+   "lat": 44.803,
+   "lon": -106.9556,
+   "radius_km": 15,
+   "aliases": [
+    "sheridan inn"
+   ],
+   "names": [
+    "sheridan",
+    "sheridan wyoming",
+    "sheridan wy",
+    "sheridan city"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#8EA2B8",
+    "mid": "#7A6450",
+    "ice": "#F2F0EA",
+    "water": "#4A7FA0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A40",
+    "acc": "#9A5A40",
+    "obj": "#3E6E50"
    }
   },
   {
@@ -5579,6 +6020,450 @@
     "leaf": "#3E6541",
     "acc": "#BCDCEB",
     "obj": "#5EA6CC"
+   }
+  },
+  {
+   "slug": "san-simeon",
+   "label": "Casa Grande of Hearst Castle with its twin towers and palms, San Simeon",
+   "lat": 35.685,
+   "lon": -121.168,
+   "radius_km": 8,
+   "aliases": [
+    "hearst castle",
+    "castello hearst",
+    "castello di hearst",
+    "hearst san simeon",
+    "la cuesta encantada",
+    "hearst state historical monument"
+   ],
+   "names": [
+    "san simeon",
+    "san simeon ca",
+    "san simeon california"
+   ],
+   "palette": {
+    "sky": "#8EC3EE",
+    "far": "#C9AC6E",
+    "mid": "#8A7258",
+    "ice": "#F1EDE3",
+    "water": "#3E9BB0",
+    "near": "#262321",
+    "sun": "#F4C542",
+    "leaf": "#4E8A3E",
+    "acc": "#6E3B26",
+    "obj": "#B8583A"
+   }
+  },
+  {
+   "slug": "glenwood-springs",
+   "label": "The Glenwood Hot Springs pool and its red sandstone lodge under the canyon mountains",
+   "lat": 39.5505,
+   "lon": -107.3222,
+   "radius_km": 12,
+   "aliases": [
+    "glenwood hot springs"
+   ],
+   "names": [
+    "glenwood springs",
+    "glenwood springs colorado"
+   ],
+   "palette": {
+    "sky": "#A9D2F0",
+    "far": "#9AA58F",
+    "mid": "#A85A42",
+    "ice": "#F4F1EA",
+    "water": "#4FC6D2",
+    "near": "#2A2522",
+    "sun": "#F5C540",
+    "leaf": "#4A6E3E",
+    "acc": "#BE3A2C",
+    "obj": "#D9D2C4"
+   }
+  },
+  {
+   "slug": "maui",
+   "label": "A humpback whale breaching off Maui in front of the West Maui Mountains, with a coconut palm",
+   "lat": 20.8,
+   "lon": -156.33,
+   "radius_km": 45,
+   "aliases": [
+    "maui island",
+    "isola di maui",
+    "island of maui"
+   ],
+   "names": [
+    "maui",
+    "maui hawaii"
+   ],
+   "palette": {
+    "sky": "#A6D3F2",
+    "far": "#7E9C6A",
+    "mid": "#8A6A4E",
+    "ice": "#F7F7F2",
+    "water": "#2B7FC0",
+    "near": "#1F2A33",
+    "sun": "#F7C843",
+    "leaf": "#3E8A3E",
+    "acc": "#EBD3A0",
+    "obj": "#3E4856"
+   }
+  },
+  {
+   "slug": "buffalo",
+   "label": "Buffalo City Hall's Art Deco tower behind the McKinley Monument obelisk",
+   "lat": 42.8865,
+   "lon": -78.8784,
+   "radius_km": 15,
+   "aliases": [
+    "buffalo city hall",
+    "buffalo new york",
+    "buffalo ny"
+   ],
+   "names": [
+    "buffalo"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C9BFAE",
+    "mid": "#D6A75E",
+    "ice": "#F2EEE6",
+    "water": "#4C86B0",
+    "near": "#2A2420",
+    "sun": "#F4C542",
+    "leaf": "#3F7A34",
+    "acc": "#C9B07A",
+    "obj": "#6E5A44"
+   }
+  },
+  {
+   "slug": "hilo",
+   "label": "Hilo Bay and Coconut Island under the broad shield of Mauna Kea",
+   "lat": 19.7297,
+   "lon": -155.07,
+   "radius_km": 15,
+   "aliases": [
+    "hilo bay",
+    "hilo hawaii",
+    "coconut island hilo",
+    "moku ola"
+   ],
+   "names": [
+    "hilo"
+   ],
+   "palette": {
+    "sky": "#9FC8F0",
+    "far": "#6E6E92",
+    "mid": "#7D8A5A",
+    "ice": "#F4F2EC",
+    "water": "#2C5FA8",
+    "near": "#1F2420",
+    "sun": "#F4C542",
+    "leaf": "#3E7A34",
+    "acc": "#D8C9A0",
+    "obj": "#6E5A44"
+   }
+  },
+  {
+   "slug": "prince-william-sound",
+   "label": "A tidewater glacier calving into Prince William Sound between spruce slopes, with a harbor seal on a floe",
+   "lat": 60.85,
+   "lon": -147.75,
+   "radius_km": 60,
+   "aliases": [
+    "prince william sound",
+    "college fjord",
+    "columbia glacier",
+    "whittier glacier cruise",
+    "26 glacier cruise"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#6E7680",
+    "mid": "#2E4A3A",
+    "ice": "#EEF4F8",
+    "water": "#3E6E86",
+    "near": "#1E2224",
+    "sun": "#F4C542",
+    "leaf": "#2F5A3A",
+    "acc": "#9FD0E0",
+    "obj": "#6E5A44"
+   }
+  },
+  {
+   "slug": "chattanooga",
+   "label": "Walnut Street Bridge over the Tennessee River, Chattanooga",
+   "lat": 35.0598,
+   "lon": -85.3076,
+   "radius_km": 15,
+   "aliases": [
+    "walnut street bridge"
+   ],
+   "names": [
+    "chattanooga"
+   ],
+   "palette": {
+    "sky": "#AFD0F0",
+    "far": "#8E9E6E",
+    "mid": "#B5B2A9",
+    "ice": "#F1F0EC",
+    "water": "#7FA2AA",
+    "near": "#23292E",
+    "sun": "#F4C542",
+    "leaf": "#8FA84C",
+    "acc": "#4B9CCB",
+    "obj": "#C8322B"
+   }
+  },
+  {
+   "slug": "columbia-glacier",
+   "label": "Columbia Glacier's blue ice face over the iceberg-filled bay, with a harbor seal on a floe",
+   "lat": 61.13,
+   "lon": -147.08,
+   "radius_km": 25,
+   "aliases": [
+    "columbia bay"
+   ],
+   "palette": {
+    "sky": "#C9DDEE",
+    "far": "#A6D6E4",
+    "mid": "#4B4F5E",
+    "ice": "#F4F8FA",
+    "water": "#5E8D99",
+    "near": "#1F2328",
+    "sun": "#F2C14E",
+    "leaf": "#4E6B45",
+    "acc": "#8A8378",
+    "obj": "#6DB4CE"
+   }
+  },
+  {
+   "slug": "devils-tower",
+   "label": "Devils Tower above the pine forest and prairie, with a prairie dog",
+   "lat": 44.5902,
+   "lon": -104.7146,
+   "radius_km": 6,
+   "aliases": [
+    "devils tower",
+    "devil s tower",
+    "bear lodge butte"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#C9BE9E",
+    "mid": "#A39887",
+    "ice": "#ECE7DC",
+    "water": "#4A7FA8",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#3C5A33",
+    "acc": "#A3AC66",
+    "obj": "#B07E4E"
+   }
+  },
+  {
+   "slug": "craters-of-the-moon-national-monument",
+   "label": "Craters of the Moon: the smooth black Inferno cinder cone with limber pines above the lava field",
+   "lat": 43.4217,
+   "lon": -113.5622,
+   "radius_km": 20,
+   "aliases": [
+    "craters of the moon",
+    "inferno cone"
+   ],
+   "palette": {
+    "sky": "#A3CEF2",
+    "far": "#A8A498",
+    "mid": "#3A3633",
+    "ice": "#F2EEE0",
+    "water": "#6A9CC0",
+    "near": "#1A1817",
+    "sun": "#F2C440",
+    "leaf": "#4E6E3A",
+    "acc": "#57514B",
+    "obj": "#77706A"
+   }
+  },
+  {
+   "slug": "hanging-lake",
+   "label": "Hanging Lake in Glenwood Canyon: thin falls over a mossy travertine ledge into the emerald lake, with its fallen log",
+   "lat": 39.6011,
+   "lon": -107.1914,
+   "radius_km": 3,
+   "aliases": [
+    "hanging lake"
+   ],
+   "palette": {
+    "sky": "#9FCDEF",
+    "far": "#A8876A",
+    "mid": "#8F7C62",
+    "ice": "#F5F7F4",
+    "water": "#2FA58C",
+    "near": "#1E2622",
+    "sun": "#F4C542",
+    "leaf": "#2F5E36",
+    "acc": "#7FA04A",
+    "obj": "#D9D2C2"
+   }
+  },
+  {
+   "slug": "kingman",
+   "label": "Kingman on Route 66: the turquoise-and-pink roadside diner, the Route 66 water tanks and a vintage blue pickup below the Cerbat hills",
+   "lat": 35.1894,
+   "lon": -114.053,
+   "radius_km": 12,
+   "aliases": [
+    "kingman arizona",
+    "kingman az"
+   ],
+   "names": [
+    "kingman"
+   ],
+   "palette": {
+    "sky": "#9FCDF2",
+    "far": "#B39478",
+    "mid": "#8C8A86",
+    "ice": "#F4F2EE",
+    "water": "#2F6EC4",
+    "near": "#22262A",
+    "sun": "#F2C440",
+    "leaf": "#6E8A44",
+    "acc": "#E0457A",
+    "obj": "#5FC8B4"
+   }
+  },
+  {
+   "slug": "santa-elena-canyon",
+   "label": "Santa Elena Canyon",
+   "lat": 29.167,
+   "lon": -103.61,
+   "radius_km": 6,
+   "aliases": [
+    "santa elena canyon",
+    "canon de santa elena",
+    "santa elena canyon trail"
+   ],
+   "palette": {
+    "sky": "#8FC2EA",
+    "far": "#9C8C7A",
+    "mid": "#C49A72",
+    "ice": "#E2D6C0",
+    "water": "#8C8A64",
+    "near": "#2A2018",
+    "sun": "#F4C542",
+    "leaf": "#6E9A44",
+    "acc": "#8A6448",
+    "obj": "#3E5E2A"
+   }
+  },
+  {
+   "slug": "shenandoah-national-park",
+   "label": "Skyline Drive in Shenandoah: the road and its stone wall along the crest, the hazy blue ridges beyond, a black bear",
+   "lat": 38.53,
+   "lon": -78.44,
+   "radius_km": 50,
+   "aliases": [
+    "shenandoah national park",
+    "skyline drive",
+    "shenandoah np"
+   ],
+   "names": [
+    "shenandoah"
+   ],
+   "palette": {
+    "sky": "#A7D0F2",
+    "far": "#A9B9C9",
+    "mid": "#55585C",
+    "ice": "#F2F0EA",
+    "water": "#6A9CC0",
+    "near": "#22262A",
+    "sun": "#F2C440",
+    "leaf": "#3F7A34",
+    "acc": "#7FA048",
+    "obj": "#7E9AA8"
+   }
+  },
+  {
+   "slug": "sol-duc-valley",
+   "label": "Sol Duc Falls",
+   "lat": 47.955,
+   "lon": -123.83,
+   "radius_km": 12,
+   "aliases": [
+    "sol duc valley",
+    "sol duc falls",
+    "sol duc hot springs",
+    "sol duc river",
+    "sol duc"
+   ],
+   "palette": {
+    "sky": "#B8D8E8",
+    "far": "#4E5A48",
+    "mid": "#3A4636",
+    "ice": "#F2F6F4",
+    "water": "#9CC8D8",
+    "near": "#1E2418",
+    "sun": "#F4D46A",
+    "leaf": "#6E9A3A",
+    "acc": "#5E4A34",
+    "obj": "#2E4E2E"
+   }
+  },
+  {
+   "slug": "missoula",
+   "label": "University of Montana Main Hall clock tower below Mount Sentinel, Missoula",
+   "lat": 46.8603,
+   "lon": -113.985,
+   "radius_km": 15,
+   "aliases": [
+    "university of montana",
+    "main hall missoula",
+    "mount sentinel"
+   ],
+   "names": [
+    "missoula",
+    "missoula montana",
+    "missoula mt"
+   ],
+   "palette": {
+    "sky": "#B5D3EE",
+    "far": "#B8A07A",
+    "mid": "#A85A42",
+    "ice": "#E2DACB",
+    "water": "#5A86A8",
+    "near": "#2A2422",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#4E9C86",
+    "obj": "#7C848E"
+   }
+  },
+  {
+   "slug": "puuhonua-o-honaunau",
+   "label": "Hale o Keawe with its ki'i images and a basking green turtle at Pu'uhonua o Honaunau",
+   "lat": 19.4214,
+   "lon": -155.9106,
+   "radius_km": 3,
+   "aliases": [
+    "puuhonua o honaunau",
+    "pu uhonua o honaunau",
+    "honaunau national historical park",
+    "place of refuge",
+    "hale o keawe"
+   ],
+   "names": [
+    "honaunau"
+   ],
+   "palette": {
+    "sky": "#B4D4F0",
+    "far": "#A39C8E",
+    "mid": "#8A7456",
+    "ice": "#EFE9DA",
+    "water": "#3C86B0",
+    "near": "#22201E",
+    "sun": "#F2C14E",
+    "leaf": "#4E8A3A",
+    "acc": "#BCAE94",
+    "obj": "#4A4644"
    }
   }
  ]

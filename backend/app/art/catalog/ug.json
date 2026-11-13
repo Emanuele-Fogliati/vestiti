@@ -3,6 +3,28 @@
  "name": "Uganda",
  "places": [
   {
+   "slug": "budongo-forest",
+   "label": "A giant buttressed mahogany and a chimpanzee by the Royal Mile, Budongo Forest",
+   "lat": 1.74,
+   "lon": 31.54,
+   "radius_km": 20,
+   "aliases": [
+    "foresta di budongo"
+   ],
+   "palette": {
+    "sky": "#DDEBEA",
+    "far": "#8DA36A",
+    "mid": "#CDC3AE",
+    "ice": "#E6E2D6",
+    "water": "#5E8FA0",
+    "near": "#26241F",
+    "sun": "#F2C744",
+    "leaf": "#3E6234",
+    "acc": "#B8674A",
+    "obj": "#3A302A"
+   }
+  },
+  {
    "slug": "bugoma-forest",
    "label": "Uganda mangabey on a branch in the tall Bugoma Forest",
    "lat": 1.25,
@@ -346,6 +368,35 @@
     "leaf": "#4C7A32",
     "acc": "#C9A766",
     "obj": "#6E6052"
+   }
+  },
+  {
+   "slug": "masindi",
+   "label": "Black-and-white colobus in the tall Budongo Forest near Masindi",
+   "lat": 1.73,
+   "lon": 31.6,
+   "radius_km": 20,
+   "aliases": [
+    "budongo",
+    "royal mile budongo",
+    "kaniyo pabidi",
+    "busingiro"
+   ],
+   "names": [
+    "masindi",
+    "masindi town"
+   ],
+   "palette": {
+    "sky": "#DCEBEE",
+    "far": "#D4CEC0",
+    "mid": "#9A8E7A",
+    "ice": "#F6F4EE",
+    "water": "#7FA866",
+    "near": "#1E1F1C",
+    "sun": "#F2C14E",
+    "leaf": "#3E6C32",
+    "acc": "#6E9444",
+    "obj": "#5A5852"
    }
   },
   {

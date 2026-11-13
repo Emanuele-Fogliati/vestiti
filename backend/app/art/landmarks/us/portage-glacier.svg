@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="24" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-us-portage-glacier-p"><path d="M40 120L62 78L76 72L90 80L104 68L118 54L132 60L150 50L168 44L184 46L200 38L214 34L232 42L250 52V120Z"/></clipPath></defs>
+<path d="M40 120L62 78L76 72L90 80L104 68L118 54L132 60L150 50L168 44L184 46L200 38L214 34L232 42L250 52V120Z" fill="var(--il-far)"/>
+<path d="M60 82L76 72L90 80L104 68L118 54L132 60L150 50L168 44L184 46L200 38L214 34L232 42L250 52V70L232 62L212 60L200 66L186 60L172 70L160 64L146 74L134 70L120 80L108 76L94 88L80 84L68 92Z" fill="var(--il-ice)" clip-path="url(#il-us-portage-glacier-p)"/>
+<path d="M176 120L196 74L212 62L228 54L244 46L262 38L280 30L300 26V128Z" fill="var(--il-mid)"/>
+<path d="M226 60L236 70L232 84M262 46L270 62L266 80M284 36L292 54" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M232 96Q252 86 270 92Q286 96 300 90V108Q284 112 264 108Q246 106 232 108Z" fill="var(--il-leaf)"/>
+<path d="M60 108Q84 88 120 86Q150 84 176 90Q214 98 250 104Q280 108 300 110V142H72Z" fill="var(--il-ice)"/>
+<path d="M96 96Q120 92 140 94M190 100Q220 104 250 110M210 106Q240 112 280 116M80 106Q96 98 112 98" stroke="var(--il-acc)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M112 88L120 86Q146 94 164 104Q178 110 190 116L176 118Q160 108 140 98Q126 92 112 88Z" fill="var(--il-far)"/>
+<path d="M76 142V118L84 114L92 118L100 112L110 116L120 110L130 114L140 109L150 113L160 108L172 114L184 110L196 115L208 111L220 116L232 112L246 117L258 113L272 118L286 114L300 118V142Z" fill="var(--il-acc)"/>
+<path d="M94 140V120M112 140V118M134 140V116M156 140V115M178 140V117M268 140V121M286 140V120" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M190 142L194 132L202 128L206 120L214 118L218 110L226 112L232 106L238 114L246 114L250 122L258 126L262 134L264 142Z" fill="var(--il-mid)"/>
+<path d="M210 120L206 138M226 112L228 136M246 120L250 138" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M184 142Q188 134 196 130L200 142ZM256 142L258 128Q264 132 270 142Z" fill="var(--il-acc)"/>
+<path d="M0 136V62L12 66L26 74L40 80L54 88L68 100L80 116L88 130L92 142Z" fill="var(--il-mid)"/>
+<path d="M0 108Q12 104 24 110Q34 116 40 126Q26 122 14 126Q6 128 0 132Z" fill="var(--il-leaf)"/>
+<path d="M14 72L24 90M40 84L44 104M60 96L66 116" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 200V140H300V200Z" fill="var(--il-water)"/>
+<path d="M60 160L64 154L74 152L80 156L84 160ZM176 148L180 144L188 143L192 148ZM236 178L242 170L254 168L262 172L268 178Z" fill="var(--il-ice)"/>

@@ -172,6 +172,31 @@
    }
   },
   {
+   "slug": "blue-pond",
+   "label": "Shirogane Blue Pond in Biei: milky turquoise water with silver dead larch trunks standing in it, forest behind",
+   "lat": 43.4936,
+   "lon": 142.6144,
+   "radius_km": 3,
+   "aliases": [
+    "blue pond",
+    "aoi ike",
+    "shirogane blue pond",
+    "stagno blu"
+   ],
+   "palette": {
+    "sky": "#AFD6F2",
+    "far": "#B8B2A8",
+    "mid": "#8EA85A",
+    "ice": "#F2F4F2",
+    "water": "#5FC7C4",
+    "near": "#22262A",
+    "sun": "#F4C542",
+    "leaf": "#3E6E3A",
+    "acc": "#C9A84E",
+    "obj": "#6E9A4A"
+   }
+  },
+  {
    "slug": "daikanbo",
    "label": "The Aso caldera and its Five Peaks seen from the Daikanbo rim",
    "lat": 32.985,
@@ -303,6 +328,33 @@
     "leaf": "#3E5E3A",
     "acc": "#E8602A",
     "obj": "#C8A060"
+   }
+  },
+  {
+   "slug": "gero",
+   "label": "Gero Onsen ryokan along the Hida river under its twin wooded hills, with the steaming riverbed bath",
+   "lat": 35.806,
+   "lon": 137.243,
+   "radius_km": 10,
+   "aliases": [
+    "gero onsen",
+    "gero hot spring",
+    "gero spa"
+   ],
+   "names": [
+    "gero"
+   ],
+   "palette": {
+    "sky": "#B9D5EE",
+    "far": "#D8D3C6",
+    "mid": "#4C6A3A",
+    "ice": "#F1EFE8",
+    "water": "#6E9DAB",
+    "near": "#262829",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A55",
+    "acc": "#A8473A",
+    "obj": "#8E8D86"
    }
   },
   {
@@ -608,7 +660,8 @@
     "hirosaki castle",
     "hirosaki jo",
     "hirosaki park",
-    "castello di hirosaki"
+    "castello di hirosaki",
+    "hirosaki koen"
    ],
    "names": [
     "hirosaki",
@@ -824,7 +877,9 @@
     "nachi katsuura",
     "nachikatsuura",
     "katsuura onsen",
-    "kii katsuura"
+    "kii katsuura",
+    "cascate di nachi",
+    "cascata di nachi"
    ],
    "names": [
     "katsuura",
@@ -925,6 +980,34 @@
     "leaf": "#6E9E3E",
     "acc": "#9A7656",
     "obj": "#5E8A7A"
+   }
+  },
+  {
+   "slug": "koguchi",
+   "label": "Layered Kumano mountains and a stone Jizo on the Kumano Kodo above Koguchi",
+   "lat": 33.738,
+   "lon": 135.868,
+   "radius_km": 8,
+   "aliases": [
+    "kogumotori",
+    "ogumotori",
+    "hyakkengura",
+    "hyakken gura"
+   ],
+   "names": [
+    "koguchi"
+   ],
+   "palette": {
+    "sky": "#C6DDF0",
+    "far": "#8FA8BE",
+    "mid": "#5F8468",
+    "ice": "#EDEDE8",
+    "water": "#5B8DB0",
+    "near": "#212620",
+    "sun": "#F4C542",
+    "leaf": "#2F5A36",
+    "acc": "#C8402F",
+    "obj": "#9A9A92"
    }
   },
   {
@@ -2145,6 +2228,36 @@
    }
   },
   {
+   "slug": "takachiho-gorge",
+   "label": "Manai Falls in the basalt Takachiho Gorge with a rowboat",
+   "lat": 32.7024,
+   "lon": 131.3037,
+   "radius_km": 6,
+   "aliases": [
+    "takachiho gorge",
+    "takachiho kyo",
+    "takachihokyo",
+    "manai falls",
+    "manai waterfall",
+    "gola di takachiho"
+   ],
+   "names": [
+    "takachiho"
+   ],
+   "palette": {
+    "sky": "#C6E0EC",
+    "far": "#4E4C44",
+    "mid": "#716C5D",
+    "ice": "#F6F8F6",
+    "water": "#1F6E69",
+    "near": "#1E201C",
+    "sun": "#F4D04A",
+    "leaf": "#3F7534",
+    "acc": "#93A44A",
+    "obj": "#BFD6E0"
+   }
+  },
+  {
    "slug": "takayama",
    "label": "Nakabashi bridge over the Miyagawa, Takayama",
    "lat": 36.1408,
@@ -2595,6 +2708,85 @@
     "leaf": "#4F6E3C",
     "acc": "#5E3A2A",
     "obj": "#8C9096"
+   }
+  },
+  {
+   "slug": "zenko-ji",
+   "label": "The Main Hall of Zenko-ji temple, Nagano",
+   "lat": 36.6617,
+   "lon": 138.1878,
+   "radius_km": 4,
+   "aliases": [
+    "zenko ji",
+    "zenkoji",
+    "tempio zenkoji",
+    "zenkoji temple"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#BEB8AC",
+    "mid": "#5B4636",
+    "ice": "#F1EEE6",
+    "water": "#5E8FB0",
+    "near": "#211A16",
+    "sun": "#F4C542",
+    "leaf": "#3F6A3A",
+    "acc": "#D2B46A",
+    "obj": "#934B33"
+   }
+  },
+  {
+   "slug": "goryokaku",
+   "label": "Goryokaku star fort and moat seen from the tower, Hakodate",
+   "lat": 41.7969,
+   "lon": 140.757,
+   "radius_km": 3,
+   "aliases": [
+    "goryokaku",
+    "goryo kaku",
+    "hakodate magistrate"
+   ],
+   "palette": {
+    "sky": "#BBD8F0",
+    "far": "#8D9FA0",
+    "mid": "#9CC46A",
+    "ice": "#F2EEE4",
+    "water": "#4E7E78",
+    "near": "#22281F",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E36",
+    "acc": "#B85A3C",
+    "obj": "#C4C1B8"
+   }
+  },
+  {
+   "slug": "naha",
+   "label": "Seiden hall of Shuri Castle, Naha",
+   "lat": 26.217,
+   "lon": 127.7195,
+   "radius_km": 12,
+   "aliases": [
+    "shuri castle",
+    "shurijo",
+    "shuri jo",
+    "shuri"
+   ],
+   "names": [
+    "naha",
+    "naha city",
+    "okinawa"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#BDB8AC",
+    "mid": "#B8382C",
+    "ice": "#F3EEE6",
+    "water": "#4A90B0",
+    "near": "#2A1E1C",
+    "sun": "#E8B840",
+    "leaf": "#4E7A3E",
+    "acc": "#C46658",
+    "obj": "#DDA592"
    }
   }
  ]

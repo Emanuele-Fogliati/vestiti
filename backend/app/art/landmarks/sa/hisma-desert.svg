@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="52" cy="32" r="12" fill="var(--il-sun)"/>
+<path d="M0 150V122L8 118L12 110L20 114L26 104L34 110L42 106L48 114L58 112L66 120L70 150ZM238 150L244 120L252 116L258 106L266 112L274 104L282 110L290 102L300 108V150Z" fill="var(--il-far)"/>
+<path d="M42 152L48 142Q44 134 56 130L64 120Q58 112 72 108L82 98Q78 90 90 88L96 80Q92 72 104 70Q112 62 122 68L126 78Q140 76 152 80L160 86Q178 84 190 90L198 96Q212 94 220 102L228 110Q240 110 242 118L250 126Q260 128 258 136L264 144Q268 150 268 152Z" fill="var(--il-mid)"/>
+<path d="M98 80H124M84 98H160M70 118H200M56 134H240" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M102 74H118M90 90H150M76 108H190M62 126H230M50 144H260" stroke="var(--il-acc)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M112 84V94M136 84V94M106 102V114M150 104V114M188 100V112M120 122V132M170 120V130M214 122V132M96 138V148M200 138V148" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V148H300V200Z" fill="var(--il-acc)"/>
+<path d="M30 152Q32 142 42 142Q50 140 54 148L56 152ZM208 152Q210 140 222 140Q234 142 236 152ZM262 158Q264 148 274 148Q284 148 286 158Z" fill="var(--il-leaf)"/>
+<path d="M20 186h3M60 178h2M120 190h3M170 182h2M250 188h3M286 176h2" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+<g transform="translate(92 158) scale(1.1)">
+<path d="M6 16L5 33M11 16L12 33M26 16L26 33M31 15L33 33M0 13L-2 22" stroke="var(--il-obj)" stroke-width="3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M0 13Q1 6 9 4Q15 -4 22 3Q26 7 30 7L35 -6Q37 -10 42 -9L46 -6Q46 -3 43 -4L40 -4Q36 6 34 14Q32 18 27 18H11Q3 18 0 13Z" fill="var(--il-obj)"/>
+</g>
+<g transform="translate(200 162) scale(0.85)">
+<path d="M6 16L5 33M11 16L12 33M26 16L26 33M31 15L33 33" stroke="var(--il-obj)" stroke-width="3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M0 13Q1 6 9 4Q15 -4 22 3Q26 7 30 7L35 18Q37 22 33 22L30 20Q28 18 27 18H11Q3 18 0 13Z" fill="var(--il-obj)"/>
+</g>

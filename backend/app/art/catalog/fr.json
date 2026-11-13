@@ -3,6 +3,34 @@
  "name": "France",
  "places": [
   {
+   "slug": "agriates-desert",
+   "label": "White sand beach on a turquoise bay below the maquis hills of the Agriates, with a Corsican cow",
+   "lat": 42.7,
+   "lon": 9.18,
+   "radius_km": 12,
+   "aliases": [
+    "agriates",
+    "desert des agriates",
+    "deserto delle agriate",
+    "saleccia",
+    "plage du lotu",
+    "plage de loto",
+    "lotu beach"
+   ],
+   "palette": {
+    "sky": "#A8CDEC",
+    "far": "#8E9AAE",
+    "mid": "#A8A878",
+    "ice": "#F4EFE0",
+    "water": "#3FBCC2",
+    "near": "#24261E",
+    "sun": "#F4C430",
+    "leaf": "#4F6236",
+    "acc": "#B9B4A6",
+    "obj": "#8A5A3A"
+   }
+  },
+  {
    "slug": "aiguille-du-midi",
    "label": "The Aiguille du Midi granite spire with its cable-car station and summit mast",
    "lat": 45.8786,
@@ -925,6 +953,34 @@
    }
   },
   {
+   "slug": "dinan",
+   "label": "The port of Dinan on the Rance: the Gothic old bridge, the tall granite viaduct and the half-timbered quay houses",
+   "lat": 48.4555,
+   "lon": -2.0455,
+   "radius_km": 8,
+   "aliases": [
+    "port de dinan",
+    "viaduc de dinan",
+    "dinan viaduct",
+    "port of dinan"
+   ],
+   "names": [
+    "dinan"
+   ],
+   "palette": {
+    "sky": "#A8D0F0",
+    "far": "#B8AFA0",
+    "mid": "#A69E92",
+    "ice": "#ECE6DA",
+    "water": "#5E8A86",
+    "near": "#2A2E33",
+    "sun": "#F4C542",
+    "leaf": "#4C7A38",
+    "acc": "#6B4A32",
+    "obj": "#566070"
+   }
+  },
+  {
    "slug": "domme",
    "label": "The Dordogne valley from the clifftop belvedere of Domme",
    "lat": 44.8022,
@@ -948,6 +1004,34 @@
     "leaf": "#4C7432",
     "acc": "#D7BA76",
     "obj": "#A8745A"
+   }
+  },
+  {
+   "slug": "dune-of-pilat",
+   "label": "The Dune du Pilat rising between the Landes pine forest and the Arcachon bay, with a paraglider",
+   "lat": 44.5894,
+   "lon": -1.2131,
+   "radius_km": 5,
+   "aliases": [
+    "dune of pilat",
+    "dune du pilat",
+    "dune du pyla",
+    "duna del pilat",
+    "duna di pilat",
+    "pilat dune",
+    "pyla dune"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#D9C7A0",
+    "mid": "#EED9B0",
+    "ice": "#F6F2E8",
+    "water": "#2F86B8",
+    "near": "#22261E",
+    "sun": "#F4C542",
+    "leaf": "#2F5A30",
+    "acc": "#D8443A",
+    "obj": "#6E5A44"
    }
   },
   {
@@ -975,6 +1059,30 @@
     "leaf": "#7E9C52",
     "acc": "#4E6E34",
     "obj": "#8A8478"
+   }
+  },
+  {
+   "slug": "flogny-la-chapelle",
+   "label": "Saint-Léger church of Flogny-la-Chapelle",
+   "lat": 47.953,
+   "lon": 3.872,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "flogny la chapelle",
+    "flogny"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#D4C29C",
+    "mid": "#C5AE86",
+    "ice": "#F2EEE4",
+    "water": "#4F86B0",
+    "near": "#25221E",
+    "sun": "#F4C542",
+    "leaf": "#3F6B34",
+    "acc": "#A8563A",
+    "obj": "#5D636B"
    }
   },
   {
@@ -1087,6 +1195,32 @@
     "leaf": "#5E8A4C",
     "acc": "#B4664E",
     "obj": "#3F4B60"
+   }
+  },
+  {
+   "slug": "joigny",
+   "label": "Joigny's hillside old town with the green-domed Saint-Jean tower above the bridge over the Yonne",
+   "lat": 47.982,
+   "lon": 3.397,
+   "radius_km": 12,
+   "aliases": [
+    "pont saint nicolas joigny"
+   ],
+   "names": [
+    "joigny",
+    "jogny"
+   ],
+   "palette": {
+    "sky": "#AAD0F0",
+    "far": "#E4D3B8",
+    "mid": "#D3C2A2",
+    "ice": "#F3EEE4",
+    "water": "#5E8C9C",
+    "near": "#28282A",
+    "sun": "#F4C430",
+    "leaf": "#4E7E3E",
+    "acc": "#A85E44",
+    "obj": "#3E9C84"
    }
   },
   {
@@ -1257,6 +1391,33 @@
    }
   },
   {
+   "slug": "les-contamines-montjoie",
+   "label": "Les Contamines-Montjoie church under the Domes de Miage",
+   "lat": 45.8216,
+   "lon": 6.7272,
+   "radius_km": 10,
+   "aliases": [
+    "contamines montjoie",
+    "domes de miage"
+   ],
+   "names": [
+    "les contamines",
+    "contamines"
+   ],
+   "palette": {
+    "sky": "#9FC8F0",
+    "far": "#BFB29C",
+    "mid": "#8E8B88",
+    "ice": "#F7F6F2",
+    "water": "#9DBCC8",
+    "near": "#22201E",
+    "sun": "#F6C431",
+    "leaf": "#3E6A3A",
+    "acc": "#C9A04A",
+    "obj": "#5F6166"
+   }
+  },
+  {
    "slug": "les-eyzies",
    "label": "Les Eyzies: the prehistory museum under its overhanging cliff",
    "lat": 44.9375,
@@ -1284,6 +1445,29 @@
     "leaf": "#4F7A35",
     "acc": "#D8BF8C",
     "obj": "#B85C3C"
+   }
+  },
+  {
+   "slug": "les-houches",
+   "label": "Les Houches church with its onion spire under the Mont Blanc massif",
+   "lat": 45.8906,
+   "lon": 6.7986,
+   "radius_km": 6,
+   "aliases": [],
+   "names": [
+    "les houches"
+   ],
+   "palette": {
+    "sky": "#A9CDEF",
+    "far": "#7F858F",
+    "mid": "#E6E1D5",
+    "ice": "#FFFFFF",
+    "water": "#5A8FB0",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#6F9B4C",
+    "acc": "#A8693A",
+    "obj": "#36553F"
    }
   },
   {
@@ -1869,6 +2053,30 @@
    }
   },
   {
+   "slug": "petite-france",
+   "label": "The Maison des Tanneurs and half-timbered houses on the Ill, Petite France, Strasbourg",
+   "lat": 48.5806,
+   "lon": 7.74,
+   "radius_km": 2,
+   "aliases": [
+    "petite france",
+    "maison des tanneurs",
+    "piccola francia"
+   ],
+   "palette": {
+    "sky": "#B9D6EE",
+    "far": "#C46A4A",
+    "mid": "#7D6C5E",
+    "ice": "#F4F0E6",
+    "water": "#6E8A7C",
+    "near": "#2E2420",
+    "sun": "#F4C542",
+    "leaf": "#7EA24C",
+    "acc": "#D23A2E",
+    "obj": "#B97F70"
+   }
+  },
+  {
    "slug": "piana",
    "label": "Piana's campanile and village under the red granite of the Calanche, Corsica",
    "lat": 42.2375,
@@ -1968,6 +2176,65 @@
     "leaf": "#5C7E38",
     "acc": "#C8A060",
     "obj": "#B04A30"
+   }
+  },
+  {
+   "slug": "porto",
+   "label": "Genoese tower of Porto on its red granite rock, Corsica",
+   "lat": 42.2667,
+   "lon": 8.695,
+   "radius_km": 8,
+   "aliases": [
+    "tour de porto",
+    "torre di porto",
+    "tour genoise de porto",
+    "golfe de porto",
+    "golfo di porto",
+    "porto ota",
+    "ota porto",
+    "porto corse",
+    "porto corsica"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#8AA08E",
+    "mid": "#CC7658",
+    "ice": "#F2ECE2",
+    "water": "#3B7FA2",
+    "near": "#2B2321",
+    "sun": "#F2C14E",
+    "leaf": "#5F7E3C",
+    "acc": "#C8A27C",
+    "obj": "#FFFFFF"
+   }
+  },
+  {
+   "slug": "provencal-colorado",
+   "label": "The red and yellow ochre spires of the Colorado Provencal, Rustrel",
+   "lat": 43.918,
+   "lon": 5.483,
+   "radius_km": 5,
+   "aliases": [
+    "colorado provencal",
+    "provencal colorado",
+    "colorado de rustrel",
+    "ocres de rustrel",
+    "colorado provenzale"
+   ],
+   "names": [
+    "rustrel"
+   ],
+   "palette": {
+    "sky": "#AFD2F0",
+    "far": "#7E8C66",
+    "mid": "#D9772E",
+    "ice": "#EFE9DE",
+    "water": "#4A88B0",
+    "near": "#2A2018",
+    "sun": "#F5C744",
+    "leaf": "#5C863C",
+    "acc": "#BE4A2A",
+    "obj": "#E6AE48"
    }
   },
   {
@@ -2453,6 +2720,119 @@
     "leaf": "#3F5A2E",
     "acc": "#CDBB94",
     "obj": "#4B525C"
+   }
+  },
+  {
+   "slug": "jumieges-abbey",
+   "label": "The twin towers and lantern wall of the ruined Jumieges Abbey",
+   "lat": 49.4318,
+   "lon": 0.8195,
+   "radius_km": 4,
+   "aliases": [
+    "jumieges",
+    "abbaye de jumieges",
+    "abbazia di jumieges",
+    "jumieges abbey"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#8DBA4E",
+    "mid": "#E2DBC9",
+    "ice": "#F5F2EA",
+    "water": "#7A8C9C",
+    "near": "#26261F",
+    "sun": "#F4C542",
+    "leaf": "#3F6B33",
+    "acc": "#BCB098",
+    "obj": "#8F8572"
+   }
+  },
+  {
+   "slug": "strasbourg",
+   "label": "Strasbourg Cathedral's single spire above the half-timbered houses",
+   "lat": 48.5818,
+   "lon": 7.7509,
+   "radius_km": 15,
+   "aliases": [
+    "strasbourg cathedral",
+    "cathedrale de strasbourg",
+    "cathedrale notre dame de strasbourg",
+    "notre dame de strasbourg",
+    "strassburger munster",
+    "cattedrale di strasburgo"
+   ],
+   "names": [
+    "strasbourg",
+    "strasburgo",
+    "strassburg",
+    "strasbourg city",
+    "strasbourg old town"
+   ],
+   "palette": {
+    "sky": "#9CC8EE",
+    "far": "#EADFC8",
+    "mid": "#B8735F",
+    "ice": "#F3EBDC",
+    "water": "#6A9AB0",
+    "near": "#2A1F1C",
+    "sun": "#F4C542",
+    "leaf": "#A39A8E",
+    "acc": "#A8513C",
+    "obj": "#5B3A28"
+   }
+  },
+  {
+   "slug": "saint-jean-pied-de-port",
+   "label": "The Nive, Basque balconies and the old bridge, Saint-Jean-Pied-de-Port",
+   "lat": 43.1631,
+   "lon": -1.2378,
+   "radius_km": 6,
+   "aliases": [],
+   "names": [
+    "saint jean pied de port",
+    "st jean pied de port",
+    "donibane garazi"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#CDBFA6",
+    "mid": "#9A8C76",
+    "ice": "#F4F0E8",
+    "water": "#5A93A0",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7A35",
+    "acc": "#8C2F28",
+    "obj": "#A65840"
+   }
+  },
+  {
+   "slug": "utah-beach",
+   "label": "Sherman tank, the US obelisk and the museum at Utah Beach",
+   "lat": 49.415,
+   "lon": -1.176,
+   "radius_km": 5,
+   "aliases": [
+    "utah beach",
+    "plage d utah",
+    "utah beach museum",
+    "musee du debarquement utah beach",
+    "la madeleine sainte marie du mont"
+   ],
+   "names": [
+    "utah"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#A9A77A",
+    "mid": "#B98878",
+    "ice": "#ECE6D6",
+    "water": "#5E7E92",
+    "near": "#22241F",
+    "sun": "#F2C14E",
+    "leaf": "#6F7552",
+    "acc": "#D8CBA9",
+    "obj": "#A8A59C"
    }
   }
  ]

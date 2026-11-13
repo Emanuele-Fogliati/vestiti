@@ -3,6 +3,32 @@
  "name": "Andorra",
  "places": [
   {
+   "slug": "encamp",
+   "label": "The Romanesque chapel of Sant Roma de les Bons on its rock above Encamp",
+   "lat": 42.5367,
+   "lon": 1.5866,
+   "radius_km": 6,
+   "aliases": [
+    "sant roma de les bons",
+    "sant roma dels bons"
+   ],
+   "names": [
+    "encamp"
+   ],
+   "palette": {
+    "sky": "#A9CDF0",
+    "far": "#B3AEA3",
+    "mid": "#9C8C78",
+    "ice": "#E6E1D6",
+    "water": "#9BB29E",
+    "near": "#26241F",
+    "sun": "#F2C14E",
+    "leaf": "#3E5F35",
+    "acc": "#8C5C34",
+    "obj": "#56534F"
+   }
+  },
+  {
    "slug": "incles-valley",
    "label": "Vall d'Incles meadows and peaks",
    "lat": 42.585,
@@ -22,6 +48,59 @@
     "leaf": "#93AC4E",
     "acc": "#D2BC72",
     "obj": "#2F4B2A"
+   }
+  },
+  {
+   "slug": "engolasters-lake",
+   "label": "Engolasters Lake in its pine forest with the Radio Andorra masts",
+   "lat": 42.522,
+   "lon": 1.568,
+   "radius_km": 3,
+   "aliases": [
+    "engolasters",
+    "estany d engolasters",
+    "lac d engolasters",
+    "lago di engolasters"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#6F8597",
+    "mid": "#8E8A7C",
+    "ice": "#F2F2EE",
+    "water": "#5A8C92",
+    "near": "#1E2722",
+    "sun": "#F4C542",
+    "leaf": "#2F5934",
+    "acc": "#A8A69C",
+    "obj": "#86A452"
+   }
+  },
+  {
+   "slug": "andorra-la-vella",
+   "label": "Casa de la Vall in Andorra la Vella below the Pyrenees",
+   "lat": 42.5065,
+   "lon": 1.5208,
+   "radius_km": 10,
+   "aliases": [
+    "casa de la vall"
+   ],
+   "names": [
+    "andorra la vella",
+    "andorra la vieja",
+    "andorre la vieille",
+    "andorra"
+   ],
+   "palette": {
+    "sky": "#CFE0EE",
+    "far": "#C6C1B7",
+    "mid": "#ADA08A",
+    "ice": "#E6E2D8",
+    "water": "#5E6670",
+    "near": "#2A2522",
+    "sun": "#F4C542",
+    "leaf": "#4E6A3A",
+    "acc": "#8C7A69",
+    "obj": "#7B4A2D"
    }
   }
  ]
