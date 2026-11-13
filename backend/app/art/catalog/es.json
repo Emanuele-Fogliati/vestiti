@@ -3,6 +3,35 @@
  "name": "Spain",
  "places": [
   {
+   "slug": "a-fonsagrada",
+   "label": "The church of Santa Maria with its granite belfry, A Fonsagrada",
+   "lat": 43.1238,
+   "lon": -7.0675,
+   "radius_km": 12,
+   "aliases": [
+    "igrexa de santa maria da fonsagrada",
+    "iglesia de santa maria de fonsagrada",
+    "fonte sagrada"
+   ],
+   "names": [
+    "a fonsagrada",
+    "la fonsagrada",
+    "fonsagrada"
+   ],
+   "palette": {
+    "sky": "#A3C9EE",
+    "far": "#E4DBC4",
+    "mid": "#F3F1EC",
+    "ice": "#FFFFFF",
+    "water": "#A8A39A",
+    "near": "#26262A",
+    "sun": "#F4C542",
+    "leaf": "#5E8A55",
+    "acc": "#8C7A66",
+    "obj": "#5D5C5E"
+   }
+  },
+  {
    "slug": "albaicin",
    "label": "The Albaicin hillside with San Nicolas church, Granada",
    "lat": 37.1811,
@@ -202,6 +231,32 @@
    }
   },
   {
+   "slug": "caldera-de-taburiente",
+   "label": "The rim wall of the Caldera de Taburiente above its pine forest, La Palma",
+   "lat": 28.735,
+   "lon": -17.865,
+   "radius_km": 12,
+   "aliases": [
+    "caldera de taburiente",
+    "taburiente",
+    "la cumbrecita",
+    "mirador de la cumbrecita",
+    "lomo de las chozas"
+   ],
+   "palette": {
+    "sky": "#8EC2EE",
+    "far": "#B9A18E",
+    "mid": "#977A6B",
+    "ice": "#EDE6DA",
+    "water": "#4E8FB0",
+    "near": "#2A2622",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E32",
+    "acc": "#7E9C45",
+    "obj": "#6E4E36"
+   }
+  },
+  {
    "slug": "caminito-del-rey",
    "label": "Caminito del Rey hanging bridge, Desfiladero de los Gaitanes",
    "lat": 36.928,
@@ -359,6 +414,39 @@
     "leaf": "#5E7E3A",
     "acc": "#B8704A",
     "obj": "#5F4E42"
+   }
+  },
+  {
+   "slug": "dali-theatre-and-museum",
+   "label": "The red egg-crowned walls and glass dome of the Dali Theatre-Museum, Figueres",
+   "lat": 42.2681,
+   "lon": 2.9594,
+   "radius_km": 5,
+   "aliases": [
+    "dali theatre",
+    "teatre museu dali",
+    "teatro museo dali",
+    "museu dali",
+    "museo dali",
+    "dali museum",
+    "torre galatea",
+    "dali theatre museum"
+   ],
+   "names": [
+    "figueres",
+    "figueras"
+   ],
+   "palette": {
+    "sky": "#9CC4EC",
+    "far": "#E6DFD2",
+    "mid": "#C8424F",
+    "ice": "#F2E9D3",
+    "water": "#A9CFC6",
+    "near": "#2A2526",
+    "sun": "#F6C33C",
+    "leaf": "#3E5F30",
+    "acc": "#D7A63C",
+    "obj": "#8F8E8A"
    }
   },
   {
@@ -578,6 +666,35 @@
     "leaf": "#5E7E44",
     "acc": "#6E4830",
     "obj": "#C9A06C"
+   }
+  },
+  {
+   "slug": "guadix",
+   "label": "Cave houses and white chimneys of the Barrio de las Cuevas, Guadix",
+   "lat": 37.2955,
+   "lon": -3.1305,
+   "radius_km": 12,
+   "aliases": [
+    "cuevas de guadix",
+    "guadix caves",
+    "guadix cave houses",
+    "barrio de las cuevas guadix",
+    "grotte di guadix"
+   ],
+   "names": [
+    "guadix"
+   ],
+   "palette": {
+    "sky": "#BFDDF3",
+    "far": "#D9BF8F",
+    "mid": "#B48B60",
+    "ice": "#F6F4EE",
+    "water": "#6FA3C8",
+    "near": "#2A231D",
+    "sun": "#F4C430",
+    "leaf": "#6E7A3A",
+    "acc": "#B8573A",
+    "obj": "#9A7350"
    }
   },
   {
