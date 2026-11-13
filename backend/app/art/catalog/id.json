@@ -3,6 +3,34 @@
  "name": "Indonesia",
  "places": [
   {
+   "slug": "amed",
+   "label": "Jemeluk Bay at Amed with jukung boats below Mount Agung",
+   "lat": -8.336,
+   "lon": 115.66,
+   "radius_km": 10,
+   "aliases": [
+    "jemeluk",
+    "amed beach",
+    "pantai amed"
+   ],
+   "names": [
+    "amed",
+    "amed bali"
+   ],
+   "palette": {
+    "sky": "#B4D6F0",
+    "far": "#9AA6B4",
+    "mid": "#7E8584",
+    "ice": "#F5F3EE",
+    "water": "#2D7FA8",
+    "near": "#22262A",
+    "sun": "#F5C842",
+    "leaf": "#3F7A36",
+    "acc": "#C4623E",
+    "obj": "#3D3936"
+   }
+  },
+  {
    "slug": "bali",
    "label": "Bali: the Lempuyang split gate framing Mount Agung",
    "lat": -8.3906,
@@ -302,6 +330,33 @@
     "leaf": "#4C8A3C",
     "acc": "#8A6845",
     "obj": "#8F8B83"
+   }
+  },
+  {
+   "slug": "candi-sukuh",
+   "label": "The pyramid temple of Candi Sukuh on the slopes of Mount Lawu",
+   "lat": -7.6273,
+   "lon": 111.1311,
+   "radius_km": 3,
+   "aliases": [
+    "candi sukuh",
+    "sukuh temple",
+    "tempio di sukuh"
+   ],
+   "names": [
+    "sukuh"
+   ],
+   "palette": {
+    "sky": "#CFE2EE",
+    "far": "#7F9C86",
+    "mid": "#706960",
+    "ice": "#E8E3D6",
+    "water": "#5D8FA6",
+    "near": "#24261F",
+    "sun": "#F2C14E",
+    "leaf": "#43703A",
+    "acc": "#8C7462",
+    "obj": "#B0AB9E"
    }
   },
   {
@@ -1778,6 +1833,28 @@
    }
   },
   {
+   "slug": "sibetan",
+   "label": "Salak snake-fruit gardens of Sibetan below Mount Agung",
+   "lat": -8.452,
+   "lon": 115.509,
+   "radius_km": 4,
+   "aliases": [
+    "sibetan"
+   ],
+   "palette": {
+    "sky": "#B8DAF2",
+    "far": "#A9C66A",
+    "mid": "#5F6A78",
+    "ice": "#F2F0E8",
+    "water": "#3F8FB0",
+    "near": "#22261F",
+    "sun": "#F6C431",
+    "leaf": "#4F8A3E",
+    "acc": "#6E3322",
+    "obj": "#2F6A34"
+   }
+  },
+  {
    "slug": "sipiso-piso-waterfall",
    "label": "Sipiso-piso waterfall dropping into its gorge",
    "lat": 2.9175,
@@ -1799,6 +1876,73 @@
     "leaf": "#86A83E",
     "acc": "#BE9260",
     "obj": "#3E6E36"
+   }
+  },
+  {
+   "slug": "sorong",
+   "label": "Sorong's stilt-house waterfront with a phinisi liveaboard",
+   "lat": -0.875,
+   "lon": 131.25,
+   "radius_km": 15,
+   "aliases": [
+    "pelabuhan sorong",
+    "sorong harbour",
+    "sorong harbor",
+    "sorong port"
+   ],
+   "names": [
+    "sorong",
+    "kota sorong",
+    "sorong city"
+   ],
+   "palette": {
+    "sky": "#A9D3EE",
+    "far": "#8DB872",
+    "mid": "#7A4A2C",
+    "ice": "#F2EFE6",
+    "water": "#3E9E9A",
+    "near": "#1E2326",
+    "sun": "#F4C430",
+    "leaf": "#3E7A36",
+    "acc": "#C4473A",
+    "obj": "#3D78B8"
+   }
+  },
+  {
+   "slug": "sumba",
+   "label": "Tall-roofed uma mbatangu houses and a stone tomb in a Sumbanese village (Ratenggaro), with a grazing Sumba pony",
+   "lat": -9.65,
+   "lon": 119.6,
+   "radius_km": 60,
+   "aliases": [
+    "sumba island",
+    "isola di sumba",
+    "ratenggaro",
+    "praijing",
+    "tarung village",
+    "kampung tarung",
+    "sumba barat",
+    "west sumba",
+    "sumba timur",
+    "east sumba"
+   ],
+   "names": [
+    "sumba",
+    "waikabubak",
+    "tambolaka",
+    "waingapu"
+   ],
+   "palette": {
+    "sky": "#A9D0F2",
+    "far": "#C9B48E",
+    "mid": "#857560",
+    "ice": "#EDE4D0",
+    "water": "#3E6B34",
+    "near": "#2A241E",
+    "sun": "#F4C430",
+    "leaf": "#7DAA48",
+    "acc": "#8B6B45",
+    "obj": "#A7A295"
    }
   },
   {
@@ -2215,7 +2359,13 @@
     "leaf": "#8DBB52",
     "acc": "#C9A266",
     "obj": "#3B6331"
-   }
+   },
+   "names": [
+    "dintor",
+    "dintor village",
+    "desa dintor",
+    "dintor flores"
+   ]
   },
   {
    "slug": "yogyakarta",

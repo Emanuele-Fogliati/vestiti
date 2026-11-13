@@ -3,6 +3,36 @@
  "name": "Spain",
  "places": [
   {
+   "slug": "a-coruna",
+   "label": "The Tower of Hercules on its headland above the Atlantic, A Coruna",
+   "lat": 43.3859,
+   "lon": -8.4065,
+   "radius_km": 12,
+   "aliases": [
+    "tower of hercules",
+    "torre de hercules",
+    "torre di ercole"
+   ],
+   "names": [
+    "a coruna",
+    "la coruna",
+    "coruna",
+    "corunna"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#9FB2BC",
+    "mid": "#CBB590",
+    "ice": "#ECE5D6",
+    "water": "#2F6FA3",
+    "near": "#2B2A28",
+    "sun": "#F2C14E",
+    "leaf": "#7E9A4C",
+    "acc": "#A8957A",
+    "obj": "#D3C9B8"
+   }
+  },
+  {
    "slug": "a-fonsagrada",
    "label": "The church of Santa Maria with its granite belfry, A Fonsagrada",
    "lat": 43.1238,
@@ -164,6 +194,37 @@
     "leaf": "#3E6A34",
     "acc": "#C8845A",
     "obj": "#B8603E"
+   }
+  },
+  {
+   "slug": "antequera",
+   "label": "The Alcazaba of Antequera above the white town, with the Peña de los Enamorados",
+   "lat": 37.0195,
+   "lon": -4.5603,
+   "radius_km": 12,
+   "aliases": [
+    "alcazaba de antequera",
+    "alcazaba of antequera",
+    "antequera alcazaba",
+    "pena de los enamorados",
+    "lovers rock antequera",
+    "torre del homenaje antequera",
+    "alcazaba di antequera"
+   ],
+   "names": [
+    "antequera"
+   ],
+   "palette": {
+    "sky": "#A6CEF0",
+    "far": "#B7A487",
+    "mid": "#C9A56C",
+    "ice": "#F6F3EC",
+    "water": "#3F6B30",
+    "near": "#2B2218",
+    "sun": "#F4C430",
+    "leaf": "#5E8A3C",
+    "acc": "#C2673E",
+    "obj": "#C8C0B2"
    }
   },
   {
@@ -335,6 +396,67 @@
    }
   },
   {
+   "slug": "cap-de-creus",
+   "label": "The white lighthouse on the bare schist rocks of Cap de Creus",
+   "lat": 42.3191,
+   "lon": 3.3159,
+   "radius_km": 8,
+   "aliases": [
+    "cap de creus",
+    "cabo de creus",
+    "capo di creus",
+    "far de cap de creus",
+    "faro de cabo de creus",
+    "parc natural del cap de creus",
+    "cape creus"
+   ],
+   "palette": {
+    "sky": "#C0D8EE",
+    "far": "#9C8B76",
+    "mid": "#8C7A66",
+    "ice": "#F7F6F2",
+    "water": "#2D5C8C",
+    "near": "#24221F",
+    "sun": "#F2C14E",
+    "leaf": "#6D8A46",
+    "acc": "#D6A588",
+    "obj": "#4A5C56"
+   }
+  },
+  {
+   "slug": "cape-finisterre",
+   "label": "Fisterra lighthouse on Cape Finisterre above the Atlantic",
+   "lat": 42.8826,
+   "lon": -9.2718,
+   "radius_km": 6,
+   "aliases": [
+    "cape finisterre",
+    "cabo fisterra",
+    "cabo finisterre",
+    "capo finisterre",
+    "faro de fisterra",
+    "faro de finisterre",
+    "fisterra lighthouse",
+    "finisterre lighthouse"
+   ],
+   "names": [
+    "finisterre",
+    "fisterra"
+   ],
+   "palette": {
+    "sky": "#AACCEC",
+    "far": "#9C7A5E",
+    "mid": "#9A9A92",
+    "ice": "#F4F2EC",
+    "water": "#3E6E9C",
+    "near": "#25282A",
+    "sun": "#F5C842",
+    "leaf": "#6E8E3E",
+    "acc": "#B23A2E",
+    "obj": "#2F5FA0"
+   }
+  },
+  {
    "slug": "casa-batllo",
    "label": "Casa Batlló facade, Barcelona",
    "lat": 41.3916,
@@ -355,6 +477,38 @@
     "leaf": "#4F7F5C",
     "acc": "#C97A5C",
     "obj": "#3E8E8C"
+   }
+  },
+  {
+   "slug": "cave-of-el-castillo",
+   "label": "Red hand stencils and disks of the Panel of Hands in El Castillo cave, Puente Viesgo",
+   "lat": 43.2925,
+   "lon": -3.9653,
+   "radius_km": 4,
+   "aliases": [
+    "cueva de el castillo",
+    "cueva del castillo",
+    "cave of el castillo",
+    "el castillo cave",
+    "grotta di el castillo",
+    "monte castillo",
+    "cuevas de puente viesgo",
+    "cuevas del monte castillo"
+   ],
+   "names": [
+    "puente viesgo"
+   ],
+   "palette": {
+    "sky": "#CFE4F2",
+    "far": "#8EAA6A",
+    "mid": "#D9C8A8",
+    "ice": "#F0E4CA",
+    "water": "#6F98B0",
+    "near": "#241C18",
+    "sun": "#F2C14E",
+    "leaf": "#5E8E3E",
+    "acc": "#6C4E3E",
+    "obj": "#B03A22"
    }
   },
   {
@@ -1480,6 +1634,34 @@
    }
   },
   {
+   "slug": "picos-de-europa",
+   "label": "The Naranjo de Bulnes monolith above the pastures of the Picos de Europa, with a casina cow",
+   "lat": 43.2034,
+   "lon": -4.8145,
+   "radius_km": 35,
+   "aliases": [
+    "picos de europa",
+    "naranjo de bulnes",
+    "picu urriellu",
+    "pico urriellu"
+   ],
+   "names": [
+    "picos"
+   ],
+   "palette": {
+    "sky": "#A5C6EC",
+    "far": "#C8C5BB",
+    "mid": "#A9A59C",
+    "ice": "#F4F4F2",
+    "water": "#5B8FB8",
+    "near": "#2A2A28",
+    "sun": "#F3C54A",
+    "leaf": "#5C8A3A",
+    "acc": "#9A6A3E",
+    "obj": "#8E4E36"
+   }
+  },
+  {
    "slug": "plaza-mayor-madrid",
    "label": "Plaza Mayor, Madrid, with the Casa de la Panaderia",
    "lat": 40.4155,
@@ -1798,6 +1980,67 @@
     "leaf": "#4E7A3A",
     "acc": "#B8603E",
     "obj": "#9C8C74"
+   }
+  },
+  {
+   "slug": "sant-antoni-de-portmany",
+   "label": "The Egg of Columbus monument on the seafront of Sant Antoni de Portmany, Ibiza",
+   "lat": 38.978,
+   "lon": 1.304,
+   "radius_km": 10,
+   "aliases": [
+    "huevo de colon",
+    "egg of columbus",
+    "the egg sant antoni"
+   ],
+   "names": [
+    "sant antoni de portmany",
+    "sant antoni",
+    "san antonio",
+    "san antonio abad",
+    "san antonio ibiza",
+    "sant antoni ibiza",
+    "san antonio de portmany"
+   ],
+   "palette": {
+    "sky": "#A9D2F2",
+    "far": "#8C9C74",
+    "mid": "#9A9A96",
+    "ice": "#FAFAF6",
+    "water": "#2F86B8",
+    "near": "#22262A",
+    "sun": "#F6C431",
+    "leaf": "#5E9440",
+    "acc": "#E6DCC8",
+    "obj": "#7A5A3C"
+   }
+  },
+  {
+   "slug": "santa-cruz-de-tenerife",
+   "label": "The Auditorio de Tenerife by the sea, Santa Cruz de Tenerife",
+   "lat": 28.4562,
+   "lon": -16.2518,
+   "radius_km": 12,
+   "aliases": [
+    "auditorio de tenerife",
+    "auditorio adan martin"
+   ],
+   "names": [
+    "santa cruz de tenerife",
+    "santa cruz tenerife",
+    "s cruz de tenerife"
+   ],
+   "palette": {
+    "sky": "#C6DFF2",
+    "far": "#8E8A78",
+    "mid": "#45423F",
+    "ice": "#F5F4F0",
+    "water": "#3D7099",
+    "near": "#24272B",
+    "sun": "#F6C843",
+    "leaf": "#6E8A4A",
+    "acc": "#D6D1C6",
+    "obj": "#A59D90"
    }
   },
   {
@@ -2190,6 +2433,38 @@
     "leaf": "#6E8450",
     "acc": "#A88C6C",
     "obj": "#5EC4C8"
+   }
+  },
+  {
+   "slug": "vitoria-gasteiz",
+   "label": "Plaza de la Virgen Blanca with the Battle of Vitoria monument and San Miguel church, Vitoria-Gasteiz",
+   "lat": 42.8467,
+   "lon": -2.6727,
+   "radius_km": 15,
+   "aliases": [
+    "plaza de la virgen blanca",
+    "virgen blanca",
+    "andre maria zuriaren plaza",
+    "monumento a la batalla de vitoria"
+   ],
+   "names": [
+    "vitoria",
+    "vitoria gasteiz",
+    "gasteiz",
+    "vitoria gasteiz old town",
+    "vitoria old town"
+   ],
+   "palette": {
+    "sky": "#A6CAEC",
+    "far": "#C9B595",
+    "mid": "#E3DACA",
+    "ice": "#F6F4EE",
+    "water": "#7B95A8",
+    "near": "#262625",
+    "sun": "#F5C633",
+    "leaf": "#4E7E3A",
+    "acc": "#B04A30",
+    "obj": "#4A5A50"
    }
   },
   {

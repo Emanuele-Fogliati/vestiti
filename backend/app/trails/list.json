@@ -8,17 +8,17 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Fitz Roy trailhead, El Chaltén",
-     "reuse": null
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "mirador",
      "name": "Mirador del Fitz Roy",
-     "reuse": null
+     "reuse": "ar-mirador-fitz-roy"
     },
     {
      "point": "capri",
@@ -28,7 +28,7 @@
     {
      "point": "poincenot",
      "name": "Campamento Poincenot",
-     "reuse": "ar-loma-del-pliegue-tumbado"
+     "reuse": "ar-campamento-poincenot"
     },
     {
      "point": "goal",
@@ -44,27 +44,27 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Laguna Torre trailhead, El Chaltén",
-     "reuse": null
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "mirador",
      "name": "Mirador del Torre",
-     "reuse": null
+     "reuse": "ar-mirador-del-torre"
     },
     {
      "point": "agostini",
      "name": "Campamento De Agostini",
-     "reuse": null
+     "reuse": "ar-campamento-de-agostini"
     },
     {
      "point": "goal",
      "name": "Laguna Torre",
-     "reuse": null
+     "reuse": "ar-laguna-torre"
     }
    ]
   },
@@ -75,22 +75,22 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Los Glaciares visitor centre, El Chaltén",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "ridge",
      "name": "Pliegue Tumbado ridge, above the forest",
-     "reuse": null
+     "reuse": "ar-pliegue-tumbado-ridge"
     },
     {
      "point": "goal",
      "name": "Loma del Pliegue Tumbado",
-     "reuse": null
+     "reuse": "ar-loma-del-pliegue-tumbado"
     }
    ]
   },
@@ -101,17 +101,17 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Fitz Roy trailhead, El Chaltén",
-     "reuse": null
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "river",
      "name": "Mirador del Río de las Vueltas",
-     "reuse": null
+     "reuse": "ar-rio-de-las-vueltas"
     },
     {
      "point": "goal",
@@ -127,12 +127,12 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Los Glaciares visitor centre, El Chaltén",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "condores",
@@ -142,7 +142,7 @@
     {
      "point": "goal",
      "name": "Mirador de las Águilas",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-mirador-de-las-aguilas"
     }
    ]
   },
@@ -153,32 +153,32 @@
    "slot": "AR-A",
    "base": "El Chaltén",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Los Glaciares visitor centre, El Chaltén",
-     "reuse": "ar-mirador-de-los-condores"
+     "reuse": "ar-el-chalten"
     },
     {
      "point": "toro",
      "name": "Laguna Toro",
-     "reuse": null
+     "reuse": "ar-laguna-toro"
     },
     {
      "point": "paso-viento",
      "name": "Paso del Viento, Southern Ice Field view",
-     "reuse": null
+     "reuse": "ar-paso-del-viento"
     },
     {
      "point": "paso-huemul",
      "name": "Paso Huemul above the Viedma glacier",
-     "reuse": null
+     "reuse": "ar-paso-huemul"
     },
     {
      "point": "goal",
      "name": "Bahía Túnel on Lago Viedma",
-     "reuse": null
+     "reuse": "ar-bahia-tunel"
     }
    ]
   },
@@ -531,7 +531,7 @@
    "slot": "CL-B",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -545,23 +545,23 @@
     },
     {
      "point": "goal",
-     "name": "Grey Glacier lookout on the peninsula",
-     "reuse": null
+     "name": "Grey Glacier lookout, Isla de los Hielos",
+     "reuse": "cl-grey-glacier"
     }
    ]
   },
   {
    "id": "cl-cerro-castillo",
-   "name": "Laguna Cerro Castillo",
+   "name": "Laguna Cerro Castillo by the Estero Parada",
    "country": "CL",
    "slot": "CL-B",
    "base": "Villa Cerro Castillo",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
-     "name": "Villa Cerro Castillo",
+     "name": "Estero Parada trailhead, Villa Cerro Castillo",
      "reuse": null
     },
     {
@@ -583,7 +583,7 @@
    "slot": "CL-B",
    "base": "Pucón",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -598,7 +598,7 @@
     {
      "point": "goal",
      "name": "Villarrica crater rim",
-     "reuse": "cl-villarrica-volcano"
+     "reuse": null
     }
    ]
   },
@@ -609,7 +609,7 @@
    "slot": "CL-B",
    "base": "Santiago",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -623,19 +623,19 @@
     },
     {
      "point": "goal",
-     "name": "El Morado glacier foot",
+     "name": "San Francisco glacier foot, El Morado",
      "reuse": null
     }
    ]
   },
   {
    "id": "cl-la-campana",
-   "name": "Cerro La Campana, Darwin's summit",
+   "name": "Cerro La Campana by the Andinista trail",
    "country": "CL",
    "slot": "CL-B",
    "base": "Valparaíso",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -661,10 +661,10 @@
    "slot": "CL-B",
    "base": "Puerto Williams",
    "kind": "multiday",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
-     "point": "start",
+     "point": "bandera",
      "name": "Cerro Bandera, Puerto Williams",
      "reuse": null
     },
@@ -675,11 +675,11 @@
     },
     {
      "point": "teeth",
-     "name": "Dientes de Navarino from Paso Australia",
+     "name": "Dientes de Navarino over Laguna Escondida",
      "reuse": null
     },
     {
-     "point": "goal",
+     "point": "martillo",
      "name": "Laguna Martillo, Navarino",
      "reuse": null
     }
@@ -1054,32 +1054,32 @@
    "slot": "IS-A",
    "base": "Landmannalaugar",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Landmannalaugar rhyolite mountains",
-     "reuse": null
+     "point": "start",
+     "name": "Landmannalaugar hut",
+     "reuse": "is-landmannalaugar"
     },
     {
-     "point": null,
-     "name": "Hrafntinnusker obsidian and steam vents",
-     "reuse": null
+     "point": "hrafntinnusker",
+     "name": "Hrafntinnusker hut",
+     "reuse": "is-hrafntinnusker"
     },
     {
-     "point": null,
-     "name": "Álftavatn lake",
-     "reuse": null
+     "point": "alftavatn",
+     "name": "Álftavatn hut",
+     "reuse": "is-alftavatn"
     },
     {
-     "point": null,
-     "name": "Markarfljótsgljúfur canyon at Emstrur",
-     "reuse": null
+     "point": "emstrur",
+     "name": "Emstrur (Botnar) hut",
+     "reuse": "is-emstrur"
     },
     {
-     "point": null,
-     "name": "Þórsmörk",
-     "reuse": null
+     "point": "goal",
+     "name": "Þórsmörk, Langidalur hut",
+     "reuse": "is-thorsmork"
     }
    ]
   },
@@ -1090,27 +1090,27 @@
    "slot": "IS-A",
    "base": "Skógar",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Skógafoss",
+     "point": "start",
+     "name": "Skógafoss, Skógar",
+     "reuse": "is-skogafoss"
+    },
+    {
+     "point": "waterfalls",
+     "name": "The Skógá waterfalls",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Skógá river waterfalls",
+     "point": "baldvinsskali",
+     "name": "Baldvinsskáli hut",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "craters",
      "name": "Magni and Móði craters",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Heljarkambur ridge above Þórsmörk",
-     "reuse": null
+     "reuse": "is-fimmvorduhals"
     }
    ]
   },
@@ -1121,21 +1121,21 @@
    "slot": "IS-A",
    "base": "Þórsmörk",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Langidalur hut, Þórsmörk",
+     "point": "start",
+     "name": "Langidalur hut (Skagfjörðsskáli)",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Valahnúkur summit view of three glaciers",
-     "reuse": null
+     "point": "krossa",
+     "name": "Krossá view on the ridge",
+     "reuse": "is-thorsmork"
     },
     {
-     "point": null,
-     "name": "Krossá river braids",
+     "point": "goal",
+     "name": "Valahnúkur summit",
      "reuse": null
     }
    ]
@@ -1147,25 +1147,25 @@
    "slot": "IS-A",
    "base": "Landmannalaugar",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Landmannalaugar hot spring",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Laugahraun obsidian lava field",
+     "point": "laugahraun",
+     "name": "Laugahraun lava field",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "brennisteinsalda",
      "name": "Brennisteinsalda",
-     "reuse": null
+     "reuse": "is-landmannalaugar"
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Bláhnúkur summit",
      "reuse": null
     }
@@ -1178,21 +1178,21 @@
    "slot": "IS-A",
    "base": "Hveragerði",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Hveragerði trailhead",
+     "point": "start",
+     "name": "Reykjadalur trailhead, Hveragerði",
+     "reuse": "is-hveragerdi"
+    },
+    {
+     "point": "valley",
+     "name": "Djúpagilsfoss and the steaming valley",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Steaming Reykjadalur valley",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Reykjadalur bathing river boardwalk",
+     "point": "goal",
+     "name": "Reykjadalsá bathing boardwalk",
      "reuse": null
     }
    ]
@@ -1204,22 +1204,22 @@
    "slot": "IS-A",
    "base": "Hvalfjörður",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Botnsá cave entrance",
+     "point": "cave",
+     "name": "Þvottahellir cave",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "log",
      "name": "Log crossing on the Botnsá",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Glymur gorge",
-     "reuse": null
+     "point": "goal",
+     "name": "Glymur gorge viewpoint",
+     "reuse": "is-hvalfjordur"
     }
    ]
   },
@@ -1386,25 +1386,25 @@
    "slot": "IT-A",
    "base": "Misurina",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "auronzo",
      "name": "Rifugio Auronzo",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "forcella",
      "name": "Forcella Lavaredo",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Locatelli with the Tre Cime north faces",
-     "reuse": null
+     "point": "locatelli",
+     "name": "Rifugio Locatelli",
+     "reuse": "it-dolomites"
     },
     {
-     "point": null,
+     "point": "langalm",
      "name": "Malga Langalm",
      "reuse": null
     }
@@ -1417,21 +1417,21 @@
    "slot": "IT-A",
    "base": "Cortina d'Ampezzo",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "tre-croci",
      "name": "Passo Tre Croci",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Sorapis trail ledge with cables",
+     "point": "ledges",
+     "name": "Cabled ledges on path 215",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Lago di Sorapis with the Dito di Dio",
+     "point": "lake",
+     "name": "Lago di Sorapis",
      "reuse": null
     }
    ]
@@ -1443,20 +1443,25 @@
    "slot": "IT-A",
    "base": "Misurina",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "misurina",
      "name": "Lago di Misurina",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Col de Varda",
+     "point": "antorno",
+     "name": "Lago d'Antorno",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "auronzo",
+     "name": "Rifugio Auronzo",
+     "reuse": null
+    },
+    {
+     "point": "viewpoint",
      "name": "Cadini di Misurina viewpoint",
      "reuse": null
     }
@@ -1469,21 +1474,16 @@
    "slot": "IT-A",
    "base": "Braies",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "boathouse",
      "name": "Lago di Braies boathouse",
-     "reuse": null
+     "reuse": "it-lago-di-braies"
     },
     {
-     "point": null,
-     "name": "Lago di Braies far shore",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Croda del Becco over Lago di Braies",
+     "point": "south",
+     "name": "Lago di Braies south shore",
      "reuse": null
     }
    ]
@@ -1493,28 +1493,28 @@
    "name": "Alta Via 1 of the Dolomites",
    "country": "IT",
    "slot": "IT-A",
-   "base": "Cortina d'Ampezzo",
+   "base": "Braies",
    "kind": "multiday",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "braies",
      "name": "Lago di Braies",
-     "reuse": null
+     "reuse": "it-lago-di-braies"
     },
     {
-     "point": null,
+     "point": "lagazuoi",
      "name": "Rifugio Lagazuoi",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Lago Coldai with Civetta",
+     "point": "coldai",
+     "name": "Lago Coldai",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Tissi with the Civetta wall",
+     "point": "tissi",
+     "name": "Rifugio Tissi",
      "reuse": null
     }
    ]
@@ -1526,25 +1526,20 @@
    "slot": "IT-A",
    "base": "Ortisei",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Seceda cable car top",
-     "reuse": null
-    },
-    {
-     "point": null,
+     "point": "ridge",
      "name": "Seceda ridge with the Odle",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Pieralongia meadows",
+     "point": "pieralongia",
+     "name": "Pieralongia",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "col-raiser",
      "name": "Col Raiser",
      "reuse": null
     }
@@ -1557,20 +1552,20 @@
    "slot": "IT-B",
    "base": "Val di Funes",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
-     "name": "San Giovanni in Ranui church",
+     "point": "start",
+     "name": "Malga Zannes under the Odle",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Malga Zannes",
+     "point": "munkel",
+     "name": "Adolf Munkel path under the Odle walls",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Malga Geisler under the Odle",
      "reuse": null
     }
@@ -1583,20 +1578,20 @@
    "slot": "IT-B",
    "base": "Positano",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Bomerano, Agerola",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "praiano",
      "name": "Sentiero degli Dei above Praiano",
-     "reuse": null
+     "reuse": "it-path-of-the-gods"
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Nocelle over Positano",
      "reuse": null
     }
@@ -1609,20 +1604,20 @@
    "slot": "IT-B",
    "base": "Cinque Terre",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Monterosso al Mare",
-     "reuse": null
+     "reuse": "it-monterosso-al-mare"
     },
     {
-     "point": null,
+     "point": "vernazza",
      "name": "Vernazza from the path",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Corniglia",
      "reuse": null
     }
@@ -1635,20 +1630,20 @@
    "slot": "IT-B",
    "base": "Catania",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Crateri Silvestri at Rifugio Sapienza",
-     "reuse": null
+     "reuse": "it-silvestri-craters"
     },
     {
-     "point": null,
+     "point": "cablecar",
      "name": "Etna cable car top and ash slopes",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Etna summit craters",
      "reuse": null
     }
@@ -1661,21 +1656,16 @@
    "slot": "IT-B",
    "base": "Courmayeur",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Val Ferret meadows",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Bonatti",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Grandes Jorasses from Rifugio Bonatti",
+     "point": "goal",
+     "name": "Rifugio Bonatti under the Grandes Jorasses",
      "reuse": null
     }
    ]
@@ -1687,20 +1677,20 @@
    "slot": "IT-B",
    "base": "Valsavarenche",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Pont, Valsavarenche",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "moraine",
      "name": "Gran Paradiso from the moraine",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Rifugio Vittorio Emanuele II",
      "reuse": null
     }

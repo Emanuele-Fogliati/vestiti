@@ -1,0 +1,72 @@
+{
+ "id": "it-etna",
+ "country": "IT",
+ "name": "Etna summit craters",
+ "base": "Catania",
+ "region": "Etna Park, Sicily",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  7,
+  9
+ ],
+ "start_by": "08:00",
+ "why": "Walk up black ash past lava flows from the 2000s to the edge of Europe's highest active volcano, 3,300 m above the sea you can see.",
+ "book": "Above Torre del Filosofo (2,920 m) only with an authorised volcano guide; guides save 5 hours with the cable car to 2,500 m and a 4x4 to 2,900 m. The summit is closed by the mayors' ordinances whenever Etna erupts (closed in August 2026): check the day before.",
+ "water": "Only at Rifugio Sapienza and the cable-car top bar: carry 2-3 litres.",
+ "dangers": [
+  "Volcanic gas and sudden explosions near the craters: follow the guide.",
+  "Cold wind and fog at 3,000 m even in August.",
+  "Loose ash: heavy going up, ankles on the way down."
+ ],
+ "turnaround": "Turn back where the guide or the ordinance says; without a guide your limit is Torre del Filosofo.",
+ "sources": [
+  "https://www.etnatracking.com/en/refuge-sapienza-torre-del-filosofo",
+  "https://www.guidetna.it/en/excursion-south-etna-summit-craters.html",
+  "https://organizzazione.cai.it/sez-catania/wp-content/uploads/sites/16/2026/08/Belpasso-ord_00135_10-08-2026.pdf"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Crateri Silvestri at Rifugio Sapienza",
+   "lat": 37.70129,
+   "lon": 15.00475,
+   "role": "start",
+   "note": "1,910 m: the end of the road, the cable-car station and the Silvestri cones of 1892.",
+   "scene": "it-silvestri-craters"
+  },
+  {
+   "id": "cablecar",
+   "name": "Etna cable car top (Montagnola)",
+   "lat": 37.71802,
+   "lon": 14.99877,
+   "role": "point",
+   "note": "2,500 m, the top of the cable car: black ash slopes; the free walking limit without a guide."
+  },
+  {
+   "id": "filosofo",
+   "name": "Torre del Filosofo",
+   "lat": 37.73782,
+   "lon": 15.00107,
+   "role": "point",
+   "note": "2,920 m: the 4x4 buses stop here. Above, only with a guide."
+  },
+  {
+   "id": "goal",
+   "name": "Etna summit craters",
+   "lat": 37.747,
+   "lon": 14.999,
+   "role": "goal",
+   "note": "The rim of the summit area near the South-East Crater, about 3,200 m, smoking fumaroles and yellow sulphur."
+  }
+ ]
+}
