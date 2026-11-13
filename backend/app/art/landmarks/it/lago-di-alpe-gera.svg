@@ -1,0 +1,16 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="26" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-it-lago-di-alpe-gera-m"><path d="M46 116L62 98L76 86L90 74L102 62L112 52L120 44L128 50L136 56L148 58L160 56L172 52L180 48L188 40L196 48L208 60L222 74L236 90L250 104L258 116Z"/></clipPath></defs>
+<path d="M46 116L62 98L76 86L90 74L102 62L112 52L120 44L128 50L136 56L148 58L160 56L172 52L180 48L188 40L196 48L208 60L222 74L236 90L250 104L258 116Z" fill="var(--il-far)"/>
+<path d="M132 40H176V52L172 60L166 68L160 64L154 76L148 72L142 68L136 60L132 54Z" fill="var(--il-ice)" clip-path="url(#il-it-lago-di-alpe-gera-m)"/>
+<path d="M104 70L98 96M118 58L114 92M196 58L202 92M214 70L218 98M140 76L136 100M164 74L168 100M88 84L84 104" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M30 122V106H270V122Z" fill="var(--il-water)"/>
+<path d="M36 118H264V125H36Z" fill="var(--il-obj)"/>
+<path d="M40 125H260L232 178H68Z" fill="var(--il-obj)"/>
+<path d="M78 128L86 176M106 128L110 178M134 128L136 178M162 128L162 178M190 128L188 178M218 128L214 176M54 140H246" stroke="var(--il-near)" stroke-width="0.7" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 200V40L14 36L28 44L40 58L50 74L58 90L64 104L66 120L80 160L96 200Z" fill="var(--il-mid)"/>
+<path d="M300 200V32L286 36L272 46L260 60L250 76L242 92L236 106L234 120L220 160L204 200Z" fill="var(--il-mid)"/>
+<path d="M14 36L28 44L40 58L34 94L22 130L16 92ZM286 36L272 46L268 80L274 130L284 92Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M46 90L40 120M58 130L50 160M250 92L256 120M240 134L248 164" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V174Q50 168 92 176H208Q250 168 300 174V200Z" fill="var(--il-acc)"/>
+<path d="M20 198Q22 184 40 184Q58 184 62 198ZM238 198Q242 186 258 186Q274 188 276 200Z" fill="var(--il-mid)"/>
