@@ -23,7 +23,7 @@
  "start_by": "07:00",
  "published": {
   "km": 19,
-  "gain_m": 900,
+  "gain_m": null,
   "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
  },
  "why": "The three granite towers over their glacier lake: the picture of Patagonia, earned in one long day.",
@@ -44,34 +44,36 @@
   {
    "id": "start",
    "name": "Hotel Las Torres, Torres del Paine",
-   "lat": -50.9525,
-   "lon": -72.8644,
+   "lat": -50.97316,
+   "lon": -72.87498,
    "role": "start",
    "note": "The Welcome Centre and park bus stop are 10 minutes before the hotel."
   },
   {
    "id": "vientos",
    "name": "Paso de los Vientos, Valle Ascencio",
-   "lat": -50.9352,
-   "lon": -72.8954,
+   "lat": -50.96342,
+   "lon": -72.90271,
    "role": "point",
-   "note": "After 1 h of climbing: the trail turns into the Ascencio valley above the river."
+   "note": "After 1 h of climbing: the trail turns into the Ascencio valley above the river.",
+   "scene": "cl-valle-ascencio"
   },
   {
    "id": "chileno",
    "name": "Refugio Chileno",
-   "lat": -50.93,
-   "lon": -72.912,
+   "lat": -50.95725,
+   "lon": -72.91065,
    "role": "point",
    "note": "Hut, toilets and water. Then 1 h of forest to Campamento Torres."
   },
   {
    "id": "goal",
    "name": "Mirador Base Las Torres",
-   "lat": -50.942,
-   "lon": -72.9683,
+   "lat": -50.94267,
+   "lon": -72.94966,
    "role": "goal",
-   "note": "About 870 m, after 45-60 min on the boulder moraine: the towers over the lake."
+   "note": "About 870 m, after 45-60 min on the boulder moraine: the towers over the lake.",
+   "scene": "cl-base-de-las-torres"
   }
  ]
 }

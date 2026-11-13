@@ -19,14 +19,14 @@
   5
  ],
  "hours": [
-  1.5,
-  2.5
+  1,
+  2
  ],
  "start_by": "17:00",
  "published": {
-  "km": 4,
-  "gain_m": 300,
-  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+  "km": 2.4,
+  "gain_m": null,
+  "source": "https://torresdelpaine.com/en/tourist-attraction/condor-viewpoint"
  },
  "why": "A short, steep climb to the whole Paine massif over Lago Pehoé's turquoise; condors ride the wind at the top.",
  "book": "Park entry online. Starts by Camping Pehoé.",
@@ -36,22 +36,24 @@
  ],
  "turnaround": "",
  "sources": [
+  "https://torresdelpaine.com/en/tourist-attraction/condor-viewpoint",
   "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
  ],
  "points": [
   {
    "id": "start",
    "name": "Camping Pehoé",
-   "lat": -51.088,
-   "lon": -72.999,
+   "lat": -51.10789,
+   "lon": -72.98811,
    "role": "start",
-   "note": "By the lake shore, at the camp entrance."
+   "note": "By the lake shore, at the camp entrance.",
+   "scene": "cl-lake-pehoe"
   },
   {
    "id": "goal",
    "name": "Mirador Cóndor",
-   "lat": -51.095,
-   "lon": -73.011,
+   "lat": -51.10165,
+   "lon": -72.97811,
    "role": "goal",
    "note": "The massif across Lago Pehoé, the hotel island below."
   }
