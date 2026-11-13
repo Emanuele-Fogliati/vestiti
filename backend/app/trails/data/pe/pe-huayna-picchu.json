@@ -22,11 +22,6 @@
   3
  ],
  "start_by": "07:00",
- "published": {
-  "km": 4,
-  "gain_m": 360,
-  "source": "https://www.machupicchu.gob.pe"
- },
  "why": "The steep peak behind Machu Picchu: Inca stairs to terraces on the summit and the whole citadel straight below.",
  "book": "A Machu Picchu ticket that includes Huayna Picchu (limited per time slot), booked months ahead for May-September.",
  "water": "Carry 1 litre; no food allowed in the citadel.",
@@ -36,32 +31,35 @@
  ],
  "turnaround": "You must be back at the control by the time on your ticket.",
  "sources": [
-  "https://www.machupicchu.gob.pe"
+  "https://en.wikivoyage.org/wiki/Machu_Picchu",
+  "https://www.machupicchu.gob.pe",
+  "https://www.openstreetmap.org/way/42871036"
  ],
  "points": [
   {
    "id": "start",
    "name": "Huayna Picchu control, Machu Picchu",
-   "lat": -13.1617,
-   "lon": -72.5455,
+   "lat": -13.16159,
+   "lon": -72.54579,
    "role": "start",
-   "note": "Sign in at the hut past the Sacred Rock."
+   "note": "The control hut past the Sacred Rock, at the north end of the citadel: sign in and out with your Huayna Picchu ticket.",
+   "scene": "pe-huayna-picchu"
   },
   {
    "id": "stairs",
    "name": "Huayna Picchu Inca stairs",
-   "lat": -13.1595,
-   "lon": -72.546,
+   "lat": -13.159,
+   "lon": -72.5462,
    "role": "point",
-   "note": "The 'stairs of death': hold the cable."
+   "note": "Narrow Inca steps cut into the cliff, steel cables to hold; very steep and slippery when wet."
   },
   {
    "id": "goal",
    "name": "Huayna Picchu summit terraces",
-   "lat": -13.1569,
-   "lon": -72.5458,
+   "lat": -13.15666,
+   "lon": -72.54599,
    "role": "goal",
-   "note": "About 2,700 m: Machu Picchu straight below."
+   "note": "About 2,690 m: terraces near the top, a tight squeeze through a rock tunnel, then Machu Picchu straight below."
   }
  ]
 }

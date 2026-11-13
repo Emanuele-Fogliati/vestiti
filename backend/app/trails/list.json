@@ -692,12 +692,17 @@
    "slot": "PE-A",
    "base": "Cusco",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
      "name": "Km 82, Piscacucho bridge",
      "reuse": null
+    },
+    {
+     "point": "wayllabamba",
+     "name": "Wayllabamba",
+     "reuse": "pe-huayllabamba"
     },
     {
      "point": "pass",
@@ -710,9 +715,14 @@
      "reuse": "pe-winay-wayna"
     },
     {
-     "point": "goal",
+     "point": "sungate",
      "name": "Inti Punku, the Sun Gate",
      "reuse": "pe-intipunku"
+    },
+    {
+     "point": "goal",
+     "name": "Machu Picchu",
+     "reuse": "pe-machu-picchu"
     }
    ]
   },
@@ -723,12 +733,12 @@
    "slot": "PE-A",
    "base": "Cusco",
    "kind": "multiday",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
      "name": "Soraypampa under Nevado Salkantay",
-     "reuse": null
+     "reuse": "pe-salkantay"
     },
     {
      "point": "pass",
@@ -736,14 +746,24 @@
      "reuse": null
     },
     {
+     "point": "collpapampa",
+     "name": "Collpapampa and Chaullay",
+     "reuse": "pe-chaullay"
+    },
+    {
      "point": "forest",
-     "name": "Santa Teresa valley cloud forest",
+     "name": "La Playa, Santa Teresa valley cloud forest",
+     "reuse": null
+    },
+    {
+     "point": "llactapata",
+     "name": "Llactapata ruins, Machu Picchu view",
      "reuse": null
     },
     {
      "point": "goal",
-     "name": "Llactapata ruins, Machu Picchu view",
-     "reuse": null
+     "name": "Aguas Calientes",
+     "reuse": "pe-aguas-calientes"
     }
    ]
   },
@@ -754,17 +774,12 @@
    "slot": "PE-A",
    "base": "Cusco",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
-     "name": "Vinicunca trailhead with alpacas",
+     "name": "Vinicunca trailhead with alpacas and Ausangate",
      "reuse": null
-    },
-    {
-     "point": "valley",
-     "name": "Vinicunca valley with Ausangate",
-     "reuse": "pe-rainbow-mountain"
     },
     {
      "point": "goal",
@@ -774,7 +789,7 @@
     {
      "point": "red",
      "name": "Red Valley (Valle Rojo)",
-     "reuse": null
+     "reuse": "pe-red-valley"
     }
    ]
   },
@@ -785,12 +800,12 @@
    "slot": "PE-A",
    "base": "Cusco",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
      "name": "Soraypampa under Nevado Salkantay",
-     "reuse": null
+     "reuse": "pe-salkantay"
     },
     {
      "point": "climb",
@@ -800,7 +815,7 @@
     {
      "point": "goal",
      "name": "Humantay Lake",
-     "reuse": null
+     "reuse": "pe-humantay-lake"
     }
    ]
   },
@@ -811,7 +826,7 @@
    "slot": "PE-A",
    "base": "Machu Picchu",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -821,12 +836,12 @@
     {
      "point": "stairs",
      "name": "Huayna Picchu Inca stairs",
-     "reuse": "pe-huayna-picchu"
+     "reuse": null
     },
     {
      "point": "goal",
-     "name": "Huayna Picchu summit terraces",
-     "reuse": "pe-huayna-picchu"
+     "name": "Machu Picchu from Huayna Picchu summit",
+     "reuse": null
     }
    ]
   },
@@ -837,7 +852,7 @@
    "slot": "PE-A",
    "base": "Machu Picchu",
    "kind": "day",
-   "status": "draft",
+   "status": "checked",
    "scenes": [
     {
      "point": "start",
@@ -847,12 +862,12 @@
     {
      "point": "stairs",
      "name": "Machu Picchu Mountain stone stairway",
-     "reuse": "pe-machu-picchu"
+     "reuse": null
     },
     {
      "point": "goal",
-     "name": "Machu Picchu Mountain",
-     "reuse": "pe-machu-picchu"
+     "name": "Machu Picchu from Machu Picchu Mountain summit",
+     "reuse": null
     }
    ]
   },
