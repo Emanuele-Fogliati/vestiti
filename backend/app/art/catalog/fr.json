@@ -3,6 +3,34 @@
  "name": "France",
  "places": [
   {
+   "slug": "agriates-desert",
+   "label": "White sand beach on a turquoise bay below the maquis hills of the Agriates, with a Corsican cow",
+   "lat": 42.7,
+   "lon": 9.18,
+   "radius_km": 12,
+   "aliases": [
+    "agriates",
+    "desert des agriates",
+    "deserto delle agriate",
+    "saleccia",
+    "plage du lotu",
+    "plage de loto",
+    "lotu beach"
+   ],
+   "palette": {
+    "sky": "#A8CDEC",
+    "far": "#8E9AAE",
+    "mid": "#A8A878",
+    "ice": "#F4EFE0",
+    "water": "#3FBCC2",
+    "near": "#24261E",
+    "sun": "#F4C430",
+    "leaf": "#4F6236",
+    "acc": "#B9B4A6",
+    "obj": "#8A5A3A"
+   }
+  },
+  {
    "slug": "aiguille-du-midi",
    "label": "The Aiguille du Midi granite spire with its cable-car station and summit mast",
    "lat": 45.8786,
@@ -2017,6 +2045,65 @@
     "leaf": "#5C7E38",
     "acc": "#C8A060",
     "obj": "#B04A30"
+   }
+  },
+  {
+   "slug": "porto",
+   "label": "Genoese tower of Porto on its red granite rock, Corsica",
+   "lat": 42.2667,
+   "lon": 8.695,
+   "radius_km": 8,
+   "aliases": [
+    "tour de porto",
+    "torre di porto",
+    "tour genoise de porto",
+    "golfe de porto",
+    "golfo di porto",
+    "porto ota",
+    "ota porto",
+    "porto corse",
+    "porto corsica"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#8AA08E",
+    "mid": "#CC7658",
+    "ice": "#F2ECE2",
+    "water": "#3B7FA2",
+    "near": "#2B2321",
+    "sun": "#F2C14E",
+    "leaf": "#5F7E3C",
+    "acc": "#C8A27C",
+    "obj": "#FFFFFF"
+   }
+  },
+  {
+   "slug": "provencal-colorado",
+   "label": "The red and yellow ochre spires of the Colorado Provencal, Rustrel",
+   "lat": 43.918,
+   "lon": 5.483,
+   "radius_km": 5,
+   "aliases": [
+    "colorado provencal",
+    "provencal colorado",
+    "colorado de rustrel",
+    "ocres de rustrel",
+    "colorado provenzale"
+   ],
+   "names": [
+    "rustrel"
+   ],
+   "palette": {
+    "sky": "#AFD2F0",
+    "far": "#7E8C66",
+    "mid": "#D9772E",
+    "ice": "#EFE9DE",
+    "water": "#4A88B0",
+    "near": "#2A2018",
+    "sun": "#F5C744",
+    "leaf": "#5C863C",
+    "acc": "#BE4A2A",
+    "obj": "#E6AE48"
    }
   },
   {

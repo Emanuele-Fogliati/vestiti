@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 112V98H300V112Z" fill="var(--il-far)"/>
+<path d="M52 110Q76 94 100 88Q124 74 152 70Q178 58 208 60Q240 54 268 62Q288 66 300 68V114H52Z" fill="var(--il-mid)"/>
+<path d="M58 110Q64 102 72 104Q78 98 86 101Q94 95 102 99Q110 93 120 97Q128 91 138 95Q148 89 158 93Q168 87 178 91Q190 85 200 89Q212 84 222 88Q234 83 244 87Q256 82 266 86Q278 82 290 86L300 84V114H58Z" fill="var(--il-leaf)"/>
+<path d="M0 200V110H300V200Z" fill="var(--il-water)"/>
+<path d="M300 200V107Q200 107 120 109Q90 110 62 112Q120 118 168 134Q216 156 230 200Z" fill="var(--il-acc)"/>
+<path d="M216 132Q214 112 206 96M252 152Q252 124 260 102M284 176Q286 146 294 124" stroke="var(--il-obj)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<g transform="translate(206 96) scale(1.2)"><path d="M0 0Q-10 -8 -20 -2Q-10 -4 0 1Q10 -9 20 -3Q10 -5 0 1Q-7 5 -13 15Q-4 5 0 1Q8 5 13 15Q5 3 0 0ZM0 0Q-4 -12 -13 -14Q-5 -9 0 1ZM0 0Q6 -12 15 -12Q6 -8 0 1Z" fill="var(--il-leaf)"/></g>
+<g transform="translate(260 102) scale(1.35)"><path d="M0 0Q-10 -8 -20 -2Q-10 -4 0 1Q10 -9 20 -3Q10 -5 0 1Q-7 5 -13 15Q-4 5 0 1Q8 5 13 15Q5 3 0 0ZM0 0Q-4 -12 -13 -14Q-5 -9 0 1ZM0 0Q6 -12 15 -12Q6 -8 0 1Z" fill="var(--il-leaf)"/></g>
+<g transform="translate(294 124) scale(1.5)"><path d="M0 0Q-10 -8 -20 -2Q-10 -4 0 1Q10 -9 20 -3Q10 -5 0 1Q-7 5 -13 15Q-4 5 0 1Q8 5 13 15Q5 3 0 0ZM0 0Q-4 -12 -13 -14Q-5 -9 0 1ZM0 0Q6 -12 15 -12Q6 -8 0 1Z" fill="var(--il-leaf)"/></g>
+<path d="M10 152V140M30 152V140M50 152V140M60 140V122M80 140V122" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M0 142V138H86V142Z" fill="var(--il-obj)"/>
+<path d="M52 125L70 110L88 125Z" fill="var(--il-obj)"/>
