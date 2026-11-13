@@ -1,0 +1,12 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="52" cy="28" r="12" fill="var(--il-sun)"/>
+<path d="M168 140L180 104L192 84L200 70L206 58L212 62L218 46L224 52L230 40L236 46L242 34L248 44L254 40L262 56L268 52L276 66L284 64L292 76L300 74V140Z" fill="var(--il-mid)"/>
+<path d="M10 140L40 100Q62 80 84 66L94 60L98 46L102 36Q124 34 150 32L154 34Q156 50 160 62Q166 72 170 86L180 104L192 140Z" fill="var(--il-mid)"/>
+<path d="M150 32L154 34Q156 50 160 62Q166 72 170 86L180 104L192 140H166Q158 104 156 80Q150 56 146 34Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M242 34L248 44Q242 60 246 84Q238 74 232 78Q240 58 242 34ZM218 46L224 52Q218 64 220 82L212 74Q216 62 218 46ZM262 56L268 52Q266 70 272 88L264 84Q264 70 262 56Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M104 42Q126 40 146 38M98 52Q110 56 118 70" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 142V50L6 40L12 52L18 44L24 56L30 48L36 62L42 56L48 70L54 64L60 78L66 72L72 86L78 80L84 94L90 90L96 104L102 100L108 112L114 108L120 120L126 116L132 126L138 124H170L176 120L182 124L190 112L196 120L204 108L210 118L218 104L224 114L232 100L238 110L246 96L252 106L260 94L266 104L274 90L280 100L288 88L294 98L300 92V142Z" fill="var(--il-leaf)"/>
+<path d="M0 200V136H300V200Z" fill="var(--il-water)"/>
+<path d="M98 152Q104 142 118 142Q130 142 134 152Z" fill="var(--il-far)"/>
+<path d="M200 200Q206 182 224 176Q250 168 300 166V200Z" fill="var(--il-far)"/>
+<g transform="translate(250 172)"><path d="M-12 0V-14M-8 0V-14M8 0V-14M12 0V-14" stroke="var(--il-obj)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M-16 -12Q-18 -22 -8 -24H8Q14 -24 16 -20L20 -30L26 -30L22 -16Q16 -10 8 -10H-10Q-16 -10 -16 -12Z" fill="var(--il-acc)"/><path d="M14 -20L18 -32H26L24 -24Q20 -16 14 -16Z" fill="var(--il-obj)"/><path d="M21 -32Q18 -42 12 -46M20 -38L16 -40M22 -32Q26 -42 32 -46M24 -38L28 -40" stroke="var(--il-obj)" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M24 -32L30 -28Q30 -25 26 -25Z" fill="var(--il-obj)"/></g>
