@@ -1,0 +1,67 @@
+{
+ "id": "cl-mirador-cuernos",
+ "country": "CL",
+ "name": "Salto Grande and Mirador Cuernos",
+ "base": "Torres del Paine",
+ "region": "Torres del Paine National Park, centre",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  9,
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 6,
+  "gain_m": 150,
+  "source": "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+ },
+ "why": "The easiest big view in the park: a roaring waterfall, then the Cuernos straight above Lago Nordenskjöld.",
+ "book": "Park entry online. Starts at the Pudeto catamaran pier.",
+ "water": "None: carry a bottle.",
+ "dangers": [
+  "The most violent wind of any park trail: hold on to children and hats."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.conaf.cl/parques/parque-nacional-torres-del-paine/"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Pudeto, Lago Pehoé",
+   "lat": -51.075,
+   "lon": -72.9965,
+   "role": "start",
+   "note": "The catamaran pier and car park."
+  },
+  {
+   "id": "salto",
+   "name": "Salto Grande",
+   "lat": -51.0681,
+   "lon": -72.9934,
+   "role": "point",
+   "note": "15 minutes: the Paine river falling from Lago Nordenskjöld into Lago Pehoé."
+  },
+  {
+   "id": "goal",
+   "name": "Mirador Cuernos",
+   "lat": -51.0467,
+   "lon": -72.9866,
+   "role": "goal",
+   "note": "45 minutes more over burnt bush: the Cuernos above the lake."
+  }
+ ]
+}

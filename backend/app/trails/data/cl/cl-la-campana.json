@@ -1,0 +1,65 @@
+{
+ "id": "cl-la-campana",
+ "country": "CL",
+ "name": "Cerro La Campana, Darwin's summit",
+ "base": "Valparaíso",
+ "region": "La Campana National Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  9,
+  10,
+  11,
+  3,
+  4,
+  5
+ ],
+ "hours": [
+  7,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 14,
+  "gain_m": 1500,
+  "source": "https://www.conaf.cl/parques/parque-nacional-la-campana/"
+ },
+ "why": "Darwin climbed it in 1834: from the summit you see the Pacific and Aconcagua in the same look.",
+ "book": "CONAF entry at the Granizo gate; the summit trail closes to new walkers around midday.",
+ "water": "None after the start: carry 3 litres, it is hot.",
+ "dangers": [
+  "The top part is a rock scramble with your hands.",
+  "Summer heat: go in spring or autumn."
+ ],
+ "turnaround": "Leave the summit by 14:30.",
+ "sources": [
+  "https://www.conaf.cl/parques/parque-nacional-la-campana/"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Sector Granizo, La Campana National Park",
+   "lat": -32.96,
+   "lon": -71.127,
+   "role": "start",
+   "note": "Ranger post and car park."
+  },
+  {
+   "id": "darwin",
+   "name": "Darwin plaque, Cerro La Campana",
+   "lat": -32.96,
+   "lon": -71.1,
+   "role": "point",
+   "note": "Half way up: the plaque that remembers Darwin's climb."
+  },
+  {
+   "id": "goal",
+   "name": "Cerro La Campana summit",
+   "lat": -32.9571,
+   "lon": -71.0867,
+   "role": "goal",
+   "note": "1,880 m: the Pacific to the west, Aconcagua to the east."
+  }
+ ]
+}

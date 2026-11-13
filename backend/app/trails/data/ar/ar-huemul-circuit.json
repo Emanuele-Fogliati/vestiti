@@ -1,0 +1,87 @@
+{
+ "id": "ar-huemul-circuit",
+ "country": "AR",
+ "name": "Huemul Circuit",
+ "base": "El Chaltén",
+ "region": "Los Glaciares National Park and the Southern Ice Field",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "loop",
+ "difficulty": "technical",
+ "months": [
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  28,
+  34
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 64,
+  "gain_m": 2600,
+  "source": "https://en.wikivoyage.org/wiki/El_Chalten"
+ },
+ "why": "Four days to the edge of the Southern Patagonian Ice Field and down to Lago Viedma's icebergs. The wildest trek you can do from a village.",
+ "book": "Register at the park visitor centre before you go (compulsory). You need a harness and two carabiners for the river crossings on a rope: rent them in El Chaltén. Part of the route crosses private land with a fee.",
+ "water": "Glacier streams and lakes; nothing to buy for four days.",
+ "dangers": [
+  "Two tyrolean traverses over glacier rivers on a fixed rope: you must know how to use a harness.",
+  "Paso del Viento (about 1,450 m) and Paso Huemul are fully exposed: wait a day if the forecast says over 70 km/h.",
+  "Crossing the glacier tongue at Laguna Toro needs care; the route is marked by cairns, not paint."
+ ],
+ "turnaround": "If the wind at Paso del Viento makes you crouch, go back down to Laguna Toro: there is no shelter for 4 hours after it.",
+ "sources": [
+  "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
+  "https://hiking.waymarkedtrails.org/#route?id=9365907",
+  "https://en.wikivoyage.org/wiki/El_Chalten"
+ ],
+ "osm": 9365907,
+ "points": [
+  {
+   "id": "start",
+   "name": "Los Glaciares visitor centre, El Chaltén",
+   "lat": -49.33753,
+   "lon": -72.88134,
+   "role": "start",
+   "note": "Register here before you leave. Day 1 follows the Río Túnel valley to Laguna Toro, 6-7 h."
+  },
+  {
+   "id": "toro",
+   "name": "Laguna Toro",
+   "lat": -49.38517,
+   "lon": -73.0405,
+   "role": "point",
+   "note": "Night 1: the camp by Laguna Toro, under the Río Túnel glacier. Day 2 starts with the first rope crossing and the walk over the glacier's moraine.",
+   "night": true
+  },
+  {
+   "id": "paso-viento",
+   "name": "Paso del Viento, Southern Ice Field view",
+   "lat": -49.39467,
+   "lon": -73.11743,
+   "role": "point",
+   "note": "Day 2, about 1,430 m: the Southern Ice Field fills the horizon. Sleep at Refugio Paso del Viento, 3 km below.",
+   "night": true
+  },
+  {
+   "id": "paso-huemul",
+   "name": "Paso Huemul above the Viedma glacier",
+   "lat": -49.48623,
+   "lon": -73.01469,
+   "role": "point",
+   "note": "Day 3, about 1,000 m: Viedma glacier and its icebergs below. A steep descent to the Bahía de los Témpanos camp.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Bahía Túnel on Lago Viedma",
+   "lat": -49.39457,
+   "lon": -72.86865,
+   "role": "goal",
+   "note": "Day 4: the second rope crossing over the Río Túnel, then the shore of Lago Viedma to Bahía Túnel. The village is 6 km more on the gravel road, or book a transfer."
+  }
+ ]
+}

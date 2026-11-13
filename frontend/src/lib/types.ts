@@ -120,6 +120,8 @@ export interface TodoItem {
   note?: string; moved?: boolean; pinned?: boolean;
   /** the day hour by hour, and what tour programmes leave out */
   steps?: HourStep[]; extras?: string[]; sights?: string[];
+  /** its trail page (map, profile, what to wear), when this thing to do is a trail */
+  trail?: string | null;
 }
 export interface HourStep { at: string; what: string; note: string }
 /** A thing to do from a hand-written guide, as a proposal carries it. */
@@ -140,6 +142,8 @@ export interface BoardStop {
   };
   plan: { mode: string | null; choices: PlanChoices; days: PlanDayOut[]; waiting: TodoItem[]; out_of_season: string[]; advice: string[] };
   weather_sources: string[];
+  /** the trekking trails you can walk from this stop */
+  trails?: TrailCard[];
 }
 export interface Board {
   trip_id: string; start_date: string | null; end_date: string | null; total_days: number; start_estimated: boolean;
@@ -565,4 +569,33 @@ export interface Itinerary extends ItineraryCard {
   start_date: string;
   stops: ItineraryStop[];
   group_trips: { operator: string; title: string; days: number; href: string }[];
+}
+
+/** A trekking trail (app.trails): a card in a list, and the whole trail on its page. */
+export type TrailDifficulty = "easy" | "moderate" | "hard" | "technical";
+export interface TrailCard {
+  id: string; name: string; country: string; base: string; region: string;
+  kind: "day" | "multiday"; days: number; shape: "out_and_back" | "loop" | "one_way";
+  difficulty: TrailDifficulty; glacier: boolean; hours: [number, number]; months: number[]; months_text: string;
+  in_season: boolean | null; why: string; art: StopArt | null; has_map: boolean;
+  km: number | null; gain_m: number | null; max_m: number | null; min_m: number | null; numbers_from: string | null;
+}
+export interface TrailPoint {
+  id: string; name: string; role: "start" | "point" | "goal"; note: string; night: boolean;
+  lat: number; lon: number; art: StopArt | null; km: number | null; ele: number | null;
+}
+export interface TrailSegment { from: string; to: string; from_name: string; to_name: string; km: number; up: number; down: number; hours: number }
+export interface Trail extends TrailCard {
+  difficulty_text: string; start_by: string; book: string; water: string; dangers: string[]; turnaround: string;
+  sources: string[]; published: { km: number; gain_m: number; source: string } | null;
+  points: TrailPoint[]; segments: TrailSegment[];
+  computed: { km: number; one_way_km: number; gain_m: number; loss_m: number; walk_hours: number } | null;
+  profile: [number, number][]; line: [number, number][]; attribution: string | null;
+  activity: Activity; base_trails: string[];
+}
+export interface TrailWear {
+  trail_id: string; month: number; in_season: boolean;
+  weather: { tmin: number; tmax: number; wind_kmh: number; rain_chance: number; source: string } | null;
+  coldest: { feels_like_c: number; where: string; altitude_m: number } | null;
+  pieces: { slot: string; name: string; level: string; waterproof: boolean; footwear_type: string | null; ankle_support: boolean; reasons: string[] }[];
 }

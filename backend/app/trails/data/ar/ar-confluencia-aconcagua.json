@@ -1,0 +1,64 @@
+{
+ "id": "ar-confluencia-aconcagua",
+ "country": "AR",
+ "name": "Aconcagua: Laguna de Horcones and Confluencia",
+ "base": "Mendoza",
+ "region": "Aconcagua Provincial Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 16,
+  "gain_m": 500,
+  "source": "https://www.aconcagua.mendoza.gov.ar"
+ },
+ "why": "Walk into the Horcones valley under the highest mountain outside Asia, to the first base camp at 3,400 m.",
+ "book": "A day trekking permit from the park (buy online before you go). The short loop to Laguna de Horcones needs only the entry ticket.",
+ "water": "None on the trail before Confluencia: carry 2 litres.",
+ "dangers": [
+  "Altitude: you start at 2,950 m. Don't do it the day you arrive from Mendoza at 750 m.",
+  "Strong sun and dry wind: sunburn in an hour."
+ ],
+ "turnaround": "If you have a headache before Confluencia, go back: it is the altitude.",
+ "sources": [
+  "https://www.aconcagua.mendoza.gov.ar"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Horcones ranger station, Aconcagua Park",
+   "lat": -32.8219,
+   "lon": -69.9408,
+   "role": "start",
+   "note": "2,950 m. Show your permit at the gate."
+  },
+  {
+   "id": "laguna",
+   "name": "Laguna de Horcones",
+   "lat": -32.8095,
+   "lon": -69.9419,
+   "role": "point",
+   "note": "20 minutes in: Aconcagua's south face reflected in the lagoon."
+  },
+  {
+   "id": "goal",
+   "name": "Confluencia camp, Aconcagua",
+   "lat": -32.766,
+   "lon": -69.967,
+   "role": "goal",
+   "note": "About 3,400 m: the first base camp, where the valleys meet."
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+ "id": "pe-huayna-picchu",
+ "country": "PE",
+ "name": "Huayna Picchu",
+ "base": "Machu Picchu",
+ "region": "Machu Picchu Historical Sanctuary",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 4,
+  "gain_m": 360,
+  "source": "https://www.machupicchu.gob.pe"
+ },
+ "why": "The steep peak behind Machu Picchu: Inca stairs to terraces on the summit and the whole citadel straight below.",
+ "book": "A Machu Picchu ticket that includes Huayna Picchu (limited per time slot), booked months ahead for May-September.",
+ "water": "Carry 1 litre; no food allowed in the citadel.",
+ "dangers": [
+  "Narrow Inca steps with long drops; not for vertigo.",
+  "Slippery in rain."
+ ],
+ "turnaround": "You must be back at the control by the time on your ticket.",
+ "sources": [
+  "https://www.machupicchu.gob.pe"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Huayna Picchu control, Machu Picchu",
+   "lat": -13.1617,
+   "lon": -72.5455,
+   "role": "start",
+   "note": "Sign in at the hut past the Sacred Rock."
+  },
+  {
+   "id": "stairs",
+   "name": "Huayna Picchu Inca stairs",
+   "lat": -13.1595,
+   "lon": -72.546,
+   "role": "point",
+   "note": "The 'stairs of death': hold the cable."
+  },
+  {
+   "id": "goal",
+   "name": "Huayna Picchu summit terraces",
+   "lat": -13.1569,
+   "lon": -72.5458,
+   "role": "goal",
+   "note": "About 2,700 m: Machu Picchu straight below."
+  }
+ ]
+}

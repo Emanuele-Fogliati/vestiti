@@ -3,6 +3,58 @@
  "name": "Canada",
  "places": [
   {
+   "slug": "algonquin-provincial-park",
+   "label": "A red canoe, granite, white pines and a moose on an Algonquin lake",
+   "lat": 45.55,
+   "lon": -78.6,
+   "radius_km": 50,
+   "aliases": [
+    "algonquin park",
+    "algonquin provincial park",
+    "parc algonquin"
+   ],
+   "names": [
+    "algonquin"
+   ],
+   "palette": {
+    "sky": "#B6D7F0",
+    "far": "#4A3426",
+    "mid": "#A8928A",
+    "ice": "#F4EFE4",
+    "water": "#4E7FA2",
+    "near": "#1F2420",
+    "sun": "#F4C542",
+    "leaf": "#2E5230",
+    "acc": "#B5302B",
+    "obj": "#D8C59D"
+   }
+  },
+  {
+   "slug": "annapolis-royal",
+   "label": "The Officers' Quarters with its three tall chimneys on the earthworks of Fort Anne, Annapolis Royal",
+   "lat": 44.7413,
+   "lon": -65.5181,
+   "radius_km": 10,
+   "aliases": [
+    "fort anne"
+   ],
+   "names": [
+    "annapolis royal"
+   ],
+   "palette": {
+    "sky": "#9CC6F0",
+    "far": "#6B8A62",
+    "mid": "#8E7E6A",
+    "ice": "#F6F6F2",
+    "water": "#4F86A8",
+    "near": "#25262A",
+    "sun": "#F2C14E",
+    "leaf": "#6FA34A",
+    "acc": "#9C2A2E",
+    "obj": "#3D6236"
+   }
+  },
+  {
    "slug": "athabasca-falls",
    "label": "Athabasca Falls and Mount Kerkeslin",
    "lat": 52.664,
@@ -266,6 +318,29 @@
    }
   },
   {
+   "slug": "deer-lake",
+   "label": "Deer Lake under the flat-topped Long Range hills, with a moose on the shore",
+   "lat": 49.19,
+   "lon": -57.42,
+   "radius_km": 20,
+   "aliases": [],
+   "names": [
+    "deer lake"
+   ],
+   "palette": {
+    "sky": "#CDE2F2",
+    "far": "#7C948E",
+    "mid": "#A8A39A",
+    "ice": "#D9D4CA",
+    "water": "#6E9BBA",
+    "near": "#1F2924",
+    "sun": "#F4C94A",
+    "leaf": "#3B5E3A",
+    "acc": "#D9C8A0",
+    "obj": "#4A3424"
+   }
+  },
+  {
    "slug": "emerald-lake",
    "label": "Emerald Lake and its lodge, Yoho",
    "lat": 51.443,
@@ -487,6 +562,61 @@
     "leaf": "#4A6638",
     "acc": "#E2BC52",
     "obj": "#7E5E44"
+   }
+  },
+  {
+   "slug": "kananaskis",
+   "label": "Mount Kidd above Highway 40 with bighorn sheep, Kananaskis Country",
+   "lat": 50.865,
+   "lon": -115.205,
+   "radius_km": 40,
+   "aliases": [
+    "kananaskis",
+    "mount kidd",
+    "mt kidd"
+   ],
+   "palette": {
+    "sky": "#92C3F0",
+    "far": "#7FA24E",
+    "mid": "#B9B8B0",
+    "ice": "#F6F3EA",
+    "water": "#5BA6C4",
+    "near": "#22261F",
+    "sun": "#F4C542",
+    "leaf": "#2F5A2E",
+    "acc": "#B4936B",
+    "obj": "#6D6E72"
+   }
+  },
+  {
+   "slug": "kootenay-national-park",
+   "label": "The orange ochre beds of the Paint Pots below the Rockies, with an elk, Kootenay National Park",
+   "lat": 51.17,
+   "lon": -116.15,
+   "radius_km": 35,
+   "aliases": [
+    "kootenay national park",
+    "kootenay np",
+    "kootenay park",
+    "parco nazionale di kootenay",
+    "parco nazionale kootenay",
+    "paint pots",
+    "ochre beds"
+   ],
+   "names": [
+    "kootenay"
+   ],
+   "palette": {
+    "sky": "#B4D3EE",
+    "far": "#5C7258",
+    "mid": "#D8763A",
+    "ice": "#CFCDC4",
+    "water": "#A88C3C",
+    "near": "#24261F",
+    "sun": "#F2C14E",
+    "leaf": "#2E4B32",
+    "acc": "#B5B072",
+    "obj": "#7A5638"
    }
   },
   {
@@ -793,6 +923,29 @@
    }
   },
   {
+   "slug": "port-hardy",
+   "label": "The veterans' totem pole on the Port Hardy waterfront, Coast Mountains beyond",
+   "lat": 50.7235,
+   "lon": -127.4935,
+   "radius_km": 15,
+   "aliases": [],
+   "names": [
+    "port hardy"
+   ],
+   "palette": {
+    "sky": "#BFD8EE",
+    "far": "#9AAEC6",
+    "mid": "#A9A49A",
+    "ice": "#F0E8D2",
+    "water": "#2F6EA6",
+    "near": "#1C1E22",
+    "sun": "#F4C842",
+    "leaf": "#5E8F3E",
+    "acc": "#C43A2A",
+    "obj": "#34383C"
+   }
+  },
+  {
    "slug": "prince-edward-island",
    "label": "White lighthouse above the red sandstone cliffs of Prince Edward Island",
    "lat": 46.51,
@@ -819,6 +972,36 @@
     "leaf": "#6EAF3E",
     "acc": "#C4502E",
     "obj": "#7A5A3E"
+   }
+  },
+  {
+   "slug": "prince-rupert",
+   "label": "Fishing boats in Cow Bay harbour below the forested hills, Prince Rupert",
+   "lat": 54.319,
+   "lon": -130.318,
+   "radius_km": 15,
+   "aliases": [
+    "cow bay",
+    "atlin terminal",
+    "atlin cruise terminal"
+   ],
+   "names": [
+    "prince rupert",
+    "prince rupert bc",
+    "prince rupert british columbia",
+    "prince rupert canada"
+   ],
+   "palette": {
+    "sky": "#92C2EE",
+    "far": "#7489A0",
+    "mid": "#3E5A3C",
+    "ice": "#F4F2EC",
+    "water": "#2D5E8A",
+    "near": "#1F2328",
+    "sun": "#F3C746",
+    "leaf": "#5E8246",
+    "acc": "#C0392B",
+    "obj": "#3E7CC4"
    }
   },
   {
@@ -879,6 +1062,30 @@
     "leaf": "#2E5644",
     "acc": "#7E9E4A",
     "obj": "#5A4632"
+   }
+  },
+  {
+   "slug": "rogers-pass",
+   "label": "The red double-arch Summit Monument of Rogers Pass below the glaciated Selkirks",
+   "lat": 51.301,
+   "lon": -117.519,
+   "radius_km": 10,
+   "aliases": [
+    "rogers pass",
+    "roger pass",
+    "passo rogers"
+   ],
+   "palette": {
+    "sky": "#AFCDEA",
+    "far": "#8D949A",
+    "mid": "#53784F",
+    "ice": "#EEEFEC",
+    "water": "#8CB2D2",
+    "near": "#24262A",
+    "sun": "#F2C14E",
+    "leaf": "#2D4A33",
+    "acc": "#D0602C",
+    "obj": "#A79D8E"
    }
   },
   {

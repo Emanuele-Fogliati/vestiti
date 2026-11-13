@@ -1,0 +1,67 @@
+{
+ "id": "pe-humantay",
+ "country": "PE",
+ "name": "Humantay Lake",
+ "base": "Cusco",
+ "region": "Vilcabamba range, Soraypampa",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 7,
+  "gain_m": 400,
+  "source": "https://en.wikivoyage.org/wiki/Salkantay_Trek"
+ },
+ "why": "A turquoise lake under the Humantay glacier, an hour and a half above the road: the best day trip from Cusco after Machu Picchu.",
+ "book": "Tours from Cusco at 04:30; community fee at Soraypampa (cash).",
+ "water": "Carry 1.5 litres.",
+ "dangers": [
+  "The climb goes from 3,900 to 4,200 m in an hour: slow down.",
+  "Cold wind at the lake."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Salkantay_Trek"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Soraypampa under Nevado Salkantay",
+   "lat": -13.3866,
+   "lon": -72.5644,
+   "role": "start",
+   "note": "The road end and the lodges; Salkantay's snow peak above."
+  },
+  {
+   "id": "climb",
+   "name": "Humantay moraine path",
+   "lat": -13.381,
+   "lon": -72.573,
+   "role": "point",
+   "note": "The steep zigzags up the moraine; horses for those who need them."
+  },
+  {
+   "id": "goal",
+   "name": "Humantay Lake",
+   "lat": -13.3781,
+   "lon": -72.58,
+   "role": "goal",
+   "note": "About 4,200 m. Climb the ridge to the left for the view from above."
+  }
+ ]
+}

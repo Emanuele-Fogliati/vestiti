@@ -59,6 +59,7 @@ class Item(BaseModel):
     extras: list[str] = Field(default_factory=list, max_length=8)
     sights: list[str] = Field(default_factory=list, max_length=8)  # the places of the globe it covers
     arrive: bool = False  # fits the afternoon you arrive
+    trail: str | None = None  # the trail page (app.trails) with the map, profile and kit
 
     @field_validator("steps")
     @classmethod
@@ -239,6 +240,10 @@ class Todo(BaseModel):
 
 
 def todo_for(name: str, country: str | None, lat: float, lon: float) -> Todo:
+    return with_trails(_todo_for(name, country, lat, lon), name, country, lat, lon)
+
+
+def _todo_for(name: str, country: str | None, lat: float, lon: float) -> Todo:
     a = area_for(name, country, lat, lon)
     if a:
         return Todo(source="guide", area=a.id, items=a.items, rain=a.rain, routes=a.routes,
@@ -251,3 +256,59 @@ def todo_for(name: str, country: str | None, lat: float, lon: float) -> Todo:
         return Todo(source="trips", items=trips + rest[:max(0, NEARBY_MAX - len(trips))])
     items = nearby(name, country, lat, lon)
     return Todo(source="nearby" if items else "none", items=items)
+
+
+# ---------------------------------------------------------------- trekking trails
+
+_SMALL = {"de", "del", "la", "las", "los", "el", "the", "to", "and", "a", "di", "of", "on", "under",
+          "lookout", "mirador", "hike", "walk", "trail"}
+TRAIL_KM = 40.0
+
+
+def _words(s: str) -> set[str]:
+    return {w for w in _norm(s).split() if w not in _SMALL and len(w) > 1}
+
+
+def _same_walk(item: Item, trail) -> bool:
+    """'Laguna de los Tres, under Fitz Roy' (the guide) is the trail 'Laguna de los Tres...'."""
+    a = _words(item.name)
+    for b in (_words(trail.name), _words(trail.points[-1].name)):
+        if a and b and len(a & b) / min(len(a), len(b)) >= 0.6:
+            return True
+    return False
+
+
+def _trail_item(t) -> Item:
+    from app import trails
+    g = trails.geo(t.id) or {}
+    km_ = t.published.km if t.published else g.get("km")
+    lo, hi = t.hours
+    hours = f"{lo:g}–{hi:g} h" if hi > lo else f"{lo:g} h"
+    if km_:
+        hours += f" · about {round(km_)} km"
+    return Item(id=f"trail-{t.id}"[:80], name=t.name, hours=hours,
+                length="full" if hi >= 6 else ("half" if hi >= 3 else "short"),
+                effort={"easy": "easy", "moderate": "moderate"}.get(t.difficulty, "hard"),
+                need="clear" if t.difficulty in ("hard", "technical") else "dry",
+                book=t.book[:120], why=t.why, months=t.months, act=trails.activity(t), trail=t.id)
+
+
+def with_trails(todo: Todo, name: str, country: str | None, lat: float, lon: float) -> Todo:
+    """Link the things to do that are trails to their trail page, and add the day trails of this
+    place that the list does not have yet (multi-day treks are a stop of their own, not a thing
+    to do on one day)."""
+    from app import trails
+    near = trails.near(lat, lon, country, name, radius_km=TRAIL_KM)
+    if not near:
+        return todo
+    used: set[str] = set()
+    items = []
+    for it in todo.items:
+        if it.trail is None and (it.act or {}).get("type") in ("hiking", "trek_multiday"):
+            t = next((t for t in near if t.id not in used and _same_walk(it, t)), None)
+            if t:
+                used.add(t.id)
+                it = it.model_copy(update={"trail": t.id})
+        items.append(it)
+    extra = [_trail_item(t) for t in near if t.kind == "day" and t.id not in used]
+    return todo.model_copy(update={"items": items + extra})

@@ -19,7 +19,9 @@ from app import travel
 from app.db import get_db
 from app.deps import current_user, own_trip
 from app.guide import _norm
-from app.guide.todo import NEED_TEXT, todo_for
+from app import trails
+from app.api.trails import card as trail_card
+from app.guide.todo import NEED_TEXT, TRAIL_KM, todo_for
 from app.models import Stop, Trip
 from app.schemas import FlightBookIn, FlightSearchIn, FlightsTogetherIn, LayoutIn, TripOut, check_date
 from app.travel import duffel
@@ -133,6 +135,9 @@ def board(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
                 "advice": p.advice,
             },
             "weather_sources": sources,
+            "trails": [trail_card(t, s.start_date.month)
+                       for t in trails.near(s.latitude, s.longitude, s.country_code, s.name,
+                                            radius_km=TRAIL_KM)],
         })
         prev = s
     last = stops[-1] if stops else None

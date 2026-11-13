@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from app.api import admin, ai, art, auth, board, globe, go, inspire, meta, plan, plans, profile, trips, wardrobe
+from app.api import trails as trails_api
 from app.config import get_settings
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s %(message)s")
@@ -119,7 +120,7 @@ app.add_middleware(BodyLimit, max_bytes=settings.max_body_bytes)
 
 for r in (meta.router, auth.router, trips.router, wardrobe.router, plans.router, ai.router,
           go.router, admin.router, art.router, profile.router, inspire.router, globe.router,
-          board.router, plan.router):
+          board.router, plan.router, trails_api.router):
     app.include_router(r)
 
 # Optional: serve the built frontend from the same process (single-container deploys).

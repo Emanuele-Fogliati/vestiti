@@ -1,6 +1,7 @@
 import type {
   PlanProposal, PlanReading, PlanStep, PlanSuggestion,
   Airport, Board, FlightOffer, FlightOrder, FlightPrice, LegSaved, Passenger, TripFlights, PlanChoices, StopStatus,
+  Trail, TrailCard, TrailWear,
   AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
 } from "./types";
 
@@ -98,6 +99,12 @@ export const api = {
   patchTrip: (id: string, patch: { name?: string; notes?: string; home_airport?: string | null; return_leg?: LegSaved | null }) =>
     req<Trip>("PATCH", `/api/trips/${id}`, patch),
   board: (id: string) => req<Board>("GET", `/api/trips/${id}/board`),
+  trails: (q: { country?: string; lat?: number; lon?: number; name?: string; month?: number } = {}) => {
+    const p = new URLSearchParams(Object.entries(q).filter(([, v]) => v !== undefined && v !== "").map(([k, v]) => [k, String(v)]));
+    return req<{ trails: TrailCard[]; countries: string[] }>("GET", `/api/trails${p.size ? `?${p}` : ""}`);
+  },
+  trail: (id: string) => req<Trail>("GET", `/api/trails/${encodeURIComponent(id)}`),
+  trailWear: (id: string, month: number) => req<TrailWear>("GET", `/api/trails/${encodeURIComponent(id)}/wear?month=${month}`),
   /** New order, days and status of every stop; the dates follow. 409 when something booked would move. */
   layout: (id: string, stops: { id: string; days: number; status?: StopStatus; gap_before?: number }[], start_date?: string) =>
     req<Trip>("PUT", `/api/trips/${id}/layout`, { stops, start_date }),

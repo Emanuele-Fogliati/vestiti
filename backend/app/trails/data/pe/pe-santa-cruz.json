@@ -1,0 +1,77 @@
+{
+ "id": "pe-santa-cruz",
+ "country": "PE",
+ "name": "Santa Cruz trek",
+ "base": "Huaraz",
+ "region": "Huascarán National Park, Cordillera Blanca",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  22,
+  26
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 50,
+  "gain_m": 2300,
+  "source": "https://www.sernanp.gob.pe/huascaran"
+ },
+ "why": "The classic of the Cordillera Blanca: four days among 6,000 m peaks, over Punta Unión with Taulliraju above a turquoise lake.",
+ "book": "Huascarán park multi-day ticket. Most go with an agency from Huaraz (donkeys, cook, transfer).",
+ "water": "Streams (treat them).",
+ "dangers": [
+  "Punta Unión at 4,750 m: be acclimatised.",
+  "Night frost at every camp from June to August."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.sernanp.gob.pe/huascaran",
+  "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Vaquería",
+   "lat": -9.031,
+   "lon": -77.547,
+   "role": "start",
+   "note": "Day 1: after the pass road; down to the Huaripampa valley.",
+   "night": true
+  },
+  {
+   "id": "union",
+   "name": "Punta Unión pass with Taulliraju",
+   "lat": -8.901,
+   "lon": -77.593,
+   "role": "point",
+   "note": "Day 2-3: 4,750 m, Taulliraju above the lake below the pass.",
+   "night": true
+  },
+  {
+   "id": "alpamayo",
+   "name": "Alpamayo from the Arhuaycocha valley",
+   "lat": -8.88,
+   "lon": -77.63,
+   "role": "point",
+   "note": "Day 3: a side trip to the 'most beautiful mountain in the world'.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Jatuncocha",
+   "lat": -8.905,
+   "lon": -77.675,
+   "role": "goal",
+   "note": "Day 3-4: the long lakes of the Santa Cruz valley, then down to Cashapampa."
+  }
+ ]
+}

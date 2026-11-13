@@ -1,0 +1,75 @@
+{
+ "id": "pe-huayhuash",
+ "country": "PE",
+ "name": "Cordillera Huayhuash circuit",
+ "base": "Huaraz",
+ "region": "Cordillera Huayhuash",
+ "kind": "multiday",
+ "days": 10,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  60,
+  75
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 115,
+  "gain_m": 7000,
+  "source": "https://en.wikivoyage.org/wiki/Cordillera_Huayhuash"
+ },
+ "why": "One of the great treks on Earth: ten days round a wall of ice peaks, over passes at 5,000 m, camping by lakes.",
+ "book": "Each community you cross charges a fee in cash (soles): carry the full amount. Agencies in Huaraz run it with donkeys and a cook.",
+ "water": "Streams and lakes (treat them).",
+ "dangers": [
+  "Several passes around 4,700-5,000 m; nights below -10 °C.",
+  "Very remote: a rescue takes days."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Cordillera_Huayhuash"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Quartelhuain",
+   "lat": -10.116,
+   "lon": -76.925,
+   "role": "start",
+   "note": "Day 1 camp at the road end, after 6-7 h by road from Huaraz.",
+   "night": true
+  },
+  {
+   "id": "carhuacocha",
+   "name": "Laguna Carhuacocha with Yerupajá",
+   "lat": -10.2347,
+   "lon": -76.8941,
+   "role": "point",
+   "note": "Day 3: the most famous camp, Yerupajá and Siula Grande over the lake.",
+   "night": true
+  },
+  {
+   "id": "tres",
+   "name": "Siula pass and the Tres Lagunas",
+   "lat": -10.255,
+   "lon": -76.88,
+   "role": "point",
+   "note": "Day 4: three glacier lakes one above the other from the pass."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Jahuacocha",
+   "lat": -10.227,
+   "lon": -76.953,
+   "role": "goal",
+   "note": "The last great camp, under the west face of Yerupajá.",
+   "night": true
+  }
+ ]
+}

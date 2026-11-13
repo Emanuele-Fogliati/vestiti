@@ -13,6 +13,8 @@ import Start from "./pages/Start";
 import TripPage from "./pages/TripPage";
 import Trips from "./pages/Trips";
 import Wardrobe from "./pages/Wardrobe";
+import TrailPage from "./pages/TrailPage";
+import Trails from "./pages/Trails";
 
 export default function App() {
   return (
@@ -26,6 +28,8 @@ export default function App() {
         <Route path="trips/new" element={<NewTrip />} />
         <Route path="trips/:id" element={<TripPage />} />
         <Route path="wardrobe" element={<Wardrobe />} />
+        <Route path="trails" element={<Trails />} />
+        <Route path="trails/:id" element={<TrailPage />} />
         <Route path="account" element={<Account />} />
         <Route path="admin" element={<Admin />} />
         <Route path="login" element={<Auth mode="login" />} />

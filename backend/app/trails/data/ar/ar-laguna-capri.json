@@ -1,0 +1,65 @@
+{
+ "id": "ar-laguna-capri",
+ "country": "AR",
+ "name": "Laguna Capri",
+ "base": "El Chaltén",
+ "region": "Los Glaciares National Park, north sector",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 9,
+  "gain_m": 400,
+  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+ },
+ "why": "Fitz Roy reflected in a forest lake in half a day, without the last brutal climb.",
+ "book": "Free, no permit.",
+ "water": "A stream near the lake; carry 1 litre.",
+ "dangers": [
+  "Steady climb in the first hour; easy after that."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Fitz Roy trailhead, El Chaltén",
+   "lat": -49.32111,
+   "lon": -72.89459,
+   "role": "start",
+   "note": "The same start as Laguna de los Tres."
+  },
+  {
+   "id": "river",
+   "name": "Mirador del Río de las Vueltas",
+   "lat": -49.31645,
+   "lon": -72.89858,
+   "role": "point",
+   "note": "After 30 minutes: the valley of the Río de las Vueltas opens below."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Capri",
+   "lat": -49.30285,
+   "lon": -72.92968,
+   "role": "goal",
+   "note": "750 m. Walk around the shore to the camp side for Fitz Roy over the water."
+  }
+ ]
+}

@@ -10,6 +10,7 @@ import "./theme/board.css";
 import "./theme/start.css";
 import "./theme/calm.css";
 import "./theme/tabs.css";
+import "./theme/trails.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

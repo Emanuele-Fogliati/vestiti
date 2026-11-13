@@ -1,0 +1,1685 @@
+{
+ "note": "The trekking plan (Manu, 2026-11-13): ~12 trails per country, 3-4 drawings per trail. slot = the helper thread that owns the trail. status: todo (only planned), draft (data written, not yet checked), checked (coordinates checked on OSM, geo built, numbers within 30% of the published ones), drawn (every scene done). scenes: the key points to draw; reuse = an existing scene that already shows that point (don't redraw it, but look at it: if it shows something else, draw a new one).",
+ "trails": [
+  {
+   "id": "ar-laguna-de-los-tres",
+   "name": "Laguna de los Tres, under Fitz Roy",
+   "country": "AR",
+   "slot": "AR-A",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Fitz Roy trailhead, El Chaltén",
+     "reuse": null
+    },
+    {
+     "point": "mirador",
+     "name": "Mirador del Fitz Roy",
+     "reuse": null
+    },
+    {
+     "point": "capri",
+     "name": "Laguna Capri",
+     "reuse": "ar-laguna-capri"
+    },
+    {
+     "point": "poincenot",
+     "name": "Campamento Poincenot",
+     "reuse": "ar-loma-del-pliegue-tumbado"
+    },
+    {
+     "point": "goal",
+     "name": "Laguna de los Tres",
+     "reuse": "ar-laguna-de-los-tres"
+    }
+   ]
+  },
+  {
+   "id": "ar-laguna-torre",
+   "name": "Laguna Torre",
+   "country": "AR",
+   "slot": "AR-A",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Laguna Torre trailhead, El Chaltén",
+     "reuse": null
+    },
+    {
+     "point": "mirador",
+     "name": "Mirador del Torre",
+     "reuse": null
+    },
+    {
+     "point": "agostini",
+     "name": "Campamento De Agostini",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Torre",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "ar-pliegue-tumbado",
+   "name": "Loma del Pliegue Tumbado",
+   "country": "AR",
+   "slot": "AR-A",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Los Glaciares visitor centre, El Chaltén",
+     "reuse": "ar-mirador-de-los-condores"
+    },
+    {
+     "point": "ridge",
+     "name": "Pliegue Tumbado ridge, above the forest",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Loma del Pliegue Tumbado",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "ar-laguna-capri",
+   "name": "Laguna Capri",
+   "country": "AR",
+   "slot": "AR-A",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Fitz Roy trailhead, El Chaltén",
+     "reuse": null
+    },
+    {
+     "point": "river",
+     "name": "Mirador del Río de las Vueltas",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Capri",
+     "reuse": "ar-laguna-capri"
+    }
+   ]
+  },
+  {
+   "id": "ar-condores-aguilas",
+   "name": "Mirador de los Cóndores and Las Águilas",
+   "country": "AR",
+   "slot": "AR-A",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Los Glaciares visitor centre, El Chaltén",
+     "reuse": "ar-mirador-de-los-condores"
+    },
+    {
+     "point": "condores",
+     "name": "Mirador de los Cóndores",
+     "reuse": "ar-mirador-de-los-condores"
+    },
+    {
+     "point": "goal",
+     "name": "Mirador de las Águilas",
+     "reuse": "ar-mirador-de-los-condores"
+    }
+   ]
+  },
+  {
+   "id": "ar-huemul-circuit",
+   "name": "Huemul Circuit",
+   "country": "AR",
+   "slot": "AR-A",
+   "base": "El Chaltén",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Los Glaciares visitor centre, El Chaltén",
+     "reuse": "ar-mirador-de-los-condores"
+    },
+    {
+     "point": "toro",
+     "name": "Laguna Toro",
+     "reuse": null
+    },
+    {
+     "point": "paso-viento",
+     "name": "Paso del Viento, Southern Ice Field view",
+     "reuse": null
+    },
+    {
+     "point": "paso-huemul",
+     "name": "Paso Huemul above the Viedma glacier",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Bahía Túnel on Lago Viedma",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "ar-laguna-esmeralda",
+   "name": "Laguna Esmeralda",
+   "country": "AR",
+   "slot": "AR-B",
+   "base": "Ushuaia",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Laguna Esmeralda trailhead, Ruta 3",
+     "reuse": null
+    },
+    {
+     "point": "bog",
+     "name": "Peat bog and beaver dams of the Esmeralda valley",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Esmeralda",
+     "reuse": "ar-laguna-esmeralda"
+    }
+   ]
+  },
+  {
+   "id": "ar-glaciar-martial",
+   "name": "Martial Glacier",
+   "country": "AR",
+   "slot": "AR-B",
+   "base": "Ushuaia",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Cumbres del Martial teahouse",
+     "reuse": "ar-martial-glacier"
+    },
+    {
+     "point": "view",
+     "name": "Lookout over Ushuaia and the Beagle Channel",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Martial Glacier",
+     "reuse": "ar-martial-glacier"
+    }
+   ]
+  },
+  {
+   "id": "ar-cerro-guanaco",
+   "name": "Cerro Guanaco",
+   "country": "AR",
+   "slot": "AR-B",
+   "base": "Ushuaia",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lago Acigami (Lago Roca)",
+     "reuse": "ar-lago-acigami"
+    },
+    {
+     "point": "bog",
+     "name": "Cerro Guanaco peat bog",
+     "reuse": "ar-cerro-guanaco"
+    },
+    {
+     "point": "goal",
+     "name": "Cerro Guanaco",
+     "reuse": "ar-cerro-guanaco"
+    }
+   ]
+  },
+  {
+   "id": "ar-senda-costera",
+   "name": "Senda Costera, Tierra del Fuego National Park",
+   "country": "AR",
+   "slot": "AR-B",
+   "base": "Ushuaia",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Bahía Ensenada Zaratiegui",
+     "reuse": "ar-tierra-del-fuego-national-park"
+    },
+    {
+     "point": "coast",
+     "name": "Beagle Channel coves on the Senda Costera",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Lago Acigami (Lago Roca)",
+     "reuse": "ar-lago-acigami"
+    }
+   ]
+  },
+  {
+   "id": "ar-refugio-frey",
+   "name": "Refugio Frey",
+   "country": "AR",
+   "slot": "AR-B",
+   "base": "Bariloche",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Villa Catedral",
+     "reuse": "ar-cerro-catedral"
+    },
+    {
+     "point": "valley",
+     "name": "Arroyo Van Titter valley",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Refugio Frey",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "ar-confluencia-aconcagua",
+   "name": "Aconcagua: Laguna de Horcones and Confluencia",
+   "country": "AR",
+   "slot": "AR-B",
+   "base": "Mendoza",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Horcones ranger station, Aconcagua Park",
+     "reuse": null
+    },
+    {
+     "point": "laguna",
+     "name": "Laguna de Horcones",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Confluencia camp, Aconcagua",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-base-torres",
+   "name": "Base Torres lookout",
+   "country": "CL",
+   "slot": "CL-A",
+   "base": "Torres del Paine",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hotel Las Torres, Torres del Paine",
+     "reuse": null
+    },
+    {
+     "point": "vientos",
+     "name": "Paso de los Vientos, Valle Ascencio",
+     "reuse": null
+    },
+    {
+     "point": "chileno",
+     "name": "Refugio Chileno",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Mirador Base Las Torres",
+     "reuse": "cl-base-de-las-torres"
+    }
+   ]
+  },
+  {
+   "id": "cl-w-trek",
+   "name": "W Trek",
+   "country": "CL",
+   "slot": "CL-A",
+   "base": "Torres del Paine",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hotel Las Torres, Torres del Paine",
+     "reuse": null
+    },
+    {
+     "point": "cuernos",
+     "name": "Refugio Los Cuernos on Lago Nordenskjöld",
+     "reuse": null
+    },
+    {
+     "point": "frances",
+     "name": "Valle del Francés, Mirador Británico",
+     "reuse": "cl-french-valley"
+    },
+    {
+     "point": "paine-grande",
+     "name": "Refugio Paine Grande on Lago Pehoé",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Glaciar Grey",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-o-circuit",
+   "name": "O Circuit, round the Paine massif",
+   "country": "CL",
+   "slot": "CL-A",
+   "base": "Torres del Paine",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Refugio Dickson on Lago Dickson",
+     "reuse": null
+    },
+    {
+     "point": "perros",
+     "name": "Glaciar Los Perros",
+     "reuse": null
+    },
+    {
+     "point": "gardner",
+     "name": "John Gardner Pass, Southern Ice Field view",
+     "reuse": "cl-paso-john-gardner"
+    },
+    {
+     "point": "goal",
+     "name": "Glaciar Grey hanging bridges",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-valle-frances",
+   "name": "French Valley to Mirador Británico",
+   "country": "CL",
+   "slot": "CL-A",
+   "base": "Torres del Paine",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Refugio Paine Grande on Lago Pehoé",
+     "reuse": null
+    },
+    {
+     "point": "italiano",
+     "name": "Campamento Italiano",
+     "reuse": null
+    },
+    {
+     "point": "frances",
+     "name": "Mirador Francés",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Mirador Británico",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-mirador-cuernos",
+   "name": "Salto Grande and Mirador Cuernos",
+   "country": "CL",
+   "slot": "CL-A",
+   "base": "Torres del Paine",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pudeto, Lago Pehoé",
+     "reuse": null
+    },
+    {
+     "point": "salto",
+     "name": "Salto Grande",
+     "reuse": "cl-salto-grande"
+    },
+    {
+     "point": "goal",
+     "name": "Mirador Cuernos",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-mirador-condor",
+   "name": "Mirador Cóndor over Lago Pehoé",
+   "country": "CL",
+   "slot": "CL-A",
+   "base": "Torres del Paine",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Camping Pehoé",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Mirador Cóndor",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-glaciar-grey",
+   "name": "Lago Grey beach and the Grey Glacier lookout",
+   "country": "CL",
+   "slot": "CL-B",
+   "base": "Torres del Paine",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pingo river hanging bridge",
+     "reuse": null
+    },
+    {
+     "point": "beach",
+     "name": "Lago Grey beach with icebergs",
+     "reuse": "cl-lake-grey"
+    },
+    {
+     "point": "goal",
+     "name": "Grey Glacier lookout on the peninsula",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-cerro-castillo",
+   "name": "Laguna Cerro Castillo",
+   "country": "CL",
+   "slot": "CL-B",
+   "base": "Villa Cerro Castillo",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Villa Cerro Castillo",
+     "reuse": null
+    },
+    {
+     "point": "forest",
+     "name": "Estero Parada lenga forest",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Cerro Castillo",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-villarrica",
+   "name": "Villarrica volcano summit",
+   "country": "CL",
+   "slot": "CL-B",
+   "base": "Pucón",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Villarrica ski centre",
+     "reuse": null
+    },
+    {
+     "point": "snow",
+     "name": "Villarrica snow slopes above Lake Villarrica",
+     "reuse": "cl-villarrica-volcano"
+    },
+    {
+     "point": "goal",
+     "name": "Villarrica crater rim",
+     "reuse": "cl-villarrica-volcano"
+    }
+   ]
+  },
+  {
+   "id": "cl-el-morado",
+   "name": "El Morado glacier",
+   "country": "CL",
+   "slot": "CL-B",
+   "base": "Santiago",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Baños Morales",
+     "reuse": null
+    },
+    {
+     "point": "laguna",
+     "name": "Laguna El Morado",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "El Morado glacier foot",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-la-campana",
+   "name": "Cerro La Campana, Darwin's summit",
+   "country": "CL",
+   "slot": "CL-B",
+   "base": "Valparaíso",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sector Granizo, La Campana National Park",
+     "reuse": null
+    },
+    {
+     "point": "darwin",
+     "name": "Darwin plaque, Cerro La Campana",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Cerro La Campana summit",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "cl-dientes-navarino",
+   "name": "Dientes de Navarino circuit",
+   "country": "CL",
+   "slot": "CL-B",
+   "base": "Puerto Williams",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Cerro Bandera, Puerto Williams",
+     "reuse": null
+    },
+    {
+     "point": "salto",
+     "name": "Laguna del Salto, Navarino",
+     "reuse": null
+    },
+    {
+     "point": "teeth",
+     "name": "Dientes de Navarino from Paso Australia",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Martillo, Navarino",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-inca-trail",
+   "name": "Classic Inca Trail to Machu Picchu",
+   "country": "PE",
+   "slot": "PE-A",
+   "base": "Cusco",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Km 82, Piscacucho bridge",
+     "reuse": null
+    },
+    {
+     "point": "pass",
+     "name": "Dead Woman's Pass (Warmiwañusca)",
+     "reuse": "pe-dead-womans-pass"
+    },
+    {
+     "point": "winay",
+     "name": "Wiñay Wayna terraces",
+     "reuse": "pe-winay-wayna"
+    },
+    {
+     "point": "goal",
+     "name": "Inti Punku, the Sun Gate",
+     "reuse": "pe-intipunku"
+    }
+   ]
+  },
+  {
+   "id": "pe-salkantay",
+   "name": "Salkantay trek to Machu Picchu",
+   "country": "PE",
+   "slot": "PE-A",
+   "base": "Cusco",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Soraypampa under Nevado Salkantay",
+     "reuse": null
+    },
+    {
+     "point": "pass",
+     "name": "Salkantay Pass",
+     "reuse": null
+    },
+    {
+     "point": "forest",
+     "name": "Santa Teresa valley cloud forest",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Llactapata ruins, Machu Picchu view",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-vinicunca",
+   "name": "Rainbow Mountain (Vinicunca)",
+   "country": "PE",
+   "slot": "PE-A",
+   "base": "Cusco",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Vinicunca trailhead with alpacas",
+     "reuse": null
+    },
+    {
+     "point": "valley",
+     "name": "Vinicunca valley with Ausangate",
+     "reuse": "pe-rainbow-mountain"
+    },
+    {
+     "point": "goal",
+     "name": "Vinicunca",
+     "reuse": "pe-rainbow-mountain"
+    },
+    {
+     "point": "red",
+     "name": "Red Valley (Valle Rojo)",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-humantay",
+   "name": "Humantay Lake",
+   "country": "PE",
+   "slot": "PE-A",
+   "base": "Cusco",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Soraypampa under Nevado Salkantay",
+     "reuse": null
+    },
+    {
+     "point": "climb",
+     "name": "Humantay moraine path",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Humantay Lake",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-huayna-picchu",
+   "name": "Huayna Picchu",
+   "country": "PE",
+   "slot": "PE-A",
+   "base": "Machu Picchu",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Huayna Picchu control, Machu Picchu",
+     "reuse": "pe-huayna-picchu"
+    },
+    {
+     "point": "stairs",
+     "name": "Huayna Picchu Inca stairs",
+     "reuse": "pe-huayna-picchu"
+    },
+    {
+     "point": "goal",
+     "name": "Huayna Picchu summit terraces",
+     "reuse": "pe-huayna-picchu"
+    }
+   ]
+  },
+  {
+   "id": "pe-machu-picchu-mountain",
+   "name": "Machu Picchu Mountain",
+   "country": "PE",
+   "slot": "PE-A",
+   "base": "Machu Picchu",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Machu Picchu",
+     "reuse": "pe-machu-picchu"
+    },
+    {
+     "point": "stairs",
+     "name": "Machu Picchu Mountain stone stairway",
+     "reuse": "pe-machu-picchu"
+    },
+    {
+     "point": "goal",
+     "name": "Machu Picchu Mountain",
+     "reuse": "pe-machu-picchu"
+    }
+   ]
+  },
+  {
+   "id": "pe-laguna-69",
+   "name": "Laguna 69",
+   "country": "PE",
+   "slot": "PE-B",
+   "base": "Huaraz",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "llanganuco",
+     "name": "Lagunas de Llanganuco",
+     "reuse": "pe-llanganuco-lakes"
+    },
+    {
+     "point": "start",
+     "name": "Cebollapampa meadow",
+     "reuse": null
+    },
+    {
+     "point": "falls",
+     "name": "Laguna 69 waterfalls",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna 69",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-laguna-churup",
+   "name": "Laguna Churup",
+   "country": "PE",
+   "slot": "PE-B",
+   "base": "Huaraz",
+   "kind": "day",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pitec",
+     "reuse": null
+    },
+    {
+     "point": "cables",
+     "name": "Churup rock slabs with fixed cables",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Churup",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-santa-cruz",
+   "name": "Santa Cruz trek",
+   "country": "PE",
+   "slot": "PE-B",
+   "base": "Huaraz",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Vaquería",
+     "reuse": null
+    },
+    {
+     "point": "union",
+     "name": "Punta Unión pass with Taulliraju",
+     "reuse": null
+    },
+    {
+     "point": "alpamayo",
+     "name": "Alpamayo from the Arhuaycocha valley",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Jatuncocha",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-huayhuash",
+   "name": "Cordillera Huayhuash circuit",
+   "country": "PE",
+   "slot": "PE-B",
+   "base": "Huaraz",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Quartelhuain",
+     "reuse": null
+    },
+    {
+     "point": "carhuacocha",
+     "name": "Laguna Carhuacocha with Yerupajá",
+     "reuse": null
+    },
+    {
+     "point": "tres",
+     "name": "Siula pass and the Tres Lagunas",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Jahuacocha",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-colca-trek",
+   "name": "Colca Canyon trek to the Sangalle oasis",
+   "country": "PE",
+   "slot": "PE-B",
+   "base": "Cabanaconde",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Mirador San Miguel, Cabanaconde",
+     "reuse": null
+    },
+    {
+     "point": "bridge",
+     "name": "Colca river bridge",
+     "reuse": null
+    },
+    {
+     "point": "chuccho",
+     "name": "San Juan de Chuccho",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Sangalle oasis",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "pe-choquequirao",
+   "name": "Choquequirao trek",
+   "country": "PE",
+   "slot": "PE-B",
+   "base": "Cachora",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Capuliyoc viewpoint over the Apurímac canyon",
+     "reuse": null
+    },
+    {
+     "point": "river",
+     "name": "Playa Rosalina on the Apurímac river",
+     "reuse": null
+    },
+    {
+     "point": "goal",
+     "name": "Choquequirao",
+     "reuse": "pe-cachora"
+    }
+   ]
+  },
+  {
+   "id": "is-laugavegur",
+   "name": "Laugavegur trail",
+   "country": "IS",
+   "slot": "IS-A",
+   "base": "Landmannalaugar",
+   "kind": "multiday",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Landmannalaugar rhyolite mountains",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Hrafntinnusker obsidian and steam vents",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Álftavatn lake",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Markarfljótsgljúfur canyon at Emstrur",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Þórsmörk",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-fimmvorduhals",
+   "name": "Fimmvörðuháls pass",
+   "country": "IS",
+   "slot": "IS-A",
+   "base": "Skógar",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Skógafoss",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Skógá river waterfalls",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Magni and Móði craters",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Heljarkambur ridge above Þórsmörk",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-valahnukur",
+   "name": "Valahnúkur, Þórsmörk",
+   "country": "IS",
+   "slot": "IS-A",
+   "base": "Þórsmörk",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Langidalur hut, Þórsmörk",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Valahnúkur summit view of three glaciers",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Krossá river braids",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-blahnukur",
+   "name": "Bláhnúkur and Laugahraun loop",
+   "country": "IS",
+   "slot": "IS-A",
+   "base": "Landmannalaugar",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Landmannalaugar hot spring",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Laugahraun obsidian lava field",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Brennisteinsalda",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Bláhnúkur summit",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-reykjadalur",
+   "name": "Reykjadalur hot river",
+   "country": "IS",
+   "slot": "IS-A",
+   "base": "Hveragerði",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Hveragerði trailhead",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Steaming Reykjadalur valley",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Reykjadalur bathing river boardwalk",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-glymur",
+   "name": "Glymur waterfall",
+   "country": "IS",
+   "slot": "IS-A",
+   "base": "Hvalfjörður",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Botnsá cave entrance",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Log crossing on the Botnsá",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Glymur gorge",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-svartifoss",
+   "name": "Svartifoss",
+   "country": "IS",
+   "slot": "IS-B",
+   "base": "Skaftafell",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Skaftafell visitor centre",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Hundafoss",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Svartifoss basalt columns",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-kristinartindar",
+   "name": "Kristínartindar",
+   "country": "IS",
+   "slot": "IS-B",
+   "base": "Skaftafell",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Sjónarnípa over Skaftafellsjökull",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Kristínartindar summit with Hvannadalshnúkur",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Skaftafell heath",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-mulagljufur",
+   "name": "Múlagljúfur canyon",
+   "country": "IS",
+   "slot": "IS-B",
+   "base": "Skaftafell",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Múlagljúfur trailhead under Öræfajökull",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Hangandifoss in Múlagljúfur",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Múlagljúfur canyon rim",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-studlagil",
+   "name": "Stuðlagil canyon from Klaustursel",
+   "country": "IS",
+   "slot": "IS-B",
+   "base": "Egilsstaðir",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Klaustursel bridge",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Stuðlafoss",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Stuðlagil basalt canyon floor",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-hengifoss",
+   "name": "Hengifoss and Litlanesfoss",
+   "country": "IS",
+   "slot": "IS-B",
+   "base": "Egilsstaðir",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Hengifoss car park by Lagarfljót",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Litlanesfoss basalt columns",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Hengifoss red layers",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "is-esja",
+   "name": "Mount Esja to Steinn",
+   "country": "IS",
+   "slot": "IS-B",
+   "base": "Reykjavík",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Esjustofa",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Esja slopes over Reykjavík",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Steinn stone on Esja",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-tre-cime",
+   "name": "Tre Cime di Lavaredo loop",
+   "country": "IT",
+   "slot": "IT-A",
+   "base": "Misurina",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Rifugio Auronzo",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Forcella Lavaredo",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Rifugio Locatelli with the Tre Cime north faces",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Malga Langalm",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-lago-sorapis",
+   "name": "Lago di Sorapis",
+   "country": "IT",
+   "slot": "IT-A",
+   "base": "Cortina d'Ampezzo",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Passo Tre Croci",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Sorapis trail ledge with cables",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Lago di Sorapis with the Dito di Dio",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-cadini-misurina",
+   "name": "Cadini di Misurina viewpoint",
+   "country": "IT",
+   "slot": "IT-A",
+   "base": "Misurina",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Lago di Misurina",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Rifugio Col de Varda",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Cadini di Misurina viewpoint",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-lago-di-braies",
+   "name": "Lago di Braies loop",
+   "country": "IT",
+   "slot": "IT-A",
+   "base": "Braies",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Lago di Braies boathouse",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Lago di Braies far shore",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Croda del Becco over Lago di Braies",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-alta-via-1",
+   "name": "Alta Via 1 of the Dolomites",
+   "country": "IT",
+   "slot": "IT-A",
+   "base": "Cortina d'Ampezzo",
+   "kind": "multiday",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Lago di Braies",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Rifugio Lagazuoi",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Lago Coldai with Civetta",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Rifugio Tissi with the Civetta wall",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-seceda",
+   "name": "Seceda ridge",
+   "country": "IT",
+   "slot": "IT-A",
+   "base": "Ortisei",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Seceda cable car top",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Seceda ridge with the Odle",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Pieralongia meadows",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Col Raiser",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-adolf-munkel",
+   "name": "Adolf Munkel trail, Val di Funes",
+   "country": "IT",
+   "slot": "IT-B",
+   "base": "Val di Funes",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "San Giovanni in Ranui church",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Malga Zannes",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Malga Geisler under the Odle",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-sentiero-degli-dei",
+   "name": "Path of the Gods (Sentiero degli Dei)",
+   "country": "IT",
+   "slot": "IT-B",
+   "base": "Positano",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Bomerano, Agerola",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Sentiero degli Dei above Praiano",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Nocelle over Positano",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-sentiero-azzurro",
+   "name": "Sentiero Azzurro, Monterosso to Corniglia",
+   "country": "IT",
+   "slot": "IT-B",
+   "base": "Cinque Terre",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Monterosso al Mare",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Vernazza from the path",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Corniglia",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-etna",
+   "name": "Etna summit craters",
+   "country": "IT",
+   "slot": "IT-B",
+   "base": "Catania",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Crateri Silvestri at Rifugio Sapienza",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Etna cable car top and ash slopes",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Etna summit craters",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-rifugio-bonatti",
+   "name": "Rifugio Bonatti, Val Ferret",
+   "country": "IT",
+   "slot": "IT-B",
+   "base": "Courmayeur",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Val Ferret meadows",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Rifugio Bonatti",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Grandes Jorasses from Rifugio Bonatti",
+     "reuse": null
+    }
+   ]
+  },
+  {
+   "id": "it-vittorio-emanuele",
+   "name": "Rifugio Vittorio Emanuele II, Gran Paradiso",
+   "country": "IT",
+   "slot": "IT-B",
+   "base": "Valsavarenche",
+   "kind": "day",
+   "status": "todo",
+   "scenes": [
+    {
+     "point": null,
+     "name": "Pont, Valsavarenche",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Gran Paradiso from the moraine",
+     "reuse": null
+    },
+    {
+     "point": null,
+     "name": "Rifugio Vittorio Emanuele II",
+     "reuse": null
+    }
+   ]
+  }
+ ]
+}

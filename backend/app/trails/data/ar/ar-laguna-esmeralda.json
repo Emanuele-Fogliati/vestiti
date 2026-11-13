@@ -1,0 +1,67 @@
+{
+ "id": "ar-laguna-esmeralda",
+ "country": "AR",
+ "name": "Laguna Esmeralda",
+ "base": "Ushuaia",
+ "region": "Tierra Mayor valley, Tierra del Fuego",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 9,
+  "gain_m": 300,
+  "source": "https://turismoushuaia.com"
+ },
+ "why": "The most-walked trail near Ushuaia: lenga forest, a beaver-dammed peat bog and an emerald lake under the Albino glacier.",
+ "book": "Free. Minibuses leave from Ushuaia's port road; the trailhead is 19 km north on Ruta 3.",
+ "water": "Streams along the way.",
+ "dangers": [
+  "Deep mud in the peat bog after rain: waterproof boots or you will be wet to the ankle.",
+  "Weather turns fast: carry a warm layer even in January."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://turismoushuaia.com",
+  "https://hiking.waymarkedtrails.org/#route?id=8861474"
+ ],
+ "osm": 8861474,
+ "points": [
+  {
+   "id": "start",
+   "name": "Laguna Esmeralda trailhead, Ruta 3",
+   "lat": -54.7212,
+   "lon": -68.0911,
+   "role": "start",
+   "note": "Through the lenga forest for the first 40 minutes."
+  },
+  {
+   "id": "bog",
+   "name": "Peat bog and beaver dams of the Esmeralda valley",
+   "lat": -54.703,
+   "lon": -68.1195,
+   "role": "point",
+   "note": "The open bog: walk on the boardwalks and roots, beaver dams on the stream."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Esmeralda",
+   "lat": -54.683,
+   "lon": -68.1374,
+   "role": "goal",
+   "note": "About 450 m. The Albino glacier sits in the cirque above."
+  }
+ ]
+}

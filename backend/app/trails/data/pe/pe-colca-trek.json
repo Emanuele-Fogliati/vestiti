@@ -1,0 +1,77 @@
+{
+ "id": "pe-colca-trek",
+ "country": "PE",
+ "name": "Colca Canyon trek to the Sangalle oasis",
+ "base": "Cabanaconde",
+ "region": "Colca Canyon",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  9,
+  11
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 18,
+  "gain_m": 1300,
+  "source": "https://en.wikivoyage.org/wiki/Colca_Canyon"
+ },
+ "why": "Down 1,100 m into one of the deepest canyons on Earth, a night by the pools of a palm oasis, and back up at dawn.",
+ "book": "The Colca tourist ticket (boleto turístico), checked on the road. Lodges in San Juan de Chuccho and Sangalle need no booking out of July-August.",
+ "water": "Buy at the lodges at the bottom.",
+ "dangers": [
+  "The climb out from Sangalle: 1,100 m in 3-4 hours, start before 05:00 to beat the sun.",
+  "No shade on the descent."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Colca_Canyon"
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Mirador San Miguel, Cabanaconde",
+   "lat": -15.617,
+   "lon": -71.97,
+   "role": "start",
+   "note": "Day 1: the descent starts at the canyon rim, 3,290 m."
+  },
+  {
+   "id": "bridge",
+   "name": "Colca river bridge",
+   "lat": -15.615,
+   "lon": -71.945,
+   "role": "point",
+   "note": "The bottom of the canyon, about 2,200 m: cross the river."
+  },
+  {
+   "id": "chuccho",
+   "name": "San Juan de Chuccho",
+   "lat": -15.615,
+   "lon": -71.935,
+   "role": "point",
+   "note": "A village of fruit trees; lunch, then along the canyon to the oasis."
+  },
+  {
+   "id": "goal",
+   "name": "Sangalle oasis",
+   "lat": -15.618,
+   "lon": -71.953,
+   "role": "goal",
+   "note": "Night by the pools; day 2 climbs straight back to Cabanaconde.",
+   "night": true
+  }
+ ]
+}
