@@ -30,9 +30,11 @@ SLUG = r"^[a-z0-9]+(-[a-z0-9]+)*$"
 
 
 class Published(BaseModel):
-    """The distance and climb the park or hut publishes, to check ours against."""
+    """The distance and climb the park or hut publishes, to check ours against. Both are for the
+    WHOLE walk (there and back for out_and_back). gain_m is the total climb; when the source only
+    gives the net height difference (top minus start), leave gain_m null: ours is shown."""
     km: float = Field(gt=0, le=400)
-    gain_m: float = Field(ge=0, le=15000)
+    gain_m: float | None = Field(default=None, ge=0, le=15000)
     source: HttpUrl
 
 

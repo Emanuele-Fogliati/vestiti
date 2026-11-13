@@ -36,7 +36,7 @@ lists its `sources`.
 | `months` | best months, 1-12 (the trail open and the weather sane) |
 | `hours` | walking time `[low, high]` as the park or a guide publishes it (total for multiday) |
 | `start_by` | when to leave, HH:MM |
-| `published` | `{km, gain_m, source}`: the round-trip distance and climb the park/hut publishes |
+| `published` | `{km, gain_m, source}`: distance and TOTAL climb of the whole walk (there and back for `out_and_back`) as the park/hut publishes them. Many parks give only the one-way distance and the NET height difference (top minus start): double the distance for a there-and-back, and put `gain_m: null` rather than a net difference (the page then shows our computed climb) |
 | `why` | one sentence that makes you want to go. No hype words |
 | `book` | permits, tickets, compulsory guides, huts to book, how to reach the trailhead |
 | `water`, `dangers`, `turnaround` | short, concrete, true. `turnaround` = the rule to turn back (time or place) |
@@ -64,7 +64,7 @@ OSM paths of the area through the points (local router: mountain paths included;
 foot router skips `sac_scale=mountain_hiking` paths and is only the fallback for long trails),
 then reads the altitude (Open-Meteo, Copernicus DEM 90 m).
 It prints `!` when a point is more than 0.8 km off the path, or when the distance or climb is more
-than 30% off the published numbers. **Fix every `!`** (coordinates, `via`, the right relation,
+than 30% off the published numbers (the climb only for day trails with a published climb of 200 m or more: a 90 m DEM is noise on flat walks and misses the small ups of long treks; the page shows the published numbers). **Fix every `!`** (coordinates, `via`, the right relation,
 or the published numbers if you used the wrong source) before you mark the trail `checked`.
 The tests (`tests/test_trails.py`) fail on the same conditions.
 

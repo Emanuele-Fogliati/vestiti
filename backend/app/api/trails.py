@@ -63,7 +63,7 @@ def _numbers(t: trails.Trail) -> dict:
     pub = t.published
     return {
         "km": pub.km if pub else g.get("km"),
-        "gain_m": pub.gain_m if pub else g.get("gain_m"),
+        "gain_m": pub.gain_m if pub and pub.gain_m is not None else g.get("gain_m"),
         "max_m": g.get("max_m"), "min_m": g.get("min_m"),
         "numbers_from": str(pub.source) if pub else ("map" if g else None),
     }
