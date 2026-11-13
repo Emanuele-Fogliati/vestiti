@@ -1054,32 +1054,32 @@
    "slot": "IS-A",
    "base": "Landmannalaugar",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Landmannalaugar rhyolite mountains",
-     "reuse": null
+     "point": "start",
+     "name": "Landmannalaugar hut",
+     "reuse": "is-landmannalaugar"
     },
     {
-     "point": null,
-     "name": "Hrafntinnusker obsidian and steam vents",
-     "reuse": null
+     "point": "hrafntinnusker",
+     "name": "Hrafntinnusker hut",
+     "reuse": "is-hrafntinnusker"
     },
     {
-     "point": null,
-     "name": "Álftavatn lake",
-     "reuse": null
+     "point": "alftavatn",
+     "name": "Álftavatn hut",
+     "reuse": "is-alftavatn"
     },
     {
-     "point": null,
-     "name": "Markarfljótsgljúfur canyon at Emstrur",
-     "reuse": null
+     "point": "emstrur",
+     "name": "Emstrur (Botnar) hut",
+     "reuse": "is-emstrur"
     },
     {
-     "point": null,
-     "name": "Þórsmörk",
-     "reuse": null
+     "point": "goal",
+     "name": "Þórsmörk, Langidalur hut",
+     "reuse": "is-thorsmork"
     }
    ]
   },
@@ -1090,27 +1090,27 @@
    "slot": "IS-A",
    "base": "Skógar",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Skógafoss",
+     "point": "start",
+     "name": "Skógafoss, Skógar",
+     "reuse": "is-skogafoss"
+    },
+    {
+     "point": "waterfalls",
+     "name": "The Skógá waterfalls",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Skógá river waterfalls",
+     "point": "baldvinsskali",
+     "name": "Baldvinsskáli hut",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "craters",
      "name": "Magni and Móði craters",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Heljarkambur ridge above Þórsmörk",
-     "reuse": null
+     "reuse": "is-fimmvorduhals"
     }
    ]
   },
@@ -1121,21 +1121,21 @@
    "slot": "IS-A",
    "base": "Þórsmörk",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Langidalur hut, Þórsmörk",
+     "point": "start",
+     "name": "Langidalur hut (Skagfjörðsskáli)",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Valahnúkur summit view of three glaciers",
-     "reuse": null
+     "point": "krossa",
+     "name": "Krossá view on the ridge",
+     "reuse": "is-thorsmork"
     },
     {
-     "point": null,
-     "name": "Krossá river braids",
+     "point": "goal",
+     "name": "Valahnúkur summit",
      "reuse": null
     }
    ]
@@ -1147,25 +1147,25 @@
    "slot": "IS-A",
    "base": "Landmannalaugar",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "start",
      "name": "Landmannalaugar hot spring",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Laugahraun obsidian lava field",
+     "point": "laugahraun",
+     "name": "Laugahraun lava field",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "brennisteinsalda",
      "name": "Brennisteinsalda",
-     "reuse": null
+     "reuse": "is-landmannalaugar"
     },
     {
-     "point": null,
+     "point": "goal",
      "name": "Bláhnúkur summit",
      "reuse": null
     }
@@ -1178,21 +1178,21 @@
    "slot": "IS-A",
    "base": "Hveragerði",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Hveragerði trailhead",
+     "point": "start",
+     "name": "Reykjadalur trailhead, Hveragerði",
+     "reuse": "is-hveragerdi"
+    },
+    {
+     "point": "valley",
+     "name": "Djúpagilsfoss and the steaming valley",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Steaming Reykjadalur valley",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Reykjadalur bathing river boardwalk",
+     "point": "goal",
+     "name": "Reykjadalsá bathing boardwalk",
      "reuse": null
     }
    ]
@@ -1204,22 +1204,22 @@
    "slot": "IS-A",
    "base": "Hvalfjörður",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Botnsá cave entrance",
+     "point": "cave",
+     "name": "Þvottahellir cave",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "log",
      "name": "Log crossing on the Botnsá",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Glymur gorge",
-     "reuse": null
+     "point": "goal",
+     "name": "Glymur gorge viewpoint",
+     "reuse": "is-hvalfjordur"
     }
    ]
   },
