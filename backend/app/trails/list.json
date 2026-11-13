@@ -189,7 +189,7 @@
    "slot": "AR-B",
    "base": "Ushuaia",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -210,17 +210,17 @@
   },
   {
    "id": "ar-glaciar-martial",
-   "name": "Martial Glacier",
+   "name": "Martial Glacier: Mirador de los Cóndores",
    "country": "AR",
    "slot": "AR-B",
    "base": "Ushuaia",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
-     "name": "Cumbres del Martial teahouse",
-     "reuse": "ar-martial-glacier"
+     "name": "Refugio Base, Cerro Martial",
+     "reuse": null
     },
     {
      "point": "view",
@@ -229,7 +229,7 @@
     },
     {
      "point": "goal",
-     "name": "Martial Glacier",
+     "name": "Mirador de los Cóndores, Martial Glacier",
      "reuse": "ar-martial-glacier"
     }
    ]
@@ -241,7 +241,7 @@
    "slot": "AR-B",
    "base": "Ushuaia",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -251,7 +251,7 @@
     {
      "point": "bog",
      "name": "Cerro Guanaco peat bog",
-     "reuse": "ar-cerro-guanaco"
+     "reuse": null
     },
     {
      "point": "goal",
@@ -267,7 +267,7 @@
    "slot": "AR-B",
    "base": "Ushuaia",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -281,7 +281,7 @@
     },
     {
      "point": "goal",
-     "name": "Lago Acigami (Lago Roca)",
+     "name": "Lago Acigami (Lago Roca), Alakush visitor centre",
      "reuse": "ar-lago-acigami"
     }
    ]
@@ -293,7 +293,7 @@
    "slot": "AR-B",
    "base": "Bariloche",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -308,7 +308,7 @@
     {
      "point": "goal",
      "name": "Refugio Frey",
-     "reuse": null
+     "reuse": "ar-refugio-frey"
     }
    ]
   },
@@ -319,7 +319,7 @@
    "slot": "AR-B",
    "base": "Mendoza",
    "kind": "day",
-   "status": "draft",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -329,7 +329,7 @@
     {
      "point": "laguna",
      "name": "Laguna de Horcones",
-     "reuse": null
+     "reuse": "ar-aconcagua"
     },
     {
      "point": "goal",
