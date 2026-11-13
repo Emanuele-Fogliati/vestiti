@@ -349,30 +349,6 @@
    }
   },
   {
-   "slug": "goryokaku",
-   "label": "Goryokaku star fort and moat seen from the tower, Hakodate",
-   "lat": 41.7969,
-   "lon": 140.757,
-   "radius_km": 3,
-   "aliases": [
-    "goryokaku",
-    "goryo kaku",
-    "hakodate magistrate"
-   ],
-   "palette": {
-    "sky": "#BBD8F0",
-    "far": "#8D9FA0",
-    "mid": "#9CC46A",
-    "ice": "#F2EEE4",
-    "water": "#4E7E78",
-    "near": "#22281F",
-    "sun": "#F2C14E",
-    "leaf": "#3F6E36",
-    "acc": "#B85A3C",
-    "obj": "#C4C1B8"
-   }
-  },
-  {
    "slug": "great-buddha-of-kamakura",
    "label": "Great Buddha of Kamakura (Kotoku-in)",
    "lat": 35.3167,
@@ -785,6 +761,36 @@
    }
   },
   {
+   "slug": "kumamoto",
+   "label": "Kumamoto Castle's black main and small keeps on their curved stone walls",
+   "lat": 32.8063,
+   "lon": 130.7058,
+   "radius_km": 15,
+   "aliases": [
+    "kumamoto castle",
+    "kumamoto jo",
+    "castello di kumamoto",
+    "chateau de kumamoto"
+   ],
+   "names": [
+    "kumamoto",
+    "kumamoto city",
+    "kumamoto japan"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#9BA1A8",
+    "mid": "#8A8478",
+    "ice": "#F3F1EC",
+    "water": "#4A7FA8",
+    "near": "#1C1C1E",
+    "sun": "#F6C431",
+    "leaf": "#4E7A3A",
+    "acc": "#C9C2B2",
+    "obj": "#36373A"
+   }
+  },
+  {
    "slug": "kumano-hayatama-taisha",
    "label": "The vermilion worship halls of Kumano Hayatama Taisha under its great trees, Shingu",
    "lat": 33.7302,
@@ -1035,6 +1041,28 @@
     "leaf": "#5E9A42",
     "acc": "#C88A62",
     "obj": "#8E8A88"
+   }
+  },
+  {
+   "slug": "lake-shikotsu",
+   "label": "Lake Shikotsu with Mt Fuppushi and Mt Tarumae's lava dome",
+   "lat": 42.77,
+   "lon": 141.36,
+   "radius_km": 15,
+   "aliases": [
+    "shikotsu"
+   ],
+   "palette": {
+    "sky": "#B9D9F2",
+    "far": "#B7B9C2",
+    "mid": "#8C857A",
+    "ice": "#F4F3EE",
+    "water": "#2F72A8",
+    "near": "#1F2622",
+    "sun": "#F6C431",
+    "leaf": "#4A7A44",
+    "acc": "#C9473A",
+    "obj": "#8C6C4C"
    }
   },
   {
@@ -1304,33 +1332,34 @@
    }
   },
   {
-   "slug": "naha",
-   "label": "Seiden hall of Shuri Castle, Naha",
-   "lat": 26.217,
-   "lon": 127.7195,
-   "radius_km": 12,
+   "slug": "nagoya",
+   "label": "Nagoya Castle's keep with its golden shachihoko and the small keep on the stone walls",
+   "lat": 35.1856,
+   "lon": 136.8992,
+   "radius_km": 15,
    "aliases": [
-    "shuri castle",
-    "shurijo",
-    "shuri jo",
-    "shuri"
+    "nagoya castle",
+    "nagoya jo",
+    "nagoyajo",
+    "castello di nagoya",
+    "meijo park"
    ],
    "names": [
-    "naha",
-    "naha city",
-    "okinawa"
+    "nagoya",
+    "nagoya city",
+    "nagoya station"
    ],
    "palette": {
-    "sky": "#A6CBEE",
-    "far": "#BDB8AC",
-    "mid": "#B8382C",
-    "ice": "#F3EEE6",
-    "water": "#4A90B0",
-    "near": "#2A1E1C",
-    "sun": "#E8B840",
-    "leaf": "#4E7A3E",
-    "acc": "#C46658",
-    "obj": "#DDA592"
+    "sky": "#AFD0EE",
+    "far": "#9DB06E",
+    "mid": "#8F877A",
+    "ice": "#F4F2EC",
+    "water": "#4E7E8E",
+    "near": "#22262A",
+    "sun": "#E9B832",
+    "leaf": "#3F6B3C",
+    "acc": "#86BFA4",
+    "obj": "#6C727A"
    }
   },
   {
@@ -2255,6 +2284,60 @@
     "leaf": "#4F7F3A",
     "acc": "#A24A36",
     "obj": "#4E7E5A"
+   }
+  },
+  {
+   "slug": "goryokaku",
+   "label": "Goryokaku star fort and moat seen from the tower, Hakodate",
+   "lat": 41.7969,
+   "lon": 140.757,
+   "radius_km": 3,
+   "aliases": [
+    "goryokaku",
+    "goryo kaku",
+    "hakodate magistrate"
+   ],
+   "palette": {
+    "sky": "#BBD8F0",
+    "far": "#8D9FA0",
+    "mid": "#9CC46A",
+    "ice": "#F2EEE4",
+    "water": "#4E7E78",
+    "near": "#22281F",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E36",
+    "acc": "#B85A3C",
+    "obj": "#C4C1B8"
+   }
+  },
+  {
+   "slug": "naha",
+   "label": "Seiden hall of Shuri Castle, Naha",
+   "lat": 26.217,
+   "lon": 127.7195,
+   "radius_km": 12,
+   "aliases": [
+    "shuri castle",
+    "shurijo",
+    "shuri jo",
+    "shuri"
+   ],
+   "names": [
+    "naha",
+    "naha city",
+    "okinawa"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#BDB8AC",
+    "mid": "#B8382C",
+    "ice": "#F3EEE6",
+    "water": "#4A90B0",
+    "near": "#2A1E1C",
+    "sun": "#E8B840",
+    "leaf": "#4E7A3E",
+    "acc": "#C46658",
+    "obj": "#DDA592"
    }
   }
  ]

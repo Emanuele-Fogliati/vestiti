@@ -22,9 +22,9 @@
  ],
  "start_by": "08:00",
  "published": {
-  "km": 19,
-  "gain_m": 450,
-  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+  "km": 20,
+  "gain_m": null,
+  "source": "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf"
  },
  "why": "The gentler of the two great El Chaltén walks: a long valley to a lake with icebergs under Cerro Torre's needle.",
  "book": "Free, no permit.",
@@ -35,6 +35,7 @@
  ],
  "turnaround": "Leave the lake by 15:00 to be back before dark in spring and autumn.",
  "sources": [
+  "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf",
   "https://www.argentina.gob.ar/parquesnacionales/losglaciares",
   "https://hiking.waymarkedtrails.org/#route?id=9051398",
   "https://de.wikivoyage.org/wiki/El_Chalt%C3%A9n"
@@ -46,7 +47,8 @@
    "lat": -49.33111,
    "lon": -72.89518,
    "role": "start",
-   "note": "At the west end of Calle Los Cohihues. The first 20 minutes are the steepest of the day."
+   "note": "At the west end of Calle Los Cohihues. The first 20 minutes are the steepest of the day.",
+   "scene": "ar-el-chalten"
   },
   {
    "id": "mirador",
@@ -54,7 +56,8 @@
    "lat": -49.33278,
    "lon": -72.9271,
    "role": "point",
-   "note": "After about 3 km: the whole valley and, if it is clear, Cerro Torre at its end."
+   "note": "After about 3 km: the whole valley and, if it is clear, Cerro Torre at its end.",
+   "scene": "ar-mirador-del-torre"
   },
   {
    "id": "agostini",
@@ -62,7 +65,8 @@
    "lat": -49.326,
    "lon": -72.9865,
    "role": "point",
-   "note": "The camp in the lenga forest, with toilets. The lake is 10 minutes up the moraine."
+   "note": "The camp in the lenga forest, with toilets. The lake is 10 minutes up the moraine.",
+   "scene": "ar-campamento-de-agostini"
   },
   {
    "id": "goal",
@@ -70,7 +74,8 @@
    "lat": -49.3301,
    "lon": -72.98893,
    "role": "goal",
-   "note": "630 m, on the moraine above the lake: icebergs from the Glaciar Grande. Mirador Maestri is 1 h more along the moraine crest to the right."
+   "note": "630 m, on the moraine above the lake: icebergs from the Glaciar Grande. Mirador Maestri is 1 h more along the moraine crest to the right.",
+   "scene": "ar-laguna-torre"
   }
  ]
 }

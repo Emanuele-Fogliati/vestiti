@@ -1,0 +1,88 @@
+{
+ "id": "it-tre-cime",
+ "country": "IT",
+ "name": "Tre Cime di Lavaredo loop (Drei Zinnen)",
+ "base": "Misurina",
+ "region": "Dolomiti di Sesto / Auronzo di Cadore, Belluno",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3.5,
+  4.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 9.5,
+  "gain_m": 405,
+  "source": "https://it.wikivoyage.org/wiki/Giro_delle_Tre_Cime_di_Lavaredo"
+ },
+ "why": "The most famous walk of the Dolomites: all the way round the three rock towers, from their bright south walls to the north faces everyone knows, on wide paths with three huts on the way.",
+ "book": "Free path. By car: toll road from Misurina to Rifugio Auronzo, parking booked online in advance since 2025 (40 EUR a car in 2026). Or the summer shuttle bus from Dobbiaco or Misurina. Huts open roughly mid-June to late September.",
+ "water": "No streams worth trusting: fill up at Rifugio Auronzo. Rifugio Lavaredo, Locatelli and Malga Langalm sell drinks and food.",
+ "dangers": [
+  "Afternoon thunderstorms in July and August: you are on open ground at 2,300-2,450 m with no shelter between the huts.",
+  "Snow on the north side and on Forcella Lavaredo until late June.",
+  "Very crowded from 10:00 in summer: start early."
+ ],
+ "turnaround": "If thunder starts before Forcella Lavaredo, go back to Auronzo the way you came; after the pass, shelter at Rifugio Locatelli.",
+ "sources": [
+  "https://it.wikivoyage.org/wiki/Giro_delle_Tre_Cime_di_Lavaredo",
+  "https://www.dolomiti.it/it/itinerari/trekking/giro-delle-tre-cime-di-lavaredo",
+  "https://hiking.waymarkedtrails.org/#route?id=1116663"
+ ],
+ "osm": null,
+ "points": [
+  {
+   "id": "auronzo",
+   "name": "Rifugio Auronzo",
+   "lat": 46.6122,
+   "lon": 12.2961,
+   "role": "start",
+   "note": "2,320 m, end of the toll road and of the bus. Walk east on the flat gravel road (path 101) under the south walls.",
+   "scene": "it-rifugio-auronzo"
+  },
+  {
+   "id": "lavaredo",
+   "name": "Rifugio Lavaredo",
+   "lat": 46.6183,
+   "lon": 12.3121,
+   "role": "point",
+   "note": "2,344 m, after 30 minutes. Small hut with a terrace below the Cima Piccola; the path then climbs to the pass."
+  },
+  {
+   "id": "forcella",
+   "name": "Forcella Lavaredo",
+   "lat": 46.6225,
+   "lon": 12.3115,
+   "role": "point",
+   "note": "2,454 m, the highest point. The north faces of the Tre Cime appear on the left, Monte Paterno on the right.",
+   "scene": "it-forcella-lavaredo"
+  },
+  {
+   "id": "locatelli",
+   "name": "Rifugio Locatelli",
+   "lat": 46.6369,
+   "lon": 12.3105,
+   "role": "point",
+   "note": "2,405 m, the classic view of the three north faces straight across the valley. Lunch here, then take path 105 west.",
+   "scene": "it-dolomites"
+  },
+  {
+   "id": "langalm",
+   "name": "Malga Langalm",
+   "lat": 46.6257,
+   "lon": 12.2898,
+   "role": "goal",
+   "note": "2,283 m, a small pasture hut by two little lakes. From here the path climbs gently back to Rifugio Auronzo in 45 minutes.",
+   "scene": "it-malga-langalm"
+  }
+ ]
+}
