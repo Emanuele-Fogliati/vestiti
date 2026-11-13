@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="26" r="11" fill="var(--il-sun)"/>
+<path d="M0 104V90Q60 84 120 88Q200 82 300 88V104Z" fill="var(--il-far)"/>
+<path d="M14 98Q44 92 80 96Q60 102 30 102Z" fill="var(--il-water)"/>
+<defs><clipPath id="il-cl-villarrica-crater-l"><path d="M196 96Q216 82 232 62L240 56H246L254 62Q270 82 290 96Z"/></clipPath></defs>
+<path d="M196 96Q216 82 232 62L240 56H246L254 62Q270 82 290 96Z" fill="var(--il-far)"/>
+<path d="M196 96Q216 82 232 62L240 56H246L254 62Q270 82 290 96Z" fill="var(--il-near)" opacity="0.3"/>
+<g clip-path="url(#il-cl-villarrica-crater-l)"><path d="M200 50H290V72L276 76L268 70L258 78L250 70L242 78L234 70L226 76L214 72L200 74Z" fill="var(--il-ice)"/></g>
+<path d="M0 200V100Q40 96 70 104Q110 96 150 100Q200 94 240 102Q270 98 300 104V200Z" fill="var(--il-mid)"/>
+<path d="M40 112Q80 104 150 106Q230 104 268 112Q250 150 200 160Q150 168 100 160Q56 150 40 112Z" fill="var(--il-near)"/>
+<path d="M56 118Q100 112 150 114Q216 112 252 118Q236 140 196 148Q150 154 106 148Q68 140 56 118Z" fill="var(--il-obj)"/>
+<path d="M90 140Q110 128 150 130Q196 128 214 140Q196 150 150 152Q106 150 90 140Z" fill="var(--il-near)"/>
+<path d="M140 146Q132 128 142 112Q136 96 128 84Q118 70 96 66Q104 60 120 62Q140 66 150 82Q160 98 156 112Q166 128 164 146Q152 150 140 146Z" fill="var(--il-ice)" opacity="0.6"/>
+<path d="M0 200V170L20 160L44 156L64 162L80 158L96 166L112 176L120 200ZM300 200V164L280 156L258 160L242 168L226 176L216 200Z" fill="var(--il-mid)"/>
