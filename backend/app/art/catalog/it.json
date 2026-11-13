@@ -738,6 +738,37 @@
    }
   },
   {
+   "slug": "bergamo",
+   "label": "Bergamo's Citta Alta skyline above the Venetian walls: the Campanone, the Duomo dome and the bell towers",
+   "lat": 45.7037,
+   "lon": 9.6623,
+   "radius_km": 12,
+   "aliases": [
+    "citta alta bergamo",
+    "citta alta di bergamo",
+    "bergamo alta",
+    "bergamo citta alta",
+    "bergamo upper town",
+    "upper town of bergamo"
+   ],
+   "names": [
+    "bergamo",
+    "citta alta"
+   ],
+   "palette": {
+    "sky": "#BCD8EE",
+    "far": "#A7B6C4",
+    "mid": "#B3A68E",
+    "ice": "#EDE2C8",
+    "water": "#6C9BB8",
+    "near": "#2A2420",
+    "sun": "#F2C14E",
+    "leaf": "#5E8045",
+    "acc": "#C2633F",
+    "obj": "#6FA38E"
+   }
+  },
+  {
    "slug": "biella",
    "label": "Biella's Piazza Duomo: the neo-Gothic cathedral portico and the Santo Stefano bell tower",
    "lat": 45.5659,
@@ -2851,6 +2882,29 @@
    }
   },
   {
+   "slug": "corniglia",
+   "label": "Corniglia on its cliff above the sea, with terraced vineyards",
+   "lat": 44.12,
+   "lon": 9.7087,
+   "radius_km": 2,
+   "aliases": [
+    "corniglia"
+   ],
+   "names": [],
+   "palette": {
+    "sky": "#B4D6F2",
+    "far": "#ECDCC0",
+    "mid": "#A39C8E",
+    "ice": "#F6F3EC",
+    "water": "#235F9E",
+    "near": "#23272A",
+    "sun": "#F2C14E",
+    "leaf": "#5C7F3A",
+    "acc": "#D3825F",
+    "obj": "#E2C45A"
+   }
+  },
+  {
    "slug": "cortina-dampezzo",
    "label": "Cortina d'Ampezzo bell tower below the Tofane",
    "lat": 46.5383,
@@ -3554,6 +3608,29 @@
     "leaf": "#6E9440",
     "acc": "#B0563A",
     "obj": "#2E5C58"
+   }
+  },
+  {
+   "slug": "franciacorta",
+   "label": "Franciacorta vineyard rows below the Santissima di Gussago on its hilltop",
+   "lat": 45.5968,
+   "lon": 10.1555,
+   "radius_km": 20,
+   "aliases": [
+    "franciacorta",
+    "santissima di gussago"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#C8C48A",
+    "mid": "#D2B37C",
+    "ice": "#ECE2C8",
+    "water": "#93ABC6",
+    "near": "#25261F",
+    "sun": "#F4C443",
+    "leaf": "#5E8C2F",
+    "acc": "#B5603C",
+    "obj": "#2F4A2A"
    }
   },
   {
@@ -4331,6 +4408,56 @@
     "leaf": "#4A6E36",
     "acc": "#C2604A",
     "obj": "#E8B488"
+   }
+  },
+  {
+   "slug": "labirinto-della-masone",
+   "label": "The brick pyramid chapel behind the courtyard walls of the Labirinto della Masone",
+   "lat": 44.8915,
+   "lon": 10.1773,
+   "radius_km": 3,
+   "aliases": [
+    "labirinto della masone",
+    "masone labyrinth",
+    "masone maze",
+    "labirinto di franco maria ricci",
+    "franco maria ricci labyrinth",
+    "labyrinth of franco maria ricci"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#D9AE94",
+    "mid": "#C98A6E",
+    "ice": "#F0E6DA",
+    "water": "#6C9BB8",
+    "near": "#2A1F1C",
+    "sun": "#F4C443",
+    "leaf": "#5E9A3E",
+    "acc": "#B87458",
+    "obj": "#A2604A"
+   }
+  },
+  {
+   "slug": "lacona",
+   "label": "The sandy bay of Lacona with its pine wood and the green hills of Elba",
+   "lat": 42.756,
+   "lon": 10.302,
+   "radius_km": 4,
+   "aliases": [
+    "lacona",
+    "golfo di lacona"
+   ],
+   "palette": {
+    "sky": "#A9D3F2",
+    "far": "#8FD3CF",
+    "mid": "#6E8A4A",
+    "ice": "#FFFFFF",
+    "water": "#2A8CC8",
+    "near": "#22301E",
+    "sun": "#F6C431",
+    "leaf": "#3E6430",
+    "acc": "#E8CF96",
+    "obj": "#E2483A"
    }
   },
   {
@@ -5360,6 +5487,33 @@
    }
   },
   {
+   "slug": "margherita-di-savoia",
+   "label": "The salt mountain, salt stacker and flamingos of the Margherita di Savoia salt pans",
+   "lat": 41.37,
+   "lon": 16.14,
+   "radius_km": 10,
+   "aliases": [
+    "saline di margherita di savoia",
+    "salina di margherita di savoia",
+    "saline margherita di savoia"
+   ],
+   "names": [
+    "margherita di savoia"
+   ],
+   "palette": {
+    "sky": "#C3DCEF",
+    "far": "#8E9A6E",
+    "mid": "#5E5A56",
+    "ice": "#FBFBF8",
+    "water": "#D8A9AE",
+    "near": "#2A2628",
+    "sun": "#F6C431",
+    "leaf": "#6F8048",
+    "acc": "#A85E44",
+    "obj": "#EF8CA0"
+   }
+  },
+  {
    "slug": "marmolada",
    "label": "Marmolada glacier above Lago di Fedaia",
    "lat": 46.434,
@@ -5760,6 +5914,36 @@
     "leaf": "#4E7A36",
     "acc": "#D4382E",
     "obj": "#3E9A8C"
+   }
+  },
+  {
+   "slug": "modena",
+   "label": "Modena Cathedral and the Ghirlandina tower on Piazza Grande",
+   "lat": 44.6464,
+   "lon": 10.9256,
+   "radius_km": 12,
+   "aliases": [
+    "ghirlandina",
+    "duomo di modena",
+    "modena cathedral",
+    "cattedrale di modena",
+    "piazza grande modena",
+    "piazza grande di modena"
+   ],
+   "names": [
+    "modena"
+   ],
+   "palette": {
+    "sky": "#A8CCEF",
+    "far": "#D3C3A3",
+    "mid": "#E6DAC2",
+    "ice": "#F3EEE3",
+    "water": "#6C9BB8",
+    "near": "#2C2622",
+    "sun": "#F2C14E",
+    "leaf": "#7A9A55",
+    "acc": "#C98A60",
+    "obj": "#A8644A"
    }
   },
   {
@@ -7762,6 +7946,30 @@
    }
   },
   {
+   "slug": "pianosa-tremiti",
+   "label": "The flat limestone islet of Pianosa with its lighthouse, Tremiti Islands",
+   "lat": 42.225,
+   "lon": 15.745,
+   "radius_km": 4,
+   "aliases": [
+    "pianosa tremiti",
+    "pianosa isole tremiti",
+    "pianosa delle tremiti"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#DAD3BF",
+    "mid": "#9A8F5E",
+    "ice": "#FFFFFF",
+    "water": "#1F5EA8",
+    "near": "#1E2630",
+    "sun": "#F6C431",
+    "leaf": "#7A8048",
+    "acc": "#BDB8AC",
+    "obj": "#EAB52A"
+   }
+  },
+  {
    "slug": "piazza-navona",
    "label": "Piazza Navona: Sant'Agnese in Agone and the Fountain of the Four Rivers",
    "lat": 41.8992,
@@ -8557,6 +8765,29 @@
     "leaf": "#86B84A",
     "acc": "#C76B5C",
     "obj": "#4A4F48"
+   }
+  },
+  {
+   "slug": "pugnochiuso",
+   "label": "The pine-ringed cove of Pugnochiuso with its sea cave, Gargano",
+   "lat": 41.826,
+   "lon": 16.166,
+   "radius_km": 3,
+   "aliases": [
+    "pugnochiuso",
+    "baia di pugnochiuso"
+   ],
+   "palette": {
+    "sky": "#B4D8F2",
+    "far": "#7E9A55",
+    "mid": "#D9D2C0",
+    "ice": "#FFFFFF",
+    "water": "#3FB6AE",
+    "near": "#23302A",
+    "sun": "#F6C431",
+    "leaf": "#3C5E2E",
+    "acc": "#E3CC9E",
+    "obj": "#2F6FB0"
    }
   },
   {
@@ -9418,6 +9649,31 @@
    }
   },
   {
+   "slug": "san-piero-in-campo",
+   "label": "San Piero in Campo below the granite slopes of Monte Capanne, Elba",
+   "lat": 42.751,
+   "lon": 10.213,
+   "radius_km": 3,
+   "aliases": [
+    "san piero in campo"
+   ],
+   "names": [
+    "san piero"
+   ],
+   "palette": {
+    "sky": "#B5D6F0",
+    "far": "#CCC5B4",
+    "mid": "#8C8A5C",
+    "ice": "#F0DFAE",
+    "water": "#3C8CC0",
+    "near": "#2B2A22",
+    "sun": "#F6C431",
+    "leaf": "#3F6031",
+    "acc": "#C4623A",
+    "obj": "#E9A79A"
+   }
+  },
+  {
    "slug": "san-pietro-island",
    "label": "Le Colonne, the two trachyte sea stacks of San Pietro island off La Bobba beach",
    "lat": 39.118,
@@ -9634,6 +9890,33 @@
     "leaf": "#4E7A36",
     "acc": "#E58F7A",
     "obj": "#E9C460"
+   }
+  },
+  {
+   "slug": "santandrea",
+   "label": "The sea arch and stacks of Torre Sant'Andrea, Salento",
+   "lat": 40.256,
+   "lon": 18.445,
+   "radius_km": 3,
+   "aliases": [
+    "torre sant andrea",
+    "faraglioni di sant andrea",
+    "faraglioni di torre sant andrea"
+   ],
+   "names": [
+    "sant andrea"
+   ],
+   "palette": {
+    "sky": "#BCD9EE",
+    "far": "#D6C69E",
+    "mid": "#E6D3A2",
+    "ice": "#FFFFFF",
+    "water": "#2FB0B4",
+    "near": "#2A2A26",
+    "sun": "#F6C431",
+    "leaf": "#5E7140",
+    "acc": "#A88E62",
+    "obj": "#2271A0"
    }
   },
   {
@@ -11704,6 +11987,29 @@
    }
   },
   {
+   "slug": "vernazza",
+   "label": "Vernazza's harbour, Santa Margherita church and the Doria tower from the Sentiero Azzurro",
+   "lat": 44.1352,
+   "lon": 9.6835,
+   "radius_km": 2,
+   "aliases": [
+    "vernazza"
+   ],
+   "names": [],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#F0D8B4",
+    "mid": "#9C9486",
+    "ice": "#F7F2E8",
+    "water": "#2A8FB6",
+    "near": "#24282B",
+    "sun": "#F2C14E",
+    "leaf": "#5E8A3E",
+    "acc": "#DE8670",
+    "obj": "#E3B240"
+   }
+  },
+  {
    "slug": "verona",
    "label": "Arena di Verona with the Ala on Piazza Bra",
    "lat": 45.4391,
@@ -11808,6 +12114,29 @@
     "leaf": "#4E7A3C",
     "acc": "#4FA58E",
     "obj": "#8A5A32"
+   }
+  },
+  {
+   "slug": "vico-del-gargano",
+   "label": "The hill town of Vico del Gargano with its red dome and castle",
+   "lat": 41.897,
+   "lon": 15.957,
+   "radius_km": 8,
+   "aliases": [],
+   "names": [
+    "vico del gargano"
+   ],
+   "palette": {
+    "sky": "#A9D0F0",
+    "far": "#B9B2A3",
+    "mid": "#8E9A5E",
+    "ice": "#ECE8DF",
+    "water": "#2E78B8",
+    "near": "#2A2724",
+    "sun": "#F6C431",
+    "leaf": "#4F6B35",
+    "acc": "#B9673F",
+    "obj": "#B8322A"
    }
   },
   {
