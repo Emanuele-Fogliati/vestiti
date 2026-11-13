@@ -3,6 +3,33 @@
  "name": "Canada",
  "places": [
   {
+   "slug": "admiralty-inlet",
+   "label": "Admiralty Inlet's sheer cliffs above the sea-ice floe edge, with narwhals and a polar bear",
+   "lat": 72.8,
+   "lon": -85.8,
+   "radius_km": 60,
+   "aliases": [
+    "admiralty inlet",
+    "arctic bay floe edge",
+    "ikpiarjuk"
+   ],
+   "names": [
+    "arctic bay"
+   ],
+   "palette": {
+    "sky": "#C4DEF0",
+    "far": "#A08A78",
+    "mid": "#7E5848",
+    "ice": "#F4F6F6",
+    "water": "#2D5E76",
+    "near": "#1E2226",
+    "sun": "#F4D25A",
+    "leaf": "#7D7A55",
+    "acc": "#E8E0CC",
+    "obj": "#6A7378"
+   }
+  },
+  {
    "slug": "algonquin-provincial-park",
    "label": "A red canoe, granite, white pines and a moose on an Algonquin lake",
    "lat": 45.55,
@@ -680,6 +707,29 @@
     "leaf": "#4F8A6A",
     "acc": "#B8402E",
     "obj": "#3E6E9E"
+   }
+  },
+  {
+   "slug": "gros-morne-national-park",
+   "label": "Western Brook Pond's granite fjord with Pissing Mare Falls and a moose, Gros Morne National Park",
+   "lat": 49.78,
+   "lon": -57.83,
+   "radius_km": 40,
+   "aliases": [
+    "gros morne",
+    "western brook pond"
+   ],
+   "palette": {
+    "sky": "#A9CDEE",
+    "far": "#BCC4C6",
+    "mid": "#8C9091",
+    "ice": "#F4F6F6",
+    "water": "#2F5C7A",
+    "near": "#1E2624",
+    "sun": "#F5C842",
+    "leaf": "#3F7A3A",
+    "acc": "#5A3D28",
+    "obj": "#C8452F"
    }
   },
   {
@@ -1512,6 +1562,40 @@
     "leaf": "#3B6334",
     "acc": "#CDBFA8",
     "obj": "#B03A2E"
+   }
+  },
+  {
+   "slug": "saint-john",
+   "label": "The Reversing Falls steel arch bridge over the Saint John River gorge, Saint John",
+   "lat": 45.2627,
+   "lon": -66.0909,
+   "radius_km": 15,
+   "aliases": [
+    "reversing falls",
+    "reversing rapids",
+    "chutes reversibles",
+    "reversing falls bridge",
+    "skywalk saint john",
+    "saint john new brunswick",
+    "saint john nb",
+    "saint john n b"
+   ],
+   "names": [
+    "saint john",
+    "city of saint john",
+    "port of saint john"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#B8BCB4",
+    "mid": "#9E9C94",
+    "ice": "#F0F0EC",
+    "water": "#3E6E8C",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#4E7A3A",
+    "acc": "#3A6EA8",
+    "obj": "#7F95A6"
    }
   },
   {

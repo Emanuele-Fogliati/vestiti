@@ -345,7 +345,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -376,7 +376,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -391,7 +391,7 @@
     {
      "point": "frances",
      "name": "Mirador Británico, Valle del Francés",
-     "reuse": null
+     "reuse": "cl-mirador-britanico"
     },
     {
      "point": "paine-grande",
@@ -412,7 +412,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -453,7 +453,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -473,7 +473,7 @@
     {
      "point": "goal",
      "name": "Mirador Británico",
-     "reuse": null
+     "reuse": "cl-mirador-britanico"
     }
    ]
   },
@@ -484,7 +484,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -510,7 +510,7 @@
    "slot": "CL-A",
    "base": "Torres del Paine",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -1386,25 +1386,25 @@
    "slot": "IT-A",
    "base": "Misurina",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "auronzo",
      "name": "Rifugio Auronzo",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "forcella",
      "name": "Forcella Lavaredo",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Locatelli with the Tre Cime north faces",
-     "reuse": null
+     "point": "locatelli",
+     "name": "Rifugio Locatelli",
+     "reuse": "it-dolomites"
     },
     {
-     "point": null,
+     "point": "langalm",
      "name": "Malga Langalm",
      "reuse": null
     }
@@ -1417,21 +1417,21 @@
    "slot": "IT-A",
    "base": "Cortina d'Ampezzo",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "tre-croci",
      "name": "Passo Tre Croci",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Sorapis trail ledge with cables",
+     "point": "ledges",
+     "name": "Cabled ledges on path 215",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Lago di Sorapis with the Dito di Dio",
+     "point": "lake",
+     "name": "Lago di Sorapis",
      "reuse": null
     }
    ]
@@ -1443,20 +1443,25 @@
    "slot": "IT-A",
    "base": "Misurina",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "misurina",
      "name": "Lago di Misurina",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Col de Varda",
+     "point": "antorno",
+     "name": "Lago d'Antorno",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "auronzo",
+     "name": "Rifugio Auronzo",
+     "reuse": null
+    },
+    {
+     "point": "viewpoint",
      "name": "Cadini di Misurina viewpoint",
      "reuse": null
     }
@@ -1469,21 +1474,16 @@
    "slot": "IT-A",
    "base": "Braies",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "boathouse",
      "name": "Lago di Braies boathouse",
-     "reuse": null
+     "reuse": "it-lago-di-braies"
     },
     {
-     "point": null,
-     "name": "Lago di Braies far shore",
-     "reuse": null
-    },
-    {
-     "point": null,
-     "name": "Croda del Becco over Lago di Braies",
+     "point": "south",
+     "name": "Lago di Braies south shore",
      "reuse": null
     }
    ]
@@ -1493,28 +1493,28 @@
    "name": "Alta Via 1 of the Dolomites",
    "country": "IT",
    "slot": "IT-A",
-   "base": "Cortina d'Ampezzo",
+   "base": "Braies",
    "kind": "multiday",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
+     "point": "braies",
      "name": "Lago di Braies",
-     "reuse": null
+     "reuse": "it-lago-di-braies"
     },
     {
-     "point": null,
+     "point": "lagazuoi",
      "name": "Rifugio Lagazuoi",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Lago Coldai with Civetta",
+     "point": "coldai",
+     "name": "Lago Coldai",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Rifugio Tissi with the Civetta wall",
+     "point": "tissi",
+     "name": "Rifugio Tissi",
      "reuse": null
     }
    ]
@@ -1526,25 +1526,20 @@
    "slot": "IT-A",
    "base": "Ortisei",
    "kind": "day",
-   "status": "todo",
+   "status": "drawn",
    "scenes": [
     {
-     "point": null,
-     "name": "Seceda cable car top",
-     "reuse": null
-    },
-    {
-     "point": null,
+     "point": "ridge",
      "name": "Seceda ridge with the Odle",
      "reuse": null
     },
     {
-     "point": null,
-     "name": "Pieralongia meadows",
+     "point": "pieralongia",
+     "name": "Pieralongia",
      "reuse": null
     },
     {
-     "point": null,
+     "point": "col-raiser",
      "name": "Col Raiser",
      "reuse": null
     }
