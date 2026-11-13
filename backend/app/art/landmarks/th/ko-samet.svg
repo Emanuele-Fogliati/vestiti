@@ -1,0 +1,12 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="56" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V112H300V200Z" fill="var(--il-water)"/>
+<path d="M232 113Q250 105 270 106Q288 104 300 106V113Z" fill="var(--il-leaf)"/>
+<path d="M0 200V146Q60 138 120 141Q200 144 300 139V200Z" fill="var(--il-far)"/>
+<path d="M170 164L173 112H205L209 164Z" fill="var(--il-obj)"/>
+<path d="M173 124H205M172 137H207M171 150H208M184 112V124M196 124V137M182 137V150M198 150V164" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+<path d="M70 200Q80 176 110 164Q140 154 170 155Q200 153 230 156Q260 162 280 176L300 182V200ZM0 200V178Q20 172 44 178Q60 184 64 200Z" fill="var(--il-mid)"/>
+<path d="M104 182Q140 168 180 170M200 172Q240 172 270 184" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+
+<g transform="translate(128 162) scale(1.55)"><path vector-effect="non-scaling-stroke" d="M-7 -22H7Q9 -10 6 -2Q12 2 19 -2L24 -9L25 2Q14 8 0 4Q-8 0 -7 -22Z" fill="var(--il-water)"/><path vector-effect="non-scaling-stroke" d="M-6 -21Q-7 -32 -4 -37H6Q9 -32 7 -21Z" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M-7 -20V-24H8V-20Z" fill="var(--il-acc)"/><path vector-effect="non-scaling-stroke" d="M-3 -33L2 -28L6 -33L2 -31Z" fill="var(--il-ice)"/><circle vector-effect="non-scaling-stroke" cx="1" cy="-41" r="4.5" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M-3 -44L1 -53L5 -44Z" fill="var(--il-acc)"/></g>
+<g transform="translate(192 112) scale(1.55)"><path vector-effect="non-scaling-stroke" d="M-15 -4L-16 28L-8 33H-6L-11 28L-9 -2Z" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M6 0L-14 0Q-18 -4 -16 -8L6 -10Z" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M-4 -10Q-4 -26 -2 -33Q3 -36 8 -33Q10 -26 10 -10Z" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M-5 -9V-14H11V-9Z" fill="var(--il-acc)"/><path vector-effect="non-scaling-stroke" d="M-1 -32L-11 -29L-13 -43H-9L-8 -33L0 -35ZM9 -31L1 -26L-4 -42H-1L3 -31Z" fill="var(--il-ice)"/><circle vector-effect="non-scaling-stroke" cx="4" cy="-39" r="5" fill="var(--il-ice)"/><path vector-effect="non-scaling-stroke" d="M0 -42L2 -48L3 -53L4 -58L5 -53L6 -48L8 -42Z" fill="var(--il-acc)"/><path vector-effect="non-scaling-stroke" d="M-20 -42H0" stroke="var(--il-acc)" stroke-width="2.4" fill="none" stroke-linecap="round"/></g>

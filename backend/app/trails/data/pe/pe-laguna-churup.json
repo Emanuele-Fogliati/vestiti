@@ -15,48 +15,49 @@
   9
  ],
  "hours": [
-  5,
-  6
+  4,
+  5
  ],
  "start_by": "08:00",
  "published": {
-  "km": 7,
-  "gain_m": 600,
-  "source": "https://www.sernanp.gob.pe/huascaran"
+  "km": 6,
+  "gain_m": null,
+  "source": "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park"
  },
  "why": "The acclimatisation hike of Huaraz: a green lake under a glacier peak, with a short scramble on cables at the end.",
  "book": "Park ticket at the Pitec control. Taxi or colectivo from Huaraz (45 min).",
  "water": "Carry 1.5 litres.",
  "dangers": [
-  "The last 30 minutes are rock slabs with fixed cables: hands needed, slippery when wet.",
+  "The last part is a 9 m rock step and slabs with fixed cables and ropes: hands needed, slippery when wet.",
   "From 3,850 to 4,450 m."
  ],
  "turnaround": "",
  "sources": [
+  "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park",
   "https://www.sernanp.gob.pe/huascaran"
  ],
  "points": [
   {
    "id": "start",
    "name": "Pitec",
-   "lat": -9.4849,
-   "lon": -77.4362,
+   "lat": -9.5057,
+   "lon": -77.4423,
    "role": "start",
    "note": "The ranger post at the road end, 3,850 m."
   },
   {
    "id": "cables",
    "name": "Churup rock slabs with fixed cables",
-   "lat": -9.477,
-   "lon": -77.421,
+   "lat": -9.4865,
+   "lon": -77.4322,
    "role": "point",
    "note": "The scramble beside the waterfall below the lake."
   },
   {
    "id": "goal",
    "name": "Laguna Churup",
-   "lat": -9.4744,
-   "lon": -77.4166,
+   "lat": -9.4856,
+   "lon": -77.431,
    "role": "goal",
    "note": "About 4,450 m, under Nevado Churup."
   }
