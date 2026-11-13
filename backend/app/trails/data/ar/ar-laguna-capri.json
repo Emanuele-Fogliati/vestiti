@@ -22,9 +22,9 @@
  ],
  "start_by": "09:00",
  "published": {
-  "km": 9,
-  "gain_m": 400,
-  "source": "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
+  "km": 8,
+  "gain_m": null,
+  "source": "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf"
  },
  "why": "Fitz Roy reflected in a forest lake in half a day, without the last brutal climb.",
  "book": "Free, no permit.",
@@ -34,6 +34,7 @@
  ],
  "turnaround": "",
  "sources": [
+  "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf",
   "https://www.argentina.gob.ar/parquesnacionales/losglaciares"
  ],
  "points": [
@@ -43,7 +44,8 @@
    "lat": -49.32111,
    "lon": -72.89459,
    "role": "start",
-   "note": "The same start as Laguna de los Tres."
+   "note": "The same start as Laguna de los Tres.",
+   "scene": "ar-el-chalten"
   },
   {
    "id": "river",
@@ -51,7 +53,8 @@
    "lat": -49.31645,
    "lon": -72.89858,
    "role": "point",
-   "note": "After 30 minutes: the valley of the Río de las Vueltas opens below."
+   "note": "After 30 minutes: the valley of the Río de las Vueltas opens below.",
+   "scene": "ar-rio-de-las-vueltas"
   },
   {
    "id": "goal",
@@ -59,7 +62,8 @@
    "lat": -49.30285,
    "lon": -72.92968,
    "role": "goal",
-   "note": "750 m. Walk around the shore to the camp side for Fitz Roy over the water."
+   "note": "750 m. Walk around the shore to the camp side for Fitz Roy over the water.",
+   "scene": "ar-laguna-capri"
   }
  ]
 }

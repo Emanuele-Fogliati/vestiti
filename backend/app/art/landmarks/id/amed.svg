@@ -1,0 +1,12 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="248" cy="32" r="12" fill="var(--il-sun)"/>
+<path d="M160 130L196 108L220 96L232 90L244 94L262 102L284 104L300 104V132Z" fill="var(--il-far)"/>
+<path d="M0 130C46 122 96 86 116 44L122 38L127 36L133 37L138 41C152 82 214 114 300 120V132H0Z" fill="var(--il-mid)"/>
+<path d="M116 44L122 38L127 36L133 37L138 41L134 44L130 41L125 42L120 46Z" fill="var(--il-near)" opacity="0.5"/>
+<path d="M0 200V128H300V200Z" fill="var(--il-water)"/>
+<path d="M0 154V96Q16 90 30 94Q46 92 58 100Q78 106 98 114Q122 120 150 124Q180 128 206 132Q226 136 238 140Q240 144 232 146Q120 150 0 156Z" fill="var(--il-leaf)"/>
+<path d="M48 120h9v6h-9ZM78 126h9v6h-9ZM116 130h9v6h-9ZM150 134h9v6h-9ZM184 136h8v6h-8ZM212 139h7v5h-7Z" fill="var(--il-ice)"/>
+<path d="M46 121L52.5 116L59 121ZM76 127L82.5 122L89 127ZM114 131L120.5 126L127 131ZM148 135L154.5 130L161 135ZM182 137L188 132L194 137ZM210 140L215.5 135.5L221 140Z" fill="var(--il-acc)"/>
+<path d="M0 156Q120 150 232 146Q242 145 240 148Q130 156 0 162Z" fill="var(--il-obj)"/>
+<g transform="translate(150 176)"><path d="M-28 -2Q0 6 26 -2L32 -10Q28 -4 22 -5Q0 0 -24 -6Q-30 -8 -34 -12Q-32 -4 -28 -2Z" fill="var(--il-ice)"/><path d="M-12 -4Q-12 -14 -6 -14Q0 -12 -2 4M10 -4Q10 -14 16 -14Q22 -12 20 4M-26 4H34" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M-22 -3Q0 2 22 -3" stroke="var(--il-acc)" stroke-width="1.5" fill="none" stroke-linecap="round"/></g>
+<g transform="translate(244 160) scale(0.6)"><path d="M-28 -2Q0 6 26 -2L32 -10Q28 -4 22 -5Q0 0 -24 -6Q-30 -8 -34 -12Q-32 -4 -28 -2Z" fill="var(--il-ice)"/><path d="M-12 -4Q-12 -14 -6 -14Q0 -12 -2 4M10 -4Q10 -14 16 -14Q22 -12 20 4M-26 4H34" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/></g>

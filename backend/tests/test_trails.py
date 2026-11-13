@@ -86,7 +86,8 @@ def test_api_lists_and_filters(client):
                                               "month": 7}).json()["trails"]
     ldt = next(t for t in near if t["id"] == "ar-laguna-de-los-tres")
     assert ldt["in_season"] is False and ldt["months_text"] == "Nov–Apr"
-    assert ldt["km"] == 22 and ldt["gain_m"] == 1000  # the park's numbers come first
+    assert ldt["km"] == 20  # the park's numbers come first (brochure, there and back)
+    assert 900 < ldt["gain_m"] < 1100  # brochure gives only the net level: climb from the map
 
 
 def test_api_one_trail_and_wear(client):

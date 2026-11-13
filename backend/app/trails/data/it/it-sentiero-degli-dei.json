@@ -1,0 +1,70 @@
+{
+ "id": "it-sentiero-degli-dei",
+ "country": "IT",
+ "name": "Path of the Gods (Sentiero degli Dei)",
+ "base": "Positano",
+ "region": "Monti Lattari, Amalfi Coast",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 6.5,
+  "gain_m": 150,
+  "source": "https://siviaggia.it/cammini/monti-lattari-sentiero-degli-dei/286069/"
+ },
+ "why": "A balcony path 500 m above the sea, from Agerola's terraces to Positano, with the whole Amalfi Coast and Capri ahead.",
+ "book": "No ticket. SITA bus to Bomerano (Agerola) from Amalfi; at Nocelle take the local bus down to Positano or the 1,700 steps.",
+ "water": "Fill up in Bomerano; a fountain and kiosks only in Nocelle.",
+ "dangers": [
+  "Little shade: in summer start by 8:30 and carry sun protection.",
+  "Uneven limestone steps, slippery after rain; no barrier on some drops."
+ ],
+ "turnaround": "If you reach Colle Serra after 12:00 in summer, drop to Praiano instead of going on.",
+ "sources": [
+  "https://siviaggia.it/cammini/monti-lattari-sentiero-degli-dei/286069/",
+  "https://organizzazione.cai.it/sez-potenza/wp-content/uploads/sites/36/2024/10/Scheda-Escursione-Sentiero-deli-dei-corretta-2.pdf",
+  "https://www.openstreetmap.org/relation/4757514"
+ ],
+ "osm": 4757514,
+ "points": [
+  {
+   "id": "start",
+   "name": "Bomerano, Agerola",
+   "lat": 40.62924,
+   "lon": 14.53977,
+   "role": "start",
+   "note": "Start at Piazza Paolo Capasso; signs for path 327 lead down past terraces and the Grotta del Biscotto."
+  },
+  {
+   "id": "praiano",
+   "name": "Colle Serra above Praiano",
+   "lat": 40.62112,
+   "lon": 14.52832,
+   "role": "point",
+   "note": "The path crests above Praiano: Positano, Li Galli and Capri appear ahead.",
+   "scene": "it-path-of-the-gods"
+  },
+  {
+   "id": "goal",
+   "name": "Nocelle above Positano",
+   "lat": 40.6287,
+   "lon": 14.50369,
+   "role": "goal",
+   "note": "A car-free hamlet 450 m above Positano. Bus or 1,700 steps down to the town."
+  }
+ ]
+}
