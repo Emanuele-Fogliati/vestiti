@@ -28,6 +28,7 @@ export function Layout() {
   const links = [
     ["/start", "Plan a trip"],
     ["/trips", "My trips"],
+    ["/trails", "Trekking"],
     ["/wardrobe", "Wardrobe"],
     ["/how-it-works", "How it works"],
   ];
