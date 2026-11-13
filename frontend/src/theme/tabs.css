@@ -292,3 +292,22 @@ i.x-cell::after{transform:scale(.7)}
 .x-js .x-reveal.in{opacity:1;transform:none}
 @media (max-width:860px){.x-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:460px){.x-steps{grid-template-columns:minmax(0,1fr)}}
+
+/* one bag: every piece and where it is worn, stop by stop */
+.x-onebag-h{margin-top:22px}
+.x-onebag-h .x-h3{margin-top:0}
+.x-route{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
+.x-route li{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.x-route small{color:var(--ink-3);font-size:12px}
+.x-route .n,.w{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;font-size:11px;font-weight:700;line-height:1;flex:none;box-sizing:border-box}
+.x-route .n{background:var(--accent);color:var(--ink)}
+.w.worn{background:var(--ink);color:var(--surface)}
+.w.stops{background:var(--ink-3);color:var(--surface)}
+.w.pack{border:1.5px solid var(--ink);color:var(--ink);background:var(--surface)}
+.w.none{color:var(--ink-3);background:transparent;border:1.5px dashed var(--rule-strong)}
+.x-onebag-h .x-legend .w{display:inline-block;width:14px;height:14px;font-size:0;margin-right:6px}
+.x-where{margin:8px 0 2px}
+.x-way{display:flex;flex-wrap:wrap;gap:4px;align-items:center}
+.x-way .w{display:grid;margin:0;position:static}
+.x-onebag-h .x-legend>span{display:inline-flex;align-items:center}
+.x-where p{margin:6px 0 0;font-size:13px;line-height:1.35;color:var(--ink-2)}

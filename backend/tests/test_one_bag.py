@@ -82,3 +82,15 @@ def test_hot_day_piece_can_be_owned_or_swapped(client):
         assert line["kind"] == "have" and line["cost"] == 0
     assert client.put(f"/api/trips/{tid}/selections", json={
         "tier": "medium", "slot": "shell_top@warm", "choice": "have"}).status_code == 422
+
+
+def test_every_piece_says_where_it_is_worn(client):
+    tid = _trip(client, MOUNTAINS + SEA)
+    medium = client.get(f"/api/trips/{tid}/plans").json()["tiers"]["medium"]
+    assert [s["name"] for s in medium["stops"]] == ["Cortina", "Val Gardena", "Cagliari",
+                                                    "Villasimius"]
+    for line in medium["items"]:
+        assert len(line["where"]) == 4 and line["where_text"].endswith(".")
+    shorts = next(i for i in medium["items"] if i["slot"] == "trousers@warm")
+    assert shorts["where"] == ["none", "none", "worn", "worn"]
+    assert shorts["where_text"].startswith("Worn in Cagliari and Villasimius")

@@ -360,6 +360,9 @@ export interface KitLine {
   owned_verdict: "fine" | "works" | null;
   preferred_brand?: boolean;
   brand_note?: string | null;
+  /** one status per stop, in trip order */
+  where?: SlotStatus[];
+  where_text?: string;
 }
 
 export interface MarginRow { required: number; provided: number; margin: number; status: Status }
@@ -368,6 +371,7 @@ export type Status = "covered" | "marginal" | "cold";
 export interface TierPlan {
   tier: Tier;
   items: KitLine[];
+  stops?: { index: number; name: string; start: string; end: string }[];
   totals: {
     buy: number; rent: number; total: number; owned_value_saved: number;
     items_to_buy: number; items_owned: number; items_rented: number; weight_g: number;
