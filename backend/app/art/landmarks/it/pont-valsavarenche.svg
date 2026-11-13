@@ -1,0 +1,19 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="268" cy="24" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-it-pont-valsavarenche-c"><path d="M120 130L138 100L150 80L160 66L172 60L186 62L196 70L204 82L212 76L222 60L230 48L238 58L246 72L256 84L270 96L284 108L300 116V158H120Z"/></clipPath></defs>
+<path d="M120 130L138 100L150 80L160 66L172 60L186 62L196 70L204 82L212 76L222 60L230 48L238 58L246 72L256 84L270 96L284 108L300 116V158H120Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-it-pont-valsavarenche-c)">
+<path d="M150 80L160 66L172 60L186 62L196 70L200 76L192 80L186 92L178 84L170 94L162 84L156 92Z" fill="var(--il-ice)"/>
+<path d="M222 60L230 48L238 58L246 72L242 90L236 110L232 88L226 100L222 80L216 92L214 78Z" fill="var(--il-ice)"/>
+</g>
+<path d="M0 150V20L14 18L30 26L46 40L62 52L80 70L98 88L114 102L130 116L142 130L152 158H0Z" fill="var(--il-far)"/>
+<path d="M30 40L40 80L52 120M62 60L70 96M90 82L96 110" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 150L20 120L36 130L50 116L70 132L90 124L110 136L130 132L150 146V160H0Z" fill="var(--il-leaf)"/>
+<path d="M300 160V110L290 104L280 112L270 106L262 118L252 116L244 128L232 130L222 140L210 144L200 152Z" fill="var(--il-leaf)"/>
+<path d="M252 128L258 102L262 92L266 102L272 128ZM270 120L276 90L280 78L284 90L290 120ZM286 116L292 92L296 84L300 92V116Z" fill="var(--il-leaf)"/>
+<path d="M0 200V156Q80 148 150 150Q230 152 300 150V200Z" fill="var(--il-acc)"/>
+<path d="M0 176Q60 168 120 170Q200 172 300 164V176Q200 184 120 182Q60 180 0 188Z" fill="var(--il-water)"/>
+<path d="M118 186V164H122V186ZM170 186V164H174V186Z" fill="var(--il-obj)"/>
+<path d="M112 168Q146 158 180 168V172Q146 162 112 172Z" fill="var(--il-obj)"/>
+<path d="M114 162Q146 152 178 162" stroke="var(--il-obj)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M130 160V166M146 157V163M162 159V165" stroke="var(--il-obj)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
