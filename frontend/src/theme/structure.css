@@ -85,7 +85,9 @@ button,input,select{font:inherit;color:inherit}
 .cond dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
 .cond dd{margin:0;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums}
 .cond dd.hot{color:var(--hot)}
-@media (max-width:1000px){.stop{grid-template-columns:112px 180px minmax(0,1fr);gap:20px}}
+/* a stop with no drawing has no picture: its text takes the picture's column */
+.stop.noart{grid-template-columns:128px minmax(0,1fr)}
+@media (max-width:1000px){.stop{grid-template-columns:112px 180px minmax(0,1fr);gap:20px}.stop.noart{grid-template-columns:112px minmax(0,1fr)}}
 @media (max-width:720px){
   .stop{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 18px}
   .stop .days{grid-column:1/-1;display:flex;gap:10px;align-items:baseline}

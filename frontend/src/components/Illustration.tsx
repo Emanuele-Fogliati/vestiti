@@ -36,20 +36,21 @@ function useLandmark(id?: string): string | null | undefined {
   return svg;
 }
 
-/** A stop's scene: its landmark when we have one, otherwise the generic terrain. While the landmark
- *  loads the frame stays empty (never a generic scene that looks like the wrong place).
- *  `fallback={false}`: show nothing at all when the landmark can't be had (the globe's place card). */
-export function Illustration({ terrain, art, label, fallback = true }: {
-  terrain: Terrain; art?: StopArt | null; label?: string; fallback?: boolean;
-}) {
-  const landmark = useLandmark(art?.kind === "landmark" ? art.id : undefined);
-  if (landmark === null && art?.kind === "landmark" && !fallback) return null;
+/** A place's picture: its own landmark drawing, or nothing at all. A place without a drawing never
+ *  gets a generic scene, which reads as the wrong place (Manu, 2026-11-13: no drawing, no picture,
+ *  until it is drawn). While the drawing loads the frame stays empty.
+ *  `terrain` with no `art`: one of the generic scenes, only for pages that illustrate an idea
+ *  rather than a place (the "How it works" steps). */
+export function Illustration({ terrain, art, label }: { terrain?: Terrain; art?: StopArt | null; label?: string }) {
+  const id = art?.kind === "landmark" ? art.id : undefined;
+  const landmark = useLandmark(id);
+  if (id ? landmark === null : !terrain || art !== undefined) return null;
   const name = label ?? (landmark ? art?.label : undefined);
   return (
     <figure className="thumb">
       <svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" role={name ? "img" : undefined}
         aria-label={name} aria-hidden={name ? undefined : true}
-        dangerouslySetInnerHTML={{ __html: landmark === undefined ? "" : landmark ?? ART[terrain] }} />
+        dangerouslySetInnerHTML={{ __html: id ? landmark ?? "" : ART[terrain!] }} />
     </figure>
   );
 }

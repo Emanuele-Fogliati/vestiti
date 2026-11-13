@@ -8,7 +8,6 @@ import { Visits } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, monthRange, monthYear, nights, today } from "../lib/format";
-import { terrainFor } from "../lib/terrain";
 import type { Itinerary, ItineraryStop, Stop } from "../lib/types";
 import { DRESS_ME } from "./Start";
 
@@ -53,11 +52,10 @@ function PackForm({ it, id }: { it: Itinerary; id?: string }) {
 
 function StopBlock({ stop, index, dayFrom }: { stop: ItineraryStop; index: number; dayFrom: number }) {
   const n = nights(stop.start_date, stop.end_date);
-  const terrain = terrainFor(stop, index);
   return (
-    <li className="stop istop" id={`stop-${index}`}>
+    <li className={`stop istop${stop.art ? "" : " noart"}`} id={`stop-${index}`}>
       <div className="days">{n > 1 ? "Days" : "Day"} <b>{n > 1 ? `${dayFrom}–${dayFrom + n - 1}` : dayFrom}</b></div>
-      <Illustration terrain={terrain} art={stop.art} />
+      <Illustration art={stop.art} />
       <div className="info">
         <h3>{stop.name}</h3>
         <div className="acts">
@@ -70,7 +68,7 @@ function StopBlock({ stop, index, dayFrom }: { stop: ItineraryStop; index: numbe
         </ol>
         {/* the day plan already names every place: only the ones with their own picture come back here */}
         <Visits stop={{ ...stop, plan: undefined, visits: (stop.visits ?? []).filter((v) => v.art && v.art.id !== stop.art?.id) }}
-          dayFrom={dayFrom} terrain={terrain} />
+          dayFrom={dayFrom} />
         {(stop.do.length > 0 || stop.skip.length > 0) && (
           <div className="tips">
             {stop.do.length > 0 && <div className="tip-do"><h4>Worth it</h4><ul>{stop.do.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}

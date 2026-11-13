@@ -2,7 +2,6 @@ import { useState } from "react";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, addDays, countryName, dayMonth, daysBetween, minus, nights, SOURCE_LABEL } from "../lib/format";
-import { terrainFor, type Terrain } from "../lib/terrain";
 import type { Activity, Place, Stage, Stop, Visit } from "../lib/types";
 import { ActivityEditor } from "./ActivityEditor";
 import { Illustration } from "./Illustration";
@@ -31,7 +30,7 @@ function Conditions({ stage }: { stage?: Stage }) {
 
 /** The places a stop's days take you to, day by day: a picture for each one the library has
  * drawn (once: Machu Picchu is not shown twice), a name for the others. */
-export function Visits({ stop, dayFrom, terrain }: { stop: Stop; dayFrom: number; terrain: Terrain }) {
+export function Visits({ stop, dayFrom }: { stop: Stop; dayFrom: number }) {
   const vs = stop.visits ?? [];
   if (!vs.length) return null;
   const multi = nights(stop.start_date, stop.end_date) > 1;
@@ -51,7 +50,7 @@ export function Visits({ stop, dayFrom, terrain }: { stop: Stop; dayFrom: number
             const pic = v.art && !shown.has(v.art.id);
             if (v.art) shown.add(v.art.id);
             return pic ? (
-              <div className="visit" key={i}><Illustration terrain={terrain} art={v.art} label={v.name} /><span>{v.name}</span></div>
+              <div className="visit" key={i}><Illustration art={v.art} label={v.name} /><span>{v.name}</span></div>
             ) : <span className="vchip" key={i} title={v.art ? v.art.label : undefined}>{v.name}</span>;
           })}
         </div>
@@ -67,16 +66,15 @@ export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelec
   onConfirm?: () => void;
 }) {
   const n = nights(stop.start_date, stop.end_date);
-  const terrain = terrainFor(stop, index);
   const est = stop.days_estimated;
   return (
-    <li className={`stop${selected ? " sel" : ""}`} tabIndex={0} onClick={onSelect}
+    <li className={`stop${selected ? " sel" : ""}${stop.art ? "" : " noart"}`} tabIndex={0} onClick={onSelect}
       onKeyDown={(e) => { if (e.key === "Enter" && e.target === e.currentTarget) onSelect(); }}
       aria-label={`${stop.name}, select to see its layers`}>
       <div className="days" title={est ? "You did not say how long: these days are a guess" : undefined}>{n > 1 ? "Days" : "Day"} <b>{n > 1 ? `${dayFrom}–${dayFrom + n - 1}` : dayFrom}</b>
         <span>{dayMonth(stop.start_date)}{n > 1 ? ` – ${dayMonth(stop.end_date)}` : ""}</span>
         {est && <span className="est">≈ {n} {n === 1 ? "day" : "days"}, a guess</span>}</div>
-      <Illustration terrain={terrain} art={stop.art} />
+      <Illustration art={stop.art} />
       <div className="info">
         <h3>{stop.name}</h3>
         {stop.place_status === "check" && onConfirm && (
@@ -87,7 +85,7 @@ export function StopCard({ stop, stage, index, count, selected, dayFrom, onSelec
           <span className="tag">{Math.round(stop.elevation_m)} m</span></div>
         <PlaceGuide guide={stop.guide} />
         {stop.notes && <p className="act">{stop.notes}</p>}
-        <Visits stop={stop} dayFrom={dayFrom} terrain={terrain} />
+        <Visits stop={stop} dayFrom={dayFrom} />
         <Conditions stage={stage} />
         {stage && (
           <div className="wx" aria-label="Daily weather">
