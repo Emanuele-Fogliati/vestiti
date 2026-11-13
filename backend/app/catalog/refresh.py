@@ -20,7 +20,7 @@ from app.catalog import pagereader
 from app.models import Product
 
 log = logging.getLogger(__name__)
-READABLE_HOSTS = {"www.bergfreunde.it"}
+READABLE_HOSTS = {"www.bergfreunde.it", "www.evo.com", "www.decathlon.com"}
 
 
 def readable(url: str | None) -> bool:
@@ -42,7 +42,7 @@ def refresh_prices(db: Session, older_than: timedelta | None = None, pause: floa
     out = {"checked": 0, "updated": 0, "off": 0, "back_on": 0, "failed": 0}
     own = client is None
     client = client or httpx.Client(
-        headers={"User-Agent": pagereader.UA, "Accept-Language": "it,en;q=0.8"},
+        headers={"User-Agent": pagereader.UA, "Accept-Language": "en,it;q=0.8"},
         follow_redirects=True, timeout=20)
     try:
         for i, p in enumerate(rows):

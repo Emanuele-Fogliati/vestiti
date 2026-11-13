@@ -75,7 +75,31 @@ Run feeds daily (cron or a scheduled task); prices drift.
 
 ## The catalog today (before any network approves us)
 
-`backend/seed/products.json`, rebuilt with `tools/catalog/refresh_seed.py`:
+Two markets. Every user shops in one: `users.market` ("us" or "eu"), chosen in the kit
+("US shops $ / EU shops €") or in Account; without a choice, `DEFAULT_MARKET` (default
+`us`). The kit only uses that market's products and shows money in its currency.
+
+### US (USD): `backend/seed/products_us.json`
+
+Rebuilt with `tools/catalog/build_us_seed.py` from the list in `tools/catalog/us_pages.json`
+(~100 products, The North Face, Patagonia, Smartwool, Helly Hansen, Outdoor Research, Black
+Diamond, Merrell, Decathlon's own brands).
+
+| Shop | Link | Price, picture, stock | Network when approved |
+|---|---|---|---|
+| evo | the real product page | read from the page, re-read like Bergfreunde | AvantLink (evo's merchant id goes in `MERCHANT_PROGRAM_IDS`, e.g. `evo=12345`) |
+| Decathlon US | the real product page | read from the page | FlexOffers (`FLEXOFFERS_LINK_TEMPLATE`, with `{url}` and `{click}`) |
+
+The North Face and Patagonia are sold through evo: their own US programs (TNF on
+FlexOffers, ~3%, 7-day cookie; Patagonia on AvantLink) can be added later as more shops.
+REI, Backcountry and the brands' own sites refuse automated requests, so they need their
+affiliate feed, not page reading.
+
+Specs of US products are copied from the same (or the closest) model in the EU file.
+
+### Europe (EUR): `backend/seed/products.json`
+
+Rebuilt with `tools/catalog/refresh_seed.py`:
 
 | Shop | Products | Link | Price, picture, stock | Network when approved |
 |---|---|---|---|---|

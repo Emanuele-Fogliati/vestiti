@@ -72,7 +72,7 @@ def merge_guest(db: Session, guest: User | None, into: User) -> int:
     if into.profile_done_at is None and guest.profile_done_at is not None:
         # the quiz answered as a guest is the traveller's own: keep it
         for k in ("thermal_offset", "pace", "evenings", "gender_pref", "preferred_brands",
-                  "profile_done_at"):
+                  "market", "profile_done_at"):
             setattr(into, k, getattr(guest, k))
     db.flush()
     db.expire(guest, ["trips", "wardrobe"])

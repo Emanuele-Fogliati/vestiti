@@ -123,6 +123,23 @@ class AvantLink(Network):
                         + quote(click_id) + "&url=" + quote(url, safe=""), True, self.key)
 
 
+class FlexOffers(Network):
+    """FlexOffers: the deep link template from its link builder, {url} = encoded destination,
+    {click} = our click id."""
+
+    key = "flexoffers"
+
+    def configured(self) -> bool:
+        t = self.s.flexoffers_link_template
+        return bool(t) and "{url}" in t
+
+    def build(self, url, click_id, program_id=None):
+        if not self.configured():
+            return Outbound(url, False, self.key)
+        return Outbound(self.s.flexoffers_link_template.replace("{click}", quote(click_id))
+                        .replace("{url}", quote(url, safe="")), True, self.key)
+
+
 class GetYourGuide(Network):
     """GetYourGuide partner program (tours and excursions): adds partner_id=<our partner id>
     and cmp=<click id>, the campaign field their partner reports show."""
@@ -155,8 +172,19 @@ class Viator(Network):
                                            "medium": "link", "campaign": click_id}), True, self.key)
 
 
-REGISTRY = {cls.key: cls for cls in (Direct, Amazon, Awin, Impact, CJ, AvantLink, GetYourGuide,
-                                     Viator)}
+REGISTRY = {cls.key: cls for cls in (Direct, Amazon, Awin, Impact, CJ, AvantLink, FlexOffers,
+                                     GetYourGuide, Viator)}
+
+
+def program_id_for(merchant: str, program_id: str | None, settings: Settings) -> str | None:
+    """The product's own program id, else the one set for its merchant in MERCHANT_PROGRAM_IDS."""
+    if program_id:
+        return program_id
+    for part in (settings.merchant_program_ids or "").split(";"):
+        name, _, pid = part.partition("=")
+        if name.strip().lower() == (merchant or "").strip().lower() and pid.strip():
+            return pid.strip()
+    return None
 
 
 def network_for(key: str, settings: Settings) -> Network:

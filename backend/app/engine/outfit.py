@@ -16,6 +16,8 @@ Rules (product decisions, not tuning):
 """
 from __future__ import annotations
 
+import contextvars
+
 from dataclasses import dataclass, field
 from datetime import date
 
@@ -755,8 +757,13 @@ def stages_name(stages, idx: int) -> str:
     return next((s.name for s in stages if s.index == idx), f"stage {idx + 1}")
 
 
+# currency of the kit being built (the traveller's market): set by the planner per request
+CURRENCY: contextvars.ContextVar[str] = contextvars.ContextVar("kit_currency", default="EUR")
+SYMBOL = {"EUR": "€", "USD": "$", "GBP": "£"}
+
+
 def _money(v: float) -> str:
-    return f"€{abs(v):,.0f}"
+    return f"{SYMBOL.get(CURRENCY.get(), CURRENCY.get() + ' ')}{abs(v):,.0f}"
 
 
 def group_by_slot(items: list[CatalogItem]) -> dict[str, list[CatalogItem]]:

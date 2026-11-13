@@ -6,7 +6,7 @@ from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
 from app import inspire
-from app.affiliates.networks import network_for
+from app.affiliates.networks import network_for, program_id_for
 from app.config import get_settings
 from app.db import get_db
 from app.deps import optional_user
@@ -39,7 +39,8 @@ def go_product(product_id: str, request: Request, trip_id: str | None = None,
                            user_agent_hash=ua_hash(request.headers.get("user-agent")))
     db.add(click)
     db.flush()
-    out = network_for(p.network, get_settings()).build(p.url, click.id, p.program_id)
+    s = get_settings()
+    out = network_for(p.network, s).build(p.url, click.id, program_id_for(p.merchant, p.program_id, s))
     click.destination_url = out.url
     click.tracked = out.tracked
     db.commit()

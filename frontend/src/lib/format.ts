@@ -1,5 +1,12 @@
-export const money = (n: number, currency = "EUR") =>
-  new Intl.NumberFormat("en-IE", { style: "currency", currency, maximumFractionDigits: 0 }).format(n);
+/** The currency of the shops the user buys from (their market): totals and savings use it. */
+let shopCurrency = "USD";
+export const setShopMarket = (m?: string | null) => {
+  shopCurrency = m === "eu" ? "EUR" : "USD";
+};
+export const money = (n: number, currency?: string | null) => {
+  const c = currency || shopCurrency;
+  return new Intl.NumberFormat(c === "USD" ? "en-US" : "en-IE", { style: "currency", currency: c, maximumFractionDigits: 0 }).format(n);
+};
 
 export const minus = (n: number) => (n < 0 ? "−" + Math.abs(n) : String(n));
 export const temp = (n: number) => `${minus(Math.round(n))} °C`;
