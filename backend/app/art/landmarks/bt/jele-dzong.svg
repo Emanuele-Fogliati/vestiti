@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="32" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-bt-jele-dzong-snow"><path d="M200 140L226 112L244 98L252 92L262 100L278 110L300 118V140Z"/></clipPath></defs>
+<path d="M0 140V118Q20 108 40 114Q60 106 80 116L100 124V140ZM200 140L226 112L244 98L252 92L262 100L278 110L300 118V140Z" fill="var(--il-far)"/>
+<path d="M240 102L244 98L252 92L262 100L270 106L262 108L256 103L250 107L244 104Z" fill="var(--il-ice)" clip-path="url(#il-bt-jele-dzong-snow)"/>
+<path d="M0 170V134Q30 124 60 130Q80 134 100 142H200Q230 128 260 126Q285 126 300 130V170Z" fill="var(--il-water)"/>
+<path d="M141 133V92H197V133Z" fill="var(--il-ice)"/>
+<path d="M141 101V91H197V101Z" fill="var(--il-acc)"/>
+<path d="M150 109H156V117H150ZM166 109H172V117H166ZM182 109H188V117H182ZM148 94H154V98H148ZM160 94H166V98H160ZM172 94H178V98H172ZM184 94H190V98H184Z" fill="var(--il-near)"/>
+<path d="M132 93L149 81H189L206 93Z" fill="var(--il-obj)"/>
+<path d="M166 81L169 72L172 81Z" fill="var(--il-sun)"/>
+<path d="M116 133V112H142V133Z" fill="var(--il-ice)"/>
+<path d="M116 116V111H142V116Z" fill="var(--il-acc)"/>
+<path d="M112 112L120 106H140L144 112Z" fill="var(--il-obj)"/>
+<path d="M107 134V62" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M108 66H113V102H108Z" fill="var(--il-ice)"/>
+<path d="M0 200V164Q40 154 80 142Q104 132 120 129Q160 124 202 129Q226 136 250 150Q280 164 300 168V200Z" fill="var(--il-leaf)"/>
+<path d="M206 131Q214 128 220 136Q228 134 232 142Q242 140 246 150Q258 150 262 160Q276 160 280 168Q292 166 300 170V200H214Q236 180 232 162Q226 146 206 131Z" fill="var(--il-water)"/>
+<path d="M40 157V152M62 148V143M262 158V152" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M33 153L40 136L47 153ZM35 145L40 128L45 145ZM55 144L62 127L69 144ZM57 136L62 119L67 136ZM255 154L262 136L269 154ZM257 146L262 128L267 146Z" fill="var(--il-water)"/>
+<path d="M44 200Q64 182 96 170Q118 160 128 146Q134 136 146 130H156Q144 138 140 150Q130 168 106 178Q84 188 74 200Z" fill="var(--il-mid)"/>
