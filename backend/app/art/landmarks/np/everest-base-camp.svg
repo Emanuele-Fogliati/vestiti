@@ -1,0 +1,27 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="112" cy="28" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-np-everest-base-camp-ws"><path d="M86 152L118 112L148 80L176 52L194 34L208 28L222 38L234 50L246 64L236 90L222 112L210 134L200 152Z"/></clipPath><clipPath id="il-np-everest-base-camp-nu"><path d="M198 152L222 106L238 78L252 60L266 48L280 30L294 18L300 18V152Z"/></clipPath><clipPath id="il-np-everest-base-camp-li"><path d="M0 152V64L12 50L24 54L38 42L54 54L68 68L82 86L96 104L108 124L118 152Z"/></clipPath></defs>
+<path d="M0 152V64L12 50L24 54L38 42L54 54L68 68L82 86L96 104L108 124L118 152Z" fill="var(--il-mid)"/>
+<path d="M0 64L12 50L24 54L38 42L54 54L68 68L60 74L52 66L44 76L36 64L28 72L18 62L8 74L0 72Z" fill="var(--il-ice)" clip-path="url(#il-np-everest-base-camp-li)"/>
+<path d="M86 152L118 112L148 80L176 52L194 34L208 28L222 38L234 50L246 64L236 90L222 112L210 134L200 152Z" fill="var(--il-mid)"/>
+<path d="M136 92L156 74L182 46L194 34L208 28L222 38L234 50L226 60L216 56L206 70L194 74L186 90L174 92L164 104L152 98L144 108Z" fill="var(--il-ice)" clip-path="url(#il-np-everest-base-camp-ws)"/>
+<path d="M198 152L222 106L238 78L252 60L266 48L280 30L294 18L300 18V152Z" fill="var(--il-mid)"/>
+<path d="M238 78L252 60L266 48L280 30L294 18L300 18V36L292 44L282 56L272 54L262 68L252 72L244 88L236 84Z" fill="var(--il-ice)" clip-path="url(#il-np-everest-base-camp-nu)"/>
+<path d="M262 80L254 120M280 64L272 116M292 52L290 110M150 100L140 130M176 76L170 110" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M204 140L210 128L208 120L216 112L214 104L222 98L230 102L234 110L240 114L240 124L248 128L254 140Z" fill="var(--il-ice)"/>
+<path d="M56 166V160L68 152L78 156L88 149L98 154L110 147L122 152L134 145L146 150L158 143L170 148L182 141L194 146L204 138H254L264 143L276 136L288 141L300 136V166Z" fill="var(--il-ice)"/>
+<path d="M220 108L226 116M214 120L222 124M230 120L236 126M212 132L218 136M232 132L240 136M80 156L86 160M104 152L110 158M128 150L134 156M152 148L158 154M176 146L182 152M200 144L206 150M240 144L246 150M268 142L274 148" stroke="var(--il-water)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M0 200V150Q30 148 56 154Q110 162 170 160Q240 156 300 162V200Z" fill="var(--il-far)"/>
+<path d="M20 176Q24 172 30 174M60 186Q66 182 72 184M150 190Q156 186 162 188M200 180Q206 176 212 178M270 192Q276 188 282 190M110 178Q116 174 122 176" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M54 166L62 154L70 166ZM86 168L94 156L102 168ZM128 170L136 158L144 170ZM168 168L176 156L184 168ZM104 176L113 163L122 176ZM146 178L155 166L164 178ZM200 168L207 158L214 168Z" fill="var(--il-acc)"/>
+<path d="M70 170L78 158L86 170ZM112 166L119 156L126 166ZM150 166L158 156L166 166ZM184 172L192 161L200 172ZM128 180L136 170L144 180Z" fill="var(--il-obj)"/>
+<path d="M12 186L16 172L26 164L38 166L46 176L48 186Z" fill="var(--il-mid)"/>
+<path d="M30 166V150" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M30 151Q70 168 115 175" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.7"/>
+<path d="M106 184L109 176L116 173L122 178L123 184Z" fill="var(--il-mid)"/>
+<path d="M36 155h5v6h-5zM68 166h5v6h-5z" fill="var(--il-obj)"/>
+<path d="M46 159h5v6h-5zM78 168h5v6h-5z" fill="var(--il-ice)"/>
+<path d="M56 162h5v6h-5zM88 171h5v6h-5z" fill="var(--il-acc)"/>
+<path d="M98 173h5v6h-5z" fill="var(--il-leaf)"/>
+<g transform="translate(130 22)"><path d="M104 161L105 167H107L108 162H120L121 167H123L124 161Q127 160 127 157L131 158L132 155L129 153L126 154Q122 150 114 151Q106 150 103 154L101 158Q101 161 104 161Z" fill="var(--il-near)"/>
+<path d="M128 153Q130 150 132 151" stroke="var(--il-ice)" stroke-width="1" fill="none" stroke-linecap="round"/></g>
