@@ -878,22 +878,22 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Cebollapampa meadow",
-     "reuse": null
+     "reuse": "pe-cebollapampa"
     },
     {
      "point": "falls",
      "name": "Laguna 69 waterfalls",
-     "reuse": null
+     "reuse": "pe-laguna-69-falls"
     },
     {
      "point": "goal",
      "name": "Laguna 69",
-     "reuse": null
+     "reuse": "pe-laguna-69"
     }
    ]
   },
@@ -904,22 +904,17 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
-    {
-     "point": "start",
-     "name": "Pitec",
-     "reuse": null
-    },
     {
      "point": "cables",
      "name": "Churup rock slabs with fixed cables",
-     "reuse": null
+     "reuse": "pe-churup-slabs"
     },
     {
      "point": "goal",
      "name": "Laguna Churup",
-     "reuse": null
+     "reuse": "pe-laguna-churup"
     }
    ]
   },
@@ -930,12 +925,12 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Vaquería",
-     "reuse": null
+     "reuse": "pe-vaqueria"
     },
     {
      "point": "union",
@@ -950,7 +945,7 @@
     {
      "point": "jatuncocha",
      "name": "Laguna Jatuncocha",
-     "reuse": null
+     "reuse": "pe-laguna-jatuncocha"
     }
    ]
   },
@@ -961,22 +956,22 @@
    "slot": "PE-B",
    "base": "Huaraz",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Quartelhuain",
-     "reuse": null
+     "reuse": "pe-quartelhuain"
     },
     {
      "point": "carhuacocha",
      "name": "Laguna Carhuacocha with Yerupajá",
-     "reuse": null
+     "reuse": "pe-laguna-carhuacocha"
     },
     {
      "point": "tres",
      "name": "Siula pass and the Tres Lagunas",
-     "reuse": null
+     "reuse": "pe-tres-lagunas"
     },
     {
      "point": "jahuacocha",
@@ -992,7 +987,7 @@
    "slot": "PE-B",
    "base": "Cabanaconde",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -1002,17 +997,17 @@
     {
      "point": "bridge",
      "name": "Colca river bridge",
-     "reuse": null
+     "reuse": "pe-colca-bridge"
     },
     {
      "point": "chuccho",
      "name": "San Juan de Chuccho",
-     "reuse": null
+     "reuse": "pe-san-juan-de-chuccho"
     },
     {
      "point": "goal",
      "name": "Sangalle oasis",
-     "reuse": null
+     "reuse": "pe-sangalle-oasis"
     }
    ]
   },
@@ -1023,7 +1018,7 @@
    "slot": "PE-B",
    "base": "Cachora",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "capuliyoc",
@@ -1033,7 +1028,7 @@
     {
      "point": "river",
      "name": "Playa Rosalina on the Apurímac river",
-     "reuse": null
+     "reuse": "pe-playa-rosalina"
     },
     {
      "point": "goal",
