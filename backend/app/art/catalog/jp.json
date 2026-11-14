@@ -3,6 +3,65 @@
  "name": "Japan",
  "places": [
   {
+   "slug": "abashiri",
+   "label": "The Aurora icebreaker in the Okhotsk drift ice off Abashiri, with a Steller's sea eagle",
+   "lat": 44.0206,
+   "lon": 144.2741,
+   "radius_km": 15,
+   "aliases": [
+    "aurora icebreaker",
+    "icebreaker aurora",
+    "abashiri icebreaker",
+    "abashiri drift ice",
+    "abashiri ryuhyo",
+    "drift ice cruise abashiri"
+   ],
+   "names": [
+    "abashiri",
+    "abashiri city",
+    "abashiri hokkaido"
+   ],
+   "palette": {
+    "sky": "#A6CCEE",
+    "far": "#C9D6E4",
+    "mid": "#C8332E",
+    "ice": "#F4F7FA",
+    "water": "#2F5F8E",
+    "near": "#1E232A",
+    "sun": "#F2C14E",
+    "leaf": "#5A7A4A",
+    "acc": "#9DB2C8",
+    "obj": "#2A4C9C"
+   }
+  },
+  {
+   "slug": "abashiri-prison",
+   "label": "The red-brick main gate of the Abashiri Prison Museum, with its domed guardhouses",
+   "lat": 43.9906,
+   "lon": 144.2454,
+   "radius_km": 2,
+   "aliases": [
+    "abashiri prison",
+    "abashiri prison museum",
+    "abashiri kangoku",
+    "hakubutsukan abashiri kangoku",
+    "prigione di abashiri",
+    "museo della prigione di abashiri"
+   ],
+   "palette": {
+    "sky": "#92C2EE",
+    "far": "#2F5A34",
+    "mid": "#A84934",
+    "ice": "#D8D8D2",
+    "water": "#4F7FA0",
+    "near": "#221E1C",
+    "sun": "#F2C14E",
+    "leaf": "#62A042",
+    "acc": "#BE5E46",
+    "obj": "#86898E"
+   }
+  },
+  {
    "slug": "akihabara",
    "label": "Akihabara Electric Town, Tokyo",
    "lat": 35.6984,
@@ -172,6 +231,40 @@
    }
   },
   {
+   "slug": "bikan-historical-quarter",
+   "label": "White namako-walled kura storehouses and weeping willows on the Kurashiki canal, Bikan historical quarter",
+   "lat": 34.5955,
+   "lon": 133.7717,
+   "radius_km": 4,
+   "aliases": [
+    "bikan historical",
+    "bikan quarter",
+    "bikan district",
+    "bikan area",
+    "quartiere bikan",
+    "kurashiki bikan",
+    "kurashiki canal",
+    "bikan chiku"
+   ],
+   "names": [
+    "bikan",
+    "kurashiki",
+    "kurashiki city"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#CFC8B8",
+    "mid": "#A8A296",
+    "ice": "#F5F3EE",
+    "water": "#3F78A8",
+    "near": "#1E1F22",
+    "sun": "#F2C14E",
+    "leaf": "#7FA040",
+    "acc": "#8A5A3A",
+    "obj": "#3C4048"
+   }
+  },
+  {
    "slug": "blue-pond",
    "label": "Shirogane Blue Pond in Biei: milky turquoise water with silver dead larch trunks standing in it, forest behind",
    "lat": 43.4936,
@@ -273,6 +366,34 @@
     "leaf": "#6E9E4E",
     "acc": "#F0C020",
     "obj": "#D8402E"
+   }
+  },
+  {
+   "slug": "enoshima",
+   "label": "Enoshima island with the Sea Candle tower and the Benten bridge, seen from Katase beach",
+   "lat": 35.2995,
+   "lon": 139.4804,
+   "radius_km": 3,
+   "aliases": [
+    "enoshima",
+    "sea candle",
+    "enoshima sea candle",
+    "enoshima shrine",
+    "enoshima jinja",
+    "benten bridge",
+    "isola di enoshima"
+   ],
+   "palette": {
+    "sky": "#A6CBEE",
+    "far": "#CDB68E",
+    "mid": "#3E6B35",
+    "ice": "#F0ECE2",
+    "water": "#4C83A6",
+    "near": "#232620",
+    "sun": "#F2C14E",
+    "leaf": "#5F9446",
+    "acc": "#C27A52",
+    "obj": "#9AA0A6"
    }
   },
   {
@@ -594,6 +715,41 @@
     "leaf": "#6E9A4A",
     "acc": "#E0607A",
     "obj": "#5A5446"
+   }
+  },
+  {
+   "slug": "hagi",
+   "label": "Stone walls and moat of the Hagi Castle ruins under wooded Mount Shizuki, Hagi",
+   "lat": 34.4186,
+   "lon": 131.3866,
+   "radius_km": 12,
+   "aliases": [
+    "hagi castle",
+    "hagi jo",
+    "hagijo",
+    "castello di hagi",
+    "shizuki park",
+    "shizuki koen",
+    "shizukiyama",
+    "hagi castle town",
+    "hagi jokamachi"
+   ],
+   "names": [
+    "hagi",
+    "hagi city",
+    "hagi yamaguchi"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#9CB49A",
+    "mid": "#4D773C",
+    "ice": "#C9C3B4",
+    "water": "#5F7C66",
+    "near": "#22251F",
+    "sun": "#F2C14E",
+    "leaf": "#6E9A48",
+    "acc": "#ABA597",
+    "obj": "#6B5440"
    }
   },
   {
@@ -1364,6 +1520,35 @@
    }
   },
   {
+   "slug": "kotohira",
+   "label": "The two-storey Omon gate at the top of the stone stairs of Kotohira-gu (Kompira-san), Kotohira",
+   "lat": 34.1853,
+   "lon": 133.8094,
+   "radius_km": 5,
+   "aliases": [
+    "kotohira gu",
+    "kotohiragu",
+    "kotohira shrine",
+    "konpira",
+    "kompira"
+   ],
+   "names": [
+    "kotohira"
+   ],
+   "palette": {
+    "sky": "#BFD8EE",
+    "far": "#A39C8E",
+    "mid": "#BDB6A8",
+    "ice": "#F4F1EA",
+    "water": "#5D6168",
+    "near": "#201C1A",
+    "sun": "#F2C14E",
+    "leaf": "#3E6436",
+    "acc": "#5E8C78",
+    "obj": "#4E3828"
+   }
+  },
+  {
    "slug": "kumamoto",
    "label": "Kumamoto Castle's black main and small keeps on their curved stone walls",
    "lat": 32.8063,
@@ -2082,6 +2267,70 @@
    }
   },
   {
+   "slug": "mount-takao",
+   "label": "Mount Fuji over the layered Tanzawa ridges from the summit of Mount Takao, autumn maples below",
+   "lat": 35.6251,
+   "lon": 139.2437,
+   "radius_km": 4,
+   "aliases": [
+    "mount takao",
+    "mt takao",
+    "takaosan",
+    "takao san",
+    "monte takao",
+    "takao mountain"
+   ],
+   "names": [
+    "takao"
+   ],
+   "palette": {
+    "sky": "#B4D0EC",
+    "far": "#9AAEC6",
+    "mid": "#5C7488",
+    "ice": "#F5F6F8",
+    "water": "#8EA4C2",
+    "near": "#1F2328",
+    "sun": "#F2C14E",
+    "leaf": "#4C6E44",
+    "acc": "#D2582E",
+    "obj": "#8A6A48"
+   }
+  },
+  {
+   "slug": "mount-tento",
+   "label": "Lake Abashiri and the Okhotsk Sea from the summit of Mount Tento, Abashiri",
+   "lat": 43.993,
+   "lon": 144.236,
+   "radius_km": 3,
+   "aliases": [
+    "mount tento",
+    "mt tento",
+    "tentozan",
+    "tento zan",
+    "tento san",
+    "okhotsk ryuhyo museum",
+    "okhotsk ryu hyo museum",
+    "ryuhyo museum",
+    "lake abashiri",
+    "abashiriko"
+   ],
+   "names": [
+    "tento"
+   ],
+   "palette": {
+    "sky": "#AACCEE",
+    "far": "#93A6BE",
+    "mid": "#3D6438",
+    "ice": "#F2F4F6",
+    "water": "#86A8C6",
+    "near": "#1E2420",
+    "sun": "#F2C14E",
+    "leaf": "#4F7E3E",
+    "acc": "#C9B48A",
+    "obj": "#7A6A58"
+   }
+  },
+  {
    "slug": "myoko-kogen",
    "label": "Mount Myoko above the lily-pad Imori Pond, Myoko Kogen",
    "lat": 36.886,
@@ -2452,6 +2701,34 @@
    }
   },
   {
+   "slug": "okayama",
+   "label": "The black keep of Okayama Castle above the Asahi River and its stone embankment, Okayama",
+   "lat": 34.665,
+   "lon": 133.936,
+   "radius_km": 15,
+   "aliases": [
+    "okayama castle",
+    "okayama jo",
+    "okayamajo"
+   ],
+   "names": [
+    "okayama",
+    "okayama city"
+   ],
+   "palette": {
+    "sky": "#BCD6EC",
+    "far": "#8A9A6E",
+    "mid": "#646B76",
+    "ice": "#F2F0EA",
+    "water": "#5A8A84",
+    "near": "#1C1C20",
+    "sun": "#F2C14E",
+    "leaf": "#7A9440",
+    "acc": "#D8AE3A",
+    "obj": "#2A2D35"
+   }
+  },
+  {
    "slug": "okunoin",
    "label": "Cedar path with stone lanterns and gorinto graves, Okunoin cemetery, Koyasan",
    "lat": 34.2155,
@@ -2591,6 +2868,35 @@
    }
   },
   {
+   "slug": "ritsurin-garden",
+   "label": "Engetsu-kyo arched bridge over the South Pond of Ritsurin Garden, Mt Shiun behind, Takamatsu",
+   "lat": 34.3297,
+   "lon": 134.0444,
+   "radius_km": 3,
+   "aliases": [
+    "ritsurin",
+    "ritsurin koen",
+    "engetsukyo",
+    "engetsu kyo"
+   ],
+   "palette": {
+    "sky": "#C8DEEE",
+    "far": "#55764A",
+    "mid": "#A49E92",
+    "ice": "#F1EEE6",
+    "water": "#4F8676",
+    "near": "#22261F",
+    "sun": "#F2C14E",
+    "leaf": "#3F6A38",
+    "acc": "#9AA466",
+    "obj": "#5A4636"
+   },
+   "names": [
+    "takamatsu",
+    "takamatsu city"
+   ]
+  },
+  {
    "slug": "ryoan-ji",
    "label": "Zen rock garden of Ryoan-ji, Kyoto",
    "lat": 35.0345,
@@ -2710,6 +3016,38 @@
    ]
   },
   {
+   "slug": "shari",
+   "label": "Mount Shari over the wheat fields and hay rolls of the Shari plain, with an Ezo red fox",
+   "lat": 43.88,
+   "lon": 144.68,
+   "radius_km": 20,
+   "aliases": [
+    "mount shari",
+    "mt shari",
+    "shari dake",
+    "sharidake",
+    "monte shari"
+   ],
+   "names": [
+    "shari",
+    "shari town",
+    "shari cho",
+    "sharicho"
+   ],
+   "palette": {
+    "sky": "#A2CBF0",
+    "far": "#3F6A3C",
+    "mid": "#5D7E9C",
+    "ice": "#F6F4EE",
+    "water": "#4F7FA0",
+    "near": "#1F2326",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3E",
+    "acc": "#D2B06A",
+    "obj": "#C8702E"
+   }
+  },
+  {
    "slug": "shibu-onsen",
    "label": "The many-storeyed wooden Kanaguya ryokan on the old street of Shibu Onsen",
    "lat": 36.7353,
@@ -2768,6 +3106,33 @@
    "names": [
     "shibuya"
    ]
+  },
+  {
+   "slug": "shichirigahama",
+   "label": "The Enoden train at the Kamakurakokomae crossing above the Shichirigahama sea, Enoshima on the horizon",
+   "lat": 35.3066,
+   "lon": 139.5007,
+   "radius_km": 3,
+   "aliases": [
+    "shichirigahama",
+    "shichiri ga hama",
+    "shichirigahama beach",
+    "kamakurakokomae",
+    "kamakura kokomae",
+    "enoden"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#BDB7AA",
+    "mid": "#8C8E92",
+    "ice": "#F1E9CF",
+    "water": "#3E78A8",
+    "near": "#22252A",
+    "sun": "#F2C14E",
+    "leaf": "#6E9E3E",
+    "acc": "#F2C230",
+    "obj": "#2E7A56"
+   }
   },
   {
    "slug": "shiga-kogen",
@@ -3397,6 +3762,32 @@
     "leaf": "#5F8A3A",
     "acc": "#C49A68",
     "obj": "#5A4A3C"
+   }
+  },
+  {
+   "slug": "yakuo-in",
+   "label": "Main Hall of Yakuo-in on Mount Takao, with its shimenawa rope, incense burner and stone stairs",
+   "lat": 35.6254,
+   "lon": 139.2449,
+   "radius_km": 2,
+   "aliases": [
+    "yakuo in",
+    "yakuoin",
+    "yakuouin",
+    "takaosan yakuoin",
+    "yakuoin temple"
+   ],
+   "palette": {
+    "sky": "#B2D2EE",
+    "far": "#8EA39C",
+    "mid": "#5C4433",
+    "ice": "#E6E2D8",
+    "water": "#4F7FA0",
+    "near": "#221D19",
+    "sun": "#F2C14E",
+    "leaf": "#3E6A36",
+    "acc": "#D8B65E",
+    "obj": "#C8452E"
    }
   },
   {
