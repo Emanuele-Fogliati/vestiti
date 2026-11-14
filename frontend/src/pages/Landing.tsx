@@ -17,8 +17,8 @@ function playIntro(): boolean {
 const PLANE = "M21 15.5l-8-4.5V5.5a1.5 1.5 0 0 0-3 0V11l-8 4.5V17l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-4.5l8 2.5z";
 const PEAK = "M2 20L9 7l4 6 2.5-3.5L22 20z";
 
-/** Home (design M10 "Notte chiara"): the globe on a light night sky, one question, Trip or Trek,
- *  one box. The first time per visit it opens with the universe and the Earth flying in. */
+/** Home (design M10 "Notte chiara"): the map fills the screen on a light night sky; over it the
+ *  line "Pick a place. We pack the bag.", Trip or Trek, one box. The first time per visit it opens with the universe and the Earth flying in. */
 export default function Landing() {
   const nav = useNavigate();
   const [mode, setMode] = useState<"trip" | "trek">("trip");
@@ -66,7 +66,7 @@ export default function Landing() {
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="3" /><path d="M9 7V4h6v3" /></svg>
       </Link>
       <section className="home2-ui">
-        <h1>Where to?</h1>
+        <h1>Pick a place.<br /><span>We pack the bag.</span></h1>
         <div className="home2-tabs" role="tablist" aria-label="What are you planning?">
           {(["trip", "trek"] as const).map((m) => (
             <button key={m} type="button" role="tab" aria-selected={mode === m} className={mode === m ? "on" : ""} onClick={() => setMode(m)}>

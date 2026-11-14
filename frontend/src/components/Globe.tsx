@@ -26,13 +26,22 @@ const narrow = (el: HTMLElement) => el.clientWidth < 600;
 
 /** Room the title takes at the top, so the globe sits below it. */
 function topPad(el: HTMLElement): number {
-  if (el.dataset.bare) return 0; // the home has no title over the globe: keep it centred
-  return narrow(el) ? 70 : 100;
+  return pads(el).top;
 }
 
-/** The zoom at which the whole globe fills the box under the title. */
+/** What covers the map, so the globe sits in the free part. On the home the map fills the
+ *  whole screen and runs under the words: on a computer they are on the right, on a phone
+ *  at the bottom (see .home2 in paper.css). Elsewhere a title sits on top. */
+function pads(el: HTMLElement): { top: number; right: number; bottom: number; left: number } {
+  if (!el.dataset.bare) return { top: narrow(el) ? 70 : 100, right: 0, bottom: 0, left: 0 };
+  if (el.clientWidth >= 900) return { top: 0, right: Math.round(el.clientWidth * 0.42), bottom: 0, left: 0 };
+  return { top: 56, right: 0, bottom: Math.min(300, Math.round(el.clientHeight * 0.38)), left: 0 };
+}
+
+/** The zoom at which the whole globe fills the free part of the box. */
 function fitZoom(el: HTMLElement): number {
-  const side = Math.min(el.clientWidth, el.clientHeight - topPad(el));
+  const p = pads(el);
+  const side = Math.min(el.clientWidth - p.left - p.right, el.clientHeight - p.top - p.bottom);
   // the home's globe on a computer has the whole left half to itself: draw it bigger
   const big = el.dataset.bare && !narrow(el) ? 0.22 : 0;
   return Math.max(0.2, Math.log2(side / 512) + (narrow(el) ? 1.75 : 1.62) + big);
@@ -131,7 +140,7 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
     }
     mapRef.current = map;
     if (new URLSearchParams(location.search).has("mapdebug")) (window as unknown as { __map: unknown }).__map = map;
-    map.setPadding({ top: topPad(el), left: 0, right: 0, bottom: 0 });
+    map.setPadding(pads(el));
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
 
     const scenes: Scene[] = [];
