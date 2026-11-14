@@ -123,8 +123,9 @@ def _start_clock(d: dict) -> int | None:
     after landing or arriving by car on a travel day, none when the arrival time is not known."""
     if not d["legs"]:
         return 8 * 60 + 30
-    arr = d["legs"][-1].get("arr")
-    if not arr or (d["legs"][-1].get("arr_date") or d["date"]) != d["date"]:
+    last = d["legs"][-1]
+    arr = last.get("arr") or {"morning": "11:00", "afternoon": "16:00", "evening": "19:00"}.get(last.get("arr_part") or "")
+    if not arr or (last.get("arr_date") or d["date"]) != d["date"]:
         return None
     h, m = map(int, arr.split(":"))
     return h * 60 + m + 60
@@ -318,7 +319,8 @@ def check(raw: dict, draft_days: list[dict], w: dict | None = None) -> list[dict
             free = [r for r in rows if not r["fixed"]]
             # a timed fact matches a row at its time; one without a time, a row without a time
             same = [r for r in free if (_key(r["at"]) == _key(f["at"]) if f["at"] else not r["at"])]
-            like = [r for r in same if _words(f["what"]) & _words(r["what"])]
+            like = [r for r in same if _words(f["what"]) & _words(r["what"])
+                    or (_nums(f["what"]) and _nums(f["what"]) == _nums(r["what"]))]
             hit = like[0] if like else same[0] if f["at"] and len(same) == 1 else None
             if hit is None:
                 rows.append(dict(f))  # the model lost it, or moved it: the fact goes back as written
@@ -326,11 +328,27 @@ def check(raw: dict, draft_days: list[dict], w: dict | None = None) -> list[dict
             # the model kept it in its own words: it stays a fact (time, overnight arrival, the bed last)
             hit.update({"fixed": True, "at": f["at"] or hit["at"], "effort": f["effort"], "optional": False,
                         **{k: True for k in ("next_day", "sleep") if f.get(k)}})
+        # a move the model wrote again at a wrong time (the fact is already there): out
+        facts = [r for r in rows if r["fixed"]]
+        rows = [r for r in rows if r["fixed"] or not MOVE.search(r["what"])
+                or not any(len(_words(r["what"]) & _words(f["what"])) >= 2 for f in facts)]
+        # the effort the model left out: the guide's, for the row at the same time
+        guide = {_key(r["at"]): r["effort"] for r in draft["rows"] if not r["fixed"] and r["at"] and r["effort"]}
+        for r in rows:
+            if not r["fixed"] and r["effort"] is None and r["at"]:
+                r["effort"] = guide.get(_key(r["at"]))
         prio = m.get("priority")
         out.append({"date": date_, "title": str(m.get("title") or draft["title"])[:90],
                     "priority": prio if isinstance(prio, int) and 0 < prio < 10 else draft["priority"],
                     "rows": _sorted(rows)})
     return out
+
+
+MOVE = re.compile(r"\b(volo|flight|vuelo|vol|flug|drive|guida|in auto|on the road|transfer|taxi|bus)\b", re.I)
+
+
+def _nums(s: str) -> list[str]:
+    return re.findall(r"\d+", s)
 
 
 def _words(s: str) -> set[str]:
@@ -363,7 +381,10 @@ def ai_days(reading: dict, group: int, wishes: str = "", lang: str = "English",
         days = check(raw, mine, wants(wishes))
         w = raw.get("weather") if isinstance(raw.get("weather"), dict) else None
         if w and w.get("drop") in {d["date"] for d in mine}:
-            area = next((x["area"] for x in weather), "")
+            area = next((x["area"] for x in weather), "") or next(
+                (reading["stops"][reading["timeline"][k]["stop"]]["name"] for k in idx
+                 if reading["timeline"][k]["stop"] is not None
+                 and reading["stops"][reading["timeline"][k]["stop"]].get("kind") != "transit"), "")
             weather = [{"area": area, "drop": w["drop"], "how": str(w.get("how") or "")[:300]}]
         return {"group": group, "groups": len(gs), "days": days, "weather": weather,
                 "source": "llm", "model": client.s.llm_model}

@@ -162,3 +162,25 @@ def test_wishes_the_code_keeps_even_without_a_model():
     rows = dayplan.ai_days(R, 1, "piano, niente barche", "Italian", client=fake)["days"][1]["rows"]
     assert all(r["optional"] for r in rows if not r["fixed"])
     assert "Grey Glacier by boat" not in fake.asked[0][1]
+
+
+def test_models_slips_are_mended():
+    fake = Fake({"days": [
+        {"date": "2027-01-17", "rows": [
+            {"at": "11:15", "what": "Volo Buenos Aires (Ezeiza) → El Calafate"},
+            {"at": "12:00", "what": "Ritiro auto Hertz"}]},
+        {"date": "2027-01-22", "rows": [
+            {"at": "07:00", "what": "Partenza in auto per El Chaltén"},
+            {"what": "≈ 7–8 h in auto"},
+            {"at": "~17:00", "what": "Mirador de los Cóndores"}]},
+        {"date": "2027-01-18", "rows": [{"at": "07:00", "what": "Partenza dal Welcome Centre"}]}],
+        "weather": {"drop": "2027-01-27", "how": "Se piove, sposta il parco"}})
+    out = dayplan.ai_days(R, 0, "", "Italian", client=fake)["days"]
+    d17 = [r["what"] for r in _day({"days": out}, "2027-01-17")["rows"]]
+    assert "Volo Buenos Aires (Ezeiza) → El Calafate" not in d17 and "Flight Buenos Aires (Ezeiza) → El Calafate" in d17
+    assert _day({"days": out}, "2027-01-18")["rows"][0]["effort"] == "high"  # the guide's effort
+    g1 = dayplan.ai_days(R, 1, "", "Italian", client=fake)["days"][0]["rows"]
+    assert [r["what"] for r in g1].count("≈ 7–8 h on the road") == 0 and any(r["what"] == "≈ 7–8 h in auto" and r["fixed"] for r in g1)
+    assert dayplan.ai_days(R, 2, "niente barche", "Italian", client=fake)["weather"][0]["area"] == "Ushuaia"
+    d22 = _day(dayplan.rules_days(R), "2027-01-22")["rows"]
+    assert next(r for r in d22 if r["what"].startswith("Mirador de los Cóndores"))["at"] == "~17:00"
