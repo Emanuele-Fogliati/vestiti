@@ -14,9 +14,9 @@ import json
 import math
 from functools import lru_cache
 from pathlib import Path
-from typing import Literal
+from typing import Annotated, Literal
 
-from pydantic import BaseModel, Field, HttpUrl, field_validator
+from pydantic import BaseModel, Field, HttpUrl, field_validator, model_validator
 
 from app.guide import _norm
 
@@ -41,6 +41,25 @@ class Step(BaseModel):
     note: str = Field(default="", max_length=240)
 
 
+# The six scores of a thing to do (Manu, 2026-11-14), 0 to 5: how much of each it gives you,
+# not how good it is (Fitz Roy: culture 0). The anchors are fixed, written in docs/RANKING.md;
+# effort is measured from the published hours and climb, never felt.
+SCORE_KEYS = ("effort", "nature", "culture", "relax", "history", "landscape")
+S = Annotated[int, Field(ge=0, le=5)]
+Tier = Literal["A", "B", "C"]  # A: do it with one day; B: with 2-3 days; C: with more
+Kind = Literal["trek", "walk", "boat", "city", "museum", "wildlife", "thermal", "beach", "food",
+               "view", "drive", "night", "culture", "adventure"]
+
+
+class Scores(BaseModel):
+    effort: S
+    nature: S
+    culture: S
+    relax: S
+    history: S
+    landscape: S
+
+
 class Item(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9-]+$")
     name: str = Field(min_length=3, max_length=80)
@@ -60,6 +79,14 @@ class Item(BaseModel):
     sights: list[str] = Field(default_factory=list, max_length=8)  # the places of the globe it covers
     arrive: bool = False  # fits the afternoon you arrive
     trail: str | None = None  # the trail page (app.trails) with the map, profile and kit
+    # ranking (app.guide.rank): the order of `items` is the zone's rank, these say what for
+    scores: Scores | None = None
+    tier: Tier | None = None
+    kinds: list[Kind] = Field(default_factory=list, max_length=4)
+    alt_of: str | None = None  # the easier thing that gives most of this one ("Laguna Capri")
+    cost: Literal["free", "$", "$$", "$$$"] | None = None
+    kids: Literal["yes", "12+", "no"] | None = None
+    needs: Literal["car", "guide", "transfer"] | None = None  # None: you get there on your own
 
     @field_validator("steps")
     @classmethod
@@ -112,6 +139,19 @@ class Area(BaseModel):
     rain: Rain | None = None
     routes: list[Route] = Field(default_factory=list)
     extras: list[str] = Field(default_factory=list, max_length=10)  # off the programme, for the place
+    # nights worth spending here: [least, ideal, most]; buffer = of those, kept for the weather
+    nights: list[int] | None = Field(default=None, min_length=3, max_length=3)
+    buffer: int = Field(default=0, ge=0, le=3)
+
+    @model_validator(mode="after")
+    def _ranked(self):
+        ids = {it.id for it in self.items}
+        for it in self.items:
+            if it.alt_of and (it.alt_of not in ids or it.alt_of == it.id):
+                raise ValueError(f"{self.id}/{it.id}: alt_of names no other thing of this area")
+        if self.nights and not (1 <= self.nights[0] <= self.nights[1] <= self.nights[2]):
+            raise ValueError(f"{self.id}: nights must be least <= ideal <= most")
+        return self
 
 
 def km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:

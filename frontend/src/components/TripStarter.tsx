@@ -11,12 +11,17 @@ import { useApp } from "../lib/app-context";
 import { MONTH_LONG, MONTHS, today } from "../lib/format";
 import { dated, firstOf, LENGTHS, move, setDays, short, span, totalDays } from "../lib/plan";
 import { useSpeech } from "../lib/speech";
-import type { BookedDay, DayPlan, Place, PlanArea, PlanIdea, PlanReading, PlanStep, PlanSuggestion, WeatherRule } from "../lib/types";
+import type { BookedDay, DayPlan, Place, PlanArea, PlanEffort, PlanIdea, PlanLike, PlanReading, PlanReady, PlanStep, PlanSuggestion, WeatherRule } from "../lib/types";
 import BookedPlan from "./BookedPlan";
 import HourByHour from "./HourByHour";
 import { PlaceSearch } from "./PlaceSearch";
 
 export const DRESS_ME_LABEL = "Dress me for this trip";
+
+const LIKE_CHIPS: [PlanLike, string][] = [
+  ["nature", "Nature"], ["landscape", "Views & photos"], ["culture", "Culture"], ["history", "History"], ["relax", "Relax"],
+];
+const EFFORT_CHIPS: [PlanEffort, string][] = [["easy", "Easy, no treks"], ["some", "Some walking"], ["hard", "Big treks"]];
 
 const EXAMPLES = [
   "Patagonia in January, three weeks",
@@ -74,6 +79,10 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   const [keep, setKeep] = useState<string[]>([]);
   const [endWith, setEndWith] = useState<string[]>([]);  // "e alla fine Ushuaia": stays the last stop
   const [drop, setDrop] = useState<string[]>([]);
+  // the two questions that order what to do in each place (backend app/guide/rank.py)
+  const [likes, setLikes] = useState<PlanLike[]>([]);
+  const [effort, setEffort] = useState<PlanEffort | null>(null);
+  const [ready, setReady] = useState<PlanReady | null>(null);
   const [ideas, setIdeas] = useState<PlanIdea[]>([]);
   const [home, setHome] = useState<PlanReading["home"]>(null);
   const [missing, setMissing] = useState<PlanReading["missing"]>([]);
@@ -102,7 +111,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   }, [text, speech.listening]);
 
   function reset() {
-    setErr(""); setIdeas([]); setMore([]); setRoute(null); setBest([]); setKeep([]); setEndWith([]); setDrop([]); setArea(null); setOnly([]);
+    setErr(""); setIdeas([]); setMore([]); setRoute(null); setReady(null); setBest([]); setKeep([]); setEndWith([]); setDrop([]); setArea(null); setOnly([]);
   }
 
   async function read(t: string) {
@@ -122,6 +131,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
         setBookedDays(r.plan_days ?? []); setWeatherRules(r.weather ?? []);
       } else if (r.mode === "region" && r.proposal) {
         const p = r.proposal;
+        setLikes(p.likes ?? []); setEffort(p.effort ?? null); setReady(p.ready ?? null);
         setMode("region"); setArea(p.area); setOnly(p.only); setSteps(p.stops); setMore(p.more);
         setRoute(p.route); setBest(p.best_months); setTarget(r.days ?? p.days); setKeep(r.keep ?? []); setEndWith(r.last ?? []);
       } else if (r.mode === "stops") {
@@ -137,19 +147,22 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
     setText(s.name); setSugg([]); reset(); setBusy(true);
     try {
       await ensureUser();
-      const p = await api.planPropose({ area: s.id, month });
+      const p = await api.planPropose({ area: s.id, month, likes, effort });
+      setReady(p.ready ?? null);
       setMode("region"); setArea(p.area); setOnly(p.only); setSteps(p.stops); setMore(p.more); setRoute(p.route);
       setBest(p.best_months); setTarget(p.days); setMissing(month ? ["how_long"] : ["when", "how_long"]); setHeardText("");
     } catch (e) { setErr(e instanceof ApiError ? e.message : String(e)); } finally { setBusy(false); }
   }
 
-  async function repropose(patch: { days?: number | null; month?: number | null; keep?: string[]; drop?: string[] }) {
+  async function repropose(patch: { days?: number | null; month?: number | null; keep?: string[]; drop?: string[];
+    likes?: PlanLike[]; effort?: PlanEffort | null }) {
     if (!area) return;
     setBusy(true);
     try {
       const p = await api.planPropose({ area: area.id, only, days: patch.days ?? target, month: patch.month ?? month,
-        keep: patch.keep ?? keep, drop: patch.drop ?? drop, last: endWith.filter((k) => !(patch.drop ?? drop).includes(k)) });
-      setSteps(p.stops); setMore(p.more); setRoute(p.route); setBest(p.best_months);
+        keep: patch.keep ?? keep, drop: patch.drop ?? drop, last: endWith.filter((k) => !(patch.drop ?? drop).includes(k)),
+        likes: patch.likes ?? likes, effort: patch.effort === undefined ? effort : patch.effort });
+      setSteps(p.stops); setMore(p.more); setRoute(p.route); setBest(p.best_months); setReady(p.ready ?? null);
     } catch (e) { setErr(e instanceof ApiError ? e.message : String(e)); } finally { setBusy(false); }
   }
 
@@ -160,6 +173,16 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   function chooseLength(n: number) {
     setTarget(n); setMissing((x) => x.filter((k) => k !== "how_long"));
     if (mode === "region") repropose({ days: n });
+  }
+  function toggleLike(l: PlanLike) {
+    const next = likes.includes(l) ? likes.filter((x) => x !== l) : [...likes, l].slice(-3);
+    setLikes(next);
+    if (mode === "region") repropose({ likes: next });
+  }
+  function chooseEffort(e: PlanEffort) {
+    const next = effort === e ? null : e;
+    setEffort(next);
+    if (mode === "region") repropose({ effort: next });
   }
   function removeStep(i: number) {
     const s = steps[i];
@@ -312,7 +335,32 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
                   </div>
                 </div>
               )}
+              {mode === "region" && (
+                <div className="pq">
+                  <span className="pq-l">What do you like most?</span>
+                  <div className="pq-c chips-row">
+                    {LIKE_CHIPS.map(([l, label]) => (
+                      <button key={l} type="button" className="fchip" aria-pressed={likes.includes(l)} onClick={() => toggleLike(l)}>{label}</button>
+                    ))}
+                  </div>
+                  <span className="pq-why">Up to three. Each place puts first what gives you most of it.</span>
+                </div>
+              )}
+              {mode === "region" && (
+                <div className="pq">
+                  <span className="pq-l">How hard do you want it?</span>
+                  <div className="pq-c chips-row">
+                    {EFFORT_CHIPS.map(([e, label]) => (
+                      <button key={e} type="button" className="fchip" aria-pressed={effort === e} onClick={() => chooseEffort(e)}>{label}</button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
+          )}
+
+          {mode === "region" && ready && (
+            <p className="plan-note"><b>{ready.title}.</b> {ready.why}</p>
           )}
 
           {mode === "open" && (
@@ -429,7 +477,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
               <span className="small muted">{mode === "booked" ? "Your flights, car and beds stay as you wrote them." : `${estimate ? "Dates are a guess until you pick them. " : ""}Flights and beds later, if you want.`}</span>
             </div>
           )}
-          {mode === "region" && <p className="small muted">The order follows what organised trips do; the days are what they give each place. Change anything.</p>}
+          {mode === "region" && <p className="small muted">{ready ? "A trip we wrote for this length; each place puts first what you like." : "The order follows what organised trips do; the days are what they give each place."} Change anything.</p>}
           {mode !== "region" && month && !start && steps.length > 0 && <p className="small muted">Starting {MONTHS[month - 1]} 1 until you pick the day.</p>}
         </section>
       )}

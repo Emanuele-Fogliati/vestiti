@@ -1,5 +1,5 @@
 import type {
-  DaysWritten, PlanProposal, PlanReading, PlanStep, PlanSuggestion,
+  DaysWritten, PlanEffort, PlanLike, PlanProposal, PlanReading, PlanStep, PlanSuggestion,
   Airport, Board, FlightOffer, FlightOrder, FlightPrice, LegSaved, Passenger, TripFlights, PlanChoices, StopStatus,
   Trail, TrailCard, TrailDot, TrailWear,
   AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
@@ -166,7 +166,8 @@ export const api = {
   planUnderstand: (text: string) => req<PlanReading>("POST", "/api/plan/understand", { text }),
   planDays: (text: string, group: number, wishes: string) =>
     req<DaysWritten>("POST", "/api/plan/days", { text, group, wishes }),
-  planPropose: (body: { area: string; only?: string[]; days?: number | null; month?: number | null; keep?: string[]; drop?: string[]; last?: string[] }) =>
+  planPropose: (body: { area: string; only?: string[]; days?: number | null; month?: number | null; keep?: string[]; drop?: string[]; last?: string[];
+    likes?: PlanLike[]; effort?: PlanEffort | null }) =>
     req<PlanProposal>("POST", "/api/plan/propose", body),
   planSuggest: (q: string) => req<PlanSuggestion[]>("GET", `/api/plan/suggest?q=${encodeURIComponent(q)}`),
   planTrip: (body: { stops: PlanStep[]; start_date?: string | null; month?: number | null; area?: string | null;

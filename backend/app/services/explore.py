@@ -727,15 +727,17 @@ def _fits(things: list, it) -> bool:
     return b is None or all(_span(t) is None or _span(t)[1] <= b[0] or b[1] <= _span(t)[0] for t in things)
 
 
-def _guide_days(stops: list[dict], month: int | None = None) -> None:
+def _guide_days(stops: list[dict], month: int | None = None, prefs=None, spare: bool = False) -> None:
     """Where a local guide is written by hand (app.guide.todo: Peru, Chile, Argentina, Iceland,
     Patagonia), its days replace the ones read from the trips: things in the order not to miss,
     a whole day out alone, half days and short visits sharing a day when their hours fit, each
     with its hours and what the programmes leave out. The trips' data stays where nobody wrote
     a guide. A thing is left out where the trip goes anyway (no Torres del Paine day tour from
     Puerto Natales when the trip sleeps in the park, no Sacred Valley from Cusco when it sleeps
-    in Ollantaytambo), or when an earlier stop already saw it."""
-    from app.guide import _norm
+    in Ollantaytambo), or when an earlier stop already saw it. `prefs` (app.guide.rank): what
+    the traveller likes and how hard they want it reorders each place's things to do. `spare`: keep
+    each area's days for the weather free (a proposal; a booked trip has its own weather rules)."""
+    from app.guide import _norm, rank
     from app.guide.todo import area_for
     found = [area_for(s["name"], s.get("country"), s["lat"], s["lon"]) for s in stops]
     done: dict[str, set[str]] = {}  # area -> things already planned (Reykjavik again at the end)
@@ -763,6 +765,7 @@ def _guide_days(stops: list[dict], month: int | None = None) -> None:
         todo = [it for it in items if it.id not in used and (not month or not it.months or month in it.months)
                 and not (it.sights and all(n in seen for n in it.sights))
                 and not any(_norm(n) in elsewhere for n in it.sights)]
+        todo, too_hard = rank.ordered(todo, prefs)
         plan: list[dict] = []
 
         def day(d: int, kind: str, things: list, extra: list[str] | None = None) -> dict:
@@ -790,7 +793,9 @@ def _guide_days(stops: list[dict], month: int | None = None) -> None:
                 plan.append(day(1, "arrive", [first] if first else [], s.get("way")))
                 continue
             left = [it for it in todo if it.id not in used]
-            if not left:
+            # from three days on, the area's spare days for the weather stay free, at the end
+            keep_free = spare and a.buffer and s["days"] >= 3 and d > s["days"] - a.buffer
+            if not left or keep_free:
                 plan.append({"day": d, "kind": "free", "sights": [], "items": []})
                 continue
             things, room = [left[0]], 4 - SIZE[left[0].length]
@@ -803,16 +808,45 @@ def _guide_days(stops: list[dict], month: int | None = None) -> None:
             plan.append(day(d, "day", things))
         s["plan"] = plan
         seen.update(n for p in plan for n in p["sights"])
-        rest = [it for it in todo if it.id not in used]
+        rest = [it for it in todo if it.id not in used] + too_hard
         s["also"] = [it.name for it in rest][:6]
         s["more_things"] = [_thing(it) for it in rest][:6]
         named = [n for it in a.items for n in it.sights]
         s["sights"] = list(dict.fromkeys([n for p in plan for n in p["sights"] if n in named] + named + s.get("sights", [])))[:12]
 
 
+def _ready(a: dict, only: list[str], days: int | None, month: int | None, prefs) -> dict | None:
+    """The region's ready-made trip for about these days (app.guide.ready), its nights moved
+    for what the traveller likes, or None."""
+    from app import globe
+    from app.guide import ready
+    t = ready.for_region(a["id"], days, only)
+    if t is None:
+        return None
+    P = globe.by_id()
+    if any(s.place not in P for s in t.stops):
+        return None
+    nights = ready.nights(t, P, prefs)
+    stops = [{**_stop_of_base({**P[s.place], "sights": []}, n), "key": s.place}
+             for s, n in zip(t.stops, nights)]
+    _days_of(stops)
+    _guide_days(stops, month, prefs, spare=True)
+    more = []  # the other places to sleep in the region, most visited first
+    for b in bases(a, only):
+        if any(km(b["lat"], b["lon"], x["lat"], x["lon"]) <= TOWN_IN_CITY_KM for x in stops):
+            continue
+        more.append(_stop_of_base(b, DEFAULT_DAYS.get(b["kind"], 2)))
+        if len(more) >= 10:
+            break
+    _days_of(more)
+    _guide_days(more, month, prefs, spare=True)
+    return {"stops": stops, "more": more, "route": None, "best_months": sorted(t.months), "days": sum(nights),
+            "ready": {"id": t.id, "title": t.title, "why": t.why, "pace": t.pace, "level": t.level}}
+
+
 def propose(a: dict, only: list[str] | None = None, days: int | None = None,
             month: int | None = None, keep: list[str] | None = None, drop: list[str] | None = None,
-            last: list[str] | None = None) -> dict:
+            last: list[str] | None = None, prefs=None) -> dict:
     """A route through the area that fits the days: {stops, more, route, best_months, days}.
 
     Made by merging the organised trips of the area (Manu, 2026-11-12: "not one trip copied,
@@ -825,11 +859,15 @@ def propose(a: dict, only: list[str] | None = None, days: int | None = None,
     `last`: places the traveller wants to end with ("e alla fine Ushuaia"), kept and moved last.
     """
     only = only or list(a["countries"])
+    if not (keep or drop or last):
+        r = _ready(a, only, days, month, prefs)
+        if r is not None:
+            return r
     trips = _area_trips(a, only)
     if len(trips) < MIN_AREA_TRIPS:
         p = _propose_from_route(a, only, days, month, keep, drop, last)
         _days_of(p["stops"])
-        _guide_days(p["stops"], month)
+        _guide_days(p["stops"], month, prefs, spare=True)
         return p
     from app import globe
     P = globe.by_id()
@@ -929,7 +967,7 @@ def propose(a: dict, only: list[str] | None = None, days: int | None = None,
         stops[0]["days"] -= 1
         stops.append({**_stop_of_base({**P[ring], "sights": []}, 1), "key": f"{ring}~back"})
     _days_of(stops)
-    _guide_days(stops, month)
+    _guide_days(stops, month, prefs, spare=True)
     taken = set(order)
     more = []
     for b in sorted(cands, key=lambda c: -m.imp[c]):
@@ -939,10 +977,11 @@ def propose(a: dict, only: list[str] | None = None, days: int | None = None,
         if len(more) >= 10:
             break
     _days_of(more)  # what you would do there, if you add it
-    _guide_days(more, month)
+    _guide_days(more, month, prefs, spare=True)
     routes = area_routes(a, only)
     best_months = sorted({mo for r in routes[:6] for mo in r.get("best_months") or []})
-    return {"stops": stops, "more": more, "route": None, "best_months": best_months, "days": total()}
+    return {"stops": stops, "more": more, "route": None, "best_months": best_months, "days": total(),
+            "ready": None}
 
 
 def start_for(month: int | None, best: list[int], today: date | None = None) -> date:

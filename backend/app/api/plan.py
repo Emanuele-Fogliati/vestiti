@@ -20,6 +20,7 @@ from sqlalchemy.orm import Session
 from app import travel
 from app.api.trips import _stop_from, _verify
 from app.db import get_db
+from app.guide import rank
 from app.deps import current_user, rate_limit
 from app.models import Trip, User
 from app.schemas import MAX_STOPS, StopIn, TripOut, check_date
@@ -54,6 +55,9 @@ class ProposeIn(BaseModel):
     keep: list[Annotated[str, Field(max_length=80)]] = Field(default_factory=list, max_length=30)
     drop: list[Annotated[str, Field(max_length=80)]] = Field(default_factory=list, max_length=60)
     last: list[Annotated[str, Field(max_length=80)]] = Field(default_factory=list, max_length=5)
+    # the two questions (app.guide.rank): what you like most, how hard you want it
+    likes: list[rank.Like] = Field(default_factory=list, max_length=3)
+    effort: rank.Effort | None = None
 
 
 def _date(d) -> str | None:
@@ -62,9 +66,10 @@ def _date(d) -> str | None:
 
 def _proposal(a: dict, only: list[str], days: int | None, month: int | None,
               keep: list[str] | None = None, drop: list[str] | None = None,
-              last: list[str] | None = None) -> dict:
-    p = explore.propose(a, only, days, month, keep, drop, last)
-    return {**p, "last": last or [], "area": {"id": a["id"], "name": a["name"], "kind": a["kind"]}, "only": only,
+              last: list[str] | None = None, prefs: rank.Prefs | None = None) -> dict:
+    p = explore.propose(a, only, days, month, keep, drop, last, prefs)
+    prefs = prefs or rank.Prefs()
+    return {**p, "last": last or [], "likes": prefs.likes, "effort": prefs.effort, "area": {"id": a["id"], "name": a["name"], "kind": a["kind"]}, "only": only,
             "suggested_start": explore.start_for(month, p["best_months"]).isoformat()}
 
 
@@ -118,10 +123,12 @@ def understand_text(body: TextIn, _user: User = Depends(current_user)):
     out = {**r, "start_date": _date(r["start_date"]), "proposal": None, "ideas": []}
     if r["mode"] == "open":
         out["ideas"] = explore.ideas(r["month"], r["days"], r["wishes"])
+    prefs = rank.read(body.text)  # "un viaggio spirituale, niente trekking"
+    out["likes"], out["effort"] = prefs.likes, prefs.effort
     if r["mode"] == "region":
         a = explore.area(r["area"]["id"])
         out["proposal"] = _proposal(a, r["only"], r["days"], r["month"], r.get("keep"),
-                                    last=r.get("last"))
+                                    last=r.get("last"), prefs=prefs)
     return out
 
 
@@ -141,7 +148,8 @@ def propose(body: ProposeIn, _user: User = Depends(current_user)):
     if a is None:
         raise HTTPException(404, "Unknown region")
     only = [c for c in body.only if c in a["countries"]] or list(a["countries"])
-    return _proposal(a, only, body.days, body.month, body.keep, body.drop, body.last)
+    return _proposal(a, only, body.days, body.month, body.keep, body.drop, body.last,
+                     rank.Prefs(likes=body.likes, effort=body.effort))
 
 
 @router.get("/suggest")

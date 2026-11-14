@@ -1,0 +1,22 @@
+{
+"_doc": "Ready-made trips per region for one, two and three weeks (Manu, 2026-11-14), written by hand: the zones you sleep in (globe place ids) and the nights in each, in travel order. Each zone has a hand-written area in todo.json / areas/*.json, whose ranked things fill the days. level = the highest effort (rubric 0-5, docs/RANKING.md) among the zones' first things; pace: relaxed = 3+ nights a base, normal, intense = 1-2. Loaded by app.guide.ready; used by app.services.explore.propose when no stop was kept or dropped.",
+"trips": [
+ {"id": "patagonia-7", "region": "patagonia", "title": "Glaciers and Fitz Roy in a week", "pace": "relaxed", "level": 4,
+  "months": [11, 12, 1, 2, 3],
+  "why": "Two bases only: Perito Moreno from El Calafate, then four nights under Fitz Roy to catch a clear day.",
+  "stops": [{"place": "ar-el-calafate", "nights": 3}, {"place": "ar-el-chalten", "nights": 4}]},
+ {"id": "patagonia-14", "region": "patagonia", "title": "Patagonia classic: Fitz Roy, Torres del Paine, Ushuaia", "pace": "normal", "level": 4,
+  "months": [11, 12, 1, 2, 3],
+  "why": "The three big parks of the south with a weather day in each, then the end of the world.",
+  "stops": [{"place": "ar-el-calafate", "nights": 2}, {"place": "ar-el-chalten", "nights": 4},
+            {"place": "cl-puerto-natales", "nights": 1}, {"place": "cl-torres-del-paine-national-park", "nights": 3},
+            {"place": "cl-punta-arenas", "nights": 1}, {"place": "ar-ushuaia", "nights": 3}]},
+ {"id": "patagonia-21", "region": "patagonia", "title": "Patagonia from the Atlantic to the lakes", "pace": "normal", "level": 4,
+  "months": [11, 12, 1, 2, 3],
+  "why": "Penguins on the Atlantic (whales too until December), the far south, the two great parks, and the lakes and volcanoes to end.",
+  "stops": [{"place": "ar-puerto-madryn", "nights": 2}, {"place": "ar-ushuaia", "nights": 3},
+            {"place": "ar-el-calafate", "nights": 2}, {"place": "ar-el-chalten", "nights": 5},
+            {"place": "cl-puerto-natales", "nights": 1}, {"place": "cl-torres-del-paine-national-park", "nights": 4},
+            {"place": "cl-punta-arenas", "nights": 1}, {"place": "cl-puerto-varas", "nights": 3}]}
+]
+}
