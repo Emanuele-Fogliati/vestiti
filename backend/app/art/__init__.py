@@ -149,6 +149,19 @@ def _named(text: str, lat: float | None = None, lon: float | None = None) -> lis
     return [lm for _, _, lm in sorted((h for _, h in hits), key=lambda h: (h[0], near(h[2]), h[1]))]
 
 
+def named_near(text: str, lat: float | None, lon: float | None, country: str | None = None) -> Landmark | None:
+    """The landmark a thing to do names ("Laguna de los Tres", "Perito Moreno glacier"), in the
+    stop's country and near it, or None: never the nearest one by distance alone."""
+    cc = (country or "").upper()
+    for lm in _named(text, lat, lon):
+        if cc and lm.country != cc:
+            continue
+        if lat is not None and lon is not None and _km(lat, lon, lm.lat, lm.lon) > NAMESAKE_KM:
+            continue
+        return lm
+    return None
+
+
 def _nearest(lat: float, lon: float, country: str = "") -> Landmark | None:
     best = None
     for lm in landmarks():

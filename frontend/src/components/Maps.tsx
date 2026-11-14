@@ -10,6 +10,6 @@ export function HomeGlobe() {
   return <Suspense fallback={<section className="globe globe-loading" aria-hidden="true" />}><GlobeImpl /></Suspense>;
 }
 
-export function TripMap({ stops }: { stops: RouteStop[] }) {
-  return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><RouteMapImpl stops={stops} /></Suspense>;
+export function TripMap({ stops, focusIndex }: { stops: RouteStop[]; focusIndex?: number | null }) {
+  return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><RouteMapImpl stops={stops} focusIndex={focusIndex} /></Suspense>;
 }

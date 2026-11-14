@@ -122,6 +122,8 @@ export interface TodoItem {
   steps?: HourStep[]; extras?: string[]; sights?: string[];
   /** its trail page (map, profile, what to wear), when this thing to do is a trail */
   trail?: string | null;
+  /** the drawing of the place it is about, when we have one */
+  art?: StopArt | null;
 }
 export interface HourStep { at: string; what: string; note: string }
 /** A thing to do from a hand-written guide, as a proposal carries it. */
