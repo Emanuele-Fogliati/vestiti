@@ -43,6 +43,66 @@ body{background:var(--bg)}
   .home-side{padding:40px 48px 40px 16px;margin:0}
 }
 
+/* ---------- Home (design M10 "Notte chiara", Manu 2026-11-14) ----------
+   One screen, no scrolling: the globe on a light night sky, "Where to?", Trip or Trek, one box.
+   The first time per visit: the universe, then the Earth flying in while it spins (Landing.tsx). */
+body.home-page{overflow:hidden;padding-bottom:0}
+body.home-page footer,body.home-page .mnav{display:none}
+body.home-page .top{position:fixed;left:0;right:0;top:0;z-index:30;background:transparent;border:0;--top-ink:#FFFFFF;--top-ink-2:rgba(255,255,255,.8);color:#FFFFFF;transition:opacity .6s}
+body.home-page .top :is(a,button,.logo){color:#FFFFFF}
+body.home-page .top .nav a.active{background:transparent}
+body.home-intro .top{opacity:0;pointer-events:none}
+.home2{position:fixed;inset:0;overflow:hidden;color:#FFFFFF;
+  background:radial-gradient(1.3px 1.3px at 32.4% 15.1%,rgba(255,255,255,0.37) 50%,transparent 51%),radial-gradient(1.0px 1.0px at 53.6% 36.6%,rgba(255,255,255,0.48) 50%,transparent 51%),radial-gradient(1.0px 1.0px at 3.7% 43.4%,rgba(255,255,255,0.37) 50%,transparent 51%),radial-gradient(1.1px 1.1px at 42.5% 82.7%,rgba(255,255,255,0.41) 50%,transparent 51%),radial-gradient(1.3px 1.3px at 62.7% 94.8%,rgba(255,255,255,0.45) 50%,transparent 51%),radial-gradient(1.4px 1.4px at 97.6% 4.7%,rgba(255,255,255,0.42) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 14.4% 11.8%,rgba(255,255,255,0.55) 50%,transparent 51%),radial-gradient(1.3px 1.3px at 18.1% 58.2%,rgba(255,255,255,0.44) 50%,transparent 51%),radial-gradient(1.0px 1.0px at 54.8% 6.3%,rgba(255,255,255,0.40) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 68.0% 42.8%,rgba(255,255,255,0.50) 50%,transparent 51%),radial-gradient(1.4px 1.4px at 45.3% 30.0%,rgba(255,255,255,0.52) 50%,transparent 51%),radial-gradient(1.3px 1.3px at 24.4% 57.4%,rgba(255,255,255,0.57) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 72.9% 28.8%,rgba(255,255,255,0.38) 50%,transparent 51%),radial-gradient(1.1px 1.1px at 41.8% 75.7%,rgba(255,255,255,0.47) 50%,transparent 51%),radial-gradient(circle at 30% 45%,#3E5F8C 0%,#2A4468 70%)}
+.home2-space{position:absolute;inset:-25%;z-index:0;pointer-events:none;opacity:0;
+  background:radial-gradient(1.9px 1.9px at 3.9% 66.8%,rgba(255,255,255,0.74) 50%,transparent 51%),radial-gradient(1.8px 1.8px at 87.5% 31.4%,rgba(255,255,255,0.76) 50%,transparent 51%),radial-gradient(2.0px 2.0px at 58.0% 45.6%,rgba(255,255,255,0.97) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 47.4% 66.4%,rgba(255,255,255,0.82) 50%,transparent 51%),radial-gradient(2.0px 2.0px at 64.7% 99.3%,rgba(255,255,255,0.57) 50%,transparent 51%),radial-gradient(0.8px 0.8px at 38.6% 66.9%,rgba(255,255,255,0.68) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 16.8% 11.7%,rgba(255,255,255,0.86) 50%,transparent 51%),radial-gradient(1.3px 1.3px at 12.9% 24.8%,rgba(255,255,255,0.92) 50%,transparent 51%),radial-gradient(1.6px 1.6px at 8.1% 44.9%,rgba(255,255,255,0.93) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 81.9% 86.4%,rgba(255,255,255,0.65) 50%,transparent 51%),radial-gradient(2.1px 2.1px at 35.9% 88.4%,rgba(255,255,255,0.49) 50%,transparent 51%),radial-gradient(1.1px 1.1px at 17.6% 23.2%,rgba(255,255,255,0.69) 50%,transparent 51%),radial-gradient(0.8px 0.8px at 58.9% 26.3%,rgba(255,255,255,0.65) 50%,transparent 51%),radial-gradient(2.1px 2.1px at 36.9% 56.6%,rgba(255,255,255,0.81) 50%,transparent 51%),radial-gradient(1.7px 1.7px at 51.5% 61.8%,rgba(255,255,255,0.43) 50%,transparent 51%),radial-gradient(2.0px 2.0px at 90.0% 78.0%,rgba(255,255,255,0.88) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 39.2% 39.9%,rgba(255,255,255,0.78) 50%,transparent 51%),radial-gradient(1.1px 1.1px at 6.2% 6.7%,rgba(255,255,255,0.50) 50%,transparent 51%),radial-gradient(0.8px 0.8px at 34.0% 5.3%,rgba(255,255,255,0.49) 50%,transparent 51%),radial-gradient(0.8px 0.8px at 10.1% 36.4%,rgba(255,255,255,0.92) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 61.4% 14.9%,rgba(255,255,255,0.61) 50%,transparent 51%),radial-gradient(2.0px 2.0px at 36.4% 12.3%,rgba(255,255,255,1.00) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 46.6% 48.4%,rgba(255,255,255,0.46) 50%,transparent 51%),radial-gradient(2.0px 2.0px at 34.3% 26.5%,rgba(255,255,255,0.50) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 2.3% 95.1%,rgba(255,255,255,0.49) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 54.3% 2.7%,rgba(255,255,255,0.99) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 86.3% 69.6%,rgba(255,255,255,0.62) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 16.7% 77.2%,rgba(255,255,255,0.87) 50%,transparent 51%),radial-gradient(1.9px 1.9px at 33.0% 22.3%,rgba(255,255,255,0.99) 50%,transparent 51%),radial-gradient(1.9px 1.9px at 85.3% 80.6%,rgba(255,255,255,0.84) 50%,transparent 51%),radial-gradient(1.3px 1.3px at 22.7% 51.8%,rgba(255,255,255,0.42) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 2.8% 27.9%,rgba(255,255,255,0.82) 50%,transparent 51%),radial-gradient(2.1px 2.1px at 95.7% 44.7%,rgba(255,255,255,0.99) 50%,transparent 51%),radial-gradient(1.1px 1.1px at 95.5% 36.5%,rgba(255,255,255,0.54) 50%,transparent 51%),radial-gradient(1.7px 1.7px at 19.7% 20.4%,rgba(255,255,255,0.94) 50%,transparent 51%),radial-gradient(1.7px 1.7px at 84.0% 47.9%,rgba(255,255,255,0.88) 50%,transparent 51%),radial-gradient(2.1px 2.1px at 8.5% 66.1%,rgba(255,255,255,0.87) 50%,transparent 51%),radial-gradient(1.0px 1.0px at 75.0% 47.8%,rgba(255,255,255,0.87) 50%,transparent 51%),radial-gradient(2.2px 2.2px at 33.3% 80.1%,rgba(255,255,255,0.64) 50%,transparent 51%),radial-gradient(1.8px 1.8px at 40.1% 94.7%,rgba(255,255,255,0.50) 50%,transparent 51%),radial-gradient(2.1px 2.1px at 12.7% 15.1%,rgba(255,255,255,0.88) 50%,transparent 51%),radial-gradient(2.2px 2.2px at 14.6% 82.7%,rgba(255,255,255,0.79) 50%,transparent 51%),radial-gradient(1.0px 1.0px at 35.0% 54.9%,rgba(255,255,255,0.41) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 97.1% 65.0%,rgba(255,255,255,0.96) 50%,transparent 51%),radial-gradient(2.0px 2.0px at 43.4% 87.2%,rgba(255,255,255,0.53) 50%,transparent 51%),radial-gradient(1.1px 1.1px at 25.2% 29.3%,rgba(255,255,255,0.75) 50%,transparent 51%),radial-gradient(1.0px 1.0px at 25.9% 41.9%,rgba(255,255,255,0.95) 50%,transparent 51%),radial-gradient(1.6px 1.6px at 35.4% 45.8%,rgba(255,255,255,0.94) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 42.1% 91.8%,rgba(255,255,255,0.72) 50%,transparent 51%),radial-gradient(1.4px 1.4px at 52.4% 1.9%,rgba(255,255,255,0.51) 50%,transparent 51%),radial-gradient(1.0px 1.0px at 0.4% 79.9%,rgba(255,255,255,0.68) 50%,transparent 51%),radial-gradient(1.3px 1.3px at 72.5% 55.6%,rgba(255,255,255,0.71) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 55.5% 78.4%,rgba(255,255,255,0.74) 50%,transparent 51%),radial-gradient(1.9px 1.9px at 24.8% 27.7%,rgba(255,255,255,0.70) 50%,transparent 51%),radial-gradient(2.1px 2.1px at 56.2% 76.0%,rgba(255,255,255,0.67) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 61.3% 50.6%,rgba(255,255,255,0.82) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 45.2% 53.3%,rgba(255,255,255,0.96) 50%,transparent 51%),radial-gradient(2.1px 2.1px at 69.9% 87.7%,rgba(255,255,255,0.56) 50%,transparent 51%),radial-gradient(2.0px 2.0px at 56.0% 94.3%,rgba(255,255,255,0.48) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 12.2% 44.2%,rgba(255,255,255,0.54) 50%,transparent 51%),radial-gradient(1.9px 1.9px at 7.3% 66.9%,rgba(255,255,255,0.94) 50%,transparent 51%),radial-gradient(1.7px 1.7px at 15.4% 71.6%,rgba(255,255,255,0.49) 50%,transparent 51%),radial-gradient(1.1px 1.1px at 88.3% 96.8%,rgba(255,255,255,0.97) 50%,transparent 51%),radial-gradient(2.2px 2.2px at 39.8% 48.7%,rgba(255,255,255,0.90) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 16.1% 43.2%,rgba(255,255,255,0.60) 50%,transparent 51%),radial-gradient(1.8px 1.8px at 19.6% 31.9%,rgba(255,255,255,0.41) 50%,transparent 51%),radial-gradient(0.8px 0.8px at 55.4% 44.0%,rgba(255,255,255,0.60) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 62.4% 51.2%,rgba(255,255,255,0.99) 50%,transparent 51%),radial-gradient(0.9px 0.9px at 78.8% 97.2%,rgba(255,255,255,0.56) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 4.0% 77.9%,rgba(255,255,255,0.48) 50%,transparent 51%),radial-gradient(ellipse at 50% 50%,#16233F 0%,#060A14 70%);transition:opacity 1.8s ease}
+.home2.space .home2-space,.home2.zoom .home2-space{opacity:1}
+.home2.zoom .home2-space{opacity:0;transition:opacity 2.2s ease .2s}
+.home2.space .home2-space,.home2.zoom .home2-space{animation:home2-drift 5s ease-out both}
+@keyframes home2-drift{from{transform:scale(1)}to{transform:scale(1.35)}}
+.home2-globe{position:absolute;z-index:1;left:0;right:0;top:56px;height:min(calc(100svh - 300px),calc(100vw + 40px));
+  transform-origin:50% 50%;transition:transform 2.6s cubic-bezier(.16,.8,.12,1),opacity 1s ease}
+.home2-globe::before{content:"";position:absolute;left:50%;top:50%;width:78%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(120,180,255,.30) 45%,rgba(120,180,255,0) 70%);pointer-events:none}
+.home2.space .home2-globe{transform:scale(.1);opacity:0}
+.home2 .globe{height:100%;min-height:0;background:transparent}
+.home2 .globe-head,.home2 .globe-hint{display:none}
+.home2 .globe-shade{box-shadow:0 0 60px 10px rgba(120,180,255,.30),0 40px 90px -20px rgba(0,10,30,.45)}
+.home2 .globe-tools{bottom:8px}
+.home2 .maplibregl-ctrl-attrib{opacity:.7}
+.home2-ui{position:absolute;z-index:2;left:20px;right:20px;bottom:calc(36px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px;
+  transition:opacity .7s ease,transform .7s ease}
+.home2.space .home2-ui,.home2.zoom .home2-ui{opacity:0;transform:translateY(18px);pointer-events:none}
+.home2-ui h1{margin:0;font-family:var(--f-display);font-weight:900;font-size:44px;line-height:1;letter-spacing:-.01em;color:#FFFFFF}
+.home2-tabs{display:flex;padding:4px;border-radius:26px;background:#111111;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.22)}
+.home2-tabs button{flex:1 1 0;height:44px;border:0;border-radius:22px;background:transparent;color:#FFFFFF;font:700 16px var(--f-body);display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+.home2-tabs button.on{background:var(--accent);color:#111111;font-weight:800}
+.home2-search{display:flex;align-items:center;gap:10px;height:58px;border-radius:29px;padding:0 6px 0 20px;box-sizing:border-box;
+  background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35);color:#FFFFFF}
+.home2-search:focus-within{background:rgba(255,255,255,.22);border-color:#FFFFFF}
+.home2-search input{flex:1 1 auto;min-width:0;border:0;outline:none;background:transparent;color:#FFFFFF;font:600 17px var(--f-body)}
+.home2-search input::placeholder{color:rgba(255,255,255,.78)}
+.home2-search button{width:46px;height:46px;flex:0 0 auto;border:0;border-radius:23px;background:var(--accent);color:#111111;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.home2-bag{position:fixed;z-index:31;right:16px;top:12px;width:42px;height:42px;border-radius:21px;background:rgba(255,255,255,.14);color:#FFFFFF;display:flex;align-items:center;justify-content:center;transition:opacity .6s}
+body.home-intro .home2-bag{opacity:0}
+.home2-skip{position:absolute;z-index:3;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));height:34px;padding:0 14px;border-radius:17px;
+  border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);font:600 13px var(--f-body);cursor:pointer}
+@media (min-width:900px){
+  .home2-globe{top:0;bottom:0;right:auto;width:58vw;height:auto}
+  .home2.space .home2-globe{transform:translateX(21vw) scale(.1)}
+  .home2-ui{left:58vw;right:auto;top:0;bottom:0;width:min(420px,36vw);justify-content:center;gap:22px}
+  .home2-ui h1{font-size:64px}
+  .home2-search{height:62px;border-radius:31px}
+  .home2-bag{display:none}
+}
+@media (max-height:640px) and (max-width:899px){
+  .home2-ui h1{font-size:34px}
+  .home2-ui{gap:12px;bottom:20px}
+}
+@media (prefers-reduced-motion:reduce){
+  .home2-globe,.home2-ui,.home2-space{transition:none;animation:none}
+}
+
 /* ---------- phone: tab bar at the bottom, like an app ---------- */
 @media (max-width:760px){
   .mnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--bg);border-top:1.5px solid var(--ink);

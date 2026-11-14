@@ -16,6 +16,8 @@ import {
 
 const SPIN_DEG_PER_S = 3; // one turn in two minutes
 const RESUME_AFTER_MS = 1500; // the globe starts turning again this long after you let go
+const INTRO_DEG_PER_S = 110; // the opening spin starts this fast...
+const INTRO_SLOWDOWN_MS = 900; // ...and slows down to the usual pace in about three seconds
 const SPIN_UNTIL_ZOOM = 3; // closer than this you are exploring: the globe stays still
 const TERRAIN_FROM_ZOOM = 7; // mountains stand up in 3D once you are this close
 const SHADE_UNTIL_ZOOM = 4; // the sphere's light and shadow fade out as the globe fills the screen
@@ -24,13 +26,16 @@ const narrow = (el: HTMLElement) => el.clientWidth < 600;
 
 /** Room the title takes at the top, so the globe sits below it. */
 function topPad(el: HTMLElement): number {
+  if (el.dataset.bare) return 0; // the home has no title over the globe: keep it centred
   return narrow(el) ? 70 : 100;
 }
 
 /** The zoom at which the whole globe fills the box under the title. */
 function fitZoom(el: HTMLElement): number {
   const side = Math.min(el.clientWidth, el.clientHeight - topPad(el));
-  return Math.max(0.2, Math.log2(side / 512) + (narrow(el) ? 1.75 : 1.62));
+  // the home's globe on a computer has the whole left half to itself: draw it bigger
+  const big = el.dataset.bare && !narrow(el) ? 0.22 : 0;
+  return Math.max(0.2, Math.log2(side / 512) + (narrow(el) ? 1.75 : 1.62) + big);
 }
 
 /** A round thumbnail of one landmark scene, centred on its place (the map writes its name beside it). */
@@ -70,7 +75,10 @@ interface Scene {
  *  anywhere and the places worth seeing appear, the most visited first, with their pictures.
  *  From far away a city stands for everything in it (Florence); zoomed on it, its places show
  *  (the Uffizi, Ponte Vecchio). Pick whole cities or single places for your own trip. */
-export default function Globe() {
+/** `bare`: no title or hint over the globe (the home puts its own words beside it).
+ *  `intro`: the opening animation is playing, so the globe spins fast at first and slows down
+ *  to its usual pace. `onReady` fires once the map has drawn. */
+export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?: boolean; onReady?: () => void } = {}) {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [data, setData] = useState<GlobeData | null>(null);
@@ -90,6 +98,9 @@ export default function Globe() {
   // the map's handlers live in the map effect; these let React state reach them
   const handlers = useRef({ pickPlace: (_p: GlobePlace) => {}, clear: () => {} });
   const spin = useRef({ hold: () => {}, resume: () => {} });
+  const introRef = useRef(intro);
+  const readyRef = useRef(onReady);
+  readyRef.current = onReady;
 
   useEffect(() => {
     loadPlaces().then(setData).catch(() => setFailed(true));
@@ -282,6 +293,12 @@ export default function Globe() {
     const hold = () => { busyUntil = Infinity; };
     const release = () => { if (!openRef.current) busyUntil = performance.now() + RESUME_AFTER_MS; };
     spin.current = { hold, resume: () => { busyUntil = performance.now() + RESUME_AFTER_MS; } };
+    // the opening animation: a fast spin from far away that slows down to the usual pace
+    let boostFrom = 0;
+    map.on("load", () => {
+      if (introRef.current) boostFrom = performance.now();
+      readyRef.current?.();
+    });
     map.on("mousedown", hold); map.on("touchstart", hold); map.on("wheel", hold);
     map.on("moveend", (e) => { if ((e as { originalEvent?: Event }).originalEvent || busyUntil === Infinity) release(); });
     map.on("zoom", () => setClose(map.getZoom() >= SPIN_UNTIL_ZOOM));
@@ -298,7 +315,8 @@ export default function Globe() {
         && map.getZoom() < SPIN_UNTIL_ZOOM && map.loaded()) {
         const ctr = map.getCenter();
         spinning = true;
-        map.jumpTo({ center: [ctr.lng - SPIN_DEG_PER_S * dt, ctr.lat] });
+        const boost = boostFrom ? INTRO_DEG_PER_S * Math.exp(-(now - boostFrom) / INTRO_SLOWDOWN_MS) : 0;
+        map.jumpTo({ center: [ctr.lng - (SPIN_DEG_PER_S + boost) * dt, ctr.lat] });
         spinning = false;
       }
       raf = requestAnimationFrame(tick);
@@ -386,7 +404,7 @@ export default function Globe() {
 
   return (
     <section className={`globe${close ? " close" : ""}${open ? " open" : ""}${trip.length ? " has-trip" : ""}`} aria-label="Explore the world">
-      <div className="globe-map" ref={box}>
+      <div className="globe-map" ref={box} data-bare={bare ? "1" : undefined}>
         {!data && <p className="globe-wait"><span className="spin" /></p>}
       </div>
       <div className="globe-head">
