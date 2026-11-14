@@ -1,22 +1,254 @@
 {
-"_doc": "Ready-made trips per region for one, two and three weeks (Manu, 2026-11-14), written by hand: the zones you sleep in (globe place ids) and the nights in each, in travel order. Each zone has a hand-written area in todo.json / areas/*.json, whose ranked things fill the days. level = the highest effort (rubric 0-5, docs/RANKING.md) among the zones' first things; pace: relaxed = 3+ nights a base, normal, intense = 1-2. Loaded by app.guide.ready; used by app.services.explore.propose when no stop was kept or dropped.",
-"trips": [
- {"id": "patagonia-7", "region": "patagonia", "title": "Glaciers and Fitz Roy in a week", "pace": "relaxed", "level": 4,
-  "months": [11, 12, 1, 2, 3],
-  "why": "Two bases only: Perito Moreno from El Calafate, then four nights under Fitz Roy to catch a clear day.",
-  "stops": [{"place": "ar-el-calafate", "nights": 3}, {"place": "ar-el-chalten", "nights": 4}]},
- {"id": "patagonia-14", "region": "patagonia", "title": "Patagonia classic: Fitz Roy, Torres del Paine, Ushuaia", "pace": "normal", "level": 4,
-  "months": [11, 12, 1, 2, 3],
-  "why": "The three big parks of the south with a weather day in each, then the end of the world.",
-  "stops": [{"place": "ar-el-calafate", "nights": 2}, {"place": "ar-el-chalten", "nights": 4},
-            {"place": "cl-puerto-natales", "nights": 1}, {"place": "cl-torres-del-paine-national-park", "nights": 3},
-            {"place": "cl-punta-arenas", "nights": 1}, {"place": "ar-ushuaia", "nights": 3}]},
- {"id": "patagonia-21", "region": "patagonia", "title": "Patagonia from the Atlantic to the lakes", "pace": "normal", "level": 4,
-  "months": [11, 12, 1, 2, 3],
-  "why": "Penguins on the Atlantic (whales too until December), the far south, the two great parks, and the lakes and volcanoes to end.",
-  "stops": [{"place": "ar-puerto-madryn", "nights": 2}, {"place": "ar-ushuaia", "nights": 3},
-            {"place": "ar-el-calafate", "nights": 2}, {"place": "ar-el-chalten", "nights": 5},
-            {"place": "cl-puerto-natales", "nights": 1}, {"place": "cl-torres-del-paine-national-park", "nights": 4},
-            {"place": "cl-punta-arenas", "nights": 1}, {"place": "cl-puerto-varas", "nights": 3}]}
-]
+ "_doc": "Ready-made trips per region for one, two and three weeks (Manu, 2026-11-14), written by hand: the zones you sleep in (globe place ids) and the nights in each, in travel order. Each zone has a hand-written area in todo.json / areas/*.json, whose ranked things fill the days. level = the highest effort (rubric 0-5, docs/RANKING.md) among the zones' first things; pace: relaxed = 3+ nights a base, normal, intense = 1-2. Loaded by app.guide.ready; used by app.services.explore.propose when no stop was kept or dropped.",
+ "trips": [
+  {
+   "id": "patagonia-7",
+   "region": "patagonia",
+   "title": "Glaciers and Fitz Roy in a week",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "why": "Two bases only: Perito Moreno from El Calafate, then four nights under Fitz Roy to catch a clear day.",
+   "stops": [
+    {
+     "place": "ar-el-calafate",
+     "nights": 3
+    },
+    {
+     "place": "ar-el-chalten",
+     "nights": 4
+    }
+   ]
+  },
+  {
+   "id": "patagonia-14",
+   "region": "patagonia",
+   "title": "Patagonia classic: Fitz Roy, Torres del Paine, Ushuaia",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "why": "The three big parks of the south with a weather day in each, then the end of the world.",
+   "stops": [
+    {
+     "place": "ar-el-calafate",
+     "nights": 2
+    },
+    {
+     "place": "ar-el-chalten",
+     "nights": 4
+    },
+    {
+     "place": "cl-puerto-natales",
+     "nights": 1
+    },
+    {
+     "place": "cl-torres-del-paine-national-park",
+     "nights": 3
+    },
+    {
+     "place": "cl-punta-arenas",
+     "nights": 1
+    },
+    {
+     "place": "ar-ushuaia",
+     "nights": 3
+    }
+   ]
+  },
+  {
+   "id": "patagonia-21",
+   "region": "patagonia",
+   "title": "Patagonia from the Atlantic to the lakes",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "why": "Penguins on the Atlantic (whales too until December), the far south, the two great parks, and the lakes and volcanoes to end.",
+   "stops": [
+    {
+     "place": "ar-puerto-madryn",
+     "nights": 2
+    },
+    {
+     "place": "ar-ushuaia",
+     "nights": 3
+    },
+    {
+     "place": "ar-el-calafate",
+     "nights": 2
+    },
+    {
+     "place": "ar-el-chalten",
+     "nights": 5
+    },
+    {
+     "place": "cl-puerto-natales",
+     "nights": 1
+    },
+    {
+     "place": "cl-torres-del-paine-national-park",
+     "nights": 4
+    },
+    {
+     "place": "cl-punta-arenas",
+     "nights": 1
+    },
+    {
+     "place": "cl-puerto-varas",
+     "nights": 3
+    }
+   ]
+  },
+  {
+   "id": "vietnam-7",
+   "region": "c-vn",
+   "title": "Hanoi, the bays and Hoi An in a week",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "why": "The north's karst by boat twice, Ha Long and Ninh Binh, then a flight to the lanterns of Hoi An.",
+   "stops": [
+    {
+     "place": "vn-hanoi",
+     "nights": 2
+    },
+    {
+     "place": "vn-ha-long-bay",
+     "nights": 1
+    },
+    {
+     "place": "vn-ninh-binh",
+     "nights": 2
+    },
+    {
+     "place": "vn-hoi-an",
+     "nights": 2
+    }
+   ]
+  },
+  {
+   "id": "vietnam-14",
+   "region": "c-vn",
+   "title": "Vietnam north to south in two weeks",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    2,
+    3,
+    4
+   ],
+   "why": "Hanoi, a night on Ha Long Bay, the terraces of Sapa, the emperors of Hue, Hoi An and Saigon.",
+   "stops": [
+    {
+     "place": "vn-hanoi",
+     "nights": 2
+    },
+    {
+     "place": "vn-ha-long-bay",
+     "nights": 1
+    },
+    {
+     "place": "vn-ninh-binh",
+     "nights": 2
+    },
+    {
+     "place": "vn-sapa",
+     "nights": 2
+    },
+    {
+     "place": "vn-hue",
+     "nights": 2
+    },
+    {
+     "place": "vn-hoi-an",
+     "nights": 3
+    },
+    {
+     "place": "vn-ho-chi-minh-city",
+     "nights": 2
+    }
+   ]
+  },
+  {
+   "id": "vietnam-21",
+   "region": "c-vn",
+   "title": "Vietnam in three weeks, with the Ha Giang Loop",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    3,
+    4,
+    10,
+    11
+   ],
+   "why": "The far north by road, the caves of Phong Nha, the old capitals of the centre, and the Mekong to end.",
+   "stops": [
+    {
+     "place": "vn-hanoi",
+     "nights": 2
+    },
+    {
+     "place": "vn-ha-giang",
+     "nights": 3
+    },
+    {
+     "place": "vn-sapa",
+     "nights": 2
+    },
+    {
+     "place": "vn-ninh-binh",
+     "nights": 2
+    },
+    {
+     "place": "vn-ha-long-bay",
+     "nights": 1
+    },
+    {
+     "place": "vn-phong-nha",
+     "nights": 2
+    },
+    {
+     "place": "vn-hue",
+     "nights": 2
+    },
+    {
+     "place": "vn-hoi-an",
+     "nights": 3
+    },
+    {
+     "place": "vn-ho-chi-minh-city",
+     "nights": 2
+    },
+    {
+     "place": "vn-can-tho",
+     "nights": 2
+    }
+   ]
+  }
+ ]
 }
