@@ -1,0 +1,80 @@
+{
+ "id": "nz-hooker-valley",
+ "country": "NZ",
+ "name": "Hooker Valley Track",
+ "base": "Aoraki Mount Cook",
+ "region": "Aoraki/Mount Cook National Park, Canterbury",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  3,
+  3
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 10,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/things-to-do/tracks/hooker-valley-track/"
+ },
+ "why": "A gentle valley walk over three swing bridges to Hooker Lake, with Aoraki/Mount Cook straight ahead and, in summer, icebergs on the water.",
+ "book": "Free. White Horse Hill car park, at the end of Hooker Valley Road 5 minutes from the village, costs $2.50 per half hour or $25 a day (cards only).",
+ "water": "Treated drinking water at the White Horse Hill Campground shelter at the start; toilets there and 15 minutes past the second bridge.",
+ "dangers": [
+  "Weather changes fast: strong wind, heavy rain and cold at any time of year.",
+  "Icy and very slippery in shaded parts in winter: microspikes and poles.",
+  "The lakes are about 3 °C: stay out of the water, off frozen lakes and off the icebergs."
+ ],
+ "turnaround": "In strong wind or heavy rain, turn back at the first swing bridge, just after the Mueller Lake lookout.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/things-to-do/tracks/hooker-valley-track/",
+  "https://www.openstreetmap.org/relation/6204716"
+ ],
+ "osm": 6204716,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "White Horse Hill car park",
+   "lat": -43.71797,
+   "lon": 170.09364,
+   "role": "start",
+   "note": "Past side tracks to Freda's Rock and the Alpine Memorial; the Mueller Lake lookout is before the first bridge."
+  },
+  {
+   "id": "hooker-swing-bridge",
+   "name": "Second Hooker swing bridge",
+   "lat": -43.70589,
+   "lon": 170.10045,
+   "role": "point",
+   "note": "The new 189 m bridge over the Hooker River (opened July 2026), the longest suspension bridge in New Zealand."
+  },
+  {
+   "id": "goal",
+   "name": "Hooker Lake",
+   "lat": -43.68891,
+   "lon": 170.10362,
+   "role": "goal",
+   "note": "The track ends at the lake shore under Aoraki/Mount Cook. Return the same way.",
+   "scene": "nz-aoraki-mount-cook"
+  }
+ ]
+}

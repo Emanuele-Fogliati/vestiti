@@ -1,0 +1,81 @@
+{
+ "id": "nz-gertrude-saddle",
+ "country": "NZ",
+ "name": "Gertrude Saddle Route",
+ "base": "Te Anau",
+ "region": "Milford Road, Fiordland National Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 7,
+  "gain_m": 646,
+  "source": "https://www.doc.govt.nz/globalassets/documents/parks-and-recreation/tracks-and-walks/fiordland/gertrude-saddle-safety-handout.pdf"
+ },
+ "why": "A short, steep climb from the Milford Road up granite slabs past Black Lake to a saddle that looks down the Cleddau valley to Milford Sound.",
+ "book": "Free, no permit. The Gertrude Valley car park is about 98 km from Te Anau on the Milford Road (SH94), just before the Homer Tunnel. Talk to the Fiordland National Park Visitor Centre in Te Anau before you go.",
+ "water": "Streams in the valley; nothing above Black Lake. No toilets on the route.",
+ "dangers": [
+  "Wet, mossy or frosty granite slabs are treacherous: people have died falling here. If there is rain or snow, don't go.",
+  "No permanent markers above the head of the valley: cairns only. Navigation skills and a map are needed.",
+  "Avalanche terrain after snow, usually May to November.",
+  "Stream crossings rise quickly after rain."
+ ],
+ "turnaround": "If the slabs above the stream crossing are wet or icy, or cloud hides the saddle, turn back there.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/gertrude-saddle-route/",
+  "https://www.doc.govt.nz/globalassets/documents/parks-and-recreation/tracks-and-walks/fiordland/gertrude-saddle-safety-handout.pdf",
+  "https://www.openstreetmap.org/way/23433126"
+ ],
+ "osm_ways": [
+  23433126
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Gertrude Valley car park",
+   "lat": -44.76728,
+   "lon": 168.00442,
+   "role": "start",
+   "note": "Next to Homer Hut on the Milford Road. The marked track follows the valley floor through alpine plants."
+  },
+  {
+   "id": "black-lake",
+   "name": "Black Lake",
+   "lat": -44.74527,
+   "lon": 168.01613,
+   "role": "point",
+   "note": "A dark tarn in a rock basin above the steep slabs and steel cables. A good stop before the last boulder climb."
+  },
+  {
+   "id": "goal",
+   "name": "Gertrude Saddle",
+   "lat": -44.74137,
+   "lon": 168.01261,
+   "role": "goal",
+   "note": "1,410 m. Views down to the Cleddau valley and part of Milford Sound. Return the same way."
+  }
+ ]
+}

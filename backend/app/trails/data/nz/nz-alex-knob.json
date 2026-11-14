@@ -1,0 +1,94 @@
+{
+ "id": "nz-alex-knob",
+ "country": "NZ",
+ "name": "Alex Knob Track",
+ "base": "Franz Josef",
+ "region": "Westland Tai Poutini National Park, West Coast",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  8,
+  8
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 17.2,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/things-to-do/tracks/alex-knob-track/"
+ },
+ "why": "The best view of Franz Josef Glacier without a helicopter: a long climb from rainforest through alpine meadows to a 1,303 m knob above the ice.",
+ "book": "Free walk; DOC charges for parking at the Alex Knob/Lake Wombat car park, 2 km up the Glacier Access Road from the Waiho bridge (cards only). If full, park at the glacier car park and walk back.",
+ "water": "No water sources on the track: carry all you need.",
+ "dangers": [
+  "Afternoon cloud often hides the glacier in summer: start early.",
+  "Steep and long; snow is likely above Christmas Lookout in winter.",
+  "West Coast weather changes fast: carry warm and waterproof layers."
+ ],
+ "turnaround": "If cloud is down on the hills at Christmas Lookout or you are not there by 11:00, take the view there and go back.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/things-to-do/tracks/alex-knob-track/",
+  "https://www.openstreetmap.org/relation/6050926"
+ ],
+ "osm": 6050926,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Alex Knob / Lake Wombat car park",
+   "lat": -43.41228,
+   "lon": 170.17697,
+   "role": "start",
+   "note": "On the right of the Glacier Access Road. The track climbs steadily through rimu, rātā and kāmahi forest."
+  },
+  {
+   "id": "lake-wombat",
+   "name": "Lake Wombat turn-off",
+   "lat": -43.40691,
+   "lon": 170.16961,
+   "role": "point",
+   "note": "A short side track leads to Lake Wombat in the forest."
+  },
+  {
+   "id": "rata-lookout",
+   "name": "Rata Lookout",
+   "lat": -43.41029,
+   "lon": 170.16236,
+   "role": "point",
+   "note": "About 2 h up: the first glimpses of the glacier through the trees."
+  },
+  {
+   "id": "christmas-lookout",
+   "name": "Christmas Lookout",
+   "lat": -43.41759,
+   "lon": 170.15452,
+   "role": "point",
+   "note": "An hour further at an easier grade: a rest spot with a full view of the glacier on a clear day."
+  },
+  {
+   "id": "goal",
+   "name": "Alex Knob summit",
+   "lat": -43.42758,
+   "lon": 170.15133,
+   "role": "goal",
+   "note": "1,303 m, through subalpine scrub and herb fields: glaciers, peaks and the Tasman Sea. Kea may be about. Return the same way."
+  }
+ ]
+}

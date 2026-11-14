@@ -1,0 +1,75 @@
+{
+ "id": "vn-langbiang",
+ "country": "VN",
+ "name": "Langbiang mountain (Núi Lang Biang)",
+ "base": "Da Lat",
+ "region": "Lac Duong, Lam Dong, north of Da Lat",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Up through pine forest and grassy ridges to the 2,167 m top of the mountain above Da Lat, with the highland lakes and valleys spread below.",
+ "book": "Start at the Langbiang tourist area at Lac Duong, about 10 km north of Da Lat (entrance ticket). The path to the summit starts beside the jeep road to Radar Hill. A local guide is advised.",
+ "water": "No water on the path: carry 2 litres and food.",
+ "dangers": [
+  "Steep, eroded sections that turn to slippery mud in the wet season (May to October).",
+  "Fog closes in fast on the ridge: stay on the marked path.",
+  "Cold and windy on the top: carry a warm layer and a rain jacket."
+ ],
+ "turnaround": "Not on the summit ridge by 12:00, or fog and rain closing in: turn back.",
+ "sources": [
+  "https://e.vnexpress.net/photo/places/lang-biang-a-one-day-trekking-adventure-in-da-lat-4778041.html",
+  "https://hiking.waymarkedtrails.org/#route?id=18392791",
+  "https://www.openstreetmap.org/node/2688028631"
+ ],
+ "osm": 18392791,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Langbiang tourist area gate, Lac Duong",
+   "lat": 12.02311,
+   "lon": 108.42627,
+   "role": "start",
+   "note": "At about 1,500 m. The path climbs north along the jeep road towards Radar Hill, then turns off into the forest."
+  },
+  {
+   "id": "pine-forest",
+   "name": "Lang Biang pine forest",
+   "lat": 12.04506,
+   "lon": 108.43048,
+   "role": "point",
+   "note": "Open Khasi pine forest on the ridge, with an information board. From here the path gets steeper towards the summit."
+  },
+  {
+   "id": "goal",
+   "name": "Langbiang summit",
+   "lat": 12.04726,
+   "lon": 108.44058,
+   "role": "goal",
+   "note": "2,167 m, the highest of the Langbiang peaks, with views over Lac Duong and the Da Lat plateau. Return the same way."
+  }
+ ]
+}

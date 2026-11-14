@@ -1,0 +1,105 @@
+{
+ "id": "nz-hump-ridge-track",
+ "country": "NZ",
+ "name": "Tuatapere Hump Ridge Track",
+ "base": "Tuatapere",
+ "region": "South coast of Fiordland, Southland",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  17,
+  23
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 61,
+  "gain_m": null,
+  "source": "https://humpridgetrack.co.nz/product/freedom-walk/"
+ },
+ "why": "A three-day loop from the south coast up to the sub-alpine tors of the Hump Ridge, then down past the old timber tramway viaducts to the sawmill village ruins at Port Craig.",
+ "book": "Book the lodges (Okaka and Port Craig) for the season, 23 October to 17 April. Every walker checks in at the track office, 31 Orawia Road, Tuatapere, before driving 17 km to Rarakau car park ($5 koha). Track transport and helicopter pack transport can be booked.",
+ "water": "Drinking water at both lodges; most streams are safe, but boiling or treatment is recommended. Water points are on the track map.",
+ "dangers": [
+  "Day 1 climbs from sea level to about 900 m over 20 km: a long, hard day.",
+  "Weather from the south hits the ridge first: high wind, rain and even snow at any time of year.",
+  "The Percy Burn and Edwin Burn viaducts are closed (2026): use the marked detours, never cross them."
+ ],
+ "turnaround": "Day 3 track transport leaves Rarakau car park at 14:30: leave Port Craig by 08:00.",
+ "sources": [
+  "https://humpridgetrack.co.nz/",
+  "https://humpridgetrack.co.nz/product/freedom-walk/",
+  "https://humpridgetrack.co.nz/frequently-asked-questions/",
+  "https://www.openstreetmap.org/relation/11620232"
+ ],
+ "router": "local",
+ "via": [
+  [
+   -46.22893,
+   167.28516
+  ]
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 3,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Rarakau car park",
+   "lat": -46.14656,
+   "lon": 167.47278,
+   "role": "start",
+   "note": "At the end of Papatotara Coast Road. The first 10 km follow the coast and its beaches through native bush."
+  },
+  {
+   "id": "okaka-lodge-tors",
+   "name": "Okaka Lodge and the Hump Ridge tors",
+   "lat": -46.15913,
+   "lon": 167.30994,
+   "role": "point",
+   "note": "First night at 835 m after 20.5 km. A loop above the lodge passes the tors, with views to Stewart Island.",
+   "night": true
+  },
+  {
+   "id": "percy-burn-viaduct",
+   "name": "Percy Burn viaduct",
+   "lat": -46.24089,
+   "lon": 167.30358,
+   "role": "point",
+   "note": "One of the wooden tramway viaducts of the 1920s; closed in 2026, seen from the marked detour."
+  },
+  {
+   "id": "port-craig",
+   "name": "Port Craig Lodge",
+   "lat": -46.22244,
+   "lon": 167.36146,
+   "role": "point",
+   "note": "Second night at the old sawmill village, its relics in the bush around the former school.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Rarakau car park",
+   "lat": -46.14656,
+   "lon": 167.47278,
+   "role": "goal",
+   "note": "Back along the coast through forest and beaches, retracing the first part of Day 1. Watch for Hector's dolphins."
+  }
+ ]
+}

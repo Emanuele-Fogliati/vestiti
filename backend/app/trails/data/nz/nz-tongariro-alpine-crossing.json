@@ -1,0 +1,97 @@
+{
+ "id": "nz-tongariro-alpine-crossing",
+ "country": "NZ",
+ "name": "Tongariro Alpine Crossing",
+ "base": "National Park Village",
+ "region": "Tongariro National Park, Central North Island",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  7,
+  8
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 20.2,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/things-to-do/tracks/tongariro-alpine-crossing/"
+ },
+ "why": "A one-way crossing of an active volcanic massif: up the Mangatepōpō Valley, over the rim of Red Crater at 1,886 m, past the Emerald Lakes and Blue Lake, then down with Lake Taupō in view.",
+ "book": "Free. DOC recommends that every walker books online (no cost); a booking is required to use a shuttle or a guide. Road-end parking is limited to 4 hours (none for walkers at Mangatepōpō in summer): take a shuttle from National Park Village, Whakapapa or Tūrangi. May-October it is an alpine route: go with a guide.",
+ "water": "Water along the track is not safe to drink: carry 2-3 litres. Toilets every 1-2 hours.",
+ "dangers": [
+  "Alpine weather all year: strong wind, cold, rain and poor visibility even in summer. DOC posts a \"Not Recommended Today\" advisory at 06:00 on bad days.",
+  "Loose scree on the steep descent from Red Crater to the Emerald Lakes.",
+  "Active volcanic area: check the GeoNet alert level. Keep away from steam vents; do not touch or enter the lakes, which are sacred.",
+  "May-October: snow, ice and avalanche terrain. Ice axe, crampons, helmet and avalanche gear are needed.",
+  "Fires in late 2025 burned the area near the start; a 10-year rāhui covers it: stay on the track."
+ ],
+ "turnaround": "Decide in South Crater, after the climb from the valley: if the wind or cloud is worse than forecast, or you are behind time, walk back to Mangatepōpō.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/things-to-do/tracks/tongariro-alpine-crossing/",
+  "https://www.openstreetmap.org/relation/104369"
+ ],
+ "osm": 104369,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 3,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Mangatepōpō road end",
+   "lat": -39.14448,
+   "lon": 175.58098,
+   "role": "start",
+   "note": "Start at 1,120 m. A boardwalk climbs gently up the Mangatepōpō Valley for the first 5.4 km, shared with the Soda Springs Walk."
+  },
+  {
+   "id": "red-crater",
+   "name": "Red Crater",
+   "lat": -39.1356,
+   "lon": 175.65028,
+   "role": "point",
+   "note": "The highest point of the crossing, 1,886 m. On a calm day at least 10 °C colder than Taupō; colder still in wind."
+  },
+  {
+   "id": "emerald-lakes",
+   "name": "Ngā Rotopounamu / Emerald Lakes",
+   "lat": -39.13265,
+   "lon": 175.65635,
+   "role": "point",
+   "note": "Vivid green crater lakes at the foot of the scree descent, with steam vents nearby: keep off the warm ground.",
+   "scene": "nz-tongariro-alpine-crossing"
+  },
+  {
+   "id": "blue-lake",
+   "name": "Blue Lake / Te Wai Whakaata o Te Rangihīroa",
+   "lat": -39.12708,
+   "lon": 175.65979,
+   "role": "point",
+   "note": "Rangihīroa's mirror, sacred to Ngāti Hikairo. After it the long zigzag descent of the northern slopes begins."
+  },
+  {
+   "id": "goal",
+   "name": "Ketetahi road end",
+   "lat": -39.07382,
+   "lon": 175.66385,
+   "role": "goal",
+   "note": "End at 760 m after a descent through forest. Shuttles collect here; the private car park is nearby."
+  }
+ ]
+}

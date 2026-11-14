@@ -1,0 +1,104 @@
+{
+ "id": "nz-ben-lomond",
+ "country": "NZ",
+ "name": "Ben Lomond Track",
+ "base": "Queenstown",
+ "region": "Queenstown area, Otago",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 14,
+  "gain_m": 1438,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/ben-lomond-track/"
+ },
+ "why": "From the centre of Queenstown up the Tiki Trail and over the tussock tops to a 1,748 m summit, with Lake Whakatipu, the Remarkables and on clear days Mount Earnslaw and Mount Aspiring in view.",
+ "book": "Free. The Tiki Trail starts next to the Skyline Gondola base at the top of Brecon Street. You can ride the gondola up (paid) and start from the top complex, which saves the first climb; one-way tickets down are also sold. The saddle to the summit crosses private land.",
+ "water": "No water after the Skyline Gondola complex: carry all you need. A toilet stands 100 m before the saddle.",
+ "dangers": [
+  "Steep, rough track with drop-offs between the saddle and the summit; treacherous with snow and ice.",
+  "Fast downhill mountain bike tracks cross the walking track: follow the signs and orange markers.",
+  "Weather changes fast; hypothermia is a risk even in summer.",
+  "Year-round fire ban: the slopes are a high wildfire risk zone."
+ ],
+ "turnaround": "The summit is only the halfway point: if you reach Ben Lomond Saddle after 13:00 or in cloud, make the saddle your top.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/queenstown-area/things-to-do/ben-lomond-track/",
+  "https://www.openstreetmap.org/relation/6059845",
+  "https://www.openstreetmap.org/way/216245046"
+ ],
+ "osm_ways": [
+  40797189,
+  216245044,
+  216245023,
+  216245046,
+  216245025,
+  1268787531,
+  1268787532,
+  1268787530,
+  1268787528,
+  77403669,
+  404272895,
+  404272894,
+  404272896,
+  40797040
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 3,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tiki Trail, Skyline Gondola base",
+   "lat": -45.0284,
+   "lon": 168.656,
+   "role": "start",
+   "note": "Top of Brecon Street. The Tiki Trail climbs through Douglas fir behind the cemetery wall."
+  },
+  {
+   "id": "gondola-top",
+   "name": "Skyline gondola top, Bob's Peak",
+   "lat": -45.0267,
+   "lon": 168.6487,
+   "role": "point",
+   "note": "The top complex on Bob's Peak, with the view over Queenstown and the lake. Toilets; last water.",
+   "scene": "nz-queenstown"
+  },
+  {
+   "id": "ben-lomond-saddle",
+   "name": "Ben Lomond saddle",
+   "lat": -45.00211,
+   "lon": 168.62802,
+   "role": "point",
+   "note": "1,326 m, above the tree line in tussock. A good turnaround; beyond it the track is steeper and rougher."
+  },
+  {
+   "id": "goal",
+   "name": "Ben Lomond summit",
+   "lat": -45.00704,
+   "lon": 168.61556,
+   "role": "goal",
+   "note": "1,748 m, a panorama over Lake Whakatipu, Walter and Cecil Peaks and the Remarkables. Return the same way."
+  }
+ ]
+}

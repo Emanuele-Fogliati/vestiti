@@ -1,0 +1,79 @@
+{
+ "id": "nz-rob-roy-glacier",
+ "country": "NZ",
+ "name": "Rob Roy Glacier Track",
+ "base": "Wānaka",
+ "region": "Matukituki Valley, Mount Aspiring National Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 10,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/rob-roy-track/"
+ },
+ "why": "From the Matukituki valley over a swing bridge and up a gorge through beech forest to a lookout under the Rob Roy Glacier, waterfalls pouring off its ice cliffs.",
+ "book": "Free. Raspberry Flat car park is 54 km from Wānaka on the Wanaka-Mount Aspiring Road (1 hr 20 min); the last 30 km are gravel with fords that rise after heavy rain. The start crosses private farmland.",
+ "water": "Carry water for the day; there is nothing to buy past Wānaka.",
+ "dangers": [
+  "Avalanche paths cross the track between the lower and upper lookouts, mostly May-November, even with no snow on the track.",
+  "Steep drop-offs along the track; do not go beyond the upper lookout.",
+  "Fords on the access road can be impassable after heavy rain.",
+  "Only a limited number of people may be on the swing bridge at once: wait your turn."
+ ],
+ "turnaround": "From May to November, end the walk at the lower lookout (DOC).",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/rob-roy-track/",
+  "https://www.openstreetmap.org/relation/17651428"
+ ],
+ "router": "local",
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Raspberry Flat car park",
+   "lat": -44.51037,
+   "lon": 168.74328,
+   "role": "start",
+   "note": "At the road end. 15 minutes on, a swing bridge crosses the West Matukituki River."
+  },
+  {
+   "id": "lower-lookout",
+   "name": "Rob Roy lower lookout",
+   "lat": -44.48697,
+   "lon": 168.72287,
+   "role": "point",
+   "note": "First view of the glacier through the beech forest; the end of the walk from May to November."
+  },
+  {
+   "id": "goal",
+   "name": "Rob Roy Glacier upper lookout",
+   "lat": -44.47819,
+   "lon": 168.72814,
+   "role": "goal",
+   "note": "In the alpine vegetation at the head of the valley, under the glacier's ice cliffs and waterfalls. Return the same way.",
+   "scene": "nz-mount-aspiring-national-park"
+  }
+ ]
+}

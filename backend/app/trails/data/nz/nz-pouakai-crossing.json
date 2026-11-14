@@ -1,0 +1,96 @@
+{
+ "id": "nz-pouakai-crossing",
+ "country": "NZ",
+ "name": "Pouākai Crossing",
+ "base": "New Plymouth",
+ "region": "Te Papa-Kura-o-Taranaki (Egmont National Park)",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  7.5,
+  9.5
+ ],
+ "start_by": "07:30",
+ "published": {
+  "km": 19,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/pouakai-crossing"
+ },
+ "why": "Across the northern flank of Taranaki Maunga under the Dieffenbach Cliffs, over the Ahukawakawa swamp to the tarns that mirror the mountain.",
+ "book": "Free, no permit. One way: book a shuttle (see Venture Taranaki) or leave a car at Mangorei Road. Parking at North Egmont is limited until December 2026 while the new visitor centre is built.",
+ "water": "Springs between North Egmont and Holly Hut are sacred to iwi: do not wash in them. Huts have rainwater; carry 2 litres.",
+ "dangers": [
+  "Rockfall at Boomerang Slip and other signed zones: cross one at a time without stopping.",
+  "Alpine weather changes fast; in winter you need an ice axe, crampons and the skills to use them.",
+  "Minarapa Stream before Holly Hut has no bridge and can be impassable after heavy rain.",
+  "No cell coverage in places: hire a distress beacon at the visitor centre."
+ ],
+ "turnaround": "At the lookout 10 minutes past the Holly Hut Track junction: if you cannot see the maunga or lack the gear, go back down the Veronica Loop.",
+ "sources": [
+  "https://www.doc.govt.nz/pouakai-crossing",
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/taranaki/places/te-papa-kura-o-taranaki/things-to-do/tracks/pouakai-circuit/",
+  "https://www.openstreetmap.org/relation/17204365"
+ ],
+ "osm": 17204365,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "North Taranaki Visitor Centre, North Egmont",
+   "lat": -39.27017,
+   "lon": 174.09585,
+   "role": "start",
+   "note": "At the end of Egmont Road. The Veronica Loop climbs long steps past the Camphouse and Ambury Monument."
+  },
+  {
+   "id": "holly-hut",
+   "name": "Holly Hut",
+   "lat": -39.26491,
+   "lon": 174.04747,
+   "role": "point",
+   "note": "After the Dieffenbach Cliffs and Boomerang Slip, 3-4 h. Te Rere-o-Tahurangi Falls (31 m) is a 1 h return side trip."
+  },
+  {
+   "id": "pouakai-tarns",
+   "name": "Pouākai tarns",
+   "lat": -39.2341,
+   "lon": 174.04716,
+   "role": "point",
+   "note": "Small alpine pools on a boardwalk; on a still day they mirror Taranaki Maunga. Keep to the boardwalk."
+  },
+  {
+   "id": "pouakai-hut",
+   "name": "Pouākai Hut",
+   "lat": -39.23522,
+   "lon": 174.03732,
+   "role": "point",
+   "note": "20 minutes from the tarns, with views up the Taranaki coast. The descent starts here."
+  },
+  {
+   "id": "goal",
+   "name": "Mangorei Road end",
+   "lat": -39.20273,
+   "lon": 174.05712,
+   "role": "goal",
+   "note": "2 h down through mossy 'goblin forest' of twisted kāmahi to the Pouākai Crossing car park."
+  }
+ ]
+}

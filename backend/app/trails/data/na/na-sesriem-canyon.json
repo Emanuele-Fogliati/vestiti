@@ -1,0 +1,57 @@
+{
+ "id": "na-sesriem-canyon",
+ "country": "NA",
+ "name": "Sesriem Canyon",
+ "base": "Sesriem",
+ "region": "Sesriem, Namib-Naukluft National Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [4, 5, 6, 7, 8, 9],
+ "hours": [1, 1.5],
+ "start_by": "16:00",
+ "published": null,
+ "why": "A short walk into a narrow gorge the Tsauchab river cut through layered conglomerate, cool and shaded under walls up to 30 m high.",
+ "book": "Inside Namib-Naukluft National Park: buy the park permit at the office just inside the Sesriem gate. The canyon is about 4 km from the gate on a gravel road; the park closes at sunset.",
+ "water": "Carry 1 litre; the pools in the canyon are not for drinking.",
+ "dangers": [
+  "Never enter the canyon when rain clouds are over the Naukluft: flash floods.",
+  "Loose rock on the steps down and from the walls.",
+  "Hot from October to March: go late in the afternoon."
+ ],
+ "turnaround": "Turn back at deep water or where the floor narrows into boulders; be out before sunset to leave the park in time.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Sesriem_Canyon",
+  "https://en.wikivoyage.org/wiki/Sossusvlei",
+  "https://www.openstreetmap.org/way/217409304"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 1, "nature": 3, "culture": 0, "relax": 4, "history": 1, "landscape": 4},
+ "points": [
+  {
+   "id": "start",
+   "name": "Sesriem Canyon rim",
+   "lat": -24.5183,
+   "lon": 15.8001,
+   "role": "start",
+   "note": "Parking at the canyon edge. The name means 'six belts': Dorsland trekkers tied six rawhide thongs to lower a bucket to the water."
+  },
+  {
+   "id": "steps",
+   "name": "Steps down to the canyon floor",
+   "lat": -24.51917,
+   "lon": 15.79885,
+   "role": "point",
+   "note": "A short path and steps lead down into the gorge."
+  },
+  {
+   "id": "goal",
+   "name": "Sesriem Canyon floor",
+   "lat": -24.51907,
+   "lon": 15.79396,
+   "role": "goal",
+   "note": "Sand and pebbles between walls of cemented gravel, about 500 m downstream of the steps. Walk back the same way."
+  }
+ ]
+}

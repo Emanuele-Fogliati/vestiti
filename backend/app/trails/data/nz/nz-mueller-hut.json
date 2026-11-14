@@ -1,0 +1,77 @@
+{
+ "id": "nz-mueller-hut",
+ "country": "NZ",
+ "name": "Mueller Hut Route",
+ "base": "Aoraki Mount Cook",
+ "region": "Aoraki/Mount Cook National Park, Canterbury",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  7,
+  7
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 10.4,
+  "gain_m": 1000,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/things-to-do/tracks/mueller-hut-route/"
+ },
+ "why": "About 1,000 m straight up from the village to the hut on the Sealy Range, facing the hanging glaciers and ice cliffs of Mount Sefton above the Mueller Glacier.",
+ "book": "As a day walk: free. Register your intentions at the Aoraki/Mount Cook Visitor Centre the day you start and sign out after. To sleep at Mueller Hut, book it (mid-November to 30 April). Parking at White Horse Hill costs $25 a day.",
+ "water": "Carry all your water for the day; the hut tap water is untreated: boil it.",
+ "dangers": [
+  "Above Sealy Tarns it is an unmaintained alpine route over rock and a loose scree slope: follow the orange poles and always see the next one.",
+  "Snow and ice from March to November; avalanche danger from April to mid-November. Then it needs ice axe, crampons and avalanche gear.",
+  "Fast weather changes, strong wind and low visibility on the ridge.",
+  "Ice is common on the lower ridge in the morning: wait for it to soften before descending."
+ ],
+ "turnaround": "Sealy Tarns is the decision point (DOC): if the weather is closing in, someone is struggling or you cannot reach the hut with time to spare, go back down from there.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/things-to-do/tracks/mueller-hut-route/",
+  "https://www.openstreetmap.org/relation/6062291"
+ ],
+ "osm": 6062291,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 4,
+  "culture": 0,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Aoraki/Mount Cook Village",
+   "lat": -43.73285,
+   "lon": 170.09485,
+   "role": "start",
+   "note": "Follow the Kea Point Track from the village, then the Sealy Tarns Track, steps most of the way."
+  },
+  {
+   "id": "sealy-tarns",
+   "name": "Sealy Tarns",
+   "lat": -43.71362,
+   "lon": 170.07475,
+   "role": "point",
+   "note": "Small tarns on a shelf, 2 hours up, with Aoraki and the Hooker Valley behind you. The decision point."
+  },
+  {
+   "id": "goal",
+   "name": "Mueller Hut",
+   "lat": -43.72117,
+   "lon": 170.06448,
+   "role": "goal",
+   "note": "1,800 m, under Mount Ollivier, the first peak Edmund Hillary climbed. The Mueller Glacier and Mount Sefton's ice shelf across the valley."
+  }
+ ]
+}

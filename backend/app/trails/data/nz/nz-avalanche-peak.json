@@ -1,0 +1,74 @@
+{
+ "id": "nz-avalanche-peak",
+ "country": "NZ",
+ "name": "Avalanche Peak",
+ "base": "Arthur's Pass",
+ "region": "Arthur's Pass National Park, Canterbury",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "07:30",
+ "why": "The only poled route to a summit in Arthur's Pass: 1,100 m straight up from the village to an 1,833 m top facing Mount Rolleston and the Crow Glacier.",
+ "book": "Free, no permit. Arthur's Pass village is on SH73, 150 km from Christchurch; the TranzAlpine train stops there. Check the track and avalanche conditions at the visitor centre before you start.",
+ "water": "Avalanche Creek in the forest; none above the bushline. Carry 2 litres.",
+ "dangers": [
+  "Steep, rocky and exposed with sheer drops; people have died here. Do not go in poor visibility or high wind.",
+  "The final ridge is a narrow rock edge: if it is windy, icy or snowy, go back the way you came.",
+  "Avalanche-prone in winter and spring; take an ice axe and crampons in winter.",
+  "Do not leave the marked route between the two ridges: a hidden canyon blocks the way."
+ ],
+ "turnaround": "If the weather is poor or you found the climb to the bushline hard, enjoy the view at the bushline and turn back there.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/arthurs-pass-national-park/things-to-do/tracks/avalanche-peak-route/",
+  "https://www.doc.govt.nz/globalassets/documents/parks-and-recreation/national-parks/arthurs-pass/tramping-in-arthurs-pass.pdf",
+  "https://en.wikivoyage.org/wiki/Arthur%27s_Pass_National_Park",
+  "https://www.openstreetmap.org/relation/6048349"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 4,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Avalanche Peak Track, Arthur's Pass village",
+   "lat": -42.94086,
+   "lon": 171.56147,
+   "role": "start",
+   "note": "Just north of the visitor centre, before the bridge over Avalanche Creek (737 m). The track climbs through mountain beech beside the creek's waterfalls."
+  },
+  {
+   "id": "summit",
+   "name": "Avalanche Peak summit",
+   "lat": -42.94313,
+   "lon": 171.53608,
+   "role": "point",
+   "note": "1,833 m. Mount Rolleston and the Crow Glacier across the valley; kea are often here. Descend on Scotts Route, orange poles, towards Mount Cassidy."
+  },
+  {
+   "id": "goal",
+   "name": "Scotts Track road end",
+   "lat": -42.93421,
+   "lon": 171.55969,
+   "role": "goal",
+   "note": "Scotts Track meets SH73 about 700 m west of the visitor centre, by the Devils Punchbowl car park."
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "id": "vn-bach-ma-summit",
+ "country": "VN",
+ "name": "Bach Ma: Five Lakes and the summit (Hải Vọng Đài)",
+ "base": "Hue",
+ "region": "Bach Ma National Park, between Hue and Da Nang",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [2, 3, 4, 5, 6, 7, 8],
+ "hours": [2, 3],
+ "start_by": "08:30",
+ "published": null,
+ "why": "Two short walks at the top of a former French hill station: a stair path down to a chain of pools in the cloud forest, then up to a tower with the coast and the lagoons below.",
+ "book": "Pay the entrance fee at the park gate near Cau Hai, about 40 km south of Hue. Motorbikes and bicycles are not allowed on the steep 16 km summit road: book the park car or come with a car and driver. Ask at the gate whether the road is open to the top.",
+ "water": "Carry 1.5 litres; the pools are for swimming, not drinking. Drinks only at the park guesthouses near the summit.",
+ "dangers": [
+  "One of the wettest places in Vietnam: rain and fog most of the year, heavy rain and typhoons from September to December.",
+  "Slippery stone steps and rocks at the Five Lakes, and leeches after rain.",
+  "Cool at 1,400 m even in summer: carry a rain jacket and a warm layer."
+ ],
+ "turnaround": "In heavy rain skip the Five Lakes steps (the stream rises fast) and walk only to the summit tower.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Bach_Ma_National_Park",
+  "https://en.wikipedia.org/wiki/B%E1%BA%A1ch_M%C3%A3_National_Park",
+  "https://www.openstreetmap.org/way/484001513"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 4, "culture": 1, "relax": 2, "history": 2, "landscape": 4},
+ "points": [
+  {
+   "id": "start",
+   "name": "Five Lakes trailhead, km 17 of the summit road",
+   "lat": 16.19428,
+   "lon": 107.85313,
+   "role": "start",
+   "note": "By the checkpoint on the summit road. The Five Lakes path goes down from here; the summit path climbs from the same bend."
+  },
+  {
+   "id": "five-lakes",
+   "name": "Five Lakes (Ngũ Hồ)",
+   "lat": 16.19143,
+   "lon": 107.85532,
+   "role": "point",
+   "note": "Stone steps lead down to five pools linked by small falls on a granite stream. Come back up the same steps."
+  },
+  {
+   "id": "goal",
+   "name": "Bach Ma summit tower (Hải Vọng Đài)",
+   "lat": 16.1996,
+   "lon": 107.8575,
+   "role": "goal",
+   "note": "About 1,450 m. From the tower: the Annamite ridges, Cau Hai lagoon and the sea when the cloud lifts. Walk back down to the road."
+  }
+ ]
+}

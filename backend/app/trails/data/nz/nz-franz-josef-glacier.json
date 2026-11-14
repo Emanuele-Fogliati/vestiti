@@ -1,0 +1,77 @@
+{
+ "id": "nz-franz-josef-glacier",
+ "country": "NZ",
+ "name": "Franz Josef Glacier / Kā Roimata o Hine Hukatere Walk",
+ "base": "Franz Josef",
+ "region": "Westland Tai Poutini National Park, West Coast",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  0.5,
+  0.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 1.7,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/things-to-do/tracks/franz-josef-glacierka--roimata-o-hine-hukatere-walk/"
+ },
+ "why": "A short rainforest walk to a viewpoint over the Waiho valley the glacier has left behind, with the ice still visible high up the valley.",
+ "book": "Free walk; DOC charges for parking at the glacier car park ($2.50 per half hour, $20 a day, cards only). The car park is 4 km from Franz Josef township on the Glacier Access Road, or walk or cycle Te Ara a Waiau.",
+ "water": "Carry your own; flush toilets at the car park only.",
+ "dangers": [
+  "The river has cut off the old walk up the valley to the glacier: you cannot go further than the viewpoint.",
+  "River surges from ice dams, rockfall and flash floods: never cross the barriers. People have died beyond them.",
+  "The road and track close for floods, rockfall or slips: check at the visitor centre."
+ ],
+ "turnaround": "The viewpoint is the end of the walk. To get onto the ice, book a guided heli-hike in town.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/things-to-do/tracks/franz-josef-glacierka--roimata-o-hine-hukatere-walk/",
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/franz-josef-glacier/",
+  "https://www.openstreetmap.org/node/7293708485"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Franz Josef Glacier car park",
+   "lat": -43.42313,
+   "lon": 170.1692,
+   "role": "start",
+   "note": "End of the Glacier Access Road above the Waiho River bed. The track winds through rainforest with glimpses of waterfalls."
+  },
+  {
+   "id": "goal",
+   "name": "Glacier valley viewpoint",
+   "lat": -43.42781,
+   "lon": 170.16788,
+   "role": "goal",
+   "note": "A short climb to a view up the Waiho valley to the upper glacier, and of the bare rock the retreating ice left. Barriers mark the end.",
+   "scene": "nz-franz-josef-glacier"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "id": "nz-lake-marian",
+ "country": "NZ",
+ "name": "Lake Marian Track",
+ "base": "Te Anau",
+ "region": "Hollyford Road, Fiordland National Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  3,
+  3.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 6.2,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/lake-marian-track/"
+ },
+ "why": "Ten minutes to a chain of waterfalls, then a steep forest climb to an alpine lake in a hanging valley under the Darran Mountains.",
+ "book": "Free, no permit. Turn off the Milford Road at Marian Corner (about 87 km from Te Anau) onto the Hollyford Road; the car park is 1 km down this gravel road.",
+ "water": "Streams and the lake: treat before drinking. Nothing at the car park.",
+ "dangers": [
+  "Marian Creek is fast with slippery rocks: a fall into the water can kill. Stay on the track and behind barriers at the falls.",
+  "Above the falls the track is steep, rooty and muddy.",
+  "Do not walk around the lake edge in winter and spring: avalanche paths reach the shore.",
+  "Stinging nettle (ongaonga) along the track: wear long trousers."
+ ],
+ "turnaround": "If you are not at the lake 2 hours after leaving the car park, or the creek is in flood, go back down.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/lake-marian-track/",
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/lake-marian-falls-track/",
+  "https://www.openstreetmap.org/way/491082637"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lake Marian car park",
+   "lat": -44.80825,
+   "lon": 168.10249,
+   "role": "start",
+   "note": "On the Hollyford Road. A swing bridge crosses the Hollyford River into the forest."
+  },
+  {
+   "id": "falls",
+   "name": "Lake Marian Falls",
+   "lat": -44.8052,
+   "lon": 168.10168,
+   "role": "point",
+   "note": "A boardwalk to a series of falls and pools on Marian Creek, 10 minutes in. The tramping track starts here."
+  },
+  {
+   "id": "goal",
+   "name": "Lake Marian",
+   "lat": -44.79221,
+   "lon": 168.0822,
+   "role": "goal",
+   "note": "An alpine lake above the bushline, ringed by peaks of the Darran Mountains; reflections on a calm day. Return the same way."
+  }
+ ]
+}

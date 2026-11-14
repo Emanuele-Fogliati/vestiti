@@ -1,0 +1,58 @@
+{
+ "id": "na-spitzkoppe",
+ "country": "NA",
+ "name": "Spitzkoppe: Rock Arch to Bushman's Paradise",
+ "base": "Spitzkoppe",
+ "region": "Spitzkoppe, Erongo, between Usakos and Swakopmund",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [4, 5, 6, 7, 8, 9],
+ "hours": [2, 3],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Sand tracks between red granite domes, from the stone arch that frames the Spitzkoppe to a chain up a bare slab into a hidden green valley with San rock paintings.",
+ "book": "Pay the entrance fee at the Spitzkoppe community rest camp reception, about 50 km from Usakos (B2, then gravel D1918 and D3716). The rock-art sites, Bushman's Paradise included, are visited only with a local guide from the reception (tip). Arrange a car to pick you up at the end.",
+ "water": "No water on the way and no running water at most camp pitches: carry 2-3 litres each.",
+ "dangers": [
+  "Heat: over 35 °C from October to March, little shade. Walk in the early morning.",
+  "The slab to Bushman's Paradise is steep and polished: hold the chain, and stay off it when wet.",
+  "Loose sand and sharp granite: closed shoes, and watch for snakes and scorpions under rocks."
+ ],
+ "turnaround": "Not at the foot of the Bushman's Paradise slab by 10:30 in hot weather: get picked up and come back early next morning.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Spitzkoppe",
+  "https://en.wikipedia.org/wiki/Spitzkoppe",
+  "https://www.openstreetmap.org/way/692271603",
+  "https://www.openstreetmap.org/node/280279653"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 3, "culture": 3, "relax": 2, "history": 3, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Spitzkoppe Rock Arch",
+   "lat": -21.84622,
+   "lon": 15.18248,
+   "role": "start",
+   "note": "A granite arch on the south side of the Pontok domes, with the Spitzkoppe framed in it. Best at first light."
+  },
+  {
+   "id": "slab-foot",
+   "name": "Foot of the Bushman's Paradise slab",
+   "lat": -21.8277,
+   "lon": 15.215,
+   "role": "point",
+   "note": "At the end of the sand track on the east side of the Pontok mountains. A fixed chain runs up the bare granite slab."
+  },
+  {
+   "id": "goal",
+   "name": "Bushman's Paradise",
+   "lat": -21.82673,
+   "lon": 15.21281,
+   "role": "goal",
+   "note": "A green basin among the domes and an overhang with San paintings, 2,000-4,000 years old, many of them damaged. Back down the chain."
+  }
+ ]
+}
