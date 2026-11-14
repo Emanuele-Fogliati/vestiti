@@ -6,31 +6,30 @@ import { brandName, useApp } from "../lib/app-context";
 /** Logo "Globo con cerniera" (Manu 2026-11-14): a yellow globe with a zip across it.
  *  The teeth, slider and pull are cut out of the globe (mask), so whatever is behind shows through
  *  on the night home and dark bars. On light paper (--logo-globe/--logo-teeth set in paper.css) the globe turns
- *  ink and the teeth yellow, as on the logo board. `small` (under ~32 px) merges the teeth into one band. */
-export function LogoMark({ size = 26, small = size < 32 }: { size?: number; small?: boolean }) {
+ *  ink and the teeth yellow. Few, chunky teeth so it still reads as a zip at 20-36 px (Manu: "si deve sempre capire che è una zip"). */
+export function LogoMark({ size = 36 }: { size?: number }) {
   const id = `zipglobe-${useId().replace(/:/g, "")}`;
-  const teeth = small
-    ? [<rect key="band" x="9" y="27.5" width="30" height="9" rx="1" />]
-    : [9, 15, 21, 27, 33].flatMap((x) => [
-        <rect key={`t${x}`} x={x} y="27.5" width="3.6" height="4.5" rx="1" />,
-        <rect key={`b${x}`} x={x + 3} y="32" width="3.6" height="4.5" rx="1" />,
-      ]);
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" style={{ flex: "0 0 auto" }}>
       <defs>
         <mask id={id} maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
-          <circle cx="32" cy="32" r="27" fill="#fff" />
+          <circle cx="32" cy="32" r="28" fill="#fff" />
           <g fill="#000">
-            {teeth}
-            <path d="M48 32L60 28.5V35.5Z" />
-            <rect x="38.5" y="26" width="10" height="12" rx="3" />
-            <rect x="41" y="37" width="5" height="15" rx="2.5" />
+            {[6, 16, 26].map((x) => (
+              <g key={x}>
+                <rect x={x} y="25.5" width="6" height="6.5" rx="1.2" />
+                <rect x={x + 5} y="32" width="6" height="6.5" rx="1.2" />
+              </g>
+            ))}
+            <path d="M50 32L62 26.5V37.5Z" />
+            <rect x="39.5" y="24" width="12" height="16" rx="3.5" />
+            <rect x="42.5" y="38" width="6" height="17" rx="3" />
           </g>
-          {!small && <rect x="42.6" y="44" width="1.8" height="5" rx=".9" fill="#fff" />}
+          <rect x="44.4" y="45.5" width="2.2" height="6" rx="1.1" fill="#fff" />
         </mask>
       </defs>
-      <circle cx="32" cy="32" r="27" fill="var(--logo-teeth, transparent)" />
-      <circle cx="32" cy="32" r="27" fill="var(--logo-globe, #FFD60A)" mask={`url(#${id})`} />
+      <circle cx="32" cy="32" r="28" fill="var(--logo-teeth, transparent)" />
+      <circle cx="32" cy="32" r="28" fill="var(--logo-globe, #FFD60A)" mask={`url(#${id})`} />
     </svg>
   );
 }
@@ -38,8 +37,8 @@ export function LogoMark({ size = 26, small = size < 32 }: { size?: number; smal
 export function Logo({ name }: { name: string }) {
   return (
     <>
-      <LogoMark size={28} />
-      <span style={{ fontFamily: "\"Bricolage Grotesque\", var(--f-display)", fontWeight: 800, fontSize: 22, letterSpacing: "-.03em" }}>
+      <LogoMark size={36} />
+      <span style={{ fontFamily: "\"Bricolage Grotesque\", var(--f-display)", fontWeight: 800, fontSize: 24, letterSpacing: "-.03em" }}>
         {name}
       </span>
     </>
