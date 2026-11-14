@@ -1,0 +1,23 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 150V80L14 70L30 60L46 52L62 47L78 44L92 45L106 40L122 37L136 39L150 42L166 46L182 52L198 56L214 64L230 72L246 78L262 84L280 92L300 98V150Z" fill="var(--il-mid)"/>
+<clipPath id="il-is-dalvik-c"><path d="M0 150V80L14 70L30 60L46 52L62 47L78 44L92 45L106 40L122 37L136 39L150 42L166 46L182 52L198 56L214 64L230 72L246 78L262 84L280 92L300 98V150Z"/></clipPath>
+<path d="M66 44Q70 70 64 98M102 40Q106 66 100 98M136 40Q140 64 134 98M172 46Q176 70 170 100M210 58Q212 76 206 102M240 72Q242 86 236 104" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 150V112Q40 100 80 104Q120 96 160 102Q200 98 240 106Q270 108 300 112V150Z" fill="var(--il-leaf)" clip-path="url(#il-is-dalvik-c)"/>
+<path d="M22 148V132H48V148ZM254 148V136H280V148Z" fill="var(--il-ice)"/>
+<path d="M19 133L35 124L51 133ZM251 137L267 128L283 137Z" fill="var(--il-obj)"/>
+<path d="M28 136H34V142H28ZM38 136H44V142H38ZM260 140H266V146H260ZM270 140H276V146H270Z" fill="var(--il-near)" opacity="0.7"/>
+<path d="M84 152V118H146V152Z" fill="var(--il-ice)"/>
+<path d="M80 119L94 104H146V119Z" fill="var(--il-far)"/>
+<path d="M166 152V120H226V152Z" fill="var(--il-ice)"/>
+<path d="M166 108H214L230 121H166Z" fill="var(--il-far)"/>
+<path d="M186 152V120L202 104L218 120V152Z" fill="var(--il-ice)"/>
+<path d="M184 122L202 102L220 122" stroke="var(--il-acc)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M138 152V82H174V152Z" fill="var(--il-ice)"/>
+<path d="M143 82V66H169V82Z" fill="var(--il-ice)"/>
+<path d="M146 66L156 34L166 66Z" fill="var(--il-ice)"/>
+<path d="M156 34V24M152 28H160" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M136 82H176M141 66H171M80 119H146M166 121H186M218 121H230" stroke="var(--il-acc)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M147 80V75L150.0 70L153 75V80ZM159 80V75L162.0 70L165 75V80ZM146 104V95L149.0 90L152 95V104ZM160 104V95L163.0 90L166 95V104ZM92 142V131L95.0 126L98 131V142ZM106 142V131L109.0 126L112 131V142ZM120 142V131L123.0 126L126 131V142ZM193 137V128L195.5 124L198 128V137ZM199.5 137V126L202.0 122L204.5 126V137ZM206 137V128L208.5 124L211 128V137ZM172 142V133L175.0 128L178 133V142Z" fill="var(--il-near)"/>
+<path d="M150 152V140L156.0 132L162 140V152ZM196 152V147L201.0 140L206 147V152Z" fill="var(--il-obj)"/>
+<path d="M0 200V148Q80 144 150 148Q230 152 300 146V200Z" fill="var(--il-leaf)"/>
