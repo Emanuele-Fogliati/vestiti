@@ -169,3 +169,21 @@
   .dayrow-n{display:flex;gap:10px;align-items:baseline}
   .step-name{font-size:22px}
 }
+
+/* A trip already booked (Manu, 2026-11-14): each day with its moves, what to do, the bed */
+.dayrows.booked{margin-top:4px}
+.dayband{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:22px 0 10px;border-bottom:2px solid var(--ink)}
+.dayband b{font-family:var(--f-display);font-weight:800;font-size:24px;line-height:1.15}
+.dayband span{font-size:15px;color:var(--ink-2)}
+.legs{list-style:none;margin:0;padding:0;display:grid;gap:8px;width:100%}
+.leg{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start}
+.leg-mode{font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;background:var(--surface-2);color:var(--ink);white-space:nowrap;margin-top:2px}
+.leg-flight .leg-mode{background:var(--ink);color:var(--surface)}
+.leg-car .leg-mode{background:var(--accent);color:var(--accent-ink)}
+.leg-main{display:grid;gap:2px;min-width:0}
+.leg-route{font-size:16px;font-weight:600;line-height:1.4}
+.leg-route time{font-variant-numeric:tabular-nums;font-weight:800}
+.leg-arr{font-weight:500;color:var(--ink-2)}
+.leg-meta{font-size:14px;color:var(--ink-2)}
+.sleep{margin:0;font-size:14px;color:var(--ink-2);padding-left:12px;border-left:3px solid var(--accent)}
+@media (max-width:560px){.dayband b{font-size:21px}.leg{grid-template-columns:minmax(0,1fr);gap:4px}.leg-mode{justify-self:start}}
