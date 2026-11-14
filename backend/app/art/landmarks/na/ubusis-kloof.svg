@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="22" r="11" fill="var(--il-sun)"/>
+<path d="M0 200V16L24 14L44 38L72 34L100 40L126 46L150 42L176 46L204 38L232 34L258 26L278 8L300 6V200Z" fill="var(--il-mid)"/>
+<path d="M0 16L24 14L44 38L54 62L50 80L62 100L56 120L0 116Z" fill="var(--il-acc)"/>
+<path d="M90 52L94 72L90 96M116 54L112 80L116 108M150 50L146 76L152 104M184 52L188 80L182 100M214 44L210 66L216 90M246 38L250 60L246 82" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 166V58Q30 76 56 104Q84 132 140 150L120 166Z" fill="var(--il-far)"/>
+<path d="M300 166V84Q270 104 240 124Q206 144 170 152L190 166Z" fill="var(--il-far)"/>
+<path d="M16 104Q24 96 32 102Q40 98 44 108Q38 116 26 114Q14 114 16 104ZM56 126Q64 118 74 124Q82 122 84 132Q74 138 62 136Q52 134 56 126ZM248 114Q256 106 266 110Q276 108 278 118Q268 124 256 122Q246 122 248 114Z" fill="var(--il-leaf)"/>
+<path d="M164 152L166 132M164 140L156 128M166 136L174 126" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M146 128Q148 116 160 116Q166 108 176 114Q188 114 186 126Q180 134 166 132Q150 136 146 128Z" fill="var(--il-leaf)"/>
+<path d="M206 156Q208 144 220 144Q230 138 240 146Q252 146 250 156Z" fill="var(--il-leaf)"/>
+<path d="M0 200V160Q70 150 150 152Q230 150 300 160V200Z" fill="var(--il-obj)"/>
+<path d="M30 170Q34 162 42 164Q48 166 47 170ZM188 168Q194 160 204 163L207 168ZM236 182Q242 172 256 173Q264 176 263 182ZM150 200Q156 186 174 186Q188 190 190 200Z" fill="var(--il-ice)"/>
+<g transform="translate(92 182) scale(1.15)"><path d="M-14 -24Q-2 -26 8 -24L10 -25Q14 -31 18 -34L19 -38L20.5 -35Q22 -34 24 -30L27 -24Q28 -21 25 -21L21 -23Q17 -23 15 -19Q14 -15 12 -13L12.4 0H10.2L9.2 -11.5L7.8 -12L7.6 0H5.6L5.2 -12Q-2 -11 -8 -12L-8 0H-10L-11 -11L-11.6 -11L-12.2 0H-14.2L-14.4 -13Q-16 -18 -15 -22Q-15 -24 -14 -24Z" fill="var(--il-ice)"/><path d="M-11 -24.5Q-12 -18 -10 -12.5M-7 -25Q-8 -18 -6 -12.5M-3 -25.2Q-4 -18 -2 -11.6M1 -25.2Q0 -18 2 -11.6M5 -24.8Q4 -18 6 -12.4M9 -24Q11 -19 12 -15M12 -28L15 -23M14.5 -31.5L17 -26M17 -34L20 -29M11.4 -4H9.9M11.6 -8H9.6M7.6 -4H5.8M7.6 -8H5.6M-8 -4H-9.8M-8 -8H-10.2M-12.2 -4H-14M-12.2 -8H-14.2" vector-effect="non-scaling-stroke" stroke="var(--il-near)" stroke-width="1.3" fill="none" stroke-linecap="round"/><path d="M10 -25.5Q14 -31.5 18 -34.5M-15 -22Q-17.5 -17 -17 -11" vector-effect="non-scaling-stroke" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round"/></g>
