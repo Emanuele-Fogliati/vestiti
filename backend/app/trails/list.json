@@ -1,5 +1,5 @@
 {
- "note": "The trekking plan (Manu, 2026-11-13): ~12 trails per country, 3-4 drawings per trail. slot = the helper thread that owns the trail. status: todo (only planned), draft (data written, not yet checked), checked (coordinates checked on OSM, geo built, numbers within 30% of the published ones), drawn (every scene done). scenes: the key points to draw; reuse = an existing scene that already shows that point (don't redraw it, but look at it: if it shows something else, draw a new one).",
+ "note": "The trekking plan (Manu, 2026-11-13): ~12 trails per country, 3-4 drawings per trail. slot = the helper thread that owns the trail. status: todo (only planned), draft (data written, not yet checked), checked (coordinates checked on OSM, geo built, numbers within 30% of the published ones), drawn (every scene done). scenes: the key points to draw; reuse = an existing scene that already shows that point (don't redraw it, but look at it: if it shows something else, draw a new one). 2026-11-14 (Manu: treks at par with trips, 8 countries PE CL AR IS NZ JP VN NA): +143 tier-A top treks as todo; slots group ~6 trails each. tier B (OSM long tail) is not planned here: it is generated (tools/trails/osm_tail.py).",
  "trails": [
   {
    "id": "ar-laguna-de-los-tres",
@@ -1683,6 +1683,3138 @@
      "point": "goal",
      "name": "Rifugio Vittorio Emanuele II",
      "reuse": "it-rifugio-vittorio-emanuele"
+    }
+   ]
+  },
+  {
+   "id": "ar-glaciar-huemul",
+   "name": "Lago del Desierto and Glaciar Huemul",
+   "country": "AR",
+   "slot": "AR-C",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lago del Desierto"
+    },
+    {
+     "point": "goal",
+     "name": "Glaciar Huemul lagoon"
+    }
+   ]
+  },
+  {
+   "id": "ar-chorrillo-del-salto",
+   "name": "Chorrillo del Salto waterfall",
+   "country": "AR",
+   "slot": "AR-C",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Fitz Roy trailhead road"
+    },
+    {
+     "point": "goal",
+     "name": "Chorrillo del Salto"
+    }
+   ]
+  },
+  {
+   "id": "ar-laguna-toro",
+   "name": "Laguna Toro",
+   "country": "AR",
+   "slot": "AR-C",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Laguna Toro trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Toro and Glaciar Río Túnel"
+    }
+   ]
+  },
+  {
+   "id": "ar-big-ice-perito-moreno",
+   "name": "Big Ice trek on Perito Moreno Glacier",
+   "country": "AR",
+   "slot": "AR-C",
+   "base": "El Calafate",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Bajo las Sombras pier"
+    },
+    {
+     "point": "goal",
+     "name": "Perito Moreno ice field"
+    }
+   ]
+  },
+  {
+   "id": "ar-refugio-otto-meiling",
+   "name": "Refugio Otto Meiling on Tronador",
+   "country": "AR",
+   "slot": "AR-C",
+   "base": "Bariloche",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pampa Linda"
+    },
+    {
+     "point": "refugio-otto-meiling",
+     "name": "Refugio Otto Meiling"
+    },
+    {
+     "point": "goal",
+     "name": "Tronador glaciers"
+    }
+   ]
+  },
+  {
+   "id": "ar-refugio-jakob",
+   "name": "Refugio San Martín and Laguna Jakob",
+   "country": "AR",
+   "slot": "AR-C",
+   "base": "Bariloche",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Colonia Suiza trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Jakob"
+    }
+   ]
+  },
+  {
+   "id": "ar-nahuel-huapi-traverse",
+   "name": "Nahuel Huapi Traverse",
+   "country": "AR",
+   "slot": "AR-D",
+   "base": "Bariloche",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Refugio Frey"
+    },
+    {
+     "point": "laguna-negra",
+     "name": "Laguna Negra"
+    },
+    {
+     "point": "goal",
+     "name": "Refugio López"
+    }
+   ]
+  },
+  {
+   "id": "ar-cerro-llao-llao",
+   "name": "Cerro Llao Llao",
+   "country": "AR",
+   "slot": "AR-D",
+   "base": "Bariloche",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Llao Llao forest"
+    },
+    {
+     "point": "goal",
+     "name": "Cerro Llao Llao lookout"
+    }
+   ]
+  },
+  {
+   "id": "ar-volcan-lanin",
+   "name": "Lanín volcano to Refugio RIM",
+   "country": "AR",
+   "slot": "AR-D",
+   "base": "Junín de los Andes",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tromen ranger post"
+    },
+    {
+     "point": "refugio-rim",
+     "name": "Refugio RIM"
+    },
+    {
+     "point": "goal",
+     "name": "Lanín summit"
+    }
+   ]
+  },
+  {
+   "id": "ar-aconcagua-plaza-de-mulas",
+   "name": "Aconcagua to Plaza de Mulas",
+   "country": "AR",
+   "slot": "AR-D",
+   "base": "Mendoza",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Horcones lagoon"
+    },
+    {
+     "point": "confluencia-camp",
+     "name": "Confluencia camp"
+    },
+    {
+     "point": "goal",
+     "name": "Plaza de Mulas"
+    }
+   ]
+  },
+  {
+   "id": "ar-quebrada-de-las-senoritas",
+   "name": "Quebrada de las Señoritas",
+   "country": "AR",
+   "slot": "AR-D",
+   "base": "Humahuaca",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Uquía church"
+    },
+    {
+     "point": "goal",
+     "name": "Quebrada de las Señoritas red canyon"
+    }
+   ]
+  },
+  {
+   "id": "ar-garganta-del-diablo-tilcara",
+   "name": "Garganta del Diablo of Tilcara",
+   "country": "AR",
+   "slot": "AR-D",
+   "base": "Tilcara",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tilcara"
+    },
+    {
+     "point": "goal",
+     "name": "Garganta del Diablo waterfall, Tilcara"
+    }
+   ]
+  },
+  {
+   "id": "ar-cerro-champaqui",
+   "name": "Cerro Champaquí",
+   "country": "AR",
+   "slot": "AR-E",
+   "base": "Villa General Belgrano",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Villa Alpina"
+    },
+    {
+     "point": "goal",
+     "name": "Cerro Champaquí summit"
+    }
+   ]
+  },
+  {
+   "id": "ar-sendero-macuco",
+   "name": "Sendero Macuco to Salto Arrechea",
+   "country": "AR",
+   "slot": "AR-E",
+   "base": "Puerto Iguazú",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Macuco trail forest"
+    },
+    {
+     "point": "goal",
+     "name": "Salto Arrechea"
+    }
+   ]
+  },
+  {
+   "id": "ar-laguna-de-los-tempanos",
+   "name": "Laguna de los Témpanos at Vinciguerra Glacier",
+   "country": "AR",
+   "slot": "AR-E",
+   "base": "Ushuaia",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Andorra valley trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Laguna de los Témpanos"
+    }
+   ]
+  },
+  {
+   "id": "cl-huerquehue-tres-lagos",
+   "name": "Huerquehue: Los Lagos trail",
+   "country": "CL",
+   "slot": "CL-C",
+   "base": "Pucón",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lago Tinquilco"
+    },
+    {
+     "point": "lago-chico",
+     "name": "Lago Chico"
+    },
+    {
+     "point": "goal",
+     "name": "Lago Toro"
+    }
+   ]
+  },
+  {
+   "id": "cl-cochamo-la-junta",
+   "name": "Cochamó valley to La Junta",
+   "country": "CL",
+   "slot": "CL-C",
+   "base": "Puerto Varas",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Cochamó trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "La Junta granite walls"
+    }
+   ]
+  },
+  {
+   "id": "cl-sendero-desolacion",
+   "name": "Paso Desolación on Osorno volcano",
+   "country": "CL",
+   "slot": "CL-C",
+   "base": "Puerto Varas",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Petrohué"
+    },
+    {
+     "point": "goal",
+     "name": "Mirador Desolación"
+    }
+   ]
+  },
+  {
+   "id": "cl-conguillio-sierra-nevada",
+   "name": "Conguillío: Sierra Nevada trail",
+   "country": "CL",
+   "slot": "CL-C",
+   "base": "Pucón",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Playa Linda, Lago Conguillío"
+    },
+    {
+     "point": "goal",
+     "name": "Sierra Nevada lookout"
+    }
+   ]
+  },
+  {
+   "id": "cl-nahuelbuta-piedra-del-aguila",
+   "name": "Nahuelbuta: Piedra del Águila",
+   "country": "CL",
+   "slot": "CL-C",
+   "base": "Angol",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pehuenco araucaria forest"
+    },
+    {
+     "point": "goal",
+     "name": "Piedra del Águila"
+    }
+   ]
+  },
+  {
+   "id": "cl-cerro-provincia",
+   "name": "Cerro Provincia over Santiago",
+   "country": "CL",
+   "slot": "CL-C",
+   "base": "Santiago",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Puente Ñilhue trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Cerro Provincia summit"
+    }
+   ]
+  },
+  {
+   "id": "cl-valle-de-la-luna",
+   "name": "Valle de la Luna on foot",
+   "country": "CL",
+   "slot": "CL-D",
+   "base": "San Pedro de Atacama",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Duna Mayor"
+    },
+    {
+     "point": "goal",
+     "name": "Las Tres Marías"
+    }
+   ]
+  },
+  {
+   "id": "cl-volcan-lascar",
+   "name": "Láscar volcano",
+   "country": "CL",
+   "slot": "CL-D",
+   "base": "San Pedro de Atacama",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Láscar base"
+    },
+    {
+     "point": "goal",
+     "name": "Láscar crater rim"
+    }
+   ]
+  },
+  {
+   "id": "cl-rano-kau-orongo",
+   "name": "Rano Kau crater and Orongo",
+   "country": "CL",
+   "slot": "CL-D",
+   "base": "Hanga Roa",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hanga Roa coast"
+    },
+    {
+     "point": "rano-kau-crater-lake",
+     "name": "Rano Kau crater lake"
+    },
+    {
+     "point": "goal",
+     "name": "Orongo"
+    }
+   ]
+  },
+  {
+   "id": "cl-terevaka",
+   "name": "Maunga Terevaka",
+   "country": "CL",
+   "slot": "CL-D",
+   "base": "Hanga Roa",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ahu Akivi"
+    },
+    {
+     "point": "goal",
+     "name": "Terevaka summit"
+    }
+   ]
+  },
+  {
+   "id": "cl-muelle-de-las-almas",
+   "name": "Muelle de las Almas, Chiloé",
+   "country": "CL",
+   "slot": "CL-D",
+   "base": "Castro",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Punta Pirulil cliffs"
+    },
+    {
+     "point": "goal",
+     "name": "Muelle de las Almas"
+    }
+   ]
+  },
+  {
+   "id": "cl-lagunas-altas",
+   "name": "Parque Patagonia: Lagunas Altas",
+   "country": "CL",
+   "slot": "CL-D",
+   "base": "Cochrane",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "West Winds camp"
+    },
+    {
+     "point": "goal",
+     "name": "Lagunas Altas"
+    }
+   ]
+  },
+  {
+   "id": "cl-ventisquero-colgante",
+   "name": "Queulat: Ventisquero Colgante",
+   "country": "CL",
+   "slot": "CL-E",
+   "base": "Puyuhuapi",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Queulat suspension bridge"
+    },
+    {
+     "point": "goal",
+     "name": "Ventisquero Colgante"
+    }
+   ]
+  },
+  {
+   "id": "cl-volcan-chaiten",
+   "name": "Chaitén volcano",
+   "country": "CL",
+   "slot": "CL-E",
+   "base": "Chaitén",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Chaitén volcano trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Chaitén crater lookout"
+    }
+   ]
+  },
+  {
+   "id": "cl-glaciar-exploradores",
+   "name": "Exploradores Glacier ice hike",
+   "country": "CL",
+   "slot": "CL-E",
+   "base": "Puerto Río Tranquilo",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Exploradores lookout trail"
+    },
+    {
+     "point": "goal",
+     "name": "Exploradores Glacier ice"
+    }
+   ]
+  },
+  {
+   "id": "pe-ausangate",
+   "name": "Ausangate Circuit",
+   "country": "PE",
+   "slot": "PE-C",
+   "base": "Cusco",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tinki"
+    },
+    {
+     "point": "laguna-ausangate-cocha",
+     "name": "Laguna Ausangate Cocha"
+    },
+    {
+     "point": "goal",
+     "name": "Palomani pass"
+    }
+   ]
+  },
+  {
+   "id": "pe-lares",
+   "name": "Lares Trek",
+   "country": "PE",
+   "slot": "PE-C",
+   "base": "Cusco",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lares hot springs"
+    },
+    {
+     "point": "ipsaycocha-pass",
+     "name": "Ipsaycocha pass"
+    },
+    {
+     "point": "goal",
+     "name": "Patacancha"
+    }
+   ]
+  },
+  {
+   "id": "pe-palccoyo",
+   "name": "Palccoyo rainbow mountains",
+   "country": "PE",
+   "slot": "PE-C",
+   "base": "Cusco",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Palccoyo trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Palccoyo rainbow ridges"
+    }
+   ]
+  },
+  {
+   "id": "pe-laguna-paron",
+   "name": "Laguna Parón",
+   "country": "PE",
+   "slot": "PE-C",
+   "base": "Huaraz",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Parón dam"
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Parón and Pirámide de Garcilaso"
+    }
+   ]
+  },
+  {
+   "id": "pe-pastoruri",
+   "name": "Pastoruri glacier",
+   "country": "PE",
+   "slot": "PE-C",
+   "base": "Huaraz",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Puya raimondii forest"
+    },
+    {
+     "point": "goal",
+     "name": "Pastoruri glacier"
+    }
+   ]
+  },
+  {
+   "id": "pe-alpamayo",
+   "name": "Alpamayo Circuit",
+   "country": "PE",
+   "slot": "PE-C",
+   "base": "Huaraz",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hualcayán"
+    },
+    {
+     "point": "alpamayo-base-camp",
+     "name": "Alpamayo base camp"
+    },
+    {
+     "point": "goal",
+     "name": "Jancarurish lake"
+    }
+   ]
+  },
+  {
+   "id": "pe-wilcacocha",
+   "name": "Laguna Wilcacocha",
+   "country": "PE",
+   "slot": "PE-D",
+   "base": "Huaraz",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Chiwipampa"
+    },
+    {
+     "point": "goal",
+     "name": "Laguna Wilcacocha"
+    }
+   ]
+  },
+  {
+   "id": "pe-pisac-ruins",
+   "name": "Pisac ruins on foot",
+   "country": "PE",
+   "slot": "PE-D",
+   "base": "Pisac",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pisac terraces"
+    },
+    {
+     "point": "goal",
+     "name": "Intihuatana of Pisac"
+    }
+   ]
+  },
+  {
+   "id": "pe-moray-maras",
+   "name": "Moray to the Maras salt pans",
+   "country": "PE",
+   "slot": "PE-D",
+   "base": "Urubamba",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Moray terraces"
+    },
+    {
+     "point": "goal",
+     "name": "Maras salt pans"
+    }
+   ]
+  },
+  {
+   "id": "pe-huchuy-qosqo",
+   "name": "Huchuy Qosqo",
+   "country": "PE",
+   "slot": "PE-D",
+   "base": "Calca",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tambomachay"
+    },
+    {
+     "point": "goal",
+     "name": "Huchuy Qosqo ruins"
+    }
+   ]
+  },
+  {
+   "id": "pe-waqrapukara",
+   "name": "Waqrapukara",
+   "country": "PE",
+   "slot": "PE-D",
+   "base": "Cusco",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Waqrapukara trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Waqrapukara fortress"
+    }
+   ]
+  },
+  {
+   "id": "pe-gocta",
+   "name": "Gocta waterfall",
+   "country": "PE",
+   "slot": "PE-D",
+   "base": "Chachapoyas",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Cocachimba"
+    },
+    {
+     "point": "goal",
+     "name": "Gocta waterfall"
+    }
+   ]
+  },
+  {
+   "id": "pe-misti",
+   "name": "El Misti volcano",
+   "country": "PE",
+   "slot": "PE-E",
+   "base": "Arequipa",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Aguada Blanca"
+    },
+    {
+     "point": "monte-blanco-camp",
+     "name": "Monte Blanco camp"
+    },
+    {
+     "point": "goal",
+     "name": "Misti summit cross"
+    }
+   ]
+  },
+  {
+   "id": "pe-inca-quarry",
+   "name": "Inca Quarry trail",
+   "country": "PE",
+   "slot": "PE-E",
+   "base": "Ollantaytambo",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Cachicata"
+    },
+    {
+     "point": "goal",
+     "name": "Inti Punku of Cachicata"
+    }
+   ]
+  },
+  {
+   "id": "pe-taquile",
+   "name": "Taquile island walk",
+   "country": "PE",
+   "slot": "PE-E",
+   "base": "Puno",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Taquile harbour"
+    },
+    {
+     "point": "taquile-main-square",
+     "name": "Taquile main square"
+    },
+    {
+     "point": "goal",
+     "name": "Taquile stone arches"
+    }
+   ]
+  },
+  {
+   "id": "is-hornstrandir",
+   "name": "Hornstrandir: Hesteyri to Hornvík",
+   "country": "IS",
+   "slot": "IS-C",
+   "base": "Ísafjörður",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hesteyri"
+    },
+    {
+     "point": "hornvik-bay",
+     "name": "Hornvík bay"
+    },
+    {
+     "point": "goal",
+     "name": "Hornbjarg cliffs"
+    }
+   ]
+  },
+  {
+   "id": "is-kerlingarfjoll",
+   "name": "Kerlingarfjöll: Hveradalir",
+   "country": "IS",
+   "slot": "IS-C",
+   "base": "Kerlingarfjöll",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hveradalir geothermal valley"
+    },
+    {
+     "point": "goal",
+     "name": "Snækollur"
+    }
+   ]
+  },
+  {
+   "id": "is-askja-viti",
+   "name": "Askja and Víti crater",
+   "country": "IS",
+   "slot": "IS-C",
+   "base": "Mývatn",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Drekagil"
+    },
+    {
+     "point": "viti-crater",
+     "name": "Víti crater"
+    },
+    {
+     "point": "goal",
+     "name": "Öskjuvatn"
+    }
+   ]
+  },
+  {
+   "id": "is-hverfjall",
+   "name": "Hverfjall crater and Dimmuborgir",
+   "country": "IS",
+   "slot": "IS-C",
+   "base": "Mývatn",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hverfjall crater rim"
+    },
+    {
+     "point": "goal",
+     "name": "Dimmuborgir"
+    }
+   ]
+  },
+  {
+   "id": "is-jokulsargljufur",
+   "name": "Dettifoss to Ásbyrgi canyon trek",
+   "country": "IS",
+   "slot": "IS-C",
+   "base": "Ásbyrgi",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Dettifoss"
+    },
+    {
+     "point": "hljoaklettar",
+     "name": "Hljóðaklettar"
+    },
+    {
+     "point": "goal",
+     "name": "Ásbyrgi"
+    }
+   ]
+  },
+  {
+   "id": "is-storurd",
+   "name": "Stórurð, the Giant's Rubble",
+   "country": "IS",
+   "slot": "IS-C",
+   "base": "Egilsstaðir",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Vatnsskarð pass"
+    },
+    {
+     "point": "goal",
+     "name": "Stórurð green ponds"
+    }
+   ]
+  },
+  {
+   "id": "is-thingvellir",
+   "name": "Þingvellir rift walk",
+   "country": "IS",
+   "slot": "IS-D",
+   "base": "Reykjavík",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Almannagjá"
+    },
+    {
+     "point": "goal",
+     "name": "Öxarárfoss"
+    }
+   ]
+  },
+  {
+   "id": "is-arnarstapi-hellnar",
+   "name": "Arnarstapi to Hellnar coastal path",
+   "country": "IS",
+   "slot": "IS-D",
+   "base": "Snæfellsnes",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Gatklettur arch"
+    },
+    {
+     "point": "goal",
+     "name": "Hellnar"
+    }
+   ]
+  },
+  {
+   "id": "is-solheimajokull",
+   "name": "Sólheimajökull glacier walk",
+   "country": "IS",
+   "slot": "IS-D",
+   "base": "Vík",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sólheimajökull car park"
+    },
+    {
+     "point": "goal",
+     "name": "Sólheimajökull ice"
+    }
+   ]
+  },
+  {
+   "id": "is-falljokull",
+   "name": "Falljökull glacier walk",
+   "country": "IS",
+   "slot": "IS-D",
+   "base": "Skaftafell",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Falljökull moraine"
+    },
+    {
+     "point": "goal",
+     "name": "Falljökull icefall"
+    }
+   ]
+  },
+  {
+   "id": "is-hvannadalshnukur",
+   "name": "Hvannadalshnúkur, Iceland's highest peak",
+   "country": "IS",
+   "slot": "IS-D",
+   "base": "Skaftafell",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sandfellsheiði trailhead"
+    },
+    {
+     "point": "orfajokull-caldera",
+     "name": "Öræfajökull caldera"
+    },
+    {
+     "point": "goal",
+     "name": "Hvannadalshnúkur summit"
+    }
+   ]
+  },
+  {
+   "id": "is-fjadrargljufur",
+   "name": "Fjaðrárgljúfur canyon rim",
+   "country": "IS",
+   "slot": "IS-D",
+   "base": "Kirkjubæjarklaustur",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Fjaðrá river mouth"
+    },
+    {
+     "point": "goal",
+     "name": "Fjaðrárgljúfur lookout"
+    }
+   ]
+  },
+  {
+   "id": "nz-milford-track",
+   "name": "Milford Track",
+   "country": "NZ",
+   "slot": "NZ-A",
+   "base": "Te Anau",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Glade Wharf"
+    },
+    {
+     "point": "mackinnon-pass",
+     "name": "Mackinnon Pass"
+    },
+    {
+     "point": "sutherland-falls",
+     "name": "Sutherland Falls"
+    },
+    {
+     "point": "goal",
+     "name": "Sandfly Point"
+    }
+   ]
+  },
+  {
+   "id": "nz-routeburn-track",
+   "name": "Routeburn Track",
+   "country": "NZ",
+   "slot": "NZ-A",
+   "base": "Queenstown",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Routeburn Shelter"
+    },
+    {
+     "point": "harris-saddle",
+     "name": "Harris Saddle"
+    },
+    {
+     "point": "lake-mackenzie",
+     "name": "Lake Mackenzie"
+    },
+    {
+     "point": "goal",
+     "name": "The Divide"
+    }
+   ]
+  },
+  {
+   "id": "nz-kepler-track",
+   "name": "Kepler Track",
+   "country": "NZ",
+   "slot": "NZ-A",
+   "base": "Te Anau",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lake Te Anau control gates"
+    },
+    {
+     "point": "luxmore-hut",
+     "name": "Luxmore Hut"
+    },
+    {
+     "point": "goal",
+     "name": "Mount Luxmore ridge"
+    }
+   ]
+  },
+  {
+   "id": "nz-abel-tasman-coast-track",
+   "name": "Abel Tasman Coast Track",
+   "country": "NZ",
+   "slot": "NZ-A",
+   "base": "Motueka",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Mārahau"
+    },
+    {
+     "point": "anchorage-bay",
+     "name": "Anchorage Bay"
+    },
+    {
+     "point": "awaroa-inlet",
+     "name": "Awaroa Inlet"
+    },
+    {
+     "point": "goal",
+     "name": "Tōtaranui"
+    }
+   ]
+  },
+  {
+   "id": "nz-heaphy-track",
+   "name": "Heaphy Track",
+   "country": "NZ",
+   "slot": "NZ-A",
+   "base": "Karamea",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Brown Hut"
+    },
+    {
+     "point": "gouland-downs",
+     "name": "Gouland Downs"
+    },
+    {
+     "point": "goal",
+     "name": "Heaphy river mouth"
+    }
+   ]
+  },
+  {
+   "id": "nz-tongariro-northern-circuit",
+   "name": "Tongariro Northern Circuit",
+   "country": "NZ",
+   "slot": "NZ-A",
+   "base": "National Park Village",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Whakapapa"
+    },
+    {
+     "point": "ngauruhoe-slopes",
+     "name": "Ngauruhoe slopes"
+    },
+    {
+     "point": "goal",
+     "name": "Oturere valley"
+    }
+   ]
+  },
+  {
+   "id": "nz-tongariro-alpine-crossing",
+   "name": "Tongariro Alpine Crossing",
+   "country": "NZ",
+   "slot": "NZ-B",
+   "base": "National Park Village",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Mangatepopo"
+    },
+    {
+     "point": "red-crater",
+     "name": "Red Crater"
+    },
+    {
+     "point": "emerald-lakes",
+     "name": "Emerald Lakes"
+    },
+    {
+     "point": "goal",
+     "name": "Blue Lake"
+    }
+   ]
+  },
+  {
+   "id": "nz-lake-waikaremoana",
+   "name": "Lake Waikaremoana Great Walk",
+   "country": "NZ",
+   "slot": "NZ-B",
+   "base": "Wairoa",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Onepoto"
+    },
+    {
+     "point": "panekiri-bluff",
+     "name": "Panekiri Bluff"
+    },
+    {
+     "point": "goal",
+     "name": "Hopuruahine"
+    }
+   ]
+  },
+  {
+   "id": "nz-rakiura-track",
+   "name": "Rakiura Track",
+   "country": "NZ",
+   "slot": "NZ-B",
+   "base": "Oban",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lee Bay chain sculpture"
+    },
+    {
+     "point": "port-william",
+     "name": "Port William"
+    },
+    {
+     "point": "goal",
+     "name": "North Arm"
+    }
+   ]
+  },
+  {
+   "id": "nz-paparoa-track",
+   "name": "Paparoa Track",
+   "country": "NZ",
+   "slot": "NZ-B",
+   "base": "Punakaiki",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Smoke-ho car park"
+    },
+    {
+     "point": "moonlight-tops-hut",
+     "name": "Moonlight Tops Hut"
+    },
+    {
+     "point": "goal",
+     "name": "Pororari gorge"
+    }
+   ]
+  },
+  {
+   "id": "nz-hump-ridge-track",
+   "name": "Hump Ridge Track",
+   "country": "NZ",
+   "slot": "NZ-B",
+   "base": "Tuatapere",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Rarakau"
+    },
+    {
+     "point": "okaka-lodge-tors",
+     "name": "Okaka Lodge tors"
+    },
+    {
+     "point": "goal",
+     "name": "Percy Burn viaduct"
+    }
+   ]
+  },
+  {
+   "id": "nz-hooker-valley",
+   "name": "Hooker Valley Track",
+   "country": "NZ",
+   "slot": "NZ-B",
+   "base": "Aoraki Mount Cook",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "White Horse Hill"
+    },
+    {
+     "point": "hooker-swing-bridge",
+     "name": "Hooker swing bridge"
+    },
+    {
+     "point": "goal",
+     "name": "Hooker Lake"
+    }
+   ]
+  },
+  {
+   "id": "nz-mueller-hut",
+   "name": "Mueller Hut Route",
+   "country": "NZ",
+   "slot": "NZ-C",
+   "base": "Aoraki Mount Cook",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sealy Tarns"
+    },
+    {
+     "point": "goal",
+     "name": "Mueller Hut"
+    }
+   ]
+  },
+  {
+   "id": "nz-roys-peak",
+   "name": "Roys Peak Track",
+   "country": "NZ",
+   "slot": "NZ-C",
+   "base": "Wānaka",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Roys Peak car park"
+    },
+    {
+     "point": "roys-peak-ridge-viewpoint",
+     "name": "Roys Peak ridge viewpoint"
+    },
+    {
+     "point": "goal",
+     "name": "Roys Peak summit"
+    }
+   ]
+  },
+  {
+   "id": "nz-isthmus-peak",
+   "name": "Isthmus Peak Track",
+   "country": "NZ",
+   "slot": "NZ-C",
+   "base": "Wānaka",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Isthmus Peak track start, Lake Hāwea"
+    },
+    {
+     "point": "goal",
+     "name": "Isthmus Peak summit"
+    }
+   ]
+  },
+  {
+   "id": "nz-ben-lomond",
+   "name": "Ben Lomond Track",
+   "country": "NZ",
+   "slot": "NZ-C",
+   "base": "Queenstown",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Skyline gondola top"
+    },
+    {
+     "point": "ben-lomond-saddle",
+     "name": "Ben Lomond saddle"
+    },
+    {
+     "point": "goal",
+     "name": "Ben Lomond summit"
+    }
+   ]
+  },
+  {
+   "id": "nz-rob-roy-glacier",
+   "name": "Rob Roy Glacier Track",
+   "country": "NZ",
+   "slot": "NZ-C",
+   "base": "Wānaka",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Raspberry Flat"
+    },
+    {
+     "point": "goal",
+     "name": "Rob Roy Glacier upper lookout"
+    }
+   ]
+  },
+  {
+   "id": "nz-key-summit",
+   "name": "Key Summit",
+   "country": "NZ",
+   "slot": "NZ-C",
+   "base": "Te Anau",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "The Divide"
+    },
+    {
+     "point": "goal",
+     "name": "Key Summit tarns"
+    }
+   ]
+  },
+  {
+   "id": "nz-gertrude-saddle",
+   "name": "Gertrude Saddle",
+   "country": "NZ",
+   "slot": "NZ-D",
+   "base": "Te Anau",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Gertrude Valley"
+    },
+    {
+     "point": "black-lake",
+     "name": "Black Lake"
+    },
+    {
+     "point": "goal",
+     "name": "Gertrude Saddle"
+    }
+   ]
+  },
+  {
+   "id": "nz-lake-marian",
+   "name": "Lake Marian",
+   "country": "NZ",
+   "slot": "NZ-D",
+   "base": "Te Anau",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lake Marian falls"
+    },
+    {
+     "point": "goal",
+     "name": "Lake Marian"
+    }
+   ]
+  },
+  {
+   "id": "nz-avalanche-peak",
+   "name": "Avalanche Peak",
+   "country": "NZ",
+   "slot": "NZ-D",
+   "base": "Arthur's Pass",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Arthur's Pass village"
+    },
+    {
+     "point": "goal",
+     "name": "Avalanche Peak summit"
+    }
+   ]
+  },
+  {
+   "id": "nz-pouakai-crossing",
+   "name": "Pouakai Crossing",
+   "country": "NZ",
+   "slot": "NZ-D",
+   "base": "New Plymouth",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "North Egmont visitor centre"
+    },
+    {
+     "point": "pouakai-tarns",
+     "name": "Pouakai tarns"
+    },
+    {
+     "point": "goal",
+     "name": "Mangorei track end"
+    }
+   ]
+  },
+  {
+   "id": "nz-cathedral-cove",
+   "name": "Cathedral Cove walk",
+   "country": "NZ",
+   "slot": "NZ-D",
+   "base": "Hahei",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hahei clifftop"
+    },
+    {
+     "point": "goal",
+     "name": "Cathedral Cove arch"
+    }
+   ]
+  },
+  {
+   "id": "nz-franz-josef-glacier",
+   "name": "Franz Josef Glacier valley walk",
+   "country": "NZ",
+   "slot": "NZ-D",
+   "base": "Franz Josef",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Waiho river bed"
+    },
+    {
+     "point": "goal",
+     "name": "Franz Josef glacier terminal"
+    }
+   ]
+  },
+  {
+   "id": "nz-alex-knob",
+   "name": "Alex Knob",
+   "country": "NZ",
+   "slot": "NZ-E",
+   "base": "Franz Josef",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lake Wombat"
+    },
+    {
+     "point": "goal",
+     "name": "Alex Knob summit"
+    }
+   ]
+  },
+  {
+   "id": "nz-queen-charlotte-track",
+   "name": "Queen Charlotte Track",
+   "country": "NZ",
+   "slot": "NZ-E",
+   "base": "Picton",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ship Cove"
+    },
+    {
+     "point": "kenepuru-saddle",
+     "name": "Kenepuru Saddle"
+    },
+    {
+     "point": "goal",
+     "name": "Anakiwa"
+    }
+   ]
+  },
+  {
+   "id": "nz-greenstone-caples",
+   "name": "Greenstone and Caples Tracks",
+   "country": "NZ",
+   "slot": "NZ-E",
+   "base": "Queenstown",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Greenstone car park"
+    },
+    {
+     "point": "mckellar-saddle",
+     "name": "McKellar Saddle"
+    },
+    {
+     "point": "goal",
+     "name": "Caples valley"
+    }
+   ]
+  },
+  {
+   "id": "nz-rees-dart",
+   "name": "Rees-Dart Track",
+   "country": "NZ",
+   "slot": "NZ-E",
+   "base": "Glenorchy",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Muddy Creek"
+    },
+    {
+     "point": "rees-saddle",
+     "name": "Rees Saddle"
+    },
+    {
+     "point": "goal",
+     "name": "Dart Glacier"
+    }
+   ]
+  },
+  {
+   "id": "nz-gillespie-pass",
+   "name": "Gillespie Pass Circuit",
+   "country": "NZ",
+   "slot": "NZ-E",
+   "base": "Makarora",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Young valley"
+    },
+    {
+     "point": "gillespie-pass",
+     "name": "Gillespie Pass"
+    },
+    {
+     "point": "goal",
+     "name": "Crucible Lake"
+    }
+   ]
+  },
+  {
+   "id": "nz-copland-track",
+   "name": "Copland Track to Welcome Flat",
+   "country": "NZ",
+   "slot": "NZ-E",
+   "base": "Fox Glacier",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Karangarua bridge"
+    },
+    {
+     "point": "goal",
+     "name": "Welcome Flat hot pools"
+    }
+   ]
+  },
+  {
+   "id": "nz-rangitoto-summit",
+   "name": "Rangitoto summit",
+   "country": "NZ",
+   "slot": "NZ-F",
+   "base": "Auckland",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Rangitoto wharf"
+    },
+    {
+     "point": "rangitoto-lava-fields",
+     "name": "Rangitoto lava fields"
+    },
+    {
+     "point": "goal",
+     "name": "Rangitoto summit crater"
+    }
+   ]
+  },
+  {
+   "id": "nz-tama-lakes",
+   "name": "Tama Lakes",
+   "country": "NZ",
+   "slot": "NZ-F",
+   "base": "National Park Village",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Taranaki Falls"
+    },
+    {
+     "point": "goal",
+     "name": "Lower Tama Lake"
+    }
+   ]
+  },
+  {
+   "id": "nz-lake-angelus",
+   "name": "Robert Ridge to Lake Angelus",
+   "country": "NZ",
+   "slot": "NZ-F",
+   "base": "St Arnaud",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Mount Robert car park"
+    },
+    {
+     "point": "robert-ridge",
+     "name": "Robert Ridge"
+    },
+    {
+     "point": "goal",
+     "name": "Lake Angelus hut"
+    }
+   ]
+  },
+  {
+   "id": "nz-diamond-lake-rocky-mountain",
+   "name": "Diamond Lake and Rocky Mountain",
+   "country": "NZ",
+   "slot": "NZ-F",
+   "base": "Wānaka",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Diamond Lake"
+    },
+    {
+     "point": "goal",
+     "name": "Rocky Mountain summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-kumano-kodo-nakahechi",
+   "name": "Kumano Kodo Nakahechi",
+   "country": "JP",
+   "slot": "JP-A",
+   "base": "Tanabe",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Takijiri-oji"
+    },
+    {
+     "point": "chikatsuyu",
+     "name": "Chikatsuyu"
+    },
+    {
+     "point": "goal",
+     "name": "Kumano Hongu Taisha"
+    }
+   ]
+  },
+  {
+   "id": "jp-kumano-kodo-kohechi",
+   "name": "Kumano Kodo Kohechi",
+   "country": "JP",
+   "slot": "JP-A",
+   "base": "Koyasan",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Koyasan"
+    },
+    {
+     "point": "obako-pass",
+     "name": "Obako pass"
+    },
+    {
+     "point": "goal",
+     "name": "Yagio"
+    }
+   ]
+  },
+  {
+   "id": "jp-nakasendo-magome-tsumago",
+   "name": "Nakasendo: Magome to Tsumago",
+   "country": "JP",
+   "slot": "JP-A",
+   "base": "Magome",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Magome post town"
+    },
+    {
+     "point": "odaki-and-medaki-falls",
+     "name": "Odaki and Medaki falls"
+    },
+    {
+     "point": "goal",
+     "name": "Tsumago post town"
+    }
+   ]
+  },
+  {
+   "id": "jp-fuji-yoshida",
+   "name": "Mount Fuji by the Yoshida trail",
+   "country": "JP",
+   "slot": "JP-A",
+   "base": "Fujiyoshida",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Fuji Subaru Line 5th Station"
+    },
+    {
+     "point": "8th-station-huts",
+     "name": "8th Station huts"
+    },
+    {
+     "point": "goal",
+     "name": "Fuji crater rim"
+    }
+   ]
+  },
+  {
+   "id": "jp-kamikochi-valley",
+   "name": "Kamikochi: Taisho Pond to Myojin Pond",
+   "country": "JP",
+   "slot": "JP-A",
+   "base": "Kamikochi",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Taisho Pond"
+    },
+    {
+     "point": "kappa-bridge",
+     "name": "Kappa Bridge"
+    },
+    {
+     "point": "goal",
+     "name": "Myojin Pond"
+    }
+   ]
+  },
+  {
+   "id": "jp-yarigatake",
+   "name": "Yarigatake from Kamikochi",
+   "country": "JP",
+   "slot": "JP-A",
+   "base": "Kamikochi",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Yokoo"
+    },
+    {
+     "point": "yarigatake-sanso",
+     "name": "Yarigatake Sanso"
+    },
+    {
+     "point": "goal",
+     "name": "Yarigatake spear summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-karasawa-hotaka",
+   "name": "Karasawa cirque and Okuhotaka",
+   "country": "JP",
+   "slot": "JP-B",
+   "base": "Kamikochi",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tokusawa"
+    },
+    {
+     "point": "karasawa-cirque",
+     "name": "Karasawa cirque"
+    },
+    {
+     "point": "goal",
+     "name": "Okuhotaka summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-tateyama-oyama",
+   "name": "Tateyama: Murodo to Mount Oyama",
+   "country": "JP",
+   "slot": "JP-B",
+   "base": "Toyama",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Murodo, Mikuriga-ike"
+    },
+    {
+     "point": "ichinokoshi",
+     "name": "Ichinokoshi"
+    },
+    {
+     "point": "goal",
+     "name": "Oyama shrine summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-yakushima-jomon-sugi",
+   "name": "Jomon Sugi on Yakushima",
+   "country": "JP",
+   "slot": "JP-B",
+   "base": "Yakushima",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Arakawa trailhead tram line"
+    },
+    {
+     "point": "wilson-stump",
+     "name": "Wilson stump"
+    },
+    {
+     "point": "goal",
+     "name": "Jomon Sugi"
+    }
+   ]
+  },
+  {
+   "id": "jp-shiratani-unsuikyo",
+   "name": "Shiratani Unsuikyo",
+   "country": "JP",
+   "slot": "JP-B",
+   "base": "Yakushima",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Shiratani ravine"
+    },
+    {
+     "point": "goal",
+     "name": "Taikoiwa rock"
+    }
+   ]
+  },
+  {
+   "id": "jp-daisetsuzan-traverse",
+   "name": "Daisetsuzan: Asahidake to Kurodake",
+   "country": "JP",
+   "slot": "JP-B",
+   "base": "Asahikawa",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sugatami pond"
+    },
+    {
+     "point": "asahidake-summit",
+     "name": "Asahidake summit"
+    },
+    {
+     "point": "goal",
+     "name": "Ohachidaira caldera"
+    }
+   ]
+  },
+  {
+   "id": "jp-shiretoko-five-lakes",
+   "name": "Shiretoko Five Lakes",
+   "country": "JP",
+   "slot": "JP-B",
+   "base": "Utoro",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Shiretoko Goko elevated boardwalk"
+    },
+    {
+     "point": "goal",
+     "name": "First lake and Shiretoko range"
+    }
+   ]
+  },
+  {
+   "id": "jp-rausudake",
+   "name": "Rausudake",
+   "country": "JP",
+   "slot": "JP-C",
+   "base": "Utoro",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Iwaobetsu onsen trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Rausudake summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-oirase-gorge",
+   "name": "Oirase Gorge",
+   "country": "JP",
+   "slot": "JP-C",
+   "base": "Towada",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Yakeyama"
+    },
+    {
+     "point": "choshi-otaki-falls",
+     "name": "Choshi Otaki falls"
+    },
+    {
+     "point": "goal",
+     "name": "Lake Towada, Nenokuchi"
+    }
+   ]
+  },
+  {
+   "id": "jp-hakusan",
+   "name": "Mount Hakusan",
+   "country": "JP",
+   "slot": "JP-C",
+   "base": "Kanazawa",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Bettodeai"
+    },
+    {
+     "point": "murodo-hut-hakusan",
+     "name": "Murodo hut, Hakusan"
+    },
+    {
+     "point": "goal",
+     "name": "Gozengamine summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-mt-misen",
+   "name": "Mount Misen on Miyajima",
+   "country": "JP",
+   "slot": "JP-C",
+   "base": "Miyajima",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Daisho-in temple"
+    },
+    {
+     "point": "goal",
+     "name": "Misen summit rocks"
+    }
+   ]
+  },
+  {
+   "id": "jp-fushimi-inari-summit",
+   "name": "Fushimi Inari to the summit",
+   "country": "JP",
+   "slot": "JP-C",
+   "base": "Kyoto",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Senbon torii"
+    },
+    {
+     "point": "yotsutsuji-crossing",
+     "name": "Yotsutsuji crossing"
+    },
+    {
+     "point": "goal",
+     "name": "Inari summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-kurama-kibune",
+   "name": "Kurama to Kibune",
+   "country": "JP",
+   "slot": "JP-C",
+   "base": "Kyoto",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Kurama-dera"
+    },
+    {
+     "point": "goal",
+     "name": "Kibune shrine"
+    }
+   ]
+  },
+  {
+   "id": "jp-dewa-sanzan-haguro",
+   "name": "Haguro-san stone steps, Dewa Sanzan",
+   "country": "JP",
+   "slot": "JP-D",
+   "base": "Tsuruoka",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Haguro five-storey pagoda"
+    },
+    {
+     "point": "goal",
+     "name": "Haguro summit shrine"
+    }
+   ]
+  },
+  {
+   "id": "jp-aso-nakadake",
+   "name": "Mount Aso: Nakadake and Takadake",
+   "country": "JP",
+   "slot": "JP-D",
+   "base": "Aso",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Kusasenri"
+    },
+    {
+     "point": "nakadake-crater",
+     "name": "Nakadake crater"
+    },
+    {
+     "point": "goal",
+     "name": "Takadake summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-kirishima-karakunidake",
+   "name": "Kirishima: Karakunidake",
+   "country": "JP",
+   "slot": "JP-D",
+   "base": "Kirishima",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ebino plateau"
+    },
+    {
+     "point": "goal",
+     "name": "Karakunidake summit crater"
+    }
+   ]
+  },
+  {
+   "id": "jp-ishizuchi",
+   "name": "Mount Ishizuchi",
+   "country": "JP",
+   "slot": "JP-D",
+   "base": "Saijo",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ishizuchi ropeway top"
+    },
+    {
+     "point": "ishizuchi-chains",
+     "name": "Ishizuchi chains"
+    },
+    {
+     "point": "goal",
+     "name": "Tengudake"
+    }
+   ]
+  },
+  {
+   "id": "jp-yotei",
+   "name": "Mount Yotei",
+   "country": "JP",
+   "slot": "JP-D",
+   "base": "Niseko",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Makkari trailhead"
+    },
+    {
+     "point": "goal",
+     "name": "Yotei crater rim"
+    }
+   ]
+  },
+  {
+   "id": "jp-ozegahara",
+   "name": "Oze marshland",
+   "country": "JP",
+   "slot": "JP-D",
+   "base": "Numata",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hatomachi pass"
+    },
+    {
+     "point": "ozegahara-boardwalks",
+     "name": "Ozegahara boardwalks"
+    },
+    {
+     "point": "goal",
+     "name": "Ozenuma"
+    }
+   ]
+  },
+  {
+   "id": "jp-senjogahara",
+   "name": "Senjogahara marsh, Nikko",
+   "country": "JP",
+   "slot": "JP-E",
+   "base": "Nikko",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ryuzu falls"
+    },
+    {
+     "point": "senjogahara-boardwalk",
+     "name": "Senjogahara boardwalk"
+    },
+    {
+     "point": "goal",
+     "name": "Yudaki falls"
+    }
+   ]
+  },
+  {
+   "id": "jp-kumotori",
+   "name": "Mount Kumotori",
+   "country": "JP",
+   "slot": "JP-E",
+   "base": "Okutama",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Kamosawa"
+    },
+    {
+     "point": "kumotori-sanso",
+     "name": "Kumotori Sanso"
+    },
+    {
+     "point": "goal",
+     "name": "Kumotori summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-kitadake",
+   "name": "Kitadake",
+   "country": "JP",
+   "slot": "JP-E",
+   "base": "Kofu",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hirogawara"
+    },
+    {
+     "point": "kitadake-katanokoya",
+     "name": "Kitadake Katanokoya"
+    },
+    {
+     "point": "goal",
+     "name": "Kitadake summit"
+    }
+   ]
+  },
+  {
+   "id": "jp-tsurugidake",
+   "name": "Mount Tsurugi",
+   "country": "JP",
+   "slot": "JP-E",
+   "base": "Toyama",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Murodo"
+    },
+    {
+     "point": "kenzan-so-hut",
+     "name": "Kenzan-so hut"
+    },
+    {
+     "point": "goal",
+     "name": "Tsurugidake chains"
+    }
+   ]
+  },
+  {
+   "id": "jp-norikura",
+   "name": "Mount Norikura",
+   "country": "JP",
+   "slot": "JP-E",
+   "base": "Takayama",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tatamidaira"
+    },
+    {
+     "point": "goal",
+     "name": "Norikura summit shrine"
+    }
+   ]
+  },
+  {
+   "id": "jp-tanigawadake",
+   "name": "Tanigawadake",
+   "country": "JP",
+   "slot": "JP-E",
+   "base": "Minakami",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tenjindaira"
+    },
+    {
+     "point": "goal",
+     "name": "Tanigawadake twin summits"
+    }
+   ]
+  },
+  {
+   "id": "vn-fansipan",
+   "name": "Fansipan from Tram Ton",
+   "country": "VN",
+   "slot": "VN-A",
+   "base": "Sa Pa",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Tram Ton pass"
+    },
+    {
+     "point": "fansipan-camp-2800",
+     "name": "Fansipan camp 2800"
+    },
+    {
+     "point": "goal",
+     "name": "Fansipan summit pyramid"
+    }
+   ]
+  },
+  {
+   "id": "vn-muong-hoa-valley",
+   "name": "Muong Hoa valley: Lao Chai to Ta Van",
+   "country": "VN",
+   "slot": "VN-A",
+   "base": "Sa Pa",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lao Chai rice terraces"
+    },
+    {
+     "point": "goal",
+     "name": "Ta Van village"
+    }
+   ]
+  },
+  {
+   "id": "vn-ta-van-ban-ho",
+   "name": "Sa Pa homestay trek to Ban Ho",
+   "country": "VN",
+   "slot": "VN-A",
+   "base": "Sa Pa",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ta Van"
+    },
+    {
+     "point": "goal",
+     "name": "Ban Ho stream"
+    }
+   ]
+  },
+  {
+   "id": "vn-pu-luong",
+   "name": "Pu Luong rice terraces",
+   "country": "VN",
+   "slot": "VN-A",
+   "base": "Pu Luong",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Kho Muong"
+    },
+    {
+     "point": "ban-hieu-waterfall",
+     "name": "Ban Hieu waterfall"
+    },
+    {
+     "point": "goal",
+     "name": "Pu Luong terraces"
+    }
+   ]
+  },
+  {
+   "id": "vn-ta-xua",
+   "name": "Ta Xua dinosaur spine",
+   "country": "VN",
+   "slot": "VN-A",
+   "base": "Bac Yen",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ta Xua"
+    },
+    {
+     "point": "goal",
+     "name": "Dinosaur spine ridge"
+    }
+   ]
+  },
+  {
+   "id": "vn-ky-quan-san",
+   "name": "Ky Quan San (Bach Moc Luong Tu)",
+   "country": "VN",
+   "slot": "VN-A",
+   "base": "Bat Xat",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lao Than ridge"
+    },
+    {
+     "point": "goal",
+     "name": "Ky Quan San summit"
+    }
+   ]
+  },
+  {
+   "id": "vn-ngu-lam-peak",
+   "name": "Cat Ba: Ngu Lam peak",
+   "country": "VN",
+   "slot": "VN-B",
+   "base": "Cat Ba",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Cat Ba National Park gate"
+    },
+    {
+     "point": "goal",
+     "name": "Ngu Lam watchtower"
+    }
+   ]
+  },
+  {
+   "id": "vn-hang-en",
+   "name": "Hang En cave expedition",
+   "country": "VN",
+   "slot": "VN-B",
+   "base": "Phong Nha",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ban Doong village"
+    },
+    {
+     "point": "goal",
+     "name": "Hang En entrance"
+    }
+   ]
+  },
+  {
+   "id": "vn-son-doong",
+   "name": "Son Doong cave expedition",
+   "country": "VN",
+   "slot": "VN-B",
+   "base": "Phong Nha",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hang En"
+    },
+    {
+     "point": "son-doong-doline",
+     "name": "Son Doong doline"
+    },
+    {
+     "point": "goal",
+     "name": "Wall of Vietnam"
+    }
+   ]
+  },
+  {
+   "id": "vn-bach-ma-summit",
+   "name": "Bach Ma summit and Five Lakes",
+   "country": "VN",
+   "slot": "VN-B",
+   "base": "Hue",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Five Lakes trail"
+    },
+    {
+     "point": "goal",
+     "name": "Bach Ma summit"
+    }
+   ]
+  },
+  {
+   "id": "vn-langbiang",
+   "name": "Langbiang mountain",
+   "country": "VN",
+   "slot": "VN-B",
+   "base": "Da Lat",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lang Biang pine forest"
+    },
+    {
+     "point": "goal",
+     "name": "Langbiang summit"
+    }
+   ]
+  },
+  {
+   "id": "vn-cuc-phuong-ancient-tree",
+   "name": "Cuc Phuong ancient tree",
+   "country": "VN",
+   "slot": "VN-B",
+   "base": "Ninh Binh",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Cuc Phuong forest"
+    },
+    {
+     "point": "goal",
+     "name": "Cuc Phuong thousand-year tree"
+    }
+   ]
+  },
+  {
+   "id": "na-fish-river-canyon",
+   "name": "Fish River Canyon Hiking Trail",
+   "country": "NA",
+   "slot": "NA-A",
+   "base": "Ai-Ais",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hobas lookout"
+    },
+    {
+     "point": "fish-river-bend",
+     "name": "Fish River bend"
+    },
+    {
+     "point": "goal",
+     "name": "Ai-Ais"
+    }
+   ]
+  },
+  {
+   "id": "na-naukluft-trail",
+   "name": "Naukluft Hiking Trail",
+   "country": "NA",
+   "slot": "NA-A",
+   "base": "Naukluft",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hiker's Haven"
+    },
+    {
+     "point": "naukluft-chain-ladder",
+     "name": "Naukluft chain ladder"
+    },
+    {
+     "point": "goal",
+     "name": "Naukluft kloof"
+    }
+   ]
+  },
+  {
+   "id": "na-olive-trail",
+   "name": "Naukluft: Olive Trail",
+   "country": "NA",
+   "slot": "NA-A",
+   "base": "Naukluft",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Olive Trail plateau"
+    },
+    {
+     "point": "goal",
+     "name": "Olive Trail canyon chains"
+    }
+   ]
+  },
+  {
+   "id": "na-waterkloof",
+   "name": "Naukluft: Waterkloof Trail",
+   "country": "NA",
+   "slot": "NA-A",
+   "base": "Naukluft",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Waterkloof pools"
+    },
+    {
+     "point": "goal",
+     "name": "Waterkloof summit"
+    }
+   ]
+  },
+  {
+   "id": "na-waterberg-plateau",
+   "name": "Waterberg Plateau walk",
+   "country": "NA",
+   "slot": "NA-A",
+   "base": "Waterberg",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Waterberg rest camp"
+    },
+    {
+     "point": "goal",
+     "name": "Waterberg plateau edge"
+    }
+   ]
+  },
+  {
+   "id": "na-big-daddy",
+   "name": "Big Daddy dune and Deadvlei",
+   "country": "NA",
+   "slot": "NA-A",
+   "base": "Sesriem",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sossusvlei 4x4 car park"
+    },
+    {
+     "point": "big-daddy-crest",
+     "name": "Big Daddy crest"
+    },
+    {
+     "point": "goal",
+     "name": "Deadvlei"
+    }
+   ]
+  },
+  {
+   "id": "na-dune-45",
+   "name": "Dune 45 at sunrise",
+   "country": "NA",
+   "slot": "NA-B",
+   "base": "Sesriem",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Dune 45 base"
+    },
+    {
+     "point": "goal",
+     "name": "Dune 45 crest"
+    }
+   ]
+  },
+  {
+   "id": "na-sesriem-canyon",
+   "name": "Sesriem Canyon",
+   "country": "NA",
+   "slot": "NA-B",
+   "base": "Sesriem",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sesriem Canyon rim"
+    },
+    {
+     "point": "goal",
+     "name": "Sesriem Canyon floor"
+    }
+   ]
+  },
+  {
+   "id": "na-brandberg-konigstein",
+   "name": "Brandberg to Königstein",
+   "country": "NA",
+   "slot": "NA-B",
+   "base": "Uis",
+   "kind": "multiday",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Brandberg Tsisab gorge"
+    },
+    {
+     "point": "white-lady-painting",
+     "name": "White Lady painting"
+    },
+    {
+     "point": "goal",
+     "name": "Königstein summit"
+    }
+   ]
+  },
+  {
+   "id": "na-spitzkoppe",
+   "name": "Spitzkoppe: Bushman's Paradise",
+   "country": "NA",
+   "slot": "NA-B",
+   "base": "Spitzkoppe",
+   "kind": "day",
+   "status": "todo",
+   "tier": "A",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Spitzkoppe arch"
+    },
+    {
+     "point": "goal",
+     "name": "Bushman's Paradise"
     }
    ]
   }
