@@ -1,0 +1,58 @@
+{
+ "id": "is-fjadrargljufur",
+ "country": "IS",
+ "name": "Fjaðrárgljúfur canyon rim",
+ "base": "Kirkjubæjarklaustur",
+ "region": "Síða, near Kirkjubæjarklaustur, south-east Iceland",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [6, 7, 8, 9, 10],
+ "hours": [1, 1.5],
+ "start_by": "",
+ "published": null,
+ "why": "Up the edge of a twisting gorge 100 m deep and 2 km long, cut into two-million-year-old palagonite, from viewpoint to viewpoint to a waterfall at the top.",
+ "book": "No permit. Road 206 off Route 1 west of Kirkjubæjarklaustur; small cars can drive it all year. The Environment Agency has closed the path for weeks in thaw (2018 and 2019, reopened on 1 June): check Safetravel or the local information before you go.",
+ "water": "Toilets at the car park; no water on the path. Kirkjubæjarklaustur has shops.",
+ "dangers": [
+  "Unfenced cliff edges: stay behind the ropes and on the platforms.",
+  "Ice on the path in winter and deep mud in the spring thaw; walking off the path destroys the moss and is why the canyon gets closed."
+ ],
+ "turnaround": "At the upper platform by Mögárfoss: the path ends there. Walking into the canyon bed means wading in the river.",
+ "sources": [
+  "https://www.south.is/en/place/fjadrargljufur-canyon",
+  "https://ust.is/library/Skrar/Fja%c3%b0r%c3%a1rglj%c3%bafur%20-%20lokun%20feb%202019.pdf",
+  "https://www.icelandreview.com/news/fjadrargljufur-to-remain-closed-until-june/",
+  "https://en.wikipedia.org/wiki/Fja%C3%B0r%C3%A1rglj%C3%BAfur"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 1, "nature": 4, "culture": 0, "relax": 4, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Fjaðrá river mouth car park",
+   "lat": 63.77120,
+   "lon": -18.17144,
+   "role": "start",
+   "note": "Where the Fjaðrá leaves the canyon onto the plain. From the car park a short path goes to the river at the canyon mouth; the rim path climbs to the right."
+  },
+  {
+   "id": "rim",
+   "name": "Middle viewpoint on the east rim",
+   "lat": 63.77503,
+   "lon": -18.17462,
+   "role": "point",
+   "note": "A platform over the narrowest bends: sheer walls of moss and rock with the river far below."
+  },
+  {
+   "id": "goal",
+   "name": "Fjaðrárgljúfur upper lookout",
+   "lat": 63.77909,
+   "lon": -18.17681,
+   "role": "goal",
+   "note": "The steel platform at the end of the path, looking down the whole canyon. Mögárfoss falls down the opposite wall. Back the same way.",
+   "scene": "is-fjadrargljufur"
+  }
+ ]
+}

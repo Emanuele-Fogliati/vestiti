@@ -1,0 +1,56 @@
+{
+ "id": "is-arnarstapi-hellnar",
+ "country": "IS",
+ "name": "Arnarstapi to Hellnar coastal path",
+ "base": "Snæfellsnes",
+ "region": "Arnarstapi and Hellnar nature reserve, Snæfellsnes",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [5, 6, 7, 8, 9],
+ "hours": [1, 1.5],
+ "start_by": "",
+ "published": null,
+ "why": "Along the old Neðstagata track over a 3,900-year-old lava field, past sea arches and basalt gorges full of kittiwakes, to a fishing hamlet with a café on the beach.",
+ "book": "Free, no permit. Park in Arnarstapi by the harbour. Camping in the reserve is not allowed.",
+ "water": "Nothing on the path; cafés and toilets in Arnarstapi and at Fjöruhúsið in Hellnar.",
+ "dangers": [
+  "Unfenced cliff edges above the surf: keep to the marked path, above all in wind.",
+  "Arctic terns nesting at Arnarstapi dive at walkers in June and July: wear a hat and keep moving."
+ ],
+ "turnaround": "In a storm with spray over the cliffs, walk only to Gatklettur and back.",
+ "sources": [
+  "https://ust.is/english/visiting-iceland/protected-areas/west/the-coast-by-stapi-and-hellnir/",
+  "https://www.openstreetmap.org/way/113715491"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 1, "nature": 4, "culture": 1, "relax": 4, "history": 1, "landscape": 4},
+ "points": [
+  {
+   "id": "start",
+   "name": "Gatklettur arch, Arnarstapi",
+   "lat": 64.76533,
+   "lon": -23.62193,
+   "role": "start",
+   "note": "The sea arch below the harbour cliffs, a few minutes from the car park and Bárður's stone statue. Snæfellsjökull stands behind the village.",
+   "scene": "is-arnarstapi"
+  },
+  {
+   "id": "lava",
+   "name": "Hellnahraun lava coast",
+   "lat": 64.75886,
+   "lon": -23.63241,
+   "role": "point",
+   "note": "Halfway: the track crosses the mossy lava close to the cliffs, with sea caves and stacks below. Draugarlág cave is by the path."
+  },
+  {
+   "id": "goal",
+   "name": "Hellnar beach and Baðstofa cave",
+   "lat": 64.75177,
+   "lon": -23.64551,
+   "role": "goal",
+   "note": "An old fishing port of 200 people in the 1600s, now a few houses, a small church and the Fjöruhúsið café by the beach. Baðstofa sea cave is in the rocks east of the cove."
+  }
+ ]
+}

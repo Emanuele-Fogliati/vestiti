@@ -1,0 +1,51 @@
+{
+ "id": "is-falljokull",
+ "country": "IS",
+ "name": "Falljökull glacier walk",
+ "base": "Skaftafell",
+ "region": "Vatnajökull National Park, Öræfi",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "glacier": true,
+ "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+ "hours": [3.5, 4],
+ "start_by": "",
+ "published": null,
+ "why": "Crampons on a glacier that falls in a broken icefall from the Öræfajökull caldera: blue crevasses and moulins, with Iceland's highest peak above.",
+ "book": "On the ice only with a licensed glacier guide; the park itself says so. Tours (about 4 h, of which 1-1.5 h on the ice; crampons, harness and helmet included) meet at the Skaftafell base and drive 25 minutes to the Falljökull car park.",
+ "water": "Toilets and water at Skaftafell before the tour; nothing at the glacier. Carry 1 litre.",
+ "dangers": [
+  "Crevasses and moulins: walk only in the guide's steps, never on your own.",
+  "The moraine in front of the glacier is loose and the meltwater streams are cold and fast.",
+  "Rain and wind come down off Öræfajökull quickly: a waterproof shell and gloves even in summer."
+ ],
+ "turnaround": "Without a guide stop at the viewpoint at the foot of the ice. On a tour, the guide decides.",
+ "sources": [
+  "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/destination-falljokull",
+  "https://adventures.is/iceland/day-tours/glacier-tours/glacier-tours-on-vatnajokull/glacier-wonders/",
+  "https://www.mountainguides.is/tour/blue-ice-glacier-walk",
+  "https://www.openstreetmap.org/node/5861324586"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 5, "culture": 0, "relax": 2, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Falljökull car park on the moraine",
+   "lat": 63.96665,
+   "lon": -16.80408,
+   "role": "start",
+   "note": "End of the gravel track below the glacier, with the park's warning board. The guides fit crampons here or at Skaftafell, then walk about 30 minutes over the old moraine."
+  },
+  {
+   "id": "goal",
+   "name": "Falljökull ice edge, below the icefall",
+   "lat": 63.97163,
+   "lon": -16.79463,
+   "role": "goal",
+   "note": "The viewpoint at the foot of the ice, where the crampons go on. The guided part goes up the lower tongue towards the icefall from the Öræfajökull caldera; the route changes with the ice and is not mapped."
+  }
+ ]
+}

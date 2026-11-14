@@ -1,0 +1,66 @@
+{
+ "id": "pe-laguna-paron",
+ "country": "PE",
+ "name": "Laguna Parón shore walk",
+ "base": "Huaraz",
+ "region": "Huascarán National Park, Cordillera Blanca, above Caraz",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2.5,
+  3.5
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "Along the turquoise water of the Cordillera Blanca's largest lake, 4,200 m up, towards the perfect snow pyramid of Pirámide de Garcilaso and the walls of Artesonraju.",
+ "book": "Inside Huascarán National Park, but the lake is run by the Cruz de Mayo community: in 2019 it charged S/5 and the park ticket did not apply. From Caraz about 2 h by taxi or tour (no colectivo to the lake); day tours from Huaraz.",
+ "water": "None to buy on the path: carry 1.5 litres.",
+ "dangers": [
+  "4,200 m: walk slowly if you came up from Huaraz or Caraz the same day.",
+  "A rough, wet stretch on the north shore in the rainy season.",
+  "Cold wind off the glaciers in the afternoon."
+ ],
+ "turnaround": "Turn round at half the time your driver waits: the east end of the lake is about 1.5 hours away on foot.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park",
+  "https://es.wikipedia.org/wiki/Laguna_Par%C3%B3n",
+  "https://www.openstreetmap.org/way/123093548"
+ ],
+ "tier": "A",
+ "area": "pe-huaraz",
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Parón dam and refuge",
+   "lat": -8.99915,
+   "lon": -77.68476,
+   "role": "start",
+   "note": "Where the road ends at 4,185 m, by the refuge and the boats: the classic view up the lake to the Pirámide.",
+   "scene": "pe-caraz"
+  },
+  {
+   "id": "goal",
+   "name": "Head of Laguna Parón, under the Pirámide de Garcilaso",
+   "lat": -8.98505,
+   "lon": -77.65736,
+   "role": "goal",
+   "note": "The east end of the lake: the Pirámide's ice face straight ahead, Artesonraju and its glacier to the left. Back the same way."
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "id": "is-hvannadalshnukur",
+ "country": "IS",
+ "name": "Hvannadalshnúkur, Iceland's highest peak",
+ "base": "Skaftafell",
+ "region": "Vatnajökull National Park, Öræfajökull",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "glacier": true,
+ "months": [4, 5, 6, 7],
+ "hours": [12, 16],
+ "start_by": "04:00",
+ "published": {
+  "km": 22,
+  "gain_m": null,
+  "source": "https://www.mountainguides.is/blog/summiting-hvannadalshnukur"
+ },
+ "why": "The longest summit day in Europe: from almost sea level to 2,110 m, roped together across the snow of the Öræfajökull caldera, with the whole Vatnajökull ice cap to the north.",
+ "book": "Only with a licensed mountain guide and a rope team. Guided climbs start from Sandfell (on Route 1 south-east of Skaftafell) in the season, usually April to August and shorter in recent years; a briefing at the Skaftafell base at 16:00 the day before. Keep spare days for the weather.",
+ "water": "One stream on the way up to refill; carry 3 litres of capacity and food for 14 hours.",
+ "dangers": [
+  "Hidden crevasses under the snow on the upper half: rope, harness and a guide who knows the unmarked line.",
+  "Whiteout and storm on the caldera; the weather decides most attempts.",
+  "Over 2,000 m of climb in one day: exhaustion on the way down, and the team turns back together.",
+  "Snow blindness and sunburn on the snow: glacier glasses and sun cream."
+ ],
+ "turnaround": "The guide turns the team when the day would pass 16 hours, or in whiteout or wind. Above 700 m the whole rope team stays together.",
+ "sources": [
+  "https://www.mountainguides.is/blog/summiting-hvannadalshnukur",
+  "https://www.mountainguides.is/tour/hvannadalshnukur",
+  "https://www.vatnajokulsthjodgardur.is/en/areas/skaftafell/destination-sandfell",
+  "https://en.wikipedia.org/wiki/Hvannadalshnj%C3%BAkur",
+  "https://www.openstreetmap.org/way/620059054"
+ ],
+ "osm_ways": [366594723, 620059052, 593504932, 620059054],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 5, "nature": 5, "culture": 0, "relax": 0, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Sandfell trailhead",
+   "lat": 63.94454,
+   "lon": -16.79395,
+   "role": "start",
+   "note": "The old farm and church site of Sandfell by Route 1, about 100 m above the sea. The path climbs straight up the Sandfellsheiði ridge, in the dark at the start."
+  },
+  {
+   "id": "rope-up",
+   "name": "Snow line on Sandfellsheiði",
+   "lat": 63.96888,
+   "lon": -16.73235,
+   "role": "point",
+   "note": "Around 1,000-1,100 m the rock path ends on the snow: crampons and harness on, the rope team ties in here."
+  },
+  {
+   "id": "orfajokull-caldera",
+   "name": "Öræfajökull caldera",
+   "lat": 64.00062,
+   "lon": -16.66977,
+   "role": "point",
+   "note": "Around 1,800 m on the rim: the long white crossing of the ice-filled crater, with the summit pyramid ahead."
+  },
+  {
+   "id": "goal",
+   "name": "Hvannadalshnúkur summit",
+   "lat": 64.01415,
+   "lon": -16.67696,
+   "role": "goal",
+   "note": "2,110 m, the highest point in Iceland. The last steep slope is often done with axe and crampons. Return the same way."
+  }
+ ]
+}

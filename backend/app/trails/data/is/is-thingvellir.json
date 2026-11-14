@@ -1,0 +1,63 @@
+{
+ "id": "is-thingvellir",
+ "country": "IS",
+ "name": "Þingvellir rift walk: Almannagjá to Öxarárfoss",
+ "base": "Reykjavík",
+ "region": "Þingvellir National Park, Golden Circle",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+ "hours": [1, 2],
+ "start_by": "",
+ "published": {
+  "km": 3.5,
+  "gain_m": null,
+  "source": "https://www.thingvellir.is/media/squbpy2o/thinghelgi_isl_gun_min.pdf"
+ },
+ "why": "Down the rift between two continental plates, past the rock where Iceland's parliament met from 930, to a waterfall pouring into the crack.",
+ "book": "Free walk; the park charges a parking fee at Hakið (1,000 ISK for a car). By car from Reykjavík on Route 36, or on a Golden Circle bus.",
+ "water": "Toilets, water and a café at the Hakið visitor centre; nothing on the path.",
+ "dangers": [
+  "Ice on the paths in winter: wear spikes or good soles.",
+  "Stay off the cliff edges and out of fenced fissures; the ground is still cracking open."
+ ],
+ "turnaround": "No real turnaround: the walk is short and paved. In bad weather turn back at Lögberg.",
+ "sources": [
+  "https://www.thingvellir.is/media/squbpy2o/thinghelgi_isl_gun_min.pdf",
+  "https://www.thingvellir.is/afthreying/goenguleidir/",
+  "https://www.thingvellir.is/en/service/parking-service/",
+  "https://www.thingvellir.is/en/things-to-do/visitor-centre/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 1, "nature": 3, "culture": 4, "relax": 4, "history": 5, "landscape": 4},
+ "points": [
+  {
+   "id": "start",
+   "name": "Hakið viewpoint above Almannagjá",
+   "lat": 64.25541,
+   "lon": -21.12804,
+   "role": "start",
+   "note": "The platform by the visitor centre on the rim of the North American plate: the whole rift valley and Þingvallavatn below. The path drops into the gorge from here.",
+   "scene": "is-thingvellir-national-park"
+  },
+  {
+   "id": "logberg",
+   "name": "Lögberg, the Law Rock",
+   "lat": 64.25954,
+   "lon": -21.12254,
+   "role": "point",
+   "note": "Where the laws were recited at the Alþingi from 930 to 1262; a flagpole marks it. The path then passes Drekkingarhylur pool."
+  },
+  {
+   "id": "goal",
+   "name": "Öxarárfoss",
+   "lat": 64.26574,
+   "lon": -21.11723,
+   "role": "goal",
+   "note": "A fall of almost 13 m into Stekkjargjá; the river was probably diverted into the rift in the Middle Ages. Back the same way, or by the river past the church.",
+   "scene": "is-oxararfoss"
+  }
+ ]
+}
