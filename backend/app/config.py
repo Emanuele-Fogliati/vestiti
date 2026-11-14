@@ -59,7 +59,8 @@ class Settings(BaseSettings):
     llm_disable_thinking: bool = True  # Qwen3: append /no_think for fast JSON answers
     # "auto" talks to Ollama's native API when the server is Ollama (needed to raise the
     # context window per request), otherwise to the OpenAI-compatible /v1 API.
-    llm_api: str = "auto"  # auto | ollama | openai
+    llm_api: str = "auto"  # auto | ollama | openai | anthropic (Claude through the official SDK)
+    llm_effort: str = "medium"  # anthropic only: low | medium | high (more = better plans, more cost)
     llm_num_ctx_max: int = 32768  # largest context window we ask Ollama for (long itineraries)
     llm_long_timeout_s: float = 600.0  # cap for reading very long trip descriptions
     # Photos of a garment -> brand, model, kind. Needs a model that sees images:

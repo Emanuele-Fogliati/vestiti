@@ -1,5 +1,5 @@
 import type {
-  PlanProposal, PlanReading, PlanStep, PlanSuggestion,
+  DaysWritten, PlanProposal, PlanReading, PlanStep, PlanSuggestion,
   Airport, Board, FlightOffer, FlightOrder, FlightPrice, LegSaved, Passenger, TripFlights, PlanChoices, StopStatus,
   Trail, TrailCard, TrailWear,
   AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
@@ -162,6 +162,8 @@ export const api = {
 
   /** A sentence (typed or spoken): stops, a region with its proposed route, or a wish with ideas. */
   planUnderstand: (text: string) => req<PlanReading>("POST", "/api/plan/understand", { text }),
+  planDays: (text: string, group: number, wishes: string) =>
+    req<DaysWritten>("POST", "/api/plan/days", { text, group, wishes }),
   planPropose: (body: { area: string; only?: string[]; days?: number | null; month?: number | null; keep?: string[]; drop?: string[]; last?: string[] }) =>
     req<PlanProposal>("POST", "/api/plan/propose", body),
   planSuggest: (q: string) => req<PlanSuggestion[]>("GET", `/api/plan/suggest?q=${encodeURIComponent(q)}`),

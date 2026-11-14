@@ -2,6 +2,8 @@
 
 POST /api/plan/understand  "Patagonia a gennaio, tre settimane" -> what it says, and for a
                            region the proposed route
+POST /api/plan/days      a booked trip's days, one base at a time, written by the model around
+                         the facts of the text and what the traveller wants (checked after)
 POST /api/plan/propose     the route again after a change (days, month, keep, drop)
 POST /api/plan/trip        the stops (proposed, read, or typed as rows) become a trip
 GET  /api/plan/suggest     regions and countries for what is typed
@@ -21,6 +23,7 @@ from app.db import get_db
 from app.deps import current_user, rate_limit
 from app.models import Trip, User
 from app.schemas import MAX_STOPS, StopIn, TripOut, check_date
+from app.llm import dayplan
 from app.services import booked, explore, understand
 
 router = APIRouter(prefix="/api/plan", tags=["plan"])
@@ -30,6 +33,12 @@ MAX_TRIP_DAYS = 120
 
 class TextIn(BaseModel):
     text: str = Field(min_length=2, max_length=50000)
+
+
+class DaysIn(BaseModel):
+    text: str = Field(min_length=2, max_length=50000)
+    group: int = Field(ge=0, le=40)
+    wishes: str = Field(default="", max_length=1500)
 
 
 class ProposeIn(BaseModel):
@@ -88,7 +97,9 @@ def _geocoded(text: str) -> list[dict]:
 def understand_text(body: TextIn, _user: User = Depends(current_user)):
     b = booked.read(body.text)  # flights, car, nights and addresses: a trip already booked
     if b is not None:
-        return {**b, "proposal": None, "ideas": []}
+        draft = dayplan.rules_days(b)
+        return {**b, "proposal": None, "ideas": [], "plan_days": draft["days"], "weather": draft["weather"],
+                "groups": len(dayplan.groups(b)), "lang": dayplan.lang_of(body.text)}
     r = understand.read(body.text)
     if r["mode"] == "open":
         found = _geocoded(body.text)
@@ -107,6 +118,16 @@ def understand_text(body: TextIn, _user: User = Depends(current_user)):
         out["proposal"] = _proposal(a, r["only"], r["days"], r["month"], r.get("keep"),
                                     last=r.get("last"))
     return out
+
+
+@router.post("/days", dependencies=[Depends(plan_limit)])
+def write_days(body: DaysIn, _user: User = Depends(current_user)):
+    b = booked.read(body.text)
+    if b is None:
+        raise HTTPException(422, "Not a booked trip: write where you sleep or your flights and times")
+    if body.group >= len(dayplan.groups(b)):
+        raise HTTPException(422, "No such part of the trip")
+    return dayplan.ai_days(b, body.group, body.wishes, dayplan.lang_of(body.text + " " + body.wishes))
 
 
 @router.post("/propose")
