@@ -6,6 +6,7 @@ _DB = os.path.join(tempfile.mkdtemp(), "test.db")
 os.environ.update({
     "DATABASE_URL": f"sqlite:///{_DB}",
     "WEATHER_ENABLED": "false",
+    "ROADS_ENABLED": "false",
     "LLM_ENABLED": "false",
     "SECRET_KEY": "test-secret-key-not-for-production-use-0123456789",
     "AUTH_RATE_LIMIT_PER_MINUTE": "1000",

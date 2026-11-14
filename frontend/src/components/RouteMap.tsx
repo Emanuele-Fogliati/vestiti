@@ -1,4 +1,5 @@
 import { maplibregl } from "../lib/maplibre";
+import { api } from "../lib/api";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PlaceCard } from "./PlaceCard";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
@@ -71,6 +72,17 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
         paint: { "line-color": c.halo, "line-width": 6 } });
       map.addLayer({ id: "route", type: "line", source: "route", layout: { "line-join": "round", "line-cap": "round" },
         paint: { "line-color": c.ink, "line-width": 2.5, "line-dasharray": [2, 1.6] } });
+      // then the real way (Manu, 2026-11-14): along the roads like Google Maps, flights as arcs
+      if (pts.length > 1 && pts.length <= 40) {
+        api.roads(pts.map((s) => [s.latitude, s.longitude])).then(({ legs }) => {
+          if (!map.getSource("route")) return;
+          const feats = legs.map((l) => ({ type: "Feature" as const, properties: { air: l.mode === "air" ? 1 : 0 },
+            geometry: { type: "LineString" as const, coordinates: l.line } }));
+          (map.getSource("route") as maplibregl.GeoJSONSource).setData({ type: "FeatureCollection", features: feats });
+          map.setPaintProperty("route", "line-dasharray", ["case", ["==", ["get", "air"], 1], ["literal", [2, 1.6]], ["literal", [1, 0]]]);
+          map.setPaintProperty("route", "line-width", ["case", ["==", ["get", "air"], 1], 2, 3.2]);
+        }).catch(() => { /* keep the straight lines */ });
+      }
       map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places, { boost }) });
       for (const l of placeLayers(c)) map.addLayer(l);
       // stops on top: numbered pins, same order as the list below

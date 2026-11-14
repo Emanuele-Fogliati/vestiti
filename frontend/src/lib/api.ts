@@ -1,7 +1,7 @@
 import type {
   DaysWritten, PlanProposal, PlanReading, PlanStep, PlanSuggestion,
   Airport, Board, FlightOffer, FlightOrder, FlightPrice, LegSaved, Passenger, TripFlights, PlanChoices, StopStatus,
-  Trail, TrailCard, TrailDot, TrailWear,
+  RoadLeg, Trail, TrailCard, TrailDot, TrailWear,
   AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
 } from "./types";
 
@@ -104,6 +104,8 @@ export const api = {
     return req<{ trails: TrailCard[]; countries: string[] }>("GET", `/api/trails${p.size ? `?${p}` : ""}`);
   },
   trail: (id: string) => req<Trail>("GET", `/api/trails/${encodeURIComponent(id)}`),
+  roads: (pts: [number, number][]) => req<{ legs: RoadLeg[]; attribution: string }>("GET",
+    `/api/roads?pts=${encodeURIComponent(pts.map(([la, lo]) => `${la.toFixed(5)},${lo.toFixed(5)}`).join(";"))}`),
   trailDots: () => req<{ fields: string[]; trails: TrailDot[] }>("GET", "/api/trails/dots"),
   trailCard: (id: string) => req<TrailCard>("GET", `/api/trails/${encodeURIComponent(id)}/card`),
   trailWear: (id: string, month: number) => req<TrailWear>("GET", `/api/trails/${encodeURIComponent(id)}/wear?month=${month}`),

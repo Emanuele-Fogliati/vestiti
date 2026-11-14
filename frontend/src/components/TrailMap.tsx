@@ -1,6 +1,7 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
 import { baseStyle, mapColors } from "../lib/worldmap";
+import { addContours } from "../lib/contours";
 import type { TrailPoint } from "../lib/types";
 
 /** One trail on the map: its path, every other footpath around it (so you see the junctions),
@@ -20,11 +21,28 @@ export default function TrailMap({ line, points, focus, onFocus }: {
     let map: maplibregl.Map;
     try {
       const style = baseStyle(c, { globe: false });
-      // footpaths and tracks: the walking network around the trail
+      // a topographic map, as the trekking sites have: contour lines with their heights...
+      addContours(style, "#8A6A45");
+      // ...footpaths and tracks, the walking network around the trail (junctions, other ways)...
       style.layers.push({
         id: "paths", type: "line", source: "omt", "source-layer": "transportation", minzoom: 11,
         filter: ["in", ["get", "class"], ["literal", ["path", "track"]]],
-        paint: { "line-color": c.line, "line-width": 1, "line-dasharray": [2, 2], "line-opacity": 0.8 },
+        paint: { "line-color": "#6B4E2E", "line-width": ["interpolate", ["linear"], ["zoom"], 11, 0.8, 15, 1.8],
+          "line-dasharray": [2, 1.5], "line-opacity": 0.85 },
+      }, {
+        id: "path-names", type: "symbol", source: "omt", "source-layer": "transportation_name", minzoom: 13,
+        filter: ["in", ["get", "class"], ["literal", ["path", "track"]]],
+        layout: { "symbol-placement": "line", "text-field": ["coalesce", ["get", "name:en"], ["get", "name"]],
+          "text-font": ["Noto Sans Italic"], "text-size": 10.5 },
+        paint: { "text-color": "#6B4E2E", "text-halo-color": "#FFFFFF", "text-halo-width": 1.2 },
+      }, {
+        // ...and the huts, shelters, springs and viewpoints on the way
+        id: "trek-pois", type: "symbol", source: "omt", "source-layer": "poi", minzoom: 12,
+        filter: ["in", ["get", "subclass"], ["literal", ["alpine_hut", "wilderness_hut", "shelter", "drinking_water", "spring", "viewpoint", "camp_site", "information"]]],
+        layout: { "text-field": ["concat", ["match", ["get", "subclass"], "viewpoint", "◉ ", "drinking_water", "◦ ", "spring", "◦ ", "camp_site", "△ ", "■ "],
+            ["coalesce", ["get", "name:en"], ["get", "name"], ""]],
+          "text-font": ["Noto Sans Regular"], "text-size": 11, "text-anchor": "left", "text-offset": [0.3, 0] },
+        paint: { "text-color": c.ink, "text-halo-color": "#FFFFFF", "text-halo-width": 1.4 },
       });
       map = new maplibregl.Map({
         container: el, style, bounds: bounds(coords),
