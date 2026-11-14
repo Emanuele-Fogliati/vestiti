@@ -134,7 +134,7 @@ def test_without_a_model_the_draft_is_the_answer():
 def test_api_days(client):
     client.post("/api/auth/guest")
     j = client.post("/api/plan/understand", json={"text": MANU}).json()
-    assert j["groups"] == 3 and j["lang"] == "Italian" and len(j["plan_days"]) == 15 and j["days"] == 15
+    assert j["groups"] == 3 and j["lang"] == "English" and len(j["plan_days"]) == 15 and j["days"] == 15
     r = client.post("/api/plan/days", json={"text": MANU, "group": 2, "wishes": "niente barche"})
     assert r.status_code == 200, r.text
     assert r.json()["days"][0]["date"] == "2027-01-26"
@@ -184,3 +184,16 @@ def test_models_slips_are_mended():
     assert dayplan.ai_days(R, 2, "niente barche", "Italian", client=fake)["weather"][0]["area"] == "Ushuaia"
     d22 = _day(dayplan.rules_days(R), "2027-01-22")["rows"]
     assert next(r for r in d22 if r["what"].startswith("Mirador de los Cóndores"))["at"] == "~17:00"
+
+
+def test_api_writes_in_english_whatever_the_text(client, monkeypatch):
+    client.post("/api/auth/guest")
+    seen = {}
+
+    def fake(reading, group, wishes, lang):
+        seen["lang"] = lang
+        return {"group": group, "groups": 3, "days": [], "weather": [], "source": "rules", "model": None}
+
+    monkeypatch.setattr(dayplan, "ai_days", fake)
+    assert client.post("/api/plan/days", json={"text": MANU, "group": 0, "wishes": "camminiamo piano"}).status_code == 200
+    assert seen["lang"] == "English"
