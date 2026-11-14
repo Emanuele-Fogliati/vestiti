@@ -14,7 +14,7 @@
 body{background:var(--bg)}
 
 /* top bar: paper, logo left, plain links */
-.top{background:var(--bg);border-bottom:1.5px solid var(--ink)}
+.top{background:var(--bg);border-bottom:1.5px solid var(--ink);--logo-globe:#111111;--logo-teeth:#FFD60A}
 .top .free{display:none}
 
 /* white cards with an ink line */
@@ -48,7 +48,7 @@ body{background:var(--bg)}
    The first time per visit: the universe, then the Earth flying in while it spins (Landing.tsx). */
 body.home-page{overflow:hidden;padding-bottom:0}
 body.home-page footer,body.home-page .mnav{display:none}
-body.home-page .top{position:fixed;left:0;right:0;top:0;z-index:30;background:linear-gradient(rgba(42,68,104,.85),rgba(42,68,104,0));border:0;--top-ink:#FFFFFF;--top-ink-2:rgba(255,255,255,.8);color:#FFFFFF;transition:opacity .6s}
+body.home-page .top{--logo-globe:#FFD60A;--logo-teeth:transparent;position:fixed;left:0;right:0;top:0;z-index:30;background:linear-gradient(rgba(42,68,104,.85),rgba(42,68,104,0));border:0;--top-ink:#FFFFFF;--top-ink-2:rgba(255,255,255,.8);color:#FFFFFF;transition:opacity .6s}
 body.home-page .top :is(a,button,.logo){color:#FFFFFF}
 body.home-page .top .nav a.active{background:transparent}
 body.home-intro .top{opacity:0;pointer-events:none}
