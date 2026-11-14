@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V124Q20 114 44 120Q70 126 96 130H220Q250 126 276 128Q290 126 300 130V200Z" fill="var(--il-far)"/>
+<path d="M126 150V132M162 150V110M206 150V128" stroke="var(--il-near)" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M165 30Q157 31 155 44Q153 58 146 70Q136 86 140 102Q146 118 165 118Q184 118 190 102Q194 86 184 70Q177 58 175 44Q173 31 165 30Z" fill="var(--il-obj)"/>
+<path d="M166 31L164 18" stroke="var(--il-near)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M166 24Q174 12 188 14Q186 28 172 32Q168 30 166 24Z" fill="var(--il-leaf)"/>
+<path d="M168 28Q176 22 184 17" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.5"/>
+<path d="M60 96Q60 64 88 56Q104 52 116 60Q134 72 132 100Q130 130 104 136Q72 136 62 116Q60 106 60 96Z" fill="var(--il-acc)"/>
+<path d="M76 66Q70 90 76 120M90 58Q84 88 88 128M104 56Q100 80 102 100" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M90 110Q90 80 116 74Q144 70 156 94Q164 118 148 136Q134 148 114 144Q92 138 90 110Z" fill="var(--il-water)"/>
+<path d="M128 76Q118 96 122 118Q126 134 136 146" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M188 70Q212 64 228 78Q242 94 236 114Q228 136 204 138Q180 138 172 118Q164 96 176 80Q180 72 188 70Z" fill="var(--il-acc)"/>
+<clipPath id="il-nz-cromwell-nec"><path d="M188 70Q212 64 228 78Q242 94 236 114Q228 136 204 138Q180 138 172 118Q164 96 176 80Q180 72 188 70Z"/></clipPath>
+<path d="M214 60Q244 70 246 100Q244 126 222 142Q232 118 228 96Q224 76 214 60Z" fill="var(--il-sun)" clip-path="url(#il-nz-cromwell-nec)"/>
+<path d="M186 74Q196 84 196 104Q196 122 188 134" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 186V144Q10 132 26 136Q34 124 50 130Q60 134 66 142Q80 138 92 146Q110 144 124 150Q140 146 154 150Q170 146 186 150Q200 144 214 148Q232 140 246 146Q256 132 270 134Q284 130 300 138V186Z" fill="var(--il-leaf)"/>
+<path d="M20 186V160H140V186ZM160 186V160H300V186Z" fill="var(--il-mid)"/>
+<path d="M22 166H138M22 172H138M22 178H138M162 166H298M162 172H298M162 178H298M40 160V166M70 166V172M100 172V178M54 178V186M120 160V166M190 160V166M226 166V172M262 172V178M210 178V186M280 160V166" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V184H300V200Z" fill="var(--il-ice)"/>
