@@ -11,7 +11,8 @@ import { useApp } from "../lib/app-context";
 import { MONTH_LONG, MONTHS, today } from "../lib/format";
 import { dated, firstOf, LENGTHS, move, setDays, short, span, totalDays } from "../lib/plan";
 import { useSpeech } from "../lib/speech";
-import type { Place, PlanArea, PlanIdea, PlanReading, PlanStep, PlanSuggestion } from "../lib/types";
+import type { BookedDay, Place, PlanArea, PlanIdea, PlanReading, PlanStep, PlanSuggestion } from "../lib/types";
+import BookedPlan from "./BookedPlan";
 import HourByHour from "./HourByHour";
 import { PlaceSearch } from "./PlaceSearch";
 
@@ -23,7 +24,7 @@ const EXAMPLES = [
   "Somewhere warm by the sea in February, 10 days",
 ];
 
-type Mode = "none" | "region" | "stops" | "open";
+type Mode = "none" | "region" | "stops" | "open" | "booked";
 
 const km = (a: { lat: number; lon: number }, b: { lat: number; lon: number }) => {
   const r = Math.PI / 180, x = (b.lon - a.lon) * r * Math.cos(((a.lat + b.lat) / 2) * r), y = (b.lat - a.lat) * r;
@@ -78,6 +79,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   const [missing, setMissing] = useState<PlanReading["missing"]>([]);
   const [heardText, setHeardText] = useState("");
   const [sugg, setSugg] = useState<PlanSuggestion[]>([]);
+  const [booked, setBooked] = useState<{ timeline: BookedDay[]; end: string; nights: number; days: number } | null>(null);
   const [adding, setAdding] = useState(false);
   const [creating, setCreating] = useState<"" | "dress" | "days">("");
   const resultRef = useRef<HTMLDivElement>(null);
@@ -109,7 +111,12 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
       const r = await api.planUnderstand(t.trim());
       setHeardText(r.text);
       setMonth(r.month); setStart(r.start_date ?? ""); setHome(r.home); setMissing(r.missing);
-      if (r.mode === "region" && r.proposal) {
+      setBooked(null);
+      if (r.mode === "booked" && r.timeline) {
+        // a trip already booked: its days as written, the beds as stops
+        setMode("booked"); setSteps(r.stops); setTarget(null); setHeardText("");
+        setBooked({ timeline: r.timeline, end: r.end_date ?? "", nights: r.nights ?? 0, days: r.days ?? r.timeline.length });
+      } else if (r.mode === "region" && r.proposal) {
         const p = r.proposal;
         setMode("region"); setArea(p.area); setOnly(p.only); setSteps(p.stops); setMore(p.more);
         setRoute(p.route); setBest(p.best_months); setTarget(r.days ?? p.days); setKeep(r.keep ?? []); setEndWith(r.last ?? []);
@@ -199,7 +206,8 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   const legs = useMemo(() => steps.map((s, i) => (i ? guessLeg({ lat: steps[i - 1].lat, lon: steps[i - 1].lon, country: steps[i - 1].country }, s) : null)), [steps]);
   const estimate = !start && !steps.some((s) => s.start_date);
   const last = dates[dates.length - 1];
-  const title = mode === "region" && area ? area.name : mode === "open" ? "Where could that be?" : "Your stops";
+  const title = mode === "region" && area ? area.name : mode === "open" ? "Where could that be?"
+    : mode === "booked" ? steps.filter((s) => s.kind !== "transit").map((s) => s.name).join(" · ") : "Your stops";
 
   return (
     <div className={`starter${compact ? " compact" : ""}`}>
@@ -258,13 +266,18 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
           {heardText && <p className="plan-heard">“{heardText}”</p>}
           <header className="plan-head">
             <h2>{title}</h2>
-            {steps.length > 0 && last && (
+            {mode === "booked" && booked && (
+              <p>{booked.days} days · {short(start)} – {short(booked.end)} · {booked.nights} nights booked</p>
+            )}
+            {mode !== "booked" && steps.length > 0 && last && (
               <p>{total} days · {estimate ? "≈ " : ""}{short(dates[0]!.start)} – {short(last.end)}</p>
             )}
-            {steps.length > 0 && !last && <p>{total} days · dates to choose</p>}
+            {mode !== "booked" && steps.length > 0 && !last && <p>{total} days · dates to choose</p>}
           </header>
 
-          {(mode === "region" || mode === "open" || missing.includes("when") || mode === "stops") && (
+          {mode === "booked" && booked && <BookedPlan steps={steps} timeline={booked.timeline} />}
+
+          {(mode === "region" || mode === "open" || mode === "stops") && (
             <div className="plan-q">
               <div className={`pq${missing.includes("when") ? " ask-me" : ""}`}>
                 <span className="pq-l">When do you go?</span>
@@ -310,7 +323,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
             </div>
           )}
 
-          {mode !== "open" && (
+          {mode !== "open" && mode !== "booked" && (
             <ol className="steps">
               {steps.map((s, i) => {
                 const d = dates[i];
@@ -406,7 +419,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
                 {creating === "dress" ? <span className="spin" /> : DRESS_ME_LABEL}</button>
               <button type="button" className="btn ghost" onClick={() => create("days")} disabled={!!creating}>
                 {creating === "days" ? <span className="spin" /> : "Plan the days first"}</button>
-              <span className="small muted">{estimate ? "Dates are a guess until you pick them. " : ""}Flights and beds later, if you want.</span>
+              <span className="small muted">{mode === "booked" ? "Your flights, car and beds stay as you wrote them." : `${estimate ? "Dates are a guess until you pick them. " : ""}Flights and beds later, if you want.`}</span>
             </div>
           )}
           {mode === "region" && <p className="small muted">The order follows what organised trips do; the days are what they give each place. Change anything.</p>}

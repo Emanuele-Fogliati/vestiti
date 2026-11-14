@@ -21,7 +21,7 @@ from app.db import get_db
 from app.deps import current_user, rate_limit
 from app.models import Trip, User
 from app.schemas import MAX_STOPS, StopIn, TripOut, check_date
-from app.services import explore, understand
+from app.services import booked, explore, understand
 
 router = APIRouter(prefix="/api/plan", tags=["plan"])
 plan_limit = rate_limit("plan", "ai_rate_limit_per_minute")
@@ -29,7 +29,7 @@ MAX_TRIP_DAYS = 120
 
 
 class TextIn(BaseModel):
-    text: str = Field(min_length=2, max_length=1500)
+    text: str = Field(min_length=2, max_length=50000)
 
 
 class ProposeIn(BaseModel):
@@ -86,6 +86,9 @@ def _geocoded(text: str) -> list[dict]:
 
 @router.post("/understand", dependencies=[Depends(plan_limit)])
 def understand_text(body: TextIn, _user: User = Depends(current_user)):
+    b = booked.read(body.text)  # flights, car, nights and addresses: a trip already booked
+    if b is not None:
+        return {**b, "proposal": None, "ideas": []}
     r = understand.read(body.text)
     if r["mode"] == "open":
         found = _geocoded(body.text)

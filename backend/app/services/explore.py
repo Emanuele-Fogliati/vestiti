@@ -750,7 +750,17 @@ def _guide_days(stops: list[dict], month: int | None = None) -> None:
         elsewhere = {_norm(o["name"]) for k, o in enumerate(stops) if k != i and (found[k] is None or found[k].id != a.id)}
         elsewhere |= {_norm(n) for k, b in enumerate(found) if b and b.id != a.id and stops[k]["days"] >= 2 for n in b.names}
         used = done.setdefault(a.id, set())
-        todo = [it for it in a.items if it.id not in used and (not month or not it.months or month in it.months)
+        items = list(a.items)
+        # "da qui si va e si torna ogni giorno da Torres del Paine" (a booked trip, services.booked):
+        # that area's own days come first, and the base's tour of it goes (you drive there yourself)
+        trips = [area_for(n, s.get("country"), s["lat"], s["lon"]) for n in s.get("day_trips", ())]
+        trips = [t for t in trips if t and t.id != a.id]
+        if trips:
+            names = {_norm(n) for t in trips for n in t.names}
+            items = [it for t in trips for it in t.items] + [
+                it for it in a.items if not any(_norm(n) in names for n in it.sights)]
+        late = (s.get("arrive_at") or "") >= "17:00"  # landing at 18:40: the evening only
+        todo = [it for it in items if it.id not in used and (not month or not it.months or month in it.months)
                 and not (it.sights and all(n in seen for n in it.sights))
                 and not any(_norm(n) in elsewhere for n in it.sights)]
         plan: list[dict] = []
@@ -768,10 +778,15 @@ def _guide_days(stops: list[dict], month: int | None = None) -> None:
 
         for d in range(1, s["days"] + 1):
             if d == 1 and (i > 0 or s["days"] > 1):
-                if s["days"] == 1:  # one night: the thing not to miss, if it fits in the half day
+                if s.get("kind") == "transit":  # hours between two flights: something close by
+                    first = next((it for it in todo if it.arrive), None) or next(
+                        (it for it in todo if it.length == "short"), None)
+                elif s["days"] == 1:  # one night: the thing not to miss, if it fits in the half day
                     first = next((it for it in todo if it.length != "full"), None)
                 else:
-                    first = next((it for it in todo if it.arrive), None)
+                    # the evening you arrive stays in town: not the park two hours away
+                    first = next((it for it in todo if it.arrive and not (late and it.length != "short")
+                                  and (not trips or it in a.items)), None)
                 plan.append(day(1, "arrive", [first] if first else [], s.get("way")))
                 continue
             left = [it for it in todo if it.id not in used]

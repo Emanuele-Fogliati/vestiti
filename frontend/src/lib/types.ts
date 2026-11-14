@@ -168,6 +168,8 @@ export interface FlightOrder { order_id: string; booking_reference: string | nul
 export interface PlanStep {
   key: string; place_id?: string | null; name: string; country: string | null; lat: number; lon: number;
   kind?: string | null; days: number; start_date?: string | null; fixed_dates?: boolean;
+  /** a booked trip: the bed, its address, the places you go to and back from, a stop between flights */
+  lodging?: string | null; address?: string | null; day_trips?: string[]; transit?: string; arrive_at?: string;
   elevation_m?: number | null; activities?: Activity[] | null; sights: string[];
   /** What to do each day there, from what organised trips do (several things a day). */
   plan?: PlanDay[]; also?: string[];
@@ -186,8 +188,21 @@ export interface PlanProposal {
   best_months: number[]; days: number; suggested_start: string;
 }
 export interface PlanIdea { id: string; title: string; days: number; countries: string[]; weather: string; guide: string | null }
+/** A move of a booked trip (services/booked.py): a flight, the car, a taxi, with its times. */
+export interface BookedLeg {
+  date: string | null; mode: string; from: string | null; from_airport: string | null; to: string | null;
+  to_airport: string | null; dep: string | null; arr: string | null; arr_date: string | null; arr_part: string | null;
+  via: string[]; stops: { name: string; when: string | null }[]; notes: string[];
+}
+/** One day of a booked trip: its moves, the stop it belongs to and where you sleep. */
+export interface BookedDay {
+  n: number; date: string; stop: number | null; stop_day: number | null; legs: BookedLeg[];
+  sleep: { name: string | null; address: string | null; town: string } | { in_the_air: true } | null;
+}
 export interface PlanReading {
-  text: string; mode: "stops" | "region" | "open"; area: PlanArea | null; only: string[]; month: number | null;
+  text: string; mode: "stops" | "region" | "open" | "booked";
+  /** booked: every move and every day, the last day, the nights booked */
+  legs?: BookedLeg[]; timeline?: BookedDay[]; end_date?: string; nights?: number; area: PlanArea | null; only: string[]; month: number | null;
   start_date: string | null; start_part?: string; days: number | null; stops: PlanStep[];
   home: { name: string; country: string; lat: number; lon: number } | null; wishes: string[];
   missing: ("where" | "when" | "how_long")[]; keep?: string[]; last?: string[]; proposal: PlanProposal | null; ideas: PlanIdea[];
