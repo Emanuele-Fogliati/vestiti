@@ -1,0 +1,106 @@
+{
+ "id": "nz-paparoa-track",
+ "country": "NZ",
+ "name": "Paparoa Track",
+ "base": "Punakaiki",
+ "region": "Paparoa National Park, West Coast",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  16,
+  20
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 55,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/paparoa-national-park/things-to-do/tracks/paparoa-track/"
+ },
+ "why": "Up a gold miners' track onto the tops of the Paparoa Range, a night at Moonlight Tops Hut above the Tasman Sea, then down through limestone and nīkau palms in the Pororari River gorge.",
+ "book": "Ces Clark, Moonlight Tops and Pororari huts must be booked; there are no campsites. The start, Smoke-ho car park, is at the end of Blackball Road, 8 km north of Blackball (no camping there); shuttles serve both ends. Mountain bikers share the track.",
+ "water": "Huts have a water supply, untreated: boil it before drinking.",
+ "dangers": [
+  "About 6,000 mm of rain a year; heavy rain, snow, ice, fog and strong wind are possible on the exposed tops at any time.",
+  "The Pororari valley can become impassable in very heavy rain, with landslide and treefall risk: wait at Pororari Hut.",
+  "Mountain bikers use the same track: stay alert, especially on descents.",
+  "Cars have been broken into at the Smoke-ho, Waikori Road and Pororari car parks."
+ ],
+ "turnaround": "If the weather becomes severe on the tops, stay in the hut or turn back to the last one until it improves (DOC).",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/paparoa-national-park/things-to-do/tracks/paparoa-track/",
+  "https://www.openstreetmap.org/relation/10462885"
+ ],
+ "osm": 10462885,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Smoke-ho car park",
+   "lat": -42.3375,
+   "lon": 171.39819,
+   "role": "start",
+   "note": "End of Blackball Road. The rough historic Croesus Track climbs through podocarp and beech forest."
+  },
+  {
+   "id": "ces-clark-hut",
+   "name": "Ces Clark Hut",
+   "lat": -42.29383,
+   "lon": 171.39182,
+   "role": "point",
+   "note": "On the bushline after 10.3 km, past the historic Croesus Top Hut; on a clear day views to Lake Brunner and Aoraki."
+  },
+  {
+   "id": "moonlight-tops-hut",
+   "name": "Moonlight Tops Hut",
+   "lat": -42.2416,
+   "lon": 171.40532,
+   "role": "point",
+   "note": "First night after 20 km, most of the last part along the open ridge; sunsets over the Tasman Sea.",
+   "night": true
+  },
+  {
+   "id": "pororari-hut",
+   "name": "Pororari Hut",
+   "lat": -42.17057,
+   "lon": 171.42514,
+   "role": "point",
+   "note": "Second night after 19.1 km along the escarpment and down through ancient forest; the Lone Hand rock is across the valley.",
+   "night": true
+  },
+  {
+   "id": "pororari-gorge",
+   "name": "Pororari River gorge",
+   "lat": -42.11341,
+   "lon": 171.35144,
+   "role": "point",
+   "note": "The track sidles the limestone gorge among beech, northern rātā and nīkau palms."
+  },
+  {
+   "id": "goal",
+   "name": "Pororari River car park, Punakaiki",
+   "lat": -42.10699,
+   "lon": 171.33981,
+   "role": "goal",
+   "note": "On SH6, 1.2 km north of the Pancake Rocks."
+  }
+ ]
+}

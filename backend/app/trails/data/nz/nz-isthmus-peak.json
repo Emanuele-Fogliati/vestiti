@@ -1,0 +1,70 @@
+{
+ "id": "nz-isthmus-peak",
+ "country": "NZ",
+ "name": "Isthmus Peak Track",
+ "base": "Wānaka",
+ "region": "Wānaka area, Otago",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  5,
+  7
+ ],
+ "start_by": "07:30",
+ "published": {
+  "km": 16,
+  "gain_m": 1000,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/isthmus-peak-track/"
+ },
+ "why": "A steep climb to a skyline ridge on the narrow neck between Lake Hāwea and Lake Wānaka, with both lakes below and the Southern Alps behind.",
+ "book": "Free. Closed for fawning from 20 November to 20 December. The car park is beside SH6 north of Lake Hāwea township, 30 minutes from Wānaka: take care parking and crossing the highway. The track crosses private farmland.",
+ "water": "No water sources on the track: carry plenty.",
+ "dangers": [
+  "Steep, rocky switchbacks with false summits; the top only shows once you reach the ridge.",
+  "Weather changes fast: hypothermia is a risk even in summer, and snow or low cloud can bring whiteout.",
+  "Avalanches can cross the track, usually from May into November.",
+  "Safari hunting on Glen Dene Station, especially in the March-May roar: stay visible and on the track."
+ ],
+ "turnaround": "If you are not on the skyline ridge by 13:00, or cloud covers it, turn back.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/isthmus-peak-track/",
+  "https://www.openstreetmap.org/way/154906166"
+ ],
+ "router": "local",
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 4,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Isthmus Peak Track car park, Lake Hāwea",
+   "lat": -44.46639,
+   "lon": 169.24764,
+   "role": "start",
+   "note": "Beside SH6 on the Lake Hāwea shore. Cross the highway; the track goes through forest and farmland to a 4WD track."
+  },
+  {
+   "id": "goal",
+   "name": "Isthmus Peak summit",
+   "lat": -44.46271,
+   "lon": 169.20022,
+   "role": "goal",
+   "note": "1,385 m. Lake Wānaka to the west, Lake Hāwea to the east. Return the same way: there is no public access beyond."
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "id": "nz-queen-charlotte-track",
+ "country": "NZ",
+ "name": "Queen Charlotte Track",
+ "base": "Picton",
+ "region": "Queen Charlotte Sound / Tōtaranui, Marlborough Sounds",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  25,
+  25
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 73.5,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/marlborough/places/queen-charlotte-sound-totaranui-area/things-to-do/tracks/queen-charlotte-track/"
+ },
+ "why": "Four days along the bays and ridges between Queen Charlotte and Kenepuru sounds, from Cook's anchorage at Ship Cove to Anakiwa, with lodges or campsites each night.",
+ "book": "Boat from Picton to Meretoto/Ship Cove (no road); boats can carry your pack between lodges. A Queen Charlotte Track Land Cooperative pass is needed for the private land from Kenepuru Saddle to Anakiwa. DOC campsites must be booked all year; lodges book direct. Bus or boat back from Anakiwa.",
+ "water": "Taps at DOC campsites, untreated: boil, filter or treat. Some ridge sections are dry in summer: carry water for the day.",
+ "dangers": [
+  "Tight blind corners shared with mountain bikers, steep drops beside the track and slippery clay when wet.",
+  "Camp Bay to Torea Saddle is long (24.5 km, about 8 h) on an exposed ridge.",
+  "Wasps in late summer and autumn: carry antihistamine if allergic.",
+  "Fallen trees and slips after storms; the track can close in extreme drought."
+ ],
+ "turnaround": "Each road saddle (Kenepuru, Torea, Te Mahia) is an exit: if you are behind schedule or the weather turns, finish the day there and take a road or boat transfer.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/marlborough/places/queen-charlotte-sound-totaranui-area/things-to-do/tracks/queen-charlotte-track/",
+  "https://www.doc.govt.nz/globalassets/documents/parks-and-recreation/places-to-visit/nelson-marlborough/queen-charlotte-track-brochure.pdf",
+  "https://www.openstreetmap.org/relation/8524520"
+ ],
+ "osm": 8524520,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 2,
+  "relax": 2,
+  "history": 4,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Meretoto / Ship Cove",
+   "lat": -41.09461,
+   "lon": 174.23448,
+   "role": "start",
+   "note": "Boat landing only: a historic reserve of some of the earliest meetings of Māori and Europeans, Cook among them. The track climbs to a saddle lookout over the outer and inner sound."
+  },
+  {
+   "id": "endeavour-inlet",
+   "name": "Endeavour Inlet",
+   "lat": -41.09256,
+   "lon": 174.1878,
+   "role": "point",
+   "note": "First night at the head of the inlet (15 km, 5 h): lodges and a campsite. Panels recall the 1880s antimony mines.",
+   "night": true
+  },
+  {
+   "id": "camp-bay",
+   "name": "Camp Bay",
+   "lat": -41.1282,
+   "lon": 174.14698,
+   "role": "point",
+   "note": "Second night: DOC campsite and lodges at Punga Cove, after 11.5 km round Big Bay.",
+   "night": true
+  },
+  {
+   "id": "kenepuru-saddle",
+   "name": "Kenepuru Saddle",
+   "lat": -41.12957,
+   "lon": 174.14258,
+   "role": "point",
+   "note": "Road access and the start of the ridge: from here views over both Queen Charlotte and Kenepuru sounds. Private land pass needed."
+  },
+  {
+   "id": "torea-saddle",
+   "name": "Torea Saddle",
+   "lat": -41.20771,
+   "lon": 174.03461,
+   "role": "point",
+   "note": "Third night after the longest day (24.5 km): Cowshed Bay campsite or lodges at Portage below the saddle.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Anakiwa",
+   "lat": -41.26399,
+   "lon": 173.9206,
+   "role": "goal",
+   "note": "Over Te Mahia Saddle and old bridle paths past Davies Bay to the jetty by the Outward Bound school; bus or boat to Picton."
+  }
+ ]
+}

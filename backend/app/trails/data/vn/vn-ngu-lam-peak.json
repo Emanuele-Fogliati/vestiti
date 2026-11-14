@@ -1,0 +1,74 @@
+{
+ "id": "vn-ngu-lam-peak",
+ "country": "VN",
+ "name": "Cat Ba: Ngu Lam peak (Đỉnh Ngự Lâm)",
+ "base": "Cat Ba",
+ "region": "Cat Ba National Park, Cat Ba Island, Hai Phong",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "A short, steep climb through the Kim Giao forest to an observation tower above the karst hills in the middle of Cat Ba Island.",
+ "book": "Pay the small park entrance fee at the national park headquarters on the Hung Son road, in the middle of the island north-west of Cat Ba town (motorbike or taxi). No guide is needed for this trail.",
+ "water": "No shops on the trail: carry 1-1.5 litres; drinks are sold at the headquarters.",
+ "dangers": [
+  "Rock and stone steps are slippery and muddy after rain.",
+  "Heat and humidity from May to September: start early.",
+  "The top of the watchtower is exposed: hold the rail, and stay off it in a thunderstorm."
+ ],
+ "turnaround": "In rain or thunder, stop at the Kim Giao viewpoint and go back down.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Cat_Ba",
+  "https://en.baobacninhtv.vn/cat-ba-national-park-offers-range-of-trekking-options.bbg",
+  "https://www.openstreetmap.org/node/994065787"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Cat Ba National Park gate and headquarters",
+   "lat": 20.79368,
+   "lon": 106.99045,
+   "role": "start",
+   "note": "Ticket office, information board and a small café by the Hung Son road. The trail heads east past the botanical garden into the forest."
+  },
+  {
+   "id": "kim-giao",
+   "name": "Kim Giao viewpoint",
+   "lat": 20.79469,
+   "lon": 106.99743,
+   "role": "point",
+   "note": "Stone benches in the Kim Giao forest, named after its native podocarp trees. The last stretch to Ngu Lam is the steepest."
+  },
+  {
+   "id": "goal",
+   "name": "Ngu Lam peak watchtower",
+   "lat": 20.79437,
+   "lon": 106.99931,
+   "role": "goal",
+   "note": "About 220 m. An observation tower over the forested karst hills of the island; a good lunch stop. Return the same way."
+  }
+ ]
+}

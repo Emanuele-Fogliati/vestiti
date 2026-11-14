@@ -1,0 +1,69 @@
+{
+ "id": "nz-key-summit",
+ "country": "NZ",
+ "name": "Key Summit Track",
+ "base": "Te Anau",
+ "region": "Fiordland National Park, Milford Road",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  3,
+  3
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 6.8,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/routeburn-track-key-summit-track/"
+ },
+ "why": "An hour up the Routeburn Track from the Milford Road and a short climb to alpine tarns and bogs, with views over the Hollyford Valley to the Humboldt and Darran Mountains.",
+ "book": "Free, no booking for a day walk. The Divide car park is about 85 km from Te Anau on the Milford Road (SH94).",
+ "water": "Carry water for the walk.",
+ "dangers": [
+  "Fiordland weather: heavy rain, wind and cold arrive fast; in cloud there is no view from the top.",
+  "Boardwalks and rock can be slippery when wet."
+ ],
+ "turnaround": "If Key Summit is in cloud at the turn-off, skip the last 20 minutes: there will be nothing to see.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/routeburn-track-key-summit-track/",
+  "https://www.openstreetmap.org/relation/6207460"
+ ],
+ "router": "local",
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "The Divide",
+   "lat": -44.82484,
+   "lon": 168.11756,
+   "role": "start",
+   "note": "Shelter and car park on the Milford Road at 531 m. The first hour follows the Routeburn Track through silver beech."
+  },
+  {
+   "id": "goal",
+   "name": "Key Summit tarns",
+   "lat": -44.8151,
+   "lon": 168.12743,
+   "role": "goal",
+   "note": "918 m. Tarns and bog on an ice-scoured knob; a glacier once overtopped it by 500 m. Return the same way."
+  }
+ ]
+}

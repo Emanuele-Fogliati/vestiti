@@ -1,0 +1,77 @@
+{
+ "id": "nz-cathedral-cove",
+ "country": "NZ",
+ "name": "Mautohe Cathedral Cove Track",
+ "base": "Hahei",
+ "region": "Te Whanganui-o-Hei Marine Reserve, Coromandel",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  9,
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "hours": [
+  2.5,
+  2.5
+ ],
+ "start_by": "08:00",
+ "why": "Along the clifftops above a marine reserve and down to Mares Leg Cove, where a rock arch frames the white stack of Te Hoho.",
+ "book": "Free, no booking. No parking at the Grange Road track entrance: park at the Hahei Visitor Car Park on Hahei Beach Road and walk (30 min each way, included here) or take the shuttle. Boats and kayaks also land at the cove.",
+ "water": "No drinking water on the track or the beach: fill up at the Hahei Visitor Car Park.",
+ "dangers": [
+  "Landslides and rockfall: do not visit during or right after heavy rain, move quickly through the arch, do not sit under the cliffs.",
+  "At high tide or in rough seas the beach and arch can be cut off: go at low tide.",
+  "Unpatrolled beaches with rips.",
+  "Crowded and hot in summer with little shade."
+ ],
+ "turnaround": "If the arch is under water or waves surge through it, stay at Mares Leg Cove and go back.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/coromandel/places/hahei-area/tracks/mautohe-cathedral-cove-walk/",
+  "https://www.openstreetmap.org/relation/18355079"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 2,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hahei Visitor Car Park",
+   "lat": -36.84502,
+   "lon": 175.80433,
+   "role": "start",
+   "note": "Free parking, toilets and a water refill on Hahei Beach Road. Take the shuttle or walk 30 min uphill to the track entrance; little shade."
+  },
+  {
+   "id": "track-entrance",
+   "name": "Grange Road track entrance, Hahei clifftop",
+   "lat": -36.83353,
+   "lon": 175.79922,
+   "role": "point",
+   "note": "Top of Grange Road, a drop-off zone only, with toilets and a lookout over Mercury Bay. A sealed track with steps follows the clifftops."
+  },
+  {
+   "id": "goal",
+   "name": "Mautohe Cathedral Cove arch",
+   "lat": -36.82866,
+   "lon": 175.79035,
+   "role": "goal",
+   "note": "Down the stairs to Mares Leg Cove and the arch through to Te Hoho rock. Ngāti Hei are the guardians here. Return the same way.",
+   "scene": "nz-cathedral-cove"
+  }
+ ]
+}

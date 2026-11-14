@@ -1,0 +1,80 @@
+{
+ "id": "nz-copland-track",
+ "country": "NZ",
+ "name": "Copland Track to Welcome Flat",
+ "base": "Fox Glacier",
+ "region": "Westland Tai Poutini National Park, West Coast",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  14,
+  14
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 36,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/things-to-do/tracks/copland-track-to-welcome-flat-hut/"
+ },
+ "why": "A day up the rātā forest and boulder beds of the Copland valley to natural hot pools facing the Sierra Range, and a hut built on an early 1900s tourist route.",
+ "book": "Book Welcome Flat Hut (31 bunks, warden) or its campsites all year. The car park is off SH6 on the north side of the Karangarua River bridge, 26 km south of Fox Glacier. No camping at the road end.",
+ "water": "Hut tap water is untreated: boil before use. Streams on the way.",
+ "dangers": [
+  "Unbridged streams, Rough Creek first, flood in heavy rain: the track closes at short notice. Use the flood bridge 30-45 min up Rough Creek only to get out.",
+  "Two active landslides with no-stopping zones above Architect Creek.",
+  "Hot pools: keep your head above the water (amoebic meningitis); no soap.",
+  "Kea damage cars and gear at the car park."
+ ],
+ "turnaround": "If Rough Creek is rising at the start, don't go. If heavy rain is forecast at Welcome Flat, stay put: carry extra food for a day's delay.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westland-tai-poutini-national-park/things-to-do/tracks/copland-track-to-welcome-flat-hut/",
+  "https://www.openstreetmap.org/relation/17692450"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 3,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Copland Track car park, Karangarua bridge",
+   "lat": -43.57481,
+   "lon": 169.81172,
+   "role": "start",
+   "note": "Read the closure notices in the shelter, ford Rough Creek if safe, then follow orange triangles between forest and riverbed."
+  },
+  {
+   "id": "architect-creek-hut",
+   "name": "Architect Creek Hut",
+   "lat": -43.61111,
+   "lon": 169.88594,
+   "role": "point",
+   "note": "A 2-bunk hut about halfway. Beyond, the valley narrows and the track climbs past Open Creek and Shiels Creek."
+  },
+  {
+   "id": "goal",
+   "name": "Welcome Flat Hut and hot pools",
+   "lat": -43.63054,
+   "lon": 169.94651,
+   "role": "goal",
+   "note": "18 km and about 7 h in. The natural hot pools, found by the track builders, are a short stroll from the hut with views of the Sierra Range. Return the same way.",
+   "night": true
+  }
+ ]
+}

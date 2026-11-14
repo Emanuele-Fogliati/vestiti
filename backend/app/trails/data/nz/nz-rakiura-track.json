@@ -1,0 +1,90 @@
+{
+ "id": "nz-rakiura-track",
+ "country": "NZ",
+ "name": "Rakiura Track",
+ "base": "Oban",
+ "region": "Rakiura National Park, Stewart Island",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  13,
+  14.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 32,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/southland/places/stewart-island-rakiura/rakiura-national-park/things-to-do/rakiura-track/"
+ },
+ "why": "An island circuit at an easy pace: beaches on the open coast to Port William, then old sawmill tramlines through podocarp forest to the quiet shores of Paterson Inlet, with kiwi calling at night.",
+ "book": "All huts and campsites must be booked, all year. Reach Oban by a 1 hour ferry from Bluff or a 20 minute flight from Invercargill. From Oban it is 5 km by road to Lee Bay (shuttles run) and 2 km back from Fern Gully car park.",
+ "water": "Each campsite has a water supply; treat or boil water before drinking.",
+ "dangers": [
+  "Between Port William and North Arm, mud can rise above boot height for up to 500 m after rain: wear gaiters.",
+  "Strong wind, hail and heavy rain can come at any time of year.",
+  "The creeks at Little River and Māori Beach can be waded only at low tide; at high tide use the track and bridges."
+ ],
+ "turnaround": "After long rain, ask at the Rakiura National Park Visitor Centre in Oban before leaving Port William; if the inland section is too wet, walk back to Lee Bay.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/southland/places/stewart-island-rakiura/rakiura-national-park/things-to-do/rakiura-track/",
+  "https://www.openstreetmap.org/relation/1385146"
+ ],
+ "router": "local",
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lee Bay chain sculpture",
+   "lat": -46.86334,
+   "lon": 168.12242,
+   "role": "start",
+   "note": "The track enters the national park through the giant anchor-chain sculpture at Lee Bay, 5 km from Oban."
+  },
+  {
+   "id": "port-william",
+   "name": "Port William Hut",
+   "lat": -46.83579,
+   "lon": 168.08709,
+   "role": "point",
+   "note": "First night by Magnetic Beach in Port William / Potirepo, after Māori Beach and its old sawmill boiler.",
+   "night": true
+  },
+  {
+   "id": "north-arm",
+   "name": "North Arm Hut",
+   "lat": -46.88299,
+   "lon": 168.01848,
+   "role": "point",
+   "note": "Second night on Paterson Inlet, after 13 km of forest and log-hauler relics from the milling days.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Fern Gully car park",
+   "lat": -46.8937,
+   "lon": 168.105,
+   "role": "goal",
+   "note": "End of the track after Sawdust Bay and Kaipipi Bay on the old Kaipipi Road; Oban is 2 km down the road."
+  }
+ ]
+}

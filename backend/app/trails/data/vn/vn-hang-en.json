@@ -1,0 +1,78 @@
+{
+ "id": "vn-hang-en",
+ "country": "VN",
+ "name": "Hang En cave expedition (Swallow Cave)",
+ "base": "Phong Nha",
+ "region": "Phong Nha-Ke Bang National Park, Quang Tri (formerly Quang Binh)",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "hours": [
+  8,
+  11
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Down through jungle and river crossings to the Doong valley, then a night on a sand beach inside one of the largest caves in the world.",
+ "book": "Only as a guided tour with Oxalis Adventure, the licensed operator: 2 days, ages 16-70, up to 16 guests, with guides, porters and a cook. Fitness test: a 5 km run in 45 minutes. Oxalis counts about 25 km of trekking plus 3 km of caving over the two days. Runs December to August; book months ahead.",
+ "water": "The tour provides filtered, boiled water and all meals. Carry 2 litres for the trek out.",
+ "dangers": [
+  "Many river crossings, knee-deep or more; flash floods after heavy rain close the trek.",
+  "Slippery rock, mud and leeches in the jungle; boulders and darkness inside the cave.",
+  "Heat and humidity from April to August, and a 450 m climb back up to the road on day 2."
+ ],
+ "turnaround": "The guides decide: after heavy rain or with rising rivers the tour is postponed or turned back.",
+ "sources": [
+  "https://oxalisadventure.com/tour/hang-en-cave-adventure/",
+  "https://www.openstreetmap.org/node/6358064546",
+  "https://www.openstreetmap.org/node/4409014092"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 2,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Trailhead on the Ho Chi Minh Road West",
+   "lat": 17.47472,
+   "lon": 106.32151,
+   "role": "start",
+   "note": "The tour van drops you on the jungle road above the Rao Thuong valley. The path drops steeply through forest to the stream."
+  },
+  {
+   "id": "ban-doong",
+   "name": "Ban Doong village",
+   "lat": 17.44973,
+   "lon": 106.31924,
+   "role": "point",
+   "note": "A small Bru-Van Kieu village with stilt houses on the valley floor, cut off from roads. Lunch stop."
+  },
+  {
+   "id": "goal",
+   "name": "Hang En entrance and camp",
+   "lat": 17.43488,
+   "lon": 106.29978,
+   "role": "goal",
+   "night": true,
+   "note": "The river runs into a huge mouth full of swallows. Camp on the sand beach by the underground lake; back the same way on day 2."
+  }
+ ]
+}

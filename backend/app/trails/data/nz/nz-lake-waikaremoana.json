@@ -1,0 +1,107 @@
+{
+ "id": "nz-lake-waikaremoana",
+ "country": "NZ",
+ "name": "Lake Waikaremoana Great Walk",
+ "base": "Wairoa",
+ "region": "Te Urewera, East Coast",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  18.5,
+  21
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 46,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/east-coast/places/te-urewera/things-to-do/tracks/lake-waikaremoana-great-walk/"
+ },
+ "why": "Four days around a forest lake in Te Urewera, the homeland of Ngāi Tūhoe: first a ridge walk along the Panekire Bluff high above the water, then bays, beaches and falls along the shore.",
+ "book": "Huts and campsites must be booked all year (fees per night). The two ends are about 30 km apart by road: book the Tūhoe water taxi (usually Oct-Apr) or a shuttle from Te Urewera Visitor Centre at Te Kura Whenua. SH38 is gravel for about 90 km.",
+ "water": "Hut tap water is untreated: boil, filter or treat it. Panekire Hut tank water can run low in summer.",
+ "dangers": [
+  "About 600 m of steep climb and descent over the Panekire Range, exposed to wind and cloud.",
+  "Cold, snow, strong wind and heavy rain can come at any time of year; the rainforest tracks get muddy.",
+  "Huts have no gas cookers, lighting or toilet paper: carry a stove and fuel."
+ ],
+ "turnaround": "Plan the Panekire Range for a clear day: if it is in cloud and wind, wait at Onepoto or the hut rather than walk the ridge blind.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/east-coast/places/te-urewera/things-to-do/tracks/lake-waikaremoana-great-walk/",
+  "https://www.openstreetmap.org/relation/5987155"
+ ],
+ "osm": 5987155,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 4,
+  "relax": 1,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Onepoto",
+   "lat": -38.80018,
+   "lon": 177.12064,
+   "role": "start",
+   "note": "Start at the Onepoto shelter on SH38, through the site of the old Armed Constabulary redoubt."
+  },
+  {
+   "id": "panekiri-bluff",
+   "name": "Panekiri Bluff",
+   "lat": -38.79007,
+   "lon": 177.08834,
+   "role": "point",
+   "note": "The track tops the bluff and follows the cliff edge, the lake and its arms far below."
+  },
+  {
+   "id": "panekire-hut",
+   "name": "Panekire Hut",
+   "lat": -38.81239,
+   "lon": 177.05169,
+   "role": "point",
+   "note": "First night, 36 bunks on the range past Puketapu Trig (1,180 m), 8.8 km and 4-6 hours from Onepoto.",
+   "night": true
+  },
+  {
+   "id": "waiopaoa-hut",
+   "name": "Waiopaoa Hut",
+   "lat": -38.80959,
+   "lon": 176.99367,
+   "role": "point",
+   "note": "Second night at the mouth of the Waiopaoa inlet, after a steep drop off the range. Korokoro Falls is a 1 hour side trip further on.",
+   "night": true
+  },
+  {
+   "id": "marauiti-hut",
+   "name": "Marauiti Hut",
+   "lat": -38.76616,
+   "lon": 176.99563,
+   "role": "point",
+   "note": "Third night over Whakaneke Ridge; at dusk you may hear kiwi on the Puketukutuku Peninsula.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Hopuruahine Landing",
+   "lat": -38.71673,
+   "lon": 177.05164,
+   "role": "goal",
+   "note": "The northern end, over the Hopuruahine suspension bridge. Water taxi pick-up; the road car park is 2 km away."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "id": "vn-cuc-phuong-ancient-tree",
+ "country": "VN",
+ "name": "Cuc Phuong: the Thousand-Year-Old Tree and Palace Cave",
+ "base": "Ninh Binh",
+ "region": "Cuc Phuong National Park, Ninh Binh",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [11, 12, 1, 2, 3, 4],
+ "hours": [2, 3],
+ "start_by": "08:30",
+ "published": null,
+ "why": "A loop through Vietnam's oldest national park: limestone forest, a cave climbed by steep steps and a giant tree with buttress roots taller than a person.",
+ "book": "Buy the park permit at the headquarters, about 40 km from Ninh Binh (1-2 hours by car or motorbike taxi), then drive on to the park centre at Bong, where the loop starts. Guides can be hired at the park.",
+ "water": "Carry 1.5 litres; drinks and food at the canteen in Bong.",
+ "dangers": [
+  "Slippery limestone and roots after rain; steep stone steps to the cave.",
+  "Leeches in the wet season: long trousers and socks over them.",
+  "Hot and humid from May to September, with heavy rain."
+ ],
+ "turnaround": "Not at the tree 2 hours after leaving Bong, or in heavy rain: go back the way you came.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Cuc_Phuong_National_Park",
+  "https://www.openstreetmap.org/way/152606183",
+  "https://www.openstreetmap.org/node/1995508761"
+ ],
+ "osm_ways": [152606183],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 5, "culture": 0, "relax": 3, "history": 1, "landscape": 3},
+ "points": [
+  {
+   "id": "start",
+   "name": "Bong park centre, Cuc Phuong forest",
+   "lat": 20.34846,
+   "lon": 105.59819,
+   "role": "start",
+   "note": "Guest house, canteen and the information desk in a clearing of the primary forest. The marked trail leaves north into the trees."
+  },
+  {
+   "id": "palace-cave",
+   "name": "Palace Cave (Động Sơn Cung)",
+   "lat": 20.3581,
+   "lon": 105.60076,
+   "role": "point",
+   "note": "A short, steep flight of steps leads up to the cave mouth. Bring a torch to look inside."
+  },
+  {
+   "id": "goal",
+   "name": "Thousand-Year-Old Tree (Cây Chò Ngàn Năm)",
+   "lat": 20.36021,
+   "lon": 105.5987,
+   "role": "goal",
+   "note": "A giant forest tree with huge buttress roots, partly dying of age. The loop returns south to the end of the park road and back to Bong."
+  }
+ ]
+}

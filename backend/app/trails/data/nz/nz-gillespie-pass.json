@@ -1,0 +1,115 @@
+{
+ "id": "nz-gillespie-pass",
+ "country": "NZ",
+ "name": "Gillespie Pass Circuit",
+ "base": "Makarora",
+ "region": "Mount Aspiring National Park, Otago",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  19,
+  23
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 56,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/gillespie-pass-circuit/"
+ },
+ "why": "Up the Young valley, over a 1,600 m snow-grass ridge facing Mount Awful and down to Siberia Hut, with a day trip to Crucible Lake under Mount Alba.",
+ "book": "Book Young and Siberia huts. The Young valley turn-off is 2.5 km north of Makarora on SH6; the circuit ends on Wilkin Road south of Makarora, about 7 km away by SH6, so arrange a lift or leave time for the road. Jet boats can take you across the Makarora or out from Kerin Forks, and planes fly out of Siberia Valley: book them before you go.",
+ "water": "Hut taps are untreated: boil before use. Fill up in the upper Young before the pass: no water until well over it.",
+ "dangers": [
+  "River crossings are the main risk: several people have drowned here. Do not cross the Makarora, Young or Wilkin when high or after rain.",
+  "The Makarora can look clear and still flow too fast to cross.",
+  "Avoid the Young valley in heavy rain: a 2007 landslide dam in the North Branch could burst.",
+  "Snow and avalanche risk on the pass in winter and spring; slippery snow grass on the descent."
+ ],
+ "turnaround": "If rain is forecast at Young Hut or the pass is in cloud, wait in the hut rather than cross; the Young River Link Track avoids the first Makarora crossing.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/gillespie-pass-circuit/",
+  "https://www.doc.govt.nz/documents/parks-and-recreation/tracks-and-walks/otago/gillespie-pass-brochure-web.pdf",
+  "https://www.openstreetmap.org/relation/21446629"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Young valley turn-off, SH6",
+   "lat": -44.19971,
+   "lon": 169.23615,
+   "role": "start",
+   "note": "Cross the stile and follow orange poles to the Young-Makarora confluence; ford the Makarora only if it is low."
+  },
+  {
+   "id": "young-hut",
+   "name": "Young Hut",
+   "lat": -44.17457,
+   "lon": 169.0898,
+   "role": "point",
+   "note": "First night, 20 km and 6-7 h in, at 550 m, past the swing bridge at Young Forks. No camping at the hut.",
+   "night": true
+  },
+  {
+   "id": "gillespie-pass",
+   "name": "Gillespie Pass",
+   "lat": -44.15646,
+   "lon": 169.07085,
+   "role": "point",
+   "note": "The track climbs a snow-grass spur to a 1,600 m ridge with Mount Awful ahead, then drops steeply through snow-grass basins."
+  },
+  {
+   "id": "siberia-hut",
+   "name": "Siberia Hut",
+   "lat": -44.20482,
+   "lon": 169.06167,
+   "role": "point",
+   "note": "Second night at 630 m on the Siberia flats. Crucible Lake under Mount Alba is a day trip: 7 km, 3-4 h from the hut by the DOC brochure.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Wilkin Road, Makarora",
+   "lat": -44.26215,
+   "lon": 169.19693,
+   "role": "goal",
+   "note": "22 km, 7-8 h from Siberia Hut: down Siberia Gorge to the Wilkin by Kerin Forks, along the Wilkin flats, across the Makarora and out by Wilkin Road to SH6."
+  }
+ ],
+ "osm_ways": [
+  577329488,
+  149063586,
+  149063596,
+  149063588,
+  149063607,
+  149063600,
+  151030743,
+  151030744,
+  149067128,
+  149067133,
+  577336201,
+  577336202,
+  577336205,
+  577336198,
+  577336199,
+  808289206
+ ]
+}

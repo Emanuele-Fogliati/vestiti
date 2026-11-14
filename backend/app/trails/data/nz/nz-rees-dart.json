@@ -1,0 +1,90 @@
+{
+ "id": "nz-rees-dart",
+ "country": "NZ",
+ "name": "Rees-Dart Track: Rees Saddle to Dart Hut",
+ "base": "Glenorchy",
+ "region": "Mount Aspiring National Park, Otago",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  20,
+  28
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 58,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/rees-dart-track/"
+ },
+ "why": "Up the Rees valley under Mount Earnslaw/Pikirakatahi, over the 1,471 m Rees Saddle and down Snowy Creek to Dart Hut, below the moraines of the Dart Glacier.",
+ "book": "The full circuit is closed: a large slip between Daleys Flat Hut and Chinamans Bluff has shut the Dart Track indefinitely. DOC's options: in and out of the Rees valley to Dart Hut (this trip), Cascade Saddle to Dart Hut, or a booked helicopter hop with Heli Glenorchy. Book Shelter Rock and Dart huts. Muddy Creek car park is 68 km from Queenstown via Glenorchy.",
+ "water": "Hut taps are untreated: boil before use. Streams on the way.",
+ "dangers": [
+  "Rivers and side streams flood often, after rain and during snowmelt: carry an emergency shelter and spare food, and wait.",
+  "The upper Snowy Creek bridge is removed each winter and may not be back until December: ask the Queenstown visitor centre.",
+  "Avalanche paths above the bushline from late autumn to early summer.",
+  "Steep drops beside the track below Rees Saddle; Waterfall Creek bridge near Shelter Rock Hut is damaged."
+ ],
+ "turnaround": "If rain is forecast or Rees Saddle is in cloud or snow, stay at Shelter Rock Hut or walk back out.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/mount-aspiring-national-park/things-to-do/tracks/rees-dart-track/",
+  "https://www.doc.govt.nz/documents/parks-and-recreation/tracks-and-walks/otago/rees-dart-track-brochure.pdf",
+  "https://www.openstreetmap.org/relation/19470095"
+ ],
+ "osm": 19470095,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 0,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Muddy Creek car park",
+   "lat": -44.69595,
+   "lon": 168.47001,
+   "role": "start",
+   "note": "Farm track over Rees Valley Station (private land, 12 km, 4-5 h) past Lennox Falls to the national park boundary swing bridge."
+  },
+  {
+   "id": "shelter-rock-hut",
+   "name": "Shelter Rock Hut",
+   "lat": -44.55865,
+   "lon": 168.50893,
+   "role": "point",
+   "note": "Night out and back, 19 km and 6-8 h in, above the bushline on the Rees River.",
+   "night": true
+  },
+  {
+   "id": "rees-saddle",
+   "name": "Rees Saddle",
+   "lat": -44.5509,
+   "lon": 168.56313,
+   "role": "point",
+   "note": "1,471 m, on a lightly marked climb near the bluff. Patrick Caples crossed here in 1864 and was the first European to describe the Dart Glacier."
+  },
+  {
+   "id": "goal",
+   "name": "Dart Hut",
+   "lat": -44.52167,
+   "lon": 168.55447,
+   "role": "goal",
+   "note": "Over the swing bridge on Snowy Creek, 10 km and 4-6 h from Shelter Rock Hut. The Dart Glacier lies up the valley. Walk back out the same way.",
+   "night": true
+  }
+ ]
+}

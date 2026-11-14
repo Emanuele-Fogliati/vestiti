@@ -1,0 +1,144 @@
+{
+ "id": "nz-greenstone-caples",
+ "country": "NZ",
+ "name": "Greenstone and Caples Tracks",
+ "base": "Queenstown",
+ "region": "Greenstone and Caples conservation areas, Otago",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  15.5,
+  21.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 61,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/greenstone-and-caples-conservation-areas/things-to-do/greenstone-and-caples-tracks/"
+ },
+ "why": "Up the narrow, forested Caples valley, over the boardwalked McKellar Saddle, and back down the wide tussock flats of the Greenstone: a quieter loop next to the Routeburn.",
+ "book": "Book the DOC huts (Mid Caples, McKellar, Greenstone) or the campsites beside them all year; Upper Caples and Mid Greenstone huts are booked through the NZ Deerstalkers' Association. The road end is 86 km from Queenstown via Glenorchy; the last 11 km from Kinloch is gravel with fords.",
+ "water": "Hut taps are untreated: boil or treat. Plenty of streams.",
+ "dangers": [
+  "Side streams flood after heavy rain, above all the Caples above Upper Caples Hut and Jean Batten Creek: carry extra food and wait in a hut.",
+  "Cattle, including bulls, on the private valley floors: stay on the track at the forest edge.",
+  "Avalanche danger around Slip Flat in the lower Greenstone in winter.",
+  "Slips between the Caples-Greenstone confluence and Mid Caples Hut: take care in bad weather."
+ ],
+ "turnaround": "If rain is forecast for the McKellar Saddle day, stay at Mid Caples Hut or walk out the way you came.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/greenstone-and-caples-conservation-areas/things-to-do/greenstone-and-caples-tracks/",
+  "https://www.doc.govt.nz/globalassets/documents/parks-and-recreation/tracks-and-walks/otago/greenstone-caples-brochure.pdf",
+  "https://www.openstreetmap.org/relation/2215461",
+  "https://www.openstreetmap.org/relation/2215504"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 2,
+  "relax": 1,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Greenstone car park",
+   "lat": -44.93405,
+   "lon": 168.3451,
+   "role": "start",
+   "note": "End of Greenstone Road by Lake Wakatipu. The Greenstone was a pounamu route for Ngāi Tahu travelling to the West Coast. Keep to the true left of the Caples River."
+  },
+  {
+   "id": "mid-caples-hut",
+   "name": "Mid Caples Hut",
+   "lat": -44.89191,
+   "lon": 168.27317,
+   "role": "point",
+   "note": "First night, 9 km and 2-3 h in, just after a gorge. 24 bunks.",
+   "night": true
+  },
+  {
+   "id": "mckellar-saddle",
+   "name": "McKellar Saddle",
+   "lat": -44.85092,
+   "lon": 168.15397,
+   "role": "point",
+   "note": "945 m, boardwalked over the subalpine bog, at the end of a 22 km day. No camping on the saddle."
+  },
+  {
+   "id": "mckellar-hut",
+   "name": "McKellar Hut",
+   "lat": -44.87183,
+   "lon": 168.14516,
+   "role": "point",
+   "note": "Second night at the south end of Lake McKellar, an hour from the junction below the saddle.",
+   "night": true
+  },
+  {
+   "id": "greenstone-hut",
+   "name": "Greenstone Hut",
+   "lat": -44.97927,
+   "lon": 168.26253,
+   "role": "point",
+   "note": "Third night, 18 km down the open Greenstone valley past Steele Creek; across a bridge over a gorge.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Greenstone car park",
+   "lat": -44.93405,
+   "lon": 168.3451,
+   "role": "goal",
+   "note": "12 km through the Greenstone gorge and Slip Flat, with deep river pools, to the confluence and back to the car park."
+  }
+ ],
+ "osm_ways": [
+  1137205201,
+  166236727,
+  215814970,
+  974980141,
+  974980142,
+  166251372,
+  166244722,
+  293102994,
+  293102993,
+  189234493,
+  189234494,
+  1149654323,
+  1150461927,
+  1150461928,
+  1150988674,
+  1150461929,
+  1150461930,
+  1150988675,
+  1150461931,
+  1150461932,
+  1150988676,
+  189234491,
+  189236369,
+  215815119,
+  189236371,
+  1137208097,
+  189236368,
+  1137205204,
+  219017991,
+  1458949049,
+  1458949050,
+  189236370,
+  166254012,
+  166254010
+ ]
+}

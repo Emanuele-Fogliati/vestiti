@@ -1,0 +1,50 @@
+{
+ "id": "na-dune-45",
+ "country": "NA",
+ "name": "Dune 45 at sunrise",
+ "base": "Sesriem",
+ "region": "Sossusvlei, Namib-Naukluft National Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [4, 5, 6, 7, 8, 9],
+ "hours": [1, 1.5],
+ "start_by": "05:30",
+ "published": null,
+ "why": "A climb up the sharp crest of a red star dune to watch the first sun light up the Namib, one side bright orange and the other still in shadow.",
+ "book": "Park permit from the office just inside the Sesriem gate. The gate opens at sunrise and closes at sunset; only guests of the Namibia Wildlife Resorts places inside the gate can reach the dunes for sunrise. Dune 45 is at km 45 of the tarred Sossusvlei road.",
+ "water": "None at the dune: carry 1 litre each, more if you stay for Sossusvlei.",
+ "dangers": [
+  "Soft sand on a steep, narrow crest: walk on the ridge line, and the way down is faster straight down the slope.",
+  "Cold, windy mornings in winter (June to August), then fierce sun: layers, hat and sunscreen.",
+  "From October to March the sand is too hot to climb after mid-morning."
+ ],
+ "turnaround": "On the crest by sunrise or a little after; in hot months be back down by 09:00.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dune_45",
+  "https://en.wikivoyage.org/wiki/Sossusvlei",
+  "https://www.openstreetmap.org/way/249247434"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 4, "culture": 0, "relax": 2, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Dune 45 base and parking",
+   "lat": -24.72357,
+   "lon": 15.47104,
+   "role": "start",
+   "note": "Parking with a few camel thorn trees beside the Sossusvlei road. The path heads straight for the north end of the crest.",
+   "scene": "na-dune-45"
+  },
+  {
+   "id": "goal",
+   "name": "Dune 45 crest",
+   "lat": -24.72952,
+   "lon": 15.47192,
+   "role": "goal",
+   "note": "A high point on the crest of the dune, which stands over 170 m. View over the Tsauchab valley and rows of red dunes. Return the same way."
+  }
+ ]
+}
