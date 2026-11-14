@@ -915,7 +915,9 @@
     "llao llao hotel",
     "llao llao",
     "peninsula llao llao",
-    "peninsula de llao llao"
+    "peninsula de llao llao",
+    "cerro llao llao",
+    "mirador cerro llao llao"
    ],
    "palette": {
     "sky": "#9FC8EE",
@@ -1857,7 +1859,10 @@
    "lat": -25.682,
    "lon": -54.454,
    "radius_km": 15,
-   "aliases": [],
+   "aliases": [
+    "salto arrechea",
+    "sendero macuco"
+   ],
    "names": [
     "iguazu national park",
     "parque nacional iguazu",
@@ -3542,7 +3547,9 @@
     "perito moreno",
     "perito moreno glacier",
     "glaciar perito moreno",
-    "ghiacciaio perito moreno"
+    "ghiacciaio perito moreno",
+    "big ice perito moreno",
+    "minitrekking perito moreno"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -5760,6 +5767,85 @@
     "leaf": "#78A848",
     "acc": "#C9B98A",
     "obj": "#B4B2AA"
+   }
+  },
+  {
+   "slug": "cerro-champaqui",
+   "label": "The granite boulder tor and summit cairn of Cerro Champaquí above its small tarn",
+   "lat": -31.9874,
+   "lon": -64.9362,
+   "radius_km": 3,
+   "aliases": [
+    "cerro champaqui",
+    "cumbre del champaqui",
+    "champaqui summit",
+    "laguna del champaqui"
+   ],
+   "names": [
+    "champaqui"
+   ],
+   "palette": {
+    "sky": "#A6CBEF",
+    "far": "#B7C0B2",
+    "mid": "#C9B2A2",
+    "ice": "#F2ECE6",
+    "water": "#2F4560",
+    "near": "#2A2521",
+    "sun": "#F4C542",
+    "leaf": "#7D8A45",
+    "acc": "#B59D5C",
+    "obj": "#8A7768"
+   }
+  },
+  {
+   "slug": "laguna-jakob",
+   "label": "Laguna Jakob in its green lenga valley under granite needles, with the stone Refugio San Martín on the shore",
+   "lat": -41.1868,
+   "lon": -71.561,
+   "radius_km": 3,
+   "aliases": [
+    "laguna jakob",
+    "lago jakob",
+    "refugio jakob",
+    "refugio san martin jakob"
+   ],
+   "names": [
+    "refugio san martin"
+   ],
+   "palette": {
+    "sky": "#9DC8F0",
+    "far": "#A7AAB2",
+    "mid": "#8E8C8C",
+    "ice": "#F4F6F8",
+    "water": "#2B8ED0",
+    "near": "#25272B",
+    "sun": "#F4C542",
+    "leaf": "#4E8B37",
+    "acc": "#C4AE8E",
+    "obj": "#6B4A35"
+   }
+  },
+  {
+   "slug": "refugio-otto-meiling",
+   "label": "Refugio Otto Meiling on its rock ridge below the glaciers and twin summits of Cerro Tronador",
+   "lat": -41.1759,
+   "lon": -71.8181,
+   "radius_km": 3,
+   "aliases": [
+    "otto meiling",
+    "refugio meiling"
+   ],
+   "palette": {
+    "sky": "#8FC1EE",
+    "far": "#7F7B84",
+    "mid": "#8C7362",
+    "ice": "#FFFFFF",
+    "water": "#8FB8D8",
+    "near": "#26221F",
+    "sun": "#F4C542",
+    "leaf": "#6F9A45",
+    "acc": "#9E4436",
+    "obj": "#555A62"
    }
   }
  ]
