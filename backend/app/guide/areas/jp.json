@@ -1,0 +1,2077 @@
+{
+ "_doc": "Japan, written by hand for the ranking and the plans hour by hour (Manu, 2026-11-14). Treks (Kumano Kodo, Fuji) are trail pages of app/trails. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "jp-tokyo",
+   "names": [
+    "Tokyo",
+    "Tōkyō",
+    "東京",
+    "Shinjuku",
+    "Shibuya",
+    "Asakusa"
+   ],
+   "country": "JP",
+   "lat": 35.68,
+   "lon": 139.7,
+   "radius_km": 30,
+   "season": "Late March to early April for the cherry blossom, November for the autumn leaves. June is the rainy season, July and August hot and humid, winter dry and sunny.",
+   "sleep": "Near a Yamanote line station: Shinjuku or Shibuya for the night, Ueno or Asakusa for the old town, Ginza for quiet.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Tokyo",
+    "https://en.wikivoyage.org/wiki/Tokyo/Asakusa",
+    "https://en.wikivoyage.org/wiki/Tokyo/Shibuya"
+   ],
+   "nights": [
+    2,
+    4,
+    6
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Museums and depachika",
+    "hours": "",
+    "why": "The Tokyo National Museum in Ueno, then the food halls under the department stores."
+   },
+   "extras": [
+    "A Suica or Pasmo card on your phone pays every train, bus and convenience store.",
+    "Most temples and gardens close by 17:00; plan the evenings for the neon quarters."
+   ],
+   "items": [
+    {
+     "id": "asakusa",
+     "name": "Asakusa and Senso-ji, then Ueno",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Before 08:00 at Senso-ji",
+     "book": "",
+     "why": "Tokyo's oldest temple behind the Thunder Gate, the shopping street to it, and Ueno's park and museums.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:30",
+       "what": "Senso-ji before the crowds"
+      },
+      {
+       "at": "09:00",
+       "what": "Nakamise street opens: snacks and souvenirs"
+      },
+      {
+       "at": "10:30",
+       "what": "Walk or ride to Ueno Park"
+      },
+      {
+       "at": "11:30",
+       "what": "Ameyoko market for lunch"
+      }
+     ],
+     "sights": [
+      "Ueno Park",
+      "Ameyoko Market"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "west",
+     "name": "Meiji Shrine, Harajuku and Shibuya Crossing",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A forest shrine in the middle of the city, Takeshita Street's teen fashion, and the busiest crossing on Earth at dusk.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Meiji Shrine through the forest"
+      },
+      {
+       "at": "11:00",
+       "what": "Takeshita Street and Omotesando"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Harajuku"
+      },
+      {
+       "at": "15:00",
+       "what": "Shibuya: the Hachikō statue and the crossing"
+      },
+      {
+       "at": "17:30",
+       "what": "A rooftop over the crossing at sunset"
+      }
+     ],
+     "sights": [
+      "Meiji Shrine",
+      "Harajuku and Takeshita Street",
+      "Omotesando",
+      "Shibuya Crossing",
+      "Hachikō Statue"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "shinjuku-night",
+     "name": "Shinjuku by night: Golden Gai and Omoide Yokocho",
+     "hours": "Evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "After 19:00",
+     "book": "",
+     "why": "Neon canyons, tiny bars of six seats, and yakitori smoke in the alleys by the station.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Shinjuku",
+      "Golden Gai",
+      "Kabukichō"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "night",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "no"
+    },
+    {
+     "id": "tsukiji-ginza",
+     "name": "Tsukiji outer market, Hamarikyu and Ginza",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning: the market winds down by early afternoon",
+     "book": "",
+     "why": "Sushi for breakfast in the old fish market's lanes, a tea house in a shogun's garden, then Ginza.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Tsukiji outer market: tamagoyaki and sushi"
+      },
+      {
+       "at": "10:00",
+       "what": "Hamarikyu gardens, matcha in the tea house"
+      },
+      {
+       "at": "12:00",
+       "what": "Ginza's department stores and their food halls"
+      }
+     ],
+     "sights": [
+      "Tsukiji Outer Market",
+      "Hamarikyu Gardens",
+      "Ginza"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "palace",
+     "name": "The Imperial Palace East Gardens and Tokyo Station",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The walls and moats of Edo castle, now the emperor's garden in the business district.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Tokyo Imperial Palace"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "akihabara",
+     "name": "Akihabara",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Eight floors of manga, retro games and electronics; the capital of anime fans.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Akihabara"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-hakone",
+   "names": [
+    "Hakone",
+    "箱根",
+    "Owakudani",
+    "Lake Ashi"
+   ],
+   "country": "JP",
+   "lat": 35.23,
+   "lon": 139.11,
+   "radius_km": 15,
+   "season": "All year. Fuji is clearest from November to February; June and July are often cloudy.",
+   "sleep": "A ryokan with its own onsen, dinner and breakfast included: the point of coming.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hakone"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Open-Air Museum and an onsen",
+    "hours": "",
+    "why": "Sculptures in the hills and a Picasso pavilion, then the hot spring."
+   },
+   "items": [
+    {
+     "id": "loop",
+     "name": "The Hakone loop: train, cable car, ropeway, pirate ship",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "The Hakone Free Pass covers the whole loop.",
+     "why": "Up the mountain railway, over the steaming sulphur valley of Owakudani by ropeway, across Lake Ashi with Fuji behind.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Hakone Tozan railway up the switchbacks"
+      },
+      {
+       "at": "10:00",
+       "what": "Cable car, then ropeway over Owakudani",
+       "note": "black eggs boiled in the hot springs"
+      },
+      {
+       "at": "12:00",
+       "what": "Lake Ashi by sightseeing boat"
+      },
+      {
+       "at": "13:30",
+       "what": "Hakone shrine's torii in the water"
+      },
+      {
+       "at": "15:00",
+       "what": "Back to the ryokan for the onsen"
+      }
+     ],
+     "sights": [
+      "Owakudani",
+      "Lake Ashi"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "onsen",
+     "name": "A ryokan night with onsen and kaiseki",
+     "hours": "Evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A hot-spring bath in the woods, a dinner of a dozen small courses, futon on tatami.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 5,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "thermal",
+      "food",
+      "culture"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "open-air",
+     "name": "Hakone Open-Air Museum",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Sculptures across the hills, and a pavilion of Picasso's ceramics.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-fuji-five-lakes",
+   "names": [
+    "Lake Kawaguchi",
+    "Kawaguchiko",
+    "Fujikawaguchiko",
+    "Fuji Five Lakes",
+    "Mount Fuji",
+    "Chureito Pagoda"
+   ],
+   "country": "JP",
+   "lat": 35.51,
+   "lon": 138.75,
+   "radius_km": 25,
+   "season": "Fuji is clearest in the cold months, November to February; the climbing season is early July to early September.",
+   "sleep": "By Lake Kawaguchi, a room facing the mountain.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Fujikawaguchiko",
+    "https://en.wikivoyage.org/wiki/Mount_Fuji"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "chureito",
+     "name": "Chureito Pagoda at sunrise",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "Sunrise on a clear morning",
+     "book": "",
+     "why": "The five-storey pagoda with Fuji behind it: the postcard of Japan, about 400 steps up.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "steps": [
+      {
+       "at": "05:30",
+       "what": "Train or taxi to Shimoyoshida"
+      },
+      {
+       "at": "06:00",
+       "what": "Up the steps to the pagoda"
+      },
+      {
+       "at": "07:00",
+       "what": "Back for breakfast"
+      }
+     ],
+     "sights": [
+      "Chureito Pagoda",
+      "Mount Fuji"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 1,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "lake",
+     "name": "Around Lake Kawaguchi by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The north shore with Fuji over the water, and the ropeway to Tenjo-yama.",
+     "act": {
+      "type": "cycling"
+     },
+     "sights": [
+      "Mount Fuji"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "fifth-station",
+     "name": "Fuji's Fifth Station",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The road ends at 2,300 m on the mountain itself, above the clouds on a good day.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2300
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "sights": [
+      "Mount Fuji"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "jp-kamakura",
+   "names": [
+    "Kamakura",
+    "鎌倉",
+    "Enoshima"
+   ],
+   "country": "JP",
+   "lat": 35.32,
+   "lon": 139.55,
+   "radius_km": 10,
+   "season": "All year; hydrangeas in June, leaves in early December.",
+   "sleep": "A day trip from Tokyo, about an hour.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kamakura"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "buddha",
+     "name": "The Great Buddha, Hase-dera and Tsurugaoka Hachimangu",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A 13 m bronze Buddha in the open air since 1495, a temple of a thousand statues over the sea, and the shogun's shrine.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Kita-Kamakura's Zen temples"
+      },
+      {
+       "at": "10:30",
+       "what": "Tsurugaoka Hachimangu"
+      },
+      {
+       "at": "12:00",
+       "what": "Lunch on Komachi street"
+      },
+      {
+       "at": "13:30",
+       "what": "Enoden train to Hase"
+      },
+      {
+       "at": "14:00",
+       "what": "Hase-dera and the Great Buddha"
+      }
+     ],
+     "sights": [
+      "Tsurugaoka Hachimangu",
+      "Hase-dera",
+      "Great Buddha of Kamakura"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "enoshima",
+     "name": "Enoshima island at sunset",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A small island of shrines and caves, Fuji across the bay at sunset.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Enoshima"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-nikko",
+   "names": [
+    "Nikko",
+    "Nikkō",
+    "日光"
+   ],
+   "country": "JP",
+   "lat": 36.75,
+   "lon": 139.6,
+   "radius_km": 20,
+   "season": "Autumn colours in October; snow in winter higher up. Busy at weekends.",
+   "sleep": "A night lets you see Toshogu before the day trippers and the lakes the next day.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Nikko"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "toshogu",
+     "name": "Toshogu and the shrines in the cedars",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "At opening, 08:00 (09:00 in winter)",
+     "book": "",
+     "why": "The shogun Ieyasu's mausoleum, lacquer and gold carved with the three wise monkeys, in a cedar forest.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Shinkyo bridge"
+      },
+      {
+       "at": "08:30",
+       "what": "Toshogu",
+       "note": "the sleeping cat and the monkeys"
+      },
+      {
+       "at": "10:30",
+       "what": "Rinno-ji and Futarasan"
+      },
+      {
+       "at": "12:00",
+       "what": "Lunch: yuba, tofu skin"
+      }
+     ],
+     "sights": [
+      "Shinkyo Bridge",
+      "Nikko Toshogu",
+      "Rinno-ji"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kegon",
+     "name": "Kegon Falls and Lake Chuzenji",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Up the hairpin road to a 97 m waterfall and a lake in the mountains.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1270
+     },
+     "sights": [
+      "Kegon Falls"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-kyoto",
+   "names": [
+    "Kyoto",
+    "Kyōto",
+    "京都",
+    "Gion",
+    "Arashiyama",
+    "Higashiyama"
+   ],
+   "country": "JP",
+   "lat": 35.01,
+   "lon": 135.77,
+   "radius_km": 20,
+   "season": "Late March-early April for cherries, mid to late November for maples: both very crowded. Summer is hot and sticky; January is cold and quiet.",
+   "sleep": "Near Kyoto Station for the trains, or Higashiyama and Gion to walk out at dawn.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kyoto",
+    "https://en.wikivoyage.org/wiki/Kyoto/Eastern",
+    "https://en.wikivoyage.org/wiki/Kyoto/Arashiyama"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Nishiki Market and a tea ceremony",
+    "hours": "",
+    "why": "A covered food market of 400 years, then matcha prepared the old way."
+   },
+   "extras": [
+    "Kyoto's sights open early: the groups arrive by 09:30. Start every day at 07:00.",
+    "Buses are slow and full: walk, cycle, or take the subway and trains."
+   ],
+   "items": [
+    {
+     "id": "fushimi",
+     "name": "Fushimi Inari at dawn",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "any",
+     "best": "Before 07:30",
+     "book": "",
+     "why": "Thousands of vermilion torii gates up a mountain; past the first half hour you are almost alone.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 233
+     },
+     "steps": [
+      {
+       "at": "06:30",
+       "what": "Train to Inari station"
+      },
+      {
+       "at": "06:45",
+       "what": "Through the Senbon torii"
+      },
+      {
+       "at": "07:30",
+       "what": "The Yotsutsuji crossing, the view over Kyoto"
+      },
+      {
+       "at": "08:30",
+       "what": "Back down for breakfast"
+      }
+     ],
+     "sights": [
+      "Fushimi Inari Taisha"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 4,
+      "relax": 1,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "higashiyama",
+     "name": "Kiyomizu-dera, the old lanes of Higashiyama, and Gion at dusk",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The wooden stage over the forest, stone lanes of tea shops to Yasaka shrine, and geiko slipping into Gion's teahouses.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Kiyomizu-dera at opening"
+      },
+      {
+       "at": "09:00",
+       "what": "Sannenzaka and Ninenzaka lanes"
+      },
+      {
+       "at": "11:00",
+       "what": "Kodai-ji or Yasaka pagoda"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch: tofu or soba"
+      },
+      {
+       "at": "14:00",
+       "what": "Yasaka Shrine and Maruyama park"
+      },
+      {
+       "at": "17:30",
+       "what": "Gion's Hanamikoji street at dusk"
+      },
+      {
+       "at": "19:00",
+       "what": "Dinner on Pontocho"
+      }
+     ],
+     "sights": [
+      "Kiyomizu-dera",
+      "Sannenzaka",
+      "Yasaka Shrine",
+      "Gion",
+      "Pontocho"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "arashiyama",
+     "name": "Arashiyama: the bamboo grove, Tenryu-ji and the river",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Bamboo grove before 08:00",
+     "book": "",
+     "why": "A bamboo forest at sunrise, a Zen garden facing the hills, and boats under the Togetsukyo bridge.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Bamboo grove almost empty"
+      },
+      {
+       "at": "08:30",
+       "what": "Tenryu-ji garden at opening"
+      },
+      {
+       "at": "10:00",
+       "what": "Togetsukyo bridge and the river"
+      },
+      {
+       "at": "11:00",
+       "what": "Monkey park on the hill, or a boat"
+      }
+     ],
+     "sights": [
+      "Arashiyama Bamboo Grove",
+      "Tenryu-ji",
+      "Togetsukyo Bridge"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "north",
+     "name": "Kinkaku-ji and Ryoan-ji",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Golden Pavilion on its pond, and fifteen rocks in raked gravel.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Kinkaku-ji",
+      "Ryoan-ji"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "philosopher",
+     "name": "Philosopher's Path to Ginkaku-ji and Nanzen-ji",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A canal path under cherry trees between temples, from the Silver Pavilion to a Zen temple with a brick aqueduct.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Philosopher's Path",
+      "Ginkaku-ji",
+      "Nanzen-ji"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "nijo",
+     "name": "Nijo Castle and Nishiki Market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The shogun's palace with floors that sing to warn of intruders, then a food market for lunch.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Nijo Castle",
+      "Nishiki Market"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "food",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-nara",
+   "names": [
+    "Nara",
+    "奈良",
+    "Nara Park"
+   ],
+   "country": "JP",
+   "lat": 34.68,
+   "lon": 135.83,
+   "radius_km": 10,
+   "season": "All year; the deer are calmer away from the crowds of spring.",
+   "sleep": "A day trip from Kyoto or Osaka, under an hour.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Nara"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "park",
+     "name": "Nara Park: Todai-ji, the deer and Kasuga Taisha",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A 15 m bronze Buddha in one of the largest wooden halls on Earth, a thousand bowing deer, and a shrine of stone lanterns.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Kofuku-ji's five-storey pagoda"
+      },
+      {
+       "at": "09:30",
+       "what": "Todai-ji's Great Buddha"
+      },
+      {
+       "at": "11:30",
+       "what": "The deer of Nara Park",
+       "note": "they bow for crackers"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Naramachi"
+      },
+      {
+       "at": "14:30",
+       "what": "Kasuga Taisha through the lantern path"
+      }
+     ],
+     "sights": [
+      "Kofuku-ji",
+      "Todai-ji",
+      "Nara Park",
+      "Kasuga Taisha"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-osaka",
+   "names": [
+    "Osaka",
+    "Ōsaka",
+    "大阪",
+    "Dotonbori",
+    "Namba"
+   ],
+   "country": "JP",
+   "lat": 34.69,
+   "lon": 135.5,
+   "radius_km": 20,
+   "season": "All year; summer is hot.",
+   "sleep": "Namba for the food and the night, Umeda for the trains.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Osaka"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "dotonbori",
+     "name": "Dotonbori and street food at night",
+     "hours": "Evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The neon river, the Glico runner, and takoyaki, okonomiyaki and kushikatsu from the counter.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Dotonbori",
+      "Namba"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "castle",
+     "name": "Osaka Castle and Shinsekai",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The castle of the unifier Hideyoshi in its moats, then the retro neon of Shinsekai under the Tsutenkaku tower.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Osaka Castle",
+      "Shinsekai",
+      "Tsutenkaku"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "usj",
+     "name": "Universal Studios Japan",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Tickets online; express passes sell out.",
+     "why": "A theme park for those who travel with children or for the rides.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Universal Studios Japan"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-hiroshima",
+   "names": [
+    "Hiroshima",
+    "広島",
+    "Miyajima",
+    "Itsukushima"
+   ],
+   "country": "JP",
+   "lat": 34.39,
+   "lon": 132.45,
+   "radius_km": 30,
+   "season": "All year; autumn maples on Miyajima in November.",
+   "sleep": "Hiroshima for the trains; a ryokan on Miyajima to see the torii lit after the day trippers leave.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hiroshima",
+    "https://en.wikivoyage.org/wiki/Miyajima"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "peace",
+     "name": "The Peace Memorial Park and Museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Atomic Bomb Dome, the cenotaph and the museum of 6 August 1945: the place to understand what one bomb does.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "The Atomic Bomb Dome"
+      },
+      {
+       "at": "09:00",
+       "what": "The Peace Memorial Museum",
+       "note": "2 h; hard to look at"
+      },
+      {
+       "at": "11:30",
+       "what": "The Children's Peace Monument and its paper cranes"
+      },
+      {
+       "at": "12:30",
+       "what": "Okonomiyaki Hiroshima-style for lunch"
+      }
+     ],
+     "sights": [
+      "Atomic Bomb Dome",
+      "Hiroshima Peace Memorial Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 1,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "miyajima",
+     "name": "Miyajima: the floating torii and Mount Misen",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "Check the tide table: the torii stands in water at high tide, and you can walk to it at low tide.",
+     "why": "The great torii standing in the sea at high tide, the shrine on stilts, deer, and the ropeway or the climb to Misen.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 535
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Ferry from Miyajimaguchi",
+       "note": "10 min"
+      },
+      {
+       "at": "09:30",
+       "what": "Itsukushima shrine"
+      },
+      {
+       "at": "11:00",
+       "what": "Ropeway up Mount Misen, last part on foot"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch: grilled oysters and anago rice"
+      },
+      {
+       "at": "15:00",
+       "what": "The torii at low or high tide"
+      },
+      {
+       "at": "17:30",
+       "what": "Ferry back, or stay for the torii lit at night"
+      }
+     ],
+     "sights": [
+      "Miyajima",
+      "Itsukushima Shrine",
+      "Mount Misen"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view",
+      "boat"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-himeji",
+   "names": [
+    "Himeji",
+    "姫路",
+    "Himeji Castle"
+   ],
+   "country": "JP",
+   "lat": 34.82,
+   "lon": 134.69,
+   "radius_km": 8,
+   "season": "All year; cherry trees in the grounds in early April.",
+   "sleep": "A stop on the train between Kyoto or Osaka and Hiroshima: leave the bags in station lockers.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Himeji"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "castle",
+     "name": "Himeji Castle and Koko-en garden",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "At opening, 09:00",
+     "book": "",
+     "why": "The White Heron: Japan's finest original castle, six floors of wood never burned or bombed.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Into the castle",
+       "note": "steep wooden ladders, shoes off"
+      },
+      {
+       "at": "11:00",
+       "what": "Koko-en, nine walled gardens next door"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch near the station"
+      }
+     ],
+     "sights": [
+      "Himeji Castle"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 2,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-kanazawa",
+   "names": [
+    "Kanazawa",
+    "金沢",
+    "Kenroku-en"
+   ],
+   "country": "JP",
+   "lat": 36.56,
+   "lon": 136.66,
+   "radius_km": 15,
+   "season": "All year; snow ropes on the garden's pines in winter.",
+   "sleep": "Near the station or Higashi Chaya.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kanazawa"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "garden",
+     "name": "Kenroku-en, the castle and the 21st Century Museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "At opening, 07:00 in summer",
+     "book": "",
+     "why": "One of Japan's three great gardens, the castle park across the road, and a modern art museum of glass.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Kenroku-en before the groups"
+      },
+      {
+       "at": "09:00",
+       "what": "Kanazawa Castle park"
+      },
+      {
+       "at": "10:30",
+       "what": "21st Century Museum of Contemporary Art"
+      }
+     ],
+     "sights": [
+      "Kenroku-en",
+      "Kanazawa Castle"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "districts",
+     "name": "The geisha and samurai districts, Omicho market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Wooden teahouses of Higashi Chaya, gold-leaf ice cream, the samurai lanes of Nagamachi, and crab at the market.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Higashi Chaya District",
+      "Nagamachi Samurai District",
+      "Omicho Market"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-takayama",
+   "names": [
+    "Takayama",
+    "高山",
+    "Hida",
+    "Shirakawa-go",
+    "Shirakawago"
+   ],
+   "country": "JP",
+   "lat": 36.14,
+   "lon": 137.25,
+   "radius_km": 60,
+   "season": "All year; Shirakawa-go under snow in January and February (illuminations some weekends). Takayama's festivals in April and October.",
+   "sleep": "Takayama's old town; one night in a thatched farmhouse in Shirakawa-go if you can book it.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Takayama",
+    "https://en.wikivoyage.org/wiki/Shirakawa-go"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Takayama's old town and morning markets",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning, for the markets",
+     "book": "",
+     "why": "Edo-era merchant streets of sake breweries, the riverside morning market, and the old government house.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Miyagawa morning market by the river"
+      },
+      {
+       "at": "09:00",
+       "what": "Sanmachi Suji's old streets and a sake tasting"
+      },
+      {
+       "at": "10:30",
+       "what": "Takayama Jinya"
+      },
+      {
+       "at": "12:00",
+       "what": "Hida beef for lunch"
+      }
+     ],
+     "sights": [
+      "Takayama Jinya"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "shirakawa",
+     "name": "Shirakawa-go, the thatched village",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Steep thatched farmhouses in a mountain valley, a UNESCO village still lived in.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Bus from Takayama",
+       "note": "about 50 min"
+      },
+      {
+       "at": "10:00",
+       "what": "Up to the Shiroyama viewpoint"
+      },
+      {
+       "at": "11:00",
+       "what": "Wada House, inside a gassho farmhouse"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch, bus on to Kanazawa or back"
+      }
+     ],
+     "sights": [
+      "Shirakawa-go"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "folk",
+     "name": "Hida Folk Village",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Farmhouses moved from the valleys around a pond, with craftspeople at work.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hida Folk Village"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-kumano",
+   "names": [
+    "Kumano",
+    "Kumano Kodo",
+    "Koguchi",
+    "Hongu",
+    "Kumano Hongu Taisha",
+    "Nachi"
+   ],
+   "country": "JP",
+   "lat": 33.83,
+   "lon": 135.77,
+   "radius_km": 40,
+   "season": "March to May and October-November. June is rainy, summer hot.",
+   "sleep": "Minshuku and onsen inns along the trail; Yunomine for the hot springs near Hongu.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kumano_Kodo"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "extras": [
+    "The Kumano Kodo walks themselves are on the trail pages: they are what you come for."
+   ],
+   "items": [
+    {
+     "id": "hongu",
+     "name": "Kumano Hongu Taisha and the Oyunohara torii",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The head shrine of the pilgrimage in the forest, and the largest torii in Japan over rice fields.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Kumano Hongu Taisha"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "nachi",
+     "name": "Nachi Falls and Seiganto-ji",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Japan's tallest waterfall, 133 m, behind a red pagoda: the end of the pilgrimage.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "sights": [
+      "Nachi Falls",
+      "Kumano Nachi Taisha"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "yunomine",
+     "name": "Tsuboyu at Yunomine onsen",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A hot spring for two in a wooden hut by the creek, used by pilgrims for over a thousand years.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 3,
+      "relax": 5,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "jp-sapporo",
+   "names": [
+    "Sapporo",
+    "札幌",
+    "Otaru",
+    "Hokkaido"
+   ],
+   "country": "JP",
+   "lat": 43.06,
+   "lon": 141.35,
+   "radius_km": 45,
+   "season": "February for the snow festival and skiing at Niseko; June to August cool and green, lavender at Furano in July.",
+   "sleep": "Susukino or near Sapporo station.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Sapporo",
+    "https://en.wikivoyage.org/wiki/Otaru"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "city",
+     "name": "Sapporo: Odori Park, the market, ramen alley",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A city of wide streets, the snow sculptures of Odori in February, crab at Nijo market and miso ramen.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Sapporo"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "otaru",
+     "name": "Otaru's canal and glass workshops",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Stone warehouses along a canal, glass and music-box shops, and sushi from the port.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Otaru"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "shikotsu",
+     "name": "Lake Shikotsu",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A clear caldera lake ringed by volcanoes, with an onsen on the shore.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Lake Shikotsu"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "view",
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  }
+ ]
+}

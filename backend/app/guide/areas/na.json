@@ -1,0 +1,1348 @@
+{
+ "_doc": "Namibia, written by hand for the ranking and the plans hour by hour (Manu, 2026-11-14). Treks (Fish River Canyon trail) are trail pages of app/trails. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "na-windhoek",
+   "names": [
+    "Windhoek"
+   ],
+   "country": "NA",
+   "lat": -22.56,
+   "lon": 17.08,
+   "radius_km": 25,
+   "season": "All year. May to October is dry and cool, nights cold in June-August; November to April hot with storms.",
+   "sleep": "A guesthouse in Klein Windhoek or Ludwigsdorf; pick up the hire car the next morning.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Windhoek",
+    "https://en.wikivoyage.org/wiki/Namibia"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "extras": [
+    "Stock up on groceries and water in Windhoek: out in the country even bread and milk can be hard to find.",
+    "Never drive at night: wildlife on the roads. Gravel eats tyres: check the spare before you leave."
+   ],
+   "items": [
+    {
+     "id": "centre",
+     "name": "Windhoek centre: the Christuskirche and the Independence Museum",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The German church of 1910 on its hill, and the museum of the struggle for independence next to it, with the view from its top-floor café.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Windhoek"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "daan-viljoen",
+     "name": "Daan Viljoen nature reserve",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Walking trails among zebra, kudu and oryx in the Khomas hills, twenty minutes from town.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "joes",
+     "name": "Dinner at Joe's Beer House",
+     "hours": "Evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Windhoek's famous beer garden: game meat on the grill, the first night's ritual of every self-drive trip.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "na-sossusvlei",
+   "names": [
+    "Sossusvlei",
+    "Sesriem",
+    "Deadvlei",
+    "Dead Vlei",
+    "Dune 45",
+    "Big Daddy Dune",
+    "Namib-Naukluft National Park",
+    "Solitaire"
+   ],
+   "country": "NA",
+   "lat": -24.55,
+   "lon": 15.6,
+   "radius_km": 80,
+   "season": "All year. May to September the days are mild and the nights near freezing; December to February over 40°C at midday.",
+   "sleep": "Inside the park gate (Sesriem campsite or Sossus Dune Lodge, booked with Namibia Wildlife Resorts): only from there you are on the dunes at sunrise. Lodges outside wait for the gate to open.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Sossusvlei",
+    "https://en.wikivoyage.org/wiki/Namib-Naukluft_National_Park",
+    "https://en.wikipedia.org/wiki/Deadvlei",
+    "https://en.wikipedia.org/wiki/Dune_45"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "extras": [
+    "The road from Sesriem is 65 km, tarred except the last 5 km of deep sand: leave the hire car at the 2x4 car park and take the 4x4 shuttle.",
+    "Carry more water than you think: two litres each for the morning."
+   ],
+   "items": [
+    {
+     "id": "dunes",
+     "name": "Sunrise on Dune 45, then Deadvlei and Sossusvlei",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "From the gate at sunrise, out by 11:30",
+     "book": "Park permit at the Sesriem office; stay inside the gate to start before sunrise.",
+     "why": "The red dunes of the world's oldest desert at first light, and the white pan of Deadvlei with camel-thorn trees dead for 600 years, under dunes up to 400 m: the picture of Namibia.",
+     "act": {
+      "type": "desert"
+     },
+     "steps": [
+      {
+       "at": "05:30",
+       "what": "Drive from Sesriem toward the dunes",
+       "note": "45 km to Dune 45, the gate opens at sunrise"
+      },
+      {
+       "at": "06:30",
+       "what": "Climb Dune 45, 170 m of sand, for the sunrise",
+       "note": "about an hour up the ridge"
+      },
+      {
+       "at": "08:00",
+       "what": "On to the 2x4 car park, 4x4 shuttle the last 5 km"
+      },
+      {
+       "at": "08:30",
+       "what": "Walk across the sand to Deadvlei",
+       "note": "the trees in shadow, the dunes lit"
+      },
+      {
+       "at": "10:00",
+       "what": "Sossusvlei pan"
+      },
+      {
+       "at": "11:30",
+       "what": "Back to Sesriem before the midday heat"
+      }
+     ],
+     "sights": [
+      "Dune 45",
+      "Deadvlei",
+      "Sossusvlei"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "big-daddy",
+     "name": "Big Daddy, the dune over Deadvlei",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "hard",
+     "need": "any",
+     "best": "Start at the gate's opening: by 10:00 the sand burns",
+     "book": "",
+     "why": "The tallest dune around Deadvlei, over 300 m of soft sand up the ridge, then a run straight down into the white pan.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Big Daddy Dune",
+      "Deadvlei"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "sesriem-canyon",
+     "name": "Sesriem Canyon at sunset",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A narrow gorge 4 km from the gate: climb down and walk the dry riverbed, the old water place of the Dorsland trekkers.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Sesriem Canyon"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "balloon",
+     "name": "A hot-air balloon over the Namib at sunrise",
+     "hours": "Dawn to late morning",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book ahead from Sesriem or Solitaire; flights go only on still mornings.",
+     "why": "An hour floating over the dunes and the gravel plains, landing for a champagne breakfast.",
+     "act": {
+      "type": "unknown"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "view",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": null,
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "na-swakopmund",
+   "names": [
+    "Swakopmund",
+    "Walvis Bay",
+    "Sandwich Harbour",
+    "Moon Landscape",
+    "Dune 7"
+   ],
+   "country": "NA",
+   "lat": -22.85,
+   "lon": 14.55,
+   "radius_km": 60,
+   "season": "All year, but cool and often foggy: the cold Benguela current keeps the coast at 15-25°C while the desert behind is hot. Bring a fleece.",
+   "sleep": "Swakopmund, the old German town: cafés, a beach and the base for every tour.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Swakopmund",
+    "https://en.wikivoyage.org/wiki/Walvis_Bay",
+    "https://en.wikivoyage.org/wiki/Namib-Naukluft_National_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Swakopmund's museums and cafés",
+    "hours": "",
+    "why": "The Kristall Galerie with the world's largest quartz crystal, the aquarium, coffee and cake in the German bakeries."
+   },
+   "items": [
+    {
+     "id": "sandwich",
+     "name": "Sandwich Harbour by 4x4, where the dunes meet the ocean",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Only with a tour from Walvis Bay or Swakopmund: the track needs special vehicles.",
+     "why": "Dunes over 100 m falling straight into the Atlantic, a lagoon of flamingos, and a drive along the beach that only works at low tide.",
+     "act": {
+      "type": "desert"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Walvis Bay lagoon: flamingos and pelicans"
+      },
+      {
+       "at": "09:30",
+       "what": "South along the beach between the dunes and the surf",
+       "note": "timed by the tide"
+      },
+      {
+       "at": "11:00",
+       "what": "Up on the dunes over Sandwich Harbour's lagoon"
+      },
+      {
+       "at": "13:00",
+       "what": "Back to Walvis Bay, often by the dunes"
+      }
+     ],
+     "sights": [
+      "Walvis Bay",
+      "Sandwich Harbour"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "cruise",
+     "name": "Dolphin and seal cruise in Walvis Bay",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Pelican Point's seals climbing on the boat, dolphins, whales in season, and oysters with sparkling wine on deck.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Walvis Bay"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "town",
+     "name": "Swakopmund: the old town and the jetty at sunset",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Half-timbered houses of German South West Africa, the Woermannhaus tower, and the 300 m jetty into the Atlantic at sunset.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Swakopmund"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "spitzkoppe",
+     "name": "Spitzkoppe, the Matterhorn of Namibia",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A granite peak of 1,728 m alone on the plain, a rock arch, and San paintings that a local guide shows you.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "sights": [
+      "Spitzkoppe"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 2,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "sandboarding",
+     "name": "Sandboarding on Dune 7",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Down the dunes on a board, standing or head-first on your belly; a quad takes you back up.",
+     "act": {
+      "type": "desert"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": null,
+     "needs": "transfer"
+    },
+    {
+     "id": "moon",
+     "name": "The Moon Landscape and the welwitschia plants",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Eroded hills like a lunar surface, and welwitschia, a desert plant that lives over a thousand years.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Moon Landscape"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "cape-cross",
+     "name": "Cape Cross seal colony",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up to 100,000 Cape fur seals on the rocks where a Portuguese navigator raised a stone cross in 1486; the noise and the smell are part of it.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Cape Cross"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "na-damaraland",
+   "names": [
+    "Damaraland",
+    "Twyfelfontein",
+    "Khorixas",
+    "Uis",
+    "Brandberg",
+    "Brandberg Mountain"
+   ],
+   "country": "NA",
+   "lat": -20.75,
+   "lon": 14.6,
+   "radius_km": 70,
+   "season": "May to October, dry and mild. Summer is very hot.",
+   "sleep": "A lodge or community camp near Twyfelfontein, among the red rocks.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Twyfelfontein",
+    "https://en.wikivoyage.org/wiki/Khorixas",
+    "https://en.wikivoyage.org/wiki/Brandberg",
+    "https://en.wikivoyage.org/wiki/Kaokoland"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "twyfelfontein",
+     "name": "Twyfelfontein's rock engravings and the Organ Pipes",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Early morning, before the heat",
+     "book": "Visits only with the site's guide, included in the ticket; tip the guide.",
+     "why": "One of the largest groups of rock engravings in Africa, over 2,500 carved by hunter-gatherers and herders over thousands of years: a UNESCO site. Then the basalt columns of the Organ Pipes nearby.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Guided walk among the engravings",
+       "note": "30 to 80 minutes"
+      },
+      {
+       "at": "10:00",
+       "what": "The Organ Pipes, a short walk into a gully"
+      },
+      {
+       "at": "11:00",
+       "what": "Back to the lodge for the hot hours"
+      }
+     ],
+     "sights": [
+      "Twyfelfontein",
+      "Organ Pipes"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "elephants",
+     "name": "Desert elephants in the dry riverbeds",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Elephants that live in the desert, walking the dry rivers of Damaraland; a lodge guide knows where they are today.",
+     "act": {
+      "type": "safari"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "drive"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "white-lady",
+     "name": "The White Lady rock painting of the Brandberg",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Start early: the gorge is hot by midday",
+     "book": "Permit at the Brandberg rest camp in Uis or the National Heritage Council in Windhoek.",
+     "why": "A guided walk into Namibia's highest mountain to a painting at least 2,000 years old; despite the name, a male shaman.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "sights": [
+      "White Lady of the Brandberg",
+      "Brandberg Mountain"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "petrified",
+     "name": "The Petrified Forest",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Tree trunks up to 45 m long turned to stone, with welwitschia growing among them.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Petrified Forest"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "na-etosha",
+   "names": [
+    "Etosha",
+    "Etosha National Park",
+    "Etosha Pan",
+    "Okaukuejo",
+    "Halali",
+    "Namutoni"
+   ],
+   "country": "NA",
+   "lat": -18.95,
+   "lon": 16.2,
+   "radius_km": 90,
+   "season": "May to October, the dry months: the animals gather at the waterholes. November to April green and hot, animals spread out, birds arrive.",
+   "sleep": "Inside the park, at the Okaukuejo, Halali or Namutoni rest camps: the floodlit waterholes are by your room after the gates close.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Etosha_National_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "extras": [
+    "You drive yourself on good gravel, no 4x4 needed, 60 km/h. Gates close at sunset: be back in camp.",
+    "Crossing the park east to west takes most of a day."
+   ],
+   "items": [
+    {
+     "id": "drive",
+     "name": "A day of waterholes by car",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Out at the gate's opening, a break at midday, out again from 15:30",
+     "book": "Park permit at the gate and the camp office; pay for all the days in one go.",
+     "why": "Elephants, giraffes, zebra and springbok queueing to drink, lions waiting nearby: you drive from one waterhole to the next at your pace.",
+     "act": {
+      "type": "safari"
+     },
+     "steps": [
+      {
+       "at": "06:30",
+       "what": "Leave camp at sunrise, the gates open"
+      },
+      {
+       "at": "07:00",
+       "what": "The waterholes near camp: lions often still there"
+      },
+      {
+       "at": "11:00",
+       "what": "Back to camp for the hot hours, pool and lunch"
+      },
+      {
+       "at": "15:30",
+       "what": "Out again: the best time for animals at the water"
+      },
+      {
+       "at": "18:00",
+       "what": "Back before the gate closes at sunset"
+      }
+     ],
+     "sights": [
+      "Etosha National Park"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "waterhole",
+     "name": "Okaukuejo's floodlit waterhole at night",
+     "hours": "Evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A bench by the fence, a drink and binoculars: elephants, black rhinos and lions come to drink under the lights.",
+     "act": {
+      "type": "safari"
+     },
+     "sights": [
+      "Okaukuejo waterhole"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "pan",
+     "name": "The Etosha Pan viewpoints",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A white salt pan to the horizon, shimmering with mirages; after a good rain, flamingos.",
+     "act": {
+      "type": "safari"
+     },
+     "sights": [
+      "Etosha Pan"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "guided",
+     "name": "A guided drive at dawn or at night",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book at the camp's reception.",
+     "why": "An open vehicle from the camp, out before the gates open or after dark, when the cats hunt.",
+     "act": {
+      "type": "safari"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "wildlife",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "na-opuwo",
+   "names": [
+    "Opuwo",
+    "Kaokoland"
+   ],
+   "country": "NA",
+   "lat": -18.06,
+   "lon": 13.84,
+   "radius_km": 40,
+   "season": "May to October; a sedan reaches Opuwo, a 4x4 for the villages and beyond.",
+   "sleep": "A lodge on the hill above Opuwo.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Opuwo",
+    "https://en.wikivoyage.org/wiki/Kaokoland"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "extras": [
+    "Ask before every photo, and never photograph people in their homestead without their yes: respect is the deal."
+   ],
+   "items": [
+    {
+     "id": "himba",
+     "name": "A Himba village with a local guide",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The OvaHimba keep their way of life: ochre-red skin, leather and huts of mud and dung. A guide from the community explains, translates and asks first.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Opuwo"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 2,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "town",
+     "name": "Opuwo's market and streets",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Himba, Herero in Victorian dresses and townspeople side by side: one of the most striking towns in Africa.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Opuwo"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "na-epupa",
+   "names": [
+    "Epupa Falls",
+    "Epupa",
+    "Kunene River"
+   ],
+   "country": "NA",
+   "lat": -17.0,
+   "lon": 13.25,
+   "radius_km": 30,
+   "season": "After the rains, March to June, the falls are fullest; the road from Opuwo is long and rough.",
+   "sleep": "A lodge or camp on the Kunene, under the palms by the falls.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Epupa_Falls",
+    "https://en.wikipedia.org/wiki/Epupa_Falls"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "extras": [
+    "The Kunene has crocodiles and hippos: do not swim, and keep away from the bank outside the settlement."
+   ],
+   "items": [
+    {
+     "id": "falls",
+     "name": "Epupa Falls at sunset from the hill",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Kunene splits into dozens of channels over 1.5 km, drops of up to 37 m between baobabs and palms, on the border with Angola.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Epupa Falls"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "walk",
+     "name": "A guided walk along the Kunene",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Birds, crocodiles from a safe distance, and the Himba homesteads of the valley with a guide from the lodge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Kunene River"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 3,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "na-fish-river",
+   "names": [
+    "Fish River Canyon",
+    "Hobas",
+    "Ai-Ais"
+   ],
+   "country": "NA",
+   "lat": -27.6,
+   "lon": 17.6,
+   "radius_km": 45,
+   "season": "March to October. Summer passes 40°C in the canyon.",
+   "sleep": "Hobas camp or a lodge near the canyon rim.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Fish_River_Canyon_Park",
+    "https://en.wikipedia.org/wiki/Fish_River_Canyon"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "extras": [
+    "The five-day trail through the canyon is on its trail page: only March to September, with a doctor's certificate and a group of three or more."
+   ],
+   "items": [
+    {
+     "id": "rim",
+     "name": "Sunset over the Fish River Canyon from Hobas",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Africa's largest canyon, 550 m deep and 160 km long: from the main viewpoint the river bends in the rock below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Fish River Canyon"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "rim-walk",
+     "name": "Along the rim from viewpoint to viewpoint",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The canyon from one bend to the next on the edge, without going down.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Fish River Canyon"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "na-zambezi",
+   "names": [
+    "Bagani",
+    "Divundu",
+    "Mahango",
+    "Mahango Game Reserve",
+    "Bwabwata",
+    "Popa Falls",
+    "Caprivi Strip"
+   ],
+   "country": "NA",
+   "lat": -18.15,
+   "lon": 21.65,
+   "radius_km": 40,
+   "season": "July to November, when the bush dries and the animals come to the river. The rains (December-March) bring mud and mosquitoes: malaria area.",
+   "sleep": "A lodge on the Kavango river near Divundu.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Caprivi",
+    "https://en.wikivoyage.org/wiki/Bwabwata_National_Park",
+    "https://en.wikipedia.org/wiki/Bwabwata_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mahango",
+     "name": "Game drive in Mahango",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Buffalo, sable and roan antelope, elephants and hippos on the Okavango floodplain: the green Namibia, nothing like the desert.",
+     "act": {
+      "type": "safari"
+     },
+     "sights": [
+      "Mahango Game Reserve"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "river",
+     "name": "A sunset boat on the Kavango",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Hippos, crocodiles and hundreds of birds from a small boat, the sun going down over the reeds.",
+     "act": {
+      "type": "boat"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  }
+ ]
+}

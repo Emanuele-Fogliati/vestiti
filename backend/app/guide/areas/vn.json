@@ -1,0 +1,2007 @@
+{
+ "_doc": "Vietnam, written by hand for the ranking and the plans hour by hour (Manu, 2026-11-14). Sources per area; scores on the rubric of docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "vn-hanoi",
+   "names": [
+    "Hanoi",
+    "Ha Noi",
+    "Hà Nội",
+    "Hanoi Old Quarter"
+   ],
+   "country": "VN",
+   "lat": 21.028,
+   "lon": 105.834,
+   "radius_km": 25,
+   "season": "October to April is dry; December to February is cool and grey, 15-20 °C. May to September is hot, humid and stormy.",
+   "sleep": "The Old Quarter, around Hoan Kiem Lake: everything is on foot and the streets are the show.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hanoi"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Museums: Ethnology and Hoa Lo",
+    "hours": "Half a day",
+    "why": "The Museum of Ethnology has whole houses of the hill peoples; Hoa Lo is the French prison the Americans called the Hanoi Hilton."
+   },
+   "extras": [
+    "Hoan Kiem's streets close to traffic on weekend evenings: the whole town comes out to walk.",
+    "Train Street: cafés sit on the tracks a few times a day when a train passes; the police close it now and then."
+   ],
+   "items": [
+    {
+     "id": "old-quarter",
+     "name": "The Old Quarter and Hoan Kiem Lake on foot",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Early morning or after 17:00",
+     "book": "",
+     "why": "Streets named after what they sold for centuries, the red bridge to Ngoc Son temple, and tai chi round the lake at dawn.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "06:00",
+       "what": "Tai chi and dancing round Hoan Kiem Lake",
+       "note": "the city exercises before work"
+      },
+      {
+       "at": "07:00",
+       "what": "Phở for breakfast at a street stall"
+      },
+      {
+       "at": "08:00",
+       "what": "Ngoc Son temple over the red Huc bridge",
+       "note": "the giant turtle inside"
+      },
+      {
+       "at": "09:30",
+       "what": "The Old Quarter's guild streets to Dong Xuan Market"
+      },
+      {
+       "at": "11:30",
+       "what": "Egg coffee in a hidden café",
+       "note": "a Hanoi invention of the 1940s"
+      }
+     ],
+     "sights": [
+      "Hoan Kiem Lake",
+      "Ngoc Son Temple",
+      "Hanoi Old Quarter",
+      "Dong Xuan Market"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 2,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ho-chi-minh",
+     "name": "Ho Chi Minh's mausoleum, the One Pillar Pagoda and the Temple of Literature",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning: the mausoleum opens only a few hours",
+     "book": "The mausoleum opens mornings only, closed Monday and Friday. Shoulders and knees covered, no bags inside.",
+     "why": "Uncle Ho embalmed under guard, his stilt house in the gardens, then Vietnam's first university, founded in 1070.",
+     "act": {
+      "type": "city"
+     },
+     "weekdays": [
+      1,
+      2,
+      3,
+      5,
+      6
+     ],
+     "steps": [
+      {
+       "at": "07:30",
+       "what": "Queue for the Ho Chi Minh Mausoleum",
+       "note": "silent and quick; no photos inside"
+      },
+      {
+       "at": "09:00",
+       "what": "His stilt house and the One Pillar Pagoda"
+      },
+      {
+       "at": "10:30",
+       "what": "Temple of Literature",
+       "note": "five courtyards and the stone turtles with the names of old graduates"
+      },
+      {
+       "at": "12:00",
+       "what": "Lunch: bún chả, grilled pork with noodles"
+      }
+     ],
+     "sights": [
+      "Ho Chi Minh Mausoleum",
+      "Ho Chi Minh's Stilt House",
+      "One Pillar Pagoda",
+      "Temple of Literature"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 1,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "street-food",
+     "name": "Street food by night",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "From 18:00",
+     "book": "",
+     "why": "Hanoi eats on plastic stools on the pavement: bún chả, bánh cuốn, fresh beer at a few thousand dong a glass.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "18:00",
+       "what": "Bia hơi, fresh draught beer, on a corner"
+      },
+      {
+       "at": "19:00",
+       "what": "Three dishes at three stalls"
+      },
+      {
+       "at": "21:00",
+       "what": "Weekend night market on Hang Dao, or the lake"
+      }
+     ],
+     "sights": [
+      "Hanoi Old Quarter"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 1,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "puppets",
+     "name": "Water puppet show",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "An evening show",
+     "book": "Buy the ticket at the theatre by the lake earlier in the day.",
+     "why": "Wooden dragons and farmers dancing on water, with live folk music: a village art from the rice fields.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hoan Kiem Lake"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "museums",
+     "name": "Museum of Ethnology and Hoa Lo prison",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "The Museum of Ethnology is closed on Monday.",
+     "why": "The 54 peoples of Vietnam in houses you walk into, and the colonial prison where the Americans were later held.",
+     "act": {
+      "type": "city"
+     },
+     "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "sights": [
+      "Hoa Lo Prison"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "west-lake",
+     "name": "West Lake and Tran Quoc Pagoda by bike",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Late afternoon",
+     "book": "",
+     "why": "The oldest pagoda in Hanoi on a spit in the lake, then lakeside cafés at sunset.",
+     "act": {
+      "type": "cycling"
+     },
+     "sights": [
+      "Tran Quoc Pagoda",
+      "West Lake"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "vn-ha-long",
+   "names": [
+    "Ha Long Bay",
+    "Halong Bay",
+    "Ha Long",
+    "Hạ Long",
+    "Vung Vieng",
+    "Lan Ha Bay",
+    "Bai Tu Long Bay",
+    "Tuan Chau Island"
+   ],
+   "country": "VN",
+   "lat": 20.91,
+   "lon": 107.18,
+   "radius_km": 45,
+   "season": "October to April: calm and often misty; June to September hot, with typhoons that cancel the boats.",
+   "sleep": "On a boat, one or two nights: the bay is at its best at dawn and dusk when the day boats are gone.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ha_Long_Bay",
+    "https://en.wikivoyage.org/wiki/Cat_Ba_Island"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Sung Sot cave",
+    "hours": "1 h",
+    "why": "The bay's biggest cave is dry inside whatever the sky does."
+   },
+   "items": [
+    {
+     "id": "cruise",
+     "name": "Overnight boat on the bay: kayak, a cave, the sunset",
+     "hours": "From midday to the next late morning, a night aboard",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book the boat in Hanoi with the bus included (about 2 h 30 to the port). Lan Ha and Bai Tu Long routes are quieter than central Ha Long. Typhoons cancel the sailings.",
+     "why": "Thousands of limestone islands rising from green water; at night the boat anchors among them.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Bus from Hanoi to the port"
+      },
+      {
+       "at": "12:30",
+       "what": "Board, lunch as the boat sails out"
+      },
+      {
+       "at": "15:00",
+       "what": "Kayak through a cave into a closed lagoon"
+      },
+      {
+       "at": "17:30",
+       "what": "Sunset on the sun deck"
+      }
+     ],
+     "extras": [
+      "Next morning: tai chi on deck at dawn, Sung Sot cave or a floating village by rowing boat, back in Hanoi by mid-afternoon.",
+      "The Ti Top island steps end at a view over the whole bay: go in the late afternoon."
+     ],
+     "sights": [
+      "Ha Long Bay",
+      "Sung Sot Cave",
+      "Lan Ha Bay"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "ti-top",
+     "name": "Ti Top island and its lookout",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Steps up a karst island to the view of the bay printed on every poster, and a small beach.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Ti Top Island"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view",
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "cat-ba",
+     "name": "Cat Ba island and Lan Ha bay by kayak",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The bay's wilder half: kayak among quieter islets, then the national park forest on Cat Ba.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Cat Ba Island",
+      "Lan Ha Bay"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "vn-ninh-binh",
+   "names": [
+    "Ninh Binh",
+    "Ninh Bình",
+    "Tam Coc",
+    "Trang An",
+    "Hoa Lu"
+   ],
+   "country": "VN",
+   "lat": 20.25,
+   "lon": 105.97,
+   "radius_km": 25,
+   "season": "May and June the rice is ripe and gold around Tam Coc; lotus in June and July. January to March is grey and cool.",
+   "sleep": "A homestay in Tam Coc among the rice fields, not Ninh Binh town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ninh_Binh"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Bai Dinh pagoda",
+    "hours": "3-4 h",
+    "why": "Vietnam's largest Buddhist complex: covered galleries of 500 arhats, fine in the rain."
+   },
+   "items": [
+    {
+     "id": "trang-an",
+     "name": "Trang An by rowing boat",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "First boats at 07:00, before the crowds",
+     "book": "",
+     "why": "Rowed by a local woman through caves under the karst and past temples on the water: a UNESCO landscape.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "First boats from the Trang An pier"
+      },
+      {
+       "at": "07:15",
+       "what": "Through the first caves, ducking under the rock"
+      },
+      {
+       "at": "08:30",
+       "what": "Temples on islands, a stop on foot"
+      },
+      {
+       "at": "10:00",
+       "what": "Back at the pier"
+      }
+     ],
+     "extras": [
+      "Routes 1, 2 and 3 each take about 3 h and all have caves and temples: don't agonise over the choice."
+     ],
+     "sights": [
+      "Trang An"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mua",
+     "name": "Mua Cave viewpoint",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "Sunset, or early morning in summer heat",
+     "book": "",
+     "why": "500 steps up to a dragon on the ridge, with the river bends of Tam Coc and the rice below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Up the 500 steps",
+       "note": "hot and steep: water"
+      },
+      {
+       "at": "17:00",
+       "what": "Sunset over the karst from the dragon"
+      },
+      {
+       "at": "18:00",
+       "what": "Down by torchlight if late"
+      }
+     ],
+     "sights": [
+      "Mua Cave viewpoint"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "tam-coc",
+     "name": "Tam Coc by boat and by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A shorter river between rice fields and three caves, then country lanes by bike to Bich Dong pagoda.",
+     "act": {
+      "type": "cycling"
+     },
+     "sights": [
+      "Tam Coc",
+      "Bich Dong Pagoda"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "hoa-lu",
+     "name": "Hoa Lu, the first capital",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Temples of the kings of the 10th century, Vietnam's capital before Hanoi.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hoa Lu",
+      "Dinh Tien Hoang Temple"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "bai-dinh",
+     "name": "Bai Dinh pagoda",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Huge and new: 500 stone arhats along a covered gallery and a 100 m pagoda tower.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bai Dinh Pagoda"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "vn-sapa",
+   "names": [
+    "Sapa",
+    "Sa Pa",
+    "Lao Cai",
+    "Muong Hoa Valley",
+    "Fansipan"
+   ],
+   "country": "VN",
+   "lat": 22.34,
+   "lon": 103.84,
+   "radius_km": 40,
+   "season": "Rice terraces green in June-July, gold in September-October. December to February can drop to 0 °C with fog. Rain from May to August.",
+   "sleep": "One night in town, one in a homestay in Ta Van or a village beyond it.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Sa_Pa"
+   ],
+   "nights": [
+    2,
+    2,
+    4
+   ],
+   "buffer": 1,
+   "rain": {
+    "name": "Sapa market and a café",
+    "hours": "",
+    "why": "The hill tribes' market in town, and a hot ginger tea while the fog passes."
+   },
+   "items": [
+    {
+     "id": "villages",
+     "name": "Walk to Lao Chai and Ta Van through the terraces",
+     "hours": "5-6 h · about 12 km",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "A local guide from the villages (book in town). Shoes with grip: the paths turn to mud.",
+     "why": "Black Hmong and Dzay villages along the Muong Hoa valley, rice terraces carved into the whole mountainside.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1600
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Down from town into the Muong Hoa valley"
+      },
+      {
+       "at": "10:30",
+       "what": "Lao Chai, a Black Hmong village"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in Ta Van"
+      },
+      {
+       "at": "14:00",
+       "what": "On to Giang Ta Chai or a homestay",
+       "note": "many stay the night"
+      },
+      {
+       "at": "16:00",
+       "what": "Car back to town, or dinner with the family"
+      }
+     ],
+     "extras": [
+      "Women from the villages walk with you and expect you to buy: say no kindly at the start if you don't want to."
+     ],
+     "sights": [
+      "Muong Hoa Valley",
+      "Lao Chai",
+      "Ta Van"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 4,
+      "relax": 1,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "fansipan",
+     "name": "Fansipan by cable car",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Only on a clear morning",
+     "book": "",
+     "why": "The roof of Indochina, 3,143 m, reached by cable car over the valley. Often lost in cloud.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3143
+     },
+     "sights": [
+      "Fansipan"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "homestay",
+     "name": "A night in a village homestay",
+     "hours": "Overnight",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Dinner with the family, rice wine, and the terraces at dawn without anyone else.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Ta Van"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 5,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "bac-ha",
+     "name": "Bac Ha Sunday market",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Flower Hmong in their brightest clothes buying buffaloes, horses and pigs: the biggest market of the hills.",
+     "act": {
+      "type": "city"
+     },
+     "weekdays": [
+      6
+     ],
+     "sights": [
+      "Bac Ha"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 1,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "vn-ha-giang",
+   "names": [
+    "Ha Giang",
+    "Hà Giang",
+    "Ha Giang Loop",
+    "Dong Van",
+    "Dong Van Karst Plateau"
+   ],
+   "country": "VN",
+   "lat": 22.82,
+   "lon": 104.98,
+   "radius_km": 90,
+   "season": "October-November for the buckwheat flowers and dry roads; March-April too. July and August bring landslides.",
+   "sleep": "Ha Giang city the first night, then Yen Minh, Dong Van and Du Gia on the loop.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ha_Giang",
+    "https://en.wikivoyage.org/wiki/Dong_Van"
+   ],
+   "nights": [
+    3,
+    4,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "loop",
+     "name": "The Ha Giang Loop with a local rider",
+     "hours": "3-4 days",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "On the back of a local 'easy rider' unless you ride well and hold a valid licence: the roads are steep and the trucks don't stop.",
+     "why": "Karst mountains, the Ma Pi Leng pass over the Nho Que gorge, and Hmong markets: Vietnam's wildest road.",
+     "act": {
+      "type": "cycling"
+     },
+     "extras": [
+      "Day 1: Ha Giang to Quan Ba's Heaven Gate and Yen Minh.",
+      "Day 2: Yen Minh to Dong Van, the old town and the Hmong king's palace.",
+      "Day 3: the Ma Pi Leng pass over the Nho Que river, the view of the loop.",
+      "Day 4: Du Gia, or straight back to Ha Giang."
+     ],
+     "sights": [
+      "Ha Giang",
+      "Dong Van"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 4,
+      "relax": 1,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "adventure",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "dong-van",
+     "name": "Dong Van old town and market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Stone houses of the 1920s and a Sunday market where the hill peoples come down.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Dong Van"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 5,
+      "relax": 2,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "vn-mai-chau",
+   "names": [
+    "Mai Chau",
+    "Mai Châu",
+    "Pom Coong",
+    "Pu Luong"
+   ],
+   "country": "VN",
+   "lat": 20.66,
+   "lon": 105.08,
+   "radius_km": 40,
+   "season": "Rice green in summer and harvested in June and October. Cool and misty in winter.",
+   "sleep": "A stilt house in Lac or Pom Coong, the White Thai villages in the rice.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Mai_Chau",
+    "https://en.wikivoyage.org/wiki/Pu_Luong_Nature_Reserve"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "valley",
+     "name": "The valley by bike, stilt-house villages",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Flat lanes through rice fields to White Thai villages where looms work under the houses.",
+     "act": {
+      "type": "cycling"
+     },
+     "steps": [
+      {
+       "at": "15:00",
+       "what": "Bikes from the homestay"
+      },
+      {
+       "at": "15:30",
+       "what": "Through the rice to the villages"
+      },
+      {
+       "at": "18:00",
+       "what": "Dinner and a Thai dance evening in the village"
+      }
+     ],
+     "sights": [
+      "Pom Coong Village"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 4,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "pu-luong",
+     "name": "Pu Luong: terraces and bamboo bridges",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A quieter Sapa: terraces, water wheels and forests, with a walk between villages.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1000
+     },
+     "sights": [
+      "Pu Luong Nature Reserve"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 3,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "vn-phong-nha",
+   "names": [
+    "Phong Nha",
+    "Phong Nha-Ke Bang",
+    "Phong Nha-Ke Bang National Park",
+    "Son Trach",
+    "Dong Hoi"
+   ],
+   "country": "VN",
+   "lat": 17.59,
+   "lon": 106.28,
+   "radius_km": 50,
+   "season": "February to August. September to December is flood season: some caves close.",
+   "sleep": "Phong Nha village (Son Trach), by the river at the park gate.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Phong_Nha-Ke_Bang"
+   ],
+   "nights": [
+    2,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "Phong Nha cave by boat",
+    "hours": "2-3 h",
+    "why": "The river goes inside the mountain: a cave visited by boat, fine whatever the sky."
+   },
+   "items": [
+    {
+     "id": "paradise",
+     "name": "Paradise Cave",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A wooden walkway a kilometre into a cave of white stalagmites as tall as houses.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Paradise Cave"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "phong-nha-cave",
+     "name": "Phong Nha cave by boat",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A boat up the Son river into the mountain, the engine off as you glide under the stalactites.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Phong Nha Cave"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "dark-cave",
+     "name": "Dark Cave: zipline, kayak and mud bath",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Zipline over the river, swim into an unlit cave by headlamp, and float in mud inside it.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Phong Nha-Ke Bang National Park"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "countryside",
+     "name": "The Bong Lai valley by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Rice, karst and a farm with a beer at the end: the park's quiet side.",
+     "act": {
+      "type": "cycling"
+     },
+     "sights": [
+      "Phong Nha-Ke Bang National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "vn-hue",
+   "names": [
+    "Hue",
+    "Huế",
+    "Imperial City of Hue",
+    "Hue Imperial City",
+    "Perfume River"
+   ],
+   "country": "VN",
+   "lat": 16.46,
+   "lon": 107.59,
+   "radius_km": 25,
+   "season": "February to April is the easiest. September to December brings heavy rain and floods; May to August is hot.",
+   "sleep": "South bank of the Perfume River for restaurants; inside the citadel walls for quiet.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hue"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "The Imperial City's halls",
+    "hours": "",
+    "why": "Many of the citadel's pavilions are covered; a long lunch of imperial dishes."
+   },
+   "items": [
+    {
+     "id": "citadel",
+     "name": "The Imperial City",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "At opening (06:30), before the heat",
+     "book": "",
+     "why": "The Nguyen emperors' palace within a moated citadel, half rebuilt after the battle of 1968.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Through the Noon Gate"
+      },
+      {
+       "at": "08:00",
+       "what": "The throne hall and the Forbidden Purple City"
+      },
+      {
+       "at": "10:00",
+       "what": "Galleries and the gardens"
+      },
+      {
+       "at": "11:30",
+       "what": "Lunch: bún bò Huế, the city's spicy beef soup"
+      }
+     ],
+     "sights": [
+      "Imperial City of Hue"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "tombs",
+     "name": "The emperors' tombs and Thien Mu by the river",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Khai Dinh's mosaic tomb on a hillside, Tu Duc's lakeside retreat, and the pagoda that symbolises the city.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Thien Mu Pagoda over the river"
+      },
+      {
+       "at": "09:30",
+       "what": "Tomb of Tu Duc",
+       "note": "pavilions on a lake"
+      },
+      {
+       "at": "11:30",
+       "what": "Tomb of Khai Dinh",
+       "note": "glass and porcelain mosaics"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch"
+      },
+      {
+       "at": "14:30",
+       "what": "Tomb of Minh Mang"
+      },
+      {
+       "at": "16:30",
+       "what": "Dragon boat back down the Perfume River"
+      }
+     ],
+     "sights": [
+      "Thien Mu Pagoda",
+      "Tomb of Tu Duc",
+      "Tomb of Khai Dinh",
+      "Tomb of Minh Mang",
+      "Perfume River"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "hai-van",
+     "name": "Over the Hai Van pass to Hoi An",
+     "hours": "Half a day on the way",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The coast road over the mountains, Lang Co lagoon below: Hue to Hoi An with the best view on the way.",
+     "act": {
+      "type": "cycling"
+     },
+     "sights": [
+      "Hai Van Pass",
+      "Lang Co"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "vn-hoi-an",
+   "names": [
+    "Hoi An",
+    "Hội An",
+    "Hoi An Old Town",
+    "Da Nang",
+    "Đà Nẵng",
+    "My Son"
+   ],
+   "country": "VN",
+   "lat": 15.88,
+   "lon": 108.33,
+   "radius_km": 35,
+   "season": "February to May is dry and warm. October and November bring floods that reach the old town.",
+   "sleep": "Near the old town, or by An Bang beach 5 km away with bikes.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hoi_An",
+    "https://en.wikivoyage.org/wiki/Da_Nang"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "A cooking class or a tailor",
+    "hours": "",
+    "why": "Learn cao lầu and white rose dumplings, or have a suit made in a day."
+   },
+   "items": [
+    {
+     "id": "old-town",
+     "name": "The old town by day and by lantern light",
+     "hours": "Half a day and the evening",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "One ticket covers five of the old houses and halls.",
+     "why": "Yellow merchant houses, the Japanese covered bridge, and the river lit with lanterns at night: a UNESCO port of the 16th century.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "The empty streets and the market at dawn"
+      },
+      {
+       "at": "09:00",
+       "what": "The Japanese Covered Bridge and two merchant houses"
+      },
+      {
+       "at": "12:00",
+       "what": "Cao lầu noodles for lunch"
+      },
+      {
+       "at": "18:00",
+       "what": "Lanterns on the river; a little boat to float one"
+      },
+      {
+       "at": "19:30",
+       "what": "Dinner by the water"
+      }
+     ],
+     "sights": [
+      "Hoi An Old Town",
+      "Japanese Covered Bridge",
+      "Thu Bon River"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "my-son",
+     "name": "My Son sanctuary at opening time",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "At opening, before the heat and the groups",
+     "book": "",
+     "why": "Brick towers of the Cham kingdom in a jungle valley, a Hindu sanctuary of the 4th to 13th century.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "steps": [
+      {
+       "at": "05:30",
+       "what": "Car from Hoi An",
+       "note": "about 1 h"
+      },
+      {
+       "at": "06:30",
+       "what": "The first temple groups in the morning light"
+      },
+      {
+       "at": "08:30",
+       "what": "Dance show of Cham culture"
+      },
+      {
+       "at": "09:30",
+       "what": "Back, or by boat down the Thu Bon"
+      }
+     ],
+     "sights": [
+      "My Son"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "tra-que",
+     "name": "Tra Que vegetable village and a cooking class",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Herb gardens between the town and the sea; pick, then cook.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Tra Que"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "an-bang",
+     "name": "An Bang beach",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Soft sand and beach bars a short bike ride from the old town.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "sights": [
+      "An Bang Beach"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "marble",
+     "name": "Marble Mountains on the way to Da Nang",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Five marble hills riddled with caves and pagodas, steps to the top.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "sights": [
+      "Marble Mountains"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 3,
+      "relax": 1,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "vn-ho-chi-minh",
+   "names": [
+    "Ho Chi Minh City",
+    "Saigon",
+    "Sài Gòn",
+    "HCMC",
+    "Thành phố Hồ Chí Minh"
+   ],
+   "country": "VN",
+   "lat": 10.78,
+   "lon": 106.7,
+   "radius_km": 30,
+   "season": "Dry from December to April; rain from May to November comes in short afternoon downpours. Hot all year.",
+   "sleep": "District 1, near Ben Thanh market; District 3 is quieter.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ho_Chi_Minh_City"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "rain": {
+    "name": "War Remnants Museum",
+    "hours": "2-3 h",
+    "why": "The war from the Vietnamese side: hard to look at, important to see."
+   },
+   "items": [
+    {
+     "id": "centre",
+     "name": "Saigon's centre: the Independence Palace, the war museum, the post office",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "The palace and the War Remnants Museum close at lunch (about 11:00-13:00).",
+     "why": "The palace where the war ended in 1975, the museum of what it did, and the French cathedral and post office.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Independence Palace",
+       "note": "the 1960s rooms and the tank at the gate"
+      },
+      {
+       "at": "10:00",
+       "what": "War Remnants Museum"
+      },
+      {
+       "at": "12:00",
+       "what": "Lunch: cơm tấm, broken rice"
+      },
+      {
+       "at": "14:00",
+       "what": "The cathedral square and the Central Post Office"
+      },
+      {
+       "at": "16:00",
+       "what": "Ben Thanh market"
+      }
+     ],
+     "sights": [
+      "Independence Palace",
+      "Saigon Central Post Office",
+      "Notre-Dame Cathedral Saigon",
+      "Ben Thanh Market"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "cu-chi",
+     "name": "Cu Chi tunnels",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Part of 250 km of tunnels where the Viet Cong lived under the bombs; crawl a stretch.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Cu Chi Tunnels"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 1,
+      "relax": 1,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "transfer"
+    },
+    {
+     "id": "scooter-food",
+     "name": "Street food on the back of a scooter",
+     "hours": "4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "From 18:00",
+     "book": "",
+     "why": "Into the districts tourists never reach, eating at five stalls.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Ho Chi Minh City"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 1,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "tay-ninh",
+     "name": "Cao Dai Holy See at Tay Ninh",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The colourful temple of a 20th-century religion that honours Buddha, Jesus and Victor Hugo; the noon ceremony.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Tay Ninh",
+      "Black Virgin Mountain"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 1,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "vn-mekong",
+   "names": [
+    "Can Tho",
+    "Cần Thơ",
+    "Mekong Delta",
+    "Cai Rang",
+    "Ben Tre",
+    "Vinh Long",
+    "Cai Be"
+   ],
+   "country": "VN",
+   "lat": 10.03,
+   "lon": 105.78,
+   "radius_km": 70,
+   "season": "All year. September to November the river floods the fields; December to April is dry.",
+   "sleep": "Can Tho for the floating market at dawn, or a homestay on an island near Vinh Long or Ben Tre.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Can_Tho",
+    "https://en.wikivoyage.org/wiki/Mekong_Delta"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cai-rang",
+     "name": "Cai Rang floating market at dawn, then the canals",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave at 05:30: the market is over by 09:00",
+     "book": "",
+     "why": "Boats hang a pineapple from a pole to say what they sell; small canals after, through orchards.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "05:30",
+       "what": "Small boat from the Ninh Kieu pier"
+      },
+      {
+       "at": "06:15",
+       "what": "Cai Rang floating market",
+       "note": "noodle soup cooked on a boat"
+      },
+      {
+       "at": "08:00",
+       "what": "A rice-noodle workshop"
+      },
+      {
+       "at": "09:00",
+       "what": "Small canals and orchards"
+      },
+      {
+       "at": "11:00",
+       "what": "Back in Can Tho"
+      }
+     ],
+     "sights": [
+      "Cai Rang Floating Market"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 4,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "culture",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "islands",
+     "name": "Coconut islands by bike and sampan",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Ben Tre's coconut canals: candy workshops, a sampan rowed under the palms, lunch with a family.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Ben Tre"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 3,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  }
+ ]
+}

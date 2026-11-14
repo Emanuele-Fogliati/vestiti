@@ -233,9 +233,11 @@ def test_no_trip_counts_in_a_proposal():
 
 def test_stop_panel_shows_what_trips_do_from_a_town():
     from app.guide.todo import todo_for
-    t = todo_for("Kyoto", "JP", 35.01, 135.77)
+    # Kyoto has a zone written by hand since 2026-11-14: a town without one falls back to the trips
+    t = todo_for("Seoul", "KR", 37.56, 126.98)
     assert t.source == "trips"
-    assert any("Kinkaku-ji" in it.name and " · " in it.name for it in t.items)
+    assert any("Gyeongbokgung" in it.name and " · " in it.name for it in t.items)
+    assert todo_for("Kyoto", "JP", 35.01, 135.77).source == "guide"
 
 
 # --- the guide written by hand: hour by hour, with what the programmes leave out (Manu, 2026-11-12)
