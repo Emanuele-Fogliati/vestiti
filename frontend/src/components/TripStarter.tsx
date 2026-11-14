@@ -11,7 +11,7 @@ import { useApp } from "../lib/app-context";
 import { MONTH_LONG, MONTHS, today } from "../lib/format";
 import { dated, firstOf, LENGTHS, move, setDays, short, span, totalDays } from "../lib/plan";
 import { useSpeech } from "../lib/speech";
-import type { BookedDay, Place, PlanArea, PlanIdea, PlanReading, PlanStep, PlanSuggestion } from "../lib/types";
+import type { BookedDay, DayPlan, Place, PlanArea, PlanIdea, PlanReading, PlanStep, PlanSuggestion, WeatherRule } from "../lib/types";
 import BookedPlan from "./BookedPlan";
 import HourByHour from "./HourByHour";
 import { PlaceSearch } from "./PlaceSearch";
@@ -79,7 +79,9 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   const [missing, setMissing] = useState<PlanReading["missing"]>([]);
   const [heardText, setHeardText] = useState("");
   const [sugg, setSugg] = useState<PlanSuggestion[]>([]);
-  const [booked, setBooked] = useState<{ timeline: BookedDay[]; end: string; nights: number; days: number } | null>(null);
+  const [booked, setBooked] = useState<{ text: string; timeline: BookedDay[]; end: string; nights: number; days: number; groups: number } | null>(null);
+  const [bookedDays, setBookedDays] = useState<DayPlan[]>([]);
+  const [weatherRules, setWeatherRules] = useState<WeatherRule[]>([]);
   const [adding, setAdding] = useState(false);
   const [creating, setCreating] = useState<"" | "dress" | "days">("");
   const resultRef = useRef<HTMLDivElement>(null);
@@ -115,7 +117,9 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
       if (r.mode === "booked" && r.timeline) {
         // a trip already booked: its days as written, the beds as stops
         setMode("booked"); setSteps(r.stops); setTarget(null); setHeardText("");
-        setBooked({ timeline: r.timeline, end: r.end_date ?? "", nights: r.nights ?? 0, days: r.days ?? r.timeline.length });
+        setBooked({ text: t.trim(), timeline: r.timeline, end: r.end_date ?? "", nights: r.nights ?? 0,
+          days: r.days ?? r.timeline.length, groups: r.groups ?? 0 });
+        setBookedDays(r.plan_days ?? []); setWeatherRules(r.weather ?? []);
       } else if (r.mode === "region" && r.proposal) {
         const p = r.proposal;
         setMode("region"); setArea(p.area); setOnly(p.only); setSteps(p.stops); setMore(p.more);
@@ -275,7 +279,10 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
             {mode !== "booked" && steps.length > 0 && !last && <p>{total} days · dates to choose</p>}
           </header>
 
-          {mode === "booked" && booked && <BookedPlan steps={steps} timeline={booked.timeline} />}
+          {mode === "booked" && booked && (
+            <BookedPlan text={booked.text} steps={steps} timeline={booked.timeline} groups={booked.groups}
+              days={bookedDays} weather={weatherRules} onDays={setBookedDays} onWeather={setWeatherRules} />
+          )}
 
           {(mode === "region" || mode === "open" || mode === "stops") && (
             <div className="plan-q">

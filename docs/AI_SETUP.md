@@ -97,6 +97,24 @@ jackets apart without a readable label, so the app asks for a label photo and th
 always confirms. Photos are never stored. Without the model, the page says so and people add
 items by name instead (search + keyword estimate work with no AI at all).
 
+## Option D: Claude (paid API) for the day-by-day plan
+
+"Write my days with AI" on Plan a trip (a trip already booked: flights, car, beds) asks the model
+once per base. Our local Qwen does it for free but slowly and less reliably; Claude does it far
+better and is paid per use. In `.env`:
+
+```
+LLM_API=anthropic
+LLM_API_KEY=sk-ant-...          # console.anthropic.com
+LLM_MODEL=claude-sonnet-5-5     # or claude-opus-5-5 (best), claude-haiku-5-5 (cheapest)
+LLM_EFFORT=medium
+```
+
+Every other AI feature of the app then also goes to Claude. Rough cost of one 15-day trip
+(3 bases, about 30k tokens in and 15k out): Opus 5.5 about $0.40, Sonnet 5.5 about $0.20,
+Haiku 5.5 about $0.01. The facts (flights, drives, beds, times) are always checked against
+the traveller's text after the model answers, and places come only from our guides.
+
 ## Option B: Ollama inside Docker
 
 ```powershell

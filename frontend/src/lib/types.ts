@@ -199,10 +199,20 @@ export interface BookedDay {
   n: number; date: string; stop: number | null; stop_day: number | null; legs: BookedLeg[];
   sleep: { name: string | null; address: string | null; town: string } | { in_the_air: true } | null;
 }
+/** A row of a day, hour by hour: a move from the text (fixed) or a thing to do. */
+export interface DayRow {
+  at: string | null; what: string; note?: string; effort: "zero" | "low" | "medium" | "high" | null;
+  optional: boolean; fixed: boolean;
+}
+export interface DayPlan { date: string; title: string; priority: number | null; rows: DayRow[] }
+export interface WeatherRule { area: string; drop: string; how: string }
+export interface DaysWritten {
+  group: number; groups: number; days: DayPlan[]; weather: WeatherRule[]; source: "llm" | "rules"; model: string | null; why?: string;
+}
 export interface PlanReading {
   text: string; mode: "stops" | "region" | "open" | "booked";
   /** booked: every move and every day, the last day, the nights booked */
-  legs?: BookedLeg[]; timeline?: BookedDay[]; end_date?: string; nights?: number; area: PlanArea | null; only: string[]; month: number | null;
+  legs?: BookedLeg[]; timeline?: BookedDay[]; plan_days?: DayPlan[]; weather?: WeatherRule[]; groups?: number; lang?: string; end_date?: string; nights?: number; area: PlanArea | null; only: string[]; month: number | null;
   start_date: string | null; start_part?: string; days: number | null; stops: PlanStep[];
   home: { name: string; country: string; lat: number; lon: number } | null; wishes: string[];
   missing: ("where" | "when" | "how_long")[]; keep?: string[]; last?: string[]; proposal: PlanProposal | null; ideas: PlanIdea[];

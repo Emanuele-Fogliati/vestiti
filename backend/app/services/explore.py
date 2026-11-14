@@ -712,7 +712,7 @@ SIZE = {"full": 4, "half": 2, "short": 1}  # a day holds 4
 
 def _thing(it) -> dict:
     return {"id": it.id, "name": it.name, "hours": it.hours, "book": it.book, "need": it.need,
-            "steps": [x.model_dump() for x in it.steps], "extras": list(it.extras)}
+            "effort": it.effort, "length": it.length, "steps": [x.model_dump() for x in it.steps], "extras": list(it.extras)}
 
 
 def _span(it) -> tuple[str, str] | None:

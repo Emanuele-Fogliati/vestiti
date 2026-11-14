@@ -61,6 +61,10 @@ class LLMClient:
         if not self.s.llm_enabled:
             return {"enabled": False, "available": False, "model": self.s.llm_model,
                     "base_url": self.s.llm_base_url, "detail": "LLM_ENABLED=false"}
+        if self.s.llm_api == "anthropic":
+            ok = bool(self.s.llm_api_key) and self.s.llm_api_key != "local"
+            return {"enabled": True, "available": ok, "model": self.s.llm_model, "base_url": "anthropic",
+                    "detail": "ok" if ok else "LLM_API_KEY missing"}
         key = f"{self.s.llm_base_url}|{self.s.llm_model}"
         hit = self._status_cache.get(key)
         if hit and time.time() - hit[0] < 30:
@@ -125,7 +129,9 @@ class LLMClient:
         if not slots.acquire(timeout=self.s.llm_queue_wait_s):
             raise LLMUnavailable("model busy")
         try:
-            if num_ctx and self.is_ollama():
+            if self.s.llm_api == "anthropic":
+                text = self._anthropic(system, messages[1]["content"].removesuffix("\n/no_think"), max_tokens, timeout)
+            elif num_ctx and self.is_ollama():
                 body = {"model": self.s.llm_model, "messages": messages, "stream": False,
                         "options": {"temperature": temperature, "num_predict": max_tokens,
                                     "num_ctx": min(num_ctx, self.s.llm_num_ctx_max)}}
@@ -152,6 +158,19 @@ class LLMClient:
         finally:
             slots.release()
         return _THINK.sub("", text).strip()
+
+    def _anthropic(self, system: str, user: str, max_tokens: int, timeout: float) -> str:
+        """Claude through the official SDK (LLM_API=anthropic, LLM_API_KEY=<key>, LLM_MODEL=claude-...).
+        No temperature (newer models refuse it); effort sets how hard it thinks."""
+        import anthropic
+
+        client = anthropic.Anthropic(api_key=self.s.llm_api_key, timeout=timeout, max_retries=2)
+        r = client.messages.create(model=self.s.llm_model, max_tokens=max(max_tokens, 4000), system=system,
+                                   messages=[{"role": "user", "content": user}],
+                                   output_config={"effort": self.s.llm_effort})
+        if r.stop_reason == "refusal":
+            raise LLMUnavailable("refused")
+        return "".join(b.text for b in r.content if b.type == "text")
 
     def chat_json(self, system: str, user: str, **kw) -> dict:
         text = self.chat(system, user, json_mode=True, **kw)
