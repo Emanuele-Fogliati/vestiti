@@ -11,6 +11,7 @@ import "./theme/start.css";
 import "./theme/calm.css";
 import "./theme/tabs.css";
 import "./theme/trails.css";
+import "./theme/paper.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

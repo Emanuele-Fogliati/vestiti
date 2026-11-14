@@ -86,7 +86,7 @@ class Settings(BaseSettings):
     flexoffers_link_template: str = ""
     # program ids the network gives once a merchant accepts you, by merchant name:
     # "evo=12345;Decathlon US=678". They fill products whose program_id is empty.
-    merchant_program_ids: str = ""
+    merchant_program_ids: str = "evo=10270"  # evo on AvantLink (merchant id from evo.com/evo-affiliate-program)
     # tours and excursions at each stop of the ready-made itineraries
     getyourguide_partner_id: str = ""
     viator_pid: str = ""

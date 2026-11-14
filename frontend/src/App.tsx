@@ -6,6 +6,7 @@ import Auth, { EmailLinkLanding, ForgotPassword, ResetPassword } from "./pages/A
 import HowItWorks from "./pages/HowItWorks";
 import ItineraryPage from "./pages/ItineraryPage";
 import Landing from "./pages/Landing";
+import Preview from "./pages/Preview";
 import Legal from "./pages/Legal";
 import NewTrip from "./pages/NewTrip";
 import NotFound from "./pages/NotFound";
@@ -19,6 +20,7 @@ import Trails from "./pages/Trails";
 export default function App() {
   return (
     <Routes>
+      <Route path="preview" element={<Preview />} />
       <Route element={<Layout />}>
         <Route index element={<Landing />} />
         <Route path="start" element={<Start tab="own" />} />

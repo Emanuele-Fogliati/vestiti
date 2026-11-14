@@ -284,8 +284,8 @@ function waterNames(id: string, minzoom: number, classes: string[], layout: Reco
   })) as StyleSpecification["layers"];
 }
 
-export function baseStyle(c: MapColors, opts: { globe: boolean }): StyleSpecification {
-  const sat = opts.globe;
+export function baseStyle(c: MapColors, opts: { globe: boolean; photo?: boolean }): StyleSpecification {
+  const sat = opts.globe && opts.photo !== false; // the Earth photo from space, or the drawn map at every zoom
   const fill = (full: number) => (sat ? drawnIn(full) : full);
   // on the photo (until the drawn map is fully in) names are white with a dark edge, after that grey with a white edge
   const onPhoto = (photo: string, map: string): ExpressionSpecification | string =>

@@ -103,7 +103,7 @@ export default function Globe() {
     try {
       map = new maplibregl.Map({
         container: el,
-        style: baseStyle(c, { globe: true }),
+        style: baseStyle(c, { globe: true, photo: false }), // the drawn vintage globe, no photo (design H21)
         center: [15, 18],
         zoom: fitZoom(el),
         minZoom: 0,
