@@ -1,0 +1,85 @@
+{
+ "id": "na-fish-river-canyon",
+ "country": "NA",
+ "name": "Fish River Canyon Hiking Trail",
+ "base": "Ai-Ais",
+ "region": "|Ai-|Ais/Richtersveld Transfrontier Park, southern Namibia",
+ "kind": "multiday",
+ "days": 5,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  30,
+  40
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 85,
+  "gain_m": null,
+  "source": "https://en.wikivoyage.org/wiki/Fish_River_Canyon"
+ },
+ "why": "Five days alone on the floor of Africa's largest canyon: sand, boulders, river crossings and hot springs at the end.",
+ "book": "Book the trail with Namibia Wildlife Resorts (reservations@nwr.com.na); places sell out. Season 1 May-15 September only. Groups of at least 3, hikers over 12, each with a doctor's certificate of fitness shown at the Hobas office. Book the shuttle from Ai-Ais back to Hobas.",
+ "water": "Only river pools: treat or boil it, and some pools are too salty. Carry at least 2 litres at all times; there is none on the shortcuts.",
+ "dangers": [
+  "Heat: 40 °C is not rare in the canyon even in winter.",
+  "Slippery rocks and deep pools at river crossings; quicksand in the first third.",
+  "No phone signal and only a few emergency exits: one person stays with an injured hiker while another goes for help.",
+  "The first descent from the viewpoint is steep, with chains at the top."
+ ],
+ "turnaround": "The last easy way out is the emergency exit near Sulphur (Palm) Springs: if anyone is struggling by then, leave there.",
+ "sources": [
+  "https://www.nwr.com.na/fish-river-canyon-hiking-trail-reopens/",
+  "https://www.nwr.com.na/wp-content/uploads/2021/06/Hiking-Precautions.pdf",
+  "https://www.nwr.com.na/update-on-fish-river-canyon-hiking-season/",
+  "https://en.wikipedia.org/wiki/Fish_River_Canyon",
+  "https://en.wikivoyage.org/wiki/Fish_River_Canyon",
+  "https://hiking.waymarkedtrails.org/#route?id=9517875"
+ ],
+ "osm": 9517875,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hikers' Viewpoint, Hobas",
+   "lat": -27.57779,
+   "lon": 17.6061,
+   "role": "start",
+   "note": "Above Hell's Bend, west of Hobas. The trail drops straight down to the river, the first 100 m with chains.",
+   "scene": "na-fish-river-canyon"
+  },
+  {
+   "id": "palm-springs",
+   "name": "Sulphur Springs (Palm Springs)",
+   "lat": -27.66006,
+   "lon": 17.61815,
+   "role": "point",
+   "note": "Hot sulphur springs under palms, about 17 km in: a common camp, and one of the few emergency exits out of the canyon.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "|Ai-|Ais hot springs",
+   "lat": -27.91736,
+   "lon": 17.49023,
+   "role": "goal",
+   "note": "The resort at the canyon mouth: hot spring pools, a shop and the shuttle back to Hobas."
+  }
+ ]
+}

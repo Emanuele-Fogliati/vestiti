@@ -1,0 +1,81 @@
+{
+ "id": "na-waterkloof",
+ "country": "NA",
+ "name": "Waterkloof Trail, Naukluft",
+ "base": "Naukluft",
+ "region": "Naukluft Mountains, Namib-Naukluft National Park",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  6,
+  7
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 17,
+  "gain_m": null,
+  "source": "https://www.nwr.com.na/resorts/naukluft-camp/"
+ },
+ "why": "Up a kloof of rock pools that hold water all year to the plateau at 1,900 m, then a long loop back down to camp.",
+ "book": "Book and pay at Naukluft reception. It starts at the camp; not guided.",
+ "water": "Rock pools in the first hour; none after. Carry 2-3 litres.",
+ "dangers": [
+  "Long and exposed to the sun after the pools: start early.",
+  "Baboons raid the camp: lock food in the car."
+ ],
+ "turnaround": "Not at the high point by 12:00: go back down the kloof the way you came.",
+ "sources": [
+  "https://www.nwr.com.na/resorts/naukluft-camp/",
+  "https://travelnam.com/namib-naukluft-trails/",
+  "https://en.wikivoyage.org/wiki/Namib-Naukluft_National_Park",
+  "https://hiking.waymarkedtrails.org/#route?id=368664"
+ ],
+ "osm": 368664,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Naukluft campsite",
+   "lat": -24.2648,
+   "lon": 16.2389,
+   "role": "start",
+   "note": "The trail leaves from the campsite and heads west up the kloof."
+  },
+  {
+   "id": "pools",
+   "name": "Waterkloof rock pools",
+   "lat": -24.26116,
+   "lon": 16.22837,
+   "role": "point",
+   "note": "Clear pools in the kloof, about 30 minutes from camp; they hold water through the dry season."
+  },
+  {
+   "id": "goal",
+   "name": "Waterkloof high point",
+   "lat": -24.27536,
+   "lon": 16.2053,
+   "role": "goal",
+   "note": "The top of the loop, about 1,900 m, on the plateau west of camp. From here the path turns back east and down to camp."
+  }
+ ]
+}

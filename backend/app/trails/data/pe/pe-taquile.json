@@ -1,0 +1,85 @@
+{
+ "id": "pe-taquile",
+ "country": "PE",
+ "name": "Taquile island walk",
+ "base": "Puno",
+ "region": "Lake Titicaca, Puno",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "Across an island of stone terraces at 3,950 m, where the men knit and the textiles are UNESCO heritage, with the lake all around.",
+ "book": "Boat tours from Puno port leave around 07:00-08:00 (2 h 30 each way, usually with a stop at the Uros islands). A S/10 fee is paid on landing.",
+ "water": "Buy at the main square; carry 1 litre and sun cream.",
+ "dangers": [
+  "Altitude: walk slowly, the climb from the port is steep at nearly 4,000 m.",
+  "Strong sun and cold wind on the lake."
+ ],
+ "turnaround": "Be at the port your boat leaves from by the time your skipper gives: there is one boat back a day.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Taquile",
+  "https://en.wikivoyage.org/wiki/Taquile",
+  "https://www.openstreetmap.org/node/1861647830"
+ ],
+ "router": "local",
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 5,
+  "relax": 3,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Puerto Salacancha",
+   "lat": -15.76285,
+   "lon": -69.68022,
+   "role": "start",
+   "note": "The landing on the east shore. The path climbs past terraces to the village."
+  },
+  {
+   "id": "taquile-main-square",
+   "name": "Taquile main square",
+   "lat": -15.7644,
+   "lon": -69.6843,
+   "role": "point",
+   "note": "At 3,950 m, reached through a stone arch: the textile market hall and the tourist office that places lunch and homestays.",
+   "scene": "pe-taquile"
+  },
+  {
+   "id": "mulsina-pata",
+   "name": "Mulsina Pata lookout",
+   "lat": -15.75768,
+   "lon": -69.68955,
+   "role": "point",
+   "note": "The highest point of the island, about 4,050 m, with the lake on every side."
+  },
+  {
+   "id": "goal",
+   "name": "Puerto Chillkano",
+   "lat": -15.76894,
+   "lon": -69.69149,
+   "role": "goal",
+   "note": "Down a long stone staircase to the west landing, where boats wait."
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "id": "ar-laguna-de-los-tempanos",
+ "country": "AR",
+ "name": "Laguna de los Témpanos at Vinciguerra Glacier",
+ "base": "Ushuaia",
+ "region": "Andorra valley, Ushuaia, Tierra del Fuego",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  8,
+  9
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 10,
+  "gain_m": null,
+  "source": "https://findelmundo.tur.ar/en/senderos/3139"
+ },
+ "why": "A peat bog, a lenga forest and a rock slope lead to a grey lake with floating ice under the Vinciguerra glacier, 8 km from the centre of Ushuaia.",
+ "book": "Free, no permit. Drive or take a taxi up the Andorra valley along Camino del Valle to its end, where a blue gate marks the start. The ice caves of the glacier only with a specialised guide.",
+ "water": "Streams in the forest; the lake is glacier melt. Nothing to buy after the gate.",
+ "dangers": [
+  "Deep mud and a wide peat bog: waterproof boots and gaiters.",
+  "The last climb is a steep rock slope, icy or snowy in spring and autumn.",
+  "Never walk on the glacier or into the ice caves without a guide."
+ ],
+ "turnaround": "Not at the top of the forest by 13:00: turn back, the rock slope and the bog take the rest of the day.",
+ "sources": [
+  "https://findelmundo.tur.ar/en/senderos/3139",
+  "https://turismoushuaia.com/actividad/glaciar-vinciguerra-laguna-tempanos/?lang=en_US",
+  "https://www.openstreetmap.org/way/145557237"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Andorra valley gate",
+   "lat": -54.762,
+   "lon": -68.3064,
+   "role": "start",
+   "note": "The blue gate at the end of Camino del Valle. A wide peat bog and the Arroyo Grande bridge come first."
+  },
+  {
+   "id": "fork",
+   "name": "Laguna Encantada fork",
+   "lat": -54.7492,
+   "lon": -68.3176,
+   "role": "point",
+   "note": "In the lenga forest about 1 km past the bridge: left for Laguna de los Témpanos, right for Laguna Encantada."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna de los Témpanos",
+   "lat": -54.7323,
+   "lon": -68.3323,
+   "role": "goal",
+   "note": "Above a steep rock slope: a grey lake with floating ice under the Vinciguerra glacier. Return the same way.",
+   "scene": "ar-laguna-de-los-tempanos"
+  }
+ ]
+}

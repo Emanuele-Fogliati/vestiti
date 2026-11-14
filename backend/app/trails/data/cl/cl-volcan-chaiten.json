@@ -1,0 +1,80 @@
+{
+ "id": "cl-volcan-chaiten",
+ "country": "CL",
+ "name": "Chaitén volcano",
+ "base": "Chaitén",
+ "region": "Pumalín Douglas Tompkins National Park, Los Lagos",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  2.5,
+  4
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 4.4,
+  "gain_m": null,
+  "source": "https://www.rutadelosparques.org/?p=67"
+ },
+ "why": "Stairs through a forest killed by the 2008 eruption to the rim of the caldera, with the steaming dome inside and the sea behind.",
+ "book": "Free; trail entry only until 14:00. The trailhead is at the Los Gigios bridge on the Carretera Austral, 34 km south of Caleta Gonzalo.",
+ "water": "None on the trail: carry 1.5 litres.",
+ "dangers": [
+  "Steep stairs and loose ash; slippery when wet.",
+  "No shade among the dead trees: sun and wind.",
+  "Volcanic gases near the dome: stay at the lookout."
+ ],
+ "turnaround": "Trail entry closes at 14:00.",
+ "sources": [
+  "https://www.rutadelosparques.org/?p=67",
+  "https://www.rutadelosparques.org/en/?p=67",
+  "https://www.conaf.cl/parque_nacionales/parque-nacional-pumalin-douglas-tompkins/",
+  "https://hiking.waymarkedtrails.org/#route?id=9146834"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 0,
+  "relax": 2,
+  "history": 2,
+  "landscape": 4
+ },
+ "osm": 9146834,
+ "points": [
+  {
+   "id": "start",
+   "name": "Chaitén volcano trailhead",
+   "lat": -42.80843,
+   "lon": -72.6674,
+   "role": "start",
+   "note": "By the Los Gigios bridge on the Carretera Austral, with a small car park. The trail climbs at once on stairs."
+  },
+  {
+   "id": "forest",
+   "name": "Dead forest",
+   "lat": -42.81366,
+   "lon": -72.66555,
+   "role": "point",
+   "note": "Trees killed by the hot ash of 2008 still stand on the slope; the climb gets steeper above."
+  },
+  {
+   "id": "goal",
+   "name": "Chaitén crater lookout",
+   "lat": -42.82509,
+   "lon": -72.66074,
+   "role": "goal",
+   "note": "On the caldera rim: the new lava dome steams inside, the town and the sea behind. Return the same way."
+  }
+ ]
+}

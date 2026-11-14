@@ -1,0 +1,77 @@
+{
+ "id": "cl-cerro-provincia",
+ "country": "CL",
+ "name": "Cerro Provincia over Santiago",
+ "base": "Santiago",
+ "region": "Parque Puente Ñilhue, Lo Barnechea, Santiago",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  10,
+  11,
+  12,
+  3,
+  4
+ ],
+ "hours": [
+  8,
+  10
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 18.3,
+  "gain_m": 1816,
+  "source": "https://www.wikiexplora.com/ENG:Cerro_Provincia"
+ },
+ "why": "The big day hike from Santiago: 1,800 m of dry ridge from the Mapocho gorge to a summit with the whole city on one side and the high Andes on the other.",
+ "book": "Named ticket bought in advance at Puntoticket (Parque Puente Ñilhue). The park opens weekends and holidays, 08:00-19:00 in summer and 08:00-18:00 in winter; last entry for trekking 13:00. The trailhead is at Puente Ñilhue on the road to Farellones.",
+ "water": "The last water is an irrigation canal at about km 2 (1,470 m): carry 3 litres or more.",
+ "dangers": [
+  "Heat and sun with no shade on the long ridge in summer.",
+  "Snow and unstable weather in winter.",
+  "A short rocky pass with about 3 m of scrambling below the summit."
+ ],
+ "turnaround": "Not at the rocky pass by 14:00: turn back, the descent takes 3 hours.",
+ "sources": [
+  "https://www.wikiexplora.com/ENG:Cerro_Provincia",
+  "https://www.puntoticket.com/evento/parque-cordillera-puente-%c3%b1ilhue",
+  "https://en.wikipedia.org/wiki/Cerro_Provincia"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 3,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Puente Ñilhue trailhead",
+   "lat": -33.3721,
+   "lon": -70.4438,
+   "role": "start",
+   "note": "The park entrance by the old bridge over the Mapocho, at about 1,000 m. The path climbs south up the dry slope."
+  },
+  {
+   "id": "naranjo",
+   "name": "Alto del Naranjo",
+   "lat": -33.39337,
+   "lon": -70.45226,
+   "role": "point",
+   "note": "1,890 m, about 3.7 km in: the first wide view of Santiago. The ridge to the summit starts here."
+  },
+  {
+   "id": "goal",
+   "name": "Cerro Provincia summit",
+   "lat": -33.42646,
+   "lon": -70.43487,
+   "role": "goal",
+   "note": "2,750 m, with a small dome refuge just east of the top. Santiago on one side, the high Andes on the other. Return the same way."
+  }
+ ]
+}

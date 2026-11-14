@@ -1,0 +1,76 @@
+{
+ "id": "ar-sendero-macuco",
+ "country": "AR",
+ "name": "Sendero Macuco to Salto Arrechea",
+ "base": "Puerto Iguazú",
+ "region": "Iguazú National Park, Misiones",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2.5,
+  3
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 7,
+  "gain_m": null,
+  "source": "https://iguazuargentina.com/wp-content/uploads/2026/05/Mapa_Web1-1.pdf"
+ },
+ "why": "The quiet side of Iguazú: an hour of flat rainforest track away from the catwalk crowds, ending at a waterfall you can stand under.",
+ "book": "Park ticket at the gate or online (ventaweb.apn.gob.ar); from 1 June 2026 a day pass costs ARS 60,000 for foreigners. The trail starts near the Estación Central of the jungle train and closes at 15:00. Buses run from Puerto Iguazú to the park gate.",
+ "water": "Carry 1-2 litres: no water or food on the trail; buy it at the park centre.",
+ "dangers": [
+  "Heat and humidity: start in the morning and carry water.",
+  "The last stretch down to the falls is steep, wet and slippery.",
+  "Coatis and monkeys: keep food closed and don't feed them."
+ ],
+ "turnaround": "The trail closes at 15:00: start by 12:00 to walk it calmly.",
+ "sources": [
+  "https://iguazuargentina.com/wp-content/uploads/2026/05/Mapa_Web1-1.pdf",
+  "https://www.argentina.gob.ar/parquesnacionales/tarifas",
+  "https://www.argentina.gob.ar/parquesnacionales/iguazu"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Sendero Macuco trailhead",
+   "lat": -25.67901,
+   "lon": -54.45289,
+   "role": "start",
+   "note": "Near the Estación Central of the jungle train. The first hour is a flat dirt track under the forest canopy; capuchin monkeys and toucans are common."
+  },
+  {
+   "id": "goal",
+   "name": "Salto Arrechea",
+   "lat": -25.65522,
+   "lon": -54.4574,
+   "role": "goal",
+   "note": "A steep path and stairs drop to the pool under the 20 m fall; you can swim when it is calm. Return the same way."
+  }
+ ]
+}

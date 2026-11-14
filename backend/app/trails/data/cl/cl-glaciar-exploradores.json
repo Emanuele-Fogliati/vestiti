@@ -1,0 +1,76 @@
+{
+ "id": "cl-glaciar-exploradores",
+ "country": "CL",
+ "name": "Exploradores Glacier lookout",
+ "base": "Puerto Río Tranquilo",
+ "region": "Laguna San Rafael National Park, Aysén",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  9,
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "A short climb over the old moraine to two platforms above the Exploradores Glacier, with Monte San Valentín and the Northern Ice Field behind.",
+ "book": "Since CONAF's closure of 11 December 2025 nobody may walk on the glacier: the ice hikes no longer run. The lookout trail starts at the CONAF ranger station on the gravel road to Bahía Exploradores, west of Puerto Río Tranquilo. Check hours and tickets at pasesparques.cl.",
+ "water": "Carry 1 litre; nothing at the trailhead.",
+ "dangers": [
+  "Steep and muddy on roots and moraine boulders.",
+  "Cold wind off the ice at the platforms.",
+  "Do not leave the trail onto the moraine or the ice: the glacier front is unstable."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.conaf.cl/parque_nacionales/parque-nacional-laguna-san-rafael/",
+  "https://www.pjud.cl/prensa-y-comunicaciones/noticias-del-poder-judicial/141356",
+  "https://www.openstreetmap.org/way/1352215379"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Exploradores CONAF ranger station",
+   "lat": -46.50042,
+   "lon": -73.15248,
+   "role": "start",
+   "note": "By the road to Bahía Exploradores. The trail climbs through forest onto the old moraine."
+  },
+  {
+   "id": "alta",
+   "name": "Upper observation platform",
+   "lat": -46.51448,
+   "lon": -73.16097,
+   "role": "point",
+   "note": "The higher platform, looking across the moraine to the glacier and Monte San Valentín."
+  },
+  {
+   "id": "goal",
+   "name": "Lower observation platform",
+   "lat": -46.51676,
+   "lon": -73.16272,
+   "role": "goal",
+   "note": "The end of the trail, closest to the glacier front. Return the same way."
+  }
+ ]
+}

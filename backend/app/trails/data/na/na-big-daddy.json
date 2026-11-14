@@ -1,0 +1,84 @@
+{
+ "id": "na-big-daddy",
+ "country": "NA",
+ "name": "Big Daddy dune and Deadvlei",
+ "base": "Sesriem",
+ "region": "Sossusvlei, Namib-Naukluft National Park",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "06:30",
+ "published": null,
+ "why": "Up the crest of the highest dune around Sossusvlei, then a run down its face into the white clay pan of dead trees.",
+ "book": "Park permit at the Sesriem gate office; gates open at sunrise and close at sunset (only guests inside the gate can be at the dunes for sunrise). The last 5 km from the 2x4 car park are deep sand: 4x4 or the park shuttle.",
+ "water": "None: carry 2-3 litres each, more in summer.",
+ "dangers": [
+  "Heat: by late morning the sand burns and there is no shade.",
+  "Soft sand makes the climb about twice as slow as it looks.",
+  "Wind on the crest: sand in the eyes, keep cameras covered."
+ ],
+ "turnaround": "Not on the crest by 10:00: skip the summit and walk straight to Deadvlei.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Sossusvlei",
+  "https://en.wikipedia.org/wiki/Deadvlei",
+  "https://en.wikivoyage.org/wiki/Sossusvlei",
+  "https://www.openstreetmap.org/way/276464362"
+ ],
+ "osm_ways": [
+  380608555,
+  276464362,
+  1418156970,
+  380608534,
+  26350000
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Deadvlei 4x4 car park",
+   "lat": -24.74765,
+   "lon": 15.29066,
+   "role": "start",
+   "note": "The sand car park at the end of the 4x4 track. The path heads south over the low dunes."
+  },
+  {
+   "id": "big-daddy-crest",
+   "name": "Big Daddy crest",
+   "lat": -24.76848,
+   "lon": 15.30304,
+   "role": "point",
+   "note": "The top of the highest dune here, about 325 m over the pans: Sossusvlei, Deadvlei and dune crests to the horizon."
+  },
+  {
+   "id": "goal",
+   "name": "Deadvlei",
+   "lat": -24.7578,
+   "lon": 15.2925,
+   "role": "goal",
+   "note": "Run down the steep face into the white clay pan of camel thorn trees, dead for about 600 years. Then 1 km back to the car park.",
+   "scene": "na-deadvlei"
+  }
+ ]
+}
