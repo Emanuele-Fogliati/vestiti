@@ -55,9 +55,10 @@ body{background:var(--bg)}
 
 /* ---------- /preview: phone and computer side by side ---------- */
 .pv{min-height:100svh;background:#E9E5DB;font-family:var(--f-body)}
-.pv-bar{display:flex;gap:10px;align-items:center;padding:12px 20px;background:var(--bg);border-bottom:1.5px solid var(--ink);position:sticky;top:0;z-index:2;flex-wrap:wrap}
-.pv-bar input{flex:1 1 220px;min-width:0;height:36px;border:1.5px solid var(--ink);border-radius:18px;padding:0 14px;font:inherit}
-.pv-bar select{height:36px;border:1.5px solid var(--ink);border-radius:18px;padding:0 10px;font:inherit;background:#fff}
+.pv-bar{display:flex;gap:10px;align-items:center;padding:12px 20px;box-sizing:border-box;width:100%;background:var(--bg);border-bottom:1.5px solid var(--ink);position:sticky;top:0;z-index:2;flex-wrap:wrap}
+.pv-bar b{flex:none}
+.pv-bar input{flex:1 1 220px;min-width:0;width:auto;margin:0;height:36px;border:1.5px solid var(--ink);border-radius:18px;padding:0 14px;font:inherit}
+.pv-bar select{flex:0 1 260px;width:auto;margin:0;height:36px;border:1.5px solid var(--ink);border-radius:18px;padding:0 10px;font:inherit;background:#fff}
 .pv-stage{display:flex;gap:32px;padding:24px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
 .pv figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px}
 .pv figcaption{font-size:13px;font-weight:700;color:var(--ink-2)}
