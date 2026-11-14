@@ -612,7 +612,7 @@ export interface TrailCard {
   difficulty: TrailDifficulty; glacier: boolean; hours: [number, number]; months: number[]; months_text: string;
   in_season: boolean | null; why: string; art: StopArt | null; has_map: boolean;
   km: number | null; gain_m: number | null; max_m: number | null; min_m: number | null; numbers_from: string | null;
-  tier: "A" | "B"; area: string | null; scores: TrailScores | null;
+  tier: "A" | "B"; style: "trek" | "city"; area: string | null; scores: TrailScores | null;
 }
 /** One leg of a trip on its map: along the road (OSM), a flight arc, or a plain line offline. */
 export interface RoadLeg { mode: "road" | "air" | "line"; km: number; hours: number | null; line: [number, number][] }
