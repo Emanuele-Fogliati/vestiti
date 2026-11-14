@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="30" r="12" fill="var(--il-sun)"/>
+<g transform="translate(-30 -28) scale(1.2)">
+<path d="M0 132V94L20 90L40 86L60 84L82 82L104 80L126 80L148 78L170 79L192 78L214 80L236 82L258 84L280 88L300 90V132Z" fill="var(--il-far)"/>
+<path d="M40 88L34 112M104 82L98 110M170 80L176 108M236 84L242 112" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.3"/>
+<path d="M0 200V126Q150 120 300 126V200Z" fill="var(--il-leaf)"/>
+<path d="M106 128H118L196 200H60Z" fill="var(--il-mid)"/>
+<path d="M26 146V110H96V146Z M26 112L61 92L96 112Z" fill="var(--il-ice)"/>
+<path d="M22 113L61 89L100 113L98 116L61 94L24 116Z" fill="var(--il-obj)"/>
+<path d="M50 146V120H76V146Z M32 122H42V132H32Z" fill="var(--il-near)"/>
+<path d="M120 140V114H214V140Z M212 140V110H262V140Z M212 110L237 94L262 110Z" fill="var(--il-ice)"/>
+<path d="M116 116L132 100H214L218 116Z" fill="var(--il-acc)"/>
+<path d="M208 112L237 89L266 112L263 115L237 95L211 115Z" fill="var(--il-acc)"/>
+<path d="M131 121H137V134H131Z M144 121H150V134H144Z M157 121H163V134H157Z M170 121H176V134H170Z M200 121H206V134H200Z M226 118H248V131H226Z" fill="var(--il-near)"/>
+<path d="M185 122H193V140H185Z" fill="var(--il-acc)"/>
+<path d="M237 118V131" stroke="var(--il-ice)" stroke-width="1.2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M118 138H300V158Z" fill="var(--il-obj)"/>
+<path d="M74 194H106M86 178H112M95 165H116M101 155H118M105 147H119M108 141H119M120 194H170M124 178H160M126 165H150M126 155H142M125 147H136M124 141H132" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.5"/>
+<path d="M78 200L109 128M102 200L111 128M128 200L114 128M156 200L117 128" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M0 200V144H98L60 200Z" fill="var(--il-leaf)"/>
+</g>
