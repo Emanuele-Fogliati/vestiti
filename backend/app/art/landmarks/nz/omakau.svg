@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="26" r="12" fill="var(--il-sun)"/>
+<path d="M0 170V108Q30 96 60 100Q100 88 150 92Q200 84 240 94Q270 90 300 98V170Z" fill="var(--il-far)"/>
+<path d="M30 170V150M268 170V152" stroke="var(--il-near)" stroke-width="3" fill="none"/>
+<path d="M30 62L24 71L22 80L18 90L20 99L18 108L21 117L20 126L22 136L21 145L24 154L38 154L37 145L39 136L39 126L41 117L40 108L42 99L40 90L40 80L34 71L30 62ZM268 88L263 95L262 102L258 108L260 115L258 122L261 129L260 136L262 142L261 149L263 156L275 156L274 149L276 142L275 136L277 129L276 122L278 115L276 108L276 102L271 95L268 88Z" fill="var(--il-leaf)"/>
+<path d="M64 67V56H86L150 50L215 53H237V67Z" fill="var(--il-acc)"/>
+<path d="M60 70H241V171H60Z" fill="var(--il-acc)"/>
+<path d="M60 88H87V149H60ZM124 88H134V149H124ZM166 88H177V149H166ZM215 88H241V149H215Z" fill="var(--il-ice)"/>
+<path d="M54 65H249V71H54Z" fill="var(--il-ice)"/>
+<path d="M61 75H240M61 84H240" stroke="var(--il-obj)" stroke-width="1" fill="none" opacity="0.5"/>
+<path d="M96 97H116V140H96ZM185 97H205V140H185ZM138 97H161V109H138Z" fill="var(--il-near)"/>
+<path d="M102 97V140M109 97V140M96 107H116M96 118H116M96 129H116M192 97V140M198 97V140M185 107H205M185 118H205M185 129H205M146 97V109M154 97V109" stroke="var(--il-acc)" stroke-width="1" fill="none"/>
+<path d="M91 140H120V143H91ZM180 140H209V143H180ZM133 110H166V114H133Z" fill="var(--il-ice)"/>
+<path d="M139 124H161V165H139Z" fill="var(--il-obj)"/>
+<path d="M150 125V164M141 139H160M141 153H160" stroke="var(--il-near)" stroke-width="1" fill="none" opacity="0.5"/>
+<path d="M58 148H135V151H58ZM166 148H234V151H166Z" fill="var(--il-obj)"/>
+<path d="M0 200V168H300V200Z" fill="var(--il-far)"/>
+<path d="M0 200V178H300V200Z" fill="var(--il-mid)"/>
+<path d="M197 170L190 160M212 162L203 162L197 170L210 170L212 162L216 170M203 162L201 158M209 160L214 160" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="197" cy="170" r="6" fill="none" stroke="var(--il-near)" stroke-width="1.4"/>
+<circle cx="216" cy="170" r="6" fill="none" stroke="var(--il-near)" stroke-width="1.4"/>
