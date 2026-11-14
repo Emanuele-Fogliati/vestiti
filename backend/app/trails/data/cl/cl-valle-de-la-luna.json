@@ -1,0 +1,81 @@
+{
+ "id": "cl-valle-de-la-luna",
+ "country": "CL",
+ "name": "Valle de la Luna: the Duna Mayor walk",
+ "base": "San Pedro de Atacama",
+ "region": "Valle de la Luna, Cordillera de la Sal, Atacama",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  0.5,
+  1
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "A sand ridge above the salt-crusted Cordillera de la Sal: from the top of the great dune the valley's eroded ridges run to Licancabur and the Andes.",
+ "book": "Ticket online (valledelaluna.com, run by the Asociación Indígena Valle de la Luna with CONAF; CLP 10,800 general). You cannot enter on foot: come by car, tour or bicycle (bikes enter 08:00/09:00-11:00). Tres Marías and the salt caves are further stops by vehicle.",
+ "water": "None in the valley and no shop, only toilets at the entrance: carry 1.5 litres even for this short walk.",
+ "dangers": [
+  "Strong sun, no shade and dry air at 2,500 m: hat and sunscreen.",
+  "Stay on the marked path: the ridge edges are soft sand and crumbling salt, and the side paths are closed.",
+  "The reserve closes on red-alert heat days and after earthquakes: check the notice on the site before you go."
+ ],
+ "turnaround": "Walk back when the rangers announce closing time: vehicles must leave by 17:30 (winter) and the valley shuts after it.",
+ "sources": [
+  "https://valledelaluna.com/",
+  "https://www.puntoticket.com/valle-de-la-luna",
+  "https://en.wikivoyage.org/wiki/San_Pedro_de_Atacama",
+  "https://chile.travel/en/attractions/valle-de-la-luna/"
+ ],
+ "tier": "A",
+ "area": "cl-atacama",
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 1,
+  "relax": 4,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Duna Mayor car park",
+   "lat": -22.94737,
+   "lon": -68.29281,
+   "role": "start",
+   "note": "The stop on the valley road where the marked path leaves for the dune; tours and bikes stop here."
+  },
+  {
+   "id": "duna-mayor",
+   "name": "Duna Mayor viewpoint",
+   "lat": -22.94883,
+   "lon": -68.29808,
+   "role": "point",
+   "note": "The first lookout on the dune crest, over the great sand slope and the salt ridges of the Cordillera de la Sal."
+  },
+  {
+   "id": "goal",
+   "name": "Duna Mayor ridge end",
+   "lat": -22.95022,
+   "lon": -68.29981,
+   "role": "goal",
+   "note": "Where the ridge path ends, with the Valle de la Luna and the Andean volcanoes in one view. Back the same way."
+  }
+ ]
+}

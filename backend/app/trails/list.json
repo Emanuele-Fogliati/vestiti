@@ -2133,7 +2133,7 @@
    "slot": "CL-D",
    "base": "San Pedro de Atacama",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2153,7 +2153,7 @@
    "slot": "CL-D",
    "base": "San Pedro de Atacama",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2173,7 +2173,7 @@
    "slot": "CL-D",
    "base": "Hanga Roa",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2197,7 +2197,7 @@
    "slot": "CL-D",
    "base": "Hanga Roa",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2217,7 +2217,7 @@
    "slot": "CL-D",
    "base": "Castro",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2237,7 +2237,7 @@
    "slot": "CL-D",
    "base": "Cochrane",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2317,7 +2317,7 @@
    "slot": "PE-C",
    "base": "Cusco",
    "kind": "multiday",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2341,7 +2341,7 @@
    "slot": "PE-C",
    "base": "Cusco",
    "kind": "multiday",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2359,33 +2359,13 @@
    ]
   },
   {
-   "id": "pe-palccoyo",
-   "name": "Palccoyo rainbow mountains",
-   "country": "PE",
-   "slot": "PE-C",
-   "base": "Cusco",
-   "kind": "day",
-   "status": "todo",
-   "tier": "A",
-   "scenes": [
-    {
-     "point": "start",
-     "name": "Palccoyo trailhead"
-    },
-    {
-     "point": "goal",
-     "name": "Palccoyo rainbow ridges"
-    }
-   ]
-  },
-  {
    "id": "pe-laguna-paron",
    "name": "Laguna Parón",
    "country": "PE",
    "slot": "PE-C",
    "base": "Huaraz",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2405,7 +2385,7 @@
    "slot": "PE-C",
    "base": "Huaraz",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2425,7 +2405,7 @@
    "slot": "PE-C",
    "base": "Huaraz",
    "kind": "multiday",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2769,7 +2749,7 @@
    "slot": "IS-D",
    "base": "Reykjavík",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2789,7 +2769,7 @@
    "slot": "IS-D",
    "base": "Snæfellsnes",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2809,7 +2789,7 @@
    "slot": "IS-D",
    "base": "Vík",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2829,7 +2809,7 @@
    "slot": "IS-D",
    "base": "Skaftafell",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2849,7 +2829,7 @@
    "slot": "IS-D",
    "base": "Skaftafell",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -2873,7 +2853,7 @@
    "slot": "IS-D",
    "base": "Kirkjubæjarklaustur",
    "kind": "day",
-   "status": "todo",
+   "status": "checked",
    "tier": "A",
    "scenes": [
     {
@@ -4519,30 +4499,6 @@
    ]
   },
   {
-   "id": "vn-son-doong",
-   "name": "Son Doong cave expedition",
-   "country": "VN",
-   "slot": "VN-B",
-   "base": "Phong Nha",
-   "kind": "multiday",
-   "status": "todo",
-   "tier": "A",
-   "scenes": [
-    {
-     "point": "start",
-     "name": "Hang En"
-    },
-    {
-     "point": "son-doong-doline",
-     "name": "Son Doong doline"
-    },
-    {
-     "point": "goal",
-     "name": "Wall of Vietnam"
-    }
-   ]
-  },
-  {
    "id": "vn-bach-ma-summit",
    "name": "Bach Ma summit and Five Lakes",
    "country": "VN",
@@ -4771,30 +4727,6 @@
     {
      "point": "goal",
      "name": "Sesriem Canyon floor"
-    }
-   ]
-  },
-  {
-   "id": "na-brandberg-konigstein",
-   "name": "Brandberg to Königstein",
-   "country": "NA",
-   "slot": "NA-B",
-   "base": "Uis",
-   "kind": "multiday",
-   "status": "todo",
-   "tier": "A",
-   "scenes": [
-    {
-     "point": "start",
-     "name": "Brandberg Tsisab gorge"
-    },
-    {
-     "point": "white-lady-painting",
-     "name": "White Lady painting"
-    },
-    {
-     "point": "goal",
-     "name": "Königstein summit"
     }
    ]
   },

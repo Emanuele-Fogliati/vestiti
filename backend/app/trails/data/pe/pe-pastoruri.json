@@ -1,0 +1,68 @@
+{
+ "id": "pe-pastoruri",
+ "country": "PE",
+ "name": "Pastoruri glacier",
+ "base": "Huaraz",
+ "region": "Huascarán National Park, southern Cordillera Blanca",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
+ "start_by": "11:00",
+ "published": null,
+ "why": "A short, very high walk to the front of a disappearing tropical glacier and its meltwater lake, at about 5,000 m.",
+ "book": "Huascarán National Park ticket (one day: S/30 for foreigners in 2023). 70 km south of Huaraz via Cátac and the Pachacoto valley, where the road passes the Puya raimondii stands; most visitors come on a day tour from Huaraz.",
+ "water": "None: carry 1 litre and something warm to drink.",
+ "dangers": [
+  "About 5,000 m at the glacier: come acclimatised (Laguna Churup or Wilcacocha first) and walk slowly.",
+  "Do not walk on the ice or touch the glacier: its front is retreating and breaks off.",
+  "Cold wind, sleet and strong sun, often on the same day."
+ ],
+ "turnaround": "Headache, dizziness or breathlessness on the path: turn back to the car park, it only gets worse higher up.",
+ "sources": [
+  "https://andina.pe/agencia/noticia-fiestas-patrias-naturaleza-y-aventura-unicas-te-esperan-el-parque-nacional-huascaran-948817.aspx",
+  "https://en.wikipedia.org/wiki/Pastoruri_Glacier",
+  "https://es.wikipedia.org/wiki/Nevado_Pastoruri",
+  "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park",
+  "https://www.openstreetmap.org/node/5180955422"
+ ],
+ "tier": "A",
+ "area": "pe-huaraz",
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Pastoruri car park",
+   "lat": -9.89957,
+   "lon": -77.18528,
+   "role": "start",
+   "note": "End of the road at about 4,800 m. A marked path climbs gently south over bare rock left by the ice."
+  },
+  {
+   "id": "goal",
+   "name": "Pastoruri glacier viewpoint",
+   "lat": -9.91394,
+   "lon": -77.18392,
+   "role": "goal",
+   "note": "The glacier front above its new meltwater lake, about 5,000 m. Look, do not touch; back the same way.",
+   "scene": "pe-pastoruri"
+  }
+ ]
+}

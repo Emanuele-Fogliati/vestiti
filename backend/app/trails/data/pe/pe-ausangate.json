@@ -1,0 +1,108 @@
+{
+ "id": "pe-ausangate",
+ "country": "PE",
+ "name": "Ausangate Circuit",
+ "base": "Cusco",
+ "region": "Cordillera Vilcanota, Cusco",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  19,
+  25
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 70,
+  "gain_m": null,
+  "source": "https://en.wikivoyage.org/wiki/Ausangate_circuit"
+ },
+ "why": "Four days in the high puna around the 6,384 m ice dome of Ausangate, the great apu of Cusco: glacier lakes, red and ochre ridges, alpaca herds and passes over 5,000 m.",
+ "book": "Bus from Cusco to Tinqui (about 3 h). Backpackers pay a S/10 trail fee at Tinqui and about S/10 at campsites. Most go with an agency from Cusco or Ocongate with packhorses; alone only if you are an experienced high-altitude backpacker. Taxi Pacchanta-Tinqui about S/40.",
+ "water": "Streams and lakes all the way, but herds graze up to 5,000 m: treat every source.",
+ "dangers": [
+  "Passes from 4,700 to 5,100 m and nights near -10 °C: spend several days acclimatising in Cusco first.",
+  "Snow, hail and rain can come on any afternoon, even in the dry season.",
+  "Poorly marked in places, remote, with no rescue service.",
+  "Guard dogs at the herders' houses: give them a wide berth."
+ ],
+ "turnaround": "Altitude sickness that does not ease overnight (headache, nausea, exhaustion): go down towards Tinqui or Pacchanta instead of crossing the next pass.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Ausangate_circuit",
+  "https://en.wikipedia.org/wiki/Ausangate",
+  "https://hiking.waymarkedtrails.org/#route?id=3475867",
+  "https://www.openstreetmap.org/node/4181097112"
+ ],
+ "tier": "A",
+ "area": "pe-cusco",
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "router": "local",
+ "points": [
+  {
+   "id": "start",
+   "name": "Tinqui (Tinki)",
+   "lat": -13.66697,
+   "lon": -71.32133,
+   "role": "start",
+   "note": "Day 1: the village at about 3,800 m, 3 h from Cusco. A dirt road climbs through farmland past Upis village."
+  },
+  {
+   "id": "upis",
+   "name": "Upis camp",
+   "lat": -13.75224,
+   "lon": -71.2743,
+   "role": "point",
+   "night": true,
+   "note": "End of day 1, about 10 km: a herders' outpost with horses, basic toilets and a campsite under Ausangate's north face."
+  },
+  {
+   "id": "laguna-ausangate-cocha",
+   "name": "Laguna Ausangate Cocha camp",
+   "lat": -13.8253,
+   "lon": -71.23857,
+   "role": "point",
+   "night": true,
+   "note": "Day 2, 16 km over the Arapa pass (4,700 m), past Pucacocha and the Apacheta pass: camp by a small lake right under the glacier."
+  },
+  {
+   "id": "goal",
+   "name": "Palomani pass",
+   "lat": -13.81675,
+   "lon": -71.22276,
+   "role": "goal",
+   "note": "Day 3: the highest point of the circuit, about 5,100 m, with stone cairns and views in every direction."
+  },
+  {
+   "id": "qampa",
+   "name": "Campa (Qampa) valley camp",
+   "lat": -13.80396,
+   "lon": -71.16964,
+   "role": "point",
+   "night": true,
+   "note": "End of day 3, down the alpaca valley beyond Palomani; next morning the Campa pass (about 5,000 m) above its glaciers."
+  },
+  {
+   "id": "pacchanta",
+   "name": "Pacchanta",
+   "lat": -13.71771,
+   "lon": -71.24239,
+   "role": "point",
+   "note": "Day 4: down old stone paths to the hamlet with hot pools and a restaurant; taxi back to Tinqui."
+  }
+ ]
+}

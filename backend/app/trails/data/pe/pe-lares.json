@@ -1,0 +1,94 @@
+{
+ "id": "pe-lares",
+ "country": "PE",
+ "name": "Lares Trek",
+ "base": "Cusco",
+ "region": "Lares valley and Cordillera Urubamba, Calca, Cusco",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  8,
+  11
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "From the hot springs of Lares through Quechua weaving villages and llama pastures, over a 4,500 m pass between glacier lakes, down to Patacancha above the Sacred Valley.",
+ "book": "No permit needed. Agencies in Cusco run it with horses and a cook; the drive from Cusco to Lares over the Calca pass takes several hours. From Patacancha a colectivo goes down to Ollantaytambo and its railway station.",
+ "water": "Streams and lakes (treat them: animals graze everywhere). Shops only in Lares and Patacancha.",
+ "dangers": [
+  "The Ipsaycocha pass at about 4,450 m: acclimatise in Cusco first.",
+  "Frost at the Ipsaycocha camp; rain and hail in the afternoons.",
+  "Dogs at the farms along the way."
+ ],
+ "turnaround": "Not at the foot of the pass climb above Huacahuasi by 11:00: camp in Huacahuasi and cross the next morning.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Lares_trek",
+  "https://www.openstreetmap.org/node/2103450009",
+  "https://www.openstreetmap.org/node/10896540977"
+ ],
+ "tier": "A",
+ "area": "pe-sacred-valley",
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 5,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "router": "local",
+ "points": [
+  {
+   "id": "start",
+   "name": "Lares hot springs",
+   "lat": -13.11097,
+   "lon": -72.05656,
+   "role": "start",
+   "note": "Day 1: the thermal pools just west of Lares village (3,200 m). The path follows the valley up past Tambohuaylla.",
+   "scene": "pe-lares"
+  },
+  {
+   "id": "huacahuasi",
+   "name": "Huacahuasi",
+   "lat": -13.13845,
+   "lon": -72.10762,
+   "role": "point",
+   "night": true,
+   "note": "A weaving village at about 3,750 m: first camp, women selling textiles in front of stone houses."
+  },
+  {
+   "id": "ipsaycocha-pass",
+   "name": "Ipsaycocha pass",
+   "lat": -13.14862,
+   "lon": -72.15176,
+   "role": "point",
+   "note": "Day 2: the highest point, about 4,450 m (Abra Ipsay; some maps say 4,600 m), with glaciers above and the Ipsaycocha lakes below."
+  },
+  {
+   "id": "ipsaycocha",
+   "name": "Laguna Ipsaycocha camp",
+   "lat": -13.14692,
+   "lon": -72.16338,
+   "role": "point",
+   "night": true,
+   "note": "The camp below the pass by the lake, under the ice of the Urubamba range. Cold night."
+  },
+  {
+   "id": "goal",
+   "name": "Patacancha",
+   "lat": -13.17489,
+   "lon": -72.19254,
+   "role": "goal",
+   "note": "Day 3: down the valley to the weaving village at about 3,700 m; colectivos run on to Ollantaytambo."
+  }
+ ]
+}

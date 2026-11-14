@@ -1,0 +1,93 @@
+{
+ "id": "cl-rano-kau-orongo",
+ "country": "CL",
+ "name": "Rano Kau crater and Orongo",
+ "base": "Hanga Roa",
+ "region": "Rapa Nui National Park, Easter Island",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2.5,
+  3.5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "From the edge of Hanga Roa up through the forest to the rim of a crater lake 1.6 km wide, and on to the birdman village of Orongo above the sea cliffs and the motu islets.",
+ "book": "Rapa Nui National Park ticket (US$80 for foreigners) and an accredited Ma'u Henua guide, required for park visits; Orongo can be entered only once per ticket. Park open 09:00-18:00 (to 19:00 December-March).",
+ "water": "None after the last houses of Hanga Roa: carry 1.5-2 litres.",
+ "dangers": [
+  "The Rano Kau cliffs are crumbling: keep back from the crater and sea edges.",
+  "Sun and wind on the open rim; the forest path is slippery after rain.",
+  "Orongo closes after long rain."
+ ],
+ "turnaround": "Not at the crater viewpoint by 15:00: look at the lake and walk back, Orongo is another 40 minutes there and back.",
+ "sources": [
+  "https://www.rapanuinationalpark.com/",
+  "https://www.rapanuinationalpark.com/guias",
+  "https://en.wikivoyage.org/wiki/Easter_Island",
+  "https://chile.travel/atractivos/rano-kau/",
+  "https://www.openstreetmap.org/way/104347630"
+ ],
+ "tier": "A",
+ "area": "cl-rapa-nui",
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 4,
+  "relax": 3,
+  "history": 5,
+  "landscape": 5
+ },
+ "osm_ways": [
+  294837062,
+  104347630,
+  1553726012,
+  1553726014,
+  294837053,
+  221755544,
+  221755527
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Mataveri trailhead, Hanga Roa",
+   "lat": -27.16484,
+   "lon": -109.43899,
+   "role": "start",
+   "note": "At the south end of Hanga Roa, past the airport runway's western end: the path leaves the road and climbs into the forest."
+  },
+  {
+   "id": "rano-kau-crater-lake",
+   "name": "Rano Kau crater viewpoint",
+   "lat": -27.17948,
+   "lon": -109.43912,
+   "role": "point",
+   "note": "Top of the path, about 300 m up: the crater with its reed-covered lake far below, the sea beyond the broken southern wall.",
+   "scene": "cl-rano-kau"
+  },
+  {
+   "id": "goal",
+   "name": "Orongo ceremonial village",
+   "lat": -27.18935,
+   "lon": -109.44323,
+   "role": "goal",
+   "note": "Stone houses and birdman petroglyphs on the rim, facing Motu Nui and Motu Iti. Back the same way.",
+   "scene": "cl-orongo"
+  }
+ ]
+}

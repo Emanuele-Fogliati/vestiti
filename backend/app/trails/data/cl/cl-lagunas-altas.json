@@ -1,0 +1,116 @@
+{
+ "id": "cl-lagunas-altas",
+ "country": "CL",
+ "name": "Parque Patagonia: Lagunas Altas",
+ "base": "Cochrane",
+ "region": "Patagonia National Park, Valle Chacabuco sector, Aysén",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  7,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 21,
+  "gain_m": null,
+  "source": "https://www.conaf.cl/parques/parque-nacional-patagonia/"
+ },
+ "why": "A loop above the Chacabuco valley: up from the campground to a plateau of small lakes, then a long balcony over the steppe where guanacos graze, down to the park headquarters.",
+ "book": "Register with the Valle Chacabuco administration; entry and campsites through Pases Parques (pasesparques.cl). The trail is closed June to September. Turn off the Carretera Austral 17 km north of Cochrane, then drive 11 km east.",
+ "water": "Streams and lakes on the plateau (treat them); none on the descent: carry 2 litres.",
+ "dangers": [
+  "Pumas and feral dogs live in the park (CONAF): stay in a group and keep children close.",
+  "Strong wind and sudden cold on the open plateau.",
+  "Snow on the high part in spring: ask the rangers about trail conditions."
+ ],
+ "turnaround": "Not at the high lakes by 13:00: go back down the way you came rather than on to the longer descent.",
+ "sources": [
+  "https://www.conaf.cl/parques/parque-nacional-patagonia/",
+  "https://hiking.waymarkedtrails.org/#route?id=9170928",
+  "https://www.openstreetmap.org/relation/9170928"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "osm_ways": [
+  659509213,
+  659509230,
+  659509206,
+  659509209,
+  267865843,
+  267865879,
+  267865833,
+  267865885,
+  267865840,
+  267865893,
+  267865839,
+  267865815,
+  659509239,
+  659509222,
+  659509224,
+  659509216,
+  267865825,
+  267865866,
+  267865845,
+  267865881,
+  267865841,
+  267865883,
+  267865831,
+  267865873,
+  267865837,
+  267865817
+ ],
+ "router": "local",
+ "points": [
+  {
+   "id": "start",
+   "name": "West Winds campground",
+   "lat": -47.12703,
+   "lon": -72.50516,
+   "role": "start",
+   "note": "The park campground in the Chacabuco valley; the trail climbs south from its upper end into lenga woods."
+  },
+  {
+   "id": "norita",
+   "name": "Laguna Norita",
+   "lat": -47.15073,
+   "lon": -72.49916,
+   "role": "point",
+   "note": "First of the high lakes on the plateau, after the steady climb out of the forest."
+  },
+  {
+   "id": "goal",
+   "name": "Lagunas Altas viewpoint",
+   "lat": -47.14098,
+   "lon": -72.4756,
+   "role": "goal",
+   "note": "Above Laguna Meche, with the Chacabuco valley, the steppe and the Andes of Aysén around you."
+  },
+  {
+   "id": "descent",
+   "name": "Descent to park headquarters",
+   "lat": -47.12248,
+   "lon": -72.49007,
+   "role": "point",
+   "note": "The trail ends by the park headquarters and lodge; follow the valley path or road back to West Winds."
+  }
+ ]
+}

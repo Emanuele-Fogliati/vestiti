@@ -1,0 +1,71 @@
+{
+ "id": "cl-volcan-lascar",
+ "country": "CL",
+ "name": "Láscar volcano crater rim",
+ "base": "San Pedro de Atacama",
+ "region": "Láscar, Andes east of the Salar de Atacama",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "The most active volcano of the region: about 550 m of scree from the end of the 4x4 track to a 5,500 m rim where you look into the steaming crater.",
+ "book": "Go with a San Pedro de Atacama mountain agency: 4x4 transfer via Talabre to the end of the track at about 5,000 m, guide and oxygen. Before you book, check the alert level on SERNAGEOMIN's Red Nacional de Vigilancia Volcánica page.",
+ "water": "None at all: carry 2-3 litres.",
+ "dangers": [
+  "Active volcano: SERNAGEOMIN raised it to yellow alert in March 2026 with a 5 km no-go zone, lifted on 13 May 2026 (back to green). On 14 Nov 2026 its own page did not load: check it before going.",
+  "Volcanic gas at the rim: stay upwind and do not go down into the crater.",
+  "Start and summit above 5,000 m: only after several days of acclimatisation in San Pedro.",
+  "Icy wind and cold on the top, strong sun all day."
+ ],
+ "turnaround": "Turn back at once with a headache, dizziness or a gas smell; and in any case by 12:00, before the afternoon wind.",
+ "sources": [
+  "https://www.meganoticias.cl/nacional/522016-cancelan-perimetro-seguridad-volcan-lascar-estabilidad-actividad-sismica-san-pedro-atacama-13-05-2026.html",
+  "https://en.wikivoyage.org/wiki/San_Pedro_de_Atacama",
+  "https://en.wikipedia.org/wiki/L%C3%A1scar",
+  "https://www.openstreetmap.org/way/387411588"
+ ],
+ "tier": "A",
+ "area": "cl-atacama",
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 0,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Láscar base, end of the 4x4 track",
+   "lat": -23.38037,
+   "lon": -67.72937,
+   "role": "start",
+   "note": "About 5,000 m on the south-west flank, where the vehicles stop. The path goes straight up the scree."
+  },
+  {
+   "id": "goal",
+   "name": "Láscar crater rim",
+   "lat": -23.3673,
+   "lon": -67.72398,
+   "role": "goal",
+   "note": "About 5,550 m on the eastern rim: the crater with its fumaroles below, the Salar de Atacama to the west. Same way down."
+  }
+ ]
+}

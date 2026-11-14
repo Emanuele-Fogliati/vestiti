@@ -1,0 +1,74 @@
+{
+ "id": "cl-terevaka",
+ "country": "CL",
+ "name": "Maunga Terevaka from Ahu Akivi",
+ "base": "Hanga Roa",
+ "region": "Rapa Nui National Park, Easter Island",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2.5,
+  3
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Up the grass slopes from the seven moai of Ahu Akivi to the island's highest point, where the whole of Rapa Nui and the round Pacific horizon are in one view.",
+ "book": "Rapa Nui National Park ticket and an accredited Ma'u Henua guide, required for park visits (Ahu Akivi is a guarded site). Terevaka is a recovery area: on foot or on horseback only, no vehicles.",
+ "water": "None on the way: carry 1.5-2 litres.",
+ "dangers": [
+  "No shade and strong wind on the open summit.",
+  "The path fades higher up: in cloud keep to the ridge and go back the way you came.",
+  "Cattle and horses graze the slopes; close the gates."
+ ],
+ "turnaround": "In cloud or rain at the top of the forest: turn back, there is nothing to see from the summit.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Easter_Island",
+  "https://www.rapanuinationalpark.com/",
+  "https://www.rapanuinationalpark.com/guias",
+  "https://www.openstreetmap.org/way/487343833"
+ ],
+ "tier": "A",
+ "area": "cl-rapa-nui",
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 2,
+  "relax": 3,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ahu Akivi",
+   "lat": -27.1154,
+   "lon": -109.3951,
+   "role": "start",
+   "note": "The only inland ahu, its seven moai facing the sea. The trail leaves east along the track past the forest.",
+   "scene": "cl-ahu-akivi"
+  },
+  {
+   "id": "goal",
+   "name": "Terevaka summit",
+   "lat": -27.08612,
+   "lon": -109.38047,
+   "role": "goal",
+   "note": "507 m, the highest point of the island: Rano Kau, Poike and the coast all round. About 1.5 h up, 1 h down."
+  }
+ ]
+}

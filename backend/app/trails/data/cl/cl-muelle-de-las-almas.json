@@ -1,0 +1,71 @@
+{
+ "id": "cl-muelle-de-las-almas",
+ "country": "CL",
+ "name": "Muelle de las Almas, Chiloé",
+ "base": "Castro",
+ "region": "Punta Pirulil, Cucao, Chonchi, Chiloé",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 4,
+  "gain_m": null,
+  "source": "https://es.wikipedia.org/wiki/Muelle_de_las_Almas"
+ },
+ "why": "Through Chilote forest and pasture to the cliffs of Punta Pirulil, where a wooden pier rises over the Pacific for the souls waiting for the boatman Tempilkawe.",
+ "book": "Private land: pay the entry (CLP 10,000 in Wikipedia) at the kiosk on the road from Cucao towards Rahue, then drive about 8 km to the private car park. In summer the queue for a photo on the pier can be hours long: come early.",
+ "water": "Nothing to buy after the car park: carry water and food.",
+ "dangers": [
+  "Mud on the path after rain, which is often.",
+  "Wind and wet on the cliff top: stay behind the fences at Punta Pirulil.",
+  "The gravel road from Cucao gets bad in rain."
+ ],
+ "turnaround": "Not at the pier one hour after leaving the car park: turn back, the path and the road are worse in the dark and the rain.",
+ "sources": [
+  "https://es.wikipedia.org/wiki/Muelle_de_las_Almas",
+  "https://www.meganoticias.cl/dato-util/365200-fotos-muelle-de-las-almas-como-llegar-mitos-chiloe-17-1-2022.html",
+  "https://www.chile.travel/blog/cultura/tres-lugares-de-chiloe-llenos-de-misterios-que-debes-conocer",
+  "https://www.openstreetmap.org/way/317082945"
+ ],
+ "tier": "A",
+ "area": "cl-chiloe",
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 4,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Muelle de las Almas car park, Rahue",
+   "lat": -42.71294,
+   "lon": -74.131,
+   "role": "start",
+   "note": "The private car park at the end of the road; the path leaves west through forest and fields towards the sea."
+  },
+  {
+   "id": "goal",
+   "name": "Muelle de las Almas, Punta Pirulil",
+   "lat": -42.71383,
+   "lon": -74.156,
+   "role": "goal",
+   "note": "Marcelo Orellana's wooden pier climbs into the air off the Pirulil cliffs, where souls call the ferryman Tempilkawe in Chilote legend. Back the same way."
+  }
+ ]
+}

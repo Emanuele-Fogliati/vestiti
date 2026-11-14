@@ -1,0 +1,95 @@
+{
+ "id": "pe-alpamayo",
+ "country": "PE",
+ "name": "Alpamayo trek to Laguna Jancarurish",
+ "base": "Huaraz",
+ "region": "Huascarán National Park, northern Cordillera Blanca",
+ "kind": "multiday",
+ "days": 5,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  26,
+  32
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The first, wildest part of the Alpamayo circuit: from Hualcayán over two passes near 4,850 m to the glacier lake at the foot of Alpamayo, one of the most beautiful ice peaks in the world.",
+ "book": "Huascarán National Park multi-day ticket (4-30 days: S/150 for foreigners in 2023). Hualcayán is reached by road from Caraz. Most go with an agency from Huaraz or Caraz with arrieros and donkeys; the full circuit continues east to Pomabamba.",
+ "water": "Streams and lakes (treat them); carry 2 litres on the pass days.",
+ "dangers": [
+  "Osoruri (about 4,860 m) and Vientunan (about 4,770 m) passes and camps above 4,200 m: acclimatise first.",
+  "Long remote days with no villages after Hualcayán and no rescue service.",
+  "Night frost; hail or snow on afternoons."
+ ],
+ "turnaround": "Not over the Osoruri pass by 13:00: camp at Laguna Cullicocha and cross the next morning.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Alpamayo",
+  "https://en.wikivoyage.org/wiki/Huascar%C3%A1n_National_Park",
+  "https://andina.pe/agencia/noticia-fiestas-patrias-naturaleza-y-aventura-unicas-te-esperan-el-parque-nacional-huascaran-948817.aspx",
+  "https://hiking.waymarkedtrails.org/#route?id=1732180"
+ ],
+ "tier": "A",
+ "area": "pe-huaraz",
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "router": "local",
+ "points": [
+  {
+   "id": "start",
+   "name": "Hualcayán",
+   "lat": -8.89812,
+   "lon": -77.80198,
+   "role": "start",
+   "note": "Day 1: the village at about 3,100 m above Caraz. A long climb of some 1,500 m up the slope to the lake plateau."
+  },
+  {
+   "id": "cullicocha",
+   "name": "Laguna Cullicocha",
+   "lat": -8.8644,
+   "lon": -77.75974,
+   "role": "point",
+   "night": true,
+   "note": "Camp near the dammed glacier lake at about 4,600 m, under Santa Cruz peak."
+  },
+  {
+   "id": "osoruri",
+   "name": "Osoruri pass",
+   "lat": -8.85766,
+   "lon": -77.75539,
+   "role": "point",
+   "note": "Day 2: about 4,860 m, then on over the Vientunan pass and down to the Los Cedros valley."
+  },
+  {
+   "id": "alpamayo-base-camp",
+   "name": "Jancarurish camp",
+   "lat": -8.84616,
+   "lon": -77.68169,
+   "role": "point",
+   "night": true,
+   "note": "The valley-floor camp at about 4,200 m in the Los Cedros valley, with Alpamayo's north side rising at its head."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Jancarurish, Alpamayo north base camp",
+   "lat": -8.86347,
+   "lon": -77.67998,
+   "role": "goal",
+   "night": true,
+   "note": "Day 3: up the moraine to the turquoise glacier lake under Alpamayo and Jancarurish peak. A rest day here, then 2 days back."
+  }
+ ]
+}
