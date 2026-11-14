@@ -1,0 +1,2487 @@
+{
+ "_doc": "New Zealand, written by hand for the ranking and the plans hour by hour (Manu, 2026-11-14). Multi-day treks (Great Walks) are trail pages of app/trails. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "nz-auckland",
+   "names": [
+    "Auckland",
+    "Auckland Harbour Bridge",
+    "Sky Tower",
+    "Waiheke Island",
+    "Devonport"
+   ],
+   "country": "NZ",
+   "lat": -36.85,
+   "lon": 174.76,
+   "radius_km": 25,
+   "season": "December to March is summer, the busiest; November and April are quieter and still mild.",
+   "sleep": "The waterfront and Viaduct, or Ponsonby for cafés.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Auckland",
+    "https://en.wikivoyage.org/wiki/Waiheke_Island"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "harbour",
+     "name": "Ferry to Devonport, up Mount Victoria, then the Sky Tower",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Ten minutes by ferry to a Victorian seaside village, a volcano cone with the city across the water, then the city from 328 m up.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Ferry from downtown to Devonport",
+       "note": "about 10 minutes"
+      },
+      {
+       "at": "10:30",
+       "what": "Walk up Mount Victoria, a volcanic cone"
+      },
+      {
+       "at": "12:00",
+       "what": "Lunch in Devonport, ferry back"
+      },
+      {
+       "at": "15:00",
+       "what": "Sky Tower viewing deck"
+      }
+     ],
+     "sights": [
+      "Sky Tower"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "boat",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "waiheke",
+     "name": "A day on Waiheke Island: vineyards and beaches",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Forty minutes by ferry to an island of vineyards, olive groves and white beaches like Oneroa and Palm Beach.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Ferry to Matiatia",
+       "note": "about 40 minutes"
+      },
+      {
+       "at": "11:00",
+       "what": "Oneroa beach and village"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch at a vineyard"
+      },
+      {
+       "at": "15:00",
+       "what": "Palm Beach"
+      },
+      {
+       "at": "17:30",
+       "what": "Ferry back"
+      }
+     ],
+     "sights": [
+      "Waiheke Island"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "beach",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-bay-of-islands",
+   "names": [
+    "Paihia",
+    "Waitangi",
+    "Waitangi Treaty Grounds",
+    "Russell",
+    "Bay of Islands"
+   ],
+   "country": "NZ",
+   "lat": -35.28,
+   "lon": 174.09,
+   "radius_km": 20,
+   "season": "December to March is summer, the busiest; November and April are quieter and still mild.",
+   "sleep": "Paihia, by the wharf; Russell across the water is quieter.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Paihia",
+    "https://en.wikivoyage.org/wiki/Bay_of_Islands"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "waitangi",
+     "name": "Waitangi Treaty Grounds",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Where Māori chiefs and the British Crown signed the Treaty of Waitangi in 1840, the founding document of New Zealand: the carved meeting house, the great war canoe, the museum.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Guided tour of the grounds"
+      },
+      {
+       "at": "10:30",
+       "what": "The cultural performance in the meeting house"
+      },
+      {
+       "at": "11:30",
+       "what": "Museum of the treaty"
+      },
+      {
+       "at": "12:30",
+       "what": "The war canoe on the shore"
+      }
+     ],
+     "sights": [
+      "Waitangi Treaty Grounds"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "hole-rock",
+     "name": "Hole in the Rock and dolphins by boat",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Out among the bay's 144 islands to the pierced rock at Cape Brett, with dolphins on the way and a stop on Urupukapuka island.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "opua",
+     "name": "Opua forest lookout walk",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Up through the bush behind Paihia to a view over the bay and Russell.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-coromandel",
+   "names": [
+    "Hahei",
+    "Cathedral Cove",
+    "Hot Water Beach",
+    "Whitianga",
+    "Coromandel Peninsula"
+   ],
+   "country": "NZ",
+   "lat": -36.85,
+   "lon": 175.78,
+   "radius_km": 25,
+   "season": "December to March is summer, the busiest; November and April are quieter and still mild.",
+   "sleep": "Hahei, between the two: very busy from Christmas to the end of January.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hahei",
+    "https://en.wikivoyage.org/wiki/Coromandel_Peninsula"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cathedral",
+     "name": "Cathedral Cove by boat or kayak",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "The walking track from Grange Road was closed by landslips in 2023: check DOC whether it has reopened, otherwise go by boat or kayak.",
+     "why": "A limestone arch between two white beaches in a marine reserve, reached by sea from Hahei.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Cathedral Cove"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "beach",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "hot-water",
+     "name": "Dig your own pool on Hot Water Beach",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Two hours each side of low tide",
+     "book": "Bring or hire a spade; the water at the source is 64°C, dig a little away from it.",
+     "why": "Two hot springs come up through the sand two hours each side of low tide: dig a hole and lie in it, the surf a few metres away.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hot Water Beach"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "thermal"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-waitomo",
+   "names": [
+    "Waitomo",
+    "Waitomo Caves"
+   ],
+   "country": "NZ",
+   "lat": -38.26,
+   "lon": 175.1,
+   "radius_km": 15,
+   "season": "All year: the caves are the same in the rain.",
+   "sleep": "Waitomo village, or as a stop between Auckland and Rotorua.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Waitomo"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "glowworms",
+     "name": "Waitomo Glowworm Caves by boat",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A walk through the limestone, then a silent boat in the dark under a ceiling of thousands of glowworms.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Waitomo Caves"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "blackwater",
+     "name": "Black water rafting in Ruakuri Cave",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Float on an inner tube down an underground river, jump off subterranean waterfalls, glowworms above.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "ruakuri",
+     "name": "Ruakuri Cave walk",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A spiral entrance into a cave the Māori found 400-500 years ago, with streams and glowworms on walkways.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-rotorua",
+   "names": [
+    "Rotorua",
+    "Te Puia",
+    "Pohutu Geyser",
+    "Kuirau Park",
+    "Ohinemutu",
+    "Wai-O-Tapu",
+    "Waimangu Volcanic Valley"
+   ],
+   "country": "NZ",
+   "lat": -38.14,
+   "lon": 176.25,
+   "radius_km": 30,
+   "season": "All year; the thermal areas steam best on cold mornings.",
+   "sleep": "By the lake or near the centre: you smell the sulphur everywhere.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Rotorua",
+    "https://en.wikivoyage.org/wiki/Matamata"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "te-puia",
+     "name": "Te Puia: Pohutu geyser and Māori arts",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Whakarewarewa valley of boiling mud and the Pohutu geyser, with the national school of Māori carving and weaving; a hāngī dinner and a performance in the evening.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Te Puia",
+      "Pohutu Geyser"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 4,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "thermal-valley",
+     "name": "Wai-O-Tapu and Waimangu volcanic valley",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Wikivoyage last listed Wai-O-Tapu as closed for renovation: check it is open.",
+     "why": "Pools of every colour, the orange-rimmed Champagne Pool, and Waimangu, a valley born from the 1886 eruption of Mount Tarawera.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Wai-O-Tapu",
+      "Waimangu Volcanic Valley"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "hobbiton",
+     "name": "Hobbiton movie set",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Shire of the Lord of the Rings films on a sheep farm near Matamata: hobbit holes, the mill, a drink at the Green Dragon.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hobbiton"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "spa",
+     "name": "Polynesian Spa by the lake",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hot mineral pools on the shore of Lake Rotorua, open until late.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-taupo",
+   "names": [
+    "Taupo",
+    "Taupō",
+    "Lake Taupo",
+    "Huka Falls",
+    "Orakei Korako"
+   ],
+   "country": "NZ",
+   "lat": -38.69,
+   "lon": 176.07,
+   "radius_km": 20,
+   "season": "All year; summer for the lake.",
+   "sleep": "Taupō town, on the lakefront.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Taupō"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "huka",
+     "name": "Huka Falls and Craters of the Moon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "New Zealand's biggest river forced through a narrow rock cleft in a roar of blue water, then a boardwalk among steaming craters.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Huka Falls from the footbridge"
+      },
+      {
+       "at": "10:00",
+       "what": "Craters of the Moon boardwalk",
+       "note": "45 minutes"
+      },
+      {
+       "at": "12:00",
+       "what": "Aratiatia rapids: the dam gates open at 12:00"
+      }
+     ],
+     "sights": [
+      "Huka Falls"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "orakei",
+     "name": "Orakei Korako, the hidden valley",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A boat across the lake to geysers, silica terraces and a cave with a hot pool inside.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Orakei Korako"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "nz-tongariro",
+   "names": [
+    "Tongariro National Park",
+    "Tongariro Alpine Crossing",
+    "National Park",
+    "Whakapapa",
+    "Mount Ruapehu",
+    "Mount Ngauruhoe",
+    "Red Crater"
+   ],
+   "country": "NZ",
+   "lat": -39.2,
+   "lon": 175.58,
+   "radius_km": 30,
+   "season": "The Crossing is a summer walk, November to April; in winter it needs ice axe and crampons. Weather turns fast: one day spare.",
+   "sleep": "National Park village or Whakapapa, with a shuttle to the start.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Tongariro_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "crossing",
+     "name": "The Tongariro Alpine Crossing",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "Book the shuttle: it drops you at Mangatepopo and collects you at Ketetahi. Do not leave a car at Mangatepopo.",
+     "why": "19.4 km across an active volcanic landscape: the Red Crater, the Emerald Lakes, the cone of Ngauruhoe; one of the great day walks on Earth.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1886
+     },
+     "steps": [
+      {
+       "at": "06:30",
+       "what": "Shuttle to Mangatepopo"
+      },
+      {
+       "at": "07:00",
+       "what": "Up the valley to the Devil's Staircase"
+      },
+      {
+       "at": "10:00",
+       "what": "South Crater, then the ridge to Red Crater",
+       "note": "the highest point"
+      },
+      {
+       "at": "11:00",
+       "what": "Down the scree to the Emerald Lakes"
+      },
+      {
+       "at": "13:00",
+       "what": "Blue Lake, then the long descent"
+      },
+      {
+       "at": "15:00",
+       "what": "Ketetahi car park, shuttle back"
+      }
+     ],
+     "sights": [
+      "Tongariro Alpine Crossing",
+      "Red Crater",
+      "Mount Ngauruhoe"
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "no",
+     "needs": "transfer"
+    },
+    {
+     "id": "taranaki-falls",
+     "name": "Taranaki Falls from Whakapapa",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Through beech forest and over old lava flows to a 20 m waterfall, Ruapehu behind.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Mount Ruapehu"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "alt_of": "crossing"
+    }
+   ]
+  },
+  {
+   "id": "nz-wellington",
+   "names": [
+    "Wellington",
+    "Mount Victoria",
+    "Zealandia"
+   ],
+   "country": "NZ",
+   "lat": -41.29,
+   "lon": 174.78,
+   "radius_km": 20,
+   "season": "All year; windy in every season.",
+   "sleep": "Te Aro or the waterfront, everything on foot.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Wellington"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "te-papa",
+     "name": "Te Papa, the national museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "New Zealand's museum by the harbour: Māori treasures and a marae, the colossal squid, the earthquake house.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "city",
+     "name": "Cable car, Botanic Garden and Mount Victoria lookout",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up the red cable car to Kelburn, down through the gardens, then the city and harbour from Mount Victoria.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Mount Victoria"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "zealandia",
+     "name": "Zealandia ecosanctuary",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A fenced valley in the city where New Zealand's rare birds live as before the rats; the night tour finds kiwi.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Zealandia"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-marlborough",
+   "names": [
+    "Picton",
+    "Marlborough Sounds",
+    "Queen Charlotte Sound"
+   ],
+   "country": "NZ",
+   "lat": -41.29,
+   "lon": 174.0,
+   "radius_km": 25,
+   "season": "December to March is summer, the busiest; November and April are quieter and still mild.",
+   "sleep": "Picton, at the ferry.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Picton_(New_Zealand)"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ferry",
+     "name": "The Cook Strait ferry through Queen Charlotte Sound",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The crossing from Wellington ends in an hour of green fjords to Picton.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Marlborough Sounds"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kayak",
+     "name": "Kayak in the Marlborough Sounds",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Paddle the sheltered bays from Picton or Anakiwa, dolphins and birds around.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "nz-abel-tasman",
+   "names": [
+    "Abel Tasman National Park",
+    "Kaiteriteri",
+    "Marahau"
+   ],
+   "country": "NZ",
+   "lat": -40.95,
+   "lon": 173.0,
+   "radius_km": 20,
+   "season": "October to April; the coast is mild all year.",
+   "sleep": "Kaiteriteri or Marahau, at the park's door.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Abel_Tasman_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "coast",
+     "name": "Water taxi up the coast, walk back",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Golden beaches and granite coves: a water taxi drops you up the coast track and you walk back through the bush from bay to bay.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Water taxi from Marahau or Kaiteriteri"
+      },
+      {
+       "at": "10:00",
+       "what": "Dropped at Anchorage or Bark Bay"
+      },
+      {
+       "at": "10:30",
+       "what": "Coast track, bay to bay"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch and a swim on a beach"
+      },
+      {
+       "at": "16:00",
+       "what": "Back to Marahau, or picked up at a bay"
+      }
+     ],
+     "sights": [
+      "Abel Tasman National Park"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "boat",
+      "beach"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kayak",
+     "name": "Sea kayak in Abel Tasman",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Paddle along the coast to seal colonies and beaches only reachable by sea.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "nz-kaikoura",
+   "names": [
+    "Kaikoura",
+    "Kaikōura"
+   ],
+   "country": "NZ",
+   "lat": -42.4,
+   "lon": 173.68,
+   "radius_km": 20,
+   "season": "All year: the whales are here every month. Tours stop in rough seas: one day spare.",
+   "sleep": "Kaikōura town, along the Esplanade.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kaikoura"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "whales",
+     "name": "Whale watching from Kaikōura",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "The morning, when the sea is calmer",
+     "book": "Book ahead; trips are cancelled in rough seas.",
+     "why": "Sperm whales feed all year over a deep canyon just off the coast, with snowy mountains behind.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "peninsula",
+     "name": "Point Kean seals and the Peninsula Walkway",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Fur seals asleep on the rocks at the car park, then along the clifftops to South Bay.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "dolphins",
+     "name": "Swim with dusky dolphins",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "In a wetsuit among hundreds of dusky dolphins, or just watch them from the boat.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-punakaiki",
+   "names": [
+    "Punakaiki",
+    "Pancake Rocks",
+    "Paparoa National Park"
+   ],
+   "country": "NZ",
+   "lat": -42.11,
+   "lon": 171.33,
+   "radius_km": 15,
+   "season": "All year; the west coast is wet in every season.",
+   "sleep": "Punakaiki, between the forest and the sea.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Punakaiki"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "pancake",
+     "name": "Pancake Rocks and the blowholes",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "High tide with a westerly swell",
+     "book": "",
+     "why": "Limestone stacked like pancakes, the sea blasting up to 15 m through the blowholes at high tide.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Pancake Rocks"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "pororari",
+     "name": "Pororari River track",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up a gorge of limestone walls and nikau palms, the river green below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Paparoa National Park"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-glaciers",
+   "names": [
+    "Franz Josef",
+    "Franz Josef Glacier",
+    "Fox Glacier",
+    "Lake Matheson",
+    "Okarito"
+   ],
+   "country": "NZ",
+   "lat": -43.42,
+   "lon": 170.1,
+   "radius_km": 25,
+   "season": "All year; it rains a lot, but clear days are sharp. One day spare for the helicopters.",
+   "sleep": "Franz Josef or Fox village, both at the glacier's foot.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Franz_Josef",
+    "https://en.wikivoyage.org/wiki/Fox_Glacier"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "franz-walk",
+     "name": "Franz Josef glacier valley walk",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Along a rocky riverbed between waterfalls to a viewpoint on the glacier coming down from the Alps.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Franz Josef Glacier"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "matheson",
+     "name": "Lake Matheson at dawn",
+     "hours": "1.5 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "Early morning, before the wind",
+     "book": "",
+     "why": "A 4.4 km loop around a dark lake with Aoraki/Mount Cook and Mount Tasman mirrored in it.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Lake Matheson"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "heli",
+     "name": "Heli-hike or snow landing on the glacier",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "Flights go only in clear weather: book for the first morning, keep a spare day.",
+     "why": "A helicopter up to the ice, then a guided walk among blue caves and crevasses, or a landing on the névé.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "hot-pools",
+     "name": "Glacier hot pools",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hot pools in the rainforest of Franz Josef village.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-wanaka",
+   "names": [
+    "Wanaka",
+    "That Wanaka Tree",
+    "Wanaka Tree",
+    "Lake Wanaka",
+    "Lake Hawea"
+   ],
+   "country": "NZ",
+   "lat": -44.7,
+   "lon": 169.13,
+   "radius_km": 20,
+   "season": "December to March for walks, July to September for skiing.",
+   "sleep": "Wanaka town, on the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Wanaka"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "tree",
+     "name": "That Wanaka Tree and the lakefront",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "Sunrise",
+     "book": "",
+     "why": "A lone willow standing in the lake, the most photographed tree in the country, at sunrise.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "That Wanaka Tree",
+      "Lake Wanaka"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "rob-roy",
+     "name": "Rob Roy Glacier walk",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up a valley of beech forest in Mount Aspiring National Park to a hanging glacier: Wanaka's favourite day walk.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate"
+     },
+     "sights": [
+      "Mount Aspiring National Park"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "puzzling",
+     "name": "Puzzling World",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The leaning tower, the great maze and the illusion rooms.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-queenstown",
+   "names": [
+    "Queenstown",
+    "Lake Wakatipu",
+    "The Remarkables",
+    "Arrowtown",
+    "Kawarau Bridge",
+    "Gibbston Valley",
+    "Coronet Peak"
+   ],
+   "country": "NZ",
+   "lat": -45.03,
+   "lon": 168.66,
+   "radius_km": 25,
+   "season": "December to March for the lakes and walks, July to September for skiing.",
+   "sleep": "In town or along Frankton road, with the lake view.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Queenstown_(New_Zealand)"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "gondola",
+     "name": "Skyline Gondola to Bob's Peak",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Sunset",
+     "book": "",
+     "why": "The lake, the town and the Remarkables from above; ride the luge down.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "earnslaw",
+     "name": "TSS Earnslaw across Lake Wakatipu",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A coal-fired steamship of 1912 to Walter Peak high-country farm.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Lake Wakatipu"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "arrowtown",
+     "name": "Arrowtown and the Gibbston wine valley",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A gold-rush village of 1862 with its Chinese settlement, then pinot noir in the Kawarau gorge, past the first bungy bridge.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Arrowtown",
+      "Gibbston Valley",
+      "Kawarau Bridge"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "jet",
+     "name": "Shotover Jet",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A jetboat at full speed through the narrow canyon of the Shotover river, spinning 360°.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "bungy",
+     "name": "Kawarau Bridge bungy",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "43 m from the bridge where commercial bungy began in 1988.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Kawarau Bridge"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 0,
+      "relax": 0,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "nz-te-anau",
+   "names": [
+    "Te Anau",
+    "Milford Sound",
+    "Mitre Peak",
+    "Mirror Lakes",
+    "Fiordland National Park",
+    "Doubtful Sound",
+    "Lake Manapouri"
+   ],
+   "country": "NZ",
+   "lat": -45.41,
+   "lon": 167.72,
+   "radius_km": 20,
+   "season": "All year. Milford is wet most days: the waterfalls are best in rain. Snow can close the road in winter: one day spare.",
+   "sleep": "Te Anau: two hours from Milford, against more than twelve hours there and back from Queenstown.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Te_Anau",
+    "https://en.wikivoyage.org/wiki/Milford_Sound"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "milford",
+     "name": "The Milford Road and a cruise on Milford Sound",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book the cruise; fill the tank in Te Anau, fuel in Milford is limited.",
+     "why": "Two hours of the road through Fiordland, Mirror Lakes and the Homer tunnel, then a cruise under Mitre Peak, rising 1,692 m from the water, to the Tasman Sea.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Leave Te Anau on the Milford Road"
+      },
+      {
+       "at": "08:45",
+       "what": "Mirror Lakes"
+      },
+      {
+       "at": "10:00",
+       "what": "The Homer Tunnel"
+      },
+      {
+       "at": "10:30",
+       "what": "Cruise on Milford Sound",
+       "note": "Mitre Peak, Stirling Falls, seals"
+      },
+      {
+       "at": "13:00",
+       "what": "Back on the road, stops at the Chasm"
+      },
+      {
+       "at": "15:30",
+       "what": "Te Anau"
+      }
+     ],
+     "sights": [
+      "Mirror Lakes",
+      "Milford Sound",
+      "Mitre Peak"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "glowworm",
+     "name": "Te Anau glowworm caves",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Across the lake by boat, then on foot and by small boat inside a living cave of glowworms.",
+     "act": {
+      "type": "boat"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "doubtful",
+     "name": "Doubtful Sound",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Across Lake Manapouri and over a pass to a fjord three times longer than Milford and far quieter.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Lake Manapouri",
+      "Doubtful Sound"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "C",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "bird-sanctuary",
+     "name": "Te Anau bird sanctuary",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Takahē, a blue flightless bird thought extinct until 1948, on the lakeshore walk.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-mount-cook",
+   "names": [
+    "Aoraki / Mount Cook",
+    "Aoraki Mount Cook National Park",
+    "Mount Cook Village",
+    "Twizel"
+   ],
+   "country": "NZ",
+   "lat": -43.73,
+   "lon": 170.1,
+   "radius_km": 25,
+   "season": "October to April for the walks; snow can close the road. Clouds hide the peak often: one day spare.",
+   "sleep": "Mount Cook village, or Twizel 50 minutes away.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Aoraki_/_Mount_Cook_National_Park",
+    "https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/things-to-do/tracks/hooker-valley-track/"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "hooker",
+     "name": "Hooker Valley track",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Early morning, before the cloud",
+     "book": "",
+     "why": "10 km return over three swing bridges to Hooker Lake, icebergs floating under Aoraki / Mount Cook, New Zealand's highest peak.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "White Horse Hill car park"
+      },
+      {
+       "at": "07:15",
+       "what": "First swing bridge",
+       "note": "15 min"
+      },
+      {
+       "at": "07:45",
+       "what": "Second swing bridge, the Mueller glacier lake"
+      },
+      {
+       "at": "08:30",
+       "what": "Hooker Lake and the peak"
+      },
+      {
+       "at": "10:00",
+       "what": "Back at the car park"
+      }
+     ],
+     "sights": [
+      "Aoraki / Mount Cook"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "tasman",
+     "name": "Tasman Glacier viewpoint",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A short climb to the lake of New Zealand's longest glacier, grey ice and floating bergs.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "hillary",
+     "name": "Sir Edmund Hillary Alpine Centre",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The story of the climbers of Aoraki, with a planetarium, in the Hermitage hotel.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 1,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-tekapo",
+   "names": [
+    "Lake Tekapo",
+    "Tekapo",
+    "Mount John",
+    "Church of the Good Shepherd",
+    "Mackenzie Basin"
+   ],
+   "country": "NZ",
+   "lat": -44.0,
+   "lon": 170.48,
+   "radius_km": 15,
+   "season": "All year; lupins in November-December; the clearest skies in winter.",
+   "sleep": "Tekapo village, facing the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lake_Tekapo"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "church",
+     "name": "The Church of the Good Shepherd and Mount John",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A stone chapel framing a turquoise lake, then the walk up Mount John for the whole Mackenzie basin.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Church of the Good Shepherd",
+      "Mount John"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "stars",
+     "name": "Stargazing on Mount John",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book the Dark Sky Project tour; it runs only on clear nights.",
+     "why": "A tour at the observatory in a dark-sky reserve: the Milky Way, the Magellanic clouds.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "springs",
+     "name": "Tekapo Springs",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hot pools at 35-37°C looking up the lake.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-christchurch",
+   "names": [
+    "Christchurch",
+    "Christchurch Cathedral"
+   ],
+   "country": "NZ",
+   "lat": -43.53,
+   "lon": 172.64,
+   "radius_km": 20,
+   "season": "All year.",
+   "sleep": "The centre, rebuilt after 2011, walkable.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Christchurch"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "city",
+     "name": "Christchurch after the earthquake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Cardboard Cathedral by Shigeru Ban, the earthquake memorial on the Avon, the Gothic Arts Centre and the botanic gardens.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Christchurch"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "antarctic",
+     "name": "International Antarctic Centre",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A polar storm room, a Hägglund ride and little blue penguins, by the airport the Antarctic flights leave from.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "nz-catlins",
+   "names": [
+    "The Catlins",
+    "Nugget Point",
+    "McLean Falls",
+    "Curio Bay"
+   ],
+   "country": "NZ",
+   "lat": -46.5,
+   "lon": 169.4,
+   "radius_km": 40,
+   "season": "November to March; wild and windy all year.",
+   "sleep": "Owaka or Curio Bay.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/The_Catlins",
+    "https://en.wikivoyage.org/wiki/Dunedin"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "coast",
+     "name": "Nugget Point, waterfalls and Curio Bay",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A lighthouse over rock islets full of seals, two forest waterfalls, and a petrified forest on the beach at Curio Bay where yellow-eyed penguins come ashore at dusk.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Nugget Point lighthouse"
+      },
+      {
+       "at": "11:00",
+       "what": "Purakaunui Falls",
+       "note": "10 minutes each way"
+      },
+      {
+       "at": "13:00",
+       "what": "McLean Falls",
+       "note": "40 minutes return"
+      },
+      {
+       "at": "16:00",
+       "what": "Curio Bay: the petrified forest at low tide"
+      },
+      {
+       "at": "19:00",
+       "what": "Penguins coming ashore, from a distance"
+      }
+     ],
+     "sights": [
+      "Nugget Point",
+      "McLean Falls"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "walk",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  }
+ ]
+}
