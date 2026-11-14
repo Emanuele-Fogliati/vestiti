@@ -197,6 +197,8 @@ def match(name: str, lat: float | None, lon: float | None, notes: str | None = N
     if lat is not None and lon is not None:  # a namesake far away is another place (Venice Beach)
         named = [lm for lm in named if _km(lat, lon, lm.lat, lm.lon) <= NAMESAKE_KM]
     own = next(iter(named), None)
+    if own is None and cc and country_names().get(cc):  # "San Blas" is Panama's: try "san blas peru"
+        own = named_near(f"{name} {country_names()[cc]}", lat, lon, cc)
     if own is None and lat is not None and lon is not None:
         own = _nearest(lat, lon, cc)
     if gateway and own is not None and own.gateway and own.gateway not in taken and own.gateway not in elsewhere:
