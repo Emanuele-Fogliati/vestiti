@@ -608,6 +608,8 @@ export interface TrailCard {
   km: number | null; gain_m: number | null; max_m: number | null; min_m: number | null; numbers_from: string | null;
   tier: "A" | "B"; area: string | null; scores: TrailScores | null;
 }
+/** One leg of a trip on its map: along the road (OSM), a flight arc, or a plain line offline. */
+export interface RoadLeg { mode: "road" | "air" | "line"; km: number; hours: number | null; line: [number, number][] }
 /** A trail on the home globe in Trek mode: id, name, goal lat, lon, difficulty 0-3 (easy..technical), tier, days. */
 export type TrailDot = [string, string, number, number, number, "A" | "B", number];
 /** 0-5 each, the rubric of the zone ranking (Manu, 2026-11-14). */

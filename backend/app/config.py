@@ -31,6 +31,7 @@ class Settings(BaseSettings):
 
     # --- Weather (Open-Meteo, free, no key) ---
     weather_enabled: bool = True
+    roads_enabled: bool = True  # trip legs along the real roads (OSRM of FOSSGIS); off in tests
     weather_timeout_s: float = 8.0
     openmeteo_forecast_url: str = "https://api.open-meteo.com/v1/forecast"
     openmeteo_archive_url: str = "https://archive-api.open-meteo.com/v1/archive"
