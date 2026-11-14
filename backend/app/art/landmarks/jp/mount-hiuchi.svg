@@ -1,0 +1,11 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="34" r="13" fill="var(--il-sun)"/>
+<defs><clipPath id="il-jp-mount-hiuchi-pond"><path d="M22 148Q60 138 110 140Q160 136 210 139Q262 138 286 150Q294 166 276 176Q230 184 170 182Q110 186 60 182Q24 180 18 166Q14 154 22 148Z"/></clipPath></defs>
+<path d="M0 200V100L15 95L39 75L56 64L70 62L76 65L88 56L104 47L117 39L126 32L131 29L136 28L141 30L151 37L170 47L182 45L202 43L223 41L236 39L253 41L274 43L287 47L296 53L300 56V200Z" fill="var(--il-mid)"/>
+<path d="M118 200V126Q140 104 158 80Q166 64 176 56Q190 50 208 47L223 44L236 42L253 44L274 46L287 50L296 56L300 58V200Z" fill="var(--il-obj)"/>
+<path d="M126 34Q118 46 112 52Q104 62 98 80M112 52Q110 62 112 70M88 58Q84 66 78 78" stroke="var(--il-far)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M131 29Q140 70 160 120M76 65Q90 90 100 120M236 44Q240 80 250 116" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V94Q20 96 40 110Q56 120 70 128H0Z" fill="var(--il-mid)"/>
+<path d="M0 200V126Q60 120 150 122Q230 120 300 116V200Z" fill="var(--il-leaf)"/>
+<path d="M22 148Q60 138 110 140Q160 136 210 139Q262 138 286 150Q294 166 276 176Q230 184 170 182Q110 186 60 182Q24 180 18 166Q14 154 22 148Z" fill="var(--il-water)"/>
+<path d="M10 138L40 146L56 152L70 153L76 152L88 156L104 160L117 163L126 166L131 168L141 167L151 163L170 158L182 157L202 157L223 156L236 155L253 155L274 155L287 153L300 151V130H10Z" fill="var(--il-obj)" clip-path="url(#il-jp-mount-hiuchi-pond)"/>
