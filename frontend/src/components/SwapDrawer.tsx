@@ -11,7 +11,7 @@ const SORTS: [string, string][] = [
   ["warmth", "Warmest"], ["weight", "Lightest"], ["rating", "Shopper rating"], ["waterproof", "Most waterproof"],
 ];
 
-function reqText(r: Requirement): string {
+export function reqText(r: Requirement): string {
   const parts: string[] = [];
   if (r.ref_clo && !["shell_top", "shell_bottom", "footwear", "sun_hat", "socks"].includes(r.slot)) parts.push(`about ${r.ref_clo.toFixed(2)} clo (${r.level.replace("_", " ")})`);
   if (r.waterproof) parts.push(`waterproof${r.waterproof_grade_mm ? ` ${r.waterproof_grade_mm.toLocaleString("en-US")} mm+` : ""}`);

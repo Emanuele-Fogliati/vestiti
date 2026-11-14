@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { TripMap } from "../components/Maps";
 import { useItineraries } from "../components/ItineraryCards";
 import { Kit } from "../components/Kit";
+import { LayerStrategy } from "../components/LayerStrategy";
 import { EstimateForm } from "../components/Estimate";
 import { PlanChange } from "../components/PlanChange";
 import { ProfileQuiz } from "../components/ProfileQuiz";
@@ -273,7 +274,8 @@ export default function TripPage() {
       {tab === "bag" && (
         <section className="x-panel" id="p-bag" role="tabpanel" key="bag">
           <div className="wrap">
-            {plans && !plans.empty ? <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={() => loadPlans(tier)} />
+            {plans && !plans.empty ? <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={() => loadPlans(tier)}
+              layers={strategy && !strategy.empty ? <LayerStrategy tripId={id} strategy={strategy} tier={tier} stageIdx={Math.max(0, sel)} setStageIdx={setStageIdx} onChanged={() => loadPlans(tier)} /> : null} />
               : <Empty planning={planning} onAdd={() => go("trip")} />}
           </div>
         </section>
