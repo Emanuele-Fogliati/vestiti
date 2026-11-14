@@ -35,6 +35,11 @@ class TextIn(BaseModel):
     text: str = Field(min_length=2, max_length=50000)
 
 
+# The day plan is written in English whatever language the trip is told in (Manu, 2026-11-14:
+# the app is for a global market; the local model also writes English far better).
+PLAN_LANG = "English"
+
+
 class DaysIn(BaseModel):
     text: str = Field(min_length=2, max_length=50000)
     group: int = Field(ge=0, le=40)
@@ -99,7 +104,7 @@ def understand_text(body: TextIn, _user: User = Depends(current_user)):
     if b is not None:
         draft = dayplan.rules_days(b)
         return {**b, "proposal": None, "ideas": [], "plan_days": draft["days"], "weather": draft["weather"],
-                "groups": len(dayplan.groups(b)), "lang": dayplan.lang_of(body.text)}
+                "groups": len(dayplan.groups(b)), "lang": PLAN_LANG}
     r = understand.read(body.text)
     if r["mode"] == "open":
         found = _geocoded(body.text)
@@ -127,7 +132,7 @@ def write_days(body: DaysIn, _user: User = Depends(current_user)):
         raise HTTPException(422, "Not a booked trip: write where you sleep or your flights and times")
     if body.group >= len(dayplan.groups(b)):
         raise HTTPException(422, "No such part of the trip")
-    return dayplan.ai_days(b, body.group, body.wishes, dayplan.lang_of(body.text + " " + body.wishes))
+    return dayplan.ai_days(b, body.group, body.wishes, PLAN_LANG)
 
 
 @router.post("/propose")

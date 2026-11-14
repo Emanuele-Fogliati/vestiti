@@ -372,7 +372,7 @@ def ai_days(reading: dict, group: int, wishes: str = "", lang: str = "English",
             + json.dumps([{**d, "weekday": date.fromisoformat(d["date"]).strftime("%A")} for d in mine],
                          ensure_ascii=False)[:16000]
             + f"\n\nWrite these {len(mine)} days: {', '.join(d['date'] for d in mine)}."
-            + f" Write every title, row, note and the weather rule in {lang}, even where the draft is in English."
+            + f" Write every title, row, note and the weather rule in {lang}, even where the traveller writes in another language: translate their places' descriptions, keep proper names."
             + (f" Follow the WISHES: leave out or mark optional what they rule out, lighten the days for them."
                if wishes.strip() else ""))
     try:
