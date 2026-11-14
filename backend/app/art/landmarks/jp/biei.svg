@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="56" cy="32" r="13" fill="var(--il-sun)"/>
+<path d="M170 122L196 110Q224 98 250 100L272 98L300 102V124Z" fill="var(--il-far)"/>
+<path d="M0 124Q40 106 84 114Q122 104 162 112Q214 104 252 112Q280 108 300 110V156H0Z" fill="var(--il-mid)"/>
+<clipPath id="il-jp-biei-hill"><path d="M0 124Q40 106 84 114Q122 104 162 112Q214 104 252 112Q280 108 300 110V156H0Z"/></clipPath>
+<g clip-path="url(#il-jp-biei-hill)"><path d="M0 120Q42 110 84 118Q124 108 164 116Q214 108 252 116Q280 112 300 114V120Q280 118 252 122Q214 114 164 122Q124 114 84 124Q42 116 0 126Z" fill="var(--il-obj)"/><path d="M0 130Q42 120 84 128Q124 120 164 126Q214 118 252 126Q280 122 300 124V130Q280 128 252 132Q214 126 164 132Q124 126 84 134Q42 126 0 136Z" fill="var(--il-acc)"/><path d="M50 112Q46 126 52 140M112 108Q116 124 110 140M214 106Q210 124 216 140M268 108Q272 124 266 140" stroke="var(--il-leaf)" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+<path d="M0 148V136Q12 128 24 134Q36 126 48 134Q62 128 74 136Q88 128 100 136Q112 130 124 136L176 136Q188 128 200 134Q214 126 228 134Q242 128 256 134Q270 126 284 132Q294 128 300 132V148Z" fill="var(--il-leaf)"/>
+<path d="M142 156L138 140L132 128L134 116L129 104L133 92L131 80L136 68L137 56L142 44L145 34L150 24L155 30L159 28L161 40L166 52L165 64L170 76L169 88L174 100L172 112L177 124L172 136L170 146L168 156Z" fill="var(--il-leaf)"/>
+<path d="M150 40L148 60M156 52L158 74M146 80L144 100M160 90L162 114M152 112L150 134M140 120L138 136" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V150Q60 148 120 152L160 150Q230 146 300 148V200Z" fill="var(--il-mid)"/>
+<path d="M170 152Q240 148 300 148V180Q240 174 186 164Z" fill="var(--il-obj)"/>
+<path d="M190 156Q240 152 300 154M200 162Q250 160 300 162M214 168Q260 168 300 170" stroke="var(--il-acc)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M84 200Q112 176 130 160L148 158Q164 176 214 200Z" fill="var(--il-far)"/>
+<path d="M140 163L142 168M147 176L150 184M156 192L158 198" stroke="var(--il-ice)" stroke-width="1.4" fill="none" stroke-linecap="round"/>

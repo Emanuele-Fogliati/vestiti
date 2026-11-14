@@ -198,6 +198,37 @@
    }
   },
   {
+   "slug": "aspam",
+   "label": "ASPAM, the triangular tower on the Aomori waterfront, with the Aomori Bay Bridge",
+   "lat": 40.8295,
+   "lon": 140.7378,
+   "radius_km": 3,
+   "aliases": [
+    "aspam",
+    "aomori prefecture sightseeing products museum",
+    "aomori bay bridge",
+    "aomori prefectural tourist center"
+   ],
+   "palette": {
+    "sky": "#8EC6F0",
+    "far": "#9C8A90",
+    "mid": "#A9B2BF",
+    "ice": "#F3F5F7",
+    "water": "#2E6CAE",
+    "near": "#1E2430",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A48",
+    "acc": "#D2D7DE",
+    "obj": "#3C5C86"
+   },
+   "names": [
+    "aomori",
+    "aomori city",
+    "aomori shi",
+    "aomori japan"
+   ]
+  },
+  {
    "slug": "beppu",
    "label": "Steam over the cobalt pond and red torii of Umi Jigoku, the Hells of Beppu",
    "lat": 33.3165,
@@ -228,6 +259,40 @@
     "leaf": "#355F31",
     "acc": "#D8362C",
     "obj": "#6E5640"
+   }
+  },
+  {
+   "slug": "biei",
+   "label": "The Ken and Mary poplar above the patchwork hills of Biei",
+   "lat": 43.5925,
+   "lon": 142.4612,
+   "radius_km": 12,
+   "aliases": [
+    "ken and mary tree",
+    "ken to mary no ki",
+    "ken mary",
+    "patchwork road",
+    "patchwork no michi",
+    "biei hills",
+    "colline di biei"
+   ],
+   "names": [
+    "biei",
+    "biei town",
+    "biei hokkaido",
+    "biei cho"
+   ],
+   "palette": {
+    "sky": "#9CC8F0",
+    "far": "#8E99A8",
+    "mid": "#8DBE5A",
+    "ice": "#F2F2EC",
+    "water": "#5E8AA8",
+    "near": "#1E2418",
+    "sun": "#F2C14E",
+    "leaf": "#3F6E32",
+    "acc": "#A8784C",
+    "obj": "#DDBB5C"
    }
   },
   {
@@ -1023,6 +1088,71 @@
     "leaf": "#3E6A35",
     "acc": "#7A9447",
     "obj": "#46A88E"
+   }
+  },
+  {
+   "slug": "ikuchi-island",
+   "label": "The white marble Hill of Hope (Miraikokoro no Oka) at Kosanji, Ikuchijima",
+   "lat": 34.2961,
+   "lon": 133.0886,
+   "radius_km": 6,
+   "aliases": [
+    "ikuchijima",
+    "ikuchi island",
+    "ikuchi jima",
+    "isola di ikuchi",
+    "setoda",
+    "kosanji",
+    "kosan ji",
+    "miraikokoro no oka",
+    "mirai kokoro no oka",
+    "hill of hope"
+   ],
+   "names": [
+    "ikuchi"
+   ],
+   "palette": {
+    "sky": "#8EC2EE",
+    "far": "#6E8E70",
+    "mid": "#C3C9CE",
+    "ice": "#F6F6F3",
+    "water": "#4C8CB4",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#3E6E3A",
+    "acc": "#C8A060",
+    "obj": "#B8B0A0"
+   }
+  },
+  {
+   "slug": "imabari",
+   "label": "Imabari Castle's white keep and yagura over its sea-water moat",
+   "lat": 34.0631,
+   "lon": 133.0028,
+   "radius_km": 10,
+   "aliases": [
+    "imabari castle",
+    "imabari jo",
+    "imabarijo",
+    "fukiage castle",
+    "castello di imabari"
+   ],
+   "names": [
+    "imabari",
+    "imabari city",
+    "imabari ehime"
+   ],
+   "palette": {
+    "sky": "#9CC6EE",
+    "far": "#6C737C",
+    "mid": "#B9AF9C",
+    "ice": "#F6F5F0",
+    "water": "#4F7F7C",
+    "near": "#22252A",
+    "sun": "#F2C14E",
+    "leaf": "#3F6B36",
+    "acc": "#8A6E50",
+    "obj": "#C9C3B4"
    }
   },
   {
@@ -2955,6 +3085,32 @@
    }
   },
   {
+   "slug": "sannai-maruyama-site",
+   "label": "The six-pillar timber tower and the great thatched longhouse of the Jomon Sannai-Maruyama site, Aomori",
+   "lat": 40.8114,
+   "lon": 140.6964,
+   "radius_km": 2,
+   "aliases": [
+    "sannai maruyama",
+    "sannaimaruyama",
+    "sannai maruyama site",
+    "sannai maruyama iseki",
+    "jomon jiyukan"
+   ],
+   "palette": {
+    "sky": "#A8CDEE",
+    "far": "#3F6B3A",
+    "mid": "#B0A58E",
+    "ice": "#EDE8DC",
+    "water": "#5E8AA8",
+    "near": "#24221E",
+    "sun": "#F2C14E",
+    "leaf": "#7DAE4C",
+    "acc": "#8C7C64",
+    "obj": "#C9A36E"
+   }
+  },
+  {
    "slug": "sapporo",
    "label": "Sapporo TV Tower over Odori Park",
    "lat": 43.0611,
@@ -3014,6 +3170,35 @@
    "names": [
     "asakusa"
    ]
+  },
+  {
+   "slug": "seto-inland-sea",
+   "label": "Wooded islands layered on the calm Seto Inland Sea, a ferry crossing, seen from Shiudeyama",
+   "lat": 34.2236,
+   "lon": 133.6155,
+   "radius_km": 40,
+   "aliases": [
+    "seto inland sea",
+    "setouchi",
+    "seto naikai",
+    "setonaikai",
+    "mare interno di seto",
+    "mare interno del giappone",
+    "shiudeyama",
+    "shiude yama"
+   ],
+   "palette": {
+    "sky": "#B2D3EE",
+    "far": "#A9B9C8",
+    "mid": "#4D7C45",
+    "ice": "#F5F5F0",
+    "water": "#5A93B9",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#3F7436",
+    "acc": "#F2B6C8",
+    "obj": "#7E9E92"
+   }
   },
   {
    "slug": "shari",
@@ -3161,6 +3346,35 @@
     "leaf": "#2C5634",
     "acc": "#A38A80",
     "obj": "#A7B6C6"
+   }
+  },
+  {
+   "slug": "shimanami-kaido",
+   "label": "The Kurushima-Kaikyo suspension bridges of the Shimanami Kaido over the islets, seen from Kirosan",
+   "lat": 34.1225,
+   "lon": 133.006,
+   "radius_km": 20,
+   "aliases": [
+    "shimanami kaido",
+    "shimanami",
+    "kurushima kaikyo",
+    "kurushima bridge",
+    "kirosan",
+    "kiro san",
+    "nishiseto expressway",
+    "nishi seto expressway"
+   ],
+   "palette": {
+    "sky": "#AACCEB",
+    "far": "#8E9FB2",
+    "mid": "#5E8C48",
+    "ice": "#F4F6F6",
+    "water": "#4E84A6",
+    "near": "#1C2620",
+    "sun": "#F2C14E",
+    "leaf": "#3D6E34",
+    "acc": "#B8A07A",
+    "obj": "#C9C3B4"
    }
   },
   {
@@ -3528,6 +3742,41 @@
     "acc": "#D63A4E",
     "obj": "#C8A040"
    }
+  },
+  {
+   "slug": "tomita-farm",
+   "label": "Farm Tomita's rainbow flower field and lavender under a conifer crest, Nakafurano",
+   "lat": 43.4186,
+   "lon": 142.4278,
+   "radius_km": 4,
+   "aliases": [
+    "tomita farm",
+    "farm tomita",
+    "fattoria tomita",
+    "nakafurano lavender",
+    "irodori field",
+    "furano lavender",
+    "lavanda di furano"
+   ],
+   "palette": {
+    "sky": "#AACDEE",
+    "far": "#93A3BA",
+    "mid": "#6B3FA6",
+    "ice": "#F3F2EA",
+    "water": "#5E8AA8",
+    "near": "#1E2418",
+    "sun": "#F2C14E",
+    "leaf": "#4C8A3A",
+    "acc": "#D8357A",
+    "obj": "#F2C42E"
+   },
+   "names": [
+    "furano",
+    "furano city",
+    "furano hokkaido",
+    "nakafurano",
+    "kamifurano"
+   ]
   },
   {
    "slug": "tottori",
