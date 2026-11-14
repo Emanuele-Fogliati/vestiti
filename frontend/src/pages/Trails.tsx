@@ -16,6 +16,7 @@ export default function Trails() {
   const month = Number(q.get("month")) || undefined;
   const level = (q.get("level") ?? "") as TrailDifficulty | "";
   const kind = q.get("kind") ?? "";
+  const style = q.get("style") ?? "";
   const find = (q.get("find") ?? "").trim().toLowerCase(); // words typed on the home page
   const [all, setAll] = useState<TrailCard[] | null>(null);
   const [countries, setCountries] = useState<string[]>([]);
@@ -29,8 +30,9 @@ export default function Trails() {
 
   const set = (k: string, v: string) => { const n = new URLSearchParams(q); if (v) n.set(k, v); else n.delete(k); setQ(n, { replace: true }); };
   const shown = useMemo(() => (all ?? []).filter((t) => (!level || t.difficulty === level) && (!kind || t.kind === kind)
+    && (!style || (t.style ?? "trek") === style)
     && (!find || [t.name, t.country, t.region, t.base].join(" ").toLowerCase().includes(find)))
-    .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false)), [all, level, kind]);
+    .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false)), [all, level, kind, style, find]);
 
   return (
     <div className="wrap section trailsidx">
@@ -43,6 +45,11 @@ export default function Trails() {
         </div>
         <select aria-label="How hard" value={level} onChange={(e) => set("level", e.target.value)}>
           {LEVELS.map((l) => <option key={l} value={l}>{l ? l[0].toUpperCase() + l.slice(1) : "Any difficulty"}</option>)}
+        </select>
+        <select aria-label="Treks or city walks" value={style} onChange={(e) => set("style", e.target.value)}>
+          <option value="">Treks and city walks</option>
+          <option value="trek">Treks</option>
+          <option value="city">City walks</option>
         </select>
         <select aria-label="How long" value={kind} onChange={(e) => set("kind", e.target.value)}>
           <option value="">Day walks and treks</option>

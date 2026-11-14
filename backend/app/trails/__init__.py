@@ -92,6 +92,8 @@ class Trail(BaseModel):
     # Manu, 2026-11-14: treks at par with trips. tier A = the top treks of a country (full page,
     # 2-4 drawings); B = the long tail from OpenStreetMap (computed numbers, one picture).
     tier: Literal["A", "B"] = "A"
+    # Manu, 2026-11-14: city walks too, so a traveller can plan the whole trip on foot
+    style: Literal["trek", "city"] = "trek"
     area: str | None = Field(default=None, pattern=r"^[a-z]{2}-[a-z0-9-]+$")  # guide area id
     scores: Scores | None = None
 

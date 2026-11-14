@@ -99,7 +99,7 @@ def card(t: trails.Trail, month: int | None = None) -> dict:
         "months_text": _months_text(t.months),
         "in_season": None if month is None else month in t.months,
         "why": t.why, "art": _cover(t), "has_map": trails.geo(t.id) is not None,
-        "tier": t.tier, "area": t.area, "scores": t.scores.model_dump() if t.scores else None,
+        "tier": t.tier, "style": t.style, "area": t.area, "scores": t.scores.model_dump() if t.scores else None,
         **_numbers(t),
     }
 

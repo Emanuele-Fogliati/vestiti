@@ -35,6 +35,7 @@ export function TrailCards({ trails, query = "" }: { trails: Card[]; query?: str
             <div className="tcard-body">
               <div className="tags">
                 <span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
+                {t.style === "city" && <span className="tag">City walk</span>}
                 {t.kind === "multiday" && <span className="tag">{t.days} days</span>}
                 {t.glacier && <span className="tag">Glacier</span>}
                 {t.in_season === false && <span className="tag warn">Not in season then</span>}
