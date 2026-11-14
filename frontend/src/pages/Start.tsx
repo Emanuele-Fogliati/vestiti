@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ItineraryCards, useItineraries } from "../components/ItineraryCards";
 import { TripStarter } from "../components/TripStarter";
 import { MONTHS } from "../lib/format";
@@ -18,6 +18,7 @@ export function OwnTripForm({ compact }: { compact?: boolean }) {
 /** One place to start a trip: your own, or one of the recommended ones. */
 export default function Start({ tab }: { tab: "own" | "ideas" }) {
   const nav = useNavigate();
+  const [params] = useSearchParams();
   const items = useItineraries();
   const [month, setMonth] = useState<number | null>(null);
   const [len, setLen] = useState(0);
@@ -46,7 +47,7 @@ export default function Start({ tab }: { tab: "own" | "ideas" }) {
 
         {tab === "own" ? (
           <div className="start-cols">
-            <TripStarter />
+            <TripStarter initial={params.get("q") ?? undefined} />
             <aside className="stack start-aside">
               <h3 style={{ fontSize: 18 }}>Rather start from a ready trip?</h3>
               <ItineraryCards items={items} limit={2} />

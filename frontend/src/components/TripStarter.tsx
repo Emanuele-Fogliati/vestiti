@@ -53,7 +53,8 @@ const stepOf =(p: Place): PlanStep => ({
   elevation_m: p.elevation_m ?? null, sights: [],
 });
 
-export function TripStarter({ compact }: { compact?: boolean }) {
+/** `initial`: words typed on the home page; they are read as soon as the page opens. */
+export function TripStarter({ compact, initial }: { compact?: boolean; initial?: string }) {
   const nav = useNavigate();
   const { ensureUser } = useApp();
   const [text, setText] = useState("");
@@ -82,6 +83,11 @@ export function TripStarter({ compact }: { compact?: boolean }) {
   const resultRef = useRef<HTMLDivElement>(null);
 
   const speech = useSpeech((t) => { setText(t); read(t); });
+  const first = useRef(initial?.trim() ?? "");
+  useEffect(() => {
+    if (first.current) { setText(first.current); read(first.current); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // regions and countries while a short name is typed
   useEffect(() => {

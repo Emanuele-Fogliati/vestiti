@@ -15,6 +15,7 @@ export default function Trails() {
   const month = Number(q.get("month")) || undefined;
   const level = (q.get("level") ?? "") as TrailDifficulty | "";
   const kind = q.get("kind") ?? "";
+  const find = (q.get("find") ?? "").trim().toLowerCase(); // words typed on the home page
   const [all, setAll] = useState<TrailCard[] | null>(null);
   const [countries, setCountries] = useState<string[]>([]);
   const [err, setErr] = useState<string | null>(null);
@@ -26,7 +27,8 @@ export default function Trails() {
   }, [country, month]);
 
   const set = (k: string, v: string) => { const n = new URLSearchParams(q); if (v) n.set(k, v); else n.delete(k); setQ(n, { replace: true }); };
-  const shown = useMemo(() => (all ?? []).filter((t) => (!level || t.difficulty === level) && (!kind || t.kind === kind))
+  const shown = useMemo(() => (all ?? []).filter((t) => (!level || t.difficulty === level) && (!kind || t.kind === kind)
+    && (!find || [t.name, t.country, t.region, t.base].join(" ").toLowerCase().includes(find)))
     .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false)), [all, level, kind]);
 
   return (
