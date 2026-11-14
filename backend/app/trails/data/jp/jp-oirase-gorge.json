@@ -1,0 +1,70 @@
+{
+ "id": "jp-oirase-gorge",
+ "country": "JP",
+ "name": "Oirase Gorge (奥入瀬渓流), Yakeyama to Lake Towada",
+ "base": "Towada",
+ "region": "Towada-Hachimantai National Park, Aomori",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [5, 6, 7, 8, 9, 10],
+ "hours": [4, 5],
+ "start_by": "09:00",
+ "published": {
+  "km": 14.3,
+  "gain_m": null,
+  "source": "https://www.japan.travel/national-parks/parks/towada-hachimantai/see-and-do/oirase-trail/"
+ },
+ "why": "Fourteen kilometres upstream beside a clear river in beech forest, past mossy boulders, rapids and a dozen waterfalls, to the outlet of Lake Towada.",
+ "book": "Free and open all year, no permit. JR buses from Aomori and Hachinohe stop at Yakeyama and along the road beside the river (Ishigedo, Choshi Otaki, Nenokuchi): ride back or cut the walk short. The road is jammed at the autumn leaves in mid to late October: come by bus.",
+ "water": "Toilets and drinks at Yakeyama, Ishigedo and Nenokuchi only. Carry 1 litre.",
+ "dangers": [
+  "Wet roots and stones on the path; falling branches after storms.",
+  "Asian black bears live in the forest: stay on the path and make some noise.",
+  "In winter the path is under snow and only partly walkable: ask at the Oirase Stream Museum."
+ ],
+ "turnaround": "None needed: the road and its bus stops run beside the whole walk. Plan to reach Nenokuchi before the last bus.",
+ "sources": [
+  "https://www.japan.travel/national-parks/parks/towada-hachimantai/see-and-do/oirase-trail/",
+  "https://www.gltjp.com/en/directory/item/13676/",
+  "https://en.wikipedia.org/wiki/Oirase_River",
+  "https://www.openstreetmap.org/node/7294281693"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 5, "culture": 0, "relax": 4, "history": 0, "landscape": 4},
+ "points": [
+  {
+   "id": "start",
+   "name": "Yakeyama",
+   "lat": 40.57609,
+   "lon": 140.98428,
+   "role": "start",
+   "note": "The hot spring village at the bottom of the gorge, with the JR bus stop and the Oirase Stream Museum (maps, bike rental). Walk upstream: the light and the falls face you."
+  },
+  {
+   "id": "ishigedo",
+   "name": "Ishigedo",
+   "lat": 40.54046,
+   "lon": 140.97895,
+   "role": "point",
+   "note": "Rest house with toilets about 4 km up. Above it come the best stretches: the Ashura rapids and the Kumoi falls."
+  },
+  {
+   "id": "choshi-otaki-falls",
+   "name": "Choshi Otaki falls",
+   "lat": 40.48865,
+   "lon": 140.95114,
+   "role": "point",
+   "note": "The one waterfall across the whole river, a wide curtain that kept fish out of Lake Towada. Bus stop by the road."
+  },
+  {
+   "id": "goal",
+   "name": "Lake Towada, Nenokuchi",
+   "lat": 40.47886,
+   "lon": 140.94062,
+   "role": "goal",
+   "note": "Where the river leaves the caldera lake: bus stop, toilets and the pier of the lake cruise boats to Yasumiya."
+  }
+ ]
+}

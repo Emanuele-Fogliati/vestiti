@@ -1,0 +1,94 @@
+{
+ "id": "vn-ky-quan-san",
+ "country": "VN",
+ "name": "Ky Quan San (Bạch Mộc Lương Tử)",
+ "base": "Bat Xat",
+ "region": "Hoàng Liên Sơn range, Lào Cai - Lai Châu border",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  15,
+  19
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Vietnam's fourth-highest summit, 3,046 m, on a wild ridge of the Hoàng Liên Sơn: no cable car, no temples, two nights in the forest and, with luck, a sea of clouds at dawn.",
+ "book": "Go with a local guide and porters, arranged in Dền Sáng, where the trek's procedures and supplies are sorted out. Drive from Lào Cai or Bát Xát through Mường Hum to Dền Sáng, then on the hydropower road to the foot of the mountain. A typical trek takes 3 days and 2 nights.",
+ "water": "Springs near the forest camps; guides boil water there. Carry 2 litres for the summit day.",
+ "dangers": [
+  "No marked trail and no rescue nearby: never go without a local guide.",
+  "Steep, muddy forest slopes and an exposed rocky ridge over Muối peak: slippery in rain and fog.",
+  "Nights near or below freezing from December to February, with frost on the ridge.",
+  "Fog closes in fast and stays for days in the rainy season (May to September)."
+ ],
+ "turnaround": "Turn back by 11:00 on the summit day wherever you are, or as soon as your guide says the ridge is unsafe in fog or wind.",
+ "sources": [
+  "https://vi.wikipedia.org/wiki/B%E1%BA%A1ch_M%E1%BB%99c_L%C6%B0%C6%A1ng_T%E1%BB%AD",
+  "https://sapa-tourism.com/bat-xat-is-promoting-and-developing-the-climbing-adventure-tourism/",
+  "https://www.openstreetmap.org/node/4643533611",
+  "https://www.openstreetmap.org/way/274091042"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ky Quan San trailhead hamlet",
+   "lat": 22.53244,
+   "lon": 103.66647,
+   "role": "start",
+   "note": "The hamlet at the end of the track west of Sàng Ma Sáo, above Dền Sáng. The path climbs through cardamom fields into old forest."
+  },
+  {
+   "id": "lower-camp",
+   "name": "Lower forest camp",
+   "lat": 22.51458,
+   "lon": 103.62726,
+   "role": "point",
+   "note": "A wild camp by a spring at about 1,650 m, after 5 km of steady climbing: water and lunch stop, or the first night for slow groups."
+  },
+  {
+   "id": "high-camp",
+   "name": "High camp",
+   "lat": 22.50736,
+   "lon": 103.6186,
+   "role": "point",
+   "note": "Night 1 and 2 at the wild camp at about 2,200 m. Day 2: leave at dawn up the ridge over Muối peak to the summit and come back here; day 3 walk down.",
+   "night": true
+  },
+  {
+   "id": "muoi-peak",
+   "name": "Muối peak",
+   "lat": 22.5027,
+   "lon": 103.5978,
+   "role": "point",
+   "note": "The 2,840 m subsidiary summit on the main ridge. The last stretch to Ky Quan San follows the crest west."
+  },
+  {
+   "id": "goal",
+   "name": "Ky Quan San summit",
+   "lat": 22.50714,
+   "lon": 103.58768,
+   "role": "goal",
+   "note": "3,046 m, with a summit marker on the Lào Cai - Lai Châu border; Fansipan and Pu Ta Leng rise to the south. Back the same way."
+  }
+ ]
+}

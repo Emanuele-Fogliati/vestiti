@@ -1,0 +1,88 @@
+{
+ "id": "jp-tanigawadake",
+ "country": "JP",
+ "name": "Tanigawadake by the Tenjin ridge (谷川岳)",
+ "base": "Minakami",
+ "region": "Joshinetsu Kogen National Park, Gunma-Niigata border",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4.5,
+  5.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 6.0,
+  "gain_m": 700,
+  "source": "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf"
+ },
+ "why": "A ropeway lifts you to 1,320 m, then an open ridge with chains and boardwalks leads to the two rock summits, the 'ears', above some of the steepest cliffs in Japan.",
+ "book": "No permit. Joetsu Shinkansen to Jomo-Kogen, bus to the Tanigawadake Ropeway (about 50 minutes), ropeway to Tenjindaira (about 10 minutes); a chairlift goes on to Tenjin-toge. Check the time of the last ropeway down: there is no other easy way off.",
+ "water": "None on the ridge: carry 1.5 litres. Drinks at Tenjindaira and at Kata-no-koya hut below the summit.",
+ "dangers": [
+  "Chained rock steps on the ridge: slippery when wet and crowded on autumn weekends.",
+  "The weather changes fast between the Sea of Japan and Pacific sides: fog, wind and cold rain on the ridge even in summer.",
+  "Stay on the Tenjin ridge trail: the cliffs of Ichinokurazawa below the summits are climbing terrain where many people have died.",
+  "Snow on the ridge until June and from November."
+ ],
+ "turnaround": "Not at Kumaanazawa shelter by 10:30, or the ridge in fog and wind: go back to Tenjindaira.",
+ "sources": [
+  "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf",
+  "https://www.japan.travel/en/sports/hiking/courses/mt-tanigawa/",
+  "https://hikesinjapan.yamakei-online.com/course/19.php",
+  "https://www.openstreetmap.org/node/3261275245",
+  "https://www.openstreetmap.org/way/909911479"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tenjindaira",
+   "lat": 36.8182,
+   "lon": 138.94975,
+   "role": "start",
+   "note": "The top ropeway station at about 1,320 m. Take the traverse path west under the chairlift to the ridge (or ride the lift to Tenjin-toge)."
+  },
+  {
+   "id": "kumaanazawa",
+   "name": "Kumaanazawa shelter",
+   "lat": 36.82327,
+   "lon": 138.93603,
+   "role": "point",
+   "note": "A small emergency hut on the ridge. Above it the path climbs rock steps with chains, then a long flat ridge on boardwalks."
+  },
+  {
+   "id": "kata-no-koya",
+   "name": "Kata-no-koya hut",
+   "lat": 36.83309,
+   "lon": 138.92963,
+   "role": "point",
+   "note": "The hut on the shoulder after the big scree slope, a few minutes below the first summit. Drinks and a roof in bad weather."
+  },
+  {
+   "id": "goal",
+   "name": "Tanigawadake twin summits",
+   "lat": 36.83711,
+   "lon": 138.93018,
+   "role": "goal",
+   "note": "Toma-no-mimi, 1,963 m, then Oki-no-mimi, 1,977 m, 10 minutes on along the ridge. The east face drops straight to Ichinokurazawa. Back the same way."
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "id": "jp-kumotori",
+ "country": "JP",
+ "name": "Mount Kumotori from Kamosawa (雲取山)",
+ "base": "Okutama",
+ "region": "Chichibu-Tama-Kai National Park, Tokyo-Yamanashi-Saitama border",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  10,
+  12
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 23.7,
+  "gain_m": 1670,
+  "source": "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf"
+ },
+ "why": "Tokyo's highest summit, 2,017 m, reached on a long, even forest path and an open ridge with Mount Fuji to the south, with a night in a big hut just below the top.",
+ "book": "No permit; file a climbing plan (tozan todoke). Nishi Tokyo bus from Okutama station to Kamosawa, about 35 minutes; buses are few on weekdays. Book the night at Kumotori Sanso, 20 minutes below the summit, or at Nanatsuishi-goya (reservations generally needed, self-catering). Okutama-goya on the ridge is closed.",
+ "water": "Carry 2 litres from Kamosawa. Drinks are sold at Nanatsuishi-goya and Kumotori Sanso; there is a spring by the Sanso.",
+ "dangers": [
+  "A long day: about 5.5 hours and 1,450 m up to the summit. Start the climb by 09:00.",
+  "Loose small stones on the steep ridge sections: slippery coming down on day 2.",
+  "In October and November it gets dark around 16:00: carry a headlamp.",
+  "Snow and ice on the ridge from December: then it is a winter climb."
+ ],
+ "turnaround": "Not at Mount Nanatsuishi (about 4 hours up) by 14:00: sleep at Nanatsuishi-goya if you booked, or go back down.",
+ "sources": [
+  "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf",
+  "https://hikesinjapan.yamakei-online.com/course/13.php",
+  "https://www.openstreetmap.org/relation/3281485",
+  "https://www.openstreetmap.org/node/531000790"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kamosawa bus stop",
+   "lat": 35.77977,
+   "lon": 138.98444,
+   "role": "start",
+   "note": "Above Lake Okutama, about 530 m. Walk 30 minutes up the road through cedar forest to the car park and the trail entrance."
+  },
+  {
+   "id": "nanatsuishi",
+   "name": "Nanatsuishi-goya",
+   "lat": 35.82761,
+   "lon": 138.96555,
+   "role": "point",
+   "note": "The small hut at about 1,600 m, after the steep bamboo-grass slope. From Mount Nanatsuishi above, the wide open ridge leads north-west to Kumotori."
+  },
+  {
+   "id": "goal",
+   "name": "Kumotori summit",
+   "lat": 35.85554,
+   "lon": 138.94393,
+   "role": "goal",
+   "note": "2,017 m, the highest point of Tokyo, with an emergency shelter. On a clear morning Mount Fuji stands to the south-west."
+  },
+  {
+   "id": "kumotori-sanso",
+   "name": "Kumotori Sanso",
+   "lat": 35.86113,
+   "lon": 138.94366,
+   "role": "point",
+   "night": true,
+   "note": "The large two-storey hut 20 minutes down the north side of the summit. Day 2: climb back over the top for sunrise and walk down the same way to Kamosawa."
+  }
+ ]
+}

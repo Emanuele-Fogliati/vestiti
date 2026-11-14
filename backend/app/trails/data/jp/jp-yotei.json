@@ -1,0 +1,75 @@
+{
+ "id": "jp-yotei",
+ "country": "JP",
+ "name": "Mount Yotei (羊蹄山) by the Makkari trail",
+ "base": "Niseko",
+ "region": "Shikotsu-Toya National Park, Hokkaido",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  8,
+  10
+ ],
+ "start_by": "05:30",
+ "published": {
+  "km": 13.4,
+  "gain_m": 1670,
+  "source": "https://hikesinjapan.yamakei-online.com/course/85.php"
+ },
+ "why": "Hokkaido's 'Ezo Fuji': a long straight climb up a perfect cone through birch and stone pine to a crater 700 m wide, with the Niseko range and Lake Toya below.",
+ "book": "Free, no permit. Start from Yotei Nature Park in Makkari (campground, parking); Donan buses between Rusutsu and Kutchan stop at Yotei Shizen Koen Iriguchi. Sign the climbers' book at the trailhead.",
+ "water": "Drinkable spring (Yotei no Wakimizu) at the nature park only; nothing on the mountain. Carry 2.5-3 litres.",
+ "dangers": [
+  "Weather turns fast on the open upper cone: walkers have died of hypothermia in summer. Carry rain gear and a warm layer.",
+  "Over 1,600 m of climb on steep, rooty and then loose volcanic ground: a very long day.",
+  "Snow lingers into June and comes back in late September; brown bears live on the lower slopes."
+ ],
+ "turnaround": "Not at the 9th station by 11:30, or cloud and wind on the rim: rest at the Yotei hut and go down; the descent takes 3-4 hours.",
+ "sources": [
+  "https://hikesinjapan.yamakei-online.com/course/85.php",
+  "https://www.japan.travel/en/sports/hiking/courses/mt-yotei",
+  "https://www.openstreetmap.org/node/829831928"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Makkari trailhead",
+   "lat": 42.79774,
+   "lon": 140.7869,
+   "role": "start",
+   "note": "About 400 m, at the top of Yotei Nature Park, 30 minutes on a forest road from the campground. Sign in and climb straight into the forest."
+  },
+  {
+   "id": "sixth-station",
+   "name": "Makkari 6th station",
+   "lat": 42.81654,
+   "lon": 140.80137,
+   "role": "point",
+   "note": "1,321 m, about 2.5 hours up: the trees thin out and the view opens south over Makkari's fields and Lake Toya."
+  },
+  {
+   "id": "goal",
+   "name": "Yotei crater rim",
+   "lat": 42.82663,
+   "lon": 140.81151,
+   "role": "goal",
+   "note": "1,898 m, the highest point, on the east rim of the Chichigama crater, 700 m wide and 200 m deep: you reach the rim 30 minutes above the 9th station hut and walk round its south side. The full rim loop takes 80 minutes."
+  }
+ ]
+}

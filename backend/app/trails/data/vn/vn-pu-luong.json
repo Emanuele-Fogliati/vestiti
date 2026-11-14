@@ -1,0 +1,85 @@
+{
+ "id": "vn-pu-luong",
+ "country": "VN",
+ "name": "Pu Luong rice terraces: Kho Muong to Ban Hieu",
+ "base": "Pu Luong",
+ "region": "Pù Luông Nature Reserve, Bá Thước, Thanh Hóa",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  9,
+  10
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Two days on village paths through a limestone valley: rice terraces, bamboo water wheels and Thai stilt houses, with a night in a homestay and a swim under the Hiêu falls at the end.",
+ "book": "No permit. Shared vans from Hanoi's Old Quarter reach Pu Luong in 4-5 hours, some via Mai Châu. Book a stilt-house homestay in Bản Đôn for the night; local guides are recommended for the longer routes. Arrange a car or motorbike back from Bản Hiêu.",
+ "water": "Drinks and meals in the villages and homestays along the way. Carry 1.5 litres between villages.",
+ "dangers": [
+  "Clay paths and paddy dykes are slippery in the rainy season: good walking shoes.",
+  "Heat and humidity in May, June and September: start early.",
+  "Parts of the route follow village roads with motorbikes.",
+  "Stay on the paths through the terraces: they are farmed fields."
+ ],
+ "turnaround": "No hard turnaround: every village on the way is on a road, so you can stop and ride on.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Pu_Luong",
+  "https://en.wikipedia.org/wiki/Pu_Luong_Nature_Reserve",
+  "https://www.openstreetmap.org/node/11990107404",
+  "https://www.openstreetmap.org/node/6215416985"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 4,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kho Muong",
+   "lat": 20.4814,
+   "lon": 105.13193,
+   "role": "start",
+   "note": "A remote Thai village in a bowl of limestone mountains, next to the Kho Muong cave. The path climbs out south over a pass towards the main valley."
+  },
+  {
+   "id": "pu-luong-terraces",
+   "name": "Pu Luong terraces at Ban Don",
+   "lat": 20.44509,
+   "lon": 105.15246,
+   "role": "point",
+   "night": true,
+   "note": "Night in a stilt-house homestay. Rice terraces climb the slopes all around: green in May and June, golden in September and October."
+  },
+  {
+   "id": "lan-trong",
+   "name": "Paddies and water wheels at Lan Trong",
+   "lat": 20.45837,
+   "lon": 105.17532,
+   "role": "point",
+   "note": "Day 2 follows the valley floor past the paddies of Lăn Trong, where bamboo water wheels lift water from the stream to the fields.",
+   "scene": "vn-pu-luong-nature-reserve"
+  },
+  {
+   "id": "goal",
+   "name": "Ban Hieu waterfall",
+   "lat": 20.46551,
+   "lon": 105.22259,
+   "role": "goal",
+   "note": "The Hiêu falls drop over several limestone steps into clear pools where you can swim, beside the Thai village of Bản Hiêu."
+  }
+ ]
+}

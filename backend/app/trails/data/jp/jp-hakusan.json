@@ -1,0 +1,73 @@
+{
+ "id": "jp-hakusan",
+ "country": "JP",
+ "name": "Mount Hakusan (白山) by the Kanko Shindo, night at Murodo",
+ "base": "Kanazawa",
+ "region": "Hakusan National Park, Ishikawa",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [7, 8, 9, 10],
+ "hours": [9.5, 11],
+ "start_by": "08:00",
+ "published": {
+  "km": 11.7,
+  "gain_m": 1444,
+  "source": "https://hikesinjapan.yamakei-online.com/course/124.php"
+ },
+ "why": "One of Japan's three holy mountains: a ridge path through alpine meadows to the shrine lodge of Murodo, then sunrise on the 2,702 m summit with the priest.",
+ "book": "Book Hakusan Murodo (open 1 May to 15 October, meals from July) by phone, 076-273-1001: no walk-ins. On peak days in July-October the road to Bettodeai is closed to private cars: park at Ichinose and take the shuttle bus (1,000 yen). Hokuriku Tetsudo buses run from Kanazawa on set summer days.",
+ "water": "Springs at Kuroboko-iwa (Enmeisui); water, food and toilets at Murodo. Carry 2 litres for the climb.",
+ "dangers": [
+  "Snow patches on the upper path until late June and early snow in October.",
+  "Thunderstorms on summer afternoons on the open ridge: be at Murodo by early afternoon.",
+  "Fog on the plateau: stay on the stone-paved path between Murodo and the summit."
+ ],
+ "turnaround": "Not at Kuroboko-iwa by 14:00, or thunder: take the Sabo Shindo, the shorter way, or go back down to Bettodeai.",
+ "sources": [
+  "https://hikesinjapan.yamakei-online.com/course/124.php",
+  "https://www.mlit.go.jp/tagengo-db/common/001562802.pdf",
+  "https://www.japan-guide.com/e/e4285.html",
+  "https://www.openstreetmap.org/way/226107347"
+ ],
+ "osm_ways": [226106730, 226106512, 226107347, 368616630, 368616629, 625734471, 226106229],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 5, "nature": 5, "culture": 3, "relax": 1, "history": 3, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Bettodeai",
+   "lat": 36.12507,
+   "lon": 136.7398,
+   "role": "start",
+   "note": "1,260 m: bus stop, toilets and the climbers' register. The Kanko Shindo climbs left of the suspension bridge of the Sabo Shindo, steeply up the Bettozaka ridge."
+  },
+  {
+   "id": "kuroboko-iwa",
+   "name": "Kuroboko-iwa",
+   "lat": 36.14421,
+   "lon": 136.76199,
+   "role": "point",
+   "note": "A black volcanic rock at 2,320 m where the two trails meet, after the Tonogaike shelter and a meadow of summer flowers. Enmeisui spring just below."
+  },
+  {
+   "id": "murodo-hut-hakusan",
+   "name": "Murodo hut, Hakusan",
+   "lat": 36.1481,
+   "lon": 136.76664,
+   "role": "point",
+   "night": true,
+   "note": "2,450 m: four lodges for 750 people, a visitor centre and the Okumiya shrine at the foot of Gozengamine. Lights out at 20:30 in summer."
+  },
+  {
+   "id": "goal",
+   "name": "Gozengamine summit",
+   "lat": 36.15505,
+   "lon": 136.77147,
+   "role": "goal",
+   "note": "2,702 m, 40 minutes above Murodo on stones: the shrine priest leads a sunrise rite here in fine weather. The crater ponds lie just behind. Back down the same way."
+  }
+ ]
+}

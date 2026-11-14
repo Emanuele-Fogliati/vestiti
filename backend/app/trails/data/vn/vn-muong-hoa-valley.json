@@ -1,0 +1,79 @@
+{
+ "id": "vn-muong-hoa-valley",
+ "country": "VN",
+ "name": "Muong Hoa valley: Lao Chai to Ta Van",
+ "base": "Sa Pa",
+ "region": "Mường Hoa valley, Sa Pa, Lào Cai",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 3.5,
+  "gain_m": null,
+  "source": "https://en.wikivoyage.org/wiki/Sa_Pa"
+ },
+ "why": "The classic Sa Pa walk: on the dykes of the rice terraces down the Muong Hoa valley, from the Hmong village of Lao Chai to the Giay village of Ta Van.",
+ "book": "No permit. Take a taxi or motorbike from Sa Pa to Lao Chai and arrange a pick-up at the Ta Van bridge, or join a guided village walk. Local Hmong guides can be hired in Sa Pa; the women offering to guide you in Lao Chai can be insistent.",
+ "water": "Drinks and lunch in Lao Chai and Ta Van, where most homestays serve food. Carry 1 litre.",
+ "dangers": [
+  "Paddy dykes and clay paths are muddy and slippery after rain: wear shoes with good grip.",
+  "Motorbikes on the valley road: walk on its edge where the trail joins it.",
+  "Thick fog and cold from November to February."
+ ],
+ "turnaround": "No hard turnaround: the road along the valley links both villages if you want to stop.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Sa_Pa",
+  "https://vietnam.travel/places-to-go/northern-vietnam/sapa",
+  "https://www.openstreetmap.org/node/2587546398"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 3,
+  "culture": 5,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lao Chai rice terraces",
+   "lat": 22.30744,
+   "lon": 103.87045,
+   "role": "start",
+   "note": "The Black Hmong village on the slopes of the valley, about 8 km below Sa Pa. The terraces are green in July and August, golden in September and early October.",
+   "scene": "vn-sapa"
+  },
+  {
+   "id": "valley-floor",
+   "name": "Muong Hoa river terraces",
+   "lat": 22.3036,
+   "lon": 103.8825,
+   "role": "point",
+   "note": "The path follows the dykes of the paddies along the south bank of the river, with Fansipan's ridge behind on clear days."
+  },
+  {
+   "id": "goal",
+   "name": "Ta Van village",
+   "lat": 22.30281,
+   "lon": 103.88991,
+   "role": "goal",
+   "note": "The Giay village by the river, full of homestays and cafes. Cross the bridge to the road for the ride back to Sa Pa."
+  }
+ ]
+}

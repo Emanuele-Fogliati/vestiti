@@ -1,0 +1,63 @@
+{
+ "id": "jp-kirishima-karakunidake",
+ "country": "JP",
+ "name": "Kirishima: Karakunidake from Ebino Plateau (韓国岳)",
+ "base": "Kirishima",
+ "region": "Kirishima-Kinkowan National Park, Miyazaki and Kagoshima",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [4, 5, 6, 7, 8, 9, 10, 11],
+ "hours": [3, 3.5],
+ "start_by": "09:00",
+ "published": {
+  "km": 5,
+  "gain_m": null,
+  "source": "https://en.culmina.jp/kyushu/kagoshima/karakunidake"
+ },
+ "why": "The highest peak of the Kirishima volcanoes, 1,700 m: a short steep climb from the Ebino plateau to a deep crater, with the cone of Takachiho and the steaming Shinmoedake to the south and on clear days Sakurajima.",
+ "book": "Free. The round trip from Ebino plateau is open with Iozan at alert level 1; the old path over Iozan and the traverse to Shinmoedake (level 2, 2 km closed zone) are shut (status of 13 November 2026). The road from the Kirishima side over Iozan opens only on some weekend days: check the Ebino Eco Museum Center and the Miyazaki prefecture notices.",
+ "water": "Toilets, drinks and food at the Ebino Eco Museum Center and the plateau car park only. Carry 1.5 litres.",
+ "dangers": [
+  "Volcanic gas near Iozan at the start: keep to the marked path, leave if you smell sulphur strongly.",
+  "Loose scoria and rock steps on the upper slope; the crater edge has no fence.",
+  "Strong wind and fog on the summit; snow and ice from December to March."
+ ],
+ "turnaround": "Fog or rain at the 5th station, or not there by 13:00: the view is gone, go back down.",
+ "sources": [
+  "https://en.culmina.jp/kyushu/kagoshima/karakunidake",
+  "https://www.data.jma.go.jp/vois/data/report/activity_info/552.html",
+  "https://www.data.jma.go.jp/vois/data/report/volinfo/VK20261113160000_551.html",
+  "https://www.pref.miyazaki.lg.jp/kiki-kikikanri/bosai/saigai/kirisima.html",
+  "https://www.openstreetmap.org/node/1852101595"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 3, "nature": 4, "culture": 0, "relax": 2, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Ebino plateau",
+   "lat": 31.94533,
+   "lon": 130.84434,
+   "role": "start",
+   "note": "About 1,200 m: the Karakunidake trailhead by the road, a few minutes from the Ebino Eco Museum Center. The path skirts the fumaroles of Iozan, then climbs through low trees."
+  },
+  {
+   "id": "fifth-station",
+   "name": "Karakunidake 5th station",
+   "lat": 31.93954,
+   "lon": 130.85581,
+   "role": "point",
+   "note": "1,520 m: out of the trees, the view opens over the plateau and its crater lakes. The steepest part is above."
+  },
+  {
+   "id": "goal",
+   "name": "Karakunidake summit crater",
+   "lat": 31.93421,
+   "lon": 130.86156,
+   "role": "goal",
+   "note": "1,700 m on the rim of a crater some 300 m deep. South: Onami-ike lake, Shinmoedake and Takachiho-no-mine. Return the same way."
+  }
+ ]
+}

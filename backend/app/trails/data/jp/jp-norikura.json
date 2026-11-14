@@ -1,0 +1,79 @@
+{
+ "id": "jp-norikura",
+ "country": "JP",
+ "name": "Mount Norikura: Tatamidaira to Kengamine (乗鞍岳)",
+ "base": "Takayama",
+ "region": "Chubu-Sangaku National Park, Gifu-Nagano border",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2.5,
+  3.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 6.2,
+  "gain_m": 410,
+  "source": "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf"
+ },
+ "why": "The easiest 3,000 m summit in Japan: a bus to 2,700 m, then a rocky path past crater ponds and a hut to a shrine on the top of Kengamine.",
+ "book": "No permit. Private cars are not allowed on the roads up: take the bus to Tatamidaira from Hirayu or Honokidaira on the Gifu side (about 1 hour; Norikura Skyline open about 15 May to 31 October), or the shuttle from Norikura Kogen on the Nagano side.",
+ "water": "Drinks at Tatamidaira, Katanokoya hut and the summit hut. Carry 1 litre.",
+ "dangers": [
+  "Above Katanokoya the path is loose volcanic rock and steep: watch your footing on the way down.",
+  "Wind and cold at 3,000 m even in summer; fog comes up fast.",
+  "Afternoon thunderstorms: be off the summit cone by early afternoon.",
+  "Snowfields on the lower path into July."
+ ],
+ "turnaround": "Not at Katanokoya by 11:30, or thunder clouds building: stop at the hut and walk back to Tatamidaira.",
+ "sources": [
+  "https://www.japan.travel/en/sports/hiking/courses/mt-norikura/",
+  "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf",
+  "https://norikura.gr.jp/en/norikuradake/",
+  "https://www.openstreetmap.org/node/1851367347",
+  "https://www.openstreetmap.org/way/445127417"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 2,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tatamidaira",
+   "lat": 36.12454,
+   "lon": 137.55363,
+   "role": "start",
+   "note": "The bus terminal at about 2,700 m, by the Tsurugaike pond and the flower fields. The path south starts as a wide gravel road."
+  },
+  {
+   "id": "katanokoya",
+   "name": "Katanokoya hut",
+   "lat": 36.11475,
+   "lon": 137.55241,
+   "role": "point",
+   "note": "About 2,770 m, where the gravel road ends. From here a rocky path climbs the summit cone to the summit hut, just below the top."
+  },
+  {
+   "id": "goal",
+   "name": "Norikura summit shrine, Kengamine",
+   "lat": 36.10655,
+   "lon": 137.55364,
+   "role": "goal",
+   "note": "3,026 m, with the Norikura Hongu shrine on the top and the crater lakes below. The Northern Alps line the horizon to the north. Back the same way."
+  }
+ ]
+}

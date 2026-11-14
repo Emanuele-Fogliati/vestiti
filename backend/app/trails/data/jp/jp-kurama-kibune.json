@@ -1,0 +1,96 @@
+{
+ "id": "jp-kurama-kibune",
+ "country": "JP",
+ "name": "Kurama to Kibune over Mount Kurama (鞍馬・貴船)",
+ "base": "Kyoto",
+ "region": "Northern hills of Kyoto",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "09:30",
+ "published": null,
+ "why": "A temple mountain north of Kyoto: up past the halls of Kurama-dera, over a ridge of tangled cedar roots where the tengu goblins are said to live, and down to the shrine of the water god in a cool river valley.",
+ "book": "Kurama-dera asks 500 yen at the gate; open 9:00-16:15. The cable car (200 yen) saves half the climb. Eizan railway from Demachiyanagi to Kurama, 30-40 minutes; from Kibune walk or take the bus to Kibuneguchi station.",
+ "water": "Drinks and toilets in Kurama village, at the main hall and in Kibune. Kibune's riverside restaurants serve lunch on platforms over the river in summer.",
+ "dangers": [
+  "Roots and stone steps on the Kinone-michi ridge: slippery in rain.",
+  "Summer humidity on the climb to the main hall.",
+  "Snow and ice on the ridge after winter cold spells."
+ ],
+ "turnaround": "The temple closes its gates at 16:15: start the walk by 14:00 or go down the way you came.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Kurama",
+  "https://www.japan-guide.com/e/e3933.html",
+  "https://www.openstreetmap.org/way/343451573"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 5,
+  "relax": 3,
+  "history": 4,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kurama-dera",
+   "lat": 35.11424,
+   "lon": 135.77293,
+   "role": "start",
+   "note": "The red Niomon gate above Kurama station. Climb the zigzag path past Yuki shrine and its giant cedars, or take the cable car."
+  },
+  {
+   "id": "honden",
+   "name": "Kurama-dera main hall",
+   "lat": 35.1182,
+   "lon": 135.77086,
+   "role": "point",
+   "note": "The main hall on its terrace, 30-45 minutes up, with the view over the northern hills. The path to Kibune leaves behind it."
+  },
+  {
+   "id": "maoden",
+   "name": "Okunoin Maoden",
+   "lat": 35.12126,
+   "lon": 135.76589,
+   "role": "point",
+   "note": "The inner hall of the demon king Maoson, past the root-covered Kinone-michi; from here steep steps drop to the west gate."
+  },
+  {
+   "id": "goal",
+   "name": "Kibune shrine",
+   "lat": 35.12162,
+   "lon": 135.76308,
+   "role": "goal",
+   "note": "Across the river from the west gate: the lantern-lined steps up to the main shrine of the water god."
+  }
+ ],
+ "via": [
+  [
+   35.1161,
+   135.77168
+  ],
+  [
+   35.11679,
+   135.77155
+  ]
+ ]
+}
