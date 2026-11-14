@@ -1,0 +1,79 @@
+{
+ "id": "jp-kamikochi-valley",
+ "country": "JP",
+ "name": "Kamikochi: Taisho Pond to Myojin Pond (上高地)",
+ "base": "Kamikochi",
+ "region": "Chubu-Sangaku National Park, Nagano",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [5, 6, 7, 8, 9, 10, 11],
+ "hours": [3, 4],
+ "start_by": "08:00",
+ "published": {
+  "km": 9.5,
+  "gain_m": null,
+  "source": "https://www.kamikochi.org/thingstodo/walking"
+ },
+ "why": "A flat walk up a clear river under the Hotaka peaks, from a pond of drowned trees to a shrine pond in the forest.",
+ "book": "Kamikochi is open mid-April to mid-November. No private cars: park at Sawando or Hirayu and take the bus; buses from Matsumoto and Shin-Shimashima must be booked ahead. Get off at the Taisho-ike stop. Hotaka shrine charges a small fee to enter Myojin Pond.",
+ "water": "Shops, cafes and toilets at Kappa Bridge and Myojin; the river water is not for drinking. Carry 1 litre.",
+ "dangers": [
+  "Asian black bears live in the valley: ring a bell in the quiet stretches and keep food packed.",
+  "Do not feed the monkeys or leave food out.",
+  "Mornings are cold, near freezing in May and October: bring a warm layer."
+ ],
+ "turnaround": "Check the last bus time at the terminal when you arrive; be back at Kappa Bridge one hour before it.",
+ "sources": [
+  "https://www.kamikochi.org/thingstodo/walking",
+  "https://www.go-nagano.net/en/theme/id=17996",
+  "https://www.kamikochi.org/basicinfo/rules",
+  "https://www.kamikochi.org/access/public"
+ ],
+ "via": [[36.25411, 137.65168]],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 5, "culture": 1, "relax": 4, "history": 1, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Taisho Pond",
+   "lat": 36.22839,
+   "lon": 137.61969,
+   "role": "start",
+   "note": "Made by an eruption of Mount Yake in 1915: dead trees still stand in the water. The path follows the left bank past Tashiro Pond, 1.2 km on."
+  },
+  {
+   "id": "kappa-bridge",
+   "name": "Kappa Bridge",
+   "lat": 36.24884,
+   "lon": 137.63784,
+   "role": "point",
+   "note": "The wooden suspension bridge in the centre of Kamikochi, with the Hotaka range straight up the valley. Hotels, cafes and the visitor centre."
+  },
+  {
+   "id": "myojin",
+   "name": "Myojin Bridge and Myojinkan",
+   "lat": 36.25012,
+   "lon": 137.66713,
+   "role": "point",
+   "note": "Out on the left bank past Konashidaira camp, 3 km. Cross Myojin Bridge to the shrine."
+  },
+  {
+   "id": "myojin-pond",
+   "name": "Myojin Pond",
+   "lat": 36.25332,
+   "lon": 137.6644,
+   "role": "point",
+   "note": "Two quiet ponds of spring water behind Hotaka shrine's inner sanctuary, under Mount Myojin. Back by the right-bank nature trail."
+  },
+  {
+   "id": "goal",
+   "name": "Kamikochi bus terminal",
+   "lat": 36.24624,
+   "lon": 137.63526,
+   "role": "goal",
+   "note": "Past Dakesawa marsh and Kappa Bridge to the buses, 6 minutes beyond the bridge."
+  }
+ ]
+}

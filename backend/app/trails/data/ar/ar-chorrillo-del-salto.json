@@ -1,0 +1,72 @@
+{
+ "id": "ar-chorrillo-del-salto",
+ "country": "AR",
+ "name": "Chorrillo del Salto waterfall",
+ "base": "El Chaltén",
+ "region": "Los Glaciares National Park, north sector",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
+ "start_by": "",
+ "published": {
+  "km": 6,
+  "gain_m": null,
+  "source": "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf"
+ },
+ "why": "The easiest walk from El Chaltén: an hour along the Río de las Vueltas valley to a 20 m waterfall in lenga forest.",
+ "book": "Los Glaciares charges a park entry fee at El Chaltén (day pass, see the national park fees page). No permit. You can also drive Ruta 41 to the car park, 10 minutes' walk from the falls.",
+ "water": "Clear streams; the village water point is at the Fitz Roy trailhead.",
+ "dangers": [
+  "Rocks by the pool are wet and slippery.",
+  "Walk on the path, not on the gravel road, where cars to Lago del Desierto pass."
+ ],
+ "turnaround": "None needed: 40 minutes each way on a flat path.",
+ "sources": [
+  "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf",
+  "https://www.argentina.gob.ar/parquesnacionales/tarifas",
+  "https://www.openstreetmap.org/node/1237892708"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 0,
+  "relax": 4,
+  "history": 0,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Fitz Roy trailhead, El Chaltén",
+   "lat": -49.32111,
+   "lon": -72.89459,
+   "role": "start",
+   "note": "At the north end of Avenida San Martín. The path to the falls runs north beside Ruta 41 along the Río de las Vueltas.",
+   "scene": "ar-el-chalten"
+  },
+  {
+   "id": "goal",
+   "name": "Chorrillo del Salto",
+   "lat": -49.29552,
+   "lon": -72.90771,
+   "role": "goal",
+   "note": "A 20 m waterfall dropping into a pool between rock walls; picnic spot and toilets at the car park.",
+   "scene": "ar-chorrillo-del-salto-waterfall"
+  }
+ ]
+}

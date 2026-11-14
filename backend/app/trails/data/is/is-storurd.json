@@ -1,0 +1,66 @@
+{
+ "id": "is-storurd",
+ "country": "IS",
+ "name": "Stórurð, the Giant's Rubble",
+ "base": "Egilsstaðir",
+ "region": "Dyrfjöll, Borgarfjörður eystri, East Iceland",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 15,
+  "gain_m": null,
+  "source": "https://www.iceland-dream.com/guide/east/storurd"
+ },
+ "why": "Under the gate-shaped cliffs of Dyrfjöll to a hidden hollow where house-sized blocks of rock lie in a green meadow among turquoise ponds.",
+ "book": "Free. About an hour's drive from Egilsstaðir on road 94 towards Borgarfjörður eystri; park at the facilities cabin on Vatnsskarð pass. The trail is staked; a log book and stamp wait at Stórurð.",
+ "water": "Streams on the way; carry 1 litre and food, there is nothing on the route.",
+ "dangers": [
+  "The first slope from the pass is steep; snowfields can last into July.",
+  "Fog comes in fast on the plateau: follow the stakes, never shortcut.",
+  "Boulder fields at Stórurð: wet rock and deep gaps between blocks."
+ ],
+ "turnaround": "Not at Stórurð by 14:00, or fog hides the next stake: turn back the same way.",
+ "sources": [
+  "https://www.iceland-dream.com/guide/east/storurd",
+  "https://visitegilsstadir.is/en/?p=5360",
+  "https://www.openstreetmap.org/way/66776631"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Vatnsskarð pass",
+   "lat": 65.5646,
+   "lon": -14.00272,
+   "role": "start",
+   "note": "The car park and trail board on road 94, about 430 m. Trail 9 climbs steeply at first, then runs south along the west side of Súlur."
+  },
+  {
+   "id": "goal",
+   "name": "Stórurð green ponds",
+   "lat": 65.51475,
+   "lon": -13.99652,
+   "role": "goal",
+   "note": "About 100 m down into the hollow below Dyrfjallstindur: a 1.5 km loop among the boulders and ponds. Back the same way."
+  }
+ ]
+}

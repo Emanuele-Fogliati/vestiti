@@ -1,0 +1,90 @@
+{
+ "id": "jp-shiratani-unsuikyo",
+ "country": "JP",
+ "name": "Shiratani Unsuikyo (白谷雲水峡)",
+ "base": "Yakushima",
+ "region": "Yakushima, Kagoshima (World Heritage)",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3.5,
+  4.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 6,
+  "gain_m": null,
+  "source": "https://www.env.go.jp/en/park/yakushima/ywhcc/route/2-2.html"
+ },
+ "why": "A ravine of clear pools and old cedars, through a forest where every rock and root is green with moss, up to a granite rock over the island's peaks.",
+ "book": "No permit. A forest donation (500 yen when last published) is collected at the entrance building. Bus from Miyanoura port, about 35 minutes, or by car. Put a climbing registration form in the box at the start; the forest may close under a severe weather warning.",
+ "water": "Streams along the way and a toilet at Shiratani hut; nothing to buy above the entrance. Carry 1 litre.",
+ "dangers": [
+  "Wet granite and roots: the trail is slippery all year.",
+  "Several stream crossings on stones: after heavy rain they can be impassable, wait or turn back.",
+  "Taikoiwa is a bare rock with a drop: stay back from the edge in wind."
+ ],
+ "turnaround": "If the streams are over the stepping stones, go back to the entrance.",
+ "sources": [
+  "https://www.env.go.jp/en/park/yakushima/ywhcc/route/2-2.html",
+  "https://www.rinya.maff.go.jp/e/national_forest/recreation_forest/yakushima_shiratani.html",
+  "https://www.env.go.jp/en/park/yakushima/ywhcc/route/time.html",
+  "https://www.japan.travel/en/sports/hiking/courses/yakushima/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 0,
+  "relax": 2,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Shiratani ravine entrance",
+   "lat": 30.37999,
+   "lon": 130.5742,
+   "role": "start",
+   "note": "About 620 m, by the bus stop and the administration building. The trail crosses the Satsuki suspension bridge over the ravine."
+  },
+  {
+   "id": "moss-forest",
+   "name": "Moss forest (Kokemusu-mori)",
+   "lat": 30.36821,
+   "lon": 130.56989,
+   "role": "point",
+   "note": "Just above Shiratani hut: the moss-covered forest that is the reason most people come."
+  },
+  {
+   "id": "tsujitoge",
+   "name": "Tsujitoge pass",
+   "lat": 30.36399,
+   "lon": 130.56743,
+   "role": "point",
+   "note": "The pass on the ridge; Taikoiwa is a short, steep climb to the left."
+  },
+  {
+   "id": "goal",
+   "name": "Taikoiwa rock",
+   "lat": 30.36225,
+   "lon": 130.56835,
+   "role": "goal",
+   "note": "About 1,050 m: a granite slab over the Anbo valley with Yakushima's central peaks in front. Back the same way."
+  }
+ ]
+}

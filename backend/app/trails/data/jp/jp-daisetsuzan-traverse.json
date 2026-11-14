@@ -1,0 +1,87 @@
+{
+ "id": "jp-daisetsuzan-traverse",
+ "country": "JP",
+ "name": "Daisetsuzan: Asahidake to Kurodake (大雪山 旭岳-黒岳)",
+ "base": "Asahikawa",
+ "region": "Daisetsuzan National Park, central Hokkaido",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [7, 8, 9],
+ "hours": [7, 8],
+ "start_by": "07:00",
+ "published": {
+  "km": 13,
+  "gain_m": null,
+  "source": "https://www.mlit.go.jp/tagengo-db/en/R3-00255.html"
+ },
+ "why": "Across the roof of Hokkaido in a day: from the steaming top of its highest volcano round the rim of a 2 km caldera, with a ropeway at each end.",
+ "book": "No permit. Bus from Asahikawa to the Asahidake ropeway (about 4 a day) and up to Sugatami. At the end, the Kurodake chairlift and ropeway go down to Sounkyo onsen; check the last run. You can split the walk with a night at the Kurodake Ishimuro hut.",
+ "water": "Carry 2 litres: nothing to buy between the ropeways. Stream water may carry Echinococcus: boil or filter it.",
+ "dangers": [
+  "Weather turns fast on the open plateau: fog, wind and cold rain even in July. Shell, warm layer and gloves.",
+  "Brown bears live in the park: wear a bell and keep food packed.",
+  "Snow patches stay all summer; the descent from Asahidake is loose volcanic scree.",
+  "Volcanic vents steam beside the trail on Asahidake: do not leave the path."
+ ],
+ "turnaround": "In fog or high wind on Asahidake summit, go back down to Sugatami: the plateau beyond has no shelter until Kurodake Ishimuro.",
+ "sources": [
+  "https://www.mlit.go.jp/tagengo-db/en/R3-00255.html",
+  "https://en.wikivoyage.org/wiki/Daisetsuzan_National_Park",
+  "https://www.japan.travel/en/sports/hiking/courses/mt-asahi/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 4, "nature": 5, "culture": 0, "relax": 1, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Sugatami ropeway station",
+   "lat": 43.66171,
+   "lon": 142.82538,
+   "role": "start",
+   "note": "Top of the Asahidake ropeway, about 1,600 m. A short nature trail leads east to the ponds."
+  },
+  {
+   "id": "sugatami-pond",
+   "name": "Sugatami pond",
+   "lat": 43.66113,
+   "lon": 142.83277,
+   "role": "point",
+   "note": "The pond that mirrors Asahidake and its steam vents. From here the path climbs 690 m straight up the scree.",
+   "scene": "jp-asahidake"
+  },
+  {
+   "id": "asahidake-summit",
+   "name": "Asahidake summit",
+   "lat": 43.66359,
+   "lon": 142.85411,
+   "role": "point",
+   "note": "2,291 m, the highest point of Hokkaido. Down the steep east side past the Ura-Asahi camp, then along the plateau by Mamiyadake."
+  },
+  {
+   "id": "ohachidaira",
+   "name": "Ohachidaira caldera viewpoint",
+   "lat": 43.68753,
+   "lon": 142.89038,
+   "role": "point",
+   "note": "On the rim of the Ohachidaira caldera, about 2 km across. Snow and alpine flowers inside it in July and August."
+  },
+  {
+   "id": "kurodake",
+   "name": "Kurodake summit",
+   "lat": 43.69755,
+   "lon": 142.92026,
+   "role": "point",
+   "note": "1,984 m, after the Kurodake Ishimuro hut and camp. The view runs back over the whole plateau."
+  },
+  {
+   "id": "goal",
+   "name": "Kurodake 7th station lift",
+   "lat": 43.7034,
+   "lon": 142.92757,
+   "role": "goal",
+   "note": "About an hour of steep steps below the summit: the chairlift, then the ropeway, down to Sounkyo onsen."
+  }
+ ]
+}

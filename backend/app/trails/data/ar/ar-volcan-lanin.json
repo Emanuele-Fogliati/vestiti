@@ -1,0 +1,81 @@
+{
+ "id": "ar-volcan-lanin",
+ "country": "AR",
+ "name": "Lanín volcano via Refugio RIM",
+ "base": "Junín de los Andes",
+ "region": "Lanín National Park, north face",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "glacier": true,
+ "months": [
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  18,
+  21
+ ],
+ "start_by": "08:00",
+ "why": "A 3,776 m volcano climbed in two days: a night in a hut at the snow line, summit by dawn, the lakes of two countries below.",
+ "book": "Book the ascent online on the park's system at least 72 hours ahead and register at the Río Turbio / Tromen ranger post (09:00-12:00) with the full mandatory kit: mountaineering boots, crampons, ice axe, sleeping bag. Beginners must go with an APN-licensed guide. Park entry fee. Last start from the ranger post 14:00 in summer.",
+ "water": "Snowmelt near the huts only; carry a stove to melt snow and 2-3 litres for the summit day.",
+ "dangers": [
+  "Ice and hard snow above the huts: crampons and an ice axe, and know how to use them.",
+  "Altitude: 2,500 m of climb from the ranger post; headache and fatigue are common.",
+  "Sudden wind and whiteouts on the summit cone."
+ ],
+ "turnaround": "On summit day, turn back at the time your guide or the rangers set, summit or not: the descent takes 6-7 hours.",
+ "sources": [
+  "https://www.argentina.gob.ar/node/153906",
+  "https://es.wikipedia.org/wiki/Volc%C3%A1n_Lan%C3%ADn",
+  "https://www.rionegro.com.ar/voy-turismo/es-tiempo-del-volcan-lanin-requisitos-que-necesitas-saber-antes-de-subir-3856123/?amp=1",
+  "https://www.argentina.gob.ar/parquesnacionales/tarifas",
+  "https://www.openstreetmap.org/way/163607535"
+ ],
+ "osm_ways": [
+  163607533,
+  163607531,
+  163607535
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tromen ranger post (Río Turbio)",
+   "lat": -39.5893,
+   "lon": -71.43,
+   "role": "start",
+   "note": "By Lago Tromen on Ruta 60, near the Mamuil Malal border crossing. Kit check and registration here, then up the Río Turbio valley."
+  },
+  {
+   "id": "refugio-rim",
+   "name": "Refugio RIM",
+   "lat": -39.62058,
+   "lon": -71.48293,
+   "role": "point",
+   "night": true,
+   "note": "Army hut on the north face, next to the BIM and CAJA shelters. One night only; tents also allowed."
+  },
+  {
+   "id": "goal",
+   "name": "Lanín summit",
+   "lat": -39.63722,
+   "lon": -71.50306,
+   "role": "goal",
+   "note": "3,776 m, about 7 hours from the huts on snow and ice. Lagos Huechulafquen and Tromen below, Villarrica in Chile to the west."
+  }
+ ]
+}

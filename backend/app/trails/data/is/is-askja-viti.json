@@ -1,0 +1,75 @@
+{
+ "id": "is-askja-viti",
+ "country": "IS",
+ "name": "Askja and Víti crater from Dreki",
+ "base": "Mývatn",
+ "region": "Dyngjufjöll, Vatnajökull National Park, north highlands",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 8,
+  "gain_m": 500,
+  "source": "https://www.vatnajokulsthjodgardur.is/en/a2-dyngjufjoll"
+ },
+ "why": "From the Dreki huts over the bare lava and tephra of Dyngjufjöll into the Askja caldera, to the milky Víti crater on the shore of the great Öskjuvatn lake.",
+ "book": "Highland F-roads only (F88, F910, F894), open roughly July to September: a 4x4 or the summer bus/tour from Mývatn. Sleep at the Dreki huts of Ferðafélag Akureyrar (book ahead) and ask the rangers there about the route. From Víti a 2.5 km path leads north to the Vikraborgir car park, where the bus and tours stop.",
+ "water": "Fill up at Dreki: there is no drinkable water on the way.",
+ "dangers": [
+  "The path down into Víti is slippery, and rock and mud slides happen: keep to the rim if in doubt.",
+  "Snow patches into July, and sudden fog and cold on the plateau at 1,100-1,350 m.",
+  "Do not leave the marked path: the ground near the lakes can be closed after landslides."
+ ],
+ "turnaround": "Fog on the plateau or the rangers advise against it: take the road to Vikraborgir instead.",
+ "sources": [
+  "https://www.vatnajokulsthjodgardur.is/en/a2-dyngjufjoll",
+  "https://www.vatnajokulsthjodgardur.is/en/areas/askja/askja-eldstod",
+  "https://www.openstreetmap.org/way/108330687"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 0,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Drekagil huts",
+   "lat": 65.04284,
+   "lon": -16.59607,
+   "role": "start",
+   "note": "The Dreki huts and campsite at the mouth of the Drekagil gorge. The path climbs west into the Dyngjufjöll."
+  },
+  {
+   "id": "viti-crater",
+   "name": "Víti crater",
+   "lat": 65.04789,
+   "lon": -16.72463,
+   "role": "point",
+   "note": "An explosion crater with an opaque blue-green lake, on the rim above Öskjuvatn.",
+   "scene": "is-askja"
+  },
+  {
+   "id": "goal",
+   "name": "Öskjuvatn",
+   "lat": 65.04528,
+   "lon": -16.72447,
+   "role": "goal",
+   "note": "The view over Öskjuvatn inside the caldera walls. Then 2.5 km north on the marked path to the Vikraborgir car park."
+  }
+ ]
+}

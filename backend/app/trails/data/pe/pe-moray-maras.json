@@ -1,0 +1,81 @@
+{
+ "id": "pe-moray-maras",
+ "country": "PE",
+ "name": "Moray to the Maras salt pans",
+ "base": "Urubamba",
+ "region": "Maras plateau, Sacred Valley",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 11,
+  "gain_m": 50,
+  "source": "https://amazonas-explorer.com/trips/hike-moray-to-maras/"
+ },
+ "why": "From the circular Inca terraces of Moray across the farm plateau to Maras, then down a gorge into thousands of white salt pools worked since Inca times.",
+ "book": "Moray is on the Boleto Turístico del Cusco; the salt pans charge their own entry (about S/10, cash). Taxi or colectivo from Urubamba to Moray. From the salt pans a path goes down to the bridge over the Urubamba, where rides back are easy to find.",
+ "water": "Shops in Maras village; carry 1.5 litres for the plateau.",
+ "dangers": [
+  "Open plateau at 3,400 m: strong sun and wind, no shade.",
+  "Narrow walls between the salt pools: walk only where allowed, the edges crumble.",
+  "Steep, dusty path down the gorge below the salt pans."
+ ],
+ "turnaround": "Leave Moray by 11:00 so you reach the salt pans and the river with daylight to spare.",
+ "sources": [
+  "https://amazonas-explorer.com/trips/hike-moray-to-maras/",
+  "https://en.wikivoyage.org/wiki/Maras",
+  "https://www.aracari.com/travel-wisdom/peru-treks/moray-maras-trek/",
+  "https://www.openstreetmap.org/way/71895742"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 2,
+  "nature": 2,
+  "culture": 4,
+  "relax": 3,
+  "history": 4,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Moray terraces",
+   "lat": -13.33066,
+   "lon": -72.19393,
+   "role": "start",
+   "note": "About 3,385 m. Three round amphitheatres of Inca terraces, thought to be a crop laboratory; walk the rim before you set off east.",
+   "scene": "pe-moray"
+  },
+  {
+   "id": "maras",
+   "name": "Maras village",
+   "lat": -13.3331,
+   "lon": -72.156,
+   "role": "point",
+   "note": "Adobe village with a large white church on the plaza: food and drinks. The path to the salt pans leaves the road past the church."
+  },
+  {
+   "id": "goal",
+   "name": "Maras salt pans",
+   "lat": -13.30274,
+   "lon": -72.15478,
+   "role": "goal",
+   "note": "Salineras de Maras: thousands of salt pools fed by a salty spring, in a side valley of the Urubamba. Salt for sale; no work in the pools on Sundays.",
+   "scene": "pe-maras-salt-mines"
+  }
+ ]
+}

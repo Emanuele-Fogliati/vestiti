@@ -1,0 +1,92 @@
+{
+ "id": "jp-kumano-kodo-nakahechi",
+ "country": "JP",
+ "name": "Kumano Kodo Nakahechi (熊野古道 中辺路)",
+ "base": "Tanabe",
+ "region": "Kii Peninsula, Wakayama",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  15,
+  20
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 37.8,
+  "gain_m": 2110,
+  "source": "https://www.tb-kumano.jp/en/kumano-kodo/nakahechi/takijiri-oji-to-tsugizakura-oji/takijiri-oji-to-chikatsuyu-oji/"
+ },
+ "why": "The old pilgrim road to Kumano Hongu Taisha: two days of stone steps, cedar forest and small oji shrines, with a night in a mountain village inn.",
+ "book": "No permit. Book the inn in Chikatsuyu early (Kumano Travel, the tourism bureau's booking site). Bus from Kii-Tanabe station to the Takijiri stop. A daily luggage shuttle runs along the route.",
+ "water": "Fill up at the Kumano Kodo Kan at Takijiri and at your inn. Day 2 has no restaurants: carry lunch and 1.5-2 litres. Stream water is untested.",
+ "dangers": [
+  "Wet stone steps and roots: most injuries are slips, often on the old cobbles.",
+  "Typhoons and heavy rain cause landslides and floods: check the forecast every day.",
+  "Mamushi pit vipers, hornets (worst in autumn), leeches and ticks: long sleeves and trousers.",
+  "Day 2 is 24.5 km: valleys get dark early, carry a headlamp."
+ ],
+ "turnaround": "On day 2, if you are not at Tsugizakura-oji by 10:00, take the bus from Nonaka Ipposugi to Hosshinmon-oji or Hongu.",
+ "sources": [
+  "https://www.tb-kumano.jp/en/kumano-kodo/nakahechi/takijiri-oji-to-tsugizakura-oji/takijiri-oji-to-chikatsuyu-oji/",
+  "https://www.tb-kumano.jp/en/kumano-kodo/nakahechi/tsugizakura-oji-to-kumano-hongu-taisha/chikatsuyu-oji-to-kumano-hongu-taisha/",
+  "https://www.tb-kumano.jp/en/kumano-kodo/tips/",
+  "https://www.tb-kumano.jp/en/kumano-kodo/nakahechi/",
+  "https://hiking.waymarkedtrails.org/#route?id=17094646"
+ ],
+ "osm": 17094646,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 5,
+  "relax": 1,
+  "history": 5,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Takijiri-oji",
+   "lat": 33.77553,
+   "lon": 135.50369,
+   "role": "start",
+   "note": "The shrine where the mountain route begins, by the Takijiri bus stop and the Kumano Kodo Kan information centre. The path climbs steeply straight away."
+  },
+  {
+   "id": "chikatsuyu",
+   "name": "Chikatsuyu-oji",
+   "lat": 33.81436,
+   "lon": 135.60572,
+   "role": "point",
+   "night": true,
+   "note": "Night 1 in Chikatsuyu village, after 13.3 km and about 1,000 m of climb. Inns serve dinner around 18:00."
+  },
+  {
+   "id": "hosshinmon",
+   "name": "Hosshinmon-oji",
+   "lat": 33.86184,
+   "lon": 135.72077,
+   "role": "point",
+   "note": "The 'gate of awakening', traditionally the entrance to Hongu's sacred area. The last 7 km run through forest, tea fields and hamlets."
+  },
+  {
+   "id": "goal",
+   "name": "Kumano Hongu Taisha",
+   "lat": 33.84,
+   "lon": 135.7735,
+   "role": "goal",
+   "note": "The grand shrine, up its long flight of stone steps. The Hongu Heritage Centre and the buses to Tanabe and Shingu are across the road."
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "id": "jp-tateyama-oyama",
+ "country": "JP",
+ "name": "Tateyama: Murodo to Mount Oyama (立山 雄山)",
+ "base": "Toyama",
+ "region": "Chubu-Sangaku National Park, Tateyama Kurobe Alpine Route",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [7, 8, 9],
+ "hours": [3.5, 4.5],
+ "start_by": "09:00",
+ "published": null,
+ "why": "A 3,000 m summit from a bus stop: up a stone path over snowfields to the Ichinokoshi saddle, then a rocky climb to the shrine on top of one of Japan's three sacred mountains.",
+ "book": "No permit. Reach Murodo by the Tateyama Kurobe Alpine Route (train, cable car and bus from Toyama, or from the Nagano side): check the timetable and the last bus down. The summit shrine gives a blessing for a fee.",
+ "water": "Spring water at Murodo terminal (Tamadono spring); drinks at the Ichinokoshi hut. Carry 1 litre.",
+ "dangers": [
+  "Above Ichinokoshi the path is steep loose rock: falling stones, keep distance from walkers above.",
+  "Snowfields on the lower path until July: they are slippery in the morning.",
+  "Afternoon thunderstorms in summer on a bare ridge: be down from the top by early afternoon.",
+  "Cold and wind at 3,000 m even in August: warm layer and shell."
+ ],
+ "turnaround": "Not at Ichinokoshi by 11:30, or clouds building over the ridge: stop at the hut and go back down.",
+ "sources": [
+  "https://alpen-route.com/enjoy_navi/walking_and_climbing/climbing_course.html",
+  "https://alpen-route.com/en/modelcourse/walking",
+  "https://www.openstreetmap.org/way/372669757"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 3, "nature": 4, "culture": 3, "relax": 2, "history": 3, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Murodo terminal",
+   "lat": 36.57754,
+   "lon": 137.59651,
+   "role": "start",
+   "note": "2,450 m, where the Alpine Route buses stop. Mikurigaike crater pond is a 10-minute detour north; the Oyama path heads east on stone paving."
+  },
+  {
+   "id": "ichinokoshi",
+   "name": "Ichinokoshi",
+   "lat": 36.57043,
+   "lon": 137.6122,
+   "role": "point",
+   "note": "The saddle at about 2,700 m, with the Ichinokoshi hut: view east over the Kurobe valley to the Ushiro-Tateyama range."
+  },
+  {
+   "id": "goal",
+   "name": "Oyama shrine summit",
+   "lat": 36.5732,
+   "lon": 137.61789,
+   "role": "goal",
+   "note": "3,003 m, the Mine-honsha shrine of Oyama jinja on the top. Onanjiyama, 3,015 m, is 20 minutes on along the ridge. Back the same way."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "id": "nz-diamond-lake-rocky-mountain",
+ "country": "NZ",
+ "name": "Diamond Lake and Rocky Mountain",
+ "base": "Wānaka",
+ "region": "Diamond Lake Conservation Area, Wānaka",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "hours": [
+  2.5,
+  3
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 7,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/diamond-lake-and-hospital-flat/things-to-do/rocky-mountain-track/"
+ },
+ "why": "A short climb past a small lake and up bluffs to a 775 m summit with Lake Wānaka and Mount Aspiring in view.",
+ "book": "Free, no permit. Car park 18.5 km west of Wānaka on the Wanaka-Mt Aspiring Road (sealed); toilet there, none on the track.",
+ "water": "None on the track: carry 1 litre.",
+ "dangers": [
+  "Steep and slippery sections, light scrambling on the western side.",
+  "Steep drop-offs on the eastern side.",
+  "Ice in winter: the Diamond Lake track may not be safe."
+ ],
+ "turnaround": "In ice or after heavy rain, stop at the Diamond Lake platform and go back.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/diamond-lake-and-hospital-flat/things-to-do/rocky-mountain-track/",
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/diamond-lake-and-hospital-flat/things-to-do/diamond-lake-loop-track/",
+  "https://www.openstreetmap.org/relation/2082851"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Diamond Lake car park",
+   "lat": -44.65111,
+   "lon": 168.95941,
+   "role": "start",
+   "note": "An old dirt road climbs to the lake."
+  },
+  {
+   "id": "diamond-lake",
+   "name": "Diamond Lake platform",
+   "lat": -44.64654,
+   "lon": 168.96497,
+   "role": "point",
+   "note": "Viewing platform on the bluffs above the small lake, where the circuit tracks start."
+  },
+  {
+   "id": "goal",
+   "name": "Rocky Mountain summit",
+   "lat": -44.63969,
+   "lon": 168.96951,
+   "role": "goal",
+   "note": "775 m: Lake Wānaka, the Southern Alps and Mount Aspiring/Tititea. Up the western side, down the eastern side."
+  }
+ ],
+ "via": [
+  [
+   -44.64395,
+   168.96428
+  ]
+ ]
+}

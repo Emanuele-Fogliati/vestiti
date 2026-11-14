@@ -1,0 +1,99 @@
+{
+ "id": "jp-karasawa-hotaka",
+ "country": "JP",
+ "name": "Karasawa cirque and Okuhotaka (涸沢・奥穂高岳)",
+ "base": "Kamikochi",
+ "region": "Chubu-Sangaku National Park, Northern Alps",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "months": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  17,
+  20
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Up the Azusa valley into the great rock bowl of Karasawa, then on chains and ladders to the top of Japan's third highest mountain.",
+ "book": "Book the huts ahead (Karasawa Hutte or Karasawa-goya, Hotakadake Sanso). No private cars to Kamikochi: bus from Sawando, Hirayu or Shin-Shimashima. Climbing from Kamikochi takes two nights; do not try it as a day hike.",
+ "water": "Water at the huts of Tokusawa, Yokoo and Karasawa; at Hotakadake Sanso it is sold. The water at Hontani bridge is not safe to drink.",
+ "dangers": [
+  "The Zaitengrat rock ridge above Karasawa and the summit block above Hotakadake Sanso have chains and ladders: a slip there is a fall. A helmet is advised.",
+  "Falls on the Hotaka ridges kill several climbers every year; in wind, rain or snow do not go above the hut.",
+  "Snow in the Karasawa bowl until July and from October: then crampons are needed.",
+  "Afternoon thunderstorms in summer: be at the hut by early afternoon."
+ ],
+ "turnaround": "If the rock is wet or the cloud is down at Karasawa, stay there and enjoy the cirque: the Zaitengrat is not a place for bad weather.",
+ "sources": [
+  "https://www.kamikochi.org/?p=5556",
+  "https://thejapanalps.com/en/route/mt-hotaka/route-01",
+  "https://www.go-nagano.net/en/theme/id=17996",
+  "https://www.openstreetmap.org/node/165028676"
+ ],
+ "via": [
+  [
+   36.29349,
+   137.69856
+  ]
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kamikochi bus terminal",
+   "lat": 36.24624,
+   "lon": 137.63526,
+   "role": "start",
+   "note": "1,500 m. Over Kappa Bridge and up the flat valley past Myojin: about 2 hours to Tokusawa."
+  },
+  {
+   "id": "tokusawa",
+   "name": "Tokusawa",
+   "lat": 36.26572,
+   "lon": 137.69051,
+   "role": "point",
+   "note": "A meadow with elms, a lodge and a campsite under the east face of Mae-Hotaka. Yokoo, where the path turns into the mountains, is 1 hour 10 minutes on."
+  },
+  {
+   "id": "karasawa-cirque",
+   "name": "Karasawa cirque",
+   "lat": 36.29394,
+   "lon": 137.66337,
+   "role": "point",
+   "night": true,
+   "note": "Night 1 at about 2,300 m, at Karasawa Hutte in a glacial bowl walled by the Hotaka peaks; famous for autumn colours in late September."
+  },
+  {
+   "id": "hotakadake-sanso",
+   "name": "Hotakadake Sanso",
+   "lat": 36.29361,
+   "lon": 137.64754,
+   "role": "point",
+   "night": true,
+   "note": "Night 2 at about 2,980 m, on the col between Okuhotaka and Karasawadake, reached up the Zaitengrat ridge in about 3 hours."
+  },
+  {
+   "id": "goal",
+   "name": "Okuhotaka summit",
+   "lat": 36.28921,
+   "lon": 137.64798,
+   "role": "goal",
+   "note": "3,190 m, 50 minutes above the hut by ladders and chains. Yarigatake to the north, Mount Fuji far to the south-east. Back the same way."
+  }
+ ]
+}

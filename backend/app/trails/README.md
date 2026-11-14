@@ -47,7 +47,7 @@ lists its `sources`.
 | `router` | `auto` (default: local router on all OSM paths for compact trails, OSRM for long ones), `local`, `osrm` |
 | `tier` | `A` (default) = a top trek of its country, written by hand, 2-4 drawings. `B` = the long tail from OpenStreetMap (computed numbers, one picture) |
 | `area` | the guide area id of its zone (`ar-el-chalten`), when one exists |
-| `scores` | `{effort, nature, culture, relax, history, landscape}`, 0-5 each, by the zone-ranking rubric. Effort from the hours and climb: 1 = under 2 h and under 200 m, 3 = 5-7 h or 500-900 m, 5 = over 9 h, over 1,200 m, multiday with a pack, or above 4,500 m |
+| `scores` | `{effort, nature, culture, relax, history, landscape}`, 0-5 each, all six on every trek, by the zone-ranking rubric. Effort from the hours and climb: 1 = under 2 h and under 200 m, 3 = 5-7 h or 500-900 m, 5 = over 9 h, over 1,200 m, multiday with a pack, or above 4,500 m |
 | `via` | `[[lat, lon], …]` extra routing points, only if the router takes a wrong path |
 
 ## Coordinates: check every one

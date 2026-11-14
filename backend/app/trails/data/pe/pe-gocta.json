@@ -1,0 +1,78 @@
+{
+ "id": "pe-gocta",
+ "country": "PE",
+ "name": "Gocta waterfall from Cocachimba",
+ "base": "Chachapoyas",
+ "region": "Bongará, Amazonas cloud forest",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3.5,
+  5
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 11,
+  "gain_m": null,
+  "source": "https://en.wikivoyage.org/wiki/Chachapoyas"
+ },
+ "why": "Up and down through fields and cloud forest to the foot of Gocta, a two-tier fall of over 700 m off a tan cliff, the spray reaching you long before the pool.",
+ "book": "Day tours from Chachapoyas (about S/90 in 2024) include transport, guide, entry and lunch, about 09:00-17:30. You can also sleep in Cocachimba or San Pablo. Horses can be hired, but the last 30 minutes are on foot.",
+ "water": "Carry 1.5-2 litres; you eat back in Cocachimba.",
+ "dangers": [
+  "Mud and slippery steps in the forest, worst after rain.",
+  "Strong wind and spray at the base pool: a rain jacket, and do not swim.",
+  "Hot and humid on the climb back, out of the forest."
+ ],
+ "turnaround": "Not at the falls by 13:00: turn back, the path is dark in the forest by 17:30.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Chachapoyas",
+  "https://en.wikipedia.org/wiki/Gocta_Cataracts",
+  "https://www.openstreetmap.org/node/635239363"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Cocachimba",
+   "lat": -6.05811,
+   "lon": -77.89497,
+   "role": "start",
+   "note": "About 1,800 m. The visitor centre and car park of the village, with the whole waterfall in view across the valley."
+  },
+  {
+   "id": "golondrina",
+   "name": "La Golondrina bridge",
+   "lat": -6.04064,
+   "lon": -77.88799,
+   "role": "point",
+   "note": "Down through fields to the stream, then the path enters the cloud forest along the valley side."
+  },
+  {
+   "id": "goal",
+   "name": "Gocta waterfall",
+   "lat": -6.02465,
+   "lon": -77.88772,
+   "role": "goal",
+   "note": "The pool at the foot of the lower tier, in a storm of spray. The last 30 minutes are on foot only. Back the same way, mostly uphill.",
+   "scene": "pe-gocta-falls"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "id": "jp-yakushima-jomon-sugi",
+ "country": "JP",
+ "name": "Jomon Sugi on Yakushima (縄文杉)",
+ "base": "Yakushima",
+ "region": "Yakushima, Kagoshima (World Heritage)",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [3, 4, 5, 7, 8, 9, 10, 11],
+ "hours": [9, 10],
+ "start_by": "07:00",
+ "published": {
+  "km": 22,
+  "gain_m": null,
+  "source": "https://www.env.go.jp/en/park/yakushima/ywhcc/route/3-1.html"
+ },
+ "why": "A long day into the cedar forest of Yakushima: eight kilometres on an old logging railway, then roots and steps up to a cedar thousands of years old.",
+ "book": "From 1 March to 30 November cars may not drive to the Arakawa trailhead: take the Arakawa hiking bus from the Yakusugi Museum, ticket bought in advance. Put a climbing registration form in the box at the trailhead.",
+ "water": "Water at the Okabu trail entrance, above Wilson's stump and at Jomon Sugi. Carry 1.5 litres and lunch; there is nothing to buy.",
+ "dangers": [
+  "One of the wettest places in Japan: rain gear always, streams rise fast in heavy rain.",
+  "The railway sleepers and bridges are slippery; some bridges have no full handrail.",
+  "Trolleys still use the track: step aside at once when one comes.",
+  "Toilets are few: carry a portable toilet bag (collection boxes at the trailhead)."
+ ],
+ "turnaround": "Not at Jomon Sugi by 12:00: turn back, so that you are on the railway before dark and catch the last bus.",
+ "sources": [
+  "https://www.env.go.jp/en/park/yakushima/ywhcc/route/3-1.html",
+  "https://www.env.go.jp/en/park/yakushima/ywhcc/tozan/jyoumon.html",
+  "https://www.japan.travel/en/sports/hiking/courses/yakushima/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 5, "nature": 5, "culture": 1, "relax": 1, "history": 2, "landscape": 4},
+ "points": [
+  {
+   "id": "start",
+   "name": "Arakawa trailhead and the tram line",
+   "lat": 30.33986,
+   "lon": 130.59521,
+   "role": "start",
+   "note": "About 600 m. The first 8 km follow the forest railway past the old Kosugidani village site: flat but long, single file."
+  },
+  {
+   "id": "okabu",
+   "name": "Okabu trail entrance",
+   "lat": 30.35237,
+   "lon": 130.53924,
+   "role": "point",
+   "note": "End of the railway, toilets and water. From here the path climbs on roots and wooden steps."
+  },
+  {
+   "id": "wilson-stump",
+   "name": "Wilson's stump (Wilson-kabu)",
+   "lat": 30.35664,
+   "lon": 130.54168,
+   "role": "point",
+   "note": "A cedar cut about 400 years ago, hollow inside: from one spot the opening makes the shape of a heart."
+  },
+  {
+   "id": "goal",
+   "name": "Jomon Sugi",
+   "lat": 30.3608,
+   "lon": 130.5319,
+   "role": "goal",
+   "note": "About 1,300 m. The great cedar, seen from a wooden deck. Takatsuka hut is 10 minutes further. Back the same way."
+  }
+ ]
+}

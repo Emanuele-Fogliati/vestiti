@@ -1,0 +1,97 @@
+{
+ "id": "nz-tongariro-northern-circuit",
+ "country": "NZ",
+ "name": "Tongariro Northern Circuit",
+ "base": "National Park Village",
+ "region": "Tongariro National Park",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  13,
+  14.5
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 35.5,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/things-to-do/tracks/tongariro-northern-circuit/"
+ },
+ "why": "Over Red Crater and the Emerald Lakes, then round the foot of Ngauruhoe through lava fields and the Rangipo desert.",
+ "book": "Huts and campsites must be booked all year round; Great Walk season 23 Oct-30 Apr. The Whakapapa-Mangatepopo section is closed after the 2025 fire: start at Mangatepopo car park (shuttle from National Park Village or Whakapapa). Do not climb Ngauruhoe or Tongariro summits: sacred to Ngāti Tūwharetoa.",
+ "water": "Tap water at huts, untreated: boil it. None on the crater section.",
+ "dangers": [
+  "Alpine weather at the craters: strong wind, cold and cloud even in summer.",
+  "Loose rock on the steep slopes of Red Crater and the descent to the Emerald Lakes.",
+  "An active volcanic area: check the volcanic alert level."
+ ],
+ "turnaround": "If it is windy or in cloud at Mangatepopo Saddle, turn back to Mangatepopo: the crater section has no shelter.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/things-to-do/tracks/tongariro-northern-circuit/",
+  "https://www.openstreetmap.org/relation/173345"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 2,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Mangatepopo car park",
+   "lat": -39.14421,
+   "lon": 175.58098,
+   "role": "start",
+   "note": "Start of the circuit since the 2025 fire. Mangatepopo Hut is 25 min away."
+  },
+  {
+   "id": "emerald-lakes",
+   "name": "Emerald Lakes",
+   "lat": -39.13447,
+   "lon": 175.65279,
+   "role": "point",
+   "note": "Coloured lakes in old explosion pits below Red Crater, the highest point of the walk.",
+   "scene": "nz-tongariro-alpine-crossing"
+  },
+  {
+   "id": "oturere-hut",
+   "name": "Oturere Hut",
+   "lat": -39.15869,
+   "lon": 175.68919,
+   "role": "point",
+   "note": "First night, at the edge of the Oturere valley lava fields, below Ngauruhoe.",
+   "night": true
+  },
+  {
+   "id": "waihohonu-hut",
+   "name": "Waihohonu Hut",
+   "lat": -39.20948,
+   "lon": 175.67987,
+   "role": "point",
+   "note": "Second night, in a beech valley. The 1904 historic hut is 10 min off the track.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Whakapapa Village",
+   "lat": -39.19954,
+   "lon": 175.54298,
+   "role": "goal",
+   "note": "After Tama Saddle and Taranaki Falls, 15.4 km from Waihohonu. Lower Tama Lake is a 20 min side trip."
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "is-jokulsargljufur",
+ "country": "IS",
+ "name": "Dettifoss to Ásbyrgi canyon trek",
+ "base": "Ásbyrgi",
+ "region": "Jökulsárgljúfur, Vatnajökull National Park, North Iceland",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  10,
+  11
+ ],
+ "start_by": "09:00",
+ "why": "Two days down the west side of the Jökulsá canyon, from the thundering Dettifoss past basalt column rosettes and red craters to the horseshoe cliffs of Ásbyrgi.",
+ "book": "Camping only at the park campsites of Dettifoss, Vesturdalur and Ásbyrgi: no huts on the route. Arrange a car or transfer to Dettifoss west and back from Ásbyrgi. Ask at the Gljúfrastofa visitor centre in Ásbyrgi about trail conditions.",
+ "water": "No streams or springs between Vesturdalur and Ásbyrgi: carry all you need there. The Stallá is shallow and cold, but you must wade it.",
+ "dangers": [
+  "Long sections on the canyon rim with high drops: keep back from the edge in wind.",
+  "The Hafragil lowland descent and the rope at Tófugjá are no place for a heavy pack: take the rim trail.",
+  "Cold wade of the Stallá, a spring river: sandals for the crossing."
+ ],
+ "turnaround": "Fog or gale on the first day: stop at Hólmatungur, where a road reaches the trail.",
+ "sources": [
+  "https://vatnajokulsthjodgardur.is/en/asbyrgi-dettifoss",
+  "https://www.vatnajokulsthjodgardur.is/en/vesturdalur-holmatungur-l1",
+  "https://www.openstreetmap.org/node/5002318207"
+ ],
+ "published": {
+  "km": 32,
+  "gain_m": null,
+  "source": "https://vatnajokulsthjodgardur.is/en/asbyrgi-dettifoss"
+ },
+ "tier": "A",
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Dettifoss",
+   "lat": 65.81378,
+   "lon": -16.38685,
+   "role": "start",
+   "note": "The west-bank viewpoint over the falls in grey glacier water. The trail heads north along the rim past the Hafragil ravine.",
+   "scene": "is-dettifoss"
+  },
+  {
+   "id": "holmatungur",
+   "name": "Hólmatungur",
+   "lat": 65.87585,
+   "lon": -16.4474,
+   "role": "point",
+   "note": "Green spring-fed river meadows in the canyon, about 11.5 km from Dettifoss; a road ends here."
+  },
+  {
+   "id": "vesturdalur",
+   "name": "Vesturdalur campsite",
+   "lat": 65.93138,
+   "lon": -16.5465,
+   "role": "point",
+   "night": true,
+   "note": "After the Stallá ford and the twin rock Karl og Kerling, the park campsite in a grassy valley, about 8 km from Hólmatungur."
+  },
+  {
+   "id": "hljoaklettar",
+   "name": "Hljóðaklettar",
+   "lat": 65.94441,
+   "lon": -16.53302,
+   "role": "point",
+   "note": "The 'echo rocks': old volcanic plugs with basalt columns in rosettes and curls by the river. A short loop leads through them.",
+   "scene": "is-hljodaklettar"
+  },
+  {
+   "id": "goal",
+   "name": "Ásbyrgi",
+   "lat": 66.02856,
+   "lon": -16.48746,
+   "role": "goal",
+   "note": "Along the rim of the horseshoe canyon of Ásbyrgi and down by Tófugjá to the Gljúfrastofa visitor centre and campsite."
+  }
+ ]
+}

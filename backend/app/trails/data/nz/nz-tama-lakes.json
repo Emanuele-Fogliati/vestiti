@@ -1,0 +1,78 @@
+{
+ "id": "nz-tama-lakes",
+ "country": "NZ",
+ "name": "Tama Lakes Track",
+ "base": "National Park Village",
+ "region": "Tongariro National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 17.6,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/things-to-do/tracks/tama-lakes-track/"
+ },
+ "why": "From Whakapapa past Taranaki Falls across tussock to Tama Saddle, between Ruapehu and Ngauruhoe, above two crater lakes.",
+ "book": "Free, no permit. Starts at Whakapapa Village on SH48, on the Taranaki Falls track 100 m below the visitor centre.",
+ "water": "No water on the track: carry it. Do not touch or swim in the lakes.",
+ "dangers": [
+  "Alpine weather: strong wind, rain and fast temperature changes, even in summer.",
+  "The side route to Upper Tama Lake is unformed, loose and exposed: in winter it needs ice axe and crampons.",
+  "No tracks down to the lakes: the gullies are steep and unstable."
+ ],
+ "turnaround": "Turn back if low cloud covers Tama Saddle; skip the Upper Tama ridge in wind or cloud.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/things-to-do/tracks/tama-lakes-track/",
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/central-north-island/places/tongariro-national-park/things-to-do/tracks/tongariro-northern-circuit/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 1,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "whakapapa",
+   "name": "Whakapapa Village",
+   "lat": -39.19954,
+   "lon": 175.54298,
+   "role": "start",
+   "note": "Track board below the Tongariro National Park Visitor Centre."
+  },
+  {
+   "id": "taranaki-falls",
+   "name": "Taranaki Falls",
+   "lat": -39.1975,
+   "lon": 175.56436,
+   "role": "point",
+   "note": "A 20 m fall over an old lava flow; the lower track goes to its base."
+  },
+  {
+   "id": "goal",
+   "name": "Lower Tama Lake",
+   "lat": -39.19524,
+   "lon": 175.60113,
+   "role": "goal",
+   "note": "The end of the track on Tama Saddle above Lower Tama Lake, with Ngauruhoe and Ruapehu on either side."
+  }
+ ]
+}

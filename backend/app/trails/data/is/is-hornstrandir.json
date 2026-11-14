@@ -1,0 +1,95 @@
+{
+ "id": "is-hornstrandir",
+ "country": "IS",
+ "name": "Hornstrandir: Hesteyri to Hornvík",
+ "base": "Ísafjörður",
+ "region": "Hornstrandir Nature Reserve, Westfjords",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8
+ ],
+ "hours": [
+  18,
+  22
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 37,
+  "gain_m": null,
+  "source": "https://co2.ust.is/english/visiting-iceland/protected-areas/westfjords/hornstrandir/hiking-trails/"
+ },
+ "why": "Three days with a tent through the empty far north of the Westfjords: an abandoned village, two passes marked only by cairns, wide bays and the bird cliffs of Hornbjarg, with arctic foxes for company.",
+ "book": "No roads, no shops, no huts to book: boat from Ísafjörður to Hesteyri and back from Hornvík (book both seats ahead with the boat operators). Camp only at the marked campsites, such as Hlöðuvík and Höfn in Hornvík. Carry all your food, a stove and a strong tent.",
+ "water": "Streams on every stage; treat water taken near campsites.",
+ "dangers": [
+  "Remote: help is hours away by boat and phone signal is patchy. Leave your plan with someone.",
+  "Snow can lie in the passes into July; fog hides the cairns.",
+  "River fords at Kjaransvíkurá, Rekavíkurá and Hafnarós, cold and higher after rain.",
+  "The path over Miðfell to Hornbjarg is steep and hard in the wet; stay back from the cliff edges."
+ ],
+ "turnaround": "Fog in a pass or a ford too deep: wait in camp. Plan a spare day before the boat back.",
+ "sources": [
+  "https://co2.ust.is/english/visiting-iceland/protected-areas/westfjords/hornstrandir/hiking-trails/",
+  "https://www.openstreetmap.org/way/441672505"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hesteyri",
+   "lat": 66.33635,
+   "lon": -22.87291,
+   "role": "start",
+   "note": "The boat lands at the abandoned village on Hesteyrarfjörður; the old Doctor's House serves coffee in summer. The cairned path climbs north-east.",
+   "scene": "is-hesteyri"
+  },
+  {
+   "id": "hloduvik",
+   "name": "Hlöðuvík",
+   "lat": 66.41446,
+   "lon": -22.67297,
+   "role": "point",
+   "night": true,
+   "note": "14 km and 6-7 hours over Kjaransvíkurskarð (426 m), fording the Kjaransvíkurá at the shore. Campsite on the bay."
+  },
+  {
+   "id": "hornvik-bay",
+   "name": "Höfn, Hornvík bay",
+   "lat": 66.42621,
+   "lon": -22.49072,
+   "role": "point",
+   "night": true,
+   "note": "10 km and 4-5 hours over the narrow, steep Atlaskarð (327 m). Campsite at Höfn and the boat landing; stay two nights.",
+   "scene": "is-hornvik"
+  },
+  {
+   "id": "goal",
+   "name": "Hornbjarg cliffs",
+   "lat": 66.46054,
+   "lon": -22.44181,
+   "role": "goal",
+   "note": "Across the Hafnarós ford and over Miðfell to the top of Hornbjarg, a sea cliff full of seabirds, below the horns of Kálfatindar."
+  },
+  {
+   "id": "hofn",
+   "name": "Back to Höfn",
+   "lat": 66.42621,
+   "lon": -22.49072,
+   "role": "point",
+   "note": "The day loop to Hornbjarg is 13 km and 8-10 hours from Höfn. The boat to Ísafjörður leaves from the shore here."
+  }
+ ]
+}

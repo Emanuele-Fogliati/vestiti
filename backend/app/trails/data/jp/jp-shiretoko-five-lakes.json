@@ -1,0 +1,60 @@
+{
+ "id": "jp-shiretoko-five-lakes",
+ "country": "JP",
+ "name": "Shiretoko Five Lakes (知床五湖)",
+ "base": "Utoro",
+ "region": "Shiretoko National Park, Hokkaido (World Heritage)",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [5, 6, 7, 8, 9, 10],
+ "hours": [3, 3.5],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Forest paths past five quiet lakes in brown bear country, then a raised boardwalk to the first lake with the Shiretoko range rising behind it.",
+ "book": "Open mid-April to mid-November with the park road. The ground paths need a 10-minute lecture and a ticket (450 yen) at the Field House, sold 08:00-15:00; from 10 May to 31 July you may walk them only on a registered guide's tour (book ahead). They close when a bear is seen. The elevated boardwalk is free and always open in season.",
+ "water": "Toilets and drinks at the Field House only. Carry water in a sealed bottle; no sugary drinks or open food on the ground paths.",
+ "dangers": [
+  "Brown bears: if you see one, back away slowly, never run, and tell the Field House.",
+  "Muddy roots on the ground paths after rain.",
+  "Mosquitoes and cool wind by the lakes in summer."
+ ],
+ "turnaround": "If a bear is reported, the staff close the ground paths: walk the elevated boardwalk instead.",
+ "sources": [
+  "https://www.goko.go.jp/multilingual_eng/ground_pathway.html",
+  "https://www.goko.go.jp/multilingual_eng/elevated_wooden_path.html",
+  "https://www.goko.go.jp/multilingual_eng/faq.html",
+  "https://www.goko.go.jp/multilingual_eng/index.html"
+ ],
+ "osm_ways": [129190146, 129190145, 129190135, 129190137, 454873799],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 1, "nature": 5, "culture": 0, "relax": 4, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Shiretoko Goko Field House",
+   "lat": 44.12236,
+   "lon": 145.08087,
+   "role": "start",
+   "note": "Lecture, tickets and guides at the entrance of the ground paths, 15 minutes by car from Utoro. The long loop goes round all five lakes."
+  },
+  {
+   "id": "fifth-lake",
+   "name": "Fifth lake",
+   "lat": 44.1266,
+   "lon": 145.08562,
+   "role": "point",
+   "note": "The first lake you reach on the long loop, the farthest from the road; then the fourth, third and second in the forest."
+  },
+  {
+   "id": "goal",
+   "name": "First lake and the Shiretoko range",
+   "lat": 44.12463,
+   "lon": 145.07662,
+   "role": "goal",
+   "note": "The largest lake, with Mount Rausu and the Shiretoko range behind it. Walk back to the Field House on the 800 m elevated boardwalk, fenced against bears.",
+   "scene": "jp-shiretoko-national-park"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "id": "ar-big-ice-perito-moreno",
+ "country": "AR",
+ "name": "Big Ice trek on Perito Moreno Glacier",
+ "base": "El Calafate",
+ "region": "Los Glaciares National Park, Perito Moreno sector",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "glacier": true,
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  6,
+  7
+ ],
+ "start_by": "07:30",
+ "why": "The only long walk on the Perito Moreno: three hours of crampons among blue crevasses, deep in the ice.",
+ "book": "Only as a guided excursion with the park's ice-trek operator, booked ahead; the operator sets age and fitness limits. Park entry fee paid separately at the park gate. A boat from Bajo de las Sombras pier, 70 km from El Calafate, crosses Brazo Rico in 20 minutes; the whole day takes about 12 hours with transfers.",
+ "water": "Carry 1.5 litres and lunch: there is half an hour for lunch and nothing to buy on the ice side.",
+ "dangers": [
+  "Crevasses and sinkholes: stay behind the guides, in their track.",
+  "Two hours on rough moraine before the ice, the same back: it is a hard day.",
+  "Sun glare off the ice: sunglasses and sun cream."
+ ],
+ "turnaround": "The guides decide; the boat back leaves at a fixed time.",
+ "sources": [
+  "https://elcalafate.tur.ar/in-perito-moreno-glacier/big-ice-en.htm",
+  "https://www.argentina.gob.ar/parquesnacionales/tarifas",
+  "https://en.wikivoyage.org/wiki/El_Calafate",
+  "https://www.openstreetmap.org/way/1487268812"
+ ],
+ "osm_ways": [
+  157476057,
+  1487268812
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Brazo Rico landing, boat from Bajo de las Sombras",
+   "lat": -50.48923,
+   "lon": -73.04481,
+   "role": "start",
+   "note": "The boat from Bajo de las Sombras pier lands here, on the south shore facing the glacier. Guides brief the group at the shelter."
+  },
+  {
+   "id": "moraine",
+   "name": "Moraine along the glacier's south edge",
+   "lat": -50.4912,
+   "lon": -73.06002,
+   "role": "point",
+   "note": "About two hours over moraine and through forest beside the ice; crampons, harness and helmet go on at the edge."
+  },
+  {
+   "id": "goal",
+   "name": "Perito Moreno ice field",
+   "lat": -50.49881,
+   "lon": -73.07976,
+   "role": "goal",
+   "note": "On the ice for about three hours, in groups of up to ten with two guides: seracs, blue crevasses and meltwater pools."
+  }
+ ]
+}

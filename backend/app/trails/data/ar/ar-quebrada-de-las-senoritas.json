@@ -1,0 +1,75 @@
+{
+ "id": "ar-quebrada-de-las-senoritas",
+ "country": "AR",
+ "name": "Quebrada de las Señoritas",
+ "base": "Humahuaca",
+ "region": "Uquía, Quebrada de Humahuaca",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "08:30",
+ "why": "From a 17th-century village church up a dry riverbed into a canyon of red clay towers.",
+ "book": "Free, no permit. Buses from Humahuaca to Uquía take 10-15 minutes.",
+ "water": "None after the village: carry 1.5 litres, the sun is strong at 2,800 m.",
+ "dangers": [
+  "After summer storms the riverbed can flood: do not enter if rain is coming.",
+  "Sun and dry air: hat and sun cream.",
+  "Soft clay walls: do not climb them."
+ ],
+ "turnaround": "Back out of the canyon before afternoon storms in the rainy months; otherwise none.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Uqu%C3%ADa",
+  "https://www.openstreetmap.org/way/244863267"
+ ],
+ "tier": "A",
+ "area": "ar-quebrada",
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 2,
+  "relax": 3,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Uquía church",
+   "lat": -23.30337,
+   "lon": -65.35627,
+   "role": "start",
+   "note": "San Francisco de Paula, with its paintings of angels carrying arquebuses. Walk south of the church on Padre Lozano past the cemetery."
+  },
+  {
+   "id": "mouth",
+   "name": "Mouth of the Quebrada de las Señoritas",
+   "lat": -23.30896,
+   "lon": -65.36473,
+   "role": "point",
+   "note": "Where the dirt road ends, about 1 km from the church; from here you walk up the dry riverbed.",
+   "scene": "ar-quebrada-de-las-senoritas"
+  },
+  {
+   "id": "goal",
+   "name": "Red canyon of the Quebrada de las Señoritas",
+   "lat": -23.31759,
+   "lon": -65.37849,
+   "role": "goal",
+   "note": "Near the end of the canyon: the tallest red towers. Best in morning light."
+  }
+ ]
+}

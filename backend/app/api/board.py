@@ -139,8 +139,8 @@ def board(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
             },
             "weather_sources": sources,
             "trails": [trail_card(t, s.start_date.month)
-                       for t in trails.near(s.latitude, s.longitude, s.country_code, s.name,
-                                            radius_km=TRAIL_KM)],
+                       for t in _stop_trails(trails.near(s.latitude, s.longitude, s.country_code,
+                                                         s.name, radius_km=TRAIL_KM))],
         })
         prev = s
     last = stops[-1] if stops else None
@@ -322,3 +322,11 @@ def flight_book(body: FlightBookIn, trip: Trip = Depends(own_trip), db: Session 
         trip.return_leg = saved
     db.commit()
     return order
+
+
+TAIL_PER_STOP = 6
+
+
+def _stop_trails(near: list) -> list:
+    """Every top trek near the stop, then a few of the long tail (tier B), the closest."""
+    return [t for t in near if t.tier == "A"] + [t for t in near if t.tier != "A"][:TAIL_PER_STOP]

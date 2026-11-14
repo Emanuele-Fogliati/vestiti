@@ -1,0 +1,73 @@
+{
+ "id": "ar-refugio-jakob",
+ "country": "AR",
+ "name": "Refugio San Martín and Laguna Jakob",
+ "base": "Bariloche",
+ "region": "Nahuel Huapi National Park, Casa de Piedra valley",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  9,
+  11
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 28,
+  "gain_m": null,
+  "source": "https://refugiojakob.com.ar/sendero-tradicional/"
+ },
+ "why": "A long forest valley along the Casa de Piedra stream, then zigzags up to a stone hut on a mountain lake.",
+ "book": "Book the hut ahead (it works only with bookings, open all year). Register your trek on the hut's online form. The trail starts at Tambo Báez on Ruta 79, 1 km past the Casa de Piedra bridge: paid parking, or bus to Bustillo km 10.5 and walk 5.8 km.",
+ "water": "The Casa de Piedra stream runs beside most of the trail. Meals at the hut.",
+ "dangers": [
+  "The last hour climbs steep zigzags ('los caracoles').",
+  "Snow near the lake until December.",
+  "Two stream crossings on bridges; side streams rise after rain."
+ ],
+ "turnaround": "Not at the second bridge by 15:00: turn back, the hut is still 45 minutes up.",
+ "sources": [
+  "https://refugiojakob.com.ar/sendero-tradicional/",
+  "https://www.clubandino.org/refugios-y-campings/refugio-general-san-martin/",
+  "https://barilochetrekking.com/sendero-153/",
+  "https://www.openstreetmap.org/way/163622693"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tambo Báez trailhead, Casa de Piedra",
+   "lat": -41.12682,
+   "lon": -71.46104,
+   "role": "start",
+   "note": "Past the car park the path enters tall coihue forest and drops to the Casa de Piedra stream, crossed on a hanging bridge."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Jakob and Refugio San Martín",
+   "lat": -41.18675,
+   "lon": -71.56102,
+   "role": "goal",
+   "night": true,
+   "note": "1,564 m: the stone-and-wood hut on Laguna Jakob. Laguna Témpanos is 30 minutes further."
+  }
+ ]
+}

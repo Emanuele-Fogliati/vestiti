@@ -1,0 +1,83 @@
+{
+ "id": "ar-laguna-toro",
+ "country": "AR",
+ "name": "Laguna Toro",
+ "base": "El Chaltén",
+ "region": "Los Glaciares National Park, north sector",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  12,
+  14
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 32,
+  "gain_m": null,
+  "source": "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf"
+ },
+ "why": "A long, quiet valley walk off the Fitz Roy crowds, to a camp by a milky lake where the Río Túnel glacier ends.",
+ "book": "Registration at the park visitor centre is mandatory (the trail is unmarked). Park entry fee at El Chaltén. The camp at Laguna Toro is free and basic: bring tent, stove and food.",
+ "water": "Streams along the valley; filter or treat. Nothing to buy after the village.",
+ "dangers": [
+  "Unmarked in places: carry a map or GPS track.",
+  "Strong wind on the open pass above the Río Túnel valley.",
+  "River crossings swell in the afternoon and after rain."
+ ],
+ "turnaround": "If you are not over the high point by 13:00, camp lower or go back: the walk in takes about 7 hours.",
+ "sources": [
+  "https://argentina.gob.ar/sites/default/files/2019/06/folleto_senderos_zona_norte_pnlg_ingles_2024.pdf",
+  "https://www.argentina.gob.ar/parquesnacionales/tarifas",
+  "https://hiking.waymarkedtrails.org/#route?id=9365907",
+  "https://en.wikivoyage.org/wiki/El_Chalt%C3%A9n"
+ ],
+ "osm": 9365907,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Los Glaciares visitor centre, El Chaltén",
+   "lat": -49.33753,
+   "lon": -72.88134,
+   "role": "start",
+   "note": "Register here first. The trail leaves south of the village with the Pliegue Tumbado path and then turns west.",
+   "scene": "ar-el-chalten"
+  },
+  {
+   "id": "camp",
+   "name": "Campamento Laguna Toro",
+   "lat": -49.38517,
+   "lon": -73.0405,
+   "role": "point",
+   "night": true,
+   "note": "The free camp in a lenga grove after about 16 km, with an emergency shelter. Pitch on the marked sites."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Toro and Glaciar Río Túnel",
+   "lat": -49.3851,
+   "lon": -73.0593,
+   "role": "goal",
+   "note": "Twenty minutes past the camp: the lake shore, the glacier tongue in front, the start of the Huemul Circuit beyond.",
+   "scene": "ar-laguna-toro"
+  }
+ ]
+}

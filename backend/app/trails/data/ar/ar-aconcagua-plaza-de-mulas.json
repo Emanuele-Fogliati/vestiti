@@ -1,0 +1,87 @@
+{
+ "id": "ar-aconcagua-plaza-de-mulas",
+ "country": "AR",
+ "name": "Aconcagua to Plaza de Mulas",
+ "base": "Mendoza",
+ "region": "Aconcagua Provincial Park, Horcones valley",
+ "kind": "multiday",
+ "days": 7,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  21,
+  22
+ ],
+ "start_by": "09:00",
+ "why": "A week up the Horcones valley to Aconcagua's base camp at 4,300 m, under the highest peak outside Asia.",
+ "book": "A Trekking Largo permit of the Aconcagua Provincial Park (7 days, 6 nights, Confluencia and Plaza de Mulas), sold through authorised providers; evacuation and medical insurance is required. Trekkers may not go above 4,300 m. The park entrance is at Horcones, by Ruta 7 near Puente del Inca, about 180 km from Mendoza.",
+ "water": "Glacier streams at the camps: boil or treat; it is mineral-rich and upsets stomachs.",
+ "dangers": [
+  "Altitude sickness: sleep at Confluencia (3,400 m) at least two nights before going up.",
+  "Constant strong wind; the Viento Blanco storm brings snow in hours.",
+  "A glacier stream to cross on the way to Plaza de Mulas: cross early, before it rises."
+ ],
+ "turnaround": "Leave Confluencia at dawn for the 10-hour stage; any headache that does not pass with rest means going down.",
+ "sources": [
+  "https://www.mendoza.gov.ar/wp-content/uploads/sites/71/2020/12/Trekking-ENG.pdf",
+  "https://www.mendoza.gov.ar/prensa/ya-esta-habilitada-la-venta-anticipada-de-permisos-para-la-temporada-2025-2026-del-parque-provincial-aconcagua/",
+  "https://en.wikivoyage.org/wiki/Aconcagua",
+  "https://www.openstreetmap.org/way/345634339"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 1,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Horcones ranger station, Aconcagua Park",
+   "lat": -32.82383,
+   "lon": -69.94191,
+   "role": "start",
+   "note": "Permit check at 2,950 m. Mules carry the heavy bags to the camps.",
+   "scene": "ar-horcones-valley"
+  },
+  {
+   "id": "laguna",
+   "name": "Laguna de Horcones",
+   "lat": -32.80534,
+   "lon": -69.94116,
+   "role": "point",
+   "note": "The small lagoon after 2 km, with the first view of Aconcagua's south face.",
+   "scene": "ar-aconcagua"
+  },
+  {
+   "id": "confluencia-camp",
+   "name": "Confluencia camp",
+   "lat": -32.75819,
+   "lon": -69.96724,
+   "role": "point",
+   "night": true,
+   "note": "About 3,400 m, 3-4 h from Horcones. Rest days here, with a day walk to Plaza Francia under the south face.",
+   "scene": "ar-confluencia-camp"
+  },
+  {
+   "id": "goal",
+   "name": "Plaza de Mulas",
+   "lat": -32.64876,
+   "lon": -70.05797,
+   "role": "goal",
+   "night": true,
+   "note": "Base camp at 4,300 m, about 10 h up the stony Horcones Superior valley from Confluencia. Rangers, doctors and outfitters' domes.",
+   "scene": "ar-plaza-de-mulas"
+  }
+ ]
+}

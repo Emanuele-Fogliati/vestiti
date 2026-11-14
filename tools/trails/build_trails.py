@@ -217,14 +217,57 @@ def resample(line, step_km: float):
     return out
 
 
+TILE_Z = 12  # terrarium tiles (Mapzen/AWS open terrain, ~30 m at the equator), as the app's map uses
+_tiles: dict = {}
+
+
+def tile_elevations(pts) -> list[float]:
+    """Altitude of each point from the open terrain tiles (no rate limit, cached on disk):
+    Open-Meteo's elevation API answers 429 to a long batch run or many threads."""
+    import io
+    from PIL import Image
+    out = []
+    n = 2 ** TILE_Z
+    for la, lo in pts:
+        x = (lo + 180) / 360 * n
+        y = (1 - math.log(math.tan(math.radians(la)) + 1 / math.cos(math.radians(la))) / math.pi) / 2 * n
+        tx, ty = int(x), int(y)
+        key = (tx, ty)
+        if key not in _tiles:
+            f = Path(__file__).resolve().parent / ".cache" / "terrarium" / f"{TILE_Z}-{tx}-{ty}.png"
+            if not f.exists():
+                f.parent.mkdir(parents=True, exist_ok=True)
+                url = f"https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{TILE_Z}/{tx}/{ty}.png"
+                for i in range(5):
+                    try:
+                        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+                            f.write_bytes(r.read())
+                        break
+                    except Exception:
+                        if i == 4:
+                            raise
+                        time.sleep(2 + 2 * i)
+            if len(_tiles) > 400:
+                _tiles.clear()
+            _tiles[key] = Image.open(io.BytesIO(f.read_bytes())).convert("RGB").load()
+        px = _tiles[key][min(255, int((x - tx) * 256)), min(255, int((y - ty) * 256))]
+        out.append(px[0] * 256 + px[1] + px[2] / 256 - 32768)
+    return out
+
+
 def elevations(pts) -> list[float]:
+    """Copernicus DEM 90 m through Open-Meteo; the open terrain tiles when it says 429."""
     out: list[float] = []
-    for i in range(0, len(pts), 100):
-        chunk = pts[i:i + 100]
-        q = urllib.parse.urlencode({"latitude": ",".join(f"{p[0]:.5f}" for p in chunk),
-                                    "longitude": ",".join(f"{p[1]:.5f}" for p in chunk)})
-        out += get(f"https://api.open-meteo.com/v1/elevation?{q}")["elevation"]
-        time.sleep(0.3)
+    try:
+        for i in range(0, len(pts), 100):
+            chunk = pts[i:i + 100]
+            q = urllib.parse.urlencode({"latitude": ",".join(f"{p[0]:.5f}" for p in chunk),
+                                        "longitude": ",".join(f"{p[1]:.5f}" for p in chunk)})
+            out += get(f"https://api.open-meteo.com/v1/elevation?{q}", tries=2)["elevation"]
+            time.sleep(0.3)
+    except Exception as e:
+        print(f"  Open-Meteo elevation failed ({e}): open terrain tiles")
+        return tile_elevations(pts)
     return out
 
 

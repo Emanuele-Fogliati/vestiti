@@ -1,0 +1,97 @@
+{
+ "id": "jp-yarigatake",
+ "country": "JP",
+ "name": "Yarigatake from Kamikochi (槍ヶ岳)",
+ "base": "Kamikochi",
+ "region": "Chubu-Sangaku National Park, Northern Alps",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  19,
+  22
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 35.6,
+  "gain_m": 1680,
+  "source": "https://www.japan.travel/en/sports/hiking/courses/mt-yarigatake/"
+ },
+ "why": "Up the Azusa river and the Yarisawa valley to the 3,180 m spear of the Northern Alps, with a night at the hut right under its tip.",
+ "book": "Book the huts (Yarisawa Lodge, Yarigatake Sanso): bookings open one month before, cash only. Huts open late April to early November, but the trail is snow-free only from mid-July. Bus to Kamikochi from Shin-Shimashima, Sawando or Hirayu; no private cars.",
+ "water": "Water and drinks at the valley huts (Tokusawa, Yokoo, Yarisawa Lodge); at Yarigatake Sanso it is sold. Carry 2 litres for the climb above Yarisawa.",
+ "dangers": [
+  "The last 100 m to the summit are iron ladders and chains on bare rock: one way up, one way down, queues on weekends.",
+  "Above the Tenguppara junction there is no shelter from lightning: be at the hut by early afternoon.",
+  "Snowfields in the upper Yarisawa until July and new snow from October: then crampons and an ice axe are essential.",
+  "Altitude above 3,000 m: headaches are common the first night."
+ ],
+ "turnaround": "If clouds build or you hear thunder, stay at Yarigatake Sanso and climb the spear the next morning, or skip it.",
+ "sources": [
+  "https://www.japan.travel/en/sports/hiking/courses/mt-yarigatake/",
+  "https://yarigatake.co.jp/english/",
+  "https://www.go-nagano.net/en/theme/id=17996",
+  "https://www.openstreetmap.org/node/582994395"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kamikochi bus terminal",
+   "lat": 36.24624,
+   "lon": 137.63526,
+   "role": "start",
+   "note": "1,500 m. Cross Kappa Bridge and walk up the flat Azusa valley past Myojin and Tokusawa: 11 km, about 3 hours, to Yokoo."
+  },
+  {
+   "id": "yokoo",
+   "name": "Yokoo",
+   "lat": 36.29347,
+   "lon": 137.69856,
+   "role": "point",
+   "note": "Yokoo Sanso hut and the big bridge where the Karasawa trail turns off. For Yari, keep straight up the Azusa into the Yarisawa valley."
+  },
+  {
+   "id": "yarisawa-lodge",
+   "name": "Yarisawa Lodge",
+   "lat": 36.31826,
+   "lon": 137.68354,
+   "role": "point",
+   "night": true,
+   "note": "Night 1 at 1,820 m. Day 2 climbs past Babadaira and the long moraine of the upper Yarisawa: about 1,250 m up."
+  },
+  {
+   "id": "yarigatake-sanso",
+   "name": "Yarigatake Sanso",
+   "lat": 36.34102,
+   "lon": 137.64561,
+   "role": "point",
+   "night": true,
+   "note": "Night 2 at 3,080 m, on the shoulder under the spear: 400 places. Climb the spear at sunset or at dawn."
+  },
+  {
+   "id": "goal",
+   "name": "Yarigatake spear summit",
+   "lat": 36.34198,
+   "lon": 137.64763,
+   "role": "goal",
+   "note": "3,180 m, a small rock top: the Hotaka ridge, Mount Fuji and the Kurobe mountains on a clear morning. Day 3 is all the way back to Kamikochi."
+  }
+ ]
+}
