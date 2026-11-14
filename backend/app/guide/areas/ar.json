@@ -36,7 +36,21 @@
      "act": {
       "type": "city"
      },
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
     },
     {
      "id": "argentine",
@@ -101,7 +115,22 @@
       "Iguazu Falls",
       "Devil's Throat",
       "Iguazú National Park"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "brazil",
@@ -143,7 +172,23 @@
      ],
      "extras": [
       "Parque das Aves, a bird park by the Brazilian gate, is an easy extra hour."
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "moon",
@@ -159,13 +204,34 @@
       "type": "hiking",
       "difficulty": "easy",
       "max_altitude_m": 200
-     }
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "night",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     }
    ],
    "extras": [
     "Pesos in cash help in town; the park takes cards.",
     "The falls are the same price both sides, but different money: Argentine pesos one side, Brazilian reais the other."
-   ]
+   ],
+   "nights": [
+    2,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "ar-salta",
@@ -197,7 +263,22 @@
      "act": {
       "type": "city"
      },
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 1,
+      "landscape": 0
+     },
+     "tier": "B",
+     "kinds": [
+      "night",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "city",
@@ -246,7 +327,22 @@
      ],
      "sights": [
       "Cerro San Bernardo"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "cafayate",
@@ -297,7 +393,23 @@
       "Quebrada de las Conchas",
       "Garganta del Diablo (Cafayate)",
       "Cafayate"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "cachi",
@@ -318,7 +430,22 @@
       "Cuesta del Obispo",
       "Los Cardones National Park",
       "Cachi"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "salinas",
@@ -338,13 +465,35 @@
      "sights": [
       "Salinas Grandes",
       "Purmamarca"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "C",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
     }
    ],
    "extras": [
     "Siesta: many shops close from about 13:00 to 17:00. Dinner starts after 21:00.",
     "The Tren a las Nubes now runs only a short section from San Antonio de los Cobres; check the days."
-   ]
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0
   },
   {
    "id": "ar-quebrada",
@@ -385,7 +534,22 @@
      "sights": [
       "Quebrada de Humahuaca"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 2,
+      "relax": 2,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "purmamarca",
@@ -434,7 +598,23 @@
       "Purmamarca",
       "Cerro de los Siete Colores",
       "Salinas Grandes"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "hornocal",
@@ -473,7 +653,23 @@
      "sights": [
       "Hornocal",
       "Humahuaca"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "maimara",
@@ -487,13 +683,33 @@
      "why": "Painted hills over a hillside cemetery, from the main road.",
      "act": {
       "type": "city"
-     }
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
     }
    ],
    "extras": [
     "Carnival in the Quebrada (February or March) is wild and joyful: book rooms early.",
     "The altitude climbs fast: Tilcara 2,460 m, the salt flats 3,450 m, Hornocal 4,350 m."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "ar-mendoza",
@@ -531,7 +747,21 @@
      "sights": [
       "Parque General San Martín"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
     },
     {
      "id": "maipu",
@@ -572,7 +802,21 @@
        "at": "18:00",
        "what": "Return the bike"
       }
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "no"
     },
     {
      "id": "uco",
@@ -586,7 +830,23 @@
      "why": "Modern wineries at 1,000–1,500 m with the snowy Andes behind the vines. Long lunches.",
      "act": {
       "type": "city"
-     }
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "car"
     },
     {
      "id": "aconcagua",
@@ -633,13 +893,35 @@
        "at": "19:30",
        "what": "Back in Mendoza"
       }
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
     }
    ],
    "extras": [
     "Siesta: shops close from about 13:00 to 17:00; dinner after 21:00.",
     "Most wineries need a booking, even for a tasting."
-   ]
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0
   }
  ]
 }

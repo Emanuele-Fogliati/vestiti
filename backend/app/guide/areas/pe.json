@@ -60,7 +60,22 @@
       "Parque del Amor",
       "Barranco"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
     },
     {
      "id": "centro",
@@ -108,7 +123,22 @@
       "Plaza Mayor, Lima",
       "Lima Cathedral",
       "San Francisco Monastery, Lima"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 2,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "larco",
@@ -125,7 +155,21 @@
      },
      "extras": [
       "The garden café is one of the city's nicest lunches."
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "pucllana",
@@ -139,7 +183,21 @@
      "why": "A 1,500-year-old pyramid of mud bricks in the middle of the city's smartest district.",
      "act": {
       "type": "city"
-     }
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "pachacamac",
@@ -153,7 +211,22 @@
      "why": "A huge sanctuary of temples and pyramids used for a thousand years before the Incas, at the edge of the desert.",
      "act": {
       "type": "city"
-     }
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "fountains",
@@ -177,14 +250,34 @@
      ],
      "sights": [
       "Circuito Mágico del Agua"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
     }
    ],
    "extras": [
     "Ceviche is lunch in Lima: the classic cevicherías close in the late afternoon.",
     "From the airport to Miraflores takes 45 min to 1 h 30. Before a domestic flight at rush hour, leave 3 h ahead.",
     "Surquillo market, next to Miraflores, is where cooks shop: fruit you have never seen, cheap lunch counters."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-paracas",
@@ -248,7 +341,22 @@
      "sights": [
       "Ballestas Islands",
       "Paracas Candelabra"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "reserve",
@@ -288,7 +396,23 @@
      ],
      "sights": [
       "Paracas National Reserve"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "huacachina",
@@ -329,13 +453,34 @@
       "Huacachina",
       "Ica"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "transfer"
     }
    ],
    "extras": [
     "Many tours do Ballestas, the reserve and Huacachina in one day from Lima: it works, but it is 12 hours on the move.",
     "Bring cash in soles: the pier, the reserve and the oasis rarely take cards."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-nazca",
@@ -394,7 +539,22 @@
      ],
      "sights": [
       "Nazca Lines"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 1,
+      "relax": 1,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "chauchilla",
@@ -411,7 +571,22 @@
      },
      "sights": [
       "Chauchilla Cemetery"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "cantalloc",
@@ -425,12 +600,33 @@
      "why": "Spiral stone wells the Nazca people built to reach water underground. Some still run.",
      "act": {
       "type": "desert"
-     }
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
     }
    ],
    "extras": [
     "The night bus to Arequipa takes about 9–10 hours: book a semi-cama or cama seat."
-   ]
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-arequipa",
@@ -466,7 +662,21 @@
       "Yanahuara",
       "El Misti"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
     },
     {
      "id": "centre",
@@ -515,7 +725,22 @@
       "Santa Catalina Monastery",
       "Plaza de Armas, Arequipa",
       "Arequipa Cathedral"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "colca-day",
@@ -535,13 +760,35 @@
      "sights": [
       "Colca Canyon",
       "Cruz del Cóndor"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 0,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "C",
+     "kinds": [
+      "drive",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "transfer"
     }
    ],
    "extras": [
     "Arequipa (2,335 m) is a good step up before Colca (3,600 m and a 4,900 m pass) and Puno (3,830 m).",
     "Queso helado, a cinnamon ice cream sold by the Santa Catalina wall, is the local snack."
-   ]
+   ],
+   "nights": [
+    2,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-colca",
@@ -612,7 +859,23 @@
       "Colca Canyon",
       "Yanque",
       "Maca"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "calera",
@@ -630,7 +893,21 @@
      "extras": [
       "The road from Arequipa crosses Patapampa at about 4,900 m: coca tea, little food, no alcohol that day."
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "yanque",
@@ -649,13 +926,33 @@
      },
      "sights": [
       "Yanque"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 2,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
     }
    ],
    "extras": [
     "Fit and with time: the two-day trek down to the Sangalle oasis from Cabanaconde, 1,000 m down and up again at dawn.",
     "From Chivay to Puno is about 6 hours over the altiplano, with flamingos at Lagunillas."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-puno",
@@ -695,7 +992,22 @@
      "sights": [
       "Sillustani"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "lake",
@@ -755,7 +1067,22 @@
       "Uros floating islands",
       "Taquile Island",
       "Lake Titicaca"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 5,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "amantani",
@@ -772,14 +1099,36 @@
      },
      "sights": [
       "Amantaní"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 5,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "boat",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
     }
    ],
    "extras": [
     "Puno is at 3,830 m: the first evening, rest, coca tea, light dinner.",
     "Candelaria, one of South America's biggest festivals, fills Puno with dancers in the first half of February.",
     "The tourist bus to Cusco (about 10 h) stops at Pukará, La Raya pass (4,335 m), Raqchi and Andahuaylillas: a sightseeing day, not just a transfer."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-cusco",
@@ -834,7 +1183,21 @@
      "sights": [
       "Plaza de Armas, Cusco"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
     },
     {
      "id": "centre",
@@ -886,7 +1249,22 @@
       "Qorikancha",
       "Cusco Cathedral",
       "Plaza de Armas, Cusco"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "ruins",
@@ -936,7 +1314,21 @@
       "Qenqo",
       "Puka Pukara",
       "Tambomachay"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "valley",
@@ -998,7 +1390,23 @@
       "Moray",
       "Maras",
       "Chinchero"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 1,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "rainbow",
@@ -1048,7 +1456,23 @@
      ],
      "sights": [
       "Rainbow Mountain"
-     ]
+     ],
+     "scores": {
+      "effort": 5,
+      "nature": 4,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "C",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "no",
+     "needs": "transfer"
     },
     {
      "id": "humantay",
@@ -1067,7 +1491,23 @@
      },
      "sights": [
       "Humantay Lake"
-     ]
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "C",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "transfer"
     }
    ],
    "extras": [
@@ -1075,7 +1515,13 @@
     "Machu Picchu tickets are sold by the hour (06:00 to 15:00) and by circuit at tuboleto.cultura.pe: in high season buy weeks ahead.",
     "The Inca Trail needs a permit bought through an agency, months ahead; the trail closes every February.",
     "Inti Raymi, the Inca sun festival, fills Sacsayhuamán on 24 June: book everything early that week."
-   ]
+   ],
+   "nights": [
+    3,
+    4,
+    6
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-sacred-valley",
@@ -1138,7 +1584,21 @@
      "sights": [
       "Ollantaytambo"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 2,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "moray-maras",
@@ -1181,7 +1641,22 @@
      "sights": [
       "Moray",
       "Maras"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "pisac",
@@ -1219,7 +1694,23 @@
      ],
      "sights": [
       "Pisac"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 3,
+      "relax": 1,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
     },
     {
      "id": "chinchero",
@@ -1236,14 +1727,34 @@
      },
      "sights": [
       "Chinchero"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
     }
    ],
    "extras": [
     "Trains to Machu Picchu leave from Ollantaytambo (PeruRail, Inca Rail), about 1 h 30 to Aguas Calientes.",
     "On the train only a small bag (about 5 kg): leave the big one at the hotel in Ollantaytambo or Cusco.",
     "Fit and keen: the one-day Inca Trail from km 104 reaches Machu Picchu through the Sun Gate; it needs a permit too."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-machu-picchu",
@@ -1277,7 +1788,21 @@
      "act": {
       "type": "city"
      },
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "mapi",
@@ -1331,7 +1856,22 @@
      ],
      "sights": [
       "Machu Picchu"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 1,
+      "relax": 1,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
     },
     {
      "id": "huayna",
@@ -1350,7 +1890,22 @@
      },
      "sights": [
       "Huayna Picchu"
-     ]
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 0,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
     },
     {
      "id": "mandor",
@@ -1366,13 +1921,33 @@
       "type": "hiking",
       "difficulty": "easy",
       "max_altitude_m": 2000
-     }
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
     }
    ],
    "extras": [
     "Entry is with a licensed guide; guides wait at the bridge and the gate.",
     "Buses down run all day; walking down the steps takes about 1 h 30."
-   ]
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-tambopata",
@@ -1407,7 +1982,23 @@
       "difficulty": "easy",
       "max_altitude_m": 300
      },
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife",
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "guide"
     },
     {
      "id": "sandoval",
@@ -1444,7 +2035,23 @@
      ],
      "sights": [
       "Lake Sandoval"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
     },
     {
      "id": "clay-lick",
@@ -1480,7 +2087,23 @@
      "sights": [
       "Tambopata National Reserve",
       "Tambopata River"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "boat"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "guide"
     },
     {
      "id": "tower",
@@ -1496,14 +2119,36 @@
       "type": "hiking",
       "difficulty": "easy",
       "max_altitude_m": 300
-     }
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "wildlife",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "guide"
     }
    ],
    "extras": [
     "Long sleeves and long trousers in light colours, against the mosquitoes. Lodges lend rubber boots.",
     "Yellow fever vaccination is recommended for this region: check with a travel clinic weeks ahead.",
     "Flights from Cusco take under an hour: an easy add-on to Machu Picchu."
-   ]
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0
   },
   {
    "id": "pe-huaraz",
@@ -1538,7 +2183,22 @@
       "type": "hiking",
       "difficulty": "moderate",
       "max_altitude_m": 4450
-     }
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "transfer"
     },
     {
      "id": "laguna-69",
@@ -1592,7 +2252,23 @@
      "sights": [
       "Laguna 69",
       "Llanganuco Lakes"
-     ]
+     ],
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "transfer"
     },
     {
      "id": "pastoruri",
@@ -1611,7 +2287,23 @@
      },
      "sights": [
       "Pastoruri"
-     ]
+     ],
+     "scores": {
+      "effort": 5,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "no",
+     "needs": "transfer"
     },
     {
      "id": "chavin",
@@ -1628,12 +2320,34 @@
      },
      "sights": [
       "Chavín de Huántar"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 1,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "museum",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
     }
    ],
    "extras": [
     "Huaraz is at 3,050 m and Laguna 69 at 4,600 m: two easy days first is not optional."
-   ]
+   ],
+   "nights": [
+    3,
+    4,
+    6
+   ],
+   "buffer": 1
   }
  ]
 }
