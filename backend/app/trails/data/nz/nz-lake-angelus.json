@@ -1,0 +1,84 @@
+{
+ "id": "nz-lake-angelus",
+ "country": "NZ",
+ "name": "Robert Ridge to Lake Angelus",
+ "base": "St Arnaud",
+ "region": "Nelson Lakes National Park",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  10,
+  12
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 24.4,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/nelson-lakes-national-park/things-to-do/tracks/angelus-hut-via-pinchgut-track-and-robert-ridge-route/"
+ },
+ "why": "Along an open ridge above Lake Rotoiti to a hut on the shore of an alpine tarn at 1,650 m.",
+ "book": "Angelus Hut (28 bunks) and its campsite must be booked all year round; no cookers in the hut. Mt Robert car park is 7 km from St Arnaud by SH63 and Mount Robert Road.",
+ "water": "None on the ridge: carry all of it. Untreated tap water at the hut.",
+ "dangers": [
+  "Robert Ridge is exposed to high wind and poor visibility at any time of year.",
+  "Sharp, rocky sections after Julius Summit: accidents have happened there in ice.",
+  "Snow and ice possible May to December; avalanches in winter."
+ ],
+ "turnaround": "If wind or cloud is bad at the top of the Pinchgut Track, go back down: the ridge has no shelter.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/nelson-lakes-national-park/things-to-do/tracks/angelus-hut-via-pinchgut-track-and-robert-ridge-route/",
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/nelson-lakes-national-park/things-to-do/huts/angelus-hut/",
+  "https://www.openstreetmap.org/way/42290274"
+ ],
+ "osm_ways": [
+  29461269,
+  418138739,
+  42290274
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Mount Robert car park",
+   "lat": -41.82167,
+   "lon": 172.80858,
+   "role": "start",
+   "note": "End of Mount Robert Road. The Pinchgut Track zigzags up to the bushline."
+  },
+  {
+   "id": "robert-ridge",
+   "name": "Robert Ridge, Julius Summit",
+   "lat": -41.8639,
+   "lon": 172.77536,
+   "role": "point",
+   "note": "1,794 m on the pole-marked ridge, with Lake Rotoiti below."
+  },
+  {
+   "id": "goal",
+   "name": "Angelus Hut",
+   "lat": -41.88837,
+   "lon": 172.74864,
+   "role": "goal",
+   "note": "On Lake Angelus at 1,650 m. Sleep here and return the same way the next day.",
+   "night": true
+  }
+ ]
+}

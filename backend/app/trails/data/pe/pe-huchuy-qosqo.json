@@ -1,0 +1,116 @@
+{
+ "id": "pe-huchuy-qosqo",
+ "country": "PE",
+ "name": "Huchuy Qosqo trek",
+ "base": "Cusco",
+ "region": "Hills between Cusco and the Sacred Valley",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  9,
+  11
+ ],
+ "start_by": "08:00",
+ "why": "Over the puna above Cusco on old Inca paths to 'Little Cusco', a royal estate with adobe halls on a terrace high above the Sacred Valley, then down a long stair to Lamay.",
+ "book": "No public road reaches the ruins: you walk or ride. Entry is paid on site to the two caretakers (about S/22, students S/10, cash). Taxi from Cusco to Tambomachay; colectivo from Lamay back to Cusco via Pisac. Tours with mules and camp gear are sold in Cusco.",
+ "water": "Few streams on the puna and they run past grazing animals: treat the water or carry 2 litres per day.",
+ "dangers": [
+  "The passes are above 4,200 m: spend two or three days in Cusco first.",
+  "Cold nights below freezing in the dry season, sun burns by day.",
+  "The 1,000 m descent to Lamay is steep and hard on the knees."
+ ],
+ "turnaround": "Not over the high pass by 13:00, or fog on the puna: go back to Tambomachay, the paths there split and are easy to lose.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Huchuy_Qosqo",
+  "https://incatrailmachu.com/en/huchuy-qosqo-trek-2-days",
+  "https://www.openstreetmap.org/node/1728416795"
+ ],
+ "router": "osrm",
+ "via": [
+  [
+   -13.46664,
+   -71.9754
+  ],
+  [
+   -13.45937,
+   -71.98599
+  ],
+  [
+   -13.44638,
+   -71.98694
+  ],
+  [
+   -13.43185,
+   -71.9806
+  ],
+  [
+   -13.42113,
+   -71.97677
+  ],
+  [
+   -13.41582,
+   -71.967
+  ],
+  [
+   -13.4041,
+   -71.95804
+  ],
+  [
+   -13.38984,
+   -71.9481
+  ],
+  [
+   -13.37621,
+   -71.94125
+  ]
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 5,
+  "nature": 3,
+  "culture": 3,
+  "relax": 1,
+  "history": 5,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tambomachay",
+   "lat": -13.47819,
+   "lon": -71.96806,
+   "role": "start",
+   "note": "The Inca fountains on the road above Cusco, 3,750 m. The path climbs north past the village onto the open puna.",
+   "scene": "pe-tambomachay"
+  },
+  {
+   "id": "huchuy-qosqo",
+   "name": "Huchuy Qosqo ruins",
+   "lat": -13.36613,
+   "lon": -71.94589,
+   "role": "point",
+   "night": true,
+   "note": "3,650 m: Inca halls with adobe walls, terraces and a long kallanka, 1,000 m above the Urubamba. Camp by the caretakers' house.",
+   "scene": "pe-huchuy-qosqo"
+  },
+  {
+   "id": "goal",
+   "name": "Lamay",
+   "lat": -13.36452,
+   "lon": -71.9203,
+   "role": "goal",
+   "note": "2,920 m, on the Sacred Valley road after a steep descent of about two hours. Colectivos to Pisac and Cusco from the plaza."
+  }
+ ]
+}

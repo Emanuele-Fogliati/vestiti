@@ -1,0 +1,78 @@
+{
+ "id": "jp-fuji-yoshida",
+ "country": "JP",
+ "name": "Mount Fuji by the Yoshida trail (富士山 吉田ルート)",
+ "base": "Fujiyoshida",
+ "region": "Fuji-Hakone-Izu National Park, Yamanashi",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  9,
+  11
+ ],
+ "start_by": "12:00",
+ "published": {
+  "km": 13.8,
+  "gain_m": 1450,
+  "source": "https://www.fujisan-climb.jp/en/comparison-of-routes"
+ },
+ "why": "Japan's highest mountain on its most-walked trail: climb to a hut at 3,000 m, sleep a few hours and reach the crater rim for sunrise over the clouds.",
+ "book": "Open only in the official season, about 1 July to 10 September. Register online and pay the 4,000 yen climbing fee; no entry from 14:00 to 03:00 unless you have a hut booking. Book the hut months ahead: tents are not allowed. Buses to the 5th station from Kawaguchiko and Fujisan stations.",
+ "water": "No water on the mountain: buy it at the 5th station or at the huts (expensive higher up). Carry 2 litres.",
+ "dangers": [
+  "Altitude: headaches and nausea above 3,000 m. Go slowly, sleep at the hut and go down if it gets worse.",
+  "Near 0°C before sunrise at the top, with wind: down jacket, gloves and hat even in August.",
+  "Falling rocks and crowds near the summit: do not overtake on the edge, a helmet is recommended.",
+  "Thunderstorms in the afternoon: there is no shelter on the bare slope above the huts."
+ ],
+ "turnaround": "If you have a strong headache or vomit, go down at once: the only cure is lower altitude.",
+ "sources": [
+  "https://www.fujisan-climb.jp/en/comparison-of-routes",
+  "https://www.fujisan-climb.jp/en/things-to-know-before-climbing",
+  "https://www.openstreetmap.org/way/676447041"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 3,
+  "culture": 3,
+  "relax": 0,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Fuji Subaru Line 5th Station",
+   "lat": 35.39433,
+   "lon": 138.7326,
+   "role": "start",
+   "note": "2,305 m, at the end of the bus road: shops, toilets and the information centre. Spend an hour here to get used to the altitude."
+  },
+  {
+   "id": "8th-station-huts",
+   "name": "8th Station huts",
+   "lat": 35.37408,
+   "lon": 138.74146,
+   "role": "point",
+   "night": true,
+   "note": "A string of huts from the 7th to the Original 8th station, about 2,700-3,400 m. Dinner, a few hours on a futon, and off again around 01:00-02:00 for sunrise."
+  },
+  {
+   "id": "goal",
+   "name": "Fuji crater rim, top of the Yoshida trail",
+   "lat": 35.3657,
+   "lon": 138.73296,
+   "role": "goal",
+   "note": "About 3,710 m at Kusushi shrine on the rim; the true summit, 3,776 m, is on the far side of the crater. Go down by the separate descent trail: follow the yellow signs at the 8th station."
+  }
+ ]
+}

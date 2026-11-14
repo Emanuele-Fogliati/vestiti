@@ -1,0 +1,100 @@
+{
+ "id": "jp-nakasendo-magome-tsumago",
+ "country": "JP",
+ "name": "Nakasendo: Magome to Tsumago (中山道 馬籠・妻籠)",
+ "base": "Magome",
+ "region": "Kiso Valley, Gifu and Nagano",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  4,
+  5,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2.5,
+  3
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 8,
+  "gain_m": null,
+  "source": "https://www.go-nagano.net/en/trip-idea/the-nakasendo-trail-guide"
+ },
+ "why": "The best kept stretch of the Edo-period highway: from one wooden post town over a forest pass to another, with a free teahouse halfway.",
+ "book": "Free. Bus from Nakatsugawa station to Magome; from Tsumago a bus goes to Nagiso station. Same-day luggage forwarding between the two tourist offices runs late March to late November.",
+ "water": "Vending machines and shops in both towns; the Ichikokutochi teahouse serves tea. Carry 1 litre.",
+ "dangers": [
+  "Cobbles and steps are slippery when wet, and icy in winter.",
+  "Bears live in the forest: bells hang along the trail, ring them.",
+  "Paved road crossings: watch for cars."
+ ],
+ "turnaround": "None needed: if you are tired at Magome pass, the bus road is next to it.",
+ "sources": [
+  "https://www.go-nagano.net/en/trip-idea/the-nakasendo-trail-guide",
+  "https://db.go-nagano.net/en/topics_detail6/id=12314",
+  "https://en.wikivoyage.org/wiki/Magome-Tsumago_Trail",
+  "https://www.openstreetmap.org/node/1301231565"
+ ],
+ "osm": 10128790,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 5,
+  "relax": 3,
+  "history": 5,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Magome post town",
+   "lat": 35.52466,
+   "lon": 137.56534,
+   "role": "start",
+   "note": "From the bus stop the route climbs the steep stone street of Magome-juku, past the water wheel and the inns, then leaves the town at the lookout.",
+   "scene": "jp-magome"
+  },
+  {
+   "id": "magome-pass",
+   "name": "Magome pass (Magome-toge)",
+   "lat": 35.53869,
+   "lon": 137.58455,
+   "role": "point",
+   "note": "The top of the walk, about 800 m, now the border of Gifu and Nagano. From here it is downhill to Tsumago."
+  },
+  {
+   "id": "teahouse",
+   "name": "Ichikokutochi teahouse",
+   "lat": 35.54529,
+   "lon": 137.58601,
+   "role": "point",
+   "note": "An old farmhouse where volunteers serve free tea to walkers, beside the site of the Edo timber checkpoint.",
+   "scene": "jp-nakasendo"
+  },
+  {
+   "id": "odaki-and-medaki-falls",
+   "name": "Odaki and Medaki falls",
+   "lat": 35.5545,
+   "lon": 137.58866,
+   "role": "point",
+   "note": "The 'male and female' falls, a few steps off the path in the cedar forest."
+  },
+  {
+   "id": "goal",
+   "name": "Tsumago post town",
+   "lat": 35.57699,
+   "lon": 137.59542,
+   "role": "goal",
+   "note": "A whole street of Edo-period wooden inns, closed to cars by day. Pick up forwarded luggage at the tourist office.",
+   "scene": "jp-tsumago"
+  }
+ ]
+}

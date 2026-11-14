@@ -1,0 +1,85 @@
+{
+ "id": "nz-rangitoto-summit",
+ "country": "NZ",
+ "name": "Rangitoto Summit Track",
+ "base": "Auckland",
+ "region": "Rangitoto Island, Hauraki Gulf",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2,
+  2.5
+ ],
+ "start_by": "09:30",
+ "published": {
+  "km": 7,
+  "gain_m": 250,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/auckland/places/rangitoto-island/tracks/rangitoto-summit-track/"
+ },
+ "why": "A ferry ride from downtown Auckland, then black lava fields and pōhutukawa forest up to the crater rim of the city's youngest volcano.",
+ "book": "Free, no booking. Ferry from Queens Wharf (25 min) or Devonport (20 min): book it and keep the return time. The island is pest free: check and clean your gear.",
+ "water": "No water or food on the island: carry 1-2 litres per person.",
+ "dangers": [
+  "Black lava reflects heat: very hot in summer, little shade.",
+  "Rough, loose volcanic rock: wear shoes with grip.",
+  "Lava caves are dark and low: bring a torch."
+ ],
+ "turnaround": "Be back at the wharf 15 min before your return ferry; the last one does not wait.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/auckland/places/rangitoto-island/tracks/rangitoto-summit-track/",
+  "https://www.openstreetmap.org/relation/6891933"
+ ],
+ "osm": 6891933,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 2,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Rangitoto Wharf",
+   "lat": -36.80836,
+   "lon": 174.86191,
+   "role": "start",
+   "note": "Ferry wharf and the carved gateway; the Summit Track starts past the historic Scouts bach."
+  },
+  {
+   "id": "rangitoto-lava-fields",
+   "name": "Rangitoto lava fields",
+   "lat": -36.79903,
+   "lon": 174.85917,
+   "role": "point",
+   "note": "Black scoria with pōhutukawa growing out of it; turn-offs to Wilson's Park and the lava caves follow."
+  },
+  {
+   "id": "goal",
+   "name": "Rangitoto summit crater",
+   "lat": -36.78768,
+   "lon": 174.85838,
+   "role": "goal",
+   "note": "Summit Lookout at 259 m over the 60 m deep crater, Auckland and the Hauraki Gulf. The crater rim loop is 20 min."
+  }
+ ]
+}

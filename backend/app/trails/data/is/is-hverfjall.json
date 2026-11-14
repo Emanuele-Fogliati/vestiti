@@ -1,0 +1,83 @@
+{
+ "id": "is-hverfjall",
+ "country": "IS",
+ "name": "Hverfjall crater and Dimmuborgir",
+ "base": "Mývatn",
+ "region": "East shore of Lake Mývatn, North Iceland",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "09:00",
+ "why": "Up the black tephra cone of Hverfjall, along the rim of a crater a kilometre wide with Mývatn below, then down across the lava to the dark castles of Dimmuborgir.",
+ "book": "Free. One way: leave a car at Dimmuborgir, or walk back the same way; the marked path also goes on north to Reykjahlíð. Do not walk into the crater bowl: it is closed to stop erosion.",
+ "water": "None on the crater: carry 1 litre. Kaffi Borgir café at Dimmuborgir.",
+ "dangers": [
+  "Wind on the open rim, and loose tephra on the steep south descent.",
+  "Hidden cracks in the Dimmuborgir lava: stay on the marked paths.",
+  "Midges by the lake in June and July: a head net helps."
+ ],
+ "turnaround": "Gale on the rim: walk back down the north path to the car park.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/M%C3%BDvatn",
+  "https://www.northiceland.is/en/place/hverfjall",
+  "https://www.northiceland.is/en/place/dimmuborgir",
+  "https://www.openstreetmap.org/way/2818432"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 0,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hverfjall car park",
+   "lat": 65.61334,
+   "lon": -16.87505,
+   "role": "start",
+   "note": "At the end of the Hverfjallsvegur track, below the north side of the cone; path HV 1 zigzags straight up."
+  },
+  {
+   "id": "rim",
+   "name": "Hverfjall crater rim",
+   "lat": 65.60892,
+   "lon": -16.87764,
+   "role": "point",
+   "note": "The rim, about 140 m above the crater floor: a ring of black tephra 1 km across, Mývatn and the lava fields all round.",
+   "scene": "is-hverfjall"
+  },
+  {
+   "id": "south-rim",
+   "name": "South rim of Hverfjall",
+   "lat": 65.60098,
+   "lon": -16.8781,
+   "role": "point",
+   "note": "Walk the rim clockwise to the south side, where path HV 2 drops steeply towards the lava."
+  },
+  {
+   "id": "goal",
+   "name": "Dimmuborgir",
+   "lat": 65.59128,
+   "lon": -16.90287,
+   "role": "goal",
+   "note": "The 'dark castles': lava pillars, arches and caves such as Kirkjan, the 'church'. Short marked loops lead to the car park and café.",
+   "scene": "is-dimmuborgir"
+  }
+ ]
+}

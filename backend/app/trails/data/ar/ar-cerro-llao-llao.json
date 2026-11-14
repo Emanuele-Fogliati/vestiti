@@ -1,0 +1,72 @@
+{
+ "id": "ar-cerro-llao-llao",
+ "country": "AR",
+ "name": "Cerro Llao Llao",
+ "base": "Bariloche",
+ "region": "Parque Municipal Llao Llao, Circuito Chico",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  9,
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "hours": [
+  2,
+  2.5
+ ],
+ "start_by": "",
+ "published": {
+  "km": 6,
+  "gain_m": null,
+  "source": "https://barilochetrekking.com/sendero-mb2/"
+ },
+ "why": "A short forest climb to the best view of the Llao Llao peninsula: Lago Nahuel Huapi, Lago Moreno and the hotel below.",
+ "book": "Pay the Parque Municipal Llao Llao entry online or by the QR code at the gate. Open 08:00-22:00 in summer; closed on windy days. Bus 20 to Puerto Pañuelo (km 25 of Avenida Bustillo).",
+ "water": "None on the trail; café at the information centre.",
+ "dangers": [
+  "The last stretch to the top is steep with roots and loose soil.",
+  "Trails close in strong wind: falling branches."
+ ],
+ "turnaround": "None needed: about an hour up.",
+ "sources": [
+  "https://barilochetrekking.com/sendero-mb2/",
+  "https://en.wikivoyage.org/wiki/Bariloche",
+  "https://www.openstreetmap.org/way/200818063"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Llao Llao forest trailhead",
+   "lat": -41.05064,
+   "lon": -71.54448,
+   "role": "start",
+   "note": "300 m past the Llao Llao information centre, on the right of the Circuito Chico road. The path climbs through coihue and cypress forest."
+  },
+  {
+   "id": "goal",
+   "name": "Cerro Llao Llao lookout",
+   "lat": -41.04602,
+   "lon": -71.55531,
+   "role": "goal",
+   "note": "1,025 m. Lago Nahuel Huapi, Lago Moreno and the Llao Llao hotel on its peninsula below."
+  }
+ ]
+}

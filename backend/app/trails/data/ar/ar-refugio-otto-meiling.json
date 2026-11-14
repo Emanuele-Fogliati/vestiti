@@ -1,0 +1,88 @@
+{
+ "id": "ar-refugio-otto-meiling",
+ "country": "AR",
+ "name": "Refugio Otto Meiling on Tronador",
+ "base": "Bariloche",
+ "region": "Nahuel Huapi National Park, Cerro Tronador",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  9,
+  12
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 28,
+  "gain_m": null,
+  "source": "https://www.clubandino.org/refugios-y-campings/refugio-otto-meiling/"
+ },
+ "why": "A hut on a rock ridge at 1,900 m between two of Tronador's glaciers, with the ice field at the door.",
+ "book": "Book a bed at the hut (Club Andino Bariloche / the hut's office in Bariloche). Nahuel Huapi park fee at the Lago Mascardi ranger post. The gravel road from Los Rápidos to Pampa Linda is one-way by the hour: up only 10:30-14:00, down only 16:00-18:00. A minibus runs from Bariloche in summer.",
+ "water": "Streams to the Descanso de los Caballos; above it the ridge is dry. Meals and drinks at the hut.",
+ "dangers": [
+  "The last 3 km are on bare rock above the trees, marked only with paint: easy to lose in cloud.",
+  "Do not walk onto the glaciers without a guide and crampons.",
+  "Weather on Tronador changes fast: wind, rain and snow even in summer."
+ ],
+ "turnaround": "Leave Pampa Linda by 10:00; if you are not at the Descanso de los Caballos by 15:00, turn back.",
+ "sources": [
+  "https://www.clubandino.org/refugios-y-campings/refugio-otto-meiling/",
+  "https://barilochetrekking.com/sendero-124/",
+  "https://www.argentina.gob.ar/parquesnacionales/tarifas",
+  "https://www.openstreetmap.org/way/287208256"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Pampa Linda",
+   "lat": -41.23,
+   "lon": -71.7731,
+   "role": "start",
+   "note": "Ranger post, hostería and campsite at the end of the road under Tronador. The first 3 km follow a narrow track to the Castaño Overa bridge."
+  },
+  {
+   "id": "almohadilla",
+   "name": "La Almohadilla",
+   "lat": -41.19148,
+   "lon": -71.78785,
+   "role": "point",
+   "note": "Top of the forest climb, after about 9 km and 550 m: first open view of Tronador."
+  },
+  {
+   "id": "glaciers",
+   "name": "Castaño Overa glacier view",
+   "lat": -41.18488,
+   "lon": -71.79898,
+   "role": "point",
+   "note": "Near the Descanso de los Caballos at the tree line: the Castaño Overa glacier and its waterfalls. Above, a bare ridge marked with paint."
+  },
+  {
+   "id": "goal",
+   "name": "Refugio Otto Meiling",
+   "lat": -41.1759,
+   "lon": -71.8181,
+   "role": "goal",
+   "night": true,
+   "note": "1,905 m, on the ridge between the Castaño Overa and Alerce glaciers. Meals, bunks and guided walks on the ice."
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "id": "is-kerlingarfjoll",
+ "country": "IS",
+ "name": "Kerlingarfjöll: Hveradalir and Snækollur",
+ "base": "Kerlingarfjöll",
+ "region": "Kerlingarfjöll, Kjölur, central highlands",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  5,
+  6.5
+ ],
+ "start_by": "09:00",
+ "why": "Down the steps into Hveradalir, a valley of steaming vents and boiling mud between orange rhyolite slopes, then up past Fannborg to Snækollur, 1,477 m, the top of the range.",
+ "book": "Free. Highland roads only: Kjalvegur (F35) and F347 from Ásgarður up to the Hveradalir car park, open roughly July to September. Beds and campsite at the Ásgarður service centre (Kerlingarfjöll). The way up Fannborg and Snækollur is not marked.",
+ "water": "None on the mountain: carry 1.5 litres and food. Hot springs are not drinkable.",
+ "dangers": [
+  "In Hveradalir new hot springs can open: stay on the marked paths and steps, the clay is slippery.",
+  "Above Keis the route is not marked: in fog you can lose it on the bare ridges.",
+  "Snowfields and steep scree on Fannborg; cold wind on the summit even in August."
+ ],
+ "turnaround": "Cloud on the ridge above Keis: stop at Hveradalir, the summit route cannot be found in fog.",
+ "sources": [
+  "https://ust.is/library/sida/Nattura/Kerlingarfjoll%20-%20trail%20guide.pdf",
+  "https://www.openstreetmap.org/way/299028466"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hveradalir car park",
+   "lat": 64.6464,
+   "lon": -19.27909,
+   "role": "start",
+   "note": "End of the F347 above the geothermal valley; steps lead down into it."
+  },
+  {
+   "id": "hveradalir",
+   "name": "Hveradalir geothermal valley",
+   "lat": 64.64412,
+   "lon": -19.28926,
+   "role": "point",
+   "note": "Neðri-Hveradalir: fumaroles, mud pots and hot streams over two footbridges on the Ásgarðsá. Walk back up to the road for the mountain.",
+   "scene": "is-kerlingarfjoll"
+  },
+  {
+   "id": "keis",
+   "name": "Keis car park",
+   "lat": 64.65096,
+   "lon": -19.25578,
+   "role": "point",
+   "note": "By the shed called Kastali. The route follows a rhyolite ridge south-west to the foot of Fannborg and climbs its west flank."
+  },
+  {
+   "id": "fannborg",
+   "name": "Fannborg",
+   "lat": 64.64248,
+   "lon": -19.2417,
+   "role": "point",
+   "note": "The first summit; the path then runs east past the cliff Úrilli, a good place for a rest."
+  },
+  {
+   "id": "goal",
+   "name": "Snækollur",
+   "lat": 64.64371,
+   "lon": -19.22875,
+   "role": "goal",
+   "note": "1,477 m, the highest peak of Kerlingarfjöll, near the centre of Iceland: in exceptionally clear weather you see the sea to the west and north. Back the same way."
+  }
+ ]
+}

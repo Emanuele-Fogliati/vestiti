@@ -1,0 +1,110 @@
+{
+ "id": "ar-nahuel-huapi-traverse",
+ "country": "AR",
+ "name": "Nahuel Huapi Traverse",
+ "base": "Bariloche",
+ "region": "Nahuel Huapi National Park, Catedral to Cerro López",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "technical",
+ "months": [
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  27,
+  33
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 41,
+  "gain_m": null,
+  "source": "https://barilochetrekking.com/sendero-205/"
+ },
+ "why": "Bariloche's classic hut-to-hut: four granite valleys, three passes and a lake by every hut, from Cerro Catedral to Cerro López.",
+ "book": "Book the huts (Frey, San Martín/Jakob, Italia at Laguna Negra, López) and register the trek online. Bus 55 to Villa Catedral; from the end at Ruta 79 by Arroyo López, bus 10 back to Bariloche.",
+ "water": "Streams and lakes at every hut; the passes are dry. Meals at the huts.",
+ "dangers": [
+  "Jakob to Laguna Negra is graded extreme: steep loose scree and hand-on-rock steps. Walk it only in that direction.",
+  "Snow lies on the passes into January: the Jakob-Negra stage is advised from February.",
+  "Wind and cloud on the ridges; no way off between huts."
+ ],
+ "turnaround": "On each pass stage, leave the hut by 08:00 and turn back if the pass is not reached by 13:00.",
+ "sources": [
+  "https://barilochetrekking.com/sendero-63/",
+  "https://barilochetrekking.com/sendero-204/",
+  "https://barilochetrekking.com/sendero-205/",
+  "https://barilochetrekking.com/sendero-206/",
+  "https://barilochetrekking.com/sendero-90/",
+  "https://refugiojakob.com.ar/travesias-y-paseos/",
+  "https://hiking.waymarkedtrails.org/#route?id=2203242"
+ ],
+ "osm": 2203242,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Villa Catedral",
+   "lat": -41.1697,
+   "lon": -71.4423,
+   "role": "start",
+   "note": "Cerro Catedral ski base. 10 km and 700 m through forest along the Van Titter stream to the first hut.",
+   "scene": "ar-cerro-catedral"
+  },
+  {
+   "id": "frey",
+   "name": "Refugio Frey",
+   "lat": -41.19825,
+   "lon": -71.48628,
+   "role": "point",
+   "night": true,
+   "note": "1,740 m: stone hut on Laguna Toncek under the Catedral needles. Next day: over the ridge and down the Rucaco valley to Jakob, 8-10 h.",
+   "scene": "ar-refugio-frey"
+  },
+  {
+   "id": "jakob",
+   "name": "Refugio San Martín, Laguna Jakob",
+   "lat": -41.18675,
+   "lon": -71.56102,
+   "role": "point",
+   "night": true,
+   "note": "1,564 m on Laguna Jakob. The hardest stage follows: 10 km and 850 m over the Cordón de los Inocentes to Laguna Negra."
+  },
+  {
+   "id": "laguna-negra",
+   "name": "Laguna Negra, Refugio Italia",
+   "lat": -41.1367,
+   "lon": -71.57778,
+   "role": "point",
+   "night": true,
+   "note": "Refugio Manfredo Segre at 1,609 m on a dark lake under Cerro Negro. On to López: 8 km and 500 m along the ridge, 5-6 h."
+  },
+  {
+   "id": "lopez",
+   "name": "Refugio López",
+   "lat": -41.10229,
+   "lon": -71.55968,
+   "role": "point",
+   "note": "Under Pico Turista, looking down on Lago Nahuel Huapi. Food and beds; from here a 4 km track zigzags down to the road."
+  },
+  {
+   "id": "goal",
+   "name": "Ruta 79 at Arroyo López",
+   "lat": -41.09207,
+   "lon": -71.52604,
+   "role": "goal",
+   "note": "End of the traverse on the Circuito Chico road near Colonia Suiza, by the bus stop for Bariloche."
+  }
+ ]
+}

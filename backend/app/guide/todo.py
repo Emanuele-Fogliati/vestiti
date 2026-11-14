@@ -350,5 +350,6 @@ def with_trails(todo: Todo, name: str, country: str | None, lat: float, lon: flo
                 used.add(t.id)
                 it = it.model_copy(update={"trail": t.id})
         items.append(it)
-    extra = [_trail_item(t) for t in near if t.kind == "day" and t.id not in used]
+    # only the top treks join the list by themselves; the long tail (tier B) stays on the map
+    extra = [_trail_item(t) for t in near if t.kind == "day" and t.tier == "A" and t.id not in used]
     return todo.model_copy(update={"items": items + extra})

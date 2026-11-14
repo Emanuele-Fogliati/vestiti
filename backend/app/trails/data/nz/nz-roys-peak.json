@@ -1,0 +1,86 @@
+{
+ "id": "nz-roys-peak",
+ "country": "NZ",
+ "name": "Roys Peak Track",
+ "base": "Wānaka",
+ "region": "Wānaka area, Otago",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 16,
+  "gain_m": 1200,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/roys-peak-track/"
+ },
+ "why": "Two hours of zigzags straight up a sheep farm, then the ridge everyone photographs: Lake Wānaka's arms below and the Southern Alps behind.",
+ "book": "Free, no permit. Closed for lambing 1 October to 10 November. The car park, 6 km west of Wānaka on the Mount Aspiring Road, fills early: walk or cycle out on the Waterfall Creek and Glendhu Bay tracks, or take a shuttle.",
+ "water": "None on the track and no shade: carry 2-3 litres in summer.",
+ "dangers": [
+  "Steep and exposed the whole way: in summer heat and sun are the problem, in winter snow and ice.",
+  "Wind and cold on the summit ridge even on warm days: carry a warm layer and a shell.",
+  "The track crosses private farmland: stay on it, gates as you find them."
+ ],
+ "turnaround": "Not at the photo viewpoint by 13:00: take your picture there and go back down.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/wanaka-area/things-to-do/roys-peak-track/",
+  "https://www.openstreetmap.org/way/201008084"
+ ],
+ "osm_ways": [
+  491847196,
+  403925102,
+  403925096,
+  491847198,
+  1334653890,
+  403925104
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Roys Peak car park",
+   "lat": -44.67336,
+   "lon": 169.07189,
+   "role": "start",
+   "note": "On the Mount Aspiring Road by the lake; the track climbs straight from the gate through farmland."
+  },
+  {
+   "id": "viewpoint",
+   "name": "Roys Peak ridge viewpoint",
+   "lat": -44.68934,
+   "lon": 169.04992,
+   "role": "point",
+   "note": "The famous photo spot on the ridge, about 30 minutes below the summit, with the lake's arms on both sides."
+  },
+  {
+   "id": "goal",
+   "name": "Roys Peak summit",
+   "lat": -44.69431,
+   "lon": 169.04911,
+   "role": "goal",
+   "note": "1,578 m: Mount Aspiring to the west, Lake Wānaka and the Clutha basin to the east. Return the same way."
+  }
+ ]
+}

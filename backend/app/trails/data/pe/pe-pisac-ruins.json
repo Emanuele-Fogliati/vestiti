@@ -1,0 +1,74 @@
+{
+ "id": "pe-pisac-ruins",
+ "country": "PE",
+ "name": "Pisac ruins on foot",
+ "base": "Pisac",
+ "region": "Pisac Archaeological Park, Sacred Valley",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "07:30",
+ "published": null,
+ "why": "Climb from the market square of Pisac up the curved Inca terraces to the Intihuatana temple on the ridge, with the Sacred Valley under your feet.",
+ "book": "Boleto Turístico del Cusco, cash in soles with your passport: sold at the control point at the town exit and at the upper entrance. The park is open 07:00-18:00. A lazier way: taxi to the upper entrance (about S/30-35) and walk down only.",
+ "water": "No water is sold inside the park: carry 1.5 litres.",
+ "dangers": [
+  "Steep stone steps and narrow ledges with drops beside the terraces.",
+  "Loose gravel on parts of the path; slippery in the rainy season.",
+  "Strong sun at 3,000-3,400 m: hat and sunscreen."
+ ],
+ "turnaround": "Be out of the ruins before dark: the site is isolated and closes at 18:00.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Pisac",
+  "https://www.openstreetmap.org/node/2284285867"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 3,
+  "nature": 2,
+  "culture": 4,
+  "relax": 2,
+  "history": 5,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Pisac market square",
+   "lat": -13.42105,
+   "lon": -71.8505,
+   "role": "start",
+   "note": "The plaza and Sunday market by the church of San Pedro. The path starts to its left and climbs along the Kitamayo stream.",
+   "scene": "pe-pisac"
+  },
+  {
+   "id": "terraces",
+   "name": "Pisac terraces",
+   "lat": -13.41746,
+   "lon": -71.84463,
+   "role": "point",
+   "note": "Past the fork above the fields the right branch crosses the stream and climbs straight up the Inca terraces to the watchtowers on the ridge."
+  },
+  {
+   "id": "goal",
+   "name": "Intihuatana of Pisac",
+   "lat": -13.41422,
+   "lon": -71.84405,
+   "role": "goal",
+   "note": "The ceremonial sector: the sun stone and fine Inca temples on the ridge, about 3,350 m. Walk down the same way, keeping the mountain on your right."
+  }
+ ]
+}

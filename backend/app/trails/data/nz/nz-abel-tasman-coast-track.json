@@ -1,0 +1,112 @@
+{
+ "id": "nz-abel-tasman-coast-track",
+ "country": "NZ",
+ "name": "Abel Tasman Coast Track",
+ "base": "Motueka",
+ "region": "Abel Tasman National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  13.5,
+  15
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 41.4,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/things-to-do/tracks/abel-tasman-coast-track/"
+ },
+ "why": "Coastal forest and golden bays from Mārahau to Tōtaranui, with tidal estuaries to wade and a water taxi back.",
+ "book": "Huts and campsites must be booked all year round. Mārahau is 18 km from Motueka; book the water taxi back from Tōtaranui. Check the tide tables: Awaroa Inlet can only be crossed 1 h 30 min before to 2 h after low tide.",
+ "water": "Tap water at huts and campsites, untreated: boil or treat it.",
+ "dangers": [
+  "Awaroa Inlet is a compulsory tidal crossing: arrive at the wrong time and you wait hours.",
+  "Steep, rough or muddy sections between the bays.",
+  "Sun on the beaches and sandflies at the campsites."
+ ],
+ "turnaround": "At Awaroa, if low tide does not fit your day, stay at Awaroa Hut or take the water taxi from Awaroa beach.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/abel-tasman-national-park/things-to-do/tracks/abel-tasman-coast-track/",
+  "https://www.openstreetmap.org/relation/5987159"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Mārahau",
+   "lat": -40.99585,
+   "lon": 173.00522,
+   "role": "start",
+   "note": "Track start at the park entrance; the causeway crosses the estuary."
+  },
+  {
+   "id": "anchorage-bay",
+   "name": "Anchorage Hut",
+   "lat": -40.95693,
+   "lon": 173.05766,
+   "role": "point",
+   "note": "First night, 12.4 km in, on the beach of Anchorage Bay. Te Pukatea Bay is over the hill.",
+   "night": true
+  },
+  {
+   "id": "bark-bay",
+   "name": "Bark Bay Hut",
+   "lat": -40.91612,
+   "lon": 173.04857,
+   "role": "point",
+   "note": "Second night. On the way, the 47 m Falls River bridge; Torrent Bay estuary has an all-tide track.",
+   "night": true
+  },
+  {
+   "id": "awaroa-inlet",
+   "name": "Awaroa Hut",
+   "lat": -40.86525,
+   "lon": 173.01757,
+   "role": "point",
+   "note": "Third night on Awaroa Inlet, after Onetahuti Bay and Tonga Saddle. Cross the inlet at low tide.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Tōtaranui",
+   "lat": -40.82268,
+   "lon": 173.00429,
+   "role": "goal",
+   "note": "Ranger office, campground and beach, 7.1 km past the inlet. Water taxis back to Mārahau."
+  }
+ ],
+ "via": [
+  [
+   -40.97752,
+   173.04025
+  ],
+  [
+   -40.96604,
+   173.04545
+  ],
+  [
+   -40.88706,
+   173.04697
+  ]
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "id": "ar-garganta-del-diablo-tilcara",
+ "country": "AR",
+ "name": "Garganta del Diablo of Tilcara",
+ "base": "Tilcara",
+ "region": "Tilcara, Quebrada de Humahuaca",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "why": "A climb from Tilcara up the cactus slopes of the Huasamayo valley into a narrow gorge that ends at a waterfall.",
+ "book": "A small fee is charged at the entrance to the gorge. You can walk from town or take a taxi to the entrance.",
+ "water": "None on the way: carry 1.5 litres.",
+ "dangers": [
+  "The path down into the gorge is short but steep and stony: proper shoes, not sandals.",
+  "Flash floods in the gorge after storms in the rainy season.",
+  "Strong sun at 2,500-2,900 m."
+ ],
+ "turnaround": "Do not go into the gorge if storms are building over the hills.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Tilcara",
+  "https://www.openstreetmap.org/node/1684171805"
+ ],
+ "tier": "A",
+ "area": "ar-quebrada",
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tilcara main square",
+   "lat": -23.5768,
+   "lon": -65.3923,
+   "role": "start",
+   "note": "Plaza Álvarez Prado. Walk south-east up Avenida Huasamayo and the footpath signed for the Garganta del Diablo."
+  },
+  {
+   "id": "entrance",
+   "name": "Garganta del Diablo entrance",
+   "lat": -23.59387,
+   "lon": -65.37421,
+   "role": "point",
+   "note": "Viewpoint over the gorge at about 2,900 m; pay here. A steep path drops into the riverbed."
+  },
+  {
+   "id": "goal",
+   "name": "Garganta del Diablo waterfall",
+   "lat": -23.595,
+   "lon": -65.3702,
+   "role": "goal",
+   "note": "The waterfall at the end of the narrow gorge, with pools below it.",
+   "scene": "ar-garganta-del-diablo"
+  }
+ ]
+}

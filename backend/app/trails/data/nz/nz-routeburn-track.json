@@ -1,0 +1,98 @@
+{
+ "id": "nz-routeburn-track",
+ "country": "NZ",
+ "name": "Routeburn Track",
+ "base": "Queenstown",
+ "region": "Mount Aspiring and Fiordland national parks",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  11,
+  15.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 33,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/routeburn-track/"
+ },
+ "why": "Up the Route Burn to the tops, over Harris Saddle and along the Hollyford Face with the Darran Mountains across the valley.",
+ "book": "Great Walk: Routeburn Flats, Routeburn Falls and Lake Mackenzie huts and campsites must be booked for 1 Nov-30 Apr. The ends are 325 km apart by road: book transport at both ends (Routeburn Shelter is 25 km from Glenorchy, The Divide 85 km from Te Anau).",
+ "water": "Tap water at huts and campsites, untreated: boil it. Streams on the way.",
+ "dangers": [
+  "The Harris Saddle and Hollyford Face sections are exposed to wind, rain and snow at any time of year.",
+  "Avalanche risk can last into December; DOC may close sections.",
+  "Rockfall zones: do not stop where signs say so."
+ ],
+ "turnaround": "If the weather on the tops is bad at Routeburn Falls Hut or Lake Mackenzie Hut, wait or go back down rather than cross Harris Saddle.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/routeburn-track/",
+  "https://www.openstreetmap.org/relation/1385139"
+ ],
+ "osm": 1385139,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Routeburn Shelter",
+   "lat": -44.71885,
+   "lon": 168.27869,
+   "role": "start",
+   "note": "Road end 25 km from Glenorchy. The track follows the Route Burn through beech forest."
+  },
+  {
+   "id": "routeburn-falls-hut",
+   "name": "Routeburn Falls Hut",
+   "lat": -44.72595,
+   "lon": 168.19933,
+   "role": "point",
+   "note": "First night, at the bushline beside the Routeburn Falls, about 10 km in.",
+   "night": true
+  },
+  {
+   "id": "harris-saddle",
+   "name": "Harris Saddle",
+   "lat": -44.72583,
+   "lon": 168.17268,
+   "role": "point",
+   "note": "Tarahaka Whakatipu, 1,255 m, above Lake Harris. Day shelter with toilets; Conical Hill is a steep 1 h 30 min side trip.",
+   "scene": "nz-routeburn-track"
+  },
+  {
+   "id": "lake-mackenzie",
+   "name": "Lake Mackenzie Hut",
+   "lat": -44.76764,
+   "lon": 168.17357,
+   "role": "point",
+   "note": "Second night beside Lake Mackenzie, after the traverse of the Hollyford Face.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "The Divide",
+   "lat": -44.82478,
+   "lon": 168.11771,
+   "role": "goal",
+   "note": "Past Earland Falls and Lake Howden down to the Milford Road at 532 m. Key Summit is a 1-1 h 30 min side trip."
+  }
+ ]
+}

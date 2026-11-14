@@ -1,0 +1,105 @@
+{
+ "id": "nz-kepler-track",
+ "country": "NZ",
+ "name": "Kepler Track",
+ "base": "Te Anau",
+ "region": "Fiordland National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  19,
+  23.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 60,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/kepler-track/"
+ },
+ "why": "A loop from Lake Te Anau up to a long open ridge under Mount Luxmore, then down the Iris Burn to Lake Manapouri.",
+ "book": "Great Walk: Luxmore, Iris Burn and Moturau huts and Brod Bay and Iris Burn campsites must be booked for 27 Oct-30 Apr. The car park by the control gates is 5 km from Te Anau; shuttles also stop at Rainbow Reach.",
+ "water": "Fill up at Luxmore Hut: no reliable water on the alpine section until Iris Burn Hut.",
+ "dangers": [
+  "The ridge between Luxmore and Iris Burn huts is above the bushline for hours, exposed to wind, cloud and snow.",
+  "Steep climb under limestone bluffs from Brod Bay to the bushline.",
+  "Avalanche terrain on the tops outside the summer season."
+ ],
+ "turnaround": "If it is windy or in cloud at Luxmore Hut, do not set out along the ridge: wait or walk back to the car park.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/kepler-track/",
+  "https://www.openstreetmap.org/relation/1385141"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kepler Track car park, control gates",
+   "lat": -45.44253,
+   "lon": 167.68975,
+   "role": "start",
+   "note": "At the Waiau River control gates, 5 km from Te Anau. Lakeside beech forest to Brod Bay."
+  },
+  {
+   "id": "luxmore-hut",
+   "name": "Luxmore Hut",
+   "lat": -45.38522,
+   "lon": 167.61921,
+   "role": "point",
+   "note": "First night, above the bushline with views over Lake Te Anau. Luxmore Cave is 20 min return.",
+   "night": true
+  },
+  {
+   "id": "luxmore-ridge",
+   "name": "Mount Luxmore ridge",
+   "lat": -45.38666,
+   "lon": 167.58582,
+   "role": "point",
+   "note": "Turn-off for the 30 min return to the 1,472 m summit, the highest point of the track."
+  },
+  {
+   "id": "iris-burn-hut",
+   "name": "Iris Burn Hut",
+   "lat": -45.39901,
+   "lon": 167.50946,
+   "role": "point",
+   "note": "Second night, in a tussock clearing after the long zigzag descent from the ridge.",
+   "night": true
+  },
+  {
+   "id": "moturau-hut",
+   "name": "Moturau Hut",
+   "lat": -45.48171,
+   "lon": 167.6107,
+   "role": "point",
+   "note": "Third night on the beach of Lake Manapouri, after 16.2 km down the Iris Burn.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Rainbow Reach",
+   "lat": -45.49235,
+   "lon": 167.66246,
+   "role": "goal",
+   "note": "Swing bridge over the Waiau River and a shuttle stop; the loop goes on 9.5 km along the river to the car park."
+  }
+ ]
+}

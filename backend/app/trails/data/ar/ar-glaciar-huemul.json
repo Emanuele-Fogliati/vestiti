@@ -1,0 +1,72 @@
+{
+ "id": "ar-glaciar-huemul",
+ "country": "AR",
+ "name": "Glaciar Huemul at Lago del Desierto",
+ "base": "El Chaltén",
+ "region": "Lago del Desierto, north of El Chaltén",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "10:00",
+ "published": {
+  "km": 4,
+  "gain_m": null,
+  "source": "https://elchalten.com/v4/en/huemul-glacier-trek-lago-del-desierto-el-chalten.php"
+ },
+ "why": "A short, steep climb through lenga forest from the end of the road to a grey lagoon with a hanging glacier above it.",
+ "book": "The trail crosses private land at Punta Sur and an entry fee is charged at the start (cash). Lago del Desierto is 37 km north of El Chaltén on gravel Ruta 41: drive, or take a transfer or the Lago del Desierto bus.",
+ "water": "The stream by the trail runs from the glacier; carry a bottle. Food only at Punta Sur.",
+ "dangers": [
+  "Steep, rooty and slippery after rain on the way up.",
+  "Do not climb onto the ice or the moraine above the lagoon: falling ice and loose rock."
+ ],
+ "turnaround": "Plan to be back at Punta Sur by the time your bus or transfer leaves: the trail takes about 2 hours return.",
+ "sources": [
+  "https://elchalten.com/v4/en/huemul-glacier-trek-lago-del-desierto-el-chalten.php",
+  "https://es.wikipedia.org/wiki/Glaciar_Huemul",
+  "https://en.wikivoyage.org/wiki/El_Chalt%C3%A9n",
+  "https://www.openstreetmap.org/way/545526056"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Punta Sur, Lago del Desierto",
+   "lat": -49.08256,
+   "lon": -72.89167,
+   "role": "start",
+   "note": "The end of the road at the south shore of the lake: hostería, campsite, gendarmerie post and the boat pier. The trail starts behind the hostería."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Huemul and Glaciar Huemul",
+   "lat": -49.0725,
+   "lon": -72.9015,
+   "role": "goal",
+   "note": "About 1.7 km and 200 m up from the lake: a milky lagoon under the hanging Huemul glacier.",
+   "scene": "ar-huemul-glacier"
+  }
+ ]
+}

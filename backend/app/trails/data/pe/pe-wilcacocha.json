@@ -1,0 +1,70 @@
+{
+ "id": "pe-wilcacocha",
+ "country": "PE",
+ "name": "Laguna Wilcacocha",
+ "base": "Huaraz",
+ "region": "Cordillera Negra, south of Huaraz",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2.5,
+  3
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 6.4,
+  "gain_m": 500,
+  "source": "https://en.wikivoyage.org/wiki/Huaraz"
+ },
+ "why": "The first acclimatization walk from Huaraz: up through farm hamlets of the Cordillera Negra to a small lake that faces the whole snowy Cordillera Blanca.",
+ "book": "Free, no permit. Colectivo E or 10 from the Mercado Central in Huaraz (15 minutes, about S/1.5): ask for Chiwipampa, Puente Santa Cruz. Blue arrows mark the path from the bridge.",
+ "water": "Nothing to buy after the road: carry 1.5 litres.",
+ "dangers": [
+  "Altitude: you climb from about 3,200 to 3,725 m, so walk slowly if you arrived from the coast in the last two days.",
+  "Strong sun and no shade on the open slopes.",
+  "Farm dogs in the hamlets: keep walking calmly, a stick helps."
+ ],
+ "turnaround": "Headache, nausea or shortness of breath at rest: go back down, that is the point of an acclimatization walk.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Huaraz",
+  "https://www.openstreetmap.org/way/242886199"
+ ],
+ "tier": "A",
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 2,
+  "relax": 3,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Chiwipampa, Puente Santa Cruz",
+   "lat": -9.5969,
+   "lon": -77.51344,
+   "role": "start",
+   "note": "The bridge over the Río Santa where the colectivo stops. Cross it and follow the blue arrows up between the houses and fields."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Wilcacocha",
+   "lat": -9.5974,
+   "lon": -77.5314,
+   "role": "goal",
+   "note": "About 3,725 m. A small reedy lake; the reason to come is the view east over Huaraz to Huascarán and the Cordillera Blanca. Return the same way.",
+   "scene": "pe-laguna-wilcacocha"
+  }
+ ]
+}

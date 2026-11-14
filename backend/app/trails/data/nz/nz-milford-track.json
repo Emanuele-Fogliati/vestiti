@@ -1,0 +1,107 @@
+{
+ "id": "nz-milford-track",
+ "country": "NZ",
+ "name": "Milford Track",
+ "base": "Te Anau",
+ "region": "Fiordland National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  18.5,
+  20.5
+ ],
+ "start_by": "",
+ "published": {
+  "km": 53.5,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/milford-track/"
+ },
+ "why": "Four days up the Clinton valley, over Mackinnon Pass and down the Arthur valley past Sutherland Falls to Milford Sound.",
+ "book": "Great Walk: Clinton, Mintaro and Dumpling huts must be booked months ahead for 1 Nov-30 Apr; no camping. One direction only. Book the bus to Te Anau Downs, the boat to Glade Wharf and the boat from Sandfly Point.",
+ "water": "Tap water at the huts, untreated: boil it. Streams along the way, but do not fill bottles in the lakes (didymo).",
+ "dangers": [
+  "Up to 9,000 mm of rain a year: the Clinton and Arthur valleys flood and DOC may close the track.",
+  "Avalanche risk on the pass approaches into December.",
+  "Day 3 climbs 500 m to the pass and drops 1,000 m to Dumpling Hut on rough, slippery ground.",
+  "Sandflies at every hut and stop."
+ ],
+ "turnaround": "In cloud, snow or strong wind on Mackinnon Pass, follow the hut ranger's advice and wait a day at Mintaro rather than cross.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/fiordland/places/fiordland-national-park/things-to-do/tracks/milford-track/",
+  "https://www.openstreetmap.org/relation/1385121"
+ ],
+ "osm": 1385121,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Glade Wharf",
+   "lat": -44.93206,
+   "lon": 167.9302,
+   "role": "start",
+   "note": "At the head of Lake Te Anau, after the 1 h 15 min boat from Te Anau Downs. Flat beech forest to Clinton Hut."
+  },
+  {
+   "id": "clinton-hut",
+   "name": "Clinton Hut",
+   "lat": -44.90581,
+   "lon": 167.90832,
+   "role": "point",
+   "note": "First night, 5 km from the wharf, with a wetland boardwalk.",
+   "night": true
+  },
+  {
+   "id": "mintaro-hut",
+   "name": "Mintaro Hut",
+   "lat": -44.8092,
+   "lon": 167.77015,
+   "role": "point",
+   "note": "Second night by Lake Mintaro, at the foot of the pass after 17.5 km up the Clinton valley.",
+   "night": true
+  },
+  {
+   "id": "mackinnon-pass",
+   "name": "Mackinnon Pass",
+   "lat": -44.80249,
+   "lon": 167.76578,
+   "role": "point",
+   "note": "The McKinnon memorial and, just beyond, the shelter at 1,154 m, the highest point. Views of the Clinton Canyon."
+  },
+  {
+   "id": "dumpling-hut",
+   "name": "Dumpling Hut",
+   "lat": -44.76843,
+   "lon": 167.76496,
+   "role": "point",
+   "note": "Third night. Leave packs at Quintin Shelter for the 1 h 30 min side trip to 580 m Sutherland Falls.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Sandfly Point",
+   "lat": -44.68356,
+   "lon": 167.90253,
+   "role": "goal",
+   "note": "After 18 km along the Arthur River and Lake Ada. Be here for the early afternoon boat to Milford Sound."
+  }
+ ]
+}

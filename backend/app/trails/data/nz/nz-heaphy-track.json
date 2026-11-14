@@ -1,0 +1,108 @@
+{
+ "id": "nz-heaphy-track",
+ "country": "NZ",
+ "name": "Heaphy Track",
+ "base": "Collingwood",
+ "region": "Kahurangi National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  22.5,
+  24
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 78.4,
+  "gain_m": null,
+  "source": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/kahurangi-national-park/things-to-do/tracks/heaphy-track/"
+ },
+ "why": "From the Aorere valley over the open tussock of Gouland Downs and down the Heaphy River to nīkau palms and the West Coast surf.",
+ "book": "Huts and campsites must be booked all year round. Brown Hut is at the road end up the Aorere valley from Collingwood; Kohaihai is 15 km north of Karamea. The ends are far apart by road: book a shuttle or flight back. Mountain bikes 1 May-30 Nov.",
+ "water": "Tap water at huts and campsites, untreated: boil it.",
+ "dangers": [
+  "Gouland Downs is featureless in mist: stay on the track.",
+  "Floods near Saxon Hut, along the Heaphy River and at Cave Stream after heavy rain: wait in a hut.",
+  "Do not swim at the Heaphy or Kohaihai river mouths: strong currents and rips.",
+  "Large waves can close the coastal section at high tide in rough seas."
+ ],
+ "turnaround": "If the Heaphy River is flooded, stay at James Mackay or Heaphy Hut until it drops.",
+ "sources": [
+  "https://www.doc.govt.nz/parks-and-recreation/places-to-go/nelson-tasman/places/kahurangi-national-park/things-to-do/tracks/heaphy-track/",
+  "https://www.openstreetmap.org/relation/1385145"
+ ],
+ "osm": 1385145,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Brown Hut",
+   "lat": -40.85039,
+   "lon": 172.44715,
+   "role": "start",
+   "note": "Road end in the Aorere valley. The track climbs gradually on an old road survey line."
+  },
+  {
+   "id": "perry-saddle-hut",
+   "name": "Perry Saddle Hut",
+   "lat": -40.90088,
+   "lon": 172.40282,
+   "role": "point",
+   "note": "First night at 880 m, 17.5 km in; Flanagans Corner (915 m), the highest point, is 30 min before.",
+   "night": true
+  },
+  {
+   "id": "gouland-downs",
+   "name": "Gouland Downs",
+   "lat": -40.89057,
+   "lon": 172.35326,
+   "role": "point",
+   "note": "Open tussock downs and the small Gouland Downs Hut. Great spotted kiwi live here."
+  },
+  {
+   "id": "james-mackay-hut",
+   "name": "James Mackay Hut",
+   "lat": -40.88603,
+   "lon": 172.21721,
+   "role": "point",
+   "note": "Second night, on a terrace with the Tasman Sea 15 km west and 750 m below.",
+   "night": true
+  },
+  {
+   "id": "heaphy-hut",
+   "name": "Heaphy Hut, river mouth",
+   "lat": -40.98675,
+   "lon": 172.11086,
+   "role": "point",
+   "note": "Third night by the Heaphy River mouth, among nīkau palms. No swimming.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Kohaihai",
+   "lat": -41.10913,
+   "lon": 172.10308,
+   "role": "goal",
+   "note": "After 16.2 km of coastal forest and Scotts Beach: shelter and car park, 15 km from Karamea."
+  }
+ ]
+}
