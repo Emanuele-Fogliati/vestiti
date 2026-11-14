@@ -48,7 +48,7 @@ body{background:var(--bg)}
    The first time per visit: the universe, then the Earth flying in while it spins (Landing.tsx). */
 body.home-page{overflow:hidden;padding-bottom:0}
 body.home-page footer,body.home-page .mnav{display:none}
-body.home-page .top{position:fixed;left:0;right:0;top:0;z-index:30;background:transparent;border:0;--top-ink:#FFFFFF;--top-ink-2:rgba(255,255,255,.8);color:#FFFFFF;transition:opacity .6s}
+body.home-page .top{position:fixed;left:0;right:0;top:0;z-index:30;background:linear-gradient(rgba(42,68,104,.85),rgba(42,68,104,0));border:0;--top-ink:#FFFFFF;--top-ink-2:rgba(255,255,255,.8);color:#FFFFFF;transition:opacity .6s}
 body.home-page .top :is(a,button,.logo){color:#FFFFFF}
 body.home-page .top .nav a.active{background:transparent}
 body.home-intro .top{opacity:0;pointer-events:none}
@@ -60,20 +60,27 @@ body.home-intro .top{opacity:0;pointer-events:none}
 .home2.zoom .home2-space{opacity:0;transition:opacity 2.2s ease .2s}
 .home2.space .home2-space,.home2.zoom .home2-space{animation:home2-drift 5s ease-out both}
 @keyframes home2-drift{from{transform:scale(1)}to{transform:scale(1.35)}}
-.home2-globe{position:absolute;z-index:1;left:0;right:0;top:56px;height:min(calc(100svh - 300px),calc(100vw + 40px));
-  transform-origin:50% 50%;transition:transform 2.6s cubic-bezier(.16,.8,.12,1),opacity 1s ease}
-.home2-globe::before{content:"";position:absolute;left:50%;top:50%;width:78%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+.home2-globe{position:absolute;z-index:1;inset:0;
+  transform-origin:50% calc(56px + (100% - 56px - min(300px,38%)) / 2);transition:transform 2.6s cubic-bezier(.16,.8,.12,1),opacity 1s ease}
+.home2-globe::before{content:"";position:absolute;left:50%;top:calc(56px + (100% - 56px - min(300px,38%)) / 2);width:min(78vw,60vh);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
   background:radial-gradient(circle,rgba(120,180,255,.30) 45%,rgba(120,180,255,0) 70%);pointer-events:none}
 .home2.space .home2-globe{transform:scale(.1);opacity:0}
 .home2 .globe{height:100%;min-height:0;background:transparent}
 .home2 .globe-head,.home2 .globe-hint{display:none}
 .home2 .globe-shade{box-shadow:0 0 60px 10px rgba(120,180,255,.30),0 40px 90px -20px rgba(0,10,30,.45)}
-.home2 .globe-tools{bottom:8px}
+.home2 .globe-tools{bottom:auto;top:64px}
+.home2 .maplibregl-ctrl-bottom-right{bottom:min(300px,38%)}
+.home2:has(.globe.open) .home2-ui{opacity:0;pointer-events:none}
 .home2 .maplibregl-ctrl-attrib{opacity:.7}
-.home2-ui{position:absolute;z-index:2;left:20px;right:20px;bottom:calc(36px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px;
-  transition:opacity .7s ease,transform .7s ease}
+.home2-ui{position:absolute;z-index:2;left:20px;right:20px;bottom:calc(32px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px;
+  pointer-events:none;transition:opacity .7s ease,transform .7s ease}
+.home2-ui>*{pointer-events:auto}
+/* the map runs under the words: a soft veil of the night sky keeps them readable when you zoom in */
+.home2-ui::before{content:"";position:absolute;z-index:-1;left:-20px;right:-20px;bottom:calc(-32px - env(safe-area-inset-bottom,0px));height:calc(100% + 110px);pointer-events:none;
+  background:linear-gradient(to top,rgba(42,68,104,.94) 0%,rgba(42,68,104,.82) 62%,rgba(42,68,104,0) 100%)}
 .home2.space .home2-ui,.home2.zoom .home2-ui{opacity:0;transform:translateY(18px);pointer-events:none}
-.home2-ui h1{margin:0;font-family:var(--f-display);font-weight:900;font-size:44px;line-height:1;letter-spacing:-.01em;color:#FFFFFF}
+.home2-ui h1{margin:0;font-family:var(--f-display);font-weight:900;font-size:38px;line-height:1.02;letter-spacing:-.01em;color:#FFFFFF}
+.home2-ui h1 span{color:var(--accent)}
 .home2-tabs{display:flex;padding:4px;border-radius:26px;background:#111111;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.22)}
 .home2-tabs button{flex:1 1 0;height:44px;border:0;border-radius:22px;background:transparent;color:#FFFFFF;font:700 16px var(--f-body);display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
 .home2-tabs button.on{background:var(--accent);color:#111111;font-weight:800}
@@ -88,15 +95,20 @@ body.home-intro .home2-bag{opacity:0}
 .home2-skip{position:absolute;z-index:3;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));height:34px;padding:0 14px;border-radius:17px;
   border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);font:600 13px var(--f-body);cursor:pointer}
 @media (min-width:900px){
-  .home2-globe{top:0;bottom:0;right:auto;width:58vw;height:auto}
+  .home2-globe{transform-origin:29% 50%}
+  .home2-globe::before{left:29%;top:50%;width:min(52vw,96vh)}
   .home2.space .home2-globe{transform:translateX(21vw) scale(.1)}
-  .home2-ui{left:58vw;right:auto;top:0;bottom:0;width:min(420px,36vw);justify-content:center;gap:22px}
-  .home2-ui h1{font-size:64px}
+  .home2 .globe-tools{top:auto;bottom:24px;right:42%}
+  .home2 .maplibregl-ctrl-bottom-right{bottom:0;right:42%}
+  .home2-ui{left:60vw;right:auto;top:0;bottom:0;width:min(480px,37vw);justify-content:center;gap:22px}
+  .home2-ui::before{left:-8vw;right:-60vw;top:0;bottom:0;height:auto;
+    background:linear-gradient(to right,rgba(42,68,104,0) 0%,rgba(42,68,104,.82) 22%,rgba(42,68,104,.9) 100%)}
+  .home2-ui h1{font-size:clamp(40px,3.8vw,56px)}
   .home2-search{height:62px;border-radius:31px}
   .home2-bag{display:none}
 }
 @media (max-height:640px) and (max-width:899px){
-  .home2-ui h1{font-size:34px}
+  .home2-ui h1{font-size:30px}
   .home2-ui{gap:12px;bottom:20px}
 }
 @media (prefers-reduced-motion:reduce){
