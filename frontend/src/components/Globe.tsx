@@ -141,13 +141,15 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
     mapRef.current = map;
     if (new URLSearchParams(location.search).has("mapdebug")) (window as unknown as { __map: unknown }).__map = map;
     map.setPadding(pads(el));
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
+    // the home has no zoom buttons (scroll, pinch and double tap still zoom)
+    if (!bare) map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-right");
 
     const scenes: Scene[] = [];
     const places = new Map(data.places.map((p) => [p.id, p]));
     map.on("load", () => {
       // small screens: credits behind the (i) button, so they don't cover the globe
-      if (narrow(el)) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
+      // (and on the home): the map credits stay behind the small (i), closed until tapped
+      if (narrow(el) || bare) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
       map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places, { zoomOf: globeDotZoom }) });
       // from space only the big places have a name; more appear as you get closer
       // the room a picture takes (46 px), so other names keep off it

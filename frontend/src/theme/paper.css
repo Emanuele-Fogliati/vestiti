@@ -71,7 +71,9 @@ body.home-intro .top{opacity:0;pointer-events:none}
 .home2 .globe-tools{bottom:auto;top:64px}
 .home2 .maplibregl-ctrl-bottom-right{bottom:min(300px,38%)}
 .home2:has(.globe.open) .home2-ui{opacity:0;pointer-events:none}
-.home2 .maplibregl-ctrl-attrib{opacity:.7}
+.home2 .maplibregl-ctrl-attrib{opacity:.55;background:transparent}
+.home2 .maplibregl-ctrl-attrib.maplibregl-compact-show{opacity:.9;background:rgba(255,255,255,.85)}
+.home2 .maplibregl-ctrl-attrib-button{background-color:rgba(255,255,255,.55);transform:scale(.8)}
 .home2-ui{position:absolute;z-index:2;left:20px;right:20px;bottom:calc(32px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:16px;
   pointer-events:none;transition:opacity .7s ease,transform .7s ease}
 .home2-ui>*{pointer-events:auto}
