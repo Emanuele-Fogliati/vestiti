@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="46" cy="32" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-jp-sakurajima-clip"><path d="M8 144Q40 140 64 134Q84 128 98 120L110 114Q118 110 124 102L132 92Q138 84 142 80L148 72L154 70L158 66L164 68L170 64L176 67L182 66L188 70L194 69L200 74L206 78Q214 86 222 94Q232 104 246 112Q262 122 280 134L300 144Z"/></clipPath></defs>
+<path d="M186 72Q182 64 186 58Q178 52 184 44Q180 34 190 30Q196 22 206 26Q214 18 224 24Q234 24 232 34Q238 42 228 46Q222 52 212 50Q206 56 202 62Q198 66 198 72Z" fill="var(--il-ice)"/>
+<path d="M8 144Q40 140 64 134Q84 128 98 120L110 114Q118 110 124 102L132 92Q138 84 142 80L148 72L154 70L158 66L164 68L170 64L176 67L182 66L188 70L194 69L200 74L206 78Q214 86 222 94Q232 104 246 112Q262 122 280 134L300 144Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-jp-sakurajima-clip)">
+<path d="M0 150V124Q30 118 60 122Q80 114 100 118Q120 110 140 114Q160 108 180 113Q200 110 220 116Q244 114 266 122Q290 124 300 128V150Z" fill="var(--il-leaf)"/>
+</g>
+<path d="M160 70L148 96M172 66L170 100M186 70L196 100M144 80L128 106M204 78L222 106" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M112 142Q118 132 132 128Q146 122 160 126Q174 128 182 142Z" fill="var(--il-leaf)"/>
+<path d="M0 146V140H300V146Z" fill="var(--il-far)"/>
+<path d="M40 142V136H48V142ZM56 142V134H62V142ZM196 142V135H206V142ZM214 142V133H220V142ZM236 142V136H246V142Z" fill="var(--il-acc)"/>
+<path d="M0 200V144H300V200Z" fill="var(--il-water)"/>
+<path d="M56 178L62 186H114L120 178Z" fill="var(--il-ice)"/>
+<path d="M64 178V166H112V178ZM72 166V158H104V166ZM80 158V152H96V158Z" fill="var(--il-ice)"/>
+<path d="M60 182H116" stroke="var(--il-obj)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<path d="M68 172H108M76 162H100" stroke="var(--il-near)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
