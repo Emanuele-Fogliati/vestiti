@@ -20,6 +20,7 @@ const SPIN_DEG_PER_S = 3; // one turn in two minutes
 const RESUME_AFTER_MS = 1500; // the globe starts turning again this long after you let go
 const INTRO_DEG_PER_S = 110; // the opening spin starts this fast...
 const INTRO_SLOWDOWN_MS = 900; // ...and slows down to the usual pace in about three seconds
+const ZOOMED_IN = 0.35; // this much past the whole-globe view counts as zooming in
 const SPIN_UNTIL_ZOOM = 3; // closer than this you are exploring: the globe stays still
 const TERRAIN_FROM_ZOOM = 7; // mountains stand up in 3D once you are this close
 const SHADE_UNTIL_ZOOM = 4; // the sphere's light and shadow fade out as the globe fills the screen
@@ -110,6 +111,7 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
   const [sel, setSel] = useState<GlobePlace | null>(null);
   const [trail, setTrail] = useState<TrailCard | null>(null); // the trek open in Trek mode
   const [close, setClose] = useState(false);
+  const [zoomed, setZoomed] = useState(false); // closer than the whole globe: the home hides its words
   const [failed, setFailed] = useState(false);
   const [ready, setReady] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -347,7 +349,10 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
     });
     map.on("mousedown", hold); map.on("touchstart", hold); map.on("wheel", hold);
     map.on("moveend", (e) => { if ((e as { originalEvent?: Event }).originalEvent || busyUntil === Infinity) release(); });
-    map.on("zoom", () => setClose(map.getZoom() >= SPIN_UNTIL_ZOOM));
+    map.on("zoom", () => {
+      setClose(map.getZoom() >= SPIN_UNTIL_ZOOM);
+      setZoomed(map.getZoom() > fitZoom(el) + ZOOMED_IN);
+    });
     map.on("moveend", () => { if (spinning) showSoon(); else showMarkers(); });
     const io = new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; });
     io.observe(el);
@@ -481,7 +486,7 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
         : zoomNow < 8 ? () => mapRef.current?.flyTo({ center: [sel.lon, sel.lat], zoom: 9, pitch: 45, speed: 1.4, essential: true }) : undefined;
 
   return (
-    <section className={`globe${close ? " close" : ""}${open ? " open" : ""}${trip.length ? " has-trip" : ""}`} aria-label="Explore the world">
+    <section className={`globe${close ? " close" : ""}${zoomed ? " zoomed" : ""}${open ? " open" : ""}${trip.length ? " has-trip" : ""}`} aria-label="Explore the world">
       <div className="globe-map" ref={box} data-bare={bare ? "1" : undefined}>
         {!data && <p className="globe-wait"><span className="spin" /></p>}
       </div>
@@ -489,7 +494,7 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
         <h2 className="globe-title">Where to <span className="hl">next?</span></h2>
       </div>
       <div className="globe-tools">
-        {close
+        {close || zoomed
           ? <button type="button" className="btn sm" onClick={backToGlobe}>Back to the globe</button>
           : mode === "trek"
             ? <span className="trek-legend small" aria-label="Every dot is a trek, coloured by how hard it is">

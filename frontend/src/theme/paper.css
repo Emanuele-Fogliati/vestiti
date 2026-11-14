@@ -70,7 +70,10 @@ body.home-intro .top{opacity:0;pointer-events:none}
 .home2 .globe-shade{box-shadow:0 0 60px 10px rgba(120,180,255,.30),0 40px 90px -20px rgba(0,10,30,.45)}
 .home2 .globe-tools{bottom:auto;top:64px}
 .home2 .maplibregl-ctrl-bottom-right{bottom:min(300px,38%)}
-.home2:has(.globe.open) .home2-ui{opacity:0;pointer-events:none}
+/* a place open, or zooming in: the words step aside so only the map shows; they come back
+   with "Back to the globe" or when you zoom out to the whole globe */
+.home2:has(.globe.open) .home2-ui,.home2:has(.globe.zoomed) .home2-ui{opacity:0;transform:translateY(12px);pointer-events:none}
+.home2:has(.globe.zoomed) .home2-ui *{pointer-events:none}
 .home2 .maplibregl-ctrl-attrib{opacity:.55;background:transparent}
 .home2 .maplibregl-ctrl-attrib.maplibregl-compact-show{opacity:.9;background:rgba(255,255,255,.85)}
 .home2 .maplibregl-ctrl-attrib-button{background-color:rgba(255,255,255,.55);transform:scale(.8)}
