@@ -87,9 +87,41 @@ def test_model_answer_is_checked():
     assert whats[-1] == "Sleep: Patagonia Hostel, Avenida San Martín 376"
     assert d22["priority"] == 7
     assert out["days"][1]["rows"][0]["at"] == "06:00"  # days it did not write stay the draft
-    assert out["weather"] == [{"area": "", "drop": "2027-01-25", "how": "Se piove, salta il Pliegue Tumbado"}]
+    assert out["weather"] == [{"area": "El Chaltén", "drop": "2027-01-25", "how": "Se piove, salta il Pliegue Tumbado"}]
     system, user = fake.asked[0]
     assert "Italian" in system and "camminatori lenti" in user and "Laguna de los Tres" in user
+    assert "Follow the WISHES" in user
+    kept = next(r for r in d22["rows"] if r["what"] == "Partenza in auto da Puerto Natales")
+    assert kept["fixed"] and kept["effort"] is None
+
+
+def test_overnight_flights_and_beds_stay_in_place_in_the_models_words():
+    def answer(user):
+        return {"days": [
+            {"date": "2027-01-16", "title": "Verso Buenos Aires", "rows": [
+                {"at": "04:40", "what": "Arrivo a Buenos Aires (Ezeiza) (giorno dopo)"},
+                {"at": "11:15", "what": "Volo Torino → Buenos Aires (Ezeiza), via Roma"}]},
+            {"date": "2027-01-29", "title": "Buenos Aires", "rows": [
+                {"at": "08:20", "what": "Volo Ushuaia → Buenos Aires (Aeroparque)"},
+                {"at": "16:00", "what": "Cimitero della Recoleta", "effort": "low"},
+                {"at": "16:00", "what": "Arrivo a Roma (Fiumicino) (giorno dopo)"},
+                {"at": "22:35", "what": "Volo Buenos Aires (Ezeiza) → Roma (Fiumicino)"},
+                {"at": "16:00", "what": "Cimitero della Recoleta", "effort": "low"}]},
+            {"date": "2027-01-27", "title": "Canale Beagle", "rows": [
+                {"at": "09:30", "what": "Al molo turistico"},
+                {"what": "Dormi: Ushuaia Center Apartment Suit"}, {"at": "13:00", "what": "Pranzo"}]},
+        ]}
+
+    first = dayplan.ai_days(R, 0, "", "Italian", client=Fake(answer))["days"][0]
+    assert [r["at"] for r in first["rows"]] == ["11:15", "04:40"]
+    out = dayplan.ai_days(R, 2, "", "Italian", client=Fake(answer))["days"]
+    ba = next(d for d in out if d["date"] == "2027-01-29")["rows"]
+    whats = [r["what"] for r in ba]
+    assert whats.count("Cimitero della Recoleta") == 1
+    assert whats[-1] == "Arrivo a Roma (Fiumicino) (giorno dopo)" and ba[-1]["fixed"]
+    assert not next(r for r in ba if r["what"] == "Cimitero della Recoleta")["fixed"]
+    beagle = next(d for d in out if d["date"] == "2027-01-27")["rows"]
+    assert beagle[-1]["what"] == "Dormi: Ushuaia Center Apartment Suit" and beagle[-1]["fixed"]
 
 
 def test_without_a_model_the_draft_is_the_answer():
@@ -108,3 +140,25 @@ def test_api_days(client):
     assert r.json()["days"][0]["date"] == "2027-01-26"
     assert client.post("/api/plan/days", json={"text": MANU, "group": 9}).status_code == 422
     assert client.post("/api/plan/days", json={"text": "Patagonia a gennaio", "group": 0}).status_code == 422
+
+
+def test_wishes_the_code_keeps_even_without_a_model():
+    assert dayplan.wants("camminiamo piano, niente barche") == {"no_boat": True, "slow": True}
+    assert dayplan.wants("we love boats and long hikes") == {"no_boat": False, "slow": False}
+    d = dayplan.rules_days(R, "camminiamo piano, niente barche")
+    grey = _day(d, "2027-01-20")
+    assert "Grey Glacier" not in grey["title"] and any(r["what"] == "Left out for you: Grey Glacier by boat" for r in grey["rows"])
+    french = _day(d, "2027-01-19")["rows"][0]
+    assert french["optional"] and "Needs a boat" in french["note"]
+    torres = _day(d, "2027-01-18")["rows"][0]
+    assert torres["optional"] and torres["note"].startswith("Hard for an easy pace")
+    assert not any(r["what"] == "Out along the Beagle Channel" for r in _day(d, "2027-01-27")["rows"])
+    assert _day(d, "2027-01-28")["title"] == "Free day"
+    out = dayplan.ai_days(R, 2, "niente barche", client=Fake(LLMUnavailable("down")))
+    assert any(r["what"].startswith("Left out for you: Beagle") for r in out["days"][1]["rows"])
+    fake = Fake({"days": [{"date": "2027-01-23", "rows": [
+        {"at": "06:00", "what": "Laguna de los Tres", "effort": "high"},
+        {"at": "18:00", "what": "Giro in barca sul lago", "effort": "low"}]}]})
+    rows = dayplan.ai_days(R, 1, "piano, niente barche", "Italian", client=fake)["days"][1]["rows"]
+    assert all(r["optional"] for r in rows if not r["fixed"])
+    assert "Grey Glacier by boat" not in fake.asked[0][1]
