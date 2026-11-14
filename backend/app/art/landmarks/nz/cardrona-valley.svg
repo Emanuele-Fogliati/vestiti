@@ -1,0 +1,22 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="24" r="12" fill="var(--il-sun)"/>
+<path d="M0 162V62Q16 54 30 58Q50 40 72 46Q90 30 110 38Q128 26 146 34Q160 28 172 40Q190 34 206 44Q226 38 244 50Q264 46 282 56Q292 54 300 58V162Z" fill="var(--il-far)"/>
+<path d="M30 58Q36 76 32 96M72 46Q80 66 74 90M110 38Q118 60 112 80M172 40Q166 58 172 78M244 50Q250 66 246 86" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M60 160Q52 100 56 64Q58 40 64 22Q70 40 72 64Q76 100 70 160Z" fill="var(--il-leaf)"/>
+<path d="M200 96Q196 80 204 72Q202 60 212 54Q214 44 222 46Q230 44 232 54Q242 58 240 70Q248 78 244 96Z" fill="var(--il-leaf)"/>
+<path d="M226 160V100L238 94H286V160Z" fill="var(--il-mid)"/>
+<path d="M224 102L238 92H290L292 98H238Z" fill="var(--il-obj)"/>
+<path d="M232 110H240V122H232ZM262 110H270V122H262ZM244 132H256V160H244Z" fill="var(--il-near)"/>
+<path d="M236 108L252 106M256 116L276 114M236 140L244 139M258 146L282 144" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M72 160V82H230V160Z" fill="var(--il-ice)"/>
+<path d="M72 82H230V86H72ZM72 108H230V111H72ZM72 82H76V160H72ZM226 82H230V160H226Z" fill="var(--il-acc)"/>
+<path d="M80 92H222M80 100H222M80 118H222M80 126H222M80 134H222M80 142H222M80 150H222" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M84 120H96V138H84ZM112 122H126V160H112ZM142 120H156V138H142ZM166 122H180V160H166ZM196 120H212V138H196Z" fill="var(--il-acc)"/>
+<path d="M87 123H93V135H87ZM115 125H123V160H115ZM145 123H153V135H145ZM169 125H177V160H169ZM199 123H209V135H199Z" fill="var(--il-near)"/>
+<path d="M0 200V158H300V200Z" fill="var(--il-water)"/>
+<path d="M36 160V140Q36 135 41 135H64Q69 135 69 140V160ZM17 160V151Q17 147 22 147H38V160Z" fill="var(--il-ice)"/>
+<path d="M41 139H51V147H41ZM54 139H65V147H54ZM15 148H18V158H15Z" fill="var(--il-near)"/>
+<path d="M18 162Q20 152 29 152Q38 152 40 162ZM50 162Q52 152 61 152Q70 152 72 162ZM38 158H52V161H38Z" fill="var(--il-near)"/>
+<circle cx="29" cy="162" r="5" fill="var(--il-near)"/>
+<circle cx="61" cy="162" r="5" fill="var(--il-near)"/>
+<path d="M29 162H29.1M61 162H61.1" stroke="var(--il-obj)" stroke-width="3" fill="none" stroke-linecap="round"/>
