@@ -103,3 +103,11 @@ def test_api_understand_reads_the_answers(client):
     j = client.post("/api/plan/understand", json={"text": "Patagonia una settimana a gennaio, niente trekking"}).json()
     assert j["effort"] == "easy" and j["proposal"]["effort"] == "easy"
     assert j["proposal"]["ready"]["id"] == "patagonia-7"
+
+
+def test_japan_two_weeks_is_the_ready_trip_through_the_alps():
+    p = explore.propose(explore.area("c-jp"), None, 14, 4)
+    assert p["ready"]["id"] == "japan-14"
+    names = [s["name"] for s in p["stops"]]
+    assert names[0] == "Tokyo" and "Kyoto" in names and "Takayama" in names
+    assert sum(s["days"] for s in p["stops"]) == 14
