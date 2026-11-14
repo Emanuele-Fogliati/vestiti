@@ -51,8 +51,10 @@ def test_cusco_gets_its_picture_and_itinerary_but_not_its_neighbours():
     assert cusco[2] == "PE" and abs(cusco[4] + 13.53) < 0.1 and abs(cusco[5] + 71.97) < 0.1
     assert cusco[7] is not None and "cusco" in cusco[7]
     assert any(d["itineraries"][i]["slug"].startswith("peru") for i in cusco[8])
-    # a place near Cusco with no scene of its own gets no picture (no borrowed landmark)
-    assert by_id["pe-plaza-de-armas-cusco"][7] is None
+    # the cathedral scene shows the Plaza de Armas, so the plaza dot carries it by name
+    assert by_id["pe-plaza-de-armas-cusco"][7] == "pe-cusco-cathedral"
+    # a place near Cusco that no scene names gets no picture (no landmark borrowed by distance)
+    assert globe._picture("Some Unnamed Spot", "PE", -13.52, -71.98) is None
 
 
 # ---- places inside a city (Manu, 2026-10-26): Florence from far away, its sights up close
