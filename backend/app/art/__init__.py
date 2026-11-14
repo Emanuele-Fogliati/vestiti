@@ -69,6 +69,13 @@ def landmarks() -> tuple[Landmark, ...]:
     return tuple(out)
 
 
+@lru_cache
+def country_names() -> dict[str, str]:
+    """Country code -> the catalog's country name ("NZ" -> "New Zealand")."""
+    return {(d := json.loads(f.read_text(encoding="utf-8")))["country"].upper(): d.get("name", "")
+            for f in sorted(CATALOG_DIR.glob("*.json"))}
+
+
 def svg_path(landmark_id: str) -> Path | None:
     m = re.fullmatch(r"([a-z]{2})-([a-z0-9-]+)", landmark_id)
     return SVG_DIR / m[1] / f"{m[2]}.svg" if m else None

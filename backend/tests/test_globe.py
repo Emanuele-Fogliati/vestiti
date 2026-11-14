@@ -137,3 +137,12 @@ def test_extra_spots_show_with_their_own_picture():
         assert rows[pid][6] == 1 and rows[pid][7], pid
     names = {r[1]: r for r in extras}
     assert rows[names["Laguna Capri"][0]][7] != rows["ar-laguna-de-los-tres"][7]
+
+
+def test_a_name_another_country_owns_still_finds_its_own_picture():
+    # "charleston" belongs to the US scene and "orange river" to South Africa: the NZ and
+    # Namibian places find theirs through "<name> <country>" aliases, never by distance alone
+    art = {r[0]: r[7] for r in globe.payload()["places"]}
+    assert art["nz-charleston"] == "nz-charleston"
+    assert art["na-orange-river"] == "na-orange-river"
+    assert art["na-zambezi-river"] == "na-katima-mulilo"

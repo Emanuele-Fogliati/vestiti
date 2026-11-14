@@ -62,6 +62,19 @@ def _rows() -> list[list]:
     return rows
 
 
+def _picture(name: str, cc: str, lat: float, lon: float):
+    """The scene a place is named by, in its country and near it. A name another country owns
+    ("Charleston", "Orange River") is tried again with the country's name ("charleston new
+    zealand"), which the scene carries as an alias. Never the nearest scene by distance alone:
+    Mou Waho Island is not the Wanaka Tree."""
+    for text in (name, f"{name} {art.country_names().get(cc, '')}"):
+        lm = next((m for m in art._named(text)
+                   if m.country == cc and art._km(lat, lon, m.lat, m.lon) <= art.NAMESAKE_KM), None)
+        if lm:
+            return lm
+    return None
+
+
 @lru_cache
 def payload() -> dict:
     doc = {"fields": ["id", "name", "country", "kind", "lat", "lon", "trips"], "places": _rows()}
@@ -75,8 +88,7 @@ def payload() -> dict:
     for pid, name, cc, kind, lat, lon, trips in doc["places"]:
         if pid in exact:  # the Uffizi and the Duomo on their own spots, not on one 1 km dot
             lat, lon = exact[pid][0], exact[pid][1]
-        lm = next((m for m in art._named(name)
-                   if m.country == cc and art._km(lat, lon, m.lat, m.lon) <= art.NAMESAKE_KM), None)
+        lm = _picture(name, cc, lat, lon)
         hits = [i for i, names in enumerate(in_it) if cc in its[i].countries and _norm(name) in names]
         # no scene label here: it grows with every new scene and the card only needs it as alt text
         places.append([pid, name, cc, kind, lat, lon, level(trips), lm.id if lm else None, hits, parent.get(pid)])
