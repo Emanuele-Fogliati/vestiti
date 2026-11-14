@@ -124,3 +124,11 @@
   .globe.open .globe-trip{display:none}
   .globe.has-trip .globe-tools{bottom:118px}
 }
+/* Trek mode on the home globe: the trek card (Manu, 2026-11-14) */
+.globe-trail{padding:0;color:var(--ink)}
+.globe-trail a{color:inherit}
+.globe-trail .tcards{margin:0}
+.globe-trail-x{position:absolute;top:8px;right:8px;z-index:2;width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);font-size:14px;cursor:pointer}
+.trek-legend{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;padding:6px 12px;border-radius:999px;background:color-mix(in srgb,var(--bg) 86%,transparent);color:var(--ink)}
+.trek-legend>span{display:inline-flex;align-items:center;gap:5px}
+.trek-legend i{width:10px;height:10px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 0 0 .5px rgba(0,0,0,.25)}

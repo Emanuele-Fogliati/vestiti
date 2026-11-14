@@ -608,6 +608,8 @@ export interface TrailCard {
   km: number | null; gain_m: number | null; max_m: number | null; min_m: number | null; numbers_from: string | null;
   tier: "A" | "B"; area: string | null; scores: TrailScores | null;
 }
+/** A trail on the home globe in Trek mode: id, name, goal lat, lon, difficulty 0-3 (easy..technical), tier, days. */
+export type TrailDot = [string, string, number, number, number, "A" | "B", number];
 /** 0-5 each, the rubric of the zone ranking (Manu, 2026-11-14). */
 export interface TrailScores { effort: number; nature: number; culture: number; relax: number; history: number; landscape: number }
 export interface TrailPoint {

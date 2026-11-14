@@ -112,3 +112,15 @@ def test_gpx_needs_a_line(client):
             assert r.status_code == 200 and r.text.startswith("<?xml") and "<trkpt" in r.text
         else:
             assert r.status_code == 404
+
+
+def test_api_dots_and_card(client):
+    r = client.get("/api/trails/dots").json()
+    assert r["fields"][:4] == ["id", "name", "lat", "lon"]
+    ids = {row[0] for row in r["trails"]}
+    assert ids == {t.id for t in trails.trails()}
+    row = next(x for x in r["trails"] if x[0] == "ar-laguna-de-los-tres")
+    assert row[4] == 2 and row[5] == "A"
+    c = client.get("/api/trails/ar-laguna-de-los-tres/card").json()
+    assert c["id"] == "ar-laguna-de-los-tres" and c["tier"] == "A"
+    assert client.get("/api/trails/nope/card").status_code == 404

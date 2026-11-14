@@ -3,10 +3,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { cancelLandmark, loadLandmark } from "../lib/landmarks";
 import { PlaceCard } from "./PlaceCard";
+import { TrailCards } from "./TrailCards";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { groupPicks, pickStore, usePicks } from "../lib/picks";
 import { DRESS_ME } from "../pages/Start";
+import type { TrailCard, TrailDot } from "../lib/types";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
 import { PICTURE_ROOM, pictureRoomLayer } from "../lib/worldmap";
 import {
@@ -23,6 +25,20 @@ const TERRAIN_FROM_ZOOM = 7; // mountains stand up in 3D once you are this close
 const SHADE_UNTIL_ZOOM = 4; // the sphere's light and shadow fade out as the globe fills the screen
 
 const narrow = (el: HTMLElement) => el.clientWidth < 600;
+
+/** Trek mode (Manu, 2026-11-14): every trek is a dot, coloured by how hard it is. */
+const TREK_COLOURS = ["#3E8E4E", "#D9A400", "#D8642A", "#A8322B"]; // easy, moderate, hard, technical
+const TREK_NAMES_FROM_ZOOM = 6;
+
+function trailsGeoJSON(rows: TrailDot[]): GeoJSON.FeatureCollection {
+  return {
+    type: "FeatureCollection",
+    features: rows.map(([id, name, lat, lon, level, tier, days], i) => ({
+      type: "Feature", id: i, geometry: { type: "Point", coordinates: [lon, lat] },
+      properties: { id, name, level, top: tier === "A" ? 1 : 0, days },
+    })),
+  };
+}
 
 /** Room the title takes at the top, so the globe sits below it. */
 function topPad(el: HTMLElement): number {
@@ -87,11 +103,12 @@ interface Scene {
 /** `bare`: no title or hint over the globe (the home puts its own words beside it).
  *  `intro`: the opening animation is playing, so the globe spins fast at first and slows down
  *  to its usual pace. `onReady` fires once the map has drawn. */
-export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?: boolean; onReady?: () => void } = {}) {
+export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek" } = {}) {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [data, setData] = useState<GlobeData | null>(null);
   const [sel, setSel] = useState<GlobePlace | null>(null);
+  const [trail, setTrail] = useState<TrailCard | null>(null); // the trek open in Trek mode
   const [close, setClose] = useState(false);
   const [failed, setFailed] = useState(false);
   const [ready, setReady] = useState(false);
@@ -103,17 +120,25 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
   const byId = useMemo(() => new Map((data?.places ?? []).map((p) => [p.id, p])), [data]);
   const inside = useMemo(() => insideOf(data?.places ?? []), [data]);
   const openRef = useRef(false);
-  openRef.current = !!sel;
+  openRef.current = !!sel || !!trail;
   // the map's handlers live in the map effect; these let React state reach them
-  const handlers = useRef({ pickPlace: (_p: GlobePlace) => {}, clear: () => {} });
+  const handlers = useRef({ pickPlace: (_p: GlobePlace) => {}, pickTrail: (_id: string) => {}, clear: () => {} });
   const spin = useRef({ hold: () => {}, resume: () => {} });
   const introRef = useRef(intro);
   const readyRef = useRef(onReady);
   readyRef.current = onReady;
+  const modeRef = useRef(mode);
+  modeRef.current = mode;
+  const markersRef = useRef(() => {});
+  const [dots, setDots] = useState<TrailDot[] | null>(null);
 
   useEffect(() => {
     loadPlaces().then(setData).catch(() => setFailed(true));
   }, []);
+  // the trek dots load the first time Trek is chosen
+  useEffect(() => {
+    if (mode === "trek" && !dots) api.trailDots().then((r) => setDots(r.trails)).catch(() => setDots([]));
+  }, [mode, dots]);
 
   useEffect(() => {
     const el = box.current;
@@ -205,6 +230,7 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
     };
     function showMarkers() {
       const z = map.getZoom();
+      const trek = modeRef.current === "trek"; // in Trek mode the places' pictures step aside
       const gap = z < 3.5 ? 78 : 62; // far away the pictures keep more room around them
       const kept: { x: number; y: number }[] = [];
       const c = map.getCenter();
@@ -212,7 +238,7 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
       const want = new Set<Scene>();
       const placed: { s: Scene; a: NonNullable<ReturnType<typeof sceneAnchor>> }[] = [];
       for (const s of scenes) {
-        if (z < s.minPic) continue;
+        if (trek || z < s.minPic) continue;
         const a = sceneAnchor(s.owners, z, places);
         if (a && z >= globePicZoom(a.at) && km(c.lat, c.lng, a.at.lat, a.at.lon) < 7000) placed.push({ s, a });
       }
@@ -240,6 +266,7 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
       }
       sendFlips();
     }
+    markersRef.current = showMarkers;
     // while the globe turns by itself it moves every frame: look again a few times a second only
     let spinning = false;
     let later = 0;
@@ -285,12 +312,20 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
     const around = (e: maplibregl.MapMouseEvent, r: number): [maplibregl.PointLike, maplibregl.PointLike] =>
       [[e.point.x - r, e.point.y - r], [e.point.x + r, e.point.y + r]];
     map.on("click", (e) => {
+      if (modeRef.current === "trek") {
+        const hit = map.getLayer("tr-dot")
+          ? (map.queryRenderedFeatures(around(e, 6), { layers: ["tr-dot", "tr-name"] }).at(0)
+            ?? map.queryRenderedFeatures(around(e, 14), { layers: ["tr-dot"] }).at(0)) : undefined;
+        if (hit) handlers.current.pickTrail(String(hit.properties.id));
+        else if (openRef.current) handlers.current.clear();
+        return;
+      }
       const place = map.queryRenderedFeatures(around(e, 5), { layers: ["pl-dot", "pl-name"] }).at(0);
       const near = place ? undefined : map.queryRenderedFeatures(around(e, 12), { layers: ["pl-dot", "pl-name"] }).at(0);
       if (place || near) handlers.current.pickPlace(data.places[(place ?? near)!.properties.i as number]);
       else if (openRef.current) handlers.current.clear();
     });
-    for (const l of ["pl-dot", "pl-name"]) {
+    for (const l of ["pl-dot", "pl-name", "tr-dot"]) {
       map.on("mouseenter", l, () => { map.getCanvas().style.cursor = "pointer"; });
       map.on("mouseleave", l, () => { map.getCanvas().style.cursor = ""; });
     }
@@ -345,6 +380,37 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
     };
   }, [data]);
 
+  // Trip or Trek: the places (dots, names, pictures) or the treks
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!ready || !map) return;
+    const trek = mode === "trek";
+    if (trek && dots && !map.getSource("trails")) {
+      const c = mapColors();
+      map.addSource("trails", { type: "geojson", data: trailsGeoJSON(dots) });
+      const colour = ["match", ["get", "level"], 0, TREK_COLOURS[0], 1, TREK_COLOURS[1], 2, TREK_COLOURS[2], TREK_COLOURS[3]] as maplibregl.ExpressionSpecification;
+      map.addLayer({ id: "tr-dot", type: "circle", source: "trails",
+        paint: { "circle-color": colour, "circle-stroke-color": "#FFFFFF", "circle-stroke-width": 1.4,
+          "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, ["case", ["==", ["get", "top"], 1], 3.6, 2.2], 8, ["case", ["==", ["get", "top"], 1], 7, 5]] } });
+      map.addLayer({ id: "tr-name", type: "symbol", source: "trails", minzoom: TREK_NAMES_FROM_ZOOM,
+        layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 11.5, "text-offset": [0, 1.1],
+          "text-anchor": "top", "text-max-width": 9, "symbol-sort-key": ["-", 1, ["get", "top"]] },
+        paint: { "text-color": c.ink, "text-halo-color": c.halo, "text-halo-width": 1.4 } });
+      map.addLayer({ id: "tr-sel", type: "circle", source: "trails", filter: ["==", ["get", "id"], ""],
+        paint: { "circle-radius": 12, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": c.ink, "circle-stroke-width": 2.5 } });
+    }
+    for (const l of map.getStyle().layers ?? []) {
+      const src = (l as { source?: string }).source;
+      if (src === "places" || src === "trails") map.setLayoutProperty(l.id, "visibility", (src === "trails") === trek ? "visible" : "none");
+    }
+    if (trek) setSel(null); else setTrail(null);
+    markersRef.current();
+  }, [mode, dots, ready]);
+  useEffect(() => {
+    const map = mapRef.current;
+    if (ready && map?.getLayer("tr-sel")) map.setFilter("tr-sel", ["==", ["get", "id"], trail?.id ?? ""]);
+  }, [trail, ready, dots]);
+
   // ring around the open place
   useEffect(() => {
     const map = mapRef.current;
@@ -353,7 +419,8 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
 
   handlers.current = {
     pickPlace: (p) => { setSel(p); spin.current.hold(); },
-    clear: () => { setSel(null); spin.current.resume(); },
+    pickTrail: (id) => { spin.current.hold(); api.trailCard(id).then(setTrail).catch(() => setTrail(null)); },
+    clear: () => { setSel(null); setTrail(null); spin.current.resume(); },
   };
 
   /** Zoom on a city until the places inside it show, all of them on screen. */
@@ -404,7 +471,7 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
   }
 
   if (failed) return null;
-  const open = !!sel;
+  const open = !!sel || (!!trail && mode === "trek");
   const trip = groupPicks(picks.filter((id) => byId.has(id)), (id) => byId.get(id)?.parent);
   const selInside = sel ? inside.get(sel.id) ?? [] : [];
   const zoomNow = mapRef.current?.getZoom() ?? 0;
@@ -424,8 +491,18 @@ export default function Globe({ bare, intro, onReady }: { bare?: boolean; intro?
       <div className="globe-tools">
         {close
           ? <button type="button" className="btn sm" onClick={backToGlobe}>Back to the globe</button>
-          : <span className="globe-hint small">Drag to spin · zoom in anywhere, or on a city to see the places inside it</span>}
+          : mode === "trek"
+            ? <span className="trek-legend small" aria-label="Every dot is a trek, coloured by how hard it is">
+                {["Easy", "Moderate", "Hard", "Technical"].map((n, i) => <span key={n}><i style={{ background: TREK_COLOURS[i] }} />{n}</span>)}
+              </span>
+            : <span className="globe-hint small">Drag to spin · zoom in anywhere, or on a city to see the places inside it</span>}
       </div>
+      {trail && mode === "trek" && (
+        <div className="globe-card globe-trail">
+          <button type="button" className="globe-trail-x" aria-label="Close" onClick={handlers.current.clear}>✕</button>
+          <TrailCards trails={[trail]} />
+        </div>
+      )}
       {sel && data && (
         <div className="globe-card">
           <PlaceCard key={sel.id} place={sel} onClose={handlers.current.clear}

@@ -1,7 +1,7 @@
 import type {
   DaysWritten, PlanProposal, PlanReading, PlanStep, PlanSuggestion,
   Airport, Board, FlightOffer, FlightOrder, FlightPrice, LegSaved, Passenger, TripFlights, PlanChoices, StopStatus,
-  Trail, TrailCard, TrailWear,
+  Trail, TrailCard, TrailDot, TrailWear,
   AppConfig, ChatReply, DraftStop, Itinerary, ItineraryCard, Profile, QuizResult, Place, Plans, Stop, Strategy, Tier, Trip, TripEstimate, TripSummary, User, WardrobeItem, ModelMatch, PhotoReading,
 } from "./types";
 
@@ -104,6 +104,8 @@ export const api = {
     return req<{ trails: TrailCard[]; countries: string[] }>("GET", `/api/trails${p.size ? `?${p}` : ""}`);
   },
   trail: (id: string) => req<Trail>("GET", `/api/trails/${encodeURIComponent(id)}`),
+  trailDots: () => req<{ fields: string[]; trails: TrailDot[] }>("GET", "/api/trails/dots"),
+  trailCard: (id: string) => req<TrailCard>("GET", `/api/trails/${encodeURIComponent(id)}/card`),
   trailWear: (id: string, month: number) => req<TrailWear>("GET", `/api/trails/${encodeURIComponent(id)}/wear?month=${month}`),
   /** New order, days and status of every stop; the dates follow. 409 when something booked would move. */
   layout: (id: string, stops: { id: string; days: number; status?: StopStatus; gap_before?: number }[], start_date?: string) =>
