@@ -1,0 +1,85 @@
+{
+ "id": "jp-fushimi-inari-summit",
+ "country": "JP",
+ "name": "Fushimi Inari to the summit of Inariyama (稲荷山)",
+ "base": "Kyoto",
+ "region": "Fushimi, Kyoto",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "07:30",
+ "published": null,
+ "why": "Up the holy mountain of the rice god through tunnels of vermilion torii, past fox statues and moss-covered shrine mounds, to the 233 m top of the Higashiyama hills.",
+ "book": "Free and always open. JR Inari station (5 minutes from Kyoto) is in front of the main gate. The lower gates are packed from 09:00: start early, or come late afternoon.",
+ "water": "Tea houses and vending machines along the path up to Yotsutsuji and beyond; toilets at the main shrine and on the way.",
+ "dangers": [
+  "Thousands of steps, slippery in rain.",
+  "Summer heat and humidity under the gates: carry water and go early.",
+  "Above Yotsutsuji the lights are few: bring a torch if you walk at dusk."
+ ],
+ "turnaround": "Short on time or legs: turn back at Yotsutsuji, the view over Kyoto is there; the summit loop adds about an hour.",
+ "sources": [
+  "https://inari.jp/en/map/spot_01/",
+  "https://inari.jp/en/faq/",
+  "https://www.japan-guide.com/e/e3915.html",
+  "https://www.openstreetmap.org/node/2503700051"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 2,
+  "culture": 5,
+  "relax": 3,
+  "history": 4,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Senbon torii",
+   "lat": 34.96691,
+   "lon": 135.77483,
+   "role": "start",
+   "note": "Behind the main hall, two parallel rows of closely packed gates start the climb; each gate was given by a person or a company, with their name on the back.",
+   "scene": "jp-fushimi-inari-taisha"
+  },
+  {
+   "id": "yotsutsuji-crossing",
+   "name": "Yotsutsuji crossing",
+   "lat": 34.96909,
+   "lon": 135.78142,
+   "role": "point",
+   "note": "The four-way junction about halfway up, 30-45 minutes from the start, with a tea house and the view over south Kyoto. The summit loop starts here."
+  },
+  {
+   "id": "goal",
+   "name": "Inari summit",
+   "lat": 34.96701,
+   "lon": 135.78553,
+   "role": "goal",
+   "note": "Ichinomine, 233 m: the highest shrine, in the trees, no view. Reached by the east side of the loop; go down by the other side past the other peaks to Yotsutsuji, then the way you came."
+  }
+ ],
+ "router": "osrm",
+ "via": [
+  [
+   34.96884,
+   135.78523
+  ]
+ ]
+}

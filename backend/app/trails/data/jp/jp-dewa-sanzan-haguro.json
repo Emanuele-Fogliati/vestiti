@@ -1,0 +1,61 @@
+{
+ "id": "jp-dewa-sanzan-haguro",
+ "country": "JP",
+ "name": "Haguro-san stone steps, Dewa Sanzan (羽黒山)",
+ "base": "Tsuruoka",
+ "region": "Dewa Sanzan, Yamagata",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [4, 5, 6, 7, 8, 9, 10, 11],
+ "hours": [1.5, 2],
+ "start_by": "09:00",
+ "published": {
+  "km": 1.7,
+  "gain_m": null,
+  "source": "https://hagurokanko.jp/en/?p=135"
+ },
+ "why": "The pilgrims' way of the yamabushi: 2,446 stone steps under giant cedars, past a thousand-year-old cedar and a wooden pagoda, to the great thatched shrine of the three holy mountains.",
+ "book": "Free, no permit. Buses from Tsuruoka station to Zuishinmon (Haguro centre) and on to the summit car park: walk up and ride down, or the reverse. The Ideha Bunka Museum by the gate lends sneakers, rubber boots and sticks for free (closed Tuesdays).",
+ "water": "A tea house on the Ni-no-saka slope, halfway up; drinks, toilets and food at the summit. Carry 0.5-1 litre.",
+ "dangers": [
+  "The stone steps are mossy and very slippery when wet: no sandals or smooth soles.",
+  "Snow on the steps from December to March.",
+  "Hornets and horseflies in late summer."
+ ],
+ "turnaround": "Too tired at the pagoda? Go back down the 15 minutes to the gate; or keep going and take the bus down from the summit.",
+ "sources": [
+  "https://hagurokanko.jp/en/?p=135",
+  "https://www.gltjp.com/en/directory/item/12607/",
+  "https://www.openstreetmap.org/way/301073888"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 3, "culture": 5, "relax": 3, "history": 5, "landscape": 3},
+ "points": [
+  {
+   "id": "start",
+   "name": "Zuishinmon gate",
+   "lat": 38.7059,
+   "lon": 139.96459,
+   "role": "start",
+   "note": "The red gate where the pilgrims' way begins; the path drops down the Mamakozaka slope to the Harai river and the Suga waterfall."
+  },
+  {
+   "id": "pagoda",
+   "name": "Haguro five-storey pagoda",
+   "lat": 38.70476,
+   "lon": 139.9676,
+   "role": "point",
+   "note": "A 29 m wooden pagoda alone among cedars, said to date from 938, a National Treasure, just past the Jijisugi cedar, over 1,000 years old. The steps begin after it."
+  },
+  {
+   "id": "goal",
+   "name": "Haguro summit shrine",
+   "lat": 38.70256,
+   "lon": 139.98121,
+   "role": "goal",
+   "note": "Sanjin Gosaiden, 414 m: one thick thatched roof over the gods of all three mountains, with a lotus pond in front. Buses leave from the car park behind."
+  }
+ ]
+}

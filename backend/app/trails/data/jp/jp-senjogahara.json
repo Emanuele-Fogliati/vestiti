@@ -1,0 +1,70 @@
+{
+ "id": "jp-senjogahara",
+ "country": "JP",
+ "name": "Senjogahara marsh: Ryuzu Falls to Yudaki Falls (戦場ヶ原)",
+ "base": "Nikko",
+ "region": "Oku-Nikko, Nikko National Park, Tochigi",
+ "kind": "day",
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [5, 6, 7, 8, 9, 10],
+ "hours": [3, 3.5],
+ "start_by": "09:30",
+ "published": {
+  "km": 8,
+  "gain_m": null,
+  "source": "https://visitnikko.jp/en/stories/forest-and-marshes-nature-walk-yudaki-falls-to-senjogahara-marshland/"
+ },
+ "why": "A flat walk up the Yugawa river from one waterfall to another, across a 1,400 m high marsh on raised boardwalks, with Mount Nantai over the grass.",
+ "book": "Free, no permit. Tobu bus from Nikko or Tobu-Nikko station towards Yumoto Onsen: get off at Ryuzu-no-taki (about 1 hour), and take the same line back from Yutaki-iriguchi. Toilets at Akanuma and the Yudaki car park.",
+ "water": "No water on the trail itself: carry 1 litre. Shops and vending machines at Ryuzu Falls, Akanuma and Yumoto Onsen.",
+ "dangers": [
+  "Few shaded areas on the boardwalk: hat and sun cream in summer.",
+  "Wet or frosty boards are slippery, especially in October mornings.",
+  "Stay on the trail and the boardwalks: the marsh is a protected wetland."
+ ],
+ "turnaround": "No hard turnaround: Akanuma, about halfway, has a bus stop. Check the time of the last bus to Nikko before you set off.",
+ "sources": [
+  "https://visitnikko.jp/en/stories/forest-and-marshes-nature-walk-yudaki-falls-to-senjogahara-marshland/",
+  "https://visitnikko.jp/en/itineraries/forest-and-marshes-nature-walk-yudaki-falls-to-senjogahara-marshland/",
+  "https://www.mlit.go.jp/tagengo-db/common/001544435.docx",
+  "https://www.openstreetmap.org/way/188766480"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 5, "culture": 1, "relax": 4, "history": 1, "landscape": 4},
+ "points": [
+  {
+   "id": "start",
+   "name": "Ryuzu Falls",
+   "lat": 36.75890,
+   "lon": 139.45149,
+   "role": "start",
+   "note": "The falls split in two around a rock above Lake Chuzenji, by the bus stop. The trail climbs gently north beside the Yugawa river to Akanuma."
+  },
+  {
+   "id": "senjogahara-boardwalk",
+   "name": "Senjogahara boardwalk",
+   "lat": 36.77421,
+   "lon": 139.44317,
+   "role": "point",
+   "note": "Past Akanuma the path becomes raised boardwalks across the open marsh, about 1,400 m up, with Mount Nantai to the east."
+  },
+  {
+   "id": "izumiyadoike",
+   "name": "Izumiyadoike pond",
+   "lat": 36.78467,
+   "lon": 139.43296,
+   "role": "point",
+   "note": "A small spring-fed pond in the forest at the north end of the marsh, with benches: a good place for lunch. Yudaki is 40 minutes on."
+  },
+  {
+   "id": "goal",
+   "name": "Yudaki Falls",
+   "lat": 36.79590,
+   "lon": 139.42847,
+   "role": "goal",
+   "note": "The 70 m cascade that drains Lake Yunoko, seen from a platform at its foot. Yutaki-iriguchi bus stop is 10 minutes east."
+  }
+ ]
+}

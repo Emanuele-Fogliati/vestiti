@@ -1,0 +1,86 @@
+{
+ "id": "jp-ishizuchi",
+ "country": "JP",
+ "name": "Mount Ishizuchi (石鎚山) from the ropeway",
+ "base": "Saijo",
+ "region": "Ishizuchi Quasi-National Park, Ehime",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 7.2,
+  "gain_m": null,
+  "source": "https://www.city.saijo.ehime.jp/soshiki/kanko/hikingtrails.html"
+ },
+ "why": "The highest peak in western Japan and a holy mountain of the yamabushi: through beech forest past mountain shrines, a choice of hanging iron chains, and a rock blade of a summit at 1,982 m.",
+ "book": "Free. Ishizuchi Tozan Ropeway from Shimotani (bus from Iyo-Saijo station, about 1 hour), 7.5 minutes up, then 20 minutes to Jojusha. Huts and Ishizuchi Shrine's summit lodge (0897-55-4168) if you stay.",
+ "water": "Food and drinks at Jojusha and at the summit lodge; rest huts on the way are not always open. Carry 1.5-2 litres.",
+ "dangers": [
+  "The chains (33-74 m, near-vertical) are optional: bypass paths go round each one. Skip them in rain.",
+  "The ridge from the summit shrine to Tengudake is a narrow rock edge with drops on the north side: only in dry, calm weather.",
+  "Fog, wind and cold at the top; snow and ice from December to April."
+ ],
+ "turnaround": "Not at Yoakashi pass by 12:00: turn back; the descent to the last ropeway car takes 2-2.5 hours.",
+ "sources": [
+  "https://www.city.saijo.ehime.jp/soshiki/kanko/hikingtrails.html",
+  "https://www.japan.travel/en/sports/hiking/courses/mt-ishizuchi/",
+  "https://www.openstreetmap.org/node/1851999692"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 4,
+  "culture": 3,
+  "relax": 1,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Jojusha, above the ropeway",
+   "lat": 33.79005,
+   "lon": 133.12904,
+   "role": "start",
+   "note": "1,450 m, 20 minutes' walk from the top station of the ropeway: the shrine, its inns and a window framing the summit's north face. The trail starts behind it, 3.6 km to the top."
+  },
+  {
+   "id": "ishizuchi-chains",
+   "name": "Ishizuchi chains",
+   "lat": 33.77234,
+   "lon": 133.11674,
+   "role": "point",
+   "note": "Past the Yoakashi pass the first of three iron chains hangs down the rock, about 2 hours from Jojusha; a bypass path climbs beside it."
+  },
+  {
+   "id": "misen",
+   "name": "Misen summit shrine",
+   "lat": 33.76907,
+   "lon": 133.11363,
+   "role": "point",
+   "note": "1,972 m: Ishizuchi Shrine's Chojosha and the summit lodge, with food and drinks. Many stop here."
+  },
+  {
+   "id": "goal",
+   "name": "Tengudake",
+   "lat": 33.76778,
+   "lon": 133.1151,
+   "role": "goal",
+   "note": "1,982 m, ten minutes along the rock edge from the shrine: the top of Shikoku, with cliffs falling north. Back the same way."
+  }
+ ]
+}

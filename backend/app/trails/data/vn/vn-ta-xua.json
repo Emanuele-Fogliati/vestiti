@@ -1,0 +1,58 @@
+{
+ "id": "vn-ta-xua",
+ "country": "VN",
+ "name": "Ta Xua dinosaur spine (Sống lưng khủng long)",
+ "base": "Bac Yen",
+ "region": "Tà Xùa, Bắc Yên, Sơn La",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [10, 11, 12, 1, 2, 3, 4],
+ "hours": [3, 4],
+ "start_by": "05:30",
+ "published": null,
+ "why": "A knife-edge grass ridge high above the Sơn La - Yên Bái border, where on winter mornings you stand on a narrow spine over a sea of clouds.",
+ "book": "Free, no permit. Bắc Yên is 15 km below Tà Xùa on the steep provincial road 112; sleep in a Tà Xùa homestay to be on the ridge at sunrise. Many visitors ride motorbikes along the lane to the spine: on foot you share it with them.",
+ "water": "None on the ridge: carry 1.5 litres. Cafes and homestays in Tà Xùa.",
+ "dangers": [
+  "The spine is a narrow strip with steep drops on both sides: stay on the path and off the edge, above all in wind or wet grass.",
+  "Motorbikes on the narrow lane in both directions.",
+  "Cold, fog and dew at dawn in winter: warm layers and shoes with grip.",
+  "Slippery red clay in the rainy season (May to September)."
+ ],
+ "turnaround": "Fog with rain or strong wind on the ridge: stop at the end of the lane and do not walk out on the spine.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Ta_Xua",
+  "https://www.openstreetmap.org/node/4850945330",
+  "https://www.openstreetmap.org/way/1313221725"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 2, "nature": 4, "culture": 2, "relax": 2, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Ta Xua",
+   "lat": 21.31133,
+   "lon": 104.43429,
+   "role": "start",
+   "note": "The homestays of Tà Xùa at about 1,450 m. A narrow lane heads east along the ridge towards Háng Đồng."
+  },
+  {
+   "id": "lane-end",
+   "name": "End of the ridge lane",
+   "lat": 21.30618,
+   "lon": 104.46135,
+   "role": "point",
+   "note": "The lane ends and a track carries on along the crest; motorbikes stop around here. Clouds fill the valleys on both sides from October to April."
+  },
+  {
+   "id": "goal",
+   "name": "Dinosaur spine ridge",
+   "lat": 21.29764,
+   "lon": 104.47025,
+   "role": "goal",
+   "note": "The bare, bumpy crest that gives the place its name, with drops on both sides. Best between 05:00 and 07:00. Back the same way."
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "id": "jp-tsurugidake",
+ "country": "JP",
+ "name": "Mount Tsurugi from Murodo (剱岳)",
+ "base": "Toyama",
+ "region": "Chubu-Sangaku National Park, Tateyama, Toyama",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  10.5,
+  12
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 16.7,
+  "gain_m": 1900,
+  "source": "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf"
+ },
+ "why": "The hardest of the popular Japanese Alps summits: from the Murodo plateau over Bessan pass to a hut under the granite towers, then chains and ladders to the 2,999 m top.",
+ "book": "No permit. Reach Murodo on the Tateyama Kurobe Alpine Route: train from Toyama to Tateyama, cable car to Bijodaira, bus to Murodo (about 2 hours in all). Book Kenzan-so or Tsurugisawa-goya ahead for the night.",
+ "water": "Water and drinks at Murodo and at the huts (Tsurugigozen-goya, Kenzan-so). Carry 1.5 litres for the summit day: there is none above Kenzan-so.",
+ "dangers": [
+  "Between Ippuku-tsurugi and the summit, falls from ledges and falling rock are a constant risk: wear a helmet; a harness, sling and carabiners to clip the chains are recommended.",
+  "Kani-no-tatebai (up) and Kani-no-yokobai (down) are one-way chain and ladder sections on sheer rock: queues on weekends.",
+  "Snow lingers in the gullies into July and returns in October; outside the season it is a winter mountaineering climb.",
+  "Afternoon thunderstorms on bare rock: leave Kenzan-so for the summit at dawn."
+ ],
+ "turnaround": "Not at Heizo col (the foot of Kani-no-tatebai) by 08:30, or rain on the rock: go back to Kenzan-so. Wet chains on granite are not a place to be.",
+ "sources": [
+  "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf",
+  "https://hikesinjapan.yamakei-online.com/course/43.php",
+  "https://www.openstreetmap.org/node/3268398660",
+  "https://www.openstreetmap.org/way/436976218"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 1,
+  "relax": 0,
+  "history": 2,
+  "landscape": 5
+ },
+ "via": [
+  [
+   36.5871,
+   137.6011
+  ]
+ ],
+ "points": [
+  {
+   "id": "start",
+   "name": "Murodo",
+   "lat": 36.57754,
+   "lon": 137.59651,
+   "role": "start",
+   "note": "2,450 m, the Alpine Route bus terminal. Walk past Mikurigaike pond and down the steps to the Raichodaira campsite."
+  },
+  {
+   "id": "bessan-nori",
+   "name": "Tsurugigozen-goya at Bessan pass",
+   "lat": 36.59622,
+   "lon": 137.61004,
+   "role": "point",
+   "note": "About 2,750 m, 2 h 50 min from Murodo after the long rocky climb from Raichodaira. Mount Tsurugi appears across the Tsurugisawa valley."
+  },
+  {
+   "id": "kenzan-so-hut",
+   "name": "Kenzan-so hut",
+   "lat": 36.60926,
+   "lon": 137.61209,
+   "role": "point",
+   "night": true,
+   "note": "Night 1 at about 2,475 m, under the north face, after a traverse down from the pass. Start for the summit before 05:00."
+  },
+  {
+   "id": "goal",
+   "name": "Tsurugidake summit, over the chains",
+   "lat": 36.62334,
+   "lon": 137.61716,
+   "role": "goal",
+   "note": "2,999 m, reached in about 2.5 hours from Kenzan-so over Mae-tsurugi and the Kani-no-tatebai chains. Descend by Kani-no-yokobai and the same way to Murodo."
+  }
+ ]
+}

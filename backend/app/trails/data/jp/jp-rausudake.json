@@ -1,0 +1,65 @@
+{
+ "id": "jp-rausudake",
+ "country": "JP",
+ "name": "Rausudake from Iwaobetsu (羅臼岳)",
+ "base": "Utoro",
+ "region": "Shiretoko National Park, Hokkaido (World Heritage)",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [7, 8, 9],
+ "hours": [8, 10],
+ "start_by": "05:30",
+ "published": {
+  "km": 13.2,
+  "gain_m": 1431,
+  "source": "https://hikesinjapan.yamakei-online.com/course/134.php"
+ },
+ "why": "The highest peak of the Shiretoko peninsula: old forest, a snow gully, alpine flowers on Rausudaira and from the rocky top the Sea of Okhotsk and Kunashiri Island.",
+ "book": "No permit, but you must sign the climbers' register at Kinoshita-goya hut by the trailhead, where the staff also post bear news. 15 free parking spaces at Iwaobetsu Onsen, 30 minutes by car from Utoro; a few buses a day reach Iwaobetsu. The trail is closed at once when a bear causes trouble: check Shari town news before you go.",
+ "water": "No huts and no toilets on the mountain (bring a portable toilet: there is a booth). Do not drink the streams (echinococcus): carry 2-3 litres.",
+ "dangers": [
+  "Brown bears: a hiker was killed on this trail in August 2025 and it was closed again in July 2026 after a bear chased a walker. Do not go alone, make noise, carry bear spray.",
+  "Snow lies in the Osawa gully into July: slippery and steep, light crampons help early in the season.",
+  "Fog, wind and cold on the open ridge and the summit boulders, even in August.",
+  "Over 1,400 m of climb on rough rock: a long day."
+ ],
+ "turnaround": "Not at Rausudaira by 11:00, or the summit in cloud: turn back there; the descent takes 3-4 hours.",
+ "sources": [
+  "https://hikesinjapan.yamakei-online.com/course/134.php",
+  "https://www.visit-hokkaido.jp/en/spot/detail_10503.html",
+  "https://www.mlit.go.jp/tagengo-db/common/001564092.pdf",
+  "https://kumanichi.com/articles/2013635",
+  "https://en.wikivoyage.org/wiki/Shiretoko_National_Park",
+  "https://www.openstreetmap.org/way/129198080"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 5, "nature": 5, "culture": 0, "relax": 0, "history": 0, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Iwaobetsu Onsen trailhead",
+   "lat": 44.10969,
+   "lon": 145.09046,
+   "role": "start",
+   "note": "About 230 m, behind Hotel Chinohate. Sign the register at Kinoshita-goya; the path climbs at once into dense forest."
+  },
+  {
+   "id": "rausudaira",
+   "name": "Rausudaira",
+   "lat": 44.08173,
+   "lon": 145.12832,
+   "role": "point",
+   "note": "A saddle of stone pine and alpine flowers at about 1,400 m, after the Osawa snow gully, about 4 hours up past the Ginreisui spring."
+  },
+  {
+   "id": "goal",
+   "name": "Rausudake summit",
+   "lat": 44.07592,
+   "lon": 145.12223,
+   "role": "goal",
+   "note": "1,661 m, a pile of volcanic boulders an hour above Rausudaira: the Okhotsk Sea on one side, Kunashiri on the other. Return the same way."
+  }
+ ]
+}

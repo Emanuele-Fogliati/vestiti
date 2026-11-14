@@ -1,0 +1,61 @@
+{
+ "id": "jp-aso-nakadake",
+ "country": "JP",
+ "name": "Mount Aso: Nakadake and Takadake (阿蘇中岳・高岳)",
+ "base": "Aso",
+ "region": "Aso-Kuju National Park, Kumamoto",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [4, 5, 6, 9, 10, 11],
+ "hours": [5.5, 6.5],
+ "start_by": "08:00",
+ "published": null,
+ "why": "From the green bowl of Kusasenri across the black ash plain of Sunasenri and up the rim of a live volcano, then along the ridge to the 1,592 m top of the Aso caldera.",
+ "book": "Closed while the eruption alert level of Nakadake is 2 or higher: then nobody may go within about 1 km of the first crater, which takes in Sunasenri and its car park. On 13 November 2026 the level was 2 (since June 2026). Check the JMA bulletin and the Aso visitor centre site the day before: routes open and close with the level.",
+ "water": "Toilets and drinks at Kusasenri only. No water or shade on the volcano: carry 2 litres.",
+ "dangers": [
+  "Volcanic gas (sulphur dioxide) drifts over Sunasenri and the ridge: leave at once if you cough or smell it, above all with asthma or heart trouble.",
+  "A sudden eruption can throw rocks: know where the concrete shelters are.",
+  "Loose ash and scree on the crater wall; fog and wind on the open ridge.",
+  "Lightning: no cover anywhere on the summit ridge."
+ ],
+ "turnaround": "Gas warning sirens, fog on the crater wall, or not at Nakadake summit by 13:00: go back the way you came.",
+ "sources": [
+  "https://aso-visitorcenter.com/en/",
+  "https://www.mlit.go.jp/tagengo-db/common/001563343.pdf",
+  "https://www.data.jma.go.jp/vois/data/report/volinfo/VK20261113160000_503.html",
+  "https://hiking.waymarkedtrails.org/#route?id=21139377"
+ ],
+ "via": [[32.8792, 131.07647], [32.87607, 131.08673]],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 4, "nature": 4, "culture": 1, "relax": 1, "history": 1, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Kusasenri",
+   "lat": 32.88615,
+   "lon": 131.05499,
+   "role": "start",
+   "note": "The grassy crater meadow with its pond, horses and the Aso Volcano Museum. A 45-minute path leads east to the Furubochu trailhead (1,140 m)."
+  },
+  {
+   "id": "nakadake-crater",
+   "name": "Nakadake crater",
+   "lat": 32.88353,
+   "lon": 131.097,
+   "role": "point",
+   "note": "Nakadake summit, 1,506 m, on the rim above the steaming crater, reached up the crater wall from the ash plain of Sunasenri: about 2 hours from Furubochu.",
+   "scene": "jp-mount-aso"
+  },
+  {
+   "id": "goal",
+   "name": "Takadake summit",
+   "lat": 32.88437,
+   "lon": 131.10391,
+   "role": "goal",
+   "note": "1,592 m, 25 minutes along the ridge: the highest of Aso's five peaks, with the whole caldera wall around you. Return the same way."
+  }
+ ]
+}

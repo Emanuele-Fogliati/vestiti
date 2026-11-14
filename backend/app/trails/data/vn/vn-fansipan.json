@@ -1,0 +1,91 @@
+{
+ "id": "vn-fansipan",
+ "country": "VN",
+ "name": "Fansipan from Tram Ton (Phan Xi Păng)",
+ "base": "Sa Pa",
+ "region": "Hoàng Liên National Park, Lào Cai - Lai Châu border",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  11,
+  14
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "The highest summit of Indochina, 3,147 m, on foot: from the Tram Ton pass through bamboo and old forest to a camp on the ridge, then rock steps and ladders to the top above the clouds.",
+ "book": "Go with a guide, arranged in Sa Pa: tours of 2 days with one night on the mountain include the camp, meals and the Hoàng Liên National Park fee. The trail starts at the Tram Ton pass, 30 minutes by road from Sa Pa. A cable car (since 2016, 6.3 km, about 20 minutes) also runs to just below the top: many walk up and ride down.",
+ "water": "Guides carry or boil water at the camp. Carry 2 litres for each day; there is no shop until the summit complex.",
+ "dangers": [
+  "Steep rocky steps, roots and some ladders: very slippery after rain, which is frequent.",
+  "Fog can close in for days; from November to February it is cold, wet and can freeze at the top.",
+  "A false summit near 3,000 m is followed by a descent and a last climb: keep strength for it.",
+  "The top is crowded with cable-car visitors and temples: the last stretch is on concrete stairs."
+ ],
+ "turnaround": "Not at the camp by 16:00 on day 1: stop and sleep there; leave for the summit only with your guide, at dawn, and only in clear weather.",
+ "sources": [
+  "https://sapa-tourism.com/conquer-fansipan-peak-and-ham-rong-mountain/",
+  "https://en.wikipedia.org/wiki/Fansipan",
+  "https://en.wikivoyage.org/wiki/Sa_Pa",
+  "https://vietnam.travel/places-to-go/northern-vietnam/sapa",
+  "https://www.openstreetmap.org/way/192215815"
+ ],
+ "osm_ways": [
+  192215815,
+  1418993028
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 0,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tram Ton pass",
+   "lat": 22.35286,
+   "lon": 103.77474,
+   "role": "start",
+   "note": "About 1,900 m on the road west of Sa Pa, by the Nui Xe ranger station where guides sign you in. The first third of the trail is a gentle forest walk."
+  },
+  {
+   "id": "viewpoint-2143",
+   "name": "Viewpoint at 2,143 m",
+   "lat": 22.33434,
+   "lon": 103.77977,
+   "role": "point",
+   "note": "The first open view back over the Tram Ton pass and the Hoàng Liên range. After this the path climbs steeply through bamboo."
+  },
+  {
+   "id": "fansipan-camp-2800",
+   "name": "Fansipan camp 2800",
+   "lat": 22.31462,
+   "lon": 103.76562,
+   "role": "point",
+   "night": true,
+   "note": "Night 1 in the huts of the 2,800 m base camp on the ridge. Cold at night in every season: bring a warm layer and a hat."
+  },
+  {
+   "id": "goal",
+   "name": "Fansipan summit pyramid",
+   "lat": 22.30308,
+   "lon": 103.77544,
+   "role": "goal",
+   "note": "3,147 m, the steel pyramid marker and the flag, beside the cable-car station and pagodas. Back the same way to Tram Ton, or down by cable car."
+  }
+ ]
+}

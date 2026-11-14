@@ -1,0 +1,79 @@
+{
+ "id": "jp-ozegahara",
+ "country": "JP",
+ "name": "Oze marshland (尾瀬ヶ原) from Hatomachi pass",
+ "base": "Numata",
+ "region": "Oze National Park, Gunma",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [5, 6, 7, 8, 9, 10],
+ "hours": [5.5, 6.5],
+ "start_by": "08:00",
+ "published": {
+  "km": 15.8,
+  "gain_m": 193,
+  "source": "https://hikesinjapan.yamakei-online.com/course/16.php"
+ },
+ "why": "Down through beech forest to the largest high moor of Honshu: double boardwalks across 6 km of marsh, ponds and flowers, with Mount Shibutsu and Hiuchigatake at each end.",
+ "book": "Free; overnight numbers are limited, book a mountain lodge to stay. Bus from Jomo-Kogen or Numata to Tokura (about 2 hours), then the shuttle from the Oze Daiichi car park to Hatomachi pass (30 minutes, cash ticket machine). Trails are open May to October, closed under winter snow.",
+ "water": "Lodges, rest areas and toilets (100-yen contribution) at Yamanohana and Ryugu; a spring near Ushikubi. Carry 1.5 litres.",
+ "dangers": [
+  "Weather changes fast in the ring of mountains: fog, cold rain and afternoon storms. Bring a rain jacket and a warm layer.",
+  "Wet boardwalks are slippery; keep right and never step onto the marsh. Use rubber tips on poles.",
+  "Black bears live in the forest: wear a bell, take care at dawn and dusk.",
+  "The last hour is the climb back up to the pass."
+ ],
+ "turnaround": "Short on time or weather turning: cut back at the Ushikubi or Ryugu junction; the climb from Yamanohana to the pass takes 1 to 1.5 hours.",
+ "sources": [
+  "https://hikesinjapan.yamakei-online.com/course/16.php",
+  "https://www.mlit.go.jp/tagengo-db/common/001562654.pdf",
+  "https://www.visit-gunma.jp/en/discover/stories-and-guides/a-guide-to-hiking-ozegahara-gunmas-high-altitude-marshland/",
+  "https://www.openstreetmap.org/node/6593430649"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 3, "nature": 5, "culture": 1, "relax": 3, "history": 1, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Hatomachi pass",
+   "lat": 36.89001,
+   "lon": 139.20068,
+   "role": "start",
+   "note": "1,591 m: shuttle stop, rest house and shop. Stairs and boardwalk drop through beech forest for an hour."
+  },
+  {
+   "id": "yamanohana",
+   "name": "Yamanohana",
+   "lat": 36.91614,
+   "lon": 139.19712,
+   "role": "point",
+   "note": "1,400 m at the west end of the marsh: visitor centre, three lodges, campsite and toilets."
+  },
+  {
+   "id": "ozegahara-boardwalks",
+   "name": "Ozegahara boardwalks",
+   "lat": 36.92427,
+   "lon": 139.21812,
+   "role": "point",
+   "note": "Ushikubi junction, 45 minutes across the open moor: skunk cabbage in May-June, day lilies in July, gold grass in autumn. Nearby, Hiuchigatake mirrored in a pond."
+  },
+  {
+   "id": "ryugu",
+   "name": "Ryugu crossroads",
+   "lat": 36.93195,
+   "lon": 139.23697,
+   "role": "point",
+   "note": "40 minutes on, in the middle of the marsh: Ryugu lodge and toilets. Take the left fork north to the Yoppi river."
+  },
+  {
+   "id": "goal",
+   "name": "Yoppi suspension bridge",
+   "lat": 36.94158,
+   "lon": 139.22856,
+   "role": "goal",
+   "note": "The bridge over the Yoppi river at the north edge of the moor. Do not cross: follow the river back to Ushikubi, then Yamanohana and up to the pass."
+  }
+ ]
+}

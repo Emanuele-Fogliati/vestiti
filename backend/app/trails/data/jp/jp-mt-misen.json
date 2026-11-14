@@ -1,0 +1,64 @@
+{
+ "id": "jp-mt-misen",
+ "country": "JP",
+ "name": "Mount Misen (弥山) on Miyajima, Daisho-in course",
+ "base": "Miyajima",
+ "region": "Seto Inland Sea National Park, Hiroshima",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [3, 4, 5, 6, 9, 10, 11, 12],
+ "hours": [3, 4],
+ "start_by": "09:00",
+ "published": {
+  "km": 5,
+  "gain_m": null,
+  "source": "https://www.openstreetmap.org/node/2559449724"
+ },
+ "why": "From the temple behind the floating torii, hundreds of stone steps through protected primeval forest to granite boulders 535 m above the Seto Inland Sea.",
+ "book": "Free, no permit. Ferries every 15 minutes from Miyajimaguchi; Daisho-in is a 30-minute walk from the pier. The summit observatory is open 10:00-16:00. To skip the descent, walk 20 minutes down to the Shishiiwa ropeway station (last car down 17:00-17:30).",
+ "water": "No water or vending machines on the trail or at the summit; the nearest drinks are at the top ropeway station. Carry 1-1.5 litres; toilets at the summit.",
+ "dangers": [
+  "Steep stone steps all the way: hard on the knees going down, slippery when wet.",
+  "Hornets and mamushi pit vipers live on the mountain: rare, but call 119 if stung or bitten.",
+  "Summer heat and humidity: start early in July and August.",
+  "Stay on the three official courses: other paths are broken by typhoons and people get lost every year."
+ ],
+ "turnaround": "Not at the Misen Hondo halls by 14:30: go up to the summit only if you will take the ropeway down, before the last car.",
+ "sources": [
+  "https://visit-miyajima-japan.com/en/assets/pdf/misen_guide.pdf",
+  "https://www.japan.travel/en/japans-local-treasures/mt-misen-trekking-and-miyajima-2023",
+  "https://en.wikivoyage.org/wiki/Miyajima",
+  "https://www.openstreetmap.org/node/2559449724"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {"effort": 3, "nature": 4, "culture": 4, "relax": 2, "history": 4, "landscape": 5},
+ "points": [
+  {
+   "id": "start",
+   "name": "Daisho-in temple",
+   "lat": 34.29285,
+   "lon": 132.31901,
+   "role": "start",
+   "note": "Miyajima's oldest temple, 600 m behind Itsukushima Shrine. The Daisho-in course starts at the signboard beside it: 2.5 km to the top."
+  },
+  {
+   "id": "misen-hondo",
+   "name": "Misen Hondo and Reikado",
+   "lat": 34.27824,
+   "lon": 132.32081,
+   "role": "point",
+   "note": "Temple halls below the summit where Kobo Daishi is said to have trained; in the Reikado a fire has been kept burning for some 1,200 years."
+  },
+  {
+   "id": "goal",
+   "name": "Misen summit rocks",
+   "lat": 34.2797,
+   "lon": 132.31965,
+   "role": "goal",
+   "note": "535 m: huge granite boulders and an open wooden observatory, with islands of the Inland Sea on every side and Hiroshima across the bay.",
+   "scene": "jp-mount-misen"
+  }
+ ]
+}

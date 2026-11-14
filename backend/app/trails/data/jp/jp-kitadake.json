@@ -1,0 +1,96 @@
+{
+ "id": "jp-kitadake",
+ "country": "JP",
+ "name": "Kitadake loop from Hirogawara (北岳)",
+ "base": "Kofu",
+ "region": "Minami Alps National Park, Yamanashi",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  11,
+  12.5
+ ],
+ "start_by": "11:30",
+ "published": {
+  "km": 11.3,
+  "gain_m": 1668,
+  "source": "https://hikesinjapan.yamakei-online.com/course/49.php"
+ },
+ "why": "Japan's second-highest mountain, 3,193 m: up through forest and the Kusasuberi meadows to a hut on the ridge, sunrise over Mount Fuji from the top, then down past the snowy Daikanba valley.",
+ "book": "No permit. Yamanashi Kotsu bus from Kofu station (south exit) to Hirogawara, about 2 hours, only from late June to early November; by car, park at Ashiyasu and take the forest-road bus. Book Kitadake Katanokoya (or Shiraneoike-goya) ahead.",
+ "water": "Drinking water at Hirogawara and Shiraneoike-goya; on the ridge it is sold at Katanokoya. Carry 2 litres for the Kusasuberi climb.",
+ "dangers": [
+  "Kusasuberi is a long, steep climb of about 800 m: go slowly in the heat of the day.",
+  "Above 2,800 m there is no shelter from wind and lightning: be at the hut by early afternoon.",
+  "Snow can stay in the Daikanba valley into July and come back in October; in winter this is a mountaineering route.",
+  "Altitude above 3,000 m: headaches on the first night are common."
+ ],
+ "turnaround": "Not at Shiraneoike-goya by 14:30 on day 1: sleep there instead and climb Kusasuberi the next morning.",
+ "sources": [
+  "https://hikesinjapan.yamakei-online.com/course/49.php",
+  "https://www.pref.gunma.jp/uploaded/attachment/1232.pdf",
+  "https://thejapanalps.com/en/access-ashiyasu",
+  "https://www.openstreetmap.org/node/1851312843",
+  "https://www.openstreetmap.org/node/7891359513"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 0,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hirogawara",
+   "lat": 35.69698,
+   "lon": 138.27108,
+   "role": "start",
+   "note": "The bus terminal at about 1,520 m. Cross the suspension bridge over the Noro river and climb into old forest."
+  },
+  {
+   "id": "shiraneoike",
+   "name": "Shiraneoike-goya",
+   "lat": 35.68619,
+   "lon": 138.25234,
+   "role": "point",
+   "note": "The hut by a small pond at 2,230 m, after about 2.5 hours. Above it the Kusasuberi grass slope climbs straight up to the ridge."
+  },
+  {
+   "id": "kitadake-katanokoya",
+   "name": "Kitadake Katanokoya",
+   "lat": 35.67939,
+   "lon": 138.23771,
+   "role": "point",
+   "night": true,
+   "note": "Night 1 at about 3,000 m on the shoulder of Kitadake, where the Kotaro ridge joins. Sunset over the Northern and Central Alps."
+  },
+  {
+   "id": "goal",
+   "name": "Kitadake summit",
+   "lat": 35.67432,
+   "lon": 138.23881,
+   "role": "goal",
+   "note": "3,193 m, about 30 minutes up the ridge from the hut. Mount Fuji to the east, Ainodake on the ridge south."
+  },
+  {
+   "id": "happonba-col",
+   "name": "Happonba col",
+   "lat": 35.67072,
+   "lon": 138.24326,
+   "role": "point",
+   "note": "Down the summit scree to this col, then steep wooden ladders and steps into the Daikanba valley, past Futamata and back to Hirogawara."
+  }
+ ]
+}

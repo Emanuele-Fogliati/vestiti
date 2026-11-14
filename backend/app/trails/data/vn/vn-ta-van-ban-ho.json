@@ -1,0 +1,90 @@
+{
+ "id": "vn-ta-van-ban-ho",
+ "country": "VN",
+ "name": "Sa Pa homestay trek: Ta Van to Ban Ho",
+ "base": "Sa Pa",
+ "region": "Mường Hoa valley, Sa Pa, Lào Cai",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 14,
+  "gain_m": null,
+  "source": "https://sapa-tourism.com/3-days-2-nights-trekking-with-homestay/"
+ },
+ "why": "Down the Mường Hoa valley from the Giáy village of Ta Van, through the Red Dao village of Giang Ta Chai and the hamlet of Su Pan, to a Tày stilt-house village, with a night there.",
+ "book": "No permit. Go with a local guide or a tour from Sa Pa: the Lao Cai tourist information centre runs this walk as day 2 of a 3-day homestay trek. Most walkers sleep in Ta Van the night before (after the Lao Chai walk) and in a Ban Ho homestay at the end; transfer back to Sa Pa by car.",
+ "water": "Drinks and lunch in Giang Ta Chai and Su Pan; dinner at the homestay in Ban Ho. Carry 1.5 litres.",
+ "dangers": [
+  "Muddy, slippery clay paths and paddy dykes after rain: shoes with good grip.",
+  "Hanging bridges over the streams: one at a time.",
+  "Sections on the valley road with motorbikes and trucks.",
+  "Cold, wet fog from November to February; floods in heavy summer rain."
+ ],
+ "turnaround": "If the river is in flood or rain is heavy, stop in Su Pan and ride the valley road to Ban Ho.",
+ "sources": [
+  "https://sapa-tourism.com/3-days-2-nights-trekking-with-homestay/",
+  "https://en.wikivoyage.org/wiki/Sa_Pa",
+  "https://vi.wikipedia.org/wiki/B%E1%BA%A3n_H%E1%BB%93",
+  "https://www.openstreetmap.org/node/2587552089"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 5,
+  "relax": 3,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ta Van",
+   "lat": 22.30266,
+   "lon": 103.88858,
+   "role": "start",
+   "note": "The Giáy village on the valley floor at about 1,000 m, full of homestays. The path leaves east along the river through the paddies."
+  },
+  {
+   "id": "giang-ta-chai",
+   "name": "Giang Ta Chai",
+   "lat": 22.29791,
+   "lon": 103.90227,
+   "role": "point",
+   "note": "Red Dao village, known for red embroidery and silver coins on the clothes. Near it: a waterfall, a cane hanging bridge and a protected bamboo forest."
+  },
+  {
+   "id": "su-pan",
+   "name": "Su Pan",
+   "lat": 22.29366,
+   "lon": 103.92284,
+   "role": "point",
+   "note": "A hamlet with a school and a few homestays, the usual lunch stop. From here the trail goes on down the valley, crossing the Mường Hoa river."
+  },
+  {
+   "id": "goal",
+   "name": "Ban Ho stream",
+   "lat": 22.26369,
+   "lon": 103.96805,
+   "role": "goal",
+   "night": true,
+   "note": "Ban Ho, a Tày and Red Dao village of stilt houses where the streams meet. Night in a homestay; a hot spring near the village."
+  }
+ ]
+}
