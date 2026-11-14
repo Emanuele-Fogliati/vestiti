@@ -16,7 +16,7 @@ const norm = (s: string) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerC
 
 /** The trip on a map: the route from stop to stop, numbered. Tap a stop (on the map or in the
  *  row above it) to zoom in, and the places worth seeing around it appear. */
-export default function RouteMap({ stops }: { stops: RouteStop[] }) {
+export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; focusIndex?: number | null }) {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [data, setData] = useState<GlobeData | null>(null);
@@ -111,6 +111,14 @@ export default function RouteMap({ stops }: { stops: RouteStop[] }) {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data, key]);
+
+  // the trip page's timeline drives the map: a stop opened there flies the map to it
+  useEffect(() => {
+    if (focusIndex === undefined || !mapRef.current) return;
+    const i = focusIndex === null ? -1 : pts.findIndex((p) => p.n === focusIndex + 1);
+    if (i < 0) whole(); else zoomStop(i);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusIndex]);
 
   function zoomStop(i: number) {
     const s = pts[i];

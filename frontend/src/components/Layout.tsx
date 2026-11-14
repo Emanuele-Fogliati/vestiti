@@ -65,13 +65,14 @@ export function Layout() {
           </div>
         </div>
       </header>
-      <nav className="mnav" aria-label="Main (mobile)">
+      {/* inside a trip the phone shows the trip's own tabs (Plan, Weather, Pack) at the bottom instead */}
+      {!/^\/trips\/[^/]+/.test(loc.pathname) && <nav className="mnav" aria-label="Main (mobile)">
         <NavLink to="/" end>Home</NavLink>
         {links.filter(([to]) => ["/start", "/trips", "/wardrobe"].includes(to)).map(([to, label]) => (
           <NavLink key={to} to={to} className={({ isActive }) => (on(to, isActive) ? "active" : "")}>{to === "/start" ? "Plan" : to === "/wardrobe" ? "Closet" : label}</NavLink>
         ))}
         <NavLink to={user && !user.is_guest ? "/account" : "/login"}>{user && !user.is_guest ? "Account" : "Sign in"}</NavLink>
-      </nav>
+      </nav>}
       <Outlet />
       <footer>
         <div className="wrap">

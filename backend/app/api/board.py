@@ -19,7 +19,7 @@ from app import travel
 from app.db import get_db
 from app.deps import current_user, own_trip
 from app.guide import _norm
-from app import trails
+from app import art, trails
 from app.api.trails import card as trail_card
 from app.guide.todo import NEED_TEXT, TRAIL_KM, todo_for
 from app.models import Stop, Trip
@@ -84,10 +84,13 @@ def _plan_pins(stop: Stop, items) -> dict:
     return choices
 
 
-def _item_out(it, extra: dict | None = None) -> dict:
+def _item_out(it, extra: dict | None = None, at: Stop | None = None) -> dict:
     d = it.model_dump()
     d["need_text"] = NEED_TEXT[it.need]
     d.update(extra or {})
+    if at is not None:  # the drawing of the place this thing to do is about, when we have one
+        lm = art.named_near(it.name, at.latitude, at.longitude, at.country_code)
+        d["art"] = {"kind": "landmark", "id": lm.id, "label": lm.label} if lm else None
     return d
 
 
@@ -114,7 +117,7 @@ def board(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
             "fixed_note": s.fixed_note, "sleep": s.sleep, "days_estimated": bool(s.days_estimated),
             "arrival": leg,
             "todo": {"source": todo.source, "area": todo.area,
-                     "items": [_item_out(i) for i in todo.items],
+                     "items": [_item_out(i, at=s) for i in todo.items],
                      "rain": todo.rain.model_dump() if todo.rain else None,
                      "routes": [r.model_dump() for r in todo.routes],
                      "season": todo.season, "sleep_tip": todo.sleep, "sources": todo.sources,
@@ -127,7 +130,7 @@ def board(trip: Trip = Depends(own_trip), db: Session = Depends(get_db)):
                     "source": d.source, "kind": d.kind, "title": d.title, "note": d.note,
                     "override": d.override,
                     "tmin": round(w.tmin), "tmax": round(w.tmax), "wind_kmh": round(w.wind_kmh),
-                    "things": [_item_out(t.item, {"note": t.note, "moved": t.moved, "pinned": t.pinned})
+                    "things": [_item_out(t.item, {"note": t.note, "moved": t.moved, "pinned": t.pinned}, at=s)
                                for t in d.things],
                 } for d, w in zip(p.days, weather)],
                 "waiting": [_item_out(i) for i in p.waiting],

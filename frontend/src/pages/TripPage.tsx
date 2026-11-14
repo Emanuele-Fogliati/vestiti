@@ -9,7 +9,7 @@ import { ProfileQuiz } from "../components/ProfileQuiz";
 import { TailorChat } from "../components/TailorChat";
 import { TripBoard } from "../components/Board";
 import { FlightsPlanner } from "../components/Flights";
-import { Ribbon3D } from "../components/Ribbon3D";
+import { TripTimeline } from "../components/TripTimeline";
 import { Sheet } from "../components/Sheet";
 import { WeatherTab } from "../components/WeatherTab";
 import { api } from "../lib/api";
@@ -19,9 +19,9 @@ import type { Plans, QuizResult, Strategy, Tier, Trip } from "../lib/types";
 
 type Tab = "trip" | "weather" | "bag";
 const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: "trip", label: "Trip", icon: "M3 18l5-9 4 6 3-4 6 7" },
+  { id: "trip", label: "1 · Plan", icon: "M3 18l5-9 4 6 3-4 6 7" },
   { id: "weather", label: "Weather", icon: "M3 9h11a3 3 0 1 0-3-3M3 14h15a3 3 0 1 1-3 3M3 19h6" },
-  { id: "bag", label: "Clothes", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
+  { id: "bag", label: "2 · Pack", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
 ];
 // old section anchors still land in the right tab
 const HASH: Record<string, Tab> = { trip: "trip", days: "trip", flights: "trip", map: "trip", weather: "weather", layers: "bag", bag: "bag", kit: "bag", total: "bag", ask: "trip" };
@@ -41,11 +41,11 @@ export default function TripPage() {
   const [strategy, setStrategy] = useState<Strategy | null>(null);
   const [plans, setPlans] = useState<Plans | null>(null);
   const [tier, setTier] = useState<Tier>("medium");
-  const [stageIdx, setStageIdx] = useState(0);
+  const [stageIdx, setStageIdx] = useState(-1); // -1: the whole route, no stop open
   const [err, setErr] = useState<string | null>(null);
   const [planning, setPlanning] = useState(false);
   const [tab, setTab] = useState<Tab>(HASH[loc.hash.slice(1)] ?? "trip");
-  const [view, setView] = useState<"3d" | "map">("3d");
+  const [ver, setVer] = useState(0);
   const [askOpen, setAskOpen] = useState(loc.hash === "#ask");
   const [flightsOpen, setFlightsOpen] = useState(loc.hash === "#flights");
   const [menu, setMenu] = useState(false);
@@ -66,6 +66,7 @@ export default function TripPage() {
     try {
       const t = await api.trip(id);
       setTrip(t);
+      setVer((v) => v + 1);
       if (t.stops.length) await loadPlans(tier);
       else { setStrategy(null); setPlans(null); }
     } catch (e) { setErr((e as Error).message); }
@@ -75,8 +76,8 @@ export default function TripPage() {
 
   // the quiz comes before the plan, once per traveller (answered or skipped)
   useEffect(() => {
-    if (trip && trip.stops.length && user && !user.profile_done_at) setQuizOpen(true);
-  }, [trip, user]);
+    if (tab === "bag" && trip && trip.stops.length && user && !user.profile_done_at) setQuizOpen(true);
+  }, [trip, user, tab]);
 
   useEffect(() => {
     const t = HASH[loc.hash.slice(1)];
@@ -147,7 +148,7 @@ export default function TripPage() {
   const countries = new Set(stops.map((s) => s.country_code).filter(Boolean));
   const related = !trip.source_itinerary ? itineraries?.find((it) => it.countries.some((c) => countries.has(c))) : undefined;
   const estimateWeather = strategy?.stages.some((s) => s.weather_sources.includes("estimate"));
-  const sel = Math.min(stageIdx, Math.max(0, stops.length - 1));
+  const sel = stageIdx < 0 ? -1 : Math.min(stageIdx, Math.max(0, stops.length - 1));
 
   return (
     <main className="x-trip">
@@ -218,29 +219,29 @@ export default function TripPage() {
       {tab === "trip" && (
         <section className="x-panel" id="p-trip" role="tabpanel" key="trip">
           <div className="wrap">
-            {stops.length > 0 && (
-              <div className="x-stage x-rise">
-                {view === "3d" ? <Ribbon3D stops={stops} active={sel} onPick={setStageIdx} /> : <div className="x-map"><TripMap stops={stops} /></div>}
-                <div className="x-stage-ctl">
-                  <div className="x-seg sm" role="group" aria-label="View">
-                    <button type="button" aria-pressed={view === "3d"} onClick={() => setView("3d")}>3D</button>
-                    <button type="button" aria-pressed={view === "map"} onClick={() => setView("map")}>Map</button>
+            {stops.length > 0 ? (
+              <div className="r16 x-rise">
+                <div className="r16-map"><TripMap stops={stops} focusIndex={stageIdx < 0 ? null : sel} /></div>
+                <div className="r16-list">
+                  <TripTimeline tripId={id} stops={stops} version={ver} open={stageIdx < 0 ? null : sel} onOpen={(i) => setStageIdx(i ?? -1)} />
+                  <div className="r16-tools">
+                    <button type="button" className="x-btn" onClick={() => setFlightsOpen(true)}>
+                      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21 15.5l-8-4.5V5.5a1.5 1.5 0 0 0-3 0V11l-8 4.5V17l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-4.5l8 2.5z" /></svg>
+                      Flights
+                    </button>
                   </div>
-                  <button type="button" className="x-btn y" onClick={() => setFlightsOpen(true)}>
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21 15.5l-8-4.5V5.5a1.5 1.5 0 0 0-3 0V11l-8 4.5V17l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-4.5l8 2.5z" /></svg>
-                    Flights
-                  </button>
+                  <details className="r16-edit">
+                    <summary>Change the plan: days, order, what to do</summary>
+                    <TripBoard trip={trip} onChanged={loadAll} selected={Math.max(0, sel)} onSelect={setStageIdx} />
+                  </details>
+                  <div className="r16-cta">
+                    <div className="r16-steps" aria-hidden="true"><span className="on">1 · Plan the trip</span><i /><span>2 · Pack</span></div>
+                    <button type="button" onClick={() => go("bag")}>Trip ready? <span>Pack for it →</span></button>
+                  </div>
                 </div>
               </div>
-            )}
-            <div className="x-rise">
-              <TripBoard trip={trip} onChanged={loadAll} selected={sel} onSelect={setStageIdx} />
-            </div>
-            {stops.length > 0 && (
-              <div className="x-cta x-rise">
-                <b>Ready to pack?</b>
-                <button type="button" className="x-btn y" onClick={() => go("bag")}>Dress me</button>
-              </div>
+            ) : (
+              <div className="x-rise"><TripBoard trip={trip} onChanged={loadAll} selected={0} onSelect={setStageIdx} /></div>
             )}
           </div>
         </section>
