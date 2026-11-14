@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="238" cy="22" r="10" fill="var(--il-sun)"/>
+<defs><clipPath id="il-nz-greenstone-valley-p"><path d="M80 120L96 86L110 78L122 68L134 62L146 68L158 64L170 74L184 72L196 84L210 120Z"/></clipPath></defs>
+<path d="M80 120L96 86L110 78L122 68L134 62L146 68L158 64L170 74L184 72L196 84L210 120Z" fill="var(--il-far)"/>
+<path d="M80 0H220V76L208 80L196 76L186 80L174 76L164 78L154 72L144 76L134 72L124 78L114 84L102 90L80 96Z" fill="var(--il-ice)" clip-path="url(#il-nz-greenstone-valley-p)"/>
+<path d="M300 30Q262 40 226 60Q190 82 156 112H300Z" fill="var(--il-mid)"/>
+<path d="M156 110Q166 100 176 102Q184 92 196 94Q204 86 216 88Q224 80 236 82Q246 74 258 76Q268 70 280 72Q290 66 300 68V156H156Z" fill="var(--il-leaf)"/>
+<path d="M0 18Q40 40 72 66Q104 92 134 112V156H0Z" fill="var(--il-mid)"/>
+<path d="M0 66Q12 64 20 72Q32 70 40 80Q52 78 58 88Q70 88 76 96Q88 96 94 104Q106 104 112 110L134 114V156H0Z" fill="var(--il-leaf)"/>
+<path d="M0 138L36 126L76 118H228L266 124L300 132V200H0Z" fill="var(--il-acc)"/>
+<path d="M150 118Q174 121 164 125Q140 129 148 133Q158 138 136 142" stroke="var(--il-water)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+<path d="M136 142Q100 148 112 158Q126 166 96 174Q66 184 82 194Q88 198 86 200" stroke="var(--il-water)" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+<path d="M196 132L198 126M202 132L202 124M208 132L206 126M226 156L228 144M232 156L232 142M238 156L236 144M34 150L36 140M40 150L40 138M46 150L44 140M166 176L168 164M172 176L172 162M178 176L176 164M262 140L264 132M268 140L268 130M274 140L272 132" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V180Q40 174 86 182Q124 190 146 200Z" fill="var(--il-obj)"/>
+<path d="M204 200Q232 186 270 184Q290 184 300 186V200Z" fill="var(--il-obj)"/>

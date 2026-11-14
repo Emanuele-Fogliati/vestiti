@@ -1,0 +1,19 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-nz-avalanche-peak-m"><path d="M0 84L14 78L26 80L40 72L52 74L64 64L74 58L80 60L90 68L100 74L108 72L116 64L124 60L134 54L146 50L158 48L170 44L176 46L182 38L188 32L194 36L202 46L212 54L220 62L230 66L240 68L252 66L262 70L272 66L284 72L300 70V200H0Z"/></clipPath></defs>
+<path d="M0 84L14 78L26 80L40 72L52 74L64 64L74 58L80 60L90 68L100 74L108 72L116 64L124 60L134 54L146 50L158 48L170 44L176 46L182 38L188 32L194 36L202 46L212 54L220 62L230 66L240 68L252 66L262 70L272 66L284 72L300 70V200H0Z" fill="var(--il-mid)"/>
+<path d="M116 28H180L172 52L160 64L150 76L142 88L130 96L124 84L118 70Z" fill="var(--il-ice)" clip-path="url(#il-nz-avalanche-peak-m)"/>
+<path d="M248 58H274L268 74L258 78L250 72Z" fill="var(--il-ice)" clip-path="url(#il-nz-avalanche-peak-m)"/>
+<path d="M188 34L194 54L198 78L192 100M74 60L80 84L88 106M212 56L218 80M30 84L36 106M232 70L240 92L246 114" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M188 32L202 46L212 54L220 62L230 66L218 88L206 108L196 104L198 80ZM74 58L80 60L90 68L100 74L108 72L104 98L96 118L86 100Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M96 200L118 184L138 170L160 160L180 152L204 146L232 140L262 136L300 132V200Z" fill="var(--il-far)"/>
+<path d="M204 146L232 140L262 136L300 132V200H246Q236 172 204 146Z" fill="var(--il-acc)"/>
+<path d="M124 196L146 180M172 196L188 176M262 196L272 170M282 192L290 164" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V156Q14 148 30 150Q50 152 62 164Q76 176 96 200Z" fill="var(--il-obj)"/>
+<g transform="translate(14 134)">
+<path d="M16 15V18M20 14V18" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M0 14L8 8Q12 2 20 2Q26 1 28 5Q29 9 26 12Q20 16 12 14Z" fill="var(--il-leaf)"/>
+<path d="M11 12Q16 15 21 12L18 10Z" fill="var(--il-sun)"/>
+<path d="M27 3Q34 3 33 10Q31 6 28 7Z" fill="var(--il-far)"/>
+<circle cx="24.5" cy="5" r="0.9" fill="var(--il-near)"/>
+</g>

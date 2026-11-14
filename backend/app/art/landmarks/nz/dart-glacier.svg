@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="208" cy="20" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-nz-dart-glacier-r"><path d="M0 26L12 16L22 8L32 6L44 12L60 18L76 22L92 24L108 20L120 22L134 30L150 32L166 34L176 32L188 36L200 42L214 44L230 44L244 38L254 36L264 40L278 44L300 40V200H0Z"/></clipPath></defs>
+<path d="M0 26L12 16L22 8L32 6L44 12L60 18L76 22L92 24L108 20L120 22L134 30L150 32L166 34L176 32L188 36L200 42L214 44L230 44L244 38L254 36L264 40L278 44L300 40V200H0Z" fill="var(--il-mid)"/>
+<path d="M300 62L272 72L250 86L236 104L232 126L236 148L224 166L210 186L204 200H300ZM0 70L30 80L60 96L84 118L100 146L104 176L96 200H0Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M0 0H14L22 24L30 34L40 30L48 18L54 0H100L106 28L114 38L124 40L132 34L138 0H246L250 44L258 52L266 50L272 0H300V64L286 62L272 70L258 68L246 76L240 84Q226 96 220 112Q218 132 222 148Q214 166 200 184L192 200H104Q120 176 140 156Q154 136 160 116Q168 96 180 86L168 82L150 78L136 82L122 74L108 78L92 72L78 74L64 66L50 70L40 60L28 62L18 52L8 56L0 50Z" fill="var(--il-ice)" clip-path="url(#il-nz-dart-glacier-r)"/>
+<path d="M170 118Q194 128 216 116M158 140Q186 152 214 136M144 162Q170 174 204 160M126 184Q152 196 188 184" stroke="var(--il-water)" stroke-width="2" fill="none" stroke-linecap="round"/>
+<path d="M104 200Q120 176 140 156Q154 136 160 116L150 116Q132 140 108 160Q84 180 62 200Z" fill="var(--il-far)"/>
+<path d="M186 200Q214 186 246 178Q276 170 300 166V200Z" fill="var(--il-acc)"/>
+<path d="M220 194L222 184M226 194L226 182M232 194L230 184M280 186L282 176M286 186L286 174" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<g transform="translate(252 160)">
+<path d="M16 15V18M20 14V18" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M0 14L8 8Q12 2 20 2Q26 1 28 5Q29 9 26 12Q20 16 12 14Z" fill="var(--il-leaf)"/>
+<path d="M11 12Q16 15 21 12L18 10Z" fill="var(--il-sun)"/>
+<path d="M27 3Q34 3 33 10Q31 6 28 7Z" fill="var(--il-far)"/>
+<circle cx="24.5" cy="5" r="0.9" fill="var(--il-near)"/>
+</g>
