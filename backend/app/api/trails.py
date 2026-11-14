@@ -5,6 +5,8 @@ GET /api/trails/{id}            one trail: the numbers, key points with their dr
                                 on the map, the altitude profile and the time of every stretch
 GET /api/trails/{id}/wear       what to wear on it in a month (the same engine as the trip kit)
 GET /api/trails/{id}.gpx        the line as GPX, to open in the walker's own navigation app
+GET /api/trails/dots            every trail as a dot for the home globe in Trek mode (compact)
+GET /api/trails/{id}/card       one trail as a card (the globe opens it when a dot is tapped)
 """
 from __future__ import annotations
 
@@ -114,6 +116,26 @@ def list_trails(country: str | None = Query(None, pattern=r"^[A-Za-z]{2}$"),
         ts = [t for t in trails.trails() if cc is None or t.country == cc]
     return {"trails": [card(t, month) for t in ts],
             "countries": sorted({t.country for t in trails.trails()})}
+
+
+LEVELS = ["easy", "moderate", "hard", "technical"]
+
+
+@router.get("/dots")
+def dots():
+    """Manu, 2026-11-14: in Trek mode every trek has its dot on the globe. One row per trail,
+    [id, name, lat, lon, difficulty 0-3, tier, days], at the trail's goal: many trails leave from
+    the same trailhead (El Chaltén), but each walks to its own lake or summit."""
+    def goal(t: trails.Trail):
+        return next((p for p in reversed(t.points) if p.role == "goal"), t.points[-1])
+    return {"fields": ["id", "name", "lat", "lon", "level", "tier", "days"],
+            "trails": [[t.id, t.name, round(goal(t).lat, 4), round(goal(t).lon, 4),
+                        LEVELS.index(t.difficulty), t.tier, t.days] for t in trails.trails()]}
+
+
+@router.get("/{trail_id}/card")
+def one_card(trail_id: str, month: int | None = Query(None, ge=1, le=12)):
+    return card(_trail(trail_id), month)
 
 
 @router.get("/{trail_id}.gpx")
