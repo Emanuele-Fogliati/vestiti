@@ -49,6 +49,11 @@ class ReadyTrip(BaseModel):
     def _ok(self):
         if any(not 1 <= m <= 12 for m in self.months):
             raise ValueError(f"{self.id}: months are 1-12")
+        places = [s.place for s in self.stops]
+        if len(places) > 1 and places[-1] == places[0]:
+            places = places[:-1]  # a round trip ends where it began
+        if len(places) != len(set(places)):
+            raise ValueError(f"{self.id}: a place written twice")
         return self
 
 

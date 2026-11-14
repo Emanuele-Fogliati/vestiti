@@ -827,8 +827,10 @@ def _ready(a: dict, only: list[str], days: int | None, month: int | None, prefs)
     if any(s.place not in P for s in t.stops):
         return None
     nights = ready.nights(t, P, prefs)
-    stops = [{**_stop_of_base({**P[s.place], "sights": []}, n), "key": s.place}
-             for s, n in zip(t.stops, nights)]
+    # a ready trip may end where it began (round Iceland): the second visit is "<place>~back"
+    stops = [{**_stop_of_base({**P[s.place], "sights": []}, n),
+              "key": s.place if all(x.place != s.place for x in t.stops[:i]) else f"{s.place}~back"}
+             for i, (s, n) in enumerate(zip(t.stops, nights))]
     _days_of(stops)
     _guide_days(stops, month, prefs, spare=True)
     more = []  # the other places to sleep in the region, most visited first

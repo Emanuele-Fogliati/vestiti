@@ -213,7 +213,8 @@ def test_order_follows_the_trips_not_a_random_walk():
 
 def test_a_ring_starts_and_ends_where_the_flights_are():
     a, only = explore.best_area("Islanda")
-    for days in (9, 14):
+    # 14 days is the ready round trip (app.guide.ready); 10 days is merged from the trips
+    for days in (10, 14):
         p = explore.propose(a, only, days)
         n = _names(p)
         assert n[0] == n[-1] == "Reykjavik", n

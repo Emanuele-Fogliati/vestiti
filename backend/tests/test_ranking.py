@@ -111,3 +111,13 @@ def test_japan_two_weeks_is_the_ready_trip_through_the_alps():
     names = [s["name"] for s in p["stops"]]
     assert names[0] == "Tokyo" and "Kyoto" in names and "Takayama" in names
     assert sum(s["days"] for s in p["stops"]) == 14
+
+
+def test_a_ready_round_trip_comes_back_to_the_start():
+    p = explore.propose(explore.area("c-is"), None, 14, 7)
+    assert p["ready"]["id"] == "iceland-14"
+    keys = [s["key"] for s in p["stops"]]
+    assert keys[0] == "is-reykjavik" and keys[-1] == "is-reykjavik~back"
+    assert len(keys) == len(set(keys))
+    p = explore.propose(explore.area("c-pe"), None, 14, 7)
+    assert p["ready"]["id"] == "peru-14" and p["stops"][-1]["key"] == "pe-lima~back"
