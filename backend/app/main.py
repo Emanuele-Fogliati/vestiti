@@ -51,7 +51,8 @@ CSP = ("default-src 'self'; script-src 'self'; "
        "connect-src 'self' https://tiles.openfreemap.org https://s3.amazonaws.com https://gibs.earthdata.nasa.gov; "
        "worker-src 'self' blob:; child-src 'self' blob:; "
        "object-src 'none'; base-uri 'self'; form-action 'self'; "
-       "frame-ancestors 'none'")
+       # only our own /preview page may show the app in a frame (phone + computer side by side)
+       "frame-ancestors 'self'")
 
 
 class BodyLimit:
@@ -107,7 +108,7 @@ async def csrf_and_headers(request: Request, call_next):
     resp = await call_next(request)
     resp.headers.setdefault("X-Content-Type-Options", "nosniff")
     resp.headers.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
-    resp.headers.setdefault("X-Frame-Options", "DENY")
+    resp.headers.setdefault("X-Frame-Options", "SAMEORIGIN")
     if resp.headers.get("content-type", "").startswith("text/html"):
         resp.headers.setdefault("Content-Security-Policy", CSP)
     if settings.cookie_secure:  # served over https: tell browsers to never use http again
