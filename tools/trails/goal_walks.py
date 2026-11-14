@@ -282,15 +282,19 @@ def osm(cc: str) -> None:
 
 DOC_WORDS = [(r"\bTk\b\.?", "Track"), (r"\bRte\b", "Route"), (r"\bJct\b", "Junction"), (r"\bRd\b", "Road"),
              (r"\bMt\b", "Mount"), (r"\bSt\b", "Stream"), (r"\bCk\b", "Creek"), (r"\bR\b", "River"),
-             (r"\bVly\b", "Valley"), (r"\bBiv\b", "Bivvy"), (r"\bPk\b", "Peak"), (r"\bCa\b", "Carpark")]
+             (r"\bVly\b", "Valley"), (r"\bBiv\b", "Bivvy"), (r"\bPk\b", "Peak"), (r"\bCa\b", "Carpark"),
+             (r"\bW/Way\b", "Walkway"), (r"(?<=\w) To (?=\w)", " to ")]
 
 
 def doc_name(s: str) -> str:
-    s = re.sub(r"^T\d+\s*:\s*", "", s or "").strip()
+    s = re.sub(r"^T\d+\s*[:-]\s*", "", s or "").strip()
     s = re.sub(r"\s*\(.*$", "", s)
     for a, b in DOC_WORDS:
         s = re.sub(a, b, s)
-    return re.sub(r"\s+", " ", s).strip(" -/")
+    s = re.sub(r"\s+", " ", s).strip(" -/")
+    if s and not re.search(r"\b(Track|Route|Walk|Walkway|Trail|Circuit|Loop|Path)\b", s, re.I):
+        s += " Track"
+    return s
 
 
 def _char(a: dict, name: str):
