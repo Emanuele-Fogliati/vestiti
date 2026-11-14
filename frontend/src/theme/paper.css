@@ -1,0 +1,66 @@
+/* One palette for the whole app (design picked by Manu, 2026-11-13: H21 home, R16 trip, S11 bag).
+   Paper background, white cards with a thin ink line, ink text, yellow only for the thing you act on.
+   Blues only inside maps. Loaded last. */
+[data-theme="yellow-black"]{
+  --bg:#F4F1EA;--bg-2:#F4F1EA;--surface:#FFFFFF;--surface-2:#FBFAF6;
+  --ink:#111111;--ink-2:#555555;--ink-3:#8A867C;--rule:#E2DED4;--rule-strong:#111111;
+  --top-bg:#F4F1EA;--top-ink:#111111;--top-ink-2:#555555;
+  --photo-bg:#FFFFFF;--el-sel:#FFF3B0;--colsel:#FFF3B0;--why-bg:#FFF3B0;--total-bg:#FFFFFF;--total-border:#111111;
+  --shadow:none;--bw:1.5px;
+  /* the drawn globe and maps: soft vintage (globe g1) */
+  --map-sea:#A8CADB;--map-land:#EADDBA;--map-green:#C3CFA2;--map-wood:#B7C79A;--map-sand:#E9DCB4;--map-ice:#FFFFFF;
+  --map-line:#9C9480;--map-label:#4F4B42;--map-halo:#F4F1EA;--map-space:#F4F1EA;--map-atmosphere:#D9EAF1;--map-glow:#E6F0F3;
+}
+body{background:var(--bg)}
+
+/* top bar: paper, logo left, plain links */
+.top{background:var(--bg);border-bottom:1.5px solid var(--ink)}
+.top .free{display:none}
+
+/* white cards with an ink line */
+:is(.card,.panel,.x-item,.tcard,.witem,.place-card,.pcard){background:var(--surface);border:1.5px solid var(--ink);border-radius:18px;box-shadow:none}
+.btn{border:1.5px solid var(--ink)}
+.btn.primary,.x-btn.y{background:var(--ink);color:#FFFFFF;border-color:var(--ink);box-shadow:none}
+.btn.primary:hover{filter:none;background:#333}
+.x-btn{box-shadow:inset 0 0 0 1.5px var(--ink)}
+
+/* ---------- Home (H21) ---------- */
+.home{display:grid;grid-template-columns:1fr;min-height:calc(100svh - 64px)}
+.home-globe .globe{height:clamp(320px,52svh,520px);min-height:0;background:var(--bg)}
+.home-globe .globe-head,.home-globe .globe-hint{display:none}
+.home-side{padding:4px 16px 40px;display:flex;flex-direction:column;gap:16px;max-width:560px;width:100%;margin:0 auto;box-sizing:border-box}
+.home-h{font-family:var(--f-display);font-weight:900;font-size:clamp(34px,9vw,60px);line-height:1;letter-spacing:-.03em;margin:0}
+.home-h span{color:var(--ink)}
+.home .starter .ask-q{position:absolute;left:-9999px}
+.home .starter .ask-box{background:#FFFFFF;border:2px solid var(--ink);border-radius:30px}
+.home .starter .btn.primary.go{background:var(--accent);color:var(--ink);border-color:var(--ink)}
+.home-links{display:flex;gap:18px;flex-wrap:wrap}
+.home-ideas{font-size:16px;color:var(--ink)}
+.home-note{font-size:13px;color:var(--ink-2);margin:0}
+@media (min-width:900px){
+  .home{grid-template-columns:minmax(0,1.25fr) minmax(380px,1fr);align-items:center}
+  .home-globe .globe{height:calc(100svh - 64px)}
+  .home-side{padding:40px 48px 40px 16px;margin:0}
+}
+
+/* ---------- phone: tab bar at the bottom, like an app ---------- */
+@media (max-width:760px){
+  .mnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--bg);border-top:1.5px solid var(--ink);
+    justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));overflow-x:auto}
+  .mnav a{flex:1 1 0;text-align:center;font-size:12px;font-weight:700;color:var(--ink-2);text-decoration:none;padding:8px 2px;border-radius:12px;white-space:nowrap}
+  .mnav a.active{color:var(--ink);background:var(--accent)}
+  body{padding-bottom:64px}
+  .top .nav,.top .acct{display:none}
+}
+
+/* ---------- /preview: phone and computer side by side ---------- */
+.pv{min-height:100svh;background:#E9E5DB;font-family:var(--f-body)}
+.pv-bar{display:flex;gap:10px;align-items:center;padding:12px 20px;background:var(--bg);border-bottom:1.5px solid var(--ink);position:sticky;top:0;z-index:2;flex-wrap:wrap}
+.pv-bar input{flex:1 1 220px;min-width:0;height:36px;border:1.5px solid var(--ink);border-radius:18px;padding:0 14px;font:inherit}
+.pv-bar select{height:36px;border:1.5px solid var(--ink);border-radius:18px;padding:0 10px;font:inherit;background:#fff}
+.pv-stage{display:flex;gap:32px;padding:24px;align-items:flex-start;justify-content:center;flex-wrap:wrap}
+.pv figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:8px}
+.pv figcaption{font-size:13px;font-weight:700;color:var(--ink-2)}
+.pv-phone iframe{border:12px solid #111;border-radius:44px;background:var(--bg);box-sizing:content-box}
+.pv-desk-in{width:calc(1366px * .62);height:calc(860px * .62);overflow:hidden;border:10px solid #111;border-radius:14px;background:var(--bg)}
+.pv-desk iframe{border:0;transform:scale(.62);transform-origin:0 0}

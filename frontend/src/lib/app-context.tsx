@@ -18,21 +18,16 @@ interface Ctx {
 const AppCtx = createContext<Ctx | null>(null);
 const THEME_KEY = "theme-override";
 
-function readThemeOverride(): string | null {
-  try { return localStorage.getItem(THEME_KEY); } catch { return null; }
-}
-
 export function AppProvider({ children }: { children: ReactNode }) {
   const [config, setConfig] = useState<AppConfig | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [msg, setMsg] = useState<string | null>(null);
-  const [theme, setThemeState] = useState<string>(readThemeOverride() ?? "yellow-black");
+  const [theme, setThemeState] = useState<string>("yellow-black") // one palette for the whole app (Manu, 2026-11-13);
 
   useEffect(() => {
     api.config().then((c) => {
       setConfig(c);
-      if (!readThemeOverride()) setThemeState(c.theme);
       document.title = `${c.brand.name} · ${c.brand.tagline}`;
     }).catch(() => undefined);
     api.session().then((r) => setUser(r.user)).catch(() => setUser(null)).finally(() => setLoading(false));

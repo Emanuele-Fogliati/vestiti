@@ -16,10 +16,8 @@ export function Logo({ name }: { name: string }) {
   );
 }
 
-const THEMES: [string, string][] = [["yellow-black", "Yellow + black"], ["cobalt", "Cobalt"], ["ember", "Ember + sky"]];
-
 export function Layout() {
-  const { config, user, setUser, theme, setTheme } = useApp();
+  const { config, user, setUser } = useApp();
   const nav = useNavigate();
   const loc = useLocation();
   const name = brandName(config);
@@ -68,8 +66,9 @@ export function Layout() {
         </div>
       </header>
       <nav className="mnav" aria-label="Main (mobile)">
-        {links.map(([to, label]) => (
-          <NavLink key={to} to={to} className={({ isActive }) => (on(to, isActive) ? "active" : "")}>{label}</NavLink>
+        <NavLink to="/" end>Home</NavLink>
+        {links.filter(([to]) => ["/start", "/trips", "/wardrobe"].includes(to)).map(([to, label]) => (
+          <NavLink key={to} to={to} className={({ isActive }) => (on(to, isActive) ? "active" : "")}>{to === "/start" ? "Plan" : to === "/wardrobe" ? "Closet" : label}</NavLink>
         ))}
         <NavLink to={user && !user.is_guest ? "/account" : "/login"}>{user && !user.is_guest ? "Account" : "Sign in"}</NavLink>
       </nav>
@@ -86,11 +85,7 @@ export function Layout() {
           <div className="row">
             <span>Weather: Open-Meteo. Product data: sample catalog until affiliate feeds are connected.</span>
             <span className="spacer" />
-            <label className="themepick">Theme
-              <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-                {THEMES.map(([k, l]) => <option key={k} value={k}>{l}</option>)}
-              </select>
-            </label>
+
           </div>
         </div>
       </footer>
