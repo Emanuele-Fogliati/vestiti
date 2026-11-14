@@ -1,0 +1,87 @@
+{
+ "id": "pe-inca-quarry",
+ "country": "PE",
+ "name": "Inca Quarry Trail to Inti Punku (Cachicata)",
+ "base": "Ollantaytambo",
+ "region": "Sacred Valley, Cusco",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  8,
+  11
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Up the Inca quarries that supplied Ollantaytambo's temple to a stone sun gate on the ridge, 1,100 m above the valley.",
+ "book": "No permit system; most walkers go with a Cusco or Ollantaytambo agency with camping gear. Ask in Ollantaytambo about the community fee.",
+ "water": "Little on the way: carry 3 litres; ask at the camp about water.",
+ "dangers": [
+  "Altitude: from 2,800 m to nearly 4,000 m. Acclimatise in Cusco first.",
+  "Steep and loose on the climb through the quarries.",
+  "Afternoon rain and hail from November."
+ ],
+ "turnaround": "Not at Choquetacarpo by 15:00 on day 1: camp lower at the quarries.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ollantaytambo",
+  "https://en.wikipedia.org/wiki/Kachi_Qhata",
+  "https://www.openstreetmap.org/node/4751684025"
+ ],
+ "router": "local",
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 3,
+  "culture": 3,
+  "relax": 1,
+  "history": 4,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ollantaytambo, below the temple terraces",
+   "lat": -13.25832,
+   "lon": -72.26679,
+   "role": "start",
+   "note": "Walk west out of town about 1.5 km and cross the Urubamba on the bridge; the path then climbs south-west into the Kachiqhata ravine.",
+   "scene": "pe-ollantaytambo"
+  },
+  {
+   "id": "quarries",
+   "name": "Kachiqhata quarries",
+   "lat": -13.26544,
+   "lon": -72.30027,
+   "role": "point",
+   "note": "The Inca quarries of rose rhyolite that fed Ollantaytambo's temple, with abandoned 'tired stones' and old ramps."
+  },
+  {
+   "id": "choquetacarpo",
+   "name": "Choquetacarpo camp",
+   "lat": -13.26312,
+   "lon": -72.31086,
+   "role": "point",
+   "note": "Camp at about 3,700 m.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Inti Punku of Cachicata",
+   "lat": -13.256,
+   "lon": -72.31415,
+   "role": "goal",
+   "note": "A stone Inca gateway on the ridge at nearly 4,000 m. Return the same way."
+  }
+ ]
+}

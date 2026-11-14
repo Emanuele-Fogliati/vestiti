@@ -1,0 +1,109 @@
+{
+ "id": "na-naukluft-trail",
+ "country": "NA",
+ "name": "Naukluft Hiking Trail (4-day section)",
+ "base": "Naukluft",
+ "region": "Naukluft Mountains, Namib-Naukluft National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  22,
+  30
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 61,
+  "gain_m": null,
+  "source": "https://travelnam.com/namib-naukluft-trails/"
+ },
+ "why": "Four days across a dolomite plateau and down into deep kloofs, sleeping in stone shelters, with mountain zebra and no one else.",
+ "book": "Book and pay with Namibia Wildlife Resorts at Naukluft (reservations@nwr.com.na). Groups of 3 to 12, open early March to end of October; a doctor's health certificate is required. The 4-day option ends at Tsams Ost: arrange the pick-up.",
+ "water": "The overnight shelters have water. Fill 2 litres or more every morning: there is none on the way.",
+ "dangers": [
+  "Long, rocky stretches with little shade: follow the trail markings on the rocks.",
+  "Hot days and cold nights on the plateau.",
+  "Steep descent into Ubusis Kloof and back out on day 3."
+ ],
+ "turnaround": "Each day ends at a shelter; leave by 07:00 so you arrive before the afternoon heat. The way back from a shelter is the only exit.",
+ "sources": [
+  "https://www.nwr.com.na/resorts/naukluft-camp/",
+  "https://travelnam.com/namib-naukluft-trails/",
+  "https://en.wikivoyage.org/wiki/Namib-Naukluft_National_Park",
+  "https://hiking.waymarkedtrails.org/#route?id=112708"
+ ],
+ "osm_ways": [
+  507366006,
+  32984742,
+  507366005,
+  46881568,
+  46881570,
+  33052649,
+  46881263,
+  46881271,
+  326513075,
+  326513075,
+  46881271,
+  46881263,
+  32985221,
+  32985485
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 0,
+  "relax": 1,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hiker's Haven, Naukluft",
+   "lat": -24.26207,
+   "lon": 16.24293,
+   "role": "start",
+   "note": "The hikers' cottage at Naukluft camp, used the night before. The path climbs south onto the plateau."
+  },
+  {
+   "id": "putte",
+   "name": "Putte Shelter",
+   "lat": -24.33105,
+   "lon": 16.17979,
+   "role": "point",
+   "note": "End of day 1, about 14 km, on the high plateau.",
+   "night": true
+  },
+  {
+   "id": "ubusis",
+   "name": "Ubusis Hikers Hut",
+   "lat": -24.35871,
+   "lon": 16.07059,
+   "role": "point",
+   "note": "End of day 2, a stone hut at the bottom of Ubusis Kloof. Day 3 climbs back out the same kloof.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Tsams Ost",
+   "lat": -24.24633,
+   "lon": 16.10358,
+   "role": "goal",
+   "note": "End of the 4-day section, at the farm road where you are picked up.",
+   "night": true
+  }
+ ]
+}

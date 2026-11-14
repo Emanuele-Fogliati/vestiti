@@ -1,0 +1,90 @@
+{
+ "id": "cl-cochamo-la-junta",
+ "country": "CL",
+ "name": "Cochamó valley to La Junta",
+ "base": "Puerto Varas",
+ "region": "Cochamó valley, Los Lagos",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  8,
+  12
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 23,
+  "gain_m": null,
+  "source": "https://vallecochamo.org/en/proyectos/"
+ },
+ "why": "An old ox-cart trail through rainforest into a valley of granite walls and waterfalls, often called the Yosemite of Chile.",
+ "book": "A camping reservation at La Junta is compulsory (cochamo.com); register at the Visitor Center by the trailhead. Access to the trail closes at 15:00 (14:00 in March and April). Cochamó is 2.5 h by road from Puerto Montt; the last 10 km of gravel to the trailhead need a 4x4.",
+ "water": "Streams and the river all the way; treat it.",
+ "dangers": [
+  "Deep mud for long stretches, all summer.",
+  "Paso de la Muerte: a narrow, exposed bit above the Cochamó river.",
+  "After heavy rain the Río Piedra plank crossing may be impassable for a day or more.",
+  "Pack horses have right of way: step a metre off the trail."
+ ],
+ "turnaround": "Not past the Descansadero by 13:00: go back and sleep near the trailhead.",
+ "sources": [
+  "https://cochamo.com/en/sendero-a-la-junta/",
+  "https://vallecochamo.org/en/proyectos/",
+  "https://chile.travel/atractivos/valle-de-cochamo/",
+  "https://www.openstreetmap.org/way/286329550"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Cochamó trailhead and Visitor Center",
+   "lat": -41.4541,
+   "lon": -72.2178,
+   "role": "start",
+   "note": "At the end of the road above Cochamó: register at the Visitor Center and show your camping reservation."
+  },
+  {
+   "id": "piedra",
+   "name": "Río Piedra crossing",
+   "lat": -41.4443,
+   "lon": -72.2035,
+   "role": "point",
+   "note": "About an hour in. The bridge was washed away in 2023; the crossing on planks can be cut by high water."
+  },
+  {
+   "id": "descansadero",
+   "name": "Descansadero",
+   "lat": -41.43461,
+   "lon": -72.18445,
+   "role": "point",
+   "note": "The rest stop 2-3 hours in, after most of the climbing. Mud and rock slabs follow."
+  },
+  {
+   "id": "goal",
+   "name": "La Junta",
+   "lat": -41.41136,
+   "lon": -72.12688,
+   "role": "goal",
+   "note": "Meadows where the Río La Junta meets the Cochamó, under granite walls. Camp at the reserved site; return the same way.",
+   "night": true
+  }
+ ]
+}

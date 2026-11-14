@@ -1,0 +1,86 @@
+{
+ "id": "pe-misti",
+ "country": "PE",
+ "name": "El Misti volcano",
+ "base": "Arequipa",
+ "region": "Salinas y Aguada Blanca National Reserve, Arequipa",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  10,
+  14
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Arequipa's volcano: a walk-up to 5,822 m, an iron cross on the crater rim and the white city 3,500 m below.",
+ "book": "Go with a licensed Arequipa agency (two days, transport to the trailhead). Crossing the Aguada Blanca dam needs a permit. Acclimatise several days at altitude first.",
+ "water": "No water on the mountain: carry 4-5 litres for two days.",
+ "dangers": [
+  "Altitude: above 5,000 m headache and nausea are common; go down if they get worse.",
+  "Very cold at camp and on the night start to the summit.",
+  "Loose scree and ash; volcanic gases near the crater."
+ ],
+ "turnaround": "Not at the crater rim by 09:00, or any sign of altitude sickness: turn back.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/El_Misti",
+  "https://en.wikivoyage.org/wiki/Arequipa",
+  "https://www.openstreetmap.org/node/4942756892"
+ ],
+ "osm_ways": [
+  325396428,
+  1076887069,
+  136887373,
+  1076887070,
+  136887363
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 3,
+  "culture": 1,
+  "relax": 0,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Aguada Blanca trailhead",
+   "lat": -16.2505,
+   "lon": -71.3807,
+   "role": "start",
+   "note": "Where the track leaves the Aguada Blanca power station road, north of the volcano. Day 1 climbs the north flank."
+  },
+  {
+   "id": "monte-blanco-camp",
+   "name": "Monte Blanco camp",
+   "lat": -16.29158,
+   "lon": -71.38775,
+   "role": "point",
+   "note": "The north base camp at about 4,600-4,800 m. Very cold; you leave around 01:00-02:00 for the summit.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Misti summit cross",
+   "lat": -16.29648,
+   "lon": -71.41065,
+   "role": "goal",
+   "note": "5,822 m, an iron cross on the north-west crater rim, over the crater and Arequipa. Back to camp, then down.",
+   "scene": "pe-el-misti"
+  }
+ ]
+}

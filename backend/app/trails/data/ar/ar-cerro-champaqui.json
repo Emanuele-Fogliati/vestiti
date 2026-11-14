@@ -1,0 +1,76 @@
+{
+ "id": "ar-cerro-champaqui",
+ "country": "AR",
+ "name": "Cerro Champaquí",
+ "base": "Villa General Belgrano",
+ "region": "Sierras Grandes, Córdoba",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  14,
+  18
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Three days across the high grass of the Sierras Grandes to the roof of Córdoba province, sleeping in the stone puestos of the Río Tabaquillo valley.",
+ "book": "No permit. Villa Alpina is at the end of a long dirt road from Villa General Belgrano. The refuges and puestos in the Río Tabaquillo valley are private family houses: book a bed and meals ahead, or go with a local guide.",
+ "water": "Streams on the way and at the refuges; treat it. Nothing on the summit ridge.",
+ "dangers": [
+  "Summer storms with lightning and violent gusts build fast in the afternoon.",
+  "Fog on the plateau: the paths split and are easy to lose.",
+  "Cold below zero in winter; heat, sun and dehydration in summer."
+ ],
+ "turnaround": "Leave the refuge for the summit at dawn and be back off the ridge by 14:00, before the storms.",
+ "sources": [
+  "https://www.lacapital.com.ar/la-ciudad/clima-montana-inexperiencia-y-somatizacion-factores-que-influyen-las-excursiones-al-cerro-champaqui-n10031321.html/amp",
+  "https://es.wikipedia.org/wiki/Cerro_Champaqu%C3%AD",
+  "https://www.openstreetmap.org/way/97541725"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Villa Alpina",
+   "lat": -31.9637,
+   "lon": -64.8139,
+   "role": "start",
+   "note": "A hamlet of chalets in pine woods at about 1,400 m, at the end of the dirt road. The path climbs west onto the open grass of the sierra."
+  },
+  {
+   "id": "refuges",
+   "name": "Río Tabaquillo refuges",
+   "lat": -31.98704,
+   "lon": -64.90947,
+   "role": "point",
+   "note": "Family-run stone refuges and puestos at about 2,100 m in the Río Tabaquillo valley, 7-8 hours from Villa Alpina. Sleep here both nights.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Cerro Champaquí summit",
+   "lat": -31.9874,
+   "lon": -64.93617,
+   "role": "goal",
+   "note": "2,790 m, the highest point of Córdoba, with a small lake below the top that freezes from April to August. Back to the refuges, then down to Villa Alpina."
+  }
+ ]
+}

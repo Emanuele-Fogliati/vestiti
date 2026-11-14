@@ -1,0 +1,69 @@
+{
+ "id": "na-waterberg-plateau",
+ "country": "NA",
+ "name": "Waterberg Plateau: Mountain View walk",
+ "base": "Waterberg",
+ "region": "Waterberg Plateau Park",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1,
+  2
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "A short steep climb from the rest camp to the edge of the red sandstone plateau, with the Kalahari bush flat to the horizon.",
+ "book": "Park entry and maps at Waterberg Resort reception (Bernabe de la Bat rest camp). No permit for the camp walks.",
+ "water": "Carry 1 litre; water and the restaurant at the camp.",
+ "dangers": [
+  "The last part to the top is steep scrambling on rock.",
+  "Troops of baboons: keep food out of sight.",
+  "Summer heat up to 40 °C: walk early."
+ ],
+ "turnaround": "Do not go up after 16:00: be back in camp before dark.",
+ "sources": [
+  "https://www.nwr.com.na/waterberg-plateau-park/",
+  "https://en.wikivoyage.org/wiki/Waterberg_Plateau_Park",
+  "https://en.wikipedia.org/wiki/Waterberg_Plateau_Park",
+  "https://www.openstreetmap.org/way/674375883"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 1,
+  "relax": 3,
+  "history": 3,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Waterberg rest camp",
+   "lat": -20.5102,
+   "lon": 17.2427,
+   "role": "start",
+   "note": "By the restaurant, under the red cliffs. The German cemetery of 1904 and the old mission ruins are a few minutes' walk south.",
+   "scene": "na-waterberg-plateau"
+  },
+  {
+   "id": "goal",
+   "name": "Waterberg Plateau Viewpoint",
+   "lat": -20.50461,
+   "lon": 17.2412,
+   "role": "goal",
+   "note": "The plateau edge above the camp. Return the same way."
+  }
+ ]
+}

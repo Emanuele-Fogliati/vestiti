@@ -1,0 +1,73 @@
+{
+ "id": "cl-ventisquero-colgante",
+ "country": "CL",
+ "name": "Queulat: Ventisquero Colgante",
+ "base": "Puyuhuapi",
+ "region": "Queulat National Park, Aysén",
+ "kind": "day",
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:30",
+ "published": {
+  "km": 6.4,
+  "gain_m": null,
+  "source": "https://www.conaf.cl/parque_nacionales/parque-nacional-queulat/"
+ },
+ "why": "Across a swinging bridge and up through dripping rainforest to a lookout where a glacier hangs over a cliff and pours a waterfall into a lake.",
+ "book": "Park ticket in advance at pasesparques.cl (choose the Ventisquero Colgante sector). The sector is a 2 km spur off the Carretera Austral, 20 km south of Puyuhuapi.",
+ "water": "Streams along the trail; carry 1 litre.",
+ "dangers": [
+  "Mud, roots and wet rock: it rains most days.",
+  "Streams can rise fast after heavy rain.",
+  "Icefall and waves from the glacier: stay at the lookout."
+ ],
+ "turnaround": "Start up from the bridge before 13:30.",
+ "sources": [
+  "https://www.conaf.cl/parque_nacionales/parque-nacional-queulat/",
+  "https://en.wikivoyage.org/wiki/Queulat_National_Park",
+  "https://hiking.waymarkedtrails.org/#route?id=9376455"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 0,
+  "relax": 3,
+  "history": 0,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Río Ventisquero suspension bridge",
+   "lat": -44.4678,
+   "lon": -72.5439,
+   "role": "start",
+   "note": "A swinging footbridge over the grey glacier river, 100 m from the CONAF hut at the car park; the short path to Laguna Témpanos turns right after it."
+  },
+  {
+   "id": "goal",
+   "name": "Mirador Ventisquero Colgante",
+   "lat": -44.45257,
+   "lon": -72.52786,
+   "role": "goal",
+   "note": "The lookout facing the hanging glacier and its waterfall over Laguna Témpanos. Return the same way.",
+   "scene": "cl-queulat-hanging-glacier"
+  }
+ ],
+ "osm": 9376455
+}

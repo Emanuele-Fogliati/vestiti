@@ -1,0 +1,80 @@
+{
+ "id": "na-olive-trail",
+ "country": "NA",
+ "name": "Olive Trail, Naukluft",
+ "base": "Naukluft",
+ "region": "Naukluft Mountains, Namib-Naukluft National Park",
+ "kind": "day",
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "07:30",
+ "published": {
+  "km": 10,
+  "gain_m": null,
+  "source": "https://www.nwr.com.na/resorts/naukluft-camp/"
+ },
+ "why": "A short loop up onto a high plateau and back down a narrow gorge, with a chain to hold on the rock.",
+ "book": "Book at Naukluft reception. The trailhead is a car park about 4 km north of the camp. Follow the yellow footprints.",
+ "water": "None on the trail: carry 2 litres.",
+ "dangers": [
+  "In the gorge a fixed chain helps you along a steep rock section.",
+  "No shade on the plateau: start early."
+ ],
+ "turnaround": "Not on the plateau by 11:00 in the warm months: go back the way you came.",
+ "sources": [
+  "https://www.nwr.com.na/resorts/naukluft-camp/",
+  "https://travelnam.com/namib-naukluft-trails/",
+  "https://hiking.waymarkedtrails.org/#route?id=9449499"
+ ],
+ "osm": 9449499,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Olive Trail car park",
+   "lat": -24.24279,
+   "lon": 16.27395,
+   "role": "start",
+   "note": "The track end north of the camp. The path climbs north-west onto the plateau."
+  },
+  {
+   "id": "plateau",
+   "name": "Olive Trail plateau",
+   "lat": -24.2295,
+   "lon": 16.2606,
+   "role": "point",
+   "note": "The high point of the loop, about 1,870 m, with views over the Naukluft Mountains."
+  },
+  {
+   "id": "goal",
+   "name": "Chain section in the gorge",
+   "lat": -24.22902,
+   "lon": 16.27377,
+   "role": "goal",
+   "note": "The narrow gorge on the way back, where a chain helps you along the rock. Then down the valley to the car park."
+  }
+ ]
+}
