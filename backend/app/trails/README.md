@@ -45,7 +45,7 @@ lists its `sources`.
 | `points` | 3-5 key points in walking order: first `role: start`, last `role: goal`; multiday: `night: true` where you sleep. Each has a `note` (what you find there, 1-2 sentences) and later its `scene` |
 | `osm_ways` | OSM way ids of the path in walking order, when there is no relation and the router goes wrong |
 | `router` | `auto` (default: local router on all OSM paths for compact trails, OSRM for long ones), `local`, `osrm` |
-| `tier` | `A` (default) = a top trek of its country, written by hand, 2-4 drawings. `B` = the long tail from OpenStreetMap (computed numbers, one picture) |
+| `tier` | `A` (default) = a top trek of its country, written by hand, 2-4 drawings. `B` = the long tail, generated into `tail/`: waymarked OSM routes (`tail/<cc>.json`, tools/trails/osm_tail.py), walks from the road to a named peak, pass, hut, lake, waterfall or lookout (`tail/<cc>-goals.json`) and DOC New Zealand tracks (`tail/nz-doc.json`), both by tools/trails/goal_walks.py. Computed numbers; a picture only where a drawing of the goal exists (Manu 2026-11-14: only the famous ones get drawn) |
 | `area` | the guide area id of its zone (`ar-el-chalten`), when one exists |
 | `scores` | `{effort, nature, culture, relax, history, landscape}`, 0-5 each, all six on every trek, by the zone-ranking rubric. Effort from the hours and climb: 1 = under 2 h and under 200 m, 3 = 5-7 h or 500-900 m, 5 = over 9 h, over 1,200 m, multiday with a pack, or above 4,500 m |
 | `via` | `[[lat, lon], …]` extra routing points, only if the router takes a wrong path |

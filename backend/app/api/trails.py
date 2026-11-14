@@ -11,6 +11,7 @@ GET /api/trails/{id}/card       one trail as a card (the globe opens it when a d
 from __future__ import annotations
 
 from datetime import date, timedelta
+from functools import lru_cache
 from xml.sax.saxutils import escape
 
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -112,8 +113,15 @@ def list_trails(country: str | None = Query(None, pattern=r"^[A-Za-z]{2}$"),
     cc = country.upper() if country else None
     if lat is not None and lon is not None:
         ts = trails.near(lat, lon, cc, name)
-    else:
-        ts = [t for t in trails.trails() if cc is None or t.country == cc]
+        return {"trails": [card(t, month) for t in ts],
+                "countries": sorted({t.country for t in trails.trails()})}
+    return _country_cards(cc, month)
+
+
+@lru_cache(maxsize=32)
+def _country_cards(cc: str | None, month: int | None) -> dict:
+    """A country's cards are fixed data: built once (thousands of walks since 2026-11-14)."""
+    ts = [t for t in trails.trails() if cc is None or t.country == cc]
     return {"trails": [card(t, month) for t in ts],
             "countries": sorted({t.country for t in trails.trails()})}
 
