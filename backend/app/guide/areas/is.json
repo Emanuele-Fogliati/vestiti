@@ -61,7 +61,21 @@
       "Harpa",
       "Reykjavik Old Harbour"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
     },
     {
      "id": "golden",
@@ -122,7 +136,23 @@
       "Geysir",
       "Gullfoss",
       "Kerið"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "reykjanes",
@@ -146,7 +176,23 @@
       "Reykjanes Peninsula",
       "Brimketill",
       "Blue Lagoon"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "thermal"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "lagoon",
@@ -164,7 +210,21 @@
      "sights": [
       "Blue Lagoon",
       "Sky Lagoon"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
     },
     {
      "id": "whales",
@@ -181,7 +241,22 @@
      },
      "sights": [
       "Reykjavik Old Harbour"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "aurora",
@@ -205,14 +280,36 @@
       2,
       3,
       4
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "C",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
     }
    ],
    "extras": [
     "Check road.is (umferdin.is) and safetravel.is every morning: wind closes roads more often than snow.",
     "Tap water is excellent: no need to buy bottles.",
     "Alcohol is sold only in Vínbúðin shops, with short hours."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0
   },
   {
    "id": "is-snaefellsnes",
@@ -258,7 +355,22 @@
      "sights": [
       "Kirkjufell"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "loop",
@@ -316,7 +428,23 @@
       "Arnarstapi",
       "Djupalonssandur",
       "Snæfellsjökull"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "breidafjordur",
@@ -341,12 +469,34 @@
      "sights": [
       "Breiðafjörður",
       "Stykkishólmur"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     }
    ],
    "extras": [
     "From Reykjavík it's about 2 h 30: the peninsula is a possible long day trip, but a night makes it easy."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "is-south-coast",
@@ -414,7 +564,23 @@
       "Skógafoss",
       "Kvernufoss"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "vik-day",
@@ -464,7 +630,23 @@
       "Dyrhólaey",
       "Reynisfjara",
       "Reynisdrangar"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
     },
     {
      "id": "katla",
@@ -481,7 +663,22 @@
       "difficulty": "easy",
       "max_altitude_m": 700,
       "glacier": true
-     }
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
     },
     {
      "id": "fjadrargljufur",
@@ -503,7 +700,23 @@
      ],
      "sights": [
       "Fjaðrárgljúfur"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "thorsmork",
@@ -528,13 +741,34 @@
      ],
      "sights": [
       "Þórsmörk"
-     ]
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "transfer"
     }
    ],
    "extras": [
     "Rented cars must not cross rivers: the highland buses do it for you.",
     "Westman Islands: a ferry from Landeyjahöfn (about 35 min) to puffins and a 1973 lava town."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0
   },
   {
    "id": "is-vatnajokull",
@@ -605,7 +839,23 @@
       "Jökulsárlón",
       "Diamond Beach",
       "Fjallsárlón"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "boat"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "svartifoss",
@@ -647,7 +897,22 @@
       "Svartifoss",
       "Svínafellsjökull"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "glacier-walk",
@@ -667,7 +932,22 @@
      },
      "sights": [
       "Vatnajökull"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
     },
     {
      "id": "ice-cave",
@@ -694,7 +974,22 @@
      ],
      "sights": [
       "Vatnajökull ice caves"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "C",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
     },
     {
      "id": "hofn",
@@ -708,12 +1003,33 @@
      "why": "A fishing town known for its langoustine, with the glacier across the bay.",
      "act": {
       "type": "city"
-     }
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "food",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     }
    ],
    "extras": [
     "From here to Vík is 2 h 30 without stops; to Seyðisfjörður about 4 h on the fjords road."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "is-eastfjords",
@@ -777,7 +1093,23 @@
      "sights": [
       "Seyðisfjörður"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "studlagil",
@@ -815,7 +1147,23 @@
      ],
      "sights": [
       "Stuðlagil Canyon"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "hengifoss",
@@ -834,7 +1182,22 @@
      },
      "sights": [
       "Hengifoss"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "puffins",
@@ -856,12 +1219,33 @@
       6,
       7,
       8
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     }
    ],
    "extras": [
     "The ferry from Denmark arrives in Seyðisfjörður: the village is busy those mornings."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "is-myvatn",
@@ -901,7 +1285,21 @@
      "sights": [
       "Mývatn Nature Baths"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "lake",
@@ -965,7 +1363,23 @@
       "Námaskarð",
       "Hverir",
       "Krafla"
-     ]
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "dettifoss",
@@ -985,7 +1399,23 @@
      "sights": [
       "Dettifoss",
       "Selfoss"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "asbyrgi",
@@ -1004,13 +1434,34 @@
      },
      "sights": [
       "Ásbyrgi"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     }
    ],
    "extras": [
     "A midge head net (a few euros) saves summer walks around the lake: they don't bite, but they swarm.",
     "Goðafoss is 40 minutes west, on the road to Akureyri."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "is-akureyri",
@@ -1048,7 +1499,22 @@
      "sights": [
       "Goðafoss"
      ],
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "myvatn-day",
@@ -1110,7 +1576,22 @@
       "Námaskarð",
       "Hverir",
       "Dettifoss"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
     },
     {
      "id": "town",
@@ -1127,7 +1608,22 @@
      },
      "sights": [
       "Akureyri"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "city",
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "whales",
@@ -1154,7 +1650,22 @@
      "sights": [
       "Eyjafjörður",
       "Hauganes"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "trollaskagi",
@@ -1172,12 +1683,34 @@
      "sights": [
       "Siglufjörður",
       "Dalvík"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "drive",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
     }
    ],
    "extras": [
     "The Mývatn lake circuit is 1 h east: a stop there saves driving back and forth."
-   ]
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
   },
   {
    "id": "is-husavik",
@@ -1233,7 +1766,22 @@
      ],
      "extras": [
       "Even in July you'll be cold on deck: hat and gloves."
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "geosea",
@@ -1248,7 +1796,21 @@
      "act": {
       "type": "city"
      },
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "diamond",
@@ -1268,9 +1830,31 @@
      "sights": [
       "Ásbyrgi",
       "Dettifoss"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     }
-   ]
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0
   },
   {
    "id": "is-westfjords",
@@ -1304,7 +1888,23 @@
      "act": {
       "type": "city"
      },
-     "arrive": true
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "museum",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
     },
     {
      "id": "vigur",
@@ -1326,7 +1926,22 @@
      ],
      "sights": [
       "Vigur"
-     ]
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
     },
     {
      "id": "dynjandi",
@@ -1371,12 +1986,34 @@
      ],
      "sights": [
       "Dynjandi"
-     ]
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
     }
    ],
    "extras": [
     "Hornstrandir, the roadless nature reserve, is reached by boat from Ísafjörður in summer."
-   ]
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0
   }
  ]
 }

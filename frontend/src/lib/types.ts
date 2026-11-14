@@ -183,9 +183,14 @@ export interface PlanDay {
   /** where a guide is written: the things of the day, hour by hour */ items?: PlanThing[];
 }
 export interface PlanArea { id: string; name: string; kind: "region" | "country" }
+export type PlanLike = "nature" | "culture" | "history" | "relax" | "landscape";
+export type PlanEffort = "easy" | "some" | "hard";
+/** A ready-made trip of the region (backend app/guide/trips.json). */
+export interface PlanReady { id: string; title: string; why: string; pace: "relaxed" | "normal" | "intense"; level: number }
 export interface PlanProposal {
   area: PlanArea; only: string[]; stops: PlanStep[]; more: PlanStep[]; route: string | null;
   best_months: number[]; days: number; suggested_start: string;
+  ready?: PlanReady | null; likes?: PlanLike[]; effort?: PlanEffort | null;
 }
 export interface PlanIdea { id: string; title: string; days: number; countries: string[]; weather: string; guide: string | null }
 /** A move of a booked trip (services/booked.py): a flight, the car, a taxi, with its times. */
@@ -216,6 +221,7 @@ export interface PlanReading {
   start_date: string | null; start_part?: string; days: number | null; stops: PlanStep[];
   home: { name: string; country: string; lat: number; lon: number } | null; wishes: string[];
   missing: ("where" | "when" | "how_long")[]; keep?: string[]; last?: string[]; proposal: PlanProposal | null; ideas: PlanIdea[];
+  likes?: PlanLike[]; effort?: PlanEffort | null;
 }
 export interface PlanSuggestion { type: "region" | "country"; id: string; name: string; sub: string }
 
