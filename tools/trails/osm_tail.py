@@ -503,11 +503,7 @@ def build_one(d: dict, cc: str, taken: list, planned: list = ()) -> tuple[dict, 
                     f"https://hiking.waymarkedtrails.org/#route?id={d['id']}"],
     })
     # its picture: a drawing of the place it reaches (or passes at its top), never a far one
-    for p in reversed(pts):
-        lm = art._nearest(p["lat"], p["lon"], cc)
-        if lm and bt.km((p["lat"], p["lon"]), (lm.lat, lm.lon)) <= 3 and all(q.get("scene") != lm.id for q in pts):
-            p["scene"] = lm.id
-            break
+    pick_scene(t)
     t["scores"] = scores(d["name"], g, t["days"], h, any(p.get("scene") for p in pts),
                          bt.km(start, (base["lat"], base["lon"])) < 2)
     t["kind"] = "multiday" if t["days"] > 1 else "day"
@@ -547,6 +543,27 @@ def names(trails: list[dict]) -> None:
         n = seen[t["name"]] = seen.get(t["name"], 0) + 1
         if n > 1:
             t["name"] = f"{t['name']} ({n})"[:80]
+
+
+ZONE_KM = 30  # a stage that ends on a road shows the drawing of its zone (Manu 2026-11-14)
+
+
+def pick_scene(t: dict) -> None:
+    """Its picture: a drawing of the place it reaches (or passes at its top) within 3 km; a one-way
+    stage with none takes the nearest drawing of its zone within 30 km, on its end point."""
+    from app import art
+    pts = t["points"]
+    for p in reversed(pts):
+        lm = art._nearest(p["lat"], p["lon"], t["country"])
+        if lm and bt.km((p["lat"], p["lon"]), (lm.lat, lm.lon)) <= 3 and all(q.get("scene") != lm.id for q in pts):
+            p["scene"] = lm.id
+            return
+    if t["shape"] == "one_way":
+        end = pts[-1]
+        d, lm = min(((bt.km((end["lat"], end["lon"]), (m.lat, m.lon)), m) for m in art.landmarks()
+                     if m.country == t["country"]), default=(999, None), key=lambda x: x[0])
+        if lm and d <= ZONE_KM:
+            end["scene"] = lm.id
 
 
 def tidy(t: dict, g: dict) -> bool:
