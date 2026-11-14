@@ -606,7 +606,10 @@ export interface TrailCard {
   difficulty: TrailDifficulty; glacier: boolean; hours: [number, number]; months: number[]; months_text: string;
   in_season: boolean | null; why: string; art: StopArt | null; has_map: boolean;
   km: number | null; gain_m: number | null; max_m: number | null; min_m: number | null; numbers_from: string | null;
+  tier: "A" | "B"; area: string | null; scores: TrailScores | null;
 }
+/** 0-5 each, the rubric of the zone ranking (Manu, 2026-11-14). */
+export interface TrailScores { effort: number; nature: number; culture: number; relax: number; history: number; landscape: number }
 export interface TrailPoint {
   id: string; name: string; role: "start" | "point" | "goal"; note: string; night: boolean;
   lat: number; lon: number; art: StopArt | null; km: number | null; ele: number | null;

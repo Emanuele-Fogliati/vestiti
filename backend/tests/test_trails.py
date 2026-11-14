@@ -6,7 +6,8 @@ import pytest
 from app import art, trails
 from app.trails import DATA, GEO, km
 
-SLOTS = {f"{c}-{s}" for c in ("IT", "AR", "CL", "PE", "IS") for s in ("A", "B")}
+COUNTRIES = ("IT", "AR", "CL", "PE", "IS", "NZ", "JP", "VN", "NA")
+SLOTS = {f"{c}-{s}" for c in COUNTRIES for s in "ABCDEF"}
 
 
 def test_every_trail_file_is_valid_and_planned():

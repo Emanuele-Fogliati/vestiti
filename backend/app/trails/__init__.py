@@ -50,6 +50,17 @@ class Point(BaseModel):
     scene: str | None = Field(default=None, pattern=r"^[a-z]{2}-[a-z0-9-]+$")  # its drawing (app.art id)
 
 
+class Scores(BaseModel):
+    """How much of each thing a trail gives, 0-5, by the rubric of the zone ranking (Manu,
+    2026-11-14): effort comes from the hours and the climb, the rest is judged by hand."""
+    effort: int = Field(ge=0, le=5)
+    nature: int = Field(ge=0, le=5)
+    culture: int = Field(ge=0, le=5)
+    relax: int = Field(ge=0, le=5)
+    history: int = Field(ge=0, le=5)
+    landscape: int = Field(ge=0, le=5)
+
+
 class Trail(BaseModel):
     id: str = Field(pattern=r"^[a-z]{2}-[a-z0-9]+(-[a-z0-9]+)*$", max_length=60)
     name: str = Field(min_length=3, max_length=80)
@@ -76,6 +87,11 @@ class Trail(BaseModel):
     router: Literal["auto", "local", "osrm"] = "auto"  # how build_trails routes when no OSM line
     points: list[Point] = Field(min_length=2, max_length=8)
     via: list[tuple[float, float]] = Field(default_factory=list, max_length=12)  # routing only
+    # Manu, 2026-11-14: treks at par with trips. tier A = the top treks of a country (full page,
+    # 2-4 drawings); B = the long tail from OpenStreetMap (computed numbers, one picture).
+    tier: Literal["A", "B"] = "A"
+    area: str | None = Field(default=None, pattern=r"^[a-z]{2}-[a-z0-9-]+$")  # guide area id
+    scores: Scores | None = None
 
     @field_validator("months")
     @classmethod

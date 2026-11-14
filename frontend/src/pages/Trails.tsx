@@ -4,7 +4,8 @@ import { TrailCards } from "../components/TrailCards";
 import { api } from "../lib/api";
 import type { TrailCard, TrailDifficulty } from "../lib/types";
 
-const COUNTRY: Record<string, string> = { IT: "Italy", AR: "Argentina", CL: "Chile", PE: "Peru", IS: "Iceland" };
+const COUNTRY: Record<string, string> = { IT: "Italy", AR: "Argentina", CL: "Chile", PE: "Peru", IS: "Iceland",
+  NZ: "New Zealand", JP: "Japan", VN: "Vietnam", NA: "Namibia" };
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const LEVELS: (TrailDifficulty | "")[] = ["", "easy", "moderate", "hard", "technical"];
 
