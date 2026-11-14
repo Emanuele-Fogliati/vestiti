@@ -115,3 +115,68 @@ body{background:var(--bg)}
 .tl-dt b{font-size:14px;font-weight:600}
 .tl-wait{padding:10px;margin:0}
 @media (max-width:760px){.r16-cta{justify-items:start}.r16-cta button{width:calc(100% - 62px)}}
+
+/* ---------- Pack, step 2 (S11): the suitcase ---------- */
+.sc{margin:6px 0 30px}
+.sc-stops{display:flex;gap:8px;overflow-x:auto;padding:2px 0 6px;scrollbar-width:none}
+.sc-pill{flex:0 0 auto;height:52px;padding:0 16px 0 6px;border-radius:26px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);display:flex;align-items:center;gap:8px;font:inherit;text-align:left;cursor:pointer}
+.sc-pill:not(:has(.sc-pill-ic)){padding-left:16px}
+.sc-pill b{display:block;font-size:13px}.sc-pill small{display:block;font-size:11px;color:var(--ink-2)}
+.sc-pill.on{background:var(--ink);color:#fff}.sc-pill.on small{color:var(--accent)}
+.sc-pill-ic{width:40px;height:40px;border-radius:20px;background:var(--accent);border:1.5px solid var(--ink);display:grid;place-items:center;color:var(--ink)}
+.sc-sky{text-align:center;font-size:13px;font-weight:600;color:#333;margin:8px 0 0}
+.sc-bag{position:relative;max-width:420px;margin:0 auto;padding:56px 0 30px}
+.sc-handle{position:absolute;left:50%;top:0;width:110px;height:64px;transform:translateX(-50%);border:7px solid var(--ink);border-bottom:0;border-radius:14px 14px 0 0;box-sizing:border-box}
+.sc-body{position:relative;background:var(--accent);border:4px solid var(--ink);border-radius:36px;padding:18px 8px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px 4px;
+  background-image:repeating-linear-gradient(90deg,transparent 0 calc(25% - 2px),#E8C200 calc(25% - 2px) 25%)}
+.sc-wheel{position:absolute;bottom:8px;width:30px;height:30px;border-radius:15px;background:var(--ink)}
+.sc-wheel.l{left:16%}.sc-wheel.r{right:16%}
+.sc-label{position:absolute;right:-6px;top:38px;background:#fff;border:2px solid var(--ink);border-radius:8px;padding:5px 8px;transform:rotate(8deg);font-size:11px;font-weight:800;line-height:1.25;z-index:2}
+.sc-label small{display:block;font-weight:600}
+.sc-piece{position:relative;border:0;background:transparent;padding:0;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;font:inherit;color:var(--ink);transition:opacity .3s,transform .3s}
+.sc-piece.off{opacity:.28}
+.sc-piece:hover .sc-disc{transform:translateY(-2px)}
+.sc-disc{width:58px;height:58px;border-radius:29px;background:#fff;border:2.5px solid var(--ink);box-sizing:border-box;display:grid;place-items:center;overflow:hidden;box-shadow:0 3px 0 var(--ink);transition:transform .2s;animation:scpop .3s ease}
+.sc-piece.choose .sc-disc{border-style:dashed;box-shadow:none}
+.sc-piece.choose .sc-art{opacity:.55}
+.sc-disc img{width:50px;height:50px;object-fit:contain}
+.sc-art{width:40px;height:40px}
+.sc-tag{position:absolute;right:4px;top:-4px;width:22px;height:22px;border-radius:11px;border:1.5px solid var(--ink);box-sizing:border-box;display:grid;place-items:center;font-size:12px;font-weight:900;background:#fff}
+.sc-tag.have{background:var(--ink);color:#fff}
+.sc-name{font-size:11px;font-weight:800;background:rgba(255,255,255,.9);border-radius:6px;padding:0 5px;max-width:84px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@keyframes scpop{from{transform:scale(.5);opacity:0}to{transform:none;opacity:1}}
+.sc-legend{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-size:12px;font-weight:700;color:#333}
+.sc-legend span{display:flex;align-items:center;gap:5px}
+.sc-legend i{width:16px;height:16px;border-radius:8px;border:1.5px solid var(--ink);box-sizing:border-box;display:grid;place-items:center;font-style:normal;font-size:10px;font-weight:900;background:#fff}
+.sc-legend i.choose{border:2px dashed var(--ink)}.sc-legend i.have{background:var(--ink);color:#fff}.sc-legend i.picked{background:var(--accent)}
+.sc-cta{display:flex;justify-content:center;margin-top:14px}
+.sc-cta button,.sc-cta a{width:min(420px,100%);height:52px;border-radius:26px;border:0;background:var(--ink);color:#fff;font:800 16px var(--f-body);display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;cursor:pointer}
+.sc-cta span{color:var(--accent)}
+.sc-layers{margin:10px 0 34px}
+#your-list{scroll-margin-top:80px}
+/* the picker */
+.pk{display:grid;gap:12px}
+.pk-why{margin:0;background:#FFF3B0;border:1.5px solid var(--ink);border-radius:14px;padding:10px 12px;font-size:14px;line-height:1.4}
+.pk-have{height:52px;border-radius:26px;border:2px solid var(--ink);background:#fff;font:800 16px var(--f-body);color:var(--ink);cursor:pointer}
+.pk-have.on{background:var(--ink);color:#fff}
+.pk-h{display:flex;justify-content:space-between;align-items:baseline;margin-top:6px}
+.pk-h b{font-family:var(--f-display);font-size:20px}.pk-h span{font-size:12px;color:var(--ink-2)}
+.pk-brands{display:flex;gap:6px;overflow-x:auto}
+.pk-brands button{flex:0 0 auto;height:34px;padding:0 12px;border-radius:17px;border:1.5px solid var(--ink);background:#fff;font:700 13px var(--f-body);cursor:pointer}
+.pk-brands button.on{background:var(--ink);color:#fff}
+.pk-list{display:grid;gap:10px}
+.pk-item{display:flex;gap:12px;align-items:center;background:#fff;border:1.5px solid var(--ink);border-radius:18px;padding:10px}
+.pk-item.on{border-width:3px}
+.pk-img{width:92px;height:92px;flex:0 0 auto;display:grid;place-items:center;border-radius:12px;overflow:hidden;background:#fff}
+.pk-img img{width:100%;height:100%;object-fit:contain}
+.pk-t{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.pk-t small{font-size:12px;font-weight:800;color:var(--ink-2)}
+.pk-t b{font-size:15px;line-height:1.2}
+.pk-t span{font-size:12px;color:#333}
+.pk-row{display:flex;align-items:center;justify-content:space-between;margin-top:4px;gap:8px}
+.pk-price{font-family:var(--f-display);font-size:20px}
+.pk-row button{height:36px;padding:0 16px;border-radius:18px;border:1.5px solid var(--ink);background:#fff;font:800 14px var(--f-body);cursor:pointer}
+.pk-row button:hover{background:var(--accent)}
+.pk-buy{height:36px;padding:0 14px;border-radius:18px;background:var(--accent);border:1.5px solid var(--ink);font:800 13px var(--f-body);color:var(--ink);display:flex;align-items:center;text-decoration:none;white-space:nowrap}
+.pk-disc{font-size:12px;color:var(--ink-2);margin:4px 0 0}
+

@@ -10,6 +10,7 @@ import { Stars } from "./Stars";
 import { SwapDrawer } from "./SwapDrawer";
 import { BrandPicker } from "./BrandPicker";
 import { Sheet } from "./Sheet";
+import { Suitcase } from "./Suitcase";
 
 /** A number that counts to its new value instead of jumping. */
 function useTween(value: number, ms = 650): number {
@@ -135,8 +136,8 @@ function tp_genders(items: KitLine[]): string[] {
   return items.map((l) => l.item?.gender ?? "unisex").filter((g) => g === "men" || g === "women");
 }
 
-export function Kit({ tripId, plans, tier, setTier, onChanged }: {
-  tripId: string; plans: Plans; tier: Tier; setTier: (t: Tier) => void; onChanged: () => void;
+export function Kit({ tripId, plans, tier, setTier, onChanged, layers }: {
+  tripId: string; plans: Plans; tier: Tier; setTier: (t: Tier) => void; onChanged: () => void; layers?: ReactNode;
 }) {
   const { config, user, refreshUser, toast } = useApp();
   const [swap, setSwap] = useState<KitLine | null>(null);
@@ -204,6 +205,9 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
 
   return (
     <>
+      <Suitcase tripId={tripId} tier={tier} tp={tp} onChanged={onChanged} />
+      {layers && <section className="sc-layers"><h2 className="x-h2">How your layers work</h2>{layers}</section>}
+      <h2 className="x-h2" id="your-list">Your list</h2>
       <div className="x-bag-top x-rise">
         <div>
           <div className="x-k">Everything you still need</div>
@@ -239,7 +243,7 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
         <div className="x-alerts">{alerts.map((a) => <p key={a.k} className={`x-alert${a.warn ? " warn" : ""}`}>{a.text}</p>)}</div>
       )}
       <section className="x-onebag-h">
-        <h3 className="x-h3">One bag for the whole trip</h3>
+        <h3 className="x-h3">Every piece, and where you wear it</h3>
         <p className="x-sub">Every piece you need, and where you wear it. The numbers are your stops, in order.</p>
         {stops.length > 1 && (
           <ol className="x-route">
