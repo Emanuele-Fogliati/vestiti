@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-jp-mount-azumaya-clip"><path d="M0 200V104Q18 92 38 86Q54 80 68 80Q82 80 92 86L106 76Q120 60 134 50L140 46L146 44L152 41L158 43L164 40L170 42L178 41L186 45L196 50Q220 62 244 78Q270 92 300 98V200Z"/></clipPath></defs>
+<path d="M220 200V94L256 86L282 88L300 92V200Z" fill="var(--il-far)"/>
+<path d="M0 200V104Q18 92 38 86Q54 80 68 80Q82 80 92 86L106 76Q120 60 134 50L140 46L146 44L152 41L158 43L164 40L170 42L178 41L186 45L196 50Q220 62 244 78Q270 92 300 98V200Z" fill="var(--il-mid)"/>
+<path d="M128 0V56L136 54L142 58L148 52L154 56L160 50L168 55L176 50L184 56L192 54L200 60V0Z" fill="var(--il-obj)" clip-path="url(#il-jp-mount-azumaya-clip)"/>
+<path d="M146 60L132 86M176 56L180 80M206 64L216 88M100 92L90 108" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M50 130L58 116Q74 110 90 112L104 108L122 114L120 130ZM210 130L218 114L234 108L258 112L264 130Z" fill="var(--il-acc)"/>
+<path d="M0 200V122Q30 116 60 124Q100 128 140 122Q180 126 220 120Q260 116 300 118V200Z" fill="var(--il-mid)"/>
+<path d="M36 146V134H52V146ZM98 146V136H108V146ZM196 146V136H210V146Z" fill="var(--il-ice)"/>
+<path d="M34 134H54L50 129H38ZM96 136H110L106 131H100ZM194 136H212L207 132H198Z" fill="var(--il-water)"/>
+<path d="M0 200V142Q150 139 300 141V200Z" fill="var(--il-leaf)"/>
+<path d="M0 200V152Q60 148 112 152L84 176Q40 180 0 188Z" fill="var(--il-acc)"/>
+<path d="M4 160Q50 154 100 156M2 170Q44 164 90 166M2 181Q36 175 76 175" stroke="var(--il-leaf)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>

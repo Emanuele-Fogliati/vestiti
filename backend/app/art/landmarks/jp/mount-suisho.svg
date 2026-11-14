@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="40" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-jp-mount-suisho-clip"><path d="M0 200V100L30 92L60 80L80 70L100 62L112 52L120 46L128 42L136 35L144 29L152 25L160 27L168 31L180 35L198 39L214 37L240 39L264 41L284 43L300 45V200Z"/></clipPath></defs>
+<path d="M0 200V68L8 62L16 58L22 50L28 56L38 60L50 64L62 68L80 74L104 82V200Z" fill="var(--il-far)"/>
+<path d="M0 200V100L30 92L60 80L80 70L100 62L112 52L120 46L128 42L136 35L144 29L152 25L160 27L168 31L180 35L198 39L214 37L240 39L264 41L284 43L300 45V200Z" fill="var(--il-mid)"/>
+<path d="M60 0V86L80 78L94 76L106 84L116 70L128 72L140 64L150 80L158 62L170 66L184 56L194 72L206 54L220 58L236 52L246 66L258 52L274 58L288 50L300 54V0Z" fill="var(--il-obj)" clip-path="url(#il-jp-mount-suisho-clip)"/>
+<path d="M106 82Q96 100 86 118M150 78Q142 104 132 136M194 70Q186 92 176 110M246 64Q238 92 226 120M288 52Q284 66 278 80" stroke="var(--il-far)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M120 50L112 66M152 28L146 46M198 42L204 56M264 44L270 56" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M128 74Q122 90 116 100M220 60Q214 76 206 90M262 54Q258 68 252 78" stroke="var(--il-far)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<path d="M0 200V170Q34 170 62 190L70 200Z" fill="var(--il-leaf)"/>
+<path d="M150 200Q220 168 300 130V200Z" fill="var(--il-leaf)"/>
+<path d="M223 166Q222 157 231 156Q238 156 240 160L242 156Q244 153 248 154L250 157L247 158L246 162Q245 167 238 168Z" fill="var(--il-acc)"/>
+<path d="M226 166Q228 161 234 162Q238 163 239 167Z" fill="var(--il-ice)"/>
+<path d="M247 155.5H248" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M0 200V188Q150 180 300 186V200Z" fill="var(--il-leaf)"/>
