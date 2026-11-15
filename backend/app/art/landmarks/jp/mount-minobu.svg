@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="26" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-jp-mount-minobu-fuji"><path d="M20 100Q48 84 62 64L70 52H88L96 64Q110 84 138 100Z"/></clipPath></defs>
+<path d="M20 100Q48 84 62 64L70 52H88L96 64Q110 84 138 100Z" fill="var(--il-far)"/>
+<path d="M0 0H160V68L150 70L140 66L130 74L120 66L112 76L104 68L98 78L90 68L84 80L78 68L72 78L66 66L58 76L50 68L40 72L0 70Z" fill="var(--il-ice)" clip-path="url(#il-jp-mount-minobu-fuji)"/>
+<path d="M-10 130V86Q20 80 44 84Q70 76 96 82Q120 74 150 78Q180 72 206 80Q236 74 262 80Q286 76 310 82V130Z" fill="var(--il-far)"/>
+<path d="M-10 200V112Q30 96 66 90Q92 86 112 96Q138 106 160 104Q190 98 216 92Q240 88 262 96Q286 104 310 108V200H-10Z" fill="var(--il-mid)"/>
+<path d="M60 96Q70 112 66 132M112 98Q124 114 122 136M168 104Q178 118 176 140M238 94Q250 110 252 132" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M64 200Q104 180 146 174Q186 170 214 160Q246 150 310 148V166Q252 166 222 176Q188 188 148 190Q120 194 104 200Z" fill="var(--il-obj)"/>
+<path d="M90 196Q130 182 170 180Q200 176 224 166Q254 156 310 156V160Q258 160 230 170Q204 182 172 185Q136 188 100 198Z" fill="var(--il-water)"/>
+<path d="M-10 200V84Q8 88 20 104Q34 122 42 146Q50 170 66 186Q78 196 90 200Z" fill="var(--il-leaf)"/>
+<path d="M96 200Q160 192 220 190Q270 188 310 184V200Z" fill="var(--il-leaf)"/>
+<path d="M20 -4L300 120M8 -4L300 128" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M208 76L236 88L234 93L222 88L226 104L240 106V112H200V106L214 104L216 86L206 81Z" fill="var(--il-near)"/>
+<path d="M188 112H254L252 160H192Z" fill="var(--il-acc)"/>
+<path d="M194 120H248V138H194Z" fill="var(--il-near)"/>
+<path d="M212 120V138M230 120V138" stroke="var(--il-acc)" stroke-width="2" fill="none"/>
