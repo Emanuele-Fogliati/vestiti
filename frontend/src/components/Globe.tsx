@@ -57,8 +57,13 @@ function pads(el: HTMLElement): { top: number; right: number; bottom: number; le
   if (!el.dataset.bare) return { top: narrow(el) ? 70 : 100, right: 0, bottom: 0, left: 0 };
   // Plan a trip: the globe has its own box (left half on a computer, top on a phone, the sheet overlaps its foot)
   if (el.closest(".plan3-map")) return narrow(el) ? { top: 16, right: 0, bottom: 40, left: 0 } : { top: 24, right: 0, bottom: 24, left: 0 };
-  if (el.clientWidth >= 900) return { top: 0, right: Math.round(el.clientWidth * 0.42), bottom: 0, left: 0 };
-  return { top: 56, right: 0, bottom: Math.min(360, Math.round(el.clientHeight * 0.42)), left: 0 }; // the words, the box and the doors
+  // computer: the top bar (64 px) lies over the map, so the globe is centred in what is under it (Manu
+  // 2026-11-15: it was cut at the top with empty space below)
+  if (el.clientWidth >= 900) return { top: 88, right: Math.round(el.clientWidth * 0.42), bottom: 24, left: 0 };
+  // phone: nothing on top; the words, the box and the doors at the bottom, measured so the globe never runs under them
+  const ui = el.closest(".home2")?.querySelector(".home2-ui");
+  const under = ui ? Math.round(el.getBoundingClientRect().bottom - ui.getBoundingClientRect().top) + 8 : 0;
+  return { top: 24, right: 0, bottom: under > 120 && under < el.clientHeight * 0.7 ? under : Math.min(360, Math.round(el.clientHeight * 0.42)), left: 0 };
 }
 
 /** The zoom at which the whole globe fills the free part of the box. */
