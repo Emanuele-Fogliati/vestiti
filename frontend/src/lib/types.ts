@@ -613,6 +613,8 @@ export interface TrailCard {
   in_season: boolean | null; why: string; art: StopArt | null; has_map: boolean;
   km: number | null; gain_m: number | null; max_m: number | null; min_m: number | null; numbers_from: string | null;
   tier: "A" | "B"; style: "trek" | "city"; area: string | null; scores: TrailScores | null;
+  /** where it starts (the pins of the Treks map) */
+  lat?: number | null; lon?: number | null;
 }
 /** One leg of a trip on its map: along the road (OSM), a flight arc, or a plain line offline. */
 export interface RoadLeg { mode: "road" | "air" | "line"; km: number; hours: number | null; line: [number, number][] }
@@ -638,5 +640,7 @@ export interface TrailWear {
   trail_id: string; month: number; in_season: boolean;
   weather: { tmin: number; tmax: number; wind_kmh: number; rain_chance: number; source: string } | null;
   coldest: { feels_like_c: number; where: string; altitude_m: number } | null;
-  pieces: { slot: string; name: string; level: string; waterproof: boolean; footwear_type: string | null; ankle_support: boolean; reasons: string[] }[];
+  pieces: { slot: string; name: string; level: string; waterproof: boolean; footwear_type: string | null; ankle_support: boolean; reasons: string[];
+    /** real products that pass the piece's needs: cheaper, the pick, better */
+    products?: Record<Tier, Item | null> }[];
 }

@@ -9,7 +9,7 @@ const SUGGEST = ["I'm always cold", "I rarely feel the cold", "I have an old Dec
 
 /** Optional chat: tell the app about yourself ("I'm always cold", "I have hiking boots")
  *  and the kit is recomputed, or ask a question about the plan. */
-export function TailorChat({ tripId, tier, onChanged }: { tripId: string; tier: Tier; onChanged: () => void }) {
+export function TailorChat({ tripId, tier, onChanged, initial }: { tripId: string; tier: Tier; onChanged: () => void; initial?: string }) {
   const [msgs, setMsgs] = useState<Msg[]>([]);
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
@@ -17,6 +17,10 @@ export function TailorChat({ tripId, tier, onChanged }: { tripId: string; tier: 
   const seq = useRef(0);
 
   useEffect(() => { if (msgs.length) end.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }); }, [msgs]);
+
+  // a sentence typed in the trip's "say it" field that was not a change of stops: asked here
+  const sent = useRef(false);
+  useEffect(() => { if (initial && !sent.current) { sent.current = true; send(initial); } }); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function send(t: string) {
     const m = t.trim();

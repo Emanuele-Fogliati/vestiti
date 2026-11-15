@@ -17,7 +17,24 @@ const norm = (s: string) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerC
 
 /** The trip on a map: the route from stop to stop, numbered. Tap a stop (on the map or in the
  *  row above it) to zoom in, and the places worth seeing around it appear. */
-export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; focusIndex?: number | null }) {
+export interface RouteMapOpts {
+  /** the map alone, filling its box: no stop chips, no note (the map-first trip page) */
+  bare?: boolean;
+  /** room the floating panels take over the map, in px */
+  inset?: { top: number; right: number; bottom: number; left: number };
+  /** a stop's pin was tapped (its index in the trip) */
+  onPin?: (i: number) => void;
+  /** a small tag over each stop's pin: "4–12°" */
+  tags?: (string | null)[];
+  /** a place dot was tapped: offered to the page instead of the map's own card */
+  onPlace?: (p: GlobePlace) => void;
+}
+
+export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, onPlace }: { stops: RouteStop[]; focusIndex?: number | null } & RouteMapOpts) {
+  const opts = useRef({ inset, onPin, onPlace });
+  opts.current = { inset, onPin, onPlace };
+  const pinEls = useRef<HTMLButtonElement[]>([]);
+  const [, setReady] = useState(0);
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [data, setData] = useState<GlobeData | null>(null);
@@ -48,7 +65,7 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
         container: el,
         style: baseStyle(c, { globe: false }),
         bounds: bounds(pts),
-        fitBoundsOptions: { padding: pad(el), maxZoom: 9 },
+        fitBoundsOptions: { padding: room(el, opts.current.inset), maxZoom: 9 },
         maxZoom: 16,
         cooperativeGestures: true,
         attributionControl: { compact: true },
@@ -64,8 +81,9 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
 
     const markers: maplibregl.Marker[] = [];
+    pinEls.current = [];
     map.on("load", () => {
-      if (el.clientWidth < 600) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
+      if (el.clientWidth < 600 || bare) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
       const straight: LineFeature[] = [{ type: "Feature", properties: { air: 0 }, geometry: { type: "LineString", coordinates: pts.map((s) => [s.longitude, s.latitude]) } }];
       map.addSource("route", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
       map.addLayer({ id: "route-casing", type: "line", source: "route", layout: { "line-join": "round", "line-cap": "round" },
@@ -104,21 +122,27 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
         b.textContent = String(s.n);
         b.title = s.name;
         b.setAttribute("aria-label", `Stop ${s.n}: ${s.name}`);
-        b.addEventListener("click", (e) => { e.stopPropagation(); zoomStop(i); });
+        b.dataset.i = String(i);
+        b.addEventListener("click", (e) => { e.stopPropagation(); if (opts.current.onPin) opts.current.onPin(s.n - 1); else zoomStop(i); });
+        pinEls.current[i] = b;
         seen.set(at, b);
         markers.push(new maplibregl.Marker({ element: b }).setLngLat([s.longitude, s.latitude]).addTo(map));
       });
+      setReady((n) => n + 1); // the pins exist now: give them their tags
     });
 
     const layers = ["pl-dot", "pl-name"];
     map.on("click", (e) => {
       const f = map.queryRenderedFeatures([[e.point.x - 8, e.point.y - 8], [e.point.x + 8, e.point.y + 8]], { layers }).at(0);
-      setSel(f ? data.places[f.properties.i as number] : null);
+      const p = f ? data.places[f.properties.i as number] : null;
+      if (p && opts.current.onPlace) { opts.current.onPlace(p); return; }
+      setSel(p);
     });
     for (const l of layers) {
       map.on("mouseenter", l, () => { map.getCanvas().style.cursor = "pointer"; });
       map.on("mouseleave", l, () => { map.getCanvas().style.cursor = ""; });
     }
+    map.on("moveend", () => declutter(pinEls.current));
     const ro = new ResizeObserver(() => map.resize());
     ro.observe(el);
 
@@ -143,7 +167,9 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
     const s = pts[i];
     setFocus(i);
     setSel(null);
-    mapRef.current?.flyTo({ center: [s.longitude, s.latitude], zoom: 10.5, speed: 1.3, essential: true });
+    const r = room(box.current!, opts.current.inset);
+    mapRef.current?.flyTo({ center: [s.longitude, s.latitude], zoom: bare ? 7.5 : 10.5, speed: 1.3, essential: true,
+      padding: typeof r === "number" ? undefined : r });
   }
 
   function whole() {
@@ -151,10 +177,36 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
     if (!map || !box.current) return;
     setFocus(null);
     setSel(null);
-    map.fitBounds(bounds(pts), { padding: pad(box.current), maxZoom: 9 });
+    map.fitBounds(bounds(pts), { padding: room(box.current, opts.current.inset), maxZoom: 9 });
   }
 
+  // the weather over each pin, and which pin is open
+  useEffect(() => {
+    pinEls.current.forEach((b, i) => {
+      if (!b) return;
+      b.classList.toggle("on", focusIndex != null && pts[i]?.n === focusIndex + 1);
+      let t = b.querySelector<HTMLElement>(".rpin-tag");
+      const v = tags?.[pts[i]?.n - 1] ?? null;
+      if (!v) { t?.remove(); return; }
+      if (!t) { t = document.createElement("span"); t.className = "rpin-tag"; b.appendChild(t); }
+      t.textContent = v;
+    });
+    // again once the pins have popped up (they grow from nothing, in order)
+    const t = [60, 1800].map((ms) => setTimeout(() => declutter(pinEls.current), ms));
+    return () => t.forEach(clearTimeout);
+  });
+
+  // the panels moved (a card opened): keep the whole route in the free part of the map
+  const insetKey = inset ? `${inset.top},${inset.right},${inset.bottom},${inset.left}` : "";
+  useEffect(() => {
+    if (!insetKey || !mapRef.current || focusIndex != null) return;
+    whole();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [insetKey]);
+
   if (failed || pts.length === 0) return null;
+
+  if (bare) return <div className="rmap rmap-bare"><div className="rmap-map" ref={box} /></div>;
 
   return (
     <div className="rmap">
@@ -190,6 +242,30 @@ function bounds(pts: RouteStop[]): maplibregl.LngLatBoundsLike {
 
 function pad(el: HTMLElement): number {
   return Math.round(Math.min(56, Math.min(el.clientWidth, el.clientHeight) / 6));
+}
+
+/** Weather tags over pins that sit close together would overlap: the later stop's tag hides. */
+function declutter(pins: HTMLButtonElement[]) {
+  const seen: DOMRect[] = [];
+  for (const b of pins) {
+    const t = b?.querySelector<HTMLElement>(".rpin-tag");
+    if (!t) continue;
+    t.style.visibility = "";
+    const r = t.getBoundingClientRect();
+    const pinR = pins.filter((x) => x && x !== b).map((x) => x.getBoundingClientRect());
+    const hit = [...seen, ...pinR].some((o) => r.left < o.right && r.right > o.left && r.top < o.bottom && r.bottom > o.top);
+    if (hit) t.style.visibility = "hidden"; else seen.push(r);
+  }
+}
+
+/** Padding that keeps the route clear of the floating panels, when there are any. */
+function room(el: HTMLElement, inset?: RouteMapOpts["inset"]): number | { top: number; right: number; bottom: number; left: number } {
+  const p = pad(el);
+  if (!inset) return p;
+  const w = el.clientWidth, h = el.clientHeight;
+  // never leave less than 120 px of map: on a small window the panels give way
+  const left = Math.min(inset.left, Math.max(0, w - 120 - inset.right)), top = Math.min(inset.top, Math.max(0, h - 120 - inset.bottom));
+  return { top: top + p, right: inset.right + p, bottom: inset.bottom + p, left: left + p };
 }
 
 type LineFeature = { type: "Feature"; properties: Record<string, number>; geometry: { type: "LineString"; coordinates: number[][] } };
