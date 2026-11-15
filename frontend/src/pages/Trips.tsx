@@ -37,7 +37,9 @@ export default function Trips() {
           <div className="tlist">
             {trips.map((t) => (
               <Link className="tcard" to={`/trips/${t.id}`} key={t.id}>
-                <Illustration art={t.art} />
+                {t.art ? <Illustration art={t.art} /> : (
+                  <span className="tnoart" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="5" y="7" width="14" height="13" rx="3" /><path d="M9 7V4h6v3" /></svg></span>
+                )}
                 <div className="b">
                   <h3>{t.name}</h3>
                   <span className="small muted">{t.start_date ? `${t.estimated ? "≈ " : ""}${dayMonth(t.start_date)} – ${dayMonth(t.end_date!)}` : "No dates"} · {t.stop_count} stops{t.estimated ? " · dates are a guess" : ""}</span>

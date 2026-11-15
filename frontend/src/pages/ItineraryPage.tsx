@@ -68,7 +68,7 @@ function StopBlock({ stop, index, dayFrom }: { stop: ItineraryStop; index: numbe
         </ol>
         {/* the day plan already names every place: only the ones with their own picture come back here */}
         <Visits stop={{ ...stop, plan: undefined, visits: (stop.visits ?? []).filter((v) => v.art && v.art.id !== stop.art?.id) }}
-          dayFrom={dayFrom} />
+          dayFrom={dayFrom} flat />
         {(stop.do.length > 0 || stop.skip.length > 0) && (
           <div className="tips">
             {stop.do.length > 0 && <div className="tip-do"><h4>Worth it</h4><ul>{stop.do.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}

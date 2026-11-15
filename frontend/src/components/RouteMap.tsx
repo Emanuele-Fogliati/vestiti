@@ -3,7 +3,7 @@ import { api } from "../lib/api";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PlaceCard } from "./PlaceCard";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
-import { baseStyle, loadPlaces, mapColors, placeLayers, placesGeoJSON, reducedMotion } from "../lib/worldmap";
+import { baseStyle, blockPins, loadPlaces, mapColors, placeLayers, placesGeoJSON, reducedMotion } from "../lib/worldmap";
 
 export interface RouteStop {
   name: string;
@@ -85,6 +85,12 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
       } else drawIn(map.getSource("route") as maplibregl.GeoJSONSource, straight);
       map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places, { boost }) });
       for (const l of placeLayers(c)) map.addLayer(l);
+      // a stop's own name sits further out, beside its pin and not under it
+      const atStop = new Set(pts.map((s) => norm(s.name)));
+      const stopNames = [...new Set(data.places.filter((p) => atStop.has(norm(p.name))).map((p) => p.name))];
+      map.setLayoutProperty("pl-name", "text-radial-offset", ["case", ["in", ["get", "name"], ["literal", stopNames]], 1.6,
+        ["==", ["get", "p"], 1], 2.4, 0.75]);
+      blockPins(map, pts.map((s) => [s.longitude, s.latitude]));
       // stops on top: numbered pins, same order as the list below
       const seen = new Map<string, HTMLButtonElement>();
       pts.forEach((s, i) => {

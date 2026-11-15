@@ -104,9 +104,9 @@ export default function Account() {
               </select></div>
             <div className="field"><label>Evenings</label>
               <select value={user.evenings} onChange={(e) => patch({ evenings: e.target.value as "early" | "sometimes" | "late" })}>
-                <option value="early">Back inside after dinner: don't buy anything for cold evenings</option>
-                <option value="sometimes">Out some evenings: spend a little on them</option>
-                <option value="late">Out late most evenings: cover them fully</option>
+                <option value="early">In after dinner: nothing extra</option>
+                <option value="sometimes">Out some evenings: a little extra</option>
+                <option value="late">Out late most evenings: fully covered</option>
               </select></div>
             <div className="field"><label>Favourite brands</label>
               <BrandPicker catalog={catalog} value={user.preferred_brands ?? []} onChange={(v) => patch({ preferred_brands: v })} />

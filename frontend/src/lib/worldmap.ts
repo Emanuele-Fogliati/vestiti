@@ -2,7 +2,7 @@
 // tiles + free AWS terrain tiles for the hill shading, no API key), the places we show and how
 // they appear as you zoom in.
 import type { FeatureCollection } from "geojson";
-import type { ExpressionSpecification, StyleSpecification } from "maplibre-gl";
+import type { ExpressionSpecification, Map as MlMap, StyleSpecification } from "maplibre-gl";
 
 export type PlaceKind = "city" | "town" | "landmark" | "nature" | "island" | "region";
 
@@ -445,4 +445,16 @@ export function webglOK(): boolean {
   } catch {
     return false;
   }
+}
+
+/** Numbered stop pins are HTML markers, which map labels cannot see: without this the names of
+ * places right next to a stop ("Ballestas Islands" beside pin 2) are printed under the pin and
+ * come out cut ("llestas Islands"). An invisible icon the size of a pin, at every pin, keeps the
+ * labels of every layer below it (ours and the base map's) out of that spot. */
+export function blockPins(map: MlMap, at: [number, number][], size = 34) {
+  if (!map.hasImage("pin-hole")) map.addImage("pin-hole", { width: size, height: size, data: new Uint8Array(size * size * 4) });
+  map.addSource("pin-holes", { type: "geojson", data: { type: "FeatureCollection",
+    features: at.map((c) => ({ type: "Feature", properties: {}, geometry: { type: "Point", coordinates: c } })) } });
+  map.addLayer({ id: "pin-holes", type: "symbol", source: "pin-holes",
+    layout: { "icon-image": "pin-hole", "icon-allow-overlap": true, "icon-ignore-placement": false } });
 }

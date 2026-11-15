@@ -12,13 +12,18 @@ export default function TrailProfile({ profile, points, onFocus }: {
   if (profile.length < 2) return null;
   const maxKm = profile[profile.length - 1][0];
   const es = profile.map((p) => p[1]);
-  const lo = Math.floor((Math.min(...es) - 30) / 100) * 100;
-  const hi = Math.ceil((Math.max(...es) + 30) / 100) * 100;
+  // a flat city walk at 20-60 m gets a 0-80 m axis, not -100 to 100: never below sea level
+  // unless the path is, and a finer grid when the climb is small
+  const mn = Math.min(...es), mx = Math.max(...es), span = mx - mn;
+  const unit = span < 150 ? 20 : span < 400 ? 50 : 100, pad = span < 150 ? 10 : 30;
+  const lo0 = Math.floor((mn - pad) / unit) * unit;
+  const lo = mn >= 0 ? Math.max(0, lo0) : lo0;
+  const hi = Math.max(Math.ceil((mx + pad) / unit) * unit, lo + 4 * unit);
   const X = (k: number) => L + (k / maxKm) * (W - L - R);
   const Y = (e: number) => T + (1 - (e - lo) / (hi - lo)) * (H - T - B);
   const path = profile.map(([k, e], i) => `${i ? "L" : "M"}${X(k).toFixed(1)},${Y(e).toFixed(1)}`).join("");
   const area = `${path}L${X(maxKm)},${H - B}L${X(0)},${H - B}Z`;
-  const step = (hi - lo) > 1200 ? 500 : (hi - lo) > 500 ? 200 : 100;
+  const step = (hi - lo) > 1200 ? 500 : (hi - lo) > 500 ? 200 : (hi - lo) > 200 ? 100 : (hi - lo) > 80 ? 50 : 20;
   const ticks = [];
   for (let e = Math.ceil(lo / step) * step; e <= hi; e += step) ticks.push(e);
   const kmStep = maxKm > 40 ? 10 : maxKm > 15 ? 5 : maxKm > 6 ? 2 : 1;
