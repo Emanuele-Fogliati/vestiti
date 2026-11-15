@@ -23,6 +23,8 @@ from sqlalchemy.orm import Session
 from app import art, trails
 from app.trails import world
 from app.db import get_db
+from app.deps import optional_user
+from app.models import User
 
 router = APIRouter(prefix="/api/trails", tags=["trails"])
 
@@ -103,6 +105,8 @@ def card(t: trails.Trail, month: int | None = None) -> dict:
         "in_season": None if month is None else month in t.months,
         "why": t.why, "art": _cover(t), "has_map": trails.geo(t.id) is not None,
         "tier": t.tier, "style": t.style, "area": t.area, "scores": t.scores.model_dump() if t.scores else None,
+        # where it starts, for the pins on the Treks map
+        "lat": round(t.points[0].lat, 4) if t.points else None, "lon": round(t.points[0].lon, 4) if t.points else None,
         **_numbers(t),
     }
 
@@ -247,9 +251,16 @@ def _next(month: int, today: date) -> date:
 
 
 @router.get("/{trail_id}/wear")
-def wear(trail_id: str, month: int = Query(..., ge=1, le=12), db: Session = Depends(get_db)):
-    """What to wear on the trail in a month: the trip engine, run on this trail alone."""
+def wear(trail_id: str, month: int = Query(..., ge=1, le=12), db: Session = Depends(get_db),
+         user: User | None = Depends(optional_user)):
+    """What to wear on the trail in a month: the trip engine, run on this trail alone.
+    Each piece carries three real products that pass its needs (cheaper, the pick, better),
+    so the Treks page can sell the trek's kit without a trip (Manu, 2026-11-15)."""
+    from sqlalchemy import select
+    from app import models
+    from app.engine import outfit as O
     from app.engine.garments import SLOT_BY_KEY
+    from app.services.planner import market_of, product_item
     from app.engine.strategy import StageInput, conditions_for_stage, requirements
     from app.weather.service import WeatherService
     t = _trail(trail_id)
@@ -264,11 +275,20 @@ def wear(trail_id: str, month: int = Query(..., ge=1, le=12), db: Session = Depe
     conds = conditions_for_stage(stage)
     reqs = requirements([stage], conds)
     cold = min(conds, key=lambda c: c.feels_like_c) if conds else None
+    need = {k: r for k, r in reqs.items() if r.needed}
+    q = select(models.Product).where(models.Product.active.is_(True), models.Product.market == market_of(user),
+                                     models.Product.category.in_(list(need)))
+    pref = (user.gender_pref if user else None) or "any"
+    if pref in ("men", "women"):
+        q = q.where(models.Product.gender.in_([pref, "unisex"]))
+    cands = O.group_by_slot(O.rate(need, [product_item(p) for p in db.scalars(q).all()]))
     pieces = []
     for slot, r in reqs.items():
         if not r.needed:
             continue
-        pieces.append({"slot": slot, "name": SLOT_BY_KEY[slot].name if slot in SLOT_BY_KEY else r.name,
+        picks = {tier: O.pick_for_tier(cands.get(slot, []), tier) for tier in ("cheap", "medium", "premium")}
+        pieces.append({"products": {k: v.as_dict() if v else None for k, v in picks.items()},
+                       "slot": slot, "name": SLOT_BY_KEY[slot].name if slot in SLOT_BY_KEY else r.name,
                        "level": r.level, "waterproof": r.waterproof,
                        "footwear_type": r.footwear_type, "ankle_support": r.ankle_support,
                        "reasons": r.reasons[:2]})

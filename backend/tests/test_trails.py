@@ -105,6 +105,8 @@ def test_api_one_trail_and_wear(client):
     assert slots["footwear"]["footwear_type"] in ("hiking_boot", "mountaineering_boot")
     assert slots["footwear"]["waterproof"]  # glacier: crampon-ready boots
     assert "shell_top" in slots
+    # each piece names products for the three budgets (or null where the catalog has none)
+    assert all(set(p["products"]) == {"cheap", "medium", "premium"} for p in w["pieces"])
 
 
 def test_gpx_needs_a_line(client):

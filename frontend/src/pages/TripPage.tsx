@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { TripMap } from "../components/Maps";
 import { useItineraries } from "../components/ItineraryCards";
 import { Kit } from "../components/Kit";
 import { LayerStrategy } from "../components/LayerStrategy";
@@ -10,7 +9,7 @@ import { ProfileQuiz } from "../components/ProfileQuiz";
 import { TailorChat } from "../components/TailorChat";
 import { TripBoard } from "../components/Board";
 import { FlightsPlanner } from "../components/Flights";
-import { TripTimeline } from "../components/TripTimeline";
+import { TripStudio } from "../components/TripStudio";
 import { Sheet } from "../components/Sheet";
 import { WeatherTab } from "../components/WeatherTab";
 import { api } from "../lib/api";
@@ -46,8 +45,10 @@ export default function TripPage() {
   const [err, setErr] = useState<string | null>(null);
   const [planning, setPlanning] = useState(false);
   const [tab, setTab] = useState<Tab>(HASH[loc.hash.slice(1)] ?? "trip");
-  const [ver, setVer] = useState(0);
+  const [, setVer] = useState(0);
+  const [boardOpen, setBoardOpen] = useState(false);
   const [askOpen, setAskOpen] = useState(loc.hash === "#ask");
+  const [askText, setAskText] = useState("");
   const [flightsOpen, setFlightsOpen] = useState(loc.hash === "#flights");
   const [menu, setMenu] = useState(false);
   const tabsRef = useRef<HTMLElement>(null);
@@ -160,19 +161,32 @@ export default function TripPage() {
   const estimateWeather = strategy?.stages.some((s) => s.weather_sources.includes("estimate"));
   const sel = stageIdx < 0 ? -1 : Math.min(stageIdx, Math.max(0, stops.length - 1));
 
-  return (
-    <main className="x-trip">
-      <header className="x-head">
-        <div className="wrap">
-          <div className="x-head-in">
-            <div className="x-head-t">
+  const sheets = (
+    <>
+      <button type="button" className="x-fab" onClick={() => setAskOpen(true)}>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" /></svg>
+        <span>Ask</span>
+      </button>
+      <Sheet open={askOpen} onClose={() => setAskOpen(false)} title="Tell us, or ask">
+        <TailorChat tripId={id} tier={tier} onChanged={profileChanged} initial={askText} key={askText} />
+      </Sheet>
+      <Sheet open={flightsOpen} onClose={() => setFlightsOpen(false)} title="Flights" wide>
+        <FlightsPlanner trip={trip} onChanged={loadAll} />
+      </Sheet>
+      {quizOpen && <ProfileQuiz tripId={id} tier={tier} onDone={quizDone} />}
+    </>
+  );
+  const metaTitle = (
+    <>
               <p className="x-meta">
                 {t0 && tEnd ? <><b>{trip.estimate ? "≈ " : ""}{dayMonth(t0)} – {dayMonth(tEnd)}</b><span>{totalDays} days</span><span>{stops.length} {stops.length === 1 ? "place" : "places"}</span></> : <span>No places yet</span>}
                 {planning && <span className="spin" aria-label="Updating" />}
               </p>
               <h1><textarea className="x-title" rows={1} ref={(el) => { if (el) { el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; } }} onInput={(e) => { const el = e.currentTarget; el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; }} defaultValue={trip.name} aria-label="Trip name" onBlur={(e) => rename(e.target.value.replace(/\s+/g, " ").trim())}
                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); (e.target as HTMLTextAreaElement).blur(); } }} /></h1>
-            </div>
+    </>
+  );
+  const actions = (
             <div className="x-head-a">
               {user && (
                 <button type="button" className="x-round" onClick={() => setQuizOpen(true)} aria-label={user.profile_done_at ? "About you: change" : "4 quick questions about you"} title="About you">
@@ -196,7 +210,9 @@ export default function TripPage() {
                 )}
               </div>
             </div>
-          </div>
+  );
+  const below = (
+    <>
           {(source || related) && (
             <p className="x-from">
               <Link to={`/ideas/${(source ?? related)!.slug}`}>{source ? "Day-by-day guide" : "Our route"}: {(source ?? related)!.title} →</Link>
@@ -214,9 +230,9 @@ export default function TripPage() {
               <PlanChange changes={quizResult.changes} plan={quizResult.plan} />
             </div>
           )}
-        </div>
-      </header>
-
+    </>
+  );
+  const tabBar = (
       <nav className="x-tabs" aria-label="Trip" ref={tabsRef}>
         <div className="wrap">
           <div className="x-tabs-in" role="tablist">
@@ -230,32 +246,44 @@ export default function TripPage() {
         </div>
       </nav>
 
+  );
+
+  // the Plan tab is the map-first page: the header and the tabs move into its panel
+  if (tab === "trip" && stops.length > 0) return (
+    <main className="x-trip x-trip-st">
+      <TripStudio trip={trip} plans={plans} strategy={strategy} tier={tier} sel={stageIdx < 0 ? null : sel}
+        setSel={(i) => setStageIdx(i ?? -1)} onChanged={loadAll} onPlans={() => loadPlans(tier)}
+        head={<><div className="mf-head-r">{metaTitle}{actions}</div>{below}</>} tabs={tabBar}
+        onBag={() => go("bag")} onAsk={(t) => { setAskText(t ?? ""); setAskOpen(true); }}
+        onFlights={() => setFlightsOpen(true)} onBoard={() => setBoardOpen(true)} />
+      <Sheet open={boardOpen} onClose={() => setBoardOpen(false)} title="Days, bookings and things to do" wide>
+        <TripBoard trip={trip} onChanged={loadAll} selected={Math.max(0, sel)} onSelect={setStageIdx} />
+      </Sheet>
+      {sheets}
+    </main>
+  );
+
+  return (
+    <main className="x-trip">
+      <header className="x-head">
+        <div className="wrap">
+          <div className="x-head-in">
+            <div className="x-head-t">
+              {metaTitle}
+            </div>
+            {actions}
+          </div>
+          {below}
+        </div>
+      </header>
+
+      {tabBar}
+
       {tab === "trip" && (
         <section className="x-panel" id="p-trip" role="tabpanel" key="trip">
           <div className="wrap">
-            {stops.length > 0 ? (
-              <div className="r16 x-rise">
-                <div className="r16-map"><TripMap stops={stops} focusIndex={stageIdx < 0 ? null : sel} /></div>
-                <div className="r16-list">
-                  <TripTimeline tripId={id} stops={stops} version={ver} open={stageIdx < 0 ? null : sel} onOpen={(i) => setStageIdx(i ?? -1)} />
-                  <div className="r16-tools">
-                    <button type="button" className="x-btn" onClick={() => setFlightsOpen(true)}>
-                      <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M21 15.5l-8-4.5V5.5a1.5 1.5 0 0 0-3 0V11l-8 4.5V17l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-4.5l8 2.5z" /></svg>
-                      Flights
-                    </button>
-                  </div>
-                  <details className="r16-edit">
-                    <summary>Change the plan: days, order, what to do</summary>
-                    <TripBoard trip={trip} onChanged={loadAll} selected={Math.max(0, sel)} onSelect={setStageIdx} />
-                  </details>
-                  <div className="r16-cta">
-                    <button type="button" onClick={() => go("bag")}>Trip ready? <span>Pack for it →</span></button>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="x-rise"><TripBoard trip={trip} onChanged={loadAll} selected={0} onSelect={setStageIdx} /></div>
-            )}
+            {/* no stops yet: the board, to add the first one (with stops the Plan tab is the map-first page above) */}
+            <div className="x-rise"><TripBoard trip={trip} onChanged={loadAll} selected={0} onSelect={setStageIdx} /></div>
           </div>
         </section>
       )}
@@ -293,17 +321,7 @@ export default function TripPage() {
         </section>
       )}
 
-      <button type="button" className="x-fab" onClick={() => setAskOpen(true)}>
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" /></svg>
-        <span>Ask</span>
-      </button>
-      <Sheet open={askOpen} onClose={() => setAskOpen(false)} title="Tell us, or ask">
-        <TailorChat tripId={id} tier={tier} onChanged={profileChanged} />
-      </Sheet>
-      <Sheet open={flightsOpen} onClose={() => setFlightsOpen(false)} title="Flights" wide>
-        <FlightsPlanner trip={trip} onChanged={loadAll} />
-      </Sheet>
-      {quizOpen && <ProfileQuiz tripId={id} tier={tier} onDone={quizDone} />}
+      {sheets}
     </main>
   );
 }
