@@ -87,7 +87,7 @@ class Where:
 def why_not(d: dict, where: Where) -> tuple[str | None, str | None]:
     """(why it is not a trek or None, its country by the middle of its extent)."""
     name = d["name"].strip()
-    if not re.search(r"[A-Za-zÀ-ÿĀ-žА-яͰ-Ͽ぀-ヿ一-鿿]{3,}", name):
+    if not re.search(r"[^\W\d_]{3,}", name):  # three letters of any script (Hebrew, Thai, Hangul...)
         return "no name", None
     if d["sub"]:
         return "container of other routes", None
@@ -525,6 +525,28 @@ def qids() -> None:
     sitelinks(q)
 
 
+GOAL_WORD = {"summit": "Summit", "pass": "Pass", "hut": "Hut", "lake": "Lake", "falls": "Falls",
+             "lookout": "Lookout", "glacier": "Glacier"}
+
+
+def leads() -> None:
+    """An English app: a name with no Latin letters (Hebrew, Greek, Cyrillic, Thai, Hangul...)
+    gets an English lead, as osm_tail.names() does for Japanese: "Trail near Safed (שביל...)"."""
+    for f in sorted(WORLD.glob("[a-z][a-z].json")):
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        n = 0
+        for t in doc["trails"]:
+            if re.search(r"[A-Za-z]", t["name"]):
+                continue
+            m = re.match(r"A footpath to the (\w+):", t["why"])
+            word = GOAL_WORD.get(m.group(1), "Walk") if m else "Trail"
+            t["name"] = f"{word} near {t['base']} ({t['name']})"[:80]
+            n += 1
+        if n:
+            f.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+            print(f"{f.stem}: {n} names led in English")
+
+
 def dots() -> None:
     """world/_dots.json: one row per world trek for the globe, at its goal."""
     rows = []
@@ -653,4 +675,4 @@ def goals(region: str, *files_and_box) -> None:
 
 if __name__ == "__main__":
     cmd, *a = sys.argv[1:]
-    {"count": count, "build": build, "goals": goals, "dots": dots, "rerank": rerank, "qids": qids}[cmd](*a)
+    {"count": count, "build": build, "goals": goals, "dots": dots, "rerank": rerank, "qids": qids, "leads": leads}[cmd](*a)
