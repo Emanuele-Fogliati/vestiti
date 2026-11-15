@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="30" r="13" fill="var(--il-sun)"/>
+<path d="M-10 150V112Q20 104 50 106Q60 102 70 104V150Z" fill="var(--il-water)"/>
+<defs><clipPath id="il-jp-mount-oike-m"><path d="M10 160Q24 130 38 108Q54 82 66 64Q72 58 82 57Q100 56 120 57Q132 54 144 55Q160 56 176 54Q196 50 214 48Q228 44 242 45Q262 46 280 52Q296 58 310 62V160Z"/></clipPath></defs>
+<path d="M10 160Q24 130 38 108Q54 82 66 64Q72 58 82 57Q100 56 120 57Q132 54 144 55Q160 56 176 54Q196 50 214 48Q228 44 242 45Q262 46 280 52Q296 58 310 62V160Z" fill="var(--il-mid)"/>
+<path d="M62 68Q66 61 72 58Q80 57 88 57Q84 62 80 68Q76 76 74 88Q70 78 62 68Z" fill="var(--il-far)" clip-path="url(#il-jp-mount-oike-m)"/>
+<path d="M104 64Q100 92 92 126M146 60Q146 92 140 128M188 56Q194 88 192 126M236 52Q246 82 248 120M276 58Q286 84 290 110" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M-10 200V150Q30 140 70 142Q120 146 170 144Q220 140 260 146Q290 148 310 150V200Z" fill="var(--il-leaf)"/>
+<path d="M0 200V170Q60 164 120 166Q200 170 300 164V200Z" fill="var(--il-acc)"/>
+<path d="M206 170Q206 162 214 161H233Q241 161 243 167Q243 175 235 176H212Q206 176 206 170Z" fill="var(--il-obj)"/>
+<path d="M236 168L241 155L244 149L251 148L259 152L258 157L250 157L246 159L243 170Z" fill="var(--il-obj)"/>
+<path d="M244 150L239 144L246 147Z" fill="var(--il-obj)"/>
+<path d="M247 148L245 139L241 135M245 141L249 137M250 148L253 139L257 136M252 141L249 138" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M211 174L210 188M217 175L218 188M233 175L232 188M238 174L240 188" stroke="var(--il-obj)" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M208 165L203 161" stroke="var(--il-ice)" stroke-width="3" fill="none" stroke-linecap="round"/>
