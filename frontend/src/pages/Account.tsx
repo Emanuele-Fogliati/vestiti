@@ -40,6 +40,12 @@ export default function Account() {
     } catch (e2) { setPwErr((e2 as Error).message); }
   }
 
+  async function logout() {
+    await api.logout();
+    setUser(null);
+    nav("/");
+  }
+
   async function everywhere() {
     if (!window.confirm("Sign out on every device, this one included?")) return;
     await api.logoutEverywhere();
@@ -64,6 +70,13 @@ export default function Account() {
             You're a guest: your trips live in this browser's session. <Link to="/register">Create a free account</Link> to keep them.
           </div>
         )}
+        <div className="you-links">
+          {user.is_guest
+            ? <Link className="btn primary" to="/login" state={{ from: "/account" }}>Sign in</Link>
+            : <button type="button" className="btn" onClick={logout}>Sign out</button>}
+          <Link className="you-row" to="/how-it-works">How it works<span aria-hidden="true">→</span></Link>
+          <Link className="you-row" to="/legal/affiliate">Affiliate disclosure<span aria-hidden="true">→</span></Link>
+        </div>
         <div className="stack">
           <section className="panel form">
             <h2 style={{ fontSize: 20 }}>Fit</h2>

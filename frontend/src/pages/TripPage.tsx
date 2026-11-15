@@ -20,9 +20,9 @@ import type { Plans, QuizResult, Strategy, Tier, Trip } from "../lib/types";
 
 type Tab = "trip" | "weather" | "bag";
 const TABS: { id: Tab; label: string; icon: string }[] = [
-  { id: "trip", label: "1 · Plan", icon: "M3 18l5-9 4 6 3-4 6 7" },
+  { id: "trip", label: "Plan", icon: "M3 18l5-9 4 6 3-4 6 7" },
   { id: "weather", label: "Weather", icon: "M3 9h11a3 3 0 1 0-3-3M3 14h15a3 3 0 1 1-3 3M3 19h6" },
-  { id: "bag", label: "2 · Pack", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
+  { id: "bag", label: "Bag", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
 ];
 // old section anchors still land in the right tab
 const HASH: Record<string, Tab> = { trip: "trip", days: "trip", flights: "trip", map: "trip", weather: "weather", layers: "bag", bag: "bag", kit: "bag", total: "bag", ask: "trip" };

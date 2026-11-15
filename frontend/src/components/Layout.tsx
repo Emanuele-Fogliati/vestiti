@@ -1,6 +1,5 @@
-import { useId } from "react";
-import { Link, NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
-import { api } from "../lib/api";
+import { useId, type ReactElement } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { brandName, useApp } from "../lib/app-context";
 
 /** Logo "Globo con cerniera" (Manu 2026-11-14): a yellow globe with a zip across it.
@@ -45,68 +44,59 @@ export function Logo({ name }: { name: string }) {
   );
 }
 
+const ICONS: Record<string, ReactElement> = {
+  globe: <><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3.2 3.6 3.2 14.4 0 18M12 3c-3.2 3.6-3.2 14.4 0 18" /></>,
+  trips: <><rect x="5" y="7" width="14" height="13" rx="3" /><path d="M9 7V4h6v3" /></>,
+  treks: <path d="M3 19l6-11 4 6 2.5-3.5L21 19z" />,
+  closet: <path d="M10 6a2 2 0 1 1 3 1.7c-.6.4-1 .9-1 1.6V10L3 17h18l-9-7" />,
+  me: <><circle cx="12" cy="8" r="4" /><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6" /></>,
+};
+const Ico = ({ n }: { n: string }) => (
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{ICONS[n]}</svg>
+);
+
+/** Every page: the night sky, the logo and You at the top, one bar at the bottom
+ *  (Explore · Trips · Treks · Closet), the same on phone and computer (design Q01, Manu 2026-11-15).
+ *  Planning a trip lives under Trips; How it works and sign in live under You. */
 export function Layout() {
-  const { config, user, setUser } = useApp();
-  const nav = useNavigate();
+  const { config, user } = useApp();
   const loc = useLocation();
   const name = brandName(config);
-  // "Plan a trip" covers both ways in: your own trip and the recommended ones
-  const planning = /^\/(start|ideas|trips\/new)(\/|$)/.test(loc.pathname);
-  const links = [
-    ["/start", "Plan a trip"],
-    ["/trips", "My trips"],
-    ["/trails", "Trekking"],
-    ["/wardrobe", "Wardrobe"],
-    ["/how-it-works", "How it works"],
+  const p = loc.pathname;
+  const tripsOn = /^\/(start|ideas|trips)(\/|$)/.test(p);
+  const signedIn = !!user && !user.is_guest;
+  const dock: [string, string, string, boolean][] = [
+    ["/", "Explore", "globe", p === "/"],
+    ["/trips", "Trips", "trips", tripsOn],
+    ["/trails", "Treks", "treks", /^\/trails(\/|$)/.test(p)],
+    ["/wardrobe", "Closet", "closet", /^\/wardrobe(\/|$)/.test(p)],
   ];
-  if (user?.is_admin) links.push(["/admin", "Admin"]);
-  const on = (to: string, isActive: boolean) => (to === "/start" ? planning : to === "/trips" ? isActive && !planning : isActive);
-
-  async function logout() {
-    await api.logout();
-    setUser(null);
-    nav("/");
-  }
+  const meOn = /^\/(account|login|register|how-it-works)(\/|$)/.test(p);
 
   return (
     <>
       <header className="top">
         <div className="wrap top-in">
           <Link className="logo" to="/" aria-label={`${name} home`}><Logo name={name} /></Link>
-          <nav className="nav" aria-label="Main">
-            {links.map(([to, label]) => (
-              <NavLink key={to} to={to} className={({ isActive }) => (on(to, isActive) ? "active" : "")}>{label}</NavLink>
-            ))}
-          </nav>
           <div className="acct">
-            <span className="free">Free · always</span>
-            {user && !user.is_guest ? (
-              <>
-                <NavLink to="/account">{user.display_name || user.email}</NavLink>
-                <button type="button" onClick={logout}>Sign out</button>
-              </>
-            ) : (
-              <>
-                {user?.is_guest && <NavLink to="/account" title="You're planning as a guest">Guest</NavLink>}
-                <NavLink to="/login" state={{ from: loc.pathname }}>Sign in</NavLink>
-              </>
-            )}
+            {user?.is_admin && <Link className="admin" to="/admin">Admin</Link>}
+            <Link className={`me${meOn ? " active" : ""}`} to={signedIn || user?.is_guest ? "/account" : "/login"} state={signedIn ? undefined : { from: p }}
+              aria-label={signedIn ? `You: ${user!.display_name || user!.email}` : "You: sign in, how it works"} title={signedIn ? (user!.display_name || user!.email || undefined) : "You"}>
+              <Ico n="me" />
+            </Link>
           </div>
         </div>
       </header>
-      {/* inside a trip the phone shows the trip's own tabs (Plan, Weather, Pack) at the bottom instead */}
-      {!/^\/trips\/[^/]+/.test(loc.pathname) && <nav className="mnav" aria-label="Main (mobile)">
-        <NavLink to="/" end>Home</NavLink>
-        {links.filter(([to]) => ["/start", "/trips", "/wardrobe"].includes(to)).map(([to, label]) => (
-          <NavLink key={to} to={to} className={({ isActive }) => (on(to, isActive) ? "active" : "")}>{to === "/start" ? "Plan" : to === "/wardrobe" ? "Closet" : label}</NavLink>
-        ))}
-        <NavLink to={user && !user.is_guest ? "/account" : "/login"}>{user && !user.is_guest ? "Account" : "Sign in"}</NavLink>
-      </nav>}
       <Outlet />
+      <nav className="dock" aria-label="Main">
+        {dock.map(([to, label, icon, on]) => (
+          <Link key={to} to={to} className={on ? "active" : ""} aria-current={on ? "page" : undefined}><Ico n={icon} />{label}</Link>
+        ))}
+      </nav>
       <footer>
         <div className="wrap">
           <nav aria-label="Legal">
-            <Link to="/how-it-works">How the warmth model works</Link>
+            <Link to="/how-it-works">How it works</Link>
             <Link to="/legal/affiliate">Affiliate disclosure</Link>
             <Link to="/legal/privacy">Privacy</Link>
             <Link to="/legal/terms">Terms</Link>
@@ -114,8 +104,6 @@ export function Layout() {
           <p>{config?.disclosure}</p>
           <div className="row">
             <span>Weather: Open-Meteo. Product data: sample catalog until affiliate feeds are connected.</span>
-            <span className="spacer" />
-
           </div>
         </div>
       </footer>

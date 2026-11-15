@@ -1,0 +1,221 @@
+/* Night everywhere (design Q01, picked by Manu 2026-11-15): every page sits on the same light night sky
+   as the globe home, cards are glass, yellow marks the thing you act on. One bar at the bottom
+   (Explore · Trips · Treks · Closet), the same on phone and computer. Loaded last. */
+[data-theme="yellow-black"]{
+  color-scheme:dark;
+  --bg:#2F4D76;--bg-2:#2A4468;--surface:rgba(255,255,255,.09);--surface-2:rgba(255,255,255,.06);
+  --ink:#FFFFFF;--ink-2:rgba(255,255,255,.76);--ink-3:rgba(255,255,255,.55);
+  --rule:rgba(255,255,255,.14);--rule-strong:rgba(255,255,255,.26);
+  --top-bg:transparent;--top-ink:#FFFFFF;--top-ink-2:rgba(255,255,255,.8);
+  --focus:#FFD60A;--accent-ink:#111111;--chip-bg:#FFD60A;--chip-ink:#111111;--hl-bg:#FFD60A;--hl-ink:#111111;
+  --photo-bg:#FFFFFF;--el-sel:rgba(255,214,10,.16);--colsel:rgba(255,214,10,.16);--why-bg:rgba(255,214,10,.13);--why-k:#FFD60A;
+  --total-bg:rgba(255,255,255,.09);--total-ink:#FFFFFF;--total-ink-2:rgba(255,255,255,.75);--total-border:transparent;--total-track:rgba(255,255,255,.16);--total-fill:#FFD60A;--total-fill-dim:rgba(255,214,10,.45);
+  --tag-bg:rgba(255,255,255,.16);--tag-ink:#FFFFFF;--own:rgba(255,255,255,.12);--own-ink:#FFFFFF;
+  --seg-on:#FFD60A;--seg-on-ink:#111111;--ok:#9BDDB5;--ok-ink:#111111;--ok-text:#9BDDB5;--warn:#FF9F80;--warn-ink:#111111;--warn-text:#FFB59C;
+  --lc-bg:#111111;--lc-ink:#FFD60A;--cell-sel:#FFD60A;--dot:#FFFFFF;--star:#FFD60A;--check:#9BDDB5;--hot:#FF9F80;--cold:#9CC7FF;
+  --heat:#FF9F80;--heat-text:#FFB59C;--vapor:rgba(255,255,255,.6);--vapor-text:rgba(255,255,255,.7);
+  --el-fill:#FFD60A;--el-line:#FFFFFF;--el-dot:#FFFFFF;--el-label:#FFFFFF;--days-ink:#FFFFFF;--stop-hover:rgba(255,255,255,.06);
+  --il-sky:#3E5F8C;--shadow:0 10px 30px rgba(0,0,0,.25);--bw:1px;
+  --x-paper:rgba(255,255,255,.07);
+  --glass:rgba(255,255,255,.09);--glass-line:rgba(255,255,255,.16);
+  --night-sky:radial-gradient(1.2px 1.2px at 8% 12%,rgba(255,255,255,.5) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 37% 8%,rgba(255,255,255,.5) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 71% 11%,rgba(255,255,255,.5) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 88% 30%,rgba(255,255,255,.5) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 14% 72%,rgba(255,255,255,.45) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 62% 84%,rgba(255,255,255,.45) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 97% 8%,rgba(255,255,255,.5) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 46% 46%,rgba(255,255,255,.35) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 24% 34%,rgba(255,255,255,.4) 50%,transparent 51%),radial-gradient(1.2px 1.2px at 80% 62%,rgba(255,255,255,.4) 50%,transparent 51%),radial-gradient(circle at 30% 25%,#3E5F8C 0%,#2A4468 70%);
+}
+html{background:#2A4468}
+body{background:var(--night-sky);background-attachment:fixed;background-color:#2A4468;color:#FFFFFF}
+::selection{background:#FFD60A;color:#111111}
+a{color:inherit}
+h1,h2,h3,h4{color:#FFFFFF}
+.kicker{color:var(--ink-2)}
+.kicker a,.link,.x-from a{color:#FFD60A}
+
+/* ---------- top: logo left, You on the right, over the sky ---------- */
+.top{position:sticky;top:0;z-index:40;border:0;background:linear-gradient(rgba(42,68,104,.96),rgba(42,68,104,.82) 70%,rgba(42,68,104,0));--logo-globe:#FFD60A;--logo-teeth:transparent}
+.top-in{gap:12px;padding-block:12px}
+.top .logo{color:#FFFFFF}
+.top .nav,.top .free{display:none}
+.top .acct{margin-left:auto;gap:8px}
+.top .acct .admin{height:36px;padding:0 14px;border-radius:18px;background:rgba(255,255,255,.12);display:inline-flex;align-items:center;font-size:13px;font-weight:700;color:#FFFFFF}
+.me{width:42px;height:42px;border-radius:21px;background:rgba(255,255,255,.14);color:#FFFFFF;display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:background .2s}
+.me:hover,.me.active{background:rgba(255,255,255,.24)}
+body.home-page .top{background:linear-gradient(rgba(42,68,104,.85),rgba(42,68,104,0))}
+@media (max-width:899px){body.home-page .top .acct{display:none}} /* the phone home keeps its trips button top right */
+
+/* ---------- the bar at the bottom (Q01): same on phone and computer ---------- */
+.mnav{display:none!important}
+.dock{position:fixed;z-index:60;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(440px,calc(100% - 28px));height:68px;box-sizing:border-box;
+  display:flex;align-items:center;padding:0 6px;border-radius:30px;background:rgba(22,36,62,.8);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16),0 10px 30px rgba(0,0,0,.35);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:dock-in .52s cubic-bezier(.2,.9,.2,1.1) both}
+.dock a{flex:1 1 0;height:54px;margin:0 3px;border-radius:22px;color:rgba(255,255,255,.82);text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font:800 11px var(--f-body);transition:background .25s,color .25s}
+.dock a:hover{color:#FFFFFF;background:rgba(255,255,255,.08)}
+.dock a.active{background:var(--accent);color:#111111}
+.dock svg{width:22px;height:22px}
+@keyframes dock-in{from{transform:translate(-50%,130px)}to{transform:translate(-50%,0)}}
+body{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+body.home-page{padding-bottom:0}
+body.home-page .dock{display:none}
+@media (min-width:900px){
+  .dock{height:64px;width:min(480px,calc(100% - 28px))}
+  .dock a{flex-direction:row;gap:8px;font-size:14px;height:50px}
+}
+
+/* every page enters the same way: content rises in */
+main.page,.x-trip,.trailpage{animation:page-in .42s cubic-bezier(.2,.8,.2,1) both}
+@keyframes page-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ---------- surfaces: glass, never white boxes ---------- */
+:is(.card,.panel,.x-item,.tcard,.witem,.place-card,.pcard,.brief,.facts,.door,.banner,.tchat,.estimate,.x-alert,.x-cta,.tbox,.bd-panel,.empty,.drawer,.x-sheet){background:var(--glass);border:0;box-shadow:inset 0 0 0 1px var(--glass-line);border-radius:20px;color:#FFFFFF}
+:is(.drawer,.x-sheet,.quiz){background:#2A4468;box-shadow:0 -10px 40px rgba(0,0,0,.4)}
+.door[aria-selected="true"]{background:var(--accent);color:#111111;box-shadow:none}
+.door[aria-selected="true"] :is(b,span){color:#111111}
+.btn{background:rgba(255,255,255,.12);color:#FFFFFF;border:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.24)}
+.btn:hover{background:rgba(255,255,255,.2)}
+.btn.primary,.x-btn.y,.btn.go{background:var(--accent);color:#111111;box-shadow:none}
+.btn.primary:hover,.x-btn.y:hover{background:#FFE14D}
+.btn.ghost{background:transparent}
+.x-btn{background:rgba(255,255,255,.12);color:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(255,255,255,.24)}
+input[type=text],input[type=email],input[type=password],input[type=number],input[type=date],input[type=search],textarea,select{background:rgba(255,255,255,.1);color:#FFFFFF;border:0;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.28)}
+:is(input,textarea)::placeholder{color:rgba(255,255,255,.62)}
+select option{background:#2A4468;color:#FFFFFF}
+input:focus,textarea:focus,select:focus{outline:none;box-shadow:inset 0 0 0 2px #FFD60A}
+:is(.fchip,.x-chip,.qchip,.chip-btn,.pk-brands button,.ask-sugg button,.ask-ex button){background:rgba(255,255,255,.12);color:#FFFFFF;border:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+:is(.fchip[aria-pressed="true"],.x-chip.on,.qchip.on,.chip-btn.on,.pk-brands button.on){background:var(--accent);color:#111111;box-shadow:none}
+.muted,.small.muted,.note,.lede{color:var(--ink-2)}
+footer{color:var(--ink-2);border-top:1px solid var(--rule)}
+footer a{color:rgba(255,255,255,.85)}
+.toast{background:#111111;color:#FFFFFF}
+.tag{border-color:rgba(255,255,255,.3);color:#FFFFFF}
+.tag.diff-hard{background:#FF9F80;color:#111111;border:0}
+.tag.diff-moderate{background:#9BDDB5;color:#111111;border:0}
+.tag.diff-easy{background:#BFE3FF;color:#111111;border:0}
+.tag.diff-technical{background:#FF6B6B;color:#111111;border:0}
+
+/* drawings and product photos keep their own white paper */
+.thumb{background:#FFFFFF}
+.pk-img,.x-ic,.ph-s{background:#FFFFFF}
+
+/* ---------- Plan a trip (Q03 on night): a map you can tap on top, the sheet under it ---------- */
+.plan3{position:relative;margin-top:-66px}
+.plan3-map{position:relative;height:min(54svh,480px);min-height:320px}
+.plan3-map .globe{height:100%;min-height:0;background:transparent}
+.plan3-map .globe-head,.plan3-map .globe-hint{display:none}
+.plan3-map::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(rgba(42,68,104,0),#2C4870);pointer-events:none}
+.plan3-sheet{position:relative;z-index:2;margin-top:-34px;border-radius:30px 30px 0 0;background:rgba(44,72,112,.94);box-shadow:0 -10px 30px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.14);padding:12px 0 24px;animation:sheet-up .62s cubic-bezier(.2,.9,.2,1.05) .15s both}
+.plan3-sheet::before{content:"";display:block;width:44px;height:5px;border-radius:3px;background:rgba(255,255,255,.4);margin:0 auto 14px}
+.plan3-sheet h1{font-size:30px;margin:0 0 12px}
+@keyframes sheet-up{from{transform:translateY(80px);opacity:0}to{transform:none;opacity:1}}
+@media (min-width:900px){
+  .plan3{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(400px,1fr);gap:0;margin-top:-66px;min-height:calc(100svh - 0px)}
+  .plan3-map{position:sticky;top:0;height:100svh;max-height:none}
+  .plan3-map::after{display:none}
+  .plan3-sheet{margin:80px 24px 24px 0;border-radius:30px;align-self:start}
+}
+
+/* ---------- inside a trip: Plan / Weather / Bag at the top, the bar stays at the bottom ---------- */
+.x-tabs{position:sticky;top:64px;z-index:30;background:linear-gradient(rgba(42,68,104,.96),rgba(42,68,104,.9) 80%,rgba(42,68,104,0));backdrop-filter:none;-webkit-backdrop-filter:none;border:0;padding:6px 0 10px}
+.x-tabs-in{background:#111111;border-radius:28px;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.22);height:52px;max-width:620px;padding:0 4px}
+.x-tabs-in button{color:#FFFFFF;height:44px;font-size:15px}
+.x-tabs-in button[aria-selected="true"]{color:#111111;font-weight:800}
+.x-pill{top:4px;height:44px;border-radius:22px}
+@media (max-width:760px){
+  .x-tabs{position:sticky;top:64px;bottom:auto;left:auto;right:auto;border:0;padding:6px 0 10px}
+  .x-tabs-in{height:52px;max-width:none}
+  .x-tabs-in button{flex-direction:row;gap:6px;font-size:14px;height:44px}
+  .x-tabs-in button svg{display:none}
+  .x-pill{top:4px;height:44px;border-radius:22px}
+  .x-fab{bottom:calc(98px + env(safe-area-inset-bottom,0px))}
+  .r16-cta{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+}
+.x-fab{background:#111111;color:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22),0 10px 28px rgba(0,0,0,.35)}
+.r16-cta{bottom:calc(96px + env(safe-area-inset-bottom,0px));background:linear-gradient(rgba(42,68,104,0),#2A4468 40%)}
+.r16-cta button{background:var(--accent);color:#111111}
+.r16-cta button span{color:#111111}
+.r16-map{background:transparent}
+.r16-map .rmap-box{border:0}
+@media (min-width:900px){.r16-map .rmap-box{border-radius:22px;box-shadow:inset 0 0 0 1px var(--glass-line)}}
+.tl::before{border-left-color:rgba(255,255,255,.35)}
+.tl-av{outline-color:rgba(255,255,255,.3)}
+.tl-days{background:var(--glass);border:0;box-shadow:inset 0 0 0 1px var(--glass-line)}
+.tl-leg-ic{background:#2A4468;border-color:rgba(255,255,255,.4)}
+.sc-cta button,.sc-cta a{background:var(--accent);color:#111111}
+.sc-cta span{color:#111111}
+.sc-pill{background:rgba(255,255,255,.12);color:#FFFFFF;border:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.sc-pill.on{background:var(--accent);color:#111111}.sc-pill.on small{color:#111111}
+.sc-sky,.sc-legend{color:var(--ink-2)}
+.pk-item{background:var(--glass);border:0;box-shadow:inset 0 0 0 1px var(--glass-line)}
+.pk-item.on{box-shadow:inset 0 0 0 2.5px #FFD60A}
+.pk-have{background:rgba(255,255,255,.12);color:#FFFFFF;border:0;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.3)}
+.pk-have.on{background:#9BDDB5;color:#111111;box-shadow:none}
+.pk-t span{color:var(--ink-2)}
+.pk-why{background:rgba(255,214,10,.13);border:0;color:#FFFFFF}
+.pk-row button{background:var(--accent);color:#111111;border:0}
+
+/* ---------- lists of things: one row per item, drawing left (My trips Q01; Treks the same) ---------- */
+.tcards{gap:12px}
+.tcard{border-radius:20px;overflow:hidden}
+.tcard a{color:#FFFFFF}
+
+@media (prefers-reduced-motion:reduce){
+  .dock,main.page,.x-trip,.trailpage,.plan3-sheet{animation:none}
+}
+
+/* ---------- You ---------- */
+.you-links{display:grid;gap:10px;margin:0 0 24px}
+.you-links .btn{height:54px;border-radius:27px;font-size:16px;font-weight:800;justify-content:center;display:flex;align-items:center}
+.you-row{display:flex;align-items:center;justify-content:space-between;min-height:54px;padding:0 8px 0 18px;border-radius:24px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.26);color:#FFFFFF;text-decoration:none;font-weight:700}
+.you-row span{width:40px;height:40px;border-radius:20px;background:var(--accent);color:#111111;display:grid;place-items:center;font-weight:900}
+
+/* ---------- maps stay light (real colours): what sits on them stays readable ---------- */
+[data-theme="yellow-black"]{--map-ink:#111111}
+.rpin{background:#111111;color:#FFD60A;border-color:#FFFFFF}
+.rpin.tpin.start,.rpin.tpin.goal{background:#FFD60A;color:#111111}
+:is(.pcard,.rmap-card,.globe-card,.globe-trip,.globe-trail){background:rgba(36,58,92,.97);color:#FFFFFF;box-shadow:0 12px 32px rgba(0,0,0,.35),inset 0 0 0 1px rgba(255,255,255,.16)}
+.maplibregl-ctrl-group{background:#FFFFFF}
+.maplibregl-ctrl-group button{filter:none}
+
+/* ---------- My trips and Treks: rows, drawing on the left (Q01) ---------- */
+.tlist,.tcards{grid-template-columns:1fr;gap:10px}
+@media (min-width:900px){.tlist,.tcards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+:is(.tlist .tcard,.tcard a){flex-direction:row;align-items:center;gap:14px;padding:8px;border:0;border-radius:20px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--glass-line);transition:background .2s,transform .2s}
+.tcards .tcard{background:none;box-shadow:none;border-radius:20px}
+:is(.tlist .tcard,.tcard a):hover{background:rgba(255,255,255,.14);transform:translateY(-2px)}
+.tcard .thumb{width:112px;height:80px;aspect-ratio:auto;flex:0 0 auto;margin:0;border:0;border-radius:12px;overflow:hidden}
+.tcard .thumb svg{width:100%;height:100%;display:block}
+.tcard .b,.tcard-body{padding:0 4px 0 0;gap:3px;min-width:0;flex:1 1 auto}
+.tcard h3,.tcard-body h3{font-size:16.5px;line-height:1.15;margin:0}
+.tcard .small{font-size:12.5px;line-height:1.35}
+.tcard .b .small:not(.muted){display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink-2)}
+.tcard-body .tags{display:flex;gap:4px;flex-wrap:wrap;order:2}
+.tcard-body .tag{font-size:10.5px;padding:2px 7px}
+.tcard-body h3{order:1}
+.tcard-body p.small{order:3;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tcard-body .tfacts{order:4;display:flex;flex-wrap:wrap;gap:0;margin:0;font-size:12.5px;color:var(--ink-2)}
+.tcard-body .tfacts div{display:contents}
+.tcard-body .tfacts dt{display:none}
+.tcard-body .tfacts dd{margin:0;font-weight:700;color:rgba(255,255,255,.85)}
+.tcard-body .tfacts dd+dt+dd::before,.tcard-body .tfacts div+div dd::before{content:" · ";white-space:pre;font-weight:400;color:var(--ink-2)}
+.tcard-body .tfacts div:nth-child(n+4){display:none}
+.tcard .label{font-size:10.5px}
+
+/* the ready-trip hero: night, not a yellow block */
+.hero,[data-theme="yellow-black"] .hero{background:transparent;color:#FFFFFF;border:0}
+[data-theme="yellow-black"] .hero :is(.kicker,.lede){color:var(--ink-2)}
+.hero h1 .hl{background:var(--accent);color:#111111}
+
+/* the logo bar (64px) and Plan / Weather / Pack (68px) both stay on top inside a trip */
+.x-trip{--x-tabh:132px}
+.x-tabs-in{height:52px}
+.x-tabs-in{grid-template-columns:repeat(3,1fr)}
+
+/* the yellow suitcase keeps its paper inside: white discs, ink lines */
+.sc-body{border-color:#111111}
+.sc-handle{border-color:#FFFFFF}
+.sc-wheel{background:#111111}
+.sc-piece{color:#111111}
+.sc-disc{background:#FFFFFF;border-color:#111111;box-shadow:0 3px 0 #111111}
+.sc-piece.choose .sc-disc{box-shadow:none}
+.sc-tag{background:#FFFFFF;color:#111111;border-color:#111111}
+.sc-tag.have{background:#111111;color:#FFFFFF}
+.sc-name{background:rgba(255,255,255,.92);color:#111111}
+.sc-label{background:#FFFFFF;color:#111111;border-color:#111111}
+.sc-legend i{background:#FFFFFF;border-color:#111111;color:#111111}
+.sc-legend i.have{background:#111111;color:#FFFFFF}.sc-legend i.picked{background:var(--accent)}
