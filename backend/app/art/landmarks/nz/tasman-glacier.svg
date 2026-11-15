@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="196" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-nz-tasman-glacier-c"><path d="M0 116V60L12 54L22 50L32 42L40 34L44 30L50 33L58 40L64 44L72 50L80 56L90 64L96 60L102 56L108 54L116 60L124 66L132 76L142 88L150 116Z"/></clipPath></defs>
+<path d="M0 116V60L12 54L22 50L32 42L40 34L44 30L50 33L58 40L64 44L72 50L80 56L90 64L96 60L102 56L108 54L116 60L124 66L132 76L142 88L150 116Z" fill="var(--il-far)"/>
+<path d="M0 0H150V100L142 96L134 86L126 92L118 80L110 90L106 110L100 116H44L40 100L32 88L24 96L16 84L8 92L0 86Z" fill="var(--il-ice)" clip-path="url(#il-nz-tasman-glacier-c)"/>
+<path d="M118 116L140 100L160 92L176 86L188 78L200 74L212 64L224 58L236 50L250 40L262 34L276 22L286 18L294 22L300 26V160H118Z" fill="var(--il-mid)"/>
+<path d="M150 118L166 110L180 114L194 106L208 114L222 106L236 116L250 108L264 120L278 112L300 120V160H150Z" fill="var(--il-leaf)"/>
+<path d="M276 22L286 18L294 22L300 26V40L294 36L290 46L284 34L278 40L272 30Z" fill="var(--il-ice)"/>
+<path d="M250 42L244 74M276 26L268 66M224 60L220 86M200 76L196 96" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M36 116Q70 110 120 112L132 118Q90 120 40 120Z" fill="var(--il-ice)"/>
+<path d="M0 200V114Q40 118 80 119Q120 118 160 121Q230 128 300 152V200Z" fill="var(--il-obj)"/>
+<path d="M86 200Q104 156 116 120M170 200Q150 154 128 120M258 194Q196 150 142 122" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.35"/>
+<g transform="translate(14 132) scale(0.85)">
+<path d="M16 15V20M20 14V20" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<path d="M0 14L8 8Q12 2 20 2Q26 1 28 5Q29 9 26 12Q20 16 12 14Z" fill="var(--il-leaf)"/>
+<path d="M11 12Q16 15 21 12L18 10Z" fill="var(--il-sun)"/>
+<path d="M27 3Q34 3 33 10Q31 6 28 7Z" fill="var(--il-obj)"/>
+<circle cx="24.5" cy="5" r="0.9" fill="var(--il-near)"/>
+</g>
+<path d="M0 200V146Q20 144 40 151Q58 166 70 184Q76 192 80 200Z" fill="var(--il-acc)"/>
