@@ -210,7 +210,7 @@ SIGHT = re.compile(
     r"lighthouse|viewpoint|lookout|beach|waterfall|harbou?r|pier|promenade|old town|historic|heritage|landmark|"
     r"skyscraper|observation|aqueduct|city wall|walls|obelisk|triumphal arch|baths|forum|villa|manor|residence|"
     r"hall\b|town hall|city hall|cloister|minaret|belfry|clock tower|bell tower|mansion|pavilion|zoo|aquarium|"
-    r"botanical|arch\b|stairway|steps|hill\b|island|lake|canal|quarter|neighbourhood|district|wat\b|"
+    r"botanical|arch\b|stairway|steps|hill\b|island|lake|canal|historic district|old quarter|wat\b|"
     r"capitol|parliament building|library building|opera house|chorten|gompa|dzong|caravanserai|hammam|"
     r"cave|gorge|cliff|rock formation|volcano|crater|mountain|spring|geyser|viaduct|dam\b|windmill|mill\b", re.I)
 NOT_SIGHT = re.compile(
@@ -225,9 +225,29 @@ NOT_SIGHT = re.compile(
     r"film|book|song|album|newspaper|magazine|periodical|television|radio|ship|vessel|car\b|locomotive|"
     r"research institute|institute|laboratory|academy|faculty|prison|police|military base|barracks|"
     r"power station|power plant|factory|plant\b|warehouse|industrial|mine\b|quarry|well\b|weather station|"
-    r"ordinary|demolished|destroyed|former|defunct|closed|proposed|planned|under construction", re.I)
+    r"ordinary|demolished|destroyed|former|defunct|closed|proposed|planned|under construction|"
+    r"country|state\b|republic|empire|kingdom|polity|caliphate|khanate|sultanate|principality|era\b|period\b|"
+    r"district of|urban district|borough|neighbo|quarter of|region|territory|capital|oblast|raion|"
+    r"(?<!historic )district\b|operation|offensive|conference|siege|treaty|massacre|uprising|incident|disaster|"
+    r"attack|bombing|expedition|campaign|convention|congress|exhibition cent|concert venue|music venue|"
+    r"cricket ground|sports ground|multi-purpose|performing arts venue", re.I)
 KIND_OF = (("park", re.compile(r"park\b|zoo|botanical", re.I)), ("garden", re.compile(r"garden", re.I)),
            ("viewpoint", re.compile(r"viewpoint|lookout|observation|hill\b|mountain|cliff", re.I)))
+
+
+# classes that make many items famous only among their fans (every office tower of Dubai has 5 wikis)
+WEAK = re.compile(r"skyscraper|high-rise|tower block|building|hall\b|residence|mansion|villa|manor|district|quarter|"
+                  r"neighbourhood|hill\b|island|lake|canal|bridge|stairway|steps|spring|dam\b|mill\b|windmill|cemetery|"
+                  r"market|fountain|statue|sculpture|memorial|tower", re.I)
+STRONG = re.compile(r"church|cathedral|basilica|abbey|monastery|temple|shrine|pagoda|stupa|mosque|synagogue|museum|"
+                    r"gallery|palace|castle|ch[aâ]teau|fortress|citadel|square|plaza|piazza|park\b|garden|monument|"
+                    r"ruin|archaeological|amphitheat|theat(re|er)|opera|mausoleum|tomb|old town|historic|heritage|"
+                    r"zoo|aquarium|botanical|gate|wat\b|lighthouse|viewpoint|lookout|beach", re.I)
+
+
+def weak(types: list[str], tl: dict) -> bool:
+    names = [tl.get(t, ["", "", ""])[0] for t in types]
+    return not any(STRONG.search(n) for n in names if n) and any(WEAK.search(n) for n in names if n)
 
 
 def classify(types: list[str], tl: dict) -> str | None:
@@ -261,7 +281,21 @@ def city(ccs: list[str]) -> None:
             continue
         if re.search(r"\b(street|road|avenue|boulevard)\b", name + " " + desc, re.I) and r["n"] < 8:
             continue
+        if any(re.search(r"skyscraper|high-rise|tower block|office building", tl.get(t, [""])[0]) for t in r["types"]) and r["n"] < 40:
+            continue  # Dubai's office towers: only the Burj Khalifa and its peers
+        if weak(r["types"], tl) and r["n"] < 15 or re.search(r"\b(hotel|office|residential|tower \d|towers?)\b", desc, re.I) and r["n"] < 15:
+            continue  # an office tower, a hall, a villa: a sight only when famous
         pool_all.append({**r, "name": name, "label": name[:90], "kind": kinds[q]})
+    pool_all.sort(key=lambda s: -s["n"])  # one name, one stop (the Upper and the Lower Belvedere)
+    seen: dict[str, list] = {}
+    uniq = []
+    for s in pool_all:
+        k = s["label"].lower()
+        if any(bt.km((s["lat"], s["lon"]), q) < 1.5 for q in seen.get(k, [])):
+            continue
+        seen.setdefault(k, []).append((s["lat"], s["lon"]))
+        uniq.append(s)
+    pool_all = uniq
     print(f"{len(pool_all)} sights of {len(items)} items", flush=True)
     grid: dict[tuple[int, int], list] = {}
     for s in pool_all:
@@ -502,6 +536,47 @@ def sights_walks(ccs: list[str]) -> None:
         print(f"{cc}: {len(out)}/{len(ps)} sight walks; so far {dict(SIGHT_DROPS)}", flush=True)
 
 
+NOT_ON_FOOT = {"us-city-new-york-city-1": "Liberty Island to Ellis Island is a ferry, not mapped as one"}
+
+
+def tidy() -> None:
+    """After `city`: drop the walks the foot router sends over a ferry (Venice, Stockholm, Suomenlinna)
+    and the ones a later rule rules out (a stop that is an event or a venue), without routing again."""
+    from app import trails  # noqa: F401  (the path)
+    have = json.loads((CACHE / "near-sights.json").read_text(encoding="utf-8"))["items"]
+    tl = labels([])
+    lab = json.loads((CACHE / "near-labels.json").read_text(encoding="utf-8"))
+    bad_names = {lab[q][0] for q, r in have.items() if q in lab and lab[q][0] and classify(r["types"], tl) is None}
+    out = ot.ROOT / "backend/app/trails/tail"
+    n = k = 0
+    for f in sorted(out.glob("*-city.json")):
+        if f.name[:2].upper() in DONE:
+            continue
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        keep = []
+        for t in doc["trails"]:
+            k += 1
+            g = doc["geo"][t["id"]]
+            if any(bt.km((p["lat"], p["lon"]), (q["lat"], q["lon"])) > 0.8 for p, q in zip(t["points"], g["points"])):
+                doc["geo"].pop(t["id"])
+                n += 1
+                continue  # a sight the router could not reach (the test's rule)
+            c = ";".join(f"{p['lon']:.5f},{p['lat']:.5f}" for p in t["points"])
+            r = osrm(f"/routed-foot/route/v1/foot/{c}?overview=false&steps=true")
+            ferry = r.get("code") == "Ok" and any(st["mode"] != "walking" for leg in r["routes"][0]["legs"] for st in leg["steps"])
+            if ferry or t["id"] in NOT_ON_FOOT or any(p["name"] in bad_names for p in t["points"]):
+                doc["geo"].pop(t["id"], None)
+                n += 1
+                continue
+            keep.append(t)
+        doc["trails"] = keep
+        if keep:
+            f.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        else:
+            f.unlink()
+    print(f"tidy: {n} of {k} city walks dropped")
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "bases":
@@ -510,5 +585,7 @@ if __name__ == "__main__":
         fetch_sights()
     elif cmd == "city":
         city(sys.argv[2:])
+    elif cmd == "tidy":
+        tidy()
     elif cmd == "sightwalks":
         sights_walks(sys.argv[2:])
