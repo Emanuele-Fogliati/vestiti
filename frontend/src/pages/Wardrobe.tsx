@@ -116,7 +116,7 @@ function SearchByName({ onPick, seed = "" }: { onPick: (m: ModelMatch) => void; 
   return (
     <div className="stack">
       <div className="field"><label>Brand and model, as you remember them</label>
-        <input type="search" autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="e.g. Torrentshell, Quechua MH500, old Merrell Moab" /></div>
+        <input type="search" autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="e.g. Torrentshell, Quechua MH500" /></div>
       <p className="small muted">Older and discontinued models count too: a model line keeps its warmth across versions.</p>
       {res && res.length > 0 && <MatchList list={res} onPick={onPick} />}
       {res && q.trim().length >= 3 && (
@@ -285,13 +285,13 @@ export default function Wardrobe() {
   return (
     <main className="page">
       <div className="wrap">
-        <div className="page-head"><div><p className="kicker">What you already own</p><h1>Wardrobe</h1></div></div>
+        <div className="page-head"><div><p className="kicker">What you already own</p><h1>Closet</h1></div></div>
         <p className="muted" style={{ maxWidth: "64ch", marginBottom: 16 }}>
           Add what you own once. Every trip uses it first, for free.
         </p>
         {user?.is_guest && (
           <div className="panel row" style={{ marginBottom: 20, justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-            <span className="small" style={{ maxWidth: "60ch" }}><b>Keep your wardrobe.</b> As a guest it lives only in this browser.</span>
+            <span className="small" style={{ maxWidth: "60ch" }}><b>Keep your closet.</b> As a guest it lives only in this browser.</span>
             <Link className="btn sm primary" to="/register">Create account</Link>
           </div>
         )}

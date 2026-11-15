@@ -56,7 +56,7 @@ export function ProfileQuiz({ tripId, tier, onDone }: {
 
   return (
     <>
-      <div className="scrim" onClick={skipAll} />
+      <div className="scrim quiz-scrim" onClick={skipAll} />
       <div className="quiz" role="dialog" aria-modal="true" aria-labelledby="quiz-q">
         <div className="quiz-top">
           <span className="kicker">Tailor the kit · {Math.min(step + 1, total)} of {total}</span>

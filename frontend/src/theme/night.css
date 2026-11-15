@@ -70,7 +70,9 @@ body.home-page .home2-ui::before{bottom:calc(-100px - env(safe-area-inset-bottom
 }
 
 /* every page enters the same way: content rises in */
-main.page,.x-trip,.trailpage{animation:page-in .42s cubic-bezier(.2,.8,.2,1) both}
+/* "backwards", not "both": a transform kept after the animation turns the page into the box of every
+   fixed sheet inside it (the product picker, the chat, Flights opened far down the page, off screen) */
+main.page,.x-trip,.trailpage{animation:page-in .42s cubic-bezier(.2,.8,.2,1) backwards}
 @keyframes page-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
 /* ---------- surfaces: glass, never white boxes ---------- */
@@ -110,7 +112,7 @@ footer a{color:rgba(255,255,255,.85)}
 .plan3-map .globe{height:100%;min-height:0;background:transparent}
 .plan3-map .globe-head,.plan3-map .globe-hint{display:none}
 .plan3-map::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(rgba(42,68,104,0),#2C4870);pointer-events:none}
-.plan3-sheet{position:relative;z-index:2;margin-top:-34px;border-radius:30px 30px 0 0;background:rgba(44,72,112,.94);box-shadow:0 -10px 30px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.14);padding:12px 0 24px;animation:sheet-up .62s cubic-bezier(.2,.9,.2,1.05) .15s both}
+.plan3-sheet{position:relative;z-index:2;margin-top:-34px;border-radius:30px 30px 0 0;background:rgba(44,72,112,.94);box-shadow:0 -10px 30px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.14);padding:12px 0 24px;animation:sheet-up .62s cubic-bezier(.2,.9,.2,1.05) .15s backwards}
 .plan3-sheet::before{content:"";display:block;width:44px;height:5px;border-radius:3px;background:rgba(255,255,255,.4);margin:0 auto 14px}
 .plan3-sheet h1{font-size:30px;margin:0 0 12px}
 @keyframes sheet-up{from{transform:translateY(80px);opacity:0}to{transform:none;opacity:1}}
@@ -328,3 +330,41 @@ footer a{color:rgba(255,255,255,.85)}
   .doors-list{animation:plan3-in .45s cubic-bezier(.2,.9,.2,1) both}
   .doors-row{animation:row-in .45s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 70ms + 80ms)}
 }
+
+/* ---------- QA round (2026-11-15): nothing slides under or through anything else ---------- */
+/* the top bar is solid on every page but the globe home: what scrolls goes under it, never shows through it */
+body:not(.home-page) .top{background:#2A4468;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+/* You stays top right on the phone too: it is the only way to your account and to sign in */
+@media (max-width:760px){.top .acct{display:flex}}
+/* inside a trip the tabs sit right under the bar, on the same solid colour */
+.x-tabs{top:65px;background:#2A4468;box-shadow:0 10px 16px -12px rgba(0,0,0,.4)}
+@media (max-width:760px){.x-tabs{top:65px}}
+/* "Trip ready? Pack for it" closes the list instead of floating over the stops and under the bar */
+.r16-cta{position:static;background:none;padding:6px 0 0}
+.r16-steps{display:none}
+/* the ⋯ menu of a trip: solid, above the title */
+.x-menu{background:#1F3556;box-shadow:0 14px 34px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.16);z-index:46}
+.x-menu .danger{color:#FFB59C}
+/* the "about you" questions sit above the top bar, the bottom bar and the chat button */
+.quiz-scrim{z-index:70}
+.quiz{z-index:71}
+/* home on the phone: the map credits "i" sits under the logo, not on Trip / Trek */
+@media (max-width:899px){.home2 .maplibregl-ctrl-bottom-right{bottom:auto;top:66px}}
+/* Plan a trip: the two big choices keep their title on top of the line under it (the home's door style is for the home) */
+main.page .doors .door{display:grid;align-content:start;gap:4px;padding:14px 16px;min-height:0}
+main.page .doors .door b{font:800 18px/1.15 var(--f-display)}
+main.page .doors .door span{font-size:13.5px;line-height:1.35;color:rgba(255,255,255,.78)}
+main.page .doors .door[aria-selected="true"] span{color:rgba(17,17,17,.78)}
+/* a drawing still on its way is a soft glass block, not a white box */
+.thumb.wait{background:rgba(255,255,255,.1)}
+/* Treks: filters wrap on the phone, one per line when they do not fit */
+@media (max-width:520px){.tfilters select{flex:1 1 calc(50% - 8px);min-width:0}}
+.x-rise{animation-fill-mode:backwards} /* same reason: sheets opened from inside stay on screen */
+/* sheets (product picker, chat, flights) open over the bottom bar, so their last row and buttons are reachable */
+.x-scrim{z-index:74}
+.x-sheet{z-index:75}
+/* messages ("Shell jacket: picked.") show above the bottom bar, not hidden under it */
+.toast{z-index:80;bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+/* trip Plan tab: the map that stays on top leaves room for the stops on the phone, and ends above the bar on the computer */
+@media (max-width:899px){.r16-map .rmap-box{height:30svh;min-height:210px}}
+@media (min-width:900px){.r16-map .rmap-box{height:calc(100svh - var(--x-tabh,132px) - 130px)}}
