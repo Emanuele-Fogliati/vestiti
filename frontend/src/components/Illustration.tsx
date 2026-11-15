@@ -25,7 +25,7 @@ const ART: Record<Terrain, string> = {
 };
 
 /** The scene for a landmark id: undefined while it loads, null when there is none. */
-function useLandmark(id?: string): string | null | undefined {
+export function useLandmark(id?: string): string | null | undefined {
   const [svg, setSvg] = useState<string | null | undefined>(id ? undefined : null);
   useEffect(() => {
     let live = true;

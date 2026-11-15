@@ -49,17 +49,21 @@ export default function Landing() {
     try { sessionStorage.setItem(SEEN, "1"); } catch { /* private mode: it plays again next time */ }
   }, [phase, ready, t0]);
 
+  const [diving, setDiving] = useState(false);
   function go(e: React.FormEvent) {
     e.preventDefault();
     const q = text.trim();
-    if (mode === "trip") nav(q ? `/start?q=${encodeURIComponent(q)}` : "/start");
-    else nav(q ? `/trails?find=${encodeURIComponent(q)}` : "/trails");
+    const to = mode === "trip" ? (q ? `/start?q=${encodeURIComponent(q)}` : "/start") : (q ? `/trails?find=${encodeURIComponent(q)}` : "/trails");
+    // the globe rushes at you, then the next page opens (prototype motion 5)
+    if (reducedMotion()) { nav(to); return; }
+    setDiving(true);
+    window.setTimeout(() => nav(to), 650);
   }
 
   const skip = () => setPhase("done");
 
   return (
-    <main className={`home2 ${phase}`} onPointerDown={phase !== "done" ? skip : undefined}>
+    <main className={`home2 ${phase}${diving ? " dive" : ""}`} onPointerDown={phase !== "done" ? skip : undefined}>
       <div className="home2-space" aria-hidden="true" />
       <div className="home2-globe"><HomeGlobe bare mode={mode} intro={phase !== "done"} onReady={() => setReady(true)} /></div>
       <Link to="/trips" className="home2-bag" aria-label="My trips">

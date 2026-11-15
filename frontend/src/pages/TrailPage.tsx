@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Diorama } from "../components/Diorama";
 import { Illustration } from "../components/Illustration";
 import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
 import TrailMap from "../components/TrailMap";
@@ -56,7 +57,7 @@ export default function TrailPage() {
             <TrailFacts t={t} />
             <p className="small muted">{t.difficulty_text}.{t.published ? <> Distance and climb as <a href={t.published.source} target="_blank" rel="noopener noreferrer">published by the park</a>.</> : null}</p>
           </div>
-          {t.art && <div className="thead-art"><Illustration art={t.art} label={t.name} /></div>}
+          {t.art && <div className="thead-art"><Diorama art={t.art} label={t.name} /></div>}
         </div>
       </section>
 

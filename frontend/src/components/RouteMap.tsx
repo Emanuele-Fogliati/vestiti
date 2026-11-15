@@ -3,7 +3,7 @@ import { api } from "../lib/api";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PlaceCard } from "./PlaceCard";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
-import { baseStyle, loadPlaces, mapColors, placeLayers, placesGeoJSON } from "../lib/worldmap";
+import { baseStyle, loadPlaces, mapColors, placeLayers, placesGeoJSON, reducedMotion } from "../lib/worldmap";
 
 export interface RouteStop {
   name: string;
@@ -66,8 +66,8 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
     const markers: maplibregl.Marker[] = [];
     map.on("load", () => {
       if (el.clientWidth < 600) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
-      map.addSource("route", { type: "geojson", data: {
-        type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: pts.map((s) => [s.longitude, s.latitude]) } } });
+      const straight: LineFeature[] = [{ type: "Feature", properties: { air: 0 }, geometry: { type: "LineString", coordinates: pts.map((s) => [s.longitude, s.latitude]) } }];
+      map.addSource("route", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
       map.addLayer({ id: "route-casing", type: "line", source: "route", layout: { "line-join": "round", "line-cap": "round" },
         paint: { "line-color": c.halo, "line-width": 6 } });
       map.addLayer({ id: "route", type: "line", source: "route", layout: { "line-join": "round", "line-cap": "round" },
@@ -78,11 +78,11 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
           if (!map.getSource("route")) return;
           const feats = legs.map((l) => ({ type: "Feature" as const, properties: { air: l.mode === "air" ? 1 : 0 },
             geometry: { type: "LineString" as const, coordinates: l.line } }));
-          (map.getSource("route") as maplibregl.GeoJSONSource).setData({ type: "FeatureCollection", features: feats });
+          drawIn(map.getSource("route") as maplibregl.GeoJSONSource, feats);
           map.setPaintProperty("route", "line-dasharray", ["case", ["==", ["get", "air"], 1], ["literal", [2, 1.6]], ["literal", [1, 0]]]);
           map.setPaintProperty("route", "line-width", ["case", ["==", ["get", "air"], 1], 2, 3.2]);
-        }).catch(() => { /* keep the straight lines */ });
-      }
+        }).catch(() => { if (map.getSource("route")) drawIn(map.getSource("route") as maplibregl.GeoJSONSource, straight); }); // straight lines then
+      } else drawIn(map.getSource("route") as maplibregl.GeoJSONSource, straight);
       map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places, { boost }) });
       for (const l of placeLayers(c)) map.addLayer(l);
       // stops on top: numbered pins, same order as the list below
@@ -94,6 +94,7 @@ export default function RouteMap({ stops, focusIndex }: { stops: RouteStop[]; fo
         const b = document.createElement("button");
         b.type = "button";
         b.className = "rpin";
+        b.style.setProperty("--d", `${300 + i * 160}ms`); // pins pop up in order while the line reaches them
         b.textContent = String(s.n);
         b.title = s.name;
         b.setAttribute("aria-label", `Stop ${s.n}: ${s.name}`);
@@ -183,4 +184,29 @@ function bounds(pts: RouteStop[]): maplibregl.LngLatBoundsLike {
 
 function pad(el: HTMLElement): number {
   return Math.round(Math.min(56, Math.min(el.clientWidth, el.clientHeight) / 6));
+}
+
+type LineFeature = { type: "Feature"; properties: Record<string, number>; geometry: { type: "LineString"; coordinates: number[][] } };
+
+/** The route grows from the first stop to the last over about 1.6 s; at once with reduced motion. */
+function drawIn(src: maplibregl.GeoJSONSource, feats: LineFeature[]) {
+  const total = feats.reduce((n, f) => n + Math.max(1, f.geometry.coordinates.length - 1), 0);
+  if (reducedMotion() || total < 2) { src.setData({ type: "FeatureCollection", features: feats }); return; }
+  const t0 = performance.now(), dur = 1600;
+  const step = (now: number) => {
+    const u = Math.min(1, (now - t0) / dur), e = u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+    let left = e * total;
+    const part: LineFeature[] = [];
+    for (const f of feats) {
+      const c = f.geometry.coordinates, segs = Math.max(1, c.length - 1);
+      if (left <= 0) break;
+      if (left >= segs) { part.push(f); left -= segs; continue; }
+      const k = Math.floor(left), r = left - k, a = c[k], b = c[Math.min(k + 1, c.length - 1)];
+      part.push({ ...f, geometry: { type: "LineString", coordinates: [...c.slice(0, k + 1), [a[0] + (b[0] - a[0]) * r, a[1] + (b[1] - a[1]) * r]] } });
+      left = 0;
+    }
+    try { src.setData({ type: "FeatureCollection", features: part }); } catch { return; } // the map is gone
+    if (u < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
 }
