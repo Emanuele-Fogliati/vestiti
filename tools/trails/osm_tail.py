@@ -442,7 +442,7 @@ def _drop(why):
 
 def build_one(d: dict, cc: str, taken: list, planned: list = ()) -> tuple[dict, dict] | None:
     from app import art
-    line = [tuple(p) for p in d.get("line") or []] or bt.from_osm(d["id"])
+    line = bt.assemble([tuple(p) for p in d.get("line") or []] or bt.from_osm(d["id"]))
     if len(line) < 2:
         return _drop("no line")
     start, end = line[0], line[-1]
