@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ItineraryCards, useItineraries } from "../components/ItineraryCards";
+import { HomeGlobe } from "../components/Maps";
 import { TripStarter } from "../components/TripStarter";
 import { MONTHS } from "../lib/format";
 
@@ -24,10 +25,24 @@ export default function Start({ tab }: { tab: "own" | "ideas" }) {
   const [len, setLen] = useState(0);
   const lenOk = LENGTHS[len][1];
 
+  if (tab === "own") return (
+    <main className="plan3">
+      <div className="plan3-map"><HomeGlobe bare /></div>
+      <section className="plan3-sheet">
+        <div className="wrap stack">
+          <TripStarter initial={params.get("q") ?? undefined} />
+          <h3 style={{ fontSize: 20, marginTop: 8 }}>Rather start from a ready trip?</h3>
+          <ItineraryCards items={items} limit={3} />
+          <Link className="btn" to="/ideas">All recommended trips</Link>
+        </div>
+      </section>
+    </main>
+  );
+
   return (
     <main className="page">
       <div className="wrap">
-        {tab === "ideas" && <div className="page-head">
+        {<div className="page-head">
           <div>
             <p className="kicker">Plan a trip</p>
             <h1>Recommended trips, day by day</h1>
@@ -36,7 +51,7 @@ export default function Start({ tab }: { tab: "own" | "ideas" }) {
             </p>
           </div>
         </div>}
-        {tab === "ideas" && <div className="doors" role="tablist" aria-label="How do you want to start?">
+        {<div className="doors" role="tablist" aria-label="How do you want to start?">
           <button type="button" role="tab" aria-selected={false} className="door" onClick={() => nav("/start")}>
             <b>I have a trip in mind</b><span>Say it or type it: a region, your stops, or just an idea</span>
           </button>
@@ -45,16 +60,7 @@ export default function Start({ tab }: { tab: "own" | "ideas" }) {
           </button>
         </div>}
 
-        {tab === "own" ? (
-          <div className="start-cols">
-            <TripStarter initial={params.get("q") ?? undefined} />
-            <aside className="stack start-aside">
-              <h3 style={{ fontSize: 18 }}>Rather start from a ready trip?</h3>
-              <ItineraryCards items={items} limit={2} />
-              <Link className="btn" to="/ideas">All recommended trips</Link>
-            </aside>
-          </div>
-        ) : (
+        {(
           <div style={{ marginTop: 24 }}>
             <div className="filters" aria-label="Filter the recommended trips">
               <div className="chips" role="group" aria-label="When do you travel?">

@@ -235,7 +235,7 @@ export function mapColors(): MapColors {
     label: cssVar("--map-label", "#6F6D63"),
     halo: cssVar("--map-halo", "#FFFFFF"),
     accent: cssVar("--accent", "#FFD60A"),
-    ink: cssVar("--ink", "#0D0D0D"),
+    ink: cssVar("--map-ink", "#0D0D0D"), // the maps stay light under the night pages: their ink stays dark
     space: cssVar("--map-space", "#FFFFFF"),
     atmosphere: cssVar("--map-atmosphere", "#D9ECF7"),
     wood: cssVar("--map-wood", "#CFDDB8"),

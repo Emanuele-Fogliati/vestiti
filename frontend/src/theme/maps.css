@@ -57,7 +57,7 @@
 .globe-loading{background:var(--bg)}
 
 /* a place on any map */
-.pcard{position:relative;background:var(--surface);border-radius:var(--radius);box-shadow:0 2px 6px rgba(13,13,13,.08),0 18px 40px rgba(13,13,13,.16);overflow:hidden}
+.pcard{position:relative;background:rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:0 2px 6px rgba(13,13,13,.08),0 18px 40px rgba(13,13,13,.16);overflow:hidden}
 .pcard .thumb{margin:0;border-radius:0}
 .pcard .thumb svg{display:block;width:100%;aspect-ratio:3/2;height:auto}
 .pcard-in{padding:16px 18px 18px;display:grid;gap:8px}
@@ -66,24 +66,24 @@
 .pcard-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .pcard-sub{margin-top:8px}
 .pcard-routes{list-style:none;padding:0;margin:0;display:grid;gap:8px}
-.pcard-routes button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:3px;width:100%;padding:10px 12px;border-radius:12px;background:var(--surface-2)}
-.pcard-routes button:hover,.pcard-routes button:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.pcard-routes button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;gap:3px;width:100%;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.08)}
+.pcard-routes button:hover,.pcard-routes button:focus-visible{outline:2px solid rgba(255,255,255,.2);outline-offset:-2px}
 .pcard-routes .kicker{font-size:11px}
 .rcard-stops{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:7px;font-size:14px}
 .rcard-stops li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
-.rcard-n{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--bg);font-size:11px}
+.rcard-n{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#1E3150;color:#FFFFFF;font-size:11px}
 .rcard-days{display:grid;gap:3px;margin-top:4px;font-size:13px}
 .linkish{all:unset;cursor:pointer;justify-self:start;text-decoration:underline;text-underline-offset:3px}
-.pcard-x{position:absolute;z-index:1;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:0;background:color-mix(in srgb,var(--surface) 88%,transparent);cursor:pointer;font-size:14px;box-shadow:0 1px 4px rgba(13,13,13,.15)}
+.pcard-x{position:absolute;z-index:1;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:0;background:color-mix(in srgb,rgba(255,255,255,.08) 88%,transparent);cursor:pointer;font-size:14px;box-shadow:0 1px 4px rgba(13,13,13,.15)}
 
 /* trip map */
 .rmap{display:grid;gap:12px;margin-bottom:28px}
-.rmap-loading{height:440px;border-radius:var(--radius);background:var(--surface-2)}
+.rmap-loading{height:440px;border-radius:var(--radius);background:rgba(255,255,255,.08)}
 .rmap-stops{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
-.chip-btn{font:inherit;font-size:14px;white-space:nowrap;padding:8px 14px;border-radius:999px;border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip-btn{font:inherit;font-size:14px;white-space:nowrap;padding:8px 14px;border-radius:999px;border:1px solid var(--rule-strong);background:rgba(255,255,255,.08);color:var(--ink);cursor:pointer}
 .chip-btn b{font-family:var(--f-mono);font-size:12px;margin-right:4px}
-.chip-btn:hover{background:var(--surface-2)}
-.chip-btn.on{background:var(--ink);color:var(--accent);border-color:var(--ink)}
+.chip-btn:hover{background:rgba(255,255,255,.08)}
+.chip-btn.on{background:var(--accent);color:#111111;border-color:rgba(255,255,255,.2)}
 .rmap-box{position:relative;height:clamp(340px,52vh,520px);border-radius:var(--radius);overflow:hidden;background:var(--map-sea)}
 .rmap .rmap-map{position:absolute;inset:0}
 .rmap-card{position:absolute;z-index:3;left:12px;bottom:12px;width:min(320px,calc(100% - 24px))}
@@ -93,7 +93,7 @@
 .maplibregl-ctrl-attrib{font-size:10px}
 
 /* the route card's buttons stay in reach while its stops scroll */
-.rcard .pcard-acts{position:sticky;bottom:0;background:var(--surface);padding:10px 0 4px;margin-top:0;box-shadow:0 -10px 12px -10px rgba(13,13,13,.12)}
+.rcard .pcard-acts{position:sticky;bottom:0;background:rgba(38,62,98,.94);padding:10px 0 4px;margin-top:0;box-shadow:0 -10px 12px -10px rgba(13,13,13,.12)}
 
 /* the places inside a city, on its card; each can go into your trip on its own */
 .pcard-note{margin:-4px 0 0}
@@ -102,14 +102,14 @@
 .pcard-in-name{all:unset;cursor:pointer;flex:1;min-width:0;padding:6px 2px;font-size:14px;display:flex;align-items:center;gap:8px}
 .pcard-in-name:hover,.pcard-in-name:focus-visible{text-decoration:underline;text-underline-offset:3px}
 .pcard-dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--rule-strong)}
-.pcard-dot.art{background:var(--accent);box-shadow:0 0 0 1.5px var(--ink)}
-.pcard-add{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer;font:inherit;font-size:16px;line-height:1}
-.pcard-add.on{background:var(--ink);color:var(--bg)}
-.pcard .btn.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.pcard-dot.art{background:var(--accent);box-shadow:0 0 0 1.5px rgba(0,0,0,.35)}
+.pcard-add{flex:none;width:30px;height:30px;border-radius:50%;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:var(--ink);cursor:pointer;font:inherit;font-size:16px;line-height:1}
+.pcard-add.on{background:var(--accent);color:#111111}
+.pcard .btn.on{background:var(--accent);color:#111111;border-color:rgba(255,255,255,.2)}
 
 /* your trip, picked on the globe: cities and the places inside them */
 .globe-trip{position:absolute;z-index:3;left:16px;bottom:24px;width:min(320px,calc(100% - 32px));max-height:calc(100% - 200px);overflow:auto;
-  background:var(--surface);border-radius:var(--radius);padding:14px 16px;display:grid;gap:8px;
+  background:rgba(255,255,255,.08);border-radius:var(--radius);padding:14px 16px;display:grid;gap:8px;
   box-shadow:0 2px 6px rgba(13,13,13,.08),0 18px 40px rgba(13,13,13,.16)}
 .globe-trip .label{margin:0}
 .globe-trip ol{margin:0;padding-left:20px;display:grid;gap:6px;font-size:14px}
@@ -128,7 +128,7 @@
 .globe-trail{padding:0;color:var(--ink)}
 .globe-trail a{color:inherit}
 .globe-trail .tcards{margin:0}
-.globe-trail-x{position:absolute;top:8px;right:8px;z-index:2;width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--ink);font-size:14px;cursor:pointer}
+.globe-trail-x{position:absolute;top:8px;right:8px;z-index:2;width:30px;height:30px;border-radius:50%;border:0;background:rgba(255,255,255,.08);color:var(--ink);font-size:14px;cursor:pointer}
 .trek-legend{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;padding:6px 12px;border-radius:999px;background:color-mix(in srgb,var(--bg) 86%,transparent);color:var(--ink)}
 .trek-legend>span{display:inline-flex;align-items:center;gap:5px}
 .trek-legend i{width:10px;height:10px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 0 0 .5px rgba(0,0,0,.25)}
