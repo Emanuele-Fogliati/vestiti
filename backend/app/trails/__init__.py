@@ -154,8 +154,9 @@ def by_id() -> dict[str, Trail]:
 
 
 def _worldly(trail_id: str) -> bool:
-    """A world trek's id: <cc>-osm-<relation> (waymarked route) or <cc>-goal-<way> (walk to a goal)."""
-    return "-osm-" in trail_id or "-goal-" in trail_id
+    """A world trek's id: <cc>-osm-<relation> (waymarked route), <cc>-goal-<way> (walk to a goal), or an
+    official trail of a park agency (2026-11-15): us-nps-..., us-usfs-..., ca-pc-..."""
+    return any(k in trail_id for k in ("-osm-", "-goal-")) or trail_id.startswith(("us-nps-", "us-usfs-", "ca-pc-"))
 
 
 def find(trail_id: str) -> Trail | None:

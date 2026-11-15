@@ -157,3 +157,24 @@ def test_api_dots_rank_and_cells(client):
     if walk:
         w = client.get(f"/api/trails/{walk[0]}").json()
         assert w["id"] == walk[0] and len(w["line"]) >= 2
+
+
+def test_park_agency_trails_open(client):
+    """The official trails of the US and Canadian park agencies (2026-11-15) are world treks too."""
+    from app.trails import world
+    rows = [x for x in world.dots() if x[0].startswith(("us-nps-", "us-usfs-", "ca-pc-"))]
+    if not rows:
+        return
+    for x in (rows[0], rows[-1]):
+        t = client.get(f"/api/trails/{x[0]}").json()
+        assert t["id"] == x[0] and len(t["line"]) >= 2 and t["computed"]["km"] >= 0.9
+        assert any("nps.gov" in s or "fs.usda.gov" in s or "canada" in s for s in t["sources"])
+
+
+def test_walks_near_drawn_places():
+    """City walks of the drawn towns of the world and short walks to drawn sights (2026-11-15)."""
+    near = [t for t in trails.trails() if "-sight-" in t.id]
+    for t in near:
+        assert t.shape == "out_and_back" and t.points[-1].scene, t.id
+        g = trails.geo(t.id)
+        assert 0.5 <= g["one_way_km"] <= 3.6, t.id
