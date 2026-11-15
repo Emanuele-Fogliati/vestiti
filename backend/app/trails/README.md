@@ -84,3 +84,26 @@ scenes are all done, set its status to `drawn` in list.json.
 ## Status in list.json
 
 `todo` → `draft` (data file written) → `checked` (coordinates on OSM, geo built, no `!`) → `drawn`.
+
+## Every trek in the world (`world/`, Manu 2026-11-14)
+
+Outside the 8 trekking countries, every waymarked hiking route of OpenStreetMap that passes the
+tier-B rules (named, 4-250 km, no city, park, fitness or cycle loops, no containers) and every
+footpath to a named peak, pass, hut, lake or falls (2-25 km), as dots with their numbers and no
+drawings. Generated, never edited by hand:
+
+    osmium tags-filter <country>.osm.pbf r/route=hiking,foot -o routes/<country>.pbf   # per extract
+    node tools/trails/pbf_paths.js <country>.osm.pbf goals/<country>.json            # walks to goals
+    osmium merge routes/*.pbf -o region-routes.pbf                                    # whole cross-border routes
+    python tools/trails/pbf_routes.py region-routes.pbf census.json
+    python tools/trails/world_tail.py build census.json <region> lon0 lat0 lon1 lat1
+    python tools/trails/world_tail.py goals <region> goals/*.json lon0 lat0 lon1 lat1
+    python tools/trails/world_tail.py dots
+    python tools/trails/iconic.py                                                     # iconic.tsv -> rank 6
+
+`world/<cc>.json` holds a country's treks (the Trail schema) and their geo with the line as an
+encoded polyline (`enc`); `world/_dots.json` one row per trek; `world/_iconic.json` the world's
+iconic treks (seen from space, drawn later). They are not in `trails()` (hundreds of thousands):
+`trails.find()` and `trails.geo()` read them on demand. On the globe a trek's dot shows by the same
+zoom ladder as the places (rank 1-6): ranks 4+ come with `/api/trails/dots`, the rest by 10-degree
+cell from `/api/trails/dots/cell/{i}/{j}`.
