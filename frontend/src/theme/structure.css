@@ -15,6 +15,11 @@ button,input,select{font:inherit;color:inherit}
 .top{border-bottom:var(--bw) solid var(--rule-strong);background:var(--top-bg)}
 .top-in{display:flex;align-items:center;gap:24px;padding-block:14px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--top-ink)}
+/* "[T]hruwear": the shirt mark is the T, the rest of the name sits right against it */
+.brand-lock{display:inline-flex;align-items:center}
+.brand-word{font-family:var(--f-display);font-weight:700;font-size:36px;letter-spacing:-.03em;line-height:1}
+.brand-lock:not(.is-t) .brand-word{margin-left:8px}
+.brand-lock.is-t .brand-word{margin-left:-.11em}
 .nav{display:flex;gap:22px;flex-wrap:wrap}
 .nav a{color:var(--top-ink-2);text-decoration:none;font-size:14px;font-weight:500}
 .nav a:hover{color:var(--top-ink)}

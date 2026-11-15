@@ -1,46 +1,45 @@
-import { useId, type ReactElement } from "react";
+import type { ReactElement } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { brandName, useApp } from "../lib/app-context";
 
-/** Logo "Globo con cerniera" (Manu 2026-11-14): a yellow globe with a zip across it.
- *  The teeth, slider and pull are cut out of the globe (mask), so whatever is behind shows through
- *  on the night home and dark bars. On light paper (--logo-globe/--logo-teeth set in paper.css) the globe turns
- *  ink and the teeth yellow. Few, chunky teeth so it still reads as a zip at 20-36 px (Manu: "si deve sempre capire che è una zip"). */
+/** Logo "Maglietta con la zip", Ponte ad arco (Manu 2026-11-15): a black T-shirt that is itself the T of
+ *  Thruwear, with a yellow zip closed up to the collar. The teeth run the whole way down, the slider sits at the
+ *  neck with a little arch on top, and the pull hangs from the arch a bit sideways ("il ciondolino storto").
+ *  Colours: --logo-tee (shirt and outlines) and --logo-zip (zip), black and yellow by default.
+ *  Manu's rule: it must always read as a zip. */
+const TEETH = Array.from({ length: 11 }, (_, i) => ({ x: i % 2 === 0 ? 28.92 : 30.68, y: 20 + 3 * i }));
+const ARCH = "M29.2 16.6V15.2Q29.2 13 32 13Q34.8 13 34.8 15.2V16.6";
+
 export function LogoMark({ size = 36 }: { size?: number }) {
-  const id = `zipglobe-${useId().replace(/:/g, "")}`;
+  const tee = "var(--logo-tee, #111111)";
+  const zip = "var(--logo-zip, #FFD60A)";
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" style={{ flex: "0 0 auto" }}>
-      <defs>
-        <mask id={id} maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
-          <circle cx="32" cy="32" r="28" fill="#fff" />
-          <g fill="#000">
-            {[6, 16, 26].map((x) => (
-              <g key={x}>
-                <rect x={x} y="25.5" width="6" height="6.5" rx="1.2" />
-                <rect x={x + 5} y="32" width="6" height="6.5" rx="1.2" />
-              </g>
-            ))}
-            <path d="M50 32L62 26.5V37.5Z" />
-            <rect x="39.5" y="24" width="12" height="16" rx="3.5" />
-            <rect x="42.5" y="38" width="6" height="17" rx="3" />
-          </g>
-          <rect x="44.4" y="45.5" width="2.2" height="6" rx="1.1" fill="#fff" />
-        </mask>
-      </defs>
-      <circle cx="32" cy="32" r="28" fill="var(--logo-teeth, transparent)" />
-      <circle cx="32" cy="32" r="28" fill="var(--logo-globe, #FFD60A)" mask={`url(#${id})`} />
+      <path d="M8 9H23Q32 17 41 9H56Q60 9 60 13V22Q60 25 57 25H46V57Q46 60 43 60H21Q18 60 18 57V25H7Q4 25 4 22V13Q4 9 8 9Z" fill={tee} />
+      <g fill={zip} stroke={tee} strokeWidth="0.5">
+        {TEETH.map((t) => <rect key={t.y} x={t.x} y={t.y} width="4.4" height="3.4" rx="1.02" />)}
+      </g>
+      <rect x="29" y="55.5" width="6" height="2.6" rx="0.8" fill={zip} />
+      <path d="M27.2 12.5H36.8Q38 12.5 38 13.7L35.5 20Q35.5 21 34.5 21H29.5Q28.5 21 28.5 20L26 13.7Q26 12.5 27.2 12.5Z" fill={zip} stroke={tee} strokeWidth="0.5" />
+      <path d="M29.36 17.18L32 20.2L34.64 17.18" fill="none" stroke={tee} strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round" />
+      <g transform="rotate(-16 32 15)">
+        <path d="M30.53 14.6H33.47L34.3 22.7A2.3 2.3 0 0 1 29.7 22.7Z" fill={zip} stroke={tee} strokeWidth="1.2" strokeLinejoin="round" />
+        <rect x="31.22" y="19.38" width="1.56" height="3.95" rx="0.78" fill={tee} />
+      </g>
+      <path d={ARCH} fill="none" stroke={tee} strokeWidth="2.6" strokeLinecap="round" />
+      <path d={ARCH} fill="none" stroke={zip} strokeWidth="1.2" strokeLinecap="round" />
     </svg>
   );
 }
 
+/** The shirt is the T: "[T]hruwear". A name that does not start with T gets the shirt in front of it. */
 export function Logo({ name }: { name: string }) {
+  const isT = /^t/i.test(name);
   return (
-    <>
-      <LogoMark size={36} />
-      <span style={{ fontFamily: "\"Bricolage Grotesque\", var(--f-display)", fontWeight: 800, fontSize: 24, letterSpacing: "-.03em" }}>
-        {name}
-      </span>
-    </>
+    <span className={`brand-lock${isT ? " is-t" : ""}`}>
+      <LogoMark size={40} />
+      <span className="brand-word">{isT ? name.slice(1) : name}</span>
+    </span>
   );
 }
 
