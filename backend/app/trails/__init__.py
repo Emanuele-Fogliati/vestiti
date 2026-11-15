@@ -153,10 +153,15 @@ def by_id() -> dict[str, Trail]:
     return {t.id: t for t in trails()}
 
 
+def _worldly(trail_id: str) -> bool:
+    """A world trek's id: <cc>-osm-<relation> (waymarked route) or <cc>-goal-<way> (walk to a goal)."""
+    return "-osm-" in trail_id or "-goal-" in trail_id
+
+
 def find(trail_id: str) -> Trail | None:
     """A trek of the app (tiers A, B) or one of the world's (app.trails.world, read on demand)."""
     t = by_id().get(trail_id)
-    if t is None and "-osm-" in trail_id:
+    if t is None and _worldly(trail_id):
         from app.trails import world
         r = world.row(trail_id)
         t = Trail.model_validate(r) if r else None
@@ -169,7 +174,7 @@ def geo(trail_id: str) -> dict | None:
     if f.exists():
         return json.loads(f.read_text(encoding="utf-8"))
     g = _tail()[1].get(trail_id)
-    if g is None and "-osm-" in trail_id:
+    if g is None and _worldly(trail_id):
         from app.trails import world
         g = world.geo(trail_id)
     return g

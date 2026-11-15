@@ -168,8 +168,8 @@ class Climate:
     def __init__(self, box: tuple[float, float, float, float]):
         import numpy as np
         lon0, lat0, lon1, lat1 = box
-        la = (int((90 - lat1) * 24), int((90 - lat0) * 24))
-        lo = (int((lon0 + 180) * 24), int((lon1 + 180) * 24))
+        la = (int((90 - lat1) * 24), min(4319, int((90 - lat0) * 24)))
+        lo = (int((lon0 + 180) * 24), min(8639, int((lon1 + 180) * 24)))  # grid ends at 180E
         f = CACHE / f"tc-{la[0]}-{la[1]}-{lo[0]}-{lo[1]}-{STRIDE}.npz"
         if f.exists():
             z = np.load(f)

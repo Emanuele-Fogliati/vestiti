@@ -153,3 +153,7 @@ def test_api_dots_rank_and_cells(client):
     assert c["id"] == small[0] and c["has_map"]
     one = client.get(f"/api/trails/{small[0]}").json()
     assert len(one["line"]) >= 2 and one["profile"] and one["computed"]["km"] > 0
+    walk = next((x for x in rows if "-goal-" in x[0]), None)  # a world walk to a peak, lake or hut opens too
+    if walk:
+        w = client.get(f"/api/trails/{walk[0]}").json()
+        assert w["id"] == walk[0] and len(w["line"]) >= 2
