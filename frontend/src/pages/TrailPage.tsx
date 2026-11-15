@@ -15,7 +15,7 @@ const FOOT: Record<string, string> = {
   sandal: "Sandals",
 };
 const fmt = (n: number) => n.toLocaleString("en-US");
-const hrs = (h: number) => (h < 1 ? `${Math.round(h * 60)} min` : `${Math.floor(h)} h${h % 1 >= 0.25 ? ` ${Math.round((h % 1) * 60)}` : ""}`);
+const hrs = (h: number) => (h < 1 ? `${Math.max(1, Math.round(h * 60))} min` : `${Math.floor(h)} h${h % 1 >= 0.25 ? ` ${Math.round((h % 1) * 60)}` : ""}`);
 
 /** One trail, all you need to walk it: where it starts, the way point by point with the drawing
  *  of each, the map and the altitude, the time of every stretch, when to turn back, and what to
@@ -44,7 +44,7 @@ export default function TrailPage() {
       <section className="thead">
         <div className="wrap thead-in">
           <div className="thead-text">
-            <p className="kicker"><Link to={`/trails?country=${t.country}`}>Trekking</Link> · {t.region || t.base}</p>
+            <p className="kicker"><Link to={`/trails?country=${t.country}`}>Treks</Link> · {t.region || t.base}</p>
             <h1>{t.name}</h1>
             <p className="lede">{t.why}</p>
             <div className="tags">
@@ -117,7 +117,7 @@ export default function TrailPage() {
                       <span>{s.km.toFixed(1)} km</span>
                       {s.up > 0 && <span>+{fmt(s.up)} m</span>}
                       {s.down > 0 && <span>−{fmt(s.down)} m</span>}
-                      <span>about {hrs(s.hours)}</span>
+                      <span>about {hrs(s.hours > 0 ? s.hours : s.km / 4)}</span>
                     </li>
                   )}
                 </Fragment>

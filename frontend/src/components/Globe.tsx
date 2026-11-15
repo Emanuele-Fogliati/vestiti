@@ -409,7 +409,8 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
       map.addLayer({ id: "tr-dot", type: "circle", source: "trails", filter: shown,
         paint: { "circle-color": colour, "circle-stroke-color": "#FFFFFF", "circle-stroke-width": 1.4,
           "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, ["case", ["==", ["get", "top"], 1], 3.6, 2.2], 8, ["case", ["==", ["get", "top"], 1], 7, 5]] } });
-      map.addLayer({ id: "tr-name", type: "symbol", source: "trails", filter: shown,
+      // names only once you zoom in: on the whole globe they piled up over the title (QA 2026-11-15)
+      map.addLayer({ id: "tr-name", type: "symbol", source: "trails", filter: shown, minzoom: 3.2,
         layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 11.5, "text-offset": [0, 1.1],
           "text-anchor": "top", "text-max-width": 9, "symbol-sort-key": ["-", 10, ["get", "rank"]], "text-optional": true },
         paint: { "text-color": c.ink, "text-halo-color": c.halo, "text-halo-width": 1.4 } });

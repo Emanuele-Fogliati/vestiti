@@ -30,13 +30,17 @@ function Conditions({ stage }: { stage?: Stage }) {
 
 /** The places a stop's days take you to, day by day: a picture for each one the library has
  * drawn (once: Machu Picchu is not shown twice), a name for the others. */
-export function Visits({ stop, dayFrom }: { stop: Stop; dayFrom: number }) {
+export function Visits({ stop, dayFrom, flat = false }: { stop: Stop; dayFrom: number;
+  /** One row of pictures, the day under each name instead of a "Day N" heading per group:
+   * for pages whose day plan right above already says the days. */
+  flat?: boolean }) {
   const vs = stop.visits ?? [];
   if (!vs.length) return null;
   const multi = nights(stop.start_date, stop.end_date) > 1;
+  const dayOf = (v: Visit) => (multi && v.date ? dayFrom + daysBetween(stop.start_date, v.date) : null);
   const groups: { day: number | null; items: Visit[] }[] = [];
   for (const v of vs) {
-    const day = multi && v.date ? dayFrom + daysBetween(stop.start_date, v.date) : null;
+    const day = flat ? null : dayOf(v);
     const g = groups[groups.length - 1];
     if (g && g.day === day) g.items.push(v); else groups.push({ day, items: [v] });
   }
@@ -50,7 +54,8 @@ export function Visits({ stop, dayFrom }: { stop: Stop; dayFrom: number }) {
             const pic = v.art && !shown.has(v.art.id);
             if (v.art) shown.add(v.art.id);
             return pic ? (
-              <div className="visit" key={i}><Illustration art={v.art} label={v.name} /><span>{v.name}</span></div>
+              <div className="visit" key={i}><Illustration art={v.art} label={v.name} /><span>{v.name}</span>
+                {flat && dayOf(v) !== null && <small className="vdn">Day {dayOf(v)}</small>}</div>
             ) : <span className="vchip" key={i} title={v.art ? v.art.label : undefined}>{v.name}</span>;
           })}
         </div>

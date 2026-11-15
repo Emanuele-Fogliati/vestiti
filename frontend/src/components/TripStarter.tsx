@@ -25,7 +25,7 @@ const EFFORT_CHIPS: [PlanEffort, string][] = [["easy", "Easy, no treks"], ["some
 
 const EXAMPLES = [
   "Patagonia in January, three weeks",
-  "Rome 3 days, Florence 2, Venice 2 from 10 May",
+  "From 10 May: Rome 3 days, Florence 2, Venice 2",
   "Somewhere warm by the sea in February, 10 days",
 ];
 

@@ -32,7 +32,13 @@ export default function Trails() {
   const shown = useMemo(() => (all ?? []).filter((t) => (!level || t.difficulty === level) && (!kind || t.kind === kind)
     && (!style || (t.style ?? "trek") === style)
     && (!find || [t.name, t.country, t.region, t.base].join(" ").toLowerCase().includes(find)))
-    .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false)), [all, level, kind, style, find]);
+    // in season first, then the ones with a drawing (the famous ones), then the rest
+    .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
+      || Number(b.tier === "A") - Number(a.tier === "A")), [all, level, kind, style, find]);
+  // thousands of walks: show a page at a time, so the list opens fast and the drawings load
+  const PAGE = 40;
+  const [limit, setLimit] = useState(PAGE);
+  useEffect(() => setLimit(PAGE), [all, level, kind, style, find]);
 
   // country codes as names, A to Z (the list holds every country we have walks for)
   const byName = useMemo(() => {
@@ -70,7 +76,14 @@ export default function Trails() {
       </div>
       {err && <p className="err">{err}</p>}
       {!all && !err && <div className="loading"><span className="spin" /></div>}
-      {all && (shown.length ? <TrailCards trails={shown} query={month ? `?month=${month}` : ""} /> : <p className="muted">No trail matches: try another filter.</p>)}
+      {all && (shown.length ? <>
+        <p className="small muted tcount">{shown.length.toLocaleString("en-US")} {shown.length === 1 ? "walk" : "walks"}</p>
+        <TrailCards trails={shown.slice(0, limit)} query={month ? `?month=${month}` : ""} />
+        {shown.length > limit && (
+          <p className="tmore"><button type="button" className="btn" onClick={() => setLimit(limit + PAGE * 2)}>
+            Show more ({(shown.length - limit).toLocaleString("en-US")} left)</button></p>
+        )}
+      </> : <p className="muted">No trail matches: try another filter.</p>)}
     </div></main>
   );
 }

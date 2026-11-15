@@ -1,6 +1,6 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
-import { baseStyle, mapColors } from "../lib/worldmap";
+import { baseStyle, blockPins, mapColors } from "../lib/worldmap";
 import { addContours } from "../lib/contours";
 import type { TrailPoint } from "../lib/types";
 
@@ -65,6 +65,7 @@ export default function TrailMap({ line, points, focus, onFocus }: {
         map.addLayer({ id: "trail", type: "line", source: "trail", layout: { "line-join": "round", "line-cap": "round" },
           paint: { "line-color": "#D2452B", "line-width": 3.5 } });
       }
+      blockPins(map, points.map((p) => [p.lon, p.lat]));
       points.forEach((p, i) => {
         const b = document.createElement("button");
         b.type = "button";

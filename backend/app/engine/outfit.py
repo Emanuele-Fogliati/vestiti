@@ -753,8 +753,8 @@ def _merge_upgrades(steps: list[dict], original: dict, choices: dict[str, Choice
                 + (" and cheaper" if net < 0 else "") + " one")
         line.update({
             "to": ch.item.as_dict() if ch.item else None, "extra_cost": net, "added": added,
-            "reason": f"{SLOT_BY_KEY[slot].name}: {what}. Without it you were "
-                      f"{-w['margin_before']:.2f} clo short at {w['stage_name']} "
+            "reason": f"{SLOT_BY_KEY[slot].name}: {what}. Without it you would be "
+                      f"{chill(-w['margin_before'])} at {w['stage_name']} "
                       f"({'moving' if w['mode'] == 'moving' else 'at rest'}, "
                       f"{w['condition']['feels_like_c']:.0f} °C feels-like). "
                       + ("Costs " + _money(net) if net > 0 else
@@ -762,6 +762,11 @@ def _merge_upgrades(steps: list[dict], original: dict, choices: dict[str, Choice
         })
         result.append(line)
     return result
+
+
+def chill(gap: float) -> str:
+    """A clo gap in words: travellers do not know what a clo is."""
+    return "a little chilly" if gap < 0.3 else "cold" if gap < 0.7 else "very cold"
 
 
 AVOIDABLE_REST = {"city", "beach", "boat", "desert"}
@@ -800,7 +805,7 @@ def shortfall(stages, conds, kit, ev, tier: str, evenings: str = "sometimes") ->
             "feels_like_c": feels, "missing": [], "avoidable": True,
             "message": f"Only if you stay outside in the evening at {name}"
                        + (f" (feels like {feels:.0f} °C)" if feels is not None else "")
-                       + f": {gap:.2f} clo short standing still. Head indoors, keep walking or "
+                       + f": you would be {chill(gap)} standing still. Head indoors, keep walking or "
                        "add a layer you already own; closing it fully would mean a much pricier "
                        "jacket for a few evenings.",
         }
@@ -820,7 +825,7 @@ def shortfall(stages, conds, kit, ev, tier: str, evenings: str = "sometimes") ->
     return {
         "stage_index": si, "stage": name, "mode": mode, "gap_clo": round(gap, 2),
         "feels_like_c": feels, "missing": missing, "avoidable": False,
-        "message": f"Still {gap:.2f} clo short at {name} {when}{feels_txt}: the catalog has no "
+        "message": f"Still {chill(gap)} at {name} {when}{feels_txt}: the catalog has no "
                    f"warmer swap that fits this tier. To close it: " + "; ".join(tips) + ".",
     }
 
