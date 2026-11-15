@@ -372,7 +372,8 @@ export function baseStyle(c: MapColors, opts: { globe: boolean; photo?: boolean 
       "sky-horizon-blend": 0.6,
       "horizon-fog-blend": 0.6,
       "fog-ground-blend": 0.9,
-      "atmosphere-blend": ["interpolate", ["linear"], ["zoom"], 0, 1, 5, 0.6, 8, 0],
+      // no atmosphere: it drew a pale haze around and over the globe's edge (Manu 2026-11-15: "un alone strano, brutto")
+      "atmosphere-blend": 0,
     },
     sources: {
       omt: { type: "vector", url: "https://tiles.openfreemap.org/planet", attribution: ATTRIBUTION },

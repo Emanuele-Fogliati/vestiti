@@ -559,14 +559,17 @@ input:focus,textarea:focus,select:focus{box-shadow:inset 0 0 0 1.5px var(--ink)}
 .maplibregl-ctrl-group{background:#FFFFFF}
 
 /* the maps: white around them, labels haloed in white */
-[data-theme="yellow-black"]{--map-halo:#FFFFFF;--map-space:#FFFFFF;--map-glow:#F3F7FA;--map-atmosphere:#DCEAF3}
+/* no halo around the globe (Manu 2026-11-15: "un alone strano, brutto"): the map's atmosphere is the page white */
+[data-theme="yellow-black"]{--map-halo:#FFFFFF;--map-space:#FFFFFF;--map-glow:#FFFFFF;--map-atmosphere:#FFFFFF}
 
 /* ---------- the home: a white page, the globe left, the words right (prototype Editoriale) ---------- */
 body.home-page,body.home-page .top{background:#FFFFFF}
 .home2{background:#FFFFFF;color:var(--ink)}
 .home2-space{display:none}
-.home2-globe::before{background:radial-gradient(circle,rgba(160,190,215,.22) 45%,rgba(160,190,215,0) 70%)}
-.home2 .globe-shade{box-shadow:0 0 40px 6px rgba(160,190,215,.25),0 30px 70px -24px rgba(20,30,40,.25)}
+.home2-globe::before{display:none}
+/* the globe keeps only its darker edge (roundness): no glow outside, no white sheen on the top left */
+.globe-shade,.home2 .globe-shade{box-shadow:none;background:radial-gradient(circle at 50% 50%,rgba(0,0,0,0) 62%,rgba(18,42,62,.08) 82%,rgba(18,42,62,.2) 100%)}
+.globe{background:var(--bg)}
 .home2-ui::before{background:linear-gradient(to top,#FFFFFF 0%,rgba(255,255,255,.92) 62%,rgba(255,255,255,0) 100%)}
 .home2-ui h1{color:var(--ink);font-weight:400!important;letter-spacing:-.045em;font-size:40px;line-height:.98}
 .home2-ui h1 span{color:var(--ink-3)}
