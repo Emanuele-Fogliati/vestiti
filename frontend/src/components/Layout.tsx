@@ -55,9 +55,10 @@ const Ico = ({ n }: { n: string }) => (
   <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{ICONS[n]}</svg>
 );
 
-/** Every page: the night sky, the logo and You at the top, one bar at the bottom
- *  (Explore · Trips · Treks · Closet), the same on phone and computer (design Q01, Manu 2026-11-15).
- *  Planning a trip lives under Trips; How it works and sign in live under You. */
+/** Every page, Editoriale (Manu 2026-11-15).
+ *  Computer: one bar on top, logo left, Explore · Trips · Treks · Closet in the middle, You on the right.
+ *  Phone: nothing on top (no logo, no You: "c'è più spazio per tutto il resto"); one tab bar at the bottom
+ *  with You as the fifth tab. Planning a trip lives under Trips; How it works and sign in live under You. */
 export function Layout() {
   const { config, user } = useApp();
   const loc = useLocation();
@@ -72,15 +73,22 @@ export function Layout() {
     ["/wardrobe", "Closet", "closet", /^\/wardrobe(\/|$)/.test(p)],
   ];
   const meOn = /^\/(account|login|register|how-it-works)(\/|$)/.test(p);
+  const meTo = signedIn || user?.is_guest ? "/account" : "/login";
+  const meState = signedIn ? undefined : { from: p };
 
   return (
     <>
       <header className="top">
         <div className="wrap top-in">
           <Link className="logo" to="/" aria-label={`${name} home`}><Logo name={name} /></Link>
+          <nav className="tnav" aria-label="Main">
+            {dock.map(([to, label, , on]) => (
+              <Link key={to} to={to} className={on ? "active" : ""} aria-current={on ? "page" : undefined}>{label}</Link>
+            ))}
+          </nav>
           <div className="acct">
             {user?.is_admin && <Link className="admin" to="/admin">Admin</Link>}
-            <Link className={`me${meOn ? " active" : ""}`} to={signedIn || user?.is_guest ? "/account" : "/login"} state={signedIn ? undefined : { from: p }}
+            <Link className={`me${meOn ? " active" : ""}`} to={meTo} state={meState}
               aria-label={signedIn ? `You: ${user!.display_name || user!.email}` : "You: sign in, how it works"} title={signedIn ? (user!.display_name || user!.email || undefined) : "You"}>
               <Ico n="me" />
             </Link>
@@ -92,6 +100,7 @@ export function Layout() {
         {dock.map(([to, label, icon, on]) => (
           <Link key={to} to={to} className={on ? "active" : ""} aria-current={on ? "page" : undefined}><Ico n={icon} />{label}</Link>
         ))}
+        <Link to={meTo} state={meState} className={`dock-me${meOn ? " active" : ""}`} aria-current={meOn ? "page" : undefined}><Ico n="me" />You</Link>
       </nav>
       <footer>
         <div className="wrap">

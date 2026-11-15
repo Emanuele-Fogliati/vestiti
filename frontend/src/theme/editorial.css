@@ -1,0 +1,656 @@
+/* Editoriale (Taste Skill variant 4, picked by Manu 2026-11-15): a white page, ink text, big light titles,
+   black buttons, cobalt only on data (temperatures, profiles, totals). Yellow stays in the logo.
+   Computer: one bar on top, logo left, Explore · Trips · Treks · Closet in the middle, You on the right.
+   Phone: no logo and no You on top (more room); one tab bar at the bottom with You as the fifth tab.
+   This file grew out of the night theme (PR #547-#553): the layout rules below are the same, recoloured. Loaded last. */
+[data-theme="yellow-black"]{
+  color-scheme:light;
+  --bg:#FFFFFF;--bg-2:#FFFFFF;--surface:#FFFFFF;--surface-2:#F5F5F3;
+  --ink:#1F201D;--ink-2:#61615E;--ink-3:#8A8A86;--rule:#E8E8E5;--rule-strong:#CFCFCB;
+  --top-bg:#FFFFFF;--top-ink:#1F201D;--top-ink-2:#61615E;
+  --focus:#2F55D4;--accent:#1F201D;--accent-border:#1F201D;--accent-ink:#FFFFFF;
+  --chip-bg:#1F201D;--chip-ink:#FFFFFF;--hl-bg:#1F201D;--hl-ink:#FFFFFF;--data:#2F55D4;
+  --photo-bg:#FFFFFF;--el-sel:#EEF2FC;--colsel:#EEF2FC;--why-bg:#F5F5F3;--why-border:0;--why-k:#2F55D4;
+  --total-bg:#F5F5F3;--total-ink:#1F201D;--total-ink-2:#61615E;--total-border:transparent;--total-track:#E8E8E5;--total-fill:#2F55D4;--total-fill-dim:rgba(47,85,212,.4);
+  --tag-bg:#F0F0EE;--tag-ink:#1F201D;--own:#F0F0EE;--own-ink:#1F201D;
+  --seg-on:#1F201D;--seg-on-ink:#FFFFFF;--ok:#1D6B37;--ok-ink:#FFFFFF;--ok-text:#1D6B37;--warn:#B4441C;--warn-ink:#FFFFFF;--warn-text:#B4441C;
+  --lc-bg:#1F201D;--lc-ink:#FFFFFF;--cell-sel:#2F55D4;--dot:#1F201D;--star:#2F55D4;--check:#1D6B37;--hot:#B4441C;--cold:#2F55D4;
+  --heat:#B4441C;--heat-text:#B4441C;--vapor:#8A8A86;--vapor-text:#61615E;
+  --el-fill:#2F55D4;--el-line:#1F201D;--el-dot:#1F201D;--el-dot-ring:#FFFFFF;--el-label:#1F201D;--days-ink:#1F201D;--stop-hover:#F5F5F3;
+  --il-sky:#EDEDE6;--shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);--bw:1px;
+  --x-paper:#F5F5F3;--glass:#F5F5F3;--glass-line:#E8E8E5;--night-sky:none;--map-ink:#111111;
+  --f-display:"Instrument Sans","Segoe UI",Arial,sans-serif;--f-body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+  --d-weight:400;--d-tracking:-0.035em;--radius:22px;--radius-sm:14px;
+}
+html{background:#FFFFFF}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body)}
+::selection{background:#DCE4FA;color:var(--ink)}
+a{color:inherit}
+h1,h2,h3,h4{color:var(--ink)}
+.kicker{color:var(--ink-2)}
+.kicker a,.link,.x-from a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- top: logo left, You on the right, over the sky ---------- */
+.top{position:sticky;top:0;z-index:40;border:0;background:linear-gradient(rgba(255,255,255,.96),rgba(255,255,255,.82) 70%,rgba(255,255,255,0));--logo-globe:var(--accent);--logo-teeth:transparent}
+.top-in{gap:12px;padding-block:12px}
+.top .logo{color:var(--ink)}
+.top .nav,.top .free{display:none}
+.top .acct{margin-left:auto;gap:8px}
+.top .acct .admin{height:36px;padding:0 14px;border-radius:18px;background:rgba(31,32,29,.054);display:inline-flex;align-items:center;font-size:13px;font-weight:700;color:var(--ink)}
+.me{width:42px;height:42px;border-radius:21px;background:rgba(31,32,29,.063);color:var(--ink);display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:background .2s}
+.me:hover,.me.active{background:rgba(31,32,29,.108)}
+body.home-page .top{background:linear-gradient(rgba(255,255,255,.85),rgba(255,255,255,0))}
+body.home-page .home2-bag{display:none} /* Trips is in the bar now; You sits top right like every page */
+
+/* ---------- the bar at the bottom (Q01): same on phone and computer ---------- */
+.mnav{display:none!important}
+.dock{position:fixed;z-index:60;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(440px,calc(100% - 28px));height:68px;box-sizing:border-box;
+  display:flex;align-items:center;padding:0 6px;border-radius:30px;background:rgba(31,32,29,.36);box-shadow:inset 0 0 0 1px rgba(31,32,29,.112),0 10px 30px rgba(0,0,0,.122);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:dock-in .52s cubic-bezier(.2,.9,.2,1.1) both}
+.dock a{flex:1 1 0;height:54px;margin:0 3px;border-radius:22px;color:rgba(31,32,29,.82);text-decoration:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font:800 11px var(--f-body);transition:background .25s,color .25s}
+.dock a:hover{color:var(--ink);background:rgba(31,32,29,.036)}
+.dock a.active{background:var(--accent);color:var(--accent-ink)}
+.dock svg{width:22px;height:22px}
+@keyframes dock-in{from{transform:translate(-50%,130px)}to{transform:translate(-50%,0)}}
+body{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+body.home-page{padding-bottom:0}
+/* the globe home has the bar too (Manu 2026-11-15); it comes up after the opening */
+body.home-intro .dock{display:none}
+body.home-page .home2-ui{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+body.home-page .home2-ui::before{bottom:calc(-100px - env(safe-area-inset-bottom,0px));height:calc(100% + 180px)}
+@media (min-width:900px){
+  body.home-page .home2-ui{bottom:0}
+  body.home-page .home2 .globe-tools{bottom:100px}
+  body.home-page .home2 .maplibregl-ctrl-bottom-right{bottom:96px}
+}
+/* the map attribution never sits under the bar */
+.plan3-map .maplibregl-ctrl-bottom-right,.plan3-map .maplibregl-ctrl-bottom-left{bottom:40px}
+@media (min-width:900px){.plan3-map .maplibregl-ctrl-bottom-right,.plan3-map .maplibregl-ctrl-bottom-left{bottom:96px}}
+@media (min-width:900px){
+  .dock{height:64px;width:min(480px,calc(100% - 28px))}
+  .dock a{flex-direction:row;gap:8px;font-size:14px;height:50px}
+}
+
+/* every page enters the same way: content rises in */
+/* "backwards", not "both": a transform kept after the animation turns the page into the box of every
+   fixed sheet inside it (the product picker, the chat, Flights opened far down the page, off screen) */
+main.page,.x-trip,.trailpage{animation:page-in .42s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes page-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ---------- surfaces: glass, never white boxes ---------- */
+:is(.card,.panel,.x-item,.tcard,.witem,.place-card,.pcard,.brief,.facts,.door,.banner,.tchat,.estimate,.x-alert,.x-cta,.tbox,.bd-panel,.empty,.drawer,.x-sheet){background:var(--glass);border:0;box-shadow:inset 0 0 0 1px var(--glass-line);border-radius:20px;color:var(--ink)}
+:is(.drawer,.x-sheet,.quiz){background:#FFFFFF;box-shadow:0 -10px 40px rgba(0,0,0,.14)}
+.door[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);box-shadow:none}
+.door[aria-selected="true"] :is(b,span){color:#111111}
+.btn{background:rgba(31,32,29,.054);color:var(--ink);border:0;box-shadow:inset 0 0 0 1px rgba(31,32,29,.168)}
+.btn:hover{background:rgba(31,32,29,.09)}
+.btn.primary,.x-btn.y,.btn.go{background:var(--accent);color:var(--accent-ink);box-shadow:none}
+.btn.primary:hover,.x-btn.y:hover{background:#000000}
+.btn.ghost{background:transparent}
+.x-btn{background:rgba(31,32,29,.054);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(31,32,29,.168)}
+input[type=text],input[type=email],input[type=password],input[type=number],input[type=date],input[type=search],textarea,select{background:rgba(31,32,29,.045);color:var(--ink);border:0;box-shadow:inset 0 0 0 1.5px rgba(31,32,29,.196)}
+:is(input,textarea)::placeholder{color:rgba(31,32,29,.62)}
+select option{background:#FFFFFF;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:none;box-shadow:inset 0 0 0 2px var(--accent)}
+:is(.fchip,.x-chip,.qchip,.chip-btn,.pk-brands button,.ask-sugg button,.ask-ex button){background:rgba(31,32,29,.054);color:var(--ink);border:0;box-shadow:inset 0 0 0 1px rgba(31,32,29,.154)}
+:is(.fchip[aria-pressed="true"],.x-chip.on,.qchip.on,.chip-btn.on,.pk-brands button.on){background:var(--accent);color:var(--accent-ink);box-shadow:none}
+.muted,.small.muted,.note,.lede{color:var(--ink-2)}
+footer{color:var(--ink-2);border-top:1px solid var(--rule)}
+footer a{color:rgba(31,32,29,.85)}
+.toast{background:#111111;color:#FFFFFF}
+.tag{border-color:rgba(31,32,29,.21);color:var(--ink)}
+.tag.diff-hard{background:#FF9F80;color:#111111;border:0}
+.tag.diff-moderate{background:#9BDDB5;color:#111111;border:0}
+.tag.diff-easy{background:#BFE3FF;color:#111111;border:0}
+.tag.diff-technical{background:#FF6B6B;color:#111111;border:0}
+
+/* drawings and product photos keep their own white paper */
+.thumb{background:#FFFFFF}
+.pk-img,.x-ic,.ph-s{background:#FFFFFF}
+
+/* ---------- Plan a trip (Q03 on night): a map you can tap on top, the sheet under it ---------- */
+.plan3{position:relative;margin-top:-66px}
+.plan3-map{position:relative;height:min(54svh,480px);min-height:320px}
+.plan3-map .globe{height:100%;min-height:0;background:transparent}
+.plan3-map .globe-head,.plan3-map .globe-hint{display:none}
+.plan3-map::after{content:"";position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(rgba(255,255,255,0),#FFFFFF);pointer-events:none}
+.plan3-sheet{position:relative;z-index:2;margin-top:-34px;border-radius:30px 30px 0 0;background:rgba(31,32,29,.423);box-shadow:0 -10px 30px rgba(0,0,0,.087),inset 0 1px 0 rgba(31,32,29,.098);padding:12px 0 24px;animation:sheet-up .62s cubic-bezier(.2,.9,.2,1.05) .15s backwards}
+.plan3-sheet::before{content:"";display:block;width:44px;height:5px;border-radius:3px;background:rgba(31,32,29,.18);margin:0 auto 14px}
+.plan3-sheet h1{font-size:30px;margin:0 0 12px}
+@keyframes sheet-up{from{transform:translateY(80px);opacity:0}to{transform:none;opacity:1}}
+@media (min-width:900px){
+  .plan3{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(400px,1fr);gap:0;margin-top:-66px;min-height:calc(100svh - 0px)}
+  .plan3-map{position:sticky;top:0;height:100svh;max-height:none}
+  .plan3-map::after{display:none}
+  .plan3-sheet{margin:80px 24px 24px 0;border-radius:30px;align-self:start}
+}
+
+/* ---------- inside a trip: Plan / Weather / Bag at the top, the bar stays at the bottom ---------- */
+.x-tabs{position:sticky;top:64px;z-index:30;background:linear-gradient(rgba(255,255,255,.96),rgba(255,255,255,.9) 80%,rgba(255,255,255,0));backdrop-filter:none;-webkit-backdrop-filter:none;border:0;padding:6px 0 10px}
+.x-tabs-in{background:#111111;border-radius:28px;box-shadow:inset 0 0 0 1.5px rgba(31,32,29,.154);height:52px;max-width:620px;padding:0 4px}
+.x-tabs-in button{color:var(--ink);height:44px;font-size:15px}
+.x-tabs-in button[aria-selected="true"]{color:#111111;font-weight:800}
+.x-pill{top:4px;height:44px;border-radius:22px}
+@media (max-width:760px){
+  .x-tabs{position:sticky;top:64px;bottom:auto;left:auto;right:auto;border:0;padding:6px 0 10px}
+  .x-tabs-in{height:52px;max-width:none}
+  .x-tabs-in button{flex-direction:row;gap:6px;font-size:14px;height:44px}
+  .x-tabs-in button svg{display:none}
+  .x-pill{top:4px;height:44px;border-radius:22px}
+  .x-fab{bottom:calc(98px + env(safe-area-inset-bottom,0px))}
+  .r16-cta{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+}
+.x-fab{background:#111111;color:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(31,32,29,.154),0 10px 28px rgba(0,0,0,.122)}
+.r16-cta{bottom:calc(96px + env(safe-area-inset-bottom,0px));background:linear-gradient(rgba(255,255,255,0),#FFFFFF 40%)}
+.r16-cta button{background:var(--accent);color:var(--accent-ink)}
+.r16-cta button span{color:#111111}
+.r16-map{background:transparent}
+.r16-map .rmap-box{border:0}
+@media (min-width:900px){.r16-map .rmap-box{border-radius:22px;box-shadow:inset 0 0 0 1px var(--glass-line)}}
+.tl::before{border-left-color:rgba(31,32,29,.245)}
+.tl-av{outline-color:rgba(31,32,29,.21)}
+.tl-days{background:var(--glass);border:0;box-shadow:inset 0 0 0 1px var(--glass-line)}
+.tl-leg-ic{background:#FFFFFF;border-color:rgba(31,32,29,.28)}
+.sc-cta button,.sc-cta a{background:var(--accent);color:var(--accent-ink)}
+.sc-cta span{color:#111111}
+.sc-pill{background:rgba(31,32,29,.054);color:var(--ink);border:0;box-shadow:inset 0 0 0 1px rgba(31,32,29,.154)}
+.sc-pill.on{background:var(--accent);color:var(--accent-ink)}.sc-pill.on small{color:#111111}
+.sc-sky,.sc-legend{color:var(--ink-2)}
+.pk-item{background:var(--glass);border:0;box-shadow:inset 0 0 0 1px var(--glass-line)}
+.pk-item.on{box-shadow:inset 0 0 0 2.5px var(--accent)}
+.pk-have{background:rgba(31,32,29,.054);color:var(--ink);border:0;box-shadow:inset 0 0 0 1.5px rgba(31,32,29,.21)}
+.pk-have.on{background:#9BDDB5;color:#111111;box-shadow:none}
+.pk-t span{color:var(--ink-2)}
+.pk-why{background:rgba(31,32,29,.065);border:0;color:var(--ink)}
+.pk-row button{background:var(--accent);color:var(--accent-ink);border:0}
+
+/* ---------- lists of things: one row per item, drawing left (My trips Q01; Treks the same) ---------- */
+.tcards{gap:12px}
+.tcard{border-radius:20px;overflow:hidden}
+.tcard a{color:var(--ink)}
+
+@media (prefers-reduced-motion:reduce){
+  .dock,main.page,.x-trip,.trailpage,.plan3-sheet{animation:none}
+}
+
+/* ---------- You ---------- */
+.you-links{display:grid;gap:10px;margin:0 0 24px}
+.you-links .btn{height:54px;border-radius:27px;font-size:16px;font-weight:800;justify-content:center;display:flex;align-items:center}
+.you-row{display:flex;align-items:center;justify-content:space-between;min-height:54px;padding:0 8px 0 18px;border-radius:24px;background:rgba(31,32,29,.045);box-shadow:inset 0 0 0 1.5px rgba(31,32,29,.182);color:var(--ink);text-decoration:none;font-weight:700}
+.you-row span{width:40px;height:40px;border-radius:20px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:900}
+
+/* ---------- maps stay light (real colours): what sits on them stays readable ---------- */
+[data-theme="yellow-black"]{--map-ink:#111111}
+.rpin{background:#111111;color:var(--accent);border-color:#FFFFFF}
+.rpin.tpin.start,.rpin.tpin.goal{background:var(--accent);color:#111111}
+:is(.pcard,.rmap-card,.globe-card,.globe-trip,.globe-trail){background:rgba(31,32,29,.436);color:var(--ink);box-shadow:0 12px 32px rgba(0,0,0,.122),inset 0 0 0 1px rgba(31,32,29,.112)}
+.maplibregl-ctrl-group{background:#FFFFFF}
+.maplibregl-ctrl-group button{filter:none}
+
+/* ---------- My trips and Treks: rows, drawing on the left (Q01) ---------- */
+.tlist,.tcards{grid-template-columns:1fr;gap:10px}
+@media (min-width:900px){.tlist,.tcards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+:is(.tlist .tcard,.tcard a){flex-direction:row;align-items:center;gap:14px;padding:8px;border:0;border-radius:20px;background:var(--glass);box-shadow:inset 0 0 0 1px var(--glass-line);transition:background .2s,transform .2s}
+.tcards .tcard{background:none;box-shadow:none;border-radius:20px}
+:is(.tlist .tcard,.tcard a):hover{background:rgba(31,32,29,.063);transform:translateY(-2px)}
+.tcard .thumb{width:112px;height:80px;aspect-ratio:auto;flex:0 0 auto;margin:0;border:0;border-radius:12px;overflow:hidden}
+.tcard .thumb svg{width:100%;height:100%;display:block}
+.tcard .b,.tcard-body{padding:0 4px 0 0;gap:3px;min-width:0;flex:1 1 auto}
+.tcard h3,.tcard-body h3{font-size:16.5px;line-height:1.15;margin:0}
+.tcard .small{font-size:12.5px;line-height:1.35}
+.tcard .b .small:not(.muted){display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;color:var(--ink-2)}
+.tcard-body .tags{display:flex;gap:4px;flex-wrap:wrap;order:2}
+.tcard-body .tag{font-size:10.5px;padding:2px 7px}
+.tcard-body h3{order:1}
+.tcard-body p.small{order:3;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tcard-body .tfacts{order:4;display:flex;flex-wrap:wrap;gap:0;margin:0;font-size:12.5px;color:var(--ink-2)}
+.tcard-body .tfacts div{display:contents}
+.tcard-body .tfacts dt{display:none}
+.tcard-body .tfacts dd{margin:0;font-weight:700;color:rgba(31,32,29,.85)}
+.tcard-body .tfacts dd+dt+dd::before,.tcard-body .tfacts div+div dd::before{content:" · ";white-space:pre;font-weight:400;color:var(--ink-2)}
+.tcard-body .tfacts div:nth-child(n+4){display:none}
+.tcard .label{font-size:10.5px}
+
+/* the ready-trip hero: night, not a yellow block */
+.hero,[data-theme="yellow-black"] .hero{background:transparent;color:var(--ink);border:0}
+[data-theme="yellow-black"] .hero :is(.kicker,.lede){color:var(--ink-2)}
+.hero h1 .hl{background:var(--accent);color:var(--accent-ink)}
+
+/* the logo bar (64px) and Plan / Weather / Pack (68px) both stay on top inside a trip */
+.x-trip{--x-tabh:132px}
+.x-tabs-in{height:52px}
+.x-tabs-in{grid-template-columns:repeat(3,1fr)}
+
+/* the yellow suitcase keeps its paper inside: white discs, ink lines */
+.sc-body{border-color:#111111}
+.sc-handle{border-color:#FFFFFF}
+.sc-wheel{background:#111111}
+.sc-piece{color:#111111}
+.sc-disc{background:#FFFFFF;border-color:#111111;box-shadow:0 3px 0 #111111}
+.sc-piece.choose .sc-disc{box-shadow:none}
+.sc-tag{background:#FFFFFF;color:#111111;border-color:#111111}
+.sc-tag.have{background:#111111;color:#FFFFFF}
+.sc-name{background:rgba(31,32,29,.414);color:#111111}
+.sc-label{background:#FFFFFF;color:#111111;border-color:#111111}
+.sc-legend i{background:#FFFFFF;border-color:#111111;color:#111111}
+.sc-legend i.have{background:#111111;color:#FFFFFF}.sc-legend i.picked{background:var(--accent)}
+
+/* the logo and You sit at the page edges, like the full-width pages under them */
+.top .wrap{max-width:none;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+@media (min-width:900px){.top .wrap{padding-left:32px;padding-right:32px}}
+
+/* ---------- /preview and /phone: the app in frames, on the night sky ---------- */
+.pv{background:var(--night-sky);background-color:#FFFFFF;color:var(--ink)}
+.pv-bar{background:rgba(31,32,29,.383);border-bottom:1px solid rgba(31,32,29,.098);color:var(--ink)}
+.pv-bar :is(input,select){background:rgba(31,32,29,.045);color:var(--ink);border:0;box-shadow:inset 0 0 0 1.5px rgba(31,32,29,.196)}
+.pv figcaption{color:var(--ink-2)}
+.pv-phone iframe,.pv-phone-box iframe{border:12px solid #111111;border-radius:44px;background:#FFFFFF}
+.pv-desk-in{border-color:#111111;background:#FFFFFF}
+.pv-only .pv-stage{padding:20px}
+.pv-phone-box{position:relative;flex:0 0 auto}
+.pv-phone-box iframe{position:absolute;left:0;top:0;transform-origin:0 0;box-sizing:content-box;box-shadow:0 30px 80px rgba(0,0,0,.158)}
+
+/* ---------- motion from the prototype (Manu 2026-11-15: on the web too) ---------- */
+/* the drawing as paper layers in 3D (TrailPage hero) */
+.dio{margin:0;position:relative;perspective:1100px;aspect-ratio:3/2;touch-action:pan-y}
+.dio-stage{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .35s cubic-bezier(.2,.8,.2,1);border-radius:16px}
+.dio-l{position:absolute;inset:0;width:100%;height:100%;display:block;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.dio-l:first-child{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.122)}
+.dio-hint{position:absolute;left:0;right:0;bottom:-26px;text-align:center;font-size:12px;color:var(--ink-2)}
+@media (hover:none){.dio-hint{display:none}}
+@media (prefers-reduced-motion:no-preference){
+  /* stops pop up on the route while the line reaches them */
+  .rpin{animation:rpin-pop .45s cubic-bezier(.2,.9,.3,1.4) var(--d,0ms) both}
+  @keyframes rpin-pop{from{scale:0;opacity:0}to{scale:1;opacity:1}}
+  /* the elevation profile draws itself */
+  .tp-line{stroke-dasharray:1;stroke-dashoffset:1;animation:tp-draw 1.5s cubic-bezier(.45,.05,.3,1) .2s forwards}
+  .tp-area{animation:tp-fade .6s ease 1.1s both}
+  @keyframes tp-draw{to{stroke-dashoffset:0}}
+  @keyframes tp-fade{from{opacity:0}}
+  /* the suitcase packs itself: every piece drops in, one after another */
+  .sc-body{animation:sc-drop .5s cubic-bezier(.2,.9,.2,1.1) both}
+  .sc-piece{animation:sc-in .55s cubic-bezier(.2,.9,.3,1.2) calc(250ms + var(--i,0) * 70ms) both}
+  @keyframes sc-drop{from{translate:0 -30px;opacity:0}}
+  @keyframes sc-in{0%{translate:0 -160px;rotate:-25deg;opacity:0}60%{opacity:1}80%{translate:0 6px;rotate:0deg}100%{translate:0 0;rotate:0deg;opacity:1}}
+  /* the globe rushes at you, then Plan a trip opens with the map growing back */
+  .home2.dive .home2-globe{transform:scale(4);opacity:0;filter:blur(3px);transition:transform .7s cubic-bezier(.6,0,.4,1),opacity .6s ease .1s,filter .6s}
+  .home2.dive .home2-ui{opacity:0;transform:translateY(30px)}
+  .plan3-map{animation:plan3-in .9s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes plan3-in{from{transform:scale(.6);opacity:0}}
+  /* lists rise in one row after another */
+  :is(.tlist,.tcards)>*{animation:row-in .45s cubic-bezier(.2,.8,.2,1) both}
+  :is(.tlist,.tcards)>:nth-child(2){animation-delay:.05s}:is(.tlist,.tcards)>:nth-child(3){animation-delay:.1s}
+  :is(.tlist,.tcards)>:nth-child(4){animation-delay:.15s}:is(.tlist,.tcards)>:nth-child(5){animation-delay:.2s}
+  :is(.tlist,.tcards)>:nth-child(6){animation-delay:.25s}:is(.tlist,.tcards)>:nth-child(n+7){animation-delay:.3s}
+  @keyframes row-in{from{opacity:0;translate:0 18px}}
+}
+.thead-art:has(.dio){margin-bottom:30px}
+
+/* ---------- home doors (option A, Manu 2026-11-15): the box is the door for who knows where they go;
+   two more under it for who does not. Each opens its list right here. ---------- */
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.door{display:flex;align-items:center;gap:10px;min-height:58px;border:0;border-radius:20px;padding:7px 10px;background:rgba(31,32,29,.05);
+  box-shadow:inset 0 0 0 1px rgba(31,32,29,.14);color:var(--ink);text-align:left;cursor:pointer;font:inherit;transition:background .2s,transform .2s;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.door:hover{background:rgba(31,32,29,.081)}
+.door:active{transform:scale(.97)}
+.door .ic{width:40px;height:40px;border-radius:20px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:0 0 auto}
+.door .ic svg{width:20px;height:20px}
+.door b{display:block;font:800 15.5px/1.15 var(--f-display)}
+.door small{display:block;margin-top:2px;font:600 12px/1.25 var(--f-body);color:rgba(31,32,29,.75)}
+.home2.has-list .home2-ui h1{display:none}
+.doors-list{display:flex;flex-direction:column;gap:10px;min-height:0;min-width:0;padding:14px;border-radius:26px;background:rgba(31,32,29,.423);box-shadow:inset 0 1px 0 rgba(31,32,29,.112),0 12px 40px rgba(0,0,0,.122)}
+.doors-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.doors-head h2{margin:0;font:900 21px/1.1 var(--f-display);color:var(--ink)}
+.doors-x{width:36px;height:36px;flex:0 0 auto;border:0;border-radius:18px;background:rgba(31,32,29,.063);color:var(--ink);display:grid;place-items:center;cursor:pointer}
+.doors-note{margin:0;font:600 13px var(--f-body);color:rgba(31,32,29,.75)}
+.doors-rows{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;overflow-y:auto;max-height:min(50svh,440px);overscroll-behavior:contain;margin:0 -4px;padding:0 4px}
+.doors-row{display:flex;gap:12px;align-items:center;padding:7px;border-radius:18px;background:rgba(31,32,29,.041);box-shadow:inset 0 0 0 1px rgba(31,32,29,.112);color:var(--ink);text-decoration:none}
+.doors-row:hover{background:rgba(31,32,29,.072)}
+.doors-row .pic{width:92px;height:64px;border-radius:12px;overflow:hidden;flex:0 0 auto;background:rgba(31,32,29,.054)}
+.doors-row .pic>*{width:100%;height:100%;margin:0;border-radius:0}
+.doors-row .pic svg{width:100%;height:100%;display:block}
+.doors-row .tx{display:flex;flex-direction:column;gap:3px;min-width:0}
+.doors-row b{font:800 15px/1.15 var(--f-display)}
+.doors-row small{font:600 12.5px/1.3 var(--f-body);color:rgba(31,32,29,.74);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.doors-all{justify-self:start;padding:8px 4px;font:800 14px var(--f-body);color:var(--accent);text-decoration:none}
+@media (min-width:900px){
+  .door{min-height:68px;padding:10px 14px;gap:12px}
+  .door .ic{width:44px;height:44px;border-radius:22px}
+  .door b{font-size:17px}
+  .door small{font-size:13px}
+  .doors-rows{max-height:min(60vh,580px)}
+}
+@media (max-height:700px) and (max-width:899px){
+  .door{min-height:48px;padding:5px 8px}
+  .door .ic{width:34px;height:34px}
+  .door small{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .door{animation:row-in .5s cubic-bezier(.2,.8,.2,1) .1s both}
+  .door+.door{animation-delay:.18s}
+  .doors-list{animation:plan3-in .45s cubic-bezier(.2,.9,.2,1) both}
+  .doors-row{animation:row-in .45s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0) * 70ms + 80ms)}
+}
+
+/* ---------- QA round (2026-11-15): nothing slides under or through anything else ---------- */
+/* the top bar is solid on every page but the globe home: what scrolls goes under it, never shows through it */
+body:not(.home-page) .top{background:#FFFFFF;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(31,32,29,.056)}
+/* You stays top right on the phone too: it is the only way to your account and to sign in */
+@media (max-width:760px){.top .acct{display:flex}}
+/* inside a trip the tabs sit right under the bar, on the same solid colour */
+.x-tabs{top:65px;background:#FFFFFF;box-shadow:0 10px 16px -12px rgba(0,0,0,.14)}
+@media (max-width:760px){.x-tabs{top:65px}}
+/* "Trip ready? Pack for it" closes the list instead of floating over the stops and under the bar */
+.r16-cta{position:static;background:none;padding:6px 0 0}
+.r16-steps{display:none}
+/* the ⋯ menu of a trip: solid, above the title */
+.x-menu{background:#FFFFFF;box-shadow:0 14px 34px rgba(0,0,0,.158),inset 0 0 0 1px rgba(31,32,29,.112);z-index:46}
+.x-menu .danger{color:#FFB59C}
+/* the "about you" questions sit above the top bar, the bottom bar and the chat button */
+.quiz-scrim{z-index:70}
+.quiz{z-index:71}
+/* home on the phone: the map credits "i" sits under the logo, not on Trip / Trek */
+@media (max-width:899px){.home2 .maplibregl-ctrl-bottom-right{bottom:auto;top:66px}}
+/* Plan a trip: the two big choices keep their title on top of the line under it (the home's door style is for the home) */
+main.page .doors .door{display:grid;align-content:start;gap:4px;padding:14px 16px;min-height:0}
+main.page .doors .door b{font:800 18px/1.15 var(--f-display)}
+main.page .doors .door span{font-size:13.5px;line-height:1.35;color:rgba(31,32,29,.78)}
+main.page .doors .door[aria-selected="true"] span{color:rgba(17,17,17,.78)}
+/* a drawing still on its way is a soft glass block, not a white box */
+.thumb.wait{background:rgba(31,32,29,.045)}
+/* Treks: filters wrap on the phone, one per line when they do not fit */
+@media (max-width:520px){.tfilters select{flex:1 1 calc(50% - 8px);min-width:0}}
+.x-rise{animation-fill-mode:backwards} /* same reason: sheets opened from inside stay on screen */
+/* sheets (product picker, chat, flights) open over the bottom bar, so their last row and buttons are reachable */
+.x-scrim{z-index:74}
+.x-sheet{z-index:75}
+/* messages ("Shell jacket: picked.") show above the bottom bar, not hidden under it */
+.toast{z-index:80;bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+/* trip Plan tab: the map that stays on top leaves room for the stops on the phone, and ends above the bar on the computer */
+@media (max-width:899px){.r16-map .rmap-box{height:30svh;min-height:210px}}
+@media (min-width:900px){.r16-map .rmap-box{height:calc(100svh - var(--x-tabh,132px) - 130px)}}
+
+/* ---------- QA round 2 (2026-11-15): cards on the globe ---------- */
+/* a trek or walk card is one card: never split into the two columns of the Treks list (it squashed to 70 px) */
+.globe-trail .tcards{grid-template-columns:minmax(0,1fr)!important;gap:0}
+.globe-trail .tcard a{padding:12px 44px 12px 12px}
+.globe-trail .tcard h3{font-size:17px}
+/* on the home the map fills the screen: cards and "your trip" sit above the bottom bar, under the top bar */
+@media (max-width:899px){
+  .home2 .globe-card{left:10px;right:10px;width:auto;top:auto;bottom:calc(96px + env(safe-area-inset-bottom,0px));max-height:calc(100% - 96px - 84px - env(safe-area-inset-bottom,0px))}
+  .home2 .globe-trip{bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .home2 .globe-tools{top:78px}
+}
+@media (min-width:900px){
+  .home2 .globe-card{top:84px;max-height:calc(100% - 84px - 110px)}
+  .home2 .globe-trip{bottom:110px}
+}
+/* "Back to the globe" reads on a light map too */
+.globe-tools .btn{background:#FFFFFF;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.105),inset 0 0 0 1px rgba(31,32,29,.14)}
+.globe-tools .btn:hover{background:#FFFFFF}
+/* computer home: the map credits go to the bottom-right corner, "Back to the globe" keeps its place above the bar */
+@media (min-width:900px){body.home-page .home2 .maplibregl-ctrl-bottom-right{right:0;bottom:0}}
+/* the ✕ on a place card sits on the drawing's sky: a dark disc so it always shows */
+.pcard-x,.globe-trail-x{background:rgba(17,17,17,.72);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.105)}
+.pcard-x:hover,.globe-trail-x:hover{background:#111111}
+/* Weather: the coldest number reads on the night card (it was black on navy) */
+.x-cold-n{color:#9CC7FF}
+/* Treks: how many, and "Show more" under the list */
+.tcount{margin:0 0 10px}
+p.tmore{display:flex;justify-content:center;margin:18px 0 0} /* only "Show more" under Treks: ul.tmore is the list of nearby treks on a trek page */
+/* the trip chat: a round button next to ⋯ on the phone, the floating "Ask" only on the computer */
+.x-ask-top{display:none}
+@media (max-width:760px){.x-fab{display:none}.x-ask-top{display:grid}}
+/* Closet: the piece's little drawing is ink on its white disc (it was white on white) */
+.ph-s{color:#111111}
+/* recommended trip: the day of each sight picture sits under its name, one row per stop */
+.visit .vdn{font-size:11px;color:rgba(31,32,29,.62);letter-spacing:.04em;text-transform:uppercase}
+.x-mg.cold{color:#9CC7FF}
+/* rows of stop pills that scroll sideways: fade the right edge so a cut pill reads as "more this way" */
+.sc-stops,.rmap-stops{-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 48px),transparent);mask-image:linear-gradient(to right,#000 calc(100% - 48px),transparent);padding-right:48px}
+/* bag: layer badge on product photos was navy on navy; legend dots sat below their words */
+.x-lay{background:#111111;color:var(--accent)}
+.x-legend>span{display:inline-flex;align-items:center}
+.x-legend>span>.w{width:14px;height:14px;font-size:0;margin-right:6px}
+/* My trips: a trip with no stops yet keeps the same left column as the others */
+.tcard .tnoart{width:112px;height:80px;flex:0 0 auto;display:grid;place-items:center;border-radius:12px;background:rgba(31,32,29,.03);box-shadow:inset 0 0 0 1px rgba(31,32,29,.098);color:rgba(31,32,29,.5)}
+/* home door lists ("Inspire me", "Find a trek"): the list never grows up under the header;
+   its rows scroll inside instead */
+.doors-rows{flex:1 1 auto;min-height:0}
+@media (max-width:899px){.home2.has-list .doors-list{max-height:calc(100svh - 100px - 66px - 14px - env(safe-area-inset-bottom,0px))}}
+@media (min-width:900px){.home2.has-list .doors-list{max-height:calc(100vh - 66px - 120px)}}
+/* trip board: a one-day stop showed "Parac", "Huac": wider days, and the name wraps on two lines */
+.board{--bd-col:96px}
+.bd-blk{padding:9px 7px}
+.bd-blk .nm{white-space:normal;overflow-wrap:normal;font-size:13px;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+
+/* =====================================================================================
+   Editoriale: navigation, type and the home (Manu 2026-11-15). Everything above is the old
+   night layout recoloured; what follows replaces the parts that change shape.
+   ===================================================================================== */
+/* type: big light titles, sentence case; figures stay in DM Mono */
+h1,h2{font-family:var(--f-display);font-weight:400!important;letter-spacing:-.035em}
+h3{font-family:var(--f-display);font-weight:500;letter-spacing:-.015em}
+main.page h1{font-size:clamp(32px,4.4vw,48px);line-height:1.02}
+
+/* ---------- computer: one bar on top ---------- */
+.top{position:sticky;top:0;z-index:40;background:#FFFFFF;border:0;box-shadow:0 1px 0 var(--rule);backdrop-filter:none;-webkit-backdrop-filter:none;--logo-globe:#FFD60A;--logo-teeth:transparent}
+body:not(.home-page) .top{background:#FFFFFF;box-shadow:0 1px 0 var(--rule);backdrop-filter:none;-webkit-backdrop-filter:none}
+.top-in{position:relative;height:64px;padding-block:0;display:flex;align-items:center;gap:12px}
+.top .logo{color:var(--ink)}
+.top .logo span{font-family:var(--f-display)!important;font-weight:600!important;font-size:20px!important;letter-spacing:-.02em!important}
+.top .logo svg{width:28px;height:28px}
+.tnav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:4px}
+.tnav a{height:36px;padding:0 14px;border-radius:18px;display:flex;align-items:center;font:500 14.5px var(--f-body);color:var(--ink-2);text-decoration:none;transition:background .2s,color .2s}
+.tnav a:hover{color:var(--ink);background:var(--surface-2)}
+.tnav a.active{color:var(--ink);background:var(--surface-2)}
+.me{width:40px;height:40px;border-radius:20px;background:var(--surface-2);color:var(--ink);box-shadow:none}
+.me:hover,.me.active{background:#EBEBE8}
+.me svg{width:19px;height:19px}
+.top .acct .admin{background:var(--surface-2);color:var(--ink);font-weight:500}
+.dock-me{display:none!important}
+@media (min-width:900px){
+  .dock{display:none!important}
+  body{padding-bottom:0}
+  /* what used to make room for the floating bar at the bottom */
+  body.home-page .home2 .globe-tools{bottom:24px}
+  body.home-page .home2 .maplibregl-ctrl-bottom-right{bottom:0}
+  .plan3-map .maplibregl-ctrl-bottom-right,.plan3-map .maplibregl-ctrl-bottom-left{bottom:0}
+  .home2 .globe-trip{bottom:24px}
+  .home2 .globe-card{max-height:calc(100% - 84px - 24px)}
+  .home2.has-list .doors-list{max-height:calc(100vh - 64px - 48px)}
+  .r16-map .rmap-box{height:calc(100svh - var(--x-tabh,132px) - 40px)}
+  .toast{bottom:24px}
+}
+
+/* ---------- phone: nothing on top, a tab bar with five tabs at the bottom ---------- */
+@media (max-width:899px){
+  .top,body.home-page .top{display:none!important}
+  .dock{left:0;right:0;bottom:0;transform:none;width:auto;height:auto;border-radius:0;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+    background:#FFFFFF;box-shadow:0 -1px 0 var(--rule);backdrop-filter:none;-webkit-backdrop-filter:none;animation:none}
+  .dock a{height:50px;margin:0;border-radius:12px;gap:4px;font:500 11px var(--f-body);color:var(--ink-3)}
+  .dock a:hover{background:transparent;color:var(--ink)}
+  .dock a.active{background:transparent;color:var(--ink);font-weight:600}
+  .dock a svg{width:22px;height:22px;stroke-width:1.8}
+  .dock-me{display:flex!important}
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+  body.home-page{padding-bottom:0}
+  main.page{padding-top:max(20px,env(safe-area-inset-top,0px))}
+  /* things that sat under the logo bar or above the floating bar */
+  .x-tabs{top:0}
+  .x-trip{--x-tabh:68px}
+  .home2 .globe-tools{top:calc(14px + env(safe-area-inset-top,0px))}
+  .home2 .maplibregl-ctrl-bottom-right{top:calc(8px + env(safe-area-inset-top,0px))}
+  body.home-page .home2-ui{bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+  .home2 .globe-card{bottom:calc(76px + env(safe-area-inset-bottom,0px));max-height:calc(100% - 76px - 24px - env(safe-area-inset-bottom,0px))}
+  .home2 .globe-trip{bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .home2.has-list .doors-list{max-height:calc(100svh - 76px - 24px - env(safe-area-inset-bottom,0px))}
+  .x-fab{bottom:calc(82px + env(safe-area-inset-bottom,0px))}
+  .toast{bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+}
+
+/* ---------- titles light, item names medium (the night used 800-900 everywhere) ---------- */
+:is(.x-trip textarea.x-title,.home-h,.ask-q,.plan-head h2,.x-h2,.x-sheet-h h2,.doors-head h2,.dayband b,.why-t){font-weight:400!important;letter-spacing:-.035em}
+[data-theme="yellow-black"] .hero h1,[data-theme="yellow-black"] .sh h2{font-weight:400}
+:is(.x-cold-n,.x-clo,.x-total,.x-alt b,.days b,.fact b,.kpi b,.tsum .big,.totalp .big){font-weight:400!important;letter-spacing:-.04em}
+:is(.x-h3,.tl-name b,.door b,.doors-row b,.dayrow-n b,.mine label b,.wx-rules h3,.x-pc,.x-price,.x-stats b,main.page .doors .door b,.tcard h3,.tcard-body h3,.tl-av i){font-weight:500!important}
+:is(.x-tabs-in button[aria-selected="true"],.you-links .btn,.home2-tabs button.on,.r16-edit>summary,.r16-steps,.pk-t small,.sc-name,.x-lay,.x-fav,.x-btn,.btn){font-weight:500}
+.x-cold-n{color:var(--data)}
+.x-trip textarea.x-title{font-size:clamp(32px,5vw,56px);line-height:1.02}
+
+/* ---------- buttons: black for the one thing you act on, quiet outline for the rest ---------- */
+.btn,.x-btn{background:#FFFFFF;color:var(--ink);box-shadow:inset 0 0 0 1px var(--rule-strong);border:0}
+.btn:hover,.x-btn:hover{background:var(--surface-2)}
+.btn.primary,.x-btn.y,.btn.go{background:var(--ink);color:#FFFFFF;box-shadow:none}
+.btn.primary:hover,.x-btn.y:hover,.btn.go:hover{background:#000000;color:#FFFFFF}
+.btn:disabled,.btn.primary:disabled{opacity:.45}
+input[type=text],input[type=email],input[type=password],input[type=number],input[type=date],input[type=search],textarea,select{background:#FFFFFF;color:var(--ink);box-shadow:inset 0 0 0 1px var(--rule-strong)}
+input:focus,textarea:focus,select:focus{box-shadow:inset 0 0 0 1.5px var(--ink)}
+:is(.fchip,.x-chip,.qchip,.chip-btn,.pk-brands button,.ask-sugg button,.ask-ex button){background:#FFFFFF;color:var(--ink);box-shadow:inset 0 0 0 1px var(--rule-strong)}
+:is(.fchip[aria-pressed="true"],.x-chip.on,.qchip.on,.chip-btn.on,.pk-brands button.on){background:var(--ink);color:#FFFFFF;box-shadow:none}
+
+/* ---------- surfaces: light grey blocks, no lines, no glass ---------- */
+:is(.card,.panel,.x-item,.witem,.place-card,.brief,.facts,.banner,.tchat,.estimate,.x-alert,.x-cta,.tbox,.bd-panel,.empty){background:var(--surface-2);box-shadow:none;color:var(--ink)}
+:is(.drawer,.x-sheet,.quiz){background:#FFFFFF;box-shadow:0 -10px 40px rgba(0,0,0,.12)}
+:is(.pcard,.rmap-card,.globe-card,.globe-trip,.globe-trail){background:#FFFFFF;color:var(--ink);box-shadow:0 12px 32px rgba(0,0,0,.14),0 0 0 1px var(--rule)}
+.x-menu{background:#FFFFFF;box-shadow:0 14px 34px rgba(0,0,0,.14),0 0 0 1px var(--rule)}
+.x-menu .danger{color:#B4441C}
+.toast{background:var(--ink);color:#FFFFFF}
+.tag{border-color:var(--rule-strong);color:var(--ink)}
+.tag.diff-easy{background:#E3ECFB;color:#1F3F9E}
+.tag.diff-moderate{background:#E3F1E8;color:#1D6B37}
+.tag.diff-hard{background:#FBE9E1;color:#9A3412}
+.tag.diff-technical{background:#F9DADA;color:#9B1C1C}
+
+/* ---------- inside a trip: Plan / Weather / Bag as a quiet segmented control ---------- */
+.x-tabs,body:not(.home-page) .x-tabs{background:#FFFFFF;box-shadow:0 1px 0 var(--rule)}
+.x-tabs-in{background:var(--surface-2);box-shadow:none}
+.x-tabs-in button{color:var(--ink-2)}
+.x-tabs-in button[aria-selected="true"]{color:var(--ink)}
+.x-pill{background:#FFFFFF;box-shadow:0 0 0 1px var(--rule-strong),0 1px 2px rgba(0,0,0,.06)}
+.x-fab{background:var(--ink);color:#FFFFFF;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.r16-cta button{background:var(--ink);color:#FFFFFF}
+.r16-cta button span{color:#FFFFFF}
+.sc-cta button,.sc-cta a{background:var(--ink);color:#FFFFFF}
+.sc-cta span{color:#FFFFFF}
+.sc-pill.on{background:var(--ink);color:#FFFFFF}.sc-pill.on small{color:rgba(255,255,255,.8)}
+.pk-item.on{box-shadow:inset 0 0 0 2px var(--ink)}
+.pk-have.on{background:#E3F1E8;color:#1D6B37}
+.pk-why{background:var(--surface-2);color:var(--ink)}
+.pk-row button{background:var(--ink);color:#FFFFFF}
+.x-lay{background:var(--ink);color:#FFFFFF}
+.rpin{background:var(--ink);color:#FFFFFF;border-color:#FFFFFF}
+.rpin.tpin.start,.rpin.tpin.goal{background:#FFFFFF;color:var(--ink);border-color:var(--ink)}
+.tl-leg-ic{background:#FFFFFF;border-color:var(--rule-strong)}
+.visit .vdn{color:var(--ink-3)}
+.tcard .tnoart{background:var(--surface-2);box-shadow:none;color:var(--ink-3)}
+.thumb.wait{background:var(--surface-2)}
+:is(.tlist .tcard,.tcard a){background:var(--surface-2);box-shadow:none}
+:is(.tlist .tcard,.tcard a):hover{background:#EDEDEA}
+.tcard a{color:var(--ink)}
+.tcard-body .tfacts dd{color:var(--ink)}
+.you-row{background:var(--surface-2);box-shadow:none;color:var(--ink);font-weight:500}
+.you-row span{background:transparent;color:var(--ink-2);font-weight:400}
+.you-links .btn{border-radius:27px}
+.pcard-x,.globe-trail-x{background:rgba(255,255,255,.92);color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.globe-tools .btn{background:#FFFFFF;color:var(--ink);box-shadow:0 6px 18px rgba(0,0,0,.12),0 0 0 1px var(--rule)}
+.globe-tools .btn:hover{background:var(--surface-2)}
+.maplibregl-ctrl-group{background:#FFFFFF}
+
+/* the maps: white around them, labels haloed in white */
+[data-theme="yellow-black"]{--map-halo:#FFFFFF;--map-space:#FFFFFF;--map-glow:#F3F7FA;--map-atmosphere:#DCEAF3}
+
+/* ---------- the home: a white page, the globe left, the words right (prototype Editoriale) ---------- */
+body.home-page,body.home-page .top{background:#FFFFFF}
+.home2{background:#FFFFFF;color:var(--ink)}
+.home2-space{display:none}
+.home2-globe::before{background:radial-gradient(circle,rgba(160,190,215,.22) 45%,rgba(160,190,215,0) 70%)}
+.home2 .globe-shade{box-shadow:0 0 40px 6px rgba(160,190,215,.25),0 30px 70px -24px rgba(20,30,40,.25)}
+.home2-ui::before{background:linear-gradient(to top,#FFFFFF 0%,rgba(255,255,255,.92) 62%,rgba(255,255,255,0) 100%)}
+.home2-ui h1{color:var(--ink);font-weight:400!important;letter-spacing:-.045em;font-size:40px;line-height:.98}
+.home2-ui h1 span{color:var(--ink-3)}
+.home2-tabs{background:var(--surface-2);box-shadow:none}
+.home2-tabs button{color:var(--ink-2);font-weight:500}
+.home2-tabs button.on{background:#FFFFFF;color:var(--ink);box-shadow:0 0 0 1px var(--rule-strong),0 1px 2px rgba(0,0,0,.06)}
+.home2-search{background:#FFFFFF;border:1px solid var(--rule-strong);color:var(--ink)}
+.home2-search:focus-within{background:#FFFFFF;border-color:var(--ink)}
+.home2-search input{color:var(--ink);font-weight:400}
+.home2-search input::placeholder{color:var(--ink-3)}
+.home2-search button{background:var(--ink);color:#FFFFFF}
+.home2-skip{border-color:var(--rule-strong);background:#FFFFFF;color:var(--ink-2)}
+.door,main.page .doors .door{background:var(--surface-2);box-shadow:none;color:var(--ink);backdrop-filter:none;-webkit-backdrop-filter:none}
+.door:hover{background:#EDEDEA}
+.door .ic{background:#FFFFFF;color:var(--ink);box-shadow:0 0 0 1px var(--rule)}
+.door small,main.page .doors .door span{color:var(--ink-2)}
+.door[aria-selected="true"]{background:var(--ink);color:#FFFFFF}
+.door[aria-selected="true"] :is(b,span,small){color:#FFFFFF}
+.doors-list{background:#FFFFFF;box-shadow:0 12px 40px rgba(0,0,0,.12),0 0 0 1px var(--rule)}
+.doors-head h2{color:var(--ink)}
+.doors-x{background:var(--surface-2);color:var(--ink)}
+.doors-note{color:var(--ink-2)}
+.doors-row{background:var(--surface-2);box-shadow:none;color:var(--ink)}
+.doors-row:hover{background:#EDEDEA}
+.doors-row small{color:var(--ink-2)}
+.doors-all{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+@media (min-width:900px){
+  .home2-ui::before{background:linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.9) 22%,#FFFFFF 100%)}
+  .home2-ui h1{font-size:clamp(48px,5.4vw,76px)}
+  body.home-page .top{position:fixed;background:#FFFFFF}
+}
+
+/* ---------- Plan a trip: the map on top, the sheet under it, on white ---------- */
+.plan3-sheet{background:#FFFFFF;box-shadow:0 -10px 30px rgba(0,0,0,.06),0 0 0 1px var(--rule)}
+.plan3-sheet::before{background:var(--rule-strong)}
+.plan3-map::after{background:linear-gradient(rgba(255,255,255,0),#FFFFFF)}
+@media (max-width:899px){.plan3{margin-top:0}}
+
+/* ---------- /preview and /phone: frames on a light grey desk ---------- */
+.pv{background:#ECECEA;color:var(--ink)}
+.pv-bar{background:#FFFFFF;border-bottom:1px solid var(--rule);color:var(--ink)}
+.pv-bar :is(input,select){background:#FFFFFF;color:var(--ink);box-shadow:inset 0 0 0 1px var(--rule-strong)}
+.pv-phone iframe,.pv-phone-box iframe{background:#FFFFFF}
+.pv-desk-in{background:#FFFFFF}
+
+/* ---------- leftovers of the yellow era (accent is ink now) ---------- */
+[data-theme="yellow-black"] .btn.primary{background:var(--ink);color:#FFFFFF;border-color:var(--ink);box-shadow:none}
+[data-theme="yellow-black"] .brief .btn.primary{background:var(--ink);color:#FFFFFF}
+[data-theme="yellow-black"] .sh-k{background:var(--surface-2);color:var(--ink)}
+[data-theme="yellow-black"] .cond dd.hot{background:var(--surface-2);color:var(--ink)}
+[data-theme="yellow-black"] .hero h1 .hl,.hero h1 .hl{background:none;color:var(--ink-3);padding:0}
+[data-theme="yellow-black"] :is(.elev,.panel,.mx-box,.lt-box,.card){border-color:transparent;box-shadow:none}
+[data-theme="yellow-black"] .stop{box-shadow:none;background:var(--surface-2)}
+.x-cold{background:var(--surface-2);color:var(--ink)}
+.x-cold :is(p,span,small){color:var(--ink-2)}
+.bd-blk.sel{box-shadow:0 0 0 3px var(--data)}
+.fl-row.on{border-color:var(--ink);box-shadow:0 0 0 1.5px var(--ink)}
+@keyframes micpulse{0%,100%{box-shadow:0 0 0 0 rgba(31,32,29,.35)}50%{box-shadow:0 0 0 10px rgba(31,32,29,0)}}
+/* the home bar keeps its words dark on white (the night made them white) */
+body.home-page .top :is(a,button,.logo){color:var(--ink)}
+body.home-page .top .tnav a{color:var(--ink-2)}
+body.home-page .top .tnav a.active,body.home-page .top .tnav a:hover{color:var(--ink)}
+@media (min-width:900px){.home2-ui h1{font-size:clamp(44px,4.6vw,66px)}}
+/* a picked door is the white segment, like Trip / Trek on the home */
+.door[aria-selected="true"],main.page .doors .door[aria-selected="true"]{background:#FFFFFF;color:var(--ink);box-shadow:0 0 0 1.5px var(--ink)}
+.door[aria-selected="true"] :is(b,span,small),main.page .doors .door[aria-selected="true"] :is(b,span,small){color:var(--ink)}
+main.page .doors .door[aria-selected="true"] span{color:var(--ink-2)}
+.trailpage h1{font-size:clamp(34px,3.8vw,54px);line-height:1.02}
+/* the suitcase: a light grey case with an ink outline (no yellow), white discs inside */
+.sc-body{background-color:#EDEDEA;border:3px solid var(--ink);background-image:repeating-linear-gradient(90deg,transparent 0 calc(25% - 1px),var(--rule-strong) calc(25% - 1px) 25%)}
+.sc-handle{border-color:var(--ink);border-width:6px}
+.sc-wheel{background:var(--ink)}
+.sc-disc{border-width:1.5px;box-shadow:0 2px 0 var(--ink)}
+.sc-name{background:rgba(255,255,255,.92);color:var(--ink);font-weight:500}
+.sc-tag.have{background:var(--ink);color:#FFFFFF}
+.sc-legend i.picked{background:var(--data);border-color:var(--data)}
+.sc-pill-ic{background:#FFFFFF;border-color:var(--rule-strong)}
+/* picked chips and segments: white words on ink (they were yellow on black) */
+:is(.qchip.on,.chip-btn.on,.x-seg button:is([aria-pressed="true"],[aria-selected="true"]),.x-mark.on,.x-mtx th.on button){background:var(--ink);color:#FFFFFF}
+:is(.x-route .n,.pk-buy,.home .starter .btn.primary.go){background:var(--ink);color:#FFFFFF;border-color:var(--ink)}
+/* data in cobalt: weather bars, ranges, the flight tick, wind */
+.x-day .bar,.x-legend .lg-range,.fl-tick.on{background:var(--data)}
+.x-wind{color:var(--data);opacity:.5}
+.thero{background:var(--surface-2)}
+/* trek page on the phone: the header column never grows past the screen (long tags row) */
+.thead-text,.thead-art{min-width:0}
+.thead .tags{display:flex;flex-wrap:wrap;gap:4px}
