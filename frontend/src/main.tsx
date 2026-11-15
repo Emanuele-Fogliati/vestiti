@@ -12,7 +12,7 @@ import "./theme/calm.css";
 import "./theme/tabs.css";
 import "./theme/trails.css";
 import "./theme/paper.css";
-import "./theme/night.css";
+import "./theme/editorial.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

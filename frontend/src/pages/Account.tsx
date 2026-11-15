@@ -76,6 +76,7 @@ export default function Account() {
             : <button type="button" className="btn" onClick={logout}>Sign out</button>}
           <Link className="you-row" to="/how-it-works">How it works<span aria-hidden="true">→</span></Link>
           <Link className="you-row" to="/legal/affiliate">Affiliate disclosure<span aria-hidden="true">→</span></Link>
+          {user.is_admin && <Link className="you-row you-admin" to="/admin">Admin<span aria-hidden="true">→</span></Link>}
         </div>
         <div className="stack">
           <section className="panel form">
