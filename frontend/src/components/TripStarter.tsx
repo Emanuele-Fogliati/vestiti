@@ -60,7 +60,8 @@ const stepOf =(p: Place): PlanStep => ({
 });
 
 /** `initial`: words typed on the home page; they are read as soon as the page opens. */
-export function TripStarter({ compact, initial }: { compact?: boolean; initial?: string }) {
+/** `onStops`: told every time the stops change, so the globe beside the form can fly to them. */
+export function TripStarter({ compact, initial, onStops }: { compact?: boolean; initial?: string; onStops?: (s: PlanStep[]) => void }) {
   const nav = useNavigate();
   const { ensureUser } = useApp();
   const [text, setText] = useState("");
@@ -96,6 +97,11 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   const resultRef = useRef<HTMLDivElement>(null);
 
   const speech = useSpeech((t) => { setText(t); read(t); });
+  // the words already read: no list of regions pops up over the answer for them
+  const done = useRef("");
+  const tell = useRef(onStops);
+  tell.current = onStops;
+  useEffect(() => { tell.current?.(steps); }, [steps]);
   const first = useRef(initial?.trim() ?? "");
   useEffect(() => {
     if (first.current) { setText(first.current); read(first.current); }
@@ -105,7 +111,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
   // regions and countries while a short name is typed
   useEffect(() => {
     const q = text.trim();
-    if (q.length < 2 || q.split(/\s+/).length > 3 || speech.listening) { setSugg([]); return; }
+    if (q.length < 2 || q.split(/\s+/).length > 3 || speech.listening || q === done.current) { setSugg([]); return; }
     const t = window.setTimeout(() => api.planSuggest(q).then(setSugg).catch(() => setSugg([])), 200);
     return () => window.clearTimeout(t);
   }, [text, speech.listening]);
@@ -116,6 +122,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
 
   async function read(t: string) {
     if (t.trim().length < 2) return;
+    done.current = t.trim();
     setBusy(true); reset(); setSugg([]);
     try {
       await ensureUser();
@@ -139,11 +146,16 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
       } else {
         setMode("open"); setSteps([]); setIdeas(r.ideas); setTarget(r.days);
       }
-      window.setTimeout(() => resultRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 50);
+      // bring the answer up only when it starts low on the screen (under the globe on a phone)
+      window.setTimeout(() => {
+        const r = resultRef.current;
+        if (r && r.getBoundingClientRect().top > window.innerHeight * 0.55) r.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
     } catch (e) { setErr(e instanceof ApiError ? e.message : String(e)); } finally { setBusy(false); }
   }
 
   async function pickArea(s: PlanSuggestion) {
+    done.current = s.name;
     setText(s.name); setSugg([]); reset(); setBusy(true);
     try {
       await ensureUser();
@@ -290,7 +302,7 @@ export function TripStarter({ compact, initial }: { compact?: boolean; initial?:
 
       {mode !== "none" && (
         <section className="tplan" ref={resultRef} aria-live="polite">
-          {heardText && <p className="plan-heard">“{heardText}”</p>}
+          {heardText && heardText.trim().toLowerCase() !== done.current.toLowerCase() && <p className="plan-heard">“{heardText}”</p>}
           <header className="plan-head">
             <h2>{title}</h2>
             {mode === "booked" && booked && (

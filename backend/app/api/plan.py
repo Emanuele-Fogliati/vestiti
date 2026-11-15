@@ -73,6 +73,11 @@ def _proposal(a: dict, only: list[str], days: int | None, month: int | None,
             "suggested_start": explore.start_for(month, p["best_months"]).isoformat()}
 
 
+_DAYS = {"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "lunedì", "lunedi", "martedì",
+         "martedi", "mercoledì", "mercoledi", "giovedì", "giovedi", "venerdì", "venerdi", "sabato", "domenica",
+         "christmas", "easter", "natale", "pasqua"}
+
+
 def _geocoded(text: str) -> list[dict]:
     """Names written with a capital that the globe does not know ("Matera"), from the place
     search. No network: nothing."""
@@ -85,7 +90,9 @@ def _geocoded(text: str) -> list[dict]:
                          text):
         name = m.group(1)
         at_start = m.start() == 0 or text[:m.start()].rstrip()[-1:] in ".!?"
-        if name.lower() in understand.STOP or len(name) < 4 or (at_start and not short):
+        # "February", "Monday": a month or a day is never a place (there is a February in Tennessee)
+        if (name.lower() in understand.STOP or name.lower() in understand.MONTH_OF or name.lower() in _DAYS
+                or len(name) < 4 or (at_start and not short)):
             continue
         try:
             hits = geocode.search(name, limit=1)

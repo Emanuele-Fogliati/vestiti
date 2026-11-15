@@ -177,6 +177,19 @@ def test_api_open_wish_gives_ideas(client):
     assert client.post("/api/plan/propose", json={"area": "nowhere"}).status_code == 404
 
 
+def test_a_month_or_a_day_is_never_geocoded_as_a_place(monkeypatch):
+    """The home example "Somewhere warm by the sea in February" made one stop: February, Tennessee (QA 2026-11-15)."""
+    from app.api import plan
+    from app.weather import geocode
+    asked = []
+    monkeypatch.setattr(geocode, "search", lambda name, limit=1: asked.append(name) or [
+        {"name": name, "latitude": 1.0, "longitude": 2.0, "country_code": "US"}])
+    assert plan._geocoded("Somewhere warm by the sea in February, 10 days") == []
+    assert plan._geocoded("leaving on Monday for a week") == []
+    assert [s["name"] for s in plan._geocoded("a week in Matera")] == ["Matera"]
+    assert asked == ["Matera"]
+
+
 # ---------------------------------------------------------------- routes merged from organised trips (2026-11-12)
 
 def _names(p):

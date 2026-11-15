@@ -1,0 +1,110 @@
+/* QA round 3 (2026-11-15, after the Editoriale look): fixes on top of editorial.css, loaded last.
+   Kept in its own file so the look itself (editorial.css) can change without clashing with these. */
+
+/* ---------- Plan a trip (/start) ---------- */
+/* the stops of the trip on the globe: numbered ink discs, same numbers as the list */
+.gstop{width:28px;height:28px;border-radius:50%;background:var(--ink);color:#FFFFFF;display:grid;place-items:center;
+  font:600 13px/1 var(--f-body);box-shadow:0 0 0 2.5px #FFFFFF,0 4px 12px rgba(0,0,0,.25);pointer-events:none}
+
+/* computer: one screen, no page scroll. The map fills the left, the plan scrolls on its own on the right. */
+@media (min-width:900px){
+  body.fit-page{overflow:hidden}
+  body.fit-page footer{display:none}
+  .plan3{position:fixed;top:64px;left:0;right:0;bottom:0;margin:0;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(440px,560px)}
+  .plan3-map{position:relative;top:auto;height:100%;max-height:none}
+  .plan3-sheet{margin:0;border-radius:0;height:100%;overflow-y:auto;overscroll-behavior:contain;box-shadow:-1px 0 0 var(--rule);padding:26px 0 32px}
+  .plan3-sheet::before{display:none}
+  .plan3-sheet>.wrap{padding-inline:28px}
+}
+
+/* the plan itself: one column of quiet blocks, no card inside the sheet, no giant titles */
+.plan3 .starter{gap:14px;max-width:none}
+.plan3 .ask-q{font-size:34px;margin:0}
+.plan3 .ask-box{padding:12px 12px 10px 16px;box-shadow:none;border:1px solid var(--rule-strong)}
+.plan3 .ask-box:focus-within{border-color:var(--ink)}
+.plan3 .ask-box textarea{min-height:44px;font-size:17px;box-shadow:none;background:transparent}
+.plan3 .ask-alt{font-size:14px}
+.plan3 .tplan{padding:18px 0 0;background:none;box-shadow:none;border-radius:0;gap:16px;border-top:1px solid var(--rule);scroll-margin-top:12px}
+.plan3 .plan-head{gap:2px 14px}
+.plan3 .plan-head h2{font-size:34px;line-height:1.05}
+.plan3 .plan-head p{font-size:15px;color:var(--ink-2)}
+.plan3 .plan-q{grid-template-columns:minmax(0,1fr)!important;gap:8px}
+.plan3 .pq{padding:12px 14px;gap:8px;border-radius:16px}
+.plan3 .pq-l{font-size:14.5px;font-weight:600}
+.plan3 .pq-c{gap:6px}
+.plan3 .pq-c .fchip{padding:6px 12px;font-size:13.5px}
+.plan3 .plan-note{font-size:14px;line-height:1.45;margin:0}
+.plan3 .step{grid-template-columns:32px minmax(0,1fr) auto;column-gap:12px;padding:10px 0}
+.plan3 .step::before{left:15px}
+.plan3 .step:first-child::before{top:22px}
+.plan3 .step-dot{width:32px;height:32px;font-size:14px}
+.plan3 .step-name{font-size:19px;line-height:1.2}
+.plan3 .step-when{font-size:14px}
+.plan3 .step-sights{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.plan3 .step-ctl{gap:2px}
+.plan3 .stepper button{width:30px;height:30px;font-size:16px}
+.plan3 .stepper span{min-width:52px;font-size:13px}
+.plan3 .step-more button{font-size:13px;padding:4px 6px}
+.plan3 .step-days{margin-top:4px}
+.plan3 .step-days>summary{padding:6px 12px;font-size:13px}
+.plan3 .step.add>.link{grid-column:2 / -1;justify-self:start;font-size:15px}
+.plan3 .plan-go{padding-top:14px}
+.plan3 .plan-go .btn.big{height:48px;font-size:16px}
+.plan3 .ideas li{gap:10px}
+.plan3 .tlist{grid-template-columns:minmax(0,1fr)!important}
+.plan3-sheet h3{font-size:20px!important;margin:12px 0 0!important}
+@media (max-width:560px){
+  .plan3 .step{grid-template-columns:32px minmax(0,1fr)}
+  .plan3 .ask-q{font-size:30px}
+  .plan3 .plan-head h2{font-size:30px}
+}
+/* phone: "Back to the globe" sat on the edge of the sheet, half covered: it goes to the top of the map */
+@media (max-width:899px){.plan3 .globe-tools{top:12px;bottom:auto}}
+
+/* ---------- a trip ---------- */
+/* Weather: "The coldest hour" was white on the light grey card (invisible); the wind streaks crossed the words */
+.x-cold-t{color:var(--ink-2)}
+.x-cold-t b{color:var(--ink)}
+.x-cold .x-wind{opacity:.16}
+/* "Change the plan" opens the board inside the narrow list column: one column there, or "Best things to do"
+   ran off the right edge of the screen and the days squeezed to one word per line */
+.r16-list .bp-cols{grid-template-columns:minmax(0,1fr)}
+.r16-list .bp-day{grid-template-columns:112px minmax(0,1fr)}
+.bd-panel{padding:18px}
+/* the title: two lines at most on a phone, one big line on a computer (it took four lines and half the screen) */
+.x-trip textarea.x-title{font-size:clamp(28px,7.4vw,34px);line-height:1.08}
+@media (min-width:900px){.x-trip textarea.x-title{font-size:clamp(32px,3vw,44px)}}
+.x-head .x-from{display:inline-block;margin:8px 22px 0 0}
+@media (max-width:760px){.x-meta{flex-wrap:wrap;row-gap:2px}}
+/* computer, Plan tab: one screen. The map fills what is left under the tabs; the stops scroll beside it. */
+@media (min-width:900px){
+  body:has(.x-trip #p-trip .r16){overflow:hidden}
+  body:has(.x-trip #p-trip .r16) footer{display:none}
+  main.x-trip:has(#p-trip .r16){height:calc(100svh - 64px);display:flex;flex-direction:column;overflow:hidden}
+  main.x-trip:has(#p-trip .r16) .x-head{padding-block:14px 6px;flex:0 0 auto}
+  main.x-trip:has(#p-trip .r16) .x-tabs{position:relative;top:0;flex:0 0 auto}
+  main.x-trip #p-trip:has(.r16){flex:1 1 auto;min-height:0;padding-block:14px 16px}
+  #p-trip:has(.r16)>.wrap{height:100%}
+  #p-trip .r16{height:100%;align-items:stretch}
+  #p-trip .r16-map{position:relative;top:0;height:100%}
+  #p-trip .r16-map .rmap,#p-trip .r16-map .rmap-box{height:100%!important;min-height:0}
+  #p-trip .r16-list{height:100%;overflow-y:auto;overscroll-behavior:contain;padding:0 6px 8px 0}
+}
+/* Plan a trip, "Know your stops?": the + sat far below the search box it belongs to */
+.plan3 .step.add{align-items:start}
+.plan3 .step.add .step-dot{margin-top:6px}
+/* phone: the three round buttons took the title's width, so it broke into four lines; they sit beside the dates only */
+@media (max-width:760px){
+  .x-head-in{position:relative;display:block}
+  .x-head-a{position:absolute;right:0;top:-4px}
+  .x-head-t{width:100%}
+  .x-meta{padding-right:140px;min-height:40px}
+}
+
+/* ---------- computer: the footer is one quiet line, so short pages fit the screen ---------- */
+@media (min-width:900px){
+  footer{padding-block:12px 14px;font-size:12px}
+  footer .wrap{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 18px}
+  footer .wrap>*{margin:0}
+  footer nav a{font-size:12px}
+}

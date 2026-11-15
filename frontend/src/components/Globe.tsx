@@ -56,7 +56,7 @@ function topPad(el: HTMLElement): number {
 function pads(el: HTMLElement): { top: number; right: number; bottom: number; left: number } {
   if (!el.dataset.bare) return { top: narrow(el) ? 70 : 100, right: 0, bottom: 0, left: 0 };
   // Plan a trip: the globe has its own box (left half on a computer, top on a phone, the sheet overlaps its foot)
-  if (el.closest(".plan3-map")) return narrow(el) ? { top: 56, right: 0, bottom: 40, left: 0 } : { top: 70, right: 0, bottom: 90, left: 0 };
+  if (el.closest(".plan3-map")) return narrow(el) ? { top: 16, right: 0, bottom: 40, left: 0 } : { top: 24, right: 0, bottom: 24, left: 0 };
   if (el.clientWidth >= 900) return { top: 0, right: Math.round(el.clientWidth * 0.42), bottom: 0, left: 0 };
   return { top: 56, right: 0, bottom: Math.min(360, Math.round(el.clientHeight * 0.42)), left: 0 }; // the words, the box and the doors
 }
@@ -110,7 +110,11 @@ interface Scene {
 /** `bare`: no title or hint over the globe (the home puts its own words beside it).
  *  `intro`: the opening animation is playing, so the globe spins fast at first and slows down
  *  to its usual pace. `onReady` fires once the map has drawn. */
-export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek" } = {}) {
+/** `focus`: the stops of the trip being planned (Plan a trip): the globe flies there and numbers them,
+ *  instead of showing the whole world (Manu 2026-11-15: "zoomato su quel posto lì alla fine"). */
+export interface GlobeFocus { lat: number; lon: number; name: string }
+
+export default function Globe({ bare, intro, onReady, mode = "trip", focus }: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[] } = {}) {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [data, setData] = useState<GlobeData | null>(null);
@@ -465,6 +469,40 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
     look();
     return () => { map.off("moveend", look); };
   }, [ready, dots, mode]);
+
+  // the trip being planned: numbered stops, and the camera on them (one place: close enough to see its sights)
+  const focusKey = (focus ?? []).map((f) => `${f.lat.toFixed(3)},${f.lon.toFixed(3)}`).join("|");
+  const focusPins = useRef<maplibregl.Marker[]>([]);
+  useEffect(() => {
+    const map = mapRef.current;
+    const el = box.current;
+    if (!ready || !map || !el) return;
+    for (const m of focusPins.current) m.remove();
+    focusPins.current = [];
+    const pts = (focus ?? []).filter((f) => Number.isFinite(f.lat) && Number.isFinite(f.lon));
+    if (!pts.length) return;
+    pts.forEach((f, i) => {
+      const pin = document.createElement("div");
+      pin.className = "gstop";
+      pin.textContent = String(i + 1);
+      pin.title = f.name;
+      pin.setAttribute("aria-label", `Stop ${i + 1}: ${f.name}`);
+      // a badge on the corner of the place's picture (or next to its dot), always above the pictures
+      const m = new maplibregl.Marker({ element: pin, anchor: "center", offset: [17, -17] }).setLngLat([f.lon, f.lat]).addTo(map);
+      m.getElement().style.zIndex = "5";
+      focusPins.current.push(m);
+    });
+    spin.current.hold(); // it stays on your trip, it does not turn away
+    const b = new maplibregl.LngLatBounds([pts[0].lon, pts[0].lat], [pts[0].lon, pts[0].lat]);
+    pts.forEach((f) => b.extend([f.lon, f.lat]));
+    const pad = narrow(el) ? 60 : 70;
+    const cam = pts.length > 1 ? map.cameraForBounds(b, { padding: { top: pad, bottom: pad + (narrow(el) ? 30 : 0), left: pad, right: pad }, maxZoom: 8 }) : undefined;
+    const to = { center: cam?.center ?? b.getCenter(), zoom: cam?.zoom ?? 7.5, pitch: 0, bearing: 0 };
+    if (reducedMotion()) map.jumpTo(to);
+    else map.flyTo({ ...to, speed: 0.9, curve: 1.5, essential: true });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [ready, focusKey]);
+  useEffect(() => () => { for (const m of focusPins.current) m.remove(); }, []);
 
   // ring around the open place
   useEffect(() => {
