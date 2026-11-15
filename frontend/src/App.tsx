@@ -21,6 +21,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="preview" element={<Preview />} />
+      <Route path="phone" element={<Preview only="phone" />} />
       <Route element={<Layout />}>
         <Route index element={<Landing />} />
         <Route path="start" element={<Start tab="own" />} />

@@ -55,8 +55,10 @@ function topPad(el: HTMLElement): number {
  *  at the bottom (see .home2 in paper.css). Elsewhere a title sits on top. */
 function pads(el: HTMLElement): { top: number; right: number; bottom: number; left: number } {
   if (!el.dataset.bare) return { top: narrow(el) ? 70 : 100, right: 0, bottom: 0, left: 0 };
+  // Plan a trip: the globe has its own box (left half on a computer, top on a phone, the sheet overlaps its foot)
+  if (el.closest(".plan3-map")) return narrow(el) ? { top: 56, right: 0, bottom: 40, left: 0 } : { top: 70, right: 0, bottom: 90, left: 0 };
   if (el.clientWidth >= 900) return { top: 0, right: Math.round(el.clientWidth * 0.42), bottom: 0, left: 0 };
-  return { top: 56, right: 0, bottom: Math.min(300, Math.round(el.clientHeight * 0.38)), left: 0 };
+  return { top: 56, right: 0, bottom: Math.min(360, Math.round(el.clientHeight * 0.42)), left: 0 }; // the words, the box and the doors
 }
 
 /** The zoom at which the whole globe fills the free part of the box. */

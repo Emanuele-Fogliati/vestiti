@@ -44,7 +44,7 @@ export default function TrailProfile({ profile, points, onFocus }: {
         ))}
         {kms.map((k) => <text key={k} x={X(k)} y={H - 8} textAnchor="middle" className="tp-ax">{k} km</text>)}
         <path d={area} className="tp-area" />
-        <path d={path} className="tp-line" />
+        <path d={path} className="tp-line" pathLength={1} />
         {points.map((p, i) => p.km == null || p.ele == null ? null : (
           <g key={p.id} className="tp-pt" onClick={() => onFocus?.(i)} role="button" aria-label={`${i + 1}: ${p.name}`}>
             <circle cx={X(p.km)} cy={Y(p.ele)} r={9} />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { api, buyUrl } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { dayMonth, money } from "../lib/format";
@@ -50,10 +50,11 @@ export function Suitcase({ tripId, tier, tp, onChanged }: {
       <div className="sc-bag">
         <i className="sc-handle" aria-hidden="true" />
         <div className="sc-body">
-          {lines.map((l) => {
+          {lines.map((l, li) => {
             const st = stateOf(l), photo = st === "picked" || st === "rent" ? l.item?.image_url : null;
             return (
               <button key={l.slot} type="button" className={`sc-piece ${st}${used(l) ? "" : " off"}`} onClick={() => setOpen(l)}
+                style={{ "--i": li } as CSSProperties}
                 aria-label={`${l.slot_name}: ${st === "choose" ? "choose one" : st === "have" ? "you have it" : l.item ? `${l.item.brand} ${l.item.name}` : "rented"}`}>
                 <span className="sc-disc">{photo ? <img src={photo} alt="" loading="lazy" /> : <ProductArt slot={l.base_slot ?? l.slot} className="sc-art" />}</span>
                 {TAG[st] && <span className={`sc-tag ${st}`}>{TAG[st]}</span>}
