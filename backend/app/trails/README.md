@@ -107,3 +107,25 @@ iconic treks (seen from space, drawn later). They are not in `trails()` (hundred
 `trails.find()` and `trails.geo()` read them on demand. On the globe a trek's dot shows by the same
 zoom ladder as the places (rank 1-6): ranks 4+ come with `/api/trails/dots`, the rest by 10-degree
 cell from `/api/trails/dots/cell/{i}/{j}`.
+
+## Walks near every drawn place (Manu 2026-11-15)
+
+The traveller plans the days on foot around the places they already visit, so the long tail grows
+around the app's drawings, not everywhere (`tools/trails/near_walks.py`, tier B, generated):
+
+- `tail/<cc>-city.json` outside the 8 countries: city walks through famous sights in every drawn
+  city and town (the rules of `city_walks.py`; the sights are Wikidata items, CC0, with 3+ Wikipedia
+  languages and a sight class, found around the town; routed on foot by OSRM on OpenStreetMap);
+- `tail/<cc>-sights.json`: a short walk to a drawn spot (a falls, a lookout, a monastery on a hill)
+  from where the road ends: the foot route from the town is cut where a car can no longer follow
+  it; kept when that is 0.5-3.5 km each way and more than a flat stroll from a car park.
+
+## Official trails of the United States and Canada (2026-11-15)
+
+OpenStreetMap is thin there; the park agencies publish their trail lines as open data:
+NPS Public Trails and the Forest Service's National Forest System Trails (US public domain),
+Parks Canada's Trails APCA (Open Government Licence - Canada). `tools/trails/parks_na.py` joins
+each trail's segments, keeps the named ones for walkers (no motor, ski, horse or water trails,
+no connectors or spurs), 0.5-250 km, not already an OSM trek of the same name, and adds them to
+`world/us.json` and `world/ca.json` (ids `us-nps-...`, `us-usfs-...`, `ca-pc-...`; a short trail
+that does not come back is walked there and back). Then `world_tail.py dots`.
