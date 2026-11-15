@@ -38,7 +38,7 @@ h1,h2,h3,h4{color:#FFFFFF}
 .me{width:42px;height:42px;border-radius:21px;background:rgba(255,255,255,.14);color:#FFFFFF;display:flex;align-items:center;justify-content:center;flex:0 0 auto;transition:background .2s}
 .me:hover,.me.active{background:rgba(255,255,255,.24)}
 body.home-page .top{background:linear-gradient(rgba(42,68,104,.85),rgba(42,68,104,0))}
-@media (max-width:899px){body.home-page .top .acct{display:none}} /* the phone home keeps its trips button top right */
+body.home-page .home2-bag{display:none} /* Trips is in the bar now; You sits top right like every page */
 
 /* ---------- the bar at the bottom (Q01): same on phone and computer ---------- */
 .mnav{display:none!important}
@@ -52,7 +52,18 @@ body.home-page .top{background:linear-gradient(rgba(42,68,104,.85),rgba(42,68,10
 @keyframes dock-in{from{transform:translate(-50%,130px)}to{transform:translate(-50%,0)}}
 body{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
 body.home-page{padding-bottom:0}
-body.home-page .dock{display:none}
+/* the globe home has the bar too (Manu 2026-11-15); it comes up after the opening */
+body.home-intro .dock{display:none}
+body.home-page .home2-ui{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+body.home-page .home2-ui::before{bottom:calc(-100px - env(safe-area-inset-bottom,0px));height:calc(100% + 180px)}
+@media (min-width:900px){
+  body.home-page .home2-ui{bottom:0}
+  body.home-page .home2 .globe-tools{bottom:100px}
+  body.home-page .home2 .maplibregl-ctrl-bottom-right{bottom:96px}
+}
+/* the map attribution never sits under the bar */
+.plan3-map .maplibregl-ctrl-bottom-right,.plan3-map .maplibregl-ctrl-bottom-left{bottom:40px}
+@media (min-width:900px){.plan3-map .maplibregl-ctrl-bottom-right,.plan3-map .maplibregl-ctrl-bottom-left{bottom:96px}}
 @media (min-width:900px){
   .dock{height:64px;width:min(480px,calc(100% - 28px))}
   .dock a{flex-direction:row;gap:8px;font-size:14px;height:50px}
@@ -219,3 +230,7 @@ footer a{color:rgba(255,255,255,.85)}
 .sc-label{background:#FFFFFF;color:#111111;border-color:#111111}
 .sc-legend i{background:#FFFFFF;border-color:#111111;color:#111111}
 .sc-legend i.have{background:#111111;color:#FFFFFF}.sc-legend i.picked{background:var(--accent)}
+
+/* the logo and You sit at the page edges, like the full-width pages under them */
+.top .wrap{max-width:none;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+@media (min-width:900px){.top .wrap{padding-left:32px;padding-right:32px}}
