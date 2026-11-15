@@ -234,3 +234,14 @@ footer a{color:rgba(255,255,255,.85)}
 /* the logo and You sit at the page edges, like the full-width pages under them */
 .top .wrap{max-width:none;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 @media (min-width:900px){.top .wrap{padding-left:32px;padding-right:32px}}
+
+/* ---------- /preview and /phone: the app in frames, on the night sky ---------- */
+.pv{background:var(--night-sky);background-color:#2A4468;color:#FFFFFF}
+.pv-bar{background:rgba(22,36,62,.85);border-bottom:1px solid rgba(255,255,255,.14);color:#FFFFFF}
+.pv-bar :is(input,select){background:rgba(255,255,255,.1);color:#FFFFFF;border:0;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.28)}
+.pv figcaption{color:var(--ink-2)}
+.pv-phone iframe,.pv-phone-box iframe{border:12px solid #111111;border-radius:44px;background:#2A4468}
+.pv-desk-in{border-color:#111111;background:#2A4468}
+.pv-only .pv-stage{padding:20px}
+.pv-phone-box{position:relative;flex:0 0 auto}
+.pv-phone-box iframe{position:absolute;left:0;top:0;transform-origin:0 0;box-sizing:content-box;box-shadow:0 30px 80px rgba(0,0,0,.45)}
