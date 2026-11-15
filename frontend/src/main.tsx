@@ -13,6 +13,7 @@ import "./theme/tabs.css";
 import "./theme/trails.css";
 import "./theme/paper.css";
 import "./theme/editorial.css";
+import "./theme/fixes.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

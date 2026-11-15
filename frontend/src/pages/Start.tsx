@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ItineraryCards, useItineraries } from "../components/ItineraryCards";
 import { HomeGlobe } from "../components/Maps";
 import { TripStarter } from "../components/TripStarter";
 import { MONTHS } from "../lib/format";
+import type { GlobeFocus } from "../components/Globe";
 
 export const DRESS_ME = "Dress me for this trip";
 
@@ -24,13 +25,21 @@ export default function Start({ tab }: { tab: "own" | "ideas" }) {
   const [month, setMonth] = useState<number | null>(null);
   const [len, setLen] = useState(0);
   const lenOk = LENGTHS[len][1];
+  const [focus, setFocus] = useState<GlobeFocus[]>([]);
+  // computer: the page is one screen, the map on the left and the plan scrolling on its own on the right
+  useEffect(() => {
+    if (tab !== "own") return;
+    document.body.classList.add("fit-page");
+    return () => document.body.classList.remove("fit-page");
+  }, [tab]);
 
   if (tab === "own") return (
     <main className="plan3">
-      <div className="plan3-map"><HomeGlobe bare /></div>
+      <div className="plan3-map"><HomeGlobe bare focus={focus} /></div>
       <section className="plan3-sheet">
         <div className="wrap stack">
-          <TripStarter initial={params.get("q") ?? undefined} />
+          <TripStarter initial={params.get("q") ?? undefined}
+            onStops={(s) => setFocus(s.map((x) => ({ lat: x.lat, lon: x.lon, name: x.name })))} />
           <h3 style={{ fontSize: 20, marginTop: 8 }}>Rather start from a ready trip?</h3>
           <ItineraryCards items={items} limit={3} />
           <Link className="btn" to="/ideas">All recommended trips</Link>
