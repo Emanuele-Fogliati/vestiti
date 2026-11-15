@@ -88,6 +88,35 @@ def chain(ways: list[list[tuple[float, float]]]) -> list[tuple[float, float]]:
     return line
 
 
+def assemble(line: list[tuple[float, float]], gap_km: float = 0.05) -> list[tuple[float, float]]:
+    """A relation's line chained in member order can jump where the members are out of order:
+    cut it at every jump, then join the pieces greedily, end to nearest end, flipping as needed."""
+    parts, cur = [], [line[0]] if line else []
+    for a, b in zip(line, line[1:]):
+        if km(a, b) > gap_km:
+            parts.append(cur)
+            cur = []
+        cur.append(b)
+    if cur:
+        parts.append(cur)
+    if len(parts) < 2:
+        return list(line)
+    out = max(parts, key=len)
+    parts.remove(out)
+    while parts:
+        best = None
+        for i, p in enumerate(parts):
+            for d, at_end, flip in ((km(out[-1], p[0]), True, False), (km(out[-1], p[-1]), True, True),
+                                    (km(out[0], p[-1]), False, False), (km(out[0], p[0]), False, True)):
+                if best is None or d < best[0]:
+                    best = (d, i, at_end, flip)
+        _, i, at_end, flip = best
+        p = parts.pop(i)
+        p = p[::-1] if flip else p
+        out = out + p if at_end else p + out
+    return out
+
+
 def from_osm(rel: int) -> list[tuple[float, float]]:
     d = get(f"https://hiking.waymarkedtrails.org/api/v1/details/relation/{rel}")
     ways: list = []
@@ -192,7 +221,13 @@ def nearest(line, p) -> tuple[int, float]:
 
 
 def clip(line, a, b):
-    """The part of an OSM relation between the start and the goal, in that direction."""
+    """The part of an OSM relation between the start and the goal, in that direction. When they are
+    its two ends (a whole route, or a loop whose start is its goal) it is the whole line: nearest()
+    would find the same node for both ends of a loop and leave nothing."""
+    if km(line[0], a) < 0.05 and km(line[-1], b) < 0.05:
+        return list(line)
+    if km(line[0], b) < 0.05 and km(line[-1], a) < 0.05 and km(a, b) >= 0.05:
+        return list(line)[::-1]
     i, _ = nearest(line, a)
     j, _ = nearest(line, b)
     return line[i:j + 1] if i <= j else line[j:i + 1][::-1]
