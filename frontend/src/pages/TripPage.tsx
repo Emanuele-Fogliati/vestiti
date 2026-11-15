@@ -74,6 +74,15 @@ export default function TripPage() {
   }, [id, tier, loadPlans]);
 
   useEffect(() => { loadAll(); }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
+  // the ⋯ menu closes when you tap anywhere else or press Escape
+  useEffect(() => {
+    if (!menu) return;
+    const shut = (e: Event) => { if (!(e.target as Element).closest?.(".x-menu-w")) setMenu(false); };
+    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") setMenu(false); };
+    document.addEventListener("pointerdown", shut);
+    document.addEventListener("keydown", esc);
+    return () => { document.removeEventListener("pointerdown", shut); document.removeEventListener("keydown", esc); };
+  }, [menu]);
 
   // the quiz comes before the plan, once per traveller (answered or skipped)
   useEffect(() => {
@@ -236,7 +245,6 @@ export default function TripPage() {
                     <TripBoard trip={trip} onChanged={loadAll} selected={Math.max(0, sel)} onSelect={setStageIdx} />
                   </details>
                   <div className="r16-cta">
-                    <div className="r16-steps" aria-hidden="true"><span className="on">1 · Plan the trip</span><i /><span>2 · Pack</span></div>
                     <button type="button" onClick={() => go("bag")}>Trip ready? <span>Pack for it →</span></button>
                   </div>
                 </div>

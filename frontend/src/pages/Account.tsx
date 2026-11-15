@@ -91,7 +91,7 @@ export default function Account() {
                 <option value="us">US stores, prices in $</option>
                 <option value="eu">European stores, prices in €</option>
               </select></div>
-            <div className="field"><label>Do you run cold or warm? ({offset > 0 ? `+${offset.toFixed(2)}` : offset.toFixed(2)} clo)</label>
+            <div className="field"><label>Do you run cold or warm?</label>
               <input type="range" min={-0.3} max={0.3} step={0.05} value={offset} onChange={(e) => setOffset(Number(e.target.value))}
                 onMouseUp={() => patch({ thermal_offset: offset })} onTouchEnd={() => patch({ thermal_offset: offset })} onKeyUp={() => patch({ thermal_offset: offset })} />
               <div className="row small muted"><span>I run warm</span><span className="spacer" /><span>Average</span><span className="spacer" /><span>I run cold</span></div>

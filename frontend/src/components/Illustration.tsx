@@ -47,7 +47,7 @@ export function Illustration({ terrain, art, label }: { terrain?: Terrain; art?:
   if (id ? landmark === null : !terrain || art !== undefined) return null;
   const name = label ?? (landmark ? art?.label : undefined);
   return (
-    <figure className="thumb">
+    <figure className={`thumb${id && landmark === undefined ? " wait" : ""}`}>
       <svg viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" role={name ? "img" : undefined}
         aria-label={name} aria-hidden={name ? undefined : true}
         dangerouslySetInnerHTML={{ __html: id ? landmark ?? "" : ART[terrain!] }} />

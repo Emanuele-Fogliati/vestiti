@@ -4,8 +4,8 @@ import { TrailCards } from "../components/TrailCards";
 import { api } from "../lib/api";
 import type { TrailCard, TrailDifficulty } from "../lib/types";
 
-const COUNTRY: Record<string, string> = { IT: "Italy", AR: "Argentina", CL: "Chile", PE: "Peru", IS: "Iceland",
-  NZ: "New Zealand", JP: "Japan", VN: "Vietnam", NA: "Namibia" };
+const REGION = (() => { try { return new Intl.DisplayNames(["en"], { type: "region" }); } catch { return null; } })();
+const countryName = (c: string) => { try { return REGION?.of(c) ?? c; } catch { return c; } };
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const LEVELS: (TrailDifficulty | "")[] = ["", "easy", "moderate", "hard", "technical"];
 
@@ -34,27 +34,34 @@ export default function Trails() {
     && (!find || [t.name, t.country, t.region, t.base].join(" ").toLowerCase().includes(find)))
     .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false)), [all, level, kind, style, find]);
 
+  // country codes as names, A to Z (the list holds every country we have walks for)
+  const byName = useMemo(() => {
+    const l = countries.map((c) => [c, countryName(c)] as const);
+    if (country && !countries.includes(country)) l.push([country, countryName(country)]);
+    return l.sort((a, b) => a[1].localeCompare(b[1]));
+  }, [countries, country]);
+
   return (
-    <div className="wrap section trailsidx">
-      <h1>Trekking</h1>
+    <main className="page"><div className="wrap trailsidx">
+      <div className="page-head"><div><p className="kicker">Walks and treks</p><h1>Treks</h1></div></div>
       <p className="lede">The best walks of each country, trail by trail: where to start, how far and how high, when to turn back, and what to wear on it.</p>
       <div className="tfilters" role="group" aria-label="Filter the trails">
-        <div className="seg" role="group" aria-label="Country">
-          <button type="button" aria-pressed={!country} onClick={() => set("country", "")}>All</button>
-          {countries.map((c) => <button key={c} type="button" aria-pressed={country === c} onClick={() => set("country", c)}>{COUNTRY[c] ?? c}</button>)}
-        </div>
+        <select aria-label="Country" value={country} onChange={(e) => set("country", e.target.value)}>
+          <option value="">Every country</option>
+          {byName.map(([c, n]) => <option key={c} value={c}>{n}</option>)}
+        </select>
         <select aria-label="How hard" value={level} onChange={(e) => set("level", e.target.value)}>
           {LEVELS.map((l) => <option key={l} value={l}>{l ? l[0].toUpperCase() + l.slice(1) : "Any difficulty"}</option>)}
         </select>
         <select aria-label="Treks or city walks" value={style} onChange={(e) => set("style", e.target.value)}>
-          <option value="">Treks and city walks</option>
+          <option value="">All walks</option>
           <option value="trek">Treks</option>
           <option value="city">City walks</option>
         </select>
         <select aria-label="How long" value={kind} onChange={(e) => set("kind", e.target.value)}>
-          <option value="">Day walks and treks</option>
+          <option value="">Any length</option>
           <option value="day">Day walks</option>
-          <option value="multiday">Treks of several days</option>
+          <option value="multiday">Several days</option>
         </select>
         <select aria-label="When you go" value={month ?? ""} onChange={(e) => set("month", e.target.value)}>
           <option value="">Any month</option>
@@ -64,6 +71,6 @@ export default function Trails() {
       {err && <p className="err">{err}</p>}
       {!all && !err && <div className="loading"><span className="spin" /></div>}
       {all && (shown.length ? <TrailCards trails={shown} query={month ? `?month=${month}` : ""} /> : <p className="muted">No trail matches: try another filter.</p>)}
-    </div>
+    </div></main>
   );
 }
