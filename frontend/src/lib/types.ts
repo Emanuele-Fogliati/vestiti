@@ -616,8 +616,9 @@ export interface TrailCard {
 }
 /** One leg of a trip on its map: along the road (OSM), a flight arc, or a plain line offline. */
 export interface RoadLeg { mode: "road" | "air" | "line"; km: number; hours: number | null; line: [number, number][] }
-/** A trail on the home globe in Trek mode: id, name, goal lat, lon, difficulty 0-3 (easy..technical), tier, days. */
-export type TrailDot = [string, string, number, number, number, "A" | "B", number];
+/** A trail on the home globe in Trek mode: id, name, goal lat, lon, difficulty 0-3 (easy..technical), tier, days,
+ *  rank 1-6 (the places' zoom ladder: 6 shows from space, 1 only from close by). */
+export type TrailDot = [string, string, number, number, number, "A" | "B", number, number];
 /** 0-5 each, the rubric of the zone ranking (Manu, 2026-11-14). */
 export interface TrailScores { effort: number; nature: number; culture: number; relax: number; history: number; landscape: number }
 export interface TrailPoint {

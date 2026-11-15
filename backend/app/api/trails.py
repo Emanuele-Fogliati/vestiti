@@ -11,14 +11,17 @@ GET /api/trails/{id}/card       one trail as a card (the globe opens it when a d
 from __future__ import annotations
 
 from datetime import date, timedelta
+import gzip
+import json
 from functools import lru_cache
 from xml.sax.saxutils import escape
 
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from fastapi.responses import Response
 from sqlalchemy.orm import Session
 
 from app import art, trails
+from app.trails import world
 from app.db import get_db
 
 router = APIRouter(prefix="/api/trails", tags=["trails"])
@@ -34,7 +37,7 @@ ODBL = "Path © OpenStreetMap contributors (ODbL); altitude Copernicus DEM"
 
 
 def _trail(trail_id: str) -> trails.Trail:
-    t = trails.by_id().get(trail_id)
+    t = trails.find(trail_id)
     if not t:
         raise HTTPException(404, "No such trail")
     return t
@@ -129,16 +132,61 @@ def _country_cards(cc: str | None, month: int | None) -> dict:
 LEVELS = ["easy", "moderate", "hard", "technical"]
 
 
-@router.get("/dots")
-def dots():
-    """Manu, 2026-11-14: in Trek mode every trek has its dot on the globe. One row per trail,
-    [id, name, lat, lon, difficulty 0-3, tier, days], at the trail's goal: many trails leave from
-    the same trailhead (El Chaltén), but each walks to its own lake or summit."""
+def _rank(t: trails.Trail) -> int:
+    """How far away its dot shows on the globe, the same ladder as the places (Manu 2026-11-14):
+    6 = seen from space (the world's iconic treks), 5 = famous, ... 1 = only from close by.
+    The top treks of a country are famous; the long tail ranks by its length."""
+    if t.id in world.iconic():
+        return 6
+    if t.tier == "A":
+        return 5
+    km = (trails.geo(t.id) or {}).get("km") or 0
+    return 4 if km >= 100 else 3 if km >= 30 else 2 if km >= 12 else 1
+
+
+def _packed(request: Request, body: bytes) -> Response:
+    """The dots are large (a 10-degree cell of the Alps: ~18,000 treks, 1.4 MB): gzip them."""
+    if "gzip" in request.headers.get("accept-encoding", ""):
+        return Response(gzip.compress(body, 6), media_type="application/json",
+                        headers={"Content-Encoding": "gzip", "Vary": "Accept-Encoding", "Cache-Control": "public, max-age=3600"})
+    return Response(body, media_type="application/json", headers={"Vary": "Accept-Encoding"})
+
+
+@lru_cache(maxsize=64)
+def _dumped(key: str) -> bytes:
+    if key == "far":
+        return json.dumps(_dots(), ensure_ascii=False, separators=(",", ":")).encode()
+    i, j = map(int, key.split("/"))
+    return json.dumps({"trails": [[r[0], r[1], r[2], r[3], r[4], "B", r[5], r[6]] for r in world.cell(i, j)]},
+                      ensure_ascii=False, separators=(",", ":")).encode()
+
+
+@lru_cache
+def _dots() -> dict:
     def goal(t: trails.Trail):
         return next((p for p in reversed(t.points) if p.role == "goal"), t.points[-1])
-    return {"fields": ["id", "name", "lat", "lon", "level", "tier", "days"],
-            "trails": [[t.id, t.name, round(goal(t).lat, 4), round(goal(t).lon, 4),
-                        LEVELS.index(t.difficulty), t.tier, t.days] for t in trails.trails()]}
+    rows = [[t.id, t.name, round(goal(t).lat, 4), round(goal(t).lon, 4), LEVELS.index(t.difficulty), t.tier, t.days,
+             _rank(t)] for t in trails.trails()]
+    rows += [[r[0], r[1], r[2], r[3], r[4], "B", r[5], r[6]] for r in world.far()]
+    return {"fields": ["id", "name", "lat", "lon", "level", "tier", "days", "rank"], "trails": rows,
+            "cell": world.CELL, "cell_rank": world.FAR_RANK}
+
+
+@router.get("/dots")
+def dots(request: Request):
+    """Manu, 2026-11-14: in Trek mode every trek has its dot on the globe. One row per trail,
+    [id, name, lat, lon, difficulty 0-3, tier, days, rank], at the trail's goal: many trails leave
+    from the same trailhead (El Chaltén), but each walks to its own lake or summit. The world's
+    smaller treks (rank under `cell_rank`) come by cell, from /dots/cell/{i}/{j}, as you zoom in."""
+    return _packed(request, _dumped("far"))
+
+
+@router.get("/dots/cell/{i}/{j}")
+def dots_cell(i: int, j: int, request: Request):
+    """The smaller treks of one cell of `cell` degrees: lat in [i, i+1) * cell, lon in [j, j+1) * cell."""
+    if not (-9 <= i <= 9 and -18 <= j <= 18):
+        raise HTTPException(404, "No such cell")
+    return _packed(request, _dumped(f"{i}/{j}"))
 
 
 @router.get("/{trail_id}/card")

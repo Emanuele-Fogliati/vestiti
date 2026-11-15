@@ -120,9 +120,36 @@ def test_api_dots_and_card(client):
     r = client.get("/api/trails/dots").json()
     assert r["fields"][:4] == ["id", "name", "lat", "lon"]
     ids = {row[0] for row in r["trails"]}
-    assert ids == {t.id for t in trails.trails()}
+    from app.trails import world
+    assert ids == {t.id for t in trails.trails()} | {x[0] for x in world.far()}
     row = next(x for x in r["trails"] if x[0] == "ar-laguna-de-los-tres")
     assert row[4] == 2 and row[5] == "A"
     c = client.get("/api/trails/ar-laguna-de-los-tres/card").json()
     assert c["id"] == "ar-laguna-de-los-tres" and c["tier"] == "A"
     assert client.get("/api/trails/nope/card").status_code == 404
+
+
+def test_world_polyline_decodes():
+    from app.trails import world
+    pts = world.decode("_p~iF~ps|U_ulLnnqC_mqNvxq`@", dims=2, prec=(1e5, 1e5))
+    assert pts == [[38.5, -120.2], [40.7, -120.95], [43.252, -126.453]]
+
+
+def test_api_dots_rank_and_cells(client):
+    """Every trek of the world as a dot: far ones (rank >= cell_rank) at once, the rest by cell."""
+    from app.trails import world
+    r = client.get("/api/trails/dots").json()
+    assert r["fields"][-1] == "rank" and all(1 <= row[7] <= 6 for row in r["trails"])
+    assert all(row[7] >= r["cell_rank"] for row in r["trails"] if "-osm-" in row[0] and row[0][:2].upper() in world.countries())
+    assert client.get("/api/trails/dots/cell/99/0").status_code == 404
+    rows = world.dots()
+    if not rows:
+        return
+    small = next(x for x in rows if x[6] < world.FAR_RANK)
+    i, j = int(small[2] // world.CELL), int(small[3] // world.CELL)
+    cell = client.get(f"/api/trails/dots/cell/{i}/{j}").json()["trails"]
+    assert small[0] in {x[0] for x in cell}
+    c = client.get(f"/api/trails/{small[0]}/card").json()
+    assert c["id"] == small[0] and c["has_map"]
+    one = client.get(f"/api/trails/{small[0]}").json()
+    assert len(one["line"]) >= 2 and one["profile"] and one["computed"]["km"] > 0

@@ -29,17 +29,21 @@ const narrow = (el: HTMLElement) => el.clientWidth < 600;
 
 /** Trek mode (Manu, 2026-11-14): every trek is a dot, coloured by how hard it is. */
 const TREK_COLOURS = ["#3E8E4E", "#D9A400", "#D8642A", "#A8322B"]; // easy, moderate, hard, technical
-const TREK_NAMES_FROM_ZOOM = 6;
-
+/** Manu, 2026-11-14: a trek's dot shows by zoom with the very same ladder as the places
+ *  (globeDotZoom): from space only the iconic treks, every step closer the next rank. */
 function trailsGeoJSON(rows: TrailDot[]): GeoJSON.FeatureCollection {
   return {
     type: "FeatureCollection",
-    features: rows.map(([id, name, lat, lon, level, tier, days], i) => ({
+    features: rows.map(([id, name, lat, lon, level, tier, days, rank], i) => ({
       type: "Feature", id: i, geometry: { type: "Point", coordinates: [lon, lat] },
-      properties: { id, name, level, top: tier === "A" ? 1 : 0, days },
+      properties: { id, name, level, top: tier === "A" ? 1 : 0, days, rank: rank ?? 1,
+        z: globeDotZoom({ level: rank ?? 1, parent: null }) },
     })),
   };
 }
+
+/** The world's smaller treks come by cell of `size` degrees once you are close enough to see them. */
+interface TrekCells { size: number; from: number; asked: Set<string>; more: TrailDot[] }
 
 /** Room the title takes at the top, so the globe sits below it. */
 function topPad(el: HTMLElement): number {
@@ -133,13 +137,18 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
   modeRef.current = mode;
   const markersRef = useRef(() => {});
   const [dots, setDots] = useState<TrailDot[] | null>(null);
+  const cellsRef = useRef<TrekCells>({ size: 10, from: Infinity, asked: new Set(), more: [] });
 
   useEffect(() => {
     loadPlaces().then(setData).catch(() => setFailed(true));
   }, []);
   // the trek dots load the first time Trek is chosen
   useEffect(() => {
-    if (mode === "trek" && !dots) api.trailDots().then((r) => setDots(r.trails)).catch(() => setDots([]));
+    if (mode === "trek" && !dots) api.trailDots().then((r) => {
+      // the cells hold the ranks under cell_rank: ask for them from the zoom those ranks show at
+      cellsRef.current = { size: r.cell ?? 10, from: globeDotZoom({ level: (r.cell_rank ?? 1) - 1, parent: null }) - 0.4, asked: new Set(), more: [] };
+      setDots(r.trails);
+    }).catch(() => setDots([]));
   }, [mode, dots]);
 
   useEffect(() => {
@@ -394,12 +403,13 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
       const c = mapColors();
       map.addSource("trails", { type: "geojson", data: trailsGeoJSON(dots) });
       const colour = ["match", ["get", "level"], 0, TREK_COLOURS[0], 1, TREK_COLOURS[1], 2, TREK_COLOURS[2], TREK_COLOURS[3]] as maplibregl.ExpressionSpecification;
-      map.addLayer({ id: "tr-dot", type: "circle", source: "trails",
+      const shown: maplibregl.ExpressionSpecification = [">=", ["zoom"], ["get", "z"]];
+      map.addLayer({ id: "tr-dot", type: "circle", source: "trails", filter: shown,
         paint: { "circle-color": colour, "circle-stroke-color": "#FFFFFF", "circle-stroke-width": 1.4,
           "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, ["case", ["==", ["get", "top"], 1], 3.6, 2.2], 8, ["case", ["==", ["get", "top"], 1], 7, 5]] } });
-      map.addLayer({ id: "tr-name", type: "symbol", source: "trails", minzoom: TREK_NAMES_FROM_ZOOM,
+      map.addLayer({ id: "tr-name", type: "symbol", source: "trails", filter: shown,
         layout: { "text-field": ["get", "name"], "text-font": ["Noto Sans Regular"], "text-size": 11.5, "text-offset": [0, 1.1],
-          "text-anchor": "top", "text-max-width": 9, "symbol-sort-key": ["-", 1, ["get", "top"]] },
+          "text-anchor": "top", "text-max-width": 9, "symbol-sort-key": ["-", 10, ["get", "rank"]], "text-optional": true },
         paint: { "text-color": c.ink, "text-halo-color": c.halo, "text-halo-width": 1.4 } });
       map.addLayer({ id: "tr-sel", type: "circle", source: "trails", filter: ["==", ["get", "id"], ""],
         paint: { "circle-radius": 12, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": c.ink, "circle-stroke-width": 2.5 } });
@@ -415,6 +425,43 @@ export default function Globe({ bare, intro, onReady, mode = "trip" }: { bare?: 
     const map = mapRef.current;
     if (ready && map?.getLayer("tr-sel")) map.setFilter("tr-sel", ["==", ["get", "id"], trail?.id ?? ""]);
   }, [trail, ready, dots]);
+
+  // the world's smaller treks: hundreds of thousands, so only the cells you look at, once you are
+  // close enough for their ranks to show (the ladder above hides them from farther anyway)
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!ready || !map || !dots || mode !== "trek") return;
+    const look = () => {
+      const cells = cellsRef.current;
+      if (map.getZoom() < cells.from || !map.getSource("trails")) return;
+      const b = map.getBounds();
+      const s = cells.size;
+      const want: [number, number][] = [];
+      const i0 = Math.floor(Math.max(-89.9, b.getSouth()) / s), i1 = Math.floor(Math.min(89.9, b.getNorth()) / s);
+      let w = b.getWest(), e = b.getEast();
+      if (e - w >= 360) { w = -180; e = 179.9; }
+      for (let i = i0; i <= i1; i++) {
+        for (let j = Math.floor(w / s); j <= Math.floor(e / s); j++) {
+          const jj = ((j % (360 / s)) + 360 / s) % (360 / s) - 180 / s; // wrap past the date line
+          const k = `${i}/${jj}`;
+          if (!cells.asked.has(k)) { cells.asked.add(k); want.push([i, jj]); }
+        }
+      }
+      if (!want.length) return;
+      Promise.all(want.map(([i, j]) => api.trailDotsCell(i, j).then((r) => r.trails).catch(() => {
+        cells.asked.delete(`${i}/${j}`);
+        return [] as TrailDot[];
+      }))).then((parts) => {
+        const more = parts.flat();
+        if (!more.length) return;
+        cells.more.push(...more);
+        (map.getSource("trails") as maplibregl.GeoJSONSource | undefined)?.setData(trailsGeoJSON(dots.concat(cells.more)));
+      });
+    };
+    map.on("moveend", look);
+    look();
+    return () => { map.off("moveend", look); };
+  }, [ready, dots, mode]);
 
   // ring around the open place
   useEffect(() => {
