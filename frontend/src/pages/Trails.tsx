@@ -99,7 +99,7 @@ export default function Trails() {
   const search = (
     <form className="mf-say mf-search" role="search" onSubmit={(e) => { e.preventDefault(); set("find", typed.trim()); }}>
       <SearchIcon />
-      <input type="search" value={typed} aria-label="Search treks" placeholder="Search a trek, park, town or country"
+      <input type="search" value={typed} aria-label="Search hikes" placeholder="Search a hike, park, town or country"
         onChange={(e) => { setTyped(e.target.value); set("find", e.target.value.trim()); }} />
       {typed && <button type="button" aria-label="Clear" onClick={() => { setTyped(""); set("find", ""); }}>×</button>}
     </form>
@@ -112,9 +112,9 @@ export default function Trails() {
           <option value="">Every country</option>
           {byName.map(([c, n]) => <option key={c} value={c}>{n}</option>)}
         </select>
-        <select aria-label="Treks or city walks" value={style} onChange={(e) => set("style", e.target.value)}>
+        <select aria-label="Hikes or city walks" value={style} onChange={(e) => set("style", e.target.value)}>
           <option value="">All walks</option>
-          <option value="trek">Treks</option>
+          <option value="trek">Hikes</option>
           <option value="city">City walks</option>
         </select>
         <select aria-label="How long" value={kind} onChange={(e) => set("kind", e.target.value)}>
@@ -195,12 +195,12 @@ export default function Trails() {
           {desk && <div className="mf-legend">{(["easy", "moderate", "hard", "technical"] as const).map((l) => <span key={l}><i className={`mf-dot ${l}`} />{DIFFICULTY[l]}</span>)}</div>}
         </div>
 
-        <section className="mf-float mf-panel" aria-label="Treks">
+        <section className="mf-float mf-panel" aria-label="Hikes">
           {!desk && sel ? (
             <>
-              <button type="button" className="mf-btn sm mf-back" onClick={() => set("t", "")}><Back /> All treks</button>
+              <button type="button" className="mf-btn sm mf-back" onClick={() => set("t", "")}><Back /> All hikes</button>
               {card}
-              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this trek · {money(totalOf(picks), cur)}</div>
+              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this hike · {money(totalOf(picks), cur)}</div>
                 <ProductRow picks={picks} onPick={pick} /></div>}
               <div className="mf-phone-go">
                 <button type="button" className="mf-btn go wide" disabled={!picks.length} onClick={() => setBuyOpen(true)}>
@@ -209,7 +209,7 @@ export default function Trails() {
             </>
           ) : (
             <>
-              <div className="mf-thead"><h1>Treks</h1><span className="mf-k">{all ? `${shown.length.toLocaleString("en-US")} in ${where}` : ""}</span></div>
+              <div className="mf-thead"><h1>Hikes</h1><span className="mf-k">{all ? `${shown.length.toLocaleString("en-US")} in ${where}` : ""}</span></div>
               {search}
               {filters}
               {err && <p className="err">{err}</p>}
@@ -218,7 +218,7 @@ export default function Trails() {
               {all && shown.length > PER && (desk ? (
                 <div className="mf-pager"><span>{page + 1} / {pages}</span>
                   <span><button type="button" className="mf-btn sm" disabled={!page} onClick={() => setPage(page - 1)}>Back</button>
-                    <button type="button" className="mf-btn sm" disabled={page >= pages - 1} onClick={() => setPage(page + 1)}>More treks</button></span>
+                    <button type="button" className="mf-btn sm" disabled={page >= pages - 1} onClick={() => setPage(page + 1)}>More hikes</button></span>
                 </div>
               ) : list.length < shown.length && (
                 <button type="button" className="mf-btn wide" onClick={() => setPage(page + 1)}>Show more ({(shown.length - list.length).toLocaleString("en-US")} left)</button>
@@ -229,11 +229,11 @@ export default function Trails() {
 
         {desk && card}
         {desk && (sel ? (
-          <BuyBar title="To get for this trek" sub={`what ${sel.name} asks for in ${MONTHS[wearMonth - 1]}`} picks={picks} onPick={pick}
+          <BuyBar title="To get for this hike" sub={`what ${sel.name} asks for in ${MONTHS[wearMonth - 1]}`} picks={picks} onPick={pick}
             onBuy={() => setBuyOpen(true)} empty={wear ? "Nothing special to wear on it." : "Working out the kit…"} />
         ) : (
-          <BuyBar title="To get for a trek" sub="pick one on the map or in the list" picks={[]}
-            empty="Pick a trek: what it asks you to wear shows here, with real products and prices." />
+          <BuyBar title="To get for a hike" sub="pick one on the map or in the list" picks={[]}
+            empty="Pick a hike: what it asks you to wear shows here, with real products and prices." />
         ))}
       </div>
 

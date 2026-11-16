@@ -21,7 +21,7 @@ export const DRESS_ME_LABEL = "Dress me for this trip";
 const LIKE_CHIPS: [PlanLike, string][] = [
   ["nature", "Nature"], ["landscape", "Views & photos"], ["culture", "Culture"], ["history", "History"], ["relax", "Relax"],
 ];
-const EFFORT_CHIPS: [PlanEffort, string][] = [["easy", "Easy, no treks"], ["some", "Some walking"], ["hard", "Big treks"]];
+const EFFORT_CHIPS: [PlanEffort, string][] = [["easy", "Easy, no hikes"], ["some", "Some walking"], ["hard", "Big hikes"]];
 
 const EXAMPLES = [
   "Patagonia in January, three weeks",

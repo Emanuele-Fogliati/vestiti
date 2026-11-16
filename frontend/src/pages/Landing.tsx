@@ -133,7 +133,7 @@ export default function Landing() {
             {(["trip", "trek"] as const).map((m) => (
               <button key={m} type="button" role="tab" aria-selected={mode === m} className={mode === m ? "on" : ""} onClick={() => setMode(m)}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={m === "trip" ? PLANE : PEAK} /></svg>
-                {m === "trip" ? "Trip" : "Trek"}
+                {m === "trip" ? "Trip" : "Hike"}
               </button>
             ))}
           </div>
@@ -149,12 +149,12 @@ export default function Landing() {
         {door ? (
           <div className="doors-list" aria-live="polite">
             <div className="doors-head">
-              <h2>{door === "inspire" ? `Ready trips for ${name}` : `Treks good in ${name}`}</h2>
+              <h2>{door === "inspire" ? `Ready trips for ${name}` : `Hikes good in ${name}`}</h2>
               <button type="button" className="doors-x" onClick={shut} aria-label="Back">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
               </button>
             </div>
-            {door === "trek" && <p className="doors-note">Every trek is a dot on the globe: tap one.</p>}
+            {door === "trek" && <p className="doors-note">Every hike is a dot on the globe: tap one.</p>}
             {rows === null ? <p className="loading"><span className="spin" /></p> : (
               <div className="doors-rows">
                 {rows.map((r, i) => (<Fragment key={r.to}>
@@ -166,7 +166,7 @@ export default function Landing() {
                 </Fragment>))}
                 {!rows.length && <p className="doors-note">Nothing yet for {name}.</p>}
                 <Link className="doors-all" to={door === "inspire" ? "/ideas" : `/trails?month=${month}`}>
-                  {door === "inspire" ? "All ready trips" : "All treks"} →
+                  {door === "inspire" ? "All ready trips" : "All hikes"} →
                 </Link>
               </div>
             )}
@@ -179,7 +179,7 @@ export default function Landing() {
             </button>
             <button type="button" className="door" onClick={() => open("trek")}>
               <span className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{ICON.trek}</svg></span>
-              <span><b>Find a trek</b><small>The best for {name}</small></span>
+              <span><b>Find a hike</b><small>The best for {name}</small></span>
             </button>
           </div>
         )}
