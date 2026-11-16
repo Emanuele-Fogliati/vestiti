@@ -47,6 +47,9 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
     const W = el.clientWidth, H = el.clientHeight;
     const taken: [number, number][] = [];
     const keep = new Set<string>();
+    // each drawing once on the whole map (Manu 2026-11-16): walks that share a place show it once,
+    // and a place already drawn along the chosen walk is not drawn again for another walk
+    const drawn = new Set<string>((sights ?? []).map((x) => x.art?.id ?? x.id));
     const cands = pts.filter((t) => t.art?.kind === "landmark").sort((a, b) => rank(a) - rank(b));
     for (const t of cands) {
       if (keep.size >= 40) break;
@@ -55,8 +58,10 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
       // on the globe's far side, or under the panels: no picture
       if (at.x < free.left - 24 || at.x > W - free.right + 24 || at.y < free.top - 24 || at.y > H - free.bottom + 24) continue;
       if (map.getZoom() < 9 && !isFront(map, lo, la)) continue;
+      if (drawn.has(t.art!.id)) continue;
       if (t.id !== selected && taken.some(([x, y]) => Math.abs(x - at.x) < 68 && Math.abs(y - at.y) < 50)) continue;
       taken.push([at.x, at.y]);
+      drawn.add(t.art!.id);
       keep.add(t.id);
       let m = markers.current.get(t.id);
       if (!m) {
@@ -163,6 +168,7 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
         b.classList.add("sight");
         sightPins.current.push(new maplibregl.Marker({ element: b, anchor: "bottom", offset: [0, -6] }).setLngLat([x.lon, x.lat]).addTo(map));
       }
+      pics.current();
     });
     return () => { for (const m of sightPins.current) m.remove(); sightPins.current = []; };
   }, [sightKey]); // eslint-disable-line react-hooks/exhaustive-deps
