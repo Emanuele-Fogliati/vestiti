@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ActivityEditor } from "../components/ActivityEditor";
 import { EstimateForm } from "../components/Estimate";
+import { HomeGlobe } from "../components/Maps";
 import { PlaceQuestion } from "../components/PlaceQuestion";
 import { PlaceSearch } from "../components/PlaceSearch";
 import { api, type StopInput } from "../lib/api";
@@ -93,14 +94,16 @@ export default function NewTrip() {
   }));
 
   return (
-    <main className="page">
-      <div className="wrap">
-        <div className="page-head">
-          <div><p className="kicker">New trip</p><h1>Paste your plan</h1>
-            <p className="lede" style={{ marginTop: 10 }}>From a chat, an agency or your notes. We turn it into places on days, then you change anything on the board.</p></div>
+    <main className="trk newtrip pasteplan">
+      <div className="mf">
+        <div className="mf-map mf-globe" data-left={640}>
+          <HomeGlobe bare focus={(draft ?? []).flatMap((s) => s.place ? [{ lat: s.place.latitude, lon: s.place.longitude, name: s.place.name }] : [])} />
         </div>
-        <div className="cols">
-          <div className="stack">
+        <section className="mf-float mf-panel mf-paste" aria-label="Paste your plan">
+          <Link className="mf-k mf-crumb" to="/start"><Back /> New trip</Link>
+          <div className="mf-thead"><h1>Paste your plan</h1></div>
+          <div className="mf-scroll stack">
+            <p className="mf-lede">From a chat, an agency or your notes. We turn it into places on days, then you change anything on the board.</p>
             <div className="field"><label htmlFor="desc">Places, dates, what you'll do. Any language.</label>
               <textarea id="desc" rows={5} value={text} maxLength={MAX_TEXT} onChange={(e) => setText(e.target.value)}
                 placeholder="From 12 June 2027: 3 days in Reykjavik, then 4 days hard trekking in Landmannalaugar up to 1100 m, then 2 days in Rome. Or paste the full day-by-day program from your travel agency." />
@@ -162,9 +165,8 @@ export default function NewTrip() {
                 <button className="btn primary big" type="button" disabled={busy} onClick={() => create(true)}>Lay it out on the days</button>
               </div>
             )}
-          </div>
-          <aside className="panel stack">
-            <h3 style={{ fontSize: 18 }}>Tips</h3>
+            <details className="mf-tips">
+              <summary>Tips for a good read</summary>
             <ul className="stagenotes">
               <li>Give a start date ("from 12 June 2027") and days per stop.</li>
               <li>Only know the places? "Lima, Cusco, Machu Picchu, Titicaca" works: we spread the days and mark the plan as an estimate.</li>
@@ -172,10 +174,13 @@ export default function NewTrip() {
               <li>Not decided? "Maybe hiking, don't know yet" plans for both.</li>
               <li>You can change, add or remove stops later. The plan updates.</li>
             </ul>
-            <p className="small muted">No route yet? <Link to="/ideas">Start from a recommended trip</Link>.</p>
-          </aside>
-        </div>
+            </details>
+            <p className="mf-k">No route yet? <Link to="/ideas">Start from a recommended trip</Link>.</p>
+          </div>
+        </section>
       </div>
     </main>
   );
 }
+
+const Back = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>;

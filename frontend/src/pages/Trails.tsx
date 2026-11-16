@@ -25,7 +25,8 @@ export default function Trails() {
   const level = (q.get("level") ?? "") as TrailDifficulty | "";
   const kind = q.get("kind") ?? "";
   const style = q.get("style") ?? "";
-  const find = (q.get("find") ?? "").trim().toLowerCase(); // words typed on the home page
+  const find = (q.get("find") ?? "").trim().toLowerCase(); // words typed here or on the home page
+  const [typed, setTyped] = useState(q.get("find") ?? "");
   const selId = q.get("t");
   const [all, setAll] = useState<TrailCard[] | null>(null);
   const [countries, setCountries] = useState<string[]>([]);
@@ -52,7 +53,7 @@ export default function Trails() {
   const set = (k: string, v: string) => { const n = new URLSearchParams(q); if (v) n.set(k, v); else n.delete(k); if (k !== "t") n.delete("t"); setQ(n, { replace: true }); };
   const shown = useMemo(() => (all ?? []).filter((t) => (!level || t.difficulty === level) && (!kind || t.kind === kind)
     && (!style || (t.style ?? "trek") === style)
-    && (!find || [t.name, t.country, t.region, t.base].join(" ").toLowerCase().includes(find)))
+    && (!find || ((h) => find.split(/\s+/).every((w) => h.includes(w)))([t.name, t.country, countryName(t.country), t.region, t.base].join(" ").toLowerCase())))
     // in season first, then the ones with a drawing (the famous ones), then the rest
     .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
       || Number(b.tier === "A") - Number(a.tier === "A")), [all, level, kind, style, find]);
@@ -94,6 +95,15 @@ export default function Trails() {
 
   const where = country ? countryName(country) : find ? `“${find}”` : "the world";
   const inset = desk ? { top: 20, right: 60, bottom: 150, left: sel ? 870 : 470 } : undefined;
+
+  const search = (
+    <form className="mf-say mf-search" role="search" onSubmit={(e) => { e.preventDefault(); set("find", typed.trim()); }}>
+      <SearchIcon />
+      <input type="search" value={typed} aria-label="Search treks" placeholder="Search a trek, park, town or country"
+        onChange={(e) => { setTyped(e.target.value); set("find", e.target.value.trim()); }} />
+      {typed && <button type="button" aria-label="Clear" onClick={() => { setTyped(""); set("find", ""); }}>×</button>}
+    </form>
+  );
 
   const filters = (
     <div className="mf-filters">
@@ -200,6 +210,7 @@ export default function Trails() {
           ) : (
             <>
               <div className="mf-thead"><h1>Treks</h1><span className="mf-k">{all ? `${shown.length.toLocaleString("en-US")} in ${where}` : ""}</span></div>
+              {search}
               {filters}
               {err && <p className="err">{err}</p>}
               {!all && !err ? <div className="loading"><span className="spin" /></div>
@@ -234,3 +245,5 @@ export default function Trails() {
 const I = (d: string) => () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>;
 const X = I("M6 6l12 12M18 6L6 18");
 const Back = I("M19 12H5M11 6l-6 6 6 6");
+
+const SearchIcon = () => <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>;
