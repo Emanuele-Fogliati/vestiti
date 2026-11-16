@@ -63,7 +63,7 @@ def test_list_and_detail(client):
     assert all(c["weeks"] in (1, 2, 3, 4) and c["months"] and c["destination"] and c["journey"] for c in cards)
     # one card per travel region (Manu, 2026-11-16: not the same trip once per length)
     leads = [c for c in cards if c["lead"]]
-    assert len(leads) == len({c["journey"] for c in cards}) == 18
+    assert len(leads) == len({c["journey"] for c in cards}) == 20
     assert all(c["weeks"] == 2 for c in leads)
     d = client.get("/api/inspire/peru-coast-andes-titicaca?start=2027-06-01").json()
     assert d["start_date"] == "2027-06-01" and d["days"] == 15
@@ -154,7 +154,7 @@ def test_regions_cross_borders_and_each_month_has_one_route_per_length():
     for it in inspire.itineraries():
         if it.listed and it.weeks:
             by[it.region].append(it)
-    assert len(by) == 18  # + Norway, Tanzania, Morocco, Nepal (2026-11-16)
+    assert len(by) == 20  # + Norway, Tanzania, Morocco, Nepal, Switzerland, Austria (2026-11-16)
     for region, its in by.items():
         weeks = {i.weeks for i in its}
         assert {1, 2} <= weeks, region
@@ -381,3 +381,16 @@ def test_a_ski_week_packs_a_real_ski_jacket_and_no_expedition_layers():
     assert {"Ski jacket", "Ski trousers"} <= names
     assert not names & {"Rain jacket", "Thick down jacket", "Lined winter trousers", "Thick fleece",
                         "Thick base layer", "Warm trousers"}
+
+
+def test_a_thing_out_of_its_season_is_not_dressed_for():
+    """A winter trip taken in May still names its ski day "(Dec–Mar)", but the bag has no ski
+    kit: you cannot ski then (2026-11-16, Switzerland and Austria from October to May)."""
+    from app.inspire import days
+    jan = {p["name"] for p in _wear("switzerland-28-winter", 1)["pieces"]}
+    may = {p["name"] for p in _wear("switzerland-28-winter", 5)["pieces"]}
+    assert "Ski trousers" in jan and not may & {"Ski jacket", "Ski trousers"}
+    it = inspire.get("switzerland-28-winter")
+    i = next(k for k, s in enumerate(it.stops) if s.name == "St. Moritz")
+    ski = next(d for d in days.for_stop(it, i, 0, 5) if "Skiing" in d["title"])
+    assert "(Dec–Mar)" in ski["title"] and not {"Ski jacket", "Ski trousers"} & set(ski["wear"] + ski["pack"])
