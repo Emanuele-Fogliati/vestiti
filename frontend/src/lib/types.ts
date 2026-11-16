@@ -275,6 +275,8 @@ export interface TripSummary {
   art?: StopArt | null;
   estimated?: boolean;
   source_itinerary?: string | null;
+  /** the stops' places in order, [lat, lon]: the My trips map */
+  points?: number[][];
 }
 
 export interface Place {

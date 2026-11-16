@@ -249,9 +249,39 @@ export default function TripPage() {
   );
 
   // the Plan tab is the map-first page: the header and the tabs move into its panel
-  if (tab === "trip" && stops.length > 0) return (
+  const weatherBody = (
+    <div className="x-panel mf-tab" id="p-weather" role="tabpanel">
+      {estimateWeather && <p className="x-alert warn">The weather service could not be reached: some places use a rough estimate. Reload later.</p>}
+      {trip.estimate && t0 && (
+        <div className="x-alert">
+          <EstimateForm start={trip.estimate.start} days={trip.estimate.days} firstDay={t0} totalDays={totalDays}
+            onApply={async (v) => { try { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated."); loadPlans(tier); } catch (e) { toast((e as Error).message); } }}
+            onKeep={async () => { setTrip(await api.setDates(id, { confirm: true })); }} />
+        </div>
+      )}
+      {strategy && !strategy.empty ? <WeatherTab strategy={strategy} /> : <Empty planning={planning} onAdd={() => go("trip")} />}
+      {strategy && strategy.questions.length > 0 && (
+        <div className="x-qs">
+          <h2 className="x-h2">This would change the plan</h2>
+          <ul className="x-list">{strategy.questions.map((q, i) => <li key={i}>{q.question}</li>)}</ul>
+          <button type="button" className="x-link" onClick={() => setAskOpen(true)}>Answer in the chat</button>
+        </div>
+      )}
+    </div>
+  );
+  const bagBody = (
+    <div className="x-panel mf-tab" id="p-bag" role="tabpanel">
+      {plans && !plans.empty ? <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={() => loadPlans(tier)}
+        layers={strategy && !strategy.empty ? <LayerStrategy tripId={id} strategy={strategy} tier={tier} stageIdx={Math.max(0, sel)} setStageIdx={setStageIdx} onChanged={() => loadPlans(tier)} /> : null} />
+        : <Empty planning={planning} onAdd={() => go("trip")} />}
+    </div>
+  );
+
+  // with stops, every tab is the map-first page: the header and the tabs sit in its panel,
+  // Plan shows the map, Weather and Bag fill the big panel beside it
+  if (stops.length > 0) return (
     <main className="x-trip x-trip-st">
-      <TripStudio trip={trip} plans={plans} strategy={strategy} tier={tier} sel={stageIdx < 0 ? null : sel}
+      <TripStudio content={tab === "weather" ? weatherBody : tab === "bag" ? bagBody : undefined} trip={trip} plans={plans} strategy={strategy} tier={tier} sel={stageIdx < 0 ? null : sel}
         setSel={(i) => setStageIdx(i ?? -1)} onChanged={loadAll} onPlans={() => loadPlans(tier)}
         head={<><div className="mf-head-r">{metaTitle}{actions}</div>{below}</>} tabs={tabBar}
         onBag={() => go("bag")} onAsk={(t) => { setAskText(t ?? ""); setAskOpen(true); }}
