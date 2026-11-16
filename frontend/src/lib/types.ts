@@ -671,6 +671,8 @@ export interface TrailCard {
   tier: "A" | "B"; style: "trek" | "city"; area: string | null; scores: TrailScores | null;
   /** a day of a recommended trip does it: the Walks map shows its drawing */
   featured?: boolean;
+  /** where its drawing goes on the map, [lat, lon]: the point of the walk where you see it */
+  art_at?: [number, number] | null;
   /** where it starts (the pins of the Treks map) */
   lat?: number | null; lon?: number | null;
 }
@@ -693,6 +695,8 @@ export interface Trail extends TrailCard {
   computed: { km: number; one_way_km: number; gain_m: number; loss_m: number; walk_hours: number } | null;
   profile: [number, number][]; line: [number, number][]; attribution: string | null;
   activity: Activity; base_trails: string[];
+  /** the drawn places the walk goes past, in walking order (on the path) */
+  sights?: TrailSight[];
 }
 export interface TrailWear {
   trail_id: string; month: number; in_season: boolean;
@@ -702,3 +706,5 @@ export interface TrailWear {
     /** real products that pass the piece's needs: cheaper, the pick, better */
     products?: Record<Tier, Item | null> }[];
 }
+
+export interface TrailSight { id: string; name: string; lat: number; lon: number; art: StopArt | null }

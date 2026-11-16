@@ -2,7 +2,7 @@ import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
 import { artPin } from "../lib/artpin";
 import { baseStyle, mapColors, phoneGestures, worldZoom } from "../lib/worldmap";
-import type { TrailCard } from "../lib/types";
+import type { TrailCard, TrailSight } from "../lib/types";
 
 export const LEVEL_COLOR = { easy: "#2F55D4", moderate: "#1D6B37", hard: "#C2541B", technical: "#9B1C1C" } as const;
 /** City walks are not a level of difficulty: their own colour (Manu 2026-11-16). */
@@ -15,10 +15,12 @@ type Inset = { top: number; right: number; bottom: number; left: number };
 /** The Treks page's map: every trek of the list as a dot coloured by how hard it is; the chosen
  *  one larger, ringed. The map frames the list when the filters change, and the chosen trek when
  *  one is picked (beside the panels, never under them). */
-export default function TrekMap({ trails, selected, onPick, inset, fitKey, line, onView, around }: {
+export default function TrekMap({ trails, selected, onPick, inset, fitKey, line, onView, around, sights }: {
   trails: TrailCard[]; selected: string | null; onPick: (id: string) => void; inset?: Inset; fitKey: string;
   /** the chosen hike's path ([lon, lat]), drawn as soon as it is picked */
   line?: [number, number][] | null;
+  /** the drawn places the chosen walk goes past: their drawings on the path */
+  sights?: TrailSight[];
   /** what the map shows now: the list follows it (null = the whole globe) */
   onView?: (b: { w: number; s: number; e: number; n: number } | null) => void;
   /** a search by zone: the map frames this circle, not every match of the words */
@@ -48,10 +50,11 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
     const cands = pts.filter((t) => t.art?.kind === "landmark").sort((a, b) => rank(a) - rank(b));
     for (const t of cands) {
       if (keep.size >= 40) break;
-      const at = map.project([t.lon!, t.lat!]);
+      const [la, lo] = t.art_at ?? [t.lat!, t.lon!]; // where you see it, not the trailhead
+      const at = map.project([lo, la]);
       // on the globe's far side, or under the panels: no picture
       if (at.x < free.left - 24 || at.x > W - free.right + 24 || at.y < free.top - 24 || at.y > H - free.bottom + 24) continue;
-      if (map.getZoom() < 9 && !isFront(map, t.lon!, t.lat!)) continue;
+      if (map.getZoom() < 9 && !isFront(map, lo, la)) continue;
       if (t.id !== selected && taken.some(([x, y]) => Math.abs(x - at.x) < 68 && Math.abs(y - at.y) < 50)) continue;
       taken.push([at.x, at.y]);
       keep.add(t.id);
@@ -60,7 +63,7 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
         const b = artPin(t.art, null, t.name);
         if (!b) continue;
         b.addEventListener("click", (e) => { e.stopPropagation(); cb.current.onPick(t.id); });
-        m = new maplibregl.Marker({ element: b, anchor: "bottom", offset: [0, -6] }).setLngLat([t.lon!, t.lat!]).addTo(map);
+        m = new maplibregl.Marker({ element: b, anchor: "bottom", offset: [0, -6] }).setLngLat([lo, la]).addTo(map);
         markers.current.set(t.id, m);
       }
       m.getElement().classList.toggle("on", t.id === selected);
@@ -144,6 +147,25 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
         { padding: room(box.current!, cb.current.inset), maxZoom: 14, duration: 800 });
     });
   }, [line]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // the chosen walk's sights along the way (Manu 2026-11-16: "l'immagine a metà strada")
+  const sightPins = useRef<maplibregl.Marker[]>([]);
+  const sightKey = (sights ?? []).map((x) => x.id).join("|");
+  useEffect(() => {
+    when(() => {
+      const map = mapRef.current;
+      for (const m of sightPins.current) m.remove();
+      sightPins.current = [];
+      if (!map) return;
+      for (const x of sights ?? []) {
+        const b = artPin(x.art, null, x.name);
+        if (!b) continue;
+        b.classList.add("sight");
+        sightPins.current.push(new maplibregl.Marker({ element: b, anchor: "bottom", offset: [0, -6] }).setLngLat([x.lon, x.lat]).addTo(map));
+      }
+    });
+    return () => { for (const m of sightPins.current) m.remove(); sightPins.current = []; };
+  }, [sightKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // the dots
   useEffect(() => {

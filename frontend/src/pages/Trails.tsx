@@ -7,7 +7,7 @@ import { DIFFICULTY, TrailFacts, hoursText } from "../components/TrailCards";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { money } from "../lib/format";
-import type { Item, TrailCard, TrailDifficulty, TrailWear } from "../lib/types";
+import type { Item, TrailCard, TrailDifficulty, TrailSight, TrailWear } from "../lib/types";
 
 const REGION = (() => { try { return new Intl.DisplayNames(["en"], { type: "region" }); } catch { return null; } })();
 const countryName = (c: string) => { try { return REGION?.of(c) ?? c; } catch { return c; } };
@@ -43,6 +43,7 @@ export default function Trails() {
   const [buyOpen, setBuyOpen] = useState(false);
   // the chosen hike's path, drawn on the map as soon as it is picked
   const [line, setLine] = useState<[number, number][] | null>(null);
+  const [sights, setSights] = useState<TrailSight[]>([]);
   // what the map shows: the list follows it (null = the whole globe)
   const [view, setView] = useState<{ w: number; s: number; e: number; n: number } | null>(null);
 
@@ -166,9 +167,10 @@ export default function Trails() {
 
   useEffect(() => {
     setLine(null);
+    setSights([]);
     if (!selId) return;
     let live = true;
-    api.trail(selId).then((t) => { if (live && t.line.length > 1) setLine(t.line); }).catch(() => undefined);
+    api.trail(selId).then((t) => { if (!live) return; if (t.line.length > 1) setLine(t.line); setSights(t.sights ?? []); }).catch(() => undefined);
     return () => { live = false; };
   }, [selId]);
 
@@ -293,7 +295,7 @@ export default function Trails() {
     <main className="trk">
       <div className="mf">
         <div className="mf-map">
-          <TreksMap trails={shown} selected={selId} onPick={(id) => set("t", id)} inset={inset} line={line} onView={setView}
+          <TreksMap trails={shown} selected={selId} onPick={(id) => set("t", id)} inset={inset} line={line} sights={sights} onView={setView}
             around={zone ? { lat: zone.lat, lon: zone.lon, km } : null}
             fitKey={`${savedTab ? `saved:${savedIds.length}|` : ""}${country}|${month}|${level}|${kind}|${style}|${find}|${shown.length}|${zone ? `${zone.lat},${zone.lon},${km}` : ""}`} />
           {desk && <div className="mf-legend">{(["easy", "moderate", "hard", "technical"] as const).map((l) => <span key={l}><i className={`mf-dot ${l}`} />{DIFFICULTY[l]}</span>)}<span><i className="mf-dot city" />City walk</span></div>}
