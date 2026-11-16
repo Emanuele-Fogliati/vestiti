@@ -59,12 +59,13 @@ def list_trips(user: User = Depends(current_user), db: Session = Depends(get_db)
     out = []
     for t in trips:
         stops = sorted(t.stops, key=lambda s: s.position)
+        arts = [{"id": lm.id, "label": lm.label} if lm else None for lm in assign(stops)]
         out.append(TripSummary(id=t.id, name=t.name, created_at=t.created_at, updated_at=t.updated_at,
                                stop_count=len(stops),
                                start_date=min((s.start_date for s in stops), default=None),
                                end_date=max((s.end_date for s in stops), default=None),
                                places=[s.name for s in stops],
-                               art=next(({"id": lm.id, "label": lm.label} for lm in assign(stops) if lm), None),
+                               art=next((a for a in arts if a), None), arts=arts,
                                estimated=bool(t.start_estimated or any(s.days_estimated for s in stops)),
                                source_itinerary=t.source_itinerary, saved=bool(t.saved),
                                points=[[round(s.latitude, 4), round(s.longitude, 4)] for s in stops]))

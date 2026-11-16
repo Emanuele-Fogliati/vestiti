@@ -11,7 +11,8 @@ import type { ItineraryCard, StopArt, TripSummary } from "../lib/types";
 
 /** Trips (Manu 2026-11-16: "o crea un nuovo viaggio oppure viaggi raccomandati, fine"): one button
  *  to draw a new trip on the map, the recommended trips, and the trips you saved. Map first: the
- *  picked trip shows on the globe along its roads, its card opens beside the panel. */
+ *  picked trip shows on the globe along its roads, its stops as their drawings; no card in
+ *  between, the picked row has its Open button. */
 export default function Trips() {
   const { user, loading } = useApp();
   const nav = useNavigate();
@@ -37,8 +38,8 @@ export default function Trips() {
   }, [user, loading]);
 
   const saved = useMemo(() => (trips ?? []).filter((t) => t.saved), [trips]);
-  // Saved opens first when there is something in it
-  const tab = (q.get("tab") ?? (trips && saved.length ? "saved" : trips ? "recommended" : "")) as "saved" | "recommended" | "";
+  // Recommended always opens first (Manu 2026-11-16: "di default mi devi andare su Recommended")
+  const tab = (q.get("tab") === "saved" ? "saved" : "recommended") as "saved" | "recommended";
   const setTab = (t: string) => { setSel(null); setQ({ tab: t }, { replace: true }); };
 
   // Manu 2026-11-16: one card per travel region, not one per length or month: the region's page
@@ -53,10 +54,13 @@ export default function Trips() {
       fold([y.destination ?? "", y.title, countryNames(y.countries), ...y.places].join(" ")).includes(w))));
   }, [items, find]); // eslint-disable-line react-hooks/exhaustive-deps
   const best = (x: ItineraryCard) => monthRuns(regionBest((items ?? []).filter((y) => y.journey === x.journey), x.weeks ?? 2));
-  const lands = (x: ItineraryCard) => countryNames([...new Set([x, ...(items ?? []).filter((y) => y.journey === x.journey)].flatMap((y) => y.countries))]);
+  // the countries only when the name does not already say them ("Japan", not "Japan · Japan")
+  const lands = (x: ItineraryCard) => {
+    const c = countryNames([...new Set([x, ...(items ?? []).filter((y) => y.journey === x.journey)].flatMap((y) => y.countries))]);
+    return fold(c) === fold(x.destination ?? x.title) ? "" : `${c} · `;
+  };
   const link = (slug: string) => `/ideas/${slug}`;
   const it = tab === "recommended" && sel ? (items ?? []).find((x) => x.slug === sel) ?? null : null;
-  const t = tab === "saved" && sel ? saved.find((x) => x.id === sel) ?? null : null;
 
   // a recommended trip picked: its stops on the globe, joined along the roads
   useEffect(() => {
@@ -69,10 +73,14 @@ export default function Trips() {
     return () => { live = false; };
   }, [it?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const mapTrips = tab === "saved" ? saved.map((x) => ({ id: x.id, points: x.points ?? [] }))
+  const mapTrips = tab === "saved" ? saved.map((x) => ({ id: x.id, points: x.points ?? [], arts: x.arts, names: x.places }))
     : it && stops.points.length ? [{ id: it.slug, ...stops }] : [];
-  const open = (id: string, to: string) => (desk ? setSel(sel === id ? null : id) : nav(to));
-  const when = (x: TripSummary) => x.start_date ? `${dayMonth(x.start_date)} – ${dayMonth(x.end_date!)}` : "No dates";
+  // Saved on a wide screen: the first trip is on the map straight away, its stops as drawings
+  useEffect(() => {
+    if (desk && tab === "saved" && !sel && saved.length) setSel(saved[0].id);
+  }, [desk, tab, saved]); // eslint-disable-line react-hooks/exhaustive-deps
+  const open = (id: string, to: string) => (desk ? setSel(sel === id && tab === "recommended" ? null : id) : nav(to));
+  const when = (x: TripSummary) => x.start_date ? `${dayMonth(x.start_date)} – ${dayMonth(x.end_date!)}` : `${x.stop_count} ${x.stop_count === 1 ? "stop" : "stops"}`;
 
   const recRows = (list: ItineraryCard[]) => (
     <ul className="mf-treks">
@@ -82,7 +90,7 @@ export default function Trips() {
           <button type="button" className={`mf-trow${sel === x.slug ? " sel" : ""}`} onClick={() => open(x.slug, link(x.slug))}
             onDoubleClick={() => nav(link(x.slug))}>
             <span className="mf-thumb">{x.art ? <Illustration art={x.art} /> : null}</span>
-            <span className="mf-nm"><b>{x.destination ?? x.title}</b><small>{lands(x)} · best {best(x)}</small></span>
+            <span className="mf-nm"><b>{x.destination ?? x.title}</b><small>{lands(x)}best {best(x)}</small></span>
           </button>
           {sel === x.slug && <Link className="mf-btn go sm mf-recopen" to={link(x.slug)}>Open</Link>}
         </li>
@@ -93,11 +101,12 @@ export default function Trips() {
   const savedRows = (
     <ul className="mf-treks">
       {saved.map((x) => (
-        <li key={x.id}>
+        <li key={x.id} className="mf-recrow">
           <button type="button" className={`mf-trow${sel === x.id ? " sel" : ""}`} onClick={() => open(x.id, `/trips/${x.id}`)} onDoubleClick={() => nav(`/trips/${x.id}`)}>
             <span className="mf-thumb">{x.art ? <Illustration art={x.art} /> : null}</span>
-            <span className="mf-nm"><b>{x.name}</b><small>{when(x)} · {x.stop_count} {x.stop_count === 1 ? "stop" : "stops"}</small></span>
+            <span className="mf-nm"><b>{x.name}</b><small>{when(x)}</small></span>
           </button>
+          {sel === x.id && <Link className="mf-btn go sm mf-recopen" to={`/trips/${x.id}`}>Open</Link>}
         </li>
       ))}
     </ul>
@@ -112,15 +121,13 @@ export default function Trips() {
         {find && <button type="button" aria-label="Clear" onClick={() => setFind("")}>×</button>}
       </form>
       {items === null ? <div className="loading"><span className="spin" /></div>
-        : <div className="mf-scroll">{shown.length ? recRows(shown) : <p className="mf-k">No trip there yet.</p>}</div>}
+        : <div className="mf-scroll">{shown.length ? recRows(shown) : <p className="mf-k">Nothing found.</p>}</div>}
     </>
-  ) : tab === "saved" ? (
+  ) : trips === null ? <div className="loading"><span className="spin" /></div> : (
     <div className="mf-scroll">
-      {saved.length ? savedRows : (
-        <div className="mf-empty"><p>Nothing saved yet.</p><p className="mf-k">Press Save on a trip to keep it here.</p></div>
-      )}
+      {saved.length ? savedRows : <div className="mf-empty"><p>Nothing saved yet.</p></div>}
     </div>
-  ) : <div className="loading"><span className="spin" /></div>;
+  );
 
   return (
     <main className="trk mytrips">
@@ -128,7 +135,7 @@ export default function Trips() {
         <div className="mf-map">
           <MyTripsMap trips={mapTrips} selected={tab === "saved" ? sel : it?.slug ?? null}
             onPick={(id) => (tab === "saved" ? open(id, `/trips/${id}`) : undefined)}
-            inset={desk ? { top: 20, right: 60, bottom: 20, left: t ? 850 : 470 } : undefined} />
+            inset={desk ? { top: 20, right: 60, bottom: 20, left: 470 } : undefined} />
         </div>
 
         <section className="mf-float mf-panel" aria-label="Trips">
@@ -142,26 +149,11 @@ export default function Trips() {
           {body}
         </section>
 
-        {desk && t && (
-          <div className="mf-float mf-card mf-tripcard">
-            <button type="button" className="mf-x" onClick={() => setSel(null)} aria-label="Close"><X /></button>
-            {t.art && <div className="mf-art"><Illustration art={t.art} /></div>}
-            <div className="mf-card-in">
-              <div>
-                <span className="mf-k">{when(t)} · {t.stop_count} {t.stop_count === 1 ? "stop" : "stops"}</span>
-                <h3>{t.name}</h3>
-              </div>
-              {t.places.length > 0 && <ol className="mf-route">{t.places.map((p, i) => <li key={i}><span className="mf-num">{i + 1}</span>{p}</li>)}</ol>}
-              <Link className="mf-btn go wide" to={`/trips/${t.id}`}>Open →</Link>
-            </div>
-          </div>
-        )}
       </div>
     </main>
   );
 }
 
 const I = (d: string) => () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d={d} /></svg>;
-const X = I("M6 6l12 12M18 6L6 18");
 const Plus = I("M12 5v14M5 12h14");
 const Search = I("M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4");

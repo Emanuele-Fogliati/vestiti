@@ -83,25 +83,26 @@ export default function TripsMap({ trips, selected, onPick, inset }: {
     when(() => {
       const map = mapRef.current;
       if (!map) return;
+      // the chosen trip's stops as their drawings, numbered, over the road
+      const chosen = shown.find((t) => t.id === selected);
+      const drawn = chosen ? [chosen] : [];
       const feats = shown.flatMap((t) => {
         const s = t.id === selected ? 1 : 0;
         const coords = t.points.map(([la, lo]) => [lo, la]);
         const way = roads[`${t.id}:${t.points.map((p) => p.join(",")).join(";")}`] ?? (coords.length > 1 ? [coords] : []);
         return [
           ...way.map((line) => ({ type: "Feature" as const, properties: { id: t.id, s }, geometry: { type: "LineString" as const, coordinates: line } })),
-          ...coords.map((c, i) => ({ type: "Feature" as const, properties: { id: t.id, s, a: s && t.arts?.[i] ? 1 : 0 },
+          ...coords.map((c, i) => ({ type: "Feature" as const, properties: { id: t.id, s, a: drawn.includes(t) && t.arts?.[i] ? 1 : 0 },
             geometry: { type: "Point" as const, coordinates: c } })),
         ];
       });
-      // the chosen trip's stops as their drawings, numbered, over the road
       for (const m of pins.current.splice(0)) m.remove();
-      const chosen = shown.find((t) => t.id === selected);
       const seen = new Set<string>();
-      chosen?.points.forEach(([la, lo], i) => {
+      for (const t of drawn) t.points.forEach(([la, lo], i) => {
         const at = `${la.toFixed(2)},${lo.toFixed(2)}`;
         if (seen.has(at)) return; // back where it started
         seen.add(at);
-        const el = artPin(chosen.arts?.[i], i + 1, chosen.names?.[i] ?? "");
+        const el = artPin(t.arts?.[i], i + 1, t.names?.[i] ?? "");
         if (el) pins.current.push(new maplibregl.Marker({ element: el }).setLngLat([lo, la]).addTo(map));
       });
       (map.getSource("trips") as maplibregl.GeoJSONSource | undefined)?.setData({ type: "FeatureCollection", features: feats });

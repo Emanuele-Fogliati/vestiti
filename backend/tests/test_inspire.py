@@ -93,7 +93,10 @@ def test_pack_my_bag_creates_a_trip_ready_for_the_kit(client):
     assert [s["name"] for s in trip["stops"]][:2] == ["Lima", "Paracas"]
     plans = client.get(f"/api/trips/{trip['id']}/plans").json()
     assert plans["tiers"]["medium"]["items"]
-    assert trip["id"] in [t["id"] for t in client.get("/api/trips").json()]
+    mine = next(t for t in client.get("/api/trips").json() if t["id"] == trip["id"])
+    # each stop's drawing, in order, for the map (Manu 2026-11-16: drawings, not black dots)
+    assert len(mine["arts"]) == len(mine["points"]) == 9
+    assert mine["arts"][0]["id"] == mine["art"]["id"] and sum(a is not None for a in mine["arts"]) >= 7
 
 
 def test_pack_without_a_date_is_a_guess(client):

@@ -561,6 +561,8 @@ class TripSummary(ORM):
     saved: bool = False
     # where the stops are, in order ([lat, lon]): the trips on the My trips map
     points: list[list[float]] = []
+    # each stop's drawing (None: no drawing), in the same order: the stops on the map as pictures
+    arts: list[StopArt | None] = []
 
 
 class ReorderIn(BaseModel):

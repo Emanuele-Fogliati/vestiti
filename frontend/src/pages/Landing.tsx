@@ -128,7 +128,7 @@ export default function Landing() {
     <main className={`home2 ${phase}${diving ? " dive" : ""}${door ? " has-list" : ""}`} onPointerDown={phase !== "done" ? skip : undefined}>
       <div className="home2-space" aria-hidden="true" />
       <div className="home2-globe"><HomeGlobe bare mode={mode} intro={phase !== "done"} onReady={() => setReady(true)} /></div>
-      <Link to="/trips" className="home2-bag" aria-label="My trips">
+      <Link to="/trips?tab=saved" className="home2-bag" aria-label="My trips">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="3" /><path d="M9 7V4h6v3" /></svg>
       </Link>
       <section className="home2-ui">

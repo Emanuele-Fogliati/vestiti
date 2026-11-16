@@ -280,6 +280,8 @@ export interface TripSummary {
   saved?: boolean;
   /** the stops' places in order, [lat, lon]: the My trips map */
   points?: number[][];
+  /** each stop's drawing, in the same order (null: none) */
+  arts?: (StopArt | null)[];
 }
 
 export interface Place {
