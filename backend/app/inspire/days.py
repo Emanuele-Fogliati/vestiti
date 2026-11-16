@@ -78,8 +78,10 @@ def _stop_days(it, index: int, offset: int, month: int) -> tuple:
         done = [things[x] for x in dp.things if x in things]
         spare = things.get(dp.spare) if dp.spare else None
         shown = [_thing(x) for x in done] + ([_thing(spare, spare=True)] if spare else [])
-        # a spare day is dressed for its walk: if the sky is good, that is where you will be
-        acts = [_act(x) for x in done] or ([_act(spare)] if spare else [])
+        # a spare day is dressed for its walk: if the sky is good, that is where you will be;
+        # a thing out of its season (skiing in May) is shown with its months, not dressed for
+        on = [x for x in done + ([spare] if spare else []) if not x.months or month in x.months]
+        acts = [_act(x) for x in on if x is not spare] or ([_act(spare)] if spare in on else [])
         # and the evening in the place you sleep: the day's clothes cover the whole day
         acts = acts + [{"type": "city"}]
         out.append({"kind": dp.kind, "title": s.plan[k], "things": shown,

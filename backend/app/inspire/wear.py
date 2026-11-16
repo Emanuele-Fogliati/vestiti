@@ -145,8 +145,26 @@ def _cached(key: tuple, month: int) -> dict:
     return for_month(stops, month)
 
 
+@lru_cache
+def _things() -> dict[str, dict]:
+    from app.guide.todo import areas
+    return {a.id: {it.id: it for it in a.items} for a in areas()}
+
+
+def acts_in(s, month: int) -> list[dict]:
+    """The stop's activities that month: a ski day of a winter trip taken in May is not dressed
+    for (the day says "Dec–Mar"), so a thing out of its season leaves the kit."""
+    acts = [a.model_dump(exclude_none=True) for a in s.activities]
+    things = _things().get(s.area or "", {})
+    planned = [things[x] for dp in s.day_plans for x in dp.things if x in things]
+    if all(not t.months or month in t.months for t in planned):
+        return acts
+    from app.inspire.build import acts_of
+    return acts_of([t for t in planned if not t.months or month in t.months])
+
+
 def for_itinerary(it, month: int) -> dict:
     key = tuple((s.name, s.lat, s.lon, s.elevation_m, s.days,
-                 tuple(tuple(sorted(a.model_dump(exclude_none=True).items())) for a in s.activities))
+                 tuple(tuple(sorted(a.items())) for a in acts_in(s, month)))
                 for s in it.stops)
     return _cached(key, month)
