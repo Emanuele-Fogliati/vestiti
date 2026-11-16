@@ -143,6 +143,8 @@ class PackIn(BaseModel):
     month: int | None = Field(default=None, ge=1, le=12)  # no date but a month: its 1st
     days: int | None = Field(default=None, ge=3, le=35)  # another length than the route's own
     stops: list[tuple[str, int]] | None = Field(default=None, max_length=15)  # the traveller's own stops and nights
+    # the trip this page already made: its stops are replaced, its picks in the bag stay
+    trip_id: str | None = Field(default=None, max_length=64)
 
     _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v)))
 
@@ -158,11 +160,24 @@ def pack_for_this(slug: str, body: PackIn, user: User = Depends(current_user),
     it = (_edited(slug, tuple((p, n) for p, n in body.stops)) if body.stops
           else _sized(it, body.days, body.month or (body.start_date.month if body.start_date else None)))
     start = body.start_date or inspire.default_start(it, month=body.month)
-    trip = Trip(user_id=user.id, name=it.title, notes=f"From the itinerary '{it.title}'.",
-                start_estimated=body.start_date is None, source_itinerary=it.slug)
+    # the trip page and its bag are one page (Manu 2026-11-16: "sta tutto dentro la stessa
+    # pagina"): each change of the route updates the same trip, so what you said you have stays
+    trip = db.get(Trip, body.trip_id) if body.trip_id else None
+    if trip is not None and trip.user_id != user.id:
+        trip = None
+    if trip is None:
+        trip = Trip(user_id=user.id, name=it.title, notes=f"From the itinerary '{it.title}'.",
+                    source_itinerary=it.slug)
+        db.add(trip)
+    else:
+        trip.stops.clear()
+        db.flush()
+        if not trip.saved:
+            trip.name = it.title
+        trip.source_itinerary = it.slug
+    trip.start_estimated = body.start_date is None
     trip.stops = [Stop(position=i, **s) for i, s in enumerate(inspire.stops_for(it, start))]
     mark_ready_made(trip)
-    db.add(trip)
     db.commit()
     db.refresh(trip)
     return trip

@@ -631,3 +631,35 @@ a.mf-btn{text-decoration:none}
 .mf-placepop.in .mf-art{display:none}
 .mf-placepop .mf-btn.go{margin-top:4px}
 @media (max-width:899px){.mf-irow .mf-step span{min-width:38px}.mf-irow .mf-step i{display:none}}
+
+/* ---------- one page: the route on the map, the clothes below (Manu 2026-11-16: "sta tutto
+   dentro la stessa pagina ... scrollare in basso e vedere i vestiti") ---------- */
+.ip-crumbrow{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.ip-crumbrow .mf-crumb{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ip-crumbrow .x-save{flex:none}
+.ip-grip{display:flex;align-items:center;color:var(--ink-3);cursor:grab;flex:none;margin-right:-4px}
+.itinerary-mf .mf-stops li.drag{opacity:.45}
+.ip-add input:disabled{opacity:.5}
+.mf-res button.hi{background:var(--surface-2)}
+.ip-none{display:block;padding:8px 10px}
+.ip-or{font-size:12px}
+.ip-bag{background:var(--bg,#FFFFFF);padding:26px 0 56px;border-top:1px solid var(--rule);scroll-margin-top:64px}
+.ip-bag-in{max-width:1180px;margin:0 auto;padding:0 20px;min-width:0}
+.ip-bag-h{display:flex;align-items:center;gap:12px;margin:0 0 18px}
+.ip-bag-h h2{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(30px,4vw,44px);letter-spacing:-.035em;line-height:1}
+.ip-bag-h h2 span{display:inline-block;margin-left:14px;font:500 14px var(--f-mono);letter-spacing:0;color:var(--ink-2);vertical-align:middle}
+.ip-bag-busy{opacity:.55;transition:opacity .2s}
+.ip-cue{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 18px;border:0;border-radius:999px;background:var(--ink);color:#FFFFFF;font:inherit;font-size:14px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+@media (min-width:900px){
+  body:has(.ip-one){overflow:auto}
+  main.x-trip-st.ip-one,main.trk.ip-one{height:auto;overflow:visible}
+  /* the top screen stops a little short, so the clothes below peek in */
+  .ip-one .ip-top{position:relative;height:calc(100svh - 64px - 44px);min-height:520px;overflow:hidden}
+  .ip-cue{left:calc(50% + 230px);transform:translateX(-50%);bottom:22px}
+  .ip-cue:hover{background:#000}
+}
+@media (max-width:899px){
+  .ip-bag{padding-top:22px}
+  .ip-bag-in{padding:0 16px}
+  .ip-bag-h h2 span{display:block;margin:6px 0 0}
+}
