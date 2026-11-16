@@ -148,3 +148,10 @@ def test_a_name_another_country_owns_still_finds_its_own_picture():
     assert art["nz-charleston"] == "nz-charleston"
     assert art["na-orange-river"] == "na-orange-river"
     assert art["na-zambezi-river"] == "na-katima-mulilo"
+
+
+def test_twin_names_in_one_country_get_their_own_city_scene():
+    # two dots called "Bou Inania Madrasa": the Fes one and the Meknes one, each its own scene
+    art = {r[0]: r[7] for r in globe.payload()["places"]}
+    assert art["ma-bou-inania-madrasa"] == "ma-bou-inania-madrasa"
+    assert art["ma-bou-inania-madrasa-2"] == "ma-bou-inania-madrasa-meknes"
