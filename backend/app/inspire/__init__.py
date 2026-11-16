@@ -40,6 +40,14 @@ class Excursion(BaseModel):
     query: str = Field(min_length=2, max_length=120)  # what we search on the marketplaces
 
 
+class DayPlan(BaseModel):
+    """One day at a stop, as the zone's guide plans it (app.guide.todo): its things by id, so the
+    page can show each one hour by hour, its walk on the map and what to wear that day."""
+    kind: str = Field(pattern=r"^(arrive|day|free)$")
+    things: list[str] = Field(default_factory=list, max_length=4)  # item ids of the stop's area
+    spare: str | None = None  # a free day: the thing to do if the weather is good
+
+
 class ItineraryStop(BaseModel):
     name: str = Field(min_length=1, max_length=200)
     country_code: str = Field(min_length=2, max_length=2)
@@ -54,9 +62,13 @@ class ItineraryStop(BaseModel):
     skip: list[str] = Field(default_factory=list)
     excursions: list[Excursion] = Field(default_factory=list)
     programs: int | None = Field(default=None, ge=0)
+    area: str | None = None  # the hand-written zone guide (app.guide.todo) the days come from
+    day_plans: list[DayPlan] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def _days(self):
+        if self.day_plans and len(self.day_plans) != self.days:
+            raise ValueError(f"{self.name}: {self.days} days but {len(self.day_plans)} day plans")
         if len(self.plan) != self.days:
             raise ValueError(f"{self.name}: {self.days} days but {len(self.plan)} plan lines")
         for v in self.visits:
@@ -79,17 +91,34 @@ class Itinerary(BaseModel):
     title: str
     countries: list[str] = Field(min_length=1)
     summary: str
-    best_months: list[int] = Field(min_length=1)
+    best_months: list[int] = Field(default_factory=list)  # [] = an off-season route
     season_note: str
     stops: list[ItineraryStop] = Field(min_length=1, max_length=30)
     group_trips: list[GroupTrip] = Field(default_factory=list)
+    # the recommended trips (recommended.json): a destination, its length in weeks, and the season
+    # band this route is the one for; the hand-written ones above are older, kept for their links
+    destination: str = ""
+    region: str = ""
+    weeks: int | None = Field(default=None, ge=1, le=4)
+    months: list[int] = Field(default_factory=list)  # [] = best_months
+    pace: str | None = None
+    level: int | None = Field(default=None, ge=1, le=5)
+    listed: bool = True  # shown in Recommended
 
-    @field_validator("best_months")
+    @field_validator("best_months", "months")
     @classmethod
     def _months(cls, v):
         if any(m < 1 or m > 12 for m in v):
             raise ValueError("months are 1..12")
         return v
+
+    @model_validator(mode="after")
+    def _band(self):
+        if not self.months:
+            if not self.best_months:
+                raise ValueError(f"{self.slug}: no months")
+            self.months = list(self.best_months)
+        return self
 
     @model_validator(mode="after")
     def _countries(self):
@@ -103,27 +132,55 @@ class Itinerary(BaseModel):
         return sum(s.days for s in self.stops)
 
 
+RECOMMENDED = HERE / "recommended.json"  # built by tools/guide/build_recommended.py
+
+
 @lru_cache
 def itineraries() -> tuple[Itinerary, ...]:
     out = [Itinerary.model_validate(json.loads(f.read_text(encoding="utf-8")))
            for f in sorted(DATA_DIR.glob("*.json"))]
+    if RECOMMENDED.exists():
+        out += [Itinerary.model_validate(x)
+                for x in json.loads(RECOMMENDED.read_text(encoding="utf-8"))["itineraries"]]
     slugs = [i.slug for i in out]
     if len(set(slugs)) != len(slugs):
         raise ValueError("duplicate itinerary slug")
     return tuple(out)
 
 
+def journey(region: str) -> list[Itinerary]:
+    """The routes of one travel region of Recommended: its lengths and season bands."""
+    return sorted((i for i in itineraries() if i.listed and i.weeks and i.region == region),
+                  key=lambda i: (i.weeks, min(i.months)))
+
+
+def lead(region: str) -> Itinerary | None:
+    """The route a region's card opens on: two weeks, the band with the best weather."""
+    its = journey(region)
+    return min(its, key=lambda i: (abs((i.weeks or 2) - 2), -len(i.best_months)), default=None)
+
+
+@lru_cache(maxsize=256)
+def custom(region: str, days: int, month: int) -> Itinerary | None:
+    """The trip of a travel region for any number of days in a month (Manu, 2026-11-16: "anche
+    volendo 10 giorni, 17 giorni"): built on the fly from the nearest ready route (app.inspire.build)."""
+    from app.inspire import build
+    t = build.fitted(region, days, month)
+    return Itinerary.model_validate(build.build(t)) if t else None
+
+
 def get(slug: str) -> Itinerary | None:
     return next((i for i in itineraries() if i.slug == slug), None)
 
 
-def default_start(it: Itinerary, today: date | None = None) -> date:
-    """The first day of the next good month, at least two weeks away."""
+def default_start(it: Itinerary, today: date | None = None, month: int | None = None) -> date:
+    """The first day of the next good month (or of `month`), at least two weeks away."""
     d = (today or date.today()) + timedelta(days=14)
+    want = [month] if month else (it.best_months or it.months)
     for k in range(13):
         y, m = divmod(d.month - 1 + k, 12)
         first = date(d.year + y, m + 1, 1)
-        if first.month in it.best_months and first >= d:
+        if first.month in want and first >= d:
             return first
     return d
 

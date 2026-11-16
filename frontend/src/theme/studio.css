@@ -538,3 +538,77 @@ a.mf-btn{text-decoration:none}
 .mf-th1{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}
 .mf-th1 h1{min-width:0}
 .mf-th1 .x-save{margin-top:4px;flex:none}
+
+/* recommended trip: what to wear in the chosen month (Manu 2026-11-16) */
+.mf-wear-h{display:flex;align-items:center;gap:8px}
+.mf-wear-h .mf-sub{white-space:nowrap}
+.mf-wear-h select{height:30px;border-radius:15px;border:0;background:var(--surface-2);padding:0 10px;font:inherit;font-size:13px;color:var(--ink)}
+.mf-iwear .tags{display:flex;flex-wrap:wrap;gap:4px}
+
+/* recommended region: how long, and when (Manu 2026-11-16) */
+.mf-pick{display:grid;gap:8px;margin-top:10px}
+.mf-weeks{margin:0}
+.mf-weeks button{font-size:13px;height:32px}
+.mf-months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2px}
+.mf-months button{height:32px;min-width:0;border:0;border-radius:8px;background:var(--surface-2);color:var(--ink-2);font:inherit;font-size:11px;letter-spacing:-.2px;padding:0;cursor:pointer;overflow:hidden}
+.mf-months button.best{background:#DCEBD0;color:#2F4A1C}
+.mf-months button.on{background:var(--ink);color:#FFFFFF}
+.mf-months button:disabled{background:transparent;color:var(--ink-3, #B5B5B5);box-shadow:inset 0 0 0 1px var(--rule);cursor:not-allowed}
+.mf-mlegend{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mf-mlegend i{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--surface-2)}
+.mf-mlegend i.best{background:#DCEBD0}
+.mf-mlegend i.off{background:transparent;box-shadow:inset 0 0 0 1px var(--rule)}
+.mf-treks .mf-nm{min-width:0}
+.mf-treks .mf-nm small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* a recommended trip, day by day (Manu 2026-11-16): the stop's days as tabs, the open day in full */
+.mf-days{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:4px}
+.mf-days button{display:grid;gap:1px;text-align:left;padding:6px 8px;border:1px solid var(--rule);border-radius:12px;background:none;font:inherit;color:var(--ink-2);cursor:pointer;min-width:0}
+.mf-days button b{font-size:12.5px;font-weight:600;color:var(--ink)}
+.mf-days button small{font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mf-days button.on{border-color:var(--ink);background:var(--surface-2)}
+.mf-day{display:grid;gap:10px}
+.mf-thing{display:grid;gap:4px}
+.mf-thead{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.mf-thead b{font-size:15px;line-height:1.3}
+.mf-thead .mf-btn{flex:0 0 auto}
+.mf-steps{list-style:none;margin:2px 0 0;padding:0;display:grid;gap:3px;font-size:13px;line-height:1.35}
+.mf-steps li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:6px}
+.mf-steps small{color:var(--ink-2);font-size:12.5px}
+.mf-why{margin:0;font-size:13.5px;line-height:1.4}
+.mf-dwear{display:grid;gap:5px;padding:10px 12px;border-radius:14px;background:var(--surface-2)}
+.mf-dwear .tags{display:flex;flex-wrap:wrap;gap:4px}
+.mf-ihead{display:flex;align-items:center;gap:12px;padding-right:36px}
+.mf-ihead .mf-thumb{flex:0 0 auto;width:64px;height:48px;border-radius:10px;overflow:hidden}
+@media (min-width:900px){.mf-icard{width:400px}}
+/* Recommended: the picked region opens from its own row, no card in between (Manu 2026-11-16) */
+.mf-recrow{position:relative}
+.mf-recopen{position:absolute;right:10px;top:50%;transform:translateY(-50%)}
+.mf-recrow .mf-trow.sel .mf-nm{padding-right:72px}
+/* the region page (Manu 2026-11-16): weeks or any number of days; the stops open in the list on
+   their days, each day on what to do hour by hour; no card beside the panel */
+.mf-lenrow{display:flex;gap:6px;align-items:center}
+.mf-lenrow .mf-weeks{flex:1 1 auto;min-width:0}
+.mf-daysn{flex:none;display:flex;align-items:center;gap:2px;height:38px;padding:3px;border-radius:999px;background:var(--surface-2);font-size:13px;color:var(--ink-2)}
+.mf-daysn.on{background:var(--ink);color:#FFFFFF}
+.mf-daysn span{min-width:58px;text-align:center;white-space:nowrap}
+.mf-daysn b{font-weight:600}
+.mf-daysn button{width:30px;height:32px;border:0;border-radius:999px;background:#FFFFFF;color:var(--ink);font:inherit;font-size:16px;line-height:1;cursor:pointer}
+.mf-daysn button:disabled{opacity:.4;cursor:not-allowed}
+.mf-stops li.open>.mf-trow{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.mf-dlist{list-style:none;margin:0 0 8px;padding:4px 0 6px 44px;display:grid;gap:2px}
+.mf-drow{display:grid;grid-template-columns:52px minmax(0,1fr) 16px;gap:6px;align-items:center;width:100%;padding:7px 8px;border:0;border-radius:10px;background:none;font:inherit;font-size:13.5px;line-height:1.3;color:var(--ink);text-align:left;cursor:pointer}
+.mf-drow.static{grid-template-columns:52px minmax(0,1fr);cursor:default}
+.mf-drow:hover{background:var(--surface-2)}
+.mf-dlist li.open>.mf-drow{background:var(--surface-2)}
+.mf-dlist li.open .mf-chev{transform:rotate(180deg)}
+.mf-chev{color:var(--ink-3);transition:transform .15s ease}
+.mf-dmore{display:grid;gap:10px;padding:8px 8px 12px 66px}
+.mf-dtour{display:flex;gap:10px;align-items:center;padding:6px 8px;font-size:13px}
+.mf-dtour a{color:var(--ink)}
+@media (max-width:899px){
+  .mf-lenrow{flex-wrap:wrap}
+  .mf-lenrow .mf-weeks{flex-basis:100%}
+  .mf-dlist{padding-left:8px}
+  .mf-dmore{padding-left:8px}
+}

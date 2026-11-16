@@ -256,7 +256,8 @@
      "why": "Up through the bush behind Paihia to a view over the bay and Russell.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 150
      },
      "scores": {
       "effort": 2,
@@ -557,7 +558,8 @@
      "why": "Pools of every colour, the orange-rimmed Champagne Pool, and Waimangu, a valley born from the 1886 eruption of Mount Tarawera.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 450
      },
      "sights": [
       "Wai-O-Tapu",
@@ -679,7 +681,8 @@
      "why": "New Zealand's biggest river forced through a narrow rock cleft in a roar of blue water, then a boardwalk among steaming craters.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 400
      },
      "steps": [
       {
@@ -728,7 +731,8 @@
      "why": "A boat across the lake to geysers, silica terraces and a cave with a hot pool inside.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 400
      },
      "sights": [
       "Orakei Korako"
@@ -782,6 +786,7 @@
     {
      "id": "crossing",
      "name": "The Tongariro Alpine Crossing",
+     "trail": "nz-tongariro-alpine-crossing",
      "hours": "A whole day",
      "length": "full",
      "effort": "hard",
@@ -855,7 +860,8 @@
      "why": "Through beech forest and over old lava flows to a 20 m waterfall, Ruapehu behind.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 1300
      },
      "sights": [
       "Mount Ruapehu"
@@ -975,7 +981,8 @@
      "why": "A fenced valley in the city where New Zealand's rare birds live as before the rats; the night tour finds kiwi.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 200
      },
      "sights": [
       "Zealandia"
@@ -1120,7 +1127,8 @@
      "why": "Golden beaches and granite coves: a water taxi drops you up the coast track and you walk back through the bush from bay to bay.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 150
      },
      "steps": [
       {
@@ -1259,7 +1267,8 @@
      "why": "Fur seals asleep on the rocks at the car park, then along the clifftops to South Bay.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 100
      },
      "arrive": true,
      "scores": {
@@ -1345,7 +1354,8 @@
      "why": "Limestone stacked like pancakes, the sea blasting up to 15 m through the blowholes at high tide.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 30
      },
      "sights": [
       "Pancake Rocks"
@@ -1379,7 +1389,8 @@
      "why": "Up a gorge of limestone walls and nikau palms, the river green below.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 80
      },
      "sights": [
       "Paparoa National Park"
@@ -1430,6 +1441,7 @@
     {
      "id": "franz-walk",
      "name": "Franz Josef glacier valley walk",
+     "trail": "nz-franz-josef-glacier",
      "hours": "2 h",
      "length": "short",
      "effort": "easy",
@@ -1439,7 +1451,8 @@
      "why": "Along a rocky riverbed between waterfalls to a viewpoint on the glacier coming down from the Alps.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 350
      },
      "sights": [
       "Franz Josef Glacier"
@@ -1473,7 +1486,8 @@
      "why": "A 4.4 km loop around a dark lake with Aoraki/Mount Cook and Mount Tasman mirrored in it.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 100
      },
      "sights": [
       "Lake Matheson"
@@ -1506,7 +1520,8 @@
      "why": "A helicopter up to the ice, then a guided walk among blue caves and crevasses, or a landing on the névé.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 1200
      },
      "scores": {
       "effort": 2,
@@ -1617,6 +1632,7 @@
     {
      "id": "rob-roy",
      "name": "Rob Roy Glacier walk",
+     "trail": "nz-rob-roy-glacier",
      "hours": "Half a day",
      "length": "half",
      "effort": "moderate",
@@ -1626,7 +1642,8 @@
      "why": "Up a valley of beech forest in Mount Aspiring National Park to a hanging glacier: Wanaka's favourite day walk.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 1000
      },
      "sights": [
       "Mount Aspiring National Park"
@@ -2030,7 +2047,8 @@
      "why": "Takahē, a blue flightless bird thought extinct until 1948, on the lakeshore walk.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 220
      },
      "scores": {
       "effort": 1,
@@ -2078,6 +2096,7 @@
     {
      "id": "hooker",
      "name": "Hooker Valley track",
+     "trail": "nz-hooker-valley",
      "hours": "3 h",
      "length": "half",
      "effort": "easy",
@@ -2087,7 +2106,8 @@
      "why": "10 km return over three swing bridges to Hooker Lake, icebergs floating under Aoraki / Mount Cook, New Zealand's highest peak.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 900
      },
      "steps": [
       {
@@ -2143,7 +2163,8 @@
      "why": "A short climb to the lake of New Zealand's longest glacier, grey ice and floating bergs.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 850
      },
      "arrive": true,
      "scores": {
@@ -2229,7 +2250,8 @@
      "why": "A stone chapel framing a turquoise lake, then the walk up Mount John for the whole Mackenzie basin.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 1030
      },
      "sights": [
       "Church of the Good Shepherd",
@@ -2433,7 +2455,8 @@
      "why": "A lighthouse over rock islets full of seals, two forest waterfalls, and a petrified forest on the beach at Curio Bay where yellow-eyed penguins come ashore at dusk.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 100
      },
      "steps": [
       {

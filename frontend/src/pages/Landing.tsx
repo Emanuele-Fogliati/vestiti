@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Illustration } from "../components/Illustration";
 import { HomeGlobe } from "../components/Maps";
 import { api } from "../lib/api";
-import { monthRange } from "../lib/format";
+import { monthRuns, regionBest } from "../lib/format";
 import type { ItineraryCard, StopArt, TrailCard } from "../lib/types";
 import { reducedMotion } from "../lib/worldmap";
 
@@ -24,14 +24,19 @@ const SHOWN = 6;
 type Door = "inspire" | "trek";
 interface Row { to: string; art: StopArt | null; title: string; meta: string; later?: boolean }
 
-/** Ready trips at their best this month first; if there are few, the others after them, marked as better another month. */
+/** The travel regions this month (one card each, as on Trips): the ones at their best weather
+ *  first, each opening on its two-week route for this month's season. */
 function inspireRows(all: ItineraryCard[], month: number): Row[] {
-  const good = all.filter((it) => it.best_months.includes(month));
-  const rest = good.length >= 3 ? [] : all.filter((it) => !it.best_months.includes(month));
-  return [...good, ...rest].slice(0, SHOWN).map((it) => ({
-    to: `/ideas/${it.slug}`, art: it.art, title: it.title, later: !it.best_months.includes(month),
-    meta: `${it.days} days · best ${monthRange(it.best_months)}`,
-  }));
+  const two = (it: ItineraryCard) => all.find((x) => x.journey === it.journey && x.weeks === 2 && x.months.includes(month));
+  const best = (it: ItineraryCard) => regionBest(all.filter((x) => x.journey === it.journey), 2).includes(month);
+  const leads = all.filter((it) => it.lead);
+  return [...leads.filter(best), ...leads.filter((it) => !best(it))].slice(0, SHOWN).map((it) => {
+    const r = two(it);
+    return {
+      to: r ? `/ideas/${r.slug}?month=${month}` : `/ideas/${it.slug}`, art: it.art, title: it.destination ?? it.title, later: !best(it),
+      meta: best(it) ? "best now" : `best ${monthRuns(regionBest(all.filter((x) => x.journey === it.journey), 2))}`,
+    };
+  });
 }
 
 /** Treks in season this month: famous ones with a drawing first, one country after another so the list is not all one country. */

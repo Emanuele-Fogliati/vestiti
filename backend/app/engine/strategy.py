@@ -29,6 +29,11 @@ COLD_ONLY = {"headwear", "gloves", "base_bottom", "shell_bottom"}  # never added
 # in town and on low walks nobody wears long johns or rain trousers for warmth above freezing:
 # a warmer top does it (Manu, 2026-11-16)
 LEGS_ONLY_FREEZING = {"base_bottom", "shell_bottom"}
+HIGH_COLD_M = 4500  # from here warm gloves, beanie and down go, whatever the day
+DRY_PROB = 15  # below this chance of rain on every day of the trip, a month is desert-dry
+CITY_EVENING_MET = 1.8
+WARM_RAIN_C = 18  # rain warmer than this all day: no rain trousers in the lowlands
+TOWN_WIND = 0.5  # street-level wind in town, against the open-country 10 m wind  # the evening after a boat trip is an evening in town
 STATUS_RANK = {"none": 0, "pack": 1, "stops": 2, "worn": 3}
 ESSENTIALS = ["base_top", "trousers", "socks", "footwear"]
 MOVE_ORDER = ["mid_top", "shell_top", "headwear", "gloves", "base_bottom", "insulation_top",
@@ -152,6 +157,15 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
                     t_rest = day.tmin + 0.25 * span
                     rest_where = "evening outdoors"
                     rest_wind = day.wind_kmh
+                # an evening out is a walk to dinner and back, an hour of stars or a sundowner,
+                # not a night standing still: Buenos Aires in July (9 °C) got a warm down jacket,
+                # warm gloves and warm trousers, the Atacama in July (5 °C at dusk) insulated
+                # trousers (Opus check of the recommended trips, 2026-11-16). In town the streets
+                # also take half the wind. The camp of a multi-day trek stays long and still.
+                evening = rest_where == "evening outdoors"
+                town_evening = evening and profile.key in ("city", "boat")
+                if town_evening:
+                    rest_wind = day.wind_kmh * TOWN_WIND
                 wet = day.precip_mm >= 1.0 and day.precip_prob >= 50
                 # UV rises ~10% per 1000 m: above 2500 m it is strong even on a cool day,
                 # and climate averages carry no UV index, so altitude has to stand in for it
@@ -162,13 +176,15 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
                      alt),
                     ("rest", t_rest, rest_wind, rest_where, alt if "break" in rest_where else base),
                 ):
-                    met = profile.met_moving * met_factor if mode == "moving" else profile.met_rest
+                    met = profile.met_moving * met_factor if mode == "moving" else (
+                        max(profile.met_rest, CITY_EVENING_MET) if town_evening else profile.met_rest)
                     air = profile.extra_air_ms if mode == "moving" else (
                         2.0 if profile.key == "ski" else 0.0  # chairlift
                     )
                     req = thermal.required_clo(
                         temp, wind, met, moving=(mode == "moving"), extra_air_speed_ms=air,
-                        short_stop=profile.short_stops or day_walk,  # a walk's stops are short
+                        # a walk's stops are short; so is an evening in town
+                        short_stop=profile.short_stops or day_walk or evening,
                         personal_offset=personal_offset,
                     )
                     snow = wet and thermal.lapse_adjust(day.tmax, base, alt_here) <= 1.0
@@ -228,7 +244,7 @@ def dress(kit: dict[str, KitItem], cond: Condition, start: list[str] | None = No
         if (cond.precip_mm >= 10 and cond.precip_prob >= 60) or (
                 cond.precip_mm >= 4 and cond.precip_prob >= 60 and cond.activity.mountain):
             add("shell_bottom", f"steady rain {cond.precip_mm:.1f} mm on a long day outside")
-    if cond.snow:
+    if cond.snow and cond.activity.mountain:  # in town snow means boots, not rain trousers
         add("shell_bottom", "snow")
     if cond.wind_kmh >= 30:
         add("shell_top", f"wind {cond.wind_kmh:.0f} km/h")
@@ -243,7 +259,10 @@ def dress(kit: dict[str, KitItem], cond: Condition, start: list[str] | None = No
         candidates = [s for s in order if s in kit and s not in worn
                       and not (s in COLD_ONLY and cond.feels_like_c > 10)
                       and not (s in LEGS_ONLY_FREEZING and cond.feels_like_c > 0
-                               and not in_mountains(cond))]
+                               and not in_mountains(cond))
+                      # rain trousers are never the warm layer in town: thermal leggings are
+                      # (Japan in January got rain trousers, Opus check 2026-11-16)
+                      and not (s == "shell_bottom" and not in_mountains(cond))]
         if not candidates:
             break
         # Prefer the lightest single layer that closes the gap (a fleece for a mild
@@ -252,7 +271,9 @@ def dress(kit: dict[str, KitItem], cond: Condition, start: list[str] | None = No
         for s in candidates:
             p, _ = _provided(kit, worn + [s], cond)
             if p >= cond.required:
-                closing.append((kit[s].clo, order.index(s), s))
+                # thermal leggings before rain trousers when either would do (El Tatio at
+                # dawn): rain trousers are the rain and wind layer (Opus check, 2026-11-16)
+                closing.append((kit[s].clo + (1.0 if s == "shell_bottom" else 0.0), order.index(s), s))
         pick = min(closing)[2] if closing else candidates[0]
         add(pick, why)
         provided, pens = _provided(kit, worn, cond)
@@ -291,7 +312,10 @@ def precaution(slot: str, conds: list[Condition]) -> str | None:
         max_mm = max((c.precip_mm for c in conds), default=0)
         if mountain and max_prob >= 40:
             return f"{max_prob:.0f}% chance of rain"
-        if max_prob >= 60 and max_mm >= 10:
+        # in warm rain (a monsoon afternoon at 30 °C) rain trousers are a sauna: legs dry in
+        # minutes (Opus check, 2026-11-16: Vietnam in July got them)
+        cool = min((c.temp_c for c in conds if c.wet), default=99) < WARM_RAIN_C
+        if max_prob >= 60 and max_mm >= 10 and cool:
             return f"heavy rain likely (up to {max_mm:.0f} mm a day)"
     if slot == "insulation_top" and mountain and max_alt >= 2000:
         return f"above 2,000 m ({max_alt:.0f} m): an emergency warm layer"
@@ -309,9 +333,22 @@ PRESETS: list[dict[str, str]] = [
     {"base_top": "medium", "trousers": "medium", "socks": "medium", "mid_top": "medium",
      "shell_top": "medium", "insulation_top": "light", "headwear": "medium", "gloves": "light",
      "base_bottom": "light"},
+    # the steps in between (Opus check, 2026-11-16): one cold moment no longer makes every
+    # piece two levels warmer (an expedition down jacket for Patagonia in January)
+    {"base_top": "medium", "trousers": "medium", "socks": "medium", "mid_top": "medium",
+     "shell_top": "medium", "insulation_top": "medium", "headwear": "medium", "gloves": "medium",
+     "base_bottom": "light"},
+    # a warm down jacket over the everyday layers, before every piece goes up: Cusco in July
+    # (4 °C walking to dinner) got warm trousers, a warm fleece and a warm base layer too
+    {"base_top": "medium", "trousers": "medium", "socks": "medium", "mid_top": "medium",
+     "shell_top": "medium", "insulation_top": "warm", "headwear": "medium", "gloves": "medium",
+     "base_bottom": "medium"},
     {"base_top": "warm", "trousers": "warm", "socks": "warm", "mid_top": "warm",
      "shell_top": "warm", "insulation_top": "warm", "headwear": "warm", "gloves": "warm",
      "base_bottom": "medium", "shell_bottom": "medium"},
+    {"base_top": "warm", "trousers": "warm", "socks": "warm", "mid_top": "warm",
+     "shell_top": "warm", "insulation_top": "very_warm", "headwear": "very_warm", "gloves": "very_warm",
+     "base_bottom": "warm", "shell_bottom": "medium"},
     {s.key: "very_warm" for s in SLOTS},
 ]
 
@@ -390,6 +427,16 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
                        f"({c.date:%d %b}, {c.where})")
             bump(slot, kit[slot].level or "medium", c.stage_index, c.date, why)
 
+    # very high (Rainbow Mountain, Laguna 69): the weather turns in minutes and sleet is
+    # common even in the dry season, so warm gloves, a warm beanie and a real down jacket go
+    # up whatever the average day says (Opus check, 2026-11-16)
+    for c in conds:
+        if c.altitude_m >= HIGH_COLD_M:
+            for slot, lv in (("gloves", "warm"), ("headwear", "warm"), ("insulation_top", "medium")):
+                bump(slot, lv, c.stage_index, c.date,
+                     f"{SLOT_BY_KEY[slot].name}: above {HIGH_COLD_M:,} m the weather turns fast "
+                     f"({c.date:%d %b}, {c.where})")
+
     # the sun hat does not depend on warmth: a cold, high day still needs one
     for c in conds:
         if c.hot_sun:
@@ -414,8 +461,11 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
     if reqs["shell_top"].needed:
         r = reqs["shell_top"]
         r.windproof = True
+        # mountains want a waterproof shell, unless the month is desert-dry: the Atacama
+        # (2-10% rain) needs one against the wind, not the rain (Opus check, 2026-11-16)
+        dry = max((c.precip_prob for c in conds), default=0) < DRY_PROB
         if wet or any(c.precip_prob >= 30 for c in conds) or any(
-                in_mountains(c) or c.activity.spray for c in conds):
+                (in_mountains(c) or c.activity.spray) and not dry for c in conds):
             r.waterproof = True
             heavy = max((c.precip_mm for c in conds), default=0) >= 10 or len(
                 {c.date for c in wet}) >= 3
@@ -430,7 +480,9 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
     fw.footwear_type = max((p.footwear for p in profiles), key=FOOTWEAR_TYPES.index,
                            default="sneaker")
     fw.ankle_support = any(p.ankle_support for p in profiles)
-    hiking_wet = [c for c in wet if c.activity.mountain] or [c for c in conds if c.snow]
+    # waterproof shoes for wet trails in the mountains, not for the stairs of a shrine in a
+    # summer shower (Fushimi Inari in July got waterproof trail shoes, Opus check 2026-11-16)
+    hiking_wet = [c for c in wet if in_mountains(c)] or [c for c in conds if c.snow]
     glacier = any(p.glacier for p in profiles)
     fw.waterproof = bool(hiking_wet) or glacier
     fw.insulated = any(c.temp_c < -5 and c.activity.mountain for c in conds)

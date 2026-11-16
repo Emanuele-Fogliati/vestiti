@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { api } from "../lib/api";
-import { monthRange } from "../lib/format";
+import { monthRuns } from "../lib/format";
 import type { ItineraryCard } from "../lib/types";
 import { Illustration } from "./Illustration";
 
@@ -26,7 +26,7 @@ export function ItineraryCards({ limit, filter, items: given, empty }: {
         <Link className="tcard" to={`/ideas/${it.slug}`} key={it.slug}>
           <Illustration art={it.art} />
           <div className="b">
-            <span className="label">{it.days} days · best {monthRange(it.best_months)}</span>
+            <span className="label">{it.days} days · {monthRuns(it.months)}</span>
             <h3>{it.title}</h3>
             <span className="small">{it.places.map((p) => p.replace(/ \(.*\)$/, "")).join(" → ")}</span>
           </div>

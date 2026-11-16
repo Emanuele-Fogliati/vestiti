@@ -72,7 +72,8 @@
      "why": "Walking trails among zebra, kudu and oryx in the Khomas hills, twenty minutes from town.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 1900
      },
      "scores": {
       "effort": 2,
@@ -297,7 +298,7 @@
      "book": "Book ahead from Sesriem or Solitaire; flights go only on still mornings.",
      "why": "An hour floating over the dunes and the gravel plains, landing for a champagne breakfast.",
      "act": {
-      "type": "unknown"
+      "type": "desert"
      },
      "scores": {
       "effort": 0,
@@ -472,6 +473,7 @@
     {
      "id": "spitzkoppe",
      "name": "Spitzkoppe, the Matterhorn of Namibia",
+     "trail": "na-spitzkoppe",
      "hours": "A whole day",
      "length": "full",
      "effort": "moderate",
@@ -481,7 +483,8 @@
      "why": "A granite peak of 1,728 m alone on the plain, a rock arch, and San paintings that a local guide shows you.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 1400
      },
      "sights": [
       "Spitzkoppe"
@@ -641,7 +644,8 @@
      "why": "One of the largest groups of rock engravings in Africa, over 2,500 carved by hunter-gatherers and herders over thousands of years: a UNESCO site. Then the basalt columns of the Organ Pipes nearby.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 700
      },
      "steps": [
       {
@@ -721,7 +725,8 @@
      "why": "A guided walk into Namibia's highest mountain to a painting at least 2,000 years old; despite the name, a male shaman.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 850
      },
      "sights": [
       "White Lady of the Brandberg",
@@ -756,7 +761,8 @@
      "why": "Tree trunks up to 45 m long turned to stone, with welwitschia growing among them.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 650
      },
      "sights": [
       "Petrified Forest"
@@ -820,7 +826,7 @@
      "book": "Park permit at the gate and the camp office; pay for all the days in one go.",
      "why": "Elephants, giraffes, zebra and springbok queueing to drink, lions waiting nearby: you drive from one waterhole to the next at your pace.",
      "act": {
-      "type": "safari"
+      "type": "city"
      },
      "steps": [
       {
@@ -1094,7 +1100,8 @@
      "why": "The Kunene splits into dozens of channels over 1.5 km, drops of up to 37 m between baobabs and palms, on the border with Angola.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 800
      },
      "sights": [
       "Epupa Falls"
@@ -1128,7 +1135,8 @@
      "why": "Birds, crocodiles from a safe distance, and the Himba homesteads of the valley with a guide from the lodge.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 780
      },
      "sights": [
       "Kunene River"
@@ -1191,7 +1199,8 @@
      "why": "Africa's largest canyon, 550 m deep and 160 km long: from the main viewpoint the river bends in the rock below.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 800
      },
      "sights": [
       "Fish River Canyon"
@@ -1226,7 +1235,8 @@
      "why": "The canyon from one bend to the next on the edge, without going down.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 800
      },
      "sights": [
       "Fish River Canyon"

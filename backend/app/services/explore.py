@@ -727,7 +727,19 @@ def _fits(things: list, it) -> bool:
     return b is None or all(_span(t) is None or _span(t)[1] <= b[0] or b[1] <= _span(t)[0] for t in things)
 
 
-def _guide_days(stops: list[dict], month: int | None = None, prefs=None, spare: bool = False) -> None:
+def in_season(it, month: int | None = None, months: list[int] | None = None) -> bool:
+    """A thing to do fits the month, or a season band (a recommended trip's months): in at
+    least half of the band (the penguins of Chiloé, September to March, in an October-to-April
+    route; the page says when)."""
+    if not it.months:
+        return True
+    if months:
+        return 2 * sum(m in it.months for m in months) >= len(months)
+    return not month or month in it.months
+
+
+def _guide_days(stops: list[dict], month: int | None = None, prefs=None, spare: bool = False,
+                months: list[int] | None = None) -> None:
     """Where a local guide is written by hand (app.guide.todo: Peru, Chile, Argentina, Iceland,
     Patagonia), its days replace the ones read from the trips: things in the order not to miss,
     a whole day out alone, half days and short visits sharing a day when their hours fit, each
@@ -762,7 +774,7 @@ def _guide_days(stops: list[dict], month: int | None = None, prefs=None, spare: 
             items = [it for t in trips for it in t.items] + [
                 it for it in a.items if not any(_norm(n) in names for n in it.sights)]
         late = (s.get("arrive_at") or "") >= "17:00"  # landing at 18:40: the evening only
-        todo = [it for it in items if it.id not in used and (not month or not it.months or month in it.months)
+        todo = [it for it in items if it.id not in used and in_season(it, month, months)
                 and not (it.sights and all(n in seen for n in it.sights))
                 and not any(_norm(n) in elsewhere for n in it.sights)]
         todo, too_hard = rank.ordered(todo, prefs)
@@ -820,7 +832,7 @@ def _ready(a: dict, only: list[str], days: int | None, month: int | None, prefs)
     for what the traveller likes, or None."""
     from app import globe
     from app.guide import ready
-    t = ready.for_region(a["id"], days, only)
+    t = ready.for_region(a["id"], days, only, month)
     if t is None:
         return None
     P = globe.by_id()
@@ -842,7 +854,7 @@ def _ready(a: dict, only: list[str], days: int | None, month: int | None, prefs)
             break
     _days_of(more)
     _guide_days(more, month, prefs, spare=True)
-    return {"stops": stops, "more": more, "route": None, "best_months": sorted(t.months), "days": sum(nights),
+    return {"stops": stops, "more": more, "route": None, "best_months": sorted(t.best or t.months), "days": sum(nights),
             "ready": {"id": t.id, "title": t.title, "why": t.why, "pace": t.pace, "level": t.level}}
 
 

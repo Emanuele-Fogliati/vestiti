@@ -226,7 +226,8 @@ def test_prune_guests(db):
 
 def test_trip_from_recommended_remembers_it_and_gets_guides(client):
     client.post("/api/auth/guest")
-    slug = client.get("/api/inspire").json()[0]["slug"]
+    # a recommended trip whose places all have a sourced guide (68 places of the library have none yet)
+    slug = next(c["slug"] for c in client.get("/api/inspire").json() if c["slug"] == "peru-14")
     t = client.post(f"/api/inspire/{slug}/trip", json={}).json()
     assert t["source_itinerary"] == slug
     assert all(s["guide"] and s["guide"]["fun_fact"] for s in t["stops"])

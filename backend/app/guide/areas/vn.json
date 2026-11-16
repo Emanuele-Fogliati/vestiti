@@ -414,7 +414,8 @@
      "why": "Steps up a karst island to the view of the bay printed on every poster, and a small beach.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 110
      },
      "sights": [
       "Ti Top Island"
@@ -566,7 +567,8 @@
      "why": "500 steps up to a dragon on the ridge, with the river bends of Tam Coc and the rice below.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 120
      },
      "steps": [
       {
@@ -734,6 +736,7 @@
     {
      "id": "villages",
      "name": "Walk to Lao Chai and Ta Van through the terraces",
+     "trail": "vn-muong-hoa-valley",
      "hours": "5-6 h · about 12 km",
      "length": "full",
      "effort": "moderate",
@@ -797,6 +800,7 @@
     {
      "id": "fansipan",
      "name": "Fansipan by cable car",
+     "trail": "vn-fansipan",
      "hours": "Half a day",
      "length": "half",
      "effort": "easy",
@@ -1072,6 +1076,7 @@
     {
      "id": "pu-luong",
      "name": "Pu Luong: terraces and bamboo bridges",
+     "trail": "vn-pu-luong",
      "hours": "A whole day",
      "length": "full",
      "effort": "moderate",
@@ -1148,7 +1153,8 @@
      "why": "A wooden walkway a kilometre into a cave of white stalagmites as tall as houses.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 150
      },
      "sights": [
       "Paradise Cave"
@@ -1547,7 +1553,8 @@
      "why": "Brick towers of the Cham kingdom in a jungle valley, a Hindu sanctuary of the 4th to 13th century.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 100
      },
      "steps": [
       {
@@ -1672,7 +1679,8 @@
      "why": "Five marble hills riddled with caves and pagodas, steps to the top.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 110
      },
      "sights": [
       "Marble Mountains"
@@ -1795,7 +1803,8 @@
      "why": "Part of 250 km of tunnels where the Viet Cong lived under the bombs; crawl a stretch.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 30
      },
      "sights": [
       "Cu Chi Tunnels"

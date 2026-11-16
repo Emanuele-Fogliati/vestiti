@@ -33,13 +33,20 @@ class ReadyStop(BaseModel):
 
 class ReadyTrip(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9-]+$")
-    region: str  # app/guide/regions.json id, or "c-xx" for a whole country
+    # app/guide/regions.json id, or "c-xx" for a whole country; None: a route across regions and
+    # borders (Atacama to Uyuni), only in Recommended, never proposed by app.services.explore
+    region: str | None
     title: str = Field(min_length=5, max_length=80)
     pace: str = Field(pattern=r"^(relaxed|normal|intense)$")
     level: int = Field(ge=1, le=5)  # the highest effort of the trip's things not to miss
-    months: list[int] = Field(min_length=1)
+    months: list[int] = Field(min_length=1)  # the season band this route is the one for
+    best: list[int] = Field(default_factory=list)  # best weather inside the band; [] = off season
     why: str = Field(default="", max_length=240)
+    note: str = Field(default="", max_length=400)  # the honest season note
     stops: list[ReadyStop] = Field(min_length=1)
+    # the travel region of Recommended this route is one length/season of (Manu, 2026-11-16: "viaggi
+    # che possono andare su più nazioni", as tour operators cut them); None: only for app.services.explore
+    journey: str | None = None
 
     @property
     def days(self) -> int:
@@ -47,8 +54,10 @@ class ReadyTrip(BaseModel):
 
     @model_validator(mode="after")
     def _ok(self):
-        if any(not 1 <= m <= 12 for m in self.months):
+        if any(not 1 <= m <= 12 for m in self.months + self.best):
             raise ValueError(f"{self.id}: months are 1-12")
+        if not set(self.best) <= set(self.months):
+            raise ValueError(f"{self.id}: best months outside the band")
         places = [s.place for s in self.stops]
         if len(places) > 1 and places[-1] == places[0]:
             places = places[:-1]  # a round trip ends where it began
@@ -67,14 +76,43 @@ def trips() -> tuple[ReadyTrip, ...]:
     return out
 
 
-def for_region(region: str, days: int | None, countries: list[str] | None = None) -> ReadyTrip | None:
+class Journey(BaseModel):
+    id: str = Field(pattern=r"^[a-z0-9-]+$")
+    name: str = Field(min_length=3, max_length=60)
+    blurb: str = Field(min_length=20, max_length=200)
+
+
+@lru_cache
+def journeys() -> tuple[Journey, ...]:
+    doc = json.loads((HERE / "trips.json").read_text(encoding="utf-8"))
+    out = tuple(Journey.model_validate(j) for j in doc.get("journeys", []))
+    known = {j.id for j in out}
+    for t in trips():
+        if t.journey and t.journey not in known:
+            raise ValueError(f"{t.id}: no journey {t.journey}")
+    return out
+
+
+def for_region(region: str, days: int | None, countries: list[str] | None = None,
+               month: int | None = None) -> ReadyTrip | None:
     """The ready trip of this region nearest to the days asked (within MATCH_DAYS), or the
-    two-week one when no length is given."""
+    two-week one when no length is given. With a month, the route of that month's season band
+    (the winter route of Iceland in January); without, the main route (the most best months)."""
     want = days or 14
     cands = [t for t in trips() if t.region == region
              and (not countries or all(s.place[:2].upper() in countries for s in t.stops))]
     cands = [t for t in cands if abs(t.days - want) <= MATCH_DAYS]
-    return min(cands, key=lambda t: (abs(t.days - want), t.days)) if cands else None
+    if month:
+        cands = [t for t in cands if month in t.months]
+    return min(cands, key=lambda t: (abs(t.days - want), t.days, -len(t.best))) if cands else None
+
+
+def season_bands() -> dict[tuple[str, int], list[ReadyTrip]]:
+    """(region, weeks) -> its routes, one for each season band."""
+    out: dict[tuple[str, int], list[ReadyTrip]] = {}
+    for t in trips():
+        out.setdefault((t.region, round(t.days / 7)), []).append(t)
+    return out
 
 
 def _area(place: dict):

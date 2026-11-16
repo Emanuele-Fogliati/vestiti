@@ -480,7 +480,8 @@
      "why": "The five-storey pagoda with Fuji behind it: the postcard of Japan, about 400 steps up.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 850
      },
      "steps": [
       {
@@ -861,6 +862,7 @@
     {
      "id": "fushimi",
      "name": "Fushimi Inari at dawn",
+     "trail": "jp-fushimi-inari-summit",
      "hours": "2-3 h",
      "length": "short",
      "effort": "moderate",
@@ -1072,7 +1074,8 @@
      "why": "A canal path under cherry trees between temples, from the Silver Pavilion to a Zen temple with a brick aqueduct.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 100
      },
      "sights": [
       "Philosopher's Path",
@@ -1419,6 +1422,7 @@
     {
      "id": "miyajima",
      "name": "Miyajima: the floating torii and Mount Misen",
+     "trail": "jp-mt-misen",
      "hours": "A whole day",
      "length": "full",
      "effort": "moderate",
@@ -1861,7 +1865,8 @@
      "why": "The head shrine of the pilgrimage in the forest, and the largest torii in Japan over rice fields.",
      "act": {
       "type": "hiking",
-      "difficulty": "easy"
+      "difficulty": "easy",
+      "max_altitude_m": 400
      },
      "sights": [
       "Kumano Hongu Taisha"
@@ -1894,7 +1899,8 @@
      "why": "Japan's tallest waterfall, 133 m, behind a red pagoda: the end of the pilgrimage.",
      "act": {
       "type": "hiking",
-      "difficulty": "moderate"
+      "difficulty": "moderate",
+      "max_altitude_m": 350
      },
      "sights": [
       "Nachi Falls",

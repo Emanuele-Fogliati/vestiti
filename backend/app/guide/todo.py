@@ -344,7 +344,9 @@ def with_trails(todo: Todo, name: str, country: str | None, lat: float, lon: flo
     used: set[str] = set()
     items = []
     for it in todo.items:
-        if it.trail is None and (it.act or {}).get("type") in ("hiking", "trek_multiday"):
+        if it.trail:  # linked by hand in the guide: not offered again as a trail of its own
+            used.add(it.trail)
+        elif (it.act or {}).get("type") in ("hiking", "trek_multiday"):
             t = next((t for t in near if t.id not in used and _same_walk(it, t)), None)
             if t:
                 used.add(t.id)

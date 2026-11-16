@@ -1,3 +1,4 @@
+import type { MapTrip } from "./TripsMap";
 import { lazy, Suspense } from "react";
 import type { RouteMapOpts, RouteStop } from "./RouteMap";
 import type { GlobeFocus } from "./Globe";
@@ -25,7 +26,7 @@ export function TreksMap(props: { trails: TrailCard[]; selected: string | null; 
   return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><TrekMapImpl {...props} /></Suspense>;
 }
 
-export function MyTripsMap(props: { trips: { id: string; points: number[][] }[]; selected: string | null; onPick: (id: string) => void;
+export function MyTripsMap(props: { trips: MapTrip[]; selected: string | null; onPick: (id: string) => void;
   inset?: { top: number; right: number; bottom: number; left: number } }) {
   return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><TripsMapImpl {...props} /></Suspense>;
 }

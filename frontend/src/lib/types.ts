@@ -590,21 +590,68 @@ export interface ItineraryCard {
   highest_m: number;
   places: string[];
   art: StopArt | null;
+  /** the recommended library: where, its length in weeks, the months this route is the one for */
+  destination: string | null;
+  weeks: number | null;
+  months: number[];
+  pace: string | null;
+  level: number | null;
+  /** its travel region (Patagonia, Peru & Bolivia...): Recommended shows one card each, the lead route */
+  journey: string | null;
+  journey_blurb: string | null;
+  lead: boolean;
+}
+
+/** A travel region with all its routes: one per length (1-4 weeks) and season band. */
+export interface Journey {
+  id: string; name: string; blurb: string; countries: string[];
+  routes: { slug: string; weeks: number; days: number; months: number[]; best_months: number[] }[];
+}
+
+/** What to wear on a recommended trip in one month: the layer engine on each stop's climate. */
+export interface ItineraryWear {
+  month: number; low: number; high: number; rain: number; top_m: number;
+  /** the coldest moment, the one the warm layers are for */
+  cold: { feels: number; place: string; what: string };
+  pieces: { slot: string; name: string; level: string; pack: boolean; why: string }[];
+  hot: { names: string[]; pieces: string[] } | null;
 }
 
 export interface ExcursionLink { provider: string; label: string; href: string }
 
 /** One stop of an itinerary: the same shape as a trip stop, plus the day plan and tips. */
+/** One thing to do on a day of a recommended trip, from the zone's guide; trail: its walk. */
+export interface ItineraryThing {
+  id: string; name: string; hours: string; effort: string; need: string; best: string; book: string; why: string;
+  steps: { at: string; what: string; note: string }[];
+  spare: boolean; // the spare day's walk, if the sky is good
+  trail: { id: string; name: string; difficulty: string; hours: number[]; km: number | null; gain_m: number | null;
+    max_m: number | null; has_map: boolean } | null;
+}
+
+/** A day of a recommended trip: what you do and what to wear that day (the layer engine). */
+export interface ItineraryDay {
+  kind: "arrive" | "day" | "free";
+  title: string;
+  things: ItineraryThing[];
+  low: number; high: number; rain: number;
+  wear: string[]; pack: string[];
+  cold: { feels: number; place: string; what: string };
+}
+
 export interface ItineraryStop extends Omit<Stop, "plan"> {
   plan: string[];
+  days: ItineraryDay[];
   do: string[];
   skip: string[];
   excursions: { title: string; links: ExcursionLink[] }[];
 }
 
-export interface Itinerary extends ItineraryCard {
+export interface Itinerary extends Omit<ItineraryCard, "journey"> {
   season_note: string;
   start_date: string;
+  wear: ItineraryWear;
+  journey: Journey | null;
   stops: ItineraryStop[];
   group_trips: { operator: string; title: string; days: number; href: string }[];
 }
