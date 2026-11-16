@@ -1,0 +1,70 @@
+{
+ "id": "no-ryten-kvalvika",
+ "country": "NO",
+ "name": "Ryten and Kvalvika beach",
+ "base": "Fredvang",
+ "region": "Lofoten",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Over a bog pass to a wild white beach between cliffs, then up Ryten for the famous view of Kvalvika from above.",
+ "book": "Free; parking at Innerpollen near Fredvang.",
+ "water": "Streams (treat).",
+ "dangers": [
+  "Boggy and muddy path.",
+  "Cliff edge on Ryten."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.visitnorway.com/places-to-go/northern-norway/lofoten/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Fredvang",
+   "lat": 68.0841,
+   "lon": 13.1667,
+   "role": "start",
+   "note": "The car park by the lagoon."
+  },
+  {
+   "id": "kvalvika",
+   "name": "Kvalvika Beach",
+   "lat": 68.0769,
+   "lon": 13.0963,
+   "role": "point",
+   "note": "A white beach in a bay closed by steep mountains."
+  },
+  {
+   "id": "goal",
+   "name": "Ryten",
+   "lat": 68.0893,
+   "lon": 13.0929,
+   "role": "goal",
+   "note": "A 543 m top with a cliff dropping to the beach."
+  }
+ ]
+}

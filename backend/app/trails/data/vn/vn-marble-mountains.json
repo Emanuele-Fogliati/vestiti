@@ -1,0 +1,81 @@
+{
+ "id": "vn-marble-mountains",
+ "country": "VN",
+ "name": "Marble Mountains: Thuy Son",
+ "base": "Da Nang",
+ "region": "Ngu Hanh Son, Da Nang",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Up steps through pagodas and Buddhist caves inside a limestone hill between Da Nang and Hoi An, to lookouts over the beach.",
+ "book": "Ticket at the gate; lift for the first part.",
+ "water": "Shops at the gate.",
+ "dangers": [
+  "Dark and slippery inside the caves."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Marble_Mountains_(Vietnam)"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 5,
+  "relax": 3,
+  "history": 4,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Marble Mountains gate",
+   "lat": 16.00455,
+   "lon": 108.26195,
+   "role": "start",
+   "note": "The steps up Thuy Son from Huyen Tran Cong Chua street."
+  },
+  {
+   "id": "tam-thai",
+   "name": "Tam Thai Pagoda",
+   "lat": 16.00389,
+   "lon": 108.26279,
+   "role": "point",
+   "note": "The 17th-century pagoda at the top of the steps."
+  },
+  {
+   "id": "vong-hai-dai",
+   "name": "Vong Hai Dai",
+   "lat": 16.0037,
+   "lon": 108.26424,
+   "role": "point",
+   "note": "Lookout over My Khe beach and the sea."
+  },
+  {
+   "id": "goal",
+   "name": "Vong Giang Dai",
+   "lat": 16.00357,
+   "lon": 108.26213,
+   "role": "goal",
+   "note": "Lookout over the river and the other marble hills.",
+   "scene": "vn-marble-mountains"
+  }
+ ]
+}

@@ -1,0 +1,1316 @@
+{
+ "_doc": "Austria, written by hand for the recommended trips (Manu, 2026-11-16): Vienna, the Wachau, Salzburg and its lakes, Hallstatt, the Hohe Tauern and Tyrol, in summer, winter and the seasons between. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "at-vienna",
+   "names": [
+    "Vienna",
+    "Wien",
+    "Schönbrunn",
+    "Kahlenberg"
+   ],
+   "country": "AT",
+   "lat": 48.208,
+   "lon": 16.374,
+   "radius_km": 20,
+   "season": "Hot summers (28 °C), cold grey winters; the Christmas markets from mid-November to 24 December, the ball season January and February.",
+   "sleep": "Inside the Ring, or Neubau and Spittelberg just outside it.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Vienna",
+    "https://en.wikipedia.org/wiki/Sch%C3%B6nbrunn_Palace",
+    "https://en.wikipedia.org/wiki/St._Stephen%27s_Cathedral,_Vienna",
+    "https://en.wikipedia.org/wiki/Belvedere,_Vienna"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "centre",
+     "name": "St Stephen's, the Hofburg and the coffee houses",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Gothic cathedral and its tiled roof, the Habsburgs' winter palace with Sisi's rooms, and a melange in a coffee house, on UNESCO's list of living heritage.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "St. Stephen's Cathedral",
+      "Hofburg"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "schonbrunn",
+     "name": "Schönbrunn Palace and gardens",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed tickets online",
+     "why": "The Habsburgs' summer palace of 1,441 rooms, its baroque gardens and the Gloriette over the city.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Schönbrunn Palace"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "belvedere",
+     "name": "Klimt's Kiss at the Belvedere",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Two baroque palaces with the largest Klimt collection in the world.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Belvedere Palace"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "opera",
+     "name": "An evening at the State Opera",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Standing tickets for a few euros, sold the day of the show, for one of the world's great opera houses.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Vienna State Opera"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "kahlenberg",
+     "name": "Kahlenberg and the wine taverns",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Up through the vineyards of the Vienna Woods to the city's viewpoint, then a Heuriger tavern serving its own wine.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 484
+     },
+     "trail": "at-kahlenberg",
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "markets",
+     "name": "The Christmas markets",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Mulled wine and wooden stalls in front of the City Hall, at Schönbrunn and on Spittelberg.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "at-durnstein",
+   "names": [
+    "Dürnstein",
+    "Wachau",
+    "Melk",
+    "Krems an der Donau",
+    "Spitz"
+   ],
+   "country": "AT",
+   "lat": 48.39,
+   "lon": 15.52,
+   "radius_km": 25,
+   "season": "The Wachau is at its best from April (apricot blossom) to October (grape harvest); in winter most inns and boats stop.",
+   "sleep": "Dürnstein or Spitz, among the vineyards.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Wachau",
+    "https://en.wikipedia.org/wiki/Wachau",
+    "https://en.wikipedia.org/wiki/Melk_Abbey",
+    "https://en.wikipedia.org/wiki/D%C3%BCrnstein"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "melk",
+     "name": "Melk Abbey and the Danube by boat",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A baroque abbey on a rock over the river with a gilded library, then the boat down the Wachau to Dürnstein between terraced vineyards.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Melk Abbey",
+      "Wachau"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ruin",
+     "name": "Dürnstein castle ruin",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Up the rocks to the ruin where Richard the Lionheart was held for ransom in 1192, over the blue tower of the abbey and the river.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 320
+     },
+     "arrive": true,
+     "trail": "at-durnstein-ruin",
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "wine",
+     "name": "Wine and apricots of the Wachau",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Grüner Veltliner and Riesling at the wineries, apricot jam and brandy, by bike along the river path.",
+     "act": {
+      "type": "cycling"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "at-salzburg",
+   "names": [
+    "Salzburg",
+    "Hellbrunn",
+    "Untersberg"
+   ],
+   "country": "AT",
+   "lat": 47.8,
+   "lon": 13.04,
+   "radius_km": 15,
+   "season": "Rain often (summer storms), cold winters; the Salzburg Festival is July and August, the Advent markets late November to 24 December.",
+   "sleep": "The old town or across the river by Linzer Gasse.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Salzburg",
+    "https://en.wikipedia.org/wiki/Hohensalzburg_Fortress",
+    "https://en.wikipedia.org/wiki/Hellbrunn_Palace",
+    "https://en.wikipedia.org/wiki/Mozart%27s_birthplace"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Old town, Mozart's birthplace and the fortress",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A UNESCO baroque town under the Hohensalzburg, one of Europe's biggest medieval castles, reached by funicular; Getreidegasse and the house where Mozart was born.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hohensalzburg Fortress",
+      "Mozart's Birthplace"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "hellbrunn",
+     "name": "Hellbrunn's trick fountains",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A prince-archbishop's summer palace whose hidden jets of water still soak the guests.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "mirabell",
+     "name": "Mirabell gardens and the Sound of Music",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The formal gardens of the film's 'Do-Re-Mi' with the fortress behind.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Mirabell Palace"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "at-st-wolfgang",
+   "names": [
+    "St. Wolfgang",
+    "St. Gilgen",
+    "Wolfgangsee",
+    "Schafberg"
+   ],
+   "country": "AT",
+   "lat": 47.74,
+   "lon": 13.45,
+   "radius_km": 15,
+   "season": "The lake is warm enough to swim in July and August. The Schafberg railway runs about late April to October; the Advent market by the lake in December.",
+   "sleep": "St. Wolfgang or St. Gilgen on the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/St._Wolfgang_im_Salzkammergut",
+    "https://en.wikipedia.org/wiki/Wolfgangsee",
+    "https://en.wikipedia.org/wiki/Schafbergbahn"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "schafberg",
+     "name": "Schafberg by rack railway, down on foot",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Austria's steepest rack railway to 1,783 m, the view over a dozen lakes of the Salzkammergut, and the path back down.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1783
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "at-schafberg",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "lake",
+     "name": "The lake by boat and St. Wolfgang's church",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Lake steamers between the villages, and Michael Pacher's carved altar of 1481 in the pilgrimage church.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Wolfgangsee"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-at-hallstatt",
+   "names": [
+    "Hallstatt",
+    "Obertraun",
+    "Dachstein",
+    "Hallstätter See"
+   ],
+   "country": "AT",
+   "lat": 47.5622,
+   "lon": 13.6493,
+   "radius_km": 12,
+   "season": "Lovely in every season, crowded at midday in summer; the salt mine and Dachstein caves close about November to March.",
+   "sleep": "Hallstatt itself (book early) or Obertraun across the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hallstatt",
+    "https://en.wikipedia.org/wiki/Hallstatt",
+    "https://en.wikipedia.org/wiki/Dachstein_Ice_Cave"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "village",
+     "name": "Hallstatt village and the lake",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Wooden houses stacked between a steep mountain and the lake, the bone house of painted skulls; come early or late to miss the coaches.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "salt",
+     "name": "The salt mine and the Skywalk",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Funicular to the world's oldest salt mine, worked for 7,000 years, with miners' slides inside, and the platform 350 m above the village.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 860
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "at-hallstatt-salzberg",
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "dachstein",
+     "name": "Dachstein: ice cave and the Five Fingers",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A cable car from Obertraun to a cave of ice and a platform of five fingers jutting out over a 400 m drop, high above the lake.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-at-zell-am-see",
+   "names": [
+    "Zell am See",
+    "Kaprun",
+    "Grossglockner",
+    "Krimml",
+    "Liechtensteinklamm",
+    "Hohe Tauern"
+   ],
+   "country": "AT",
+   "lat": 47.3233,
+   "lon": 12.7967,
+   "radius_km": 50,
+   "season": "Summer for the Grossglockner road (open about May to October) and the high walks; skiing on the Kitzsteinhorn glacier much of the year.",
+   "sleep": "Zell am See on the lake, or Kaprun.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Zell_am_See",
+    "https://en.wikipedia.org/wiki/Grossglockner_High_Alpine_Road",
+    "https://en.wikipedia.org/wiki/Krimml_Waterfalls",
+    "https://en.wikipedia.org/wiki/Liechtensteinklamm"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "glockner",
+     "name": "Grossglockner road and the Pasterze glacier",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Austria's grandest road over the Alps to Kaiser-Franz-Josefs-Höhe, facing its highest peak (3,798 m) and the Pasterze glacier; the Gamsgrube path to marmots and ibex.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2600
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "at-gamsgrube",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "krimml",
+     "name": "Krimml waterfalls",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Europe's highest falls, 380 m in three steps, with a path up beside the spray.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1500
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "at-krimml-waterfalls",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "pinzgauer",
+     "name": "The Pinzgauer Spaziergang",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A high balcony path from the Schmittenhöhe facing 30 glaciated peaks of the Hohe Tauern.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2000
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "at-pinzgauer-spaziergang",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "klamm",
+     "name": "Liechtensteinklamm gorge",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Walkways and a spiral stair through a slot gorge 300 m deep.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 700
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "at-liechtensteinklamm",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing on the Kitzsteinhorn and Schmitten",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A glacier ski area above Kaprun and the slopes of Zell over the lake.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "lake",
+     "name": "Lake Zell",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The lakeside promenade and a boat round to Thumersbach, with the snow of the Kitzsteinhorn behind.",
+     "act": {
+      "type": "boat"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "at-kitzbuhel",
+   "names": [
+    "Kitzbühel",
+    "Hahnenkamm",
+    "Kitzbüheler Horn"
+   ],
+   "country": "AT",
+   "lat": 47.45,
+   "lon": 12.39,
+   "radius_km": 15,
+   "season": "Skiing December to March (the Hahnenkamm race in January); walking June to October.",
+   "sleep": "In the walled old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kitzb%C3%BChel",
+    "https://en.wikipedia.org/wiki/Hahnenkamm_(Kitzb%C3%BChel)"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ski",
+     "name": "Skiing the Hahnenkamm",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the great ski areas of the Alps, with the Streif, the most famous downhill of the World Cup.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "horn",
+     "name": "Kitzbüheler Horn",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up to 1,996 m by cable car for the Wilder Kaiser and the Hohe Tauern; an alpine flower garden near the top.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1996
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "town",
+     "name": "Kitzbühel old town",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Painted houses of the medieval market town and its two churches.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "at-innsbruck",
+   "names": [
+    "Innsbruck",
+    "Nordkette",
+    "Ehrwald",
+    "Seebensee",
+    "Tyrol"
+   ],
+   "country": "AT",
+   "lat": 47.269,
+   "lon": 11.404,
+   "radius_km": 40,
+   "season": "In the Inn valley at 570 m: hot summer days, the mountains with snow December to April; the Christmas markets in December.",
+   "sleep": "The old town (Altstadt) under the Nordkette.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Innsbruck",
+    "https://en.wikipedia.org/wiki/Goldenes_Dachl",
+    "https://en.wikipedia.org/wiki/Nordkettenbahn",
+    "https://en.wikipedia.org/wiki/Seebensee"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "The Golden Roof and the old town",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The gilded balcony of Emperor Maximilian of 1500, the Hofburg and the coloured houses on the Inn.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Innsbruck"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "nordkette",
+     "name": "Nordkette and the Goetheweg",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From the old town by funicular and cable cars to 2,256 m in 20 minutes, then a high path along the ridge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2300
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "at-nordkette-goetheweg",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "seebensee",
+     "name": "Seebensee and the Zugspitze",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Ehrwald up to a lake that mirrors the Zugspitze, Germany's highest peak.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1700
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "at-seebensee",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "transfer"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing above the city",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Nine ski areas around the city, from the Nordkette's steep slopes to the Stubai glacier.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "swarovski",
+     "name": "Swarovski Crystal Worlds",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Chambers of art made of crystal under a giant's head, in Wattens.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 2,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  }
+ ]
+}

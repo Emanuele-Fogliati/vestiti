@@ -1,0 +1,61 @@
+{
+ "id": "at-pinzgauer-spaziergang",
+ "country": "AT",
+ "name": "Pinzgauer Spaziergang",
+ "base": "Zell am See",
+ "region": "Kitzbühel Alps",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "A gentle high walk of grassy ridges from the Schmittenhöhe to Saalbach, with the whole line of the Hohe Tauern glaciers across the valley.",
+ "book": "Schmittenhöhe cable car from Zell am See; bus back from Saalbach.",
+ "water": "Huts at the start and the end.",
+ "dangers": [
+  "Afternoon thunderstorms in summer: start early and be off ridges by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Schmittenh%C3%B6he"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Schmittenhöhe",
+   "lat": 47.329,
+   "lon": 12.737,
+   "role": "start",
+   "note": "The summit above Zell am See and its lake."
+  },
+  {
+   "id": "goal",
+   "name": "Saalbach",
+   "lat": 47.391,
+   "lon": 12.636,
+   "role": "goal",
+   "note": "A ski village in the Glemmtal."
+  }
+ ]
+}

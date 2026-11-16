@@ -1,0 +1,67 @@
+{
+ "id": "tz-engaresero-falls",
+ "country": "TZ",
+ "name": "Engaresero waterfall gorge",
+ "base": "Lake Natron",
+ "region": "Ngorongoro district",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  2.5,
+  3.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Up a narrow red gorge from the Maasai village of Engaresero, wading the warm stream to a waterfall in a cliff pool.",
+ "book": "Village fee and a local Maasai guide at Engaresero.",
+ "water": "Carry 1.5 litres.",
+ "dangers": [
+  "You walk in the stream: shoes that can get wet.",
+  "Flash floods after rain on the escarpment: do not go in a storm."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Lake_Natron",
+  "https://en.wikivoyage.org/wiki/Lake_Natron"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 3,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Engaresero",
+   "lat": -2.6107,
+   "lon": 35.878,
+   "role": "start",
+   "note": "A Maasai village at the foot of the Rift escarpment, near the lake."
+  },
+  {
+   "id": "goal",
+   "name": "Engaresero Falls",
+   "lat": -2.576,
+   "lon": 35.879,
+   "role": "goal",
+   "note": "A waterfall that falls into a pool between red rock walls."
+  }
+ ]
+}

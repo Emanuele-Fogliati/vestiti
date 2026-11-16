@@ -1,0 +1,63 @@
+{
+ "id": "no-skageflaa",
+ "country": "NO",
+ "name": "Skageflå farm above Geirangerfjord",
+ "base": "Geiranger",
+ "region": "Geirangerfjord",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Up from Geiranger to an old farm on a ledge 250 m above the fjord, opposite the Seven Sisters waterfall.",
+ "book": "Free from Homlong; many go by boat to the landing below and climb from there.",
+ "water": "Carry 1 litre.",
+ "dangers": [
+  "Steep path above the fjord; some chains."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Skagefl%C3%A5",
+  "https://en.wikipedia.org/wiki/Geirangerfjord"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 3,
+  "relax": 3,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Homlong",
+   "lat": 62.106,
+   "lon": 7.1806,
+   "role": "start",
+   "note": "A farm road above Geiranger."
+  },
+  {
+   "id": "goal",
+   "name": "Skageflå",
+   "lat": 62.1105,
+   "lon": 7.1211,
+   "role": "goal",
+   "note": "Grass-roofed farm buildings on a ledge high above the fjord."
+  }
+ ]
+}

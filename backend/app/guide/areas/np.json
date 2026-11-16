@@ -1,0 +1,2398 @@
+{
+ "_doc": "Nepal, written by hand for the recommended trips (Manu, 2026-11-16): the Kathmandu valley, Pokhara, Chitwan, Lumbini, a night in each village of the Everest, Poon Hill and Annapurna Sanctuary treks, and Mustang for the monsoon. Nepal has required a licensed guide on most trekking routes since 2023. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "np-kathmandu",
+   "names": [
+    "Kathmandu",
+    "Thamel",
+    "Patan",
+    "Lalitpur",
+    "Boudhanath",
+    "Swayambhunath",
+    "Pashupatinath"
+   ],
+   "country": "NP",
+   "lat": 27.717,
+   "lon": 85.324,
+   "radius_km": 15,
+   "season": "At 1,300 m: warm and dusty October to May, monsoon rain June to September, cold mornings December to February.",
+   "sleep": "Thamel for trekkers, or the quieter lanes around Patan's Durbar Square or Boudha.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kathmandu",
+    "https://en.wikipedia.org/wiki/Boudhanath",
+    "https://en.wikipedia.org/wiki/Swayambhunath",
+    "https://en.wikipedia.org/wiki/Pashupatinath_Temple",
+    "https://en.wikipedia.org/wiki/Patan_Durbar_Square"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "durbar",
+     "name": "Kathmandu Durbar Square and the old bazaars",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The old royal square of temples and palaces, part of UNESCO's Kathmandu Valley site, the house of the living goddess Kumari, and the bazaar of Asan.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Kathmandu Durbar Square",
+      "Kumari Ghar"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "boudha",
+     "name": "Pashupatinath and Boudhanath",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Open-air cremations on the Bagmati at Nepal's holiest Hindu temple, then the kora at dusk around Boudhanath, one of the largest stupas in the world.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Pashupatinath Temple",
+      "Boudhanath"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "swayambhu",
+     "name": "Swayambhunath, the monkey temple",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "365 steps up a hill to a white stupa with the Buddha's eyes, prayer wheels, monkeys and the whole valley below.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Swayambhunath"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "patan",
+     "name": "Patan Durbar Square and museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The finest of the valley's royal squares, with Newar temples of brick and carved wood and one of Asia's best small museums in the palace.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Patan Durbar Square"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "flight",
+     "name": "Mountain flight to Everest",
+     "hours": "1 h, at dawn",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "An hour along the Himalaya at dawn, with Everest from the cockpit, for those not trekking to it.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-bhaktapur",
+   "names": [
+    "Bhaktapur",
+    "Changu Narayan"
+   ],
+   "country": "NP",
+   "lat": 27.67,
+   "lon": 85.43,
+   "radius_km": 8,
+   "season": "As Kathmandu: warm October to May, monsoon June to September.",
+   "sleep": "Guesthouses on the squares of the old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bhaktapur",
+    "https://en.wikipedia.org/wiki/Bhaktapur_Durbar_Square",
+    "https://en.wikipedia.org/wiki/Changu_Narayan_Temple"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "squares",
+     "name": "Bhaktapur's squares and the potters",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A car-free Newar town of temples: the five-storey Nyatapola, the 55-window palace, potters' square and the king curd, juju dhau.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bhaktapur Durbar Square"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "changu",
+     "name": "Changu Narayan temple",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The oldest temple of the valley, from the 4th century, on a ridge 6 km north of Bhaktapur.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Changu Narayan"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-nagarkot",
+   "names": [
+    "Nagarkot"
+   ],
+   "country": "NP",
+   "lat": 27.72,
+   "lon": 85.52,
+   "radius_km": 6,
+   "season": "At 2,100 m: the clearest views October to February; cold nights in winter, cloud in the monsoon.",
+   "sleep": "Hotels along the ridge, facing north.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Nagarkot",
+    "https://en.wikipedia.org/wiki/Nagarkot"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "sunrise",
+     "name": "Himalaya sunrise",
+     "hours": "1 h at dawn",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From the ridge the Himalaya from Annapurna to Everest, 200 km of snow peaks turning pink at dawn.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "changu-walk",
+     "name": "Walk down to Changu Narayan",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Along the ridge through pine forest and villages to the valley's oldest temple, then a bus to Bhaktapur.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "trail": "np-nagarkot-changu-narayan",
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-dhulikhel",
+   "names": [
+    "Dhulikhel",
+    "Namobuddha",
+    "Panauti"
+   ],
+   "country": "NP",
+   "lat": 27.62,
+   "lon": 85.55,
+   "radius_km": 15,
+   "season": "At 1,550 m: as Nagarkot, the Himalaya clearest October to February.",
+   "sleep": "Lodges on the ridge above the old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Dhulikhel",
+    "https://en.wikipedia.org/wiki/Namo_Buddha",
+    "https://en.wikipedia.org/wiki/Panauti"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "namobuddha",
+     "name": "Walk to Namobuddha monastery",
+     "hours": "5-6 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Through terraced villages to the hilltop monastery where the young Buddha gave himself to a starving tigress.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1800
+     },
+     "sights": [
+      "Namobuddha"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "panauti",
+     "name": "Panauti old town",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A Newar town at the meeting of two rivers, its temples untouched by the tourists of the valley.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-bandipur",
+   "names": [
+    "Bandipur"
+   ],
+   "country": "NP",
+   "lat": 27.94,
+   "lon": 84.41,
+   "radius_km": 6,
+   "season": "At 1,000 m: warm, with Himalaya views October to February.",
+   "sleep": "Guesthouses in the old Newar houses of the bazaar.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bandipur",
+    "https://en.wikipedia.org/wiki/Bandipur"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "bazaar",
+     "name": "Bandipur bazaar and Tundikhel",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A car-free hill town of 18th-century Newar trading houses, and the meadow of Tundikhel with the Annapurnas and Manaslu at dawn.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "siddha",
+     "name": "Siddha Cave",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A steep path down to one of Nepal's biggest caves, lit by your guide's lamp.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1000
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-pokhara",
+   "names": [
+    "Pokhara",
+    "Phewa Lake",
+    "Sarangkot",
+    "Lakeside"
+   ],
+   "country": "NP",
+   "lat": 28.21,
+   "lon": 83.986,
+   "radius_km": 15,
+   "season": "At 800 m under the Annapurnas: warm. October to April for the mountain views; June to September is the wettest place in Nepal.",
+   "sleep": "Lakeside, by Phewa lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Pokhara",
+    "https://en.wikipedia.org/wiki/Phewa_Lake",
+    "https://en.wikipedia.org/wiki/Sarangkot",
+    "https://en.wikipedia.org/wiki/World_Peace_Pagoda_(Pokhara)"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "sarangkot",
+     "name": "Sunrise at Sarangkot",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up before dawn to the ridge at 1,600 m: Dhaulagiri, the Annapurnas and the fishtail of Machapuchare over the lake.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1600
+     },
+     "sights": [
+      "Sarangkot"
+     ],
+     "trail": "np-sarangkot",
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "lake",
+     "name": "Boat on Phewa lake and the Peace Pagoda",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Row to the island temple of Tal Barahi, cross the lake and climb through forest to the white World Peace Pagoda.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1100
+     },
+     "sights": [
+      "Phewa Lake",
+      "World Peace Pagoda"
+     ],
+     "arrive": true,
+     "trail": "np-world-peace-pagoda",
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "paraglide",
+     "name": "Paragliding from Sarangkot",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "One of the world's great tandem flights: 30 minutes over the lake facing the Annapurnas.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    },
+    {
+     "id": "museum",
+     "name": "International Mountain Museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The story of the Himalaya, its peoples and the first ascents of the 8,000 m peaks.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-sauraha",
+   "names": [
+    "Sauraha",
+    "Chitwan National Park",
+    "Chitwan",
+    "Rapti River"
+   ],
+   "country": "NP",
+   "lat": 27.58,
+   "lon": 84.5,
+   "radius_km": 25,
+   "season": "Hot lowlands at 200 m: the best months are October to March (foggy mornings in December and January); April to June is very hot; in the monsoon many jungle activities stop.",
+   "sleep": "Lodges in Sauraha by the Rapti river.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Chitwan_National_Park",
+    "https://en.wikipedia.org/wiki/Chitwan_National_Park"
+   ],
+   "nights": [
+    2,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "jeep",
+     "name": "Jeep safari in Chitwan",
+     "hours": "Half a day to a day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Grassland and sal forest of the one-horned rhino, about 700 of them; also sloth bears, gharials and, with luck, a Bengal tiger.",
+     "act": {
+      "type": "safari"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "sights": [
+      "Chitwan National Park"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "canoe",
+     "name": "Dugout canoe and a jungle walk",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Down the Rapti in a dugout past mugger crocodiles and kingfishers, then on foot with two naturalists.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "tharu",
+     "name": "Tharu village and dance",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The people of the Terai's forests: mud-walled houses by day, stick dances in the evening.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-lumbini",
+   "names": [
+    "Lumbini",
+    "Maya Devi Temple"
+   ],
+   "country": "NP",
+   "lat": 27.47,
+   "lon": 83.28,
+   "radius_km": 10,
+   "season": "Hot plains: October to March; April to June reaches 40 °C.",
+   "sleep": "Hotels near the sacred garden, or a monastery guesthouse.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lumbini",
+    "https://en.wikipedia.org/wiki/Lumbini"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "garden",
+     "name": "Maya Devi temple and the monasteries",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The birthplace of the Buddha, on UNESCO's list, with Ashoka's pillar of 249 BC, and temples built by Buddhist countries from Japan to Germany along a canal.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Maya Devi Temple"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-ulleri",
+   "names": [
+    "Ulleri",
+    "Tikhedhunga",
+    "Nayapul",
+    "Birethanti",
+    "Hile"
+   ],
+   "country": "NP",
+   "lat": 28.37,
+   "lon": 83.73,
+   "radius_km": 6,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Ulleri.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-ulleri",
+     "name": "From Nayapul up the stone steps to Ulleri",
+     "hours": "5-6 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "From Pokhara by road to Nayapul, along the river past Birethanti, then about 3,300 stone steps up to the Magar village of Ulleri at 2,000 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2070
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 2,
+      "relax": 1,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-ghorepani",
+   "names": [
+    "Ghorepani",
+    "Poon Hill"
+   ],
+   "country": "NP",
+   "lat": 28.4,
+   "lon": 83.7,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Ghorepani at 2,860 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area",
+    "https://en.wikipedia.org/wiki/Poon_Hill"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-ghorepani",
+     "name": "Through the rhododendron forest to Ghorepani",
+     "hours": "4-5 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up through forests of rhododendron, red in March and April, to the pass village under Poon Hill.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2860
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "poon-hill",
+     "name": "Poon Hill at sunrise",
+     "hours": "2 h at dawn",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "An hour up by headlamp to 3,210 m for the sun rising over Dhaulagiri, Annapurna South and Machapuchare: the classic Himalaya view.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3210
+     },
+     "sights": [
+      "Poon Hill"
+     ],
+     "trail": "np-poon-hill",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-tadapani",
+   "names": [
+    "Tadapani"
+   ],
+   "country": "NP",
+   "lat": 28.39,
+   "lon": 83.79,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Tadapani.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-tadapani",
+     "name": "Over the ridge to Tadapani",
+     "hours": "5-6 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "From Poon Hill along the forest ridge of Deurali at 3,100 m and down to Tadapani, face to face with Machapuchare.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3100
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-ghandruk",
+   "names": [
+    "Ghandruk",
+    "Landruk"
+   ],
+   "country": "NP",
+   "lat": 28.38,
+   "lon": 83.81,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Ghandruk's stone houses.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area",
+    "https://en.wikipedia.org/wiki/Ghandruk"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-ghandruk",
+     "name": "Down to Ghandruk, the Gurung village",
+     "hours": "3-4 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A big Gurung village of slate roofs on terraces, home of many Gurkha soldiers, with a small museum of their life.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2630
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-chhomrong",
+   "names": [
+    "Chhomrong"
+   ],
+   "country": "NP",
+   "lat": 28.42,
+   "lon": 83.82,
+   "radius_km": 3,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Chhomrong.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-chhomrong",
+     "name": "Across the valley to Chhomrong",
+     "hours": "5-6 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The last Gurung village before the Annapurna Sanctuary, on a spur under Annapurna South and Hiunchuli.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2340
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 2,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-bamboo",
+   "names": [
+    "Bamboo",
+    "Sinuwa"
+   ],
+   "country": "NP",
+   "lat": 28.47,
+   "lon": 83.84,
+   "radius_km": 3,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Bamboo.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-bamboo",
+     "name": "Down Chhomrong's steps and into the gorge to Bamboo",
+     "hours": "5-6 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Down some 2,500 stone steps, across the river, up to Sinuwa and into the bamboo forest of the Modi Khola gorge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2360
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-deurali",
+   "names": [
+    "Deurali",
+    "Himalaya Hotel"
+   ],
+   "country": "NP",
+   "lat": 28.5,
+   "lon": 83.87,
+   "radius_km": 3,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Deurali at 3,200 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-deurali",
+     "name": "Up the gorge to Deurali",
+     "hours": "4-5 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Out of the forest into the narrow gorge under the walls of Hiunchuli; in winter and spring watch for avalanche warnings here.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3230
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-annapurna-base-camp",
+   "names": [
+    "Annapurna Base Camp",
+    "Machapuchare Base Camp",
+    "Annapurna Sanctuary"
+   ],
+   "country": "NP",
+   "lat": 28.53,
+   "lon": 83.88,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses at Annapurna Base Camp, 4,130 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area",
+    "https://en.wikipedia.org/wiki/Annapurna_Sanctuary"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "abc",
+     "name": "Into the Annapurna Sanctuary",
+     "hours": "4-5 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Past Machapuchare Base Camp into a ring of peaks over 6,000 m, Annapurna I (8,091 m) at its head; sunrise at base camp is the reward.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4130
+     },
+     "sights": [
+      "Annapurna Base Camp"
+     ],
+     "arrive": true,
+     "trail": "np-annapurna-base-camp",
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-jhinu-danda",
+   "names": [
+    "Jhinu Danda",
+    "Jhinu"
+   ],
+   "country": "NP",
+   "lat": 28.409,
+   "lon": 83.824,
+   "radius_km": 3,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Jhinu Danda.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapurna_Sanctuary",
+    "https://en.wikipedia.org/wiki/Annapurna_Conservation_Area"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "springs",
+     "name": "Down to the Jhinu hot springs",
+     "hours": "6-7 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The long way down from the sanctuary ends in hot pools by the Modi Khola, ten minutes below the village.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4130
+     },
+     "sights": [
+      "Jhinu Danda"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-phakding",
+   "names": [
+    "Phakding"
+   ],
+   "country": "NP",
+   "lat": 27.74,
+   "lon": 86.71,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Phakding.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park",
+    "https://en.wikipedia.org/wiki/Tenzing%E2%80%93Hillary_Airport"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-phakding",
+     "name": "Fly to Lukla, walk down to Phakding",
+     "hours": "3-4 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A dawn flight onto Lukla's short sloping runway (from Ramechhap in the busy months), then down the Dudh Kosi past prayer walls to Phakding.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2850
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-namche-bazaar",
+   "names": [
+    "Namche Bazaar",
+    "Namche"
+   ],
+   "country": "NP",
+   "lat": 27.8,
+   "lon": 86.71,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Lodges in Namche at 3,440 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park",
+    "https://en.wikipedia.org/wiki/Namche_Bazaar"
+   ],
+   "nights": [
+    2,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-namche",
+     "name": "Up to Namche Bazaar",
+     "hours": "6-7 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Over high suspension bridges and up the long Namche hill, with the first glimpse of Everest, to the Sherpa capital.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3440
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 2,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "acclimatise",
+     "name": "Everest View Hotel and Khumjung",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The day to adapt to the height: up to 3,880 m for Everest, Lhotse and Ama Dablam, then the Sherpa village of Khumjung and down.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3880
+     },
+     "trail": "np-everest-view-khumjung",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 3,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "museum",
+     "name": "Sherpa museum and Namche's market",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Sherpa life and the history of Everest climbs, and on Saturdays the market where traders come over from Tibet's side.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-pangboche",
+   "names": [
+    "Pangboche",
+    "Tengboche"
+   ],
+   "country": "NP",
+   "lat": 27.86,
+   "lon": 86.79,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Pangboche at 3,985 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park",
+    "https://en.wikipedia.org/wiki/Tengboche_Monastery"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-pangboche",
+     "name": "Tengboche monastery and on to Pangboche",
+     "hours": "5-6 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up through forest to Tengboche, the great monastery of the Khumbu with Everest behind it, then Pangboche under Ama Dablam.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3985
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 4,
+      "relax": 1,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-dingboche",
+   "names": [
+    "Dingboche"
+   ],
+   "country": "NP",
+   "lat": 27.89,
+   "lon": 86.83,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Dingboche at 4,410 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park"
+   ],
+   "nights": [
+    2,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-dingboche",
+     "name": "Into the Imja valley to Dingboche",
+     "hours": "4-5 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Above the trees, among stone-walled potato fields, to the village under Island Peak and Lhotse's south face.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4410
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "nangkartshang",
+     "name": "Nangkartshang for the height",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The rest day: climb high and sleep low, up to about 5,000 m with Makalu, the world's fifth peak, in view.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 5080
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-lobuche",
+   "names": [
+    "Lobuche",
+    "Thukla"
+   ],
+   "country": "NP",
+   "lat": 27.95,
+   "lon": 86.81,
+   "radius_km": 3,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Lobuche at 4,940 m: cold nights.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-lobuche",
+     "name": "Up the moraine to Lobuche",
+     "hours": "5-6 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up the Khumbu glacier's moraine past the memorial cairns of Thukla pass, to Lobuche at about 4,940 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4940
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 1,
+      "relax": 1,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-gorak-shep",
+   "names": [
+    "Gorak Shep",
+    "Everest Base Camp",
+    "Kala Patthar"
+   ],
+   "country": "NP",
+   "lat": 27.98,
+   "lon": 86.83,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Gorak Shep at 5,164 m: very cold, little sleep.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park",
+    "https://en.wikipedia.org/wiki/Kala_Patthar"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ebc",
+     "name": "To Everest Base Camp",
+     "hours": "7-8 h on foot",
+     "length": "half",
+     "effort": "hard",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "To Gorak Shep, then over the glacier to the base camp at 5,364 m under the Khumbu Icefall, where expeditions camp in April and May.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 5364
+     },
+     "sights": [
+      "Everest Base Camp",
+      "Khumbu Icefall"
+     ],
+     "arrive": true,
+     "trail": "np-everest-base-camp",
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 1,
+      "relax": 0,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-pheriche",
+   "names": [
+    "Pheriche"
+   ],
+   "country": "NP",
+   "lat": 27.89,
+   "lon": 86.82,
+   "radius_km": 3,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Teahouses in Pheriche at 4,370 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park",
+    "https://en.wikipedia.org/wiki/Kala_Patthar"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "kala-patthar",
+     "name": "Kala Patthar at dawn, then down to Pheriche",
+     "hours": "8-9 h on foot",
+     "length": "half",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up by headlamp to 5,644 m for the best view of Everest's summit at sunrise, then down the valley to thicker air.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 5644
+     },
+     "sights": [
+      "Kala Patthar"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-khumjung",
+   "names": [
+    "Khumjung",
+    "Khunde"
+   ],
+   "country": "NP",
+   "lat": 27.82,
+   "lon": 86.72,
+   "radius_km": 3,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Lodges in Khumjung at 3,790 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park",
+    "https://en.wikipedia.org/wiki/Khumjung"
+   ],
+   "nights": [
+    1,
+    1,
+    1
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-khumjung",
+     "name": "Down to Khumjung",
+     "hours": "6-7 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Down the valley to the green Sherpa village above Namche, with the school Edmund Hillary built in 1961 and the monastery that keeps a 'yeti scalp'.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4370
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 4,
+      "relax": 2,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-lukla",
+   "names": [
+    "Lukla"
+   ],
+   "country": "NP",
+   "lat": 27.687,
+   "lon": 86.731,
+   "radius_km": 4,
+   "season": "October and November are clear and dry; March to May bring rhododendrons and haze. December to February are cold but clear; June to September is the monsoon: cloud, rain and leeches below 3,000 m.",
+   "sleep": "Lodges by the airstrip.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Everest_Base_Camp_trek",
+    "https://en.wikipedia.org/wiki/Sagarmatha_National_Park"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "to-lukla",
+     "name": "The last day down to Lukla",
+     "hours": "6-7 h on foot",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Back over the bridges of the Dudh Kosi to Lukla; flights out leave in the morning and are often delayed by cloud: keep a spare day.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3790
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 2,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-jomsom",
+   "names": [
+    "Jomsom",
+    "Muktinath",
+    "Kali Gandaki"
+   ],
+   "country": "NP",
+   "lat": 28.78,
+   "lon": 83.73,
+   "radius_km": 20,
+   "season": "Behind the Annapurnas, in their rain shadow: dry even in the monsoon, windy every afternoon. Flights from Pokhara often stop for cloud; the road is the fallback.",
+   "sleep": "Lodges in Jomsom.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Jomsom",
+    "https://en.wikipedia.org/wiki/Muktinath",
+    "https://en.wikipedia.org/wiki/Kali_Gandaki_Gorge"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "flight",
+     "name": "Fly up the Kali Gandaki gorge",
+     "hours": "20 min",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Pokhara between Dhaulagiri and Annapurna, through one of the deepest gorges on Earth, to the windswept valley of Jomsom.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Kali Gandaki Gorge"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "muktinath",
+     "name": "Muktinath temple",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "At 3,710 m, holy to Hindus and Buddhists: 108 spouts of freezing water and a flame burning out of the rock.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3800
+     },
+     "sights": [
+      "Muktinath"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 5,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "np-kagbeni",
+   "names": [
+    "Kagbeni"
+   ],
+   "country": "NP",
+   "lat": 28.84,
+   "lon": 83.78,
+   "radius_km": 5,
+   "season": "Dry and windy, the gate to Upper Mustang.",
+   "sleep": "Guesthouses in Kagbeni's old mud-brick houses.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kagbeni",
+    "https://en.wikipedia.org/wiki/Kagbeni"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "village",
+     "name": "Kagbeni and its red monastery",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A medieval village of tunnels and mud-brick towers where the Kali Gandaki meets the Jhong river, the last stop before the restricted area.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "np-lo-manthang",
+   "names": [
+    "Lo Manthang",
+    "Upper Mustang",
+    "Mustang",
+    "Chhoser"
+   ],
+   "country": "NP",
+   "lat": 29.18,
+   "lon": 83.97,
+   "radius_km": 20,
+   "season": "At 3,840 m in a desert in the rain shadow: the trekking months are May to October, and it stays dry in the monsoon. The restricted-area permit (US$500 for 10 days) and a licensed guide are required.",
+   "sleep": "Guesthouses inside the walled town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Upper_Mustang",
+    "https://en.wikipedia.org/wiki/Lo_Manthang",
+    "https://en.wikipedia.org/wiki/Upper_Mustang"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "walled",
+     "name": "The walled city of Lo",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The capital of the old kingdom of Lo: a mud-walled town with the king's palace and 15th-century monasteries of Jampa and Thubchen, their murals restored.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3840
+     },
+     "sights": [
+      "Lo Manthang"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "caves",
+     "name": "Chhoser cave dwellings",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "By jeep or horse to cliffs honeycombed with caves cut 2,000 years ago, some five storeys high.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4000
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "np-marpha",
+   "names": [
+    "Marpha"
+   ],
+   "country": "NP",
+   "lat": 28.75,
+   "lon": 83.69,
+   "radius_km": 5,
+   "season": "Dry and windy in the rain shadow.",
+   "sleep": "Guesthouses in Marpha.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Marpha",
+    "https://en.wikipedia.org/wiki/Marpha"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "village",
+     "name": "Marpha, the apple village",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Whitewashed Thakali houses on flagstone lanes, a monastery above, and apple brandy from the orchards.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  }
+ ]
+}

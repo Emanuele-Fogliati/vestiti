@@ -1,0 +1,65 @@
+{
+ "id": "ma-dades-monkey-fingers",
+ "country": "MA",
+ "name": "Dades Valley: the Monkey Fingers",
+ "base": "Boumalne Dades",
+ "region": "Dades Valley",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Into a maze of narrow red canyons whose rounded rock pillars look like knuckles, then back through almond orchards and kasbahs of the Dades.",
+ "book": "Free; a local guide helps you find the way out of the canyons.",
+ "water": "Carry 2 litres.",
+ "dangers": [
+  "Short scrambles and a ladder in the narrows.",
+  "Heat from June to September: walk early, carry 2-3 litres.",
+  "Flash floods after rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Dad%C3%A8s_Gorges"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 3,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tamellalt",
+   "lat": 31.458,
+   "lon": -5.963,
+   "role": "start",
+   "note": "A village in the valley under the rock formations."
+  },
+  {
+   "id": "goal",
+   "name": "Monkey Fingers",
+   "lat": 31.4492,
+   "lon": -5.9701,
+   "role": "goal",
+   "note": "Red conglomerate pillars shaped like fingers."
+  }
+ ]
+}

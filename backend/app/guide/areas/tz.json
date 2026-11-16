@@ -1,0 +1,1400 @@
+{
+ "_doc": "Tanzania, written by hand for the recommended trips (Manu, 2026-11-16): the northern safari circuit, Kilimanjaro, Lake Natron, the Usambara and Zanzibar. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "tz-arusha",
+   "names": [
+    "Arusha",
+    "Arusha National Park",
+    "Momella",
+    "Mount Meru"
+   ],
+   "country": "TZ",
+   "lat": -3.37,
+   "lon": 36.68,
+   "radius_km": 30,
+   "season": "At 1,400 m: warm days and cool nights (12-15 °C in June to August). Long rains March to May, short rains November to December.",
+   "sleep": "In town or the coffee lodges on its edge, towards Usa River.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Arusha",
+    "https://en.wikipedia.org/wiki/Arusha_National_Park",
+    "https://en.wikipedia.org/wiki/Mount_Meru_(Tanzania)"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "arusha-np",
+     "name": "Arusha National Park: Momella lakes and a walking safari",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Giraffes and buffalo under Mount Meru, flamingos on the Momella lakes, black-and-white colobus in the forest, and a walk with an armed ranger.",
+     "act": {
+      "type": "safari"
+     },
+     "sights": [
+      "Arusha National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "town",
+     "name": "Arusha market and coffee",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The central market, then a coffee farm on the slopes of Meru where you pick, roast and taste.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "tz-tarangire-national-park",
+   "names": [
+    "Tarangire National Park",
+    "Tarangire"
+   ],
+   "country": "TZ",
+   "lat": -3.85,
+   "lon": 36.0,
+   "radius_km": 40,
+   "season": "Best June to October, when the river is the only water and thousands of elephants gather on it; green and quieter in the rains.",
+   "sleep": "Tented camps inside the park or on its edge.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Tarangire_National_Park",
+    "https://en.wikipedia.org/wiki/Tarangire_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "drive",
+     "name": "Game drive among baobabs and elephants",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The northern circuit's biggest elephant herds along the Tarangire river, under baobabs centuries old; lions, and over 500 kinds of birds.",
+     "act": {
+      "type": "safari"
+     },
+     "sights": [
+      "Tarangire National Park"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "walk",
+     "name": "Walking safari on the park's edge",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "On foot with an armed ranger and a Maasai guide: tracks, dung, termite hills and the small things a car drives past.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1200
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "tz-karatu",
+   "names": [
+    "Karatu",
+    "Ngorongoro Crater",
+    "Ngorongoro",
+    "Ngorongoro Conservation Area",
+    "Lake Eyasi",
+    "Olduvai Gorge"
+   ],
+   "country": "TZ",
+   "lat": -3.34,
+   "lon": 35.67,
+   "radius_km": 45,
+   "season": "The crater rim is at 2,300 m: cold at dawn all year (5-10 °C June to August). The crater floor has game all year.",
+   "sleep": "Karatu's lodges and coffee farms, or on the crater rim for an early start.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ngorongoro_Conservation_Area",
+    "https://en.wikipedia.org/wiki/Ngorongoro_Crater",
+    "https://en.wikipedia.org/wiki/Olduvai_Gorge",
+    "https://en.wikipedia.org/wiki/Hadza_people"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "crater",
+     "name": "Ngorongoro Crater floor",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Down at dawn, when the gates open",
+     "book": "",
+     "why": "Down 600 m into a caldera 19 km across, with about 25,000 large animals: lions, elephants, hippos and one of the last black rhinos of East Africa.",
+     "act": {
+      "type": "safari"
+     },
+     "sights": [
+      "Ngorongoro Crater"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "eyasi",
+     "name": "Lake Eyasi with the Hadzabe",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Out at dawn with one of the last hunter-gatherer peoples of Africa, then the Datoga blacksmiths by the soda lake.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1100
+     },
+     "sights": [
+      "Lake Eyasi"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 5,
+      "relax": 1,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "olduvai",
+     "name": "Olduvai Gorge",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Where the Leakeys found some of the oldest remains of early humans; a small museum on the road to the Serengeti.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Olduvai Gorge"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 1,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "farm",
+     "name": "Coffee farm in Karatu",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Walk the rows of a highland coffee estate and taste it the same day.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "tz-serengeti-national-park",
+   "names": [
+    "Serengeti National Park",
+    "Serengeti",
+    "Seronera",
+    "Ndutu",
+    "Grumeti",
+    "Kogatende",
+    "Mara River"
+   ],
+   "country": "TZ",
+   "lat": -2.33,
+   "lon": 34.83,
+   "radius_km": 120,
+   "season": "The Great Migration moves all year: calving on the southern plains (Ndutu) January to March, the Grumeti in the west June and July, the Mara River crossings in the north August to October. The big cats of Seronera stay all year.",
+   "sleep": "Tented camps; which part of the park follows the month and the herds.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Serengeti_National_Park",
+    "https://en.wikipedia.org/wiki/Serengeti_National_Park",
+    "https://en.wikipedia.org/wiki/Great_Migration_(Africa)"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "drive",
+     "name": "Full-day game drive",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Endless short-grass plains with the largest lion population in Africa, leopards in the trees of Seronera, cheetahs on the kopjes.",
+     "act": {
+      "type": "safari"
+     },
+     "sights": [
+      "Serengeti National Park"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "migration",
+     "name": "Following the Great Migration",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "About 1.5 million wildebeest with zebras and gazelles: calving in the south from January, river crossings in the north from August.",
+     "act": {
+      "type": "safari"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "balloon",
+     "name": "Balloon at dawn over the plains",
+     "hours": "4 h with breakfast",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book well ahead",
+     "why": "An hour over the herds as the sun comes up, with breakfast in the bush where you land.",
+     "act": {
+      "type": "safari"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "tz-lake-natron",
+   "names": [
+    "Lake Natron",
+    "Engaresero",
+    "Ol Doinyo Lengai"
+   ],
+   "country": "TZ",
+   "lat": -2.42,
+   "lon": 36.03,
+   "radius_km": 40,
+   "season": "Hot all year (35 °C at midday). Lesser flamingos breed here about August to December. Ol Doinyo Lengai is climbed by night, in the dry months.",
+   "sleep": "Simple camps at Engaresero, on the lake's south end.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Lake_Natron",
+    "https://en.wikipedia.org/wiki/Ol_Doinyo_Lengai",
+    "https://en.wikipedia.org/wiki/Engare_Sero_footprints"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "falls",
+     "name": "Engaresero waterfall and the flamingo shore",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Up a gorge, wading in the river, to a waterfall in the cliffs; at sunset the soda flats where flamingos feed.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 750
+     },
+     "arrive": true,
+     "trail": "tz-engaresero-falls",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "lengai",
+     "name": "Ol Doinyo Lengai by night",
+     "hours": "10-12 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The Maasai 'mountain of God', the only volcano on Earth that erupts black carbonatite lava; a steep climb by headlamp to watch dawn from the crater rim.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 2960
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      1,
+      2
+     ],
+     "trail": "tz-ol-doinyo-lengai",
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 1,
+      "relax": 0,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "footprints",
+     "name": "The Engare Sero footprints",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hundreds of human footprints pressed into volcanic mud by the lake, thought to be about 10,000 to 19,000 years old.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "tz-moshi",
+   "names": [
+    "Moshi",
+    "Materuni",
+    "Marangu",
+    "Kikuletwa"
+   ],
+   "country": "TZ",
+   "lat": -3.335,
+   "lon": 37.34,
+   "radius_km": 30,
+   "season": "Hot at 800 m; the town at the foot of Kilimanjaro. Long rains March to May.",
+   "sleep": "In town, with the snows of Kibo in view on clear mornings.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Moshi",
+    "https://en.wikipedia.org/wiki/Moshi"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "materuni",
+     "name": "Materuni waterfall and Chagga coffee",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A walk through banana and coffee gardens to a 70 m waterfall on the slopes of Kilimanjaro, then coffee roasted with a Chagga family.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1700
+     },
+     "trail": "tz-materuni-falls",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "food",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "springs",
+     "name": "Kikuletwa hot springs",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A clear spring-fed pool among fig trees in the dry plain; warm, not hot, water.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "town",
+     "name": "Moshi market and the view of Kibo",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A relaxed town: the market, the Indian quarter and, on a clear morning, the snows of Kilimanjaro above the roofs.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "tz-mount-kilimanjaro",
+   "names": [
+    "Mount Kilimanjaro",
+    "Kilimanjaro",
+    "Machame",
+    "Shira",
+    "Barranco",
+    "Karanga",
+    "Barafu",
+    "Uhuru Peak"
+   ],
+   "country": "TZ",
+   "lat": -3.07,
+   "lon": 37.35,
+   "radius_km": 25,
+   "season": "Climbed all year; the driest and clearest months are January to mid-March and June to October. April and May have the long rains; it is coldest at the top in December to February nights (-15 °C or below).",
+   "sleep": "Tents at the camps of the Machame route, put up by the porters.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Mount_Kilimanjaro",
+    "https://www.tanzaniaparks.go.tz/",
+    "https://en.wikipedia.org/wiki/Machame_Route"
+   ],
+   "nights": [
+    6,
+    6,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "machame-1",
+     "name": "Machame Gate to Machame Camp",
+     "hours": "5-7 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "From 1,800 m up through the rainforest, often wet, to the first camp at about 2,850 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2850
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "machame-2",
+     "name": "Up to the Shira plateau",
+     "hours": "4-6 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Out of the forest into giant heather, up to the Shira Camp at about 3,750 m with Kibo in front.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 3850
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "machame-3",
+     "name": "Lava Tower and down to Barranco",
+     "hours": "6-7 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Climb high to the Lava Tower at 4,600 m, then sleep low at Barranco (3,950 m) among giant groundsels: the best day for the altitude.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4630
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "machame-4",
+     "name": "The Barranco Wall to Karanga",
+     "hours": "4-5 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A scramble up the 250 m Barranco Wall, then across valleys to Karanga Camp at about 4,000 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4200
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "machame-5",
+     "name": "Up to Barafu base camp",
+     "hours": "3-4 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A short day over bare scree to Barafu Camp at 4,670 m: eat early and sleep a few hours before the summit night.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 4670
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "summit",
+     "name": "Summit night to Uhuru Peak, 5,895 m",
+     "hours": "12-16 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up from midnight by headlamp to Stella Point and Uhuru Peak, Africa's roof, at sunrise, then all the way down to Mweka Camp.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 5895
+     },
+     "trail": "tz-kilimanjaro-machame",
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "tz-stone-town",
+   "names": [
+    "Stone Town",
+    "Zanzibar",
+    "Zanzibar City",
+    "Prison Island",
+    "Changuu"
+   ],
+   "country": "TZ",
+   "lat": -6.16,
+   "lon": 39.19,
+   "radius_km": 15,
+   "season": "Hot and humid all year (30 °C). The long rains of April and May are heavy; June to October and December to February are dry.",
+   "sleep": "In the old town's restored merchant houses.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Zanzibar_City",
+    "https://en.wikipedia.org/wiki/Stone_Town",
+    "https://en.wikipedia.org/wiki/Changuu_Island"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Stone Town's lanes, the Old Fort and the slave market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A UNESCO town of carved doors and coral-stone houses; the Anglican cathedral stands on the site of East Africa's last open slave market, closed in 1873.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Stone Town",
+      "Freddie Mercury House"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "spice",
+     "name": "Spice farm tour",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Cloves, nutmeg, cinnamon and vanilla straight from the plants, on the farms that made Zanzibar the Spice Island.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "prison",
+     "name": "Prison Island and the giant tortoises",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A boat ride to a small island with Aldabra giant tortoises, some over a century old, and snorkelling on the reef.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Prison Island"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "beach"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "forodhani",
+     "name": "Forodhani gardens night market",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Grilled seafood and Zanzibar pizza on the seafront at sunset.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Forodhani Gardens"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "tz-nungwi",
+   "names": [
+    "Nungwi",
+    "Kendwa",
+    "Mnemba"
+   ],
+   "country": "TZ",
+   "lat": -5.73,
+   "lon": 39.29,
+   "radius_km": 15,
+   "season": "Dry June to October and December to February; heavy rain in April and May. The north tip has the smallest tides, so you can swim all day.",
+   "sleep": "Beach hotels at Nungwi or Kendwa.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Nungwi",
+    "https://en.wikipedia.org/wiki/Mnemba_Island"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "beach",
+     "name": "Beach days at Nungwi and Kendwa",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "White sand and water you can swim in at any tide, dhows sailing out at sunset.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "mnemba",
+     "name": "Snorkelling at Mnemba atoll",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A boat to the coral reef around Mnemba, with turtles, reef fish and often dolphins on the way.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Mnemba Atoll"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "tz-paje",
+   "names": [
+    "Paje",
+    "Jambiani",
+    "Michamvi",
+    "Jozani"
+   ],
+   "country": "TZ",
+   "lat": -6.27,
+   "lon": 39.53,
+   "radius_km": 20,
+   "season": "Dry June to October and December to February; heavy rain in April and May. Big tides: the sea goes out far each day. Kite wind June to September and December to February.",
+   "sleep": "Beach hotels in Paje or Jambiani.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Paje",
+    "https://en.wikipedia.org/wiki/Jozani_Chwaka_Bay_National_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "beach",
+     "name": "Beach days on the east coast",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Long white beaches, seaweed farms worked by women at low tide, and kitesurf schools on the lagoon.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "jozani",
+     "name": "Jozani forest and the red colobus",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Zanzibar red colobus lives nowhere else; a boardwalk through the mangroves next door.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "kite",
+     "name": "Kitesurf lessons",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The shallow lagoon and steady trade wind make Paje one of the best places in Africa to learn.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      12,
+      1,
+      2
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "beach"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "tz-lushoto",
+   "names": [
+    "Lushoto",
+    "Usambara Mountains",
+    "Irente",
+    "Irente Viewpoint"
+   ],
+   "country": "TZ",
+   "lat": -4.79,
+   "lon": 38.29,
+   "radius_km": 25,
+   "season": "At 1,400 m in the Usambara Mountains: green and cool, rain in March to May and November.",
+   "sleep": "Guesthouses and farm lodges around Lushoto.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lushoto",
+    "https://en.wikipedia.org/wiki/Usambara_Mountains"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "irente",
+     "name": "Irente viewpoint",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Through farms and forest to a cliff edge 1,000 m above the Maasai steppe, with lunch at Irente farm (cheese and bread made there).",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1500
+     },
+     "trail": "tz-irente-viewpoint",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "villages",
+     "name": "Village walk with a local guide",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Through the Shambaa villages, terraced fields and the old German colonial hill station.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1600
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  }
+ ]
+}

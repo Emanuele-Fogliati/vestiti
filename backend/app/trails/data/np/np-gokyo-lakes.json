@@ -1,0 +1,96 @@
+{
+ "id": "np-gokyo-lakes",
+ "country": "NP",
+ "name": "Gokyo Lakes and Gokyo Ri",
+ "base": "Lukla",
+ "region": "Sagarmatha National Park, Khumbu",
+ "kind": "multiday",
+ "days": 10,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  50,
+  62
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The quieter valley west of Everest: a chain of turquoise glacier lakes beside the Ngozumpa, the longest glacier of Nepal, and four 8,000 m peaks from the top of Gokyo Ri.",
+ "book": "Sagarmatha National Park permit and the Khumbu municipality permit. Fly to Lukla. Teahouses at every stop.",
+ "water": "Boiled water from the teahouses; treat stream water.",
+ "dangers": [
+  "Altitude: sleep at Dole and Machhermo before Gokyo (4,790 m), never more than 500 m higher a night.",
+  "Headache or breathlessness at rest: go down.",
+  "Frost every night above 4,000 m."
+ ],
+ "turnaround": "Start up Gokyo Ri before sunrise and be down by 11:00, before the clouds come up.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Gokyo_Lakes",
+  "https://en.wikipedia.org/wiki/Gokyo_Ri",
+  "https://en.wikivoyage.org/wiki/Sagarmatha_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lukla",
+   "lat": 27.68897,
+   "lon": 86.73067,
+   "role": "start",
+   "note": "The mountain airstrip where you land from Kathmandu.",
+   "scene": "np-lukla"
+  },
+  {
+   "id": "namche",
+   "name": "Namche Bazaar",
+   "lat": 27.80417,
+   "lon": 86.7098,
+   "role": "point",
+   "note": "Two nights in the Sherpa capital to get used to the height.",
+   "night": true,
+   "scene": "np-namche-bazaar"
+  },
+  {
+   "id": "machhermo",
+   "name": "Machhermo",
+   "lat": 27.90288,
+   "lon": 86.7156,
+   "role": "point",
+   "note": "A small yak-herding settlement at 4,470 m, last night before the lakes.",
+   "night": true
+  },
+  {
+   "id": "gokyo",
+   "name": "Gokyo",
+   "lat": 27.95409,
+   "lon": 86.69459,
+   "role": "point",
+   "note": "Lodges on the shore of the third lake, Dudh Pokhari, beside the moraine of the Ngozumpa Glacier.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Gokyo Ri",
+   "lat": 27.96154,
+   "lon": 86.68313,
+   "role": "goal",
+   "note": "A 5,357 m hill above the lake: Everest, Lhotse, Makalu and Cho Oyu in one view.",
+   "scene": "np-gokyo"
+  }
+ ]
+}

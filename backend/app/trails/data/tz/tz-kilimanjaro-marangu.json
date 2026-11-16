@@ -1,0 +1,97 @@
+{
+ "id": "tz-kilimanjaro-marangu",
+ "country": "TZ",
+ "name": "Kilimanjaro by the Marangu route",
+ "base": "Moshi",
+ "region": "Kilimanjaro National Park",
+ "kind": "multiday",
+ "days": 6,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  38,
+  48
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The oldest route up Kilimanjaro, with nights in huts instead of tents, across the saddle between Kibo and the jagged Mawenzi.",
+ "book": "Kilimanjaro National Park fees per day, paid through a licensed operator: climbing without a registered guide and porters is not allowed. Most climbs start from Moshi. Huts at Mandara, Horombo and Kibo must be booked by the operator.",
+ "water": "Water at the huts from springs: boiled by the crew.",
+ "dangers": [
+  "Altitude: the summit is at 5,895 m. Headache, vomiting, confusion or breathlessness at rest: go down at once.",
+  "Summit night starts around midnight, -10 to -20 C with wind at the crater rim.",
+  "Afternoon storms and hail in the rainy months (March to May, November).",
+  "The route climbs fast: take the extra day at Horombo."
+ ],
+ "turnaround": "Leave Kibo Hut at midnight; be at Gilman's Point by 06:30, or turn back.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Kilimanjaro",
+  "https://www.tanzaniaparks.go.tz/national_parks/kilimanjaro-national-park",
+  "https://www.openstreetmap.org/relation/8737292"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 2,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Marangu Gate",
+   "lat": -3.2436,
+   "lon": 37.5177,
+   "role": "start",
+   "note": "The park gate above the Chagga village of Marangu, among coffee and banana gardens."
+  },
+  {
+   "id": "mandara",
+   "name": "Mandara Hut",
+   "lat": -3.1817,
+   "lon": 37.5133,
+   "role": "point",
+   "note": "A-frame huts in the forest at 2,720 m, next to the Maundi crater.",
+   "night": true
+  },
+  {
+   "id": "horombo",
+   "name": "Horombo Hut",
+   "lat": -3.14,
+   "lon": 37.4393,
+   "role": "point",
+   "note": "Huts in the moorland at 3,720 m with Mawenzi and Kibo ahead.",
+   "night": true
+  },
+  {
+   "id": "kibo-hut",
+   "name": "Kibo Hut",
+   "lat": -3.0818,
+   "lon": 37.3894,
+   "role": "point",
+   "note": "A stone hut at 4,700 m on the bare saddle under the summit cone.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Uhuru Peak",
+   "lat": -3.0764,
+   "lon": 37.354,
+   "role": "goal",
+   "note": "The highest point of Africa, 5,895 m, on the crater rim.",
+   "scene": "tz-uhuru-peak"
+  }
+ ]
+}

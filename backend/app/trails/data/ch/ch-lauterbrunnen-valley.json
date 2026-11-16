@@ -1,0 +1,72 @@
+{
+ "id": "ch-lauterbrunnen-valley",
+ "country": "CH",
+ "name": "Lauterbrunnen valley of waterfalls",
+ "base": "Lauterbrunnen",
+ "region": "Jungfrau region",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  2.5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Along a flat green valley between 300 m cliffs, past the Staubbach falls and the glacier water roaring inside the mountain at Trümmelbach.",
+ "book": "Free; Trümmelbach falls ticket (April to November). Bus back from Stechelberg.",
+ "water": "Cafes along the valley.",
+ "dangers": [
+  "Spray and wet rock at the falls."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Lauterbrunnen",
+  "https://en.wikipedia.org/wiki/Tr%C3%BCmmelbach_Falls"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 5,
+  "culture": 2,
+  "relax": 5,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lauterbrunnen",
+   "lat": 46.593,
+   "lon": 7.908,
+   "role": "start",
+   "note": "The village under the Staubbach waterfall."
+  },
+  {
+   "id": "trummelbach",
+   "name": "Trümmelbach Falls",
+   "lat": 46.5701,
+   "lon": 7.913,
+   "role": "point",
+   "note": "Ten glacier waterfalls inside the mountain."
+  },
+  {
+   "id": "goal",
+   "name": "Stechelberg",
+   "lat": 46.545,
+   "lon": 7.903,
+   "role": "goal",
+   "note": "The end of the valley road under the Mürren cliff."
+  }
+ ]
+}

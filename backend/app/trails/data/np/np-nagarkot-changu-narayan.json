@@ -1,0 +1,75 @@
+{
+ "id": "np-nagarkot-changu-narayan",
+ "country": "NP",
+ "name": "Nagarkot to Changu Narayan",
+ "base": "Nagarkot",
+ "region": "Kathmandu valley",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "A gentle half day down the ridge from Nagarkot through villages and terraces to the oldest temple of the valley, a World Heritage site.",
+ "book": "Ticket for the Changu Narayan temple. Taxi or bus back to Bhaktapur (30 min).",
+ "water": "Tea shops in Telkot and Changu village.",
+ "dangers": [
+  "Stretches on a village road with cars and motorbikes."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Changu_Narayan_Temple",
+  "https://en.wikipedia.org/wiki/Nagarkot"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 5,
+  "relax": 4,
+  "history": 5,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Nagarkot",
+   "lat": 27.71851,
+   "lon": 85.51973,
+   "role": "start",
+   "note": "Start after the sunrise from the view tower.",
+   "scene": "np-nagarkot"
+  },
+  {
+   "id": "telkot",
+   "name": "Telkot",
+   "lat": 27.71239,
+   "lon": 85.47463,
+   "role": "point",
+   "note": "A small crossroads village on the ridge."
+  },
+  {
+   "id": "goal",
+   "name": "Changu Narayan",
+   "lat": 27.71635,
+   "lon": 85.4279,
+   "role": "goal",
+   "note": "A two-roofed Vishnu temple of the 5th century, its struts carved with gods.",
+   "scene": "np-changu-narayan"
+  }
+ ]
+}

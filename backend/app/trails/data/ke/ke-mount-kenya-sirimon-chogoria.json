@@ -1,0 +1,94 @@
+{
+ "id": "ke-mount-kenya-sirimon-chogoria",
+ "country": "KE",
+ "name": "Mount Kenya: Sirimon route to Point Lenana",
+ "base": "Nanyuki",
+ "region": "Mount Kenya National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  1,
+  2,
+  8,
+  9,
+  12
+ ],
+ "hours": [
+  16,
+  22
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Up the dry Sirimon valley of giant lobelias to Shipton's Camp under the rock spires of Batian and Nelion, sunrise on Point Lenana, then down past Lake Michaelson in the Gorges Valley.",
+ "book": "Kenya Wildlife Service park fees; a registered guide and porters through an operator in Nanyuki or Chogoria.",
+ "water": "Streams at every camp (treat).",
+ "dangers": [
+  "Altitude: Point Lenana is 4,985 m.",
+  "Ice on the final slope in the early morning.",
+  "Hail and rain in the afternoons."
+ ],
+ "turnaround": "Leave Shipton's at 02:30; turn back at 07:00 wherever you are.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Kenya",
+  "https://www.kws.go.ke/mount-kenya-national-park",
+  "https://www.openstreetmap.org/relation/416424",
+  "https://www.openstreetmap.org/relation/416423"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Sirimon Gate",
+   "lat": 0.0052,
+   "lon": 37.2466,
+   "role": "start",
+   "note": "The park gate on the dry north-west side."
+  },
+  {
+   "id": "old-moses",
+   "name": "Old Moses Camp",
+   "lat": -0.0496,
+   "lon": 37.2869,
+   "role": "point",
+   "note": "Huts at 3,300 m at the edge of the moorland.",
+   "night": true
+  },
+  {
+   "id": "shipton",
+   "name": "Shipton's Camp",
+   "lat": -0.1414,
+   "lon": 37.3149,
+   "role": "point",
+   "note": "Huts at 4,200 m right under Batian and Nelion.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Point Lenana",
+   "lat": -0.1552,
+   "lon": 37.3178,
+   "role": "goal",
+   "note": "The trekkers' summit, 4,985 m, above the Lewis glacier.",
+   "scene": "ke-mount-kenya"
+  },
+  {
+   "id": "michaelson",
+   "name": "Lake Michaelson",
+   "lat": -0.1458,
+   "lon": 37.3515,
+   "role": "point",
+   "note": "A dark lake under cliffs at the head of the Gorges Valley."
+  }
+ ]
+}

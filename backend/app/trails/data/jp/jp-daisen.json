@@ -1,0 +1,64 @@
+{
+ "id": "jp-daisen",
+ "country": "JP",
+ "name": "Daisen by the Natsuyama trail",
+ "base": "Yonago",
+ "region": "Daisen-Oki National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Steps up through beech forest to the summit plateau of the 'Fuji of Hoki', with the Sea of Japan and the Shimane peninsula below.",
+ "book": "Free. Bus from Yonago to Daisen-ji.",
+ "water": "Summit hut sells drinks in season.",
+ "dangers": [
+  "Wind on the summit plateau."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Daisen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 2,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Daisen-ji",
+   "lat": 35.391,
+   "lon": 133.539,
+   "role": "start",
+   "note": "The temple village at the foot of the mountain."
+  },
+  {
+   "id": "goal",
+   "name": "Misen",
+   "lat": 35.3708,
+   "lon": 133.5391,
+   "role": "goal",
+   "note": "The 1,709 m summit of Daisen, on a boardwalk plateau."
+  }
+ ]
+}

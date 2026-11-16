@@ -1,0 +1,85 @@
+{
+ "id": "bo-el-choro",
+ "country": "BO",
+ "name": "El Choro Inca trail",
+ "base": "La Paz",
+ "region": "Cotapata National Park",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  16,
+  22
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "From a 4,850 m pass of llamas and snow down a pre-Hispanic stone road into the cloud forest of the Yungas, 3,500 m lower, in three days.",
+ "book": "Cotapata park ticket and small community fees on the way. Taxi or minibus from La Paz to La Cumbre (1 h). A guide is advised: the trail is remote.",
+ "water": "Streams all the way below the pass (treat); small shops in Chucura and Challapampa.",
+ "dangers": [
+  "Altitude: La Paz is at 3,600 m; spend two or three days there before any hike.",
+  "The pass can be in snow and fog.",
+  "Slippery stones and mud in the forest."
+ ],
+ "turnaround": "Be over the Apacheta pass by 11:00, or come back to La Cumbre.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/El_Choro_Trek",
+  "https://www.openstreetmap.org/relation/3127884"
+ ],
+ "osm": 3127884,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 3,
+  "relax": 2,
+  "history": 4,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "La Cumbre",
+   "lat": -16.354,
+   "lon": -68.042,
+   "role": "start",
+   "note": "The high pass of the road to the Yungas, with a statue of Christ."
+  },
+  {
+   "id": "abra",
+   "name": "Apacheta Chucura pass",
+   "lat": -16.32203,
+   "lon": -68.0542,
+   "role": "point",
+   "note": "The 4,859 m pass with a stone cairn."
+  },
+  {
+   "id": "chucura",
+   "name": "Chucura",
+   "lat": -16.29525,
+   "lon": -67.98868,
+   "role": "point",
+   "note": "An Aymara hamlet where the stone road enters the valley.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Chairo",
+   "lat": -16.2038,
+   "lon": -67.8358,
+   "role": "goal",
+   "note": "A village in the warm Yungas forest at the end of the trail."
+  }
+ ]
+}

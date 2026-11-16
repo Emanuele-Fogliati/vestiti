@@ -1,0 +1,67 @@
+{
+ "id": "at-durnstein-ruin",
+ "country": "AT",
+ "name": "Dürnstein castle ruin",
+ "base": "Dürnstein",
+ "region": "Wachau",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "Up a rocky path from a blue-towered abbey to the ruined castle where Richard the Lionheart was held prisoner, the Danube and the vineyards of the Wachau below.",
+ "book": "Free. Train or boat to Dürnstein from Krems or Melk.",
+ "water": "Cafes in the village.",
+ "dangers": [
+  "Uneven rock steps."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/D%C3%BCrnstein",
+  "https://en.wikipedia.org/wiki/D%C3%BCrnstein_Castle"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 4,
+  "relax": 4,
+  "history": 5,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Dürnstein",
+   "lat": 48.395,
+   "lon": 15.52,
+   "role": "start",
+   "note": "A walled wine village with a blue and white abbey tower by the Danube."
+  },
+  {
+   "id": "goal",
+   "name": "Dürnstein Castle",
+   "lat": 48.399,
+   "lon": 15.523,
+   "role": "goal",
+   "note": "The ruins on a rock above the village."
+  }
+ ]
+}

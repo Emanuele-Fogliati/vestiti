@@ -1,0 +1,70 @@
+{
+ "id": "at-seebensee",
+ "country": "AT",
+ "name": "Seebensee and the Coburger Hütte",
+ "base": "Ehrwald",
+ "region": "Mieming Range",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "08:30",
+ "published": null,
+ "why": "Up to a green lake that mirrors the Zugspitze, and on to a hut beside the dark Drachensee under limestone walls.",
+ "book": "Ehrwalder Almbahn gondola shortens the climb.",
+ "water": "Seebenalm and Coburger Hütte.",
+ "dangers": [
+  "Steep steps to the Coburger Hütte.",
+  "Afternoon thunderstorms in summer: start early and be off ridges by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Seebensee"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ehrwalder Alm",
+   "lat": 47.3853,
+   "lon": 10.9681,
+   "role": "start",
+   "note": "The top station of the gondola above Ehrwald."
+  },
+  {
+   "id": "seebensee",
+   "name": "Seebensee",
+   "lat": 47.3685,
+   "lon": 10.9345,
+   "role": "point",
+   "note": "A clear lake with the Zugspitze reflected in it."
+  },
+  {
+   "id": "goal",
+   "name": "Coburger Hütte",
+   "lat": 47.36,
+   "lon": 10.9335,
+   "role": "goal",
+   "note": "A stone hut above the Drachensee."
+  }
+ ]
+}

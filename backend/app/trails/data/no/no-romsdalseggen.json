@@ -1,0 +1,77 @@
+{
+ "id": "no-romsdalseggen",
+ "country": "NO",
+ "name": "Romsdalseggen ridge",
+ "base": "Åndalsnes",
+ "region": "Romsdalen, Møre og Romsdal",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 10,
+  "gain_m": 970,
+  "source": "https://www.visitnorway.com/listings/romsdalseggen/"
+ },
+ "why": "A ridge high over the Romsdal valley with the Trollveggen wall opposite, ending with the Rampestreken platform above Åndalsnes.",
+ "book": "Free: the Norwegian right to roam (allemannsretten). Paid parking at the trailhead. Bus from Åndalsnes to Vengedalen in summer. Or Rampestreken only by the Romsdalen gondola.",
+ "water": "Streams near the start only.",
+ "dangers": [
+  "Exposed sections on the crest.",
+  "Weather turns fast: fog, rain and wind even in July. Check yr.no and turn back in fog."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.visitnorway.com/listings/romsdalseggen/",
+  "https://en.wikipedia.org/wiki/Romsdalen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Vengedalen",
+   "lat": 62.536,
+   "lon": 7.8255,
+   "role": "start",
+   "note": "A valley farm where the bus leaves you."
+  },
+  {
+   "id": "ridge",
+   "name": "Romsdalseggen",
+   "lat": 62.5604,
+   "lon": 7.7125,
+   "role": "point",
+   "note": "The crest with the Romsdal valley and Trollveggen below."
+  },
+  {
+   "id": "goal",
+   "name": "Åndalsnes",
+   "lat": 62.5637,
+   "lon": 7.691,
+   "role": "goal",
+   "note": "The town at the head of the Romsfjord.",
+   "scene": "no-andalsnes"
+  }
+ ],
+ "osm": 5480596
+}

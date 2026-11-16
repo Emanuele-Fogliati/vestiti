@@ -1,0 +1,73 @@
+{
+ "id": "np-everest-view-khumjung",
+ "country": "NP",
+ "name": "Hotel Everest View and Khumjung",
+ "base": "Namche Bazaar",
+ "region": "Sagarmatha National Park, Khumbu",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "07:30",
+ "published": null,
+ "why": "The rest-day walk from Namche: up to the terrace of the Hotel Everest View for tea in front of Everest and Ama Dablam, then through the Sherpa village of Khumjung.",
+ "book": "Covered by the Sagarmatha National Park permit.",
+ "water": "Tea at the hotel and in Khumjung.",
+ "dangers": [
+  "You climb 450 m to almost 3,900 m: go slowly, this is the walk that helps you acclimatise."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Hotel_Everest_View",
+  "https://en.wikipedia.org/wiki/Khumjung"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 4,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Namche Bazaar",
+   "lat": 27.80417,
+   "lon": 86.7098,
+   "role": "start",
+   "note": "Leave the horseshoe town by the steps behind the monastery.",
+   "scene": "np-namche-bazaar"
+  },
+  {
+   "id": "hotel",
+   "name": "Hotel Everest View",
+   "lat": 27.81672,
+   "lon": 86.7236,
+   "role": "point",
+   "note": "A stone hotel at 3,880 m with a terrace facing Everest, Lhotse and Ama Dablam."
+  },
+  {
+   "id": "goal",
+   "name": "Khumjung",
+   "lat": 27.82362,
+   "lon": 86.7173,
+   "role": "goal",
+   "note": "A Sherpa village of green roofs; its monastery keeps a 'yeti scalp'.",
+   "scene": "np-khumjung"
+  }
+ ]
+}

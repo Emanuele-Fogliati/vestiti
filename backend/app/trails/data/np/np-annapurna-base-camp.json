@@ -1,0 +1,98 @@
+{
+ "id": "np-annapurna-base-camp",
+ "country": "NP",
+ "name": "Annapurna Base Camp",
+ "base": "Pokhara",
+ "region": "Annapurna Conservation Area",
+ "kind": "multiday",
+ "days": 7,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  38,
+  48
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Through Gurung villages and bamboo forest into the Annapurna Sanctuary, a ring of glaciers and 7,000 m walls with Machhapuchhre straight above.",
+ "book": "Annapurna Conservation Area permit and TIMS card. Since April 2023 Nepal requires foreign trekkers to hire a licensed guide in its national parks and conservation areas (check the current rule before you go). Jeep from Pokhara to Nayapul or Ghandruk. Book lodges ahead in October: the sanctuary lodges are few.",
+ "water": "Teahouses all the way; drinking water stations at Chhomrong and Bamboo.",
+ "dangers": [
+  "Avalanche risk between Deurali and Machhapuchhre Base Camp after heavy snow: ask at Chhomrong before going up.",
+  "Thousands of stone steps above Chhomrong: hard on the knees going down.",
+  "Leeches in the forest in spring and after rain."
+ ],
+ "turnaround": "Do not cross the avalanche stretch above Deurali in fresh snow or after 13:00.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Annapurna_Sanctuary",
+  "https://www.openstreetmap.org/relation/17548991",
+  "https://ntnc.org.np/project/annapurna-conservation-area-project"
+ ],
+ "osm": 17548991,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ghandruk",
+   "lat": 28.37686,
+   "lon": 83.80779,
+   "role": "start",
+   "note": "A large Gurung village of stone roofs facing Annapurna South and Machhapuchhre.",
+   "scene": "np-ghandruk"
+  },
+  {
+   "id": "chhomrong",
+   "name": "Chhomrong",
+   "lat": 28.41849,
+   "lon": 83.81828,
+   "role": "point",
+   "note": "The last village, terraced on a steep slope; stone steps down to the river and up again.",
+   "night": true,
+   "scene": "np-chhomrong"
+  },
+  {
+   "id": "bamboo",
+   "name": "Bamboo",
+   "lat": 28.45702,
+   "lon": 83.85693,
+   "role": "point",
+   "note": "Lodges in a bamboo and rhododendron forest deep in the Modi Khola gorge.",
+   "night": true,
+   "scene": "np-bamboo"
+  },
+  {
+   "id": "mbc",
+   "name": "Machhapuchhre Base Camp",
+   "lat": 28.501,
+   "lon": 83.88,
+   "role": "point",
+   "note": "The gate of the sanctuary at 3,700 m under the fishtail peak.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Annapurna Base Camp",
+   "lat": 28.53076,
+   "lon": 83.87785,
+   "role": "goal",
+   "note": "Lodges at 4,130 m on the moraine, surrounded by Annapurna I, Annapurna South and Hiunchuli.",
+   "scene": "np-annapurna-base-camp"
+  }
+ ]
+}

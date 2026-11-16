@@ -1,0 +1,66 @@
+{
+ "id": "np-world-peace-pagoda",
+ "country": "NP",
+ "name": "World Peace Pagoda above Phewa Lake",
+ "base": "Pokhara",
+ "region": "Pokhara",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "A short climb through forest from the dam of Phewa Lake to a white stupa on the hill, with the lake, Pokhara and the Annapurna range below.",
+ "book": "Free. Many cross the lake by rowing boat to the Anadu landing and walk down here instead.",
+ "water": "Cafes at the top.",
+ "dangers": [
+  "Slippery steps after rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/World_Peace_Pagoda_(Pokhara)",
+  "https://en.wikivoyage.org/wiki/Pokhara"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 4,
+  "relax": 4,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Damside",
+   "lat": 28.19641,
+   "lon": 83.96648,
+   "role": "start",
+   "note": "The dam at the south end of Phewa Lake, called Damside."
+  },
+  {
+   "id": "goal",
+   "name": "World Peace Pagoda",
+   "lat": 28.20102,
+   "lon": 83.94474,
+   "role": "goal",
+   "note": "A white Buddhist stupa built by Japanese monks on Anadu hill.",
+   "scene": "np-world-peace-pagoda"
+  }
+ ]
+}

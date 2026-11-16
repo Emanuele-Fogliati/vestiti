@@ -1,0 +1,69 @@
+{
+ "id": "no-trolltunga",
+ "country": "NO",
+ "name": "Trolltunga",
+ "base": "Odda",
+ "region": "Hardanger, Vestland",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  10,
+  12
+ ],
+ "start_by": "06:00",
+ "published": {
+  "km": 20,
+  "gain_m": 800,
+  "source": "https://www.visitnorway.com/places-to-go/fjord-norway/the-hardangerfjord/trolltunga/"
+ },
+ "why": "A long day over the high plateau above Ringedalsvatnet to a thin tongue of rock sticking out 700 m above the lake.",
+ "book": "Free: the Norwegian right to roam (allemannsretten). Paid parking at the trailhead. Parking P2 at Skjeggedal (Mågelitopp P3 shortens it by 4 km, book online). Outside mid-June to mid-September go only with a guide.",
+ "water": "Streams on the plateau (clean). Carry food for the day.",
+ "dangers": [
+  "Long and remote: rescue calls every summer from people turning back too late.",
+  "Weather turns fast: fog, rain and wind even in July. Check yr.no and turn back in fog.",
+  "Snow on the plateau until late June."
+ ],
+ "turnaround": "Be at Trolltunga by 14:00 from P2, or turn back.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Trolltunga",
+  "https://www.visitnorway.com/places-to-go/fjord-norway/the-hardangerfjord/trolltunga/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Mågelitopp (P3)",
+   "lat": 60.1423,
+   "lon": 6.6265,
+   "role": "start",
+   "note": "The parking above Skjeggedal where the trail climbs onto the plateau."
+  },
+  {
+   "id": "goal",
+   "name": "Trolltunga",
+   "lat": 60.133,
+   "lon": 6.754,
+   "role": "goal",
+   "note": "A horizontal rock tongue above Ringedalsvatnet."
+  }
+ ],
+ "osm": 4270209
+}

@@ -4749,6 +4749,2006 @@
      "name": "Bushman's Paradise"
     }
    ]
+  },
+  {
+   "id": "np-everest-base-camp",
+   "name": "Everest Base Camp and Kala Patthar",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Lukla",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lukla",
+     "reuse": "np-lukla"
+    },
+    {
+     "point": "namche",
+     "name": "Namche Bazaar",
+     "reuse": "np-namche-bazaar"
+    },
+    {
+     "point": "tengboche",
+     "name": "Tengboche Monastery",
+     "reuse": "np-tengboche"
+    },
+    {
+     "point": "dingboche",
+     "name": "Dingboche",
+     "reuse": "np-dingboche"
+    },
+    {
+     "point": "kala-patthar",
+     "name": "Kala Patthar",
+     "reuse": "np-kala-patthar"
+    },
+    {
+     "point": "goal",
+     "name": "Everest Base Camp",
+     "reuse": "np-everest-base-camp"
+    }
+   ]
+  },
+  {
+   "id": "np-gokyo-lakes",
+   "name": "Gokyo Lakes and Gokyo Ri",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Lukla",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lukla",
+     "reuse": "np-lukla"
+    },
+    {
+     "point": "namche",
+     "name": "Namche Bazaar",
+     "reuse": "np-namche-bazaar"
+    },
+    {
+     "point": "goal",
+     "name": "Gokyo Ri",
+     "reuse": "np-gokyo"
+    }
+   ]
+  },
+  {
+   "id": "np-annapurna-circuit",
+   "name": "Annapurna Circuit over Thorong La",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Besisahar",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Besisahar",
+     "reuse": "np-besisahar"
+    },
+    {
+     "point": "manang",
+     "name": "Manang",
+     "reuse": "np-manang"
+    },
+    {
+     "point": "thorong-la",
+     "name": "Thorong La",
+     "reuse": "np-thorong-la-pass"
+    },
+    {
+     "point": "muktinath",
+     "name": "Muktinath",
+     "reuse": "np-muktinath"
+    },
+    {
+     "point": "goal",
+     "name": "Jomsom",
+     "reuse": "np-jomsom"
+    }
+   ]
+  },
+  {
+   "id": "np-annapurna-base-camp",
+   "name": "Annapurna Base Camp",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Pokhara",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ghandruk",
+     "reuse": "np-ghandruk"
+    },
+    {
+     "point": "chhomrong",
+     "name": "Chhomrong",
+     "reuse": "np-chhomrong"
+    },
+    {
+     "point": "bamboo",
+     "name": "Bamboo",
+     "reuse": "np-bamboo"
+    },
+    {
+     "point": "goal",
+     "name": "Annapurna Base Camp",
+     "reuse": "np-annapurna-base-camp"
+    }
+   ]
+  },
+  {
+   "id": "np-poon-hill",
+   "name": "Ghorepani and Poon Hill",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Pokhara",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Birethanti",
+     "reuse": "np-birethanti"
+    },
+    {
+     "point": "ulleri",
+     "name": "Ulleri",
+     "reuse": "np-ulleri"
+    },
+    {
+     "point": "goal",
+     "name": "Poon Hill",
+     "reuse": "np-poon-hill"
+    }
+   ]
+  },
+  {
+   "id": "np-mardi-himal",
+   "name": "Mardi Himal High Camp and viewpoint",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Pokhara",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mardi Himal Upper Viewpoint"
+    },
+    {
+     "point": "start",
+     "name": "Kande"
+    }
+   ]
+  },
+  {
+   "id": "np-langtang-valley",
+   "name": "Langtang Valley and Kyanjin Ri",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Kathmandu",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Kyanjin Ri"
+    },
+    {
+     "point": "start",
+     "name": "Syabrubesi"
+    }
+   ]
+  },
+  {
+   "id": "np-gosaikunda",
+   "name": "Gosaikunda sacred lakes",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Kathmandu",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Gosaikunda"
+    },
+    {
+     "point": "start",
+     "name": "Dhunche"
+    }
+   ]
+  },
+  {
+   "id": "np-manaslu-circuit",
+   "name": "Manaslu Circuit over Larkya La",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Kathmandu",
+   "kind": "multiday",
+   "status": "draft",
+   "scenes": [
+    {
+     "point": "larkya",
+     "name": "Larkya La"
+    },
+    {
+     "point": "goal",
+     "name": "Dharapani"
+    }
+   ]
+  },
+  {
+   "id": "np-tilicho-lake",
+   "name": "Tilicho Lake from Manang",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Manang",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Manang",
+     "reuse": "np-manang"
+    },
+    {
+     "point": "goal",
+     "name": "Tilicho Lake",
+     "reuse": "np-tilicho-lake"
+    }
+   ]
+  },
+  {
+   "id": "np-chisapani-nagarkot",
+   "name": "Kathmandu valley rim: Sundarijal to Nagarkot",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Kathmandu",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sundarijal",
+     "reuse": "np-sundarijal"
+    },
+    {
+     "point": "goal",
+     "name": "Nagarkot",
+     "reuse": "np-nagarkot"
+    }
+   ]
+  },
+  {
+   "id": "np-nagarkot-changu-narayan",
+   "name": "Nagarkot to Changu Narayan",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Nagarkot",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Nagarkot",
+     "reuse": "np-nagarkot"
+    },
+    {
+     "point": "goal",
+     "name": "Changu Narayan",
+     "reuse": "np-changu-narayan"
+    }
+   ]
+  },
+  {
+   "id": "np-world-peace-pagoda",
+   "name": "World Peace Pagoda above Phewa Lake",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Pokhara",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "World Peace Pagoda",
+     "reuse": "np-world-peace-pagoda"
+    },
+    {
+     "point": "start",
+     "name": "Pardi Dam"
+    }
+   ]
+  },
+  {
+   "id": "np-sarangkot",
+   "name": "Sarangkot sunrise hill",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Pokhara",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Sarangkot viewpoint",
+     "reuse": "np-pokhara"
+    },
+    {
+     "point": "start",
+     "name": "Lakeside, Pokhara"
+    }
+   ]
+  },
+  {
+   "id": "np-everest-view-khumjung",
+   "name": "Hotel Everest View and Khumjung",
+   "country": "NP",
+   "slot": "NP-A",
+   "base": "Namche Bazaar",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Namche Bazaar",
+     "reuse": "np-namche-bazaar"
+    },
+    {
+     "point": "hotel",
+     "name": "Hotel Everest View"
+    },
+    {
+     "point": "goal",
+     "name": "Khumjung",
+     "reuse": "np-khumjung"
+    }
+   ]
+  },
+  {
+   "id": "tz-kilimanjaro-machame",
+   "name": "Kilimanjaro by the Machame route",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Moshi",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Uhuru Peak",
+     "reuse": "tz-uhuru-peak"
+    },
+    {
+     "point": "start",
+     "name": "Machame Gate"
+    }
+   ]
+  },
+  {
+   "id": "tz-kilimanjaro-marangu",
+   "name": "Kilimanjaro by the Marangu route",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Moshi",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Marangu Gate"
+    },
+    {
+     "point": "goal",
+     "name": "Uhuru Peak",
+     "reuse": "tz-uhuru-peak"
+    }
+   ]
+  },
+  {
+   "id": "tz-kilimanjaro-lemosho",
+   "name": "Kilimanjaro by the Lemosho route",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Moshi",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "shira",
+     "name": "Shira 2 Camp"
+    },
+    {
+     "point": "barranco",
+     "name": "Barranco Wall"
+    },
+    {
+     "point": "goal",
+     "name": "Uhuru Peak",
+     "reuse": "tz-uhuru-peak"
+    }
+   ]
+  },
+  {
+   "id": "tz-mount-meru",
+   "name": "Mount Meru to Socialist Peak",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Arusha",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Socialist Peak"
+    },
+    {
+     "point": "start",
+     "name": "Momella Gate"
+    }
+   ]
+  },
+  {
+   "id": "tz-ol-doinyo-lengai",
+   "name": "Ol Doinyo Lengai night climb",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Lake Natron",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ol Doinyo Lengai",
+     "reuse": "tz-lake-natron"
+    },
+    {
+     "point": "start",
+     "name": "Ol Doinyo Lengai trailhead"
+    }
+   ]
+  },
+  {
+   "id": "tz-engaresero-falls",
+   "name": "Engaresero waterfall gorge",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Lake Natron",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Engaresero Falls"
+    },
+    {
+     "point": "start",
+     "name": "Engaresero"
+    }
+   ]
+  },
+  {
+   "id": "tz-materuni-falls",
+   "name": "Materuni waterfall and coffee village",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Moshi",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Materuni Waterfalls"
+    },
+    {
+     "point": "start",
+     "name": "Materuni village"
+    }
+   ]
+  },
+  {
+   "id": "tz-irente-viewpoint",
+   "name": "Lushoto to Irente viewpoint",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Lushoto",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Irente Viewpoint",
+     "reuse": "tz-usambara-mountains"
+    },
+    {
+     "point": "start",
+     "name": "Lushoto"
+    }
+   ]
+  },
+  {
+   "id": "tz-udzungwa-sanje",
+   "name": "Sanje Waterfalls, Udzungwa Mountains",
+   "country": "TZ",
+   "slot": "TZ-A",
+   "base": "Mang'ula",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Sanje Waterfalls"
+    },
+    {
+     "point": "start",
+     "name": "Sanje village"
+    }
+   ]
+  },
+  {
+   "id": "ke-mount-kenya-sirimon-chogoria",
+   "name": "Mount Kenya: Sirimon up, Chogoria down",
+   "country": "KE",
+   "slot": "KE-A",
+   "base": "Nanyuki",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Point Lenana",
+     "reuse": "ke-mount-kenya"
+    },
+    {
+     "point": "michaelson",
+     "name": "Lake Michaelson"
+    }
+   ]
+  },
+  {
+   "id": "ke-hells-gate-gorge",
+   "name": "Hell's Gate: Fischer's Tower and the gorge",
+   "country": "KE",
+   "slot": "KE-A",
+   "base": "Naivasha",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "fischer",
+     "name": "Fischer's Tower"
+    },
+    {
+     "point": "goal",
+     "name": "Ol Njorowa Gorge",
+     "reuse": "ke-hells-gate-national-park"
+    }
+   ]
+  },
+  {
+   "id": "ke-mount-longonot",
+   "name": "Mount Longonot crater rim",
+   "country": "KE",
+   "slot": "KE-A",
+   "base": "Naivasha",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Longonot summit"
+    },
+    {
+     "point": "start",
+     "name": "Longonot gate"
+    }
+   ]
+  },
+  {
+   "id": "ke-ngong-hills",
+   "name": "Ngong Hills ridge walk",
+   "country": "KE",
+   "slot": "KE-A",
+   "base": "Nairobi",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Lamwia peak"
+    },
+    {
+     "point": "start",
+     "name": "Ngong Hills gate"
+    }
+   ]
+  },
+  {
+   "id": "ke-karura-forest",
+   "name": "Karura Forest waterfall and caves",
+   "country": "KE",
+   "slot": "KE-A",
+   "base": "Nairobi",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Karura Waterfall"
+    },
+    {
+     "point": "start",
+     "name": "Karura Forest gate"
+    }
+   ]
+  },
+  {
+   "id": "ke-thomsons-falls",
+   "name": "Thomson's Falls down to the gorge",
+   "country": "KE",
+   "slot": "KE-A",
+   "base": "Nyahururu",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Foot of Thomson's Falls",
+     "reuse": "ke-thomsons-falls"
+    },
+    {
+     "point": "start",
+     "name": "Thomson's Falls viewpoint"
+    }
+   ]
+  },
+  {
+   "id": "ke-kakamega-forest",
+   "name": "Kakamega Forest: Lirhanda Hill",
+   "country": "KE",
+   "slot": "KE-A",
+   "base": "Kakamega",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Lirhanda Hill"
+    },
+    {
+     "point": "start",
+     "name": "Isecheno forest station"
+    }
+   ]
+  },
+  {
+   "id": "bo-isla-del-sol",
+   "name": "Isla del Sol: Inca ruins and Yumani",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "Copacabana",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pilko Kaina"
+    },
+    {
+     "point": "goal",
+     "name": "Yumani",
+     "reuse": "bo-lake-titicaca"
+    }
+   ]
+  },
+  {
+   "id": "bo-el-choro",
+   "name": "El Choro Inca trail",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "La Paz",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "abra",
+     "name": "Apacheta Chucura pass"
+    },
+    {
+     "point": "goal",
+     "name": "Chairo"
+    }
+   ]
+  },
+  {
+   "id": "bo-takesi",
+   "name": "Takesi Inca trail",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "La Paz",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "abra",
+     "name": "Abra Takesi"
+    },
+    {
+     "point": "goal",
+     "name": "Kakapi"
+    }
+   ]
+  },
+  {
+   "id": "bo-huayna-potosi",
+   "name": "Huayna Potosí",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "La Paz",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Huayna Potosí"
+    },
+    {
+     "point": "start",
+     "name": "Zongo Pass"
+    }
+   ]
+  },
+  {
+   "id": "bo-chacaltaya",
+   "name": "Chacaltaya summit",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "La Paz",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Chacaltaya"
+    },
+    {
+     "point": "start",
+     "name": "Chacaltaya ski lodge"
+    }
+   ]
+  },
+  {
+   "id": "bo-condoriri",
+   "name": "Condoriri lake and base camp",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "La Paz",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Laguna Chiar Khota"
+    },
+    {
+     "point": "start",
+     "name": "Tuni"
+    }
+   ]
+  },
+  {
+   "id": "bo-tunupa-volcano",
+   "name": "Tunupa volcano crater viewpoint",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "Uyuni",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Tunupa crater viewpoint",
+     "reuse": "bo-tunupa-volcano"
+    },
+    {
+     "point": "start",
+     "name": "Coquesa"
+    }
+   ]
+  },
+  {
+   "id": "bo-maragua-crater",
+   "name": "Chataquila to the Maragua crater",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "Sucre",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Maragua"
+    },
+    {
+     "point": "start",
+     "name": "Chataquila"
+    }
+   ]
+  },
+  {
+   "id": "bo-torotoro",
+   "name": "Torotoro: El Vergel canyon",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "Torotoro",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "mirador",
+     "name": "Torotoro canyon viewpoint"
+    },
+    {
+     "point": "goal",
+     "name": "El Vergel"
+    }
+   ]
+  },
+  {
+   "id": "bo-tupiza-puerta-del-diablo",
+   "name": "Tupiza: Quebrada de Palala and Puerta del Diablo",
+   "country": "BO",
+   "slot": "BO-A",
+   "base": "Tupiza",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Puerta del Diablo",
+     "reuse": "bo-tupiza"
+    },
+    {
+     "point": "start",
+     "name": "Tupiza"
+    }
+   ]
+  },
+  {
+   "id": "no-preikestolen",
+   "name": "Preikestolen (Pulpit Rock)",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Stavanger",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Preikestolen",
+     "reuse": "no-preikestolen"
+    },
+    {
+     "point": "start",
+     "name": "Preikestolen Fjellstue"
+    }
+   ]
+  },
+  {
+   "id": "no-trolltunga",
+   "name": "Trolltunga",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Odda",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Trolltunga"
+    },
+    {
+     "point": "start",
+     "name": "Mågelitopp (P2)"
+    }
+   ]
+  },
+  {
+   "id": "no-kjeragbolten",
+   "name": "Kjeragbolten",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Stavanger",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Kjeragbolten"
+    },
+    {
+     "point": "start",
+     "name": "Øygardstøl"
+    }
+   ]
+  },
+  {
+   "id": "no-besseggen",
+   "name": "Besseggen ridge",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Gjendesheim",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "ridge",
+     "name": "Besseggen"
+    },
+    {
+     "point": "goal",
+     "name": "Gjendesheim"
+    }
+   ]
+  },
+  {
+   "id": "no-reinebringen",
+   "name": "Reinebringen",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Reine",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Reine",
+     "reuse": "no-lofoten"
+    },
+    {
+     "point": "goal",
+     "name": "Reinebringen",
+     "reuse": "no-reinebringen"
+    }
+   ]
+  },
+  {
+   "id": "no-ryten-kvalvika",
+   "name": "Ryten and Kvalvika beach",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Fredvang",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "kvalvika",
+     "name": "Kvalvika Beach"
+    },
+    {
+     "point": "goal",
+     "name": "Ryten"
+    }
+   ]
+  },
+  {
+   "id": "no-romsdalseggen",
+   "name": "Romsdalseggen ridge",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Åndalsnes",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "ridge",
+     "name": "Romsdalseggen"
+    },
+    {
+     "point": "goal",
+     "name": "Åndalsnes",
+     "reuse": "no-andalsnes"
+    }
+   ]
+  },
+  {
+   "id": "no-galdhopiggen",
+   "name": "Galdhøpiggen from Spiterstulen",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Lom",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Galdhøpiggen"
+    },
+    {
+     "point": "start",
+     "name": "Spiterstulen"
+    }
+   ]
+  },
+  {
+   "id": "no-aurlandsdalen",
+   "name": "Aurlandsdalen valley",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Aurland",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "sinjarheim",
+     "name": "Sinjarheim"
+    },
+    {
+     "point": "goal",
+     "name": "Vassbygdi"
+    }
+   ]
+  },
+  {
+   "id": "no-segla",
+   "name": "Segla",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Senja",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Segla"
+    },
+    {
+     "point": "start",
+     "name": "Fjordgård"
+    }
+   ]
+  },
+  {
+   "id": "no-vidden",
+   "name": "Vidden: Ulriken to Fløyen",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Bergen",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ulriken"
+    },
+    {
+     "point": "goal",
+     "name": "Fløyen",
+     "reuse": "no-mount-floyen"
+    }
+   ]
+  },
+  {
+   "id": "no-skageflaa",
+   "name": "Skageflå farm above Geirangerfjord",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Geiranger",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Skageflå"
+    },
+    {
+     "point": "start",
+     "name": "Homlong"
+    }
+   ]
+  },
+  {
+   "id": "no-briksdalsbreen",
+   "name": "Briksdal glacier walk",
+   "country": "NO",
+   "slot": "NO-A",
+   "base": "Olden",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Briksdalsbreen",
+     "reuse": "no-briksdalsbreen"
+    },
+    {
+     "point": "start",
+     "name": "Briksdalsbre Fjellstove"
+    }
+   ]
+  },
+  {
+   "id": "at-gamsgrube",
+   "name": "Gamsgrubenweg to the Wasserfallwinkel",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Heiligenblut",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Kaiser-Franz-Josefs-Höhe"
+    },
+    {
+     "point": "goal",
+     "name": "Wasserfallwinkel"
+    }
+   ]
+  },
+  {
+   "id": "at-krimml-waterfalls",
+   "name": "Krimml Waterfalls trail",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Krimml",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Krimml Waterfalls"
+    },
+    {
+     "point": "start",
+     "name": "Krimml"
+    }
+   ]
+  },
+  {
+   "id": "at-hallstatt-salzberg",
+   "name": "Hallstatt to the Skywalk and Salt Mine",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Hallstatt",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hallstatt"
+    },
+    {
+     "point": "goal",
+     "name": "Skywalk Hallstatt"
+    }
+   ]
+  },
+  {
+   "id": "at-nordkette-goetheweg",
+   "name": "Nordkette: Hafelekar and the Goetheweg",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Innsbruck",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Hafelekar",
+     "reuse": "at-innsbruck"
+    },
+    {
+     "point": "goal",
+     "name": "Pfeishütte"
+    }
+   ]
+  },
+  {
+   "id": "at-pinzgauer-spaziergang",
+   "name": "Pinzgauer Spaziergang",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Zell am See",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Schmittenhöhe"
+    },
+    {
+     "point": "goal",
+     "name": "Saalbach"
+    }
+   ]
+  },
+  {
+   "id": "at-seebensee",
+   "name": "Seebensee and the Coburger Hütte",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Ehrwald",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "seebensee",
+     "name": "Seebensee"
+    },
+    {
+     "point": "goal",
+     "name": "Coburger Hütte"
+    }
+   ]
+  },
+  {
+   "id": "at-durnstein-ruin",
+   "name": "Dürnstein castle ruin",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Dürnstein",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Dürnstein"
+    },
+    {
+     "point": "goal",
+     "name": "Dürnstein Castle"
+    }
+   ]
+  },
+  {
+   "id": "at-kahlenberg",
+   "name": "Vienna: Nussdorf vineyards to the Kahlenberg",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "Vienna",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Kahlenberg"
+    },
+    {
+     "point": "start",
+     "name": "Nussdorf"
+    }
+   ]
+  },
+  {
+   "id": "at-liechtensteinklamm",
+   "name": "Liechtensteinklamm gorge",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "St. Johann im Pongau",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Liechtensteinklamm"
+    },
+    {
+     "point": "start",
+     "name": "Liechtensteinklamm entrance"
+    }
+   ]
+  },
+  {
+   "id": "at-schafberg",
+   "name": "Schafberg from St. Wolfgang",
+   "country": "AT",
+   "slot": "AT-A",
+   "base": "St. Wolfgang",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "St. Wolfgang"
+    },
+    {
+     "point": "goal",
+     "name": "Schafberg"
+    }
+   ]
+  },
+  {
+   "id": "ch-five-lakes-zermatt",
+   "name": "5-Seenweg: five lakes under the Matterhorn",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Zermatt",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "stellisee",
+     "name": "Stellisee"
+    },
+    {
+     "point": "goal",
+     "name": "Sunnegga"
+    }
+   ]
+  },
+  {
+   "id": "ch-hornlihutte",
+   "name": "Hörnlihütte under the Matterhorn",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Zermatt",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Hörnlihütte"
+    },
+    {
+     "point": "start",
+     "name": "Schwarzsee"
+    }
+   ]
+  },
+  {
+   "id": "ch-eiger-trail",
+   "name": "Eiger Trail",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Grindelwald",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Alpiglen"
+    },
+    {
+     "point": "start",
+     "name": "Eigergletscher"
+    }
+   ]
+  },
+  {
+   "id": "ch-bachalpsee",
+   "name": "First to Bachalpsee",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Grindelwald",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Bachalpsee"
+    },
+    {
+     "point": "start",
+     "name": "First"
+    }
+   ]
+  },
+  {
+   "id": "ch-oeschinensee",
+   "name": "Oeschinensee panorama trail",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Kandersteg",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Oeschinensee"
+    },
+    {
+     "point": "start",
+     "name": "Oeschinen top station"
+    }
+   ]
+  },
+  {
+   "id": "ch-aletsch-panorama",
+   "name": "Aletsch panorama trail",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Riederalp",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Moosfluh",
+     "reuse": "ch-aletsch-glacier"
+    },
+    {
+     "point": "goal",
+     "name": "Bettmerhorn"
+    }
+   ]
+  },
+  {
+   "id": "ch-lauterbrunnen-valley",
+   "name": "Lauterbrunnen valley of waterfalls",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Lauterbrunnen",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Lauterbrunnen"
+    },
+    {
+     "point": "trummelbach",
+     "name": "Trümmelbach Falls"
+    },
+    {
+     "point": "goal",
+     "name": "Stechelberg"
+    }
+   ]
+  },
+  {
+   "id": "ch-lavaux",
+   "name": "Lavaux vineyard terraces",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Lausanne",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "St-Saphorin"
+    },
+    {
+     "point": "start",
+     "name": "Lutry"
+    }
+   ]
+  },
+  {
+   "id": "ch-aescher-seealpsee",
+   "name": "Seealpsee, Aescher and Ebenalp",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Appenzell",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "seealpsee",
+     "name": "Seealpsee"
+    },
+    {
+     "point": "aescher",
+     "name": "Aescher"
+    },
+    {
+     "point": "goal",
+     "name": "Ebenalp"
+    }
+   ]
+  },
+  {
+   "id": "ch-rigi",
+   "name": "Rigi Kulm to Rigi Kaltbad",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Lucerne",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Rigi Kulm"
+    },
+    {
+     "point": "goal",
+     "name": "Rigi Kaltbad"
+    }
+   ]
+  },
+  {
+   "id": "ch-creux-du-van",
+   "name": "Creux du Van",
+   "country": "CH",
+   "slot": "CH-A",
+   "base": "Neuchâtel",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Creux du Van"
+    },
+    {
+     "point": "start",
+     "name": "Noiraigue"
+    }
+   ]
+  },
+  {
+   "id": "ma-toubkal",
+   "name": "Mount Toubkal from Imlil",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Imlil",
+   "kind": "multiday",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Imlil",
+     "reuse": "ma-imlil"
+    },
+    {
+     "point": "chamharouch",
+     "name": "Sidi Chamharouch"
+    },
+    {
+     "point": "goal",
+     "name": "Toubkal summit",
+     "reuse": "ma-mount-toubkal"
+    }
+   ]
+  },
+  {
+   "id": "ma-todra-gorge",
+   "name": "Todra Gorge loop over the plateau",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Tinghir",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Todra Gorge",
+     "reuse": "ma-todra-gorge"
+    },
+    {
+     "point": "goal",
+     "name": "Tizgui"
+    }
+   ]
+  },
+  {
+   "id": "ma-dades-monkey-fingers",
+   "name": "Dades Valley: the Monkey Fingers",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Boumalne Dades",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Monkey Fingers"
+    },
+    {
+     "point": "start",
+     "name": "Tamellalt"
+    }
+   ]
+  },
+  {
+   "id": "ma-gods-bridge",
+   "name": "Akchour to God's Bridge",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Chefchaouen",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Akchour",
+     "reuse": "ma-talassemtane-national-park"
+    },
+    {
+     "point": "goal",
+     "name": "God's Bridge",
+     "reuse": "ma-gods-bridge"
+    }
+   ]
+  },
+  {
+   "id": "ma-chefchaouen-spanish-mosque",
+   "name": "Chefchaouen to the Spanish Mosque",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Chefchaouen",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Ras el Ma",
+     "reuse": "ma-chefchaouen"
+    },
+    {
+     "point": "goal",
+     "name": "Spanish Mosque"
+    }
+   ]
+  },
+  {
+   "id": "ma-ouzoud-falls",
+   "name": "Ouzoud Falls down to the river",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Azilal",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ouzoud Falls",
+     "reuse": "ma-ouzoud-falls"
+    },
+    {
+     "point": "start",
+     "name": "Ouzoud"
+    }
+   ]
+  },
+  {
+   "id": "ma-paradise-valley",
+   "name": "Paradise Valley",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Agadir",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Paradise Valley"
+    },
+    {
+     "point": "start",
+     "name": "Paradise Valley parking"
+    }
+   ]
+  },
+  {
+   "id": "ma-merzouga-big-dune",
+   "name": "Erg Chebbi: the big dune at sunrise",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Merzouga",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Erg Chebbi big dune",
+     "reuse": "ma-erg-chebbi"
+    },
+    {
+     "point": "start",
+     "name": "Merzouga"
+    }
+   ]
+  },
+  {
+   "id": "ma-setti-fatma",
+   "name": "Setti Fatma waterfalls",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Marrakech",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Setti Fatma waterfalls"
+    },
+    {
+     "point": "start",
+     "name": "Setti Fatma"
+    }
+   ]
+  },
+  {
+   "id": "ma-ait-benhaddou-granary",
+   "name": "Ait Benhaddou up to the granary",
+   "country": "MA",
+   "slot": "MA-A",
+   "base": "Aït Benhaddou",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Aït Benhaddou granary",
+     "reuse": "ma-ait-benhaddou"
+    },
+    {
+     "point": "start",
+     "name": "Aït Benhaddou village"
+    }
+   ]
+  },
+  {
+   "id": "vn-ba-be-lake",
+   "name": "Ba Be lake villages and Hua Ma cave",
+   "country": "VN",
+   "slot": "VN-C",
+   "base": "Ba Be",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Pac Ngoi",
+     "reuse": "vn-ba-be-lake"
+    },
+    {
+     "point": "goal",
+     "name": "Hua Ma Cave"
+    }
+   ]
+  },
+  {
+   "id": "vn-sapa-cat-cat",
+   "name": "Sa Pa to Cat Cat village and waterfall",
+   "country": "VN",
+   "slot": "VN-C",
+   "base": "Sa Pa",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "start",
+     "name": "Sa Pa",
+     "reuse": "vn-sapa"
+    },
+    {
+     "point": "goal",
+     "name": "Cat Cat"
+    }
+   ]
+  },
+  {
+   "id": "vn-marble-mountains",
+   "name": "Marble Mountains: Thuy Son",
+   "country": "VN",
+   "slot": "VN-C",
+   "base": "Da Nang",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Thuy Son",
+     "reuse": "vn-marble-mountains"
+    },
+    {
+     "point": "start",
+     "name": "Marble Mountains gate"
+    }
+   ]
+  },
+  {
+   "id": "na-white-lady",
+   "name": "White Lady rock painting, Tsisab gorge",
+   "country": "NA",
+   "slot": "NA-C",
+   "base": "Uis",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "White Lady",
+     "reuse": "na-white-lady-of-the-brandberg"
+    },
+    {
+     "point": "start",
+     "name": "Brandberg White Lady car park"
+    }
+   ]
+  },
+  {
+   "id": "na-twyfelfontein",
+   "name": "Twyfelfontein rock engravings walk",
+   "country": "NA",
+   "slot": "NA-C",
+   "base": "Twyfelfontein",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Twyfelfontein",
+     "reuse": "na-twyfelfontein"
+    },
+    {
+     "point": "start",
+     "name": "Twyfelfontein visitor centre"
+    }
+   ]
+  },
+  {
+   "id": "jp-akadake",
+   "name": "Akadake, Yatsugatake",
+   "country": "JP",
+   "slot": "JP-F",
+   "base": "Chino",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Akadake",
+     "reuse": "jp-mount-aka"
+    },
+    {
+     "point": "start",
+     "name": "Minotoguchi"
+    }
+   ]
+  },
+  {
+   "id": "jp-kumano-kodo-iseji-magose",
+   "name": "Kumano Kodo Iseji: Magose-toge pass",
+   "country": "JP",
+   "slot": "JP-F",
+   "base": "Owase",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "pass",
+     "name": "Magose-toge",
+     "reuse": "jp-kumano-kodo"
+    },
+    {
+     "point": "goal",
+     "name": "Owase"
+    }
+   ]
+  },
+  {
+   "id": "jp-shikoku-henro-korogashi",
+   "name": "Shikoku 88: Fujii-dera to Shosan-ji",
+   "country": "JP",
+   "slot": "JP-F",
+   "base": "Tokushima",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Shosan-ji",
+     "reuse": "jp-shosan-ji"
+    },
+    {
+     "point": "start",
+     "name": "Fujii-dera"
+    }
+   ]
+  },
+  {
+   "id": "jp-takao",
+   "name": "Mount Takao by Trail 1",
+   "country": "JP",
+   "slot": "JP-F",
+   "base": "Tokyo",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount Takao",
+     "reuse": "jp-mount-takao"
+    },
+    {
+     "point": "start",
+     "name": "Takaosanguchi"
+    }
+   ]
+  },
+  {
+   "id": "jp-daisen",
+   "name": "Daisen by the Natsuyama trail",
+   "country": "JP",
+   "slot": "JP-F",
+   "base": "Yonago",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Misen"
+    },
+    {
+     "point": "start",
+     "name": "Daisen-ji"
+    }
+   ]
+  },
+  {
+   "id": "nz-kaikoura-peninsula",
+   "name": "Kaikōura Peninsula Walkway",
+   "country": "NZ",
+   "slot": "NZ-F",
+   "base": "Kaikōura",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "South Bay",
+     "reuse": "nz-kaikoura"
+    },
+    {
+     "point": "start",
+     "name": "Point Kean"
+    }
+   ]
+  },
+  {
+   "id": "pe-ancascocha",
+   "name": "Ancascocha trek to Machu Picchu",
+   "country": "PE",
+   "slot": "PE-E",
+   "base": "Cusco",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "perolniyoc",
+     "name": "Perolniyoc waterfall",
+     "reuse": "pe-perolniyoc-waterfall"
+    },
+    {
+     "point": "ancascocha",
+     "name": "Ancascocha"
+    },
+    {
+     "point": "goal",
+     "name": "Paucarcancha"
+    }
+   ]
+  },
+  {
+   "id": "ar-piedra-del-fraile",
+   "name": "Piedra del Fraile",
+   "country": "AR",
+   "slot": "AR-E",
+   "base": "El Chaltén",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Piedra del Fraile"
+    },
+    {
+     "point": "start",
+     "name": "Río Eléctrico bridge"
+    }
+   ]
   }
  ]
 }

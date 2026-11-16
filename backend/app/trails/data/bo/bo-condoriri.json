@@ -1,0 +1,65 @@
+{
+ "id": "bo-condoriri",
+ "country": "BO",
+ "name": "Condoriri lake and base camp",
+ "base": "La Paz",
+ "region": "Cordillera Real",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Up a valley of llamas and grazing alpacas to the Chiar Khota lake under the Condoriri, a peak shaped like a condor with open wings.",
+ "book": "Community fee at Tuni. Transport from La Paz to the Tuni dam (2 h).",
+ "water": "Streams (treat).",
+ "dangers": [
+  "Altitude: La Paz is at 3,600 m; spend two or three days there before any hike.",
+  "Cold wind and frost."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Condoriri"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 2,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tuni",
+   "lat": -16.2485,
+   "lon": -68.2391,
+   "role": "start",
+   "note": "A reservoir on the Altiplano at 4,400 m."
+  },
+  {
+   "id": "goal",
+   "name": "Laguna Chiar Khota",
+   "lat": -16.1948,
+   "lon": -68.2443,
+   "role": "goal",
+   "note": "A lake at 4,650 m under the glaciers of Condoriri."
+  }
+ ]
+}

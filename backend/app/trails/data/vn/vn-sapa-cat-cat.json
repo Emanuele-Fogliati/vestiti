@@ -1,0 +1,65 @@
+{
+ "id": "vn-sapa-cat-cat",
+ "country": "VN",
+ "name": "Sa Pa to Cat Cat village and waterfall",
+ "base": "Sa Pa",
+ "region": "Hoang Lien Son, Lao Cai",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Down from Sa Pa town through the Black Hmong village of Cat Cat, its indigo dyers and water-wheels, to a waterfall in the valley.",
+ "book": "Village ticket at the top of the path. Walk back up or take a motorbike taxi.",
+ "water": "Cafes in the village.",
+ "dangers": [
+  "Steep steps on the way back up."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Sa_Pa",
+  "https://en.wikipedia.org/wiki/Sa_Pa"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 5,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Sa Pa",
+   "lat": 22.3334,
+   "lon": 103.8427,
+   "role": "start",
+   "note": "The hill town above the Muong Hoa valley.",
+   "scene": "vn-sapa"
+  },
+  {
+   "id": "goal",
+   "name": "Cat Cat",
+   "lat": 22.3289,
+   "lon": 103.8347,
+   "role": "goal",
+   "note": "A Hmong village and waterfall in the valley."
+  }
+ ]
+}

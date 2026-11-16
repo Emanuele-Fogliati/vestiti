@@ -1,0 +1,66 @@
+{
+ "id": "np-sarangkot",
+ "country": "NP",
+ "name": "Sarangkot sunrise hill",
+ "base": "Pokhara",
+ "region": "Pokhara",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  3.5,
+  5
+ ],
+ "start_by": "04:30",
+ "published": null,
+ "why": "Up the hill behind Lakeside to the paragliding take-off of Sarangkot, where the sun lights Dhaulagiri, Annapurna and Machhapuchhre above the lake.",
+ "book": "Small ticket at the viewpoint. A taxi can take you up for sunrise and you walk down.",
+ "water": "Tea shops and lodges at the top.",
+ "dangers": [
+  "Steep path in the dark: carry a headlamp."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Sarangkot",
+  "https://en.wikivoyage.org/wiki/Pokhara"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 3,
+  "culture": 3,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lakeside, Pokhara",
+   "lat": 28.21314,
+   "lon": 83.95729,
+   "role": "start",
+   "note": "The hotel district on the east shore of Phewa Lake."
+  },
+  {
+   "id": "goal",
+   "name": "Sarangkot viewpoint",
+   "lat": 28.24369,
+   "lon": 83.9575,
+   "role": "goal",
+   "note": "A 1,600 m hilltop of tea shops and paragliders, the Annapurna range in front.",
+   "scene": "np-pokhara"
+  }
+ ]
+}
