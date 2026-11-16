@@ -251,9 +251,9 @@ def test_any_number_of_days_cuts_or_stretches_the_nearest_route(client):
     assert "El Chaltén" in names and "Ushuaia" not in names  # a line ends sooner, Fitz Roy stays
     j = client.get("/api/inspire/patagonia-14?month=1&days=17").json()
     assert j["days"] == 17 and j["journey"]["id"] == "patagonia"
-    # Peru in January has only the two-week route: it stretches, never past what the zones hold
-    j = client.get("/api/inspire/peru-14?month=1&days=35").json()
-    assert 14 < j["days"] < 35
+    # Buenos Aires & Iguazú goes up to three weeks: it stretches, never past what the zones hold
+    j = client.get("/api/inspire/buenos-aires-14?month=1&days=35").json()
+    assert 21 < j["days"] < 35
     iceland = client.get("/api/inspire/iceland-14?month=7&days=10").json()
     assert iceland["stops"][0]["name"] == iceland["stops"][-1]["name"]  # the ring still comes home
     assert client.get("/api/inspire/patagonia-14?month=1&days=99").status_code == 422
@@ -277,3 +277,28 @@ def test_a_recommended_trip_is_edited_on_its_own_page(client):
         "month": 1, "stops": [["ar-el-calafate", 2], ["ar-el-chalten", 5], ["cl-puerto-natales", 1]]}).json()
     assert [s["name"] for s in trip["stops"]] == ["El Calafate", "El Chaltén", "Puerto Natales"]
     assert trip["stops"][0]["start_date"][5:7] == "01" and trip["start_estimated"] is True  # a date of ours
+
+
+def test_every_region_has_a_trip_for_every_month_of_every_length():
+    """Manu 2026-11-16: "per ogni mese ... chiunque voglia andare in qualunque posto, in qualunque
+    momento, abbia il suo outfit": every travel region, 1 to 4 weeks, a route in all twelve months
+    (another route where the season changes it), never a month with nothing."""
+    from collections import defaultdict
+    from app.guide import ready
+    cover = defaultdict(set)
+    for t in ready.trips():
+        if t.journey:
+            cover[(t.journey, round(t.days / 7))] |= set(t.months)
+    gaps = {k: sorted(set(range(1, 13)) - v) for k, v in cover.items() if v != set(range(1, 13))}
+    assert not gaps, gaps
+    for m in range(1, 13):
+        assert inspire.custom("lakes", 10, m) is not None and inspire.custom("andes", 17, m) is not None
+
+
+def test_iceland_in_winter_stays_in_the_south():
+    """The operators' winter and aurora trips stay in the south and west (17 of 19), and so do ours."""
+    from app.guide import ready
+    north = {"is-akureyri", "is-lake-myvatn", "is-husavik", "is-seydisfjordur", "is-isafjordur"}
+    for t in ready.trips():
+        if t.journey == "iceland" and 1 in t.months:
+            assert not north & {s.place for s in t.stops}, t.id
