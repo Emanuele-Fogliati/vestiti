@@ -53,17 +53,52 @@ def _scene(sid: str | None) -> dict | None:
 
 def _cover(t: trails.Trail) -> dict | None:
     """The trail's picture: its goal's drawing, else the last point that has one."""
+    c = _cover_at(t)
+    return c[0] if c else None
+
+
+def _cover_at(t: trails.Trail) -> tuple[dict, float, float] | None:
+    return _cover_at_id(t.id)
+
+
+@lru_cache(maxsize=None)
+def _cover_at_id(tid: str) -> tuple[dict, float, float] | None:
+    """The trail's picture and the point of the walk where you see it (Manu 2026-11-16: on the
+    map the drawing sits where the thing is, the goal, not at the trailhead)."""
+    t = trails.find(tid)
     goal = [p for p in t.points if p.role == "goal"]
     for p in goal + list(reversed(t.points)):
         s = _scene(p.scene)
         if s:
-            return s
+            return s, p.lat, p.lon
     # until its scenes are linked: the drawing of the goal itself, when the library has it
     for p in goal:
         lm = art.match(p.name, p.lat, p.lon, country=t.country, gateway=False)
         if lm and trails.km(p.lat, p.lon, lm.lat, lm.lon) <= 1.5:
-            return _scene(lm.id)
+            return _scene(lm.id), p.lat, p.lon
     return None
+
+
+def _sights(t: trails.Trail, skip: set[str]) -> list[dict]:
+    """The drawn places the walk goes past (Manu 2026-11-16: "se passa da altri posti che abbiamo
+    nel database ... mi aggiungi l'immagine a metà strada"): every landmark of the library within
+    a few hundred metres of the path, in walking order, at the point of the path closest to it."""
+    g = trails.geo(t.id) or {}
+    line = [(p[0], p[1]) for p in g.get("line", [])] or [(p.lat, p.lon) for p in t.points]
+    if not line:
+        return []
+    step = max(1, len(line) // 400)
+    line = line[::step] + [line[-1]]
+    s, n = min(p[0] for p in line) - 0.02, max(p[0] for p in line) + 0.02
+    w, e = min(p[1] for p in line) - 0.03, max(p[1] for p in line) + 0.03
+    out = []
+    for lm in art.by_id().values():
+        if lm.id in skip or not (s <= lm.lat <= n and w <= lm.lon <= e):
+            continue
+        d, i = min((trails.km(lm.lat, lm.lon, la, lo), i) for i, (la, lo) in enumerate(line))
+        if d <= max(0.3, min(lm.radius_km or 0, 0.8)):
+            out.append((i, {"id": lm.id, "name": lm.label, "lat": line[i][0], "lon": line[i][1], "art": _scene(lm.id)}))
+    return [x for _, x in sorted(out, key=lambda x: x[0])][:12]
 
 
 def _numbers(t: trails.Trail) -> dict:
@@ -110,6 +145,8 @@ def card(t: trails.Trail, month: int | None = None) -> dict:
         "months_text": _months_text(t.months),
         "in_season": None if month is None else month in t.months,
         "why": t.why, "art": _cover(t), "has_map": trails.geo(t.id) is not None,
+        # where the picture goes on the map: the point of the walk where you see it
+        "art_at": [round(c[1], 4), round(c[2], 4)] if (c := _cover_at(t)) else None,
         "tier": t.tier, "featured": t.id in _featured(), "style": t.style, "area": t.area, "scores": t.scores.model_dump() if t.scores else None,
         # where it starts, for the pins on the Treks map
         "lat": round(t.points[0].lat, 4) if t.points else None, "lon": round(t.points[0].lon, 4) if t.points else None,
@@ -241,6 +278,8 @@ def one(trail_id: str):
                "km": gp.get(p.id, {}).get("km"), "ele": gp.get(p.id, {}).get("ele")}
               for p in t.points]
     names = {p.id: p.name for p in t.points}
+    cover = _cover_at(t)
+    seen = {x["art"]["id"] for x in points if x["art"]} | ({cover[0]["id"]} if cover else set())
     return {
         **card(t),
         "difficulty_text": DIFFICULTY_TEXT[t.difficulty],
@@ -248,6 +287,10 @@ def one(trail_id: str):
         "turnaround": t.turnaround, "sources": [str(s) for s in t.sources],
         "published": t.published.model_dump(mode="json") if t.published else None,
         "points": points,
+        # the drawings along the way: the walk's own points that have one, then the library's
+        # places it goes past
+        "sights": [{"id": x["art"]["id"], "name": x["name"], "lat": x["lat"], "lon": x["lon"], "art": x["art"]}
+                   for x in points if x["art"] and (not cover or x["art"]["id"] != cover[0]["id"])] + _sights(t, seen),
         "segments": [{**s, "from_name": names.get(s["from"], ""), "to_name": names.get(s["to"], "")}
                      for s in g.get("segments", [])],
         "computed": {k: g[k] for k in ("km", "one_way_km", "gain_m", "loss_m", "walk_hours")} if g else None,

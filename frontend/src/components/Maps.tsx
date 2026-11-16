@@ -2,7 +2,7 @@ import type { MapTrip } from "./TripsMap";
 import { lazy, Suspense } from "react";
 import type { RouteMapOpts, RouteStop } from "./RouteMap";
 import type { GlobeFocus } from "./Globe";
-import type { TrailCard } from "../lib/types";
+import type { TrailCard, TrailSight } from "../lib/types";
 import "../theme/maps.css";
 
 // The map library is big: it loads only on pages that show a map, after the page itself.
@@ -20,7 +20,7 @@ export function TripMap(props: { stops: RouteStop[]; focusIndex?: number | null 
 }
 
 export function TreksMap(props: { trails: TrailCard[]; selected: string | null; onPick: (id: string) => void;
-  inset?: { top: number; right: number; bottom: number; left: number }; fitKey: string; line?: [number, number][] | null;
+  inset?: { top: number; right: number; bottom: number; left: number }; fitKey: string; line?: [number, number][] | null; sights?: TrailSight[];
   onView?: (b: { w: number; s: number; e: number; n: number } | null) => void;
   around?: { lat: number; lon: number; km: number } | null }) {
   return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><TrekMapImpl {...props} /></Suspense>;
