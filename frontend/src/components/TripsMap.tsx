@@ -1,6 +1,6 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
-import { baseStyle, mapColors } from "../lib/worldmap";
+import { baseStyle, mapColors, worldZoom } from "../lib/worldmap";
 
 type Inset = { top: number; right: number; bottom: number; left: number };
 export interface MapTrip { id: string; points: number[][] }
@@ -26,7 +26,7 @@ export default function TripsMap({ trips, selected, onPick, inset }: {
     let map: maplibregl.Map;
     try {
       map = new maplibregl.Map({
-        container: el, style: baseStyle(mapColors(), { globe: false }), center: [0, 20], zoom: 1.3,
+        container: el, style: baseStyle(mapColors(), { globe: true, photo: false }), center: [0, 20], zoom: worldZoom(el), renderWorldCopies: false,
         maxZoom: 14, cooperativeGestures: true, attributionControl: { compact: true },
         pixelRatio: Math.min(window.devicePixelRatio || 1, 2), fadeDuration: 150,
       });

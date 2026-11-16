@@ -68,7 +68,7 @@ export function Layout() {
   const dock: [string, string, string, boolean][] = [
     ["/", "Explore", "globe", p === "/"],
     ["/trips", "Trips", "trips", tripsOn],
-    ["/trails", "Hikes", "treks", /^\/trails(\/|$)/.test(p)],
+    ["/trails", "Walks", "treks", /^\/trails(\/|$)/.test(p)],
     ["/wardrobe", "Closet", "closet", /^\/wardrobe(\/|$)/.test(p)],
   ];
   const meOn = /^\/(account|login|register|how-it-works)(\/|$)/.test(p);

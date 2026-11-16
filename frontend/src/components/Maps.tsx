@@ -19,7 +19,9 @@ export function TripMap(props: { stops: RouteStop[]; focusIndex?: number | null 
 }
 
 export function TreksMap(props: { trails: TrailCard[]; selected: string | null; onPick: (id: string) => void;
-  inset?: { top: number; right: number; bottom: number; left: number }; fitKey: string }) {
+  inset?: { top: number; right: number; bottom: number; left: number }; fitKey: string; line?: [number, number][] | null;
+  onView?: (b: { w: number; s: number; e: number; n: number } | null) => void;
+  around?: { lat: number; lon: number; km: number } | null }) {
   return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><TrekMapImpl {...props} /></Suspense>;
 }
 

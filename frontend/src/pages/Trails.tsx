@@ -36,6 +36,10 @@ export default function Trails() {
   const [wear, setWear] = useState<TrailWear | null>(null);
   const [chosen, setChosen] = useState<Record<string, Item>>({});
   const [buyOpen, setBuyOpen] = useState(false);
+  // the chosen hike's path, drawn on the map as soon as it is picked
+  const [line, setLine] = useState<[number, number][] | null>(null);
+  // what the map shows: the list follows it (null = the whole globe)
+  const [view, setView] = useState<{ w: number; s: number; e: number; n: number } | null>(null);
 
   useEffect(() => {
     const mq = matchMedia("(min-width: 900px)");
@@ -72,32 +76,55 @@ export default function Trails() {
     return () => { live = false; clearTimeout(h); };
   }, [find]);
   const [km, setKm] = useState(25);
+  // a hike searched by its own name (Manu 2026-11-16): it comes first and opens, and every walk
+  // around it shows too, as if you had zoomed in there
+  const nameHit = (t: TrailCard) => !!find && find.split(/\s+/).every((w) => t.name.toLowerCase().includes(w));
   const zone = useMemo(() => {
     if (find.length < 3 || !all) return null;
     if (all.some((t) => countryName(t.country).toLowerCase() === find || t.country.toLowerCase() === find)) return null;
-    if (geo && geo.q === find) return { lat: geo.lat, lon: geo.lon, name: geo.name.toLowerCase() === find ? typed.trim() : geo.name };
+    const byName = all.filter((t) => t.lat != null && t.lon != null && nameHit(t));
+    if (byName.length && byName.length <= 8) return { lat: byName[0].lat!, lon: byName[0].lon!, name: byName[0].name, trail: byName.length === 1 ? byName[0].id : null };
+    if (geo && geo.q === find) return { lat: geo.lat, lon: geo.lon, name: geo.name.toLowerCase() === find ? typed.trim() : geo.name, trail: null };
     const named = all.filter((t) => t.lat != null && t.lon != null && textHit(t));
     if (!named.length || named.length > 8) return null;
-    return { lat: named[0].lat!, lon: named[0].lon!, name: named[0].base || named[0].name };
+    return { lat: named[0].lat!, lon: named[0].lon!, name: named[0].base || named[0].name, trail: null };
   }, [find, all, geo]); // eslint-disable-line react-hooks/exhaustive-deps
   const away = (t: TrailCard) => zone && t.lat != null && t.lon != null ? distKm(zone.lat, zone.lon, t.lat, t.lon) : Infinity;
 
   const shown = useMemo(() => base.filter((t) => textHit(t) || away(t) <= km)
-    // near the place first; else in season first, then the ones with a drawing (the famous ones), then the rest
-    .sort((a, b) => (zone ? Math.round(away(a)) - Math.round(away(b)) : 0)
+    // the hike you named first, then the nearest; else in season first, then the famous ones (with a drawing)
+    .sort((a, b) => Number(nameHit(b)) - Number(nameHit(a)) || (zone ? Math.round(away(a)) - Math.round(away(b)) : 0)
       || Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
       || Number(b.tier === "A") - Number(a.tier === "A")), [base, find, zone, km]); // eslint-disable-line react-hooks/exhaustive-deps
+  // one hike matches the name: it opens (card, what to wear) once you stop typing
+  useEffect(() => {
+    if (!zone?.trail || selId === zone.trail) return;
+    const h = setTimeout(() => set("t", zone.trail!), 700);
+    return () => clearTimeout(h);
+  }, [zone?.trail]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => setPage(0), [all, level, kind, style, find, km, zone?.lat]);
 
+  const inView = (t: TrailCard) => !view || (t.lat != null && t.lon != null && t.lat >= view.s && t.lat <= view.n
+    && (view.w <= view.e ? t.lon >= view.w && t.lon <= view.e : t.lon >= view.w || t.lon <= view.e));
+  const listed = useMemo(() => shown.filter((t) => inView(t) || t.id === selId), [shown, view, selId]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => setPage(0), [view]);
   const PER = desk ? 6 : 20;
-  const pages = Math.max(1, Math.ceil(shown.length / PER));
-  const list = desk ? shown.slice(page * PER, page * PER + PER) : shown.slice(0, (page + 1) * PER);
+  const pages = Math.max(1, Math.ceil(listed.length / PER));
+  const list = desk ? listed.slice(page * PER, page * PER + PER) : listed.slice(0, (page + 1) * PER);
   const sel = selId ? (all ?? []).find((t) => t.id === selId) ?? null : null;
   // a trek picked on the map: its page of the list opens, so its row shows highlighted
   useEffect(() => {
-    const i = selId ? shown.findIndex((t) => t.id === selId) : -1;
+    const i = selId ? listed.findIndex((t) => t.id === selId) : -1;
     if (i >= 0 && desk) setPage(Math.floor(i / PER));
-  }, [selId, shown, desk, PER]);
+  }, [selId, listed, desk, PER]);
+
+  useEffect(() => {
+    setLine(null);
+    if (!selId) return;
+    let live = true;
+    api.trail(selId).then((t) => { if (live && t.line.length > 1) setLine(t.line); }).catch(() => undefined);
+    return () => { live = false; };
+  }, [selId]);
 
   // what the chosen trek asks you to wear, with products
   const wearMonth = month ?? new Date().getMonth() + 1;
@@ -129,7 +156,7 @@ export default function Trails() {
   const search = (
     <form className="mf-say mf-search" role="search" onSubmit={(e) => { e.preventDefault(); set("find", typed.trim()); }}>
       <SearchIcon />
-      <input type="search" value={typed} aria-label="Search hikes" placeholder="Search a hike, park, town or country"
+      <input type="search" value={typed} aria-label="Search walks" placeholder="Search a walk, park, town or country"
         onChange={(e) => { setTyped(e.target.value); set("find", e.target.value.trim()); }} />
       {typed && <button type="button" aria-label="Clear" onClick={() => { setTyped(""); set("find", ""); }}>×</button>}
     </form>
@@ -142,16 +169,17 @@ export default function Trails() {
           <option value="">Every country</option>
           {byName.map(([c, n]) => <option key={c} value={c}>{n}</option>)}
         </select>
-        <select aria-label="Hikes or city walks" value={style} onChange={(e) => set("style", e.target.value)}>
-          <option value="">All walks</option>
-          <option value="trek">Hikes</option>
-          <option value="city">City walks</option>
-        </select>
         <select aria-label="How long" value={kind} onChange={(e) => set("kind", e.target.value)}>
           <option value="">Any length</option>
           <option value="day">Day walks</option>
           <option value="multiday">Several days</option>
         </select>
+      </div>
+      <div className="mf-chips" role="group" aria-label="Nature or city">
+        {([["", "All walks"], ["trek", "Nature"], ["city", "City"]] as const).map(([v, l]) => (
+          <button key={v} type="button" className={style === v ? "on" : ""} onClick={() => set("style", v)}>
+            {v && <i className={`mf-dot ${v === "city" ? "city" : "nature"}`} />}{l}</button>
+        ))}
       </div>
       <div className="mf-chips" role="group" aria-label="When you go">
         <button type="button" className={!month ? "on" : ""} onClick={() => set("month", "")}>Any month</button>
@@ -220,17 +248,18 @@ export default function Trails() {
     <main className="trk">
       <div className="mf">
         <div className="mf-map">
-          <TreksMap trails={shown} selected={selId} onPick={(id) => set("t", id)} inset={inset}
-            fitKey={`${country}|${month}|${level}|${kind}|${style}|${find}|${shown.length}`} />
-          {desk && <div className="mf-legend">{(["easy", "moderate", "hard", "technical"] as const).map((l) => <span key={l}><i className={`mf-dot ${l}`} />{DIFFICULTY[l]}</span>)}</div>}
+          <TreksMap trails={shown} selected={selId} onPick={(id) => set("t", id)} inset={inset} line={line} onView={setView}
+            around={zone ? { lat: zone.lat, lon: zone.lon, km } : null}
+            fitKey={`${country}|${month}|${level}|${kind}|${style}|${find}|${shown.length}|${zone ? `${zone.lat},${zone.lon},${km}` : ""}`} />
+          {desk && <div className="mf-legend">{(["easy", "moderate", "hard", "technical"] as const).map((l) => <span key={l}><i className={`mf-dot ${l}`} />{DIFFICULTY[l]}</span>)}<span><i className="mf-dot city" />City walk</span></div>}
         </div>
 
-        <section className="mf-float mf-panel" aria-label="Hikes">
+        <section className="mf-float mf-panel" aria-label="Walks">
           {!desk && sel ? (
             <>
-              <button type="button" className="mf-btn sm mf-back" onClick={() => set("t", "")}><Back /> All hikes</button>
+              <button type="button" className="mf-btn sm mf-back" onClick={() => set("t", "")}><Back /> All walks</button>
               {card}
-              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this hike · {money(totalOf(picks), cur)}</div>
+              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this walk · {money(totalOf(picks), cur)}</div>
                 <ProductRow picks={picks} onPick={pick} /></div>}
               <div className="mf-phone-go">
                 <button type="button" className="mf-btn go wide" disabled={!picks.length} onClick={() => setBuyOpen(true)}>
@@ -239,7 +268,7 @@ export default function Trails() {
             </>
           ) : (
             <>
-              <div className="mf-thead"><h1>Hikes</h1><span className="mf-k">{all ? `${shown.length.toLocaleString("en-US")} ${zone ? "" : "in "}${where}` : ""}</span></div>
+              <div className="mf-thead"><h1>Walks</h1><span className="mf-k">{all ? (view && !zone ? `${listed.length.toLocaleString("en-US")} in this part of the map` : `${shown.length.toLocaleString("en-US")} ${zone ? "" : "in "}${where}`) : ""}</span></div>
               {search}
               {zone && (
                 <div className="mf-chips mf-zone" role="group" aria-label={`How far from ${zone.name}`}>
@@ -250,14 +279,14 @@ export default function Trails() {
               {filters}
               {err && <p className="err">{err}</p>}
               {!all && !err ? <div className="loading"><span className="spin" /></div>
-                : <div className="mf-scroll">{shown.length ? rows : <p className="mf-k">No trail matches: try another filter.</p>}</div>}
-              {all && shown.length > PER && (desk ? (
+                : <div className="mf-scroll">{listed.length ? rows : <p className="mf-k">{shown.length ? "No walk in this part of the map: zoom out or move it." : "No trail matches: try another filter."}</p>}</div>}
+              {all && listed.length > PER && (desk ? (
                 <div className="mf-pager"><span>{page + 1} / {pages}</span>
                   <span><button type="button" className="mf-btn sm" disabled={!page} onClick={() => setPage(page - 1)}>Back</button>
-                    <button type="button" className="mf-btn sm" disabled={page >= pages - 1} onClick={() => setPage(page + 1)}>More hikes</button></span>
+                    <button type="button" className="mf-btn sm" disabled={page >= pages - 1} onClick={() => setPage(page + 1)}>More walks</button></span>
                 </div>
-              ) : list.length < shown.length && (
-                <button type="button" className="mf-btn wide" onClick={() => setPage(page + 1)}>Show more ({(shown.length - list.length).toLocaleString("en-US")} left)</button>
+              ) : list.length < listed.length && (
+                <button type="button" className="mf-btn wide" onClick={() => setPage(page + 1)}>Show more ({(listed.length - list.length).toLocaleString("en-US")} left)</button>
               ))}
             </>
           )}
@@ -265,11 +294,11 @@ export default function Trails() {
 
         {desk && card}
         {desk && (sel ? (
-          <BuyBar title="To get for this hike" sub={`what ${sel.name} asks for in ${MONTHS[wearMonth - 1]}`} picks={picks} onPick={pick}
+          <BuyBar title="To get for this walk" sub={`what ${sel.name} asks for in ${MONTHS[wearMonth - 1]}`} picks={picks} onPick={pick}
             onBuy={() => setBuyOpen(true)} empty={wear ? "Nothing special to wear on it." : "Working out the kit…"} />
         ) : (
-          <BuyBar title="To get for a hike" sub="pick one on the map or in the list" picks={[]}
-            empty="Pick a hike: what it asks you to wear shows here, with real products and prices." />
+          <BuyBar title="To get for a walk" sub="pick one on the map or in the list" picks={[]}
+            empty="Pick a walk: what it asks you to wear shows here, with real products and prices." />
         ))}
       </div>
 
