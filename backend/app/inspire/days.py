@@ -62,11 +62,14 @@ def _wear(w: dict) -> dict:
             "cold": w["cold"]}
 
 
-@lru_cache(maxsize=512)
-def _stop_days(slug: str, index: int, offset: int, month: int, stop_key: tuple) -> tuple:
-    from app import inspire
-    it = inspire.get(slug)
+_CACHE: dict[tuple, tuple] = {}
+
+
+def _stop_days(it, index: int, offset: int, month: int) -> tuple:
     s = it.stops[index]
+    key = (it.slug, it.total_days, tuple(x.name for x in it.stops), index, offset, month)
+    if key in _CACHE:
+        return _CACHE[key]
     things = _items().get(s.area or "", {})
     stop = {"name": s.name, "lat": s.lat, "lon": s.lon, "elevation_m": s.elevation_m,
             "country_code": s.country_code}
@@ -81,12 +84,14 @@ def _stop_days(slug: str, index: int, offset: int, month: int, stop_key: tuple) 
         acts = acts + [{"type": "city"}]
         out.append({"kind": dp.kind, "title": s.plan[k], "things": shown,
                     **_wear(wear.for_day(stop, month, offset + k, acts))})
-    return tuple(out)
+    if len(_CACHE) > 4096:
+        _CACHE.clear()
+    _CACHE[key] = tuple(out)
+    return _CACHE[key]
 
 
 def for_stop(it, index: int, offset: int, month: int) -> list[dict]:
     """The days of stop `index`; offset: the trip's days before it. [] when the stop has no guide."""
-    s = it.stops[index]
-    if not s.day_plans:
+    if not it.stops[index].day_plans:
         return []
-    return list(_stop_days(it.slug, index, offset, month, (s.name, s.days)))
+    return list(_stop_days(it, index, offset, month))

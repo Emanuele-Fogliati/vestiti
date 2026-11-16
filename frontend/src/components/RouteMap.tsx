@@ -1,8 +1,10 @@
+import { artPin } from "../lib/artpin";
 import { maplibregl } from "../lib/maplibre";
 import { api } from "../lib/api";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PlaceCard } from "./PlaceCard";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
+import type { StopArt } from "../lib/types";
 import { baseStyle, blockPins, loadPlaces, mapColors, placeLayers, placesGeoJSON, reducedMotion } from "../lib/worldmap";
 
 export interface RouteStop {
@@ -11,6 +13,7 @@ export interface RouteStop {
   longitude: number;
   country_code?: string | null;
   visits?: { name: string }[];
+  art?: StopArt | null;
 }
 
 const norm = (s: string) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
@@ -126,14 +129,21 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
       pts.forEach((s, i) => {
         const at = `${s.latitude.toFixed(3)},${s.longitude.toFixed(3)}`;
         const twin = seen.get(at);
-        if (twin) { twin.textContent = `${twin.textContent}·${s.n}`; return; } // back at the same place
-        const b = document.createElement("button");
-        b.type = "button";
-        b.className = "rpin";
+        if (twin) { // back at the same place
+          const k = twin.querySelector("b") ?? twin;
+          k.textContent = `${k.textContent}·${s.n}`;
+          return;
+        }
+        // the stop's own drawing when it has one, else the plain numbered pin
+        const b = artPin(s.art, s.n, s.name) ?? document.createElement("button");
+        if (!b.classList.contains("apin")) {
+          b.type = "button";
+          b.className = "rpin";
+          b.textContent = String(s.n);
+          b.title = s.name;
+          b.setAttribute("aria-label", `Stop ${s.n}: ${s.name}`);
+        }
         b.style.setProperty("--d", `${300 + i * 160}ms`); // pins pop up in order while the line reaches them
-        b.textContent = String(s.n);
-        b.title = s.name;
-        b.setAttribute("aria-label", `Stop ${s.n}: ${s.name}`);
         b.dataset.i = String(i);
         b.addEventListener("click", (e) => { e.stopPropagation(); if (opts.current.onPin) opts.current.onPin(s.n - 1); else zoomStop(i); });
         pinEls.current[i] = b;

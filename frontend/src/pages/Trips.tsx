@@ -6,9 +6,8 @@ import { MyTripsMap } from "../components/Maps";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { countryNames, dayMonth, monthRuns, regionBest } from "../lib/format";
-import type { ItineraryCard, TripSummary } from "../lib/types";
+import type { ItineraryCard, StopArt, TripSummary } from "../lib/types";
 
-const short = (p: string) => p.replace(/ \(.*\)$/, "");
 
 /** Trips (Manu 2026-11-16: "o crea un nuovo viaggio oppure viaggi raccomandati, fine"): one button
  *  to draw a new trip on the map, the recommended trips, and the trips you saved. Map first: the
@@ -20,7 +19,8 @@ export default function Trips() {
   const [trips, setTrips] = useState<TripSummary[] | null>(null);
   const items = useItineraries();
   const [sel, setSel] = useState<string | null>(null);
-  const [stops, setStops] = useState<number[][]>([]);
+  const [stops, setStops] = useState<{ points: number[][]; arts: (StopArt | null)[]; names: string[] }>({ points: [], arts: [], names: [] });
+  const [find, setFind] = useState("");
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
 
   useEffect(() => {
@@ -43,12 +43,16 @@ export default function Trips() {
 
   // Manu 2026-11-16: one card per travel region, not one per length or month: the region's page
   // asks how long and shows when to go
-  const shown = useMemo(() => (items ?? []).filter((x) => x.lead), [items]);
+  // search (Manu 2026-11-16: "nei recommended voglio anche un cerca"): a region, a country or a
+  // place on any of its routes ("Fitz Roy" finds Patagonia)
+  const fold = (s: string) => s.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  const shown = useMemo(() => {
+    const all = items ?? [];
+    const w = fold(find.trim());
+    return all.filter((x) => x.lead && (!w || all.filter((y) => y.journey === x.journey).some((y) =>
+      fold([y.destination ?? "", y.title, countryNames(y.countries), ...y.places].join(" ")).includes(w))));
+  }, [items, find]); // eslint-disable-line react-hooks/exhaustive-deps
   const best = (x: ItineraryCard) => monthRuns(regionBest((items ?? []).filter((y) => y.journey === x.journey), x.weeks ?? 2));
-  const weeks = (x: ItineraryCard) => {
-    const w = [...new Set((items ?? []).filter((y) => y.journey === x.journey).map((y) => y.weeks ?? 0))].sort();
-    return w.length > 1 ? `${w[0]}–${w[w.length - 1]} weeks` : `${w[0]} week${w[0] === 1 ? "" : "s"}`;
-  };
   const lands = (x: ItineraryCard) => countryNames([...new Set([x, ...(items ?? []).filter((y) => y.journey === x.journey)].flatMap((y) => y.countries))]);
   const link = (slug: string) => `/ideas/${slug}`;
   const it = tab === "recommended" && sel ? (items ?? []).find((x) => x.slug === sel) ?? null : null;
@@ -56,26 +60,31 @@ export default function Trips() {
 
   // a recommended trip picked: its stops on the globe, joined along the roads
   useEffect(() => {
-    setStops([]);
+    setStops({ points: [], arts: [], names: [] });
     if (!it) return;
     let live = true;
-    api.itinerary(it.slug).then((r) => { if (live) setStops(r.stops.map((s) => [s.latitude, s.longitude])); }).catch(() => undefined);
+    api.itinerary(it.slug).then((r) => {
+      if (live) setStops({ points: r.stops.map((s) => [s.latitude, s.longitude]), arts: r.stops.map((s) => s.art ?? null), names: r.stops.map((s) => s.name) });
+    }).catch(() => undefined);
     return () => { live = false; };
   }, [it?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const mapTrips = tab === "saved" ? saved.map((x) => ({ id: x.id, points: x.points ?? [] }))
-    : it && stops.length ? [{ id: it.slug, points: stops }] : [];
+    : it && stops.points.length ? [{ id: it.slug, ...stops }] : [];
   const open = (id: string, to: string) => (desk ? setSel(sel === id ? null : id) : nav(to));
   const when = (x: TripSummary) => x.start_date ? `${dayMonth(x.start_date)} – ${dayMonth(x.end_date!)}` : "No dates";
 
   const recRows = (list: ItineraryCard[]) => (
     <ul className="mf-treks">
       {list.map((x) => (
-        <li key={x.slug}>
-          <button type="button" className={`mf-trow${sel === x.slug ? " sel" : ""}`} onClick={() => open(x.slug, link(x.slug))}>
+        <li key={x.slug} className="mf-recrow">
+          {/* a tap shows the trip on the map with its drawings; Open goes to its page (no card in between) */}
+          <button type="button" className={`mf-trow${sel === x.slug ? " sel" : ""}`} onClick={() => open(x.slug, link(x.slug))}
+            onDoubleClick={() => nav(link(x.slug))}>
             <span className="mf-thumb">{x.art ? <Illustration art={x.art} /> : null}</span>
             <span className="mf-nm"><b>{x.destination ?? x.title}</b><small>{lands(x)} · best {best(x)}</small></span>
           </button>
+          {sel === x.slug && <Link className="mf-btn go sm mf-recopen" to={link(x.slug)}>Open</Link>}
         </li>
       ))}
     </ul>
@@ -96,8 +105,14 @@ export default function Trips() {
 
   const body = tab === "recommended" ? (
     <>
+      <form className="mf-say mf-search" role="search" onSubmit={(e) => e.preventDefault()}>
+        <Search />
+        <input type="search" value={find} onChange={(e) => { setFind(e.target.value); setSel(null); }}
+          placeholder="Search a country or a place" aria-label="Search recommended trips" />
+        {find && <button type="button" aria-label="Clear" onClick={() => setFind("")}>×</button>}
+      </form>
       {items === null ? <div className="loading"><span className="spin" /></div>
-        : <div className="mf-scroll">{shown.length ? recRows(shown) : <p className="mf-k">None for these filters.</p>}</div>}
+        : <div className="mf-scroll">{shown.length ? recRows(shown) : <p className="mf-k">No trip there yet.</p>}</div>}
     </>
   ) : tab === "saved" ? (
     <div className="mf-scroll">
@@ -113,7 +128,7 @@ export default function Trips() {
         <div className="mf-map">
           <MyTripsMap trips={mapTrips} selected={tab === "saved" ? sel : it?.slug ?? null}
             onPick={(id) => (tab === "saved" ? open(id, `/trips/${id}`) : undefined)}
-            inset={desk ? { top: 20, right: 60, bottom: 20, left: it || t ? 850 : 470 } : undefined} />
+            inset={desk ? { top: 20, right: 60, bottom: 20, left: t ? 850 : 470 } : undefined} />
         </div>
 
         <section className="mf-float mf-panel" aria-label="Trips">
@@ -127,22 +142,6 @@ export default function Trips() {
           {body}
         </section>
 
-        {desk && it && (
-          <div className="mf-float mf-card mf-tripcard">
-            <button type="button" className="mf-x" onClick={() => setSel(null)} aria-label="Close"><X /></button>
-            {it.art && <div className="mf-art"><Illustration art={it.art} label={it.title} /></div>}
-            <div className="mf-card-in">
-              <div>
-                <span className="mf-k">{lands(it)} · {weeks(it)} · best {best(it)}</span>
-                <h3>{it.destination ?? it.title}</h3>
-                {it.journey_blurb && <p className="mf-lede">{it.journey_blurb}</p>}
-                <span className="mf-k">For example, {it.days} days:</span>
-              </div>
-              <ol className="mf-route">{it.places.map((p, i) => <li key={i}><span className="mf-num">{i + 1}</span>{short(p)}</li>)}</ol>
-              <Link className="mf-btn go wide" to={link(it.slug)}>Open →</Link>
-            </div>
-          </div>
-        )}
         {desk && t && (
           <div className="mf-float mf-card mf-tripcard">
             <button type="button" className="mf-x" onClick={() => setSel(null)} aria-label="Close"><X /></button>
@@ -165,3 +164,4 @@ export default function Trips() {
 const I = (d: string) => () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d={d} /></svg>;
 const X = I("M6 6l12 12M18 6L6 18");
 const Plus = I("M12 5v14M5 12h14");
+const Search = I("M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14M20 20l-4-4");

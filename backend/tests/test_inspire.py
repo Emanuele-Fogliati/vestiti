@@ -238,3 +238,23 @@ def test_torres_del_paine_is_where_you_sleep_not_on_the_ice_field(client):
     tdp = next(s for s in j["stops"] if s["name"].startswith("Torres del Paine"))
     assert tdp["days"][0]["low"] >= 5  # January on the east side, not 1 °C on the ice
     assert all("Warm down jacket" not in d["wear"] for d in tdp["days"])
+
+
+def test_any_number_of_days_cuts_or_stretches_the_nearest_route(client):
+    """Manu 2026-11-16: "anche volendo 17 giorni, 10 giorni"."""
+    j = client.get("/api/inspire/patagonia-14?month=1&days=10").json()
+    names = [s["name"] for s in j["stops"]]
+    assert j["days"] == 10 and sum(len(s["days"]) for s in j["stops"]) == 10
+    assert "El Chaltén" in names and "Ushuaia" not in names  # a line ends sooner, Fitz Roy stays
+    j = client.get("/api/inspire/patagonia-14?month=1&days=17").json()
+    assert j["days"] == 17 and j["journey"]["id"] == "patagonia"
+    # Peru in January has only the two-week route: it stretches, never past what the zones hold
+    j = client.get("/api/inspire/peru-14?month=1&days=35").json()
+    assert 14 < j["days"] < 35
+    iceland = client.get("/api/inspire/iceland-14?month=7&days=10").json()
+    assert iceland["stops"][0]["name"] == iceland["stops"][-1]["name"]  # the ring still comes home
+    assert client.get("/api/inspire/patagonia-14?month=1&days=99").status_code == 422
+    client.post("/api/auth/guest")
+    trip = client.post("/api/inspire/patagonia-14/trip", json={"month": 1, "days": 10}).json()
+    assert sum((date.fromisoformat(s["end_date"]) - date.fromisoformat(s["start_date"])).days + 1
+               for s in trip["stops"]) == 10

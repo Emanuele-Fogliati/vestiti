@@ -1,74 +1,138 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { ElevationProfile } from "../components/ElevationProfile";
 import { Illustration } from "../components/Illustration";
 import { TripMap } from "../components/Maps";
-import { PlaceGuide } from "../components/PlaceGuide";
-import { Visits } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { MONTHS, MONTH_LONG, activityText, countryNames, monthYear, nights, today } from "../lib/format";
-import type { Itinerary, ItineraryDay, ItineraryStop, ItineraryThing, ItineraryWear, Journey, Stop } from "../lib/types";
+import { MONTHS, countryNames, monthYear, nights, today } from "../lib/format";
+import type { Itinerary, ItineraryDay, ItineraryStop, ItineraryThing, Journey, Stop } from "../lib/types";
 import { DRESS_ME } from "../lib/words";
 
+const MIN_DAYS = 3, MAX_DAYS = 35;
+const n0 = (n: number) => Math.round(n).toLocaleString("en-US");
+
 /** The region's pickers (Manu 2026-11-16: "lo chiede all'utente quanto ci vuole stare ... scopre
- *  sul tool in che mese andare"): how many weeks, then the twelve months, the best ones marked,
- *  the ones with no route for that length off. Each pick opens the route of that length and season. */
-function Pickers({ j, it, onPick }: { j: Journey; it: Itinerary; onPick: (slug: string, month: number) => void }) {
-  const month = it.wear.month;
+ *  sul tool in che mese andare"; then "anche 10 giorni, 17 giorni"): the weeks, any number of days,
+ *  then the twelve months, the best ones marked, the ones with no route off. */
+function Pickers({ j, it, month, onPick }: { j: Journey; it: Itinerary; month: number;
+  onPick: (slug: string, month: number, days?: number) => void }) {
   const weeks = [...new Set(j.routes.map((r) => r.weeks))].sort();
-  const mine = j.routes.filter((r) => r.weeks === it.weeks);
+  const week = it.days % 7 === 0 && weeks.includes(it.days / 7) ? it.days / 7 : null;
+  // the routes a length of this trip is built from: that many weeks, or the nearest
+  const near = Math.min(4, Math.max(1, Math.round(it.days / 7)));
+  const mine = j.routes.filter((r) => r.weeks === near);
   const pickWeeks = (w: number) => {
     const rs = j.routes.filter((r) => r.weeks === w);
     const r = rs.find((x) => x.months.includes(month)) ?? rs[0];
     onPick(r.slug, r.months.includes(month) ? month : (r.best_months[0] ?? r.months[0]));
   };
+  const pickDays = (d: number) => {
+    const at = j.routes.find((r) => r.days === d && r.months.includes(month));
+    if (at) onPick(at.slug, month); else onPick(it.slug, month, d);
+  };
   return (
     <div className="mf-pick">
-      <div className="mf-seg mf-weeks" role="radiogroup" aria-label="How long" style={{ gridTemplateColumns: `repeat(${weeks.length}, 1fr)` }}>
-        {weeks.map((w) => (
-          <button type="button" role="radio" key={w} aria-checked={w === it.weeks} className={w === it.weeks ? "on" : ""}
-            onClick={() => pickWeeks(w)}>{w} {w === 1 ? "week" : "weeks"}</button>
-        ))}
+      <div className="mf-lenrow">
+        <div className="mf-seg mf-weeks" role="radiogroup" aria-label="How long" style={{ gridTemplateColumns: `repeat(${weeks.length}, 1fr)` }}>
+          {weeks.map((w) => (
+            <button type="button" role="radio" key={w} aria-checked={w === week} className={w === week ? "on" : ""}
+              onClick={() => pickWeeks(w)}>{w} {w === 1 ? "week" : "weeks"}</button>
+          ))}
+        </div>
+        <div className={`mf-daysn${week ? "" : " on"}`} role="group" aria-label="Or a number of days">
+          <button type="button" aria-label="One day less" disabled={it.days <= MIN_DAYS} onClick={() => pickDays(it.days - 1)}>−</button>
+          <span><b>{it.days}</b> days</span>
+          <button type="button" aria-label="One day more" disabled={it.days >= MAX_DAYS} onClick={() => pickDays(it.days + 1)}>+</button>
+        </div>
       </div>
       <div className="mf-months" role="radiogroup" aria-label="When">
         {MONTHS.map((m, i) => {
-          const r = mine.find((x) => x.months.includes(i + 1));
-          const best = !!r && r.best_months.includes(i + 1);
+          const ok = (week ? j.routes.filter((r) => r.weeks === week) : j.routes).some((r) => r.months.includes(i + 1));
+          const best = mine.some((r) => r.best_months.includes(i + 1));
+          const pick = () => {
+            if (!week) { onPick(it.slug, i + 1, it.days); return; }
+            const r = j.routes.find((x) => x.weeks === week && x.months.includes(i + 1));
+            if (r) onPick(r.slug, i + 1);
+          };
           return (
-            <button type="button" role="radio" key={m} aria-checked={i + 1 === month} disabled={!r}
+            <button type="button" role="radio" key={m} aria-checked={i + 1 === month} disabled={!ok}
               className={`${i + 1 === month ? "on" : ""}${best ? " best" : ""}`}
-              title={!r ? "Not a good time for this trip" : best ? "Best weather" : "Possible, not the best weather"}
-              onClick={() => r && onPick(r.slug, i + 1)}>{m}</button>
+              title={!ok ? "No trip then" : best ? "Best weather" : "Possible"} onClick={pick}>{m}</button>
           );
         })}
       </div>
-      <span className="mf-k mf-mlegend"><i className="best" /> best weather <i /> possible <i className="off" /> no trip then</span>
+      <span className="mf-k mf-mlegend"><i className="best" /> best weather <i /> possible</span>
     </div>
   );
 }
 
-/** What to wear in the chosen month (Manu 2026-11-16: "per ogni mese cosa mettere come vestito"):
- *  worked out by the layer engine from each stop's climate that month, not written by hand. */
-function Wear({ w }: { w: ItineraryWear }) {
-  const worn = w.pieces.filter((p) => !p.pack);
-  const pack = w.pieces.filter((p) => p.pack);
+/** One thing of the day: how hard and long, hour by hour, and its walk, whose line is on the map. */
+function Thing({ t }: { t: ItineraryThing }) {
+  const tr = t.trail;
+  const walk = tr && [!/km/.test(t.hours) && tr.km ? `${tr.km} km` : "", tr.gain_m ? `${n0(tr.gain_m)} m up` : ""].filter(Boolean).join(" · ");
   return (
-    <div className="mf-tsec mf-iwear">
-      <b className="mf-sub">What to wear in {MONTH_LONG[w.month - 1]}</b>
-      <span className="mf-k">{w.low}° to {w.high}° · rain up to {w.rain}% of days{w.top_m >= 1500 ? ` · up to ${w.top_m.toLocaleString("en-US")} m` : ""}</span>
-      {w.cold.feels < 15 && <span className="mf-k">Coldest: feels like {w.cold.feels}° in {w.cold.place}, {w.cold.what.replace(/(\d{4,}) m/, (_, n) => `${Number(n).toLocaleString("en-US")} m`)}.</span>}
-      <div className="tags">{worn.map((p) => <span className="tag" key={p.slot}>{p.name}</span>)}</div>
-      {pack.length > 0 && <p className="mf-k">In the bag, just in case: {pack.map((p) => p.name.toLowerCase()).join(", ")}.</p>}
-      {w.hot && <p className="mf-k">Warm in {w.hot.names.filter((n, i, a) => a.indexOf(n) === i).join(", ")}: {w.hot.pieces.join(", ").toLowerCase()}.</p>}
-      <span className="mf-k">From the {MONTHS[w.month - 1]} climate of each stop. Make the trip yours for the full kit with products.</span>
+    <div className="mf-thing">
+      <div className="mf-thead">
+        <b>{t.spare && <span className="mf-k">If it is clear: </span>}{t.name}</b>
+        {tr && <Link className="mf-btn sm" to={`/trails/${tr.id}`}>The walk ›</Link>}
+      </div>
+      <span className="mf-k">{[t.effort, t.hours, walk].filter(Boolean).join(" · ")}</span>
+      {t.steps.length > 0 ? (
+        <ol className="mf-steps">
+          {t.steps.map((x, i) => <li key={i}><span className="mf-k">{x.at}</span><span>{x.what}{x.note && <small>: {x.note}</small>}</span></li>)}
+        </ol>
+      ) : t.why && <p className="mf-why">{t.why}</p>}
     </div>
   );
 }
 
-/** "Dress me for this trip": optional start date, then the itinerary becomes the user's own
- *  trip (stops, days and activities can all be changed there) and the kit is worked out. */
-function PackForm({ it }: { it: Itinerary }) {
+/** A day's line: what you do, in a few words ("Laguna de los Tres", "Spare day"). */
+function dayLine(d: ItineraryDay): string {
+  const main = d.things.filter((t) => !t.spare).map((t) => t.name);
+  if (d.kind === "free") return main.length ? main.join(" · ") : "Spare day for the weather";
+  if (main.length) return (d.kind === "arrive" ? "Arrive · " : "") + main.join(" · ");
+  return d.title.replace(/\.$/, "");
+}
+
+/** What the stop's days are about, for its row: the things you do, not the activity types. */
+function stopDoes(s: ItineraryStop): string {
+  const names = s.days.flatMap((d) => d.things.filter((t) => !t.spare).map((t) => t.name.split(/,| \(|: /)[0]));
+  return [...new Set(names)].join(", ");
+}
+
+/** One stop, opened in the list itself (Manu 2026-11-16: "lo voglio direttamente sulla cosa a
+ *  sinistra", no card beside it): its days, each one opening on what to do hour by hour. */
+function StopDays({ s, from, day, onDay }: { s: ItineraryStop; from: number; day: number | null; onDay: (i: number | null) => void }) {
+  if (!s.days.length) {
+    return <ol className="mf-dlist">{s.plan.map((p, i) => <li key={i}><div className="mf-drow static"><span className="mf-k">Day {from + i}</span><span>{p}</span></div></li>)}</ol>;
+  }
+  const tour = s.excursions[0];
+  return (
+    <ol className="mf-dlist">
+      {s.days.map((d, i) => (
+        <li key={i} className={day === i ? "open" : ""}>
+          <button type="button" className="mf-drow" aria-expanded={day === i} onClick={() => onDay(day === i ? null : i)}>
+            <span className="mf-k">Day {from + i}</span><span>{dayLine(d)}</span><Chev />
+          </button>
+          {day === i && (
+            <div className="mf-dmore">
+              {d.things.length ? d.things.map((t) => <Thing t={t} key={t.id} />) : <p className="mf-why">{d.title}</p>}
+            </div>
+          )}
+        </li>
+      ))}
+      {tour && (
+        <li className="mf-dtour"><span className="mf-k">Tours here</span>
+          {tour.links.map((l) => <a key={l.provider} href={l.href} target="_blank" rel="noopener sponsored">{l.label} ↗</a>)}
+        </li>
+      )}
+    </ol>
+  );
+}
+
+/** "Use this trip": optional start date, then the itinerary becomes the user's own trip; the
+ *  clothes come there, the next step (Manu 2026-11-16: here the traveller is still choosing). */
+function PackForm({ it, month, days }: { it: Itinerary; month: number; days?: number }) {
   const { ensureUser } = useApp();
   const nav = useNavigate();
   const [start, setStart] = useState("");
@@ -80,7 +144,7 @@ function PackForm({ it }: { it: Itinerary }) {
     setBusy(true); setErr(null);
     try {
       await ensureUser();
-      const t = await api.packItinerary(it.slug, start || undefined, start ? undefined : it.wear.month);
+      const t = await api.packItinerary(it.slug, start || undefined, start ? undefined : month, days);
       nav(`/trips/${t.id}`);
     } catch (e2) {
       setErr((e2 as Error).message);
@@ -90,10 +154,7 @@ function PackForm({ it }: { it: Itinerary }) {
 
   return (
     <form className="mf-pack" onSubmit={pack} aria-label={DRESS_ME}>
-      <div className="mf-pack-t">
-        <b>Like it?</b>
-        <span className="mf-k">Make it yours: change the stops, then Save.</span>
-      </div>
+      <div className="mf-pack-t"><b>Like it?</b></div>
       <label className="mf-pack-d"><span className="mf-k">Leaving</span>
         <input type="date" value={start} min={today()} onChange={(e) => setStart(e.target.value)}
           title={start ? `${it.days} days from this date` : `No date yet? We plan for ${monthYear(it.start_date)}`} />
@@ -104,134 +165,18 @@ function PackForm({ it }: { it: Itinerary }) {
   );
 }
 
-/** A day's short name on its tab: "Arrive", "Spare", or what you do ("Laguna de los Tres"). */
-function dayTab(d: ItineraryDay): string {
-  if (d.kind === "free") return "Spare day";
-  const t = d.things.find((x) => !x.spare);
-  if (!t) return d.kind === "arrive" ? "Arrive" : "Free";
-  return t.name.split(/,| and | \(|: /)[0];
-}
-
-/** What the stop's days are about, for its row: the things you do, not the activity types. */
-export function stopDoes(s: ItineraryStop): string {
-  const names = s.days.flatMap((d) => d.things.filter((t) => !t.spare).map((t) => t.name.split(/,| \(|: /)[0]));
-  return [...new Set(names)].join(", ") || s.activities.map(activityText).join(", ");
-}
-
-const n0 = (n: number) => Math.round(n).toLocaleString("en-US");
-
-/** One thing of the day: how hard and long, hour by hour, and its walk (Manu 2026-11-16: "come
- *  faccio a vedere che cosa fare nei 4 giorni a El Chaltén?"). The walk's line is on the map. */
-function Thing({ t }: { t: ItineraryThing }) {
-  const tr = t.trail;
-  const walk = tr && [!/km/.test(t.hours) && tr.km ? `${tr.km} km` : "", tr.gain_m ? `${n0(tr.gain_m)} m of climb` : "",
-    tr.max_m ? `top ${n0(tr.max_m)} m` : ""].filter(Boolean).join(" · ");
-  return (
-    <div className="mf-thing">
-      <div className="mf-thead">
-        <b>{t.spare && <span className="mf-k">If the sky is clear: </span>}{t.name}</b>
-        {tr && <Link className="mf-btn sm" to={`/trails/${tr.id}`}>The walk ›</Link>}
-      </div>
-      <span className="mf-k">{[t.effort, t.hours, t.need].filter(Boolean).join(" · ")}{walk ? ` · ${walk}` : ""}</span>
-      {t.steps.length > 0 ? (
-        <ol className="mf-steps">
-          {t.steps.map((x, i) => <li key={i}><span className="mf-k">{x.at}</span><span>{x.what}{x.note && <small>: {x.note}</small>}</span></li>)}
-        </ol>
-      ) : t.why && <p className="mf-why">{t.why}</p>}
-      {t.book && <p className="mf-k">Book: {t.book}</p>}
-    </div>
-  );
-}
-
-/** One day: what you do, then what to wear for it (the layer engine on that day's walk or visit,
- *  that stop, that date: a Fitz Roy day is not a town day). */
-function DayView({ d, n }: { d: ItineraryDay; n: number }) {
-  return (
-    <div className="mf-day">
-      {d.things.length === 0 && <p className="mf-why">{d.title}</p>}
-      {d.kind === "free" && d.things.length > 0 && <p className="mf-k">A spare day for the weather: use it for whatever the clouds took from you.</p>}
-      {d.things.map((t) => <Thing t={t} key={t.id} />)}
-      <div className="mf-dwear">
-        <b className="mf-sub">What to wear on day {n}</b>
-        <span className="mf-k">{d.low}° to {d.high}° · rain {d.rain}% of days{d.cold.feels < 15 ? ` · coldest: feels like ${d.cold.feels}°, ${d.cold.what.replace(/(\d{4,}) m/, (_, x) => `${n0(Number(x))} m`)}` : ""}</span>
-        <div className="tags">{d.wear.map((w) => <span className="tag" key={w}>{w}</span>)}</div>
-        {d.pack.length > 0 && <span className="mf-k">In the bag, just in case: {d.pack.map((x) => x.toLowerCase()).join(", ")}.</span>}
-      </div>
-    </div>
-  );
-}
-
-/** One stop of the recommended trip, as the card beside the map (inline on a phone): its days as
- *  tabs, the open day in full, then the stop's own tips. */
-function StopCard({ stop, dayFrom, desk, onClose, day, onDay }: { stop: ItineraryStop; dayFrom: number; desk: boolean;
-  onClose: () => void; day: number; onDay: (i: number) => void }) {
-  const n = nights(stop.start_date, stop.end_date);
-  const d = stop.days[day] ?? null;
-  return (
-    <div className={desk ? "mf-float mf-card mf-icard" : "mf-icard in"}>
-      {desk && <button type="button" className="mf-x" onClick={onClose} aria-label="Close"><X /></button>}
-      {/* on a desk the days come first: the drawing shrinks beside the name */}
-      {stop.art && !desk && <div className="mf-art"><Illustration art={stop.art} label={stop.name} /></div>}
-      <div className="mf-card-in">
-        <div className="mf-ihead">
-          {stop.art && desk && <span className="mf-thumb"><Illustration art={stop.art} /></span>}
-          <div>
-            <span className="mf-k">{n > 1 ? `Days ${dayFrom}–${dayFrom + n - 1}` : `Day ${dayFrom}`} · {n0(stop.elevation_m)} m</span>
-            <h3>{stop.name}</h3>
-          </div>
-        </div>
-        {stop.days.length > 0 ? (
-          <>
-            {stop.days.length > 1 && (
-              <div className="mf-days" role="tablist" aria-label="Day">
-                {stop.days.map((x, i) => (
-                  <button type="button" role="tab" key={i} aria-selected={i === day} className={i === day ? "on" : ""} onClick={() => onDay(i)}>
-                    <b>Day {dayFrom + i}</b><small>{dayTab(x)}</small>
-                  </button>
-                ))}
-              </div>
-            )}
-            {d && <DayView d={d} n={dayFrom + day} />}
-          </>
-        ) : (
-          <ol className="mf-plan">
-            {stop.plan.map((p, i) => <li key={i}><span className="mf-k">Day {dayFrom + i}</span>{p}</li>)}
-          </ol>
-        )}
-        <PlaceGuide guide={stop.guide} />
-        {/* the days already name every place: only the ones with their own picture come back here */}
-        <Visits stop={{ ...stop, plan: undefined, visits: (stop.visits ?? []).filter((v) => v.art && v.art.id !== stop.art?.id) }}
-          dayFrom={dayFrom} flat />
-        {stop.do.length > 0 && <div className="mf-tip"><b className="mf-sub">Worth it</b><ul>{stop.do.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}
-        {stop.skip.length > 0 && <div className="mf-tip skip"><b className="mf-sub">Skip</b><ul>{stop.skip.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}
-        {stop.excursions.length > 0 && (
-          <div className="mf-tip">
-            <b className="mf-sub">Book a tour here</b>
-            {stop.excursions.map((x, i) => (
-              <div className="mf-exc" key={i}>
-                <span>{x.title}</span>
-                <span>{x.links.map((l) => <a key={l.provider} className="mf-btn sm" href={l.href} target="_blank" rel="noopener sponsored">{l.label} ↗</a>)}</span>
-              </div>
-            ))}
-            <span className="mf-k">Tour links go to GetYourGuide and Viator. We may earn a commission; it never decides what we suggest or tell you to skip.</span>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-/** A recommended trip, map first like the trip page (Manu 2026-11-16): the route on the map, the
- *  stops in the panel, a stop opens its card beside it, and "Dress me" sits in the bar below. */
+/** A recommended trip, map first: the route on the globe with each stop's drawing, and in the
+ *  panel the length, the month and the stops, each opening on its days (Manu 2026-11-16). */
 export default function ItineraryPage() {
   const { slug = "" } = useParams();
   const [q] = useSearchParams();
   const nav = useNavigate();
-  const month = Number(q.get("month")) || undefined;
+  const qMonth = Number(q.get("month")) || undefined;
+  const qDays = Number(q.get("days")) || undefined;
   const [it, setIt] = useState<Itinerary | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [sel, setSel] = useState<number | null>(null);
-  const [day, setDay] = useState(0);
+  const [day, setDay] = useState<number | null>(null);
   const [walk, setWalk] = useState<[number, number][] | null>(null);
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
 
@@ -242,27 +187,20 @@ export default function ItineraryPage() {
     return () => mq.removeEventListener("change", f);
   }, []);
 
-  useEffect(() => {
-    setIt(null); setSel(null);
-  }, [slug]);
+  // another length or season is another route: the stops close
+  useEffect(() => { setSel(null); setDay(null); }, [slug, qDays]);
+  useEffect(() => { setDay(null); }, [sel]);
 
-  // a new month keeps the page (and the open stop): only the dates and the clothes change
   useEffect(() => {
     setErr(null);
     let live = true;
-    api.itinerary(slug, undefined, month).then((x) => { if (live) setIt(x); })
+    api.itinerary(slug, undefined, qMonth, qDays).then((x) => { if (live) setIt(x); })
       .catch((e) => { if (live) setErr((e as Error).message); });
     return () => { live = false; };
-  }, [slug, month]);
-
-  useEffect(() => {
-    if (it && matchMedia("(min-width: 900px)").matches && it.stops.length) setSel(0);
-  }, [it?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  useEffect(() => { setDay(0); }, [sel]);
+  }, [slug, qMonth, qDays]);
 
   // the open day's walk on the map: its trail's own line, as on the Walks page
-  const trailId = sel != null ? it?.stops[sel]?.days[day]?.things.find((t) => t.trail?.has_map)?.trail?.id ?? null : null;
+  const trailId = sel != null && day != null ? it?.stops[sel]?.days[day]?.things.find((t) => t.trail?.has_map)?.trail?.id ?? null : null;
   useEffect(() => {
     setWalk(null);
     if (!trailId) return;
@@ -274,43 +212,12 @@ export default function ItineraryPage() {
   if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips?tab=recommended">All recommended trips</Link></div></main>;
   if (!it) return <main className="page"><div className="wrap"><p className="loading"><span className="spin" /></p></div></main>;
 
+  const month = qMonth ?? Number(it.start_date.slice(5, 7));
   const starts: number[] = [];
   it.stops.reduce((d, s) => { starts.push(d); return d + nights(s.start_date, s.end_date); }, 1);
-  const stop = sel != null ? it.stops[sel] : null;
-  const inset = desk ? { top: 20, right: 60, bottom: 130, left: stop ? 910 : 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
-  const card = stop && <StopCard stop={stop} dayFrom={starts[sel!]} desk={desk} onClose={() => setSel(null)} day={day} onDay={setDay} />;
-
-  const rows = (
-    <ol className="mf-stops">
-      {it.stops.map((s, i) => {
-        const n = nights(s.start_date, s.end_date);
-        return (
-          <li key={s.id}>
-            <button type="button" className={`mf-trow${sel === i ? " sel" : ""}`} onClick={() => setSel(sel === i && desk ? null : i)}>
-              <span className="mf-num">{i + 1}</span>
-              {s.art && <span className="mf-thumb"><Illustration art={s.art} /></span>}
-              <span className="mf-nm">
-                <b>{s.name}</b>
-                <small>{n > 1 ? `Days ${starts[i]}–${starts[i] + n - 1}` : `Day ${starts[i]}`} · {stopDoes(s)}</small>
-              </span>
-            </button>
-          </li>
-        );
-      })}
-    </ol>
-  );
-
-  const groups = it.group_trips.length > 0 && (
-    <div className="mf-tsec">
-      <b className="mf-sub">Rather go with a group?</b>
-      <span className="mf-k">Organised trips on a similar route. The clothes are still on you.</span>
-      <ul className="mf-groups">
-        {it.group_trips.map((g, i) => (
-          <li key={i}><a href={g.href} target="_blank" rel="noopener sponsored"><b>{g.title}</b><span className="mf-k">{g.operator} · {g.days} days ↗</span></a></li>
-        ))}
-      </ul>
-    </div>
-  );
+  const inset = desk ? { top: 20, right: 60, bottom: 130, left: 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
+  const custom = qDays && it.journey ? it.days : undefined;
+  const short = qDays && it.days < qDays;
 
   return (
     <main className="trk itinerary-mf">
@@ -320,44 +227,42 @@ export default function ItineraryPage() {
         </div>
 
         <section className="mf-float mf-panel" aria-label={it.title}>
-          {!desk && stop ? (
-            <>
-              <button type="button" className="mf-btn sm mf-back" onClick={() => setSel(null)}><Back /> All stops</button>
-              {card}
-            </>
-          ) : (
-            <>
-              <div className="mf-trailhead">
-                <Link className="mf-k mf-crumb" to="/trips?tab=recommended"><Back /> Recommended · {countryNames(it.journey?.countries ?? it.countries)}</Link>
-                <h1>{it.journey?.name ?? it.title}</h1>
-                {it.journey && <Pickers j={it.journey} it={it} onPick={(s, m) => nav(`/ideas/${s}?month=${m}`, { replace: true })} />}
-              </div>
-              <div className={desk ? "mf-scroll" : "mf-ibody"}>
-                {it.journey && <b className="mf-sub">{it.title}</b>}
-                <dl className="tfacts">
-                  <div><dt>Days</dt><dd>{it.days}</dd></div>
-                  <div><dt>Stops</dt><dd>{it.stops.length}</dd></div>
-                  <div><dt>Highest</dt><dd>{Math.round(it.highest_m).toLocaleString("en-US")} m</dd></div>
-                </dl>
-                <p className="mf-lede">{it.summary}</p>
-                <Wear w={it.wear} />
-                <b className="mf-sub">Day by day</b>
-                {rows}
-                <ElevationProfile stops={it.stops as unknown as Stop[]} selected={sel ?? -1} onSelect={(i) => setSel(i)} />
-                {it.season_note && <p className="mf-k">{it.season_note}</p>}
-                {groups}
-              </div>
-            </>
-          )}
-          {!desk && <div className="mf-phone-go"><PackForm it={it} /></div>}
+          <div className="mf-trailhead">
+            <Link className="mf-k mf-crumb" to="/trips?tab=recommended"><Back /> Recommended · {countryNames(it.journey?.countries ?? it.countries)}</Link>
+            <h1>{it.journey?.name ?? it.title}</h1>
+            {it.journey && <Pickers j={it.journey} it={it} month={month}
+              onPick={(s, m, d) => nav(`/ideas/${s}?month=${m}${d ? `&days=${d}` : ""}`, { replace: true })} />}
+            {short && <span className="mf-k">The longest trip here in {MONTHS[month - 1]} is {it.days} days.</span>}
+          </div>
+          <div className={desk ? "mf-scroll" : "mf-ibody"}>
+            <ol className="mf-stops">
+              {it.stops.map((s, i) => {
+                const n = nights(s.start_date, s.end_date);
+                const open = sel === i;
+                return (
+                  <li key={s.id} className={open ? "open" : ""}>
+                    <button type="button" className={`mf-trow${open ? " sel" : ""}`} aria-expanded={open} onClick={() => setSel(open ? null : i)}>
+                      <span className="mf-num">{i + 1}</span>
+                      {s.art && <span className="mf-thumb"><Illustration art={s.art} /></span>}
+                      <span className="mf-nm">
+                        <b>{s.name}</b>
+                        <small>{n > 1 ? `Days ${starts[i]}–${starts[i] + n - 1}` : `Day ${starts[i]}`}{stopDoes(s) ? ` · ${stopDoes(s)}` : ""}</small>
+                      </span>
+                    </button>
+                    {open && <StopDays s={s} from={starts[i]} day={day} onDay={setDay} />}
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
+          {!desk && <div className="mf-phone-go"><PackForm it={it} month={month} days={custom} /></div>}
         </section>
 
-        {desk && card}
-        {desk && <section className="mf-float mf-buy mf-packbar" aria-label={DRESS_ME}><PackForm it={it} /></section>}
+        {desk && <section className="mf-float mf-buy mf-packbar" aria-label={DRESS_ME}><PackForm it={it} month={month} days={custom} /></section>}
       </div>
     </main>
   );
 }
 
 const Back = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>;
-const X = () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>;
+const Chev = () => <svg className="mf-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>;
