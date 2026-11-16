@@ -460,6 +460,13 @@ export function blockPins(map: MlMap, at: [number, number][], size = 34) {
     layout: { "icon-image": "pin-hole", "icon-allow-overlap": true, "icon-ignore-placement": false } });
 }
 
+/** Maps take the wheel and one finger only where the page itself does not scroll: on a computer
+ *  every map is the page (zoom with the wheel, like Explore); on a phone the page scrolls past the
+ *  map, so moving the map takes two fingers. */
+export function phoneGestures(): boolean {
+  return typeof matchMedia !== "undefined" && matchMedia("(max-width: 899px)").matches;
+}
+
 /** The zoom at which the whole globe fits the free part of a map box (the panels float over the
  *  rest): My trips and Hikes open on the same globe as Explore, and become a map as you zoom in. */
 export function worldZoom(el: HTMLElement, inset?: { top: number; right: number; bottom: number; left: number }): number {
