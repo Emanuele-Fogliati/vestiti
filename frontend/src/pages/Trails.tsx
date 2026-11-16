@@ -1,13 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { BagIcon, BuyBar, KitSheet, ProductRow, totalOf, type BuyPick } from "../components/BuyBar";
 import { Illustration } from "../components/Illustration";
 import { TreksMap } from "../components/Maps";
+import { WalkWear } from "../components/WalkWear";
 import { DIFFICULTY, TrailFacts, hoursText } from "../components/TrailCards";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { money } from "../lib/format";
-import type { Item, TrailCard, TrailDifficulty, TrailSight, TrailWear } from "../lib/types";
+import type { TrailCard, TrailDifficulty, TrailSight } from "../lib/types";
 
 const REGION = (() => { try { return new Intl.DisplayNames(["en"], { type: "region" }); } catch { return null; } })();
 const countryName = (c: string) => { try { return REGION?.of(c) ?? c; } catch { return c; } };
@@ -38,9 +37,6 @@ export default function Trails() {
   const [err, setErr] = useState<string | null>(null);
   const [page, setPage] = useState(0);
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
-  const [wear, setWear] = useState<TrailWear | null>(null);
-  const [chosen, setChosen] = useState<Record<string, Item>>({});
-  const [buyOpen, setBuyOpen] = useState(false);
   // the chosen hike's path, drawn on the map as soon as it is picked
   const [line, setLine] = useState<[number, number][] | null>(null);
   const [sights, setSights] = useState<TrailSight[]>([]);
@@ -180,22 +176,13 @@ export default function Trails() {
     return () => { live = false; };
   }, [selId]);
 
-  // what the chosen trek asks you to wear, with products
-  const wearMonth = month ?? new Date().getMonth() + 1;
-  useEffect(() => {
-    setWear(null);
-    setChosen({});
-    if (!selId) return;
-    let live = true;
-    api.trailWear(selId, wearMonth).then((w) => { if (live) setWear(w); }).catch(() => undefined);
-    return () => { live = false; };
-  }, [selId, wearMonth]);
-  const picks: BuyPick[] = (wear?.pieces ?? []).flatMap((p) => {
-    const it = chosen[p.slot] ?? p.products?.medium ?? p.products?.cheap ?? p.products?.premium;
-    return it ? [{ slot: p.slot, label: p.name.replace(/\s*\/.*$/, ""), item: it, cheaper: p.products?.cheap, better: p.products?.premium }] : [];
-  });
-  const pick = (slot: string, it: Item) => setChosen((c) => ({ ...c, [slot]: it }));
-  const cur = picks[0]?.item.currency;
+  // the walk picked: its clothes one scroll down, as a trip's bag (Manu 2026-11-16: "invece di buy
+  // voglio una cosa che mi manda sotto")
+  // the month of the clothes: the list's month, changed down there without filtering the list
+  const [wm, setWm] = useState<number | null>(null);
+  useEffect(() => { setWm(null); }, [selId, month]);
+  const wearMonth = wm ?? month ?? new Date().getMonth() + 1;
+  const toBag = () => document.getElementById("bag")?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   // country codes as names, A to Z (the list holds every country we have walks for)
   const byName = useMemo(() => {
@@ -205,7 +192,7 @@ export default function Trails() {
   }, [countries, country]);
 
   const nf = [country, kind, style, month, level].filter(Boolean).length;
-  const inset = desk ? { top: 20, right: 60, bottom: sel ? 150 : 20, left: 470 } : undefined;
+  const inset = desk ? { top: 20, right: 60, bottom: sel ? 90 : 20, left: 470 } : undefined;
 
   const search = (
     <form className="mf-say mf-search" role="search" onSubmit={(e) => { e.preventDefault(); set("find", typed.trim()); }}>
@@ -298,7 +285,8 @@ export default function Trails() {
   );
 
   return (
-    <main className="trk">
+    <main className={`trk ip-one${sel ? "" : " ip-solo"}`}>
+      <div className="ip-top">
       <div className="mf">
         <div className="mf-map">
           <TreksMap trails={shown} selected={selId} onPick={(id) => set("t", id)} inset={inset} line={line} sights={sights} onView={setView}
@@ -312,11 +300,8 @@ export default function Trails() {
             <>
               <button type="button" className="mf-btn sm mf-back" onClick={() => set("t", "")}><Back /> All walks</button>
               {card}
-              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">What you wear · {money(totalOf(picks), cur)}</div>
-                <ProductRow picks={picks} onPick={pick} /></div>}
               <div className="mf-phone-go">
-                <button type="button" className="mf-btn go wide" disabled={!picks.length} onClick={() => setBuyOpen(true)}>
-                  <BagIcon />{picks.length ? `Buy the ${picks.length} pieces · ${money(totalOf(picks), cur)}` : "Working out the kit…"}</button>
+                <button type="button" className="mf-btn go wide" onClick={toBag}>What to wear in {MONTHS[wearMonth - 1]} <Down /></button>
               </div>
             </>
           ) : (
@@ -354,13 +339,10 @@ export default function Trails() {
           )}
         </section>
 
-        {desk && sel && (
-          <BuyBar title="What you wear" sub={`${sel.name}, ${MONTHS[wearMonth - 1]}`} picks={picks} onPick={pick}
-            onBuy={() => setBuyOpen(true)} empty={wear ? "Nothing special to wear on it." : "Working out the kit…"} />
-        )}
+        {desk && sel && <button type="button" className="mf-float ip-cue" onClick={toBag}>What to wear · {MONTHS[wearMonth - 1]} <Down /></button>}
       </div>
-
-      <KitSheet open={buyOpen} onClose={() => setBuyOpen(false)} title={sel ? `Your kit for ${sel.name}` : "Your kit"} picks={picks} />
+      </div>
+      {sel && <WalkWear id={sel.id} name={sel.name} month={wearMonth} months={sel.months} onMonth={setWm} />}
     </main>
   );
 }
@@ -368,6 +350,7 @@ export default function Trails() {
 const I = (d: string) => () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>;
 const Back = I("M19 12H5M11 6l-6 6 6 6");
 const Next = I("M5 12h14M13 6l6 6-6 6");
+const Down = I("M12 5v14M5 12l7 7 7-7");
 
 /** Great-circle distance in km. */
 function distKm(la1: number, lo1: number, la2: number, lo2: number) {
