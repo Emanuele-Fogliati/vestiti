@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Illustration } from "../components/Illustration";
 import { HomeGlobe } from "../components/Maps";
 import { api } from "../lib/api";
-import { monthRuns } from "../lib/format";
+import { monthRuns, regionBest } from "../lib/format";
 import type { ItineraryCard, StopArt, TrailCard } from "../lib/types";
 import { reducedMotion } from "../lib/worldmap";
 
@@ -24,15 +24,19 @@ const SHOWN = 6;
 type Door = "inspire" | "trek";
 interface Row { to: string; art: StopArt | null; title: string; meta: string; later?: boolean }
 
-/** Recommended trips this month: per destination its two-week route for this month's season,
- *  the ones at their best weather first, the others marked as better another month. */
+/** The travel regions this month (one card each, as on Trips): the ones at their best weather
+ *  first, each opening on its two-week route for this month's season. */
 function inspireRows(all: ItineraryCard[], month: number): Row[] {
-  const best = (it: ItineraryCard) => it.best_months.includes(month);
-  const pick = all.filter((it) => it.months.includes(month) && (it.weeks === 2 || it.weeks == null));
-  return [...pick.filter(best), ...pick.filter((it) => !best(it))].slice(0, SHOWN).map((it) => ({
-    to: `/ideas/${it.slug}?month=${month}`, art: it.art, title: it.title, later: !best(it),
-    meta: `${it.days} days · ${best(it) ? "best now" : `best ${monthRuns(it.best_months) || "another season"}`}`,
-  }));
+  const two = (it: ItineraryCard) => all.find((x) => x.journey === it.journey && x.weeks === 2 && x.months.includes(month));
+  const best = (it: ItineraryCard) => regionBest(all.filter((x) => x.journey === it.journey), 2).includes(month);
+  const leads = all.filter((it) => it.lead);
+  return [...leads.filter(best), ...leads.filter((it) => !best(it))].slice(0, SHOWN).map((it) => {
+    const r = two(it);
+    return {
+      to: r ? `/ideas/${r.slug}?month=${month}` : `/ideas/${it.slug}`, art: it.art, title: it.destination ?? it.title, later: !best(it),
+      meta: best(it) ? "best now" : `best ${monthRuns(regionBest(all.filter((x) => x.journey === it.journey), 2))}`,
+    };
+  });
 }
 
 /** Treks in season this month: famous ones with a drawing first, one country after another so the list is not all one country. */

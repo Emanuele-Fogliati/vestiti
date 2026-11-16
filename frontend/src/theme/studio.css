@@ -544,3 +544,19 @@ a.mf-btn{text-decoration:none}
 .mf-wear-h .mf-sub{white-space:nowrap}
 .mf-wear-h select{height:30px;border-radius:15px;border:0;background:var(--surface-2);padding:0 10px;font:inherit;font-size:13px;color:var(--ink)}
 .mf-iwear .tags{display:flex;flex-wrap:wrap;gap:4px}
+
+/* recommended region: how long, and when (Manu 2026-11-16) */
+.mf-pick{display:grid;gap:8px;margin-top:10px}
+.mf-weeks{margin:0}
+.mf-weeks button{font-size:13px;height:32px}
+.mf-months{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2px}
+.mf-months button{height:32px;min-width:0;border:0;border-radius:8px;background:var(--surface-2);color:var(--ink-2);font:inherit;font-size:11px;letter-spacing:-.2px;padding:0;cursor:pointer;overflow:hidden}
+.mf-months button.best{background:#DCEBD0;color:#2F4A1C}
+.mf-months button.on{background:var(--ink);color:#FFFFFF}
+.mf-months button:disabled{background:transparent;color:var(--ink-3, #B5B5B5);box-shadow:inset 0 0 0 1px var(--rule);cursor:not-allowed}
+.mf-mlegend{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.mf-mlegend i{display:inline-block;width:10px;height:10px;border-radius:3px;background:var(--surface-2)}
+.mf-mlegend i.best{background:#DCEBD0}
+.mf-mlegend i.off{background:transparent;box-shadow:inset 0 0 0 1px var(--rule)}
+.mf-treks .mf-nm{min-width:0}
+.mf-treks .mf-nm small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

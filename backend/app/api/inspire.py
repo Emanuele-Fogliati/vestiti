@@ -6,6 +6,7 @@ from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.orm import Session
 
 from app import inspire
+from app.guide import ready
 from app.inspire import wear
 from app.db import get_db
 from app.deps import current_user
@@ -35,7 +36,26 @@ def _card(it: inspire.Itinerary) -> dict:
             "places": [s.name for s in it.stops], "art": art.model_dump() if art else None,
             # the recommended trips: where, how many weeks, and the months this route is the one for
             "destination": it.destination or None, "weeks": it.weeks, "months": it.months,
-            "pace": it.pace, "level": it.level}
+            "pace": it.pace, "level": it.level,
+            # its travel region (one card each in Recommended), and whether this route is the card
+            "journey": it.region or None, "journey_blurb": _blurb(it.region) if it.weeks else None,
+            "lead": bool(it.weeks) and getattr(inspire.lead(it.region), "slug", None) == it.slug}
+
+
+def _blurb(region: str) -> str:
+    return next((x.blurb for x in ready.journeys() if x.id == region), "")
+
+
+def _journey(it: inspire.Itinerary) -> dict | None:
+    """The region this route belongs to: every length and season band, for the pickers."""
+    if not it.weeks:
+        return None
+    routes = inspire.journey(it.region)
+    return {"id": it.region, "name": it.destination, "blurb": _blurb(it.region),
+            # in the order the trips reach them: Peru & Bolivia, not Bolivia & Peru
+            "countries": list(dict.fromkeys(s.country_code for r in routes for s in r.stops)),
+            "routes": [{"slug": r.slug, "weeks": r.weeks, "days": r.total_days, "months": r.months,
+                        "best_months": r.best_months} for r in routes]}
 
 
 @router.get("")
@@ -67,6 +87,7 @@ def get_itinerary(slug: str, start: date | None = None, month: int | None = Quer
     return {
         **_card(it),
         "season_note": it.season_note,
+        "journey": _journey(it),
         "start_date": start.isoformat(),
         # what to wear, worked out by the layer engine from each stop's climate that month
         "wear": wear.for_itinerary(it, month or start.month),

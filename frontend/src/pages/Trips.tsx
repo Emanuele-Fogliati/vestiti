@@ -5,11 +5,9 @@ import { useItineraries } from "../components/ItineraryCards";
 import { MyTripsMap } from "../components/Maps";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { MONTHS, dayMonth, monthRuns } from "../lib/format";
+import { countryNames, dayMonth, monthRuns, regionBest } from "../lib/format";
 import type { ItineraryCard, TripSummary } from "../lib/types";
 
-// Manu 2026-11-16: per destination a trip of 1, 2, 3 and 4 weeks for every month
-const LENGTHS = ["Any length", "1 week", "2 weeks", "3 weeks", "4 weeks"];
 const short = (p: string) => p.replace(/ \(.*\)$/, "");
 
 /** Trips (Manu 2026-11-16: "o crea un nuovo viaggio oppure viaggi raccomandati, fine"): one button
@@ -22,9 +20,6 @@ export default function Trips() {
   const [trips, setTrips] = useState<TripSummary[] | null>(null);
   const items = useItineraries();
   const [sel, setSel] = useState<string | null>(null);
-  const [month, setMonth] = useState(0);
-  const [len, setLen] = useState(0);
-  const [where, setWhere] = useState("");
   const [stops, setStops] = useState<number[][]>([]);
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
 
@@ -46,11 +41,16 @@ export default function Trips() {
   const tab = (q.get("tab") ?? (trips && saved.length ? "saved" : trips ? "recommended" : "")) as "saved" | "recommended" | "";
   const setTab = (t: string) => { setSel(null); setQ({ tab: t }, { replace: true }); };
 
-  const dests = useMemo(() => [...new Set((items ?? []).map((x) => x.destination).filter(Boolean) as string[])].sort(), [items]);
-  // a month picks the route of its season band: one trip per destination and length
-  const shown = useMemo(() => (items ?? []).filter((x) => (!month || x.months.includes(month)) && (!len || x.weeks === len)
-    && (!where || x.destination === where)), [items, month, len, where]);
-  const link = (slug: string) => `/ideas/${slug}${month ? `?month=${month}` : ""}`;
+  // Manu 2026-11-16: one card per travel region, not one per length or month: the region's page
+  // asks how long and shows when to go
+  const shown = useMemo(() => (items ?? []).filter((x) => x.lead), [items]);
+  const best = (x: ItineraryCard) => monthRuns(regionBest((items ?? []).filter((y) => y.journey === x.journey), x.weeks ?? 2));
+  const weeks = (x: ItineraryCard) => {
+    const w = [...new Set((items ?? []).filter((y) => y.journey === x.journey).map((y) => y.weeks ?? 0))].sort();
+    return w.length > 1 ? `${w[0]}–${w[w.length - 1]} weeks` : `${w[0]} week${w[0] === 1 ? "" : "s"}`;
+  };
+  const lands = (x: ItineraryCard) => countryNames([...new Set([x, ...(items ?? []).filter((y) => y.journey === x.journey)].flatMap((y) => y.countries))]);
+  const link = (slug: string) => `/ideas/${slug}`;
   const it = tab === "recommended" && sel ? (items ?? []).find((x) => x.slug === sel) ?? null : null;
   const t = tab === "saved" && sel ? saved.find((x) => x.id === sel) ?? null : null;
 
@@ -74,7 +74,7 @@ export default function Trips() {
         <li key={x.slug}>
           <button type="button" className={`mf-trow${sel === x.slug ? " sel" : ""}`} onClick={() => open(x.slug, link(x.slug))}>
             <span className="mf-thumb">{x.art ? <Illustration art={x.art} /> : null}</span>
-            <span className="mf-nm"><b>{x.title}</b><small>{x.days} days · {monthRuns(x.months)}</small></span>
+            <span className="mf-nm"><b>{x.destination ?? x.title}</b><small>{lands(x)} · best {best(x)}</small></span>
           </button>
         </li>
       ))}
@@ -96,19 +96,6 @@ export default function Trips() {
 
   const body = tab === "recommended" ? (
     <>
-      <div className="mf-selects">
-        <select aria-label="Where" value={where} onChange={(e) => { setWhere(e.target.value); setSel(null); }}>
-          <option value="">Anywhere</option>
-          {dests.map((d) => <option key={d} value={d}>{d}</option>)}
-        </select>
-        <select aria-label="Month" value={month} onChange={(e) => { setMonth(Number(e.target.value)); setSel(null); }}>
-          <option value={0}>Any month</option>
-          {MONTHS.map((m, i) => <option key={m} value={i + 1}>{m}</option>)}
-        </select>
-        <select aria-label="Length" value={len} onChange={(e) => { setLen(Number(e.target.value)); setSel(null); }}>
-          {LENGTHS.map((l, i) => <option key={l} value={i}>{l}</option>)}
-        </select>
-      </div>
       {items === null ? <div className="loading"><span className="spin" /></div>
         : <div className="mf-scroll">{shown.length ? recRows(shown) : <p className="mf-k">None for these filters.</p>}</div>}
     </>
@@ -146,8 +133,10 @@ export default function Trips() {
             {it.art && <div className="mf-art"><Illustration art={it.art} label={it.title} /></div>}
             <div className="mf-card-in">
               <div>
-                <span className="mf-k">{it.days} days · {month ? MONTHS[month - 1] : monthRuns(it.months)}</span>
-                <h3>{it.title}</h3>
+                <span className="mf-k">{lands(it)} · {weeks(it)} · best {best(it)}</span>
+                <h3>{it.destination ?? it.title}</h3>
+                {it.journey_blurb && <p className="mf-lede">{it.journey_blurb}</p>}
+                <span className="mf-k">For example, {it.days} days:</span>
               </div>
               <ol className="mf-route">{it.places.map((p, i) => <li key={i}><span className="mf-num">{i + 1}</span>{short(p)}</li>)}</ol>
               <Link className="mf-btn go wide" to={link(it.slug)}>Open →</Link>

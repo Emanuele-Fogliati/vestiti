@@ -53,6 +53,9 @@ def test_reads_what_the_traveller_likes():
 def test_ready_trips_are_real_zones_of_their_region():
     P = globe.by_id()
     for t in ready.trips():
+        if t.region is None:  # across borders, Recommended only: its zones still need an area
+            assert t.journey and all(ready._area(P[s.place]) for s in t.stops), t.id
+            continue
         a = explore.area(t.region)
         assert a, t.id
         for s in t.stops:

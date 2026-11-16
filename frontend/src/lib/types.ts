@@ -596,6 +596,16 @@ export interface ItineraryCard {
   months: number[];
   pace: string | null;
   level: number | null;
+  /** its travel region (Patagonia, Peru & Bolivia...): Recommended shows one card each, the lead route */
+  journey: string | null;
+  journey_blurb: string | null;
+  lead: boolean;
+}
+
+/** A travel region with all its routes: one per length (1-4 weeks) and season band. */
+export interface Journey {
+  id: string; name: string; blurb: string; countries: string[];
+  routes: { slug: string; weeks: number; days: number; months: number[]; best_months: number[] }[];
 }
 
 /** What to wear on a recommended trip in one month: the layer engine on each stop's climate. */
@@ -617,10 +627,11 @@ export interface ItineraryStop extends Omit<Stop, "plan"> {
   excursions: { title: string; links: ExcursionLink[] }[];
 }
 
-export interface Itinerary extends ItineraryCard {
+export interface Itinerary extends Omit<ItineraryCard, "journey"> {
   season_note: string;
   start_date: string;
   wear: ItineraryWear;
+  journey: Journey | null;
   stops: ItineraryStop[];
   group_trips: { operator: string; title: string; days: number; href: string }[];
 }
