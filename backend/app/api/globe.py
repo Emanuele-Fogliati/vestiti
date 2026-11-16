@@ -2,7 +2,7 @@ import hashlib
 from datetime import date
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException, Request, Response
+from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from pydantic import BaseModel, Field, field_validator
 from sqlalchemy.orm import Session
 
@@ -10,6 +10,7 @@ from app import globe, inspire
 from app.db import get_db
 from app.deps import current_user
 from app.globe import routes as globe_routes
+from app.guide import lookup as guide_lookup
 from app.models import Stop, Trip, User
 from app.places.verify import mark_ready_made
 from app.schemas import TripOut, check_date
@@ -33,6 +34,16 @@ def _revalidated(request: Request, raw: bytes, gz: bytes) -> Response:
 def places(request: Request):
     """Every place for the globe in one compact response (rows, not objects)."""
     return _revalidated(request, *globe.payload_bytes())
+
+
+@router.get("/guide")
+def place_guide(name: str = Query(min_length=1, max_length=120), country: str = Query(min_length=2, max_length=2)):
+    """The short description and fun fact of a place on the map (app.guide, Manu 2026-11-16: every
+    place its own text), for the card a place or its drawing opens. 404: we have none yet."""
+    g = guide_lookup(name, country)
+    if g is None:
+        raise HTTPException(404, "No guide for this place")
+    return g
 
 
 @router.get("/routes")

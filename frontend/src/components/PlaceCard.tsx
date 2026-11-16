@@ -39,7 +39,7 @@ export function PlaceCard({ place, routes, onRoute, onClose, onZoom, zoomLabel, 
             : country}
         </p>
         <h3>{place.name}</h3>
-        <AboutLine id={place.art} />
+        <AboutLine id={place.art} name={place.name} country={place.country} />
         {extra}
         {pickable && (
           <div className="pcard-acts">
