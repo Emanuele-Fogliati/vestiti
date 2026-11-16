@@ -147,6 +147,16 @@ export default function TripPage() {
   if (err && !trip) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips">Back to my trips</Link></div></main>;
   if (!trip) return <main className="page"><p className="loading"><span className="spin" /> Loading trip</p></main>;
 
+  async function toggleSave() {
+    if (!trip) return;
+    const on = !trip.saved;
+    // a trip still called "New trip" gets the name of its places when it is saved
+    const st = [...trip.stops].sort((a, b) => a.position - b.position);
+    const name = on && trip.name === "New trip" && st.length ? (st.length > 1 ? `${st[0].name} to ${st[st.length - 1].name}` : st[0].name) : undefined;
+    setTrip(await api.patchTrip(trip.id, { saved: on, ...(name ? { name } : {}) }));
+    toast(on ? (user?.is_guest ? "Saved in Trips. Create a free account to keep it on every device." : "Saved in Trips.") : "Removed from Saved.");
+  }
+
   async function rename(name: string) {
     if (!trip || !name.trim() || name === trip.name) return;
     setTrip(await api.patchTrip(trip.id, { name: name.trim() }));
@@ -154,10 +164,7 @@ export default function TripPage() {
 
   const tEnd = stops.length ? stops.reduce((m, s) => (s.end_date > m ? s.end_date : m), stops[0].end_date) : null;
   const totalDays = t0 && tEnd ? daysBetween(t0, tEnd) + 1 : 0;
-  const tp = plans && !plans.empty ? plans.tiers[tier] : null;
   const source = trip.source_itinerary ? itineraries?.find((it) => it.slug === trip.source_itinerary) : undefined;
-  const countries = new Set(stops.map((s) => s.country_code).filter(Boolean));
-  const related = !trip.source_itinerary ? itineraries?.find((it) => it.countries.some((c) => countries.has(c))) : undefined;
   const estimateWeather = strategy?.stages.some((s) => s.weather_sources.includes("estimate"));
   const sel = stageIdx < 0 ? -1 : Math.min(stageIdx, Math.max(0, stops.length - 1));
 
@@ -182,7 +189,7 @@ export default function TripPage() {
                 {t0 && tEnd ? <><b>{trip.estimate ? "≈ " : ""}{dayMonth(t0)} – {dayMonth(tEnd)}</b><span>{totalDays} days</span><span>{stops.length} {stops.length === 1 ? "place" : "places"}</span></> : <span>No places yet</span>}
                 {planning && <span className="spin" aria-label="Updating" />}
               </p>
-              <h1><textarea className="x-title" rows={1} ref={(el) => { if (el) { el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; } }} onInput={(e) => { const el = e.currentTarget; el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; }} defaultValue={trip.name} aria-label="Trip name" onBlur={(e) => rename(e.target.value.replace(/\s+/g, " ").trim())}
+              <h1><textarea key={trip.name} className="x-title" rows={1} ref={(el) => { if (el) { el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; } }} onInput={(e) => { const el = e.currentTarget; el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; }} defaultValue={trip.name} aria-label="Trip name" onBlur={(e) => rename(e.target.value.replace(/\s+/g, " ").trim())}
                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); (e.target as HTMLTextAreaElement).blur(); } }} /></h1>
     </>
   );
@@ -194,9 +201,9 @@ export default function TripPage() {
                   {!user.profile_done_at && <i className="x-dot" />}
                 </button>
               )}
-              {/* on the phone the chat sits up here: a floating button there covered the stops and buttons */}
-              <button type="button" className="x-round x-ask-top" onClick={() => setAskOpen(true)} aria-label="Ask or tell us something" title="Ask">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" /></svg>
+              {/* kept in Trips > Saved only when you press Save (Manu 2026-11-16) */}
+              <button type="button" className={`mf-btn sm x-save${trip.saved ? " on" : ""}`} aria-pressed={!!trip.saved} onClick={toggleSave}>
+                {trip.saved ? <><Check /> Saved</> : "Save"}
               </button>
               <div className="x-menu-w">
                 <button type="button" className="x-round" aria-label="More" aria-expanded={menu} onClick={() => setMenu(!menu)}>
@@ -213,15 +220,8 @@ export default function TripPage() {
   );
   const below = (
     <>
-          {(source || related) && (
-            <p className="x-from">
-              <Link to={`/ideas/${(source ?? related)!.slug}`}>{source ? "Day-by-day guide" : "Our route"}: {(source ?? related)!.title} →</Link>
-            </p>
-          )}
-          {user?.is_guest && tp && (
-            <p className="x-from">
-              <Link to="/register" state={{ from: `/trips/${id}` }}>Save this trip with a free account →</Link>
-            </p>
+          {source && (
+            <p className="x-from"><Link to={`/ideas/${source.slug}`}>Day by day: {source.title} →</Link></p>
           )}
           {quizResult && (
             <div className="x-alert x-quizres">
@@ -279,13 +279,14 @@ export default function TripPage() {
 
   // with stops, every tab is the map-first page: the header and the tabs sit in its panel,
   // Plan shows the map, Weather and Bag fill the big panel beside it
-  if (stops.length > 0) return (
+  // every trip is the map-first page, an empty one too: you add its stops on the map (Manu 2026-11-16)
+  return (
     <main className="x-trip x-trip-st">
       <TripStudio content={tab === "weather" ? weatherBody : tab === "bag" ? bagBody : undefined} trip={trip} plans={plans} strategy={strategy} tier={tier} sel={stageIdx < 0 ? null : sel}
         setSel={(i) => setStageIdx(i ?? -1)} onChanged={loadAll} onPlans={() => loadPlans(tier)}
         head={<><div className="mf-head-r">{metaTitle}{actions}</div>{below}</>} tabs={tabBar}
         onBag={() => go("bag")} onAsk={(t) => { setAskText(t ?? ""); setAskOpen(true); }}
-        onFlights={() => setFlightsOpen(true)} onBoard={() => setBoardOpen(true)} />
+        onFlights={() => setFlightsOpen(true)} onBoard={() => setBoardOpen(true)} firstAdd={(loc.state as { add?: string } | null)?.add} />
       <Sheet open={boardOpen} onClose={() => setBoardOpen(false)} title="Days, bookings and things to do" wide>
         <TripBoard trip={trip} onChanged={loadAll} selected={Math.max(0, sel)} onSelect={setStageIdx} />
       </Sheet>
@@ -293,67 +294,6 @@ export default function TripPage() {
     </main>
   );
 
-  return (
-    <main className="x-trip">
-      <header className="x-head">
-        <div className="wrap">
-          <div className="x-head-in">
-            <div className="x-head-t">
-              {metaTitle}
-            </div>
-            {actions}
-          </div>
-          {below}
-        </div>
-      </header>
-
-      {tabBar}
-
-      {tab === "trip" && (
-        <section className="x-panel" id="p-trip" role="tabpanel" key="trip">
-          <div className="wrap">
-            {/* no stops yet: the board, to add the first one (with stops the Plan tab is the map-first page above) */}
-            <div className="x-rise"><TripBoard trip={trip} onChanged={loadAll} selected={0} onSelect={setStageIdx} /></div>
-          </div>
-        </section>
-      )}
-
-      {tab === "weather" && (
-        <section className="x-panel" id="p-weather" role="tabpanel" key="weather">
-          <div className="wrap">
-            {estimateWeather && <p className="x-alert warn">The weather service could not be reached: some places use a rough estimate. Reload later.</p>}
-            {trip.estimate && t0 && (
-              <div className="x-alert">
-                <EstimateForm start={trip.estimate.start} days={trip.estimate.days} firstDay={t0} totalDays={totalDays}
-                  onApply={async (v) => { try { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated."); loadPlans(tier); } catch (e) { toast((e as Error).message); } }}
-                  onKeep={async () => { setTrip(await api.setDates(id, { confirm: true })); }} />
-              </div>
-            )}
-            {strategy && !strategy.empty ? <WeatherTab strategy={strategy} /> : <Empty planning={planning} onAdd={() => go("trip")} />}
-            {strategy && strategy.questions.length > 0 && (
-              <div className="x-qs">
-                <h2 className="x-h2">This would change the plan</h2>
-                <ul className="x-list">{strategy.questions.map((q, i) => <li key={i}>{q.question}</li>)}</ul>
-                <button type="button" className="x-link" onClick={() => setAskOpen(true)}>Answer in the chat</button>
-              </div>
-            )}
-          </div>
-        </section>
-      )}
-
-      {tab === "bag" && (
-        <section className="x-panel" id="p-bag" role="tabpanel" key="bag">
-          <div className="wrap">
-            {plans && !plans.empty ? <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={() => loadPlans(tier)}
-              layers={strategy && !strategy.empty ? <LayerStrategy tripId={id} strategy={strategy} tier={tier} stageIdx={Math.max(0, sel)} setStageIdx={setStageIdx} onChanged={() => loadPlans(tier)} /> : null} />
-              : <Empty planning={planning} onAdd={() => go("trip")} />}
-          </div>
-        </section>
-      )}
-
-      {sheets}
-    </main>
-  );
 }
 
 function Empty({ planning, onAdd }: { planning: boolean; onAdd: () => void }) {
@@ -363,3 +303,5 @@ function Empty({ planning, onAdd }: { planning: boolean; onAdd: () => void }) {
     </div>
   );
 }
+
+const Check = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10" /></svg>;

@@ -76,6 +76,7 @@ class UserOut(ORM):
     pace: str = "average"
     evenings: str = "sometimes"
     preferred_brands: list[str] = []
+    saved_trails: list[str] = []
     market: str = "us"  # where the kit shops: the user's choice, else the app's default
     profile_done_at: datetime | None = None
     created_at: datetime
@@ -94,7 +95,20 @@ class ProfileIn(BaseModel):
     pace: str | None = None
     evenings: str | None = None
     preferred_brands: list[str] | None = Field(default=None, max_length=20)
+    saved_trails: list[str] | None = Field(default=None, max_length=500)
     market: str | None = None
+
+    @field_validator("saved_trails")
+    @classmethod
+    def _st(cls, v):
+        if v is None:
+            return v
+        out = []
+        for x in v:
+            x = str(x).strip()[:120]
+            if x and x not in out:
+                out.append(x)
+        return out
 
     @field_validator("market")
     @classmethod
@@ -463,6 +477,7 @@ class TripPatch(BaseModel):
     notes: str | None = Field(default=None, max_length=4000)
     home_airport: str | None = Field(default=None, max_length=3)
     return_leg: LegIn | None = None
+    saved: bool | None = None
 
     @field_validator("home_airport")
     @classmethod
@@ -492,6 +507,7 @@ class TripOut(ORM):
     def _cs(cls, v):
         return v or []
     source_itinerary: str | None = None  # slug of the recommended trip it started from
+    saved: bool = False
     home_airport: str | None = None
     return_leg: dict | None = None
 
@@ -542,6 +558,7 @@ class TripSummary(ORM):
     art: StopArt | None = None
     estimated: bool = False
     source_itinerary: str | None = None
+    saved: bool = False
     # where the stops are, in order ([lat, lon]): the trips on the My trips map
     points: list[list[float]] = []
 

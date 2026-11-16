@@ -13,6 +13,7 @@ export interface User {
   pace: Pace;
   evenings: Evenings;
   preferred_brands: string[];
+  saved_trails?: string[];
   market: "us" | "eu";
   profile_done_at: string | null;
   created_at: string;
@@ -259,6 +260,7 @@ export interface Trip {
   countries?: string[];
   /** Slug of the recommended trip it started from; null = the traveller's own. */
   source_itinerary?: string | null;
+  saved?: boolean;
   home_airport?: string | null;
   return_leg?: LegSaved | null;
 }
@@ -275,6 +277,7 @@ export interface TripSummary {
   art?: StopArt | null;
   estimated?: boolean;
   source_itinerary?: string | null;
+  saved?: boolean;
   /** the stops' places in order, [lat, lon]: the My trips map */
   points?: number[][];
 }

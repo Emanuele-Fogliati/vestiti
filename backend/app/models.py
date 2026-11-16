@@ -49,6 +49,8 @@ class User(Base):
     evenings: Mapped[str] = mapped_column(String(10), default="sometimes")
     # brands the traveller prefers (catalog spelling, e.g. ["Patagonia"]); [] = no preference
     preferred_brands: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
+    # walks the traveller saved (trail ids), newest first (Manu 2026-11-16: "se ne ho salvati alcuni")
+    saved_trails: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
     # Set when the traveller answered or skipped the profile quiz (it is not shown again)
     profile_done_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), default=utcnow)
@@ -78,6 +80,9 @@ class Trip(Base):
     countries: Mapped[list] = mapped_column(JSON, default=list, server_default="[]")
     # slug of the recommended itinerary this trip started from (None = the traveller's own)
     source_itinerary: Mapped[str | None] = mapped_column(String(80))
+    # kept in Saved trips only when the traveller pressed Save (Manu 2026-11-16); a trip being
+    # drawn, or opened from a recommended one, is a draft until then
+    saved: Mapped[bool] = mapped_column(Boolean, default=False, server_default=false())
     # the traveller's home airport (IATA), for the flights out and back
     home_airport: Mapped[str | None] = mapped_column(String(3))
     # how the traveller gets home after the last stop, same shape as Stop.arrival

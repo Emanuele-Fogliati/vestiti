@@ -9,6 +9,8 @@ GET /api/roads?pts=lat,lon;lat,lon;...   one leg per pair of consecutive stops
 from __future__ import annotations
 
 import math
+import time
+from concurrent.futures import ThreadPoolExecutor
 
 import httpx
 from fastapi import APIRouter, Depends, HTTPException, Query
@@ -53,36 +55,67 @@ def arc(a: tuple[float, float], b: tuple[float, float], n: int = 32) -> list[lis
     return out
 
 
-def leg(a: tuple[float, float], b: tuple[float, float], cache: WeatherService | None) -> dict:
+def _osrm(a: tuple[float, float], b: tuple[float, float]) -> dict | None:
+    """The road from a to b, or a flight when no sensible road joins them; None when the router
+    could not be reached (twice): the leg then shows as a plain line and is asked again next time."""
     straight = km(a, b)
-    fly = {"mode": "air", "km": round(straight), "hours": None, "line": arc(a, b)}
-    if straight > FLY_KM:
-        return fly
-    if straight < 0.5:
-        return {"mode": "road", "km": 0, "hours": 0, "line": [[a[1], a[0]], [b[1], b[0]]]}
-    key = f"road:{a[0]:.3f},{a[1]:.3f}>{b[0]:.3f},{b[1]:.3f}"
-    hit = cache._cache_get(key) if cache else None
-    if hit:
-        return hit
-    if not get_settings().roads_enabled:
-        return {"mode": "line", "km": round(straight), "hours": None, "line": [[a[1], a[0]], [b[1], b[0]]]}
-    try:
-        r = httpx.get(f"{OSRM}{a[1]:.5f},{a[0]:.5f};{b[1]:.5f},{b[0]:.5f}",
-                      params={"overview": "simplified", "geometries": "geojson"},
-                      headers={"User-Agent": "trip-planner/1.0 (open data routes)"}, timeout=20)
-        d = r.json()
-        route = d["routes"][0] if d.get("code") == "Ok" and d.get("routes") else None
-    except Exception:
-        return {"mode": "line", "km": round(straight), "hours": None, "line": [[a[1], a[0]], [b[1], b[0]]]}
-    if not route or route["distance"] / 1000 > DETOUR * straight + 30:
-        out = fly
-    else:
-        out = {"mode": "road", "km": round(route["distance"] / 1000),
-               "hours": round(route["duration"] / 3600, 1),
-               "line": [[round(x, 5), round(y, 5)] for x, y in route["geometry"]["coordinates"]]}
-    if cache:
-        cache._cache_put(key, "osrm", out, CACHE_HOURS)
-    return out
+    for attempt in range(2):
+        try:
+            r = httpx.get(f"{OSRM}{a[1]:.5f},{a[0]:.5f};{b[1]:.5f},{b[0]:.5f}",
+                          params={"overview": "simplified", "geometries": "geojson"},
+                          headers={"User-Agent": "trip-planner/1.0 (open data routes)"}, timeout=15)
+            d = r.json()
+        except Exception:
+            d = None
+        if d and d.get("code") in ("Ok", "NoRoute"):
+            route = d["routes"][0] if d.get("code") == "Ok" and d.get("routes") else None
+            if not route or route["distance"] / 1000 > DETOUR * straight + 30:
+                return {"mode": "air", "km": round(straight), "hours": None, "line": arc(a, b)}
+            return {"mode": "road", "km": round(route["distance"] / 1000),
+                    "hours": round(route["duration"] / 3600, 1),
+                    "line": [[round(x, 5), round(y, 5)] for x, y in route["geometry"]["coordinates"]]}
+        if attempt == 0:
+            time.sleep(1.5)  # the public router asks for a pause when it gets many at once
+    return None
+
+
+def legs(stops: list[tuple[float, float]], cache: WeatherService | None) -> list[dict]:
+    """Every leg of a trip. The roads not yet known are asked for together (a few at a time), so a
+    nine-stop recommended trip draws along its roads in seconds, not one leg after another."""
+    out: list[dict | None] = []
+    todo: list[int] = []
+    for a, b in zip(stops, stops[1:]):
+        straight = km(a, b)
+        if straight > FLY_KM:
+            out.append({"mode": "air", "km": round(straight), "hours": None, "line": arc(a, b)})
+        elif straight < 0.5:
+            out.append({"mode": "road", "km": 0, "hours": 0, "line": [[a[1], a[0]], [b[1], b[0]]]})
+        else:
+            hit = cache._cache_get(_key(a, b)) if cache else None
+            out.append(hit)
+            if not hit:
+                todo.append(len(out) - 1)
+    if todo and get_settings().roads_enabled:
+        pairs = list(zip(stops, stops[1:]))
+        with ThreadPoolExecutor(max_workers=4) as pool:
+            got = list(pool.map(lambda i: _osrm(*pairs[i]), todo))
+        for i, g in zip(todo, got):
+            if g:
+                out[i] = g
+                if cache:
+                    cache._cache_put(_key(*pairs[i]), "osrm", g, CACHE_HOURS)
+    for i, (a, b) in enumerate(zip(stops, stops[1:])):
+        if out[i] is None:
+            out[i] = {"mode": "line", "km": round(km(a, b)), "hours": None, "line": [[a[1], a[0]], [b[1], b[0]]]}
+    return out  # type: ignore[return-value]
+
+
+def _key(a: tuple[float, float], b: tuple[float, float]) -> str:
+    return f"road:{a[0]:.3f},{a[1]:.3f}>{b[0]:.3f},{b[1]:.3f}"
+
+
+def leg(a: tuple[float, float], b: tuple[float, float], cache: WeatherService | None) -> dict:
+    return legs([a, b], cache)[0]
 
 
 def parse(pts: str) -> list[tuple[float, float]]:
@@ -104,5 +137,5 @@ def parse(pts: str) -> list[tuple[float, float]]:
 def roads(pts: str = Query(..., max_length=MAX_STOPS * 26), db: Session = Depends(get_db)):
     stops = parse(pts)
     cache = WeatherService(db)
-    return {"legs": [leg(a, b, cache) for a, b in zip(stops, stops[1:])],
+    return {"legs": legs(stops, cache),
             "attribution": "Roads © OpenStreetMap contributors (ODbL), routing OSRM / FOSSGIS"}

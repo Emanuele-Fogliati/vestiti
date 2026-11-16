@@ -75,7 +75,7 @@ export const api = {
   verifyEmailLink: (token: string) => req<User>("POST", "/api/auth/email-link/verify", { token }),
   changePassword: (new_password: string, current_password?: string) =>
     req<User>("POST", "/api/me/password", { new_password, current_password: current_password || null }),
-  updateMe: (patch: Partial<Pick<User, "display_name" | "gender_pref" | "thermal_offset" | "pace" | "evenings" | "preferred_brands" | "market">>) =>
+  updateMe: (patch: Partial<Pick<User, "display_name" | "gender_pref" | "thermal_offset" | "pace" | "evenings" | "preferred_brands" | "saved_trails" | "market">>) =>
     req<User>("PATCH", "/api/me", patch),
   profile: () => req<Profile>("GET", "/api/me/profile"),
   quiz: (answers: { cold?: string | null; pace?: string | null; evenings?: string | null; owned?: string[] | null; brands?: string[] | null }, tripId?: string, tier?: Tier) => {
@@ -96,7 +96,7 @@ export const api = {
   /** Firm up guessed dates: a start date moves the trip, a length spreads the guessed stops. */
   setDates: (id: string, body: { start_date?: string; total_days?: number; confirm?: boolean }) =>
     req<Trip>("POST", `/api/trips/${id}/dates`, body),
-  patchTrip: (id: string, patch: { name?: string; notes?: string; home_airport?: string | null; return_leg?: LegSaved | null }) =>
+  patchTrip: (id: string, patch: { name?: string; notes?: string; saved?: boolean; home_airport?: string | null; return_leg?: LegSaved | null }) =>
     req<Trip>("PATCH", `/api/trips/${id}`, patch),
   board: (id: string) => req<Board>("GET", `/api/trips/${id}/board`),
   trails: (q: { country?: string; lat?: number; lon?: number; name?: string; month?: number } = {}) => {

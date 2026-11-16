@@ -6,6 +6,7 @@ import { Illustration } from "../components/Illustration";
 import { TreksMap } from "../components/Maps";
 import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
 import { api } from "../lib/api";
+import { useApp } from "../lib/app-context";
 import { money } from "../lib/format";
 import type { Item, TrailCard, TrailDifficulty, TrailWear } from "../lib/types";
 
@@ -28,6 +29,10 @@ export default function Trails() {
   const find = (q.get("find") ?? "").trim().toLowerCase(); // words typed here or on the home page
   const [typed, setTyped] = useState(q.get("find") ?? "");
   const selId = q.get("t");
+  const savedTab = q.get("saved") === "1";
+  const { user, ensureUser, setUser, toast } = useApp();
+  const savedIds = useMemo(() => user?.saved_trails ?? [], [user]);
+  const [more, setMore] = useState(false); // the filters, folded away (Manu 2026-11-16: fewer words)
   const [all, setAll] = useState<TrailCard[] | null>(null);
   const [countries, setCountries] = useState<string[]>([]);
   const [err, setErr] = useState<string | null>(null);
@@ -53,6 +58,26 @@ export default function Trails() {
     api.trails({ country: country || undefined, month }).then((r) => { setAll(r.trails); setCountries(r.countries); })
       .catch((e) => setErr((e as Error).message));
   }, [country, month]);
+
+  // the walks you saved (Manu 2026-11-16: "voglio vedere ... se ne ho salvati alcuni")
+  const [extra, setExtra] = useState<Record<string, TrailCard>>({});
+  useEffect(() => {
+    if (!all) return;
+    const have = new Set(all.map((t) => t.id));
+    for (const id of savedIds) if (!have.has(id) && !extra[id])
+      api.trailCard(id).then((c) => setExtra((x) => ({ ...x, [id]: c }))).catch(() => undefined);
+  }, [savedIds, all]); // eslint-disable-line react-hooks/exhaustive-deps
+  const savedCards = useMemo(() => {
+    const by = new Map((all ?? []).map((t) => [t.id, t]));
+    return savedIds.map((id) => by.get(id) ?? extra[id]).filter(Boolean) as TrailCard[];
+  }, [savedIds, all, extra]);
+  async function toggleSave(id: string) {
+    const u = user ?? await ensureUser();
+    const now = u.saved_trails ?? [];
+    const on = !now.includes(id);
+    setUser(await api.updateMe({ saved_trails: on ? [id, ...now] : now.filter((x) => x !== id) }));
+    toast(on ? "Saved in Walks." : "Removed from Saved.");
+  }
 
   const set = (k: string, v: string) => { const n = new URLSearchParams(q); if (v) n.set(k, v); else n.delete(k); if (k !== "t") n.delete("t"); setQ(n, { replace: true }); };
   const textHit = (t: TrailCard) => !find || ((h) => find.split(/\s+/).every((w) => h.includes(w)))(
@@ -111,11 +136,12 @@ export default function Trails() {
     return `${d < 1 ? "Under 1" : d < 10 ? d.toFixed(1) : Math.round(d)} km away · `;
   };
 
-  const shown = useMemo(() => base.filter((t) => textHit(t) || away(t) <= km)
+  const found = useMemo(() => base.filter((t) => textHit(t) || away(t) <= km)
     // the hike you named first, then the nearest; else in season first, then the famous ones (with a drawing)
     .sort((a, b) => Number(nameHit(b)) - Number(nameHit(a)) || (zone ? Math.min(away(a), 1e6) - Math.min(away(b), 1e6) : 0)
       || Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
       || Number(b.tier === "A") - Number(a.tier === "A")), [base, find, zone, km, paths]); // eslint-disable-line react-hooks/exhaustive-deps
+  const shown = savedTab ? savedCards : found;
   // one hike matches the name: it opens (card, what to wear) once you stop typing
   useEffect(() => {
     if (!zone?.trail || selId === zone.trail) return;
@@ -126,7 +152,7 @@ export default function Trails() {
 
   const inView = (t: TrailCard) => !view || (t.lat != null && t.lon != null && t.lat >= view.s && t.lat <= view.n
     && (view.w <= view.e ? t.lon >= view.w && t.lon <= view.e : t.lon >= view.w || t.lon <= view.e));
-  const listed = useMemo(() => shown.filter((t) => inView(t) || t.id === selId), [shown, view, selId]); // eslint-disable-line react-hooks/exhaustive-deps
+  const listed = useMemo(() => (savedTab ? shown : shown.filter((t) => inView(t) || t.id === selId)), [shown, view, selId, savedTab]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => setPage(0), [view]);
   const PER = desk ? 6 : 20;
   const pages = Math.max(1, Math.ceil(listed.length / PER));
@@ -170,13 +196,14 @@ export default function Trails() {
     return l.sort((a, b) => a[1].localeCompare(b[1]));
   }, [countries, country]);
 
+  const nf = [country, kind, style, month, level].filter(Boolean).length;
   const where = zone ? `around ${zone.name}` : country ? countryName(country) : find ? `“${find}”` : "the world";
   const inset = desk ? { top: 20, right: 60, bottom: 150, left: sel ? 870 : 470 } : undefined;
 
   const search = (
     <form className="mf-say mf-search" role="search" onSubmit={(e) => { e.preventDefault(); set("find", typed.trim()); }}>
       <SearchIcon />
-      <input type="search" value={typed} aria-label="Search walks" placeholder="Search a walk, park, town or country"
+      <input type="search" value={typed} aria-label="Search walks" placeholder="Search a walk or a place"
         onChange={(e) => { setTyped(e.target.value); set("find", e.target.value.trim()); }} />
       {typed && <button type="button" aria-label="Clear" onClick={() => { setTyped(""); set("find", ""); }}>×</button>}
     </form>
@@ -223,7 +250,7 @@ export default function Trails() {
               <small><span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
                 {t.km != null && <span>{Math.round(t.km)} km</span>}{t.gain_m != null && <span>+{Math.round(t.gain_m).toLocaleString("en-US")} m</span>}
                 {t.kind === "multiday" && <span>{t.days} days</span>}</small>
-              <small className="mf-base">{howFar(t)}From {t.base}{country ? "" : ` · ${countryName(t.country)}`} · best {t.months_text}</small>
+              <small className="mf-base">{howFar(t)}{t.base}{country || zone ? "" : `, ${countryName(t.country)}`}</small>
             </span>
           </button>
         </li>
@@ -241,6 +268,8 @@ export default function Trails() {
           <span className="mf-k">From {sel.base} · best {sel.months_text}</span>
           <h3>{sel.name}</h3>
         </div>
+        <button type="button" className={`mf-btn sm x-save mf-tsave${savedIds.includes(sel.id) ? " on" : ""}`} aria-pressed={savedIds.includes(sel.id)} onClick={() => toggleSave(sel.id)}>
+          {savedIds.includes(sel.id) ? "✓ Saved" : "Save"}</button>
         <TrailFacts t={sel} />
         {wear?.weather && <span className="mf-k">{wear.weather.tmin}–{wear.weather.tmax}° in {MONTHS[wearMonth - 1]}{wear.coldest ? ` · feels ${wear.coldest.feels_like_c}° at the coldest` : ""}{wear.in_season ? "" : " · not in season then"}</span>}
         <b className="mf-sub">What you wear on it</b>
@@ -259,7 +288,7 @@ export default function Trails() {
             })}
           </ul>
         )}
-        <Link className="mf-btn wide" to={`/trails/${sel.id}${month ? `?month=${month}` : ""}`}>The trail: map, profile, when to turn back →</Link>
+        <Link className="mf-btn wide" to={`/trails/${sel.id}${month ? `?month=${month}` : ""}`}>Open →</Link>
       </div>
     </div>
   );
@@ -270,7 +299,7 @@ export default function Trails() {
         <div className="mf-map">
           <TreksMap trails={shown} selected={selId} onPick={(id) => set("t", id)} inset={inset} line={line} onView={setView}
             around={zone ? { lat: zone.lat, lon: zone.lon, km } : null}
-            fitKey={`${country}|${month}|${level}|${kind}|${style}|${find}|${shown.length}|${zone ? `${zone.lat},${zone.lon},${km}` : ""}`} />
+            fitKey={`${savedTab ? `saved:${savedIds.length}|` : ""}${country}|${month}|${level}|${kind}|${style}|${find}|${shown.length}|${zone ? `${zone.lat},${zone.lon},${km}` : ""}`} />
           {desk && <div className="mf-legend">{(["easy", "moderate", "hard", "technical"] as const).map((l) => <span key={l}><i className={`mf-dot ${l}`} />{DIFFICULTY[l]}</span>)}<span><i className="mf-dot city" />City walk</span></div>}
         </div>
 
@@ -288,18 +317,26 @@ export default function Trails() {
             </>
           ) : (
             <>
-              <div className="mf-thead"><h1>Walks</h1><span className="mf-k">{all ? (view && !zone ? `${listed.length.toLocaleString("en-US")} in this part of the map` : `${shown.length.toLocaleString("en-US")} ${zone ? "" : "in "}${where}`) : ""}</span></div>
-              {search}
+              <div className="mf-thead"><h1>Walks</h1><span className="mf-k">{all && !savedTab ? (view && !zone ? `${listed.length.toLocaleString("en-US")} here` : `${shown.length.toLocaleString("en-US")} ${zone ? "" : "in "}${where}`) : ""}</span></div>
+              <div className="mf-segrow">
+                <div className="mf-seg" role="tablist" aria-label="Walks">
+                  <button type="button" role="tab" aria-selected={!savedTab} className={!savedTab ? "on" : ""} onClick={() => set("saved", "")}>All</button>
+                  <button type="button" role="tab" aria-selected={savedTab} className={savedTab ? "on" : ""} onClick={() => set("saved", "1")}>Saved{savedIds.length ? ` · ${savedIds.length}` : ""}</button>
+                </div>
+                {!savedTab && <button type="button" className={`mf-btn sm mf-fbtn${more || nf ? " on" : ""}`} aria-expanded={more} onClick={() => setMore(!more)}>
+                  <FilterIcon />Filters{nf ? ` · ${nf}` : ""}</button>}
+              </div>
+              {!savedTab && search}
               {zone && (
                 <div className="mf-chips mf-zone" role="group" aria-label={`How far from ${zone.name}`}>
                   <span className="mf-k">Around {zone.name}:</span>
                   {[10, 25, 50, 100].map((k) => <button key={k} type="button" className={km === k ? "on" : ""} onClick={() => setKm(k)}>{k} km</button>)}
                 </div>
               )}
-              {filters}
+              {!savedTab && more && filters}
               {err && <p className="err">{err}</p>}
               {!all && !err ? <div className="loading"><span className="spin" /></div>
-                : <div className="mf-scroll">{listed.length ? rows : <p className="mf-k">{shown.length ? "No walk in this part of the map: zoom out or move it." : "No trail matches: try another filter."}</p>}</div>}
+                : <div className="mf-scroll">{listed.length ? rows : <p className="mf-k">{savedTab ? "Nothing saved yet. Open a walk and press Save." : shown.length ? "None here: zoom out or move the map." : "No walk matches."}</p>}</div>}
               {all && listed.length > PER && (desk ? (
                 <div className="mf-pager"><span>{page + 1} / {pages}</span>
                   <span><button type="button" className="mf-btn sm" disabled={!page} onClick={() => setPage(page - 1)}>Back</button>
@@ -337,4 +374,5 @@ function distKm(la1: number, lo1: number, la2: number, lo2: number) {
   return 12742 * Math.asin(Math.sqrt(a));
 }
 
+const FilterIcon = () => <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" /></svg>;
 const SearchIcon = () => <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>;

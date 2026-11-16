@@ -5,7 +5,7 @@ import { useApp } from "../lib/app-context";
 import { MONTH_LONG, monthRuns } from "../lib/format";
 import type { GlobeRoute } from "../lib/worldmap";
 import { countriesLabel } from "../lib/worldmap";
-import { DRESS_ME } from "../pages/Start";
+import { DRESS_ME } from "../lib/words";
 
 const nightsLabel = (d: number) => `${d} ${d === 1 ? "day" : "days"}`;
 
