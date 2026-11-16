@@ -263,3 +263,52 @@ a.mf-btn{text-decoration:none}
 @media (max-width:899px){
   .mf-tabbody{display:block;min-width:0}
 }
+
+/* ---------- one trek, map first (Manu 2026-11-16): the trail fills the screen ---------- */
+.trailpage-mf .mf-map .tmap{height:100%;border:0;border-radius:0}
+.mf-trailhead{display:grid;gap:6px;flex:0 0 auto}
+.mf-trailhead h1{margin:0;font-size:clamp(28px,2.6vw,38px);line-height:1.02;letter-spacing:-.03em;text-wrap:balance}
+.mf-trailhead .tags{display:flex;flex-wrap:wrap;gap:4px}
+.mf-trailhead .tfacts{margin:2px 0 0;display:flex;flex-wrap:wrap;gap:4px 16px;overflow:visible;border-radius:0;background:none;padding:0}
+.mf-trailhead .tfacts div{display:grid;padding:0;border:0}
+.mf-trailhead .tfacts dt{font-size:11.5px;color:var(--ink-2)}
+.mf-trailhead .tfacts dd{margin:0;font:600 15px var(--f-mono)}
+.mf-crumb{display:inline-flex;align-items:center;gap:4px;text-decoration:none;color:var(--ink-2)}
+.mf-crumb:hover{color:var(--ink)}
+.mf-lede{margin:0 0 4px;font-size:15px;line-height:1.45}
+.trailpage-mf .mf-scroll{display:flex;flex-direction:column;gap:10px}
+.trailpage-mf .tprof{margin:0}
+.mf-tsec{display:grid;gap:6px;padding-top:10px;border-top:1px solid var(--rule)}
+.mf-tsec p{margin:0}
+.mf-dl{display:grid;gap:6px;margin:0}
+.mf-dl div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px;font-size:13.5px}
+.mf-dl dt{font-size:12px;color:var(--ink-2)}
+.mf-dl dd{margin:0}
+.mf-warn{margin:0;font-size:13px;padding:8px 12px;border-radius:12px;background:#FBEDE7;color:var(--warn-text)}
+.mf-warn ul{margin:4px 0 0;padding-left:16px}
+.mf-tsteps .tstep{grid-template-columns:30px minmax(0,1fr) 92px;gap:10px;padding:6px 4px}
+.mf-tsteps .tstep h3{font-size:15px;margin:3px 0 0}
+.mf-tsteps .tstep p{font-size:13.5px}
+.mf-tsteps .tnum{width:26px;height:26px;font-size:12px}
+.mf-tsteps .tstep-art{border-radius:10px;overflow:hidden}
+.mf-tsteps .tseg{margin-left:12px;padding-left:24px;font-size:11.5px}
+.mf-twear .mf-card-in{display:flex;flex-direction:column;gap:8px}
+.mf-twear-h{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.mf-twear-h select{width:auto;height:32px;padding:0 8px;font-size:13px;border-radius:10px}
+.mf-twear .mf-sub{margin:0}
+.mf-tadd .mf-btn{justify-self:start}
+.tmore{font-size:13.5px}
+@media (min-width:900px){
+  .mf-twear{max-height:calc(100% - 196px)}
+}
+@media (max-width:899px){
+  .trailpage-mf .mf-map{height:min(320px,42svh)}
+  .trailpage-mf .mf-map .tmap{position:absolute;inset:0}
+  .mf-twear.in{display:block;padding:12px;border-radius:16px;background:var(--surface-2)}
+  .mf-twear.in .mf-wear li{background:#FFFFFF}
+  .mf-tsteps .tstep{grid-template-columns:30px minmax(0,1fr)}
+  .mf-tsteps .tstep-art{max-width:240px}
+}
+.mf-twear-h label{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.mf-twear-h select{max-width:150px}
+.mf-twear .mf-art{height:120px}

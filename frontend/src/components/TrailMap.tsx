@@ -6,9 +6,12 @@ import type { TrailPoint } from "../lib/types";
 
 /** One trail on the map: its path, every other footpath around it (so you see the junctions),
  *  and its key points numbered in walking order. Tap a number to zoom in. */
-export default function TrailMap({ line, points, focus, onFocus }: {
+export default function TrailMap({ line, points, focus, onFocus, inset }: {
   line: [number, number][]; points: TrailPoint[]; focus: number | null; onFocus: (i: number | null) => void;
+  /** room the floating panels take over the map (the map-first trek page) */
+  inset?: { top: number; right: number; bottom: number; left: number };
 }) {
+  const padding = inset ? { top: inset.top + 36, right: inset.right + 36, bottom: inset.bottom + 36, left: inset.left + 36 } : 36;
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [failed, setFailed] = useState(false);
@@ -46,7 +49,7 @@ export default function TrailMap({ line, points, focus, onFocus }: {
       });
       map = new maplibregl.Map({
         container: el, style, bounds: bounds(coords),
-        fitBoundsOptions: { padding: 36, maxZoom: 14 },
+        fitBoundsOptions: { padding, maxZoom: 14 },
         maxZoom: 16, cooperativeGestures: true, attributionControl: { compact: true },
         pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
       });
@@ -58,6 +61,7 @@ export default function TrailMap({ line, points, focus, onFocus }: {
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
     const markers: maplibregl.Marker[] = [];
     map.on("load", () => {
+      if (inset) el.querySelector(".maplibregl-ctrl-attrib")?.classList.remove("maplibregl-compact-show");
       if (line.length) {
         map.addSource("trail", { type: "geojson", data: { type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: line } } });
         map.addLayer({ id: "trail-casing", type: "line", source: "trail", layout: { "line-join": "round", "line-cap": "round" },
@@ -86,8 +90,8 @@ export default function TrailMap({ line, points, focus, onFocus }: {
   useEffect(() => {
     const map = mapRef.current;
     if (!map) return;
-    if (focus === null) map.fitBounds(bounds(coords), { padding: 36, maxZoom: 14 });
-    else map.flyTo({ center: [points[focus].lon, points[focus].lat], zoom: 14.5, speed: 1.4, essential: true });
+    if (focus === null) map.fitBounds(bounds(coords), { padding, maxZoom: 14 });
+    else map.flyTo({ center: [points[focus].lon, points[focus].lat], zoom: 14.5, speed: 1.4, essential: true, padding: typeof padding === "number" ? undefined : padding });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focus]);
 

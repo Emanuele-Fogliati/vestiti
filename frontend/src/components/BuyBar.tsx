@@ -3,6 +3,7 @@ import { money } from "../lib/format";
 import type { Item, Tier } from "../lib/types";
 import { Garment, baseSlot } from "./Garment";
 import { ProductArt } from "./ProductArt";
+import { Sheet } from "./Sheet";
 
 /** One piece to get: the product picked now, and the cheaper and better ones it can switch to. */
 export interface BuyPick {
@@ -73,6 +74,26 @@ export function BuyBar({ title, sub, picks, tripId, tier, onPick, onBuy, buyLabe
 
 export function BagIcon() {
   return <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" /></svg>;
+}
+
+/** The pieces as a shopping list, each opening its shop: what "Buy" opens where there is no trip bag. */
+export function KitSheet({ open, onClose, title, picks }: { open: boolean; onClose: () => void; title: string; picks: BuyPick[] }) {
+  const cur = picks[0]?.item.currency;
+  return (
+    <Sheet open={open} onClose={onClose} title={title}>
+      <ul className="mf-wear mf-buylist">
+        {picks.map((p) => (
+          <li key={p.slot} className="get">
+            <Garment slot={p.slot} />
+            <span className="mf-nm"><span>{p.item.brand} {p.item.name}</span><small>{p.label} · {p.item.merchant}</small></span>
+            {p.item.image_url && <img src={p.item.image_url} alt="" loading="lazy" referrerPolicy="no-referrer" />}
+            <a className="mf-btn go sm" href={buyUrl(p.item.id)} target="_blank" rel="sponsored noopener">{money(p.item.price, p.item.currency)} ↗</a>
+          </li>
+        ))}
+      </ul>
+      <p className="mf-fine">Each piece opens its shop. Prices from the shops; we may earn a commission. Total {money(totalOf(picks), cur)}.</p>
+    </Sheet>
+  );
 }
 
 export { Garment };

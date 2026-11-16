@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { BagIcon, BuyBar, ProductRow, totalOf, type BuyPick } from "../components/BuyBar";
+import { BagIcon, BuyBar, KitSheet, ProductRow, totalOf, type BuyPick } from "../components/BuyBar";
 import { Garment } from "../components/Garment";
 import { Illustration } from "../components/Illustration";
 import { TreksMap } from "../components/Maps";
-import { Sheet } from "../components/Sheet";
 import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
-import { api, buyUrl } from "../lib/api";
+import { api } from "../lib/api";
 import { money } from "../lib/format";
 import type { Item, TrailCard, TrailDifficulty, TrailWear } from "../lib/types";
 
@@ -227,19 +226,7 @@ export default function Trails() {
         ))}
       </div>
 
-      <Sheet open={buyOpen} onClose={() => setBuyOpen(false)} title={sel ? `Your kit for ${sel.name}` : "Your kit"}>
-        <ul className="mf-wear mf-buylist">
-          {picks.map((p) => (
-            <li key={p.slot} className="get">
-              <Garment slot={p.slot} />
-              <span className="mf-nm"><span>{p.item.brand} {p.item.name}</span><small>{p.label} · {p.item.merchant}</small></span>
-              {p.item.image_url && <img src={p.item.image_url} alt="" loading="lazy" referrerPolicy="no-referrer" />}
-              <a className="mf-btn go sm" href={buyUrl(p.item.id)} target="_blank" rel="sponsored noopener">{money(p.item.price, p.item.currency)} ↗</a>
-            </li>
-          ))}
-        </ul>
-        <p className="mf-fine">Each piece opens its shop. Prices from the shops; we may earn a commission. Total {money(totalOf(picks), cur)}.</p>
-      </Sheet>
+      <KitSheet open={buyOpen} onClose={() => setBuyOpen(false)} title={sel ? `Your kit for ${sel.name}` : "Your kit"} picks={picks} />
     </main>
   );
 }
