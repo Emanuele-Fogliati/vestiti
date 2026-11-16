@@ -191,3 +191,14 @@ def test_a_gateway_town_shows_its_sight_unless_the_trip_also_visits_the_sight():
     assert ids("Aguas Calientes") == ["pe-machu-picchu"]
     assert ids("Aguas Calientes", "Machu Picchu") == ["pe-aguas-calientes", "pe-machu-picchu"]
     assert ids("Puno", "Uros Islands") == ["pe-puno", "pe-uros-titicaca"]
+
+
+def test_a_drawing_says_what_the_place_is(client):
+    """Manu 2026-11-16: every drawing on the map opens a small card saying what the place is:
+    a Wikipedia sentence where we have one (credited), else what the drawing shows."""
+    r = client.get("/api/art/landmarks/pe-machu-picchu/about").json()
+    assert r["id"] == "pe-machu-picchu" and r["country"] == "PE" and r["shows"]
+    assert (r["text"] is None) == (r["source"] is None)
+    if r["source"]:
+        assert r["source"]["url"].startswith("https://en.wikipedia.org/wiki/")
+    assert client.get("/api/art/landmarks/xx-nowhere/about").status_code == 404

@@ -1,4 +1,5 @@
 import { loadLandmark } from "./landmarks";
+import { openArt } from "./artcard";
 import type { StopArt } from "./types";
 
 /** A stop on a map as its own drawing (Manu 2026-11-16: "al posto dei pallini neri mettici
@@ -21,6 +22,9 @@ export function artPin(art: StopArt | null | undefined, n: number | null, name: 
     k.textContent = String(n);
     b.appendChild(k);
   }
+  // every drawing on every map opens its small card, whatever else the map does with the tap
+  const id = art.id;
+  b.addEventListener("click", () => openArt({ id, name: name || art.label || "" }));
   loadLandmark(art.id).then((s) => {
     if (s) svg.innerHTML = s;
     b.classList.remove("wait");

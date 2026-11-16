@@ -663,3 +663,43 @@ a.mf-btn{text-decoration:none}
   .ip-bag-in{padding:0 16px}
   .ip-bag-h h2 span{display:block;margin:6px 0 0}
 }
+
+/* ---------- the card of a drawing tapped on a map: small, on the right, the drawing big ---------- */
+.artcard{position:fixed;z-index:40;right:64px;top:84px;width:300px;background:#FFFFFF;border-radius:20px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.06),0 16px 40px rgba(0,0,0,.18);animation:artcard-in .22s cubic-bezier(.2,.8,.2,1)}
+@keyframes artcard-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.artcard .mf-x{position:absolute;right:10px;top:10px;z-index:2}
+.artcard-pic{height:190px;background:var(--surface-2)}
+.artcard-pic .thumb,.artcard-pic svg{width:100%;height:100%;display:block;margin:0;border-radius:0}
+.artcard-in{padding:12px 16px 14px;display:grid;gap:4px}
+.artcard-in h3{margin:0;font-weight:400;font-size:24px;letter-spacing:-.03em;line-height:1.08}
+.artcard-t{margin:2px 0 0;font-size:13.5px;line-height:1.4;color:var(--ink-2)}
+.artcard-t.wait{display:grid;gap:6px}
+.artcard-t.wait span{display:block;height:10px;border-radius:5px;background:var(--surface-2)}
+.artcard-t.wait span:last-child{width:60%}
+.artcard-src{font-size:11.5px;color:var(--ink-3);text-decoration:none}
+.artcard-src:hover{text-decoration:underline}
+.about-line{font-size:13px}
+@media (max-width:899px){
+  .artcard{left:12px;right:12px;top:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));width:auto;display:grid;grid-template-columns:132px minmax(0,1fr)}
+  .artcard-pic{height:auto;min-height:120px}
+  .artcard-in{padding:10px 36px 12px 12px}
+  .artcard-in h3{font-size:20px}
+  .artcard-t{font-size:13px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+}
+@media (prefers-reduced-motion:reduce){.artcard{animation:none}}
+
+/* Trips: every trip on the globe until one is picked; the pill gives the whole world back */
+.trips-h{margin:6px 0 2px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.trips-all{left:calc(50% + 230px);transform:translateX(-50%);top:20px;display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border:0;border-radius:999px;background:#FFFFFF;color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.trips-all:hover{background:var(--surface-2)}
+/* the Walks list with nothing picked: one screen, nothing below (Manu 2026-11-16) */
+@media (min-width:900px){
+  main.trk.ip-one.ip-solo{height:calc(100svh - 64px);overflow:hidden}
+  .ip-solo .ip-top{height:calc(100svh - 64px)}
+}
+/* a walk's clothes (WalkWear): the weather at the start, as a row of small facts */
+.ww-months{max-width:560px;margin:0 0 18px}
+.ww-wx{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 18px;padding:0}
+.ww-wx li{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:14px;background:var(--surface-2, #F3F3F1);min-width:96px}
+.ww-wx small{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2)}
+.ww-wx b{font:500 16px var(--f-mono, inherit);color:var(--ink)}
