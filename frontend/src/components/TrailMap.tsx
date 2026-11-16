@@ -2,12 +2,15 @@ import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
 import { baseStyle, blockPins, mapColors, phoneGestures, reducedMotion, worldZoom } from "../lib/worldmap";
 import { addContours } from "../lib/contours";
-import type { TrailPoint } from "../lib/types";
+import { artPin } from "../lib/artpin";
+import type { TrailPoint, TrailSight } from "../lib/types";
 
 /** One trail on the map: its path, every other footpath around it (so you see the junctions),
  *  and its key points numbered in walking order. Tap a number to zoom in. */
-export default function TrailMap({ line, points, focus, onFocus, inset }: {
+export default function TrailMap({ line, points, focus, onFocus, inset, arts = [] }: {
   line: [number, number][]; points: TrailPoint[]; focus: number | null; onFocus: (i: number | null) => void;
+  /** the drawings of the places you see on the way, each on the place itself (Manu 2026-11-16) */
+  arts?: TrailSight[];
   /** room the floating panels take over the map (the map-first trek page) */
   inset?: { top: number; right: number; bottom: number; left: number };
 }) {
@@ -15,7 +18,9 @@ export default function TrailMap({ line, points, focus, onFocus, inset }: {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [failed, setFailed] = useState(false);
-  const coords: [number, number][] = [...line, ...points.map((p): [number, number] => [p.lon, p.lat])];
+  const coords: [number, number][] = [...line, ...points.map((p): [number, number] => [p.lon, p.lat]),
+    ...arts.map((a): [number, number] => [a.lon, a.lat])];
+  const artKey = arts.map((a) => a.id).join("|");
 
   useEffect(() => {
     const el = box.current;
@@ -68,6 +73,11 @@ export default function TrailMap({ line, points, focus, onFocus, inset }: {
         map.addLayer({ id: "trail", type: "line", source: "trail", layout: { "line-join": "round", "line-cap": "round" },
           paint: { "line-color": "#D2452B", "line-width": 3.5 } });
       }
+      // the drawings, under the numbers: one per place, where the place is
+      for (const a of arts) {
+        const b = artPin(a.art, null, a.name);
+        if (b) markers.push(new maplibregl.Marker({ element: b, anchor: "bottom", offset: [0, -6] }).setLngLat([a.lon, a.lat]).addTo(map));
+      }
       blockPins(map, points.map((p) => [p.lon, p.lat]));
       points.forEach((p, i) => {
         const b = document.createElement("button");
@@ -86,7 +96,7 @@ export default function TrailMap({ line, points, focus, onFocus, inset }: {
     ro.observe(el);
     return () => { ro.disconnect(); for (const m of markers) m.remove(); map.remove(); mapRef.current = null; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [line, points]);
+  }, [line, points, artKey]);
 
   useEffect(() => {
     const map = mapRef.current;
