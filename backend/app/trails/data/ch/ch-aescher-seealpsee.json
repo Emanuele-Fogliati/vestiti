@@ -1,0 +1,80 @@
+{
+ "id": "ch-aescher-seealpsee",
+ "country": "CH",
+ "name": "Seealpsee, Aescher and Ebenalp",
+ "base": "Appenzell",
+ "region": "Alpstein",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3.5,
+  4.5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "From Wasserauen to the green Seealpsee, then up to the Aescher, a mountain inn built into a cliff, and through a cave chapel to Ebenalp.",
+ "book": "Free; cable car down from Ebenalp. Train to Wasserauen from Appenzell.",
+ "water": "Inns at the lake, Aescher and Ebenalp.",
+ "dangers": [
+  "Steep path to the Aescher, slippery when wet."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Seealpsee",
+  "https://en.wikipedia.org/wiki/Ebenalp"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 3,
+  "relax": 4,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Wasserauen",
+   "lat": 47.288,
+   "lon": 9.43,
+   "role": "start",
+   "note": "The end of the Appenzell railway."
+  },
+  {
+   "id": "seealpsee",
+   "name": "Seealpsee",
+   "lat": 47.27,
+   "lon": 9.4,
+   "role": "point",
+   "note": "A green lake under the Säntis cliffs."
+  },
+  {
+   "id": "aescher",
+   "name": "Aescher",
+   "lat": 47.284,
+   "lon": 9.415,
+   "role": "point",
+   "note": "An inn built under an overhanging cliff."
+  },
+  {
+   "id": "goal",
+   "name": "Ebenalp",
+   "lat": 47.285,
+   "lon": 9.412,
+   "role": "goal",
+   "note": "A grassy top with the cable car down."
+  }
+ ]
+}

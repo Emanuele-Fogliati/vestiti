@@ -1,0 +1,101 @@
+{
+ "id": "tz-kilimanjaro-lemosho",
+ "country": "TZ",
+ "name": "Kilimanjaro by the Lemosho route",
+ "base": "Moshi",
+ "region": "Kilimanjaro National Park",
+ "kind": "multiday",
+ "days": 8,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  55,
+  68
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The long western way: two days of forest, a walk across the whole Shira plateau, Lava Tower and the Barranco Wall, with the most time to get used to the height.",
+ "book": "Kilimanjaro National Park fees per day, paid through a licensed operator: climbing without a registered guide and porters is not allowed. Most climbs start from Moshi. Transfer to Londorossi Gate takes 3-4 hours from Moshi.",
+ "water": "Porters boil stream water at every camp.",
+ "dangers": [
+  "Altitude: the summit is at 5,895 m. Headache, vomiting, confusion or breathlessness at rest: go down at once.",
+  "Summit night starts around midnight, -10 to -20 C with wind at the crater rim.",
+  "Afternoon storms and hail in the rainy months (March to May, November)."
+ ],
+ "turnaround": "Be at Stella Point by 07:00 on summit night, or turn back.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Kilimanjaro",
+  "https://www.tanzaniaparks.go.tz/national_parks/kilimanjaro-national-park",
+  "https://www.openstreetmap.org/relation/8737241"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 2,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lemosho Gate",
+   "lat": -3.0029,
+   "lon": 37.1469,
+   "role": "start",
+   "note": "A remote trailhead in the western forest, where colobus monkeys live."
+  },
+  {
+   "id": "shira",
+   "name": "Shira 2 Camp",
+   "lat": -3.0545,
+   "lon": 37.2762,
+   "role": "point",
+   "note": "On the Shira plateau, a wide high plain of heather at 3,800 m, the collapsed crater of the oldest volcano."
+  },
+  {
+   "id": "lava-tower",
+   "name": "Lava Tower",
+   "lat": -3.0684,
+   "lon": 37.3266,
+   "role": "point",
+   "note": "A 90 m volcanic plug at 4,630 m: you climb high and sleep low."
+  },
+  {
+   "id": "barranco",
+   "name": "Barranco Wall",
+   "lat": -3.0958,
+   "lon": 37.3342,
+   "role": "point",
+   "note": "A 250 m rock wall you scramble up with hands, above Barranco Camp."
+  },
+  {
+   "id": "goal",
+   "name": "Uhuru Peak",
+   "lat": -3.0764,
+   "lon": 37.354,
+   "role": "goal",
+   "note": "The 5,895 m summit and its glaciers.",
+   "scene": "tz-uhuru-peak"
+  },
+  {
+   "id": "mweka",
+   "name": "Mweka Gate",
+   "lat": -3.2197,
+   "lon": 37.3412,
+   "role": "point",
+   "note": "The way down through the forest."
+  }
+ ]
+}

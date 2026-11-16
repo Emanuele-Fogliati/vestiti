@@ -1,0 +1,67 @@
+{
+ "id": "bo-isla-del-sol",
+ "country": "BO",
+ "name": "Isla del Sol: Inca ruins and Yumani",
+ "base": "Copacabana",
+ "region": "Lake Titicaca",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1,
+  2
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Along the island where the Inca placed the birth of the Sun, from the Pilko Kaina temple up through terraces to Yumani, the blue lake and the white Cordillera Real all round.",
+ "book": "Boat from Copacabana (1.5 h). Each community charges a small entry ticket. The north of the island (Cha'llapampa, Chincana) has been closed to visitors for years at a time by a dispute between villages: ask in Copacabana.",
+ "water": "Shops in Yumani.",
+ "dangers": [
+  "Altitude: La Paz is at 3,600 m; spend two or three days there before any hike.",
+  "Strong sun on the water: hat and sunscreen."
+ ],
+ "turnaround": "Keep the last boat back to Copacabana in mind (mid afternoon).",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Isla_del_Sol",
+  "https://en.wikivoyage.org/wiki/Isla_del_Sol"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 5,
+  "relax": 4,
+  "history": 5,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Pilko Kaina",
+   "lat": -16.0487,
+   "lon": -69.1442,
+   "role": "start",
+   "note": "Inca stone temple on the south-east shore."
+  },
+  {
+   "id": "goal",
+   "name": "Yumani",
+   "lat": -16.035,
+   "lon": -69.1499,
+   "role": "goal",
+   "note": "The hilltop village of the island, the lake on both sides.",
+   "scene": "bo-lake-titicaca"
+  }
+ ]
+}

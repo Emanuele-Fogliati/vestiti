@@ -1,0 +1,1463 @@
+{
+ "_doc": "Switzerland, written by hand for the recommended trips (Manu, 2026-11-16): the cities, the lakes, the Jungfrau region, Zermatt, Aletsch, the Engadin and Ticino, in summer, winter and the seasons between. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "ch-zurich",
+   "names": [
+    "Zurich",
+    "Zürich",
+    "Uetliberg"
+   ],
+   "country": "CH",
+   "lat": 47.377,
+   "lon": 8.542,
+   "radius_km": 15,
+   "season": "Warm summers (25 °C), cold grey winters near freezing; the lake swimming baths open June to August.",
+   "sleep": "The old town (Niederdorf) or by the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Zurich",
+    "https://en.wikipedia.org/wiki/Grossm%C3%BCnster",
+    "https://en.wikipedia.org/wiki/Uetliberg"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Old town, Grossmünster and the lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Lanes of guild houses on both banks of the Limmat, the twin towers of the Grossmünster where Zwingli preached, the Lindenhof and the lakeside.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "uetliberg",
+     "name": "Uetliberg",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A train from the centre to the city's own mountain, 871 m, for the lake and on clear days the whole chain of the Alps.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 871
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "kunsthaus",
+     "name": "Kunsthaus Zürich",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Switzerland's largest art museum: Giacometti, Munch, Monet and the Swiss painters.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ch-lucerne",
+   "names": [
+    "Lucerne",
+    "Luzern",
+    "Rigi",
+    "Pilatus",
+    "Lake Lucerne"
+   ],
+   "country": "CH",
+   "lat": 47.05,
+   "lon": 8.31,
+   "radius_km": 25,
+   "season": "The lake boats run all year (fewer in winter). Pilatus's cogwheel railway runs about May to November; Rigi's trains run all year.",
+   "sleep": "The old town by the Reuss or the lakefront.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lucerne",
+    "https://en.wikipedia.org/wiki/Kapellbr%C3%BCcke",
+    "https://en.wikipedia.org/wiki/Pilatus_Railway",
+    "https://en.wikipedia.org/wiki/Rigi"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Chapel Bridge, the old town and the Lion Monument",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A covered wooden bridge of 1333 with painted panels, painted facades on the old squares, and the dying lion cut into the rock for the Swiss Guards of 1792.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "rigi",
+     "name": "Rigi, the queen of the mountains",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "By lake boat to Vitznau and Europe's first mountain railway (1871) to Rigi Kulm, 1,798 m, over lakes on three sides; walk part of the way down.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1798
+     },
+     "trail": "ch-rigi",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view",
+      "walk"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "pilatus",
+     "name": "Pilatus by the world's steepest cogwheel railway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The Golden Round Trip: boat to Alpnachstad, the 48% cogwheel line to 2,128 m, cable cars down to Kriens.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "boat"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ch-grindelwald",
+   "names": [
+    "Grindelwald",
+    "First",
+    "Bachalpsee",
+    "Kleine Scheidegg",
+    "Jungfraujoch",
+    "Eiger",
+    "Kandersteg",
+    "Oeschinensee"
+   ],
+   "country": "CH",
+   "lat": 46.6245,
+   "lon": 8.0369,
+   "radius_km": 20,
+   "season": "Summer walking about mid-June to mid-October; Bachalpsee and the Eiger Trail are snow-free from about July. December to March for skiing and sledging; Jungfraujoch is open all year.",
+   "sleep": "Grindelwald village, facing the Eiger's north face.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Grindelwald",
+    "https://en.wikipedia.org/wiki/Jungfraujoch",
+    "https://en.wikipedia.org/wiki/Bachalpsee",
+    "https://en.wikipedia.org/wiki/Oeschinen_Lake",
+    "https://en.wikipedia.org/wiki/Jungfrau_region"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "bachalpsee",
+     "name": "First and the Bachalpsee",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Gondola to First, the cliff walk, then an easy walk to a lake that mirrors the Schreckhorn and Finsteraarhorn.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2300
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ch-bachalpsee",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "eiger",
+     "name": "The Eiger Trail",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Right under the 1,800 m north face of the Eiger, from Eigergletscher down to Alpiglen.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2320
+     },
+     "months": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ch-eiger-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    },
+    {
+     "id": "jungfraujoch",
+     "name": "Jungfraujoch, the top of Europe",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book a seat; check the webcam",
+     "why": "Eiger Express and the railway through the Eiger to Europe's highest station at 3,454 m, over the Aletsch glacier.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "sled",
+     "name": "Sledging and winter walks",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Long sled runs from Faulhorn, First or Kleine Scheidegg and prepared winter paths high above the village.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "oeschinensee",
+     "name": "Oeschinensee",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Kandersteg (about 1 h 15 min by train via Spiez) a gondola and a walk to a blue lake under 3,000 m walls.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1700
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ch-oeschinensee",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "ch-lauterbrunnen",
+   "names": [
+    "Lauterbrunnen",
+    "Mürren",
+    "Wengen",
+    "Gimmelwald",
+    "Schilthorn",
+    "Trümmelbach Falls",
+    "Staubbach Falls"
+   ],
+   "country": "CH",
+   "lat": 46.59,
+   "lon": 7.91,
+   "radius_km": 8,
+   "season": "A valley of 72 waterfalls, fullest in June. Trümmelbach Falls open about April to November; the Schilthorn all year.",
+   "sleep": "Lauterbrunnen in the valley, or car-free Mürren or Wengen above it.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lauterbrunnen",
+    "https://en.wikipedia.org/wiki/Tr%C3%BCmmelbach_Falls",
+    "https://en.wikipedia.org/wiki/Schilthorn",
+    "https://en.wikipedia.org/wiki/Jungfrau_region"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "valley",
+     "name": "Lauterbrunnen valley walk",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Along the floor of the U-shaped valley under walls of 300 m and the Staubbach falls, to the Trümmelbach falls inside the mountain.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1300
+     },
+     "arrive": true,
+     "trail": "ch-lauterbrunnen-valley",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "schilthorn",
+     "name": "Mürren and the Schilthorn",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up past the car-free village of Mürren to the revolving restaurant of Piz Gloria at 2,970 m, from a James Bond film, facing Eiger, Mönch and Jungfrau.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Mürren"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ch-zermatt",
+   "names": [
+    "Zermatt",
+    "Matterhorn",
+    "Gornergrat",
+    "Sunnegga",
+    "Hörnlihütte"
+   ],
+   "country": "CH",
+   "lat": 46.0207,
+   "lon": 7.7491,
+   "radius_km": 15,
+   "season": "Walking about late June to early October (the high paths from July); skiing November to April, with glacier skiing in summer. The Gornergrat railway runs all year.",
+   "sleep": "The car-free village; the old larch barns of Hinterdorf.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Zermatt",
+    "https://en.wikipedia.org/wiki/Gornergrat_Railway",
+    "https://en.wikipedia.org/wiki/Matterhorn",
+    "https://en.wikipedia.org/wiki/Matterhorn_Glacier_Paradise"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "gornergrat",
+     "name": "Gornergrat railway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A cogwheel train to 3,089 m, facing the Matterhorn and 29 peaks over 4,000 m around the Gorner glacier.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "five-lakes",
+     "name": "The Five Lakes walk",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Blauherd past five small lakes, three of them mirroring the Matterhorn on a still morning.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2600
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "trail": "ch-five-lakes-zermatt",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "hornli",
+     "name": "Up to the Hörnli hut",
+     "hours": "6-7 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Schwarzsee up the Matterhorn's own ridge to the hut at 3,260 m where the climbers start.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 3260
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "trail": "ch-hornlihutte",
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "no"
+    },
+    {
+     "id": "glacier-paradise",
+     "name": "Matterhorn Glacier Paradise",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Europe's highest cable car station at 3,883 m, an ice palace in the glacier, and skiing even in summer.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Klein Matterhorn"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing under the Matterhorn",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the highest ski areas of the Alps, linked to Cervinia in Italy.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ch-aletsch-glacier",
+   "names": [
+    "Aletsch Glacier",
+    "Riederalp",
+    "Bettmeralp",
+    "Fiescheralp",
+    "Eggishorn",
+    "Moosfluh"
+   ],
+   "country": "CH",
+   "lat": 46.5,
+   "lon": 8.03,
+   "radius_km": 15,
+   "season": "The car-free villages above the glacier: walking about late June to mid-October, skiing December to April.",
+   "sleep": "Riederalp or Bettmeralp, reached by cable car from the Rhône valley.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Riederalp",
+    "https://en.wikipedia.org/wiki/Aletsch_Glacier",
+    "https://en.wikipedia.org/wiki/Swiss_Alps_Jungfrau-Aletsch"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "panorama",
+     "name": "Along the Aletsch glacier",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Moosfluh on the ridge above the longest glacier of the Alps, 20 km of ice curving down from the Jungfrau.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2600
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Aletsch Glacier"
+     ],
+     "trail": "ch-aletsch-panorama",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "eggishorn",
+     "name": "Eggishorn",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Cable cars from Fiescheralp to 2,869 m, with the whole glacier below and the 4,000 m peaks of Valais beyond.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ch-lausanne",
+   "names": [
+    "Lausanne",
+    "Lavaux",
+    "Montreux",
+    "Vevey",
+    "Chillon",
+    "Lake Geneva"
+   ],
+   "country": "CH",
+   "lat": 46.52,
+   "lon": 6.63,
+   "radius_km": 25,
+   "season": "Mild by the lake; the vineyards are greenest May to September and harvested in late September and October.",
+   "sleep": "Lausanne, or Montreux and Vevey along the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lausanne",
+    "https://en.wikipedia.org/wiki/Lavaux",
+    "https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Chillon"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "lavaux",
+     "name": "Walk the Lavaux vineyard terraces",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Stone-walled terraces on UNESCO's list falling to Lake Geneva, between wine villages where you can taste in the cellars.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 600
+     },
+     "sights": [
+      "Lavaux"
+     ],
+     "trail": "ch-lavaux",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "food",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "chillon",
+     "name": "Château de Chillon and Montreux",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A medieval castle on a rock in the lake that Byron wrote about, and the promenade of Montreux with Freddie Mercury's statue.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "lausanne",
+     "name": "Lausanne's cathedral and the Olympic Museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A Gothic cathedral where a watchman still calls the hours at night, and the Olympic Museum on the lakefront at Ouchy.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ch-geneva",
+   "names": [
+    "Geneva",
+    "Genève"
+   ],
+   "country": "CH",
+   "lat": 46.2,
+   "lon": 6.15,
+   "radius_km": 15,
+   "season": "Mild by the lake, grey and cold in winter with the bise wind.",
+   "sleep": "Near the station or the old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Geneva",
+    "https://en.wikipedia.org/wiki/Jet_d%27Eau",
+    "https://en.wikipedia.org/wiki/CERN"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Old town, the Jet d'Eau and the lakefront",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "St Pierre cathedral where Calvin preached, the lanes of the old town and the 140 m fountain on the lake.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "cern",
+     "name": "CERN Science Gateway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Free exhibitions on the particle physics of the lab that built the Large Hadron Collider and invented the web.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ch-bern",
+   "names": [
+    "Bern",
+    "Berne"
+   ],
+   "country": "CH",
+   "lat": 46.95,
+   "lon": 7.45,
+   "radius_km": 10,
+   "season": "Warm summers when locals float down the Aare; cold winters.",
+   "sleep": "In the old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bern",
+    "https://en.wikipedia.org/wiki/Old_City_(Bern)",
+    "https://en.wikipedia.org/wiki/Zytglogge"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Bern's arcades and the Zytglogge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A UNESCO old town on a loop of the green Aare, 6 km of stone arcades, the astronomical clock tower, the bear park and Einstein's flat.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "aare",
+     "name": "Swim down the Aare",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "In summer the Bernese walk upstream and float back to the Marzili baths below the parliament.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "x-ch-appenzell",
+   "names": [
+    "Appenzell",
+    "Ebenalp",
+    "Aescher",
+    "Seealpsee",
+    "Säntis"
+   ],
+   "country": "CH",
+   "lat": 47.331,
+   "lon": 9.409,
+   "radius_km": 15,
+   "season": "Walking May to October; the Aescher guesthouse opens about May to October.",
+   "sleep": "Appenzell village or Wasserauen.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Appenzell",
+    "https://en.wikipedia.org/wiki/Aescher",
+    "https://en.wikipedia.org/wiki/Seealpsee"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "aescher",
+     "name": "Ebenalp, the Aescher cliff inn and the Seealpsee",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Cable car to Ebenalp, the wooden inn built into the cliff face, then down to a green lake.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1640
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ch-aescher-seealpsee",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "village",
+     "name": "Appenzell village",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Painted wooden houses, cheese and herbal liqueur in the heart of Switzerland's most traditional canton.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ch-st-moritz",
+   "names": [
+    "St. Moritz",
+    "Engadin",
+    "Muottas Muragl",
+    "Diavolezza",
+    "Pontresina"
+   ],
+   "country": "CH",
+   "lat": 46.4908,
+   "lon": 9.8355,
+   "radius_km": 25,
+   "season": "At 1,800 m: sunny all year. Skiing and the frozen-lake events December to March; walking June to October.",
+   "sleep": "St. Moritz or quieter Pontresina.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/St._Moritz",
+    "https://en.wikipedia.org/wiki/Bernina_Railway",
+    "https://en.wikipedia.org/wiki/Rhaetian_Railway_in_the_Albula_/_Bernina_Landscapes"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "bernina",
+     "name": "The Bernina Express",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Seat reservation for the panorama cars",
+     "why": "The UNESCO railway over the Bernina pass at 2,253 m, past glaciers, down the spiral viaduct of Brusio to Tirano in Italy.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "muottas",
+     "name": "Muottas Muragl",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A funicular to the classic view down the chain of Engadin lakes; a high path to the Segantini hut in summer.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2450
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing in the Engadin",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Corviglia and Diavolezza, sun-soaked slopes in the high valley where winter tourism began in 1864.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ch-lugano",
+   "names": [
+    "Lugano",
+    "Monte San Salvatore",
+    "Monte Brè",
+    "Gandria"
+   ],
+   "country": "CH",
+   "lat": 46.0037,
+   "lon": 8.9511,
+   "radius_km": 15,
+   "season": "The Swiss Mediterranean: the mildest of Switzerland, with palms and camellias by the lake.",
+   "sleep": "By the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lugano",
+    "https://en.wikipedia.org/wiki/Monte_San_Salvatore"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "lake",
+     "name": "Lakefront, Gandria and the olive trail",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Italian-speaking lake town's arcades, then a path through olive groves to the old fishing village of Gandria, back by boat.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "boat",
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "salvatore",
+     "name": "Monte San Salvatore",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A funicular to 912 m over the arms of Lake Lugano and, on clear days, the Matterhorn and Monte Rosa.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  }
+ ]
+}

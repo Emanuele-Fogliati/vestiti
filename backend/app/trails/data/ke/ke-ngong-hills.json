@@ -1,0 +1,66 @@
+{
+ "id": "ke-ngong-hills",
+ "country": "KE",
+ "name": "Ngong Hills ridge walk",
+ "base": "Nairobi",
+ "region": "Ngong Hills Forest",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Along the knuckles of the Ngong Hills, the ridge Karen Blixen saw from her farm, between Nairobi and the Rift Valley.",
+ "book": "Kenya Forest Service ticket at the gate; a ranger escort is advised.",
+ "water": "Carry 2 litres.",
+ "dangers": [
+  "Windy and exposed ridge.",
+  "Walk with a ranger: robberies have happened."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ngong_Hills"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 2,
+  "relax": 3,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ngong Hills gate",
+   "lat": -1.3743,
+   "lon": 36.642,
+   "role": "start",
+   "note": "The forest station above the town of Ngong."
+  },
+  {
+   "id": "goal",
+   "name": "Lamwia peak",
+   "lat": -1.4109,
+   "lon": 36.6329,
+   "role": "goal",
+   "note": "The highest knuckle of the ridge, 2,460 m."
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "id": "ma-ait-benhaddou-granary",
+ "country": "MA",
+ "name": "Ait Benhaddou up to the granary",
+ "base": "Aït Benhaddou",
+ "region": "Ouarzazate",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Across the river and up the lanes of a fortified mud village, a World Heritage site and film set, to the old granary at the top over the desert road.",
+ "book": "Small fee to enter some houses.",
+ "water": "Cafes at the bottom.",
+ "dangers": [
+  "Steep uneven steps.",
+  "Heat from June to September: walk early, carry 2-3 litres."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/A%C3%AFt_Benhaddou"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 5,
+  "relax": 4,
+  "history": 5,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Aït Benhaddou village",
+   "lat": 31.048,
+   "lon": -7.13,
+   "role": "start",
+   "note": "The new village across the river."
+  },
+  {
+   "id": "goal",
+   "name": "Aït Benhaddou granary",
+   "lat": 31.047,
+   "lon": -7.129,
+   "role": "goal",
+   "note": "The ruined granary at the top of the ksar.",
+   "scene": "ma-ait-benhaddou"
+  }
+ ]
+}

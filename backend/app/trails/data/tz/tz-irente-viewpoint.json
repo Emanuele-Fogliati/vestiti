@@ -1,0 +1,67 @@
+{
+ "id": "tz-irente-viewpoint",
+ "country": "TZ",
+ "name": "Lushoto to Irente viewpoint",
+ "base": "Lushoto",
+ "region": "Usambara Mountains",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  3.5,
+  4.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Through farms and forest of the Usambara Mountains to a cliff edge 1,000 m above the Maasai plains.",
+ "book": "Village fee; local guides from the Lushoto tourist office.",
+ "water": "A farm sells cheese, bread and drinks on the way.",
+ "dangers": [
+  "Unfenced cliff at the viewpoint."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Usambara_Mountains",
+  "https://en.wikivoyage.org/wiki/Lushoto"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 3,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lushoto",
+   "lat": -4.7951,
+   "lon": 38.2905,
+   "role": "start",
+   "note": "An old German hill station in the Usambara mountains."
+  },
+  {
+   "id": "goal",
+   "name": "Irente Viewpoint",
+   "lat": -4.8035,
+   "lon": 38.2574,
+   "role": "goal",
+   "note": "A rock edge over the plains far below.",
+   "scene": "tz-usambara-mountains"
+  }
+ ]
+}

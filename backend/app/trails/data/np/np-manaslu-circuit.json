@@ -1,0 +1,93 @@
+{
+ "id": "np-manaslu-circuit",
+ "country": "NP",
+ "name": "Manaslu Circuit over Larkya La",
+ "base": "Kathmandu",
+ "region": "Manaslu Conservation Area",
+ "kind": "multiday",
+ "days": 12,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  65,
+  80
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Round the eighth-highest mountain on Earth, up the gorge of the Budhi Gandaki into Tibetan villages and over the 5,106 m Larkya La, with far fewer people than the Annapurna.",
+ "book": "Restricted area: Manaslu Restricted Area Permit, MCAP and ACAP permits, only through a licensed agency, with a licensed guide and at least two trekkers. Jeep from Kathmandu to Machha Khola (8-9 h).",
+ "water": "Teahouses all the way, simpler than on the Annapurna.",
+ "dangers": [
+  "Larkya La at 5,106 m: rest days at Samagaon and Samdo.",
+  "Long 8-10 h pass day from Dharamsala: leave by 04:00.",
+  "Landslides in the lower gorge."
+ ],
+ "turnaround": "Do not leave Dharamsala for the pass in a snowstorm, or later than 05:00.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Manaslu",
+  "https://www.openstreetmap.org/relation/1328173",
+  "https://ntnc.org.np/project/manaslu-conservation-area-project"
+ ],
+ "osm": 1328173,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 4,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Machha Khola",
+   "lat": 28.21404,
+   "lon": 84.83441,
+   "role": "start",
+   "note": "A village in the Budhi Gandaki gorge where the jeep road ends."
+  },
+  {
+   "id": "namrung",
+   "name": "Namrung",
+   "lat": 28.54506,
+   "lon": 84.76788,
+   "role": "point",
+   "note": "The first Tibetan-style village, among barley fields and mani walls.",
+   "night": true
+  },
+  {
+   "id": "samagaon",
+   "name": "Samagaon",
+   "lat": 28.58467,
+   "lon": 84.64404,
+   "role": "point",
+   "note": "A big village at 3,530 m under Manaslu, with Pungyen gompa and Birendra lake nearby.",
+   "night": true
+  },
+  {
+   "id": "larkya",
+   "name": "Larkya La",
+   "lat": 28.66392,
+   "lon": 84.52031,
+   "role": "point",
+   "note": "The 5,106 m pass of prayer flags, glaciers and ice peaks all round."
+  },
+  {
+   "id": "goal",
+   "name": "Dharapani",
+   "lat": 28.519,
+   "lon": 84.35838,
+   "role": "goal",
+   "note": "On the Marsyangdi side, where the circuit joins the Annapurna road."
+  }
+ ]
+}

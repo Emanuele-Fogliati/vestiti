@@ -1,0 +1,2400 @@
+{
+ "_doc": "Norway, written by hand for the recommended trips (Manu, 2026-11-16): summer in the fjords and Lofoten, winter for the northern lights in the north. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "no-oslo",
+   "names": [
+    "Oslo",
+    "Bygdøy",
+    "Holmenkollen"
+   ],
+   "country": "NO",
+   "lat": 59.914,
+   "lon": 10.752,
+   "radius_km": 20,
+   "season": "June to August are long and mild (20-22 °C, light until 23:00). December to February are dark and below freezing, with snow for the ski trails above the city.",
+   "sleep": "The centre between the harbour (Aker Brygge) and Karl Johans gate; Grünerløkka for cafés.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Oslo",
+    "https://en.wikipedia.org/wiki/Vigeland_installation",
+    "https://en.wikipedia.org/wiki/Fram_Museum",
+    "https://en.wikipedia.org/wiki/Munch_Museum"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "harbour",
+     "name": "Opera roof, Akershus Fortress and the harbour",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Walk up the sloping marble roof of the Opera House over the fjord, then the medieval fortress on the point and the harbour of Aker Brygge.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Oslo Opera House",
+      "Akershus Fortress"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "vigeland",
+     "name": "Vigeland Park",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Over 200 granite and bronze sculptures by one man, Gustav Vigeland, around the Monolith of 121 bodies; free and open all day.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Vigeland Park"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "bygdoy",
+     "name": "Bygdøy: the Fram and Kon-Tiki museums",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Board the Fram, the wooden ship of Nansen and Amundsen's polar voyages, and see Heyerdahl's balsa raft Kon-Tiki next door; ferry from the City Hall pier in summer, bus all year.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "munch",
+     "name": "MUNCH: The Scream and the painter's life",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The museum on the harbour holds the largest Edvard Munch collection in the world, with versions of The Scream shown in turns.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "holmenkollen",
+     "name": "Holmenkollen ski jump",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Metro line 1 climbs to the ski jump over the city; the ski museum and the jump tower look down on the whole Oslofjord.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Holmenkollen"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-bergen",
+   "names": [
+    "Bergen",
+    "Fløyen",
+    "Ulriken",
+    "Bryggen"
+   ],
+   "country": "NO",
+   "lat": 60.39,
+   "lon": 5.32,
+   "radius_km": 20,
+   "season": "One of Europe's wettest cities: rain on about 200 days a year, mild all year (0-3 °C in winter, 15-18 °C in summer). May to September have the long days.",
+   "sleep": "Near Bryggen and the fish market, or Nordnes for quiet streets.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bergen",
+    "https://en.wikipedia.org/wiki/Bryggen",
+    "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen",
+    "https://en.wikipedia.org/wiki/Ulriken"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "bryggen",
+     "name": "Bryggen and the fish market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The wooden wharf of the Hanseatic merchants, on UNESCO's list, with its leaning alleys and the Hanseatic Museum, then fish soup at the market.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bryggen"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "floyen",
+     "name": "Fløibanen funicular and the lakes on Fløyen",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Eight minutes up to 320 m for the view over the city and its fjords, then forest paths and small lakes on top, and down on foot.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 400
+     },
+     "sights": [
+      "Fløibanen"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "vidden",
+     "name": "Vidden: Ulriken to Fløyen over the mountains",
+     "hours": "6-7 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Bergen's classic ridge walk: up Ulriken by cable car or on foot, then across open mountain above the city to Fløyen.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 650
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-vidden",
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "mostraumen",
+     "name": "Fjord cruise to Mostraumen",
+     "hours": "3.5 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A boat from the fish market into the narrow Osterfjord, close under waterfalls, to the tidal strait of Mostraumen and back.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-flam",
+   "names": [
+    "Flåm",
+    "Aurland",
+    "Gudvangen",
+    "Undredal",
+    "Myrdal",
+    "Nærøyfjord",
+    "Aurlandsfjord"
+   ],
+   "country": "NO",
+   "lat": 60.86,
+   "lon": 7.11,
+   "radius_km": 25,
+   "season": "The fjord boats and the Flåm Railway run all year. May to September for walking; in winter snow lies above the fjord and some upper roads close.",
+   "sleep": "Flåm by the quay, or quieter Aurland 10 km along the fjord.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Fl%C3%A5m",
+    "https://en.wikipedia.org/wiki/Fl%C3%A5m_Line",
+    "https://en.wikipedia.org/wiki/N%C3%A6r%C3%B8yfjord",
+    "https://en.wikipedia.org/wiki/Stegastein"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "naeroyfjord",
+     "name": "Nærøyfjord by boat, Flåm to Gudvangen",
+     "hours": "2 h on the boat",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The narrowest arm of the Sognefjord, on UNESCO's list: 250 m wide in places under walls 1,700 m high, past the farms of Undredal and Dyrdal.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Nærøyfjord"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "railway",
+     "name": "The Flåm Railway to Myrdal and back",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Twenty kilometres and 865 m of climb in an hour, through 20 tunnels and past the Kjosfossen waterfall; one of the steepest normal railways in the world.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Flåm Railway"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "stegastein",
+     "name": "Stegastein viewpoint",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A wooden platform that juts out 650 m above the Aurlandsfjord, a short drive or bus above Aurland.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "aurlandsdalen",
+     "name": "Aurlandsdalen, the valley walk",
+     "hours": "6-7 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Norway's 'Grand Canyon': a valley walk past waterfalls and old summer farms from Østerbø down towards Vassbygdi, bus at both ends.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 900
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-aurlandsdalen",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "kayak",
+     "name": "Kayak on the Aurlandsfjord",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A guided paddle from Flåm on still water under the fjord walls; seals and waterfalls close up.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "no-hardangerfjord",
+   "names": [
+    "Hardangerfjord",
+    "Odda",
+    "Lofthus",
+    "Ullensvang",
+    "Eidfjord",
+    "Tyssedal",
+    "Skjeggedal"
+   ],
+   "country": "NO",
+   "lat": 60.2,
+   "lon": 6.5,
+   "radius_km": 45,
+   "season": "Fruit trees blossom along the fjord in May. Trolltunga is a summer hike, about June to mid-September; outside that only with a guide.",
+   "sleep": "Odda for Trolltunga (the trailhead is above Tyssedal), Lofthus or Eidfjord for the fjord.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Odda",
+    "https://en.wikipedia.org/wiki/Trolltunga",
+    "https://en.wikipedia.org/wiki/V%C3%B8ringsfossen",
+    "https://en.wikipedia.org/wiki/Hardangerfjord"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "trolltunga",
+     "name": "Trolltunga",
+     "hours": "10-12 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "Start before 07:00",
+     "book": "Parking at Skjeggedal or Mågelitopp, book ahead in summer",
+     "why": "The 'troll's tongue', a flat slab of rock jutting 700 m above lake Ringedalsvatnet: one of Norway's hardest famous hikes, about 27 km return.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1180
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-trolltunga",
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "no"
+    },
+    {
+     "id": "voringsfossen",
+     "name": "Vøringsfossen and the edge of Hardangervidda",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A 163 m free fall into the Måbødalen gorge, seen from platforms and a step bridge, by the road up from Eidfjord.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Vøringsfossen"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "orchards",
+     "name": "Orchards and cider farms of Ullensvang",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A quarter of Norway's fruit grows along this fjord: cider and apple juice tastings at farms between Lofthus and Utne.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "no-stavanger",
+   "names": [
+    "Stavanger",
+    "Lysefjord",
+    "Preikestolen",
+    "Jørpeland",
+    "Kjerag"
+   ],
+   "country": "NO",
+   "lat": 58.97,
+   "lon": 5.73,
+   "radius_km": 50,
+   "season": "Mild and wet. Preikestolen and the Lysefjord boats are best May to September; Kjerag's road opens about June to September.",
+   "sleep": "Old Stavanger by the harbour; for Preikestolen, the lodge at the trailhead.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Stavanger",
+    "https://en.wikipedia.org/wiki/Preikestolen",
+    "https://en.wikipedia.org/wiki/Kjeragbolten",
+    "https://en.wikipedia.org/wiki/Lysefjord"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "preikestolen",
+     "name": "Preikestolen, the Pulpit Rock",
+     "hours": "4-5 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "Early or late, to miss the crowds",
+     "book": "",
+     "why": "A flat cliff top 604 m straight above the Lysefjord, about 8 km return with 500 m of climb on stone steps.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 610
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "no-preikestolen",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "lysefjord",
+     "name": "Lysefjord cruise",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "From Stavanger under Preikestolen, past the Hengjanefossen waterfall and the Vagabond's Cave, with the cliff seen from below.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Lysefjord"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "old-town",
+     "name": "Old Stavanger and the harbour",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "About 170 white wooden houses of the 18th and 19th century on cobbled lanes, the best kept in Northern Europe.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "kjerag",
+     "name": "Kjerag and the boulder",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A boulder wedged in a crack 1,000 m above the Lysefjord; a steep route with chains over three ridges from Øygardsstøl, 2.5 h by car.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1090
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-kjeragbolten",
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "no",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "no-loen",
+   "names": [
+    "Loen",
+    "Olden",
+    "Stryn",
+    "Briksdal",
+    "Lovatnet",
+    "Hoven"
+   ],
+   "country": "NO",
+   "lat": 61.87,
+   "lon": 6.85,
+   "radius_km": 25,
+   "season": "June to September. The Skylift runs most of the year, but the walks on top and the glacier arms are summer outings.",
+   "sleep": "Loen by the fjord, or Olden.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Stryn",
+    "https://en.wikipedia.org/wiki/Loen_Skylift",
+    "https://en.wikipedia.org/wiki/Briksdalsbreen",
+    "https://en.wikipedia.org/wiki/Lovatnet"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "briksdal",
+     "name": "Briksdalsbreen glacier",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "An arm of Jostedalsbreen, mainland Europe's biggest glacier, at the end of a path past a roaring waterfall; the ice has shrunk back a long way.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "arrive": true,
+     "trail": "no-briksdalsbreen",
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "skylift",
+     "name": "Loen Skylift to Mount Hoven",
+     "hours": "2-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A cable car from the fjord to 1,011 m in five minutes, then paths on the summit plateau over the Nordfjord.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1011
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "lovatnet",
+     "name": "Lake Lovatnet to Kjenndalsbreen",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A green glacier lake under 1,500 m walls, the road along it to the Kjenndal glacier, and the sites of the 1905 and 1936 rockslide waves.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "no-geiranger",
+   "names": [
+    "Geiranger",
+    "Geirangerfjord",
+    "Hellesylt",
+    "Dalsnibba",
+    "Skageflå"
+   ],
+   "country": "NO",
+   "lat": 62.1,
+   "lon": 7.2,
+   "radius_km": 25,
+   "season": "The fjord boats run all year; the mountain road over Dalsnibba opens about late May to October and Trollstigen about June to October.",
+   "sleep": "Geiranger at the head of the fjord.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Geiranger",
+    "https://en.wikipedia.org/wiki/Geirangerfjord",
+    "https://en.wikipedia.org/wiki/Dalsnibba",
+    "https://en.wikipedia.org/wiki/Seven_Sisters_(waterfall)"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cruise",
+     "name": "Geirangerfjord by boat to Hellesylt",
+     "hours": "1 h each way",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "UNESCO's fjord: the Seven Sisters falls on one side, the Suitor on the other, and abandoned farms on the ledges above the water.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Geirangerfjord",
+      "Seven Sisters Waterfall"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "skageflaa",
+     "name": "Skageflå farm on the cliff",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Up from the fjord (boat to the landing) to a mountain farm perched 250 m above the water, then over to Homlong.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 600
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-skageflaa",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 2,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "dalsnibba",
+     "name": "Dalsnibba and Flydalsjuvet",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A road to 1,500 m with the fjord far below, and on the way down the overhanging rock of Flydalsjuvet.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Dalsnibba",
+      "Flydalsjuvet"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "storseter",
+     "name": "Storseterfossen, walking behind the waterfall",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A path from the village up to a waterfall you can walk behind, with the fjord in view.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 500
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-andalsnes",
+   "names": [
+    "Åndalsnes",
+    "Romsdalen",
+    "Trollstigen",
+    "Rampestreken",
+    "Trollveggen"
+   ],
+   "country": "NO",
+   "lat": 62.57,
+   "lon": 7.69,
+   "radius_km": 25,
+   "season": "Romsdalseggen and Trollstigen are summer only (about June to September). The Rauma Railway runs all year.",
+   "sleep": "Åndalsnes town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/%C3%85ndalsnes",
+    "https://en.wikipedia.org/wiki/Trollstigen",
+    "https://en.wikipedia.org/wiki/Trollveggen",
+    "https://en.wikipedia.org/wiki/Rauma_Line"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "romsdalseggen",
+     "name": "Romsdalseggen ridge",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "Bus to the trailhead in Vengedalen",
+     "why": "A narrow ridge from Vengedalen back down to Åndalsnes, with the Troll Wall and the Romsdalsfjord either side: Norway's finest day walk for many.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1220
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-romsdalseggen",
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "no"
+    },
+    {
+     "id": "rampestreken",
+     "name": "Rampestreken viewpoint",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Sherpa steps from town to a steel platform over the valley and fjord at 550 m, or the gondola up Nesaksla.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 560
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "trollstigen",
+     "name": "Trollstigen road and Trollveggen",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Eleven hairpins up a wall to the viewing platforms over the falls, and on the way the Troll Wall, Europe's tallest vertical rock face.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Trollstigen",
+      "Trollveggen"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "rauma",
+     "name": "The Rauma Railway",
+     "hours": "2.5 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The line from Åndalsnes up Romsdalen to Bjorli and back, past the Troll Wall and over the Kylling bridge.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Rauma Line"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-alesund",
+   "names": [
+    "Ålesund",
+    "Aksla"
+   ],
+   "country": "NO",
+   "lat": 62.47,
+   "lon": 6.15,
+   "radius_km": 20,
+   "season": "Mild and wet on the open coast. May to September for the islands and the boats.",
+   "sleep": "In the Art Nouveau centre by Brosundet.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/%C3%85lesund",
+    "https://en.wikipedia.org/wiki/%C3%85lesund",
+    "https://en.wikipedia.org/wiki/Runde"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "aksla",
+     "name": "Art Nouveau town and Aksla viewpoint",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Rebuilt in stone after the fire of 1904 with towers and turrets, seen whole from Fjellstua after 418 steps up the hill of Aksla.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Ålesund"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "runde",
+     "name": "Runde, the bird island",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "About 100,000 pairs of seabirds nest on the cliffs, puffins from April to August; a walk up from the harbour.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 300
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "no-reine",
+   "names": [
+    "Reine",
+    "Hamnøy",
+    "Å",
+    "Sakrisøy",
+    "Moskenes",
+    "Nusfjord",
+    "Fredvang",
+    "Kvalvika"
+   ],
+   "country": "NO",
+   "lat": 67.93,
+   "lon": 13.09,
+   "radius_km": 30,
+   "season": "Midnight sun about 28 May to 14 July; northern lights September to March; cod fishing and drying racks February to April. The mountain paths are icy in winter.",
+   "sleep": "Rorbuer (red fishermen's cabins) in Reine, Hamnøy or Sakrisøy.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lofoten",
+    "https://en.wikipedia.org/wiki/Reine",
+    "https://en.wikipedia.org/wiki/Nusfjord",
+    "https://en.wikipedia.org/wiki/Kvalvika"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "reinebringen",
+     "name": "Reinebringen",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Nearly 2,000 stone steps laid by Nepali Sherpas up to 448 m, for the famous view over Reine and its fjords.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 450
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-reinebringen",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "kvalvika",
+     "name": "Ryten and Kvalvika beach",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A wild white beach between peaks, seen from the overhang of Ryten 543 m above the Atlantic.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 545
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-ryten-kvalvika",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "beach",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "villages",
+     "name": "Hamnøy, Reine and Å",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Red cabins on stilts, cod drying on wooden racks, and the stockfish museum at Å at the end of the road.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Reine",
+      "Å"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "nusfjord",
+     "name": "Nusfjord fishing village",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of Norway's oldest and best kept fishing villages, with its old general store and cod-liver oil factory.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "aurora",
+     "name": "Northern lights by the fjords",
+     "hours": "2-3 h at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Away from the lights of the villages the aurora shines over peaks and still water; best on clear nights September to March.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-svolvaer",
+   "names": [
+    "Svolvær",
+    "Henningsvær",
+    "Kabelvåg",
+    "Borg",
+    "Trollfjord",
+    "Haukland",
+    "Uttakleiv"
+   ],
+   "country": "NO",
+   "lat": 68.23,
+   "lon": 14.57,
+   "radius_km": 35,
+   "season": "Midnight sun about 28 May to 14 July; northern lights September to March; the cod season February to April.",
+   "sleep": "Svolvær harbour, or a rorbu in Henningsvær.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Svolv%C3%A6r",
+    "https://en.wikipedia.org/wiki/Henningsv%C3%A6r",
+    "https://en.wikipedia.org/wiki/Lofotr_Viking_Museum",
+    "https://en.wikipedia.org/wiki/Trollfjord"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "henningsvaer",
+     "name": "Henningsvær",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A fishing village on skerries, with galleries, cafés and its football pitch on the rocks.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Henningsvær"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "trollfjord",
+     "name": "Trollfjord boat and sea eagles",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A boat into a fjord 100 m wide under walls 1,000 m high, with white-tailed eagles fed close by.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Trollfjord"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "borg",
+     "name": "Lofotr Viking Museum at Borg",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The rebuilt 83 m longhouse of a Viking chief, found by a farmer's plough in 1983.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Lofotr Viking Museum"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "beaches",
+     "name": "Haukland and Uttakleiv beaches",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "White sand and green water under the peaks, joined by an old road around Mannen.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "sights": [
+      "Haukland Beach",
+      "Uttakleiv Beach"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "aurora",
+     "name": "Northern lights",
+     "hours": "2-3 h at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "On clear nights from September to March, from the beaches or a guided chase by minibus.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-senja",
+   "names": [
+    "Senja",
+    "Segla",
+    "Hesten",
+    "Bergsbotn",
+    "Tungeneset",
+    "Hamn i Senja",
+    "Mefjordvær"
+   ],
+   "country": "NO",
+   "lat": 69.3,
+   "lon": 17.3,
+   "radius_km": 50,
+   "season": "Midnight sun late May to late July. The mountain paths are summer only; in winter, northern lights and snow down to the sea.",
+   "sleep": "Hamn i Senja, Mefjordvær or the fishing villages of the north coast; a car is needed.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Senja",
+    "https://en.wikipedia.org/wiki/Senja",
+    "https://en.wikipedia.org/wiki/Segla"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "segla",
+     "name": "Segla",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A fin of rock 639 m straight above the Mefjord, seen best from the neighbouring top of Hesten.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 640
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "no-segla",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "route",
+     "name": "The north coast road: Bergsbotn and Tungeneset",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A National Tourist Route along the outer coast, with platforms over the Bergsfjord and the jagged Devil's Teeth at Tungeneset.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Senja"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "aurora",
+     "name": "Northern lights over the fjords",
+     "hours": "2-3 h at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Few people and little light: on clear nights September to March the aurora over the peaks.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-tromso",
+   "names": [
+    "Tromsø",
+    "Kvaløya",
+    "Fjellheisen",
+    "Storsteinen",
+    "Lyngen"
+   ],
+   "country": "NO",
+   "lat": 69.65,
+   "lon": 18.956,
+   "radius_km": 40,
+   "season": "Polar night about 27 November to 15 January (blue light at midday); northern lights September to early April; whales in the fjords about November to January; midnight sun 20 May to 22 July.",
+   "sleep": "The centre around Storgata and the harbour.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Troms%C3%B8",
+    "https://en.wikipedia.org/wiki/Arctic_Cathedral",
+    "https://en.wikipedia.org/wiki/Fjellheisen",
+    "https://en.wikipedia.org/wiki/Troms%C3%B8"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "aurora",
+     "name": "Northern lights chase",
+     "hours": "6-8 h at night",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book a small-group chase",
+     "why": "Guides drive towards the clear sky, sometimes into Finland, to find the aurora; best September to March.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "fjellheisen",
+     "name": "Fjellheisen cable car and the Arctic Cathedral",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The white triangles of the Arctic Cathedral across the bridge, then the cable car to Storsteinen at 421 m over the city and the island.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Arctic Cathedral"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "whales",
+     "name": "Whale safari",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Orcas and humpbacks follow the herring into the fjords north of Tromsø, by boat from the city.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      11,
+      12,
+      1
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "dogs",
+     "name": "Dog sledding",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Drive your own team of huskies through the snowy valleys of Kvaløya or Lyngen.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kvaloya",
+     "name": "Kvaløya and Sommarøy by car",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Mountains straight out of the sea, white beaches and the fishing island of Sommarøy; midnight sun in summer.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view",
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "no-alta",
+   "names": [
+    "Alta",
+    "Sorrisniva"
+   ],
+   "country": "NO",
+   "lat": 69.97,
+   "lon": 23.27,
+   "radius_km": 30,
+   "season": "Called the town of the northern lights, inland and drier than the coast: September to March for the aurora, December to April for snow.",
+   "sleep": "In town, or the snow hotel at Sorrisniva in winter.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Alta",
+    "https://en.wikipedia.org/wiki/Rock_art_of_Alta",
+    "https://en.wikipedia.org/wiki/Northern_Lights_Cathedral"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "rockart",
+     "name": "The rock carvings of Alta",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Over 6,000 figures of reindeer, boats and hunters cut 2,000 to 7,000 years ago, on UNESCO's list; the outdoor paths are open in summer, the museum all year.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "aurora",
+     "name": "Northern lights",
+     "hours": "3-4 h at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The dry inland sky of Finnmark gives more clear nights than the coast.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "sami",
+     "name": "Reindeer and Sami culture",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Meet reindeer herders, ride a reindeer sled and eat by the fire in a lavvu tent.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "cathedral",
+     "name": "Northern Lights Cathedral",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A titanium spiral of a church, built in 2013 in the shape of the aurora.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 2,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "no-trondheim",
+   "names": [
+    "Trondheim",
+    "Bakklandet",
+    "Nidaros"
+   ],
+   "country": "NO",
+   "lat": 63.43,
+   "lon": 10.4,
+   "radius_km": 15,
+   "season": "Cold, short days in winter (5 hours of light in December), mild summers.",
+   "sleep": "The centre or Bakklandet across the Old Town Bridge.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Trondheim",
+    "https://en.wikipedia.org/wiki/Nidaros_Cathedral"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "nidaros",
+     "name": "Nidaros Cathedral and Bakklandet",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The northernmost medieval cathedral of the world, built over the grave of St Olav, then the wooden warehouses and cafés across the Old Town Bridge.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  }
+ ]
+}

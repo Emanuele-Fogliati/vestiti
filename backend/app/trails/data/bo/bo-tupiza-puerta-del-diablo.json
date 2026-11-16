@@ -1,0 +1,65 @@
+{
+ "id": "bo-tupiza-puerta-del-diablo",
+ "country": "BO",
+ "name": "Tupiza: Quebrada de Palala and Puerta del Diablo",
+ "base": "Tupiza",
+ "region": "Tupiza",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Red rock canyons and spires around Tupiza, the landscape of the last days of Butch Cassidy, on foot up a dry gorge to the Devil's Gate.",
+ "book": "Free; maps and guides at the Tupiza agencies.",
+ "water": "Carry 2 litres.",
+ "dangers": [
+  "Sun and heat in the gorge."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Tupiza"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Tupiza",
+   "lat": -21.4438,
+   "lon": -65.7208,
+   "role": "start",
+   "note": "A small town among red cliffs."
+  },
+  {
+   "id": "goal",
+   "name": "Puerta del Diablo",
+   "lat": -21.4629,
+   "lon": -65.7362,
+   "role": "goal",
+   "note": "A narrow gate between red rock fins.",
+   "scene": "bo-tupiza"
+  }
+ ]
+}

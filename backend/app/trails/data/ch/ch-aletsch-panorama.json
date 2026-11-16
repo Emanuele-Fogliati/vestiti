@@ -1,0 +1,65 @@
+{
+ "id": "ch-aletsch-panorama",
+ "country": "CH",
+ "name": "Aletsch panorama trail",
+ "base": "Riederalp",
+ "region": "Aletsch Arena",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Along the ridge above the Great Aletsch Glacier, the longest of the Alps, from Moosfluh to Bettmerhorn, a river of ice 20 km long at your feet.",
+ "book": "Lifts from Riederalp and Bettmeralp (car-free villages, cable car from the Rhône valley).",
+ "water": "Huts at both ends.",
+ "dangers": [
+  "Rocky ridge path.",
+  "Afternoon thunderstorms in summer: be off the high paths by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Aletsch_Glacier",
+  "https://www.aletscharena.ch/en/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Moosfluh",
+   "lat": 46.3946,
+   "lon": 8.0463,
+   "role": "start",
+   "note": "The lift above Riederalp at the glacier's edge.",
+   "scene": "ch-aletsch-glacier"
+  },
+  {
+   "id": "goal",
+   "name": "Bettmerhorn",
+   "lat": 46.4143,
+   "lon": 8.0802,
+   "role": "goal",
+   "note": "A rocky top with the glacier stretching north."
+  }
+ ]
+}

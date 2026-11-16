@@ -1,0 +1,65 @@
+{
+ "id": "tz-udzungwa-sanje",
+ "country": "TZ",
+ "name": "Sanje Waterfalls, Udzungwa Mountains",
+ "base": "Mang'ula",
+ "region": "Udzungwa Mountains National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Rainforest of the Eastern Arc mountains, home of rare red colobus monkeys, to the 170 m Sanje falls and a pool at the top.",
+ "book": "Udzungwa Mountains National Park fees and a park guide at the Mang'ula headquarters.",
+ "water": "Carry 2 litres.",
+ "dangers": [
+  "Steep and slippery in the rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Udzungwa_Mountains_National_Park",
+  "https://www.tanzaniaparks.go.tz/national_parks/udzungwa-mountains-national-park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Sanje village",
+   "lat": -7.7684,
+   "lon": 36.9162,
+   "role": "start",
+   "note": "The village and trailhead on the road at the foot of the mountains."
+  },
+  {
+   "id": "goal",
+   "name": "Sanje Waterfalls",
+   "lat": -7.767,
+   "lon": 36.8959,
+   "role": "goal",
+   "note": "A long waterfall that drops off the escarpment in several steps."
+  }
+ ]
+}

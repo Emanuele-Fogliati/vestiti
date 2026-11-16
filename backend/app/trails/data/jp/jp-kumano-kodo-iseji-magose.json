@@ -1,0 +1,73 @@
+{
+ "id": "jp-kumano-kodo-iseji-magose",
+ "country": "JP",
+ "name": "Kumano Kodo Iseji: Magose-toge pass",
+ "base": "Owase",
+ "region": "Mie",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "The best-kept stone paving of the Iseji route to Kumano, through a dark cypress forest over the Magose pass and down to Owase.",
+ "book": "Free. JR Kisei line to Kii-Nagashima or Aiga.",
+ "water": "Carry 1 litre.",
+ "dangers": [
+  "Mossy stones are slippery in rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Kumano_Kod%C5%8D",
+  "https://www.tb-kumano.jp/en/kumano-kodo/iseji/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 4,
+  "relax": 3,
+  "history": 5,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Magose-toge trailhead",
+   "lat": 34.104,
+   "lon": 136.21,
+   "role": "start",
+   "note": "The roadside rest stop where the stone path starts."
+  },
+  {
+   "id": "pass",
+   "name": "Magose-toge",
+   "lat": 34.0919,
+   "lon": 136.2015,
+   "role": "point",
+   "note": "The pass among cypress trees, with stone Buddhas.",
+   "scene": "jp-kumano-kodo"
+  },
+  {
+   "id": "goal",
+   "name": "Owase",
+   "lat": 34.071,
+   "lon": 136.191,
+   "role": "goal",
+   "note": "A fishing town on its bay."
+  }
+ ]
+}

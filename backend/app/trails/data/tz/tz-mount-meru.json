@@ -1,0 +1,86 @@
+{
+ "id": "tz-mount-meru",
+ "country": "TZ",
+ "name": "Mount Meru to Socialist Peak",
+ "base": "Arusha",
+ "region": "Arusha National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  22,
+  28
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The second mountain of Tanzania: past giraffes and buffalo in the forest, then a sharp ridge around a broken crater with Kilimanjaro floating at sunrise.",
+ "book": "Arusha National Park fees and hut fees. An armed park ranger is compulsory: book through an operator in Arusha. Huts at Miriakamba and Saddle.",
+ "water": "Water at both huts.",
+ "dangers": [
+  "Buffalo and elephant in the lower forest: stay with the ranger.",
+  "The summit ridge is narrow and steep, with drops into the crater.",
+  "Altitude: 4,566 m."
+ ],
+ "turnaround": "Leave Saddle Hut at 01:00 and turn back at 08:00 wherever you are.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Meru_(Tanzania)",
+  "https://www.tanzaniaparks.go.tz/national_parks/arusha-national-park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Momella Gate",
+   "lat": -3.2333,
+   "lon": 36.8501,
+   "role": "start",
+   "note": "The gate in Arusha National Park; giraffe often graze near the road."
+  },
+  {
+   "id": "miriakamba",
+   "name": "Miriakamba Hut",
+   "lat": -3.2292,
+   "lon": 36.7996,
+   "role": "point",
+   "note": "Huts at 2,500 m in the forest, below the crater wall.",
+   "night": true
+  },
+  {
+   "id": "saddle",
+   "name": "Saddle Hut",
+   "lat": -3.218,
+   "lon": 36.7733,
+   "role": "point",
+   "note": "Huts at 3,570 m on the saddle between Little Meru and the summit ridge.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Socialist Peak",
+   "lat": -3.2434,
+   "lon": 36.7498,
+   "role": "goal",
+   "note": "The 4,566 m summit on the crater rim, Kilimanjaro on the eastern horizon."
+  }
+ ]
+}

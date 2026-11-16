@@ -1,0 +1,65 @@
+{
+ "id": "na-twyfelfontein",
+ "country": "NA",
+ "name": "Twyfelfontein rock engravings walk",
+ "base": "Twyfelfontein",
+ "region": "Kunene",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "A guided loop among red sandstone boulders carved with thousands of animals and footprints, Namibia's first World Heritage site.",
+ "book": "Entry with a compulsory guide at the visitor centre.",
+ "water": "Visitor centre.",
+ "dangers": [
+  "Heat and sun."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Twyfelfontein"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 3,
+  "culture": 5,
+  "relax": 3,
+  "history": 5,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Twyfelfontein visitor centre",
+   "lat": -20.594,
+   "lon": 14.37,
+   "role": "start",
+   "note": "The visitor centre at the foot of the rocks."
+  },
+  {
+   "id": "goal",
+   "name": "Twyfelfontein",
+   "lat": -20.5946,
+   "lon": 14.3737,
+   "role": "goal",
+   "note": "Engraved slabs of the Lion Plate and the dancing kudu.",
+   "scene": "na-twyfelfontein"
+  }
+ ]
+}

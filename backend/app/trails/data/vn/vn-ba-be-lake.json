@@ -1,0 +1,65 @@
+{
+ "id": "vn-ba-be-lake",
+ "country": "VN",
+ "name": "Ba Be lake villages and Hua Ma cave",
+ "base": "Ba Be",
+ "region": "Ba Be National Park, Bac Kan",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:30",
+ "published": null,
+ "why": "Through Tay stilt-house villages and rice fields beside Vietnam's largest natural lake, to a huge cave of stalactites in the forest.",
+ "book": "Ba Be National Park ticket. Homestays in Pac Ngoi; boats on the lake.",
+ "water": "Shops in the villages.",
+ "dangers": [
+  "Slippery steps inside the cave."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ba_Be_National_Park",
+  "https://en.wikivoyage.org/wiki/Ba_Be_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 4,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Pac Ngoi",
+   "lat": 22.3864,
+   "lon": 105.6399,
+   "role": "start",
+   "note": "A Tay village of stilt houses on the lake shore.",
+   "scene": "vn-ba-be-lake"
+  },
+  {
+   "id": "goal",
+   "name": "Hua Ma Cave",
+   "lat": 22.3517,
+   "lon": 105.6767,
+   "role": "goal",
+   "note": "A large cave of stalactites up a forest stair."
+  }
+ ]
+}

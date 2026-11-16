@@ -1,0 +1,73 @@
+{
+ "id": "ma-todra-gorge",
+ "country": "MA",
+ "name": "Todra Gorge loop over the plateau",
+ "base": "Tinghir",
+ "region": "High Atlas",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Through the narrowest part of the gorge between 300 m walls, then up a mule path to the nomad plateau and down past Berber villages and palm groves.",
+ "book": "Free; local guides at the gorge entrance. Taxi from Tinghir (15 km).",
+ "water": "Cafes at the gorge; nothing on the plateau.",
+ "dangers": [
+  "Falling stones in the gorge.",
+  "Heat from June to September: walk early, carry 2-3 litres."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Todra_Gorge"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 3,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Todra Gorge",
+   "lat": 31.588,
+   "lon": -5.59,
+   "role": "start",
+   "note": "The narrow gorge between pink limestone walls.",
+   "scene": "ma-todra-gorge"
+  },
+  {
+   "id": "plateau",
+   "name": "Todra plateau",
+   "lat": 31.598,
+   "lon": -5.6,
+   "role": "point",
+   "note": "A stony high plain where nomad families camp."
+  },
+  {
+   "id": "goal",
+   "name": "Tizgui",
+   "lat": 31.58,
+   "lon": -5.585,
+   "role": "goal",
+   "note": "A village above the palm groves of the Todra."
+  }
+ ]
+}

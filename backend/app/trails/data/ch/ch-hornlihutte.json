@@ -1,0 +1,61 @@
+{
+ "id": "ch-hornlihutte",
+ "country": "CH",
+ "name": "Hörnlihütte under the Matterhorn",
+ "base": "Zermatt",
+ "region": "Valais",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Up the Matterhorn's own ridge from Schwarzsee to the climbers' hut at 3,260 m, where the north and east faces rise straight above you.",
+ "book": "Lift to Schwarzsee. The hut serves meals (book a night ahead).",
+ "water": "Hut at the top.",
+ "dangers": [
+  "Steep path with metal stairs and fixed ropes.",
+  "Altitude 3,260 m."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/H%C3%B6rnli_Hut"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Schwarzsee",
+   "lat": 45.99,
+   "lon": 7.71,
+   "role": "start",
+   "note": "A small lake with a chapel at 2,583 m."
+  },
+  {
+   "id": "goal",
+   "name": "Hörnlihütte",
+   "lat": 45.9822,
+   "lon": 7.677,
+   "role": "goal",
+   "note": "The hut at the foot of the Hörnli ridge."
+  }
+ ]
+}

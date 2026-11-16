@@ -1,0 +1,70 @@
+{
+ "id": "ke-karura-forest",
+ "country": "KE",
+ "name": "Karura Forest waterfall and caves",
+ "base": "Nairobi",
+ "region": "Karura Forest",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Inside Nairobi: forest paths to a waterfall and the Mau Mau caves, with monkeys and many birds.",
+ "book": "Ticket at the Limuru Road gate (Friends of Karura).",
+ "water": "Cafe at the gate.",
+ "dangers": [
+  "Slippery near the falls after rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Karura_Forest",
+  "https://www.friendsofkarura.org"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 3,
+  "culture": 2,
+  "relax": 5,
+  "history": 3,
+  "landscape": 3
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Karura Forest gate",
+   "lat": -1.241,
+   "lon": 36.832,
+   "role": "start",
+   "note": "The main gate on Limuru Road."
+  },
+  {
+   "id": "goal",
+   "name": "Karura Waterfall",
+   "lat": -1.237,
+   "lon": 36.838,
+   "role": "goal",
+   "note": "A 15 m waterfall on the Karura river, next to the Mau Mau caves."
+  }
+ ]
+}

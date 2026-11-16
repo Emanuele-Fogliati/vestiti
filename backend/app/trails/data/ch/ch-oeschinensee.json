@@ -1,0 +1,71 @@
+{
+ "id": "ch-oeschinensee",
+ "country": "CH",
+ "name": "Oeschinensee panorama trail",
+ "base": "Kandersteg",
+ "region": "Bernese Oberland",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Above a turquoise lake closed by cliffs and the Blüemlisalp glaciers, on the high path to Heuberg and down to the shore.",
+ "book": "Gondola from Kandersteg.",
+ "water": "Restaurants at the lake.",
+ "dangers": [
+  "Steep descent from Heuberg.",
+  "Afternoon thunderstorms in summer: be off the high paths by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Oeschinen_Lake"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Oeschinen top station",
+   "lat": 46.498,
+   "lon": 7.711,
+   "role": "start",
+   "note": "The gondola above Kandersteg."
+  },
+  {
+   "id": "heuberg",
+   "name": "Heuberg",
+   "lat": 46.501,
+   "lon": 7.74,
+   "role": "point",
+   "note": "A high pasture over the lake."
+  },
+  {
+   "id": "goal",
+   "name": "Oeschinensee",
+   "lat": 46.4985,
+   "lon": 7.7268,
+   "role": "goal",
+   "note": "A turquoise lake under rock walls and glaciers."
+  }
+ ]
+}

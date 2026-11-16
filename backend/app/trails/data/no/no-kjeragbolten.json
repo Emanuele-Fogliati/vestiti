@@ -1,0 +1,68 @@
+{
+ "id": "no-kjeragbolten",
+ "country": "NO",
+ "name": "Kjeragbolten",
+ "base": "Stavanger",
+ "region": "Lysefjord, Rogaland",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  5,
+  7
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 11,
+  "gain_m": 800,
+  "source": "https://www.fjordnorway.com/en/attractions/kjerag"
+ },
+ "why": "Three steep ridges with chains on bare rock to a boulder wedged in a crack 1,000 m above the Lysefjord.",
+ "book": "Free: the Norwegian right to roam (allemannsretten). Paid parking at the trailhead. Parking at Øygardstøl (Eagle's Nest), 2.5 h from Stavanger by road; the road opens in late May or June.",
+ "water": "Streams between the ridges. Cafe at Øygardstøl.",
+ "dangers": [
+  "Steep slabs with chains: slippery when wet.",
+  "Stepping onto the boulder is your own risk: a fall is fatal.",
+  "Weather turns fast: fog, rain and wind even in July. Check yr.no and turn back in fog."
+ ],
+ "turnaround": "Do not climb the ridges in rain or fog.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Kjeragbolten",
+  "https://www.fjordnorway.com/en/attractions/kjerag"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Øygardstøl",
+   "lat": 59.0457,
+   "lon": 6.6516,
+   "role": "start",
+   "note": "The car park and Eagle's Nest cafe above Lysebotn."
+  },
+  {
+   "id": "goal",
+   "name": "Kjeragbolten",
+   "lat": 59.0337,
+   "lon": 6.5933,
+   "role": "goal",
+   "note": "A round boulder stuck between two cliffs above the fjord."
+  }
+ ]
+}

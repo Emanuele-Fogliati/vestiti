@@ -1,0 +1,105 @@
+{
+ "id": "tz-kilimanjaro-machame",
+ "country": "TZ",
+ "name": "Kilimanjaro by the Machame route",
+ "base": "Moshi",
+ "region": "Kilimanjaro National Park",
+ "kind": "multiday",
+ "days": 7,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  45,
+  58
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The 'whiskey route' up the highest mountain of Africa: rainforest, the moorland of the Shira plateau, the Barranco Wall and the glaciers of the crater rim, down by the Mweka route.",
+ "book": "Kilimanjaro National Park fees per day, paid through a licensed operator: climbing without a registered guide and porters is not allowed. Most climbs start from Moshi. Seven days gives the best chance of reaching the top.",
+ "water": "Porters boil stream water at every camp.",
+ "dangers": [
+  "Altitude: the summit is at 5,895 m. Headache, vomiting, confusion or breathlessness at rest: go down at once.",
+  "Summit night starts around midnight, -10 to -20 C with wind at the crater rim.",
+  "Afternoon storms and hail in the rainy months (March to May, November).",
+  "The Barranco Wall is a scramble on rock with hands: easy, but some exposure."
+ ],
+ "turnaround": "Guides turn you back at any sign of altitude sickness. Be at Stella Point by 07:00, or turn back.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Kilimanjaro",
+  "https://www.tanzaniaparks.go.tz/national_parks/kilimanjaro-national-park",
+  "https://www.openstreetmap.org/relation/8737224"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 2,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Machame Gate",
+   "lat": -3.1735,
+   "lon": 37.2392,
+   "role": "start",
+   "note": "The park gate at 1,800 m in rainforest above the village of Machame."
+  },
+  {
+   "id": "shira",
+   "name": "Shira Cave Camp",
+   "lat": -3.0669,
+   "lon": 37.2762,
+   "role": "point",
+   "note": "Moorland of giant heather at 3,750 m on the edge of the Shira plateau.",
+   "night": true
+  },
+  {
+   "id": "barranco",
+   "name": "Barranco Camp",
+   "lat": -3.0951,
+   "lon": 37.3296,
+   "role": "point",
+   "note": "A camp in a valley of giant groundsels under the Barranco Wall and the Southern Icefield.",
+   "night": true
+  },
+  {
+   "id": "barafu",
+   "name": "Barafu Camp",
+   "lat": -3.0995,
+   "lon": 37.378,
+   "role": "point",
+   "note": "The high camp at 4,670 m on a bare ridge, start of summit night.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Uhuru Peak",
+   "lat": -3.0764,
+   "lon": 37.354,
+   "role": "goal",
+   "note": "The 5,895 m summit on the crater rim, with glaciers walls around it.",
+   "scene": "tz-uhuru-peak"
+  },
+  {
+   "id": "mweka",
+   "name": "Mweka Gate",
+   "lat": -3.2197,
+   "lon": 37.3412,
+   "role": "point",
+   "note": "The way out through the rainforest, where you get your summit certificate."
+  }
+ ]
+}

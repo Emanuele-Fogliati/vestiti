@@ -1,0 +1,84 @@
+{
+ "id": "bo-takesi",
+ "country": "BO",
+ "name": "Takesi Inca trail",
+ "base": "La Paz",
+ "region": "Cordillera Real",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  9,
+  12
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The best kept Inca road of Bolivia: stone paving over a 4,650 m pass and down into the green Yungas.",
+ "book": "Small community fees. Transport from La Paz to Choquekota or Ventilla (2-3 h).",
+ "water": "Streams (treat).",
+ "dangers": [
+  "Altitude: La Paz is at 3,600 m; spend two or three days there before any hike.",
+  "The pass can be cold and foggy."
+ ],
+ "turnaround": "Be on the pass by noon.",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Takesi_Trek",
+  "https://www.openstreetmap.org/relation/3313887"
+ ],
+ "osm": 3313887,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 3,
+  "relax": 2,
+  "history": 4,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Choquekota",
+   "lat": -16.5192,
+   "lon": -67.9213,
+   "role": "start",
+   "note": "An Aymara village where the stone road begins."
+  },
+  {
+   "id": "abra",
+   "name": "Abra Takesi",
+   "lat": -16.4864,
+   "lon": -67.8872,
+   "role": "point",
+   "note": "The 4,650 m pass on the Inca paving."
+  },
+  {
+   "id": "takesi",
+   "name": "Takesi",
+   "lat": -16.4692,
+   "lon": -67.848,
+   "role": "point",
+   "note": "A small village of stone houses below the pass.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Kakapi",
+   "lat": -16.4446,
+   "lon": -67.7957,
+   "role": "goal",
+   "note": "A hamlet in the green Yungas where the Inca road ends; Yanacachi is a short ride on."
+  }
+ ]
+}

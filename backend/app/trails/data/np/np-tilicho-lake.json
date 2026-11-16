@@ -1,0 +1,83 @@
+{
+ "id": "np-tilicho-lake",
+ "country": "NP",
+ "name": "Tilicho Lake from Manang",
+ "base": "Manang",
+ "region": "Annapurna Conservation Area",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  14,
+  18
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "A side trip from the Annapurna Circuit to one of the highest lakes of its size on Earth, under the ice walls of Tilicho Peak.",
+ "book": "Annapurna Conservation Area permit and TIMS card. Since April 2023 Nepal requires foreign trekkers to hire a licensed guide in its national parks and conservation areas (check the current rule before you go). Lodges at Shree Kharka and Tilicho Base Camp.",
+ "water": "Lodges at Shree Kharka and Base Camp; nothing above.",
+ "dangers": [
+  "The landslide traverse before Base Camp: scree and falling stones, walk it early and without stopping.",
+  "The lake is at 4,919 m: only after two nights at Manang."
+ ],
+ "turnaround": "Leave Base Camp by 05:00 and turn back at noon wherever you are.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Tilicho_Lake",
+  "https://www.openstreetmap.org/relation/11077478"
+ ],
+ "osm": 11077478,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 2,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Manang",
+   "lat": 28.66611,
+   "lon": 84.02312,
+   "role": "start",
+   "note": "The stone village of the upper Marsyangdi where you acclimatise.",
+   "scene": "np-manang"
+  },
+  {
+   "id": "khangsar",
+   "name": "Khangsar",
+   "lat": 28.66973,
+   "lon": 83.97344,
+   "role": "point",
+   "note": "A small old village of flat roofs and prayer flags."
+  },
+  {
+   "id": "base-camp",
+   "name": "Tilicho Base Camp",
+   "lat": 28.68018,
+   "lon": 83.90692,
+   "role": "point",
+   "note": "Two lodges at 4,150 m after the landslide traverse.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Tilicho Lake",
+   "lat": 28.69154,
+   "lon": 83.85285,
+   "role": "goal",
+   "note": "A wide blue lake at 4,919 m below the glaciers of Tilicho Peak.",
+   "scene": "np-tilicho-lake"
+  }
+ ]
+}

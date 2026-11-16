@@ -1,0 +1,109 @@
+{
+ "id": "np-everest-base-camp",
+ "country": "NP",
+ "name": "Everest Base Camp and Kala Patthar",
+ "base": "Lukla",
+ "region": "Sagarmatha National Park, Khumbu",
+ "kind": "multiday",
+ "days": 12,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  60,
+  75
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Twelve days up the Khumbu from the Lukla airstrip past Sherpa villages and the Tengboche monastery to the foot of the Khumbu Icefall, with Everest close from the top of Kala Patthar.",
+ "book": "Sagarmatha National Park permit and the Khumbu Pasang Lhamu municipality permit (in Kathmandu or at Monjo). Fly Kathmandu or Ramechhap to Lukla; flights are often delayed by cloud, keep 2 spare days. Teahouses all the way: book ahead in October and April.",
+ "water": "Teahouses sell boiled water in every village. Treat stream water; bring purifying tablets or a filter.",
+ "dangers": [
+  "Altitude: above 3,000 m climb no more than 500 m of sleeping height a day and take the two rest days at Namche and Dingboche.",
+  "Headache, nausea or breathlessness at rest: go down at once.",
+  "Yak and porter trains on narrow paths and bridges: stand on the mountain side.",
+  "Night frost from Dingboche up, well below zero at Gorak Shep."
+ ],
+ "turnaround": "Turn back down at any sign of altitude sickness; from Gorak Shep leave for Kala Patthar by 05:00 and be back by noon.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Everest_base_camps",
+  "https://en.wikivoyage.org/wiki/Sagarmatha_National_Park",
+  "https://en.wikipedia.org/wiki/Kala_Patthar",
+  "https://ntb.gov.np/en/trekking-permits"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 4,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lukla",
+   "lat": 27.68897,
+   "lon": 86.73067,
+   "role": "start",
+   "note": "The airstrip on a mountainside at 2,860 m where the trek begins. The trail drops to the Dudh Kosi river.",
+   "scene": "np-lukla"
+  },
+  {
+   "id": "namche",
+   "name": "Namche Bazaar",
+   "lat": 27.80417,
+   "lon": 86.7098,
+   "role": "point",
+   "note": "The Sherpa capital in a horseshoe of terraces at 3,440 m. Two nights here to get used to the height.",
+   "night": true,
+   "scene": "np-namche-bazaar"
+  },
+  {
+   "id": "tengboche",
+   "name": "Tengboche Monastery",
+   "lat": 27.83615,
+   "lon": 86.76378,
+   "role": "point",
+   "note": "The largest monastery of the Khumbu, on a ridge with Ama Dablam and Everest in front.",
+   "night": true,
+   "scene": "np-tengboche"
+  },
+  {
+   "id": "dingboche",
+   "name": "Dingboche",
+   "lat": 27.89352,
+   "lon": 86.83094,
+   "role": "point",
+   "note": "Stone-walled fields at 4,410 m under Ama Dablam and Island Peak. Second rest day.",
+   "night": true,
+   "scene": "np-dingboche"
+  },
+  {
+   "id": "kala-patthar",
+   "name": "Kala Patthar",
+   "lat": 27.9958,
+   "lon": 86.82844,
+   "role": "point",
+   "note": "A brown hill of 5,644 m above Gorak Shep: the closest full view of Everest and the Khumbu Glacier.",
+   "scene": "np-kala-patthar"
+  },
+  {
+   "id": "goal",
+   "name": "Everest Base Camp",
+   "lat": 27.99966,
+   "lon": 86.84879,
+   "role": "goal",
+   "note": "Moraine and tents on the Khumbu Glacier at 5,364 m, under the icefall. Expeditions camp here in April and May.",
+   "scene": "np-everest-base-camp"
+  }
+ ]
+}

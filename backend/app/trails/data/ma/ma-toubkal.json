@@ -1,0 +1,84 @@
+{
+ "id": "ma-toubkal",
+ "country": "MA",
+ "name": "Mount Toubkal from Imlil",
+ "base": "Imlil",
+ "region": "Toubkal National Park, High Atlas",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  9,
+  10
+ ],
+ "hours": [
+  13,
+  16
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The highest mountain of North Africa, 4,167 m: up the Mizane valley past the shrine of Sidi Chamharouch to the stone refuge, then at dawn over scree to the summit tripod.",
+ "book": "A licensed mountain guide is compulsory for foreigners. Night at the Toubkal refuge (CAF or Les Mouflons): book ahead. Taxi from Marrakech to Imlil (1.5 h).",
+ "water": "Springs and drinks stalls up to the refuge; treat the water.",
+ "dangers": [
+  "Altitude 4,167 m: headache or nausea, go down.",
+  "Snow and ice from November to April: crampons and ice axe.",
+  "Loose scree on the summit slope."
+ ],
+ "turnaround": "Leave the refuge by 05:00 and turn back at 10:00 wherever you are.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Toubkal",
+  "https://en.wikivoyage.org/wiki/Toubkal_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Imlil",
+   "lat": 31.137,
+   "lon": -7.919,
+   "role": "start",
+   "note": "A Berber village of walnut trees, the gateway to Toubkal.",
+   "scene": "ma-imlil"
+  },
+  {
+   "id": "chamharouch",
+   "name": "Sidi Chamharouch",
+   "lat": 31.0978,
+   "lon": -7.9128,
+   "role": "point",
+   "note": "A white-painted shrine on a boulder above the river, a pilgrimage site."
+  },
+  {
+   "id": "refuge",
+   "name": "Toubkal refuge",
+   "lat": 31.0635,
+   "lon": -7.9376,
+   "role": "point",
+   "note": "Stone huts at 3,207 m at the foot of the summit slopes.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Toubkal summit",
+   "lat": 31.0619,
+   "lon": -7.9161,
+   "role": "goal",
+   "note": "The 4,167 m top with its metal tripod.",
+   "scene": "ma-mount-toubkal"
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "id": "bo-maragua-crater",
+ "country": "BO",
+ "name": "Chataquila to the Maragua crater",
+ "base": "Sucre",
+ "region": "Cordillera de los Frailes",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  9,
+  12
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Down an Inca stone path from the Chataquila chapel to the Jalq'a weaving villages and the red and purple folded rock of the Maragua crater.",
+ "book": "Community fees; a guide from Sucre is advised (paths are not marked). Night in a community lodge at Maragua.",
+ "water": "Carry 2 litres; shops only in the villages.",
+ "dangers": [
+  "Unmarked paths: easy to get lost."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Sucre",
+  "https://en.wikipedia.org/wiki/Cordillera_de_los_Frailes"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 5,
+  "relax": 3,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Chataquila",
+   "lat": -18.9893,
+   "lon": -65.405,
+   "role": "start",
+   "note": "A white chapel on a rock pass above the valley."
+  },
+  {
+   "id": "chaunaca",
+   "name": "Chaunaca",
+   "lat": -18.9903,
+   "lon": -65.4377,
+   "role": "point",
+   "note": "A village by the river where the Inca road ends."
+  },
+  {
+   "id": "goal",
+   "name": "Maragua",
+   "lat": -19.0369,
+   "lon": -65.4216,
+   "role": "goal",
+   "note": "A village inside a wide bowl of folded red rock.",
+   "night": true
+  }
+ ]
+}

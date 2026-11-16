@@ -1,0 +1,63 @@
+{
+ "id": "at-gamsgrube",
+ "country": "AT",
+ "name": "Gamsgrubenweg to the Wasserfallwinkel",
+ "base": "Heiligenblut",
+ "region": "Hohe Tauern National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "From the Kaiser-Franz-Josefs-Höhe through short rock tunnels along the Pasterze, Austria's longest glacier, with the Grossglockner straight across.",
+ "book": "Grossglockner High Alpine Road toll (open May to October). Bus from Heiligenblut in summer.",
+ "water": "Restaurants at the Kaiser-Franz-Josefs-Höhe.",
+ "dangers": [
+  "Marmots and ibex close to the path: do not feed them.",
+  "Afternoon thunderstorms in summer: start early and be off ridges by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Pasterze",
+  "https://www.hohetauern.at/en/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kaiser-Franz-Josefs-Höhe",
+   "lat": 47.0759,
+   "lon": 12.7509,
+   "role": "start",
+   "note": "The end of the road above the Pasterze glacier."
+  },
+  {
+   "id": "goal",
+   "name": "Wasserfallwinkel",
+   "lat": 47.0978,
+   "lon": 12.73,
+   "role": "goal",
+   "note": "A grassy corner with a waterfall, high above the glacier."
+  }
+ ]
+}

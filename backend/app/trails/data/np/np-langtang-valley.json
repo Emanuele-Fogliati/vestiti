@@ -1,0 +1,94 @@
+{
+ "id": "np-langtang-valley",
+ "country": "NP",
+ "name": "Langtang Valley and Kyanjin Ri",
+ "base": "Kathmandu",
+ "region": "Langtang National Park",
+ "kind": "multiday",
+ "days": 7,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  32,
+  40
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The nearest big valley to Kathmandu: up the Langtang Khola gorge past rebuilt Tamang villages to the yak pastures and cheese factory of Kyanjin Gompa, ringed by glaciers.",
+ "book": "Langtang National Park permit and TIMS card. Since April 2023 Nepal requires foreign trekkers to hire a licensed guide in its national parks and conservation areas (check the current rule before you go). Bus or jeep from Kathmandu to Syabrubesi (7-8 h).",
+ "water": "Teahouses all the way.",
+ "dangers": [
+  "Landslides and rockfall in the gorge in the monsoon and after quakes.",
+  "Altitude: Kyanjin Ri reaches 4,773 m.",
+  "The 2015 avalanche buried old Langtang village: do not linger under steep slopes after heavy snow."
+ ],
+ "turnaround": "Climb Kyanjin Ri early and be down by noon.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Langtang_National_Park",
+  "https://en.wikivoyage.org/wiki/Langtang_National_Park",
+  "https://www.openstreetmap.org/relation/1269089"
+ ],
+ "osm": 1269089,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 4,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Syabrubesi",
+   "lat": 28.16457,
+   "lon": 85.34274,
+   "role": "start",
+   "note": "The road head on the Bhote Koshi, a few hours from the Tibet border."
+  },
+  {
+   "id": "lama-hotel",
+   "name": "Lama Hotel",
+   "lat": 28.16143,
+   "lon": 85.43027,
+   "role": "point",
+   "note": "Lodges in the forest of the gorge; red pandas live in these woods.",
+   "night": true
+  },
+  {
+   "id": "langtang",
+   "name": "Langtang village",
+   "lat": 28.21574,
+   "lon": 85.50704,
+   "role": "point",
+   "note": "A Tamang village rebuilt after the 2015 earthquake, with prayer walls and water-driven prayer wheels.",
+   "night": true
+  },
+  {
+   "id": "kyanjin",
+   "name": "Kyanjin Gompa",
+   "lat": 28.21239,
+   "lon": 85.56659,
+   "role": "point",
+   "note": "A monastery, a cheese factory and lodges at 3,870 m among glaciers.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Kyanjin Ri",
+   "lat": 28.22359,
+   "lon": 85.57577,
+   "role": "goal",
+   "note": "A 4,773 m viewpoint over Langtang Lirung and its glaciers."
+  }
+ ]
+}

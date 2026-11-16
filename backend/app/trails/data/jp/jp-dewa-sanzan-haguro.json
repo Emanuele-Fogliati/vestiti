@@ -7,8 +7,20 @@
  "kind": "day",
  "shape": "one_way",
  "difficulty": "easy",
- "months": [4, 5, 6, 7, 8, 9, 10, 11],
- "hours": [1.5, 2],
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
  "start_by": "09:00",
  "published": {
   "km": 1.7,
@@ -31,7 +43,14 @@
  ],
  "tier": "A",
  "area": null,
- "scores": {"effort": 2, "nature": 3, "culture": 5, "relax": 3, "history": 5, "landscape": 3},
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 5,
+  "relax": 3,
+  "history": 5,
+  "landscape": 3
+ },
  "points": [
   {
    "id": "start",
@@ -54,7 +73,8 @@
    "name": "Haguro summit shrine",
    "lat": 38.70256,
    "lon": 139.98121,
-   "role": "goal", "scene": "jp-haguro-summit-shrine",
+   "role": "goal",
+   "scene": "jp-haguro-summit-shrine",
    "note": "Sanjin Gosaiden, 414 m: one thick thatched roof over the gods of all three mountains, with a lotus pond in front. Buses leave from the car park behind."
   }
  ]

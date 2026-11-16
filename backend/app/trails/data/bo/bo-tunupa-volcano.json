@@ -1,0 +1,67 @@
+{
+ "id": "bo-tunupa-volcano",
+ "country": "BO",
+ "name": "Tunupa volcano crater viewpoint",
+ "base": "Uyuni",
+ "region": "Salar de Uyuni",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  5,
+  7
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "From Coquesa, on the shore of the salt flat, up to the multicoloured crater of Tunupa with the white Salar spreading to the horizon.",
+ "book": "Community fee at Coquesa (also for the mummy cave). Most come with a 4x4 tour from Uyuni.",
+ "water": "No water on the mountain: carry 3 litres.",
+ "dangers": [
+  "Altitude: the viewpoint is at about 4,900 m.",
+  "Cold wind, strong sun."
+ ],
+ "turnaround": "Turn back at noon.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Tunupa",
+  "https://www.openstreetmap.org/node/2619147793"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 2,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Coquesa",
+   "lat": -19.9013,
+   "lon": -67.6262,
+   "role": "start",
+   "note": "A hamlet on the north shore of the Salar, at the foot of the volcano."
+  },
+  {
+   "id": "goal",
+   "name": "Tunupa crater viewpoint",
+   "lat": -19.84374,
+   "lon": -67.64028,
+   "role": "goal",
+   "note": "A lookout into the red, yellow and orange crater.",
+   "scene": "bo-tunupa-volcano"
+  }
+ ]
+}

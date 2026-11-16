@@ -1,0 +1,84 @@
+{
+ "id": "pe-ancascocha",
+ "country": "PE",
+ "name": "Ancascocha trek to Machu Picchu",
+ "base": "Cusco",
+ "region": "Vilcanota range, Cusco",
+ "kind": "multiday",
+ "days": 5,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  24,
+  32
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The quiet way to Machu Picchu: past the Perolniyoc waterfall and Inca ruins, over high passes of about 4,650 m by the Ancascocha lake, then down into the Inca Trail valley.",
+ "book": "Through a Cusco agency (cook, mules, train back from Aguas Calientes). The last day may join the classic Inca Trail, which needs its own permit.",
+ "water": "Streams (treat).",
+ "dangers": [
+  "Altitude: passes around 4,650 m.",
+  "Cold nights below zero from June to August."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.theoutbound.com/peru/backpacking/backpack-the-ancascocha-trail-to-machu-picchu",
+  "https://en.wikivoyage.org/wiki/Cusco"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 1,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Soqma",
+   "lat": -13.3121,
+   "lon": -72.2452,
+   "role": "start",
+   "note": "A small village above Ollantaytambo."
+  },
+  {
+   "id": "perolniyoc",
+   "name": "Perolniyoc waterfall",
+   "lat": -13.3103,
+   "lon": -72.2626,
+   "role": "point",
+   "note": "A waterfall in a narrow valley below an Inca fort.",
+   "scene": "pe-perolniyoc-waterfall"
+  },
+  {
+   "id": "ancascocha",
+   "name": "Ancascocha",
+   "lat": -13.3306,
+   "lon": -72.3641,
+   "role": "point",
+   "note": "A high lake and herders' hamlet under snow peaks.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Paucarcancha",
+   "lat": -13.2804,
+   "lon": -72.4501,
+   "role": "goal",
+   "note": "Inca ruins where the trail meets the Inca Trail valley."
+  }
+ ]
+}

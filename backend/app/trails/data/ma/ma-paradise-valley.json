@@ -1,0 +1,65 @@
+{
+ "id": "ma-paradise-valley",
+ "country": "MA",
+ "name": "Paradise Valley",
+ "base": "Agadir",
+ "region": "Anti-Atlas foothills",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  2,
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "A palm-lined gorge in the hills behind Agadir, with natural rock pools to swim in, reached by a short path from the road.",
+ "book": "Free; taxi or tour from Agadir or Taghazout (1 h).",
+ "water": "Cafes by the pools.",
+ "dangers": [
+  "Do not jump into shallow pools.",
+  "Heat from June to September: walk early, carry 2-3 litres."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Agadir"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 1,
+  "relax": 5,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Paradise Valley parking",
+   "lat": 30.5879,
+   "lon": -9.532,
+   "role": "start",
+   "note": "The car park on the road to Imouzzer."
+  },
+  {
+   "id": "goal",
+   "name": "Paradise Valley",
+   "lat": 30.5893,
+   "lon": -9.5226,
+   "role": "goal",
+   "note": "Green pools between palms and rocks."
+  }
+ ]
+}

@@ -7,8 +7,18 @@
  "kind": "day",
  "shape": "one_way",
  "difficulty": "easy",
- "months": [5, 6, 7, 8, 9, 10],
- "hours": [3, 3.5],
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  3.5
+ ],
  "start_by": "09:30",
  "published": {
   "km": 8,
@@ -32,12 +42,19 @@
  ],
  "tier": "A",
  "area": null,
- "scores": {"effort": 2, "nature": 5, "culture": 1, "relax": 4, "history": 1, "landscape": 4},
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
  "points": [
   {
    "id": "start",
    "name": "Ryuzu Falls",
-   "lat": 36.75890,
+   "lat": 36.7589,
    "lon": 139.45149,
    "role": "start",
    "note": "The falls split in two around a rock above Lake Chuzenji, by the bus stop. The trail climbs gently north beside the Yugawa river to Akanuma."
@@ -61,9 +78,10 @@
   {
    "id": "goal",
    "name": "Yudaki Falls",
-   "lat": 36.79590,
+   "lat": 36.7959,
    "lon": 139.42847,
-   "role": "goal", "scene": "jp-yudaki-falls",
+   "role": "goal",
+   "scene": "jp-yudaki-falls",
    "note": "The 70 m cascade that drains Lake Yunoko, seen from a platform at its foot. Yutaki-iriguchi bus stop is 10 minutes east."
   }
  ]

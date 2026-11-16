@@ -1,0 +1,66 @@
+{
+ "id": "ma-merzouga-big-dune",
+ "country": "MA",
+ "name": "Erg Chebbi: the big dune at sunrise",
+ "base": "Merzouga",
+ "region": "Erg Chebbi",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "05:30",
+ "published": null,
+ "why": "On foot from the edge of Merzouga up the soft crest of the highest dune of Erg Chebbi, about 150 m, to watch the sun rise over the Sahara.",
+ "book": "Free from the village; camps and camel rides are paid.",
+ "water": "Carry 1.5 litres.",
+ "dangers": [
+  "Soft sand: slow going up.",
+  "Heat after 10:00 from April to October."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Erg_Chebbi"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 2,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Merzouga",
+   "lat": 31.099,
+   "lon": -4.012,
+   "role": "start",
+   "note": "A village on the edge of the dunes."
+  },
+  {
+   "id": "goal",
+   "name": "Grande Dune de Merzouga",
+   "lat": 31.0777,
+   "lon": -3.9924,
+   "role": "goal",
+   "note": "The highest dune crest of the erg.",
+   "scene": "ma-erg-chebbi"
+  }
+ ]
+}
