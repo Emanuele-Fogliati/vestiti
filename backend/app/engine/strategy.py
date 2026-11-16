@@ -31,7 +31,9 @@ COLD_ONLY = {"headwear", "gloves", "base_bottom", "shell_bottom"}  # never added
 LEGS_ONLY_FREEZING = {"base_bottom", "shell_bottom"}
 HIGH_COLD_M = 4500  # from here warm gloves, beanie and down go, whatever the day
 DRY_PROB = 15  # below this chance of rain on every day of the trip, a month is desert-dry
-CITY_EVENING_MET = 1.8
+# a walk to dinner and back is a slow walk (ASHRAE: 2.0 met at 3.2 km/h), not standing still:
+# at 1.8 Takayama in January got a thick down jacket and lined trousers (Opus check, 2026-11-16)
+CITY_EVENING_MET = 2.0
 WARM_RAIN_C = 18  # rain warmer than this all day: no rain trousers in the lowlands
 TOWN_WIND = 0.5  # street-level wind in town, against the open-country 10 m wind  # the evening after a boat trip is an evening in town
 STATUS_RANK = {"none": 0, "pack": 1, "stops": 2, "worn": 3}
@@ -343,6 +345,13 @@ PRESETS: list[dict[str, str]] = [
     {"base_top": "medium", "trousers": "medium", "socks": "medium", "mid_top": "medium",
      "shell_top": "medium", "insulation_top": "warm", "headwear": "medium", "gloves": "medium",
      "base_bottom": "medium"},
+    # a warmer fleece, beanie and gloves under the same down jacket before the base layer and
+    # the trousers go up too: Kyoto in January (1 °C walking to dinner) got warm trousers,
+    # a warm base layer and thermal leggings; a city at freezing wants a good jacket, not a
+    # mountain kit (Opus check of every recommended month, 2026-11-16)
+    {"base_top": "medium", "trousers": "medium", "socks": "medium", "mid_top": "warm",
+     "shell_top": "medium", "insulation_top": "warm", "headwear": "warm", "gloves": "warm",
+     "base_bottom": "medium"},
     {"base_top": "warm", "trousers": "warm", "socks": "warm", "mid_top": "warm",
      "shell_top": "warm", "insulation_top": "warm", "headwear": "warm", "gloves": "warm",
      "base_bottom": "medium", "shell_bottom": "medium"},
@@ -559,9 +568,12 @@ def zone_name(slot: str, req: SlotRequirement) -> str:
 def warm_zone(stages: list[StageInput], conds: list[Condition],
               reqs: dict[str, SlotRequirement]) -> dict | None:
     """The hot places of a trip and the lighter pieces they need, or None when the main
-    bag already suits them (all-hot trips, or nothing hot)."""
+    bag already suits them (nothing hot, or the bag is already T-shirts and shorts)."""
     idx = warm_stages(stages, conds)
-    if not idx or len(idx) == len(stages):
+    # every place hot is not "the bag already suits them": cool evenings in Sapa or Sapporo
+    # put long sleeves and trousers in the bag, and Tokyo and Hue in July then got no T-shirt
+    # at all (Opus check, 2026-11-16). The pieces below go only when lighter than the bag.
+    if not idx:
         return None
     ws = [s for s in stages if s.index in idx]
     wc = [c for c in conds if c.stage_index in idx]
