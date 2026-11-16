@@ -180,3 +180,14 @@ def test_walks_near_drawn_places():
         assert t.shape == "out_and_back" and t.points[-1].scene, t.id
         g = trails.geo(t.id)
         assert 0.5 <= g["one_way_km"] <= 3.6, t.id
+
+
+def test_api_around_measures_from_the_path(client):
+    """Manu 2026-11-16: the distance is to the walk's path, not to where it starts."""
+    fitz = client.get("/api/trails/around", params={"lat": -49.2713, "lon": -73.0431, "km": 25}).json()["away"]
+    assert fitz and all(0 <= d <= 25 for d in fitz.values())
+    start = trails.by_id()["ar-laguna-de-los-tres"].points[0]
+    assert fitz["ar-laguna-de-los-tres"] < km(-49.2713, -73.0431, start.lat, start.lon) - 3
+    ref = client.get("/api/trails/around", params={"lat": start.lat, "lon": start.lon, "km": 10,
+                                                   "trail": "ar-laguna-de-los-tres"}).json()["away"]
+    assert ref["ar-laguna-de-los-tres"] == 0

@@ -15,7 +15,7 @@ export default function Legal() {
   );
 
   if (page === "affiliate") return (
-    <main className="page"><div className="wrap prose" style={{ maxWidth: 760 }}>
+    <main className="page legal-mf"><div className="wrap prose legal-in">
       <p className="kicker">Legal</p><h1>Affiliate disclosure</h1>{draft}
       <p>{name} is free to use and always will be. We pay for it with affiliate commissions: when you click a shop link and buy,
         the shop may pay us a small percentage. You pay the same price.</p>
@@ -26,7 +26,7 @@ export default function Legal() {
     </div></main>
   );
   if (page === "privacy") return (
-    <main className="page"><div className="wrap prose" style={{ maxWidth: 760 }}>
+    <main className="page legal-mf"><div className="wrap prose legal-in">
       <p className="kicker">Legal</p><h1>Privacy</h1>{draft}
       <h2>What we store</h2>
       <ul>
@@ -48,7 +48,7 @@ export default function Legal() {
     </div></main>
   );
   if (page === "terms") return (
-    <main className="page"><div className="wrap prose" style={{ maxWidth: 760 }}>
+    <main className="page legal-mf"><div className="wrap prose legal-in">
       <p className="kicker">Legal</p><h1>Terms of use</h1>{draft}
       <p>{name} gives clothing suggestions based on estimates of weather and of how warm clothes are. They are not safety advice.
         In the mountains, check local conditions, and ask a guide or a mountain hut when in doubt.</p>

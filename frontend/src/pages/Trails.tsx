@@ -89,13 +89,33 @@ export default function Trails() {
     if (!named.length || named.length > 8) return null;
     return { lat: named[0].lat!, lon: named[0].lon!, name: named[0].base || named[0].name, trail: null };
   }, [find, all, geo]); // eslint-disable-line react-hooks/exhaustive-deps
-  const away = (t: TrailCard) => zone && t.lat != null && t.lon != null ? distKm(zone.lat, zone.lon, t.lat, t.lon) : Infinity;
+  // how far each walk's PATH comes to the place, or to the walk you searched (Manu 2026-11-16: not
+  // from where it starts, since many walks share a trailhead and "0 km away" said nothing)
+  const [aw, setAw] = useState<{ key: string; away: Record<string, number> } | null>(null);
+  const zkey = zone ? `${zone.lat},${zone.lon},${zone.trail ?? ""}` : "";
+  useEffect(() => {
+    if (!zone) return;
+    let live = true;
+    api.trailsAround(zone.lat, zone.lon, 100, zone.trail).then((r) => { if (live) setAw({ key: zkey, away: r.away }); }).catch(() => undefined);
+    return () => { live = false; };
+  }, [zkey]); // eslint-disable-line react-hooks/exhaustive-deps
+  const paths = aw && aw.key === zkey ? aw.away : null;
+  const away = (t: TrailCard) => !zone ? Infinity : paths ? paths[t.id] ?? Infinity
+    : t.lat != null && t.lon != null ? distKm(zone.lat, zone.lon, t.lat, t.lon) : Infinity;
+  const ref = zone?.trail ? (all ?? []).find((t) => t.id === zone.trail) ?? null : null;
+  const howFar = (t: TrailCard) => {
+    const d = away(t);
+    if (!zone || !Number.isFinite(d) || t.id === zone.trail) return "";
+    if (ref && ref.lat != null && t.lat != null && distKm(ref.lat, ref.lon!, t.lat, t.lon!) < 0.3) return "Same start · ";
+    if (d < 0.3) return ref ? "Shares part of the path · " : `Goes through ${zone.name} · `;
+    return `${d < 1 ? "Under 1" : d < 10 ? d.toFixed(1) : Math.round(d)} km away · `;
+  };
 
   const shown = useMemo(() => base.filter((t) => textHit(t) || away(t) <= km)
     // the hike you named first, then the nearest; else in season first, then the famous ones (with a drawing)
-    .sort((a, b) => Number(nameHit(b)) - Number(nameHit(a)) || (zone ? Math.round(away(a)) - Math.round(away(b)) : 0)
+    .sort((a, b) => Number(nameHit(b)) - Number(nameHit(a)) || (zone ? Math.min(away(a), 1e6) - Math.min(away(b), 1e6) : 0)
       || Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
-      || Number(b.tier === "A") - Number(a.tier === "A")), [base, find, zone, km]); // eslint-disable-line react-hooks/exhaustive-deps
+      || Number(b.tier === "A") - Number(a.tier === "A")), [base, find, zone, km, paths]); // eslint-disable-line react-hooks/exhaustive-deps
   // one hike matches the name: it opens (card, what to wear) once you stop typing
   useEffect(() => {
     if (!zone?.trail || selId === zone.trail) return;
@@ -203,7 +223,7 @@ export default function Trails() {
               <small><span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
                 {t.km != null && <span>{Math.round(t.km)} km</span>}{t.gain_m != null && <span>+{Math.round(t.gain_m).toLocaleString("en-US")} m</span>}
                 {t.kind === "multiday" && <span>{t.days} days</span>}</small>
-              <small className="mf-base">{zone && Number.isFinite(away(t)) ? `${Math.round(away(t))} km away · ` : ""}From {t.base}{country ? "" : ` · ${countryName(t.country)}`} · best {t.months_text}</small>
+              <small className="mf-base">{howFar(t)}From {t.base}{country ? "" : ` · ${countryName(t.country)}`} · best {t.months_text}</small>
             </span>
           </button>
         </li>
