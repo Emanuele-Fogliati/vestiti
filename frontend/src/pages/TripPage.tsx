@@ -144,7 +144,7 @@ export default function TripPage() {
   const stops = useMemo(() => (trip ? [...trip.stops].sort((a, b) => a.position - b.position) : []), [trip]);
   const t0 = stops.length ? stops.reduce((m, s) => (s.start_date < m ? s.start_date : m), stops[0].start_date) : null;
 
-  if (err && !trip) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips">Back to my trips</Link></div></main>;
+  if (err && !trip) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips?tab=saved">Back to my trips</Link></div></main>;
   if (!trip) return <main className="page"><p className="loading"><span className="spin" /> Loading trip</p></main>;
 
   async function toggleSave() {
@@ -212,7 +212,7 @@ export default function TripPage() {
                 {menu && (
                   <div className="x-menu" role="menu">
                     <button type="button" role="menuitem" onClick={async () => { setMenu(false); const c = await api.duplicateTrip(id); nav(`/trips/${c.id}`); }}>Duplicate</button>
-                    <button type="button" role="menuitem" className="danger" onClick={async () => { setMenu(false); if (window.confirm("Delete this trip?")) { await api.deleteTrip(id); nav("/trips"); } }}>Delete trip</button>
+                    <button type="button" role="menuitem" className="danger" onClick={async () => { setMenu(false); if (window.confirm("Delete this trip?")) { await api.deleteTrip(id); nav("/trips?tab=saved"); } }}>Delete trip</button>
                   </div>
                 )}
               </div>
