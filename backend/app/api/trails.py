@@ -67,15 +67,17 @@ def _cover_at_id(tid: str) -> tuple[dict, float, float] | None:
     map the drawing sits where the thing is, the goal, not at the trailhead)."""
     t = trails.find(tid)
     goal = [p for p in t.points if p.role == "goal"]
+    # the drawing sits on the place itself (its own coordinates), never on a point of the route,
+    # so the same place is in one spot whichever walk shows it (Manu 2026-11-16)
     for p in goal + list(reversed(t.points)):
-        s = _scene(p.scene)
-        if s:
-            return s, p.lat, p.lon
+        lm = art.by_id().get(p.scene or "")
+        if lm:
+            return _scene(lm.id), lm.lat, lm.lon
     # until its scenes are linked: the drawing of the goal itself, when the library has it
     for p in goal:
         lm = art.match(p.name, p.lat, p.lon, country=t.country, gateway=False)
         if lm and trails.km(p.lat, p.lon, lm.lat, lm.lon) <= 1.5:
-            return _scene(lm.id), p.lat, p.lon
+            return _scene(lm.id), lm.lat, lm.lon
     return None
 
 
@@ -97,8 +99,19 @@ def _sights(t: trails.Trail, skip: set[str]) -> list[dict]:
             continue
         d, i = min((trails.km(lm.lat, lm.lon, la, lo), i) for i, (la, lo) in enumerate(line))
         if d <= max(0.3, min(lm.radius_km or 0, 0.8)):
-            out.append((i, {"id": lm.id, "name": lm.label, "lat": line[i][0], "lon": line[i][1], "art": _scene(lm.id)}))
+            out.append((i, {"id": lm.id, "name": lm.label, "lat": lm.lat, "lon": lm.lon, "art": _scene(lm.id)}))
     return [x for _, x in sorted(out, key=lambda x: x[0])][:12]
+
+
+def _own_sights(points: list[dict], cover: str | None) -> list[dict]:
+    """The walk's own points that have a drawing, each drawing once, on the place itself."""
+    out, seen = [], {cover}
+    for x in points:
+        lm = art.by_id().get((x["art"] or {}).get("id", ""))
+        if lm and lm.id not in seen:
+            seen.add(lm.id)
+            out.append({"id": lm.id, "name": x["name"], "lat": lm.lat, "lon": lm.lon, "art": x["art"]})
+    return out
 
 
 def _numbers(t: trails.Trail) -> dict:
@@ -289,8 +302,7 @@ def one(trail_id: str):
         "points": points,
         # the drawings along the way: the walk's own points that have one, then the library's
         # places it goes past
-        "sights": [{"id": x["art"]["id"], "name": x["name"], "lat": x["lat"], "lon": x["lon"], "art": x["art"]}
-                   for x in points if x["art"] and (not cover or x["art"]["id"] != cover[0]["id"])] + _sights(t, seen),
+        "sights": _own_sights(points, cover[0]["id"] if cover else None) + _sights(t, seen),
         "segments": [{**s, "from_name": names.get(s["from"], ""), "to_name": names.get(s["to"], "")}
                      for s in g.get("segments", [])],
         "computed": {k: g[k] for k in ("km", "one_way_km", "gain_m", "loss_m", "walk_hours")} if g else None,
