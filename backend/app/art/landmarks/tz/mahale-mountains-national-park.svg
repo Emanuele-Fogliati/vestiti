@@ -1,0 +1,20 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="50" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M230 140L248 92L268 70L284 56L292 58L300 62V140Z" fill="var(--il-far)"/>
+<path d="M0 142L20 136L44 126L66 114L84 102L96 94L104 96L110 90L118 96L128 92L142 82L156 68L168 56L180 42L186 38L194 44L204 58L216 72L232 82L246 92L258 102L270 110L284 116L300 120V146H0Z" fill="var(--il-mid)"/>
+<path d="M96 94Q100 110 92 128M142 82Q146 102 136 132M168 56Q172 80 164 112Q160 126 156 136M186 38Q192 68 190 96Q188 116 192 134M216 72Q218 96 228 118" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 146Q30 136 60 138Q90 132 120 138Q150 128 180 130Q210 118 240 108Q270 96 300 98V150H0Z" fill="var(--il-leaf)"/>
+<path d="M0 200V146Q80 142 150 146Q220 150 300 146V200Z" fill="var(--il-acc)"/>
+<path d="M0 200V168Q80 162 150 166Q220 170 300 164V200Z" fill="var(--il-water)"/>
+<path d="M28 176H94L88 182Q60 186 36 182Z" fill="var(--il-obj)"/>
+<g transform="translate(124 68) scale(0.55)">
+<path d="M190 172Q200 150 194 126Q188 102 168 96Q156 94 148 100Q138 108 136 124Q134 140 140 152L132 172Z" fill="var(--il-near)"/>
+<path d="M160 96Q166 78 154 69Q140 64 133 74L129 82Q122 85 121 91Q122 99 132 99Q142 102 150 101Z" fill="var(--il-near)"/>
+<path d="M131 77Q126 84 122 90Q124 98 133 98Q142 97 143 88Q141 80 137 76Z" fill="var(--il-obj)"/>
+<path d="M131 78Q137 75 143 77M126 93Q130 95 134 94" stroke="var(--il-ice)" stroke-width="1" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+<circle cx="138" cy="82" r="1.4" fill="var(--il-near)"/>
+<circle cx="157" cy="83" r="5" fill="var(--il-obj)"/>
+<path d="M164 172Q140 170 128 158Q120 146 128 136Q138 130 148 140Q156 150 172 156Z" fill="var(--il-near)"/>
+<path d="M166 104Q150 112 140 132Q130 152 122 168L134 170Q142 152 154 134Q166 118 178 110Z" fill="var(--il-near)"/>
+<path d="M116 169Q118 163 126 164Q134 165 133 171Z M146 172Q150 166 158 168Q164 170 163 174Z" fill="var(--il-obj)"/>
+</g>
