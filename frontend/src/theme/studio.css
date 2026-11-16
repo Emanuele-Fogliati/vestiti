@@ -538,3 +538,9 @@ a.mf-btn{text-decoration:none}
 .mf-th1{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}
 .mf-th1 h1{min-width:0}
 .mf-th1 .x-save{margin-top:4px;flex:none}
+
+/* recommended trip: what to wear in the chosen month (Manu 2026-11-16) */
+.mf-wear-h{display:flex;align-items:center;gap:8px}
+.mf-wear-h .mf-sub{white-space:nowrap}
+.mf-wear-h select{height:30px;border-radius:15px;border:0;background:var(--surface-2);padding:0 10px;font:inherit;font-size:13px;color:var(--ink)}
+.mf-iwear .tags{display:flex;flex-wrap:wrap;gap:4px}

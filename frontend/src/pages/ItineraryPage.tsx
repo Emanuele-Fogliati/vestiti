@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { ElevationProfile } from "../components/ElevationProfile";
 import { Illustration } from "../components/Illustration";
 import { TripMap } from "../components/Maps";
@@ -7,11 +7,35 @@ import { PlaceGuide } from "../components/PlaceGuide";
 import { Visits } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { activityText, monthRange, monthYear, nights, today } from "../lib/format";
-import type { Itinerary, ItineraryStop, Stop } from "../lib/types";
+import { MONTHS, MONTH_LONG, activityText, monthRuns, monthYear, nights, today } from "../lib/format";
+import type { Itinerary, ItineraryStop, ItineraryWear, Stop } from "../lib/types";
 import { DRESS_ME } from "../lib/words";
 
-const COUNTRY: Record<string, string> = { PE: "Peru", AR: "Argentina", CL: "Chile", IS: "Iceland", VN: "Vietnam" };
+const COUNTRY: Record<string, string> = { PE: "Peru", AR: "Argentina", CL: "Chile", IS: "Iceland", VN: "Vietnam",
+  JP: "Japan", NA: "Namibia", NZ: "New Zealand" };
+
+/** What to wear in the chosen month (Manu 2026-11-16: "per ogni mese cosa mettere come vestito"):
+ *  worked out by the layer engine from each stop's climate that month, not written by hand. */
+function Wear({ w, months, onMonth }: { w: ItineraryWear; months: number[]; onMonth: (m: number) => void }) {
+  const worn = w.pieces.filter((p) => !p.pack);
+  const pack = w.pieces.filter((p) => p.pack);
+  return (
+    <div className="mf-tsec mf-iwear">
+      <div className="mf-wear-h">
+        <b className="mf-sub">What to wear in</b>
+        <select aria-label="Month" value={w.month} onChange={(e) => onMonth(Number(e.target.value))}>
+          {months.map((m) => <option key={m} value={m}>{MONTH_LONG[m - 1]}</option>)}
+        </select>
+      </div>
+      <span className="mf-k">{w.low}° to {w.high}° · rain up to {w.rain}% of days{w.top_m >= 1500 ? ` · up to ${w.top_m.toLocaleString("en-US")} m` : ""}</span>
+      {w.cold.feels < 15 && <span className="mf-k">Coldest: feels like {w.cold.feels}° in {w.cold.place}, {w.cold.what.replace(/(\d{4,}) m/, (_, n) => `${Number(n).toLocaleString("en-US")} m`)}.</span>}
+      <div className="tags">{worn.map((p) => <span className="tag" key={p.slot}>{p.name}</span>)}</div>
+      {pack.length > 0 && <p className="mf-k">In the bag, just in case: {pack.map((p) => p.name.toLowerCase()).join(", ")}.</p>}
+      {w.hot && <p className="mf-k">Warm in {w.hot.names.filter((n, i, a) => a.indexOf(n) === i).join(", ")}: {w.hot.pieces.join(", ").toLowerCase()}.</p>}
+      <span className="mf-k">From the {MONTHS[w.month - 1]} climate of each stop. Make the trip yours for the full kit with products.</span>
+    </div>
+  );
+}
 
 /** "Dress me for this trip": optional start date, then the itinerary becomes the user's own
  *  trip (stops, days and activities can all be changed there) and the kit is worked out. */
@@ -27,7 +51,7 @@ function PackForm({ it }: { it: Itinerary }) {
     setBusy(true); setErr(null);
     try {
       await ensureUser();
-      const t = await api.packItinerary(it.slug, start || undefined);
+      const t = await api.packItinerary(it.slug, start || undefined, start ? undefined : it.wear.month);
       nav(`/trips/${t.id}`);
     } catch (e2) {
       setErr((e2 as Error).message);
@@ -94,6 +118,8 @@ function StopCard({ stop, dayFrom, desk, onClose }: { stop: ItineraryStop; dayFr
  *  stops in the panel, a stop opens its card beside it, and "Dress me" sits in the bar below. */
 export default function ItineraryPage() {
   const { slug = "" } = useParams();
+  const [q, setQ] = useSearchParams();
+  const month = Number(q.get("month")) || undefined;
   const [it, setIt] = useState<Itinerary | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [sel, setSel] = useState<number | null>(null);
@@ -107,10 +133,21 @@ export default function ItineraryPage() {
   }, []);
 
   useEffect(() => {
-    setIt(null); setErr(null); setSel(null);
-    api.itinerary(slug).then((x) => { setIt(x); if (matchMedia("(min-width: 900px)").matches && x.stops.length) setSel(0); })
-      .catch((e) => setErr((e as Error).message));
+    setIt(null); setSel(null);
   }, [slug]);
+
+  // a new month keeps the page (and the open stop): only the dates and the clothes change
+  useEffect(() => {
+    setErr(null);
+    let live = true;
+    api.itinerary(slug, undefined, month).then((x) => { if (live) setIt(x); })
+      .catch((e) => { if (live) setErr((e as Error).message); });
+    return () => { live = false; };
+  }, [slug, month]);
+
+  useEffect(() => {
+    if (it && matchMedia("(min-width: 900px)").matches && it.stops.length) setSel(0);
+  }, [it?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips?tab=recommended">All recommended trips</Link></div></main>;
   if (!it) return <main className="page"><div className="wrap"><p className="loading"><span className="spin" /></p></div></main>;
@@ -174,15 +211,18 @@ export default function ItineraryPage() {
                 <dl className="tfacts">
                   <div><dt>Days</dt><dd>{it.days}</dd></div>
                   <div><dt>Stops</dt><dd>{it.stops.length}</dd></div>
-                  <div><dt>Best</dt><dd>{monthRange(it.best_months)}</dd></div>
+                  <div><dt>Best</dt><dd>{monthRuns(it.best_months) || "—"}</dd></div>
                   <div><dt>Highest</dt><dd>{Math.round(it.highest_m).toLocaleString("en-US")} m</dd></div>
                 </dl>
               </div>
               <div className={desk ? "mf-scroll" : "mf-ibody"}>
                 <p className="mf-lede">{it.summary}</p>
+                <Wear w={it.wear} months={it.months.length ? [...it.months].sort((a, b) => a - b) : [it.wear.month]}
+                  onMonth={(m) => setQ({ month: String(m) }, { replace: true })} />
                 <b className="mf-sub">Day by day</b>
                 {rows}
                 <ElevationProfile stops={it.stops as unknown as Stop[]} selected={sel ?? -1} onSelect={(i) => setSel(i)} />
+                {it.season_note && <p className="mf-k">{it.season_note}</p>}
                 {groups}
               </div>
             </>

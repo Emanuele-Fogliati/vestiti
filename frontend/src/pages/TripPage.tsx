@@ -220,8 +220,8 @@ export default function TripPage() {
   );
   const below = (
     <>
-          {source && (
-            <p className="x-from"><Link to={`/ideas/${source.slug}`}>Day by day: {source.title} →</Link></p>
+          {trip.source_itinerary && (
+            <p className="x-from"><Link to={`/ideas/${trip.source_itinerary}`}>Day by day{source ? `: ${source.title}` : ""} →</Link></p>
           )}
           {quizResult && (
             <div className="x-alert x-quizres">

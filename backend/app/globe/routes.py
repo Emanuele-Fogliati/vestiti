@@ -50,7 +50,9 @@ def _from_itinerary(it: inspire.Itinerary) -> dict:
 @lru_cache
 def routes() -> tuple[dict, ...]:
     read = json.loads((HERE / "routes.json").read_text(encoding="utf-8"))["routes"]
-    guided = [_from_itinerary(it) for it in inspire.itineraries() if bucket_of(it.total_days)]
+    # the hand-written itineraries only: the recommended library (it.weeks, one route per season
+    # band) lives on the Trips page, not on the globe
+    guided = [_from_itinerary(it) for it in inspire.itineraries() if bucket_of(it.total_days) and not it.weeks]
     keep = []
     for r in read:
         names = [s["name"] for s in r["stops"]]

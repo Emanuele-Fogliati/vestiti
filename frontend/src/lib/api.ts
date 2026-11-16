@@ -154,11 +154,12 @@ export const api = {
     req<{ ok: boolean }>("DELETE", `/api/trips/${id}/selections${tier ? `?tier=${tier}` : ""}`),
 
   itineraries: () => req<ItineraryCard[]>("GET", "/api/inspire"),
-  itinerary: (slug: string, start?: string) =>
-    req<Itinerary>("GET", `/api/inspire/${encodeURIComponent(slug)}${start ? `?start=${start}` : ""}`),
+  /** month: the trip in that month, with what to wear then */
+  itinerary: (slug: string, start?: string, month?: number) =>
+    req<Itinerary>("GET", `/api/inspire/${encodeURIComponent(slug)}${start ? `?start=${start}` : month ? `?month=${month}` : ""}`),
   /** "Dress me for this trip": the itinerary becomes the user's trip. No date = next good month, a guess. */
-  packItinerary: (slug: string, start_date?: string) =>
-    req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null }),
+  packItinerary: (slug: string, start_date?: string, month?: number) =>
+    req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null, month: month ?? null }),
 
   /** "Dress me for this trip" on a route of the globe. No date: the next good month (or the month given), a guess. */
   /** A trip from the places picked on the globe: whole cities and single sights inside them. */
