@@ -160,6 +160,15 @@ def lead(region: str) -> Itinerary | None:
     return min(its, key=lambda i: (abs((i.weeks or 2) - 2), -len(i.best_months)), default=None)
 
 
+@lru_cache(maxsize=256)
+def custom(region: str, days: int, month: int) -> Itinerary | None:
+    """The trip of a travel region for any number of days in a month (Manu, 2026-11-16: "anche
+    volendo 10 giorni, 17 giorni"): built on the fly from the nearest ready route (app.inspire.build)."""
+    from app.inspire import build
+    t = build.fitted(region, days, month)
+    return Itinerary.model_validate(build.build(t)) if t else None
+
+
 def get(slug: str) -> Itinerary | None:
     return next((i for i in itineraries() if i.slug == slug), None)
 

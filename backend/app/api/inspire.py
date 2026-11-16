@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app import inspire
 from app.guide import ready
-from app.inspire import days, wear
+from app.inspire import days as day_by_day, wear
 from app.db import get_db
 from app.deps import current_user
 from app.models import Stop, Trip, User
@@ -63,12 +63,27 @@ def list_itineraries():
     return [_card(it) for it in inspire.itineraries() if it.listed]
 
 
+def _sized(it: inspire.Itinerary, days: int | None, month: int | None) -> inspire.Itinerary:
+    """The route of the same region for `days` days (Manu, 2026-11-16: "anche 10 giorni, 17
+    giorni"), cut or stretched from the nearest ready one; the route itself when it is that long."""
+    if not days or days == it.total_days or not it.weeks:
+        return it
+    m = month or (it.best_months or it.months)[0]
+    out = inspire.custom(it.region, days, m)
+    if out is None:
+        raise HTTPException(422, f"No {it.destination} trip of {days} days in that month")
+    return out
+
+
 @router.get("/{slug}")
-def get_itinerary(slug: str, start: date | None = None, month: int | None = Query(None, ge=1, le=12)):
-    """month: the trip in that month (Recommended filtered by month), with what to wear then."""
+def get_itinerary(slug: str, start: date | None = None, month: int | None = Query(None, ge=1, le=12),
+                  days: int | None = Query(None, ge=3, le=35)):
+    """month: the trip in that month (Recommended filtered by month), with what to wear then.
+    days: the same region for that many days (the nearest route, cut or stretched)."""
     it = inspire.get(slug)
     if it is None:
         raise HTTPException(404, "Itinerary not found")
+    it = _sized(it, days, month)
     try:
         start = check_date(start) or inspire.default_start(it, month=month)
     except ValueError as e:
@@ -81,7 +96,7 @@ def get_itinerary(slug: str, start: date | None = None, month: int | None = Quer
             **out.model_dump(mode="json"),
             "plan": s.plan, "do": s.do, "skip": s.skip,
             # each day: what you do hour by hour, its walk on the map, what to wear that day
-            "days": days.for_stop(it, i, before, month or start.month),
+            "days": day_by_day.for_stop(it, i, before, month or start.month),
             "excursions": [{"title": e.title, "links": [
                 {"provider": p, "label": label, "href": f"/api/go/excursion/{it.slug}/{i}/{n}?provider={p}"}
                 for p, (label, _) in inspire.EXCURSION_PROVIDERS.items()]}
@@ -104,6 +119,7 @@ def get_itinerary(slug: str, start: date | None = None, month: int | None = Quer
 class PackIn(BaseModel):
     start_date: date | None = None  # none: the next good month, shown as a guess
     month: int | None = Field(default=None, ge=1, le=12)  # no date but a month: its 1st
+    days: int | None = Field(default=None, ge=3, le=35)  # another length than the route's own
 
     _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v)))
 
@@ -116,6 +132,7 @@ def pack_for_this(slug: str, body: PackIn, user: User = Depends(current_user),
     it = inspire.get(slug)
     if it is None:
         raise HTTPException(404, "Itinerary not found")
+    it = _sized(it, body.days, body.month or (body.start_date.month if body.start_date else None))
     start = body.start_date or inspire.default_start(it, month=body.month)
     trip = Trip(user_id=user.id, name=it.title, notes=f"From the itinerary '{it.title}'.",
                 start_estimated=body.start_date is None, source_itinerary=it.slug)
