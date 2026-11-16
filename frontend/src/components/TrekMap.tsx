@@ -97,7 +97,7 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey }: {
   }, [fitKey, selected]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (failed) return null;
-  return <div className="rmap rmap-bare"><div className="rmap-map" ref={box} role="region" aria-label="Map of the treks" /></div>;
+  return <div className="rmap rmap-bare"><div className="rmap-map" ref={box} role="region" aria-label="Map of the hikes" /></div>;
 }
 
 function room(el: HTMLElement, inset?: Inset) {

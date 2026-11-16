@@ -56,6 +56,9 @@ function topPad(el: HTMLElement): number {
 function pads(el: HTMLElement): { top: number; right: number; bottom: number; left: number } {
   if (!el.dataset.bare) return { top: narrow(el) ? 70 : 100, right: 0, bottom: 0, left: 0 };
   // Plan a trip: the globe has its own box (left half on a computer, top on a phone, the sheet overlaps its foot)
+  // New trip, map first: the panel (and a card beside it) float on the left of a full-screen globe
+  const mf = el.closest<HTMLElement>(".mf-globe");
+  if (mf) return narrow(el) ? { top: 16, right: 0, bottom: 40, left: 0 } : { top: 24, right: 24, bottom: 24, left: Number(mf.dataset.left ?? 480) };
   if (el.closest(".plan3-map")) return narrow(el) ? { top: 16, right: 0, bottom: 40, left: 0 } : { top: 24, right: 0, bottom: 24, left: 0 };
   // computer: the top bar (64 px) lies over the map, so the globe is centred in what is under it (Manu
   // 2026-11-15: it was cut at the top with empty space below)
@@ -498,6 +501,7 @@ export default function Globe({ bare, intro, onReady, mode = "trip", focus }: { 
       focusPins.current.push(m);
     });
     spin.current.hold(); // it stays on your trip, it does not turn away
+    if (el.closest(".mf-globe")) map.setPadding(pads(el));
     const b = new maplibregl.LngLatBounds([pts[0].lon, pts[0].lat], [pts[0].lon, pts[0].lat]);
     pts.forEach((f) => b.extend([f.lon, f.lat]));
     const pad = narrow(el) ? 60 : 70;
@@ -590,7 +594,7 @@ export default function Globe({ bare, intro, onReady, mode = "trip", focus }: { 
         {close || zoomed
           ? <button type="button" className="btn sm" onClick={backToGlobe}>Back to the globe</button>
           : mode === "trek"
-            ? <span className="trek-legend small" aria-label="Every dot is a trek, coloured by how hard it is">
+            ? <span className="trek-legend small" aria-label="Every dot is a hike, coloured by how hard it is">
                 {["Easy", "Moderate", "Hard", "Technical"].map((n, i) => <span key={n}><i style={{ background: TREK_COLOURS[i] }} />{n}</span>)}
               </span>
             : <span className="globe-hint small">Drag to spin · zoom in anywhere, or on a city to see the places inside it</span>}

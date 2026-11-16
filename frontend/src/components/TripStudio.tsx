@@ -278,7 +278,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
             : <p className="mf-k">{plans ? "Nothing special here." : "Working out the clothes…"}</p>}
           {b?.trails && b.trails.length > 0 && (
             <>
-              <b className="mf-sub">Treks from here</b>
+              <b className="mf-sub">Hikes from here</b>
               <ul className="mf-treks">
                 {b.trails.slice(0, 3).map((t) => <li key={t.id}><Link to={`/trails/${t.id}`}>{t.name}</Link><span>{t.difficulty} · {t.km ? `${Math.round(t.km)} km` : `${t.days} d`}</span></li>)}
               </ul>
