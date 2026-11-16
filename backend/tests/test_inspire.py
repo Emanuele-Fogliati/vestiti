@@ -200,3 +200,41 @@ def test_pack_in_a_month_starts_that_month(client):
     client.post("/api/auth/guest")
     trip = client.post("/api/inspire/japan-14/trip", json={"month": 4}).json()
     assert date.fromisoformat(trip["stops"][0]["start_date"]).month == 4
+
+
+def test_every_day_of_a_recommended_trip_comes_from_its_zone_guide():
+    """Manu 2026-11-16: "come faccio a vedere che cosa fare nei 4 giorni a El Chaltén?"."""
+    from app import trails
+    from app.inspire import days
+    for it in inspire.itineraries():
+        if not it.weeks:
+            continue
+        for s in it.stops:
+            assert s.area and len(s.day_plans) == s.days, (it.slug, s.name)
+            known = days._items()[s.area]
+            for d in s.day_plans:
+                assert all(x in known for x in d.things + ([d.spare] if d.spare else [])), (it.slug, s.name, d)
+    for items in days._items().values():
+        for x in items.values():
+            assert x.trail is None or trails.find(x.trail), x.id
+
+
+def test_a_fitz_roy_day_is_dressed_apart_from_a_town_day(client):
+    j = client.get("/api/inspire/patagonia-14?month=1").json()
+    chalten = next(s for s in j["stops"] if s["name"] == "El Chaltén")
+    assert [d["kind"] for d in chalten["days"]] == ["arrive", "day", "day", "free"]
+    fitz = chalten["days"][1]
+    walk = fitz["things"][0]
+    assert walk["id"] == "laguna-de-los-tres" and walk["trail"]["id"] == "ar-laguna-de-los-tres" and walk["steps"]
+    assert "Hiking boots" in fitz["wear"]
+    town = j["stops"][0]["days"][0]  # El Calafate, the day you land
+    assert "Hiking boots" not in town["wear"]
+    spare = chalten["days"][3]
+    assert spare["things"][0]["spare"] and spare["things"][0]["trail"]
+
+
+def test_torres_del_paine_is_where_you_sleep_not_on_the_ice_field(client):
+    j = client.get("/api/inspire/patagonia-14?month=1").json()
+    tdp = next(s for s in j["stops"] if s["name"].startswith("Torres del Paine"))
+    assert tdp["days"][0]["low"] >= 5  # January on the east side, not 1 °C on the ice
+    assert all("Warm down jacket" not in d["wear"] for d in tdp["days"])

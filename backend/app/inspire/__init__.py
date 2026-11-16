@@ -40,6 +40,14 @@ class Excursion(BaseModel):
     query: str = Field(min_length=2, max_length=120)  # what we search on the marketplaces
 
 
+class DayPlan(BaseModel):
+    """One day at a stop, as the zone's guide plans it (app.guide.todo): its things by id, so the
+    page can show each one hour by hour, its walk on the map and what to wear that day."""
+    kind: str = Field(pattern=r"^(arrive|day|free)$")
+    things: list[str] = Field(default_factory=list, max_length=4)  # item ids of the stop's area
+    spare: str | None = None  # a free day: the thing to do if the weather is good
+
+
 class ItineraryStop(BaseModel):
     name: str = Field(min_length=1, max_length=200)
     country_code: str = Field(min_length=2, max_length=2)
@@ -54,9 +62,13 @@ class ItineraryStop(BaseModel):
     skip: list[str] = Field(default_factory=list)
     excursions: list[Excursion] = Field(default_factory=list)
     programs: int | None = Field(default=None, ge=0)
+    area: str | None = None  # the hand-written zone guide (app.guide.todo) the days come from
+    day_plans: list[DayPlan] = Field(default_factory=list)
 
     @model_validator(mode="after")
     def _days(self):
+        if self.day_plans and len(self.day_plans) != self.days:
+            raise ValueError(f"{self.name}: {self.days} days but {len(self.day_plans)} day plans")
         if len(self.plan) != self.days:
             raise ValueError(f"{self.name}: {self.days} days but {len(self.plan)} plan lines")
         for v in self.visits:

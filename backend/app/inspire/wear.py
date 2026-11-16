@@ -83,7 +83,22 @@ def stages(stops: list[dict], month: int) -> list[StageInput]:
 def for_month(stops: list[dict], month: int) -> dict:
     """{month, low, high, rain, top_m, cold: {feels, place, what}, pieces: [{slot, name, level, pack, why}],
     hot: {names, pieces}}. cold: the moment the warm layers are for (the coldest feels-like)."""
-    st = stages(stops, month)
+    return {"month": month, **kit(stages(stops, month))}
+
+
+def for_day(stop: dict, month: int, offset: int, acts: list[dict]) -> dict:
+    """What to wear on one day of a recommended trip (Manu, 2026-11-16: "mi serve per creare
+    l'outfit in base a dove vado"): the day's own walk or visit at that stop, on the climate of
+    that date. offset: days from the start of the trip (which leaves on the 8th of the month)."""
+    d = date(YEAR, month, START_DAY) + timedelta(days=offset)
+    day = estimate_day(stop["lat"], stop["elevation_m"], d, stop["lon"])
+    st = StageInput(index=0, stop_id="0", name=stop["name"], base_elevation_m=stop["elevation_m"], start=d, end=d,
+                    activities=acts or [{"type": "city"}], days=[day], country_code=stop.get("country_code"))
+    return kit([st])
+
+
+def kit(st: list[StageInput]) -> dict:
+    """The layer engine on these stages: the pieces, the coldest moment and the range."""
     conds = [c for s in st for c in conditions_for_stage(s)]
     reqs = requirements(st, conds)
     zone = warm_zone(st, conds, reqs)
@@ -104,7 +119,6 @@ def for_month(stops: list[dict], month: int) -> dict:
     lows = [d.tmin for d in days]
     highs = [d.tmax for d in days]
     return {
-        "month": month,
         "low": round(min(lows)), "high": round(max(highs)),
         "rain": round(max(d.precip_prob for d in days)),
         "top_m": round(max([s.base_elevation_m for s in st] + [a.get("max_altitude_m") or 0 for s in st for a in s.activities])),

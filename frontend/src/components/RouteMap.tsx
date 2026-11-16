@@ -28,11 +28,13 @@ export interface RouteMapOpts {
   tags?: (string | null)[];
   /** a place dot was tapped: offered to the page instead of the map's own card */
   onPlace?: (p: GlobePlace) => void;
+  /** one day's walk ([lon, lat] points), drawn over the route and zoomed to (a recommended trip's day) */
+  walk?: [number, number][] | null;
 }
 
-export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, onPlace }: { stops: RouteStop[]; focusIndex?: number | null } & RouteMapOpts) {
-  const opts = useRef({ inset, onPin, onPlace });
-  opts.current = { inset, onPin, onPlace };
+export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, onPlace, walk }: { stops: RouteStop[]; focusIndex?: number | null } & RouteMapOpts) {
+  const opts = useRef({ inset, onPin, onPlace, walk });
+  opts.current = { inset, onPin, onPlace, walk };
   const pinEls = useRef<HTMLButtonElement[]>([]);
   const [, setReady] = useState(0);
   const box = useRef<HTMLDivElement>(null);
@@ -106,6 +108,13 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
       } else drawIn(map.getSource("route") as maplibregl.GeoJSONSource, straight);
       map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places, { boost }) });
       for (const l of placeLayers(c)) map.addLayer(l);
+      // the day's walk, over the places: the trail's own line, as on the Walks page
+      map.addSource("walk", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+      map.addLayer({ id: "walk-casing", type: "line", source: "walk", layout: { "line-join": "round", "line-cap": "round" },
+        paint: { "line-color": "#FFFFFF", "line-width": 7 } });
+      map.addLayer({ id: "walk-line", type: "line", source: "walk", layout: { "line-join": "round", "line-cap": "round" },
+        paint: { "line-color": "#D2452B", "line-width": 3.5 } });
+      if (opts.current.walk) showWalk(opts.current.walk);
       // a stop's own name sits further out, beside its pin and not under it
       const atStop = new Set(pts.map((s) => norm(s.name)));
       const stopNames = [...new Set(data.places.filter((p) => atStop.has(norm(p.name))).map((p) => p.name))];
@@ -165,6 +174,32 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
     if (i < 0) whole(); else zoomStop(i);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusIndex]);
+
+  // a day with a walk: its line on the map, zoomed to; without, back to the stop
+  const walkKey = walk && walk.length > 1 ? `${walk.length}:${walk[0].join(",")}` : "";
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !map.getSource("walk")) return;
+    if (walk && walk.length > 1) showWalk(walk);
+    else {
+      (map.getSource("walk") as maplibregl.GeoJSONSource).setData({ type: "FeatureCollection", features: [] });
+      const i = focusIndex == null ? -1 : pts.findIndex((p) => p.n === focusIndex + 1);
+      if (i >= 0) zoomStop(i);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [walkKey]);
+
+  function showWalk(line: [number, number][]) {
+    const map = mapRef.current;
+    const src = map?.getSource("walk") as maplibregl.GeoJSONSource | undefined;
+    if (!map || !src || !box.current) return;
+    src.setData({ type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: line } });
+    const lons = line.map((c) => c[0]), lats = line.map((c) => c[1]);
+    // the padding of the last flight to a stop stays on the camera and would add to this one
+    map.setPadding({ top: 0, right: 0, bottom: 0, left: 0 });
+    map.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]],
+      { padding: room(box.current, opts.current.inset), maxZoom: 14, duration: 900 });
+  }
 
   function zoomStop(i: number) {
     const s = pts[i];

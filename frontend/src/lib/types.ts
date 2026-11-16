@@ -620,8 +620,28 @@ export interface ItineraryWear {
 export interface ExcursionLink { provider: string; label: string; href: string }
 
 /** One stop of an itinerary: the same shape as a trip stop, plus the day plan and tips. */
+/** One thing to do on a day of a recommended trip, from the zone's guide; trail: its walk. */
+export interface ItineraryThing {
+  id: string; name: string; hours: string; effort: string; need: string; best: string; book: string; why: string;
+  steps: { at: string; what: string; note: string }[];
+  spare: boolean; // the spare day's walk, if the sky is good
+  trail: { id: string; name: string; difficulty: string; hours: number[]; km: number | null; gain_m: number | null;
+    max_m: number | null; has_map: boolean } | null;
+}
+
+/** A day of a recommended trip: what you do and what to wear that day (the layer engine). */
+export interface ItineraryDay {
+  kind: "arrive" | "day" | "free";
+  title: string;
+  things: ItineraryThing[];
+  low: number; high: number; rain: number;
+  wear: string[]; pack: string[];
+  cold: { feels: number; place: string; what: string };
+}
+
 export interface ItineraryStop extends Omit<Stop, "plan"> {
   plan: string[];
+  days: ItineraryDay[];
   do: string[];
   skip: string[];
   excursions: { title: string; links: ExcursionLink[] }[];

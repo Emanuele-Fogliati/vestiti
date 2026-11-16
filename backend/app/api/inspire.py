@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 
 from app import inspire
 from app.guide import ready
-from app.inspire import wear
+from app.inspire import days, wear
 from app.db import get_db
 from app.deps import current_user
 from app.models import Stop, Trip, User
@@ -75,15 +75,19 @@ def get_itinerary(slug: str, start: date | None = None, month: int | None = Quer
         raise HTTPException(422, str(e)) from e
     prev = _preview(it, start)
     stops = []
+    before = 0
     for i, (s, out) in enumerate(zip(it.stops, prev.stops)):
         stops.append({
             **out.model_dump(mode="json"),
             "plan": s.plan, "do": s.do, "skip": s.skip,
+            # each day: what you do hour by hour, its walk on the map, what to wear that day
+            "days": days.for_stop(it, i, before, month or start.month),
             "excursions": [{"title": e.title, "links": [
                 {"provider": p, "label": label, "href": f"/api/go/excursion/{it.slug}/{i}/{n}?provider={p}"}
                 for p, (label, _) in inspire.EXCURSION_PROVIDERS.items()]}
                 for n, e in enumerate(s.excursions)],
         })
+        before += s.days
     return {
         **_card(it),
         "season_note": it.season_note,
