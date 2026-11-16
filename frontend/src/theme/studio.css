@@ -428,3 +428,5 @@ a.mf-btn{text-decoration:none}
 .mf-search input::-webkit-search-cancel-button{display:none}
 .mf-search button{background:var(--surface-2);color:var(--ink);font-size:18px;line-height:1}
 .mf-zone{align-items:center}.mf-zone .mf-k{flex:none;margin-right:2px}
+/* the globe floats on the page's own white, as on Explore (Manu 2026-11-16: the blue mixed sea and space) */
+.mf-map,.mf-globe,.mf-globe .globe{background:var(--bg)}

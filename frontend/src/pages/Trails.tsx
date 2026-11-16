@@ -72,21 +72,32 @@ export default function Trails() {
     return () => { live = false; clearTimeout(h); };
   }, [find]);
   const [km, setKm] = useState(25);
+  // a hike searched by its own name (Manu 2026-11-16): it comes first and opens, and every walk
+  // around it shows too, as if you had zoomed in there
+  const nameHit = (t: TrailCard) => !!find && find.split(/\s+/).every((w) => t.name.toLowerCase().includes(w));
   const zone = useMemo(() => {
     if (find.length < 3 || !all) return null;
     if (all.some((t) => countryName(t.country).toLowerCase() === find || t.country.toLowerCase() === find)) return null;
-    if (geo && geo.q === find) return { lat: geo.lat, lon: geo.lon, name: geo.name.toLowerCase() === find ? typed.trim() : geo.name };
+    const byName = all.filter((t) => t.lat != null && t.lon != null && nameHit(t));
+    if (byName.length && byName.length <= 8) return { lat: byName[0].lat!, lon: byName[0].lon!, name: byName[0].name, trail: byName.length === 1 ? byName[0].id : null };
+    if (geo && geo.q === find) return { lat: geo.lat, lon: geo.lon, name: geo.name.toLowerCase() === find ? typed.trim() : geo.name, trail: null };
     const named = all.filter((t) => t.lat != null && t.lon != null && textHit(t));
     if (!named.length || named.length > 8) return null;
-    return { lat: named[0].lat!, lon: named[0].lon!, name: named[0].base || named[0].name };
+    return { lat: named[0].lat!, lon: named[0].lon!, name: named[0].base || named[0].name, trail: null };
   }, [find, all, geo]); // eslint-disable-line react-hooks/exhaustive-deps
   const away = (t: TrailCard) => zone && t.lat != null && t.lon != null ? distKm(zone.lat, zone.lon, t.lat, t.lon) : Infinity;
 
   const shown = useMemo(() => base.filter((t) => textHit(t) || away(t) <= km)
-    // near the place first; else in season first, then the ones with a drawing (the famous ones), then the rest
-    .sort((a, b) => (zone ? Math.round(away(a)) - Math.round(away(b)) : 0)
+    // the hike you named first, then the nearest; else in season first, then the famous ones (with a drawing)
+    .sort((a, b) => Number(nameHit(b)) - Number(nameHit(a)) || (zone ? Math.round(away(a)) - Math.round(away(b)) : 0)
       || Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
       || Number(b.tier === "A") - Number(a.tier === "A")), [base, find, zone, km]); // eslint-disable-line react-hooks/exhaustive-deps
+  // one hike matches the name: it opens (card, what to wear) once you stop typing
+  useEffect(() => {
+    if (!zone?.trail || selId === zone.trail) return;
+    const h = setTimeout(() => set("t", zone.trail!), 700);
+    return () => clearTimeout(h);
+  }, [zone?.trail]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => setPage(0), [all, level, kind, style, find, km, zone?.lat]);
 
   const PER = desk ? 6 : 20;

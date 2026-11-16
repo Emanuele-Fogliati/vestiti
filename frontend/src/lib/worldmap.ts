@@ -459,3 +459,11 @@ export function blockPins(map: MlMap, at: [number, number][], size = 34) {
   map.addLayer({ id: "pin-holes", type: "symbol", source: "pin-holes",
     layout: { "icon-image": "pin-hole", "icon-allow-overlap": true, "icon-ignore-placement": false } });
 }
+
+/** The zoom at which the whole globe fits the free part of a map box (the panels float over the
+ *  rest): My trips and Hikes open on the same globe as Explore, and become a map as you zoom in. */
+export function worldZoom(el: HTMLElement, inset?: { top: number; right: number; bottom: number; left: number }): number {
+  const w = el.clientWidth - (inset ? inset.left + inset.right : 0), h = el.clientHeight - (inset ? inset.top + inset.bottom : 0);
+  const side = Math.max(160, Math.min(w, h)) * 0.86;
+  return Math.max(0.2, Math.log2(side / 512) + (el.clientWidth < 900 ? 1.75 : 1.62));
+}
