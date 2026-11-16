@@ -232,3 +232,24 @@
 .mf-pager .mf-btn{font-family:var(--f-body)}
 .mf-phone-buy,.mf-scroll,.mf-filters{min-width:0}
 @media (min-width:900px) and (max-height:700px){.mf-art{height:110px}}
+
+/* ---------- My trips: every trip on the map, the list on the left ---------- */
+.mf-acts{display:flex;gap:6px;flex-wrap:wrap;flex:0 0 auto}
+.mf-note{margin:0;font-size:12.5px;color:var(--ink-2);background:var(--surface-2);padding:8px 12px;border-radius:12px;flex:0 0 auto}
+.mf-note a,.mf-empty a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.mf-trips{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.mf-copies{margin-left:8px;font:600 11.5px var(--f-mono);background:var(--ink);color:#FFFFFF;padding:1px 7px;border-radius:999px;vertical-align:2px}
+.mf-hint{flex:0 0 auto;margin:0}
+.mf-empty{display:grid;gap:10px;font-size:15px}
+.mf-empty p{margin:0}
+.mf-route{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14.5px}
+.mf-route li{display:flex;align-items:center;gap:10px}
+.mf-num{flex:none;width:22px;height:22px;border-radius:11px;background:var(--ink);color:#FFFFFF;font:600 11.5px var(--f-mono);display:grid;place-items:center}
+.mf-dupe{display:grid;gap:6px;padding:10px 12px;border-radius:12px;background:#FBEDE7;font-size:13px}
+.mf-dupe .mf-btn{justify-self:start;background:#FFFFFF}
+.mf-dupe-ph{margin:2px 0 6px 6px;background:#FBEDE7}
+.mf-tripcard{width:350px}
+a.mf-btn{text-decoration:none}
+@media (max-width:899px){
+  .mytrips .mf-map{height:min(280px,36svh)}
+}

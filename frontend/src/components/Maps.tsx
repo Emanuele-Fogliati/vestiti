@@ -8,6 +8,7 @@ import "../theme/maps.css";
 const GlobeImpl = lazy(() => import("./Globe"));
 const RouteMapImpl = lazy(() => import("./RouteMap"));
 const TrekMapImpl = lazy(() => import("./TrekMap"));
+const TripsMapImpl = lazy(() => import("./TripsMap"));
 
 export function HomeGlobe(props: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[] }) {
   return <Suspense fallback={<section className="globe globe-loading" aria-hidden="true" />}><GlobeImpl {...props} /></Suspense>;
@@ -20,4 +21,9 @@ export function TripMap(props: { stops: RouteStop[]; focusIndex?: number | null 
 export function TreksMap(props: { trails: TrailCard[]; selected: string | null; onPick: (id: string) => void;
   inset?: { top: number; right: number; bottom: number; left: number }; fitKey: string }) {
   return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><TrekMapImpl {...props} /></Suspense>;
+}
+
+export function MyTripsMap(props: { trips: { id: string; points: number[][] }[]; selected: string | null; onPick: (id: string) => void;
+  inset?: { top: number; right: number; bottom: number; left: number } }) {
+  return <Suspense fallback={<div className="rmap rmap-loading" aria-hidden="true" />}><TripsMapImpl {...props} /></Suspense>;
 }

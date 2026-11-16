@@ -542,6 +542,8 @@ class TripSummary(ORM):
     art: StopArt | None = None
     estimated: bool = False
     source_itinerary: str | None = None
+    # where the stops are, in order ([lat, lon]): the trips on the My trips map
+    points: list[list[float]] = []
 
 
 class ReorderIn(BaseModel):

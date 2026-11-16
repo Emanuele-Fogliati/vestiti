@@ -111,6 +111,8 @@ def test_api_serves_landmarks_and_trips_carry_them(client):
         "pe-cusco-cathedral", "pe-machu-picchu", "pe-rainbow-mountain", None]
     summary = next(t for t in client.get("/api/trips").json() if t["id"] == trip["id"])
     assert summary["art"]["id"] == "pe-cusco-cathedral"
+    # the stops' places, in order, for the My trips map
+    assert len(summary["points"]) == 4 and summary["points"][3] == [0.0, -30.0]
 
 
 def test_library_follows_the_style_guide():
