@@ -51,7 +51,7 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
 
   useEffect(() => {
     const el = box.current;
-    if (!el || !data || pts.length === 0) return;
+    if (!el || !data) return; // no stops yet (a new trip): the whole world, to add the first one
     const c = mapColors();
     const countries = new Set(pts.map((s) => s.country_code?.toUpperCase()).filter(Boolean) as string[]);
     const onTrip = new Set(pts.flatMap((s) => [s.name, ...(s.visits ?? []).map((v) => v.name)]).map(norm));
@@ -92,14 +92,17 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
         paint: { "line-color": c.ink, "line-width": 2.5, "line-dasharray": [2, 1.6] } });
       // then the real way (Manu, 2026-11-14): along the roads like Google Maps, flights as arcs
       if (pts.length > 1 && pts.length <= 40) {
-        api.roads(pts.map((s) => [s.latitude, s.longitude])).then(({ legs }) => {
+        // a road the router could not give now comes back as a plain line: ask again, twice
+        const ask = (n: number) => api.roads(pts.map((s) => [s.latitude, s.longitude])).then(({ legs }) => {
           if (!map.getSource("route")) return;
-          const feats = legs.map((l) => ({ type: "Feature" as const, properties: { air: l.mode === "air" ? 1 : 0 },
+          if (n < 2 && legs.some((l) => l.mode === "line")) setTimeout(() => { if (map.getSource("route")) ask(n + 1).catch(() => undefined); }, 3000 * (n + 1));
+          const feats = legs.map((l) => ({ type: "Feature" as const, properties: { air: l.mode === "road" ? 0 : 1 },
             geometry: { type: "LineString" as const, coordinates: l.line } }));
           drawIn(map.getSource("route") as maplibregl.GeoJSONSource, feats);
           map.setPaintProperty("route", "line-dasharray", ["case", ["==", ["get", "air"], 1], ["literal", [2, 1.6]], ["literal", [1, 0]]]);
           map.setPaintProperty("route", "line-width", ["case", ["==", ["get", "air"], 1], 2, 3.2]);
-        }).catch(() => { if (map.getSource("route")) drawIn(map.getSource("route") as maplibregl.GeoJSONSource, straight); }); // straight lines then
+        });
+        ask(0).catch(() => { if (map.getSource("route")) drawIn(map.getSource("route") as maplibregl.GeoJSONSource, straight); }); // straight lines then
       } else drawIn(map.getSource("route") as maplibregl.GeoJSONSource, straight);
       map.addSource("places", { type: "geojson", data: placesGeoJSON(data.places, { boost }) });
       for (const l of placeLayers(c)) map.addLayer(l);
@@ -204,7 +207,7 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [insetKey]);
 
-  if (failed || pts.length === 0) return null;
+  if (failed || (pts.length === 0 && !bare)) return null;
 
   if (bare) return <div className="rmap rmap-bare"><div className="rmap-map" ref={box} /></div>;
 
@@ -233,6 +236,7 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
 }
 
 function bounds(pts: RouteStop[]): maplibregl.LngLatBoundsLike {
+  if (!pts.length) return [[-150, -45], [160, 65]];
   const lons = pts.map((s) => s.longitude), lats = pts.map((s) => s.latitude);
   const [w, e, s, n] = [Math.min(...lons), Math.max(...lons), Math.min(...lats), Math.max(...lats)];
   // one stop only: show its surroundings, not a single point at max zoom

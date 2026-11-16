@@ -97,7 +97,7 @@ export default function Landing() {
   function go(e: React.FormEvent) {
     e.preventDefault();
     const q = text.trim();
-    const to = mode === "trip" ? (q ? `/start?q=${encodeURIComponent(q)}` : "/start") : (q ? `/trails?find=${encodeURIComponent(q)}` : "/trails");
+    const to = mode === "trip" ? (q ? `/trips/new?q=${encodeURIComponent(q)}` : "/trips/new") : (q ? `/trails?find=${encodeURIComponent(q)}` : "/trails");
     // the globe rushes at you, then the next page opens (prototype motion 5)
     if (reducedMotion()) { nav(to); return; }
     setDiving(true);
@@ -149,7 +149,7 @@ export default function Landing() {
         {door ? (
           <div className="doors-list" aria-live="polite">
             <div className="doors-head">
-              <h2>{door === "inspire" ? `Ready trips for ${name}` : `Walks good in ${name}`}</h2>
+              <h2>{door === "inspire" ? `Recommended for ${name}` : `Walks for ${name}`}</h2>
               <button type="button" className="doors-x" onClick={shut} aria-label="Back">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
               </button>
@@ -165,8 +165,8 @@ export default function Landing() {
                   </Link>
                 </Fragment>))}
                 {!rows.length && <p className="doors-note">Nothing yet for {name}.</p>}
-                <Link className="doors-all" to={door === "inspire" ? "/ideas" : `/trails?month=${month}`}>
-                  {door === "inspire" ? "All ready trips" : "All walks"} →
+                <Link className="doors-all" to={door === "inspire" ? "/trips?tab=recommended" : `/trails?month=${month}`}>
+                  {door === "inspire" ? "All recommended trips" : "All walks"} →
                 </Link>
               </div>
             )}
@@ -175,11 +175,11 @@ export default function Landing() {
           <div className="doors" role="group" aria-label="Not sure yet?">
             <button type="button" className="door" onClick={() => open("inspire")}>
               <span className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{ICON.inspire}</svg></span>
-              <span><b>Inspire me</b><small>Ready trips for {name}</small></span>
+              <span><b>Recommended trips</b><small>Good in {name}</small></span>
             </button>
             <button type="button" className="door" onClick={() => open("trek")}>
               <span className="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{ICON.trek}</svg></span>
-              <span><b>Find a walk</b><small>The best for {name}</small></span>
+              <span><b>Walks</b><small>Good in {name}</small></span>
             </button>
           </div>
         )}

@@ -521,3 +521,20 @@ a.mf-btn{text-decoration:none}
   .closet-mf .cl-board.with-card .cl-ts{font-size:11px}
   .closet-mf .cl-board.with-card .cl-board-in{gap:12px}
 }
+
+/* ---------- Trips, simple (Manu 2026-11-16): New trip, Recommended, Saved ---------- */
+.mf-first-add{position:relative;flex:0 0 auto}
+.mf-first-add .mf-res{bottom:auto;top:calc(100% + 6px)}
+.mf-first{margin:0}
+.mf-new{flex:0 0 auto}
+.mytrips .mf-trow .mf-nm b{font-size:15px}
+.x-save{height:34px;padding:0 14px;background:var(--surface-2)}
+.x-save.on{background:var(--ink);color:#FFFFFF}
+.mf-segrow{display:flex;gap:8px;align-items:center;flex:0 0 auto;min-width:0}
+.mf-segrow .mf-seg{flex:1 1 auto;min-width:0}
+.mf-fbtn{flex:none;height:42px;border-radius:21px;gap:6px}
+.mf-fbtn.on{background:var(--ink);color:#FFFFFF}
+.mf-tsave{align-self:flex-start}
+.mf-th1{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}
+.mf-th1 h1{min-width:0}
+.mf-th1 .x-save{margin-top:4px;flex:none}

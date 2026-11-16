@@ -7,6 +7,7 @@ import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
 import TrailMap from "../components/TrailMap";
 import TrailProfile from "../components/TrailProfile";
 import { api } from "../lib/api";
+import { useApp } from "../lib/app-context";
 import { activityText, money } from "../lib/format";
 import type { Activity, Item, Trail, TrailWear } from "../lib/types";
 
@@ -26,6 +27,7 @@ export default function TrailPage() {
   const [q] = useSearchParams();
   const tripId = q.get("trip"), stopId = q.get("stop");
   const [t, setT] = useState<Trail | null>(null);
+  const { user, ensureUser, setUser, toast } = useApp();
   const [err, setErr] = useState<string | null>(null);
   const [focus, setFocus] = useState<number | null>(null);
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
@@ -75,10 +77,19 @@ export default function TrailPage() {
   const boots = w?.pieces.find((p) => p.slot === "footwear");
   const inset = desk ? { top: 20, right: 60, bottom: 150, left: 870 } : { top: 0, right: 0, bottom: 22, left: 0 };
 
+  const saved = (user?.saved_trails ?? []).includes(t.id);
+  async function toggleSave() {
+    const u = user ?? await ensureUser();
+    const now = u.saved_trails ?? [];
+    setUser(await api.updateMe({ saved_trails: saved ? now.filter((x) => x !== t!.id) : [t!.id, ...now] }));
+    toast(saved ? "Removed from Saved." : "Saved in Walks.");
+  }
+
   const head = (
     <div className="mf-trailhead">
       <Link className="mf-k mf-crumb" to={`/trails?country=${t.country}&t=${t.id}`}><Back /> Walks · {t.region || t.base}</Link>
-      <h1>{t.name}</h1>
+      <div className="mf-th1"><h1>{t.name}</h1>
+        <button type="button" className={`mf-btn sm x-save${saved ? " on" : ""}`} aria-pressed={saved} onClick={toggleSave}>{saved ? "✓ Saved" : "Save"}</button></div>
       <div className="tags">
         <span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
         {t.kind === "multiday" && <span className="tag">{t.days} days</span>}

@@ -279,3 +279,16 @@ def test_pre_registered_account_is_taken_back_by_the_email_owner(client):
     r = client.post("/api/auth/email-link", json={"email": "victim@example.com"})
     client.post("/api/auth/email-link/verify", json={"token": _token(r.json())})
     assert fresh.post("/api/auth/login", json={"email": "victim@example.com", "password": "owner pass 22"}).status_code == 200
+
+
+def test_trips_are_saved_only_on_save_and_saved_walks_follow_the_guest(client):
+    """Manu 2026-11-16: a trip shows in Saved only after Save; walks saved as a guest stay saved."""
+    trip_id = guest_with_trip(client)["id"]
+    listed = {t["id"]: t for t in client.get("/api/trips").json()}
+    assert listed[trip_id]["saved"] is False
+    assert client.patch(f"/api/trips/{trip_id}", json={"saved": True}).json()["saved"] is True
+    assert {t["id"]: t for t in client.get("/api/trips").json()}[trip_id]["saved"] is True
+    me = client.patch("/api/me", json={"saved_trails": ["ar-laguna-de-los-tres", "ar-laguna-de-los-tres", " cl-base-torres "]}).json()
+    assert me["saved_trails"] == ["ar-laguna-de-los-tres", "cl-base-torres"]
+    client.post("/api/auth/register", json={"email": "walker@example.com", "password": "correct horse 1"})
+    assert client.get("/api/me").json()["saved_trails"] == ["ar-laguna-de-los-tres", "cl-base-torres"]

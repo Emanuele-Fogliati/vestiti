@@ -69,6 +69,8 @@ def merge_guest(db: Session, guest: User | None, into: User) -> int:
     for w in db.scalars(select(WardrobeItem).where(WardrobeItem.user_id == guest.id)).all():
         w.user_id = into.id
     db.execute(update(AffiliateClick).where(AffiliateClick.user_id == guest.id).values(user_id=into.id))
+    # walks saved as a guest stay saved
+    into.saved_trails = list(dict.fromkeys([*(guest.saved_trails or []), *(into.saved_trails or [])]))
     if into.profile_done_at is None and guest.profile_done_at is not None:
         # the quiz answered as a guest is the traveller's own: keep it
         for k in ("thermal_offset", "pace", "evenings", "gender_pref", "preferred_brands",

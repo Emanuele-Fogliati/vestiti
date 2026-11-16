@@ -7,7 +7,7 @@ import { TrailCards } from "./TrailCards";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { groupPicks, pickStore, usePicks } from "../lib/picks";
-import { DRESS_ME } from "../pages/Start";
+import { DRESS_ME } from "../lib/words";
 import type { TrailCard, TrailDot } from "../lib/types";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
 import { PICTURE_ROOM, pictureRoomLayer } from "../lib/worldmap";

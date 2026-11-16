@@ -18,7 +18,7 @@ import { LegIcon } from "./StopPanel";
  *  to get there; a stop opens its card beside the panel (weather, what you wear); at the bottom the
  *  pieces to get for the whole trip with Cheaper / Better and the total. On the phone: the map on
  *  top and the same content below it, each stop opening in place. */
-export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged, onPlans, head, tabs, onBag, onAsk, onFlights, onBoard, content }: {
+export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged, onPlans, head, tabs, onBag, onFlights, onBoard, content, firstAdd }: {
   trip: Trip; plans: Plans | null; strategy: Strategy | null; tier: Tier;
   sel: number | null; setSel: (i: number | null) => void;
   /** the stops changed: reload the trip (and its kit) */
@@ -30,6 +30,8 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
   onFlights: () => void; onBoard: () => void;
   /** the Weather or Bag tab: shown in the big panel on the right (computer) or under the tabs (phone) */
   content?: ReactNode;
+  /** a new trip: the first place to look up (typed on the home page) */
+  firstAdd?: string;
 }) {
   const { toast } = useApp();
   const [board, setBoard] = useState<Board | null>(null);
@@ -169,48 +171,11 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
     return best;
   }
 
-  // ---- "say it": the common changes in plain words; anything else goes to the chat
-  async function say(text: string) {
-    const t = text.trim();
-    if (!t) return;
-    const find = (name: string) => {
-      const n = norm(name);
-      return stops.findIndex((s) => norm(s.name).includes(n) || n.includes(norm(s.name)));
-    };
-    let m = t.match(/^(?:add|aggiungi)\s+(.+?)(?:\s+(?:for\s+)?(\d+)\s*(?:days?|nights?|giorni|notti))?$/i);
-    if (m) {
-      try {
-        const r = await api.geocode(m[1], trip.countries);
-        const p = r.results[0];
-        if (!p) { setMsg({ text: `I can't find "${m[1]}" on the map.`, bad: true }); return; }
-        await add(p, bestSlot(p.latitude, p.longitude), m[2] ? Math.max(1, Math.min(60, +m[2])) : 2);
-      } catch (e) { setMsg({ text: (e as Error).message, bad: true }); }
-      return;
-    }
-    m = t.match(/(\d+)\s*(?:days?|nights?|giorni|notti)\s+(?:in|at|a|ad)\s+(.+)$/i) ?? t.match(/^(.+?)\s*[:,]?\s+(\d+)\s*(?:days?|nights?|giorni|notti)$/i);
-    if (m) {
-      const [n, name] = /^\d+$/.test(m[1]) ? [+m[1], m[2]] : [+m[2], m[1]];
-      const i = find(name);
-      if (i >= 0 && blocks[i]) { days(i, n - blocks[i].days); return; }
-    }
-    m = t.match(/^(?:remove|delete|drop|togli|rimuovi)\s+(.+)$/i);
-    if (m) { const i = find(m[1]); if (i >= 0) { drop(i); return; } }
-    onAsk(t);
-  }
-
   const openStop = (i: number | null) => setSel(i === sel ? null : i);
   const s = sel != null ? stops[sel] : null;
   const total = totalOf(picks);
   const cur = picks[0]?.item.currency ?? plans?.currency;
   const inset = desk ? { top: 20, right: 70, bottom: 150, left: s ? 860 : 470 } : undefined;
-
-  const say_ = (
-    <form className="mf-say" onSubmit={(e) => { e.preventDefault(); const f = e.currentTarget.elements.namedItem("say") as HTMLInputElement; say(f.value); f.value = ""; }}>
-      <Spark />
-      <input name="say" placeholder={`Or say it: "add ${suggest(stops)}", "4 days in ${stops[1]?.name ?? stops[0]?.name ?? "Cusco"}"`} aria-label="Say a change" autoComplete="off" />
-      <button type="submit" aria-label="Apply"><Arrow /></button>
-    </form>
-  );
 
   const rows = (
     <ol className={`mf-stops${busy ? " busy" : ""}`} aria-label="Stops">
@@ -289,7 +254,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
     );
   }
 
-  const addField = <AddField inputRef={addRef} countries={trip.countries} label={insAt != null ? `Add a stop after ${stops[insAt - 1]?.name ?? "the start"}` : "Add a stop: town, park, glacier…"}
+  const addField = <AddField inputRef={addRef} countries={trip.countries} first={firstAdd} focus={!stops.length} label={insAt != null ? `Add a stop after ${stops[insAt - 1]?.name ?? "the start"}` : stops.length ? "Add a stop" : "Where do you start?"}
     onPick={(p) => add(p, insAt)} onCancel={insAt != null ? () => setInsAt(null) : undefined} />;
 
   return (
@@ -304,7 +269,6 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
         <div className="mf-head">{head}</div>
         <div className="mf-tabs">{tabs}</div>
         {content && !desk ? <div className="mf-tabbody">{content}</div> : <>
-        {say_}
         {msg && <p className={`mf-msg${msg.bad ? " bad" : ""}`} role="status">{msg.text}</p>}
         {offer && (
           <div className="mf-offer">
@@ -321,13 +285,14 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
             <ProductRow picks={picks} tripId={trip.id} tier={tier} onPick={pick} />
           </div>
         )}
-        <div className="mf-scroll">{rows}</div>
-        {addField}
-        <div className="mf-more">
+        {!stops.length && <div className="mf-first-add">{addField}</div>}
+        {stops.length ? <div className="mf-scroll">{rows}</div> : <p className="mf-k mf-first">Type a place, or tap one on the map.</p>}
+        {stops.length > 0 && addField}
+        {stops.length > 0 && <div className="mf-more">
           <button type="button" onClick={onFlights}><LegIcon mode="flight" />Flights</button>
-          <button type="button" onClick={onBoard}>Days, bookings and things to do</button>
-        </div>
-        {!desk && (
+          <button type="button" onClick={onBoard}>Days & bookings</button>
+        </div>}
+        {!desk && stops.length > 0 && (
           <div className="mf-phone-go">
             <button type="button" className="mf-btn go wide" onClick={onBag} disabled={!picks.length}>
               <BagIcon />{picks.length ? `Buy the ${picks.length} pieces · ${money(total, cur)}` : "Your closet covers it"}
@@ -339,7 +304,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
 
       {desk && content && <section className="mf-float mf-wide">{content}</section>}
       {desk && !content && sel != null && stops[sel] && card(sel, true)}
-      {desk && !content && (
+      {desk && !content && stops.length > 0 && (
         <BuyBar title="To get for this trip" sub={tp ? `${picks.length} of ${lines.filter((l) => l.kind !== "none").length} pieces, picked for the weather on the map` : "Working out the clothes…"}
           picks={picks} tripId={trip.id} tier={tier} onPick={pick} onBuy={onBag} buyLabel="Buy" />
       )}
@@ -363,10 +328,15 @@ function WearRow({ l }: { l: KitLine }) {
   );
 }
 
-function AddField({ inputRef, countries, label, onPick, onCancel }: {
-  inputRef: RefObject<HTMLInputElement | null>; countries?: string[]; label: string; onPick: (p: Place) => void; onCancel?: () => void;
+function AddField({ inputRef, countries, label, onPick, onCancel, first, focus }: {
+  inputRef: RefObject<HTMLInputElement | null>; countries?: string[]; label: string; onPick: (p: Place) => void; onCancel?: () => void; first?: string; focus?: boolean;
 }) {
   const [q, setQ] = useState("");
+  // a new trip opens with the place typed on the home page already looked up, else just the cursor here
+  useEffect(() => {
+    if (focus) inputRef.current?.focus({ preventScroll: true });
+    if (first?.trim()) change(first.trim());
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   const [res, setRes] = useState<Place[]>([]);
   const [busy, setBusy] = useState(false);
   const timer = useRef<number | undefined>(undefined);
@@ -400,10 +370,8 @@ function AddField({ inputRef, countries, label, onPick, onCancel }: {
 }
 
 const at = (l: KitLine, i: number) => !!l.where?.[i] && l.where[i] !== "none";
-const norm = (s: string) => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 /** "Shell jacket", not "Shell jacket (waterproof, 10k)" */
 const short = (l: KitLine) => l.slot_name.replace(/\s*\(.*\)$/, "");
-const suggest = (stops: Stop[]) => (stops.some((s) => s.country_code === "AR" || s.country_code === "CL") ? "Ushuaia" : "a town");
 
 function legMode(l: BoardLeg): LegMode {
   if (l.chosen || l.booked) return l.mode;
@@ -420,5 +388,3 @@ const I = (d: string) => () => <svg viewBox="0 0 24 24" width="16" height="16" f
 const X = I("M6 6l12 12M18 6L6 18");
 const Up = I("M12 19V5M5 12l7-7 7 7");
 const Plus = I("M12 5v14M5 12h14");
-const Arrow = I("M5 12h14M13 6l6 6-6 6");
-const Spark = I("M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6");

@@ -1,12 +1,14 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
+import { api } from "../lib/api";
 import { baseStyle, mapColors, worldZoom } from "../lib/worldmap";
 
 type Inset = { top: number; right: number; bottom: number; left: number };
 export interface MapTrip { id: string; points: number[][] }
 
-/** My trips on one map: every trip as its stops joined by a thin grey line; the chosen trip in
- *  ink, on top, and the map frames it beside the panels. With none chosen it frames them all. */
+/** Trips on one map: every trip as its stops joined along the roads (Manu 2026-11-16: never a
+ *  straight line), thin and grey; the chosen trip in ink, on top, and the map frames it beside the
+ *  panels. With none chosen it frames them all. */
 export default function TripsMap({ trips, selected, onPick, inset }: {
   trips: MapTrip[]; selected: string | null; onPick: (id: string) => void; inset?: Inset;
 }) {
@@ -58,7 +60,21 @@ export default function TripsMap({ trips, selected, onPick, inset }: {
     return () => { ro.disconnect(); ready.current = false; map.remove(); mapRef.current = null; };
   }, []);
 
-  const key = shown.map((t) => `${t.id}:${t.points.length}`).join("|");
+  const key = shown.map((t) => `${t.id}:${t.points.map((p) => p.join(",")).join(";")}`).join("|");
+  // each trip's legs along the roads, asked once per trip (the server keeps them)
+  const [roads, setRoads] = useState<Record<string, number[][][]>>({});
+  const asked = useRef(new Set<string>());
+  useEffect(() => {
+    for (const t of shown) {
+      const k = `${t.id}:${t.points.map((p) => p.join(",")).join(";")}`;
+      if (t.points.length < 2 || t.points.length > 40 || asked.current.has(k)) continue;
+      asked.current.add(k);
+      api.roads(t.points.map(([la, lo]) => [la, lo])).then(({ legs }) => setRoads((r) => ({ ...r, [k]: legs.map((l) => l.line) })))
+        .catch(() => undefined);
+    }
+  }, [key]); // eslint-disable-line react-hooks/exhaustive-deps
+  const roadKey = Object.keys(roads).join("|");
+  const framed = useRef("");
   useEffect(() => {
     when(() => {
       const map = mapRef.current;
@@ -66,12 +82,15 @@ export default function TripsMap({ trips, selected, onPick, inset }: {
       const feats = shown.flatMap((t) => {
         const s = t.id === selected ? 1 : 0;
         const coords = t.points.map(([la, lo]) => [lo, la]);
+        const way = roads[`${t.id}:${t.points.map((p) => p.join(",")).join(";")}`] ?? (coords.length > 1 ? [coords] : []);
         return [
-          ...(coords.length > 1 ? [{ type: "Feature" as const, properties: { id: t.id, s }, geometry: { type: "LineString" as const, coordinates: coords } }] : []),
+          ...way.map((line) => ({ type: "Feature" as const, properties: { id: t.id, s }, geometry: { type: "LineString" as const, coordinates: line } })),
           ...coords.map((c) => ({ type: "Feature" as const, properties: { id: t.id, s }, geometry: { type: "Point" as const, coordinates: c } })),
         ];
       });
       (map.getSource("trips") as maplibregl.GeoJSONSource | undefined)?.setData({ type: "FeatureCollection", features: feats });
+      if (framed.current === `${key}#${selected}`) return; // the roads came in: the frame stays
+      framed.current = `${key}#${selected}`;
       const pick = selected ? shown.filter((t) => t.id === selected) : shown;
       const pts = pick.flatMap((t) => t.points);
       if (!pts.length) return;
@@ -82,7 +101,7 @@ export default function TripsMap({ trips, selected, onPick, inset }: {
       map.fitBounds([[Math.min(...lons) - d, Math.min(...lats) - d], [Math.max(...lons) + d, Math.max(...lats) + d]],
         { padding: pad, maxZoom: 9, duration: 700 });
     });
-  }, [key, selected]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [key, selected, roadKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (failed) return null;
   return <div className="rmap rmap-bare"><div className="rmap-map" ref={box} role="region" aria-label="Map of your trips" /></div>;

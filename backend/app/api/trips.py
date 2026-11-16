@@ -66,7 +66,7 @@ def list_trips(user: User = Depends(current_user), db: Session = Depends(get_db)
                                places=[s.name for s in stops],
                                art=next(({"id": lm.id, "label": lm.label} for lm in assign(stops) if lm), None),
                                estimated=bool(t.start_estimated or any(s.days_estimated for s in stops)),
-                               source_itinerary=t.source_itinerary,
+                               source_itinerary=t.source_itinerary, saved=bool(t.saved),
                                points=[[round(s.latitude, 4), round(s.longitude, 4)] for s in stops]))
     return out
 
@@ -99,7 +99,7 @@ def patch_trip(body: TripPatch, trip: Trip = Depends(own_trip), db: Session = De
     if "return_leg" in data:
         data["return_leg"] = body.return_leg.stored() if body.return_leg else None
     for k, v in data.items():
-        if k == "name" and v is None:
+        if k in ("name", "saved") and v is None:
             continue
         setattr(trip, k, v)
     db.commit()

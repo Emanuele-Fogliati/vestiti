@@ -9,7 +9,7 @@ import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, monthRange, monthYear, nights, today } from "../lib/format";
 import type { Itinerary, ItineraryStop, Stop } from "../lib/types";
-import { DRESS_ME } from "./Start";
+import { DRESS_ME } from "../lib/words";
 
 const COUNTRY: Record<string, string> = { PE: "Peru", AR: "Argentina", CL: "Chile", IS: "Iceland", VN: "Vietnam" };
 
@@ -38,8 +38,8 @@ function PackForm({ it }: { it: Itinerary }) {
   return (
     <form className="mf-pack" onSubmit={pack} aria-label={DRESS_ME}>
       <div className="mf-pack-t">
-        <b>Like this trip?</b>
-        <span className="mf-k">It becomes your trip: we read the weather at every stop and dress you for all of it, at three budgets. Free.</span>
+        <b>Like it?</b>
+        <span className="mf-k">Make it yours: change the stops, then Save.</span>
       </div>
       <label className="mf-pack-d"><span className="mf-k">Leaving</span>
         <input type="date" value={start} min={today()} onChange={(e) => setStart(e.target.value)}
@@ -112,7 +112,7 @@ export default function ItineraryPage() {
       .catch((e) => setErr((e as Error).message));
   }, [slug]);
 
-  if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/ideas">All recommended trips</Link></div></main>;
+  if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips?tab=recommended">All recommended trips</Link></div></main>;
   if (!it) return <main className="page"><div className="wrap"><p className="loading"><span className="spin" /></p></div></main>;
 
   const starts: number[] = [];
@@ -169,7 +169,7 @@ export default function ItineraryPage() {
           ) : (
             <>
               <div className="mf-trailhead">
-                <Link className="mf-k mf-crumb" to="/ideas"><Back /> Recommended trips · {it.countries.map((c) => COUNTRY[c] ?? c).join(" & ")}</Link>
+                <Link className="mf-k mf-crumb" to="/trips?tab=recommended"><Back /> Recommended · {it.countries.map((c) => COUNTRY[c] ?? c).join(" & ")}</Link>
                 <h1>{it.title}</h1>
                 <dl className="tfacts">
                   <div><dt>Days</dt><dd>{it.days}</dd></div>
@@ -180,7 +180,6 @@ export default function ItineraryPage() {
               </div>
               <div className={desk ? "mf-scroll" : "mf-ibody"}>
                 <p className="mf-lede">{it.summary}</p>
-                <p className="mf-k">{it.season_note}</p>
                 <b className="mf-sub">Day by day</b>
                 {rows}
                 <ElevationProfile stops={it.stops as unknown as Stop[]} selected={sel ?? -1} onSelect={(i) => setSel(i)} />

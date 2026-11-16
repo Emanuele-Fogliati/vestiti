@@ -92,7 +92,7 @@ export default function Auth({ mode }: { mode: "login" | "register" }) {
             </button>
           )}
           <p className="small">{mode === "login"
-            ? <>No account? <Link to="/register" state={{ from: next }}>Create one</Link>, or just <Link to="/start">start planning</Link> as a guest.</>
+            ? <>No account? <Link to="/register" state={{ from: next }}>Create one</Link>, or just <Link to="/trips/new">start a trip</Link> as a guest.</>
             : <>Already have one? <Link to="/login" state={{ from: next }}>Sign in</Link>.</>}</p>
           <p className="small muted auth-legal">{mode === "register" ? "Creating an account means you accept the " : ""}<Link to="/legal/terms">Terms</Link> · <Link to="/legal/privacy">Privacy</Link> · <Link to="/legal/affiliate">Affiliate disclosure</Link></p>
         </form>

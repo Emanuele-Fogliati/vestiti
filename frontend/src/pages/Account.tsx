@@ -13,7 +13,7 @@ export default function Account() {
   const [pwErr, setPwErr] = useState<string | null>(null);
   const [catalog, setCatalog] = useState<string[]>([]);
   useEffect(() => { if (user) api.profile().then((p) => setCatalog(p.catalog_brands)).catch(() => undefined); }, [user?.id]); // eslint-disable-line react-hooks/exhaustive-deps
-  if (!user) return <main className="page"><div className="wrap"><p>You're not signed in. <Link to="/login">Sign in</Link> or <Link to="/trips/new">start as a guest</Link>.</p></div></main>;
+  if (!user) return <main className="page"><div className="wrap"><p>You're not signed in. <Link to="/login">Sign in</Link> or <Link to="/trips">start as a guest</Link>.</p></div></main>;
 
   async function patch(p: Parameters<typeof api.updateMe>[0]) {
     setUser(await api.updateMe(p));
