@@ -7,26 +7,55 @@ import { PlaceGuide } from "../components/PlaceGuide";
 import { Visits } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { MONTHS, MONTH_LONG, activityText, monthRuns, monthYear, nights, today } from "../lib/format";
-import type { Itinerary, ItineraryStop, ItineraryWear, Stop } from "../lib/types";
+import { MONTHS, MONTH_LONG, activityText, countryNames, monthYear, nights, today } from "../lib/format";
+import type { Itinerary, ItineraryStop, ItineraryWear, Journey, Stop } from "../lib/types";
 import { DRESS_ME } from "../lib/words";
 
-const COUNTRY: Record<string, string> = { PE: "Peru", AR: "Argentina", CL: "Chile", IS: "Iceland", VN: "Vietnam",
-  JP: "Japan", NA: "Namibia", NZ: "New Zealand" };
+/** The region's pickers (Manu 2026-11-16: "lo chiede all'utente quanto ci vuole stare ... scopre
+ *  sul tool in che mese andare"): how many weeks, then the twelve months, the best ones marked,
+ *  the ones with no route for that length off. Each pick opens the route of that length and season. */
+function Pickers({ j, it, onPick }: { j: Journey; it: Itinerary; onPick: (slug: string, month: number) => void }) {
+  const month = it.wear.month;
+  const weeks = [...new Set(j.routes.map((r) => r.weeks))].sort();
+  const mine = j.routes.filter((r) => r.weeks === it.weeks);
+  const pickWeeks = (w: number) => {
+    const rs = j.routes.filter((r) => r.weeks === w);
+    const r = rs.find((x) => x.months.includes(month)) ?? rs[0];
+    onPick(r.slug, r.months.includes(month) ? month : (r.best_months[0] ?? r.months[0]));
+  };
+  return (
+    <div className="mf-pick">
+      <div className="mf-seg mf-weeks" role="radiogroup" aria-label="How long" style={{ gridTemplateColumns: `repeat(${weeks.length}, 1fr)` }}>
+        {weeks.map((w) => (
+          <button type="button" role="radio" key={w} aria-checked={w === it.weeks} className={w === it.weeks ? "on" : ""}
+            onClick={() => pickWeeks(w)}>{w} {w === 1 ? "week" : "weeks"}</button>
+        ))}
+      </div>
+      <div className="mf-months" role="radiogroup" aria-label="When">
+        {MONTHS.map((m, i) => {
+          const r = mine.find((x) => x.months.includes(i + 1));
+          const best = !!r && r.best_months.includes(i + 1);
+          return (
+            <button type="button" role="radio" key={m} aria-checked={i + 1 === month} disabled={!r}
+              className={`${i + 1 === month ? "on" : ""}${best ? " best" : ""}`}
+              title={!r ? "Not a good time for this trip" : best ? "Best weather" : "Possible, not the best weather"}
+              onClick={() => r && onPick(r.slug, i + 1)}>{m}</button>
+          );
+        })}
+      </div>
+      <span className="mf-k mf-mlegend"><i className="best" /> best weather <i /> possible <i className="off" /> no trip then</span>
+    </div>
+  );
+}
 
 /** What to wear in the chosen month (Manu 2026-11-16: "per ogni mese cosa mettere come vestito"):
  *  worked out by the layer engine from each stop's climate that month, not written by hand. */
-function Wear({ w, months, onMonth }: { w: ItineraryWear; months: number[]; onMonth: (m: number) => void }) {
+function Wear({ w }: { w: ItineraryWear }) {
   const worn = w.pieces.filter((p) => !p.pack);
   const pack = w.pieces.filter((p) => p.pack);
   return (
     <div className="mf-tsec mf-iwear">
-      <div className="mf-wear-h">
-        <b className="mf-sub">What to wear in</b>
-        <select aria-label="Month" value={w.month} onChange={(e) => onMonth(Number(e.target.value))}>
-          {months.map((m) => <option key={m} value={m}>{MONTH_LONG[m - 1]}</option>)}
-        </select>
-      </div>
+      <b className="mf-sub">What to wear in {MONTH_LONG[w.month - 1]}</b>
       <span className="mf-k">{w.low}° to {w.high}° · rain up to {w.rain}% of days{w.top_m >= 1500 ? ` · up to ${w.top_m.toLocaleString("en-US")} m` : ""}</span>
       {w.cold.feels < 15 && <span className="mf-k">Coldest: feels like {w.cold.feels}° in {w.cold.place}, {w.cold.what.replace(/(\d{4,}) m/, (_, n) => `${Number(n).toLocaleString("en-US")} m`)}.</span>}
       <div className="tags">{worn.map((p) => <span className="tag" key={p.slot}>{p.name}</span>)}</div>
@@ -118,7 +147,8 @@ function StopCard({ stop, dayFrom, desk, onClose }: { stop: ItineraryStop; dayFr
  *  stops in the panel, a stop opens its card beside it, and "Dress me" sits in the bar below. */
 export default function ItineraryPage() {
   const { slug = "" } = useParams();
-  const [q, setQ] = useSearchParams();
+  const [q] = useSearchParams();
+  const nav = useNavigate();
   const month = Number(q.get("month")) || undefined;
   const [it, setIt] = useState<Itinerary | null>(null);
   const [err, setErr] = useState<string | null>(null);
@@ -206,19 +236,19 @@ export default function ItineraryPage() {
           ) : (
             <>
               <div className="mf-trailhead">
-                <Link className="mf-k mf-crumb" to="/trips?tab=recommended"><Back /> Recommended · {it.countries.map((c) => COUNTRY[c] ?? c).join(" & ")}</Link>
-                <h1>{it.title}</h1>
+                <Link className="mf-k mf-crumb" to="/trips?tab=recommended"><Back /> Recommended · {countryNames(it.journey?.countries ?? it.countries)}</Link>
+                <h1>{it.journey?.name ?? it.title}</h1>
+                {it.journey && <Pickers j={it.journey} it={it} onPick={(s, m) => nav(`/ideas/${s}?month=${m}`, { replace: true })} />}
+              </div>
+              <div className={desk ? "mf-scroll" : "mf-ibody"}>
+                {it.journey && <b className="mf-sub">{it.title}</b>}
                 <dl className="tfacts">
                   <div><dt>Days</dt><dd>{it.days}</dd></div>
                   <div><dt>Stops</dt><dd>{it.stops.length}</dd></div>
-                  <div><dt>Best</dt><dd>{monthRuns(it.best_months) || "—"}</dd></div>
                   <div><dt>Highest</dt><dd>{Math.round(it.highest_m).toLocaleString("en-US")} m</dd></div>
                 </dl>
-              </div>
-              <div className={desk ? "mf-scroll" : "mf-ibody"}>
                 <p className="mf-lede">{it.summary}</p>
-                <Wear w={it.wear} months={it.months.length ? [...it.months].sort((a, b) => a - b) : [it.wear.month]}
-                  onMonth={(m) => setQ({ month: String(m) }, { replace: true })} />
+                <Wear w={it.wear} />
                 <b className="mf-sub">Day by day</b>
                 {rows}
                 <ElevationProfile stops={it.stops as unknown as Stop[]} selected={sel ?? -1} onSelect={(i) => setSel(i)} />

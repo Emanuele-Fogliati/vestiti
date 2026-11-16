@@ -12,7 +12,7 @@ from app.config import Settings
 BOX = {"PE": (-18.5, -0.0, -81.5, -68.5), "AR": (-55.2, -21.7, -73.6, -53.5),
        "CL": (-56.0, -17.4, -76.0, -66.4), "IS": (63.2, 66.6, -24.6, -13.4),
        "VN": (8.4, 23.4, 102.1, 109.5), "JP": (24.0, 45.6, 122.9, 146.0), "NA": (-29.0, -16.9, 11.7, 25.3),
-       "NZ": (-47.4, -34.3, 166.3, 178.6)}
+       "NZ": (-47.4, -34.3, 166.3, 178.6), "BO": (-22.9, -9.6, -69.7, -57.4)}
 # Rapa Nui is Chile too, 3,700 km out in the Pacific
 ISLANDS = {("CL", "Hanga Roa"): (-27.3, -27.0, -109.5, -109.2)}
 
@@ -57,7 +57,11 @@ def test_list_and_detail(client):
     # the recommended library is listed; the four older hand-written ones only open by link
     slugs = {c["slug"] for c in cards}
     assert "peru-14" in slugs and "peru-coast-andes-titicaca" not in slugs
-    assert all(c["weeks"] in (1, 2, 3, 4) and c["months"] and c["destination"] for c in cards)
+    assert all(c["weeks"] in (1, 2, 3, 4) and c["months"] and c["destination"] and c["journey"] for c in cards)
+    # one card per travel region (Manu, 2026-11-16: not the same trip once per length)
+    leads = [c for c in cards if c["lead"]]
+    assert len(leads) == len({c["journey"] for c in cards}) == 10
+    assert all(c["weeks"] == 2 for c in leads)
     d = client.get("/api/inspire/peru-coast-andes-titicaca?start=2027-06-01").json()
     assert d["start_date"] == "2027-06-01" and d["days"] == 15
     by_name = {s["name"]: s for s in d["stops"]}
@@ -135,20 +139,35 @@ def test_tour_networks_track_only_when_configured():
     assert v.tracked and q["pid"] == ["P001"] and q["mcid"] == ["42383"] and q["campaign"] == ["c1"]
 
 
-def test_every_destination_has_1_to_4_weeks_for_every_month():
-    """Manu, 2026-11-16: per destination a trip of 1, 2, 3 and 4 weeks, for every month; months
-    with the same route share it."""
+def test_regions_cross_borders_and_each_month_has_one_route_per_length():
+    """Manu, 2026-11-16: travel regions as tour operators cut them, across borders (Patagonia is
+    Chile and Argentina), 1 to 4 weeks, the season deciding the route; a month with no good
+    route for a length has none, rather than a bad one."""
     from collections import defaultdict
-    cover = defaultdict(list)
+    by = defaultdict(list)
     for it in inspire.itineraries():
-        if it.listed:
-            cover[(it.destination, it.weeks)] += it.months
-    dests = {d for d, _ in cover}
-    assert len(dests) >= 9
-    for d in dests:
-        for w in (1, 2, 3, 4):
-            ms = cover[(d, w)]
-            assert sorted(ms) == list(range(1, 13)), (d, w, sorted(ms))  # each month once
+        if it.listed and it.weeks:
+            by[it.region].append(it)
+    assert len(by) == 10
+    for region, its in by.items():
+        weeks = {i.weeks for i in its}
+        assert {1, 2} <= weeks, region
+        for w in weeks:
+            ms = [m for i in its if i.weeks == w for m in i.months]
+            assert len(ms) == len(set(ms)), (region, w)  # one route per month and length
+        assert any(i.best_months for i in its), region
+    lands = {r: {c for i in its for c in i.countries} for r, its in by.items()}
+    assert lands["patagonia"] == {"AR", "CL"} and lands["andes"] == {"AR", "BO", "CL"}
+    assert lands["peru-bolivia"] == {"PE", "BO"} and lands["lakes"] == {"AR", "CL"}
+
+
+def test_region_page_lists_its_lengths_and_seasons(client):
+    d = client.get("/api/inspire/patagonia-14?month=1").json()
+    j = d["journey"]
+    assert j["name"] == "Patagonia" and j["countries"] == ["AR", "CL"]
+    assert sorted({r["weeks"] for r in j["routes"]}) == [1, 2, 3, 4]
+    winter = next(r for r in j["routes"] if r["weeks"] == 2 and 7 in r["months"])
+    assert winter["slug"] == "patagonia-14-winter" and winter["best_months"] == []
 
 
 def test_what_to_wear_follows_the_month(client):
@@ -166,7 +185,7 @@ def test_recommended_clothes_are_not_an_expedition():
     """Opus check of all 432 trip-months (2026-11-16): no thick down jacket where it is not
     cold, no rain jacket in a dry month, no rain trousers in warm rain."""
     from app.inspire import wear
-    for slug, month in (("argentina-14-winter", 7), ("patagonia-14", 1), ("namibia-14", 7),
+    for slug, month in (("buenos-aires-7", 7), ("patagonia-14", 1), ("namibia-14", 7),
                         ("vietnam-7", 7), ("japan-14", 8)):
         w = wear.for_itinerary(inspire.get(slug), month)
         names = {p["name"] for p in w["pieces"]}

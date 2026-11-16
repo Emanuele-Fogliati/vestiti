@@ -93,3 +93,15 @@ export function monthRuns(ms: number[]): string {
 /** "2027-05-01" -> "May 2027" */
 export const monthYear = (s: string) =>
   new Date(`${s}T00:00:00`).toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+
+/** "AR" -> "Argentina"; a list joined with "&": ["AR", "CL"] -> "Argentina & Chile". */
+export const countryNames = (ccs: string[]) => {
+  const n = ccs.map((c) => countryName(c) ?? c);
+  return n.length > 1 ? `${n.slice(0, -1).join(", ")} & ${n[n.length - 1]}` : n.join("");
+};
+
+/** The best months of a travel region: of all its routes of that many weeks (the north of
+ *  Vietnam in autumn, the rest in spring). */
+export function regionBest(routes: { weeks: number | null; best_months: number[] }[], weeks: number): number[] {
+  return [...new Set(routes.filter((r) => r.weeks === weeks).flatMap((r) => r.best_months))];
+}

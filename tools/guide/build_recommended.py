@@ -1,5 +1,7 @@
 """Build the recommended trips (Manu, 2026-11-16: "per ogni posto un viaggio raccomandato da 1, 2,
-3, 4 settimane, per ogni mese") from the ready-made routes of app/guide/trips.json.
+3, 4 settimane, per ogni mese"; then "viaggi che possono andare su più nazioni") from the
+ready-made routes of app/guide/trips.json that belong to a journey: a travel region as tour
+operators cut it (Patagonia on both sides of the border, Atacama with Uyuni, Peru with Bolivia).
 
 Each route (zones to sleep in, nights, in order, one per season band) becomes an itinerary of
 app.inspire: the days filled from the hand-written guide of each zone (app.guide.todo: the things
@@ -32,7 +34,7 @@ MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 # depends on the network (globe.elevation geocodes otherwise).
 ELEVATION = {
     "ar-bariloche": 890, "ar-mendoza": 750, "ar-puerto-iguazu": 170, "ar-puerto-madryn": 10, "ar-purmamarca": 2320,
-    "ar-salta": 1150, "cl-castro": 40, "cl-hanga-roa": 40, "cl-puerto-varas": 60, "cl-punta-arenas": 20,
+    "ar-salta": 1150, "bo-copacabana": 3840, "bo-la-paz": 3640, "bo-laguna-colorada": 4300, "bo-uyuni": 3670, "cl-castro": 40, "cl-hanga-roa": 40, "cl-puerto-varas": 60, "cl-punta-arenas": 20,
     "cl-torres-del-paine-national-park": 150, "is-hofn": 5, "is-husavik": 15, "is-isafjordur": 5,
     "is-lake-myvatn": 280, "is-skaftafell": 100, "is-snaefellsnes": 20, "jp-hakone": 700, "jp-himeji": 20,
     "jp-kanazawa": 40, "jp-koguchi": 110, "jp-nara": 60, "jp-nikko": 600, "na-bagani": 1010,
@@ -73,9 +75,7 @@ def month_range(ms: list[int]) -> str:
     return ", ".join(MONTHS[a - 1] if a == b else f"{MONTHS[a - 1]}–{MONTHS[b - 1]}" for a, b in runs)
 
 
-def region_name(region: str) -> str:
-    a = explore.area(region)
-    return a["name"] if a else region
+JOURNEYS = {j.id: j for j in ready.journeys()}
 
 
 def acts_of(things: list) -> list[dict]:
@@ -149,17 +149,17 @@ def build(t: ready.ReadyTrip) -> dict:
             "do": do, "skip": [], "excursions": exc,
         })
     countries = sorted({x["country_code"] for x in out})
-    dest = region_name(t.region)
+    dest = JOURNEYS[t.journey].name
     return {
         "slug": t.id, "title": t.title, "countries": countries, "summary": t.why,
-        "destination": dest, "region": t.region, "weeks": round(t.days / 7),
+        "destination": dest, "region": t.journey, "weeks": round(t.days / 7),
         "months": t.months, "best_months": t.best, "season_note": t.note,
         "pace": t.pace, "level": t.level, "stops": out, "group_trips": [],
     }
 
 
 def main() -> None:
-    its = [build(t) for t in ready.trips()]
+    its = [build(t) for t in ready.trips() if t.journey]
     its.sort(key=lambda x: (x["destination"], x["weeks"], -len(x["best_months"]), x["slug"]))
     doc = {"_doc": ("Recommended trips built by tools/guide/build_recommended.py from app/guide/trips.json and the "
                     "hand-written zone guides. Do not edit by hand: change the routes or the guides and run the tool."),

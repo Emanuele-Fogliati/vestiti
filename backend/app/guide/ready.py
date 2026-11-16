@@ -33,7 +33,9 @@ class ReadyStop(BaseModel):
 
 class ReadyTrip(BaseModel):
     id: str = Field(pattern=r"^[a-z0-9-]+$")
-    region: str  # app/guide/regions.json id, or "c-xx" for a whole country
+    # app/guide/regions.json id, or "c-xx" for a whole country; None: a route across regions and
+    # borders (Atacama to Uyuni), only in Recommended, never proposed by app.services.explore
+    region: str | None
     title: str = Field(min_length=5, max_length=80)
     pace: str = Field(pattern=r"^(relaxed|normal|intense)$")
     level: int = Field(ge=1, le=5)  # the highest effort of the trip's things not to miss
@@ -42,6 +44,9 @@ class ReadyTrip(BaseModel):
     why: str = Field(default="", max_length=240)
     note: str = Field(default="", max_length=400)  # the honest season note
     stops: list[ReadyStop] = Field(min_length=1)
+    # the travel region of Recommended this route is one length/season of (Manu, 2026-11-16: "viaggi
+    # che possono andare su più nazioni", as tour operators cut them); None: only for app.services.explore
+    journey: str | None = None
 
     @property
     def days(self) -> int:
@@ -68,6 +73,23 @@ def trips() -> tuple[ReadyTrip, ...]:
     ids = [t.id for t in out]
     if len(ids) != len(set(ids)):
         raise ValueError("ready trip written twice")
+    return out
+
+
+class Journey(BaseModel):
+    id: str = Field(pattern=r"^[a-z0-9-]+$")
+    name: str = Field(min_length=3, max_length=60)
+    blurb: str = Field(min_length=20, max_length=200)
+
+
+@lru_cache
+def journeys() -> tuple[Journey, ...]:
+    doc = json.loads((HERE / "trips.json").read_text(encoding="utf-8"))
+    out = tuple(Journey.model_validate(j) for j in doc.get("journeys", []))
+    known = {j.id for j in out}
+    for t in trips():
+        if t.journey and t.journey not in known:
+            raise ValueError(f"{t.id}: no journey {t.journey}")
     return out
 
 

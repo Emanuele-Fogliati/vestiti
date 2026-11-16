@@ -1,0 +1,706 @@
+{
+ "_doc": "Bolivia, the zones of the cross-border recommended trips (Peru & Bolivia, Atacama & Uyuni), written by hand from the sources of each area. Same format as pe.json.",
+ "areas": [
+  {
+   "id": "bo-la-paz",
+   "names": [
+    "La Paz",
+    "El Alto"
+   ],
+   "country": "BO",
+   "lat": -16.5,
+   "lon": -68.13,
+   "radius_km": 35,
+   "season": "At 3,640 m: dry and sunny May to October with nights near freezing in June and July; rain most afternoons December to March.",
+   "sleep": "In the centre around Calle Sagárnaga and the San Francisco church, or quieter Sopocachi. The airport is up in El Alto at 4,060 m.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/La_Paz",
+    "https://en.wikipedia.org/wiki/Mi_Telef%C3%A9rico"
+   ],
+   "items": [
+    {
+     "id": "teleferico",
+     "name": "The city from the cable cars",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Late afternoon, for the light on Illimani",
+     "book": "",
+     "why": "The world's biggest urban cable-car network: ride the red and yellow lines up to El Alto and the whole bowl of La Paz opens under the snow of Illimani.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "La Paz",
+      "El Alto",
+      "Illimani"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "centre",
+     "name": "Witches' Market, San Francisco and Plaza Murillo",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning",
+     "book": "",
+     "why": "Dried llama foetuses and herbs for offerings to Pachamama, a baroque church carved with Andean motifs, and the square of the presidential palace.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Witches' Market",
+      "Plaza Murillo"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "tiwanaku",
+     "name": "Tiwanaku ruins",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Leave around 08:00",
+     "book": "A day ahead with a La Paz agency, with a guide",
+     "why": "The capital of a civilisation older than the Incas, 70 km from La Paz: the Gate of the Sun and the stone heads of the semi-underground temple. On UNESCO's list.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Tiwanaku"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 1,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "moon",
+     "name": "Valle de la Luna",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Morning",
+     "book": "",
+     "why": "A maze of clay spires eroded by the rain, twenty minutes below the city, on a short marked loop.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3400
+     },
+     "sights": [
+      "Moon Valley"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "death-road",
+     "name": "Mountain bike down the Death Road",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Pick-up around 07:00",
+     "book": "Only with an operator with good bikes and guides, a few days ahead",
+     "why": "From the snow of La Cumbre at 4,650 m down 3,500 m of gravel road cut into the cliff to the jungle of the Yungas. Downhill all day, from a puffer to a T-shirt.",
+     "act": {
+      "type": "cycling",
+      "max_altitude_m": 4650
+     },
+     "sights": [
+      "Death Road",
+      "Coroico"
+     ],
+     "extras": [
+      "It starts near freezing and ends at 25 °C: layers you can stuff in the support van.",
+      "Stay on the inside of the road and slow on the corners: the drop is real."
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 0,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ],
+   "extras": [
+    "La Paz is high: the first day, walk slowly, drink a lot of water and coca tea, eat light.",
+    "Saturday and Sunday the El Alto market at 16 de Julio is one of the biggest in South America.",
+    "On Sunday evenings the cholitas wrestle in El Alto: touristy, and fun."
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0
+  },
+  {
+   "id": "bo-copacabana",
+   "names": [
+    "Copacabana",
+    "Isla del Sol",
+    "Isla de la Luna"
+   ],
+   "country": "BO",
+   "lat": -16.17,
+   "lon": -69.08,
+   "radius_km": 30,
+   "season": "On Lake Titicaca at 3,840 m: strong sun, cold nights all year, rain in the afternoon December to March.",
+   "sleep": "In Copacabana near the lake, or one night in a lodge on Isla del Sol for the sunset and the stars.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Copacabana_(Bolivia)",
+    "https://en.wikivoyage.org/wiki/Isla_del_Sol"
+   ],
+   "items": [
+    {
+     "id": "isla-del-sol",
+     "name": "Isla del Sol by boat",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "Boats leave around 08:30",
+     "book": "Boat tickets at the Copacabana pier the day before",
+     "why": "The island where the Incas placed the birth of the Sun: terraces, eucalyptus, the Inca stairway at Yumani and the ruins of Pilko Kaina above a deep blue lake.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4050
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Boat from the Copacabana pier",
+       "note": "about 1 h 30 to Yumani"
+      },
+      {
+       "at": "10:00",
+       "what": "Up the Inca stairway to Yumani",
+       "note": "steep at 3,900 m: go slow"
+      },
+      {
+       "at": "11:00",
+       "what": "Pilko Kaina ruins and the views over the lake"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch with lake trout in Yumani"
+      },
+      {
+       "at": "15:30",
+       "what": "Boat back to Copacabana"
+      }
+     ],
+     "extras": [
+      "Which parts of the island are open changes with local disputes: ask at the pier before you buy.",
+      "Each community on the island charges a small entrance fee: carry cash in bolivianos."
+     ],
+     "sights": [
+      "Isla del Sol"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "calvario",
+     "name": "Sunset from Cerro Calvario",
+     "hours": "1 h 30",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "An hour before sunset",
+     "book": "",
+     "why": "A steep path of stations of the cross above the town; at the top the whole lake turns gold.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3970
+     },
+     "sights": [
+      "Copacabana"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "basilica",
+     "name": "The basilica and the blessing of the cars",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Morning, busiest at weekends",
+     "book": "",
+     "why": "Bolivia's most loved shrine, white and Moorish; outside, priests bless decorated cars with flowers and beer.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Copacabana"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ],
+   "extras": [
+    "From Puno the bus crosses the border at Kasani in about 3 hours; from La Paz it crosses the Strait of Tiquina on a small ferry.",
+    "Copacabana's lake trout (trucha) is the dish: grilled, on the waterfront stalls."
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0
+  },
+  {
+   "id": "bo-uyuni",
+   "names": [
+    "Uyuni",
+    "Salar de Uyuni",
+    "Colchani",
+    "Incahuasi Island"
+   ],
+   "country": "BO",
+   "lat": -20.46,
+   "lon": -66.83,
+   "radius_km": 120,
+   "season": "At 3,660 m: sunny and dry from April to November, with nights down to −15 °C in June to August. From January to March rain floods the salt flat into a mirror, and some tracks close.",
+   "sleep": "In Uyuni town, or in a hotel built of salt at the edge of the flat near Colchani.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Salar_de_Uyuni",
+    "https://en.wikipedia.org/wiki/Salar_de_Uyuni"
+   ],
+   "items": [
+    {
+     "id": "salar",
+     "name": "The salt flat by 4x4, to Incahuasi and the sunset",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave around 10:30, back after sunset",
+     "book": "A day ahead with an Uyuni agency; check the jeep and the driver's reviews",
+     "why": "The biggest salt flat on Earth, white to the horizon: the train cemetery, the salt workers of Colchani, cactus island Incahuasi in the middle, and the sun going down on the salt.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3760
+     },
+     "steps": [
+      {
+       "at": "10:30",
+       "what": "Train cemetery outside Uyuni"
+      },
+      {
+       "at": "11:30",
+       "what": "Colchani: salt workers and crafts"
+      },
+      {
+       "at": "12:30",
+       "what": "Onto the salt: the old salt hotel and the flags"
+      },
+      {
+       "at": "13:30",
+       "what": "Lunch on the salt"
+      },
+      {
+       "at": "15:00",
+       "what": "Incahuasi island",
+       "note": "a 45-minute walk among giant cactus"
+      },
+      {
+       "at": "18:00",
+       "what": "Sunset on the salt flat"
+      },
+      {
+       "at": "19:30",
+       "what": "Back in Uyuni"
+      }
+     ],
+     "extras": [
+      "The salt reflects the sun: dark glasses and sun cream even on the chin and under the nose.",
+      "Funny perspective photos: bring a small toy or a bottle as a prop."
+     ],
+     "sights": [
+      "Salar de Uyuni",
+      "Uyuni Train Cemetery",
+      "Colchani",
+      "Incahuasi Island"
+     ],
+     "arrive": false,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "mirror",
+     "name": "The salt flat as a mirror",
+     "hours": "4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "Sunset or sunrise",
+     "book": "With an Uyuni agency, the day before",
+     "why": "After the rains a few centimetres of water turn the flat into a mirror of the sky, with no line between them.",
+     "months": [
+      1,
+      2,
+      3
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3660
+     },
+     "sights": [
+      "Salar de Uyuni"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "stars",
+     "name": "Stars and sunrise on the salt",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Leave around 04:30",
+     "book": "With an Uyuni agency, the day before",
+     "why": "No light for a hundred kilometres: the Milky Way over the white, then the sun coming up.",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3660
+     },
+     "extras": [
+      "Before dawn it can be −15 °C: the warmest you have, gloves and a hat."
+     ],
+     "sights": [
+      "Salar de Uyuni"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ],
+   "extras": [
+    "Flights to La Paz leave from Uyuni's small airport; the night bus takes about 9 hours.",
+    "Cash in bolivianos: cards work in few places in Uyuni."
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0
+  },
+  {
+   "id": "bo-lagunas",
+   "names": [
+    "Laguna Colorada",
+    "Eduardo Avaroa Andean Fauna National Reserve",
+    "Laguna Verde",
+    "Sol de Mañana",
+    "Siloli Desert"
+   ],
+   "country": "BO",
+   "lat": -22.2,
+   "lon": -67.78,
+   "radius_km": 120,
+   "season": "Between 4,200 and 4,900 m: sunny days, strong wind in the afternoon, frost every night; down to −20 °C in the shelters in June to August. Snow or storms can close the tracks from January to March.",
+   "sleep": "Basic shared shelters: near Laguna Colorada at about 4,300 m, no heating; the second night in a village or a salt hotel near the salt flat. A sleeping bag rated −10 °C, or rent one in San Pedro or Uyuni.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Eduardo_Avaroa_Andean_Fauna_National_Reserve",
+    "https://en.wikipedia.org/wiki/Laguna_Colorada"
+   ],
+   "items": [
+    {
+     "id": "south",
+     "name": "Laguna Verde, the Dalí desert, Polques and Laguna Colorada",
+     "hours": "The first day of the jeep tour",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave San Pedro around 07:00 for the border",
+     "book": "A 3-day jeep tour San Pedro to Uyuni, a few days ahead, driver and cook included",
+     "why": "Into Bolivia at the Hito Cajón border: a green lake under the cone of Licancabur, rocks that look painted by Dalí, a hot pool at 4,400 m, then a red lake full of flamingos.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4400
+     },
+     "steps": [
+      {
+       "at": "07:00",
+       "what": "Pick-up in San Pedro, up to the Bolivian border"
+      },
+      {
+       "at": "08:30",
+       "what": "Border at Hito Cajón, 4,480 m",
+       "note": "breakfast while the papers are done"
+      },
+      {
+       "at": "09:30",
+       "what": "Laguna Blanca and Laguna Verde under Licancabur"
+      },
+      {
+       "at": "11:00",
+       "what": "The Salvador Dalí desert"
+      },
+      {
+       "at": "12:00",
+       "what": "Polques hot springs",
+       "note": "bring a swimsuit and a towel"
+      },
+      {
+       "at": "15:00",
+       "what": "Laguna Colorada and its flamingos",
+       "note": "reddest in the afternoon"
+      },
+      {
+       "at": "18:00",
+       "what": "Shelter near the lake, dinner by the cook"
+      }
+     ],
+     "sights": [
+      "Laguna Verde",
+      "Licancabur",
+      "Polques Hot Springs",
+      "Laguna Colorada",
+      "Eduardo Avaroa Andean Fauna National Reserve"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "north",
+     "name": "Sol de Mañana at dawn, Árbol de Piedra and the high lagoons",
+     "hours": "The second day of the jeep tour",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "Leave the shelter around 05:00",
+     "book": "Part of the jeep tour",
+     "why": "Boiling mud and steam vents at 4,900 m in the first light, the rock tree of the Siloli desert, then a chain of lagoons with flamingos below volcanoes, to a night at the edge of the salt.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4900
+     },
+     "extras": [
+      "Keep to the hard ground: the crust around the pools is thin."
+     ],
+     "sights": [
+      "Sol de Mañana",
+      "Árbol de Piedra",
+      "Siloli Desert",
+      "Laguna Hedionda"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    }
+   ],
+   "extras": [
+    "Do this after a few days at San Pedro's 2,400 m or in La Paz: the night at 4,300 m is the hardest part of the trip.",
+    "Bring water, snacks, cash for the park entrance and the hot springs, and a power bank: the shelters have little electricity."
+   ],
+   "nights": [
+    2,
+    2,
+    2
+   ],
+   "buffer": 0
+  }
+ ]
+}

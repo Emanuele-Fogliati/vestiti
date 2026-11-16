@@ -1,5 +1,5 @@
 {
- "_doc": "Ready-made trips per destination (a country, or a region such as Patagonia) for one, two, three and four weeks (Manu, 2026-11-14 and 2026-11-16), written by hand: the zones you sleep in (globe place ids) and the nights in each, in travel order. `months` is the season band the route is THE recommendation for: the bands of one destination and length cover the twelve months once (a winter route where the season changes the route: closed passes, short days, floods). `best` = the months with the best weather inside the band (empty: an off-season route), `note` = the honest season note. Each zone has a hand-written area in todo.json / areas/*.json, whose ranked things fill the days. level = the highest effort (rubric 0-5, docs/RANKING.md) among the zones' first things; pace: relaxed = 3+ nights a base, normal, intense = 1-2. Loaded by app.guide.ready; used by app.services.explore.propose and by the recommended trips (tools/guide/build_recommended.py -> app/inspire/recommended.json.gz).",
+ "_doc": "Ready-made trips per destination (a country, or a region such as Patagonia) for one, two, three and four weeks (Manu, 2026-11-14 and 2026-11-16), written by hand: the zones you sleep in (globe place ids) and the nights in each, in travel order. `months` is the season band the route is THE recommendation for: the bands of one destination and length cover the twelve months once (a winter route where the season changes the route: closed passes, short days, floods). `best` = the months with the best weather inside the band (empty: an off-season route), `note` = the honest season note. Each zone has a hand-written area in todo.json / areas/*.json, whose ranked things fill the days. level = the highest effort (rubric 0-5, docs/RANKING.md) among the zones' first things; pace: relaxed = 3+ nights a base, normal, intense = 1-2. Loaded by app.guide.ready; used by app.services.explore.propose and by the recommended trips (tools/guide/build_recommended.py -> app/inspire/recommended.json.gz). journeys: the travel regions of Recommended (one card each, as tour operators cut them, across borders); a trip with a journey is one of its lengths and season bands.",
  "trips": [
   {
    "id": "patagonia-7",
@@ -34,7 +34,8 @@
     2,
     3
    ],
-   "note": "October to April. November to March has the longest days (17 hours of light in December) and the strongest wind. October and April are cooler and quieter, with some boats and trails on reduced schedules. Whales at Península Valdés until early December, penguins September to March."
+   "note": "October to April. November to March has the longest days (17 hours of light in December) and the strongest wind. October and April are cooler and quieter, with some boats and trails on reduced schedules. Whales at Península Valdés until early December, penguins September to March.",
+   "journey": "patagonia"
   },
   {
    "id": "patagonia-14",
@@ -85,7 +86,8 @@
     2,
     3
    ],
-   "note": "October to April. November to March has the longest days (17 hours of light in December) and the strongest wind. October and April are cooler and quieter, with some boats and trails on reduced schedules. Whales at Península Valdés until early December, penguins September to March."
+   "note": "October to April. November to March has the longest days (17 hours of light in December) and the strongest wind. October and April are cooler and quieter, with some boats and trails on reduced schedules. Whales at Península Valdés until early December, penguins September to March.",
+   "journey": "patagonia"
   },
   {
    "id": "patagonia-21",
@@ -144,7 +146,8 @@
     2,
     3
    ],
-   "note": "October to April. November to March has the longest days (17 hours of light in December) and the strongest wind. October and April are cooler and quieter, with some boats and trails on reduced schedules. Whales at Península Valdés until early December, penguins September to March."
+   "note": "October to April. November to March has the longest days (17 hours of light in December) and the strongest wind. October and April are cooler and quieter, with some boats and trails on reduced schedules. Whales at Península Valdés until early December, penguins September to March.",
+   "journey": "patagonia"
   },
   {
    "id": "vietnam-7",
@@ -188,7 +191,8 @@
     3,
     4
    ],
-   "note": "February to April is the best all round. December and January are cool and grey in the north (12-20 °C, colder in the mountains). May to September is hot and wet in the north and south; typhoons can cancel Ha Long cruises July to September, while Hue and Hoi An are dry and very hot."
+   "note": "February to April is the best all round. December and January are cool and grey in the north (12-20 °C, colder in the mountains). May to September is hot and wet in the north and south; typhoons can cancel Ha Long cruises July to September, while Hue and Hoi An are dry and very hot.",
+   "journey": "vietnam"
   },
   {
    "id": "vietnam-14",
@@ -244,7 +248,8 @@
     3,
     4
    ],
-   "note": "February to April is the best all round. December and January are cool and grey in the north (12-20 °C, colder in the mountains). May to September is hot and wet in the north and south; typhoons can cancel Ha Long cruises July to September, while Hue and Hoi An are dry and very hot."
+   "note": "February to April is the best all round. December and January are cool and grey in the north (12-20 °C, colder in the mountains). May to September is hot and wet in the north and south; typhoons can cancel Ha Long cruises July to September, while Hue and Hoi An are dry and very hot.",
+   "journey": "vietnam"
   },
   {
    "id": "vietnam-21",
@@ -311,7 +316,8 @@
     3,
     4
    ],
-   "note": "February to April is the best all round. December and January are cool and grey in the north (12-20 °C, colder in the mountains). May to September is hot and wet in the north and south; typhoons can cancel Ha Long cruises July to September, while Hue and Hoi An are dry and very hot."
+   "note": "February to April is the best all round. December and January are cool and grey in the north (12-20 °C, colder in the mountains). May to September is hot and wet in the north and south; typhoons can cancel Ha Long cruises July to September, while Hue and Hoi An are dry and very hot.",
+   "journey": "vietnam"
   },
   {
    "id": "japan-7",
@@ -355,7 +361,8 @@
     10,
     11
    ],
-   "note": "Late March to May and October to November are the best: blossom, then autumn leaves, mild days. June is the rainy season, July and August hot and humid (30-35 °C) with typhoons into September. December to February is cold and dry, with snow in the Alps and the clearest views of Fuji."
+   "note": "Late March to May and October to November are the best: blossom, then autumn leaves, mild days. June is the rainy season, July and August hot and humid (30-35 °C) with typhoons into September. December to February is cold and dry, with snow in the Alps and the clearest views of Fuji.",
+   "journey": "japan"
   },
   {
    "id": "japan-14",
@@ -415,7 +422,8 @@
     10,
     11
    ],
-   "note": "Late March to May and October to November are the best: blossom, then autumn leaves, mild days. June is the rainy season, July and August hot and humid (30-35 °C) with typhoons into September. December to February is cold and dry, with snow in the Alps and the clearest views of Fuji."
+   "note": "Late March to May and October to November are the best: blossom, then autumn leaves, mild days. June is the rainy season, July and August hot and humid (30-35 °C) with typhoons into September. December to February is cold and dry, with snow in the Alps and the clearest views of Fuji.",
+   "journey": "japan"
   },
   {
    "id": "japan-21",
@@ -487,7 +495,8 @@
     10,
     11
    ],
-   "note": "Late March to May and October to November are the best: blossom, then autumn leaves, mild days. June is the rainy season, July and August hot and humid (30-35 °C) with typhoons into September. December to February is cold and dry, with snow in the Alps and the clearest views of Fuji."
+   "note": "Late March to May and October to November are the best: blossom, then autumn leaves, mild days. June is the rainy season, July and August hot and humid (30-35 °C) with typhoons into September. December to February is cold and dry, with snow in the Alps and the clearest views of Fuji.",
+   "journey": "japan"
   },
   {
    "id": "namibia-7",
@@ -536,7 +545,8 @@
     9,
     10
    ],
-   "note": "May to October is the dry season: animals gather at Etosha's waterholes (best July to October), days 20-28 °C, desert nights near freezing in June and July. November to April is hot (Sossusvlei over 35 °C) and the rain falls January to March, mostly in the north: roads stay open but the game spreads out."
+   "note": "May to October is the dry season: animals gather at Etosha's waterholes (best July to October), days 20-28 °C, desert nights near freezing in June and July. November to April is hot (Sossusvlei over 35 °C) and the rain falls January to March, mostly in the north: roads stay open but the game spreads out.",
+   "journey": "namibia"
   },
   {
    "id": "namibia-14",
@@ -589,7 +599,8 @@
     9,
     10
    ],
-   "note": "May to October is the dry season: animals gather at Etosha's waterholes (best July to October), days 20-28 °C, desert nights near freezing in June and July. November to April is hot (Sossusvlei over 35 °C) and the rain falls January to March, mostly in the north: roads stay open but the game spreads out."
+   "note": "May to October is the dry season: animals gather at Etosha's waterholes (best July to October), days 20-28 °C, desert nights near freezing in June and July. November to April is hot (Sossusvlei over 35 °C) and the rain falls January to March, mostly in the north: roads stay open but the game spreads out.",
+   "journey": "namibia"
   },
   {
    "id": "namibia-21",
@@ -654,7 +665,8 @@
     9,
     10
    ],
-   "note": "May to October is the dry season: animals gather at Etosha's waterholes (best July to October), days 20-28 °C, desert nights near freezing in June and July. November to April is hot (Sossusvlei over 35 °C) and the rain falls January to March, mostly in the north: roads stay open but the game spreads out."
+   "note": "May to October is the dry season: animals gather at Etosha's waterholes (best July to October), days 20-28 °C, desert nights near freezing in June and July. November to April is hot (Sossusvlei over 35 °C) and the rain falls January to March, mostly in the north: roads stay open but the game spreads out.",
+   "journey": "namibia"
   },
   {
    "id": "new-zealand-7",
@@ -705,7 +717,8 @@
     2,
     3
    ],
-   "note": "November to April, best December to March: 20-25 °C, long days, sandflies in Fiordland. June to August is winter: snow in the Southern Alps, ski fields at Queenstown and Wanaka, the Milford road can close for avalanches and the Tongariro Crossing becomes an alpine route."
+   "note": "November to April, best December to March: 20-25 °C, long days, sandflies in Fiordland. June to August is winter: snow in the Southern Alps, ski fields at Queenstown and Wanaka, the Milford road can close for avalanches and the Tongariro Crossing becomes an alpine route.",
+   "journey": "new-zealand"
   },
   {
    "id": "new-zealand-14",
@@ -776,7 +789,8 @@
     2,
     3
    ],
-   "note": "November to April, best December to March: 20-25 °C, long days, sandflies in Fiordland. June to August is winter: snow in the Southern Alps, ski fields at Queenstown and Wanaka, the Milford road can close for avalanches and the Tongariro Crossing becomes an alpine route."
+   "note": "November to April, best December to March: 20-25 °C, long days, sandflies in Fiordland. June to August is winter: snow in the Southern Alps, ski fields at Queenstown and Wanaka, the Milford road can close for avalanches and the Tongariro Crossing becomes an alpine route.",
+   "journey": "new-zealand"
   },
   {
    "id": "new-zealand-21",
@@ -859,7 +873,8 @@
     2,
     3
    ],
-   "note": "November to April, best December to March: 20-25 °C, long days, sandflies in Fiordland. June to August is winter: snow in the Southern Alps, ski fields at Queenstown and Wanaka, the Milford road can close for avalanches and the Tongariro Crossing becomes an alpine route."
+   "note": "November to April, best December to March: 20-25 °C, long days, sandflies in Fiordland. June to August is winter: snow in the Southern Alps, ski fields at Queenstown and Wanaka, the Milford road can close for avalanches and the Tongariro Crossing becomes an alpine route.",
+   "journey": "new-zealand"
   },
   {
    "id": "peru-7",
@@ -903,7 +918,8 @@
     8,
     9
    ],
-   "note": "May to September is the dry season in the Andes: sunny days, nights below freezing above 3,500 m. December to March it rains most afternoons and the Inca Trail closes in February; Machu Picchu stays open. Lima is grey and mild June to October, sunny December to April."
+   "note": "May to September is the dry season in the Andes: sunny days, nights below freezing above 3,500 m. December to March it rains most afternoons and the Inca Trail closes in February; Machu Picchu stays open. Lima is grey and mild June to October, sunny December to April.",
+   "journey": "peru-bolivia"
   },
   {
    "id": "peru-14",
@@ -967,7 +983,8 @@
     8,
     9
    ],
-   "note": "May to September is the dry season in the Andes: sunny days, nights below freezing above 3,500 m. December to March it rains most afternoons and the Inca Trail closes in February; Machu Picchu stays open. Lima is grey and mild June to October, sunny December to April."
+   "note": "May to September is the dry season in the Andes: sunny days, nights below freezing above 3,500 m. December to March it rains most afternoons and the Inca Trail closes in February; Machu Picchu stays open. Lima is grey and mild June to October, sunny December to April.",
+   "journey": "peru-bolivia"
   },
   {
    "id": "peru-21",
@@ -1239,7 +1256,8 @@
     7,
     8
    ],
-   "note": "June to August: 18-24 hours of light, 10-15 °C. October to April: 4-10 hours of light, storms can close the south coast road for a day, ice caves November to March, northern lights September to April. This week works all year."
+   "note": "June to August: 18-24 hours of light, 10-15 °C. October to April: 4-10 hours of light, storms can close the south coast road for a day, ice caves November to March, northern lights September to April. This week works all year.",
+   "journey": "iceland"
   },
   {
    "id": "iceland-14",
@@ -1298,7 +1316,8 @@
     7,
     8
    ],
-   "note": "May to September, best June to August: long light, 10-15 °C, every road open by July. Puffins May to August."
+   "note": "May to September, best June to August: long light, 10-15 °C, every road open by July. Puffins May to August.",
+   "journey": "iceland"
   },
   {
    "id": "iceland-21",
@@ -1361,7 +1380,8 @@
     7,
     8
    ],
-   "note": "May to September, best June to August: long light, 10-15 °C, every road open by July. Puffins May to August."
+   "note": "May to September, best June to August: long light, 10-15 °C, every road open by July. Puffins May to August.",
+   "journey": "iceland"
   },
   {
    "id": "peru-28",
@@ -2114,7 +2134,8 @@
      "place": "ar-ushuaia",
      "nights": 4
     }
-   ]
+   ],
+   "journey": "patagonia"
   },
   {
    "id": "patagonia-14-winter",
@@ -2153,7 +2174,8 @@
      "place": "ar-ushuaia",
      "nights": 5
     }
-   ]
+   ],
+   "journey": "patagonia"
   },
   {
    "id": "patagonia-21-winter",
@@ -2200,7 +2222,8 @@
      "place": "ar-bariloche",
      "nights": 5
     }
-   ]
+   ],
+   "journey": "patagonia"
   },
   {
    "id": "patagonia-28",
@@ -2263,7 +2286,8 @@
      "place": "ar-bariloche",
      "nights": 4
     }
-   ]
+   ],
+   "journey": "patagonia"
   },
   {
    "id": "patagonia-28-winter",
@@ -2314,7 +2338,8 @@
      "place": "ar-bariloche",
      "nights": 5
     }
-   ]
+   ],
+   "journey": "patagonia"
   },
   {
    "id": "iceland-14-winter",
@@ -2355,7 +2380,8 @@
      "place": "is-reykjavik",
      "nights": 2
     }
-   ]
+   ],
+   "journey": "iceland"
   },
   {
    "id": "iceland-21-winter",
@@ -2408,7 +2434,8 @@
      "place": "is-reykjavik",
      "nights": 2
     }
-   ]
+   ],
+   "journey": "iceland"
   },
   {
    "id": "iceland-28",
@@ -2471,7 +2498,8 @@
      "place": "is-reykjavik",
      "nights": 2
     }
-   ]
+   ],
+   "journey": "iceland"
   },
   {
    "id": "iceland-28-winter",
@@ -2528,7 +2556,8 @@
      "place": "is-reykjavik",
      "nights": 3
     }
-   ]
+   ],
+   "journey": "iceland"
   },
   {
    "id": "vietnam-7-autumn",
@@ -2563,7 +2592,8 @@
      "place": "vn-sapa",
      "nights": 2
     }
-   ]
+   ],
+   "journey": "vietnam"
   },
   {
    "id": "vietnam-14-autumn",
@@ -2610,7 +2640,8 @@
      "place": "vn-hanoi",
      "nights": 2
     }
-   ]
+   ],
+   "journey": "vietnam"
   },
   {
    "id": "vietnam-21-autumn",
@@ -2661,7 +2692,8 @@
      "place": "vn-can-tho",
      "nights": 2
     }
-   ]
+   ],
+   "journey": "vietnam"
   },
   {
    "id": "vietnam-28",
@@ -2735,7 +2767,8 @@
      "place": "vn-can-tho",
      "nights": 3
     }
-   ]
+   ],
+   "journey": "vietnam"
   },
   {
    "id": "japan-21-summer",
@@ -2793,7 +2826,8 @@
      "place": "jp-osaka",
      "nights": 1
     }
-   ]
+   ],
+   "journey": "japan"
   },
   {
    "id": "japan-28",
@@ -2873,7 +2907,8 @@
      "place": "jp-osaka",
      "nights": 3
     }
-   ]
+   ],
+   "journey": "japan"
   },
   {
    "id": "japan-28-summer",
@@ -2943,7 +2978,8 @@
      "place": "jp-osaka",
      "nights": 3
     }
-   ]
+   ],
+   "journey": "japan"
   },
   {
    "id": "namibia-28",
@@ -3016,7 +3052,8 @@
      "place": "na-windhoek",
      "nights": 2
     }
-   ]
+   ],
+   "journey": "namibia"
   },
   {
    "id": "new-zealand-28",
@@ -3115,7 +3152,760 @@
      "place": "nz-christchurch",
      "nights": 1
     }
-   ]
+   ],
+   "journey": "new-zealand"
+  },
+  {
+   "id": "lakes-7",
+   "region": null,
+   "journey": "lakes",
+   "title": "The lakes in a week: Bariloche and Puerto Varas",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "why": "Two lake towns under volcanoes, joined by the boat-and-bus crossing of the Andes.",
+   "stops": [
+    {
+     "place": "ar-bariloche",
+     "nights": 4
+    },
+    {
+     "place": "cl-puerto-varas",
+     "nights": 3
+    }
+   ],
+   "note": "October to April. December to March is warm, with long days for the lakes and the trails; October, November and April are cooler, greener and quieter. May to September is rainy and cold: ski in Bariloche, not lakes."
+  },
+  {
+   "id": "lakes-14",
+   "region": null,
+   "journey": "lakes",
+   "title": "Chile and Argentina's lakes in two weeks, with Chiloé",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "why": "Santiago and Valparaíso, the volcanoes of Puerto Varas, the stilt houses of Chiloé, then over the Andes by lake to Bariloche.",
+   "stops": [
+    {
+     "place": "cl-santiago",
+     "nights": 2
+    },
+    {
+     "place": "cl-valparaiso",
+     "nights": 2
+    },
+    {
+     "place": "cl-puerto-varas",
+     "nights": 3
+    },
+    {
+     "place": "cl-castro",
+     "nights": 3
+    },
+    {
+     "place": "ar-bariloche",
+     "nights": 4
+    }
+   ],
+   "note": "October to April. December to March is the warm season on the lakes; Chiloé is green because it rains there even in summer. May to September is rainy and cold in the south."
+  },
+  {
+   "id": "lakes-21",
+   "region": null,
+   "journey": "lakes",
+   "title": "The lakes and the wine: Chile to Mendoza in three weeks",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "why": "Santiago, the port of Valparaíso, Puerto Varas and Chiloé, the Andes crossing to Bariloche, then the vineyards of Mendoza.",
+   "stops": [
+    {
+     "place": "cl-santiago",
+     "nights": 3
+    },
+    {
+     "place": "cl-valparaiso",
+     "nights": 2
+    },
+    {
+     "place": "cl-puerto-varas",
+     "nights": 4
+    },
+    {
+     "place": "cl-castro",
+     "nights": 3
+    },
+    {
+     "place": "ar-bariloche",
+     "nights": 5
+    },
+    {
+     "place": "ar-mendoza",
+     "nights": 4
+    }
+   ],
+   "note": "October to April. December to March is warm on the lakes; harvest in Mendoza is February to April. May to September is rainy and cold in the south."
+  },
+  {
+   "id": "lakes-28",
+   "region": null,
+   "journey": "lakes",
+   "title": "From the lakes to the glaciers in four weeks",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "why": "The Chilean lakes and Chiloé, Bariloche, then south by air to Perito Moreno and Fitz Roy, ending in Buenos Aires.",
+   "stops": [
+    {
+     "place": "cl-santiago",
+     "nights": 3
+    },
+    {
+     "place": "cl-valparaiso",
+     "nights": 2
+    },
+    {
+     "place": "cl-puerto-varas",
+     "nights": 4
+    },
+    {
+     "place": "cl-castro",
+     "nights": 3
+    },
+    {
+     "place": "ar-bariloche",
+     "nights": 5
+    },
+    {
+     "place": "ar-el-calafate",
+     "nights": 3
+    },
+    {
+     "place": "ar-el-chalten",
+     "nights": 4
+    },
+    {
+     "place": "ar-buenos-aires",
+     "nights": 4
+    }
+   ],
+   "note": "October to April. December to March has the longest days and the most open trails in the south, and the strongest wind at El Chaltén. May to September the lakes are rainy and the far south half closed."
+  },
+  {
+   "id": "andes-7",
+   "region": null,
+   "journey": "andes",
+   "title": "Atacama to Uyuni in a week",
+   "pace": "intense",
+   "level": 2,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "The desert of San Pedro, then three days by jeep across the red and green lagoons of Bolivia to the salt flat of Uyuni.",
+   "stops": [
+    {
+     "place": "cl-san-pedro-de-atacama",
+     "nights": 3
+    },
+    {
+     "place": "bo-laguna-colorada",
+     "nights": 2
+    },
+    {
+     "place": "bo-uyuni",
+     "nights": 2
+    }
+   ],
+   "note": "April to November. April, May and September to November have mild days; June to August is clear but the nights at the lagoons fall to −20 °C. December to March is the rainy season on the high plateau: tracks to the lagoons can close, the salt flat floods into a mirror."
+  },
+  {
+   "id": "andes-14",
+   "region": null,
+   "journey": "andes",
+   "title": "Salta, Atacama and Uyuni in two weeks",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "The coloured valleys of Salta and Purmamarca, over the Andes to San Pedro de Atacama, by jeep to Uyuni, then La Paz.",
+   "stops": [
+    {
+     "place": "ar-salta",
+     "nights": 3
+    },
+    {
+     "place": "ar-purmamarca",
+     "nights": 2
+    },
+    {
+     "place": "cl-san-pedro-de-atacama",
+     "nights": 3
+    },
+    {
+     "place": "bo-laguna-colorada",
+     "nights": 2
+    },
+    {
+     "place": "bo-uyuni",
+     "nights": 2
+    },
+    {
+     "place": "bo-la-paz",
+     "nights": 2
+    }
+   ],
+   "note": "April to November. April, May and September to November are the sweet spot; June to August brings freezing nights high up. December to March it rains in Salta and on the Bolivian plateau, and the lagoon tracks can close."
+  },
+  {
+   "id": "andes-21",
+   "region": null,
+   "journey": "andes",
+   "title": "Three countries of the high Andes in three weeks",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "Buenos Aires, the canyons of Salta, the Atacama desert, the lagoons and salt of Bolivia, La Paz and Lake Titicaca.",
+   "stops": [
+    {
+     "place": "ar-buenos-aires",
+     "nights": 3
+    },
+    {
+     "place": "ar-salta",
+     "nights": 3
+    },
+    {
+     "place": "ar-purmamarca",
+     "nights": 2
+    },
+    {
+     "place": "cl-san-pedro-de-atacama",
+     "nights": 4
+    },
+    {
+     "place": "bo-laguna-colorada",
+     "nights": 2
+    },
+    {
+     "place": "bo-uyuni",
+     "nights": 2
+    },
+    {
+     "place": "bo-la-paz",
+     "nights": 3
+    },
+    {
+     "place": "bo-copacabana",
+     "nights": 2
+    }
+   ],
+   "note": "April to November. April, May and September to November are the best; June to August is clear and very cold at night on the plateau. December to March is the rainy season in the north of Argentina and in Bolivia."
+  },
+  {
+   "id": "andes-28",
+   "region": null,
+   "journey": "andes",
+   "title": "Iguazú to Titicaca across the Andes in four weeks",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "Buenos Aires and Iguazú Falls, Salta and the Quebrada, the Atacama desert, three days of lagoons to Uyuni, La Paz and Lake Titicaca.",
+   "stops": [
+    {
+     "place": "ar-buenos-aires",
+     "nights": 4
+    },
+    {
+     "place": "ar-puerto-iguazu",
+     "nights": 3
+    },
+    {
+     "place": "ar-salta",
+     "nights": 3
+    },
+    {
+     "place": "ar-purmamarca",
+     "nights": 3
+    },
+    {
+     "place": "cl-san-pedro-de-atacama",
+     "nights": 4
+    },
+    {
+     "place": "bo-laguna-colorada",
+     "nights": 2
+    },
+    {
+     "place": "bo-uyuni",
+     "nights": 3
+    },
+    {
+     "place": "bo-la-paz",
+     "nights": 4
+    },
+    {
+     "place": "bo-copacabana",
+     "nights": 2
+    }
+   ],
+   "note": "April to November. April, May and September to November are the best; June to August is clear and very cold at night up high. December to March it rains in the Andes north and Iguazú is hot and humid."
+  },
+  {
+   "id": "peru-bolivia-21",
+   "region": null,
+   "journey": "peru-bolivia",
+   "title": "Peru and Bolivia in three weeks: Machu Picchu to Uyuni",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "best": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Cusco, the Sacred Valley and Machu Picchu, Lake Titicaca from Puno and from Copacabana, La Paz, and the salt flat of Uyuni.",
+   "stops": [
+    {
+     "place": "pe-lima",
+     "nights": 2
+    },
+    {
+     "place": "pe-cusco",
+     "nights": 5
+    },
+    {
+     "place": "pe-ollantaytambo",
+     "nights": 2
+    },
+    {
+     "place": "pe-aguas-calientes",
+     "nights": 2
+    },
+    {
+     "place": "pe-puno",
+     "nights": 2
+    },
+    {
+     "place": "bo-copacabana",
+     "nights": 2
+    },
+    {
+     "place": "bo-la-paz",
+     "nights": 3
+    },
+    {
+     "place": "bo-uyuni",
+     "nights": 3
+    }
+   ],
+   "note": "April to November. May to September is the dry season: clear days, freezing nights. April, October and November are greener with some showers. December to March is the rainy season, and the Inca Trail closes in February."
+  },
+  {
+   "id": "peru-bolivia-28",
+   "region": null,
+   "journey": "peru-bolivia",
+   "title": "Peru and Bolivia in four weeks, with the Colca canyon",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "best": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Arequipa and the condors of the Colca, Titicaca on both shores, La Paz and Uyuni, then Cusco, the Sacred Valley and Machu Picchu.",
+   "stops": [
+    {
+     "place": "pe-lima",
+     "nights": 2
+    },
+    {
+     "place": "pe-arequipa",
+     "nights": 3
+    },
+    {
+     "place": "pe-chivay",
+     "nights": 2
+    },
+    {
+     "place": "pe-puno",
+     "nights": 2
+    },
+    {
+     "place": "bo-copacabana",
+     "nights": 2
+    },
+    {
+     "place": "bo-la-paz",
+     "nights": 4
+    },
+    {
+     "place": "bo-uyuni",
+     "nights": 3
+    },
+    {
+     "place": "pe-cusco",
+     "nights": 5
+    },
+    {
+     "place": "pe-ollantaytambo",
+     "nights": 2
+    },
+    {
+     "place": "pe-aguas-calientes",
+     "nights": 2
+    },
+    {
+     "place": "pe-lima",
+     "nights": 1
+    }
+   ],
+   "note": "April to November. May to September is the dry season: clear days, freezing nights on the plateau. April, October and November are greener with some showers. December to March is the rainy season, and the Inca Trail closes in February."
+  },
+  {
+   "id": "buenos-aires-7",
+   "region": "c-ar",
+   "journey": "buenos-aires",
+   "title": "Buenos Aires and Iguazú Falls in a week",
+   "pace": "relaxed",
+   "level": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "Tango, steak and the old quarters of Buenos Aires, then the falls of Iguazú from both sides of the river.",
+   "stops": [
+    {
+     "place": "ar-buenos-aires",
+     "nights": 4
+    },
+    {
+     "place": "ar-puerto-iguazu",
+     "nights": 3
+    }
+   ],
+   "note": "All year. March to May and September to November are mild; December to February is hot and humid, with the most water at the falls; June to August is cool and grey in Buenos Aires but fine at Iguazú."
+  },
+  {
+   "id": "buenos-aires-14",
+   "region": "c-ar",
+   "journey": "buenos-aires",
+   "title": "Buenos Aires, Iguazú, Salta and Mendoza in two weeks",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "The capital and the falls, then the colonial north of Salta and the vineyards under the Andes in Mendoza.",
+   "stops": [
+    {
+     "place": "ar-buenos-aires",
+     "nights": 4
+    },
+    {
+     "place": "ar-puerto-iguazu",
+     "nights": 3
+    },
+    {
+     "place": "ar-salta",
+     "nights": 3
+    },
+    {
+     "place": "ar-mendoza",
+     "nights": 4
+    }
+   ],
+   "note": "All year. March to May and September to November are the best; December to February is hot, with rain in Salta; June to August is cool, with snow on the Andes above Mendoza."
+  },
+  {
+   "id": "buenos-aires-21",
+   "region": "c-ar",
+   "journey": "buenos-aires",
+   "title": "Argentina from the falls to the whales in three weeks",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "Buenos Aires and Iguazú, the canyons of Salta and Purmamarca, the wine of Mendoza, and Península Valdés for the wildlife.",
+   "stops": [
+    {
+     "place": "ar-buenos-aires",
+     "nights": 4
+    },
+    {
+     "place": "ar-puerto-iguazu",
+     "nights": 3
+    },
+    {
+     "place": "ar-salta",
+     "nights": 3
+    },
+    {
+     "place": "ar-purmamarca",
+     "nights": 2
+    },
+    {
+     "place": "ar-mendoza",
+     "nights": 4
+    },
+    {
+     "place": "ar-puerto-madryn",
+     "nights": 3
+    },
+    {
+     "place": "ar-buenos-aires",
+     "nights": 2
+    }
+   ],
+   "note": "All year. September to November is the best: whales at Valdés, penguins arriving, mild everywhere. March to May is mild too. December to February is hot with rain in Salta; June to August is cool, whales arrive in June."
+  }
+ ],
+ "journeys": [
+  {
+   "id": "patagonia",
+   "name": "Patagonia",
+   "blurb": "Glaciers, Fitz Roy and Torres del Paine, on both sides of the border, down to Ushuaia."
+  },
+  {
+   "id": "lakes",
+   "name": "The Lake District",
+   "blurb": "Volcanoes over blue lakes in Chile and Argentina, Chiloé's wooden churches, the Andes crossed by boat."
+  },
+  {
+   "id": "andes",
+   "name": "Atacama, Uyuni & Salta",
+   "blurb": "The driest desert on Earth, lagoons full of flamingos, the biggest salt flat, the coloured valleys of Argentina's north."
+  },
+  {
+   "id": "peru-bolivia",
+   "name": "Peru & Bolivia",
+   "blurb": "Machu Picchu and the Sacred Valley, Lake Titicaca on both shores, La Paz and the salt flat of Uyuni."
+  },
+  {
+   "id": "buenos-aires",
+   "name": "Buenos Aires & Iguazú",
+   "blurb": "Tango and steak in the capital, the biggest falls of the Americas, wine under the Andes."
+  },
+  {
+   "id": "iceland",
+   "name": "Iceland",
+   "blurb": "Waterfalls, glaciers, black beaches and the northern lights, around the ring road."
+  },
+  {
+   "id": "vietnam",
+   "name": "Vietnam",
+   "blurb": "Rice terraces and karst bays in the north, old towns in the centre, the Mekong in the south."
+  },
+  {
+   "id": "japan",
+   "name": "Japan",
+   "blurb": "Tokyo, Kyoto's temples, the Japanese Alps and the old roads, in every season."
+  },
+  {
+   "id": "namibia",
+   "name": "Namibia",
+   "blurb": "Red dunes of Sossusvlei, the Skeleton Coast and Etosha's waterholes."
+  },
+  {
+   "id": "new-zealand",
+   "name": "New Zealand",
+   "blurb": "Fiords, glaciers and volcanoes on two islands, and the trails between them."
   }
  ]
 }

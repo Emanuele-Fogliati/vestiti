@@ -136,6 +136,18 @@ def itineraries() -> tuple[Itinerary, ...]:
     return tuple(out)
 
 
+def journey(region: str) -> list[Itinerary]:
+    """The routes of one travel region of Recommended: its lengths and season bands."""
+    return sorted((i for i in itineraries() if i.listed and i.weeks and i.region == region),
+                  key=lambda i: (i.weeks, min(i.months)))
+
+
+def lead(region: str) -> Itinerary | None:
+    """The route a region's card opens on: two weeks, the band with the best weather."""
+    its = journey(region)
+    return min(its, key=lambda i: (abs((i.weeks or 2) - 2), -len(i.best_months)), default=None)
+
+
 def get(slug: str) -> Itinerary | None:
     return next((i for i in itineraries() if i.slug == slug), None)
 
