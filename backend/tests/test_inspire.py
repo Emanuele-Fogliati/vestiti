@@ -12,7 +12,10 @@ from app.config import Settings
 BOX = {"PE": (-18.5, -0.0, -81.5, -68.5), "AR": (-55.2, -21.7, -73.6, -53.5),
        "CL": (-56.0, -17.4, -76.0, -66.4), "IS": (63.2, 66.6, -24.6, -13.4),
        "VN": (8.4, 23.4, 102.1, 109.5), "JP": (24.0, 45.6, 122.9, 146.0), "NA": (-29.0, -16.9, 11.7, 25.3),
-       "NZ": (-47.4, -34.3, 166.3, 178.6), "BO": (-22.9, -9.6, -69.7, -57.4)}
+       "NZ": (-47.4, -34.3, 166.3, 178.6), "BO": (-22.9, -9.6, -69.7, -57.4),
+       "NO": (57.9, 71.2, 4.5, 31.2), "TZ": (-11.8, -0.9, 29.3, 40.5), "MA": (27.6, 36.0, -13.2, -1.0),
+       "NP": (26.3, 30.5, 80.0, 88.3), "CH": (45.8, 47.9, 5.9, 10.5), "AT": (46.3, 49.1, 9.5, 17.2),
+       "IT": (35.5, 47.1, 6.6, 18.6)}
 # Rapa Nui is Chile too, 3,700 km out in the Pacific
 ISLANDS = {("CL", "Hanga Roa"): (-27.3, -27.0, -109.5, -109.2)}
 
@@ -60,7 +63,7 @@ def test_list_and_detail(client):
     assert all(c["weeks"] in (1, 2, 3, 4) and c["months"] and c["destination"] and c["journey"] for c in cards)
     # one card per travel region (Manu, 2026-11-16: not the same trip once per length)
     leads = [c for c in cards if c["lead"]]
-    assert len(leads) == len({c["journey"] for c in cards}) == 10
+    assert len(leads) == len({c["journey"] for c in cards}) == 18
     assert all(c["weeks"] == 2 for c in leads)
     d = client.get("/api/inspire/peru-coast-andes-titicaca?start=2027-06-01").json()
     assert d["start_date"] == "2027-06-01" and d["days"] == 15
@@ -151,7 +154,7 @@ def test_regions_cross_borders_and_each_month_has_one_route_per_length():
     for it in inspire.itineraries():
         if it.listed and it.weeks:
             by[it.region].append(it)
-    assert len(by) == 10
+    assert len(by) == 18  # + Norway, Tanzania, Morocco, Nepal (2026-11-16)
     for region, its in by.items():
         weeks = {i.weeks for i in its}
         assert {1, 2} <= weeks, region
@@ -319,3 +322,62 @@ def test_iceland_in_winter_stays_in_the_south():
     for t in ready.trips():
         if t.journey == "iceland" and 1 in t.months:
             assert not north & {s.place for s in t.stops}, t.id
+
+
+def _wear(slug: str, month: int) -> dict:
+    from app.inspire import wear
+    it = next(i for i in inspire.itineraries() if i.slug == slug)
+    return wear.for_itinerary(it, month)
+
+
+def test_a_cold_city_gets_a_good_jacket_not_a_mountain_kit():
+    """Opus check of every recommended month (2026-11-16): Kyoto in January (1 °C walking to
+    dinner) got warm trousers, a warm base layer and a warm fleece; Takayama a thick down jacket."""
+    names = {p["name"] for p in _wear("japan-7", 1)["pieces"]}
+    assert "Warm down jacket" in names and "Beanie" in names
+    assert not names & {"Warm trousers", "Warm base layer", "Thick down jacket", "Lined winter trousers"}
+    names = {p["name"] for p in _wear("japan-14", 1)["pieces"]}
+    assert "Thick down jacket" not in names and "Warm trousers" not in names
+
+
+def test_hot_places_get_t_shirts_even_when_every_stop_is_hot():
+    """Tokyo, Kyoto and Hue in July: cool evenings in Sapporo or Sapa put long sleeves in the bag,
+    and the trip got no T-shirt at all."""
+    w = _wear("japan-21-summer", 7)
+    assert w["hot"] and "T-shirt" in w["hot"]["pieces"] and "Tokyo" in w["hot"]["names"]
+    w = _wear("vietnam-14", 7)
+    assert w["hot"] and "T-shirt" in w["hot"]["pieces"]
+
+
+def test_over_trousers_in_a_dry_month_are_for_the_wind():
+    """Uyuni in June (under 10% rain): the shell trousers are for the wind at dawn, not rain."""
+    names = {p["name"] for p in _wear("andes-7", 6)["pieces"]}
+    assert "Windproof over-trousers" in names and "Rain trousers" not in names
+    names = {p["name"] for p in _wear("iceland-7", 1)["pieces"]}
+    assert "Rain trousers" in names
+
+
+def test_italy_has_its_regions_and_etna_in_winter_is_the_snow_visit():
+    """Manu 2026-11-16 ("anche l'Italia ... come se potessero andare già in production"): four
+    regions cut as operators sell them; in winter Etna's summit is shut, the visit is the Silvestri
+    craters, and the bag for Palermo and Taormina is not an expedition kit."""
+    from app.guide import ready
+    js = {t.journey for t in ready.trips() if any(s.place.startswith("it-") for s in t.stops)}
+    assert js == {"italy-classic", "sicily", "dolomites", "south-italy"}
+    w = _wear("sicily-7-winter", 1)
+    assert w["top_m"] < 2500
+    names = {p["name"] for p in w["pieces"]}
+    assert "Thick down jacket" not in names and "Warm trousers" not in names
+    # a ski week packs ski trousers and winter boots, not rain trousers and trail shoes
+    names = {p["name"] for p in _wear("dolomites-7-ski", 1)["pieces"]}
+    assert {"Ski trousers", "Insulated winter boots"} <= names
+
+
+def test_a_ski_week_packs_a_real_ski_jacket_and_no_expedition_layers():
+    """Manu 2026-11-16: "la giacca e i pantaloni da sci veri", as many layers as the cold asks.
+    Before, January in the Dolomites stacked a thick down jacket under a rain jacket and lined
+    trousers, leggings and rain trousers on the legs."""
+    names = {p["name"] for p in _wear("dolomites-7-ski", 1)["pieces"]}
+    assert {"Ski jacket", "Ski trousers"} <= names
+    assert not names & {"Rain jacket", "Thick down jacket", "Lined winter trousers", "Thick fleece",
+                        "Thick base layer", "Warm trousers"}

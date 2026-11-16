@@ -1,0 +1,63 @@
+{
+ "id": "at-schafberg",
+ "country": "AT",
+ "name": "Schafberg from St. Wolfgang",
+ "base": "St. Wolfgang",
+ "region": "Salzkammergut",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  7,
+  8.5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Up from the lake on foot to a summit hotel on a cliff edge, with three lakes of the Salzkammergut in one view; the old cog railway takes you down.",
+ "book": "Free on foot; Schafbergbahn cog railway (May to October) for one way.",
+ "water": "Schafbergalpe and the summit hotel.",
+ "dangers": [
+  "Steep final section with steps and cables."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Schafberg_(Salzkammergut)"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 4,
+  "culture": 2,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "St. Wolfgang",
+   "lat": 47.739,
+   "lon": 13.447,
+   "role": "start",
+   "note": "A lakeside village with a pilgrim church."
+  },
+  {
+   "id": "goal",
+   "name": "Schafberg",
+   "lat": 47.776,
+   "lon": 13.433,
+   "role": "goal",
+   "note": "The 1,783 m summit and its hotel above the Mondsee."
+  }
+ ]
+}

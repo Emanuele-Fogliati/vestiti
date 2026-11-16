@@ -1,0 +1,66 @@
+{
+ "id": "ma-ouzoud-falls",
+ "country": "MA",
+ "name": "Ouzoud Falls down to the river",
+ "base": "Azilal",
+ "region": "Middle Atlas",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Down a path of olive trees and Barbary macaques to the foot of 110 m waterfalls, and back up the other side past old mills.",
+ "book": "Free; boats under the falls are paid.",
+ "water": "Cafes all along the path.",
+ "dangers": [
+  "Slippery steps near the spray.",
+  "Do not feed the monkeys."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ouzoud_Falls"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 2,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ouzoud",
+   "lat": 32.015,
+   "lon": -6.719,
+   "role": "start",
+   "note": "The village at the top of the falls."
+  },
+  {
+   "id": "goal",
+   "name": "Ouzoud Falls",
+   "lat": 32.013,
+   "lon": -6.718,
+   "role": "goal",
+   "note": "Waterfalls in several streams over red rock.",
+   "scene": "ma-ouzoud-falls"
+  }
+ ]
+}

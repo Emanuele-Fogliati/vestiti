@@ -1,0 +1,99 @@
+{
+ "id": "np-annapurna-circuit",
+ "country": "NP",
+ "name": "Annapurna Circuit over Thorong La",
+ "base": "Besisahar",
+ "region": "Annapurna Conservation Area",
+ "kind": "multiday",
+ "days": 12,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  60,
+  78
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Round the Annapurna massif from the green rice valleys of the Marsyangdi to the dry Tibetan plateau of Mustang, over the 5,416 m Thorong La.",
+ "book": "Annapurna Conservation Area permit and TIMS card (Kathmandu or Pokhara). Since April 2023 Nepal requires foreign trekkers to hire a licensed guide in its national parks and conservation areas (check the current rule before you go). Jeeps now drive much of the valley: walk the NATT side paths. Bus or jeep back from Jomsom, or fly to Pokhara.",
+ "water": "Teahouses all the way; safe drinking water stations in many villages.",
+ "dangers": [
+  "Thorong La at 5,416 m: sleep at Manang two nights and at Thorong Phedi or High Camp before the pass.",
+  "Leave Thorong Phedi by 05:00: wind on the pass grows in the late morning.",
+  "Snow can close the pass in any month: ask at Manang."
+ ],
+ "turnaround": "If you are not on the pass by 10:00, or anyone in the group has altitude symptoms at Phedi, go back down to Manang.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Annapurna_Circuit",
+  "https://en.wikivoyage.org/wiki/Annapurna_Circuit",
+  "https://www.openstreetmap.org/relation/1187310",
+  "https://ntnc.org.np/project/annapurna-conservation-area-project"
+ ],
+ "osm": 1187310,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 4,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Besisahar",
+   "lat": 28.2542,
+   "lon": 84.3711,
+   "role": "start",
+   "note": "The road head in the Marsyangdi valley; most trekkers take a jeep further up to Dharapani or Chame.",
+   "scene": "np-besisahar"
+  },
+  {
+   "id": "manang",
+   "name": "Manang",
+   "lat": 28.66611,
+   "lon": 84.02312,
+   "role": "point",
+   "note": "A stone village at 3,540 m under Gangapurna and its glacier lake. Rest day for the height.",
+   "night": true,
+   "scene": "np-manang"
+  },
+  {
+   "id": "thorong-la",
+   "name": "Thorong La",
+   "lat": 28.79353,
+   "lon": 83.93876,
+   "role": "point",
+   "note": "The pass at 5,416 m, prayer flags and a tea hut in the snow.",
+   "scene": "np-thorong-la-pass"
+  },
+  {
+   "id": "muktinath",
+   "name": "Muktinath",
+   "lat": 28.81666,
+   "lon": 83.87125,
+   "role": "point",
+   "note": "A temple sacred to Hindus and Buddhists, with 108 water spouts, at the foot of the pass.",
+   "night": true,
+   "scene": "np-muktinath"
+  },
+  {
+   "id": "goal",
+   "name": "Jomsom",
+   "lat": 28.78381,
+   "lon": 83.7305,
+   "role": "goal",
+   "note": "The windy airstrip town of the Kali Gandaki valley.",
+   "scene": "np-jomsom"
+  }
+ ]
+}

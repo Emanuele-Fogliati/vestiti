@@ -1,0 +1,67 @@
+{
+ "id": "ma-gods-bridge",
+ "country": "MA",
+ "name": "Akchour to God's Bridge",
+ "base": "Chefchaouen",
+ "region": "Talassemtane National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Along a turquoise river in a limestone gorge to a natural rock arch 25 m above the water, in the Rif an hour from Chefchaouen.",
+ "book": "Free; shared taxi from Chefchaouen to Akchour.",
+ "water": "Cafes by the river.",
+ "dangers": [
+  "Slippery rocks by the water.",
+  "Busy on summer weekends."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Talassemtane_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Akchour",
+   "lat": 35.2426,
+   "lon": -5.1819,
+   "role": "start",
+   "note": "The dam and cafes where the trail starts.",
+   "scene": "ma-talassemtane-national-park"
+  },
+  {
+   "id": "goal",
+   "name": "God's Bridge",
+   "lat": 35.2282,
+   "lon": -5.1755,
+   "role": "goal",
+   "note": "A natural rock arch over the river gorge.",
+   "scene": "ma-gods-bridge"
+  }
+ ]
+}

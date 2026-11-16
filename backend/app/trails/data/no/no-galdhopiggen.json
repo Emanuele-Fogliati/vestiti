@@ -1,0 +1,61 @@
+{
+ "id": "no-galdhopiggen",
+ "country": "NO",
+ "name": "Galdhøpiggen from Spiterstulen",
+ "base": "Lom",
+ "region": "Jotunheimen National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Up the highest mountain of Northern Europe (2,469 m) without crossing a glacier, over boulders and snowfields, with glaciers all around the top.",
+ "book": "Free: the Norwegian right to roam (allemannsretten). Paid parking at the trailhead. Road toll to Spiterstulen lodge from Lom.",
+ "water": "Streams low down; carry 2 litres.",
+ "dangers": [
+  "Boulder fields and snow even in August.",
+  "Weather turns fast: fog, rain and wind even in July. Check yr.no and turn back in fog."
+ ],
+ "turnaround": "Turn back at 13:00 wherever you are.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Galdh%C3%B8piggen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Spiterstulen",
+   "lat": 61.6315,
+   "lon": 8.4097,
+   "role": "start",
+   "note": "A lodge in the Visdalen valley."
+  },
+  {
+   "id": "goal",
+   "name": "Galdhøpiggen",
+   "lat": 61.6365,
+   "lon": 8.3124,
+   "role": "goal",
+   "note": "The 2,469 m summit with a stone hut."
+  }
+ ]
+}

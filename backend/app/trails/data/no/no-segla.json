@@ -1,0 +1,62 @@
+{
+ "id": "no-segla",
+ "country": "NO",
+ "name": "Segla",
+ "base": "Senja",
+ "region": "Senja",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "A steep climb to a sharp fin of rock 639 m straight above the Mefjord, the symbol of the island of Senja.",
+ "book": "Free; parking at Fjordgård.",
+ "water": "Carry 1 litre.",
+ "dangers": [
+  "Steep, loose and exposed near the top.",
+  "Do not go in wet or windy weather."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Segla"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Fjordgård",
+   "lat": 69.5091,
+   "lon": 17.6283,
+   "role": "start",
+   "note": "A fishing village below the mountain."
+  },
+  {
+   "id": "goal",
+   "name": "Segla",
+   "lat": 69.5074,
+   "lon": 17.5957,
+   "role": "goal",
+   "note": "A pointed peak like a sail above the fjord."
+  }
+ ]
+}

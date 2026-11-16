@@ -1,0 +1,105 @@
+{
+ "id": "ch-five-lakes-zermatt",
+ "country": "CH",
+ "name": "5-Seenweg: five lakes under the Matterhorn",
+ "base": "Zermatt",
+ "region": "Valais",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2.5,
+  3
+ ],
+ "start_by": "08:30",
+ "published": {
+  "km": 9.3,
+  "gain_m": null,
+  "source": "https://www.zermatt.ch/en"
+ },
+ "why": "From Blauherd down past five small lakes, three of them mirroring the Matterhorn on a calm morning, to the Sunnegga funicular.",
+ "book": "Sunnegga-Rothorn lift ticket up to Blauherd.",
+ "water": "Restaurants at Blauherd, Grindjisee and Sunnegga.",
+ "dangers": [
+  "Afternoon thunderstorms in summer: be off the high paths by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.zermatt.ch/en",
+  "https://en.wikipedia.org/wiki/Zermatt"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 5,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Blauherd",
+   "lat": 46.0166,
+   "lon": 7.7883,
+   "role": "start",
+   "note": "The lift station at 2,571 m."
+  },
+  {
+   "id": "stellisee",
+   "name": "Stellisee",
+   "lat": 46.0134,
+   "lon": 7.8004,
+   "role": "point",
+   "note": "The lake with the most famous Matterhorn reflection."
+  },
+  {
+   "id": "grindjisee",
+   "name": "Grindjisee",
+   "lat": 46.0115,
+   "lon": 7.7916,
+   "role": "point",
+   "note": "A small lake in larch and stone pine, with the Matterhorn reflected."
+  },
+  {
+   "id": "gruensee",
+   "name": "Grünsee",
+   "lat": 46.0056,
+   "lon": 7.7857,
+   "role": "point",
+   "note": "The warmest of the five, under the Findel glacier's old moraine; swimming in summer."
+  },
+  {
+   "id": "moosjisee",
+   "name": "Moosjisee",
+   "lat": 46.0089,
+   "lon": 7.7755,
+   "role": "point",
+   "note": "A milky green reservoir lake fed by glacier water."
+  },
+  {
+   "id": "leisee",
+   "name": "Leisee",
+   "lat": 46.015,
+   "lon": 7.7727,
+   "role": "point",
+   "note": "The family lake by Sunnegga, with a raft and a play area."
+  },
+  {
+   "id": "goal",
+   "name": "Sunnegga",
+   "lat": 46.0171,
+   "lon": 7.77,
+   "role": "goal",
+   "note": "The funicular station above Zermatt."
+  }
+ ]
+}

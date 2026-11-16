@@ -1,0 +1,72 @@
+{
+ "id": "bo-torotoro",
+ "country": "BO",
+ "name": "Torotoro: El Vergel canyon",
+ "base": "Torotoro",
+ "region": "Torotoro National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Past dinosaur footprints in the rock to the rim of a 250 m canyon, then down 800 steps to a green oasis of waterfalls.",
+ "book": "National park ticket and compulsory local guide from the Torotoro office. 4-5 h by road from Cochabamba.",
+ "water": "Carry 2 litres.",
+ "dangers": [
+  "Steep steps down into the canyon."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Torotoro_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 2,
+  "relax": 3,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Torotoro",
+   "lat": -18.1334,
+   "lon": -65.763,
+   "role": "start",
+   "note": "A village of adobe houses with dinosaur tracks in the river bed."
+  },
+  {
+   "id": "mirador",
+   "name": "Torotoro canyon viewpoint",
+   "lat": -18.124,
+   "lon": -65.747,
+   "role": "point",
+   "note": "A platform over the deep canyon."
+  },
+  {
+   "id": "goal",
+   "name": "El Vergel",
+   "lat": -18.121,
+   "lon": -65.746,
+   "role": "goal",
+   "note": "Waterfalls and pools at the bottom of the canyon."
+  }
+ ]
+}

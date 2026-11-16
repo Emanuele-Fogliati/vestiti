@@ -1,0 +1,67 @@
+{
+ "id": "at-kahlenberg",
+ "country": "AT",
+ "name": "Vienna: Nussdorf vineyards to the Kahlenberg",
+ "base": "Vienna",
+ "region": "Vienna Woods",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "Out of the city on Vienna's city hiking trail 1, through the vineyards and wine taverns of Nussdorf and Grinzing to a hill over the whole of Vienna and the Danube.",
+ "book": "Free. Tram D to Nussdorf; bus 38A back from the Kahlenberg.",
+ "water": "Heurige wine taverns on the way.",
+ "dangers": [
+  "Short steep stretch on the Nasenweg."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Kahlenberg",
+  "https://www.wien.gv.at/umwelt/wald/freizeit/wandern/wege/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 4,
+  "relax": 5,
+  "history": 3,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Nussdorf",
+   "lat": 48.2591,
+   "lon": 16.3645,
+   "role": "start",
+   "note": "The tram terminus among wine taverns."
+  },
+  {
+   "id": "goal",
+   "name": "Kahlenberg",
+   "lat": 48.2763,
+   "lon": 16.3331,
+   "role": "goal",
+   "note": "A wooded hill with a church and the view over Vienna."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "id": "tz-materuni-falls",
+ "country": "TZ",
+ "name": "Materuni waterfall and coffee village",
+ "base": "Moshi",
+ "region": "Kilimanjaro foothills",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  2.5,
+  3.5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Through banana and coffee gardens of a Chagga village on the slopes of Kilimanjaro to a 80 m waterfall in a green gorge.",
+ "book": "Village fee at Materuni; local guides offer a coffee-making visit. Dala-dala or taxi from Moshi (40 min).",
+ "water": "Small shops in the village.",
+ "dangers": [
+  "Slippery steps near the falls."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Moshi"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 4,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Materuni village",
+   "lat": -3.2733,
+   "lon": 37.3852,
+   "role": "start",
+   "note": "A Chagga village of coffee and banana plots."
+  },
+  {
+   "id": "goal",
+   "name": "Materuni Waterfalls",
+   "lat": -3.2502,
+   "lon": 37.4001,
+   "role": "goal",
+   "note": "A tall waterfall into a fern-lined gorge."
+  }
+ ]
+}

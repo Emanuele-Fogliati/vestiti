@@ -1,0 +1,74 @@
+{
+ "id": "ch-lavaux",
+ "country": "CH",
+ "name": "Lavaux vineyard terraces",
+ "base": "Lausanne",
+ "region": "Lavaux, Vaud",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "Through stone-walled vineyard terraces stepping down to Lake Geneva, a World Heritage landscape, between the wine villages of Lutry and St-Saphorin.",
+ "book": "Free. Train back along the lake.",
+ "water": "Wine cellars and cafes in the villages.",
+ "dangers": [
+  "Steep lanes between the terraces."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Lavaux"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 4,
+  "relax": 5,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lutry",
+   "lat": 46.503,
+   "lon": 6.686,
+   "role": "start",
+   "note": "A lakeside wine village east of Lausanne."
+  },
+  {
+   "id": "chexbres",
+   "name": "Chexbres",
+   "lat": 46.482,
+   "lon": 6.778,
+   "role": "point",
+   "note": "A village high on the terraces with the lake and the Alps."
+  },
+  {
+   "id": "goal",
+   "name": "St-Saphorin",
+   "lat": 46.473,
+   "lon": 6.796,
+   "role": "goal",
+   "note": "A small medieval wine village by the lake."
+  }
+ ]
+}

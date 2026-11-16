@@ -1,0 +1,62 @@
+{
+ "id": "ch-bachalpsee",
+ "country": "CH",
+ "name": "First to Bachalpsee",
+ "base": "Grindelwald",
+ "region": "Jungfrau region",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "An easy alpine path from the First gondola to a lake that mirrors the Schreckhorn, Wetterhorn and Eiger.",
+ "book": "Gondola from Grindelwald to First.",
+ "water": "Restaurant at First.",
+ "dangers": [
+  "Afternoon thunderstorms in summer: be off the high paths by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Bachalpsee"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 5,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "First",
+   "lat": 46.659,
+   "lon": 8.054,
+   "role": "start",
+   "note": "The gondola top station and cliff walk."
+  },
+  {
+   "id": "goal",
+   "name": "Bachalpsee",
+   "lat": 46.669,
+   "lon": 8.023,
+   "role": "goal",
+   "note": "A clear lake with glaciated peaks behind."
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "id": "ar-piedra-del-fraile",
+ "country": "AR",
+ "name": "Piedra del Fraile",
+ "base": "El Chaltén",
+ "region": "Los Glaciares National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Up the forested valley of the Río Eléctrico to a refuge under a huge boulder, with the north face of Fitz Roy and the Marconi glacier ahead.",
+ "book": "Private land: small fee at the refuge. Bus or taxi from El Chaltén to the Río Eléctrico bridge (17 km).",
+ "water": "River water; refuge sells meals.",
+ "dangers": [
+  "Wind in the open valley."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/El_Chalt%C3%A9n"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Río Eléctrico bridge",
+   "lat": -49.256,
+   "lon": -72.956,
+   "role": "start",
+   "note": "The bridge on the road north of El Chaltén."
+  },
+  {
+   "id": "goal",
+   "name": "Piedra del Fraile",
+   "lat": -49.2274,
+   "lon": -73.0136,
+   "role": "goal",
+   "note": "A refuge beside a giant boulder in the forest."
+  }
+ ]
+}

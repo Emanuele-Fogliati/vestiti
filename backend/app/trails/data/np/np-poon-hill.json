@@ -1,0 +1,85 @@
+{
+ "id": "np-poon-hill",
+ "country": "NP",
+ "name": "Ghorepani and Poon Hill",
+ "base": "Pokhara",
+ "region": "Annapurna Conservation Area",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  14,
+  18
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The short classic from Pokhara: up 3,300 stone steps to Ulleri and the rhododendron forest of Ghorepani, then sunrise on Dhaulagiri and Annapurna from Poon Hill.",
+ "book": "Annapurna Conservation Area permit and TIMS card. Since April 2023 Nepal requires foreign trekkers to hire a licensed guide in its national parks and conservation areas (check the current rule before you go). Jeep from Pokhara to Nayapul or Birethanti (1.5 h).",
+ "water": "Teahouses in every village.",
+ "dangers": [
+  "Steep stone steps between Tikhedhunga and Ulleri.",
+  "Ice on the steps up Poon Hill on winter mornings: use a headlamp."
+ ],
+ "turnaround": "Leave Ghorepani at 04:45 for sunrise; if the summit is in cloud by 07:00, it will not clear.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Poon_Hill",
+  "https://en.wikipedia.org/wiki/Ghorepani",
+  "https://ntnc.org.np/project/annapurna-conservation-area-project"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 4,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Birethanti",
+   "lat": 28.3095,
+   "lon": 83.77482,
+   "role": "start",
+   "note": "A village at the river crossing where the ACAP checkpost checks your permit.",
+   "scene": "np-birethanti"
+  },
+  {
+   "id": "ulleri",
+   "name": "Ulleri",
+   "lat": 28.35727,
+   "lon": 83.73537,
+   "role": "point",
+   "note": "A Magar village at the top of the famous stone staircase.",
+   "scene": "np-ulleri"
+  },
+  {
+   "id": "ghorepani",
+   "name": "Ghorepani",
+   "lat": 28.40249,
+   "lon": 83.69993,
+   "role": "point",
+   "note": "Lodges in a saddle of rhododendron forest at 2,860 m.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Poon Hill",
+   "lat": 28.40004,
+   "lon": 83.68954,
+   "role": "goal",
+   "note": "A 3,210 m viewpoint tower: Dhaulagiri, Annapurna South and Machhapuchhre at sunrise.",
+   "scene": "np-poon-hill"
+  }
+ ]
+}

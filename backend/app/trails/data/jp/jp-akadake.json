@@ -1,0 +1,72 @@
+{
+ "id": "jp-akadake",
+ "country": "JP",
+ "name": "Akadake, Yatsugatake",
+ "base": "Chino",
+ "region": "Yatsugatake-Chushin Kogen Quasi-National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  8,
+  10
+ ],
+ "start_by": "06:00",
+ "published": null,
+ "why": "Up the red volcanic pyramid of Akadake, the highest of the Yatsugatake, by chains and ladders from mountain huts in a moss forest.",
+ "book": "Bus from Chino station to Minotoguchi. Huts at Akadake-kosen and Gyoja-goya (book for a night).",
+ "water": "Huts on the way.",
+ "dangers": [
+  "Chains and ladders on steep rock.",
+  "Ice and snow from November to May."
+ ],
+ "turnaround": "Be on top by 12:00.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Yatsugatake_Mountains"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 2,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Minotoguchi",
+   "lat": 35.982,
+   "lon": 138.3012,
+   "role": "start",
+   "note": "The bus stop at the end of the road."
+  },
+  {
+   "id": "kosen",
+   "name": "Akadake-kosen",
+   "lat": 35.9868,
+   "lon": 138.3603,
+   "role": "point",
+   "note": "A hut in the forest under the red peak."
+  },
+  {
+   "id": "goal",
+   "name": "Akadake",
+   "lat": 35.9708,
+   "lon": 138.37,
+   "role": "goal",
+   "note": "The 2,899 m summit shrine.",
+   "scene": "jp-mount-aka"
+  }
+ ]
+}

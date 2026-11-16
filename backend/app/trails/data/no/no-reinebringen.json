@@ -1,0 +1,66 @@
+{
+ "id": "no-reinebringen",
+ "country": "NO",
+ "name": "Reinebringen",
+ "base": "Reine",
+ "region": "Lofoten",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "About 1,500 stone steps built by Nepalese Sherpas straight up from the road to the classic view of Reine, its red cabins and the Lofoten peaks.",
+ "book": "Free; small parking near the E10 tunnel at Reine.",
+ "water": "Carry 1 litre.",
+ "dangers": [
+  "Steep steps, slippery in rain.",
+  "The top ridge is unfenced."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Reinebringen",
+  "https://www.visitnorway.com/places-to-go/northern-norway/lofoten/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Reine",
+   "lat": 67.9325,
+   "lon": 13.0888,
+   "role": "start",
+   "note": "A fishing village of red cabins on stilts.",
+   "scene": "no-lofoten"
+  },
+  {
+   "id": "goal",
+   "name": "Reinebringen",
+   "lat": 67.9278,
+   "lon": 13.0714,
+   "role": "goal",
+   "note": "The summit ridge 448 m above Reine.",
+   "scene": "no-reinebringen"
+  }
+ ]
+}

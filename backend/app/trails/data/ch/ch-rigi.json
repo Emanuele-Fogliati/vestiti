@@ -1,0 +1,63 @@
+{
+ "id": "ch-rigi",
+ "country": "CH",
+ "name": "Rigi Kulm to Rigi Kaltbad",
+ "base": "Lucerne",
+ "region": "Lake Lucerne",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "easy",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
+ "start_by": "10:00",
+ "published": null,
+ "why": "Down from the 'queen of the mountains' with Lake Lucerne on three sides and a line of Alps from the Säntis to the Jungfrau.",
+ "book": "Boat to Vitznau and cog railway to Rigi Kulm (Swiss Travel Pass valid).",
+ "water": "Hotels at both ends.",
+ "dangers": [],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Rigi"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 2,
+  "relax": 5,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Rigi Kulm",
+   "lat": 47.0565,
+   "lon": 8.485,
+   "role": "start",
+   "note": "The summit and old hotel above the lakes."
+  },
+  {
+   "id": "goal",
+   "name": "Rigi Kaltbad",
+   "lat": 47.044,
+   "lon": 8.465,
+   "role": "goal",
+   "note": "A resort on a terrace with the lake below."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "id": "ke-hells-gate-gorge",
+ "country": "KE",
+ "name": "Hell's Gate: Fischer's Tower and the gorge",
+ "base": "Naivasha",
+ "region": "Hell's Gate National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  4.5,
+  6
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "On foot among zebra and giraffe past the volcanic plug of Fischer's Tower to the Ol Njorowa gorge, where hot springs steam out of the walls.",
+ "book": "Kenya Wildlife Service fees at Elsa Gate; bikes for hire. A local guide is compulsory in the gorge.",
+ "water": "Carry 2 litres; sun all day.",
+ "dangers": [
+  "Flash floods in the gorge when it rains on the hills: never enter in rain.",
+  "Buffalo in the park."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Hell%27s_Gate_National_Park",
+  "https://www.kws.go.ke/hells-gate-national-park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Elsa Gate",
+   "lat": -0.8525,
+   "lon": 36.369,
+   "role": "start",
+   "note": "The main gate of the park near Lake Naivasha."
+  },
+  {
+   "id": "fischer",
+   "name": "Fischer's Tower",
+   "lat": -0.8595,
+   "lon": 36.3625,
+   "role": "point",
+   "note": "A 25 m volcanic plug where rock climbers practise."
+  },
+  {
+   "id": "goal",
+   "name": "Ol Njorowa Gorge",
+   "lat": -0.8934,
+   "lon": 36.3206,
+   "role": "goal",
+   "note": "A narrow red gorge with hot springs, the lower gorge of Hell's Gate.",
+   "scene": "ke-hells-gate-national-park"
+  }
+ ]
+}

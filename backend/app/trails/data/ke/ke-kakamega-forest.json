@@ -1,0 +1,64 @@
+{
+ "id": "ke-kakamega-forest",
+ "country": "KE",
+ "name": "Kakamega Forest: Lirhanda Hill",
+ "base": "Kakamega",
+ "region": "Kakamega Forest National Reserve",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  12
+ ],
+ "hours": [
+  3.5,
+  5
+ ],
+ "start_by": "05:30",
+ "published": null,
+ "why": "The last rainforest of Kenya: before dawn up Lirhanda Hill to see the sun rise over the canopy, then birds and monkeys on the way down.",
+ "book": "KWS or Kenya Forest Service fee at Buyangu or Isecheno; walk with a local guide.",
+ "water": "Carry 1.5 litres.",
+ "dangers": [
+  "Muddy after rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Kakamega_Forest"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 2,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Isecheno forest station",
+   "lat": 0.233,
+   "lon": 34.8567,
+   "role": "start",
+   "note": "Forest station and guest houses inside the forest."
+  },
+  {
+   "id": "goal",
+   "name": "Lirhanda Hill",
+   "lat": 0.2172,
+   "lon": 34.8949,
+   "role": "goal",
+   "note": "A rocky hill above the canopy, best at sunrise."
+  }
+ ]
+}

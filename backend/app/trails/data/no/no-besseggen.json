@@ -1,0 +1,76 @@
+{
+ "id": "no-besseggen",
+ "country": "NO",
+ "name": "Besseggen ridge",
+ "base": "Gjendesheim",
+ "region": "Jotunheimen National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 14,
+  "gain_m": 1100,
+  "source": "https://en.wikipedia.org/wiki/Besseggen"
+ },
+ "why": "Norway's best-known ridge: between the green lake Gjende and the blue Bessvatnet, then up a steep rocky crest, after a boat ride from Gjendesheim.",
+ "book": "Free: the Norwegian right to roam (allemannsretten). Paid parking at the trailhead. Boat from Gjendesheim to Memurubu (book in summer). Bus to Gjendesheim from Otta.",
+ "water": "Streams near Memurubu and on the plateau.",
+ "dangers": [
+  "Steep scrambling with hands up the ridge, exposed in places.",
+  "Weather turns fast: fog, rain and wind even in July. Check yr.no and turn back in fog.",
+  "Snow on the north side until July."
+ ],
+ "turnaround": "If the ridge is in fog or wet, stay on the lake path back.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Besseggen",
+  "https://www.visitnorway.com/places-to-go/eastern-norway/jotunheimen/besseggen/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Memurubu",
+   "lat": 61.4908,
+   "lon": 8.6298,
+   "role": "start",
+   "note": "A lodge on Lake Gjende reached by boat."
+  },
+  {
+   "id": "ridge",
+   "name": "Besseggen",
+   "lat": 61.5029,
+   "lon": 8.7268,
+   "role": "point",
+   "note": "The narrow crest between two lakes of different colours."
+  },
+  {
+   "id": "goal",
+   "name": "Gjendesheim",
+   "lat": 61.4943,
+   "lon": 8.8126,
+   "role": "goal",
+   "note": "The lodge and boat landing at the east end of Gjende."
+  }
+ ]
+}

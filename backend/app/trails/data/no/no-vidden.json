@@ -1,0 +1,75 @@
+{
+ "id": "no-vidden",
+ "country": "NO",
+ "name": "Vidden: Ulriken to Fløyen",
+ "base": "Bergen",
+ "region": "Bergen",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 15,
+  "gain_m": 600,
+  "source": "https://en.visitbergen.com/"
+ },
+ "why": "Bergen's classic day walk across the open plateau between its two city mountains, with the fjords and the North Sea on one side and the city below.",
+ "book": "Free. Ulriken cable car up, Fløibanen funicular down (paid).",
+ "water": "Streams; cafes at both ends.",
+ "dangers": [
+  "Fog and rain are common: carry a map.",
+  "Cairns only on the plateau."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ulriken",
+  "https://en.wikipedia.org/wiki/Fl%C3%B8yen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 2,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ulriken",
+   "lat": 60.3775,
+   "lon": 5.3869,
+   "role": "start",
+   "note": "The highest of Bergen's seven mountains, 643 m, with a cable car."
+  },
+  {
+   "id": "goal",
+   "name": "Fløyen",
+   "lat": 60.3946,
+   "lon": 5.3428,
+   "role": "goal",
+   "note": "The city mountain with the funicular down to the old town.",
+   "scene": "no-mount-floyen"
+  }
+ ],
+ "via": [
+  [
+   60.4132,
+   5.3665
+  ]
+ ]
+}

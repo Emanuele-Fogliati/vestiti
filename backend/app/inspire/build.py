@@ -16,23 +16,46 @@ MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", 
 # where the globe has the park's height and not the village's. Written here so the build never
 # depends on the network (globe.elevation geocodes otherwise).
 ELEVATION = {
-    "ar-bariloche": 890, "ar-mendoza": 750, "ar-puerto-iguazu": 170, "ar-puerto-madryn": 10, "ar-purmamarca": 2320,
-    "ar-salta": 1150, "bo-copacabana": 3840, "bo-la-paz": 3640, "bo-laguna-colorada": 4300, "bo-uyuni": 3670, "cl-castro": 40, "cl-hanga-roa": 40, "cl-puerto-varas": 60, "cl-punta-arenas": 20,
+    "ar-bariloche": 890, "ar-mendoza": 750, "ar-puerto-iguazu": 170, "ar-puerto-madryn": 10,
+    "ar-purmamarca": 2320, "ar-salta": 1150, "at-durnstein": 210, "at-innsbruck": 575, "at-kitzbuhel": 760,
+    "at-salzburg": 425, "at-st-wolfgang": 540, "at-vienna": 190, "bo-copacabana": 3840, "bo-la-paz": 3640,
+    "bo-laguna-colorada": 4300, "bo-uyuni": 3670, "ch-aletsch-glacier": 1925, "ch-bern": 540,
+    "ch-geneva": 375, "ch-lausanne": 495, "ch-lauterbrunnen": 800, "ch-lucerne": 435, "ch-zurich": 410,
+    "cl-castro": 40, "cl-hanga-roa": 40, "cl-puerto-varas": 60, "cl-punta-arenas": 20,
     "cl-torres-del-paine-national-park": 150, "is-hofn": 5, "is-husavik": 15, "is-isafjordur": 5,
     "is-lake-myvatn": 280, "is-skaftafell": 100, "is-snaefellsnes": 20, "jp-hakone": 700, "jp-himeji": 20,
-    "jp-kanazawa": 40, "jp-koguchi": 110, "jp-nara": 60, "jp-nikko": 600, "na-bagani": 1010,
-    "na-epupa-falls": 750, "na-opuwo": 1150, "na-twyfelfontein": 600, "nz-abel-tasman-national-park": 10,
-    "nz-aoraki-mount-cook-national-park": 760, "nz-coromandel-peninsula": 10, "nz-lake-tekapo": 710,
-    "nz-paihia": 10, "nz-punakaiki": 10, "nz-te-anau": 210, "nz-tongariro-national-park": 1100,
-    "nz-waitomo": 120, "nz-wanaka": 300, "pe-chivay": 3630, "pe-huaraz": 3050, "pe-paracas": 5,
-    "pe-puerto-maldonado": 180, "vn-can-tho": 5, "vn-ha-giang": 110, "vn-mai-chau": 175, "vn-ninh-binh": 5,
-    "vn-phong-nha": 30,
+    "jp-kanazawa": 40, "jp-koguchi": 110, "jp-nara": 60, "jp-nikko": 600, "ma-asilah": 10,
+    "ma-dades-gorges": 1600, "ma-imlil": 1740, "ma-meknes": 550, "ma-ouzoud-falls": 1000, "ma-rabat": 50,
+    "ma-taghazout": 10, "na-bagani": 1010, "na-epupa-falls": 750, "na-opuwo": 1150, "na-twyfelfontein": 600,
+    "no-alesund": 10, "no-alta": 20, "no-andalsnes": 10, "no-flam": 10, "no-geiranger": 10,
+    "no-hardangerfjord": 20, "no-loen": 10, "no-senja": 20, "no-stavanger": 10, "no-trondheim": 20,
+    "np-bamboo": 2310, "np-bandipur": 1030, "np-chhomrong": 2170, "np-deurali": 3230, "np-dhulikhel": 1550,
+    "np-dingboche": 4410, "np-ghandruk": 1940, "np-ghorepani": 2860, "np-gorak-shep": 5164,
+    "np-jhinu-danda": 1780, "np-jomsom": 2720, "np-kagbeni": 2810, "np-khumjung": 3790,
+    "np-lo-manthang": 3840, "np-marpha": 2670, "np-nagarkot": 2100, "np-namche-bazaar": 3440,
+    "np-pangboche": 3985, "np-pheriche": 4370, "np-sauraha": 180, "np-tadapani": 2630, "np-ulleri": 2070,
+    "nz-abel-tasman-national-park": 10, "nz-aoraki-mount-cook-national-park": 760,
+    "nz-coromandel-peninsula": 10, "nz-lake-tekapo": 710, "nz-paihia": 10, "nz-punakaiki": 10,
+    "nz-te-anau": 210, "nz-tongariro-national-park": 1100, "nz-waitomo": 120, "nz-wanaka": 300,
+    "pe-chivay": 3630, "pe-huaraz": 3050, "pe-paracas": 5, "pe-puerto-maldonado": 180, "tz-lake-natron": 610,
+    "tz-lushoto": 1400, "tz-mount-kilimanjaro": 3900, "tz-nungwi": 5, "vn-can-tho": 5, "vn-ha-giang": 110,
+    "vn-mai-chau": 175, "vn-ninh-binh": 5, "vn-phong-nha": 30, "x-at-hallstatt": 510,
+    "x-at-zell-am-see": 760, "x-ch-appenzell": 780, "x-ch-grindelwald": 1035, "x-ch-lugano": 275,
+    "x-ch-st-moritz": 1820, "x-ch-zermatt": 1610,
+    # Italy (2026-11-16): the towns you sleep in; the Cinque Terre's globe point is up on the
+    # ridge (331 m), the villages are on the sea
+    "it-alberobello": 428, "it-amalfi": 10, "it-bologna": 54, "it-bolzano": 262, "it-cefalu": 16,
+    "it-cinque-terre": 20, "it-cortina-dampezzo": 1224, "it-lipari": 10, "it-milan": 120,
+    "it-ortisei": 1236, "it-ragusa": 450, "it-sirmione": 70, "it-sorrento": 50, "it-syracuse": 17,
+    "it-trapani": 3, "it-varenna": 220, "it-verona": 59,
 }
 
 # Where you sleep, when the globe's point is the middle of a park: Torres del Paine's sits on the
 # ice field to the west (1-9 °C in January, a warm down jacket in summer); the refugios and hotels
 # are on the east side (Opus check of the day-by-day clothes, 2026-11-16).
-COORDS = {"cl-torres-del-paine-national-park": (-50.96, -72.87)}
+COORDS = {"cl-torres-del-paine-national-park": (-50.96, -72.87),
+          # Riederalp, the village above the Aletsch glacier; the Machame camps on Kilimanjaro's south-west side
+          "ch-aletsch-glacier": (46.381, 8.026), "tz-mount-kilimanjaro": (-3.09, 37.30)}
 
 
 def height(p: dict, strict: bool = True) -> int:

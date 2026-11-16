@@ -1,0 +1,75 @@
+{
+ "id": "jp-takao",
+ "country": "JP",
+ "name": "Mount Takao by Trail 1",
+ "base": "Tokyo",
+ "region": "Meiji no Mori Takao Quasi-National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "An hour from Tokyo: a paved path past the Yakuo-in temple and its tengu statues to a summit with Mount Fuji over the ridges.",
+ "book": "Free. Keio line to Takaosanguchi; cable car for part of the way.",
+ "water": "Shops and teahouses on the way.",
+ "dangers": [
+  "Very crowded at weekends in November."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Takao"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 4,
+  "relax": 4,
+  "history": 3,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Takaosanguchi",
+   "lat": 35.632,
+   "lon": 139.27,
+   "role": "start",
+   "note": "The station at the foot of the mountain."
+  },
+  {
+   "id": "yakuoin",
+   "name": "Yakuo-in",
+   "lat": 35.625,
+   "lon": 139.249,
+   "role": "point",
+   "scene": "jp-yakuo-in",
+   "note": "A mountain temple with tengu statues."
+  },
+  {
+   "id": "goal",
+   "name": "Mount Takao",
+   "lat": 35.6254,
+   "lon": 139.2436,
+   "role": "goal",
+   "note": "The 599 m summit with the view of Fuji.",
+   "scene": "jp-mount-takao"
+  }
+ ]
+}

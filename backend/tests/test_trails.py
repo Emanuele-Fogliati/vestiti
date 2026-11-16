@@ -6,7 +6,8 @@ import pytest
 from app import art, trails
 from app.trails import DATA, GEO, km
 
-COUNTRIES = ("IT", "AR", "CL", "PE", "IS", "NZ", "JP", "VN", "NA")
+COUNTRIES = ("IT", "AR", "CL", "PE", "IS", "NZ", "JP", "VN", "NA",
+             "US", "CH", "AT", "NP", "CA", "NO", "GB", "MA", "TZ", "KE", "EC", "BO", "TR", "GR")
 SLOTS = {f"{c}-{s}" for c in COUNTRIES for s in "ABCDEF"}
 
 

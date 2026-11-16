@@ -1,0 +1,65 @@
+{
+ "id": "jp-shikoku-henro-korogashi",
+ "country": "JP",
+ "name": "Shikoku 88: Fujii-dera to Shosan-ji",
+ "base": "Tokushima",
+ "region": "Shikoku pilgrimage",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The hardest day of the Shikoku pilgrimage, 'where pilgrims fall': over forest ridges from temple 11 to temple 12, high on Mount Shosan.",
+ "book": "Free. Train to Kamojima, taxi to Fujii-dera. Temple lodging at Shosan-ji.",
+ "water": "No shops: carry 2 litres.",
+ "dangers": [
+  "Three big climbs, steep and slippery.",
+  "Long: leave by 07:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Shikoku_Pilgrimage",
+  "https://en.wikipedia.org/wiki/Sh%C5%8Dsan-ji"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 5,
+  "relax": 2,
+  "history": 5,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Fujii-dera",
+   "lat": 34.0517,
+   "lon": 134.3485,
+   "role": "start",
+   "note": "Temple 11 at the foot of the mountains."
+  },
+  {
+   "id": "goal",
+   "name": "Shosan-ji",
+   "lat": 33.9851,
+   "lon": 134.3104,
+   "role": "goal",
+   "note": "Temple 12 among giant cedars at 700 m.",
+   "scene": "jp-shosan-ji"
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "id": "no-preikestolen",
+ "country": "NO",
+ "name": "Preikestolen (Pulpit Rock)",
+ "base": "Stavanger",
+ "region": "Lysefjord, Rogaland",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 8,
+  "gain_m": null,
+  "source": "https://www.fjordnorway.com/en/attractions/preikestolen"
+ },
+ "why": "A flat square of rock 604 m straight above the Lysefjord, reached by a stone-stepped path over bare granite slabs and small lakes.",
+ "book": "Free: the Norwegian right to roam (allemannsretten). Paid parking at the trailhead. Bus from Stavanger to Preikestolen Fjellstue in summer (about 1 h). Go early or late: by noon hundreds walk it.",
+ "water": "No water on the way: carry 1.5 litres. Cafe at the Fjellstue.",
+ "dangers": [
+  "Unfenced 604 m drop: keep away from the edge, never sit on it in wind.",
+  "Weather turns fast: fog, rain and wind even in July. Check yr.no and turn back in fog.",
+  "Ice on the slabs from November to April: go with a guide and spikes."
+ ],
+ "turnaround": "If fog hides the next cairn, go back.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Preikestolen",
+  "https://www.fjordnorway.com/en/attractions/preikestolen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Preikestolen Fjellstue",
+   "lat": 58.9917,
+   "lon": 6.1424,
+   "role": "start",
+   "note": "The mountain lodge and car park at the trailhead."
+  },
+  {
+   "id": "goal",
+   "name": "Preikestolen",
+   "lat": 58.9864,
+   "lon": 6.1884,
+   "role": "goal",
+   "note": "The flat rock above the Lysefjord.",
+   "scene": "no-preikestolen"
+  }
+ ]
+}

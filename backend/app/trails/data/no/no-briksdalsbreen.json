@@ -1,0 +1,63 @@
+{
+ "id": "no-briksdalsbreen",
+ "country": "NO",
+ "name": "Briksdal glacier walk",
+ "base": "Olden",
+ "region": "Jostedalsbreen National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "An easy track past a big waterfall to a glacier lake under the blue ice tongue of Briksdalsbreen, an arm of Jostedalsbreen.",
+ "book": "Free; parking and cafe at Briksdalsbre Fjellstove. Troll cars go up in summer.",
+ "water": "Cafe at the start.",
+ "dangers": [
+  "Do not walk on the ice: blocks fall into the lake."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Briksdalsbreen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Briksdalsbre Fjellstove",
+   "lat": 61.6632,
+   "lon": 6.8234,
+   "role": "start",
+   "note": "The lodge and car park in the valley."
+  },
+  {
+   "id": "goal",
+   "name": "Briksdalsbreen",
+   "lat": 61.664,
+   "lon": 6.857,
+   "role": "goal",
+   "note": "The glacier tongue above a grey-green lake.",
+   "scene": "no-briksdalsbreen"
+  }
+ ]
+}

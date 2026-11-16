@@ -1,0 +1,70 @@
+{
+ "id": "ma-chefchaouen-spanish-mosque",
+ "country": "MA",
+ "name": "Chefchaouen to the Spanish Mosque",
+ "base": "Chefchaouen",
+ "region": "Rif",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
+ "start_by": "17:00",
+ "published": null,
+ "why": "Out of the blue medina past the Ras el Ma spring and up a hillside path to a ruined mosque, for the sunset over the whole blue town.",
+ "book": "Free.",
+ "water": "Cafes at Ras el Ma.",
+ "dangers": [
+  "Uneven path; carry a light for the way down."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Chefchaouen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 4,
+  "relax": 4,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ras el Ma",
+   "lat": 35.1715,
+   "lon": -5.2561,
+   "role": "start",
+   "note": "The spring where the river leaves the medina.",
+   "scene": "ma-chefchaouen"
+  },
+  {
+   "id": "goal",
+   "name": "Spanish Mosque",
+   "lat": 35.1655,
+   "lon": -5.2556,
+   "role": "goal",
+   "note": "A small whitewashed mosque on the hill above the town."
+  }
+ ]
+}

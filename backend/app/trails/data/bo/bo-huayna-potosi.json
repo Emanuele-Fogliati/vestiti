@@ -1,0 +1,75 @@
+{
+ "id": "bo-huayna-potosi",
+ "country": "BO",
+ "name": "Huayna Potosí",
+ "base": "La Paz",
+ "region": "Cordillera Real",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "glacier": true,
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  10,
+  14
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "The 6,088 m peak an hour from La Paz: an ice climb on a glacier ridge, and from the top the Altiplano, Lake Titicaca and the Amazon clouds.",
+ "book": "Only with a licensed mountain guide from La Paz: crampons, ice axe, rope and harness. 3 days with nights at the refuges.",
+ "water": "Meals and melted snow at the refuges.",
+ "dangers": [
+  "Crevasses and seracs on the glacier.",
+  "Altitude 6,088 m: at least a week in La Paz first.",
+  "Final ridge exposed."
+ ],
+ "turnaround": "The guide turns back at 07:00 wherever you are.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Huayna_Potos%C3%AD",
+  "https://www.openstreetmap.org/node/582796952"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Zongo Pass",
+   "lat": -16.283,
+   "lon": -68.127,
+   "role": "start",
+   "note": "The dam and road at 4,700 m below the glacier."
+  },
+  {
+   "id": "campo-alto",
+   "name": "High Camp Huayna Potosí",
+   "lat": -16.2742,
+   "lon": -68.1403,
+   "role": "point",
+   "note": "Refuge at 5,130 m on the rock under the glacier.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Huayna Potosí",
+   "lat": -16.2624,
+   "lon": -68.1541,
+   "role": "goal",
+   "note": "The 6,088 m summit on an ice ridge."
+  }
+ ]
+}

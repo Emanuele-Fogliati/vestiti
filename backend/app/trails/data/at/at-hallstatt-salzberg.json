@@ -1,0 +1,65 @@
+{
+ "id": "at-hallstatt-salzberg",
+ "country": "AT",
+ "name": "Hallstatt to the Skywalk and Salt Mine",
+ "base": "Hallstatt",
+ "region": "Salzkammergut",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Steep switchbacks from the lakeside village to the World Heritage viewpoint over the Hallstätter See and the world's oldest salt mine.",
+ "book": "Free on foot; the funicular is paid. Arrive early: Hallstatt limits coaches and is packed by 10:00.",
+ "water": "Restaurant at the top station.",
+ "dangers": [
+  "Steep path, slippery when wet."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Hallstatt",
+  "https://en.wikipedia.org/wiki/Hallstatt_salt_mine"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 4,
+  "relax": 3,
+  "history": 5,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hallstatt",
+   "lat": 47.5622,
+   "lon": 13.6493,
+   "role": "start",
+   "note": "The lakeside village of pastel houses under the cliffs."
+  },
+  {
+   "id": "goal",
+   "name": "Welterbeblick Skywalk",
+   "lat": 47.5612,
+   "lon": 13.6435,
+   "role": "goal",
+   "note": "A platform over the cliff, 350 m above the lake."
+  }
+ ]
+}

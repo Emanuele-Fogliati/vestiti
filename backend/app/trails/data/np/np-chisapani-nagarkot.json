@@ -1,0 +1,79 @@
+{
+ "id": "np-chisapani-nagarkot",
+ "country": "NP",
+ "name": "Kathmandu valley rim: Sundarijal to Nagarkot",
+ "base": "Kathmandu",
+ "region": "Shivapuri Nagarjun National Park",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  9,
+  12
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "Two days on the forested rim of the Kathmandu valley, through Tamang villages, with the Langtang and Ganesh Himal in a row and a night at Chisapani.",
+ "book": "Shivapuri Nagarjun National Park ticket at Sundarijal. Taxi from Kathmandu to Sundarijal (1 h); bus or taxi back from Nagarkot.",
+ "water": "Tea shops in the villages and lodges at Chisapani.",
+ "dangers": [
+  "Steep stone steps beside the Sundarijal water pipe.",
+  "Do not walk the forest alone: go with a guide or a group."
+ ],
+ "turnaround": "If you are not at Chisapani by 16:00, the light goes fast in the forest: stop at the first lodge.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Shivapuri_Nagarjun_National_Park",
+  "https://en.wikipedia.org/wiki/Nagarkot",
+  "https://www.openstreetmap.org/relation/9400763",
+  "https://www.openstreetmap.org/relation/9400905"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 4,
+  "relax": 3,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Sundarijal",
+   "lat": 27.75801,
+   "lon": 85.41919,
+   "role": "start",
+   "note": "Waterfalls and a reservoir at the gate of the national park.",
+   "scene": "np-sundarijal"
+  },
+  {
+   "id": "chisapani",
+   "name": "Chisapani",
+   "lat": 27.82555,
+   "lon": 85.44839,
+   "role": "point",
+   "note": "Lodges on a ridge at 2,200 m with a long line of Himalayan peaks at dawn.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Nagarkot",
+   "lat": 27.71851,
+   "lon": 85.51973,
+   "role": "goal",
+   "note": "The valley-rim village of hotels known for its sunrise over the Himalaya.",
+   "scene": "np-nagarkot"
+  }
+ ]
+}

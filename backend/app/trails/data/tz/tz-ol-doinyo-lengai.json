@@ -1,0 +1,69 @@
+{
+ "id": "tz-ol-doinyo-lengai",
+ "country": "TZ",
+ "name": "Ol Doinyo Lengai night climb",
+ "base": "Lake Natron",
+ "region": "Ngorongoro district",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10,
+  12,
+  1,
+  2
+ ],
+ "hours": [
+  9,
+  12
+ ],
+ "start_by": "23:30",
+ "published": null,
+ "why": "The only volcano on Earth that erupts black natrocarbonatite lava: a night climb up steep ash to the crater at sunrise, Lake Natron pink below.",
+ "book": "Climb only with a local guide arranged at Engaresero; Ngorongoro district and village fees. Night start to avoid the heat.",
+ "water": "No water on the mountain: carry 3-4 litres.",
+ "dangers": [
+  "Very steep loose ash: hard on the knees going down; take poles.",
+  "Heat after 09:00 on the bare slope.",
+  "Do not go into the crater: the lava can be active."
+ ],
+ "turnaround": "Turn back if you are not at the rim by 07:30.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Ol_Doinyo_Lengai",
+  "https://www.openstreetmap.org/node/255620945"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 2,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ol Doinyo Lengai trailhead",
+   "lat": -2.7352,
+   "lon": 35.8855,
+   "role": "start",
+   "note": "The end of the track on the north foot of the volcano, reached by 4x4 from Engaresero."
+  },
+  {
+   "id": "goal",
+   "name": "Ol Doinyo Lengai",
+   "lat": -2.7605,
+   "lon": 35.9146,
+   "role": "goal",
+   "note": "The 2,962 m summit crater with white carbonatite flows.",
+   "scene": "tz-lake-natron"
+  }
+ ]
+}

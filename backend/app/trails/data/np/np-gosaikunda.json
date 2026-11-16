@@ -1,0 +1,84 @@
+{
+ "id": "np-gosaikunda",
+ "country": "NP",
+ "name": "Gosaikunda sacred lakes",
+ "base": "Kathmandu",
+ "region": "Langtang National Park",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  20,
+  26
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "A steep climb through forest and the Laurebina ridge to a group of high lakes holy to Shiva, with the Langtang and Ganesh ranges behind you.",
+ "book": "Langtang National Park permit and TIMS card. Since April 2023 Nepal requires foreign trekkers to hire a licensed guide in its national parks and conservation areas (check the current rule before you go). Bus or jeep from Kathmandu to Dhunche (6-7 h). In August, thousands of pilgrims come for Janai Purnima.",
+ "water": "Lodges at Chandanbari, Laurebina and the lake.",
+ "dangers": [
+  "From Dhunche to the lake you climb 2,400 m: sleep at Chandanbari and Laurebina.",
+  "Snow and ice on the ridge from December to March."
+ ],
+ "turnaround": "If you are not at Laurebina by 15:00, sleep there.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Gosaikunda",
+  "https://www.openstreetmap.org/relation/4867746",
+  "https://en.wikivoyage.org/wiki/Langtang_National_Park"
+ ],
+ "osm": 4867746,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 4,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Dhunche",
+   "lat": 28.11279,
+   "lon": 85.29606,
+   "role": "start",
+   "note": "The district town and the gate of Langtang National Park."
+  },
+  {
+   "id": "chandanbari",
+   "name": "Chandanbari",
+   "lat": 28.11087,
+   "lon": 85.34016,
+   "role": "point",
+   "note": "Sing Gompa monastery and a cheese factory in fir forest.",
+   "night": true
+  },
+  {
+   "id": "laurebina",
+   "name": "Laurebina",
+   "lat": 28.0924,
+   "lon": 85.37984,
+   "role": "point",
+   "note": "A ridge-top stop at 3,900 m: the Ganesh Himal and Langtang range in a row.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Gosaikunda",
+   "lat": 28.08254,
+   "lon": 85.4138,
+   "role": "goal",
+   "note": "A dark blue lake at 4,380 m with a small Shiva shrine on its shore."
+  }
+ ]
+}

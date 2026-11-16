@@ -7,8 +7,18 @@
  "kind": "day",
  "shape": "out_and_back",
  "difficulty": "moderate",
- "months": [4, 5, 6, 7, 8, 9],
- "hours": [1, 1.5],
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
  "start_by": "05:30",
  "published": null,
  "why": "A climb up the sharp crest of a red star dune to watch the first sun light up the Namib, one side bright orange and the other still in shadow.",
@@ -27,7 +37,14 @@
  ],
  "tier": "A",
  "area": null,
- "scores": {"effort": 2, "nature": 4, "culture": 0, "relax": 2, "history": 0, "landscape": 5},
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 0,
+  "relax": 2,
+  "history": 0,
+  "landscape": 5
+ },
  "points": [
   {
    "id": "start",
@@ -35,8 +52,7 @@
    "lat": -24.72357,
    "lon": 15.47104,
    "role": "start",
-   "note": "Parking with a few camel thorn trees beside the Sossusvlei road. The path heads straight for the north end of the crest.",
-   "scene": "na-dune-45"
+   "note": "Parking with a few camel thorn trees beside the Sossusvlei road. The path heads straight for the north end of the crest."
   },
   {
    "id": "goal",
@@ -44,6 +60,7 @@
    "lat": -24.72952,
    "lon": 15.47192,
    "role": "goal",
+   "scene": "na-dune-45",
    "note": "A high point on the crest of the dune, which stands over 170 m. View over the Tsauchab valley and rows of red dunes. Return the same way."
   }
  ]

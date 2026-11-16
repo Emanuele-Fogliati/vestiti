@@ -1,0 +1,84 @@
+{
+ "id": "np-mardi-himal",
+ "country": "NP",
+ "name": "Mardi Himal High Camp and viewpoint",
+ "base": "Pokhara",
+ "region": "Annapurna Conservation Area",
+ "kind": "multiday",
+ "days": 5,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  24,
+  30
+ ],
+ "start_by": "07:00",
+ "published": null,
+ "why": "A ridge trek through moss forest to a grassy crest right under the fishtail of Machhapuchhre, quieter than the sanctuary below.",
+ "book": "Annapurna Conservation Area permit and TIMS card. Since April 2023 Nepal requires foreign trekkers to hire a licensed guide in its national parks and conservation areas (check the current rule before you go). Taxi from Pokhara to Kande (45 min). Few small lodges at High Camp: book in season.",
+ "water": "Lodges at Forest Camp, Low Camp and High Camp; nothing above High Camp.",
+ "dangers": [
+  "The ridge above High Camp is exposed to wind and has no shelter.",
+  "Snow on the ridge from December to March."
+ ],
+ "turnaround": "From High Camp leave at 05:00 for the viewpoint and be back by 10:00, before the clouds.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mardi_Himal",
+  "https://www.openstreetmap.org/relation/19267496",
+  "https://ntnc.org.np/project/annapurna-conservation-area-project"
+ ],
+ "osm": 19267496,
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 2,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Kande",
+   "lat": 28.29265,
+   "lon": 83.8233,
+   "role": "start",
+   "note": "The trailhead on the Pokhara-Baglung road; a path climbs to Australian Camp."
+  },
+  {
+   "id": "forest-camp",
+   "name": "Forest Camp",
+   "lat": 28.38355,
+   "lon": 83.84321,
+   "role": "point",
+   "note": "Lodges in a forest of rhododendron and oak.",
+   "night": true
+  },
+  {
+   "id": "high-camp",
+   "name": "Mardi Himal High Camp",
+   "lat": 28.43285,
+   "lon": 83.86676,
+   "role": "point",
+   "note": "Lodges at 3,580 m on the open ridge, Machhapuchhre in front.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Mardi Himal Upper Viewpoint",
+   "lat": 28.45716,
+   "lon": 83.88578,
+   "role": "goal",
+   "note": "The 4,500 m end of the ridge: Machhapuchhre, Mardi Himal and Annapurna South close up."
+  }
+ ]
+}

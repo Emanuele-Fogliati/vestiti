@@ -1,0 +1,66 @@
+{
+ "id": "ke-thomsons-falls",
+ "country": "KE",
+ "name": "Thomson's Falls down to the gorge",
+ "base": "Nyahururu",
+ "region": "Laikipia",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  0.5,
+  1
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Steps down from the town to the foot of a 74 m waterfall in a green gorge, on the edge of the Laikipia plateau.",
+ "book": "Small fee at the viewpoint.",
+ "water": "Cafes at the top.",
+ "dangers": [
+  "Slippery steps in spray."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Thomson%27s_Falls"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 4,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Thomson's Falls viewpoint",
+   "lat": 0.043,
+   "lon": 36.371,
+   "role": "start",
+   "note": "The lodge and viewpoint at the top of the falls."
+  },
+  {
+   "id": "goal",
+   "name": "Foot of Thomson's Falls",
+   "lat": 0.0441,
+   "lon": 36.3705,
+   "role": "goal",
+   "note": "The pool at the bottom of the falls.",
+   "scene": "ke-thomsons-falls"
+  }
+ ]
+}

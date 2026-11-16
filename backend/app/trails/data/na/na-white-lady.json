@@ -1,0 +1,65 @@
+{
+ "id": "na-white-lady",
+ "country": "NA",
+ "name": "White Lady rock painting, Tsisab gorge",
+ "base": "Uis",
+ "region": "Brandberg, Erongo",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "07:30",
+ "published": null,
+ "why": "Up a dry granite gorge to the Maack shelter, where San artists painted the 'White Lady' among dozens of figures around 2,000 years ago.",
+ "book": "Only with a Daureb guide from the car park (ticket).",
+ "water": "Carry 2 litres.",
+ "dangers": [
+  "Heat after 10:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/White_Lady_(painting)"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 5,
+  "relax": 3,
+  "history": 5,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Brandberg White Lady car park",
+   "lat": -21.095,
+   "lon": 14.687,
+   "role": "start",
+   "note": "The parking and guides' hut."
+  },
+  {
+   "id": "goal",
+   "name": "White Lady",
+   "lat": -21.102,
+   "lon": 14.669,
+   "role": "goal",
+   "note": "The rock shelter with the painting.",
+   "scene": "na-white-lady-of-the-brandberg"
+  }
+ ]
+}

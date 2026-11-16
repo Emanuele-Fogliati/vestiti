@@ -1,0 +1,1552 @@
+{
+ "_doc": "Morocco, written by hand for the recommended trips (Manu, 2026-11-16): the imperial cities, the High Atlas, the kasbahs and gorges, the Sahara and the Atlantic. Sources per area; scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "ma-marrakech",
+   "names": [
+    "Marrakech",
+    "Marrakesh",
+    "Jemaa el-Fnaa",
+    "Agafay",
+    "Ourika",
+    "Setti Fatma"
+   ],
+   "country": "MA",
+   "lat": 31.63,
+   "lon": -7.981,
+   "radius_km": 25,
+   "season": "Hot from June to September (38-40 °C at midday); mild winters with cold nights (5 °C). March to May and October to November are the best.",
+   "sleep": "A riad inside the medina, or the Hivernage and Gueliz for hotels.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Marrakech",
+    "https://en.wikipedia.org/wiki/Jemaa_el-Fnaa",
+    "https://en.wikipedia.org/wiki/Majorelle_Garden",
+    "https://en.wikipedia.org/wiki/Ben_Youssef_Madrasa"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "medina",
+     "name": "Jemaa el-Fnaa and the souks",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The square of storytellers, musicians and food stalls, on UNESCO's list of living heritage, and the souks of dyers, smiths and leather behind it.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Jemaa el-Fnaa",
+      "Koutoubia Mosque"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "palaces",
+     "name": "Ben Youssef Madrasa, Bahia Palace and the Saadian Tombs",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Carved cedar, stucco and zellige tiles: a 16th-century Koranic school, a vizier's palace and the tombs of a dynasty walled up for centuries.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Ben Youssef Madrasa",
+      "Bahia Palace",
+      "Saadian Tombs"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "majorelle",
+     "name": "Majorelle Garden and the YSL museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed tickets online",
+     "why": "The cobalt-blue villa and cactus garden of the painter Majorelle, later saved by Yves Saint Laurent; the museum of his designs next door.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Majorelle Garden"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ourika",
+     "name": "Ourika valley and the Setti Fatma falls",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "An hour into the High Atlas to a Berber village and a scramble up a series of waterfalls.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1700
+     },
+     "trail": "ma-setti-fatma",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "transfer"
+    },
+    {
+     "id": "agafay",
+     "name": "Sunset in the Agafay stone desert",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A bare rocky desert 40 minutes away, with the Atlas snow behind: camel ride and dinner at a camp.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Agafay Desert"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "ma-essaouira",
+   "names": [
+    "Essaouira",
+    "Mogador"
+   ],
+   "country": "MA",
+   "lat": 31.51,
+   "lon": -9.77,
+   "radius_km": 20,
+   "season": "The trade wind keeps it cool in summer (22-25 °C) when Marrakech bakes; mild in winter. Windy all year, the kite and windsurf capital.",
+   "sleep": "A riad in the medina, near the ramparts.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Essaouira",
+    "https://en.wikipedia.org/wiki/Essaouira"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "medina",
+     "name": "The medina, the Skala ramparts and the fishing port",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A white and blue fortified port on UNESCO's list, cannons on the sea wall, and blue boats landing sardines to grill on the quay.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Essaouira"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "beach",
+     "name": "The beach and the wind",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A long sandy bay for walking, camel rides and kite or windsurf lessons; too windy for lying in the sun most afternoons.",
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "argan",
+     "name": "Argan women's cooperative",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The argan trees grow only here in south-west Morocco: see the nuts cracked and pressed into oil by hand.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-imlil",
+   "names": [
+    "Imlil",
+    "Aroumd",
+    "Toubkal",
+    "Mount Toubkal",
+    "Toubkal National Park"
+   ],
+   "country": "MA",
+   "lat": 31.136,
+   "lon": -7.92,
+   "radius_km": 15,
+   "season": "At 1,740 m under Toubkal, North Africa's highest peak. Snow on the summit about December to April (then crampons and a guide); summer is fresh up here.",
+   "sleep": "Guesthouses in Imlil or Aroumd, or the Kasbah du Toubkal.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Imlil",
+    "https://en.wikipedia.org/wiki/Toubkal",
+    "https://en.wikipedia.org/wiki/Toubkal_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "toubkal",
+     "name": "Toubkal, 4,167 m, in two days",
+     "hours": "2 days",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up the Mizane valley past the shrine of Sidi Chamharouch to the refuge at 3,200 m, then the summit at dawn: the roof of North Africa.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 4167
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ma-toubkal",
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "villages",
+     "name": "Berber villages of the Imlil valley",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Mule paths between terraced walnut and apple groves to Aroumd and the Tizi n'Mzik pass, tea in a village house.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2400
+     },
+     "sights": [
+      "Aroumd"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "ma-ouarzazate",
+   "names": [
+    "Ouarzazate",
+    "Aït Benhaddou",
+    "Ait Benhaddou",
+    "Skoura",
+    "Tizi n'Tichka"
+   ],
+   "country": "MA",
+   "lat": 30.92,
+   "lon": -6.89,
+   "radius_km": 40,
+   "season": "On the edge of the desert at 1,100 m: hot summers, cold clear winter nights. The road over the Tizi n'Tichka pass (2,260 m) can close for snow in winter.",
+   "sleep": "A kasbah guesthouse at Aït Benhaddou or in Ouarzazate.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ouarzazate",
+    "https://en.wikipedia.org/wiki/A%C3%AFt_Benhaddou",
+    "https://en.wikipedia.org/wiki/Tizi_n%27Tichka"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "aitbenhaddou",
+     "name": "Aït Benhaddou",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A fortified village of red earth towers on a hill, on UNESCO's list and in Gladiator and Game of Thrones; climb to the granary on top at sunset.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1320
+     },
+     "sights": [
+      "Aït Benhaddou"
+     ],
+     "arrive": true,
+     "trail": "ma-ait-benhaddou-granary",
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "taourirt",
+     "name": "Taourirt kasbah and the film studios",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Glaoui family's earthen kasbah in Ouarzazate, then the sets of Atlas Studios, the desert's 'Ouallywood'.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Taourirt Kasbah",
+      "Atlas Studios"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-dades-gorges",
+   "names": [
+    "Dades Gorges",
+    "Dades Gorge",
+    "Dades Valley",
+    "Boumalne Dades",
+    "Todra Gorge",
+    "Tinghir",
+    "Kelaat M'Gouna",
+    "Rose Valley"
+   ],
+   "country": "MA",
+   "lat": 31.55,
+   "lon": -5.95,
+   "radius_km": 50,
+   "season": "At 1,500-1,700 m: hot summer days, frosty winter nights. The roses of Kelaat M'Gouna bloom in May.",
+   "sleep": "Guesthouses along the gorge road above Boumalne Dades, or at Todra.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Dades_Valley",
+    "https://en.wikipedia.org/wiki/Dad%C3%A8s_Gorges",
+    "https://en.wikipedia.org/wiki/Todgha_Gorge"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "monkey-fingers",
+     "name": "The Monkey Fingers of the Dades",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Through rock formations like knuckles and narrow canyons cut into red cliffs, a walk with a local guide.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1800
+     },
+     "arrive": true,
+     "trail": "ma-dades-monkey-fingers",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "todra",
+     "name": "Todra Gorge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A canyon 10 m wide under walls of 300 m, a river to walk in and a climb over the top to the Berber herders' paths.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1700
+     },
+     "sights": [
+      "Todra Gorge"
+     ],
+     "trail": "ma-todra-gorge",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "road",
+     "name": "The gorge road and its hairpins",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The road twists up from the gorge in tight bends to a café with the most photographed view of the Dades.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Dades Gorges"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "ma-merzouga",
+   "names": [
+    "Merzouga",
+    "Erg Chebbi",
+    "Khamlia",
+    "Rissani",
+    "Sahara Desert"
+   ],
+   "country": "MA",
+   "lat": 31.1,
+   "lon": -4.01,
+   "radius_km": 30,
+   "season": "October to April. In June to September it is 40-45 °C by day; in December and January nights in the camps drop near freezing.",
+   "sleep": "A desert camp in the dunes (one night), or a hotel on the edge of the erg.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Merzouga",
+    "https://en.wikipedia.org/wiki/Erg_Chebbi"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "camel",
+     "name": "Camel to a desert camp at sunset",
+     "hours": "Half a day and the night",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Across the orange dunes of Erg Chebbi, up to 150 m high, to a camp of tents; stars, drums and dinner in the sand.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Erg Chebbi"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "view",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "big-dune",
+     "name": "Sunrise from the big dune",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "Before dawn",
+     "book": "",
+     "why": "A steep climb in soft sand to the highest dune for the sun rising over Algeria.",
+     "act": {
+      "type": "desert"
+     },
+     "trail": "ma-merzouga-big-dune",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "khamlia",
+     "name": "Gnawa music at Khamlia",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A village of descendants of West African slaves, who play the trance music of the Gnawa.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-fez",
+   "names": [
+    "Fez",
+    "Fes",
+    "Fes el Bali",
+    "Fès"
+   ],
+   "country": "MA",
+   "lat": 34.03,
+   "lon": -5.0,
+   "radius_km": 15,
+   "season": "Hot in July and August (35-38 °C), cool and wet in winter. Spring and autumn are the best.",
+   "sleep": "A riad inside Fes el Bali, near Bab Boujloud.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Fez",
+    "https://en.wikipedia.org/wiki/Fes_el_Bali",
+    "https://en.wikipedia.org/wiki/University_of_al-Qarawiyyin",
+    "https://en.wikipedia.org/wiki/Chouara_Tannery"
+   ],
+   "nights": [
+    2,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "medina",
+     "name": "Fes el Bali with a guide",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The world's largest car-free town: 9,000 lanes, the Chouara tannery seen from the roofs, the Bou Inania and Al-Attarine madrasas.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Fes el Bali",
+      "Chouara Tannery",
+      "Bou Inania Madrasa"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "qarawiyyin",
+     "name": "Al Qarawiyyin and the craftsmen's quarters",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Founded in 859 by Fatima al-Fihri, held to be the oldest working university; then the coppersmiths' square and the funduq of carpenters.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Funduq al-Najjarin"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "tombs",
+     "name": "Sunset over the medina from the Merenid tombs",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The ruined tombs on the hill north of the walls look down on the whole medina as the calls to prayer start.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-meknes",
+   "names": [
+    "Meknes",
+    "Volubilis",
+    "Moulay Idriss"
+   ],
+   "country": "MA",
+   "lat": 33.89,
+   "lon": -5.55,
+   "radius_km": 35,
+   "season": "Hot in summer, cool and wet in winter.",
+   "sleep": "A riad in Meknes's medina, or a guesthouse in Moulay Idriss.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Meknes",
+    "https://en.wikipedia.org/wiki/Volubilis",
+    "https://en.wikipedia.org/wiki/Moulay_Idriss_Zerhoun"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "volubilis",
+     "name": "Volubilis and Moulay Idriss",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A Roman town of mosaics and triumphal arch among olive groves, on UNESCO's list, and the white holy town of Morocco's founder above it.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Volubilis"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "imperial",
+     "name": "Bab Mansour and Moulay Ismail's imperial city",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The grandest gate of Morocco, the sultan's mausoleum and his vast granaries and stables.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bab Mansour",
+      "Mausoleum of Moulay Ismail"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-chefchaouen",
+   "names": [
+    "Chefchaouen",
+    "Akchour",
+    "Talassemtane",
+    "God's Bridge"
+   ],
+   "country": "MA",
+   "lat": 35.17,
+   "lon": -5.27,
+   "radius_km": 30,
+   "season": "In the Rif at 600 m: hot in summer, cold and rainy in winter; the Akchour river is best April to October.",
+   "sleep": "A guesthouse in the blue medina.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Chefchaouen",
+    "https://en.wikipedia.org/wiki/Chefchaouen",
+    "https://en.wikipedia.org/wiki/Talassemtane_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "medina",
+     "name": "The blue medina and Ras el Maa",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Lanes and stairs washed in every shade of blue under the Rif mountains, the kasbah and the spring where women wash clothes.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Chefchaouen"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "mosque",
+     "name": "Sunset at the Spanish Mosque",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A short climb above the town to an abandoned mosque, for the blue town turning gold.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 700
+     },
+     "arrive": true,
+     "trail": "ma-chefchaouen-spanish-mosque",
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "akchour",
+     "name": "Akchour waterfalls and God's Bridge",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "An hour away in Talassemtane park: a river of green pools, a natural rock arch and a waterfall in a gorge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 700
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ma-gods-bridge",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "ma-rabat",
+   "names": [
+    "Rabat",
+    "Salé",
+    "Chellah"
+   ],
+   "country": "MA",
+   "lat": 34.02,
+   "lon": -6.84,
+   "radius_km": 15,
+   "season": "Mild all year on the Atlantic; wet in winter.",
+   "sleep": "Near the medina or the Hassan tower.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Rabat",
+    "https://en.wikipedia.org/wiki/Kasbah_of_the_Udayas",
+    "https://en.wikipedia.org/wiki/Hassan_Tower"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "udayas",
+     "name": "Kasbah of the Udayas, the Hassan Tower and Chellah",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Blue and white lanes of a 12th-century kasbah over the river mouth, the unfinished minaret of 1199, and Roman and Merinid ruins with storks.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Kasbah of the Udayas",
+      "Hassan Tower"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-casablanca",
+   "names": [
+    "Casablanca"
+   ],
+   "country": "MA",
+   "lat": 33.57,
+   "lon": -7.59,
+   "radius_km": 15,
+   "season": "Mild all year on the Atlantic.",
+   "sleep": "Near the corniche or the centre.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Casablanca",
+    "https://en.wikipedia.org/wiki/Hassan_II_Mosque"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mosque",
+     "name": "Hassan II Mosque",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Built over the ocean with a 210 m minaret, one of the few mosques in Morocco open to non-Muslims on guided tours.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hassan II Mosque"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-tangier",
+   "names": [
+    "Tangier",
+    "Cap Spartel",
+    "Caves of Hercules"
+   ],
+   "country": "MA",
+   "lat": 35.77,
+   "lon": -5.8,
+   "radius_km": 20,
+   "season": "Mild on the Strait of Gibraltar; windy and wet in winter.",
+   "sleep": "In the kasbah or near the medina.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Tangier",
+    "https://en.wikipedia.org/wiki/Caves_of_Hercules"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "kasbah",
+     "name": "The kasbah, the medina and Café Hafa",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The kasbah over the strait with Spain in view, and mint tea on the terraces of Café Hafa, where the Beat writers sat.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Tangier"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "spartel",
+     "name": "Cap Spartel and the Caves of Hercules",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Africa's north-west corner where the Atlantic meets the Mediterranean, and a sea cave whose opening looks like Africa.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Caves of Hercules"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "ma-asilah",
+   "names": [
+    "Asilah"
+   ],
+   "country": "MA",
+   "lat": 35.47,
+   "lon": -6.04,
+   "radius_km": 10,
+   "season": "Mild on the Atlantic; warm and busy in July and August.",
+   "sleep": "In the medina by the ramparts.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Asilah",
+    "https://en.wikipedia.org/wiki/Asilah"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "medina",
+     "name": "Asilah's painted medina and beaches",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A white walled town by the sea, its walls painted with murals each summer, and long beaches to the south.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ma-taghazout",
+   "names": [
+    "Taghazout",
+    "Paradise Valley",
+    "Tamraght",
+    "Imsouane"
+   ],
+   "country": "MA",
+   "lat": 30.54,
+   "lon": -9.71,
+   "radius_km": 40,
+   "season": "Mild all year (winter days 20 °C); the best surf is October to April.",
+   "sleep": "Surf guesthouses in Taghazout or Tamraght.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Taghazout",
+    "https://en.wikipedia.org/wiki/Taghazout"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "surf",
+     "name": "Surf lessons",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A fishing village turned surf town on long right-hand point breaks; beginner beaches nearby.",
+     "act": {
+      "type": "beach"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "paradise",
+     "name": "Paradise Valley",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A palm-filled gorge in the foothills of the Atlas with green rock pools to swim in.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 450
+     },
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "sights": [
+      "Paradise Valley"
+     ],
+     "trail": "ma-paradise-valley",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ]
+  },
+  {
+   "id": "ma-ouzoud-falls",
+   "names": [
+    "Ouzoud Falls",
+    "Ouzoud",
+    "Tanaghmeilt"
+   ],
+   "country": "MA",
+   "lat": 32.01,
+   "lon": -6.72,
+   "radius_km": 15,
+   "season": "Hot in summer; the falls carry most water in spring.",
+   "sleep": "Guesthouses by the falls at Tanaghmeilt.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ouzoud_Falls",
+    "https://en.wikipedia.org/wiki/Ouzoud_Falls"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "falls",
+     "name": "Ouzoud Falls and the Barbary macaques",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Morocco's highest falls, about 110 m in tiers into a red gorge, a path down among olive trees and wild macaques, and a boat to the spray.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1050
+     },
+     "sights": [
+      "Ouzoud Falls"
+     ],
+     "arrive": true,
+     "trail": "ma-ouzoud-falls",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  }
+ ]
+}

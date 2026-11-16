@@ -1,0 +1,67 @@
+{
+ "id": "ke-mount-longonot",
+ "country": "KE",
+ "name": "Mount Longonot crater rim",
+ "base": "Naivasha",
+ "region": "Mount Longonot National Park",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  6,
+  7,
+  8,
+  9,
+  10,
+  12
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "07:30",
+ "published": null,
+ "why": "Up a young volcano of the Rift Valley and all the way round its forest-filled crater, with Lake Naivasha below.",
+ "book": "Kenya Wildlife Service fees at the gate. Matatu or taxi from Naivasha (45 min).",
+ "water": "No water inside: carry 3 litres.",
+ "dangers": [
+  "Loose ash on the steep slope.",
+  "Sun and no shade on the rim."
+ ],
+ "turnaround": "If you reach the rim after 12:00, go back the way you came instead of round.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Mount_Longonot",
+  "https://www.kws.go.ke/mt-longonot-national-park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Longonot gate",
+   "lat": -0.8891,
+   "lon": 36.4745,
+   "role": "start",
+   "note": "The gate at the foot of the volcano."
+  },
+  {
+   "id": "goal",
+   "name": "Longonot summit",
+   "lat": -0.9162,
+   "lon": 36.4473,
+   "role": "goal",
+   "note": "The 2,776 m top on the west side of the rim."
+  }
+ ]
+}

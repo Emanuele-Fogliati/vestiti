@@ -1,0 +1,64 @@
+{
+ "id": "at-nordkette-goetheweg",
+ "country": "AT",
+ "name": "Nordkette: Hafelekar and the Goetheweg",
+ "base": "Innsbruck",
+ "region": "Karwendel",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "From the cable car above Innsbruck along a rocky high path with the city 1,700 m below on one side and the wild Karwendel on the other.",
+ "book": "Nordkettenbahnen cable car from the city centre (paid).",
+ "water": "Pfeishütte at the end; carry 1 litre.",
+ "dangers": [
+  "Short exposed bits with cables.",
+  "Afternoon thunderstorms in summer: start early and be off ridges by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Nordkette",
+  "https://www.nordkette.com/en/"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hafelekar",
+   "lat": 47.3125,
+   "lon": 11.3856,
+   "role": "start",
+   "note": "The top station at 2,256 m above Innsbruck.",
+   "scene": "at-innsbruck"
+  },
+  {
+   "id": "goal",
+   "name": "Pfeishütte",
+   "lat": 47.33,
+   "lon": 11.425,
+   "role": "goal",
+   "note": "A mountain hut in a high valley of the Karwendel."
+  }
+ ]
+}

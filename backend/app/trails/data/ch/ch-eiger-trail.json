@@ -1,0 +1,66 @@
+{
+ "id": "ch-eiger-trail",
+ "country": "CH",
+ "name": "Eiger Trail",
+ "base": "Grindelwald",
+ "region": "Jungfrau region",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2.5,
+  3
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 6,
+  "gain_m": null,
+  "source": "https://www.jungfrau.ch/en-gb/"
+ },
+ "why": "Right along the foot of the Eiger north face, from the Eigergletscher station down to Alpiglen, with Grindelwald far below.",
+ "book": "Jungfrau railways ticket to Eigergletscher; train back from Alpiglen.",
+ "water": "Restaurants at both ends.",
+ "dangers": [
+  "Falling stones under the face: do not stop below it.",
+  "Afternoon thunderstorms in summer: be off the high paths by 14:00."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Eiger"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Eigergletscher",
+   "lat": 46.5745,
+   "lon": 7.9757,
+   "role": "start",
+   "note": "The station at the foot of the Eiger."
+  },
+  {
+   "id": "goal",
+   "name": "Alpiglen",
+   "lat": 46.6001,
+   "lon": 8.002,
+   "role": "goal",
+   "note": "A station on the Grindelwald side."
+  }
+ ],
+ "osm": 19465820
+}

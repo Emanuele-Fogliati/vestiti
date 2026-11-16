@@ -1,0 +1,70 @@
+{
+ "id": "no-aurlandsdalen",
+ "country": "NO",
+ "name": "Aurlandsdalen valley",
+ "base": "Aurland",
+ "region": "Aurlandsdalen, Vestland",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  5,
+  7
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Down 'the Grand Canyon of Norway', from Østerbø past waterfalls, old summer farms and a path cut in the cliff to Vassbygdi near Aurland.",
+ "book": "Free: the Norwegian right to roam (allemannsretten). Paid parking at the trailhead. Bus from Aurland to Østerbø in summer.",
+ "water": "Streams all the way.",
+ "dangers": [
+  "Narrow cliff path with chains in places.",
+  "Slippery after rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Aurlandsdalen"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 3,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Østerbø",
+   "lat": 60.8282,
+   "lon": 7.506,
+   "role": "start",
+   "note": "A mountain lodge at the head of the valley."
+  },
+  {
+   "id": "sinjarheim",
+   "name": "Sinjarheim",
+   "lat": 60.8644,
+   "lon": 7.4073,
+   "role": "point",
+   "note": "An old farm high on a ledge of the canyon."
+  },
+  {
+   "id": "goal",
+   "name": "Vassbygdi",
+   "lat": 60.8745,
+   "lon": 7.3286,
+   "role": "goal",
+   "note": "A hamlet by a lake at the bottom of the valley."
+  }
+ ]
+}

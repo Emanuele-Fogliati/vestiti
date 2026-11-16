@@ -117,14 +117,22 @@ def km(a, b, c, d):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.parse_args()
+    # a mountain stop needs its own point: a normal 50 km away in the valley is the wrong climate
+    # (Zermatt is not Geneva, Gorak Shep is not Lukla)
+    ap.add_argument("--within", type=float, default=NORMALS_KM,
+                    help="add a stop with no normal closer than this (km)")
+    ap.add_argument("--regions", default="", help="only these journeys, comma separated")
+    a = ap.parse_args()
+    regions = {r for r in a.regions.split(",") if r}
     doc = json.loads(OUT.read_text(encoding="utf-8"))
     have = {k: tuple(map(float, k.split(","))) for k in doc["stops"]}
     rec = json.loads((ROOT / "backend/app/inspire/recommended.json").read_text(encoding="utf-8"))
     todo = {}
     for it in rec["itineraries"]:
+        if regions and it["region"] not in regions:
+            continue
         for s in it["stops"]:
-            if any(abs(la - s["lat"]) <= 1.5 and km(s["lat"], s["lon"], la, lo) <= NORMALS_KM for la, lo in have.values()):
+            if any(abs(la - s["lat"]) <= 1.5 and km(s["lat"], s["lon"], la, lo) <= a.within for la, lo in have.values()):
                 continue
             todo[key(s["lat"], s["lon"])] = (s["name"], s["lat"], s["lon"], s["elevation_m"])
     for k, (name, lat, lon, h) in sorted(todo.items()):

@@ -1,0 +1,65 @@
+{
+ "id": "ch-creux-du-van",
+ "country": "CH",
+ "name": "Creux du Van",
+ "base": "Neuchâtel",
+ "region": "Jura",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "09:00",
+ "published": null,
+ "why": "Up through Jura forest to the rim of a huge rock amphitheatre, 160 m of cliff in a perfect half circle, often with ibex on the edge.",
+ "book": "Free; train to Noiraigue.",
+ "water": "Farm inn Le Soliat at the top.",
+ "dangers": [
+  "Unfenced cliff edge.",
+  "The 14 bends path is steep."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Creux_du_Van"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Noiraigue",
+   "lat": 46.957,
+   "lon": 6.724,
+   "role": "start",
+   "note": "A village in the Val de Travers."
+  },
+  {
+   "id": "goal",
+   "name": "Creux du Van",
+   "lat": 46.933,
+   "lon": 6.723,
+   "role": "goal",
+   "note": "The rim of the rock amphitheatre."
+  }
+ ]
+}

@@ -154,7 +154,7 @@ def local_route(points: list[tuple[float, float]]) -> list[tuple[float, float]]:
     """Shortest walk on every OSM highway in the area, mountain paths included (the public OSRM
     foot router leaves out paths with sac_scale=mountain_hiking and harder)."""
     import heapq
-    pad = 0.01
+    pad = 0.02
     s, w = min(p[0] for p in points) - pad, min(p[1] for p in points) - pad
     n, e = max(p[0] for p in points) + pad, max(p[1] for p in points) + pad
     if (n - s) * (e - w) > 0.25:
@@ -203,15 +203,38 @@ def local_route(points: list[tuple[float, float]]) -> list[tuple[float, float]]:
     return out
 
 
+def _leg(a, b) -> tuple[list[tuple[float, float]], str]:
+    """One stretch between two key points: local on OSM paths, halved while its box is too big
+    for the OSM map call, OSRM only when the paths there don't connect."""
+    try:
+        return local_route([a, b]), "local"
+    except Exception as e:  # too large an area (or too many nodes for the OSM map call)
+        if km(a, b) > 3:
+            m = ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2)
+            l1, h1 = _leg(a, m)
+            l2, h2 = _leg(l1[-1], b)
+            return l1 + l2[1:], h1 if h1 == h2 else "mixed"
+        print(f"  local router on a leg: {e}; OSRM")
+        return routed([a, b]), "osrm"
+
+
 def route(points, how: str):
-    """local (OSM paths, every difficulty) for compact trails, OSRM for long ones."""
+    """local (OSM paths, every difficulty) for compact trails, OSRM for long ones. When the area is
+    too large for one OSM map call, the local router goes stretch by stretch (2026-11-16)."""
     if how != "osrm":
         try:
             return local_route(points), "local"
-        except RuntimeError as e:
+        except Exception as e:
             if how == "local":
                 raise
-            print(f"  local router: {e}; trying OSRM")
+            print(f"  local router: {e}; stretch by stretch")
+        out: list[tuple[float, float]] = []
+        kinds = set()
+        for a, b in zip(points, points[1:]):
+            seg, k = _leg(a, b)
+            kinds.add(k)
+            out += seg[1:] if out else seg
+        return out, kinds.pop() if len(kinds) == 1 else "mixed"
     return routed(points), "osrm"
 
 
@@ -469,7 +492,11 @@ def main(only: list[str]) -> None:
             if only and t["id"] not in only:
                 continue
             print(t["id"])
-            g = build(t)
+            try:
+                g = build(t)
+            except Exception as e:  # one trail failing must not stop the others
+                print(f"  FAILED: {e}")
+                continue
             print(f"  {g['how']}: {g['km']} km, +{g['gain_m']} m, {g['min_m']}-{g['max_m']} m, "
                   f"{g['walk_hours']} h walking; published {t.get('published')}; {len(g['line'])} pts")
             (GEO / f"{t['id']}.json").write_text(json.dumps(g, separators=(",", ":")), encoding="utf-8")
