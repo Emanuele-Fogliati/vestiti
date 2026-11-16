@@ -1,0 +1,13 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-bo-ollague-c"><path d="M0 136V118L28 112L56 104L78 94L94 84L104 74L110 66L118 64L126 56L134 48L142 40L150 37L158 38L166 36L174 38L182 44L192 52L206 60L222 68L238 74L254 82V136Z"/></clipPath></defs>
+<path d="M0 136V118L28 112L56 104L78 94L94 84L104 74L110 66L118 64L126 56L134 48L142 40L150 37L158 38L166 36L174 38L182 44L192 52L206 60L222 68L238 74L254 82V136Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-bo-ollague-c)"><path d="M174 38L182 44L192 52L206 60L222 68L238 74L254 82V136H196Q190 84 174 38Z" fill="var(--il-near)" opacity="0.3"/><path d="M146 34L168 34Q162 48 148 62Q132 84 112 104Q100 114 88 118L84 114Q100 104 118 84Q138 60 150 34Z" fill="var(--il-far)"/></g>
+<path d="M134 52L132 62M180 46L184 58M196 56L200 66" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M50 140Q74 116 98 118Q118 122 130 140Z" fill="var(--il-obj)"/>
+<path d="M108 140Q160 110 222 88Q264 72 300 70V140Z" fill="var(--il-obj)"/>
+<path d="M0 200V134Q150 130 300 134V200Z" fill="var(--il-leaf)"/>
+<g transform="translate(236 158) scale(1.2)"><path vector-effect="non-scaling-stroke" d="M-7 -11V0M-4 -11V0M4 -11V0M7 -11V0" stroke="var(--il-acc)" stroke-width="1.6" fill="none" stroke-linecap="round"/><path vector-effect="non-scaling-stroke" d="M-10 -12Q-10 -17 -4 -17H5L7 -26Q8 -29 11 -28L14 -25L12 -24L10 -25L9 -15Q9 -10 6 -10H-8Q-10 -10 -10 -12Z" fill="var(--il-acc)"/><path vector-effect="non-scaling-stroke" d="M9 -28L9 -31L11 -28Z" fill="var(--il-acc)"/></g>
+<path d="M0 200V174L16 168L34 170L50 162L70 164L86 174L104 168L124 170L140 162L162 166L176 176L196 170L216 172L234 164L256 166L270 176L288 170L300 172V200Z" fill="var(--il-acc)"/>
+<path d="M70 164L86 174L80 182L66 172ZM162 166L176 176L170 184L158 174ZM256 166L270 176L264 184L252 174Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M20 186L36 184M110 190L128 188M200 188L218 186M60 194L72 193M150 196L164 195" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.4"/>
