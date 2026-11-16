@@ -594,7 +594,7 @@ export default function Globe({ bare, intro, onReady, mode = "trip", focus }: { 
         {close || zoomed
           ? <button type="button" className="btn sm" onClick={backToGlobe}>Back to the globe</button>
           : mode === "trek"
-            ? <span className="trek-legend small" aria-label="Every dot is a hike, coloured by how hard it is">
+            ? <span className="trek-legend small" aria-label="Every dot is a walk, coloured by how hard it is">
                 {["Easy", "Moderate", "Hard", "Technical"].map((n, i) => <span key={n}><i style={{ background: TREK_COLOURS[i] }} />{n}</span>)}
               </span>
             : <span className="globe-hint small">Drag to spin · zoom in anywhere, or on a city to see the places inside it</span>}

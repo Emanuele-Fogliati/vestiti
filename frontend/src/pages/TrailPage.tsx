@@ -77,7 +77,7 @@ export default function TrailPage() {
 
   const head = (
     <div className="mf-trailhead">
-      <Link className="mf-k mf-crumb" to={`/trails?country=${t.country}&t=${t.id}`}><Back /> Hikes · {t.region || t.base}</Link>
+      <Link className="mf-k mf-crumb" to={`/trails?country=${t.country}&t=${t.id}`}><Back /> Walks · {t.region || t.base}</Link>
       <h1>{t.name}</h1>
       <div className="tags">
         <span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
@@ -205,7 +205,7 @@ export default function TrailPage() {
           {desk ? <div className="mf-scroll">{body}</div> : (
             <>
               {wear}
-              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this hike · {money(totalOf(picks), cur)}</div>
+              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this walk · {money(totalOf(picks), cur)}</div>
                 <ProductRow picks={picks} onPick={pick} /></div>}
               {body}
               <div className="mf-phone-go">
@@ -217,7 +217,7 @@ export default function TrailPage() {
         </section>
 
         {desk && wear}
-        {desk && <BuyBar title="To get for this hike" sub={`in ${MONTHS[month - 1]}`} picks={picks} onPick={pick}
+        {desk && <BuyBar title="To get for this walk" sub={`in ${MONTHS[month - 1]}`} picks={picks} onPick={pick}
           onBuy={() => setBuyOpen(true)} empty={w ? "Nothing special to wear on it." : "Working out the kit…"} />}
       </div>
       <KitSheet open={buyOpen} onClose={() => setBuyOpen(false)} title={`Your kit for ${t.name}`} picks={picks} />
