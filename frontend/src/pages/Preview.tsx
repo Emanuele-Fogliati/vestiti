@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { api } from "../lib/api";
 
 const PAGES: [string, string][] = [
-  ["/", "Home"], ["/trips", "Trips"], ["/trips?tab=saved", "Saved trips"], ["/wardrobe", "Closet"], ["/trails", "Walks"],
+  ["/", "Home"], ["/trips", "Trips"], ["/wardrobe", "Closet"], ["/trails", "Walks"],
 ];
 
 /** The same page as a phone and as a computer, side by side. Both frames are this app,

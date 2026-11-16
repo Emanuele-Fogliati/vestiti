@@ -6,7 +6,7 @@ import { HomeGlobe } from "../components/Maps";
 import { api } from "../lib/api";
 import { monthRuns, regionBest } from "../lib/format";
 import type { ItineraryCard, TrailCard } from "../lib/types";
-import { reducedMotion } from "../lib/worldmap";
+import { km, reducedMotion, type GlobePlace } from "../lib/worldmap";
 
 type Phase = "space" | "zoom" | "done";
 const SEEN = "thruwear-intro-seen";
@@ -130,6 +130,27 @@ export default function Landing() {
   const good = useMemo(() => (all ?? []).filter((r) => r.best.includes(month)), [all, month]);
   const glow = useMemo(() => (mode === "trip" ? good.flatMap((r) => r.lead.points ?? []) : []), [good, mode]);
 
+  // a drawing tapped on the globe (flow audit, Manu 2026-11-16): the recommended trips that go
+  // there and the walks around it, instead of a trip builder of its own
+  const placeExtra = (p: GlobePlace) => {
+    const n = norm(p.name);
+    const through = (all ?? []).filter((r) => r.routes.some((x) => x.places.some((y) => { const m = norm(y); return m === n || (Math.min(m.length, n.length) >= 5 && (m.includes(n) || n.includes(m))); }))
+      || (r.lead.points ?? []).some(([la, lo]) => km(la, lo, p.lat, p.lon) < 60)).slice(0, 3);
+    return (
+      <div className="pcard-go">
+        {through.map((r) => (
+          <Link key={r.lead.slug} to={routeFor(r, month)} className="doors-row">
+            <span className="pic">{r.lead.art ? <Illustration art={r.lead.art} /> : null}</span>
+            <span className="tx"><b>{r.lead.destination ?? r.lead.title}</b><small>Recommended trip</small></span>
+          </Link>
+        ))}
+        <Link className="doors-all" to={`/trails?find=${encodeURIComponent(p.name)}`}>Walks around {p.name} →</Link>
+      </div>
+    );
+  };
+  const [showAll, setShowAll] = useState(false);
+  useEffect(() => setShowAll(false), [month, mode]);
+
   const [diving, setDiving] = useState(false);
   function goTo(to: string) {
     // the globe rushes at you, then the next page opens (prototype motion 5)
@@ -161,8 +182,8 @@ export default function Landing() {
   return (
     <main className={`home2 ${phase}${diving ? " dive" : ""}`} onPointerDown={phase !== "done" ? skip : undefined}>
       <div className="home2-space" aria-hidden="true" />
-      <div className="home2-globe"><HomeGlobe bare mode={mode === "walk" ? "trek" : "trip"} intro={phase !== "done"} onReady={() => setReady(true)} glow={glow} /></div>
-      <Link to="/trips?tab=saved" className="home2-bag" aria-label="My trips">
+      <div className="home2-globe"><HomeGlobe bare mode={mode === "walk" ? "trek" : "trip"} intro={phase !== "done"} onReady={() => setReady(true)} glow={glow} placeExtra={placeExtra} /></div>
+      <Link to="/trips" className="home2-bag" aria-label="My trips">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="3" /><path d="M9 7V4h6v3" /></svg>
       </Link>
       <section className="home2-ui">
@@ -212,7 +233,7 @@ export default function Landing() {
           <button type="button" aria-label="Next month" onClick={() => setMonth(month === 12 ? 1 : month + 1)}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg></button>
         </div>
-        <div className="doors-rows home2-good" aria-live="polite">
+        <div className={`doors-rows home2-good${showAll ? " all" : ""}`} aria-live="polite">
           {mode === "walk" ? (walkList === null ? <p className="loading"><span className="spin" /></p> : <>
             {goodW.map((t, i) => (
               <Link key={t.id} to={`/trails?t=${encodeURIComponent(t.id)}&month=${month}`} className="doors-row" style={{ "--i": i } as React.CSSProperties}>
@@ -222,14 +243,15 @@ export default function Landing() {
             ))}
             <Link className="doors-all" to={`/trails?month=${month}`}>All walks for {MONTHS[month - 1]} →</Link>
           </>) : <>
-            {all === null ? <p className="loading"><span className="spin" /></p> : good.slice(0, SHOWN).map((r, i) => (
+            {all === null ? <p className="loading"><span className="spin" /></p> : (showAll ? good : good.slice(0, SHOWN)).map((r, i) => (
               <Link key={r.lead.slug} to={routeFor(r, month)} className="doors-row" style={{ "--i": i } as React.CSSProperties}>
                 <span className="pic">{r.lead.art ? <Illustration art={r.lead.art} /> : null}</span>
                 <span className="tx"><b>{r.lead.destination ?? r.lead.title}</b><small>{(() => { const c = r.lead.countries.map(countryName).join(" · "); return c === (r.lead.destination ?? "") ? `best ${monthRuns(r.best)}` : c; })()}</small></span>
               </Link>
             ))}
             {all && !good.length && <p className="doors-note">No trip at its best in {MONTHS[month - 1]}.</p>}
-            {good.length > SHOWN && <Link className="doors-all" to="/trips?tab=recommended">All {good.length} →</Link>}
+            {/* the recommended trips live here only (flow audit, Manu 2026-11-16): Trips is New trip + yours */}
+            {good.length > SHOWN && !showAll && <button type="button" className="doors-all" onClick={() => setShowAll(true)}>All {good.length} →</button>}
           </>}
         </div>
       </section>

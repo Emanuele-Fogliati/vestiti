@@ -1,5 +1,5 @@
 import { maplibregl } from "../lib/maplibre";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import { cancelLandmark, loadLandmark } from "../lib/landmarks";
 import { PlaceCard } from "./PlaceCard";
@@ -122,9 +122,12 @@ interface Scene {
  *  instead of showing the whole world (Manu 2026-11-15: "zoomato su quel posto lì alla fine"). */
 export interface GlobeFocus { lat: number; lon: number; name: string }
 
-export default function Globe({ bare, intro, onReady, mode = "trip", focus, glow }: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[];
+export default function Globe({ bare, intro, onReady, mode = "trip", focus, glow, placeExtra }: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[];
   /** places to light up, [lat, lon] (the home's month picker: where it is good to go that month) */
-  glow?: number[][] } = {}) {
+  glow?: number[][];
+  /** what the home adds to a place's card: the recommended trips through it and the walks around it
+   *  (flow audit, Manu 2026-11-16: the card no longer builds a trip of its own) */
+  placeExtra?: (p: GlobePlace) => ReactNode } = {}) {
   const box = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const [data, setData] = useState<GlobeData | null>(null);
@@ -638,11 +641,11 @@ export default function Globe({ bare, intro, onReady, mode = "trip", focus, glow
       {sel && data && (
         <div className="globe-card">
           <PlaceCard key={sel.id} place={sel} onClose={handlers.current.clear}
-            inside={selInside} parent={sel.parent ? byId.get(sel.parent) ?? null : null} onPlace={openPlace} pickable
-            onZoom={selZoom} zoomLabel={selInside.length ? "Show the places inside" : undefined} />
+            inside={selInside} parent={sel.parent ? byId.get(sel.parent) ?? null : null} onPlace={openPlace}
+            onZoom={selZoom} zoomLabel={selInside.length ? "Show the places inside" : undefined} extra={placeExtra?.(sel)} />
         </div>
       )}
-      {trip.length > 0 && (
+      {!bare && trip.length > 0 && (
         <div className="globe-trip" aria-label="Your trip">
           <p className="label">Your trip</p>
           <ol>

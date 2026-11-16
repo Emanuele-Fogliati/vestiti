@@ -8,8 +8,6 @@ import { ProductArt } from "./ProductArt";
 import { specRows } from "../lib/specs";
 import { Stars } from "./Stars";
 import { SwapDrawer } from "./SwapDrawer";
-import { BrandPicker } from "./BrandPicker";
-import { Sheet } from "./Sheet";
 import { Suitcase } from "./Suitcase";
 
 /** A number that counts to its new value instead of jumping. */
@@ -132,47 +130,13 @@ function Card({ line, tripId, tier, stops, onSwap, onChanged }: {
   );
 }
 
-function tp_genders(items: KitLine[]): string[] {
-  return items.map((l) => l.item?.gender ?? "unisex").filter((g) => g === "men" || g === "women");
-}
-
-export function Kit({ tripId, plans, tier, setTier, onChanged, layers }: {
-  tripId: string; plans: Plans; tier: Tier; setTier: (t: Tier) => void; onChanged: () => void; layers?: ReactNode;
+/** The bag (flow audit, Manu 2026-11-16): the suitcase, then one list with where each piece is worn.
+ *  Cut, shops and brands are set once, in You; here only the budget. */
+export function Kit({ tripId, plans, tier, setTier, onChanged }: {
+  tripId: string; plans: Plans; tier: Tier; setTier: (t: Tier) => void; onChanged: () => void;
 }) {
-  const { config, user, refreshUser, toast } = useApp();
+  const { config, toast } = useApp();
   const [swap, setSwap] = useState<KitLine | null>(null);
-  const [brandOpen, setBrandOpen] = useState(false);
-  const [catalog, setCatalog] = useState<string[]>([]);
-  const mine = user?.preferred_brands ?? [];
-
-  async function openBrands() {
-    setBrandOpen(true);
-    if (!catalog.length) setCatalog((await api.profile()).catalog_brands);
-  }
-  async function setBrands(v: string[]) {
-    await api.updateMe({ preferred_brands: v });
-    await refreshUser();
-    onChanged();
-  }
-  const pref = user?.gender_pref ?? "any";
-  const genders = new Set(tp_genders(plans.tiers[tier].items));
-  const mixed = pref === "any" && genders.has("men") && genders.has("women");
-
-  async function setCut(g: "men" | "women" | "any") {
-    if (g === pref) return;
-    await api.updateMe({ gender_pref: g });
-    await refreshUser();
-    toast(g === "any" ? "Showing all cuts." : `Showing ${g}'s cuts and unisex pieces.`);
-    onChanged();
-  }
-  const market = user?.market ?? "us";
-  async function setMarket(m: "us" | "eu") {
-    if (m === market) return;
-    await api.updateMe({ market: m });
-    await refreshUser();
-    toast(m === "us" ? "Shopping in US stores, prices in $." : "Shopping in European stores, prices in €.");
-    onChanged();
-  }
   const tp = plans.tiers[tier];
   const haves = tp.items.filter((l) => l.kind === "have");
   const hot = plans.zones?.[0];
@@ -193,7 +157,6 @@ export function Kit({ tripId, plans, tier, setTier, onChanged, layers }: {
   // the few things worth saying, one line each; the rest sits behind "Notes"
   const alerts: { k: string; warn?: boolean; text: ReactNode }[] = [];
   if (tp.shortfall) alerts.push({ k: "short", warn: !tp.shortfall.avoidable, text: tp.shortfall.message });
-  if (mixed) alerts.push({ k: "mixed", warn: true, text: <>This bag mixes men's and women's cuts. <button type="button" className="x-link" onClick={() => setCut("men")}>Men</button> · <button type="button" className="x-link" onClick={() => setCut("women")}>Women</button></> });
   if (tp.advice) alerts.push({ k: "advice", text: <>{TIER_LABEL[tp.advice.tier]} is only {money(tp.advice.extra_cost)} more. <button type="button" className="x-link" onClick={() => setTier(tp.advice!.tier)}>See it</button></> });
   const notes: ReactNode[] = [];
   if (tp.brands) notes.push(tp.brands.message);
@@ -206,7 +169,6 @@ export function Kit({ tripId, plans, tier, setTier, onChanged, layers }: {
   return (
     <>
       <Suitcase tripId={tripId} tier={tier} tp={tp} onChanged={onChanged} />
-      {layers && <section className="sc-layers"><h2 className="x-h2">How your layers work</h2>{layers}</section>}
       <h2 className="x-h2" id="your-list">Your list</h2>
       <div className="x-bag-top x-rise">
         <div>
@@ -226,19 +188,7 @@ export function Kit({ tripId, plans, tier, setTier, onChanged, layers }: {
           ))}
         </div>
       </div>
-      <div className="x-filters x-rise">
-        <div className="x-seg sm" role="group" aria-label="Cut">
-          {(["men", "women", "any"] as const).map((g) => (
-            <button key={g} type="button" aria-pressed={g === pref} onClick={() => setCut(g)}>{g === "men" ? "Men" : g === "women" ? "Women" : "Any cut"}</button>))}
-        </div>
-        <div className="x-seg sm" role="group" aria-label="Shops">
-          {(["us", "eu"] as const).map((m) => (
-            <button key={m} type="button" aria-pressed={m === market} onClick={() => setMarket(m)}>{m === "us" ? "US shops $" : "EU shops €"}</button>))}
-        </div>
-        <button type="button" className={`x-chip${mine.length ? " on" : ""}`} onClick={openBrands}>
-          {mine.length ? `♥ ${mine.join(", ")}` : "Brands you like"}
-        </button>
-      </div>
+      <p className="x-sub x-fitnote">Cut, shops and brands: <Link to="/account">You</Link>.</p>
       {alerts.length > 0 && (
         <div className="x-alerts">{alerts.map((a) => <p key={a.k} className={`x-alert${a.warn ? " warn" : ""}`}>{a.text}</p>)}</div>
       )}
@@ -286,10 +236,6 @@ export function Kit({ tripId, plans, tier, setTier, onChanged, layers }: {
         </details>
       )}
       <p className="x-disc">{config?.disclosure} Prices can change: the shop's page is what counts.</p>
-      <Sheet open={brandOpen} onClose={() => setBrandOpen(false)} title="Brands you like">
-        <p className="x-sub" style={{ marginBottom: 12 }}>Used when they fit the trip and the budget.</p>
-        <BrandPicker catalog={catalog} value={mine} onChange={setBrands} />
-      </Sheet>
       {swap && <SwapDrawer tripId={tripId} tier={tier} line={swap} onClose={() => setSwap(null)} onChanged={() => { setSwap(null); onChanged(); }} />}
     </>
   );

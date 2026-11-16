@@ -48,16 +48,32 @@ function WindStreaks({ kmh }: { kmh: number }) {
   return <canvas ref={ref} className="x-wind" aria-hidden="true" />;
 }
 
-export function WeatherTab({ strategy }: { strategy: Strategy }) {
+type Cond = Strategy["stages"][number]["modes"]["rest"]["condition"];
+function coldestOf(strategy: Strategy): { si: number; c: Cond } | null {
+  let best: { si: number; c: Cond } | null = null;
+  strategy.stages.forEach((s, si) => {
+    const c = s.modes.rest.condition;
+    if (!best || c.feels_like_c < best.c.feels_like_c) best = { si, c };
+  });
+  return best;
+}
+
+/** The one number the bag is sized for, in a line (top of the Bag tab, flow audit 2026-11-16). */
+export function Coldest({ strategy }: { strategy: Strategy }) {
+  const c = useMemo(() => coldestOf(strategy), [strategy]);
+  if (!c) return null;
+  const st = strategy.stages[c.si];
+  return (
+    <div className="x-cold-line">
+      <span className="n">{deg(c.c.feels_like_c)}</span>
+      <span className="t"><b>The coldest hour</b> {st.name}{c.c.where && c.c.where !== st.name ? ` (${c.c.where})` : ""}, {dayMonth(c.c.date)}. Your bag is sized for this.</span>
+    </div>
+  );
+}
+
+export function WeatherTab({ strategy, noCold = true }: { strategy: Strategy; noCold?: boolean }) {
   const days = useMemo(() => strategy.stages.flatMap((s, si) => s.days.map((d) => ({ ...d, si }))), [strategy]);
-  const coldest = useMemo(() => {
-    let best: { si: number; c: Strategy["stages"][number]["modes"]["rest"]["condition"] } | null = null;
-    strategy.stages.forEach((s, si) => {
-      const c = s.modes.rest.condition;
-      if (!best || c.feels_like_c < best.c.feels_like_c) best = { si, c };
-    });
-    return best as { si: number; c: Strategy["stages"][number]["modes"]["rest"]["condition"] } | null;
-  }, [strategy]);
+  const coldest = useMemo(() => coldestOf(strategy), [strategy]);
   const coldIdx = Math.max(0, days.findIndex((d) => coldest && d.date === coldest.c.date && d.si === coldest.si));
   const [sel, setSel] = useState(coldIdx);
   useEffect(() => { setSel(coldIdx); }, [coldIdx]);
@@ -74,7 +90,7 @@ export function WeatherTab({ strategy }: { strategy: Strategy }) {
 
   return (
     <div className="x-weather">
-      <div className="x-cold x-rise">
+      {!noCold && <div className="x-cold x-rise">
         <WindStreaks kmh={d.wind_kmh} />
         <div className="x-cold-in">
           <div className="x-cold-n">{deg(coldest.c.feels_like_c)}</div>
@@ -83,7 +99,7 @@ export function WeatherTab({ strategy }: { strategy: Strategy }) {
             <span>{strategy.stages[coldest.si].name}{coldest.c.where && coldest.c.where !== strategy.stages[coldest.si].name ? ` (${coldest.c.where})` : ""}, {dayMonth(coldest.c.date)}. Feels {deg(coldest.c.feels_like_c)} with {Math.round(coldest.c.wind_kmh)} km/h wind. Your bag is sized for this.</span>
           </div>
         </div>
-      </div>
+      </div>}
 
       <div className="x-rise">
         <div className={`x-days-scroll${wide ? " wide" : ""}`}>

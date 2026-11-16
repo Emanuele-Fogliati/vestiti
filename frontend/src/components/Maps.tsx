@@ -1,8 +1,9 @@
 import type { MapTrip } from "./TripsMap";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, type ReactNode } from "react";
 import type { RouteMapOpts, RouteStop } from "./RouteMap";
 import type { GlobeFocus } from "./Globe";
 import type { TrailCard, TrailSight } from "../lib/types";
+import type { GlobePlace } from "../lib/worldmap";
 import "../theme/maps.css";
 
 // The map library is big: it loads only on pages that show a map, after the page itself.
@@ -11,7 +12,7 @@ const RouteMapImpl = lazy(() => import("./RouteMap"));
 const TrekMapImpl = lazy(() => import("./TrekMap"));
 const TripsMapImpl = lazy(() => import("./TripsMap"));
 
-export function HomeGlobe(props: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[]; glow?: number[][] }) {
+export function HomeGlobe(props: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[]; glow?: number[][]; placeExtra?: (p: GlobePlace) => ReactNode }) {
   return <Suspense fallback={<section className="globe globe-loading" aria-hidden="true" />}><GlobeImpl {...props} /></Suspense>;
 }
 

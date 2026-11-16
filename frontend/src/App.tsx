@@ -25,7 +25,7 @@ export default function App() {
         <Route index element={<Landing />} />
         {/* old doors (Manu 2026-11-16: one Trips page): a new trip, or the recommended ones */}
         <Route path="start" element={<ToNew />} />
-        <Route path="ideas" element={<Navigate to="/trips?tab=recommended" replace />} />
+        <Route path="ideas" element={<Navigate to="/" replace />} />
         <Route path="ideas/:slug" element={<ItineraryPage />} />
         <Route path="trips" element={<Trips />} />
         <Route path="trips/new" element={<NewTrip />} />

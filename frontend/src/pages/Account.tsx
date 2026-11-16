@@ -90,11 +90,11 @@ export default function Account() {
         </div>
           <section className="panel form acct-fit">
             <h2>Fit</h2>
-            <div className="field"><label>Show products cut for</label>
-              <select value={user.gender_pref} onChange={(e) => patch({ gender_pref: e.target.value as "men" | "women" | "any" })}>
-                <option value="any">Everyone (men's, women's and unisex)</option>
-                <option value="women">Women's and unisex</option>
-                <option value="men">Men's and unisex</option>
+            {/* the one place for everything about you (flow audit, Manu 2026-11-16); one cut per bag, never mixed */}
+            <div className="field"><label>Clothes cut for</label>
+              <select value={user.gender_pref === "women" ? "women" : "men"} onChange={(e) => patch({ gender_pref: e.target.value as "men" | "women" })}>
+                <option value="women">Women (and unisex)</option>
+                <option value="men">Men (and unisex)</option>
               </select></div>
             <div className="field"><label>Shops</label>
               <select value={user.market} onChange={(e) => patch({ market: e.target.value as "us" | "eu" })}>

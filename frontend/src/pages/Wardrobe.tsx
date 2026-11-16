@@ -410,14 +410,16 @@ export default function Wardrobe() {
       <b className="mf-sub">{editId ? "Edit item" : picked ? "Is this right?" : "Add something you own"}</b>
       {!editId && !picked && (
         <div className="mf-chips" role="tablist" aria-label="How do you want to add it?">
-          {([["name", "By name"], ["photo", "From photos"], ["hand", "By hand"]] as const).map(([k, l]) => (
+          {/* by hand only when the search can't find it (flow audit, Manu 2026-11-16) */}
+          {([["name", "By name"], ["photo", "From photos"], ...(mode === "hand" ? [["hand", "By hand"]] as const : [])] as const).map(([k, l]) => (
             <button key={k} type="button" role="tab" aria-selected={mode === k} className={mode === k ? "on" : ""}
               onClick={() => { setMode(k); if (k === "hand") setForm((f) => ({ ...blank(), category: f.category })); }}>{l}</button>
           ))}
         </div>
       )}
       {/* kept mounted, so "Back" returns to the same results and photos */}
-      <div hidden={mode !== "name" || !!picked || !!editId}><SearchByName key={nameSeed.n} seed={nameSeed.q} onPick={(m) => pick(m, "search")} /></div>
+      <div hidden={mode !== "name" || !!picked || !!editId}><SearchByName key={nameSeed.n} seed={nameSeed.q} onPick={(m) => pick(m, "search")} />
+        <button type="button" className="x-link cl-byhand" onClick={() => { setMode("hand"); setForm((f) => ({ ...blank(), category: f.category })); }}>Can't find it? Add it by hand</button></div>
       {mode === "photo" || picked?.source === "photo" || form.added_via === "photo" ? (
         <div hidden={mode !== "photo" || !!picked || !!editId}><FromPhotos onPick={(m) => pick(m, "photo")} onSearch={(q) => { setNameSeed((s) => ({ q: q ? `${q} ` : "", n: s.n + 1 })); setMode("name"); }} /></div>
       ) : null}
@@ -472,10 +474,9 @@ export default function Wardrobe() {
         <section className="mf-float mf-panel" aria-label="Closet">
           <div className="mf-thead"><h1>Closet</h1>{items && <span className="mf-k">{items.length} piece{items.length === 1 ? "" : "s"}</span>}</div>
           <p className="mf-k cl-lede">Add what you own once. Every trip uses it first, for free.</p>
-          <div className="mf-seg" role="tablist" aria-label="Closet">
-            <button type="button" role="tab" aria-selected={tab === "own"} className={tab === "own" ? "on" : ""} onClick={() => { setTab("own"); reset(); setMode("name"); }}>What I own</button>
-            <button type="button" role="tab" aria-selected={tab === "add"} className={tab === "add" ? "on" : ""} onClick={() => setTab("add")}>Add a piece</button>
-          </div>
+          {/* no tabs (flow audit, Manu 2026-11-16): your pieces, and one button to add one */}
+          {tab === "own" ? (items && items.length > 0 && <button type="button" className="mf-btn go wide cl-addbtn" onClick={() => setTab("add")}>+ Add a piece</button>)
+            : items && items.length > 0 && <button type="button" className="x-link cl-back" onClick={() => { setTab("own"); reset(); setMode("name"); }}>← Your {items.length} piece{items.length === 1 ? "" : "s"}</button>}
           {tab === "own" ? own : add}
           {user?.is_guest && (
             <p className="mf-k cl-guest"><b>Keep your closet.</b> As a guest it lives only in this browser. <Link to="/register">Create a free account</Link>.</p>

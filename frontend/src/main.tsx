@@ -15,6 +15,7 @@ import "./theme/paper.css";
 import "./theme/editorial.css";
 import "./theme/fixes.css";
 import "./theme/studio.css";
+import "./theme/flows.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

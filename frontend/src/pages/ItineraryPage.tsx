@@ -22,11 +22,6 @@ function Pickers({ j, it, month, onPick }: { j: Journey; it: Itinerary; month: n
   // the routes a length of this trip is built from: that many weeks, or the nearest
   const near = Math.min(4, Math.max(1, Math.round(it.days / 7)));
   const mine = j.routes.filter((r) => r.weeks === near);
-  const pickWeeks = (w: number) => {
-    const rs = j.routes.filter((r) => r.weeks === w);
-    const r = rs.find((x) => x.months.includes(month)) ?? rs[0];
-    onPick(r.slug, r.months.includes(month) ? month : (r.best_months[0] ?? r.months[0]));
-  };
   const pickDays = (d: number) => {
     const at = j.routes.find((r) => r.days === d && r.months.includes(month));
     if (at) onPick(at.slug, month); else onPick(it.slug, month, d);
@@ -34,13 +29,8 @@ function Pickers({ j, it, month, onPick }: { j: Journey; it: Itinerary; month: n
   return (
     <div className="mf-pick">
       <div className="mf-lenrow">
-        <div className="mf-seg mf-weeks" role="radiogroup" aria-label="How long" style={{ gridTemplateColumns: `repeat(${weeks.length}, 1fr)` }}>
-          {weeks.map((w) => (
-            <button type="button" role="radio" key={w} aria-checked={w === week} className={w === week ? "on" : ""}
-              onClick={() => pickWeeks(w)}>{w} {w === 1 ? "week" : "weeks"}</button>
-          ))}
-        </div>
-        <div className={`mf-daysn${week ? "" : " on"}`} role="group" aria-label="Or a number of days">
+        {/* one control for how long (flow audit, Manu 2026-11-16): the weeks pills said the same */}
+        <div className="mf-daysn" role="group" aria-label="How many days">
           <button type="button" aria-label="One day less" disabled={it.days <= MIN_DAYS} onClick={() => pickDays(it.days - 1)}>−</button>
           <span><b>{it.days}</b> days</span>
           <button type="button" aria-label="One day more" disabled={it.days >= MAX_DAYS} onClick={() => pickDays(it.days + 1)}>+</button>
@@ -210,7 +200,7 @@ export default function ItineraryPage() {
     return () => { live = false; };
   }, [trailId]);
 
-  if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips?tab=recommended">All recommended trips</Link></div></main>;
+  if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/">All recommended trips</Link></div></main>;
   if (!it) return <main className="page"><div className="wrap"><p className="loading"><span className="spin" /></p></div></main>;
 
   const month = qMonth ?? Number(it.start_date.slice(5, 7));
@@ -248,7 +238,7 @@ export default function ItineraryPage() {
 
         <section className="mf-float mf-panel" aria-label={it.title}>
           <div className="mf-trailhead">
-            <Link className="mf-k mf-crumb" to="/trips?tab=recommended"><Back /> Recommended · {countryNames(it.journey?.countries ?? it.countries)}</Link>
+            <Link className="mf-k mf-crumb" to="/"><Back /> Recommended · {countryNames(it.journey?.countries ?? it.countries)}</Link>
             <h1>{it.journey?.name ?? it.title}</h1>
             {it.journey && <Pickers j={it.journey} it={it} month={month}
               onPick={(s, m, d) => nav(qStops && s === slug && (d === undefined || d === it.days)
