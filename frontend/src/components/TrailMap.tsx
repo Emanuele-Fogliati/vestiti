@@ -1,6 +1,6 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
-import { baseStyle, blockPins, mapColors } from "../lib/worldmap";
+import { baseStyle, blockPins, mapColors, phoneGestures, reducedMotion, worldZoom } from "../lib/worldmap";
 import { addContours } from "../lib/contours";
 import type { TrailPoint } from "../lib/types";
 
@@ -23,7 +23,7 @@ export default function TrailMap({ line, points, focus, onFocus, inset }: {
     const c = mapColors();
     let map: maplibregl.Map;
     try {
-      const style = baseStyle(c, { globe: false });
+      const style = baseStyle(c, { globe: true, photo: false }); // the globe like Explore, flat once zoomed in
       // a topographic map, as the trekking sites have: contour lines with their heights...
       addContours(style, "#8A6A45");
       // ...footpaths and tracks, the walking network around the trail (junctions, other ways)...
@@ -48,9 +48,8 @@ export default function TrailMap({ line, points, focus, onFocus, inset }: {
         paint: { "text-color": c.ink, "text-halo-color": "#FFFFFF", "text-halo-width": 1.4 },
       });
       map = new maplibregl.Map({
-        container: el, style, bounds: bounds(coords),
-        fitBoundsOptions: { padding, maxZoom: 14 },
-        maxZoom: 16, cooperativeGestures: true, attributionControl: { compact: true },
+        container: el, style, center: mid(coords), zoom: worldZoom(el, inset), renderWorldCopies: false, minZoom: Math.max(0, worldZoom(el) - 1), // never smaller than the globe
+        maxZoom: 16, cooperativeGestures: phoneGestures(), attributionControl: { compact: true },
         pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
       });
     } catch {
@@ -80,6 +79,8 @@ export default function TrailMap({ line, points, focus, onFocus, inset }: {
         b.addEventListener("click", (e) => { e.stopPropagation(); onFocus(i); });
         markers.push(new maplibregl.Marker({ element: b }).setLngLat([p.lon, p.lat]).addTo(map));
       });
+      // from the globe down onto the trail
+      map.fitBounds(bounds(coords), { padding, maxZoom: 14, duration: reducedMotion() ? 0 : 2000, essential: true });
     });
     const ro = new ResizeObserver(() => map.resize());
     ro.observe(el);
@@ -97,6 +98,11 @@ export default function TrailMap({ line, points, focus, onFocus, inset }: {
 
   if (failed) return null;
   return <div className="tmap" ref={box} role="region" aria-label="Map of the trail" />;
+}
+
+function mid(cs: [number, number][]): [number, number] {
+  const lons = cs.map((c) => c[0]), lats = cs.map((c) => c[1]);
+  return [(Math.min(...lons) + Math.max(...lons)) / 2, (Math.min(...lats) + Math.max(...lats)) / 2];
 }
 
 function bounds(cs: [number, number][]): maplibregl.LngLatBoundsLike {

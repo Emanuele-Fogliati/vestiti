@@ -1,6 +1,6 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
-import { baseStyle, mapColors, worldZoom } from "../lib/worldmap";
+import { baseStyle, mapColors, phoneGestures, worldZoom } from "../lib/worldmap";
 import type { TrailCard } from "../lib/types";
 
 export const LEVEL_COLOR = { easy: "#2F55D4", moderate: "#1D6B37", hard: "#C2541B", technical: "#9B1C1C" } as const;
@@ -8,6 +8,7 @@ export const LEVEL_COLOR = { easy: "#2F55D4", moderate: "#1D6B37", hard: "#C2541
 export const CITY_COLOR = "#7B4FB0";
 const LEVELS = ["easy", "moderate", "hard", "technical"] as const;
 
+const NONE = { top: 0, right: 0, bottom: 0, left: 0 };
 type Inset = { top: number; right: number; bottom: number; left: number };
 
 /** The Treks page's map: every trek of the list as a dot coloured by how hard it is; the chosen
@@ -38,8 +39,8 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
     let map: maplibregl.Map;
     try {
       map = new maplibregl.Map({
-        container: el, style: baseStyle(mapColors(), { globe: true, photo: false }), center: [10, 30], zoom: worldZoom(el), renderWorldCopies: false,
-        maxZoom: 15, cooperativeGestures: true, attributionControl: { compact: true },
+        container: el, style: baseStyle(mapColors(), { globe: true, photo: false }), center: [10, 30], zoom: worldZoom(el), renderWorldCopies: false, minZoom: Math.max(0, worldZoom(el) - 1), // never smaller than the globe
+        maxZoom: 15, cooperativeGestures: phoneGestures(), attributionControl: { compact: true },
         pixelRatio: Math.min(window.devicePixelRatio || 1, 2), fadeDuration: 150,
       });
     } catch { setFailed(true); return; }
@@ -97,7 +98,8 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
       src?.setData(ok ? { type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: line! } } : { type: "FeatureCollection", features: [] });
       if (!ok) return;
       const lons = line!.map((c) => c[0]), lats = line!.map((c) => c[1]);
-      map.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]],
+      // a padding left by flyTo would add to the one fitBounds is given
+      map.setPadding(NONE).fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]],
         { padding: room(box.current!, cb.current.inset), maxZoom: 14, duration: 800 });
     });
   }, [line]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -127,14 +129,14 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
       const a = cb.current.around;
       if (a) {
         const dl = a.km / 111, dn = a.km / (111 * Math.max(0.2, Math.cos(a.lat * Math.PI / 180)));
-        map.fitBounds([[a.lon - dn, a.lat - dl], [a.lon + dn, a.lat + dl]], { padding: p, maxZoom: 12, duration: 800 });
+        map.setPadding(NONE).fitBounds([[a.lon - dn, a.lat - dl], [a.lon + dn, a.lat + dl]], { padding: p, maxZoom: 12, duration: 800 });
         return;
       }
       if (!pts.length) return;
       const lons = pts.map((x) => x.lon!), lats = pts.map((x) => x.lat!);
       // the whole world's treks: no box can frame that well; a plain world view instead
       if (Math.max(...lons) - Math.min(...lons) > 200) { map.easeTo({ center: [15, 25], zoom: worldZoom(el, cb.current.inset), padding: p, duration: 600 }); return; }
-      map.fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: p, maxZoom: 10, duration: 700 });
+      map.setPadding(NONE).fitBounds([[Math.min(...lons), Math.min(...lats)], [Math.max(...lons), Math.max(...lats)]], { padding: p, maxZoom: 10, duration: 700 });
     };
     when(go);
   }, [fitKey, selected]); // eslint-disable-line react-hooks/exhaustive-deps

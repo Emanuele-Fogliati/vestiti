@@ -36,7 +36,7 @@
 .tbefore dd{margin:0}
 .tdanger{margin-top:12px;border-left:4px solid #D2452B;padding:6px 12px;background:var(--surface-2)}
 .tdanger ul{margin:4px 0 0;padding-left:18px}
-.tmap{height:380px;border-radius:var(--radius-sm);overflow:hidden;border:var(--bw) solid var(--rule)}
+.tmap{background:var(--bg);height:380px;border-radius:var(--radius-sm);overflow:hidden;border:var(--bw) solid var(--rule)}
 .tmap-ctl{flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
 .rpin.tpin{background:var(--surface);color:var(--ink)}
 .rpin.tpin.start,.rpin.tpin.goal{background:var(--ink);color:var(--bg)}

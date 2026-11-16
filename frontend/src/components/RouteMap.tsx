@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { PlaceCard } from "./PlaceCard";
 import type { GlobeData, GlobePlace } from "../lib/worldmap";
 import type { StopArt } from "../lib/types";
-import { baseStyle, blockPins, loadPlaces, mapColors, placeLayers, placesGeoJSON, reducedMotion } from "../lib/worldmap";
+import { baseStyle, blockPins, loadPlaces, mapColors, phoneGestures, placeLayers, placesGeoJSON, reducedMotion, worldZoom } from "../lib/worldmap";
 
 export interface RouteStop {
   name: string;
@@ -46,6 +46,8 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
   const [sel, setSel] = useState<GlobePlace | null>(null);
   const [focus, setFocus] = useState<number | null>(null);
   const [failed, setFailed] = useState(false);
+  // where the camera was when the map was last rebuilt (a stop added): start from there, not the globe
+  const cam = useRef<{ center: maplibregl.LngLat; zoom: number } | null>(null);
 
   // only stops we can place on the map, each with its number in the trip
   const pts = useMemo(() => stops.map((s, i) => ({ ...s, n: i + 1 }))
@@ -66,17 +68,24 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
 
     let map: maplibregl.Map;
     try {
+      // the same globe as Explore (Manu 2026-11-16: "il mappamondo che si possa zoomare"): it opens
+      // on the whole Earth turned towards the trip, then comes down onto the route and turns flat
+      const mid = centre(pts);
       map = new maplibregl.Map({
         container: el,
-        style: baseStyle(c, { globe: false }),
-        bounds: bounds(pts),
-        fitBoundsOptions: { padding: room(el, opts.current.inset), maxZoom: 9 },
+        style: baseStyle(c, { globe: true, photo: false }),
+        center: cam.current?.center ?? mid,
+        zoom: cam.current?.zoom ?? worldZoom(el, opts.current.inset),
+        renderWorldCopies: false, minZoom: Math.max(0, worldZoom(el) - 1), // never smaller than the globe
         maxZoom: 16,
-        cooperativeGestures: true,
+        cooperativeGestures: phoneGestures(),
         attributionControl: { compact: true },
         pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
         fadeDuration: 150,
       });
+      // the empty globe sits in the free part of the map, beside the panels
+      const r = room(el, opts.current.inset);
+      if (!pts.length && typeof r !== "number") map.setPadding(r);
     } catch {
       setFailed(true);
       return;
@@ -151,6 +160,10 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
         markers.push(new maplibregl.Marker({ element: b }).setLngLat([s.longitude, s.latitude]).addTo(map));
       });
       setReady((n) => n + 1); // the pins exist now: give them their tags
+      // down from the globe onto the route (at once when it is only a stop more on the same map)
+      // (the whole route first, even when the page opens with a stop picked)
+      if (pts.length) map.setPadding(NONE).fitBounds(bounds(pts), { padding: room(el, opts.current.inset), maxZoom: 9,
+        duration: reducedMotion() ? 0 : cam.current ? 700 : 1800, essential: true });
     });
 
     const layers = ["pl-dot", "pl-name"];
@@ -170,6 +183,7 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
 
     return () => {
       ro.disconnect();
+      cam.current = { center: map.getCenter(), zoom: map.getZoom() };
       for (const m of markers) m.remove();
       map.remove();
       mapRef.current = null;
@@ -225,7 +239,10 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
     if (!map || !box.current) return;
     setFocus(null);
     setSel(null);
-    map.fitBounds(bounds(pts), { padding: room(box.current, opts.current.inset), maxZoom: 9 });
+    const r = room(box.current, opts.current.inset);
+    // no stops yet: the whole globe, to pick the first one
+    if (!pts.length) { map.easeTo({ zoom: worldZoom(box.current, opts.current.inset), padding: typeof r === "number" ? undefined : r, duration: 600 }); return; }
+    map.setPadding(NONE).fitBounds(bounds(pts), { padding: r, maxZoom: 9 }); // fitBounds adds the map's own padding
   }
 
   // the weather over each pin, and which pin is open
@@ -280,6 +297,13 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
   );
 }
 
+/** The middle of the trip, to turn the globe towards it (the Atlantic when there is no stop yet). */
+function centre(pts: RouteStop[]): [number, number] {
+  if (!pts.length) return [10, 20];
+  const lons = pts.map((s) => s.longitude), lats = pts.map((s) => s.latitude);
+  return [(Math.min(...lons) + Math.max(...lons)) / 2, (Math.min(...lats) + Math.max(...lats)) / 2];
+}
+
 function bounds(pts: RouteStop[]): maplibregl.LngLatBoundsLike {
   if (!pts.length) return [[-150, -45], [160, 65]];
   const lons = pts.map((s) => s.longitude), lats = pts.map((s) => s.latitude);
@@ -288,6 +312,8 @@ function bounds(pts: RouteStop[]): maplibregl.LngLatBoundsLike {
   const padDeg = w === e && s === n ? 0.6 : 0;
   return [[w - padDeg, s - padDeg], [e + padDeg, n + padDeg]];
 }
+
+const NONE = { top: 0, right: 0, bottom: 0, left: 0 };
 
 function pad(el: HTMLElement): number {
   return Math.round(Math.min(56, Math.min(el.clientWidth, el.clientHeight) / 6));
