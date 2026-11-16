@@ -602,6 +602,8 @@ export interface ItineraryCard {
   journey: string | null;
   journey_blurb: string | null;
   lead: boolean;
+  /** its stops, [lat, lon] */
+  points?: number[][];
 }
 
 /** A travel region with all its routes: one per length (1-4 weeks) and season band. */

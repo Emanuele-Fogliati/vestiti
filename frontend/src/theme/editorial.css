@@ -657,3 +657,23 @@ main.page .doors .door[aria-selected="true"] span{color:var(--ink-2)}
 /* trek page on the phone: the header column never grows past the screen (long tags row) */
 .thead-text,.thead-art{min-width:0}
 .thead .tags{display:flex;flex-wrap:wrap;gap:4px}
+
+/* Home (Manu 2026-11-16, option A): Where to? goes to the place's recommended trip; a month lights up the globe */
+.home2-search{position:relative}
+.home2-sugg{position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:20;display:grid;gap:6px;padding:8px;border-radius:22px;background:#FFFFFF;box-shadow:0 14px 40px rgba(0,0,0,.16),0 0 0 1px var(--rule)}
+.home2-sugg .doors-row{background:none;box-shadow:none}
+.home2-sugg .doors-row.on,.home2-sugg .doors-row:hover{background:var(--surface-2,#F2F2EF)}
+.home2-sugg .doors-row .pic{width:64px;height:44px}
+.home2-own{padding:8px 10px;font:600 14px var(--f-body);color:var(--ink-2);text-decoration:none;border-radius:12px}
+.home2-own:hover{background:var(--surface-2,#F2F2EF);color:var(--ink)}
+.home2-month{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px}
+.home2-month b{font:500 17px var(--f-display);color:var(--ink)}
+.home2-month button{width:38px;height:38px;display:grid;place-items:center;border:0;border-radius:999px;background:#FFFFFF;color:var(--ink);box-shadow:0 0 0 1px var(--rule);cursor:pointer}
+.home2-month button:hover{background:var(--surface-2,#F2F2EF)}
+.home2-good .doors-row .pic{width:72px;height:50px}
+@media (max-width:899px){.home2-good{max-height:34svh}}
+.home2-good{flex:0 1 auto;min-height:0;align-content:start;grid-auto-rows:max-content}
+@media (min-width:900px){body.home-page .home2-ui{gap:16px}}
+@media (max-width:899px){.home2-good .doors-row .pic{width:60px;height:42px}.home2-good .doors-row{padding:5px}}
+.home2-search input:focus,.home2-search input:focus-visible{outline:none}
+.home2-search:focus-within{box-shadow:0 0 0 2px var(--ink)}

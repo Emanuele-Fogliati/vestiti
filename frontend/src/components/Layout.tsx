@@ -55,7 +55,8 @@ const Ico = ({ n }: { n: string }) => (
 );
 
 /** Every page, Editoriale (Manu 2026-11-15).
- *  Computer: one bar on top, logo left, Explore · Trips · Treks · Closet in the middle, You on the right.
+ *  Computer: one bar on top, logo left (it goes home: Explore is not in the menu, Manu 2026-11-16),
+ *  Trips · Walks · Closet in the middle, You on the right.
  *  Phone: nothing on top (no logo, no You: "c'è più spazio per tutto il resto"); one tab bar at the bottom
  *  with You as the fifth tab. Planning a trip lives under Trips; How it works and sign in live under You. */
 export function Layout() {
@@ -81,7 +82,7 @@ export function Layout() {
         <div className="wrap top-in">
           <Link className="logo" to="/" aria-label={`${name} home`}><Logo name={name} /></Link>
           <nav className="tnav" aria-label="Main">
-            {dock.map(([to, label, , on]) => (
+            {dock.filter(([to]) => to !== "/").map(([to, label, , on]) => (
               <Link key={to} to={to} className={on ? "active" : ""} aria-current={on ? "page" : undefined}>{label}</Link>
             ))}
           </nav>
