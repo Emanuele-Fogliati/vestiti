@@ -18,7 +18,7 @@ import { LegIcon } from "./StopPanel";
  *  to get there; a stop opens its card beside the panel (weather, what you wear); at the bottom the
  *  pieces to get for the whole trip with Cheaper / Better and the total. On the phone: the map on
  *  top and the same content below it, each stop opening in place. */
-export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged, onPlans, head, tabs, onBag, onAsk, onFlights, onBoard }: {
+export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged, onPlans, head, tabs, onBag, onAsk, onFlights, onBoard, content }: {
   trip: Trip; plans: Plans | null; strategy: Strategy | null; tier: Tier;
   sel: number | null; setSel: (i: number | null) => void;
   /** the stops changed: reload the trip (and its kit) */
@@ -28,6 +28,8 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
   head: ReactNode; tabs: ReactNode; onBag: () => void; onAsk: (text?: string) => void;
   /** the flights, and the full board (booked, fixed, the plan of each day), in sheets */
   onFlights: () => void; onBoard: () => void;
+  /** the Weather or Bag tab: shown in the big panel on the right (computer) or under the tabs (phone) */
+  content?: ReactNode;
 }) {
   const { toast } = useApp();
   const [board, setBoard] = useState<Board | null>(null);
@@ -291,7 +293,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
     onPick={(p) => add(p, insAt)} onCancel={insAt != null ? () => setInsAt(null) : undefined} />;
 
   return (
-    <div className={`mf${s ? " has-card" : ""}`}>
+    <div className={`mf${s ? " has-card" : ""}${content ? " has-wide" : ""}`}>
       <div className="mf-map">
         <TripMap stops={stops} focusIndex={sel} bare inset={inset} tags={tags} onPin={(i) => setSel(i)}
           onPlace={(p) => setOffer(p)} />
@@ -301,6 +303,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
       <section className="mf-float mf-panel" aria-label="Your trip">
         <div className="mf-head">{head}</div>
         <div className="mf-tabs">{tabs}</div>
+        {content && !desk ? <div className="mf-tabbody">{content}</div> : <>
         {say_}
         {msg && <p className={`mf-msg${msg.bad ? " bad" : ""}`} role="status">{msg.text}</p>}
         {offer && (
@@ -331,10 +334,12 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
             </button>
           </div>
         )}
+        </>}
       </section>
 
-      {desk && sel != null && stops[sel] && card(sel, true)}
-      {desk && (
+      {desk && content && <section className="mf-float mf-wide">{content}</section>}
+      {desk && !content && sel != null && stops[sel] && card(sel, true)}
+      {desk && !content && (
         <BuyBar title="To get for this trip" sub={tp ? `${picks.length} of ${lines.filter((l) => l.kind !== "none").length} pieces, picked for the weather on the map` : "Working out the clothes…"}
           picks={picks} tripId={trip.id} tier={tier} onPick={pick} onBuy={onBag} buyLabel="Buy" />
       )}

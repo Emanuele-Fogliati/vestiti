@@ -253,3 +253,13 @@ a.mf-btn{text-decoration:none}
 @media (max-width:899px){
   .mytrips .mf-map{height:min(280px,36svh)}
 }
+
+/* ---------- the trip's Weather and Bag tabs: the same panel on the left, the tab in a big panel ---------- */
+.mf-tab{padding:0;margin:0}
+@media (min-width:900px){
+  .mf-wide{left:480px;right:20px;top:20px;bottom:20px;overflow:auto;overscroll-behavior:contain;padding:22px 26px}
+  .mf.has-wide .mf-mapnote{display:none}
+}
+@media (max-width:899px){
+  .mf-tabbody{display:block;min-width:0}
+}
