@@ -1,5 +1,6 @@
 import type { ReactElement } from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { ArtCard } from "./ArtCard";
 import { brandName, useApp } from "../lib/app-context";
 
 /** Logo "Maglietta con la zip", Ponte ad arco (Manu 2026-11-15): a black T-shirt that is itself the T of
@@ -96,6 +97,7 @@ export function Layout() {
         </div>
       </header>
       <Outlet />
+      <ArtCard />
       <nav className="dock" aria-label="Main">
         {dock.map(([to, label, icon, on]) => (
           <Link key={to} to={to} className={on ? "active" : ""} aria-current={on ? "page" : undefined}><Ico n={icon} />{label}</Link>
