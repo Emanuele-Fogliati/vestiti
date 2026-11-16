@@ -62,12 +62,15 @@ def _rows() -> list[list]:
     return rows
 
 
-def _picture(name: str, cc: str, lat: float, lon: float):
+def _picture(name: str, cc: str, lat: float, lon: float, city: str = ""):
     """The scene a place is named by, in its country and near it. A name another country owns
     ("Charleston", "Orange River") is tried again with the country's name ("charleston new
     zealand"), which the scene carries as an alias. Never the nearest scene by distance alone:
-    Mou Waho Island is not the Wanaka Tree."""
-    for text in (name, f"{name} {art.country_names().get(cc, '')}"):
+    Mou Waho Island is not the Wanaka Tree. `city` is given only to twins, two places of one
+    country with the same name (the Bou Inania Madrasa of Fes and of Meknes): each is tried
+    first with its city's name ("bou inania madrasa meknes")."""
+    texts = ([f"{name} {city}"] if city else []) + [name, f"{name} {art.country_names().get(cc, '')}"]
+    for text in texts:
         lm = next((m for m in art._named(text)
                    if m.country == cc and art._km(lat, lon, m.lat, m.lon) <= art.NAMESAKE_KM), None)
         if lm:
@@ -84,11 +87,16 @@ def payload() -> dict:
         {_norm(n) for s in it.stops for n in [s.name, *(v.name for v in s.visits)]} for it in its]
     parent = hierarchy.parents([dict(zip(doc["fields"], r)) for r in doc["places"]])
     exact = _exact()
+    name_of = {pid: name for pid, name, *_ in doc["places"]}
+    seen: dict[tuple[str, str], int] = {}
+    for _, name, cc, *_ in doc["places"]:
+        seen[(cc, _norm(name))] = seen.get((cc, _norm(name)), 0) + 1
     places = []
     for pid, name, cc, kind, lat, lon, trips in doc["places"]:
         if pid in exact:  # the Uffizi and the Duomo on their own spots, not on one 1 km dot
             lat, lon = exact[pid][0], exact[pid][1]
-        lm = _picture(name, cc, lat, lon)
+        twin = seen[(cc, _norm(name))] > 1 and pid in parent
+        lm = _picture(name, cc, lat, lon, name_of.get(parent[pid], "") if twin else "")
         hits = [i for i, names in enumerate(in_it) if cc in its[i].countries and _norm(name) in names]
         # no scene label here: it grows with every new scene and the card only needs it as alt text
         places.append([pid, name, cc, kind, lat, lon, level(trips), lm.id if lm else None, hits, parent.get(pid)])

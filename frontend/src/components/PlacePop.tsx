@@ -1,4 +1,5 @@
 import { Illustration } from "./Illustration";
+import { AboutLine } from "./ArtCard";
 import { KIND_LABEL, countryName, type GlobePlace } from "../lib/worldmap";
 
 /** A place tapped on the map that is not on the trip (Manu 2026-11-16: "se ci sono dei paletti
@@ -19,6 +20,7 @@ export function PlacePop({ place, slot, busy, floating, onAdd, onClose }: {
         <div>
           <span className="mf-k">{KIND_LABEL[place.kind]} · {countryName(place.country)}</span>
           <h3>{place.name}</h3>
+          <AboutLine id={place.art} />
         </div>
         <button type="button" className="mf-btn go wide" disabled={busy} onClick={onAdd}>
           {busy ? <span className="spin" /> : `Add as stop ${slot + 1}`}

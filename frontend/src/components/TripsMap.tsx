@@ -78,6 +78,8 @@ export default function TripsMap({ trips, selected, onPick, inset }: {
     }
   }, [key]); // eslint-disable-line react-hooks/exhaustive-deps
   const roadKey = Object.keys(roads).join("|");
+  // the drawings can come after the points (a recommended trip's, fetched when it is picked)
+  const artKey = shown.map((t) => (t.arts ?? []).map((a) => a?.id ?? "").join(",")).join("|");
   const framed = useRef("");
   useEffect(() => {
     when(() => {
@@ -111,14 +113,23 @@ export default function TripsMap({ trips, selected, onPick, inset }: {
       const pick = selected ? shown.filter((t) => t.id === selected) : shown;
       const pts = pick.flatMap((t) => t.points);
       if (!pts.length) return;
+      const spanLon = Math.max(...pts.map((p) => p[1])) - Math.min(...pts.map((p) => p[1]));
+      if (!selected && spanLon > 120) {
+        // trips all over the world: the globe as big as it fits, turned to where most of them are
+        const x = pts.reduce((a, p) => a + Math.cos((p[1] * Math.PI) / 180), 0), y = pts.reduce((a, p) => a + Math.sin((p[1] * Math.PI) / 180), 0);
+        const lon = (Math.atan2(y, x) * 180) / Math.PI, lat = pts.reduce((a, p) => a + p[0], 0) / pts.length;
+        map.easeTo({ center: [lon, Math.max(-40, Math.min(40, lat))], zoom: worldZoom(box.current!), padding: room(box.current!, cb.current.inset), duration: 700 });
+        return;
+      }
       const lats = pts.map((p) => p[0]), lons = pts.map((p) => p[1]);
       const pad = room(box.current!, cb.current.inset);
+      map.setPadding({ top: 0, right: 0, bottom: 0, left: 0 }); // the whole-globe view's padding off
       const one = Math.max(...lats) - Math.min(...lats) < 0.2 && Math.max(...lons) - Math.min(...lons) < 0.2;
       const d = one ? 0.5 : 0;
       map.fitBounds([[Math.min(...lons) - d, Math.min(...lats) - d], [Math.max(...lons) + d, Math.max(...lats) + d]],
         { padding: pad, maxZoom: 9, duration: 700 });
     });
-  }, [key, selected, roadKey]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [key, selected, roadKey, artKey]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (failed) return null;
   return <div className="rmap rmap-bare"><div className="rmap-map" ref={box} role="region" aria-label="Map of your trips" /></div>;

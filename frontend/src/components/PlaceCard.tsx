@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { Illustration } from "./Illustration";
+import { AboutLine } from "./ArtCard";
 import type { GlobePlace, GlobeRoute } from "../lib/worldmap";
 import { KIND_LABEL, countriesLabel, countryName } from "../lib/worldmap";
 import { pickStore, usePicks } from "../lib/picks";
@@ -38,6 +39,7 @@ export function PlaceCard({ place, routes, onRoute, onClose, onZoom, zoomLabel, 
             : country}
         </p>
         <h3>{place.name}</h3>
+        <AboutLine id={place.art} />
         {extra}
         {pickable && (
           <div className="pcard-acts">
