@@ -4,9 +4,10 @@ import { Illustration } from "../components/Illustration";
 import { TripMap } from "../components/Maps";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { MONTHS, countryNames, monthYear, nights, today } from "../lib/format";
+import { MONTHS, countryNames, nights } from "../lib/format";
 import type { Itinerary, ItineraryDay, ItineraryStop, ItineraryThing, Journey, Stop } from "../lib/types";
-import { DRESS_ME } from "../lib/words";
+import { PlacePop } from "../components/PlacePop";
+import { km, type GlobePlace } from "../lib/worldmap";
 
 const MIN_DAYS = 3, MAX_DAYS = 35;
 const n0 = (n: number) => Math.round(n).toLocaleString("en-US");
@@ -130,38 +131,32 @@ function StopDays({ s, from, day, onDay }: { s: ItineraryStop; from: number; day
   );
 }
 
-/** "Use this trip": optional start date, then the itinerary becomes the user's own trip; the
- *  clothes come there, the next step (Manu 2026-11-16: here the traveller is still choosing). */
-function PackForm({ it, month, days }: { it: Itinerary; month: number; days?: number }) {
+/** The trip as it is on the page, edited or not, becomes the traveller's and opens on its clothes
+ *  (Manu 2026-11-16: no "Use this trip", no date to ask: a date in the chosen month is ours). */
+function WearButton({ it, month, days, stops }: { it: Itinerary; month: number; days?: number; stops?: [string, number][] }) {
   const { ensureUser } = useApp();
   const nav = useNavigate();
-  const [start, setStart] = useState("");
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
-  async function pack(e: React.FormEvent) {
-    e.preventDefault();
+  async function go() {
     setBusy(true); setErr(null);
     try {
       await ensureUser();
-      const t = await api.packItinerary(it.slug, start || undefined, start ? undefined : month, days);
-      nav(`/trips/${t.id}`);
-    } catch (e2) {
-      setErr((e2 as Error).message);
+      const t = await api.packItinerary(it.slug, undefined, month, stops ? undefined : days, stops);
+      nav(`/trips/${t.id}#bag`);
+    } catch (e) {
+      setErr((e as Error).message);
       setBusy(false);
     }
   }
 
   return (
-    <form className="mf-pack" onSubmit={pack} aria-label={DRESS_ME}>
-      <div className="mf-pack-t"><b>Like it?</b></div>
-      <label className="mf-pack-d"><span className="mf-k">Leaving</span>
-        <input type="date" value={start} min={today()} onChange={(e) => setStart(e.target.value)}
-          title={start ? `${it.days} days from this date` : `No date yet? We plan for ${monthYear(it.start_date)}`} />
-      </label>
-      <button className="mf-btn go" type="submit" disabled={busy}>{busy ? <span className="spin" /> : DRESS_ME}</button>
+    <div className="mf-pack">
+      <div className="mf-pack-t"><b>{it.days} days · {MONTHS[month - 1]}</b></div>
+      <button className="mf-btn go" type="button" disabled={busy} onClick={go}>{busy ? <span className="spin" /> : "What to wear →"}</button>
       {err && <p className="err">{err}</p>}
-    </form>
+    </div>
   );
 }
 
@@ -173,11 +168,15 @@ export default function ItineraryPage() {
   const nav = useNavigate();
   const qMonth = Number(q.get("month")) || undefined;
   const qDays = Number(q.get("days")) || undefined;
+  const qStops = q.get("stops") || undefined;
   const [it, setIt] = useState<Itinerary | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [sel, setSel] = useState<number | null>(null);
   const [day, setDay] = useState<number | null>(null);
   const [walk, setWalk] = useState<[number, number][] | null>(null);
+  const [offer, setOffer] = useState<GlobePlace | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [msg, setMsg] = useState<string | null>(null);
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
 
   useEffect(() => {
@@ -188,16 +187,18 @@ export default function ItineraryPage() {
   }, []);
 
   // another length or season is another route: the stops close
-  useEffect(() => { setSel(null); setDay(null); }, [slug, qDays]);
+  useEffect(() => { setSel(null); setDay(null); setOffer(null); }, [slug, qDays]);
   useEffect(() => { setDay(null); }, [sel]);
 
   useEffect(() => {
     setErr(null);
     let live = true;
-    api.itinerary(slug, undefined, qMonth, qDays).then((x) => { if (live) setIt(x); })
-      .catch((e) => { if (live) setErr((e as Error).message); });
+    setBusy(true);
+    api.itinerary(slug, undefined, qMonth, qDays, qStops).then((x) => { if (live) { setIt(x); setMsg(null); } })
+      .catch((e) => { if (live) { if (qStops) setMsg((e as Error).message); else setErr((e as Error).message); } })
+      .finally(() => { if (live) setBusy(false); });
     return () => { live = false; };
-  }, [slug, qMonth, qDays]);
+  }, [slug, qMonth, qDays, qStops]);
 
   // the open day's walk on the map: its trail's own line, as on the Walks page
   const trailId = sel != null && day != null ? it?.stops[sel]?.days[day]?.things.find((t) => t.trail?.has_map)?.trail?.id ?? null : null;
@@ -215,15 +216,34 @@ export default function ItineraryPage() {
   const month = qMonth ?? Number(it.start_date.slice(5, 7));
   const starts: number[] = [];
   it.stops.reduce((d, s) => { starts.push(d); return d + nights(s.start_date, s.end_date); }, 1);
-  const inset = desk ? { top: 20, right: 60, bottom: 130, left: 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
+  const inset = desk ? { top: 20, right: 60, bottom: 130, left: offer ? 860 : 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
   const custom = qDays && it.journey ? it.days : undefined;
-  const short = qDays && it.days < qDays;
+  const short = !qStops && qDays && it.days < qDays;
+
+  // the trip is edited right here (Manu 2026-11-16: "da qui stesso posso direttamente editare il
+  // viaggio"): days per stop, a stop out, a place tapped on the map in; the page shows the result
+  const mine: [string, number][] = it.stops.map((s) => [s.place ?? "", nights(s.start_date, s.end_date)]);
+  const canEdit = mine.every(([p]) => p);
+  const edit = (next: [string, number][]) => {
+    const total = next.reduce((n, [, d]) => n + d, 0);
+    if (total < MIN_DAYS || total > MAX_DAYS) { setMsg(`A trip here is ${MIN_DAYS} to ${MAX_DAYS} days.`); return; }
+    setOffer(null); setSel(null);
+    nav(`/ideas/${slug}?month=${month}&stops=${next.map(([p, d]) => `${p}:${d}`).join(",")}`, { replace: true });
+  };
+  const nightsAt = (i: number, d: number) => edit(mine.map(([p, n], k) => [p, k === i ? Math.min(10, Math.max(1, n + d)) : n]));
+  const drop = (i: number) => edit(mine.filter((_, k) => k !== i));
+  const slot = offer ? bestSlot(it.stops, offer.lat, offer.lon) : 0;
+  const tapped = (p: GlobePlace) => {
+    const i = it.stops.findIndex((x) => x.place === p.id || km(x.latitude, x.longitude, p.lat, p.lon) < 2);
+    if (i >= 0) { setOffer(null); setSel(i); } else if (canEdit) setOffer(p);
+  };
+  const addOffer = () => { if (offer) edit([...mine.slice(0, slot), [offer.id, 2], ...mine.slice(slot)]); };
 
   return (
     <main className="trk itinerary-mf">
       <div className="mf">
         <div className="mf-map">
-          <TripMap stops={it.stops as unknown as Stop[]} focusIndex={sel} bare inset={inset} onPin={(i) => setSel(i)} walk={walk} />
+          <TripMap stops={it.stops as unknown as Stop[]} focusIndex={sel} bare inset={inset} onPin={(i) => setSel(i)} walk={walk} onPlace={tapped} />
         </div>
 
         <section className="mf-float mf-panel" aria-label={it.title}>
@@ -231,34 +251,48 @@ export default function ItineraryPage() {
             <Link className="mf-k mf-crumb" to="/trips?tab=recommended"><Back /> Recommended · {countryNames(it.journey?.countries ?? it.countries)}</Link>
             <h1>{it.journey?.name ?? it.title}</h1>
             {it.journey && <Pickers j={it.journey} it={it} month={month}
-              onPick={(s, m, d) => nav(`/ideas/${s}?month=${m}${d ? `&days=${d}` : ""}`, { replace: true })} />}
+              onPick={(s, m, d) => nav(qStops && s === slug && (d === undefined || d === it.days)
+                ? `/ideas/${s}?month=${m}&stops=${qStops}` // another month, the same edited trip
+                : `/ideas/${s}?month=${m}${d ? `&days=${d}` : ""}`, { replace: true })} />}
             {short && <span className="mf-k">The longest trip here in {MONTHS[month - 1]} is {it.days} days.</span>}
+            {msg && <p className="mf-msg bad" role="status">{msg}</p>}
           </div>
+          {offer && !desk && <PlacePop place={offer} slot={slot} busy={busy} floating={false} onAdd={addOffer} onClose={() => setOffer(null)} />}
           <div className={desk ? "mf-scroll" : "mf-ibody"}>
-            <ol className="mf-stops">
+            <ol className={`mf-stops${busy ? " busy" : ""}`}>
               {it.stops.map((s, i) => {
                 const n = nights(s.start_date, s.end_date);
                 const open = sel === i;
                 return (
-                  <li key={s.id} className={open ? "open" : ""}>
-                    <button type="button" className={`mf-trow${open ? " sel" : ""}`} aria-expanded={open} onClick={() => setSel(open ? null : i)}>
-                      <span className="mf-num">{i + 1}</span>
-                      {s.art && <span className="mf-thumb"><Illustration art={s.art} /></span>}
-                      <span className="mf-nm">
-                        <b>{s.name}</b>
-                        <small>{n > 1 ? `Days ${starts[i]}–${starts[i] + n - 1}` : `Day ${starts[i]}`}{stopDoes(s) ? ` · ${stopDoes(s)}` : ""}</small>
-                      </span>
-                    </button>
+                  <li key={`${s.place}-${i}`} className={open ? "open" : ""}>
+                    <div className="mf-irow">
+                      <button type="button" className={`mf-trow${open ? " sel" : ""}`} aria-expanded={open} onClick={() => setSel(open ? null : i)}>
+                        <span className="mf-num">{i + 1}</span>
+                        {s.art && <span className="mf-thumb"><Illustration art={s.art} /></span>}
+                        <span className="mf-nm">
+                          <b>{s.name}</b>
+                          <small>{n > 1 ? `Days ${starts[i]}–${starts[i] + n - 1}` : `Day ${starts[i]}`}{stopDoes(s) ? ` · ${stopDoes(s)}` : ""}</small>
+                        </span>
+                      </button>
+                      {canEdit && <span className="mf-step">
+                        <button type="button" onClick={() => nightsAt(i, -1)} disabled={n <= 1 || busy} aria-label={`One day less in ${s.name}`}>−</button>
+                        <span>{n}<i> {n === 1 ? "day" : "days"}</i></span>
+                        <button type="button" onClick={() => nightsAt(i, 1)} disabled={n >= 10 || busy} aria-label={`One day more in ${s.name}`}>+</button>
+                      </span>}
+                      {canEdit && it.stops.length > 1 && <button type="button" className="mf-ib" onClick={() => drop(i)} disabled={busy} aria-label={`Remove ${s.name}`}><X /></button>}
+                    </div>
                     {open && <StopDays s={s} from={starts[i]} day={day} onDay={setDay} />}
                   </li>
                 );
               })}
             </ol>
+            {canEdit && <p className="mf-k mf-first">Tap a place on the map to add it.</p>}
           </div>
-          {!desk && <div className="mf-phone-go"><PackForm it={it} month={month} days={custom} /></div>}
+          {!desk && <div className="mf-phone-go"><WearButton it={it} month={month} days={custom} stops={qStops ? mine : undefined} /></div>}
         </section>
 
-        {desk && <section className="mf-float mf-buy mf-packbar" aria-label={DRESS_ME}><PackForm it={it} month={month} days={custom} /></section>}
+        {desk && offer && <PlacePop place={offer} slot={slot} busy={busy} floating onAdd={addOffer} onClose={() => setOffer(null)} />}
+        {desk && <section className="mf-float mf-buy mf-packbar" aria-label="What to wear"><WearButton it={it} month={month} days={custom} stops={qStops ? mine : undefined} /></section>}
       </div>
     </main>
   );
@@ -266,3 +300,18 @@ export default function ItineraryPage() {
 
 const Back = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>;
 const Chev = () => <svg className="mf-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>;
+const X = () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>;
+
+/** A place tapped on the map goes where it makes the shortest detour (never before the first stop
+ *  of a round trip's way out, never after its way home). */
+function bestSlot(stops: ItineraryStop[], lat: number, lon: number): number {
+  if (!stops.length) return 0;
+  const d = (a: ItineraryStop, la: number, lo: number) => km(a.latitude, a.longitude, la, lo);
+  const ring = stops.length > 1 && stops[0].place === stops[stops.length - 1].place;
+  let best = ring ? stops.length - 1 : stops.length, cost = ring ? Infinity : d(stops[stops.length - 1], lat, lon);
+  for (let i = 1; i < stops.length; i++) {
+    const c = d(stops[i - 1], lat, lon) + d(stops[i], lat, lon) - d(stops[i - 1], stops[i].latitude, stops[i].longitude);
+    if (c < cost) { cost = c; best = i; }
+  }
+  return best;
+}

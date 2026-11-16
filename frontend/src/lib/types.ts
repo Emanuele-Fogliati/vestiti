@@ -644,6 +644,8 @@ export interface ItineraryDay {
 }
 
 export interface ItineraryStop extends Omit<Stop, "plan"> {
+  /** the globe place id: what the traveller edits */
+  place?: string | null;
   plan: string[];
   days: ItineraryDay[];
   do: string[];

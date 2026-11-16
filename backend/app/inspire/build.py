@@ -35,11 +35,15 @@ ELEVATION = {
 COORDS = {"cl-torres-del-paine-national-park": (-50.96, -72.87)}
 
 
-def height(p: dict) -> int:
+def height(p: dict, strict: bool = True) -> int:
+    """strict (the built library): every stop's height written down; a stop the traveller added
+    takes the place search's (globe.elevation)."""
     if p["id"] in ELEVATION:
         return ELEVATION[p["id"]]
     known = globe._route_elevations().get(p["id"])
     if known is None:
+        if not strict:
+            return round(globe.elevation(p))
         raise ValueError(f"no height for {p['id']}: add it to ELEVATION")
     return round(known)
 
@@ -104,7 +108,7 @@ def day_plan(day: dict, items: dict, also: list[str]) -> dict:
     return out
 
 
-def build(t: ready.ReadyTrip) -> dict:
+def build(t: ready.ReadyTrip, strict: bool = True) -> dict:
     P = globe.by_id()
     stops = [{**explore._stop_of_base({**P[s.place], "sights": []}, s.nights),
               "key": s.place if all(x.place != s.place for x in t.stops[:i]) else f"{s.place}~back"}
@@ -137,10 +141,10 @@ def build(t: ready.ReadyTrip) -> dict:
                 q = (it.sights[0] if it.sights else it.name)[:110]
                 exc.append({"title": it.name, "query": q})
         out.append({
-            "name": p["name"], "country_code": p["country"],
+            "place": p["id"], "name": p["name"], "country_code": p["country"],
             "lat": round(COORDS.get(p["id"], (p["lat"], p["lon"]))[0], 4),
             "lon": round(COORDS.get(p["id"], (p["lat"], p["lon"]))[1], 4),
-            "elevation_m": height(p), "days": s["days"],
+            "elevation_m": height(p, strict), "days": s["days"],
             "activities": acts_of(planned),
             "visits": visits,
             "plan": [line(d, items, t.months, i == 0, s.get("also") or []) for d in s["plan"]],
@@ -264,3 +268,22 @@ def fitted(journey: str, days: int, month: int) -> ready.ReadyTrip | None:
     return base.model_copy(update={
         "id": base.id, "title": f"{name} in {got} days",
         "stops": [ready.ReadyStop(place=s[0], nights=s[1]) for s in stops]})
+
+
+# ------------------------------------------------------------- the traveller's own changes
+
+MAX_STOPS = 15
+
+
+def edited(base: ready.ReadyTrip, stops: list[tuple[str, int]]) -> ready.ReadyTrip | None:
+    """The route with the traveller's stops and nights (Manu, 2026-11-16: "da qui stesso posso
+    direttamente editare il viaggio"): any place of the globe, 1 to 10 nights each, 3 to 35 days
+    in all. None when a place is unknown or the numbers are out of range."""
+    P = globe.by_id()
+    if not 1 <= len(stops) <= MAX_STOPS or any(p not in P or not 1 <= n <= 10 for p, n in stops):
+        return None
+    total = sum(n for _, n in stops)
+    if not MIN_DAYS <= total <= MAX_DAYS:
+        return None
+    return base.model_copy(update={"title": f"{_journey_name(base.journey)} in {total} days" if base.journey else base.title,
+                                   "stops": [ready.ReadyStop(place=p, nights=n) for p, n in stops]})

@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from "react";
-import { Link } from "react-router-dom";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { blocked, blocksOf, move, place, remove, resize, type Block } from "../lib/board";
@@ -12,6 +11,7 @@ import { Illustration } from "./Illustration";
 import { TripMap } from "./Maps";
 import { legShort } from "./Board";
 import { LegIcon } from "./StopPanel";
+import { PlacePop } from "./PlacePop";
 
 /** The trip page, map first (Manu 2026-11-15, "la mappa prima di tutto"): the map fills the screen;
  *  on the left the stops as rows with the drawing of each place and black icons of the pieces still
@@ -70,7 +70,6 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
   // stop needs is in the bar below, the same everywhere: icons of it on each row say nothing)
   const everywhere = (l: KitLine) => stops.length > 1 && (l.where ?? []).every((u) => u !== "none");
   const getAt = (i: number) => toGet.filter((l) => at(l, i) && !everywhere(l)).slice(0, 4);
-  const wearAt = (i: number) => lines.filter((l) => l.kind !== "none" && at(l, i));
 
   // ---- the weather of each stop, over its pin
   const wx = (i: number) => {
@@ -172,10 +171,17 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
   }
 
   const openStop = (i: number | null) => setSel(i === sel ? null : i);
-  const s = sel != null ? stops[sel] : null;
   const total = totalOf(picks);
   const cur = picks[0]?.item.currency ?? plans?.currency;
-  const inset = desk ? { top: 20, right: 70, bottom: 150, left: s ? 860 : 470 } : undefined;
+  // no card beside the panel for a stop (Manu 2026-11-16: "non voglio il pop-up sulla destra"):
+  // a stop picked flies the map to it; only a place tapped on the map opens one, to add it
+  const inset = desk ? { top: 20, right: 70, bottom: 150, left: offer ? 860 : 470 } : undefined;
+  const slot = offer ? bestSlot(offer.lat, offer.lon) : 0;
+  const tapped = (p: GlobePlace) => {
+    const i = stops.findIndex((x) => x.name === p.name || km(x.latitude, x.longitude, p.lat, p.lon) < 2);
+    if (i >= 0) { setOffer(null); setSel(i); } else setOffer(p);
+  };
+  const addOffer = () => offer && add({ name: offer.name, country_code: offer.country, latitude: offer.lat, longitude: offer.lon, elevation_m: 0 }, slot);
 
   const rows = (
     <ol className={`mf-stops${busy ? " busy" : ""}`} aria-label="Stops">
@@ -211,7 +217,6 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
                 <button type="button" className="mf-ib" onClick={() => drop(i)} aria-label={`Remove ${st.name}`}><X /></button>
               </span>
             </div>
-            {open && !desk && <div className="mf-inline">{card(i, false)}</div>}
             {leg && (
               <div className="mf-leg">
                 <LegIcon mode={legMode(leg)} />
@@ -225,43 +230,14 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
     </ol>
   );
 
-  function card(i: number, floating: boolean) {
-    const st = stops[i], b = bstops[i], w = wx(i), wear = wearAt(i);
-    const month = st ? new Date(st.start_date + "T12:00:00Z").toLocaleString("en", { month: "long", timeZone: "UTC" }) : "";
-    return (
-      <div className={floating ? "mf-float mf-card" : "mf-card in"} key={st.id}>
-        {floating && <button type="button" className="mf-x" onClick={() => setSel(null)} aria-label="Close"><X /></button>}
-        {floating && st.art && <div className="mf-art"><Illustration art={st.art} /></div>}
-        <div className="mf-card-in">
-          {floating && <div>
-            <span className="mf-k">Stop {i + 1} · {b ? `${dayMonth(b.start_date)} – ${dayMonth(b.end_date)} · ${b.days} ${b.days === 1 ? "day" : "days"}` : ""}</span>
-            <h3>{st.name}</h3>
-          </div>}
-          {w && <span className="mf-k">{w.lo}–{w.hi}° in {month}{w.wet ? ` · rain on ${w.wet} of ${w.n} days` : " · mostly dry"}</span>}
-          <b className="mf-sub">What you wear here</b>
-          {wear.length ? <ul className="mf-wear">{wear.map((l) => <WearRow key={l.slot} l={l} />)}</ul>
-            : <p className="mf-k">{plans ? "Nothing special here." : "Working out the clothes…"}</p>}
-          {b?.trails && b.trails.length > 0 && (
-            <>
-              <b className="mf-sub">Walks from here</b>
-              <ul className="mf-treks">
-                {b.trails.slice(0, 3).map((t) => <li key={t.id}><Link to={`/trails/${t.id}`}>{t.name}</Link><span>{t.difficulty} · {t.km ? `${Math.round(t.km)} km` : `${t.days} d`}</span></li>)}
-              </ul>
-            </>
-          )}
-        </div>
-      </div>
-    );
-  }
-
   const addField = <AddField inputRef={addRef} countries={trip.countries} first={firstAdd} focus={!stops.length} label={insAt != null ? `Add a stop after ${stops[insAt - 1]?.name ?? "the start"}` : stops.length ? "Add a stop" : "Where do you start?"}
     onPick={(p) => add(p, insAt)} onCancel={insAt != null ? () => setInsAt(null) : undefined} />;
 
   return (
-    <div className={`mf${s ? " has-card" : ""}${content ? " has-wide" : ""}`}>
+    <div className={`mf${offer ? " has-card" : ""}${content ? " has-wide" : ""}`}>
       <div className="mf-map">
         <TripMap stops={stops} focusIndex={sel} bare inset={inset} tags={tags} onPin={(i) => setSel(i)}
-          onPlace={(p) => setOffer(p)} />
+          onPlace={tapped} />
         {desk && <span className="mf-mapnote">Tap a place on the map to add it</span>}
       </div>
 
@@ -270,15 +246,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
         <div className="mf-tabs">{tabs}</div>
         {content && !desk ? <div className="mf-tabbody">{content}</div> : <>
         {msg && <p className={`mf-msg${msg.bad ? " bad" : ""}`} role="status">{msg.text}</p>}
-        {offer && (
-          <div className="mf-offer">
-            {offer.art && <span className="mf-thumb"><Illustration art={{ kind: "landmark", id: offer.art, label: offer.name }} /></span>}
-            <span className="mf-nm"><b>{offer.name}</b><small>goes in as stop {bestSlot(offer.lat, offer.lon) + 1}, the shortest detour</small></span>
-            <button type="button" className="mf-btn go sm" disabled={busy}
-              onClick={() => add({ name: offer.name, country_code: offer.country, latitude: offer.lat, longitude: offer.lon, elevation_m: 0 }, bestSlot(offer.lat, offer.lon))}>Add</button>
-            <button type="button" className="mf-ib" onClick={() => setOffer(null)} aria-label="Not now"><X /></button>
-          </div>
-        )}
+        {offer && !desk && <PlacePop place={offer} slot={slot} busy={busy} floating={false} onAdd={addOffer} onClose={() => setOffer(null)} />}
         {!desk && picks.length > 0 && (
           <div className="mf-phone-buy">
             <div className="mf-k">To get for this trip · {money(total, cur)}</div>
@@ -303,28 +271,12 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
       </section>
 
       {desk && content && <section className="mf-float mf-wide">{content}</section>}
-      {desk && !content && sel != null && stops[sel] && card(sel, true)}
+      {desk && !content && offer && <PlacePop place={offer} slot={slot} busy={busy} floating onAdd={addOffer} onClose={() => setOffer(null)} />}
       {desk && !content && stops.length > 0 && (
         <BuyBar title="To get for this trip" sub={tp ? `${picks.length} of ${lines.filter((l) => l.kind !== "none").length} pieces, picked for the weather on the map` : "Working out the clothes…"}
           picks={picks} tripId={trip.id} tier={tier} onPick={pick} onBuy={onBag} buyLabel="Buy" />
       )}
     </div>
-  );
-}
-
-function WearRow({ l }: { l: KitLine }) {
-  const own = l.kind === "owned" || l.kind === "have";
-  const it = l.item;
-  return (
-    <li className={own ? "" : "get"}>
-      <Garment slot={l.slot} />
-      <span className="mf-nm"><span>{l.slot_name}</span>
-        <small>{own ? (l.kind === "have" && l.assumed ? "most people have one" : "in your closet") : l.kind === "rent" && l.rental ? `rent · ${l.rental.partner}` : it ? `${it.brand} ${it.name}` : "to get"}</small>
-      </span>
-      {own ? <span className="mf-tag ok">{l.kind === "have" && l.assumed ? "Have one?" : "You have it"}</span>
-        : it?.image_url ? <img src={it.image_url} alt="" loading="lazy" referrerPolicy="no-referrer" /> : null}
-      {!own && <span className="mf-pr">{l.cost ? money(l.cost, it?.currency) : ""}</span>}
-    </li>
   );
 }
 
