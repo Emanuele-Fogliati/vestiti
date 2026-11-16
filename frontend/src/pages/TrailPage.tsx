@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
-import { BagIcon, BuyBar, KitSheet, ProductRow, totalOf, type BuyPick } from "../components/BuyBar";
+import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { BagIcon, KitSheet, ProductRow, totalOf, type BuyPick } from "../components/BuyBar";
 import { Garment } from "../components/Garment";
 import { Illustration } from "../components/Illustration";
 import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
@@ -9,7 +9,7 @@ import TrailProfile from "../components/TrailProfile";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, money } from "../lib/format";
-import type { Activity, Item, Trail, TrailWear } from "../lib/types";
+import type { Activity, Item, Trail, TrailWear, TripSummary } from "../lib/types";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const FOOT: Record<string, string> = {
@@ -89,7 +89,10 @@ export default function TrailPage() {
     <div className="mf-trailhead">
       <Link className="mf-k mf-crumb" to={`/trails?country=${t.country}&t=${t.id}`}><Back /> Walks · {t.region || t.base}</Link>
       <div className="mf-th1"><h1>{t.name}</h1>
-        <button type="button" className={`mf-btn sm x-save${saved ? " on" : ""}`} aria-pressed={saved} onClick={toggleSave}>{saved ? "✓ Saved" : "Save"}</button></div>
+        <span className="mf-th-acts">
+          {!(tripId && stopId) && <AddWalk t={t} month={month} />}
+          <button type="button" className={`mf-btn sm x-save${saved ? " on" : ""}`} aria-pressed={saved} onClick={toggleSave}>{saved ? "✓ Saved" : "Save"}</button>
+        </span></div>
       <div className="tags">
         <span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
         {t.kind === "multiday" && <span className="tag">{t.days} days</span>}
@@ -134,6 +137,9 @@ export default function TrailPage() {
                 );
               })}
             </ul>
+            {desk && picks.length > 0 && (
+              <button type="button" className="mf-btn go wide mf-twear-buy" onClick={() => setBuyOpen(true)}>
+                <BagIcon />Buy the {picks.length} · {money(totalOf(picks), cur)}</button>)}
           </>
         )}
       </div>
@@ -227,9 +233,8 @@ export default function TrailPage() {
           )}
         </section>
 
+        {/* one block of clothes (flow audit, Manu 2026-11-16): the card, no second bar under it */}
         {desk && wear}
-        {desk && <BuyBar title="To get for this walk" sub={`in ${MONTHS[month - 1]}`} picks={picks} onPick={pick}
-          onBuy={() => setBuyOpen(true)} empty={w ? "Nothing special to wear on it." : "Working out the kit…"} />}
       </div>
       <KitSheet open={buyOpen} onClose={() => setBuyOpen(false)} title={`Your kit for ${t.name}`} picks={picks} />
     </main>
@@ -239,6 +244,64 @@ export default function TrailPage() {
 const Back = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>;
 
 /** "I'll do it": the trail becomes one of this stop's activities, so the trip's kit dresses you for it. */
+/** "Add to my trip" (flow audit, Manu 2026-11-16): a trip shows the walks from its stops, and now a walk
+ *  goes into a trip too: one of yours, after its last stop, or a new trip. The stop carries the walk, so
+ *  the bag follows it. */
+function AddWalk({ t, month }: { t: Trail; month: number }) {
+  const nav = useNavigate();
+  const { user, ensureUser } = useApp();
+  const [open, setOpen] = useState(false);
+  const [trips, setTrips] = useState<TripSummary[] | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState<string | null>(null);
+  useEffect(() => {
+    if (!open || trips) return;
+    if (!user) { setTrips([]); return; }
+    api.trips().then((x) => setTrips(x.filter((y) => y.saved))).catch(() => setTrips([]));
+  }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
+  const p0 = t.points[0];
+  const stop = (from: Date) => {
+    const end = new Date(from); end.setDate(end.getDate() + Math.max(1, t.days) - 1);
+    const iso = (d: Date) => d.toISOString().slice(0, 10);
+    return { name: t.base || p0.name, country_code: t.country, latitude: p0.lat, longitude: p0.lon, elevation_m: p0.ele ?? 0,
+      start_date: iso(from), end_date: iso(end), activities: [t.activity], notes: null };
+  };
+  async function into(id: string | null) {
+    setBusy(true); setErr(null);
+    try {
+      await ensureUser();
+      if (id) {
+        const trip = await api.trip(id);
+        const last = trip.stops.reduce((m, s) => (s.end_date > m ? s.end_date : m), "");
+        const from = last ? new Date(`${last}T00:00:00`) : new Date();
+        from.setDate(from.getDate() + 1);
+        await api.addStop(id, stop(from));
+        nav(`/trips/${id}`);
+      } else {
+        const now = new Date();
+        const from = new Date(now.getFullYear() + (month < now.getMonth() + 1 ? 1 : 0), month - 1, month === now.getMonth() + 1 ? now.getDate() + 7 : 1);
+        const trip = await api.createTrip(t.name, [stop(from)], true, [t.country]);
+        await api.patchTrip(trip.id, { saved: true });
+        nav(`/trips/${trip.id}`);
+      }
+    } catch (e) { setErr((e as Error).message); setBusy(false); }
+  }
+  return (
+    <span className="mf-addwalk">
+      <button type="button" className="mf-btn sm go" aria-expanded={open} onClick={() => setOpen(!open)}>Add to my trip</button>
+      {open && (
+        <span className="x-menu" role="menu">
+          {trips === null ? <span className="spin" /> : trips.map((x) => (
+            <button key={x.id} type="button" role="menuitem" disabled={busy} onClick={() => into(x.id)}>{x.name}</button>
+          ))}
+          <button type="button" role="menuitem" disabled={busy} onClick={() => into(null)}>+ New trip</button>
+          {err && <span className="err">{err}</span>}
+        </span>
+      )}
+    </span>
+  );
+}
+
 function AddToTrip({ t, tripId, stopId }: { t: Trail; tripId: string; stopId: string }) {
   const [state, setState] = useState<"idle" | "busy" | "done" | "had">("idle");
   const [err, setErr] = useState<string | null>(null);

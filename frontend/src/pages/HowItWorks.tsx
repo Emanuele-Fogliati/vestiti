@@ -16,60 +16,32 @@ export default function HowItWorks() {
           </div>
           <p className="mf-k">{config?.disclosure ?? "The app is free. Shop links may earn a commission."} <Link to="/legal/affiliate">Read the disclosure</Link>.</p>
         </header>
+        {/* three steps, the maths folded away (flow audit, Manu 2026-11-16: fewer words) */}
         <div className="how-cards">
-        <section className="how-card">
-
-        <h2>Your trip, stage by stage</h2>
-        <p>Each stop has dates, an elevation and activities. If you don't know how hard a day will be, pick "don't know yet":
-          we plan for both the easy and the hard version, so the kit covers both.</p>
-
-        </section>
-        <section className="how-card">
-        <h2>Weather and climate</h2>
-        <p>Up to about two weeks out we use the forecast. Further out we use the climate of the same days over the last five years
-          (average, cold nights, how often it rains). Past dates use observed weather. Temperatures are corrected for altitude
-          (−6.5 °C per 1000 m) and wind gets stronger with height. Data: Open-Meteo.</p>
-
-        </section>
-        <section className="how-card">
-        <h2>The layer strategy</h2>
-        <p>For each layer slot (shell, insulation, fleece, base layer, legs, head, hands, feet) we decide whether it is worn,
-          carried in the pack for stops, or not needed. The rule is: the lightest kit that closes the gap. Hats and gloves only
-          show up when it's actually cold (feels like 10 °C or less).</p>
-        <p>Click any "why" in the plan to see the numbers behind a decision. If the kit is short, we show the cheapest single
-          upgrade that fixes it.</p>
-
-        </section>
-        <section className="how-card">
-        <h2>How much insulation you need (clo)</h2>
-        <p>"Clo" is the standard unit of clothing insulation: 1 clo is roughly a business suit. For every stage we compute how much
-          clo keeps you comfortable, both while moving and while stopped, from:</p>
-        <ul>
-          <li>air temperature and wind (the faster the air, the thinner the still-air layer around you),</li>
-          <li>how hard you work (city walk, easy hike, technical climb...),</li>
-          <li>short stops (a 10-minute break is not a night outside),</li>
-          <li>your profile: "I run cold / warm" shifts everything by up to ±0.3 clo.</li>
-        </ul>
-        <p>Then we add up your layers. Layers don't simply sum: we use a standard ensemble formula (0.835 × sum + 0.16).
-          Without a windproof layer wind costs about 15% of your warmth; without a waterproof layer rain costs about 30%,
-          and wet down loses about 45%.</p>
-
-        </section>
-        <section className="how-card">
-        <h2>Products, tiers and your own clothes</h2>
-        <p>Every product gets 1 to 5 stars for how well it fits the job: warmth, waterproofing, weight, ankle support.
-          A product that fails a hard requirement (e.g. a "water-resistant" jacket where you need a waterproof one) gets at most
-          2 stars. Your wardrobe is used first, at zero cost, in all three tiers, and we say so when what you own is fine.</p>
-        <p>Product specs from shop feeds are partly extracted automatically and marked as estimates. Prices change: the shop's
-          price is the one that counts.</p>
-
-        </section>
-        <section className="how-card">
-        <h2>Where AI is used, and where it isn't</h2>
-        <p>The plan itself (warmth, layers, products, prices) is computed by fixed rules, the same every time. A local AI model is
-          only used to read a trip you describe in your own words, to explain a plan in plain language and to answer questions.
-          If the AI is off, everything still works.</p>
-        </section>
+          <ol className="how-steps">
+            <li className="how-card"><span className="how-n">1</span><h2>Pick a place</h2>
+              <p>A recommended trip, a walk, or your own stops on the map.</p></li>
+            <li className="how-card"><span className="how-n">2</span><h2>We read the weather</h2>
+              <p>Every stop, every day: cold, wind, rain and altitude. The coldest hour sets the bag.</p></li>
+            <li className="how-card"><span className="how-n">3</span><h2>One bag for the trip</h2>
+              <p>The lightest layers that keep you warm everywhere. What you own first, then what to get.</p></li>
+          </ol>
+          <details className="how-card how-more">
+            <summary>The details</summary>
+            <h3>Weather and climate</h3>
+            <p>Up to about two weeks out we use the forecast; further out, the climate of the same days over the last five years.
+              Temperatures are corrected for altitude (−6.5 °C per 1000 m). Data: Open-Meteo.</p>
+            <h3>How much warmth you need</h3>
+            <p>For every stop we compute the insulation (in clo: 1 clo is roughly a business suit) that keeps you comfortable while
+              moving and while stopped, from temperature, wind, how hard you work and whether you run cold. Layers add up with a
+              standard formula (0.835 × sum + 0.16); no windproof layer costs about 15% of your warmth, no waterproof one about 30%.</p>
+            <h3>Products and your own clothes</h3>
+            <p>Every product gets 1 to 5 stars for the job; one that fails a hard need (water-resistant where you need waterproof)
+              gets at most 2. Your own clothes are used first, at zero cost. The shop's price is the one that counts.</p>
+            <h3>Where AI is used</h3>
+            <p>The plan is computed by fixed rules, the same every time. A local AI model only reads your clothes from photos and
+              answers questions about a plan. If it is off, everything still works.</p>
+          </details>
         </div>
       </div>
     </main>

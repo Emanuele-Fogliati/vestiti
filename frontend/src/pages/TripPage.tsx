@@ -2,29 +2,26 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useItineraries } from "../components/ItineraryCards";
 import { Kit } from "../components/Kit";
-import { LayerStrategy } from "../components/LayerStrategy";
-import { EstimateForm } from "../components/Estimate";
+import { FitCard } from "../components/FitCard";
 import { PlanChange } from "../components/PlanChange";
-import { ProfileQuiz } from "../components/ProfileQuiz";
 import { TailorChat } from "../components/TailorChat";
-import { TripBoard } from "../components/Board";
-import { FlightsPlanner } from "../components/Flights";
 import { TripStudio } from "../components/TripStudio";
 import { Sheet } from "../components/Sheet";
-import { WeatherTab } from "../components/WeatherTab";
+import { Coldest, WeatherTab } from "../components/WeatherTab";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { dayMonth, daysBetween } from "../lib/format";
 import type { Plans, QuizResult, Strategy, Tier, Trip } from "../lib/types";
 
-type Tab = "trip" | "weather" | "bag";
+// two tabs (flow audit, Manu 2026-11-16): the places, and the bag. The weather lives in the bag,
+// as the reason for it; the map already shows each stop's temperatures.
+type Tab = "trip" | "bag";
 const TABS: { id: Tab; label: string; icon: string }[] = [
   { id: "trip", label: "Plan", icon: "M3 18l5-9 4 6 3-4 6 7" },
-  { id: "weather", label: "Weather", icon: "M3 9h11a3 3 0 1 0-3-3M3 14h15a3 3 0 1 1-3 3M3 19h6" },
   { id: "bag", label: "Bag", icon: "M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zM9 7V5a3 3 0 0 1 6 0v2" },
 ];
 // old section anchors still land in the right tab
-const HASH: Record<string, Tab> = { trip: "trip", days: "trip", flights: "trip", map: "trip", weather: "weather", layers: "bag", bag: "bag", kit: "bag", total: "bag", ask: "trip" };
+const HASH: Record<string, Tab> = { trip: "trip", days: "trip", flights: "trip", map: "trip", weather: "bag", layers: "bag", bag: "bag", kit: "bag", total: "bag", ask: "trip" };
 
 function TabIcon({ d }: { d: string }) {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>;
@@ -35,7 +32,6 @@ export default function TripPage() {
   const nav = useNavigate();
   const loc = useLocation();
   const { toast, user, refreshUser } = useApp();
-  const [quizOpen, setQuizOpen] = useState(false);
   const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
   const [trip, setTrip] = useState<Trip | null>(null);
   const [strategy, setStrategy] = useState<Strategy | null>(null);
@@ -46,10 +42,9 @@ export default function TripPage() {
   const [planning, setPlanning] = useState(false);
   const [tab, setTab] = useState<Tab>(HASH[loc.hash.slice(1)] ?? "trip");
   const [, setVer] = useState(0);
-  const [boardOpen, setBoardOpen] = useState(false);
   const [askOpen, setAskOpen] = useState(loc.hash === "#ask");
   const [askText, setAskText] = useState("");
-  const [flightsOpen, setFlightsOpen] = useState(loc.hash === "#flights");
+  const [dateOpen, setDateOpen] = useState(false);
   const [menu, setMenu] = useState(false);
   const tabsRef = useRef<HTMLElement>(null);
   const pillRef = useRef<HTMLSpanElement>(null);
@@ -85,10 +80,19 @@ export default function TripPage() {
     return () => { document.removeEventListener("pointerdown", shut); document.removeEventListener("keydown", esc); };
   }, [menu]);
 
-  // the quiz comes before the plan, once per traveller (answered or skipped)
-  useEffect(() => {
-    if (tab === "bag" && trip && trip.stops.length && user && !user.profile_done_at) setQuizOpen(true);
-  }, [trip, user, tab]);
+  // a trip you change is a trip you want: it goes into Trips on its own (flow audit, Manu
+  // 2026-11-16: an unsaved trip used to vanish when you left). Save stays, to name it.
+  const tripRef = useRef<Trip | null>(null);
+  tripRef.current = trip;
+  const keep = useCallback(async () => {
+    const t = tripRef.current;
+    if (!t || t.saved) return;
+    const st = [...t.stops].sort((a, b) => a.position - b.position);
+    const name = t.name === "New trip" && st.length ? (st.length > 1 ? `${st[0].name} to ${st[st.length - 1].name}` : st[0].name) : undefined;
+    try { setTrip(await api.patchTrip(t.id, { saved: true, ...(name ? { name } : {}) })); } catch { /* it stays a draft */ }
+  }, []);
+  const edited = useCallback(async () => { await loadAll(); keep(); }, [loadAll, keep]);
+  const picked = useCallback(() => { loadPlans(tier); keep(); }, [loadPlans, tier, keep]);
 
   useEffect(() => {
     const t = HASH[loc.hash.slice(1)];
@@ -125,7 +129,6 @@ export default function TripPage() {
   }
 
   async function quizDone(r: QuizResult) {
-    setQuizOpen(false);
     setQuizResult(r.changes.length ? r : null);
     await refreshUser();
     if (trip?.stops.length) loadPlans(tier);
@@ -144,7 +147,7 @@ export default function TripPage() {
   const stops = useMemo(() => (trip ? [...trip.stops].sort((a, b) => a.position - b.position) : []), [trip]);
   const t0 = stops.length ? stops.reduce((m, s) => (s.start_date < m ? s.start_date : m), stops[0].start_date) : null;
 
-  if (err && !trip) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips?tab=saved">Back to my trips</Link></div></main>;
+  if (err && !trip) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips">Back to my trips</Link></div></main>;
   if (!trip) return <main className="page"><p className="loading"><span className="spin" /> Loading trip</p></main>;
 
   async function toggleSave() {
@@ -166,6 +169,11 @@ export default function TripPage() {
   const totalDays = t0 && tEnd ? daysBetween(t0, tEnd) + 1 : 0;
   const source = trip.source_itinerary ? itineraries?.find((it) => it.slug === trip.source_itinerary) : undefined;
   const estimateWeather = strategy?.stages.some((s) => s.weather_sources.includes("estimate"));
+  async function setStart(v: string) {
+    if (!v) return;
+    try { setTrip(await api.setDates(id, { start_date: v })); setDateOpen(false); toast("Dates updated."); loadPlans(tier); keep(); }
+    catch (e) { toast((e as Error).message); }
+  }
   const sel = stageIdx < 0 ? -1 : Math.min(stageIdx, Math.max(0, stops.length - 1));
 
   const sheets = (
@@ -177,31 +185,28 @@ export default function TripPage() {
       <Sheet open={askOpen} onClose={() => setAskOpen(false)} title="Tell us, or ask">
         <TailorChat tripId={id} tier={tier} onChanged={profileChanged} initial={askText} key={askText} />
       </Sheet>
-      <Sheet open={flightsOpen} onClose={() => setFlightsOpen(false)} title="Flights" wide>
-        <FlightsPlanner trip={trip} onChanged={loadAll} />
-      </Sheet>
-      {quizOpen && <ProfileQuiz tripId={id} tier={tier} onDone={quizDone} />}
     </>
   );
   const metaTitle = (
     <>
               <p className="x-meta">
-                {t0 && tEnd ? <><b>{trip.estimate ? "≈ " : ""}{dayMonth(t0)} – {dayMonth(tEnd)}</b><span>{totalDays} days</span><span>{stops.length} {stops.length === 1 ? "place" : "places"}</span></> : <span>No places yet</span>}
+                {/* the one place to say when you leave (flow audit, Manu 2026-11-16); a guess until then */}
+                {t0 && tEnd ? <><button type="button" className="x-when" aria-expanded={dateOpen} onClick={() => setDateOpen(!dateOpen)}
+                  title={trip.estimate ? "A guess: set your date" : "Change the date"}><b>{trip.estimate ? "≈ " : ""}{dayMonth(t0)} – {dayMonth(tEnd)}</b></button>
+                  <span>{totalDays} days</span><span>{stops.length} {stops.length === 1 ? "place" : "places"}</span></> : <span>No places yet</span>}
                 {planning && <span className="spin" aria-label="Updating" />}
               </p>
+              {dateOpen && t0 && (
+                <p className="x-when-set"><label htmlFor="x-leave">Leaving</label>
+                  <input id="x-leave" type="date" defaultValue={trip.estimate?.start ? "" : t0} onChange={(e) => setStart(e.target.value)} /></p>
+              )}
               <h1><textarea key={trip.name} className="x-title" rows={1} ref={(el) => { if (el) { el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; } }} onInput={(e) => { const el = e.currentTarget; el.style.height = "auto"; el.style.height = `${el.scrollHeight}px`; }} defaultValue={trip.name} aria-label="Trip name" onBlur={(e) => rename(e.target.value.replace(/\s+/g, " ").trim())}
                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); (e.target as HTMLTextAreaElement).blur(); } }} /></h1>
     </>
   );
   const actions = (
             <div className="x-head-a">
-              {user && (
-                <button type="button" className="x-round" onClick={() => setQuizOpen(true)} aria-label={user.profile_done_at ? "About you: change" : "4 quick questions about you"} title="About you">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="8" r="4" /><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg>
-                  {!user.profile_done_at && <i className="x-dot" />}
-                </button>
-              )}
-              {/* kept in Trips > Saved only when you press Save (Manu 2026-11-16) */}
+              {/* goes into Trips on the first change, or when you press Save */}
               <button type="button" className={`mf-btn sm x-save${trip.saved ? " on" : ""}`} aria-pressed={!!trip.saved} onClick={toggleSave}>
                 {trip.saved ? <><Check /> Saved</> : "Save"}
               </button>
@@ -212,7 +217,7 @@ export default function TripPage() {
                 {menu && (
                   <div className="x-menu" role="menu">
                     <button type="button" role="menuitem" onClick={async () => { setMenu(false); const c = await api.duplicateTrip(id); nav(`/trips/${c.id}`); }}>Duplicate</button>
-                    <button type="button" role="menuitem" className="danger" onClick={async () => { setMenu(false); if (window.confirm("Delete this trip?")) { await api.deleteTrip(id); nav("/trips?tab=saved"); } }}>Delete trip</button>
+                    <button type="button" role="menuitem" className="danger" onClick={async () => { setMenu(false); if (window.confirm("Delete this trip?")) { await api.deleteTrip(id); nav("/trips"); } }}>Delete trip</button>
                   </div>
                 )}
               </div>
@@ -248,32 +253,24 @@ export default function TripPage() {
 
   );
 
-  // the Plan tab is the map-first page: the header and the tabs move into its panel
-  const weatherBody = (
-    <div className="x-panel mf-tab" id="p-weather" role="tabpanel">
-      {estimateWeather && <p className="x-alert warn">The weather service could not be reached: some places use a rough estimate. Reload later.</p>}
-      {trip.estimate && t0 && (
-        <div className="x-alert">
-          <EstimateForm start={trip.estimate.start} days={trip.estimate.days} firstDay={t0} totalDays={totalDays}
-            onApply={async (v) => { try { setTrip(await api.setDates(id, { start_date: v.start, total_days: v.total })); toast("Dates updated."); loadPlans(tier); } catch (e) { toast((e as Error).message); } }}
-            onKeep={async () => { setTrip(await api.setDates(id, { confirm: true })); }} />
-        </div>
-      )}
-      {strategy && !strategy.empty ? <WeatherTab strategy={strategy} /> : <Empty planning={planning} onAdd={() => go("trip")} />}
-      {strategy && strategy.questions.length > 0 && (
-        <div className="x-qs">
-          <h2 className="x-h2">This would change the plan</h2>
-          <ul className="x-list">{strategy.questions.map((q, i) => <li key={i}>{q.question}</li>)}</ul>
-          <button type="button" className="x-link" onClick={() => setAskOpen(true)}>Answer in the chat</button>
-        </div>
-      )}
-    </div>
-  );
+  // the bag (flow audit, Manu 2026-11-16): the coldest hour it is sized for, two questions the
+  // first time, the suitcase, the list. The weather day by day is folded under the coldest hour.
   const bagBody = (
     <div className="x-panel mf-tab" id="p-bag" role="tabpanel">
-      {plans && !plans.empty ? <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={() => loadPlans(tier)}
-        layers={strategy && !strategy.empty ? <LayerStrategy tripId={id} strategy={strategy} tier={tier} stageIdx={Math.max(0, sel)} setStageIdx={setStageIdx} onChanged={() => loadPlans(tier)} /> : null} />
-        : <Empty planning={planning} onAdd={() => go("trip")} />}
+      {plans && !plans.empty ? <>
+        {user && !user.profile_done_at && <FitCard tripId={id} tier={tier} onDone={quizDone} />}
+        {strategy && !strategy.empty && (
+          <div className="x-cold-top">
+            <Coldest strategy={strategy} />
+            <details className="x-wx">
+              <summary>Weather, day by day</summary>
+              {estimateWeather && <p className="x-alert warn">The weather service could not be reached: some places use a rough estimate. Reload later.</p>}
+              <WeatherTab strategy={strategy} />
+            </details>
+          </div>
+        )}
+        <Kit tripId={id} plans={plans} tier={tier} setTier={changeTier} onChanged={picked} />
+      </> : <Empty planning={planning} onAdd={() => go("trip")} />}
     </div>
   );
 
@@ -282,14 +279,11 @@ export default function TripPage() {
   // every trip is the map-first page, an empty one too: you add its stops on the map (Manu 2026-11-16)
   return (
     <main className="x-trip x-trip-st">
-      <TripStudio content={tab === "weather" ? weatherBody : tab === "bag" ? bagBody : undefined} trip={trip} plans={plans} strategy={strategy} tier={tier} sel={stageIdx < 0 ? null : sel}
-        setSel={(i) => setStageIdx(i ?? -1)} onChanged={loadAll} onPlans={() => loadPlans(tier)}
+      <TripStudio content={tab === "bag" ? bagBody : undefined} trip={trip} plans={plans} strategy={strategy} tier={tier} sel={stageIdx < 0 ? null : sel}
+        setSel={(i) => setStageIdx(i ?? -1)} onChanged={edited} onPlans={picked}
         head={<><div className="mf-head-r">{metaTitle}{actions}</div>{below}</>} tabs={tabBar}
         onBag={() => go("bag")} onAsk={(t) => { setAskText(t ?? ""); setAskOpen(true); }}
-        onFlights={() => setFlightsOpen(true)} onBoard={() => setBoardOpen(true)} firstAdd={(loc.state as { add?: string } | null)?.add} />
-      <Sheet open={boardOpen} onClose={() => setBoardOpen(false)} title="Days, bookings and things to do" wide>
-        <TripBoard trip={trip} onChanged={loadAll} selected={Math.max(0, sel)} onSelect={setStageIdx} />
-      </Sheet>
+        firstAdd={(loc.state as { add?: string } | null)?.add} />
       {sheets}
     </main>
   );

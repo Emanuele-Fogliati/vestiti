@@ -1,0 +1,56 @@
+/* Flow audit (Manu 2026-11-16, option A "taglio netto"): the few new pieces after the cuts. Loaded last. */
+
+/* home: the whole month list, and a globe drawing's card that points to trips and walks */
+.home2-good.all{overflow-y:auto;max-height:46vh;padding-right:4px}
+button.doors-all{background:none;border:0;cursor:pointer;font:inherit;font-weight:600;padding:8px 4px}
+.pcard-go{display:grid;gap:6px;margin:10px 0 4px}
+.pcard-go .doors-row{padding:6px;border-radius:14px;background:var(--surface-2);display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--ink)}
+.pcard-go .doors-row .pic{width:56px;height:40px;border-radius:8px;overflow:hidden;flex:none}
+.pcard-go .doors-row .tx{display:grid;line-height:1.2}
+.pcard-go .doors-row small{color:var(--ink-2);font-size:12px}
+
+/* trip header: the dates are the one place to say when you leave */
+.x-when{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px}
+.x-when:hover,.x-when:focus-visible{text-decoration-style:solid}
+.x-when-set{display:flex;align-items:center;gap:8px;margin:4px 0 0;font-size:13px;grid-column:1/-1}
+.x-when-set input{height:34px;border-radius:10px;border:1px solid var(--line, #DEDCD3);padding:0 8px;font:inherit}
+
+/* bag: two questions the first time, the coldest hour, the weather folded */
+.x-fit{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;padding:12px 14px;border-radius:16px;background:var(--surface-2);margin:0 0 12px}
+.x-fit-q{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.x-fit-q b{font-size:14px}
+.x-fit-skip{margin-left:auto}
+.x-cold-top{margin:0 0 6px}
+.x-cold-line{display:flex;align-items:center;gap:14px}
+.x-cold-line .n{font:400 44px/1 var(--f-display, inherit);letter-spacing:-.04em;color:var(--data, #2F5BEA);flex:none}
+.x-cold-line .t{font-size:14px;color:var(--ink-2)}
+.x-cold-line .t b{color:var(--ink);margin-right:4px}
+.x-wx{margin:6px 0 0}
+.x-wx>summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-2);padding:4px 0}
+.x-wx[open]>summary{margin-bottom:8px}
+.x-fitnote{margin:4px 0 10px}
+
+/* walk page: the walk goes into a trip; the clothes card buys */
+.mf-th-acts{display:flex;gap:8px;align-items:flex-start;flex:none;margin-top:4px}
+.mf-th-acts .x-save{margin-top:0}
+.mf-addwalk{position:relative}
+.mf-addwalk .x-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:30;min-width:220px;display:grid}
+.mf-twear-buy{margin-top:10px}
+@media (min-width:900px){
+  .trailpage-mf .mf-twear{max-height:calc(100% - 40px)}
+  .mf-twear-buy{position:sticky;bottom:12px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+}
+
+/* closet: no tabs, one button to add, by hand only on request */
+.cl-addbtn{margin:4px 0 10px}
+.cl-back{margin:2px 0 8px;justify-self:start}
+.cl-byhand{margin-top:10px;font-size:13px}
+
+/* how it works: three steps, the details folded */
+.how-cards{columns:auto!important}
+.how-steps{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.how-steps .how-card{margin:0}
+.how-n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:999px;background:var(--ink,#1C1C1A);color:#FFFFFF;font-weight:700;margin-bottom:8px}
+.how-more>summary{cursor:pointer;font-weight:600}
+.how-more h3{font-size:15px;margin:12px 0 4px}
+@media (max-width:899px){.how-steps{grid-template-columns:1fr}}

@@ -18,7 +18,7 @@ import { PlacePop } from "./PlacePop";
  *  to get there; a stop opens its card beside the panel (weather, what you wear); at the bottom the
  *  pieces to get for the whole trip with Cheaper / Better and the total. On the phone: the map on
  *  top and the same content below it, each stop opening in place. */
-export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged, onPlans, head, tabs, onBag, onFlights, onBoard, content, firstAdd }: {
+export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged, onPlans, head, tabs, onBag, content, firstAdd }: {
   trip: Trip; plans: Plans | null; strategy: Strategy | null; tier: Tier;
   sel: number | null; setSel: (i: number | null) => void;
   /** the stops changed: reload the trip (and its kit) */
@@ -26,8 +26,6 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
   /** a product was picked: reload the kit only */
   onPlans: () => void;
   head: ReactNode; tabs: ReactNode; onBag: () => void; onAsk: (text?: string) => void;
-  /** the flights, and the full board (booked, fixed, the plan of each day), in sheets */
-  onFlights: () => void; onBoard: () => void;
   /** the Weather or Bag tab: shown in the big panel on the right (computer) or under the tabs (phone) */
   content?: ReactNode;
   /** a new trip: the first place to look up (typed on the home page) */
@@ -256,14 +254,10 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
         {!stops.length && <div className="mf-first-add">{addField}</div>}
         {stops.length ? <div className="mf-scroll">{rows}</div> : <p className="mf-k mf-first">Type a place, or tap one on the map.</p>}
         {stops.length > 0 && addField}
-        {stops.length > 0 && <div className="mf-more">
-          <button type="button" onClick={onFlights}><LegIcon mode="flight" />Flights</button>
-          <button type="button" onClick={onBoard}>Days & bookings</button>
-        </div>}
         {!desk && stops.length > 0 && (
           <div className="mf-phone-go">
             <button type="button" className="mf-btn go wide" onClick={onBag} disabled={!picks.length}>
-              <BagIcon />{picks.length ? `Buy the ${picks.length} pieces · ${money(total, cur)}` : "Your closet covers it"}
+              <BagIcon />{picks.length ? `See the bag · ${picks.length} to buy` : "Your closet covers it"}
             </button>
           </div>
         )}
@@ -274,7 +268,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
       {desk && !content && offer && <PlacePop place={offer} slot={slot} busy={busy} floating onAdd={addOffer} onClose={() => setOffer(null)} />}
       {desk && !content && stops.length > 0 && (
         <BuyBar title="To get for this trip" sub={tp ? `${picks.length} of ${lines.filter((l) => l.kind !== "none").length} pieces, picked for the weather on the map` : "Working out the clothes…"}
-          picks={picks} tripId={trip.id} tier={tier} onPick={pick} onBuy={onBag} buyLabel="Buy" />
+          picks={picks} tripId={trip.id} tier={tier} onPick={pick} onBuy={onBag} buyLabel="See the bag" empty={tp ? undefined : " "} />
       )}
     </div>
   );

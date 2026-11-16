@@ -64,7 +64,16 @@ def market_of(user: User | None) -> str:
     return m if m in MARKET_CURRENCY else "us"
 
 
+
+def cut_genders(pref: str | None) -> list[str]:
+    """The product cuts one bag may use. One cut per bag, never men's and women's mixed (flow audit,
+    Manu 2026-11-16): until the traveller says which, the bag uses the men's cut, and the Bag tab
+    asks first thing."""
+    return [pref if pref in ("men", "women") else "men", "unisex"]
+
+
 @dataclass
+
 class Computed:
     stages: list[StageInput]
     conds: list[Condition]
@@ -111,9 +120,7 @@ class Planner:
 
     def candidates(self, reqs) -> dict[str, list[O.CatalogItem]]:
         q = select(Product).where(Product.active.is_(True), Product.market == self.market)
-        pref = self.user.gender_pref or "any"
-        if pref in ("men", "women"):
-            q = q.where(Product.gender.in_([pref, "unisex"]))
+        q = q.where(Product.gender.in_(cut_genders(self.user.gender_pref)))
         items = [product_item(p) for p in self.db.scalars(q).all()]
         return O.group_by_slot(O.rate(reqs, items))
 

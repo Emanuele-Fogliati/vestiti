@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { Illustration } from "./Illustration";
 import type { GlobePlace, GlobeRoute } from "../lib/worldmap";
 import { KIND_LABEL, countriesLabel, countryName } from "../lib/worldmap";
@@ -9,7 +9,7 @@ const INSIDE_SHOWN = 8;
 /** What we know about one place on the map: its picture when we have drawn it, the places
  *  inside it (Florence: the Uffizi, Ponte Vecchio...), the routes that pass there (on the home
  *  globe) and, on the globe, a way to add it, or single places inside it, to your own trip. */
-export function PlaceCard({ place, routes, onRoute, onClose, onZoom, zoomLabel, inside = [], parent = null, onPlace, pickable = false }: {
+export function PlaceCard({ place, routes, onRoute, onClose, onZoom, zoomLabel, inside = [], parent = null, onPlace, pickable = false, extra }: {
   place: GlobePlace; routes?: GlobeRoute[]; onRoute?: (r: GlobeRoute) => void;
   onClose: () => void; onZoom?: () => void; zoomLabel?: string;
   /** The places inside this city, most visited first. */
@@ -17,8 +17,10 @@ export function PlaceCard({ place, routes, onRoute, onClose, onZoom, zoomLabel, 
   /** The city this place is inside. */
   parent?: GlobePlace | null;
   onPlace?: (p: GlobePlace) => void;
-  /** On the home globe: places can go into your own trip. */
+  /** Places can go into your own trip (off on the home since the flow audit, 2026-11-16). */
   pickable?: boolean;
+  /** what the page adds under the name: on the home, the trips through here and the walks around */
+  extra?: ReactNode;
 }) {
   const picks = usePicks();
   const [all, setAll] = useState(false);
@@ -36,6 +38,7 @@ export function PlaceCard({ place, routes, onRoute, onClose, onZoom, zoomLabel, 
             : country}
         </p>
         <h3>{place.name}</h3>
+        {extra}
         {pickable && (
           <div className="pcard-acts">
             <button type="button" className={`btn sm${picked ? " on" : " primary"}`} aria-pressed={picked}

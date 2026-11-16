@@ -329,7 +329,7 @@ def wear(trail_id: str, month: int = Query(..., ge=1, le=12), db: Session = Depe
     from app import models
     from app.engine import outfit as O
     from app.engine.garments import SLOT_BY_KEY
-    from app.services.planner import market_of, product_item
+    from app.services.planner import cut_genders, market_of, product_item
     from app.engine.strategy import StageInput, conditions_for_stage, requirements
     from app.weather.service import WeatherService
     t = _trail(trail_id)
@@ -347,9 +347,7 @@ def wear(trail_id: str, month: int = Query(..., ge=1, le=12), db: Session = Depe
     need = {k: r for k, r in reqs.items() if r.needed}
     q = select(models.Product).where(models.Product.active.is_(True), models.Product.market == market_of(user),
                                      models.Product.category.in_(list(need)))
-    pref = (user.gender_pref if user else None) or "any"
-    if pref in ("men", "women"):
-        q = q.where(models.Product.gender.in_([pref, "unisex"]))
+    q = q.where(models.Product.gender.in_(cut_genders(user.gender_pref if user else None)))
     cands = O.group_by_slot(O.rate(need, [product_item(p) for p in db.scalars(q).all()]))
     pieces = []
     for slot, r in reqs.items():

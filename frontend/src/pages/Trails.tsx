@@ -109,7 +109,10 @@ export default function Trails() {
     if (find.length < 3 || !all) return null;
     if (all.some((t) => countryName(t.country).toLowerCase() === find || t.country.toLowerCase() === find)) return null;
     const byName = all.filter((t) => t.lat != null && t.lon != null && nameHit(t));
-    if (byName.length && byName.length <= 8) return { lat: byName[0].lat!, lon: byName[0].lon!, name: byName[0].name, trail: byName.length === 1 ? byName[0].id : null };
+    // many walks have the words in their name ("inca"): those walks are the answer, not a town that
+    // happens to be called that (Inca, Mallorca)
+    if (byName.length > 8) return null;
+    if (byName.length) return { lat: byName[0].lat!, lon: byName[0].lon!, name: byName[0].name, trail: byName.length === 1 ? byName[0].id : null };
     if (geo && geo.q === find) return { lat: geo.lat, lon: geo.lon, name: geo.name.toLowerCase() === find ? typed.trim() : geo.name, trail: null };
     const named = all.filter((t) => t.lat != null && t.lon != null && textHit(t));
     if (!named.length || named.length > 8) return null;
@@ -137,11 +140,14 @@ export default function Trails() {
     return `${d < 1 ? "Under 1" : d < 10 ? d.toFixed(1) : Math.round(d)} km away · `;
   };
 
+  const nowMonth = month ?? new Date().getMonth() + 1;
+  const inSeason = (t: TrailCard) => t.in_season ?? (!t.months.length || t.months.includes(nowMonth));
   const found = useMemo(() => base.filter((t) => textHit(t) || away(t) <= km)
-    // the hike you named first, then the nearest; else in season first, then the famous ones (with a drawing)
+    // the hike you named first, then the nearest; else (Manu 2026-11-16, flow audit) the famous ones in
+    // season this month first: those of the recommended trips, then the big names, then with a drawing
     .sort((a, b) => Number(nameHit(b)) - Number(nameHit(a)) || (zone ? Math.min(away(a), 1e6) - Math.min(away(b), 1e6) : 0)
-      || Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
-      || Number(b.tier === "A") - Number(a.tier === "A")), [base, find, zone, km, paths]); // eslint-disable-line react-hooks/exhaustive-deps
+      || Number(inSeason(b)) - Number(inSeason(a)) || Number(!!b.featured) - Number(!!a.featured)
+      || Number(b.tier === "A") - Number(a.tier === "A") || Number(!!b.art) - Number(!!a.art)), [base, find, zone, km, paths]); // eslint-disable-line react-hooks/exhaustive-deps
   const shown = savedTab ? savedCards : found;
   // one hike matches the name: it opens (card, what to wear) once you stop typing
   useEffect(() => {
