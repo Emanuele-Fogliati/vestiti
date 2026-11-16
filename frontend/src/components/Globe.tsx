@@ -122,9 +122,7 @@ interface Scene {
  *  instead of showing the whole world (Manu 2026-11-15: "zoomato su quel posto lì alla fine"). */
 export interface GlobeFocus { lat: number; lon: number; name: string }
 
-export default function Globe({ bare, intro, onReady, mode = "trip", focus, glow, placeExtra }: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[];
-  /** places to light up, [lat, lon] (the home's month picker: where it is good to go that month) */
-  glow?: number[][];
+export default function Globe({ bare, intro, onReady, mode = "trip", focus, placeExtra }: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[];
   /** what the home adds to a place's card: the recommended trips through it and the walks around it
    *  (flow audit, Manu 2026-11-16: the card no longer builds a trip of its own) */
   placeExtra?: (p: GlobePlace) => ReactNode } = {}) {
@@ -517,34 +515,6 @@ export default function Globe({ bare, intro, onReady, mode = "trip", focus, glow
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ready, focusKey]);
   useEffect(() => () => { for (const m of focusPins.current) m.remove(); }, []);
-
-  // the places good this month: a soft light under them (no route lines: never trip routes on the home globe)
-  const glowKey = (glow ?? []).map((g) => g.join(",")).join("|");
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!ready || !map) return;
-    const data: GeoJSON.FeatureCollection = { type: "FeatureCollection", features: (glow ?? []).map(([la, lo]) => ({
-      type: "Feature", properties: {}, geometry: { type: "Point", coordinates: [lo, la] } })) };
-    const src = map.getSource("glow") as maplibregl.GeoJSONSource | undefined;
-    if (src) src.setData(data);
-    else if (glow?.length) {
-      map.addSource("glow", { type: "geojson", data });
-      const under = map.getStyle().layers.find((l) => l.id.startsWith("pl-"))?.id;
-      map.addLayer({ id: "glow", type: "circle", source: "glow", paint: {
-        "circle-color": "#F2A516", "circle-opacity": 0.32, "circle-blur": 0.7,
-        "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 16, 4, 34, 8, 70] } }, under);
-      map.addLayer({ id: "glow-dot", type: "circle", source: "glow", paint: {
-        "circle-color": "#E08A00", "circle-radius": ["interpolate", ["linear"], ["zoom"], 1, 3.5, 6, 6],
-        "circle-stroke-color": "#FFFFFF", "circle-stroke-width": 1.5 } }, under);
-    }
-    // the globe turns to face them (not during the opening animation)
-    if (!glow?.length || intro) return;
-    const r = Math.PI / 180;
-    const x = glow.reduce((a, [, lo]) => a + Math.cos(lo * r), 0), y = glow.reduce((a, [, lo]) => a + Math.sin(lo * r), 0);
-    const lat = glow.reduce((a, [la]) => a + la, 0) / glow.length;
-    spin.current.hold();
-    map.easeTo({ center: [Math.atan2(y, x) / r, Math.max(-40, Math.min(40, lat))], duration: reducedMotion() ? 0 : 1200, essential: true });
-  }, [ready, glowKey, intro]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // ring around the open place
   useEffect(() => {

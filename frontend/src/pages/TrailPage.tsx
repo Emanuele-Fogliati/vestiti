@@ -1,15 +1,15 @@
 import { Fragment, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { BagIcon, KitSheet, ProductRow, totalOf, type BuyPick } from "../components/BuyBar";
-import { Garment } from "../components/Garment";
+import { KitSheet, type BuyPick } from "../components/BuyBar";
+import { ProductArt } from "../components/ProductArt";
 import { Illustration } from "../components/Illustration";
 import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
 import TrailMap from "../components/TrailMap";
 import TrailProfile from "../components/TrailProfile";
-import { api } from "../lib/api";
+import { api, buyUrl } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { activityText, money } from "../lib/format";
-import type { Activity, Item, Trail, TrailWear, TripSummary } from "../lib/types";
+import { TIER_LABEL, TIERS, type Activity, type Item, type Tier, type Trail, type TrailWear, type TripSummary } from "../lib/types";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const FOOT: Record<string, string> = {
@@ -36,6 +36,7 @@ export default function TrailPage() {
   const [wErr, setWErr] = useState<string | null>(null);
   const [chosen, setChosen] = useState<Record<string, Item>>({});
   const [buyOpen, setBuyOpen] = useState(false);
+  const [tier, setTier] = useState<Tier>("medium");
 
   useEffect(() => {
     const mq = matchMedia("(min-width: 900px)");
@@ -63,19 +64,16 @@ export default function TrailPage() {
   }, [t, month]);
 
   const picks: BuyPick[] = useMemo(() => (w?.pieces ?? []).flatMap((p) => {
-    const it = chosen[p.slot] ?? p.products?.medium ?? p.products?.cheap ?? p.products?.premium;
+    const it = chosen[p.slot] ?? p.products?.[tier] ?? p.products?.medium ?? p.products?.cheap ?? p.products?.premium;
     return it ? [{ slot: p.slot, label: p.name.replace(/\s*\/.*$/, ""), item: it, cheaper: p.products?.cheap, better: p.products?.premium }] : [];
-  }), [w, chosen]);
-  const pick = (slot: string, it: Item) => setChosen((c) => ({ ...c, [slot]: it }));
+  }), [w, chosen, tier]);
 
   if (err) return <div className="wrap section"><h1>Trail not found</h1><p>{err}</p><Link to="/trails">All trails</Link></div>;
   if (!t || !month) return <div className="loading"><span className="spin" /></div>;
 
   const seg = (i: number) => t.segments.find((s) => s.from === t.points[i].id && s.to === t.points[i + 1]?.id);
   const shape = t.shape === "out_and_back" ? "There and back" : t.shape === "loop" ? "A loop" : "One way";
-  const cur = picks[0]?.item.currency;
-  const boots = w?.pieces.find((p) => p.slot === "footwear");
-  const inset = desk ? { top: 20, right: 60, bottom: 150, left: 870 } : { top: 0, right: 0, bottom: 22, left: 0 };
+  const inset = desk ? { top: 20, right: 60, bottom: 90, left: 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
 
   const saved = (user?.saved_trails ?? []).includes(t.id);
   async function toggleSave() {
@@ -85,6 +83,7 @@ export default function TrailPage() {
     toast(saved ? "Removed from Saved." : "Saved in Walks.");
   }
 
+  const toBag = () => document.getElementById("bag")?.scrollIntoView({ behavior: "smooth", block: "start" });
   const head = (
     <div className="mf-trailhead">
       <Link className="mf-k mf-crumb" to={`/trails?country=${t.country}&t=${t.id}`}><Back /> Walks · {t.region || t.base}</Link>
@@ -101,48 +100,21 @@ export default function TrailPage() {
         <span className="tag">Best {t.months_text}</span>
       </div>
       <TrailFacts t={t} />
-    </div>
-  );
-
-  const wear = (
-    <div className={desk ? "mf-float mf-card mf-tcard mf-twear" : "mf-tcard mf-twear in"}>
-      {desk && t.art && <div className="mf-art"><Illustration art={t.art} label={t.name} /></div>}
-      <div className="mf-card-in">
-        <div className="mf-twear-h">
-          <b className="mf-sub">What you wear on it</b>
-          <label className="mf-k">in <select value={month} onChange={(e) => setMonth(Number(e.target.value))}>
-            {MONTHS.map((m, i) => <option key={m} value={i + 1}>{m}{t.months.includes(i + 1) ? "" : " (off season)"}</option>)}
-          </select></label>
+      {/* the month, as on a recommended trip: green when it is the walk's season */}
+      <div className="mf-pick">
+        <div className="mf-months" role="radiogroup" aria-label="When">
+          {MONTHS.map((m, i) => {
+            const best = t.months.includes(i + 1);
+            return (
+              <button type="button" role="radio" key={m} aria-checked={i + 1 === month}
+                className={`${i + 1 === month ? "on" : ""}${best ? " best" : ""}`}
+                title={best ? "In season" : "Off season"} onClick={() => setMonth(i + 1)}>{m.slice(0, 3)}</button>
+            );
+          })}
         </div>
-        {wErr && <p className="err">{wErr}</p>}
-        {!w && !wErr && <p className="mf-k"><span className="spin" /> Reading the weather of this trail…</p>}
-        {w && (
-          <>
-            {!w.in_season && <p className="mf-warn">{MONTHS[month - 1]} is outside the trail's season: snow, closures or bad weather are likely.</p>}
-            {w.weather && <span className="mf-k">At the start: {w.weather.tmin}–{w.weather.tmax}°, wind {w.weather.wind_kmh} km/h, {w.weather.rain_chance}% chance of rain{w.weather.source === "climate" ? " (past years)" : ""}.</span>}
-            {w.coldest && <span className="mf-k">Coldest: feels like {w.coldest.feels_like_c}°, {w.coldest.where}.</span>}
-            <ul className="mf-wear">
-              {w.pieces.map((p) => {
-                const it = chosen[p.slot] ?? p.products?.medium ?? null;
-                const why = p.slot === "footwear" && boots
-                  ? `${FOOT[boots.footwear_type ?? ""] ?? "Shoes"}${boots.ankle_support ? ", ankle support" : ""}${boots.waterproof ? ", waterproof" : ""}`
-                  : p.reasons.find((x) => !/clo|already on/.test(x))?.replace(/^[^:]+: /, "") ?? p.level;
-                return (
-                  <li key={p.slot} className="get">
-                    <Garment slot={p.slot} />
-                    <span className="mf-nm"><span>{p.name}{p.waterproof ? " · waterproof" : ""}</span><small>{it ? `${it.brand} ${it.name}` : why}</small></span>
-                    {it?.image_url && <img src={it.image_url} alt="" loading="lazy" referrerPolicy="no-referrer" />}
-                    {it && <span className="mf-pr">{money(it.price, it.currency)}</span>}
-                  </li>
-                );
-              })}
-            </ul>
-            {desk && picks.length > 0 && (
-              <button type="button" className="mf-btn go wide mf-twear-buy" onClick={() => setBuyOpen(true)}>
-                <BagIcon />Buy the {picks.length} · {money(totalOf(picks), cur)}</button>)}
-          </>
-        )}
+        <span className="mf-k mf-mlegend"><i className="best" /> in season <i /> off season</span>
       </div>
+      {!desk && <button type="button" className="mf-btn go wide" onClick={toBag}>What to wear in {MONTHS[month - 1]} <Down /></button>}
     </div>
   );
 
@@ -208,36 +180,119 @@ export default function TrailPage() {
     </>
   );
 
+  // the drawings on the map, each on the place itself: what the walk is for, then what you pass
+  const arts = [
+    ...(t.art && t.art_at ? [{ id: t.art.id, name: t.name, lat: t.art_at[0], lon: t.art_at[1], art: t.art }] : []),
+    ...(t.sights ?? []),
+  ].filter((a) => near(a));
+
+  // like a recommended trip (Manu 2026-11-16 "allinea a quella di Trips"): the map and the walk on
+  // top, the clothes for this walk below it, one scroll down; no second panel over the map
   return (
-    <main className="trk trailpage-mf">
-      <div className="mf">
-        <div className="mf-map">
-          {t.line.length > 0 || t.points.length > 0
-            ? <TrailMap line={t.line} points={t.points} focus={focus} onFocus={setFocus} inset={inset} />
-            : null}
+    <main className="trk trailpage-mf ip-one">
+      <div className="ip-top">
+        <div className="mf">
+          <div className="mf-map">
+            {t.line.length > 0 || t.points.length > 0
+              ? <TrailMap line={t.line} points={t.points} focus={focus} onFocus={setFocus} inset={inset} arts={arts} />
+              : null}
+          </div>
+          <section className="mf-float mf-panel" aria-label={t.name}>
+            {head}
+            <div className={desk ? "mf-scroll" : "mf-ibody"}>{body}</div>
+          </section>
+          {desk && <button type="button" className="mf-float ip-cue" onClick={toBag}>What to wear · {MONTHS[month - 1].slice(0, 3)} <Down /></button>}
         </div>
-
-        <section className="mf-float mf-panel" aria-label={t.name}>
-          {head}
-          {desk ? <div className="mf-scroll">{body}</div> : (
-            <>
-              {wear}
-              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this walk · {money(totalOf(picks), cur)}</div>
-                <ProductRow picks={picks} onPick={pick} /></div>}
-              {body}
-              <div className="mf-phone-go">
-                <button type="button" className="mf-btn go wide" disabled={!picks.length} onClick={() => setBuyOpen(true)}>
-                  <BagIcon />{picks.length ? `Buy the ${picks.length} pieces · ${money(totalOf(picks), cur)}` : w ? "Nothing to buy for it" : "Working out the kit…"}</button>
-              </div>
-            </>
-          )}
-        </section>
-
-        {/* one block of clothes (flow audit, Manu 2026-11-16): the card, no second bar under it */}
-        {desk && wear}
       </div>
+      <WalkWear t={t} month={month} w={w} err={wErr} picks={picks} tier={tier} setTier={(k) => { setChosen({}); setTier(k); }} onBuy={() => setBuyOpen(true)} />
       <KitSheet open={buyOpen} onClose={() => setBuyOpen(false)} title={`Your kit for ${t.name}`} picks={picks} />
     </main>
+  );
+
+  /** a drawing far from the walk (a whole range, a big glacier) stays off this map */
+  function near(a: { lat: number; lon: number }) {
+    const pts = t!.line.length ? t!.line.map(([lo, la]) => [la, lo]) : t!.points.map((p) => [p.lat, p.lon]);
+    return pts.some(([la, lo]) => Math.hypot(la - a.lat, (lo - a.lon) * Math.cos((la * Math.PI) / 180)) < 0.09); // ~10 km
+  }
+}
+
+const Down = () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" /></svg>;
+
+/** The clothes for this walk, under the map (Manu 2026-11-16: "non la valigia ma semplicemente i
+ *  vestiti per quel tracking"): the coldest moment, the budget, then one card per piece, in the
+ *  trip bag's design. */
+function WalkWear({ t, month, w, err, picks, tier, setTier, onBuy }: {
+  t: Trail; month: number; w: TrailWear | null; err: string | null; picks: BuyPick[];
+  tier: Tier; setTier: (t: Tier) => void; onBuy: () => void;
+}) {
+  const { config } = useApp();
+  const total = (k: Tier) => (w?.pieces ?? []).reduce((n, p) => n + (p.products?.[k]?.price ?? 0), 0);
+  const cur = picks[0]?.item.currency;
+  const boots = w?.pieces.find((p) => p.slot === "footwear");
+  return (
+    <section className="x-trip ip-bag" id="bag" aria-label="What to wear">
+      <div className="ip-bag-in">
+        <header className="ip-bag-h">
+          <h2>What to wear <span>on this walk in {MONTHS[month - 1]}</span></h2>
+          {!w && !err && <span className="spin" aria-label="Updating" />}
+        </header>
+        {err && <p className="err">{err}</p>}
+        {w && (
+          <>
+            {!w.in_season && <p className="x-alert warn">{MONTHS[month - 1]} is outside the walk's season: snow, closures or bad weather are likely.</p>}
+            {(w.coldest || w.weather) && (
+              <div className="x-cold-top">
+                <div className="x-cold-line">
+                  <span className="n">{w.coldest ? `${Math.round(w.coldest.feels_like_c)}°` : `${Math.round(w.weather!.tmin)}°`}</span>
+                  <span className="t"><b>The coldest moment</b> {w.coldest ? `${w.coldest.where.charAt(0).toUpperCase()}${w.coldest.where.slice(1)}. ` : ""}
+                    {w.weather && <>At the start {w.weather.tmin}–{w.weather.tmax}°, wind {w.weather.wind_kmh} km/h, {w.weather.rain_chance}% chance of rain{w.weather.source === "climate" ? " (past years)" : ""}.</>}</span>
+                </div>
+              </div>
+            )}
+            <h2 className="x-h2" id="your-list">Your list</h2>
+            <div className="x-bag-top x-rise">
+              <div>
+                <div className="x-k">Everything for this walk</div>
+                <div className="x-total" aria-live="polite">{money(total(tier), cur)}</div>
+                <div className="x-facts"><span>{picks.length} pieces</span>
+                  {picks.length > 0 && <button type="button" className="x-link" onClick={onBuy}>Buy them all</button>}</div>
+              </div>
+              <div className="x-seg big" role="group" aria-label="Budget">
+                {TIERS.map((k) => (
+                  <button key={k} type="button" aria-pressed={k === tier} onClick={() => setTier(k)}>
+                    {TIER_LABEL[k]}<small>{money(total(k), cur)}</small>
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className="x-items">
+              {w.pieces.map((p) => {
+                const it = p.products?.[tier] ?? null;
+                const why = p.slot === "footwear" && boots
+                  ? `${FOOT[boots.footwear_type ?? ""] ?? "Shoes"}${boots.ankle_support ? ", ankle support" : ""}${boots.waterproof ? ", waterproof" : ""}.`
+                  : null; // the other pieces speak for themselves (Manu: fewer words)
+                return (
+                  <article key={p.slot} className="x-item">
+                    <div className="x-ic">
+                      {it?.image_url ? <img src={it.image_url} alt="" loading="lazy" referrerPolicy="no-referrer" /> : <ProductArt slot={p.slot} className="x-art" />}
+                    </div>
+                    <div className="x-pc">{p.name}{p.waterproof ? " · waterproof" : ""}</div>
+                    <div className="x-pn">{it ? `${it.brand} ${it.name}` : "Nothing in the shops we check yet"}</div>
+                    {it && <div className="x-shop">{it.merchant}</div>}
+                    {why && <div className="x-where"><p>{why}</p></div>}
+                    <div className="x-row"><span className="x-price">{it ? money(it.price, it.currency) : "—"}</span></div>
+                    {it && <div className="x-acts"><a className="x-btn y" href={buyUrl(it.id, undefined, tier, p.slot)} target="_blank" rel="sponsored noopener">Buy</a></div>}
+                  </article>
+                );
+              })}
+            </div>
+            <p className="x-disc">{config?.disclosure} Prices can change: the shop's page is what counts.</p>
+          </>
+        )}
+        {!w && !err && <p className="loading"><span className="spin" /></p>}
+        <p className="mf-k">{t.name}: the clothes are for this walk alone. Doing it on a trip? Add it to your trip and the bag follows.</p>
+      </div>
+    </section>
   );
 }
 
@@ -344,7 +399,7 @@ function MoreFrom({ t }: { t: Trail }) {
   return (
     <section className="mf-tsec" aria-label={`More from ${t.base}`}>
       <b className="mf-sub">More from {t.base}</b>
-      <ul className="tmore">{list.map((x) => <li key={x.id}><Link to={`/trails/${x.id}${location.search}`}>{x.name}</Link></li>)}</ul>
+      <ul className="tmore">{list.slice(0, 6).map((x) => <li key={x.id}><Link to={`/trails/${x.id}${location.search}`}>{x.name}</Link></li>)}</ul>
     </section>
   );
 }

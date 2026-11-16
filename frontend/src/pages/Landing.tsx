@@ -128,7 +128,6 @@ export default function Landing() {
   const goodW = useMemo(() => (walkList ? goodWalks(walkList) : []), [walkList]);
   useEffect(() => setHi(0), [text]);
   const good = useMemo(() => (all ?? []).filter((r) => r.best.includes(month)), [all, month]);
-  const glow = useMemo(() => (mode === "trip" ? good.flatMap((r) => r.lead.points ?? []) : []), [good, mode]);
 
   // a drawing tapped on the globe (flow audit, Manu 2026-11-16): the recommended trips that go
   // there and the walks around it, instead of a trip builder of its own
@@ -182,7 +181,7 @@ export default function Landing() {
   return (
     <main className={`home2 ${phase}${diving ? " dive" : ""}`} onPointerDown={phase !== "done" ? skip : undefined}>
       <div className="home2-space" aria-hidden="true" />
-      <div className="home2-globe"><HomeGlobe bare mode={mode === "walk" ? "trek" : "trip"} intro={phase !== "done"} onReady={() => setReady(true)} glow={glow} placeExtra={placeExtra} /></div>
+      <div className="home2-globe"><HomeGlobe bare mode={mode === "walk" ? "trek" : "trip"} intro={phase !== "done"} onReady={() => setReady(true)} placeExtra={placeExtra} /></div>
       <Link to="/trips" className="home2-bag" aria-label="My trips">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="3" /><path d="M9 7V4h6v3" /></svg>
       </Link>
