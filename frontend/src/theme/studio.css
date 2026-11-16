@@ -687,3 +687,8 @@ a.mf-btn{text-decoration:none}
   .artcard-t{font-size:13px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 }
 @media (prefers-reduced-motion:reduce){.artcard{animation:none}}
+
+/* Trips: every trip on the globe until one is picked; the pill gives the whole world back */
+.trips-h{margin:6px 0 2px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
+.trips-all{left:calc(50% + 230px);transform:translateX(-50%);top:20px;display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 16px;border:0;border-radius:999px;background:#FFFFFF;color:var(--ink);font:inherit;font-size:13.5px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.trips-all:hover{background:var(--surface-2)}
