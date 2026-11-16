@@ -46,6 +46,11 @@ ELEVATION = {
     "vn-phong-nha": 30,
 }
 
+# Where you sleep, when the globe's point is the middle of a park: Torres del Paine's sits on the
+# ice field to the west (1-9 °C in January, a warm down jacket in summer); the refugios and hotels
+# are on the east side (Opus check of the day-by-day clothes, 2026-11-16).
+COORDS = {"cl-torres-del-paine-national-park": (-50.96, -72.87)}
+
 
 def height(p: dict) -> int:
     if p["id"] in ELEVATION:
@@ -108,6 +113,15 @@ def line(day: dict, items: dict, band: list[int], first: bool, also: list[str]) 
     return ". ".join(names) + "."
 
 
+def day_plan(day: dict, items: dict, also: list[str]) -> dict:
+    """The day by its things (ids of the zone guide); a spare day names what to do if it is clear."""
+    out = {"kind": day["kind"] if day["kind"] in ("arrive", "free") else "day",
+           "things": [t["id"] for t in day.get("items", []) if t["id"] in items]}
+    if day["kind"] == "free" and also:
+        out["spare"] = next((k for k, it in items.items() if it.name == also[0]), None)
+    return out
+
+
 def build(t: ready.ReadyTrip) -> dict:
     P = globe.by_id()
     stops = [{**explore._stop_of_base({**P[s.place], "sights": []}, s.nights),
@@ -141,12 +155,16 @@ def build(t: ready.ReadyTrip) -> dict:
                 q = (it.sights[0] if it.sights else it.name)[:110]
                 exc.append({"title": it.name, "query": q})
         out.append({
-            "name": p["name"], "country_code": p["country"], "lat": round(p["lat"], 4), "lon": round(p["lon"], 4),
+            "name": p["name"], "country_code": p["country"],
+            "lat": round(COORDS.get(p["id"], (p["lat"], p["lon"]))[0], 4),
+            "lon": round(COORDS.get(p["id"], (p["lat"], p["lon"]))[1], 4),
             "elevation_m": height(p), "days": s["days"],
             "activities": acts_of(planned),
             "visits": visits,
             "plan": [line(d, items, t.months, i == 0, s.get("also") or []) for d in s["plan"]],
             "do": do, "skip": [], "excursions": exc,
+            "area": a.id if a else None,
+            "day_plans": [day_plan(d, items, s.get("also") or []) for d in s["plan"]],
         })
     countries = sorted({x["country_code"] for x in out})
     dest = JOURNEYS[t.journey].name

@@ -8,7 +8,7 @@ import { Visits } from "../components/Stops";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { MONTHS, MONTH_LONG, activityText, countryNames, monthYear, nights, today } from "../lib/format";
-import type { Itinerary, ItineraryStop, ItineraryWear, Journey, Stop } from "../lib/types";
+import type { Itinerary, ItineraryDay, ItineraryStop, ItineraryThing, ItineraryWear, Journey, Stop } from "../lib/types";
 import { DRESS_ME } from "../lib/words";
 
 /** The region's pickers (Manu 2026-11-16: "lo chiede all'utente quanto ci vuole stare ... scopre
@@ -104,24 +104,102 @@ function PackForm({ it }: { it: Itinerary }) {
   );
 }
 
-/** One stop of the recommended trip, as the card beside the map (inline on a phone). */
-function StopCard({ stop, dayFrom, desk, onClose }: { stop: ItineraryStop; dayFrom: number; desk: boolean; onClose: () => void }) {
+/** A day's short name on its tab: "Arrive", "Spare", or what you do ("Laguna de los Tres"). */
+function dayTab(d: ItineraryDay): string {
+  if (d.kind === "free") return "Spare day";
+  const t = d.things.find((x) => !x.spare);
+  if (!t) return d.kind === "arrive" ? "Arrive" : "Free";
+  return t.name.split(/,| and | \(|: /)[0];
+}
+
+/** What the stop's days are about, for its row: the things you do, not the activity types. */
+export function stopDoes(s: ItineraryStop): string {
+  const names = s.days.flatMap((d) => d.things.filter((t) => !t.spare).map((t) => t.name.split(/,| \(|: /)[0]));
+  return [...new Set(names)].join(", ") || s.activities.map(activityText).join(", ");
+}
+
+const n0 = (n: number) => Math.round(n).toLocaleString("en-US");
+
+/** One thing of the day: how hard and long, hour by hour, and its walk (Manu 2026-11-16: "come
+ *  faccio a vedere che cosa fare nei 4 giorni a El Chaltén?"). The walk's line is on the map. */
+function Thing({ t }: { t: ItineraryThing }) {
+  const tr = t.trail;
+  const walk = tr && [!/km/.test(t.hours) && tr.km ? `${tr.km} km` : "", tr.gain_m ? `${n0(tr.gain_m)} m of climb` : "",
+    tr.max_m ? `top ${n0(tr.max_m)} m` : ""].filter(Boolean).join(" · ");
+  return (
+    <div className="mf-thing">
+      <div className="mf-thead">
+        <b>{t.spare && <span className="mf-k">If the sky is clear: </span>}{t.name}</b>
+        {tr && <Link className="mf-btn sm" to={`/trails/${tr.id}`}>The walk ›</Link>}
+      </div>
+      <span className="mf-k">{[t.effort, t.hours, t.need].filter(Boolean).join(" · ")}{walk ? ` · ${walk}` : ""}</span>
+      {t.steps.length > 0 ? (
+        <ol className="mf-steps">
+          {t.steps.map((x, i) => <li key={i}><span className="mf-k">{x.at}</span><span>{x.what}{x.note && <small>: {x.note}</small>}</span></li>)}
+        </ol>
+      ) : t.why && <p className="mf-why">{t.why}</p>}
+      {t.book && <p className="mf-k">Book: {t.book}</p>}
+    </div>
+  );
+}
+
+/** One day: what you do, then what to wear for it (the layer engine on that day's walk or visit,
+ *  that stop, that date: a Fitz Roy day is not a town day). */
+function DayView({ d, n }: { d: ItineraryDay; n: number }) {
+  return (
+    <div className="mf-day">
+      {d.things.length === 0 && <p className="mf-why">{d.title}</p>}
+      {d.kind === "free" && d.things.length > 0 && <p className="mf-k">A spare day for the weather: use it for whatever the clouds took from you.</p>}
+      {d.things.map((t) => <Thing t={t} key={t.id} />)}
+      <div className="mf-dwear">
+        <b className="mf-sub">What to wear on day {n}</b>
+        <span className="mf-k">{d.low}° to {d.high}° · rain {d.rain}% of days{d.cold.feels < 15 ? ` · coldest: feels like ${d.cold.feels}°, ${d.cold.what.replace(/(\d{4,}) m/, (_, x) => `${n0(Number(x))} m`)}` : ""}</span>
+        <div className="tags">{d.wear.map((w) => <span className="tag" key={w}>{w}</span>)}</div>
+        {d.pack.length > 0 && <span className="mf-k">In the bag, just in case: {d.pack.map((x) => x.toLowerCase()).join(", ")}.</span>}
+      </div>
+    </div>
+  );
+}
+
+/** One stop of the recommended trip, as the card beside the map (inline on a phone): its days as
+ *  tabs, the open day in full, then the stop's own tips. */
+function StopCard({ stop, dayFrom, desk, onClose, day, onDay }: { stop: ItineraryStop; dayFrom: number; desk: boolean;
+  onClose: () => void; day: number; onDay: (i: number) => void }) {
   const n = nights(stop.start_date, stop.end_date);
+  const d = stop.days[day] ?? null;
   return (
     <div className={desk ? "mf-float mf-card mf-icard" : "mf-icard in"}>
       {desk && <button type="button" className="mf-x" onClick={onClose} aria-label="Close"><X /></button>}
-      {stop.art && <div className="mf-art"><Illustration art={stop.art} label={stop.name} /></div>}
+      {/* on a desk the days come first: the drawing shrinks beside the name */}
+      {stop.art && !desk && <div className="mf-art"><Illustration art={stop.art} label={stop.name} /></div>}
       <div className="mf-card-in">
-        <div>
-          <span className="mf-k">{n > 1 ? `Days ${dayFrom}–${dayFrom + n - 1}` : `Day ${dayFrom}`} · {Math.round(stop.elevation_m).toLocaleString("en-US")} m</span>
-          <h3>{stop.name}</h3>
+        <div className="mf-ihead">
+          {stop.art && desk && <span className="mf-thumb"><Illustration art={stop.art} /></span>}
+          <div>
+            <span className="mf-k">{n > 1 ? `Days ${dayFrom}–${dayFrom + n - 1}` : `Day ${dayFrom}`} · {n0(stop.elevation_m)} m</span>
+            <h3>{stop.name}</h3>
+          </div>
         </div>
-        <div className="tags">{stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}</div>
+        {stop.days.length > 0 ? (
+          <>
+            {stop.days.length > 1 && (
+              <div className="mf-days" role="tablist" aria-label="Day">
+                {stop.days.map((x, i) => (
+                  <button type="button" role="tab" key={i} aria-selected={i === day} className={i === day ? "on" : ""} onClick={() => onDay(i)}>
+                    <b>Day {dayFrom + i}</b><small>{dayTab(x)}</small>
+                  </button>
+                ))}
+              </div>
+            )}
+            {d && <DayView d={d} n={dayFrom + day} />}
+          </>
+        ) : (
+          <ol className="mf-plan">
+            {stop.plan.map((p, i) => <li key={i}><span className="mf-k">Day {dayFrom + i}</span>{p}</li>)}
+          </ol>
+        )}
         <PlaceGuide guide={stop.guide} />
-        <ol className="mf-plan">
-          {stop.plan.map((p, i) => <li key={i}><span className="mf-k">Day {dayFrom + i}</span>{p}</li>)}
-        </ol>
-        {/* the day plan already names every place: only the ones with their own picture come back here */}
+        {/* the days already name every place: only the ones with their own picture come back here */}
         <Visits stop={{ ...stop, plan: undefined, visits: (stop.visits ?? []).filter((v) => v.art && v.art.id !== stop.art?.id) }}
           dayFrom={dayFrom} flat />
         {stop.do.length > 0 && <div className="mf-tip"><b className="mf-sub">Worth it</b><ul>{stop.do.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}
@@ -153,6 +231,8 @@ export default function ItineraryPage() {
   const [it, setIt] = useState<Itinerary | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [sel, setSel] = useState<number | null>(null);
+  const [day, setDay] = useState(0);
+  const [walk, setWalk] = useState<[number, number][] | null>(null);
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
 
   useEffect(() => {
@@ -179,14 +259,26 @@ export default function ItineraryPage() {
     if (it && matchMedia("(min-width: 900px)").matches && it.stops.length) setSel(0);
   }, [it?.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  useEffect(() => { setDay(0); }, [sel]);
+
+  // the open day's walk on the map: its trail's own line, as on the Walks page
+  const trailId = sel != null ? it?.stops[sel]?.days[day]?.things.find((t) => t.trail?.has_map)?.trail?.id ?? null : null;
+  useEffect(() => {
+    setWalk(null);
+    if (!trailId) return;
+    let live = true;
+    api.trail(trailId).then((t) => { if (live && t.line.length > 1) setWalk(t.line); }).catch(() => undefined);
+    return () => { live = false; };
+  }, [trailId]);
+
   if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/trips?tab=recommended">All recommended trips</Link></div></main>;
   if (!it) return <main className="page"><div className="wrap"><p className="loading"><span className="spin" /></p></div></main>;
 
   const starts: number[] = [];
   it.stops.reduce((d, s) => { starts.push(d); return d + nights(s.start_date, s.end_date); }, 1);
   const stop = sel != null ? it.stops[sel] : null;
-  const inset = desk ? { top: 20, right: 60, bottom: 130, left: stop ? 870 : 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
-  const card = stop && <StopCard stop={stop} dayFrom={starts[sel!]} desk={desk} onClose={() => setSel(null)} />;
+  const inset = desk ? { top: 20, right: 60, bottom: 130, left: stop ? 910 : 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
+  const card = stop && <StopCard stop={stop} dayFrom={starts[sel!]} desk={desk} onClose={() => setSel(null)} day={day} onDay={setDay} />;
 
   const rows = (
     <ol className="mf-stops">
@@ -199,7 +291,7 @@ export default function ItineraryPage() {
               {s.art && <span className="mf-thumb"><Illustration art={s.art} /></span>}
               <span className="mf-nm">
                 <b>{s.name}</b>
-                <small>{n > 1 ? `Days ${starts[i]}–${starts[i] + n - 1}` : `Day ${starts[i]}`} · {s.activities.map(activityText).join(", ")}</small>
+                <small>{n > 1 ? `Days ${starts[i]}–${starts[i] + n - 1}` : `Day ${starts[i]}`} · {stopDoes(s)}</small>
               </span>
             </button>
           </li>
@@ -224,7 +316,7 @@ export default function ItineraryPage() {
     <main className="trk itinerary-mf">
       <div className="mf">
         <div className="mf-map">
-          <TripMap stops={it.stops as unknown as Stop[]} focusIndex={sel} bare inset={inset} onPin={(i) => setSel(i)} />
+          <TripMap stops={it.stops as unknown as Stop[]} focusIndex={sel} bare inset={inset} onPin={(i) => setSel(i)} walk={walk} />
         </div>
 
         <section className="mf-float mf-panel" aria-label={it.title}>
