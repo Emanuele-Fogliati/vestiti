@@ -665,6 +665,8 @@ export interface TrailCard {
   in_season: boolean | null; why: string; art: StopArt | null; has_map: boolean;
   km: number | null; gain_m: number | null; max_m: number | null; min_m: number | null; numbers_from: string | null;
   tier: "A" | "B"; style: "trek" | "city"; area: string | null; scores: TrailScores | null;
+  /** a day of a recommended trip does it: the Walks map shows its drawing */
+  featured?: boolean;
   /** where it starts (the pins of the Treks map) */
   lat?: number | null; lon?: number | null;
 }

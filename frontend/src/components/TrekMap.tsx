@@ -1,5 +1,6 @@
 import { maplibregl } from "../lib/maplibre";
 import { useEffect, useRef, useState } from "react";
+import { artPin } from "../lib/artpin";
 import { baseStyle, mapColors, phoneGestures, worldZoom } from "../lib/worldmap";
 import type { TrailCard } from "../lib/types";
 
@@ -32,6 +33,40 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
   const cb = useRef({ onPick, inset, onView, around });
   cb.current = { onPick, inset, onView, around };
   const pts = trails.filter((t) => t.lat != null && t.lon != null);
+  // the walks shown as their drawing (Manu 2026-11-16: "aggiungi delle immagini anche sulla mappa"):
+  // the chosen one, the walks of the recommended trips, then the famous ones, as many as fit
+  const markers = useRef(new Map<string, maplibregl.Marker>());
+  const pics = useRef<() => void>(() => undefined);
+  pics.current = () => {
+    const map = mapRef.current, el = box.current;
+    if (!map || !el || !ready.current) return;
+    const rank = (t: TrailCard) => (t.id === selected ? 0 : t.featured ? 1 : t.tier === "A" && t.style !== "city" ? 2 : t.tier === "A" ? 3 : 4);
+    const free = room(el, cb.current.inset);
+    const W = el.clientWidth, H = el.clientHeight;
+    const taken: [number, number][] = [];
+    const keep = new Set<string>();
+    const cands = pts.filter((t) => t.art?.kind === "landmark").sort((a, b) => rank(a) - rank(b));
+    for (const t of cands) {
+      if (keep.size >= 40) break;
+      const at = map.project([t.lon!, t.lat!]);
+      // on the globe's far side, or under the panels: no picture
+      if (at.x < free.left - 24 || at.x > W - free.right + 24 || at.y < free.top - 24 || at.y > H - free.bottom + 24) continue;
+      if (map.getZoom() < 9 && !isFront(map, t.lon!, t.lat!)) continue;
+      if (t.id !== selected && taken.some(([x, y]) => Math.abs(x - at.x) < 68 && Math.abs(y - at.y) < 50)) continue;
+      taken.push([at.x, at.y]);
+      keep.add(t.id);
+      let m = markers.current.get(t.id);
+      if (!m) {
+        const b = artPin(t.art, null, t.name);
+        if (!b) continue;
+        b.addEventListener("click", (e) => { e.stopPropagation(); cb.current.onPick(t.id); });
+        m = new maplibregl.Marker({ element: b, anchor: "bottom", offset: [0, -6] }).setLngLat([t.lon!, t.lat!]).addTo(map);
+        markers.current.set(t.id, m);
+      }
+      m.getElement().classList.toggle("on", t.id === selected);
+    }
+    for (const [id, m] of markers.current) if (!keep.has(id)) { m.remove(); markers.current.delete(id); }
+  };
 
   useEffect(() => {
     const el = box.current;
@@ -80,12 +115,18 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
         cb.current.onView?.({ w: b.getWest(), s: b.getSouth(), e: b.getEast(), n: b.getNorth() });
       };
       map.on("moveend", view);
+      map.on("moveend", () => pics.current());
       ready.current = true;
       for (const f of waiting.current.splice(0)) f();
     });
     const ro = new ResizeObserver(() => map.resize());
     ro.observe(el);
-    return () => { ro.disconnect(); ready.current = false; map.remove(); mapRef.current = null; };
+    return () => {
+      ro.disconnect(); ready.current = false;
+      for (const m of markers.current.values()) m.remove();
+      markers.current.clear();
+      map.remove(); mapRef.current = null;
+    };
   }, []);
 
   // the chosen hike's path: drawn at once, and the map frames it
@@ -113,6 +154,7 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
       src?.setData({ type: "FeatureCollection", features: pts.map((t) => ({ type: "Feature", properties: {
         id: t.id, n: t.name, d: LEVELS.indexOf(t.difficulty), c: t.style === "city" ? 1 : 0, s: t.id === selected ? 1 : 0 },
         geometry: { type: "Point", coordinates: [t.lon!, t.lat!] } })) });
+      pics.current();
     };
     when(put);
   }, [trails, selected]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -143,6 +185,12 @@ export default function TrekMap({ trails, selected, onPick, inset, fitKey, line,
 
   if (failed) return null;
   return <div className="rmap rmap-bare"><div className="rmap-map" ref={box} role="region" aria-label="Map of the walks" /></div>;
+}
+
+/** Is the point on the side of the globe that faces you? */
+function isFront(map: maplibregl.Map, lon: number, lat: number): boolean {
+  const c = map.getCenter(), r = Math.PI / 180;
+  return Math.sin(lat * r) * Math.sin(c.lat * r) + Math.cos(lat * r) * Math.cos(c.lat * r) * Math.cos((lon - c.lng) * r) > 0.15;
 }
 
 function room(el: HTMLElement, inset?: Inset) {

@@ -1,10 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { BagIcon, BuyBar, KitSheet, ProductRow, totalOf, type BuyPick } from "../components/BuyBar";
-import { Garment } from "../components/Garment";
 import { Illustration } from "../components/Illustration";
 import { TreksMap } from "../components/Maps";
-import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
+import { DIFFICULTY, TrailFacts, hoursText } from "../components/TrailCards";
 import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
 import { money } from "../lib/format";
@@ -15,10 +14,11 @@ const countryName = (c: string) => { try { return REGION?.of(c) ?? c; } catch { 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const LEVELS: (TrailDifficulty | "")[] = ["", "easy", "moderate", "hard", "technical"];
 
-/** Treks, map first (Manu 2026-11-15: the same page as a trip). The map shows every trek of the
- *  filters as a dot coloured by how hard it is; the panel on the left lists them with their drawing;
- *  a trek opens its card beside the panel (numbers, what you wear on it) and the bar at the bottom
- *  sells what it asks for, with Cheaper / Better. Phone: the map on top, the list below. */
+/** Walks, map first (Manu 2026-11-15: the same page as a trip). The map shows every walk of the
+ *  filters as a dot coloured by how hard it is, the famous ones and those of the recommended trips
+ *  as their drawing; the panel on the left lists them. A walk picked opens in its own row, nowhere
+ *  else (Manu 2026-11-16: no second popup on the right), and the bar at the bottom shows what it
+ *  asks you to wear, with Cheaper / Better. Phone: the map on top, the list below. */
 export default function Trails() {
   const [q, setQ] = useSearchParams();
   const country = q.get("country") ?? "";
@@ -197,13 +197,12 @@ export default function Trails() {
   }, [countries, country]);
 
   const nf = [country, kind, style, month, level].filter(Boolean).length;
-  const where = zone ? `around ${zone.name}` : country ? countryName(country) : find ? `“${find}”` : "the world";
-  const inset = desk ? { top: 20, right: 60, bottom: 150, left: sel ? 870 : 470 } : undefined;
+  const inset = desk ? { top: 20, right: 60, bottom: sel ? 150 : 20, left: 470 } : undefined;
 
   const search = (
     <form className="mf-say mf-search" role="search" onSubmit={(e) => { e.preventDefault(); set("find", typed.trim()); }}>
       <SearchIcon />
-      <input type="search" value={typed} aria-label="Search walks" placeholder="Search a walk or a place"
+      <input type="search" value={typed} aria-label="Search walks" placeholder="Search"
         onChange={(e) => { setTyped(e.target.value); set("find", e.target.value.trim()); }} />
       {typed && <button type="button" aria-label="Clear" onClick={() => { setTyped(""); set("find", ""); }}>×</button>}
     </form>
@@ -241,54 +240,51 @@ export default function Trails() {
 
   const rows = (
     <ul className="mf-treks">
-      {list.map((t) => (
-        <li key={t.id}>
-          <button type="button" className={`mf-trow${t.id === selId ? " sel" : ""}${t.in_season === false ? " off" : ""}`} onClick={() => set("t", t.id === selId ? "" : t.id)}>
-            <span className="mf-thumb">{t.art ? <Illustration art={t.art} /> : null}</span>
-            <span className="mf-nm">
-              <b>{t.name}</b>
-              <small><span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
-                {t.km != null && <span>{Math.round(t.km)} km</span>}{t.gain_m != null && <span>+{Math.round(t.gain_m).toLocaleString("en-US")} m</span>}
-                {t.kind === "multiday" && <span>{t.days} days</span>}</small>
-              <small className="mf-base">{howFar(t)}{t.base}{country || zone ? "" : `, ${countryName(t.country)}`}</small>
-            </span>
-          </button>
-        </li>
-      ))}
+      {list.map((t) => {
+        const on = t.id === selId;
+        return (
+          <li key={t.id} className={on ? "open" : undefined}>
+            <button type="button" className={`mf-trow${on ? " sel" : ""}${t.in_season === false ? " off" : ""}`} aria-expanded={on} onClick={() => set("t", on ? "" : t.id)}>
+              <span className="mf-thumb">{t.art ? <Illustration art={t.art} /> : null}</span>
+              <span className="mf-nm">
+                <b>{t.name}</b>
+                <small><span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
+                  {t.km != null && <span>{Math.round(t.km)} km</span>}
+                  <span className="mf-base">{howFar(t)}{t.base}</span></small>
+              </span>
+            </button>
+            {on && desk && (
+              <div className="mf-topen">
+                <span className="mf-k">{[t.gain_m != null ? `+${Math.round(t.gain_m).toLocaleString("en-US")} m` : "", hoursText(t.hours, t.days), `best ${t.months_text}`].filter(Boolean).join(" · ")}</span>
+                <span className="mf-topen-go">
+                  <button type="button" className={`mf-btn sm x-save${savedIds.includes(t.id) ? " on" : ""}`} aria-pressed={savedIds.includes(t.id)} onClick={() => toggleSave(t.id)}>
+                    {savedIds.includes(t.id) ? "✓ Saved" : "Save"}</button>
+                  <Link className="mf-btn sm go" to={`/trails/${t.id}${month ? `?month=${month}` : ""}`}>Open</Link>
+                </span>
+              </div>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 
+  // phone: the walk picked takes the panel (desktop: it opens in its row)
   const card = sel && (
-    <div className={desk ? "mf-float mf-card mf-tcard" : "mf-tcard in"}>
-      {desk && <button type="button" className="mf-x" onClick={() => set("t", "")} aria-label="Close"><X /></button>}
+    <div className="mf-tcard in">
       {sel.art && <div className="mf-art"><Illustration art={sel.art} label={sel.name} /></div>}
       <div className="mf-card-in">
         <div>
           <span className={`tag diff-${sel.difficulty}`}>{DIFFICULTY[sel.difficulty]}</span>{" "}
-          <span className="mf-k">From {sel.base} · best {sel.months_text}</span>
+          <span className="mf-k">{sel.base} · best {sel.months_text}</span>
           <h3>{sel.name}</h3>
         </div>
-        <button type="button" className={`mf-btn sm x-save mf-tsave${savedIds.includes(sel.id) ? " on" : ""}`} aria-pressed={savedIds.includes(sel.id)} onClick={() => toggleSave(sel.id)}>
-          {savedIds.includes(sel.id) ? "✓ Saved" : "Save"}</button>
         <TrailFacts t={sel} />
-        {wear?.weather && <span className="mf-k">{wear.weather.tmin}–{wear.weather.tmax}° in {MONTHS[wearMonth - 1]}{wear.coldest ? ` · feels ${wear.coldest.feels_like_c}° at the coldest` : ""}{wear.in_season ? "" : " · not in season then"}</span>}
-        <b className="mf-sub">What you wear on it</b>
-        {!wear ? <p className="mf-k"><span className="spin" /> Working it out…</p> : (
-          <ul className="mf-wear">
-            {wear.pieces.map((p) => {
-              const it = chosen[p.slot] ?? p.products?.medium ?? null;
-              return (
-                <li key={p.slot} className="get">
-                  <Garment slot={p.slot} />
-                  <span className="mf-nm"><span>{p.name}</span><small>{it ? `${it.brand} ${it.name}` : p.reasons[0] ?? p.level}</small></span>
-                  {it?.image_url && <img src={it.image_url} alt="" loading="lazy" referrerPolicy="no-referrer" />}
-                  {it && <span className="mf-pr">{money(it.price, it.currency)}</span>}
-                </li>
-              );
-            })}
-          </ul>
-        )}
-        <Link className="mf-btn wide" to={`/trails/${sel.id}${month ? `?month=${month}` : ""}`}>Open →</Link>
+        <span className="mf-topen-go">
+          <button type="button" className={`mf-btn sm x-save${savedIds.includes(sel.id) ? " on" : ""}`} aria-pressed={savedIds.includes(sel.id)} onClick={() => toggleSave(sel.id)}>
+            {savedIds.includes(sel.id) ? "✓ Saved" : "Save"}</button>
+          <Link className="mf-btn sm go" to={`/trails/${sel.id}${month ? `?month=${month}` : ""}`}>Open</Link>
+        </span>
       </div>
     </div>
   );
@@ -308,7 +304,7 @@ export default function Trails() {
             <>
               <button type="button" className="mf-btn sm mf-back" onClick={() => set("t", "")}><Back /> All walks</button>
               {card}
-              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">To get for this walk · {money(totalOf(picks), cur)}</div>
+              {picks.length > 0 && <div className="mf-phone-buy"><div className="mf-k">What you wear · {money(totalOf(picks), cur)}</div>
                 <ProductRow picks={picks} onPick={pick} /></div>}
               <div className="mf-phone-go">
                 <button type="button" className="mf-btn go wide" disabled={!picks.length} onClick={() => setBuyOpen(true)}>
@@ -317,7 +313,7 @@ export default function Trails() {
             </>
           ) : (
             <>
-              <div className="mf-thead"><h1>Walks</h1><span className="mf-k">{all && !savedTab ? (view && !zone ? `${listed.length.toLocaleString("en-US")} here` : `${shown.length.toLocaleString("en-US")} ${zone ? "" : "in "}${where}`) : ""}</span></div>
+              <div className="mf-thead"><h1>Walks</h1></div>
               <div className="mf-segrow">
                 <div className="mf-seg" role="tablist" aria-label="Walks">
                   <button type="button" role="tab" aria-selected={!savedTab} className={!savedTab ? "on" : ""} onClick={() => set("saved", "")}>All</button>
@@ -329,18 +325,19 @@ export default function Trails() {
               {!savedTab && search}
               {zone && (
                 <div className="mf-chips mf-zone" role="group" aria-label={`How far from ${zone.name}`}>
-                  <span className="mf-k">Around {zone.name}:</span>
+                  <span className="mf-k">{zone.name}</span>
                   {[10, 25, 50, 100].map((k) => <button key={k} type="button" className={km === k ? "on" : ""} onClick={() => setKm(k)}>{k} km</button>)}
                 </div>
               )}
               {!savedTab && more && filters}
               {err && <p className="err">{err}</p>}
               {!all && !err ? <div className="loading"><span className="spin" /></div>
-                : <div className="mf-scroll">{listed.length ? rows : <p className="mf-k">{savedTab ? "Nothing saved yet. Open a walk and press Save." : shown.length ? "None here: zoom out or move the map." : "No walk matches."}</p>}</div>}
+                : <div className="mf-scroll">{listed.length ? rows : <p className="mf-k">{savedTab ? "Nothing saved yet." : shown.length ? "None here. Zoom out." : "No walk found."}</p>}</div>}
               {all && listed.length > PER && (desk ? (
-                <div className="mf-pager"><span>{page + 1} / {pages}</span>
-                  <span><button type="button" className="mf-btn sm" disabled={!page} onClick={() => setPage(page - 1)}>Back</button>
-                    <button type="button" className="mf-btn sm" disabled={page >= pages - 1} onClick={() => setPage(page + 1)}>More walks</button></span>
+                <div className="mf-pager">
+                  <button type="button" className="mf-btn sm" aria-label="Previous" disabled={!page} onClick={() => setPage(page - 1)}><Back /></button>
+                  <span>{page + 1} / {pages}</span>
+                  <button type="button" className="mf-btn sm" aria-label="Next" disabled={page >= pages - 1} onClick={() => setPage(page + 1)}><Next /></button>
                 </div>
               ) : list.length < listed.length && (
                 <button type="button" className="mf-btn wide" onClick={() => setPage(page + 1)}>Show more ({(listed.length - list.length).toLocaleString("en-US")} left)</button>
@@ -349,14 +346,10 @@ export default function Trails() {
           )}
         </section>
 
-        {desk && card}
-        {desk && (sel ? (
-          <BuyBar title="To get for this walk" sub={`what ${sel.name} asks for in ${MONTHS[wearMonth - 1]}`} picks={picks} onPick={pick}
+        {desk && sel && (
+          <BuyBar title="What you wear" sub={`${sel.name}, ${MONTHS[wearMonth - 1]}`} picks={picks} onPick={pick}
             onBuy={() => setBuyOpen(true)} empty={wear ? "Nothing special to wear on it." : "Working out the kit…"} />
-        ) : (
-          <BuyBar title="To get for a walk" sub="pick one on the map or in the list" picks={[]}
-            empty="Pick a walk: what it asks you to wear shows here, with real products and prices." />
-        ))}
+        )}
       </div>
 
       <KitSheet open={buyOpen} onClose={() => setBuyOpen(false)} title={sel ? `Your kit for ${sel.name}` : "Your kit"} picks={picks} />
@@ -365,8 +358,8 @@ export default function Trails() {
 }
 
 const I = (d: string) => () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>;
-const X = I("M6 6l12 12M18 6L6 18");
 const Back = I("M19 12H5M11 6l-6 6 6 6");
+const Next = I("M5 12h14M13 6l6 6-6 6");
 
 /** Great-circle distance in km. */
 function distKm(la1: number, lo1: number, la2: number, lo2: number) {

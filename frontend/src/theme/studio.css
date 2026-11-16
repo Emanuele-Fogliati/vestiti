@@ -612,3 +612,14 @@ a.mf-btn{text-decoration:none}
   .mf-dlist{padding-left:8px}
   .mf-dmore{padding-left:8px}
 }
+
+/* Walks (Manu 2026-11-16): a walk picked opens in its own row, no card on the right */
+.mf-treks li.open{display:block;background:var(--el-sel,#EEF2FC);border-radius:14px}
+.mf-treks li.open .mf-trow.sel{background:none}
+.mf-topen{display:flex;flex-direction:column;gap:8px;padding:0 8px 10px 88px}
+.mf-topen-go{display:flex;gap:8px}
+.mf-topen-go .mf-btn{flex:1;justify-content:center}
+.mf-trow .mf-nm small .mf-base{font:12px var(--f-body);color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.mf-pager{justify-content:center;gap:12px}
+/* a walk's drawing behind the globe's edge: hidden, not a faint box */
+.apin.maplibregl-marker-covered{visibility:hidden}
