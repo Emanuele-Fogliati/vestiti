@@ -108,6 +108,8 @@ export const api = {
     `/api/roads?pts=${encodeURIComponent(pts.map(([la, lo]) => `${la.toFixed(5)},${lo.toFixed(5)}`).join(";"))}`),
   trailDots: () => req<{ fields: string[]; trails: TrailDot[]; cell: number; cell_rank: number }>("GET", "/api/trails/dots"),
   trailDotsCell: (i: number, j: number) => req<{ trails: TrailDot[] }>("GET", `/api/trails/dots/cell/${i}/${j}`),
+  trailsAround: (lat: number, lon: number, km: number, trail?: string | null) =>
+    req<{ away: Record<string, number> }>("GET", `/api/trails/around?lat=${lat}&lon=${lon}&km=${km}${trail ? `&trail=${encodeURIComponent(trail)}` : ""}`),
   trailCard: (id: string) => req<TrailCard>("GET", `/api/trails/${encodeURIComponent(id)}/card`),
   trailWear: (id: string, month: number) => req<TrailWear>("GET", `/api/trails/${encodeURIComponent(id)}/wear?month=${month}`),
   /** New order, days and status of every stop; the dates follow. 409 when something booked would move. */

@@ -81,7 +81,7 @@ export default function Account() {
         </div>
           <section className="panel stack acct-data">
             <h2>Your data</h2>
-            <p className="small muted">Download everything we store about you, or delete it all. Clicks on shop links are kept anonymously for affiliate accounting.</p>
+            <p className="small muted">Download everything we store about you, or delete it all. Shop clicks are kept anonymously. <Link to="/legal/privacy">Privacy</Link> · <Link to="/legal/terms">Terms</Link></p>
             <div className="row">
               <button className="btn" type="button" onClick={exportData}>Download my data</button>
               <button className="btn danger" type="button" onClick={del}>Delete account</button>

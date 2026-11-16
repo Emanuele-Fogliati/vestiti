@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function NotFound() {
   return (
-    <main className="page">
+    <main className="page auth-mf">
       <div className="wrap" style={{ maxWidth: 560 }}>
         <p className="kicker">404</p>
         <h1 style={{ fontSize: 40, marginBottom: 16 }}>Wrong trail</h1>

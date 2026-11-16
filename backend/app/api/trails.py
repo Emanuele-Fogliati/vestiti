@@ -7,6 +7,7 @@ GET /api/trails/{id}/wear       what to wear on it in a month (the same engine a
 GET /api/trails/{id}.gpx        the line as GPX, to open in the walker's own navigation app
 GET /api/trails/dots            every trail as a dot for the home globe in Trek mode (compact)
 GET /api/trails/{id}/card       one trail as a card (the globe opens it when a dot is tapped)
+GET /api/trails/around          how far each trail's path comes to a place, or to another trail
 """
 from __future__ import annotations
 
@@ -191,6 +192,14 @@ def dots_cell(i: int, j: int, request: Request):
     if not (-9 <= i <= 9 and -18 <= j <= 18):
         raise HTTPException(404, "No such cell")
     return _packed(request, _dumped(f"{i}/{j}"))
+
+
+@router.get("/around")
+def around(lat: float = Query(..., ge=-90, le=90), lon: float = Query(..., ge=-180, le=180),
+           km: float = Query(100, gt=0, le=200), trail: str | None = Query(None, max_length=120)):
+    """{trail id: km} for the trails whose path passes within `km` of the place, or of `trail`'s
+    path: the Walks page sorts and labels its zone by it, not by where each walk starts."""
+    return {"away": trails.away(lat, lon, km, trail)}
 
 
 @router.get("/{trail_id}/card")

@@ -56,8 +56,9 @@ export default function Auth({ mode }: { mode: "login" | "register" }) {
   }
 
   return (
-    <main className="page">
-      <div className="wrap" style={{ maxWidth: 520 }}>
+    <main className="page auth-mf">
+      <div className="wrap auth-in">
+        <div className="auth-head">
         <p className="kicker">{mode === "login" ? "Welcome back" : "Free account"}</p>
         <h1 style={{ fontSize: 40, marginBottom: 12 }}>{mode === "login" ? "Sign in" : "Create account"}</h1>
         <p className="muted" style={{ marginBottom: 20 }}>
@@ -69,6 +70,7 @@ export default function Auth({ mode }: { mode: "login" | "register" }) {
               : "Signing in keeps what you planned as a guest: it moves into your account."}
           </p>
         )}
+        </div>
         <form className="form panel" onSubmit={submit}>
           {mode === "register" && (
             <div className="field"><label htmlFor="n">Name (optional)</label><input id="n" type="text" value={name} maxLength={120} onChange={(e) => setName(e.target.value)} autoComplete="name" /></div>
@@ -92,6 +94,7 @@ export default function Auth({ mode }: { mode: "login" | "register" }) {
           <p className="small">{mode === "login"
             ? <>No account? <Link to="/register" state={{ from: next }}>Create one</Link>, or just <Link to="/start">start planning</Link> as a guest.</>
             : <>Already have one? <Link to="/login" state={{ from: next }}>Sign in</Link>.</>}</p>
+          <p className="small muted auth-legal">{mode === "register" ? "Creating an account means you accept the " : ""}<Link to="/legal/terms">Terms</Link> · <Link to="/legal/privacy">Privacy</Link> · <Link to="/legal/affiliate">Affiliate disclosure</Link></p>
         </form>
       </div>
     </main>

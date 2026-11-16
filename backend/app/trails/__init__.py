@@ -226,3 +226,46 @@ def near(lat: float, lon: float, country: str | None = None, name: str | None = 
         if (n and _norm(t.base) == n) or d <= radius_km:
             out.append((d, t))
     return [t for _, t in sorted(out, key=lambda x: (x[1].tier, x[0]))]
+
+
+@lru_cache
+def _tracks() -> tuple[tuple[str, float, float, float, float, tuple[tuple[float, float], ...]], ...]:
+    """Every trail's line, kept light (a point every ~250 m), with its box: what `away` reads."""
+    out = []
+    for t in trails():
+        g = geo.__wrapped__(t.id) or {}
+        line = [(p[0], p[1]) for p in g.get("line", [])] or [(p.lat, p.lon) for p in t.points]
+        if not line:
+            continue
+        pts, last = [line[0]], line[0]
+        for p in line[1:]:
+            if abs(p[0] - last[0]) + abs(p[1] - last[1]) > 0.002:
+                pts.append(p)
+                last = p
+        pts.append(line[-1])
+        la, lo = [p[0] for p in pts], [p[1] for p in pts]
+        out.append((t.id, min(la), max(la), min(lo), max(lo), tuple(pts)))
+    return tuple(out)
+
+
+def away(lat: float, lon: float, radius_km: float, ref: str | None = None) -> dict[str, float]:
+    """How far each trail's PATH comes to a place, or to another trail's path (`ref`), in km
+    (Manu 2026-11-16: from the track, not from where it starts: many walks share one trailhead,
+    and "0 km away" told nothing). Only the trails within `radius_km`."""
+    tr = {x[0]: x for x in _tracks()}
+    here = list(tr[ref][5]) if ref in tr else [(lat, lon)]
+    if len(here) > 60:
+        here = here[:: math.ceil(len(here) / 60)] + [here[-1]]
+    c = math.cos(math.radians(lat)) or 1e-6
+    dl, dn = radius_km / 111.2, radius_km / (111.2 * max(0.05, c))
+    s, n = min(p[0] for p in here) - dl, max(p[0] for p in here) + dl
+    w, e = min(p[1] for p in here) - dn, max(p[1] for p in here) + dn
+    out = {}
+    for tid, a, b, lo1, lo2, pts in tr.values():
+        if b < s or a > n or lo2 < w or lo1 > e:
+            continue
+        best = min(((p[0] - q[0]) ** 2 + ((p[1] - q[1]) * c) ** 2 for p in pts for q in here))
+        d = math.sqrt(best) * 111.2
+        if d <= radius_km:
+            out[tid] = round(d, 1)
+    return out
