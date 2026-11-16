@@ -51,13 +51,43 @@ export default function Trails() {
   }, [country, month]);
 
   const set = (k: string, v: string) => { const n = new URLSearchParams(q); if (v) n.set(k, v); else n.delete(k); if (k !== "t") n.delete("t"); setQ(n, { replace: true }); };
-  const shown = useMemo(() => (all ?? []).filter((t) => (!level || t.difficulty === level) && (!kind || t.kind === kind)
-    && (!style || (t.style ?? "trek") === style)
-    && (!find || ((h) => find.split(/\s+/).every((w) => h.includes(w)))([t.name, t.country, countryName(t.country), t.region, t.base].join(" ").toLowerCase())))
-    // in season first, then the ones with a drawing (the famous ones), then the rest
-    .sort((a, b) => Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
-      || Number(b.tier === "A") - Number(a.tier === "A")), [all, level, kind, style, find]);
-  useEffect(() => setPage(0), [all, level, kind, style, find]);
+  const textHit = (t: TrailCard) => !find || ((h) => find.split(/\s+/).every((w) => h.includes(w)))(
+    [t.name, t.country, countryName(t.country), t.region, t.base].join(" ").toLowerCase());
+  const base = useMemo(() => (all ?? []).filter((t) => (!level || t.difficulty === level) && (!kind || t.kind === kind)
+    && (!style || (t.style ?? "trek") === style)), [all, level, kind, style]);
+
+  // search by zone (Manu 2026-11-16): "Fitz Roy" finds every walk around it, not only the ones with
+  // the words in their name. The place is the map's own match for the words, or else the start of
+  // the walks whose name has them; a country name stays a plain filter.
+  const [geo, setGeo] = useState<{ q: string; lat: number; lon: number; name: string } | null>(null);
+  useEffect(() => {
+    if (find.length < 3) { setGeo(null); return; }
+    let live = true;
+    const h = setTimeout(() => {
+      api.geocode(find).then((r) => {
+        const p = r.results.find((x) => !/^(PCL|ADM1|CONT)/.test((x as { feature?: string }).feature ?? ""));
+        if (live) setGeo(p ? { q: find, lat: p.latitude, lon: p.longitude, name: p.name } : null);
+      }).catch(() => { if (live) setGeo(null); });
+    }, 350);
+    return () => { live = false; clearTimeout(h); };
+  }, [find]);
+  const [km, setKm] = useState(25);
+  const zone = useMemo(() => {
+    if (find.length < 3 || !all) return null;
+    if (all.some((t) => countryName(t.country).toLowerCase() === find || t.country.toLowerCase() === find)) return null;
+    if (geo && geo.q === find) return { lat: geo.lat, lon: geo.lon, name: geo.name.toLowerCase() === find ? typed.trim() : geo.name };
+    const named = all.filter((t) => t.lat != null && t.lon != null && textHit(t));
+    if (!named.length || named.length > 8) return null;
+    return { lat: named[0].lat!, lon: named[0].lon!, name: named[0].base || named[0].name };
+  }, [find, all, geo]); // eslint-disable-line react-hooks/exhaustive-deps
+  const away = (t: TrailCard) => zone && t.lat != null && t.lon != null ? distKm(zone.lat, zone.lon, t.lat, t.lon) : Infinity;
+
+  const shown = useMemo(() => base.filter((t) => textHit(t) || away(t) <= km)
+    // near the place first; else in season first, then the ones with a drawing (the famous ones), then the rest
+    .sort((a, b) => (zone ? Math.round(away(a)) - Math.round(away(b)) : 0)
+      || Number(b.in_season !== false) - Number(a.in_season !== false) || Number(!!b.art) - Number(!!a.art)
+      || Number(b.tier === "A") - Number(a.tier === "A")), [base, find, zone, km]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => setPage(0), [all, level, kind, style, find, km, zone?.lat]);
 
   const PER = desk ? 6 : 20;
   const pages = Math.max(1, Math.ceil(shown.length / PER));
@@ -93,7 +123,7 @@ export default function Trails() {
     return l.sort((a, b) => a[1].localeCompare(b[1]));
   }, [countries, country]);
 
-  const where = country ? countryName(country) : find ? `“${find}”` : "the world";
+  const where = zone ? `around ${zone.name}` : country ? countryName(country) : find ? `“${find}”` : "the world";
   const inset = desk ? { top: 20, right: 60, bottom: 150, left: sel ? 870 : 470 } : undefined;
 
   const search = (
@@ -145,7 +175,7 @@ export default function Trails() {
               <small><span className={`tag diff-${t.difficulty}`}>{DIFFICULTY[t.difficulty]}</span>
                 {t.km != null && <span>{Math.round(t.km)} km</span>}{t.gain_m != null && <span>+{Math.round(t.gain_m).toLocaleString("en-US")} m</span>}
                 {t.kind === "multiday" && <span>{t.days} days</span>}</small>
-              <small className="mf-base">From {t.base}{country ? "" : ` · ${countryName(t.country)}`} · best {t.months_text}</small>
+              <small className="mf-base">{zone && Number.isFinite(away(t)) ? `${Math.round(away(t))} km away · ` : ""}From {t.base}{country ? "" : ` · ${countryName(t.country)}`} · best {t.months_text}</small>
             </span>
           </button>
         </li>
@@ -209,8 +239,14 @@ export default function Trails() {
             </>
           ) : (
             <>
-              <div className="mf-thead"><h1>Hikes</h1><span className="mf-k">{all ? `${shown.length.toLocaleString("en-US")} in ${where}` : ""}</span></div>
+              <div className="mf-thead"><h1>Hikes</h1><span className="mf-k">{all ? `${shown.length.toLocaleString("en-US")} ${zone ? "" : "in "}${where}` : ""}</span></div>
               {search}
+              {zone && (
+                <div className="mf-chips mf-zone" role="group" aria-label={`How far from ${zone.name}`}>
+                  <span className="mf-k">Around {zone.name}:</span>
+                  {[10, 25, 50, 100].map((k) => <button key={k} type="button" className={km === k ? "on" : ""} onClick={() => setKm(k)}>{k} km</button>)}
+                </div>
+              )}
               {filters}
               {err && <p className="err">{err}</p>}
               {!all && !err ? <div className="loading"><span className="spin" /></div>
@@ -245,5 +281,11 @@ export default function Trails() {
 const I = (d: string) => () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>;
 const X = I("M6 6l12 12M18 6L6 18");
 const Back = I("M19 12H5M11 6l-6 6 6 6");
+
+/** Great-circle distance in km. */
+function distKm(la1: number, lo1: number, la2: number, lo2: number) {
+  const r = Math.PI / 180, a = Math.sin((la2 - la1) * r / 2) ** 2 + Math.cos(la1 * r) * Math.cos(la2 * r) * Math.sin((lo2 - lo1) * r / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(a));
+}
 
 const SearchIcon = () => <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" /></svg>;
