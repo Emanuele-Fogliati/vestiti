@@ -1,0 +1,13 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="26" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-at-kaprun-g"><path d="M56 110L76 82L94 60L108 44L120 38L132 44L148 40L162 30L171 22L180 28L192 40L206 56L222 78L242 110Z"/></clipPath></defs>
+<path d="M56 110L76 82L94 60L108 44L120 38L132 44L148 40L162 30L171 22L180 28L192 40L206 56L222 78L242 110Z" fill="var(--il-far)"/>
+<path clip-path="url(#il-at-kaprun-g)" d="M90 64L108 44L120 38L132 44L148 40L162 30L171 22L180 28L192 40L188 50L180 44L174 56L168 48L162 58L166 62L160 80L152 74L146 96L138 84L130 98L124 80L116 88L110 72L100 80Z" fill="var(--il-ice)"/>
+<path d="M0 112V18L16 14L32 24L48 36L64 52L82 70L102 88L122 102L140 112Z" fill="var(--il-mid)"/>
+<path d="M300 112V6L280 18L260 34L240 52L220 70L200 88L178 104L164 112Z" fill="var(--il-leaf)"/>
+<path d="M0 200V108H300V200Z" fill="var(--il-water)"/>
+<path d="M118 200Q148 152 202 137Q252 125 300 121V172Q260 172 220 180Q190 186 170 200Z" fill="var(--il-obj)"/>
+<path d="M150 166L164 190M172 152L182 184M196 143L202 180M222 136L226 176M248 131L250 174M274 127L275 172" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M104 200Q134 148 198 130Q250 118 300 114V121Q252 125 202 137Q148 152 118 200Z" fill="var(--il-far)"/>
+<path d="M160 200Q190 184 222 178Q262 170 300 170V200Z" fill="var(--il-leaf)"/>
+<path d="M0 200V184Q26 176 54 184L62 200Z" fill="var(--il-leaf)"/>
