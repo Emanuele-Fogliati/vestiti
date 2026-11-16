@@ -312,3 +312,46 @@ a.mf-btn{text-decoration:none}
 .mf-twear-h label{display:flex;align-items:center;gap:6px;white-space:nowrap}
 .mf-twear-h select{max-width:150px}
 .mf-twear .mf-art{height:120px}
+
+/* ---------- a recommended trip, map first (Manu 2026-11-16) ---------- */
+.itinerary-mf .mf-stops{display:grid;grid-template-columns:minmax(0,1fr);gap:2px}
+.itinerary-mf .mf-trow .mf-nm{min-width:0}
+.itinerary-mf .mf-trow .mf-num{align-self:center}
+.itinerary-mf .mf-trow small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.itinerary-mf .mf-scroll,.mf-ibody{display:flex;flex-direction:column;gap:10px}
+.mf-icard .mf-card-in{gap:10px}
+.mf-icard .tags{display:flex;flex-wrap:wrap;gap:4px}
+.mf-plan{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:13.5px;line-height:1.4}
+.mf-plan li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:8px}
+.mf-tip{display:grid;gap:4px;font-size:13.5px}
+.mf-tip ul{margin:0;padding-left:16px}
+.mf-tip.skip ul{color:var(--ink-2)}
+.mf-exc{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:4px 0;border-top:1px solid var(--rule)}
+.mf-exc>span:last-child{display:flex;gap:4px}
+.mf-groups{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.mf-groups a{display:grid;gap:1px;padding:8px 10px;border-radius:12px;background:var(--surface-2);text-decoration:none;color:var(--ink);font-size:13.5px}
+.mf-pack{display:flex;align-items:center;gap:12px;width:100%;min-width:0;margin:0}
+.mf-pack-t{display:grid;gap:2px;flex:1 1 auto;min-width:0}
+.mf-pack-d{display:grid;gap:2px;flex:none}
+.mf-pack-d input{height:38px;padding:0 10px;border-radius:12px;width:auto;font-size:14px}
+.mf-pack .mf-btn.go{flex:none;height:46px;padding:0 22px}
+.mf-pack .err{flex-basis:100%;margin:0}
+.itinerary-mf .elev{margin:0;padding:10px 10px 6px;border-radius:14px;min-width:0}
+.itinerary-mf .elev svg{min-width:0}
+.itinerary-mf .elev-hint{display:none}
+.mf-ibody{min-width:0}
+@media (min-width:900px){
+  .mf-packbar{flex-wrap:nowrap}
+  .mf-icard{max-height:calc(100% - 176px)}
+}
+@media (max-width:899px){
+  .itinerary-mf .mf-map{height:min(300px,40svh)}
+  .mf-pack{flex-wrap:wrap;gap:8px}
+  .mf-pack-t span{display:none}
+  .mf-pack-d{grid-template-columns:auto 1fr;align-items:center;gap:8px;flex:1 1 auto}
+  .mf-pack .mf-btn.go{flex:1 1 100%}
+  .mf-icard.in{display:flex;flex-direction:column;gap:10px}
+  .mf-icard.in .mf-art{height:170px;border-radius:16px}
+  .mf-icard.in .mf-card-in{padding:0}
+}
+.itinerary-mf .mf-trow{width:100%;min-width:0}

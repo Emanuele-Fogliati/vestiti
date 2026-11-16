@@ -15,7 +15,7 @@ const COUNTRY: Record<string, string> = { PE: "Peru", AR: "Argentina", CL: "Chil
 
 /** "Dress me for this trip": optional start date, then the itinerary becomes the user's own
  *  trip (stops, days and activities can all be changed there) and the kit is worked out. */
-function PackForm({ it, id }: { it: Itinerary; id?: string }) {
+function PackForm({ it }: { it: Itinerary }) {
   const { ensureUser } = useApp();
   const nav = useNavigate();
   const [start, setStart] = useState("");
@@ -36,74 +36,80 @@ function PackForm({ it, id }: { it: Itinerary; id?: string }) {
   }
 
   return (
-    <form className="brief pack" onSubmit={pack} aria-label={DRESS_ME}>
-      <h2>Like this trip?</h2>
-      <p className="small muted">We read the weather at every stop and dress you for all of it: what to wear, what to pack, at three budgets. It becomes your trip, so you can change stops and days after. Free.</p>
-      <div className="field">
-        <label htmlFor={`start-${id ?? "top"}`}>When do you leave? (optional)</label>
-        <input id={`start-${id ?? "top"}`} type="date" value={start} min={today()} onChange={(e) => setStart(e.target.value)} />
+    <form className="mf-pack" onSubmit={pack} aria-label={DRESS_ME}>
+      <div className="mf-pack-t">
+        <b>Like this trip?</b>
+        <span className="mf-k">It becomes your trip: we read the weather at every stop and dress you for all of it, at three budgets. Free.</span>
       </div>
-      <p className="small muted">{start ? `${it.days} days from this date.` : `No date yet? We plan for ${monthYear(it.start_date)} and you set the date later.`}</p>
+      <label className="mf-pack-d"><span className="mf-k">Leaving</span>
+        <input type="date" value={start} min={today()} onChange={(e) => setStart(e.target.value)}
+          title={start ? `${it.days} days from this date` : `No date yet? We plan for ${monthYear(it.start_date)}`} />
+      </label>
+      <button className="mf-btn go" type="submit" disabled={busy}>{busy ? <span className="spin" /> : DRESS_ME}</button>
       {err && <p className="err">{err}</p>}
-      <button className="btn primary" type="submit" disabled={busy}>{busy ? <span className="spin" /> : DRESS_ME}</button>
     </form>
   );
 }
 
-function StopBlock({ stop, index, dayFrom }: { stop: ItineraryStop; index: number; dayFrom: number }) {
+/** One stop of the recommended trip, as the card beside the map (inline on a phone). */
+function StopCard({ stop, dayFrom, desk, onClose }: { stop: ItineraryStop; dayFrom: number; desk: boolean; onClose: () => void }) {
   const n = nights(stop.start_date, stop.end_date);
   return (
-    <li className={`stop istop${stop.art ? "" : " noart"}`} id={`stop-${index}`}>
-      <div className="days">{n > 1 ? "Days" : "Day"} <b>{n > 1 ? `${dayFrom}–${dayFrom + n - 1}` : dayFrom}</b></div>
-      <Illustration art={stop.art} />
-      <div className="info">
-        <h3>{stop.name}</h3>
-        <div className="acts">
-          {stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}
-          <span className="tag">{Math.round(stop.elevation_m).toLocaleString("en-US")} m</span>
+    <div className={desk ? "mf-float mf-card mf-icard" : "mf-icard in"}>
+      {desk && <button type="button" className="mf-x" onClick={onClose} aria-label="Close"><X /></button>}
+      {stop.art && <div className="mf-art"><Illustration art={stop.art} label={stop.name} /></div>}
+      <div className="mf-card-in">
+        <div>
+          <span className="mf-k">{n > 1 ? `Days ${dayFrom}–${dayFrom + n - 1}` : `Day ${dayFrom}`} · {Math.round(stop.elevation_m).toLocaleString("en-US")} m</span>
+          <h3>{stop.name}</h3>
         </div>
+        <div className="tags">{stop.activities.map((a, i) => <span className="tag" key={i}>{activityText(a)}</span>)}</div>
         <PlaceGuide guide={stop.guide} />
-        <ol className="plan">
-          {stop.plan.map((p, i) => <li key={i}><span className="vd">Day {dayFrom + i}</span>{p}</li>)}
+        <ol className="mf-plan">
+          {stop.plan.map((p, i) => <li key={i}><span className="mf-k">Day {dayFrom + i}</span>{p}</li>)}
         </ol>
         {/* the day plan already names every place: only the ones with their own picture come back here */}
         <Visits stop={{ ...stop, plan: undefined, visits: (stop.visits ?? []).filter((v) => v.art && v.art.id !== stop.art?.id) }}
           dayFrom={dayFrom} flat />
-        {(stop.do.length > 0 || stop.skip.length > 0) && (
-          <div className="tips">
-            {stop.do.length > 0 && <div className="tip-do"><h4>Worth it</h4><ul>{stop.do.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}
-            {stop.skip.length > 0 && <div className="tip-skip"><h4>Skip</h4><ul>{stop.skip.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}
-          </div>
-        )}
+        {stop.do.length > 0 && <div className="mf-tip"><b className="mf-sub">Worth it</b><ul>{stop.do.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}
+        {stop.skip.length > 0 && <div className="mf-tip skip"><b className="mf-sub">Skip</b><ul>{stop.skip.map((t, i) => <li key={i}>{t}</li>)}</ul></div>}
         {stop.excursions.length > 0 && (
-          <div className="exc">
-            <h4>Book a tour here</h4>
+          <div className="mf-tip">
+            <b className="mf-sub">Book a tour here</b>
             {stop.excursions.map((x, i) => (
-              <div className="exc-row" key={i}>
+              <div className="mf-exc" key={i}>
                 <span>{x.title}</span>
-                <span className="exc-links">
-                  {x.links.map((l) => (
-                    <a key={l.provider} className="btn sm" href={l.href} target="_blank" rel="noopener sponsored">{l.label} ↗</a>
-                  ))}
-                </span>
+                <span>{x.links.map((l) => <a key={l.provider} className="mf-btn sm" href={l.href} target="_blank" rel="noopener sponsored">{l.label} ↗</a>)}</span>
               </div>
             ))}
+            <span className="mf-k">Tour links go to GetYourGuide and Viator. We may earn a commission; it never decides what we suggest or tell you to skip.</span>
           </div>
         )}
       </div>
-    </li>
+    </div>
   );
 }
 
+/** A recommended trip, map first like the trip page (Manu 2026-11-16): the route on the map, the
+ *  stops in the panel, a stop opens its card beside it, and "Dress me" sits in the bar below. */
 export default function ItineraryPage() {
   const { slug = "" } = useParams();
   const [it, setIt] = useState<Itinerary | null>(null);
   const [err, setErr] = useState<string | null>(null);
-  const [sel, setSel] = useState(0);
+  const [sel, setSel] = useState<number | null>(null);
+  const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
 
   useEffect(() => {
-    setIt(null); setErr(null);
-    api.itinerary(slug).then(setIt).catch((e) => setErr((e as Error).message));
+    const mq = matchMedia("(min-width: 900px)");
+    const f = () => setDesk(mq.matches);
+    mq.addEventListener("change", f);
+    return () => mq.removeEventListener("change", f);
+  }, []);
+
+  useEffect(() => {
+    setIt(null); setErr(null); setSel(null);
+    api.itinerary(slug).then((x) => { setIt(x); if (matchMedia("(min-width: 900px)").matches && x.stops.length) setSel(0); })
+      .catch((e) => setErr((e as Error).message));
   }, [slug]);
 
   if (err) return <main className="page"><div className="wrap"><p className="err">{err}</p><Link to="/ideas">All recommended trips</Link></div></main>;
@@ -111,68 +117,86 @@ export default function ItineraryPage() {
 
   const starts: number[] = [];
   it.stops.reduce((d, s) => { starts.push(d); return d + nights(s.start_date, s.end_date); }, 1);
-  const pick = (i: number) => { setSel(i); document.getElementById(`stop-${i}`)?.scrollIntoView({ behavior: "smooth", block: "start" }); };
+  const stop = sel != null ? it.stops[sel] : null;
+  const inset = desk ? { top: 20, right: 60, bottom: 130, left: stop ? 870 : 470 } : { top: 0, right: 0, bottom: 22, left: 0 };
+  const card = stop && <StopCard stop={stop} dayFrom={starts[sel!]} desk={desk} onClose={() => setSel(null)} />;
+
+  const rows = (
+    <ol className="mf-stops">
+      {it.stops.map((s, i) => {
+        const n = nights(s.start_date, s.end_date);
+        return (
+          <li key={s.id}>
+            <button type="button" className={`mf-trow${sel === i ? " sel" : ""}`} onClick={() => setSel(sel === i && desk ? null : i)}>
+              <span className="mf-num">{i + 1}</span>
+              {s.art && <span className="mf-thumb"><Illustration art={s.art} /></span>}
+              <span className="mf-nm">
+                <b>{s.name}</b>
+                <small>{n > 1 ? `Days ${starts[i]}–${starts[i] + n - 1}` : `Day ${starts[i]}`} · {s.activities.map(activityText).join(", ")}</small>
+              </span>
+            </button>
+          </li>
+        );
+      })}
+    </ol>
+  );
+
+  const groups = it.group_trips.length > 0 && (
+    <div className="mf-tsec">
+      <b className="mf-sub">Rather go with a group?</b>
+      <span className="mf-k">Organised trips on a similar route. The clothes are still on you.</span>
+      <ul className="mf-groups">
+        {it.group_trips.map((g, i) => (
+          <li key={i}><a href={g.href} target="_blank" rel="noopener sponsored"><b>{g.title}</b><span className="mf-k">{g.operator} · {g.days} days ↗</span></a></li>
+        ))}
+      </ul>
+    </div>
+  );
 
   return (
-    <main>
-      <section className="hero">
-        <div className="wrap hero-in">
-          <div>
-            <p className="kicker"><Link to="/ideas">Recommended trips</Link> · {it.countries.map((c) => COUNTRY[c] ?? c).join(" & ")}</p>
-            <h1 className="ititle">{it.title}</h1>
-            <p className="lede">{it.summary}</p>
-            <div className="facts">
-              <div className="fact"><b>{it.days}</b><span>Days, {it.stops.length} stops</span></div>
-              <div className="fact"><b>{monthRange(it.best_months)}</b><span>Best months</span></div>
-              <div className="fact"><b>{Math.round(it.highest_m).toLocaleString("en-US")} m</b><span>Highest point</span></div>
-            </div>
-            <p className="small muted" style={{ marginTop: 14, maxWidth: "62ch" }}>{it.season_note}</p>
-          </div>
-          <PackForm it={it} />
+    <main className="trk itinerary-mf">
+      <div className="mf">
+        <div className="mf-map">
+          <TripMap stops={it.stops as unknown as Stop[]} focusIndex={sel} bare inset={inset} onPin={(i) => setSel(i)} />
         </div>
-      </section>
 
-      <section className="band alt">
-        <div className="wrap">
-          <header className="sh"><p className="sh-k">Day by day</p><h2>The route</h2>
-            <p>Stops in the order that works best. Tap a stop on the map to zoom in and see what is around it.</p></header>
-          <TripMap stops={it.stops as unknown as Stop[]} />
-          <ElevationProfile stops={it.stops as unknown as Stop[]} selected={sel} onSelect={pick} />
-          <ol className="stops" style={{ marginTop: 24 }}>
-            {it.stops.map((s, i) => <StopBlock key={s.id} stop={s} index={i} dayFrom={starts[i]} />)}
-          </ol>
-          <p className="small muted" style={{ marginTop: 16 }}>
-            Tour links go to GetYourGuide and Viator. We may earn a commission when you book, at no extra cost to you.
-            It never decides which places we suggest or tell you to skip.
-          </p>
-        </div>
-      </section>
-
-      {it.group_trips.length > 0 && (
-        <section className="band">
-          <div className="wrap">
-            <header className="sh"><p className="sh-k">Rather go with a group?</p><h2>Organised trips on a similar route</h2>
-              <p>Guide, transport and most tours included. The clothes are still on you: tap “{DRESS_ME}” either way.</p></header>
-            <ul className="gtrips">
-              {it.group_trips.map((g, i) => (
-                <li key={i}>
-                  <a href={g.href} target="_blank" rel="noopener sponsored">
-                    <span className="label">{g.operator}</span>
-                    <b>{g.title}</b>
-                    <span className="small muted">{g.days} days ↗</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <section className="mf-float mf-panel" aria-label={it.title}>
+          {!desk && stop ? (
+            <>
+              <button type="button" className="mf-btn sm mf-back" onClick={() => setSel(null)}><Back /> All stops</button>
+              {card}
+            </>
+          ) : (
+            <>
+              <div className="mf-trailhead">
+                <Link className="mf-k mf-crumb" to="/ideas"><Back /> Recommended trips · {it.countries.map((c) => COUNTRY[c] ?? c).join(" & ")}</Link>
+                <h1>{it.title}</h1>
+                <dl className="tfacts">
+                  <div><dt>Days</dt><dd>{it.days}</dd></div>
+                  <div><dt>Stops</dt><dd>{it.stops.length}</dd></div>
+                  <div><dt>Best</dt><dd>{monthRange(it.best_months)}</dd></div>
+                  <div><dt>Highest</dt><dd>{Math.round(it.highest_m).toLocaleString("en-US")} m</dd></div>
+                </dl>
+              </div>
+              <div className={desk ? "mf-scroll" : "mf-ibody"}>
+                <p className="mf-lede">{it.summary}</p>
+                <p className="mf-k">{it.season_note}</p>
+                <b className="mf-sub">Day by day</b>
+                {rows}
+                <ElevationProfile stops={it.stops as unknown as Stop[]} selected={sel ?? -1} onSelect={(i) => setSel(i)} />
+                {groups}
+              </div>
+            </>
+          )}
+          {!desk && <div className="mf-phone-go"><PackForm it={it} /></div>}
         </section>
-      )}
 
-      <section className="band alt">
-        <div className="wrap pack-end">
-          <PackForm it={it} id="bottom" />
-        </div>
-      </section>
+        {desk && card}
+        {desk && <section className="mf-float mf-buy mf-packbar" aria-label={DRESS_ME}><PackForm it={it} /></section>}
+      </div>
     </main>
   );
 }
+
+const Back = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>;
+const X = () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>;
