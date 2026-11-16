@@ -20,7 +20,7 @@ export function PlacePop({ place, slot, busy, floating, onAdd, onClose }: {
         <div>
           <span className="mf-k">{KIND_LABEL[place.kind]} · {countryName(place.country)}</span>
           <h3>{place.name}</h3>
-          <AboutLine id={place.art} />
+          <AboutLine id={place.art} name={place.name} country={place.country} />
         </div>
         <button type="button" className="mf-btn go wide" disabled={busy} onClick={onAdd}>
           {busy ? <span className="spin" /> : `Add as stop ${slot + 1}`}

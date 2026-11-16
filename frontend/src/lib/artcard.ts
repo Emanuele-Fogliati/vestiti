@@ -36,3 +36,30 @@ export function useAbout(id: string | null | undefined): About | null | undefine
   }, [id]);
   return a;
 }
+
+/** The place's own short description and fun fact (app.guide), by name and country: the card shows
+ *  it first, and Wikipedia's sentence only for places that have none yet. */
+export interface PlaceText { blurb: string; fun_fact: string; source: string }
+const gcache = new Map<string, Promise<PlaceText | null>>();
+export function loadGuide(name: string, country: string): Promise<PlaceText | null> {
+  const k = `${country}|${name}`;
+  let p = gcache.get(k);
+  if (!p) {
+    const q = new URLSearchParams({ name, country });
+    p = fetch(`/api/globe/guide?${q}`, { headers: { "X-Requested-With": "app" } })
+      .then((r) => (r.ok ? r.json() : null)).catch(() => null);
+    gcache.set(k, p);
+  }
+  return p;
+}
+export function useGuide(name: string | null | undefined, country: string | null | undefined): PlaceText | null | undefined {
+  const [g, setG] = useState<PlaceText | null | undefined>(undefined);
+  useEffect(() => {
+    setG(undefined);
+    if (!name || !country) { setG(null); return; }
+    let live = true;
+    loadGuide(name, country).then((x) => { if (live) setG(x); });
+    return () => { live = false; };
+  }, [name, country]);
+  return g;
+}

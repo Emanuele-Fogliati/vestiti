@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Illustration } from "./Illustration";
-import { onArt, useAbout, type ArtOpen } from "../lib/artcard";
+import { onArt, useAbout, useGuide, type ArtOpen, type PlaceText } from "../lib/artcard";
 import { countryName } from "../lib/worldmap";
 
 /** The small card of a drawing tapped on a map: the drawing bigger, the name, what the place is in
@@ -10,6 +10,7 @@ export function ArtCard() {
   const [open, setOpen] = useState<ArtOpen | null>(null);
   const loc = useLocation();
   const about = useAbout(open?.id);
+  const guide = useGuide(open?.name, about?.country);
   useEffect(() => onArt(setOpen), []);
   useEffect(() => { setOpen(null); }, [loc.pathname]);
   useEffect(() => {
@@ -28,18 +29,33 @@ export function ArtCard() {
       <div className="artcard-in">
         {about && <span className="mf-k">{countryName(about.country)}</span>}
         <h3>{open.name}</h3>
-        {about === undefined ? <p className="artcard-t wait"><span /><span /></p>
+        {about === undefined || (about && guide === undefined) ? <p className="artcard-t wait"><span /><span /></p>
+          : guide ? <GuideText g={guide} />
           : <p className="artcard-t">{about?.text ?? about?.shows}</p>}
-        {about?.source && <a className="artcard-src" href={about.source.url} target="_blank" rel="noopener">Wikipedia ↗</a>}
+        {!guide && about?.source && <a className="artcard-src" href={about.source.url} target="_blank" rel="noopener">Wikipedia ↗</a>}
       </div>
     </aside>
   );
 }
 
-/** The same sentence inside the cards that already show a place's drawing (the globe's place card,
- *  the "Add as stop" card), so every drawing says what the place is. */
-export function AboutLine({ id }: { id: string | null | undefined }) {
-  const about = useAbout(id);
+/** The place's own text: what it is in a line, and a fun fact with its source. */
+function GuideText({ g, cls = "" }: { g: PlaceText; cls?: string }) {
+  return (
+    <>
+      <p className={`artcard-t ${cls}`}>{g.blurb}</p>
+      <p className={`artcard-t artcard-fact ${cls}`}><b>Fun fact</b> {g.fun_fact}{" "}
+        <a className="artcard-src" href={g.source} target="_blank" rel="noopener noreferrer">source</a></p>
+    </>
+  );
+}
+
+/** The same text inside the cards that show a place (the globe's place card, the "Add as stop"
+ *  card): the place's own description and fun fact when we have written one, otherwise what its
+ *  drawing is, from Wikipedia. */
+export function AboutLine({ id, name, country }: { id: string | null | undefined; name?: string; country?: string }) {
+  const guide = useGuide(name, country);
+  const about = useAbout(guide ? null : id);
+  if (guide) return <GuideText g={guide} cls="about-line" />;
   if (!id || !about) return null;
   return (
     <p className="artcard-t about-line">{about.text ?? about.shows}
