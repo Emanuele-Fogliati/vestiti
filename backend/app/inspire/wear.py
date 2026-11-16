@@ -32,6 +32,8 @@ def label(slot: str, r, wet: bool = True, ski: bool = False) -> str:
     """The piece in plain words: "Rain jacket", "Warm down jacket", "Hiking boots"."""
     lv = r.level
     if slot == "shell_top":
+        if ski and r.insulated:
+            return "Ski jacket"
         return "Rain jacket" if r.waterproof else "Windproof jacket"
     if slot == "insulation_top":
         # by the products of each level: Nano Puff, Down Sweater, Nuptse
