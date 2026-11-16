@@ -355,3 +355,46 @@ a.mf-btn{text-decoration:none}
   .mf-icard.in .mf-card-in{padding:0}
 }
 .itinerary-mf .mf-trow{width:100%;min-width:0}
+
+/* ---------- Account and How it works: one screen on a computer (Manu 2026-11-16) ---------- */
+.acct-mf h1{font-size:40px;margin:0 0 16px}
+.acct-mf h2{font-size:20px}
+.acct-grid{max-width:720px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px));display:grid;gap:16px}
+.acct-col{display:flex;flex-direction:column;gap:12px;min-width:0}
+.acct-col .banner{margin:0}
+.how-grid{max-width:760px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px));display:grid;gap:14px}
+.how-head h1{font-size:clamp(32px,3.2vw,44px);line-height:1.03;letter-spacing:-.03em;margin:4px 0 14px;text-wrap:balance}
+.how-head .mf-warn{margin-bottom:12px}
+.how-card{min-width:0}
+.how-card h2{font-size:18px;margin:0 0 6px}
+.how-card p,.how-card li{font-size:14.5px;line-height:1.5}
+.how-card p{margin:0 0 8px}
+.how-card ul{margin:0 0 8px;padding-left:18px}
+@media (min-width:900px){
+  body:has(.acct-mf),body:has(.how-mf){padding-bottom:0}
+  body:has(.acct-mf) footer,body:has(.how-mf) footer{display:none}
+  main.acct-mf,main.how-mf{min-height:calc(100svh - 64px);padding-block:24px;display:flex;align-items:flex-start}
+  .acct-grid{max-width:1300px;width:100%;grid-template-columns:320px minmax(0,1fr) 340px;align-items:start}
+  .acct-grid.guest{grid-template-columns:320px minmax(0,1fr)}
+  .acct-mf .acct-fit{display:grid;align-items:start;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+  .acct-fit>h2,.acct-fit>.field:last-child{grid-column:1/-1}
+  .acct-mf .field label{margin-bottom:4px}
+  .acct-mf .panel{border-radius:22px;padding:16px 18px}
+  .acct-mf .panel.form .field{margin-bottom:10px}
+  .acct-mf .you-links{gap:8px}
+  .how-grid{max-width:1300px;width:100%;grid-template-columns:300px minmax(0,1fr);align-items:start}
+  .how-cards{columns:3;column-gap:14px}
+  .how-card{break-inside:avoid;margin-bottom:14px;background:#FFFFFF;border-radius:22px;padding:16px 18px;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 32px rgba(0,0,0,.08)}
+  .how-card p,.how-card li{font-size:13.5px;line-height:1.45}
+}
+@media (min-width:900px) and (max-height:760px){
+  .how-card p,.how-card li{font-size:12.5px;line-height:1.4}
+  .how-head h1{font-size:32px}
+  .how-card{padding:12px 14px}
+}
+@media (min-width:900px){
+  .acct-fit .quiz-chips{gap:6px}
+  .acct-fit .qchip{height:32px;min-height:32px;padding:0 12px;font-size:13px}
+  .acct-fit .stack .row input{height:38px}
+  .acct-fit .stack .row{gap:8px;flex-wrap:nowrap}
+}

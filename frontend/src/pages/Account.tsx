@@ -61,10 +61,11 @@ export default function Account() {
   }
 
   return (
-    <main className="page">
-      <div className="wrap" style={{ maxWidth: 720 }}>
+    <main className="page acct-mf">
+      <div className={`acct-grid${user.is_guest ? " guest" : ""}`}>
+        <div className="acct-col">
         <p className="kicker">{user.is_guest ? "Guest" : user.email}</p>
-        <h1 style={{ fontSize: 40, marginBottom: 24 }}>Account</h1>
+        <h1>Account</h1>
         {user.is_guest && (
           <div className="banner info" style={{ marginBottom: 20 }}>
             You're a guest: your trips live in this browser's session. <Link to="/register">Create a free account</Link> to keep them.
@@ -78,9 +79,17 @@ export default function Account() {
           <Link className="you-row" to="/legal/affiliate">Affiliate disclosure<span aria-hidden="true">→</span></Link>
           {user.is_admin && <Link className="you-row you-admin" to="/admin">Admin<span aria-hidden="true">→</span></Link>}
         </div>
-        <div className="stack">
-          <section className="panel form">
-            <h2 style={{ fontSize: 20 }}>Fit</h2>
+          <section className="panel stack acct-data">
+            <h2>Your data</h2>
+            <p className="small muted">Download everything we store about you, or delete it all. Clicks on shop links are kept anonymously for affiliate accounting.</p>
+            <div className="row">
+              <button className="btn" type="button" onClick={exportData}>Download my data</button>
+              <button className="btn danger" type="button" onClick={del}>Delete account</button>
+            </div>
+          </section>
+        </div>
+          <section className="panel form acct-fit">
+            <h2>Fit</h2>
             <div className="field"><label>Show products cut for</label>
               <select value={user.gender_pref} onChange={(e) => patch({ gender_pref: e.target.value as "men" | "women" | "any" })}>
                 <option value="any">Everyone (men's, women's and unisex)</option>
@@ -115,7 +124,7 @@ export default function Account() {
           </section>
           {!user.is_guest && (
             <section className="panel form">
-              <h2 style={{ fontSize: 20 }}>Sign-in</h2>
+              <h2>Sign-in</h2>
               <form className="stack" onSubmit={changePw}>
                 <p className="small muted">Signed in as <b>{user.email}</b>. You can always sign in with a link sent to this email, too.</p>
                 <div className="field"><label htmlFor="cpw">Current password (leave empty if you never set one)</label>
@@ -132,15 +141,6 @@ export default function Account() {
               </form>
             </section>
           )}
-          <section className="panel stack">
-            <h2 style={{ fontSize: 20 }}>Your data</h2>
-            <p className="small muted">Download everything we store about you, or delete it all. Clicks on shop links are kept anonymously for affiliate accounting.</p>
-            <div className="row">
-              <button className="btn" type="button" onClick={exportData}>Download my data</button>
-              <button className="btn danger" type="button" onClick={del}>Delete account</button>
-            </div>
-          </section>
-        </div>
       </div>
     </main>
   );
