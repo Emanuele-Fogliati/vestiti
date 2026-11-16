@@ -37,8 +37,10 @@ class ReadyTrip(BaseModel):
     title: str = Field(min_length=5, max_length=80)
     pace: str = Field(pattern=r"^(relaxed|normal|intense)$")
     level: int = Field(ge=1, le=5)  # the highest effort of the trip's things not to miss
-    months: list[int] = Field(min_length=1)
+    months: list[int] = Field(min_length=1)  # the season band this route is the one for
+    best: list[int] = Field(default_factory=list)  # best weather inside the band; [] = off season
     why: str = Field(default="", max_length=240)
+    note: str = Field(default="", max_length=400)  # the honest season note
     stops: list[ReadyStop] = Field(min_length=1)
 
     @property
@@ -47,8 +49,10 @@ class ReadyTrip(BaseModel):
 
     @model_validator(mode="after")
     def _ok(self):
-        if any(not 1 <= m <= 12 for m in self.months):
+        if any(not 1 <= m <= 12 for m in self.months + self.best):
             raise ValueError(f"{self.id}: months are 1-12")
+        if not set(self.best) <= set(self.months):
+            raise ValueError(f"{self.id}: best months outside the band")
         places = [s.place for s in self.stops]
         if len(places) > 1 and places[-1] == places[0]:
             places = places[:-1]  # a round trip ends where it began
@@ -67,14 +71,26 @@ def trips() -> tuple[ReadyTrip, ...]:
     return out
 
 
-def for_region(region: str, days: int | None, countries: list[str] | None = None) -> ReadyTrip | None:
+def for_region(region: str, days: int | None, countries: list[str] | None = None,
+               month: int | None = None) -> ReadyTrip | None:
     """The ready trip of this region nearest to the days asked (within MATCH_DAYS), or the
-    two-week one when no length is given."""
+    two-week one when no length is given. With a month, the route of that month's season band
+    (the winter route of Iceland in January); without, the main route (the most best months)."""
     want = days or 14
     cands = [t for t in trips() if t.region == region
              and (not countries or all(s.place[:2].upper() in countries for s in t.stops))]
     cands = [t for t in cands if abs(t.days - want) <= MATCH_DAYS]
-    return min(cands, key=lambda t: (abs(t.days - want), t.days)) if cands else None
+    if month:
+        cands = [t for t in cands if month in t.months]
+    return min(cands, key=lambda t: (abs(t.days - want), t.days, -len(t.best))) if cands else None
+
+
+def season_bands() -> dict[tuple[str, int], list[ReadyTrip]]:
+    """(region, weeks) -> its routes, one for each season band."""
+    out: dict[tuple[str, int], list[ReadyTrip]] = {}
+    for t in trips():
+        out.setdefault((t.region, round(t.days / 7)), []).append(t)
+    return out
 
 
 def _area(place: dict):

@@ -11,7 +11,10 @@ from app.config import Settings
 # Rough boxes around each country: a stop outside its box has wrong coordinates.
 BOX = {"PE": (-18.5, -0.0, -81.5, -68.5), "AR": (-55.2, -21.7, -73.6, -53.5),
        "CL": (-56.0, -17.4, -76.0, -66.4), "IS": (63.2, 66.6, -24.6, -13.4),
-       "VN": (8.4, 23.4, 102.1, 109.5)}
+       "VN": (8.4, 23.4, 102.1, 109.5), "JP": (24.0, 45.6, 122.9, 146.0), "NA": (-29.0, -16.9, 11.7, 25.3),
+       "NZ": (-47.4, -34.3, 166.3, 178.6)}
+# Rapa Nui is Chile too, 3,700 km out in the Pacific
+ISLANDS = {("CL", "Hanga Roa"): (-27.3, -27.0, -109.5, -109.2)}
 
 
 def test_itineraries_load_and_are_consistent():
@@ -19,9 +22,9 @@ def test_itineraries_load_and_are_consistent():
     assert {i.slug for i in its} >= {"peru-coast-andes-titicaca", "patagonia-fitz-roy-torres-del-paine",
                                     "iceland-golden-circle-south-coast", "vietnam-north-to-south"}
     for it in its:
-        assert 5 <= it.total_days <= 30
+        assert 5 <= it.total_days <= 31
         for s in it.stops:
-            lat0, lat1, lon0, lon1 = BOX[s.country_code]
+            lat0, lat1, lon0, lon1 = ISLANDS.get((s.country_code, s.name), BOX[s.country_code])
             assert lat0 <= s.lat <= lat1 and lon0 <= s.lon <= lon1, s.name
             assert s.plan and len(s.plan) == s.days
             assert s.do, f"{s.name}: say what is worth it"
@@ -51,7 +54,10 @@ def test_stops_are_back_to_back_and_visits_on_their_day():
 
 def test_list_and_detail(client):
     cards = client.get("/api/inspire").json()
-    assert cards[0]["slug"] == "peru-coast-andes-titicaca" and cards[0]["art"]
+    # the recommended library is listed; the four older hand-written ones only open by link
+    slugs = {c["slug"] for c in cards}
+    assert "peru-14" in slugs and "peru-coast-andes-titicaca" not in slugs
+    assert all(c["weeks"] in (1, 2, 3, 4) and c["months"] and c["destination"] for c in cards)
     d = client.get("/api/inspire/peru-coast-andes-titicaca?start=2027-06-01").json()
     assert d["start_date"] == "2027-06-01" and d["days"] == 15
     by_name = {s["name"]: s for s in d["stops"]}
@@ -127,3 +133,51 @@ def test_tour_networks_track_only_when_configured():
     v = network_for("viator", Settings(viator_pid="P001", viator_mcid="42383")).build(v_url, "c1")
     q = parse_qs(urlparse(v.url).query)
     assert v.tracked and q["pid"] == ["P001"] and q["mcid"] == ["42383"] and q["campaign"] == ["c1"]
+
+
+def test_every_destination_has_1_to_4_weeks_for_every_month():
+    """Manu, 2026-11-16: per destination a trip of 1, 2, 3 and 4 weeks, for every month; months
+    with the same route share it."""
+    from collections import defaultdict
+    cover = defaultdict(list)
+    for it in inspire.itineraries():
+        if it.listed:
+            cover[(it.destination, it.weeks)] += it.months
+    dests = {d for d, _ in cover}
+    assert len(dests) >= 9
+    for d in dests:
+        for w in (1, 2, 3, 4):
+            ms = cover[(d, w)]
+            assert sorted(ms) == list(range(1, 13)), (d, w, sorted(ms))  # each month once
+
+
+def test_what_to_wear_follows_the_month(client):
+    jul = client.get("/api/inspire/peru-14?month=7").json()
+    jan = client.get("/api/inspire/peru-14?month=1").json()
+    assert jul["start_date"].split("-")[1] == "07" and jul["wear"]["month"] == 7
+    names = lambda d: {p["name"] for p in d["wear"]["pieces"]}  # noqa: E731
+    assert "Warm down jacket" in names(jul)  # Puno and the Colca at dawn, -5 C
+    assert jan["wear"]["rain"] > jul["wear"]["rain"]  # the wet season
+    assert any("Waterproof" in n for n in names(jan))
+    assert client.get("/api/inspire/peru-14?month=13").status_code == 422
+
+
+def test_recommended_clothes_are_not_an_expedition():
+    """Opus check of all 432 trip-months (2026-11-16): no thick down jacket where it is not
+    cold, no rain jacket in a dry month, no rain trousers in warm rain."""
+    from app.inspire import wear
+    for slug, month in (("argentina-14-winter", 7), ("patagonia-14", 1), ("namibia-14", 7),
+                        ("vietnam-7", 7), ("japan-14", 8)):
+        w = wear.for_itinerary(inspire.get(slug), month)
+        names = {p["name"] for p in w["pieces"]}
+        assert "Thick down jacket" not in names and "Lined winter trousers" not in names, (slug, names)
+        if w["rain"] < 15:
+            assert "Rain jacket" not in names, slug
+    hot = {p["name"] for p in wear.for_itinerary(inspire.get("vietnam-7"), 7)["pieces"]}
+    assert "Rain trousers" not in hot
+
+
+def test_pack_in_a_month_starts_that_month(client):
+    client.post("/api/auth/guest")
+    trip = client.post("/api/inspire/japan-14/trip", json={"month": 4}).json()
+    assert date.fromisoformat(trip["stops"][0]["start_date"]).month == 4

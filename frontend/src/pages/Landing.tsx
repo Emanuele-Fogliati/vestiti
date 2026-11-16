@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Illustration } from "../components/Illustration";
 import { HomeGlobe } from "../components/Maps";
 import { api } from "../lib/api";
-import { monthRange } from "../lib/format";
+import { monthRuns } from "../lib/format";
 import type { ItineraryCard, StopArt, TrailCard } from "../lib/types";
 import { reducedMotion } from "../lib/worldmap";
 
@@ -24,13 +24,14 @@ const SHOWN = 6;
 type Door = "inspire" | "trek";
 interface Row { to: string; art: StopArt | null; title: string; meta: string; later?: boolean }
 
-/** Ready trips at their best this month first; if there are few, the others after them, marked as better another month. */
+/** Recommended trips this month: per destination its two-week route for this month's season,
+ *  the ones at their best weather first, the others marked as better another month. */
 function inspireRows(all: ItineraryCard[], month: number): Row[] {
-  const good = all.filter((it) => it.best_months.includes(month));
-  const rest = good.length >= 3 ? [] : all.filter((it) => !it.best_months.includes(month));
-  return [...good, ...rest].slice(0, SHOWN).map((it) => ({
-    to: `/ideas/${it.slug}`, art: it.art, title: it.title, later: !it.best_months.includes(month),
-    meta: `${it.days} days · best ${monthRange(it.best_months)}`,
+  const best = (it: ItineraryCard) => it.best_months.includes(month);
+  const pick = all.filter((it) => it.months.includes(month) && (it.weeks === 2 || it.weeks == null));
+  return [...pick.filter(best), ...pick.filter((it) => !best(it))].slice(0, SHOWN).map((it) => ({
+    to: `/ideas/${it.slug}?month=${month}`, art: it.art, title: it.title, later: !best(it),
+    meta: `${it.days} days · ${best(it) ? "best now" : `best ${monthRuns(it.best_months) || "another season"}`}`,
   }));
 }
 

@@ -590,6 +590,21 @@ export interface ItineraryCard {
   highest_m: number;
   places: string[];
   art: StopArt | null;
+  /** the recommended library: where, its length in weeks, the months this route is the one for */
+  destination: string | null;
+  weeks: number | null;
+  months: number[];
+  pace: string | null;
+  level: number | null;
+}
+
+/** What to wear on a recommended trip in one month: the layer engine on each stop's climate. */
+export interface ItineraryWear {
+  month: number; low: number; high: number; rain: number; top_m: number;
+  /** the coldest moment, the one the warm layers are for */
+  cold: { feels: number; place: string; what: string };
+  pieces: { slot: string; name: string; level: string; pack: boolean; why: string }[];
+  hot: { names: string[]; pieces: string[] } | null;
 }
 
 export interface ExcursionLink { provider: string; label: string; href: string }
@@ -605,6 +620,7 @@ export interface ItineraryStop extends Omit<Stop, "plan"> {
 export interface Itinerary extends ItineraryCard {
   season_note: string;
   start_date: string;
+  wear: ItineraryWear;
   stops: ItineraryStop[];
   group_trips: { operator: string; title: string; days: number; href: string }[];
 }
