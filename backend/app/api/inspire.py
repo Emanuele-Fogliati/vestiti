@@ -77,15 +77,34 @@ def _sized(it: inspire.Itinerary, days: int | None, month: int | None) -> inspir
     return out
 
 
+def _parse_stops(raw: str) -> tuple[tuple[str, int], ...]:
+    """"ar-el-calafate:2,ar-el-chalten:4" -> (("ar-el-calafate", 2), ("ar-el-chalten", 4))"""
+    out = []
+    for part in raw.split(","):
+        place, _, n = part.strip().partition(":")
+        if not place or not n.isdigit():
+            raise HTTPException(422, "stops: place:nights, comma separated")
+        out.append((place, int(n)))
+    return tuple(out)
+
+
+def _edited(slug: str, stops: tuple[tuple[str, int], ...]) -> inspire.Itinerary:
+    out = inspire.edited(slug, stops)
+    if out is None:
+        raise HTTPException(422, "Those stops don't make a trip: 1 to 10 days each, 3 to 35 in all")
+    return out
+
+
 @router.get("/{slug}")
 def get_itinerary(slug: str, start: date | None = None, month: int | None = Query(None, ge=1, le=12),
-                  days: int | None = Query(None, ge=3, le=35)):
+                  days: int | None = Query(None, ge=3, le=35), stops: str | None = Query(None, max_length=800)):
     """month: the trip in that month (Recommended filtered by month), with what to wear then.
-    days: the same region for that many days (the nearest route, cut or stretched)."""
+    days: the same region for that many days (the nearest route, cut or stretched).
+    stops: the traveller's own stops and nights ("place:nights,..."), edited on the page itself."""
     it = inspire.get(slug)
     if it is None:
         raise HTTPException(404, "Itinerary not found")
-    it = _sized(it, days, month)
+    it = _edited(slug, _parse_stops(stops)) if stops else _sized(it, days, month)
     try:
         start = check_date(start) or inspire.default_start(it, month=month)
     except ValueError as e:
@@ -96,6 +115,7 @@ def get_itinerary(slug: str, start: date | None = None, month: int | None = Quer
     for i, (s, out) in enumerate(zip(it.stops, prev.stops)):
         stops.append({
             **out.model_dump(mode="json"),
+            "place": s.place,
             "plan": s.plan, "do": s.do, "skip": s.skip,
             # each day: what you do hour by hour, its walk on the map, what to wear that day
             "days": day_by_day.for_stop(it, i, before, month or start.month),
@@ -122,6 +142,7 @@ class PackIn(BaseModel):
     start_date: date | None = None  # none: the next good month, shown as a guess
     month: int | None = Field(default=None, ge=1, le=12)  # no date but a month: its 1st
     days: int | None = Field(default=None, ge=3, le=35)  # another length than the route's own
+    stops: list[tuple[str, int]] | None = Field(default=None, max_length=15)  # the traveller's own stops and nights
 
     _sd = field_validator("start_date")(classmethod(lambda cls, v: check_date(v)))
 
@@ -134,7 +155,8 @@ def pack_for_this(slug: str, body: PackIn, user: User = Depends(current_user),
     it = inspire.get(slug)
     if it is None:
         raise HTTPException(404, "Itinerary not found")
-    it = _sized(it, body.days, body.month or (body.start_date.month if body.start_date else None))
+    it = (_edited(slug, tuple((p, n) for p, n in body.stops)) if body.stops
+          else _sized(it, body.days, body.month or (body.start_date.month if body.start_date else None)))
     start = body.start_date or inspire.default_start(it, month=body.month)
     trip = Trip(user_id=user.id, name=it.title, notes=f"From the itinerary '{it.title}'.",
                 start_estimated=body.start_date is None, source_itinerary=it.slug)

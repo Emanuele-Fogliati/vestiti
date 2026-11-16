@@ -623,3 +623,11 @@ a.mf-btn{text-decoration:none}
 .mf-pager{justify-content:center;gap:12px}
 /* a walk's drawing behind the globe's edge: hidden, not a faint box */
 .apin.maplibregl-marker-covered{visibility:hidden}
+/* the region page is edited in place (Manu 2026-11-16): days per stop, a stop out, a place tapped
+   on the map in, through its card (the only card beside the panel) */
+.mf-irow{display:flex;align-items:center;gap:4px}
+.mf-irow .mf-trow{flex:1 1 auto;min-width:0}
+.mf-placepop.in{padding:4px 0 10px;position:relative}
+.mf-placepop.in .mf-art{display:none}
+.mf-placepop .mf-btn.go{margin-top:4px}
+@media (max-width:899px){.mf-irow .mf-step span{min-width:38px}.mf-irow .mf-step i{display:none}}

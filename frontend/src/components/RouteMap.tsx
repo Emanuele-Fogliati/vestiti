@@ -169,7 +169,10 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
     const layers = ["pl-dot", "pl-name"];
     map.on("click", (e) => {
       const f = map.queryRenderedFeatures([[e.point.x - 8, e.point.y - 8], [e.point.x + 8, e.point.y + 8]], { layers }).at(0);
-      const p = f ? data.places[f.properties.i as number] : null;
+      let p = f ? data.places[f.properties.i as number] : null;
+      // a tap beside the dots, where the trip can take a stop: the nearest place there (Manu
+      // 2026-11-16: "voglio poter cliccare anche sulla mappa e aggiungere delle fermate")
+      if (!p && opts.current.onPlace) p = nearest(map, data.places, e.point);
       if (p && opts.current.onPlace) { opts.current.onPlace(p); return; }
       setSel(p);
     });
@@ -295,6 +298,19 @@ export default function RouteMap({ stops, focusIndex, bare, inset, onPin, tags, 
       <p className="small muted">Tap a stop to zoom in: the places worth seeing around it appear on the map.</p>
     </div>
   );
+}
+
+/** The place of the globe nearest to a tap, within a thumb's width (48 px), else null. */
+function nearest(map: maplibregl.Map, places: GlobePlace[], at: { x: number; y: number }): GlobePlace | null {
+  let best: GlobePlace | null = null, d2 = 48 * 48;
+  const b = map.getBounds();
+  for (const p of places) {
+    if (!b.contains([p.lon, p.lat])) continue;
+    const q = map.project([p.lon, p.lat]);
+    const d = (q.x - at.x) ** 2 + (q.y - at.y) ** 2;
+    if (d < d2 || (d === d2 && best && p.level > best.level)) { d2 = d; best = p; }
+  }
+  return best;
 }
 
 /** The middle of the trip, to turn the globe towards it (the Atlantic when there is no stop yet). */

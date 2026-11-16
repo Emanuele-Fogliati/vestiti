@@ -62,6 +62,7 @@ class ItineraryStop(BaseModel):
     skip: list[str] = Field(default_factory=list)
     excursions: list[Excursion] = Field(default_factory=list)
     programs: int | None = Field(default=None, ge=0)
+    place: str | None = None  # the globe place id ("ar-el-chalten"): what the traveller edits
     area: str | None = None  # the hand-written zone guide (app.guide.todo) the days come from
     day_plans: list[DayPlan] = Field(default_factory=list)
 
@@ -167,6 +168,16 @@ def custom(region: str, days: int, month: int) -> Itinerary | None:
     from app.inspire import build
     t = build.fitted(region, days, month)
     return Itinerary.model_validate(build.build(t)) if t else None
+
+
+@lru_cache(maxsize=256)
+def edited(slug: str, stops: tuple[tuple[str, int], ...]) -> Itinerary | None:
+    """A recommended trip with the traveller's own stops and nights, days filled from the guides."""
+    from app.guide import ready
+    from app.inspire import build
+    base = next((t for t in ready.trips() if t.id == slug), None)
+    t = build.edited(base, list(stops)) if base else None
+    return Itinerary.model_validate(build.build(t, strict=False)) if t else None
 
 
 def get(slug: str) -> Itinerary | None:

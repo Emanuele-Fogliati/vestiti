@@ -261,3 +261,19 @@ def test_any_number_of_days_cuts_or_stretches_the_nearest_route(client):
     trip = client.post("/api/inspire/patagonia-14/trip", json={"month": 1, "days": 10}).json()
     assert sum((date.fromisoformat(s["end_date"]) - date.fromisoformat(s["start_date"])).days + 1
                for s in trip["stops"]) == 10
+
+
+def test_a_recommended_trip_is_edited_on_its_own_page(client):
+    """Manu 2026-11-16: "da qui stesso posso direttamente editare il viaggio": days per stop, a stop
+    out, any place of the globe in; the days come from the guides, and the trip keeps the edit."""
+    edit = "ar-el-calafate:2,ar-el-chalten:5,cl-puerto-natales:1,cl-torres-del-paine-national-park:3"
+    it = client.get(f"/api/inspire/patagonia-14?month=1&stops={edit}").json()
+    assert it["days"] == 11 and [s["place"] for s in it["stops"]] == [p.split(":")[0] for p in edit.split(",")]
+    assert [len(s["days"]) for s in it["stops"]] == [2, 5, 1, 3]
+    assert client.get("/api/inspire/patagonia-14?month=1&stops=ar-el-calafate:2,xx-nowhere:3").status_code == 422
+    assert client.get("/api/inspire/patagonia-14?month=1&stops=ar-el-calafate:40").status_code == 422
+    client.post("/api/auth/guest")
+    trip = client.post("/api/inspire/patagonia-14/trip", json={
+        "month": 1, "stops": [["ar-el-calafate", 2], ["ar-el-chalten", 5], ["cl-puerto-natales", 1]]}).json()
+    assert [s["name"] for s in trip["stops"]] == ["El Calafate", "El Chaltén", "Puerto Natales"]
+    assert trip["stops"][0]["start_date"][5:7] == "01" and trip["start_estimated"] is True  # a date of ours

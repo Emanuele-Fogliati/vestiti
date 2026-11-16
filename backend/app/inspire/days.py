@@ -67,7 +67,7 @@ _CACHE: dict[tuple, tuple] = {}
 
 def _stop_days(it, index: int, offset: int, month: int) -> tuple:
     s = it.stops[index]
-    key = (it.slug, it.total_days, tuple(x.name for x in it.stops), index, offset, month)
+    key = (it.slug, it.total_days, tuple((x.name, x.days) for x in it.stops), index, offset, month)
     if key in _CACHE:
         return _CACHE[key]
     things = _items().get(s.area or "", {})
