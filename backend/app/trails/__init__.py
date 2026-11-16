@@ -195,7 +195,12 @@ def km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
 
 
 def activity(t: Trail) -> dict:
-    """What the trail means for the clothes (an app.schemas.ActivityIn)."""
+    """What the trail means for the clothes (an app.schemas.ActivityIn).
+
+    A city walk is sightseeing on pavement, not a hike (Manu, 2026-11-16: Rome in August got
+    trail shoes, hiking socks and a rain shell "for mountain weather")."""
+    if t.style == "city":
+        return {"type": "city", "difficulty": None, "max_altitude_m": None, "glacier": False}
     g = geo(t.id) or {}
     alt = g.get("max_m") or max((0,), default=0)
     return {"type": "trek_multiday" if t.kind == "multiday" else "hiking",

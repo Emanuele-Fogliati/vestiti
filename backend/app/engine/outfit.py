@@ -90,7 +90,7 @@ class CatalogItem:
             breathability_g=s.get("breathability_g"), weight_g=s.get("weight_g"),
             packable=bool(s.get("packable", False)), insulation=s.get("insulation"),
             footwear_type=s.get("footwear_type"), ankle_support=bool(s.get("ankle_support")),
-            insulated=bool(s.get("insulated")), rating=self.rating,
+            insulated=bool(s.get("insulated")), cut=s.get("cut"), rating=self.rating,
             review_count=self.review_count,
         )
 
@@ -181,8 +181,11 @@ def rate(reqs: dict[str, SlotRequirement], items: list[CatalogItem]) -> list[Cat
 
 
 def pick_for_tier(cands: list[CatalogItem], tier: str) -> CatalogItem | None:
-    ok = [c for c in cands if c.fit.passes and c.fit.stars >= 3] or [
-        c for c in cands if c.fit.passes] or list(cands)
+    good = [c for c in cands if c.fit.passes and c.fit.stars >= 3] or [
+        c for c in cands if c.fit.passes]
+    # the three tiers are the same kind of thing at three prices: never trail shoes as the
+    # pick and hiking boots as the "cheaper" one (Manu, 2026-11-16)
+    ok = [c for c in good if c.fit.exact] or good or list(cands)
     if not ok:
         return None
     if tier == "cheap":

@@ -10,11 +10,14 @@ commercial launch needs their paid API plan (see docs/LAUNCH_CHECKLIST.md).
 """
 from __future__ import annotations
 
+import json
 import logging
 import math
 import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
+from functools import lru_cache
+from pathlib import Path
 from statistics import mean
 
 import httpx
@@ -127,7 +130,7 @@ class WeatherService:
                 out[d.date] = d
         missing = [d for d in _daterange(start, end) if d not in out]
         for d in missing:
-            out[d] = estimate_day(lat, elevation, d)
+            out[d] = estimate_day(lat, elevation, d, lon)
         return [out[d] for d in sorted(out)]
 
     # ------------------------------------------------------------ sources
@@ -257,7 +260,7 @@ class WeatherService:
             daily = self._archive_years(lat, lon, elev, windows)
         except Exception as e:
             log.warning("climate archive failed, using estimate: %s", e)
-            return [estimate_day(lat, elev, d) for d in _daterange(start, end)]
+            return [estimate_day(lat, elev, d, lon) for d in _daterange(start, end)]
         by_md: dict[tuple[int, int], list[int]] = {}
         times = [date.fromisoformat(t) for t in daily["time"]]
         for i, t in enumerate(times):
@@ -273,7 +276,7 @@ class WeatherService:
                     for i in idx if daily["temperature_2m_max"][i] is not None
                     and daily["temperature_2m_min"][i] is not None]
             if not vals:
-                out.append(estimate_day(lat, elev, d))
+                out.append(estimate_day(lat, elev, d, lon))
                 continue
             mins = sorted(v[1] for v in vals)
             out.append(DayWeather(
@@ -293,8 +296,53 @@ def _safe_date(y: int, m: int, d: int) -> date:
     return date(y, m, d)
 
 
-def estimate_day(lat: float, elev: float, d: date) -> DayWeather:
-    """Very rough climate guess (no network). Clearly labelled as an estimate."""
+NORMALS_KM = 100.0  # a TerraClimate normal this close stands in for the place
+
+
+@lru_cache(maxsize=1)
+def _normals() -> list[tuple[float, float, list]]:
+    """Monthly normals of the globe's stops: [min C, max C, rain mm, vapour kPa] x 12."""
+    path = Path(__file__).resolve().parents[1] / "globe" / "climate.json"
+    try:
+        stops = json.loads(path.read_text(encoding="utf-8"))["stops"]
+    except (OSError, ValueError, KeyError):
+        return []
+    out = []
+    for k, months in stops.items():
+        la, lo = (float(x) for x in k.split(","))
+        out.append((la, lo, months))
+    return out
+
+
+def _normal_near(lat: float, lon: float, month: int) -> list | None:
+    best, best_km = None, NORMALS_KM
+    for la, lo, months in _normals():
+        if abs(la - lat) > 1.5:
+            continue
+        p1, p2 = math.radians(lat), math.radians(la)
+        a = (math.sin((p2 - p1) / 2) ** 2
+             + math.cos(p1) * math.cos(p2) * math.sin(math.radians(lo - lon) / 2) ** 2)
+        km = 6371 * 2 * math.asin(math.sqrt(min(1.0, a)))
+        if km < best_km:
+            best, best_km = months[month - 1], km
+    return best
+
+
+def estimate_day(lat: float, elev: float, d: date, lon: float | None = None) -> DayWeather:
+    """Climate guess without the network. Clearly labelled as an estimate.
+
+    Near a stop of the globe it is that stop's TerraClimate normal for the month, rain included
+    (Manu, 2026-11-16: a flat 35% rain chance put a rain jacket on every summer walk in Rome).
+    Elsewhere a rough latitude/season guess with a middling rain chance."""
+    n = _normal_near(lat, lon, d.month) if lon is not None else None
+    if n:
+        tmin, tmax, rain_mm = n[0], n[1], n[2]
+        # monthly rain -> chance of a day with 1 mm or more: Rome in August (~25 mm) ~15%,
+        # London in November (~65 mm) ~35%, a monsoon month (300 mm) ~85%
+        prob = 100 * (1 - math.exp(-rain_mm / 150.0))
+        return DayWeather(date=d, tmax=round(tmax, 1), tmin=round(tmin, 1),
+                          precip_mm=round(rain_mm / 30.0, 1), precip_prob=round(prob),
+                          wind_kmh=15.0, source="estimate")
     # 4.5 C/km, not the free-air 6.5: towns on high plateaus are warmer than the free air
     # at the same height (Cusco 3400 m averages ~12 C, La Paz ~9 C)
     annual = 27.0 - 0.0066 * lat * lat - 0.0045 * (elev or 0)

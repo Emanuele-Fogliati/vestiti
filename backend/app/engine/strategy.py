@@ -26,6 +26,9 @@ from app.engine.garments import (
 )
 
 COLD_ONLY = {"headwear", "gloves", "base_bottom", "shell_bottom"}  # never added for warmth above 10 C
+# in town and on low walks nobody wears long johns or rain trousers for warmth above freezing:
+# a warmer top does it (Manu, 2026-11-16)
+LEGS_ONLY_FREEZING = {"base_bottom", "shell_bottom"}
 STATUS_RANK = {"none": 0, "pack": 1, "stops": 2, "worn": 3}
 ESSENTIALS = ["base_top", "trousers", "socks", "footwear"]
 MOVE_ORDER = ["mid_top", "shell_top", "headwear", "gloves", "base_bottom", "insulation_top",
@@ -111,7 +114,9 @@ PACE_MET = {"relaxed": 0.85, "average": 1.0, "brisk": 1.15}
 
 
 def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
-                         pace: str = "average") -> list[Condition]:
+                         pace: str = "average", day_walk: bool = False) -> list[Condition]:
+    """day_walk: one walk by day (the Walks page), so its stops are by day too, not an evening
+    outdoors in town (Manu, 2026-11-16: London in November got a puffer and rain trousers)."""
     out: list[Condition] = []
     met_factor = PACE_MET.get(pace, 1.0)
     acts = stage.activities or [{"type": "city"}]
@@ -139,6 +144,10 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
                         t_rest, rest_where, rest_wind = early, f"early start at {base:.0f} m", day.wind_kmh
                     else:
                         t_rest, rest_where, rest_wind = t_break, f"break at {alt:.0f} m", wind_alt
+                elif day_walk:
+                    t_rest = day.tmin + 0.5 * span
+                    rest_where = "a stop on the walk"
+                    rest_wind = day.wind_kmh
                 else:
                     t_rest = day.tmin + 0.25 * span
                     rest_where = "evening outdoors"
@@ -159,7 +168,8 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
                     )
                     req = thermal.required_clo(
                         temp, wind, met, moving=(mode == "moving"), extra_air_speed_ms=air,
-                        short_stop=profile.short_stops, personal_offset=personal_offset,
+                        short_stop=profile.short_stops or day_walk,  # a walk's stops are short
+                        personal_offset=personal_offset,
                     )
                     snow = wet and thermal.lapse_adjust(day.tmax, base, alt_here) <= 1.0
                     out.append(Condition(
@@ -231,7 +241,9 @@ def dress(kit: dict[str, KitItem], cond: Condition, start: list[str] | None = No
            f"{cond.feels_like_c:.0f} °C feels-like")
     while provided < cond.required:
         candidates = [s for s in order if s in kit and s not in worn
-                      and not (s in COLD_ONLY and cond.feels_like_c > 10)]
+                      and not (s in COLD_ONLY and cond.feels_like_c > 10)
+                      and not (s in LEGS_ONLY_FREEZING and cond.feels_like_c > 0
+                               and not in_mountains(cond))]
         if not candidates:
             break
         # Prefer the lightest single layer that closes the gap (a fleece for a mild
@@ -248,9 +260,20 @@ def dress(kit: dict[str, KitItem], cond: Condition, start: list[str] | None = No
                  pens, reasons)
 
 
+MOUNTAIN_M = 1000.0  # below this an easy or moderate walk is not "in the mountains"
+
+
+def in_mountains(c: Condition) -> bool:
+    """Weather that turns fast: hard terrain, ski, or walking above 1,000 m. An easy walk to a
+    temple at 80 m, or along a coast, is not mountain weather (Manu, 2026-11-16)."""
+    a = c.activity
+    return a.mountain and (a.ankle_support or a.glacier or a.key == "ski"
+                           or c.altitude_m >= MOUNTAIN_M)
+
+
 def precaution(slot: str, conds: list[Condition]) -> str | None:
     """Reason to carry a layer in the pack even when the model says it is not worn."""
-    mountain = [c for c in conds if c.activity.mountain]
+    mountain = [c for c in conds if in_mountains(c)]
     max_prob = max((c.precip_prob for c in conds), default=0)
     max_wind = max((c.wind_kmh for c in conds), default=0)
     max_alt = max((c.altitude_m for c in conds), default=0)
@@ -392,7 +415,7 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
         r = reqs["shell_top"]
         r.windproof = True
         if wet or any(c.precip_prob >= 30 for c in conds) or any(
-                p.mountain or p.spray for p in profiles):
+                in_mountains(c) or c.activity.spray for c in conds):
             r.waterproof = True
             heavy = max((c.precip_mm for c in conds), default=0) >= 10 or len(
                 {c.date for c in wet}) >= 3
@@ -412,6 +435,7 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
     fw.waterproof = bool(hiking_wet) or glacier
     fw.insulated = any(c.temp_c < -5 and c.activity.mountain for c in conds)
     fw.reasons.append(f"activities need at least: {fw.footwear_type.replace('_', ' ')}")
+    reqs["socks"].footwear_type = fw.footwear_type  # boots want crew socks, sneakers low ones
     if fw.ankle_support:
         fw.reasons.append("hard or technical terrain: ankle support")
     if glacier:

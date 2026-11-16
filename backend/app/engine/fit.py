@@ -33,6 +33,7 @@ class ItemSpec:
     footwear_type: str | None = None
     ankle_support: bool = False
     insulated: bool = False
+    cut: str | None = None  # socks: "low" (ankle / no-show) or None (crew and up)
     rating: float | None = None
     review_count: int = 0
 
@@ -44,6 +45,7 @@ class FitResult:
     passes: bool
     issues: list[str] = field(default_factory=list)
     positives: list[str] = field(default_factory=list)
+    exact: bool = True  # the kind the trip asks for (shoes: not a heavier type than needed)
 
     def as_dict(self) -> dict:
         return {"stars": self.stars, "score": round(self.score, 3), "passes": self.passes,
@@ -56,6 +58,7 @@ def score_item(req, item: ItemSpec) -> FitResult:
     issues: list[str] = []
     positives: list[str] = []
     passes = True
+    exact = True
     name = SLOT_BY_KEY[req.slot].name.lower()
 
     # hard requirements
@@ -74,9 +77,19 @@ def score_item(req, item: ItemSpec) -> FitResult:
         elif have == need:
             parts.append((0.35, 1.0))
             positives.append("right type for your activities")
-        else:
+        elif have == need + 1:
+            exact = False
             parts.append((0.35, 0.75))
             issues.append("more technical (and heavier) than the trip needs")
+        else:
+            # boots for a city walk, mountaineering boots for a trail: never a right answer
+            exact = passes = False
+            parts.append((0.35, 0.2))
+            issues.append(f"far heavier than the walk needs: a "
+                          f"{req.footwear_type.replace('_', ' ')} is enough")
+        if item.insulated and not req.insulated:
+            exact = passes = False
+            issues.append("insulated winter shoe: hot, sweaty feet on this trip")
         if req.ankle_support and not item.ankle_support:
             passes = False
             issues.append("no ankle support for hard terrain")
@@ -99,7 +112,30 @@ def score_item(req, item: ItemSpec) -> FitResult:
         else:
             v = max(0.6, 1 - (ratio - 1.5) * 0.5)
             issues.append("warmer than needed: may be bulky")
+            if req.level == "light" and ratio >= 1.5:
+                # long merino sleeves or hiking trousers on a 35 °C day: wrong, not "bulky"
+                exact = passes = False
+                issues.append("too warm for hot days")
         parts.append((0.35, v))
+    # socks: thick winter or crew hiking socks in the heat are wrong, not just "bulky"
+    if req.slot == "socks" and req.ref_clo > 0:
+        ratio = item.clo / req.ref_clo
+        if ratio > 1.5:
+            exact = passes = False
+            issues.append("too thick and warm for these days")
+        elif ratio < 0.67:
+            parts.append((0.35, 0.4))
+            issues.append(f"thinner than the plan assumes ({item.clo:.3f} vs {req.ref_clo:.3f} clo)")
+        else:
+            parts.append((0.35, 1.0))
+            positives.append("thickness matches the days")
+    if req.slot == "socks" and item.cut == "low" and req.footwear_type in (
+            "hiking_boot", "mountaineering_boot"):
+        exact = passes = False
+        issues.append("ankle socks in boots rub: take crew hiking socks")
+    elif req.slot == "socks" and (item.cut == "low") != (req.level == "light"):
+        # hot days: low socks; cooler days: crew socks. The three prices show one kind.
+        exact = False
 
     # weather protection
     if req.slot in ("shell_top", "shell_bottom"):
@@ -166,4 +202,5 @@ def score_item(req, item: ItemSpec) -> FitResult:
     stars = round((1 + 4 * score) * 2) / 2
     if not passes:
         stars = min(stars, 2.0)
-    return FitResult(stars=stars, score=score, passes=passes, issues=issues, positives=positives)
+    return FitResult(stars=stars, score=score, passes=passes, issues=issues, positives=positives,
+                     exact=exact)
