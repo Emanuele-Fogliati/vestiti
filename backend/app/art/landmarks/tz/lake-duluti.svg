@@ -1,0 +1,14 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="246" cy="28" r="11" fill="var(--il-sun)"/>
+<defs><clipPath id="il-tz-lake-duluti-m"><path d="M40 112Q100 102 114 88Q124 74 128 64L132 58L136 57L140 60Q150 74 172 82Q200 89 228 87L234 85L240 88Q270 96 300 100V112Z"/></clipPath></defs>
+<path d="M40 112Q100 102 114 88Q124 74 128 64L132 58L136 57L140 60Q150 74 172 82Q200 89 228 87L234 85L240 88Q270 96 300 100V112Z" fill="var(--il-far)"/>
+<path clip-path="url(#il-tz-lake-duluti-m)" d="M138 57Q156 76 160 112H300V98Q240 90 200 88Q160 80 138 57Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M132 62Q126 78 116 94M137 62Q140 78 138 98" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M30 124V108Q44 100 56 106Q68 98 80 104Q94 98 106 104Q120 98 132 106Q146 100 158 106Q172 98 186 106Q200 100 212 106Q226 98 240 106Q256 100 270 106V124Z" fill="var(--il-leaf)"/>
+<path d="M0 200V122Q150 118 300 122V200Z" fill="var(--il-water)"/>
+<path d="M0 200V66Q12 60 22 68Q30 62 38 72Q48 72 54 84Q64 88 66 100Q76 106 76 118Q86 124 84 136Q92 146 86 156Q70 170 46 182Q28 192 20 200Z" fill="var(--il-leaf)"/>
+<path d="M300 200V70Q288 64 278 72Q268 68 262 78Q252 80 248 92Q238 96 238 108Q228 114 230 126Q220 134 224 146Q222 160 236 172Q256 186 270 200Z" fill="var(--il-leaf)"/>
+<path d="M16 90Q30 120 50 150M276 92Q262 120 250 160" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M232 160L176 172L174 168L230 154ZM196 166L188 154L191 153L200 165Z" fill="var(--il-acc)"/>
+<path d="M186 166Q183 160 186 154Q188 150 192 150Q193 144 190 140Q189 136 192 134Q196 133 197 136L201 137L197 138Q194 140 196 144Q198 150 196 156Q196 162 192 166L186 170Z" fill="var(--il-near)"/>
+<path d="M104 152H140Q136 158 128 158H112Q106 158 104 152Z" fill="var(--il-obj)"/>
