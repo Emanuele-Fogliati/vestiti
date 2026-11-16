@@ -164,8 +164,8 @@ export const api = {
     return req<Itinerary>("GET", `/api/inspire/${encodeURIComponent(slug)}${qs ? `?${qs}` : ""}`);
   },
   /** "Dress me for this trip": the itinerary becomes the user's trip. No date = next good month, a guess. */
-  packItinerary: (slug: string, start_date?: string, month?: number, days?: number, stops?: [string, number][]) =>
-    req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null, month: month ?? null, days: days ?? null, stops: stops ?? null }),
+  packItinerary: (slug: string, start_date?: string, month?: number, days?: number, stops?: [string, number][], trip_id?: string) =>
+    req<Trip>("POST", `/api/inspire/${encodeURIComponent(slug)}/trip`, { start_date: start_date || null, month: month ?? null, days: days ?? null, stops: stops ?? null, trip_id: trip_id ?? null }),
 
   /** "Dress me for this trip" on a route of the globe. No date: the next good month (or the month given), a guess. */
   /** A trip from the places picked on the globe: whole cities and single sights inside them. */

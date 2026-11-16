@@ -241,7 +241,7 @@ export function TripStudio({ trip, plans, strategy, tier, sel, setSel, onChanged
 
       <section className="mf-float mf-panel" aria-label="Your trip">
         <div className="mf-head">{head}</div>
-        <div className="mf-tabs">{tabs}</div>
+        {tabs && <div className="mf-tabs">{tabs}</div>}
         {content && !desk ? <div className="mf-tabbody">{content}</div> : <>
         {msg && <p className={`mf-msg${msg.bad ? " bad" : ""}`} role="status">{msg.text}</p>}
         {offer && !desk && <PlacePop place={offer} slot={slot} busy={busy} floating={false} onAdd={addOffer} onClose={() => setOffer(null)} />}

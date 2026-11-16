@@ -279,6 +279,23 @@ def test_a_recommended_trip_is_edited_on_its_own_page(client):
     assert trip["stops"][0]["start_date"][5:7] == "01" and trip["start_estimated"] is True  # a date of ours
 
 
+def test_the_bag_on_the_trip_page_follows_the_route(client):
+    """Manu 2026-11-16: the clothes sit under the route on the same page and change with it: the
+    same trip is updated, its stops replaced, what you said you have kept; nobody else's trip."""
+    client.post("/api/auth/guest")
+    t = client.post("/api/inspire/patagonia-14/trip", json={"month": 1}).json()
+    client.put(f"/api/trips/{t['id']}/selections", json={"tier": "medium", "slot": "headwear", "choice": "have"})
+    again = client.post("/api/inspire/patagonia-14/trip", json={
+        "month": 7, "trip_id": t["id"], "stops": [["ar-el-calafate", 2], ["ar-el-chalten", 3]]}).json()
+    assert again["id"] == t["id"] and [s["name"] for s in again["stops"]] == ["El Calafate", "El Chaltén"]
+    assert again["stops"][0]["start_date"][5:7] == "07"
+    assert any(x["slot"] == "headwear" and x["kind"] == "have" for x in client.get(f"/api/trips/{t['id']}/plans").json()["tiers"]["medium"]["items"])
+    client.post("/api/auth/logout")
+    client.post("/api/auth/guest")
+    other = client.post("/api/inspire/patagonia-14/trip", json={"month": 1, "trip_id": t["id"]}).json()
+    assert other["id"] != t["id"]
+
+
 def test_every_region_has_a_trip_for_every_month_of_every_length():
     """Manu 2026-11-16: "per ogni mese ... chiunque voglia andare in qualunque posto, in qualunque
     momento, abbia il suo outfit": every travel region, 1 to 4 weeks, a route in all twelve months
