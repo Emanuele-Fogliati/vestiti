@@ -97,6 +97,11 @@ def _months_text(ms: list[int]) -> str:
                      for r in runs)
 
 
+def _featured() -> frozenset[str]:
+    from app.inspire.days import walks  # the walks of the recommended trips
+    return walks()
+
+
 def card(t: trails.Trail, month: int | None = None) -> dict:
     return {
         "id": t.id, "name": t.name, "country": t.country, "base": t.base, "region": t.region,
@@ -105,7 +110,7 @@ def card(t: trails.Trail, month: int | None = None) -> dict:
         "months_text": _months_text(t.months),
         "in_season": None if month is None else month in t.months,
         "why": t.why, "art": _cover(t), "has_map": trails.geo(t.id) is not None,
-        "tier": t.tier, "style": t.style, "area": t.area, "scores": t.scores.model_dump() if t.scores else None,
+        "tier": t.tier, "featured": t.id in _featured(), "style": t.style, "area": t.area, "scores": t.scores.model_dump() if t.scores else None,
         # where it starts, for the pins on the Treks map
         "lat": round(t.points[0].lat, 4) if t.points else None, "lon": round(t.points[0].lon, 4) if t.points else None,
         **_numbers(t),

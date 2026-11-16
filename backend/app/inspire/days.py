@@ -90,6 +90,22 @@ def _stop_days(it, index: int, offset: int, month: int) -> tuple:
     return _CACHE[key]
 
 
+@lru_cache
+def walks() -> frozenset[str]:
+    """The walks (app.trails ids) that a day of a recommended trip does: the Walks map shows them
+    as their drawing, not as a dot (Manu 2026-11-16)."""
+    from app import inspire
+    out: set[str] = set()
+    for it in inspire.itineraries():
+        for s in it.stops:
+            things = _items().get(s.area or "", {})
+            for dp in s.day_plans:
+                for x in [*dp.things, *([dp.spare] if dp.spare else [])]:
+                    if x in things and things[x].trail:
+                        out.add(things[x].trail)
+    return frozenset(out)
+
+
 def for_stop(it, index: int, offset: int, month: int) -> list[dict]:
     """The days of stop `index`; offset: the trip's days before it. [] when the stop has no guide."""
     if not it.stops[index].day_plans:
