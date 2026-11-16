@@ -319,3 +319,36 @@ def test_iceland_in_winter_stays_in_the_south():
     for t in ready.trips():
         if t.journey == "iceland" and 1 in t.months:
             assert not north & {s.place for s in t.stops}, t.id
+
+
+def _wear(slug: str, month: int) -> dict:
+    from app.inspire import wear
+    it = next(i for i in inspire.itineraries() if i.slug == slug)
+    return wear.for_itinerary(it, month)
+
+
+def test_a_cold_city_gets_a_good_jacket_not_a_mountain_kit():
+    """Opus check of every recommended month (2026-11-16): Kyoto in January (1 °C walking to
+    dinner) got warm trousers, a warm base layer and a warm fleece; Takayama a thick down jacket."""
+    names = {p["name"] for p in _wear("japan-7", 1)["pieces"]}
+    assert "Warm down jacket" in names and "Beanie" in names
+    assert not names & {"Warm trousers", "Warm base layer", "Thick down jacket", "Lined winter trousers"}
+    names = {p["name"] for p in _wear("japan-14", 1)["pieces"]}
+    assert "Thick down jacket" not in names and "Warm trousers" not in names
+
+
+def test_hot_places_get_t_shirts_even_when_every_stop_is_hot():
+    """Tokyo, Kyoto and Hue in July: cool evenings in Sapporo or Sapa put long sleeves in the bag,
+    and the trip got no T-shirt at all."""
+    w = _wear("japan-21-summer", 7)
+    assert w["hot"] and "T-shirt" in w["hot"]["pieces"] and "Tokyo" in w["hot"]["names"]
+    w = _wear("vietnam-14", 7)
+    assert w["hot"] and "T-shirt" in w["hot"]["pieces"]
+
+
+def test_over_trousers_in_a_dry_month_are_for_the_wind():
+    """Uyuni in June (under 10% rain): the shell trousers are for the wind at dawn, not rain."""
+    names = {p["name"] for p in _wear("andes-7", 6)["pieces"]}
+    assert "Windproof over-trousers" in names and "Rain trousers" not in names
+    names = {p["name"] for p in _wear("iceland-7", 1)["pieces"]}
+    assert "Rain trousers" in names
