@@ -1,0 +1,11 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M86 96Q104 90 118 84Q132 78 140 68Q146 58 152 57Q158 58 164 66Q172 56 180 48Q186 45 192 50Q200 60 206 64Q212 56 218 55Q224 56 230 66Q238 58 244 52Q250 50 256 56Q264 66 272 70Q278 62 284 61Q292 62 300 68V96Z" fill="var(--il-mid)"/>
+<path d="M180 48Q186 45 192 50Q200 60 206 64Q212 56 218 55Q224 56 230 66Q238 58 244 52Q250 50 256 56Q264 66 272 70Q278 62 284 61Q292 62 300 68V96H224Q214 70 180 48Z" fill="var(--il-near)" opacity="0.3"/>
+<path d="M152 60Q156 76 150 90M186 50Q190 70 182 90M218 58Q222 74 216 90M250 54Q254 72 248 90M284 64Q288 78 284 90" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 98V88Q40 84 80 88L96 92L100 98Z" fill="var(--il-far)"/>
+<path d="M0 200V96H300V200Z" fill="var(--il-water)"/>
+<path d="M86 96Q104 99.6 118 103.2Q132 106.8 140 112.8Q146 118.8 152 119.4Q158 118.8 164 114Q172 120 180 124.8Q186 126.6 192 123.6Q200 117.6 206 115.2Q212 120 218 120.6Q224 120 230 114Q238 118.8 244 122.4Q250 123.6 256 120Q264 114 272 111.6Q278 116.4 284 117Q292 116.4 300 112.8V96Z" fill="var(--il-obj)"/>
+<path d="M0 200V178Q150 172 300 178V200Z" fill="var(--il-ice)"/>
+<path d="M0 186V176Q24 166 60 166Q104 164 138 172Q120 182 70 182Q30 182 0 186Z" fill="var(--il-leaf)"/>
+<g transform="translate(250 192) scale(1.3)"><path vector-effect="non-scaling-stroke" d="M-7 -11V0M-4 -11V0M4 -11V0M7 -11V0" stroke="var(--il-acc)" stroke-width="1.6" fill="none" stroke-linecap="round"/><path vector-effect="non-scaling-stroke" d="M-10 -12Q-10 -17 -4 -17H5L7 -26Q8 -29 11 -28L14 -25L12 -24L10 -25L9 -15Q9 -10 6 -10H-8Q-10 -10 -10 -12Z" fill="var(--il-acc)"/><path vector-effect="non-scaling-stroke" d="M9 -28L9 -31L11 -28Z" fill="var(--il-acc)"/></g>
