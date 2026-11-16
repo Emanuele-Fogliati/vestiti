@@ -1,21 +1,16 @@
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { KitSheet, type BuyPick } from "../components/BuyBar";
-import { ProductArt } from "../components/ProductArt";
+import { WalkWear } from "../components/WalkWear";
 import { Illustration } from "../components/Illustration";
 import { DIFFICULTY, TrailFacts } from "../components/TrailCards";
 import TrailMap from "../components/TrailMap";
 import TrailProfile from "../components/TrailProfile";
-import { api, buyUrl } from "../lib/api";
+import { api } from "../lib/api";
 import { useApp } from "../lib/app-context";
-import { activityText, money } from "../lib/format";
-import { TIER_LABEL, TIERS, type Activity, type Item, type Tier, type Trail, type TrailWear, type TripSummary } from "../lib/types";
+import { activityText } from "../lib/format";
+import type { Activity, Trail, TripSummary } from "../lib/types";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const FOOT: Record<string, string> = {
-  sneaker: "Trainers", trail_runner: "Trail shoes", hiking_boot: "Hiking boots", mountaineering_boot: "Mountaineering boots",
-  sandal: "Sandals",
-};
 const fmt = (n: number) => n.toLocaleString("en-US");
 const hrs = (h: number) => (h < 1 ? `${Math.max(1, Math.round(h * 60))} min` : `${Math.floor(h)} h${h % 1 >= 0.25 ? ` ${Math.round((h % 1) * 60)}` : ""}`);
 
@@ -32,11 +27,6 @@ export default function TrailPage() {
   const [focus, setFocus] = useState<number | null>(null);
   const [desk, setDesk] = useState(() => typeof matchMedia === "undefined" || matchMedia("(min-width: 900px)").matches);
   const [month, setMonth] = useState<number | null>(null);
-  const [w, setW] = useState<TrailWear | null>(null);
-  const [wErr, setWErr] = useState<string | null>(null);
-  const [chosen, setChosen] = useState<Record<string, Item>>({});
-  const [buyOpen, setBuyOpen] = useState(false);
-  const [tier, setTier] = useState<Tier>("medium");
 
   useEffect(() => {
     const mq = matchMedia("(min-width: 900px)");
@@ -53,20 +43,6 @@ export default function TrailPage() {
       setMonth(Number(q.get("month")) || (x.months.includes(now) ? now : x.months[0] ?? now));
     }).catch((e) => setErr((e as Error).message));
   }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // what to wear on it in the month: the trip's own warmth model, run on this walk
-  useEffect(() => {
-    if (!t || !month) return;
-    let live = true;
-    setW(null); setWErr(null); setChosen({});
-    api.trailWear(t.id, month).then((x) => { if (live) setW(x); }).catch((e) => { if (live) setWErr((e as Error).message); });
-    return () => { live = false; };
-  }, [t, month]);
-
-  const picks: BuyPick[] = useMemo(() => (w?.pieces ?? []).flatMap((p) => {
-    const it = chosen[p.slot] ?? p.products?.[tier] ?? p.products?.medium ?? p.products?.cheap ?? p.products?.premium;
-    return it ? [{ slot: p.slot, label: p.name.replace(/\s*\/.*$/, ""), item: it, cheaper: p.products?.cheap, better: p.products?.premium }] : [];
-  }), [w, chosen, tier]);
 
   if (err) return <div className="wrap section"><h1>Trail not found</h1><p>{err}</p><Link to="/trails">All trails</Link></div>;
   if (!t || !month) return <div className="loading"><span className="spin" /></div>;
@@ -204,8 +180,7 @@ export default function TrailPage() {
           {desk && <button type="button" className="mf-float ip-cue" onClick={toBag}>What to wear · {MONTHS[month - 1].slice(0, 3)} <Down /></button>}
         </div>
       </div>
-      <WalkWear t={t} month={month} w={w} err={wErr} picks={picks} tier={tier} setTier={(k) => { setChosen({}); setTier(k); }} onBuy={() => setBuyOpen(true)} />
-      <KitSheet open={buyOpen} onClose={() => setBuyOpen(false)} title={`Your kit for ${t.name}`} picks={picks} />
+      <WalkWear id={t.id} name={t.name} month={month} />
     </main>
   );
 
@@ -217,84 +192,6 @@ export default function TrailPage() {
 }
 
 const Down = () => <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7" /></svg>;
-
-/** The clothes for this walk, under the map (Manu 2026-11-16: "non la valigia ma semplicemente i
- *  vestiti per quel tracking"): the coldest moment, the budget, then one card per piece, in the
- *  trip bag's design. */
-function WalkWear({ t, month, w, err, picks, tier, setTier, onBuy }: {
-  t: Trail; month: number; w: TrailWear | null; err: string | null; picks: BuyPick[];
-  tier: Tier; setTier: (t: Tier) => void; onBuy: () => void;
-}) {
-  const { config } = useApp();
-  const total = (k: Tier) => (w?.pieces ?? []).reduce((n, p) => n + (p.products?.[k]?.price ?? 0), 0);
-  const cur = picks[0]?.item.currency;
-  const boots = w?.pieces.find((p) => p.slot === "footwear");
-  return (
-    <section className="x-trip ip-bag" id="bag" aria-label="What to wear">
-      <div className="ip-bag-in">
-        <header className="ip-bag-h">
-          <h2>What to wear <span>on this walk in {MONTHS[month - 1]}</span></h2>
-          {!w && !err && <span className="spin" aria-label="Updating" />}
-        </header>
-        {err && <p className="err">{err}</p>}
-        {w && (
-          <>
-            {!w.in_season && <p className="x-alert warn">{MONTHS[month - 1]} is outside the walk's season: snow, closures or bad weather are likely.</p>}
-            {(w.coldest || w.weather) && (
-              <div className="x-cold-top">
-                <div className="x-cold-line">
-                  <span className="n">{w.coldest ? `${Math.round(w.coldest.feels_like_c)}°` : `${Math.round(w.weather!.tmin)}°`}</span>
-                  <span className="t"><b>The coldest moment</b> {w.coldest ? `${w.coldest.where.charAt(0).toUpperCase()}${w.coldest.where.slice(1)}. ` : ""}
-                    {w.weather && <>At the start {w.weather.tmin}–{w.weather.tmax}°, wind {w.weather.wind_kmh} km/h, {w.weather.rain_chance}% chance of rain{w.weather.source === "climate" ? " (past years)" : ""}.</>}</span>
-                </div>
-              </div>
-            )}
-            <h2 className="x-h2" id="your-list">Your list</h2>
-            <div className="x-bag-top x-rise">
-              <div>
-                <div className="x-k">Everything for this walk</div>
-                <div className="x-total" aria-live="polite">{money(total(tier), cur)}</div>
-                <div className="x-facts"><span>{picks.length} pieces</span>
-                  {picks.length > 0 && <button type="button" className="x-link" onClick={onBuy}>Buy them all</button>}</div>
-              </div>
-              <div className="x-seg big" role="group" aria-label="Budget">
-                {TIERS.map((k) => (
-                  <button key={k} type="button" aria-pressed={k === tier} onClick={() => setTier(k)}>
-                    {TIER_LABEL[k]}<small>{money(total(k), cur)}</small>
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className="x-items">
-              {w.pieces.map((p) => {
-                const it = p.products?.[tier] ?? null;
-                const why = p.slot === "footwear" && boots
-                  ? `${FOOT[boots.footwear_type ?? ""] ?? "Shoes"}${boots.ankle_support ? ", ankle support" : ""}${boots.waterproof ? ", waterproof" : ""}.`
-                  : null; // the other pieces speak for themselves (Manu: fewer words)
-                return (
-                  <article key={p.slot} className="x-item">
-                    <div className="x-ic">
-                      {it?.image_url ? <img src={it.image_url} alt="" loading="lazy" referrerPolicy="no-referrer" /> : <ProductArt slot={p.slot} className="x-art" />}
-                    </div>
-                    <div className="x-pc">{p.name}{p.waterproof ? " · waterproof" : ""}</div>
-                    <div className="x-pn">{it ? `${it.brand} ${it.name}` : "Nothing in the shops we check yet"}</div>
-                    {it && <div className="x-shop">{it.merchant}</div>}
-                    {why && <div className="x-where"><p>{why}</p></div>}
-                    <div className="x-row"><span className="x-price">{it ? money(it.price, it.currency) : "—"}</span></div>
-                    {it && <div className="x-acts"><a className="x-btn y" href={buyUrl(it.id, undefined, tier, p.slot)} target="_blank" rel="sponsored noopener">Buy</a></div>}
-                  </article>
-                );
-              })}
-            </div>
-            <p className="x-disc">{config?.disclosure} Prices can change: the shop's page is what counts.</p>
-          </>
-        )}
-        {!w && !err && <p className="loading"><span className="spin" /></p>}
-        <p className="mf-k">{t.name}: the clothes are for this walk alone. Doing it on a trip? Add it to your trip and the bag follows.</p>
-      </div>
-    </section>
-  );
-}
 
 const Back = () => <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>;
 
