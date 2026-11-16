@@ -28,7 +28,7 @@ ORDER = ["shell_top", "insulation_top", "mid_top", "base_top", "base_bottom", "t
          "shell_bottom", "headwear", "gloves", "sun_hat", "socks", "footwear"]
 
 
-def label(slot: str, r, wet: bool = True) -> str:
+def label(slot: str, r, wet: bool = True, ski: bool = False) -> str:
     """The piece in plain words: "Rain jacket", "Warm down jacket", "Hiking boots"."""
     lv = r.level
     if slot == "shell_top":
@@ -51,6 +51,8 @@ def label(slot: str, r, wet: bool = True) -> str:
     if slot == "shell_bottom":
         # in a desert-dry month they are there for the wind and the cold at dawn (Uyuni in
         # June, 8% rain), not for rain (Opus check, 2026-11-16)
+        if ski:  # a ski week's shell trousers are ski trousers (Dolomites in January)
+            return "Ski trousers"
         return "Rain trousers" if wet else "Windproof over-trousers"
     if slot == "headwear":
         return "Beanie"
@@ -61,6 +63,9 @@ def label(slot: str, r, wet: bool = True) -> str:
     if slot == "socks":
         return "Hiking socks" if r.footwear_type in ("hiking_boot", "mountaineering_boot") else "Socks"
     if slot == "footwear":
+        # snow in town at -10 °C: winter boots, not trail shoes (ski boots are hired on the spot)
+        if r.insulated and r.footwear_type in ("sneaker", "trail_runner"):
+            return "Insulated winter boots"
         name = {"sandal": "Sandals", "sneaker": "Sneakers", "trail_runner": "Trail shoes",
                 "hiking_boot": "Hiking boots", "mountaineering_boot": "Mountaineering boots"}[
             r.footwear_type or "sneaker"]
@@ -107,13 +112,14 @@ def kit(st: list[StageInput]) -> dict:
     zone = warm_zone(st, conds, reqs)
     days = [d for s in st for d in s.days]
     wet = max(d.precip_prob for d in days) >= DRY_PROB
+    ski = any(c.activity.key == "ski" for c in conds)
     pieces = []
     for slot in ORDER:
         r = reqs[slot]
         if not r.needed:
             continue
         why = next((w.split(": ", 1)[1] for w in r.reasons if ": " in w), "")
-        pieces.append({"slot": slot, "name": label(slot, r, wet), "level": r.level,
+        pieces.append({"slot": slot, "name": label(slot, r, wet, ski), "level": r.level,
                        "pack": bool(r.reasons) and all("in the pack" in w for w in r.reasons), "why": why})
     hot = None
     if zone:

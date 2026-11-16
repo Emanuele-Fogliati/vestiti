@@ -12,7 +12,8 @@ from app.config import Settings
 BOX = {"PE": (-18.5, -0.0, -81.5, -68.5), "AR": (-55.2, -21.7, -73.6, -53.5),
        "CL": (-56.0, -17.4, -76.0, -66.4), "IS": (63.2, 66.6, -24.6, -13.4),
        "VN": (8.4, 23.4, 102.1, 109.5), "JP": (24.0, 45.6, 122.9, 146.0), "NA": (-29.0, -16.9, 11.7, 25.3),
-       "NZ": (-47.4, -34.3, 166.3, 178.6), "BO": (-22.9, -9.6, -69.7, -57.4)}
+       "NZ": (-47.4, -34.3, 166.3, 178.6), "BO": (-22.9, -9.6, -69.7, -57.4),
+       "IT": (35.5, 47.1, 6.6, 18.6)}
 # Rapa Nui is Chile too, 3,700 km out in the Pacific
 ISLANDS = {("CL", "Hanga Roa"): (-27.3, -27.0, -109.5, -109.2)}
 
@@ -60,7 +61,7 @@ def test_list_and_detail(client):
     assert all(c["weeks"] in (1, 2, 3, 4) and c["months"] and c["destination"] and c["journey"] for c in cards)
     # one card per travel region (Manu, 2026-11-16: not the same trip once per length)
     leads = [c for c in cards if c["lead"]]
-    assert len(leads) == len({c["journey"] for c in cards}) == 10
+    assert len(leads) == len({c["journey"] for c in cards}) == 14
     assert all(c["weeks"] == 2 for c in leads)
     d = client.get("/api/inspire/peru-coast-andes-titicaca?start=2027-06-01").json()
     assert d["start_date"] == "2027-06-01" and d["days"] == 15
@@ -151,7 +152,7 @@ def test_regions_cross_borders_and_each_month_has_one_route_per_length():
     for it in inspire.itineraries():
         if it.listed and it.weeks:
             by[it.region].append(it)
-    assert len(by) == 10
+    assert len(by) == 14
     for region, its in by.items():
         weeks = {i.weeks for i in its}
         assert {1, 2} <= weeks, region
@@ -352,3 +353,19 @@ def test_over_trousers_in_a_dry_month_are_for_the_wind():
     assert "Windproof over-trousers" in names and "Rain trousers" not in names
     names = {p["name"] for p in _wear("iceland-7", 1)["pieces"]}
     assert "Rain trousers" in names
+
+
+def test_italy_has_its_regions_and_etna_in_winter_is_the_snow_visit():
+    """Manu 2026-11-16 ("anche l'Italia ... come se potessero andare già in production"): four
+    regions cut as operators sell them; in winter Etna's summit is shut, the visit is the Silvestri
+    craters, and the bag for Palermo and Taormina is not an expedition kit."""
+    from app.guide import ready
+    js = {t.journey for t in ready.trips() if any(s.place.startswith("it-") for s in t.stops)}
+    assert js == {"italy-classic", "sicily", "dolomites", "south-italy"}
+    w = _wear("sicily-7-winter", 1)
+    assert w["top_m"] < 2500
+    names = {p["name"] for p in w["pieces"]}
+    assert "Thick down jacket" not in names and "Warm trousers" not in names
+    # a ski week packs ski trousers and winter boots, not rain trousers and trail shoes
+    names = {p["name"] for p in _wear("dolomites-7-ski", 1)["pieces"]}
+    assert {"Ski trousers", "Insulated winter boots"} <= names

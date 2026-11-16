@@ -27,6 +27,12 @@ ELEVATION = {
     "nz-waitomo": 120, "nz-wanaka": 300, "pe-chivay": 3630, "pe-huaraz": 3050, "pe-paracas": 5,
     "pe-puerto-maldonado": 180, "vn-can-tho": 5, "vn-ha-giang": 110, "vn-mai-chau": 175, "vn-ninh-binh": 5,
     "vn-phong-nha": 30,
+    # Italy (2026-11-16): the towns you sleep in; the Cinque Terre's globe point is up on the
+    # ridge (331 m), the villages are on the sea
+    "it-alberobello": 428, "it-amalfi": 10, "it-bologna": 54, "it-bolzano": 262, "it-cefalu": 16,
+    "it-cinque-terre": 20, "it-cortina-dampezzo": 1224, "it-lipari": 10, "it-milan": 120,
+    "it-ortisei": 1236, "it-ragusa": 450, "it-sirmione": 70, "it-sorrento": 50, "it-syracuse": 17,
+    "it-trapani": 3, "it-varenna": 220, "it-verona": 59,
 }
 
 # Where you sleep, when the globe's point is the middle of a park: Torres del Paine's sits on the

@@ -3429,6 +3429,1578 @@
    "group_trips": []
   },
   {
+   "slug": "dolomites-7",
+   "title": "A week of walks in the Dolomites",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Val Gardena for Seceda and the Alpe di Siusi, Cortina for the Tre Cime and Lago di Braies.",
+   "destination": "Dolomites & the Lakes",
+   "region": "dolomites",
+   "weeks": 1,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best_months": [
+    7,
+    8,
+    9
+   ],
+   "season_note": "Mid-June to late September, while the lifts and mountain huts are open. July-August are busiest; September is clear and quieter. Afternoon thunderstorms in summer.",
+   "pace": "relaxed",
+   "level": 4,
+   "stops": [
+    {
+     "place": "it-ortisei",
+     "name": "Ortisei",
+     "country_code": "IT",
+     "lat": 46.57,
+     "lon": 11.67,
+     "elevation_m": 1236,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2500
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2100
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 2680
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ortisei",
+       "day": 1
+      },
+      {
+       "name": "Selva di Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Seceda ridge",
+       "day": 2
+      },
+      {
+       "name": "Alpe di Siusi",
+       "day": 3
+      },
+      {
+       "name": "Gardena Pass",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Ortisei and its woodcarvers.",
+      "Seceda ridge.",
+      "Alpe di Siusi.",
+      "Round the Sassolungo (Jul–Sep)."
+     ],
+     "do": [
+      "Sleep: Ortisei for the village life, Selva for the lifts."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-val-gardena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortisei"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "seceda"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alpe"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sassolungo"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-cortina-dampezzo",
+     "name": "Cortina d'Ampezzo",
+     "country_code": "IT",
+     "lat": 46.54,
+     "lon": 12.14,
+     "elevation_m": 1224,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2450
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1500
+      }
+     ],
+     "visits": [
+      {
+       "name": "Corso Italia and the Olympic town",
+       "day": 1
+      },
+      {
+       "name": "Round the Tre Cime di Lavaredo",
+       "day": 2
+      },
+      {
+       "name": "Lago di Braies",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Corso Italia and the Olympic town.",
+      "Round the Tre Cime di Lavaredo.",
+      "Lago di Braies."
+     ],
+     "do": [
+      "Sleep: Cortina itself, or Dobbiaco for the Tre Cime and Braies."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Round the Tre Cime di Lavaredo",
+       "query": "Round the Tre Cime di Lavaredo"
+      },
+      {
+       "title": "Lago di Braies",
+       "query": "Lago di Braies"
+      }
+     ],
+     "area": "it-cortina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "trecime"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "braies"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "dolomites-7-lakes",
+   "title": "Lake Garda, Verona and Lake Como in a week",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Between the seasons the mountains close, so the lakes: Verona, Sirmione and the boats of Lake Como.",
+   "destination": "Dolomites & the Lakes",
+   "region": "dolomites",
+   "weeks": 1,
+   "months": [
+    4,
+    5,
+    10,
+    11
+   ],
+   "best_months": [
+    4,
+    5,
+    10
+   ],
+   "season_note": "April-May and October-November, when the Dolomite lifts and huts shut. Mild by the lakes (15-20 °C), gardens in bloom in spring; November is grey and some boats stop.",
+   "pace": "relaxed",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-verona",
+     "name": "Verona",
+     "country_code": "IT",
+     "lat": 45.44,
+     "lon": 10.99,
+     "elevation_m": 59,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Verona Arena",
+       "day": 1
+      },
+      {
+       "name": "Valpolicella wineries",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. The Arena, Juliet's balcony and the old town.",
+      "Valpolicella wineries."
+     ],
+     "do": [
+      "Sleep: Inside the old town between the Arena and the Adige."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-verona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "valpolicella"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-sirmione",
+     "name": "Sirmione",
+     "country_code": "IT",
+     "lat": 45.49,
+     "lon": 10.61,
+     "elevation_m": 70,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sirmione",
+       "day": 1
+      },
+      {
+       "name": "Across the lake by ferry",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Sirmione's castle and the Grottoes of Catullus.",
+      "Across the lake by ferry."
+     ],
+     "do": [
+      "Sleep: Sirmione or Malcesine; Riva del Garda for hikes and bikes."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-garda",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sirmione"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "boat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-varenna",
+     "name": "Varenna",
+     "country_code": "IT",
+     "lat": 46.01,
+     "lon": 9.28,
+     "elevation_m": 220,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Castello di Vezio above Varenna",
+       "day": 1
+      },
+      {
+       "name": "Lake Como",
+       "day": 2
+      },
+      {
+       "name": "Como",
+       "day": 2
+      },
+      {
+       "name": "Greenway del Lago and Villa del Balbianello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Castello di Vezio above Varenna.",
+      "Bellagio, Varenna and Villa Carlotta by ferry (Mar–Oct).",
+      "Greenway del Lago and Villa del Balbianello."
+     ],
+     "do": [
+      "Sleep: Varenna or Bellagio in the middle of the lake, where the ferries cross."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-como",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "castle"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ferry"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "greenway"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "dolomites-7-ski",
+   "title": "A ski week in the Dolomites",
+   "countries": [
+    "IT"
+   ],
+   "summary": "The Sella Ronda from Val Gardena and Cortina's slopes, on one Dolomiti Superski pass.",
+   "destination": "Dolomites & the Lakes",
+   "region": "dolomites",
+   "weeks": 1,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [
+    1,
+    2,
+    3
+   ],
+   "season_note": "December to March. January is coldest (-10 °C at the top) and quiet; February busy with school holidays; March sunny with long days.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-ortisei",
+     "name": "Ortisei",
+     "country_code": "IT",
+     "lat": 46.57,
+     "lon": 11.67,
+     "elevation_m": 1236,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "ski"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2000
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ortisei",
+       "day": 1
+      },
+      {
+       "name": "Selva di Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Ski the Sella Ronda",
+       "day": 2
+      },
+      {
+       "name": "Winter walks and sledging on Alpe di Siusi",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Ortisei and its woodcarvers.",
+      "Ski the Sella Ronda.",
+      "Winter walks and sledging on Alpe di Siusi.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Ortisei for the village life, Selva for the lifts."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Ski the Sella Ronda",
+       "query": "Ski the Sella Ronda"
+      }
+     ],
+     "area": "it-val-gardena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortisei"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sella"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "winter"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-cortina-dampezzo",
+     "name": "Cortina d'Ampezzo",
+     "country_code": "IT",
+     "lat": 46.54,
+     "lon": 12.14,
+     "elevation_m": 1224,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1500
+      },
+      {
+       "type": "ski"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Corso Italia and the Olympic town",
+       "day": 1
+      },
+      {
+       "name": "Lago di Braies",
+       "day": 2
+      },
+      {
+       "name": "Ski Cortina and the Lagazuoi",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Corso Italia and the Olympic town.",
+      "Lago di Braies.",
+      "Ski Cortina and the Lagazuoi."
+     ],
+     "do": [
+      "Sleep: Cortina itself, or Dobbiaco for the Tre Cime and Braies."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Lago di Braies",
+       "query": "Lago di Braies"
+      },
+      {
+       "title": "Ski Cortina and the Lagazuoi",
+       "query": "Ski Cortina and the Lagazuoi"
+      }
+     ],
+     "area": "it-cortina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "braies"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ski"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "dolomites-14",
+   "title": "The lakes and the Dolomites in two weeks",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Lake Como and Lake Garda, then up through Bolzano to the high walks of Val Gardena and Cortina.",
+   "destination": "Dolomites & the Lakes",
+   "region": "dolomites",
+   "weeks": 2,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best_months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "season_note": "June to September. Lakes are hot in July-August (30 °C), the mountains fresh (15-20 °C by day at 2,000 m); the lifts open mid-June.",
+   "pace": "normal",
+   "level": 4,
+   "stops": [
+    {
+     "place": "it-varenna",
+     "name": "Varenna",
+     "country_code": "IT",
+     "lat": 46.01,
+     "lon": 9.28,
+     "elevation_m": 220,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Castello di Vezio above Varenna",
+       "day": 1
+      },
+      {
+       "name": "Lake Como",
+       "day": 2
+      },
+      {
+       "name": "Como",
+       "day": 2
+      },
+      {
+       "name": "Greenway del Lago and Villa del Balbianello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Castello di Vezio above Varenna.",
+      "Bellagio, Varenna and Villa Carlotta by ferry.",
+      "Greenway del Lago and Villa del Balbianello."
+     ],
+     "do": [
+      "Sleep: Varenna or Bellagio in the middle of the lake, where the ferries cross."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-como",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "castle"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ferry"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "greenway"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-sirmione",
+     "name": "Sirmione",
+     "country_code": "IT",
+     "lat": 45.49,
+     "lon": 10.61,
+     "elevation_m": 70,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sirmione",
+       "day": 1
+      },
+      {
+       "name": "Across the lake by ferry",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Sirmione's castle and the Grottoes of Catullus.",
+      "Across the lake by ferry."
+     ],
+     "do": [
+      "Sleep: Sirmione or Malcesine; Riva del Garda for hikes and bikes."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-garda",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sirmione"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "boat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-bolzano",
+     "name": "Bolzano",
+     "country_code": "IT",
+     "lat": 46.498,
+     "lon": 11.355,
+     "elevation_m": 262,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ötzi the Iceman and the old town",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Ötzi the Iceman and the old town."
+     ],
+     "do": [
+      "Sleep: Old town near Piazza Walther."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-bolzano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "otzi"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-ortisei",
+     "name": "Ortisei",
+     "country_code": "IT",
+     "lat": 46.57,
+     "lon": 11.67,
+     "elevation_m": 1236,
+     "days": 5,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2500
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2100
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 2680
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ortisei",
+       "day": 1
+      },
+      {
+       "name": "Selva di Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Seceda ridge",
+       "day": 2
+      },
+      {
+       "name": "Alpe di Siusi",
+       "day": 3
+      },
+      {
+       "name": "Gardena Pass",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. Ortisei and its woodcarvers.",
+      "Seceda ridge.",
+      "Alpe di Siusi.",
+      "Round the Sassolungo (Jul–Sep).",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Ortisei for the village life, Selva for the lifts."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-val-gardena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortisei"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "seceda"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alpe"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sassolungo"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-cortina-dampezzo",
+     "name": "Cortina d'Ampezzo",
+     "country_code": "IT",
+     "lat": 46.54,
+     "lon": 12.14,
+     "elevation_m": 1224,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2450
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1500
+      }
+     ],
+     "visits": [
+      {
+       "name": "Corso Italia and the Olympic town",
+       "day": 1
+      },
+      {
+       "name": "Round the Tre Cime di Lavaredo",
+       "day": 2
+      },
+      {
+       "name": "Lago di Braies",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Corso Italia and the Olympic town.",
+      "Round the Tre Cime di Lavaredo.",
+      "Lago di Braies."
+     ],
+     "do": [
+      "Sleep: Cortina itself, or Dobbiaco for the Tre Cime and Braies."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Round the Tre Cime di Lavaredo",
+       "query": "Round the Tre Cime di Lavaredo"
+      },
+      {
+       "title": "Lago di Braies",
+       "query": "Lago di Braies"
+      }
+     ],
+     "area": "it-cortina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "trecime"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "braies"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "dolomites-14-lakes",
+   "title": "Northern Italy between seasons: Milan, the lakes and Venice",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Milan's Last Supper, Lake Como and Lake Garda, Verona, Bolzano's old town and Venice.",
+   "destination": "Dolomites & the Lakes",
+   "region": "dolomites",
+   "weeks": 2,
+   "months": [
+    4,
+    5,
+    10,
+    11
+   ],
+   "best_months": [
+    4,
+    5,
+    10
+   ],
+   "season_note": "April-May and October-November: the Dolomite lifts are shut, the lakes and cities mild and quiet.",
+   "pace": "normal",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-milan",
+     "name": "Milan",
+     "country_code": "IT",
+     "lat": 45.464,
+     "lon": 9.19,
+     "elevation_m": 120,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "The Duomo roof and the Galleria",
+       "day": 1
+      },
+      {
+       "name": "Leonardo's Last Supper and Brera",
+       "day": 2
+      },
+      {
+       "name": "Navigli canals at aperitivo time",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. The Duomo roof and the Galleria.",
+      "Leonardo's Last Supper and Brera. Navigli canals at aperitivo time."
+     ],
+     "do": [
+      "Sleep: Near the Duomo or in Brera; Navigli for the evenings."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Leonardo's Last Supper and Brera",
+       "query": "Leonardo's Last Supper and Brera"
+      }
+     ],
+     "area": "it-milan",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "supper",
+        "navigli"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-varenna",
+     "name": "Varenna",
+     "country_code": "IT",
+     "lat": 46.01,
+     "lon": 9.28,
+     "elevation_m": 220,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Castello di Vezio above Varenna",
+       "day": 1
+      },
+      {
+       "name": "Lake Como",
+       "day": 2
+      },
+      {
+       "name": "Como",
+       "day": 2
+      },
+      {
+       "name": "Greenway del Lago and Villa del Balbianello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Castello di Vezio above Varenna.",
+      "Bellagio, Varenna and Villa Carlotta by ferry (Mar–Oct).",
+      "Greenway del Lago and Villa del Balbianello."
+     ],
+     "do": [
+      "Sleep: Varenna or Bellagio in the middle of the lake, where the ferries cross."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-como",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "castle"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ferry"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "greenway"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-sirmione",
+     "name": "Sirmione",
+     "country_code": "IT",
+     "lat": 45.49,
+     "lon": 10.61,
+     "elevation_m": 70,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1760
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sirmione",
+       "day": 1
+      },
+      {
+       "name": "Across the lake by ferry",
+       "day": 2
+      },
+      {
+       "name": "Monte Baldo cable car from Malcesine",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Sirmione's castle and the Grottoes of Catullus.",
+      "Across the lake by ferry.",
+      "Monte Baldo cable car from Malcesine (Apr–Oct)."
+     ],
+     "do": [
+      "Sleep: Sirmione or Malcesine; Riva del Garda for hikes and bikes."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-garda",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sirmione"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "boat"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "baldo"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-verona",
+     "name": "Verona",
+     "country_code": "IT",
+     "lat": 45.44,
+     "lon": 10.99,
+     "elevation_m": 59,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Verona Arena",
+       "day": 1
+      },
+      {
+       "name": "Valpolicella wineries",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Arena, Juliet's balcony and the old town.",
+      "Valpolicella wineries."
+     ],
+     "do": [
+      "Sleep: Inside the old town between the Arena and the Adige."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-verona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "valpolicella"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-bolzano",
+     "name": "Bolzano",
+     "country_code": "IT",
+     "lat": 46.498,
+     "lon": 11.355,
+     "elevation_m": 262,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1300
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ötzi the Iceman and the old town",
+       "day": 1
+      },
+      {
+       "name": "Renon plateau and the earth pyramids",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Ötzi the Iceman and the old town.",
+      "Renon plateau and the earth pyramids."
+     ],
+     "do": [
+      "Sleep: Old town near Piazza Walther."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-bolzano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "otzi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ritten"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      },
+      {
+       "name": "Palazzo Pisani",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "dolomites-14-ski",
+   "title": "Two weeks of snow in the Dolomites",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Bolzano's Christmas market or museum, then a long stay on skis or snowshoes in Val Gardena and Cortina.",
+   "destination": "Dolomites & the Lakes",
+   "region": "dolomites",
+   "weeks": 2,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [
+    1,
+    2,
+    3
+   ],
+   "season_note": "December to March. The Christmas markets run late November to early January.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-bolzano",
+     "name": "Bolzano",
+     "country_code": "IT",
+     "lat": 46.498,
+     "lon": 11.355,
+     "elevation_m": 262,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1300
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ötzi the Iceman and the old town",
+       "day": 1
+      },
+      {
+       "name": "Renon plateau and the earth pyramids",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Ötzi the Iceman and the old town.",
+      "Renon plateau and the earth pyramids."
+     ],
+     "do": [
+      "Sleep: Old town near Piazza Walther."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-bolzano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "otzi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ritten"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-ortisei",
+     "name": "Ortisei",
+     "country_code": "IT",
+     "lat": 46.57,
+     "lon": 11.67,
+     "elevation_m": 1236,
+     "days": 6,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "ski"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2000
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ortisei",
+       "day": 1
+      },
+      {
+       "name": "Selva di Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Val Gardena",
+       "day": 1
+      },
+      {
+       "name": "Ski the Sella Ronda",
+       "day": 2
+      },
+      {
+       "name": "Winter walks and sledging on Alpe di Siusi",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ortisei and its woodcarvers.",
+      "Ski the Sella Ronda.",
+      "Winter walks and sledging on Alpe di Siusi.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Ortisei for the village life, Selva for the lifts."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Ski the Sella Ronda",
+       "query": "Ski the Sella Ronda"
+      }
+     ],
+     "area": "it-val-gardena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortisei"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sella"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "winter"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-cortina-dampezzo",
+     "name": "Cortina d'Ampezzo",
+     "country_code": "IT",
+     "lat": 46.54,
+     "lon": 12.14,
+     "elevation_m": 1224,
+     "days": 6,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1500
+      },
+      {
+       "type": "ski"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Corso Italia and the Olympic town",
+       "day": 1
+      },
+      {
+       "name": "Lago di Braies",
+       "day": 2
+      },
+      {
+       "name": "Ski Cortina and the Lagazuoi",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Corso Italia and the Olympic town.",
+      "Lago di Braies.",
+      "Ski Cortina and the Lagazuoi.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Cortina itself, or Dobbiaco for the Tre Cime and Braies."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Lago di Braies",
+       "query": "Lago di Braies"
+      },
+      {
+       "title": "Ski Cortina and the Lagazuoi",
+       "query": "Ski Cortina and the Lagazuoi"
+      }
+     ],
+     "area": "it-cortina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "braies"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ski"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
    "slug": "iceland-7",
    "title": "Iceland in a week: the south coast and the glacier lagoon",
    "countries": [
@@ -12970,6 +14542,1414 @@
    "group_trips": []
   },
   {
+   "slug": "south-italy-7",
+   "title": "Naples, Pompeii and Sorrento in a week",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Naples and Pompeii, then Sorrento as the base for Capri and the Amalfi Coast road.",
+   "destination": "Naples, Amalfi & Puglia",
+   "region": "south-italy",
+   "weeks": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "All year. Capri's boat trips run April to October; in winter Sorrento stays open, with fewer boats. July-August hot and crowded.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      },
+      {
+       "name": "National Archaeological Museum",
+       "day": 3
+      },
+      {
+       "name": "Royal Palace of Naples",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii.",
+      "National Archaeological Museum. Lungomare, Castel dell'Ovo and the Royal Palace."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mann",
+        "seafront"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-sorrento",
+     "name": "Sorrento",
+     "country_code": "IT",
+     "lat": 40.63,
+     "lon": 14.38,
+     "elevation_m": 50,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sorrento's old town and the Marina Grande",
+       "day": 1
+      },
+      {
+       "name": "Capri",
+       "day": 2
+      },
+      {
+       "name": "Anacapri",
+       "day": 2
+      },
+      {
+       "name": "Positano",
+       "day": 3
+      },
+      {
+       "name": "Amalfi Coast",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Sorrento's old town and the Marina Grande.",
+      "Capri by boat (Apr–Oct).",
+      "The Amalfi Coast road by bus.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Sorrento centre near Piazza Tasso: buses and ferries leave from there."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-sorrento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "capri"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "drive"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "south-italy-14",
+   "title": "Naples, the Amalfi Coast, Matera and Puglia",
+   "countries": [
+    "IT"
+   ],
+   "summary": "From the bay of Naples across to the cave town of Matera, the trulli of the Valle d'Itria and Baroque Lecce.",
+   "destination": "Naples, Amalfi & Puglia",
+   "region": "south-italy",
+   "weeks": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "All year. Swimming June to September; spring and autumn are best for walking the towns; winter is mild (12-14 °C) and very quiet.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      },
+      {
+       "name": "National Archaeological Museum",
+       "day": 3
+      },
+      {
+       "name": "Royal Palace of Naples",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii.",
+      "National Archaeological Museum. Lungomare, Castel dell'Ovo and the Royal Palace."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mann",
+        "seafront"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-sorrento",
+     "name": "Sorrento",
+     "country_code": "IT",
+     "lat": 40.63,
+     "lon": 14.38,
+     "elevation_m": 50,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sorrento's old town and the Marina Grande",
+       "day": 1
+      },
+      {
+       "name": "Capri",
+       "day": 2
+      },
+      {
+       "name": "Anacapri",
+       "day": 2
+      },
+      {
+       "name": "Positano",
+       "day": 3
+      },
+      {
+       "name": "Amalfi Coast",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Sorrento's old town and the Marina Grande.",
+      "Capri by boat (Apr–Oct).",
+      "The Amalfi Coast road by bus."
+     ],
+     "do": [
+      "Sleep: Sorrento centre near Piazza Tasso: buses and ferries leave from there."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-sorrento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "capri"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "drive"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-matera",
+     "name": "Matera",
+     "country_code": "IT",
+     "lat": 40.67,
+     "lon": 16.6,
+     "elevation_m": 429,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 400
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sassi di Matera",
+       "day": 1
+      },
+      {
+       "name": "Matera",
+       "day": 1
+      },
+      {
+       "name": "Murgia Materana Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Sassi and the rock churches.",
+      "Across the ravine to the Murgia."
+     ],
+     "do": [
+      "Sleep: A cave hotel in the Sassi."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-matera",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sassi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "murgia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-alberobello",
+     "name": "Alberobello",
+     "country_code": "IT",
+     "lat": 40.78,
+     "lon": 17.24,
+     "elevation_m": 428,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alberobello",
+       "day": 1
+      },
+      {
+       "name": "Ostuni",
+       "day": 2
+      },
+      {
+       "name": "Castellana caves",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. The trulli of Alberobello.",
+      "Locorotondo, Cisternino and Ostuni.",
+      "Castellana caves."
+     ],
+     "do": [
+      "Sleep: A trullo in Alberobello, or a masseria (farm) in the Valle d'Itria."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-alberobello",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "trulli"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "itria"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "grotte"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-lecce",
+     "name": "Lecce",
+     "country_code": "IT",
+     "lat": 40.35,
+     "lon": 18.17,
+     "elevation_m": 56,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Basilica of Santa Croce, Lecce",
+       "day": 1
+      },
+      {
+       "name": "Lecce",
+       "day": 1
+      },
+      {
+       "name": "Otranto and the coast road south",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Lecce's Baroque.",
+      "Otranto and the coast road south.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Lecce's old town; a masseria near the coast in summer."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lecce",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "baroque"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "otranto"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "south-italy-21",
+   "title": "The South in three weeks: Amalfi to Salento",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Naples, Sorrento and Capri, the Amalfi Coast, Matera, the Valle d'Itria, Polignano's cliffs and the beaches of Salento.",
+   "destination": "Naples, Amalfi & Puglia",
+   "region": "south-italy",
+   "weeks": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    5,
+    6,
+    9
+   ],
+   "season_note": "April to October. Beaches June to September; August is Italy's holiday month, book early.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      },
+      {
+       "name": "National Archaeological Museum",
+       "day": 3
+      },
+      {
+       "name": "Royal Palace of Naples",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii.",
+      "National Archaeological Museum. Lungomare, Castel dell'Ovo and the Royal Palace."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mann",
+        "seafront"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-sorrento",
+     "name": "Sorrento",
+     "country_code": "IT",
+     "lat": 40.63,
+     "lon": 14.38,
+     "elevation_m": 50,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sorrento's old town and the Marina Grande",
+       "day": 1
+      },
+      {
+       "name": "Capri",
+       "day": 2
+      },
+      {
+       "name": "Anacapri",
+       "day": 2
+      },
+      {
+       "name": "Swim at the Bagni della Regina Giovanna",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Sorrento's old town and the Marina Grande.",
+      "Capri by boat.",
+      "Swim at the Bagni della Regina Giovanna (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Sorrento centre near Piazza Tasso: buses and ferries leave from there."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-sorrento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "capri"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bagni"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-amalfi",
+     "name": "Amalfi",
+     "country_code": "IT",
+     "lat": 40.63,
+     "lon": 14.6,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 650
+      }
+     ],
+     "visits": [
+      {
+       "name": "Amalfi Cathedral",
+       "day": 1
+      },
+      {
+       "name": "The Path of the Gods",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Ravello's villas and Amalfi town.",
+      "The Path of the Gods (Mar–Jun, Sep–Nov)."
+     ],
+     "do": [
+      "Sleep: Amalfi town or Positano: buses and boats from both. Ravello for quiet."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-amalfi",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ravello"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "gods"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-matera",
+     "name": "Matera",
+     "country_code": "IT",
+     "lat": 40.67,
+     "lon": 16.6,
+     "elevation_m": 429,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 400
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sassi di Matera",
+       "day": 1
+      },
+      {
+       "name": "Matera",
+       "day": 1
+      },
+      {
+       "name": "Murgia Materana Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Sassi and the rock churches.",
+      "Across the ravine to the Murgia.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: A cave hotel in the Sassi."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-matera",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sassi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "murgia"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-alberobello",
+     "name": "Alberobello",
+     "country_code": "IT",
+     "lat": 40.78,
+     "lon": 17.24,
+     "elevation_m": 428,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alberobello",
+       "day": 1
+      },
+      {
+       "name": "Ostuni",
+       "day": 2
+      },
+      {
+       "name": "Castellana caves",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. The trulli of Alberobello.",
+      "Locorotondo, Cisternino and Ostuni.",
+      "Castellana caves."
+     ],
+     "do": [
+      "Sleep: A trullo in Alberobello, or a masseria (farm) in the Valle d'Itria."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-alberobello",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "trulli"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "itria"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "grotte"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-polignano-a-mare",
+     "name": "Polignano a Mare",
+     "country_code": "IT",
+     "lat": 40.99,
+     "lon": 17.22,
+     "elevation_m": 35,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Polignano a Mare",
+       "day": 1
+      },
+      {
+       "name": "Monopoli",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Lama Monachile and the cliff town.",
+      "Monopoli and the coves to the south (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Polignano's old town on the cliff."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-polignano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "cliff"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "monopoli"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-lecce",
+     "name": "Lecce",
+     "country_code": "IT",
+     "lat": 40.35,
+     "lon": 18.17,
+     "elevation_m": 56,
+     "days": 5,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Basilica of Santa Croce, Lecce",
+       "day": 1
+      },
+      {
+       "name": "Lecce",
+       "day": 1
+      },
+      {
+       "name": "Otranto and the coast road south",
+       "day": 2
+      },
+      {
+       "name": "Salento's Caribbean beaches",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Lecce's Baroque.",
+      "Otranto and the coast road south.",
+      "Salento's Caribbean beaches (Jun–Sep).",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Lecce's old town; a masseria near the coast in summer."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lecce",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "baroque"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "otranto"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "beach"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "south-italy-21-winter",
+   "title": "The South in winter, slowly",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Naples and its museums at leisure, Sorrento, Matera, the Valle d'Itria, the Puglia coast towns and Lecce.",
+   "destination": "Naples, Amalfi & Puglia",
+   "region": "south-italy",
+   "weeks": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [],
+   "season_note": "November to March: mild and green, Matera's cave town lit for Christmas. The Amalfi Coast and Capri mostly close, so Sorrento is the base.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 5,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      },
+      {
+       "name": "National Archaeological Museum",
+       "day": 3
+      },
+      {
+       "name": "Royal Palace of Naples",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii.",
+      "National Archaeological Museum. Lungomare, Castel dell'Ovo and the Royal Palace.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mann",
+        "seafront"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-sorrento",
+     "name": "Sorrento",
+     "country_code": "IT",
+     "lat": 40.63,
+     "lon": 14.38,
+     "elevation_m": 50,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sorrento's old town and the Marina Grande",
+       "day": 1
+      },
+      {
+       "name": "Positano",
+       "day": 2
+      },
+      {
+       "name": "Amalfi Coast",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Sorrento's old town and the Marina Grande.",
+      "The Amalfi Coast road by bus.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Sorrento centre near Piazza Tasso: buses and ferries leave from there."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-sorrento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "drive"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-matera",
+     "name": "Matera",
+     "country_code": "IT",
+     "lat": 40.67,
+     "lon": 16.6,
+     "elevation_m": 429,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 400
+      }
+     ],
+     "visits": [
+      {
+       "name": "Sassi di Matera",
+       "day": 1
+      },
+      {
+       "name": "Matera",
+       "day": 1
+      },
+      {
+       "name": "Murgia Materana Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Sassi and the rock churches.",
+      "Across the ravine to the Murgia.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: A cave hotel in the Sassi."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-matera",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sassi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "murgia"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-alberobello",
+     "name": "Alberobello",
+     "country_code": "IT",
+     "lat": 40.78,
+     "lon": 17.24,
+     "elevation_m": 428,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alberobello",
+       "day": 1
+      },
+      {
+       "name": "Ostuni",
+       "day": 2
+      },
+      {
+       "name": "Castellana caves",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. The trulli of Alberobello.",
+      "Locorotondo, Cisternino and Ostuni.",
+      "Castellana caves."
+     ],
+     "do": [
+      "Sleep: A trullo in Alberobello, or a masseria (farm) in the Valle d'Itria."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-alberobello",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "trulli"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "itria"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "grotte"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-polignano-a-mare",
+     "name": "Polignano a Mare",
+     "country_code": "IT",
+     "lat": 40.99,
+     "lon": 17.22,
+     "elevation_m": 35,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Polignano a Mare",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Lama Monachile and the cliff town.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Polignano's old town on the cliff."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-polignano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "cliff"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-lecce",
+     "name": "Lecce",
+     "country_code": "IT",
+     "lat": 40.35,
+     "lon": 18.17,
+     "elevation_m": 56,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Basilica of Santa Croce, Lecce",
+       "day": 1
+      },
+      {
+       "name": "Lecce",
+       "day": 1
+      },
+      {
+       "name": "Otranto and the coast road south",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Lecce's Baroque.",
+      "Otranto and the coast road south.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Lecce's old town; a masseria near the coast in summer."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lecce",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "baroque"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "otranto"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
    "slug": "new-zealand-7",
    "title": "New Zealand in a week: the southern lakes and fjords",
    "countries": [
@@ -21449,6 +24429,5273 @@
        "kind": "arrive",
        "things": [
         "pachacamac"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "italy-classic-7",
+   "title": "Rome, Florence and Venice in a week",
+   "countries": [
+    "IT"
+   ],
+   "summary": "The three cities everyone starts with, by fast train: Rome's ancient centre, Florence's Renaissance, Venice on the water.",
+   "destination": "Rome, Florence & Venice",
+   "region": "italy-classic",
+   "weeks": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "All year. April-June and September-October are the best weather; July-August are hot (33-35 °C in Rome and Florence) and crowded; November-February are cool, rainy at times and empty, with acqua alta some mornings in Venice.",
+   "pace": "normal",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-rome",
+     "name": "Rome",
+     "country_code": "IT",
+     "lat": 41.903,
+     "lon": 12.496,
+     "elevation_m": 58,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Venezia",
+       "day": 1
+      },
+      {
+       "name": "Roman Forum",
+       "day": 2
+      },
+      {
+       "name": "Colosseum",
+       "day": 2
+      },
+      {
+       "name": "Vatican Museums, Sistine Chapel and St Peter's",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Pantheon, Piazza Navona and the Trevi Fountain.",
+      "Colosseum, Roman Forum and the Palatine.",
+      "Vatican Museums, Sistine Chapel and St Peter's."
+     ],
+     "do": [
+      "Sleep: Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Colosseum, Roman Forum and the Palatine",
+       "query": "Roman Forum"
+      },
+      {
+       "title": "Vatican Museums, Sistine Chapel and St Peter's",
+       "query": "Vatican Museums, Sistine Chapel and St Peter's"
+      }
+     ],
+     "area": "it-rome",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ancient"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vatican"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-florence",
+     "name": "Florence",
+     "country_code": "IT",
+     "lat": 43.77,
+     "lon": 11.256,
+     "elevation_m": 67,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+       "day": 1
+      },
+      {
+       "name": "Florence Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Florence Baptistery",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Ponte Vecchio, Oltrarno and Piazzale Michelangelo.",
+      "The Duomo, Brunelleschi's dome and the Baptistery."
+     ],
+     "do": [
+      "Sleep: Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Duomo, Brunelleschi's dome and the Baptistery",
+       "query": "Florence Cathedral"
+      }
+     ],
+     "area": "it-florence",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "oltrarno"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "duomo"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Pisani",
+       "day": 1
+      },
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "italy-classic-14",
+   "title": "Classic Italy in two weeks, with Tuscany and the Cinque Terre",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Rome, a Tuscan hill town and the Val d'Orcia, Florence, the cliff path of the Cinque Terre, and Venice to finish.",
+   "destination": "Rome, Florence & Venice",
+   "region": "italy-classic",
+   "weeks": 2,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    4,
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "April to October, while the Cinque Terre boats run and the coast path is open. May-June and September are the sweet spot; July-August are hot and the villages packed.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-rome",
+     "name": "Rome",
+     "country_code": "IT",
+     "lat": 41.903,
+     "lon": 12.496,
+     "elevation_m": 58,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Venezia",
+       "day": 1
+      },
+      {
+       "name": "Roman Forum",
+       "day": 2
+      },
+      {
+       "name": "Colosseum",
+       "day": 2
+      },
+      {
+       "name": "Vatican Museums, Sistine Chapel and St Peter's",
+       "day": 3
+      },
+      {
+       "name": "Galleria Borghese and the Villa Borghese park",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Pantheon, Piazza Navona and the Trevi Fountain.",
+      "Colosseum, Roman Forum and the Palatine.",
+      "Vatican Museums, Sistine Chapel and St Peter's.",
+      "Galleria Borghese and the Villa Borghese park."
+     ],
+     "do": [
+      "Sleep: Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Colosseum, Roman Forum and the Palatine",
+       "query": "Roman Forum"
+      },
+      {
+       "title": "Vatican Museums, Sistine Chapel and St Peter's",
+       "query": "Vatican Museums, Sistine Chapel and St Peter's"
+      }
+     ],
+     "area": "it-rome",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ancient"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vatican"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "borghese"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-siena",
+     "name": "Siena",
+     "country_code": "IT",
+     "lat": 43.32,
+     "lon": 11.33,
+     "elevation_m": 344,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Siena Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pienza",
+       "day": 2
+      },
+      {
+       "name": "Montepulciano",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza del Campo, the Duomo and the Torre del Mangia.",
+      "Val d'Orcia: Pienza, Montepulciano and the cypress roads."
+     ],
+     "do": [
+      "Sleep: Inside Siena's walls, or a farmhouse (agriturismo) in the Val d'Orcia with a car."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-siena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "campo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "orcia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-florence",
+     "name": "Florence",
+     "country_code": "IT",
+     "lat": 43.77,
+     "lon": 11.256,
+     "elevation_m": 67,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+       "day": 1
+      },
+      {
+       "name": "Florence Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Florence Baptistery",
+       "day": 2
+      },
+      {
+       "name": "The Uffizi",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ponte Vecchio, Oltrarno and Piazzale Michelangelo.",
+      "The Duomo, Brunelleschi's dome and the Baptistery.",
+      "The Uffizi."
+     ],
+     "do": [
+      "Sleep: Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Duomo, Brunelleschi's dome and the Baptistery",
+       "query": "Florence Cathedral"
+      },
+      {
+       "title": "The Uffizi",
+       "query": "The Uffizi"
+      }
+     ],
+     "area": "it-florence",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "oltrarno"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "uffizi"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-cinque-terre",
+     "name": "Cinque Terre",
+     "country_code": "IT",
+     "lat": 44.13,
+     "lon": 9.7,
+     "elevation_m": 20,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 210
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterosso al Mare",
+       "day": 2
+      },
+      {
+       "name": "Vernazza",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "The Blue Path: Monterosso to Vernazza to Corniglia."
+     ],
+     "do": [
+      "Sleep: In one of the villages (Monterosso has the beach) or in La Spezia, 10 minutes by train."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Blue Path: Monterosso to Vernazza to Corniglia",
+       "query": "Monterosso al Mare"
+      }
+     ],
+     "area": "it-cinque-terre",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "blue"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      },
+      {
+       "name": "Palazzo Pisani",
+       "day": 2
+      },
+      {
+       "name": "Murano, Burano and Torcello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal.",
+      "Murano, Burano and Torcello."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "italy-classic-14-winter",
+   "title": "Italy's cities in winter: Rome, Naples, Florence, Bologna, Venice",
+   "countries": [
+    "IT"
+   ],
+   "summary": "The off-season version: no coast, more cities. Pompeii from Naples, Bologna for the food, and Venice without the crowds.",
+   "destination": "Rome, Florence & Venice",
+   "region": "italy-classic",
+   "weeks": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [],
+   "season_note": "November to March: mild in Rome and Naples (12-15 °C by day), cold and foggy in Bologna and Venice (5-8 °C). The Cinque Terre and Amalfi shut down in these months, the cities don't. Christmas markets in December.",
+   "pace": "normal",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-rome",
+     "name": "Rome",
+     "country_code": "IT",
+     "lat": 41.903,
+     "lon": 12.496,
+     "elevation_m": 58,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Venezia",
+       "day": 1
+      },
+      {
+       "name": "Roman Forum",
+       "day": 2
+      },
+      {
+       "name": "Colosseum",
+       "day": 2
+      },
+      {
+       "name": "Vatican Museums, Sistine Chapel and St Peter's",
+       "day": 3
+      },
+      {
+       "name": "Galleria Borghese and the Villa Borghese park",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. Pantheon, Piazza Navona and the Trevi Fountain.",
+      "Colosseum, Roman Forum and the Palatine.",
+      "Vatican Museums, Sistine Chapel and St Peter's.",
+      "Galleria Borghese and the Villa Borghese park."
+     ],
+     "do": [
+      "Sleep: Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Colosseum, Roman Forum and the Palatine",
+       "query": "Roman Forum"
+      },
+      {
+       "title": "Vatican Museums, Sistine Chapel and St Peter's",
+       "query": "Vatican Museums, Sistine Chapel and St Peter's"
+      }
+     ],
+     "area": "it-rome",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ancient"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vatican"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "borghese"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-florence",
+     "name": "Florence",
+     "country_code": "IT",
+     "lat": 43.77,
+     "lon": 11.256,
+     "elevation_m": 67,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+       "day": 1
+      },
+      {
+       "name": "Florence Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Florence Baptistery",
+       "day": 2
+      },
+      {
+       "name": "The Uffizi",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ponte Vecchio, Oltrarno and Piazzale Michelangelo.",
+      "The Duomo, Brunelleschi's dome and the Baptistery.",
+      "The Uffizi."
+     ],
+     "do": [
+      "Sleep: Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Duomo, Brunelleschi's dome and the Baptistery",
+       "query": "Florence Cathedral"
+      },
+      {
+       "title": "The Uffizi",
+       "query": "The Uffizi"
+      }
+     ],
+     "area": "it-florence",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "oltrarno"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "uffizi"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-bologna",
+     "name": "Bologna",
+     "country_code": "IT",
+     "lat": 44.49,
+     "lon": 11.34,
+     "elevation_m": 54,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Bologna",
+       "day": 1
+      },
+      {
+       "name": "Modena and Parma food day",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza Maggiore, the towers and the arcades.",
+      "Modena and Parma food day."
+     ],
+     "do": [
+      "Sleep: Inside the ring, near Piazza Maggiore or the university quarter."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Modena and Parma food day",
+       "query": "Modena and Parma food day"
+      }
+     ],
+     "area": "it-bologna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "food"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      },
+      {
+       "name": "Palazzo Pisani",
+       "day": 2
+      },
+      {
+       "name": "Murano, Burano and Torcello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal.",
+      "Murano, Burano and Torcello."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "italy-classic-21",
+   "title": "Italy in three weeks: Amalfi Coast to Venice",
+   "countries": [
+    "IT"
+   ],
+   "summary": "From the bay of Naples and the Amalfi Coast north through Rome, Tuscany and the Cinque Terre to Lake Como and Venice.",
+   "destination": "Rome, Florence & Venice",
+   "region": "italy-classic",
+   "weeks": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "April to October. The Amalfi Coast and Lake Como are at their best May-June and September; in July-August the coast road and the boats are full.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-amalfi",
+     "name": "Amalfi",
+     "country_code": "IT",
+     "lat": 40.63,
+     "lon": 14.6,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 650
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Amalfi Cathedral",
+       "day": 1
+      },
+      {
+       "name": "The Path of the Gods",
+       "day": 2
+      },
+      {
+       "name": "The coast by boat",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ravello's villas and Amalfi town.",
+      "The Path of the Gods (Mar–Jun, Sep–Nov).",
+      "The coast by boat (May–Oct)."
+     ],
+     "do": [
+      "Sleep: Amalfi town or Positano: buses and boats from both. Ravello for quiet."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-amalfi",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ravello"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "gods"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "boat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-rome",
+     "name": "Rome",
+     "country_code": "IT",
+     "lat": 41.903,
+     "lon": 12.496,
+     "elevation_m": 58,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Venezia",
+       "day": 1
+      },
+      {
+       "name": "Roman Forum",
+       "day": 2
+      },
+      {
+       "name": "Colosseum",
+       "day": 2
+      },
+      {
+       "name": "Vatican Museums, Sistine Chapel and St Peter's",
+       "day": 3
+      },
+      {
+       "name": "Galleria Borghese and the Villa Borghese park",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. Pantheon, Piazza Navona and the Trevi Fountain.",
+      "Colosseum, Roman Forum and the Palatine.",
+      "Vatican Museums, Sistine Chapel and St Peter's.",
+      "Galleria Borghese and the Villa Borghese park."
+     ],
+     "do": [
+      "Sleep: Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Colosseum, Roman Forum and the Palatine",
+       "query": "Roman Forum"
+      },
+      {
+       "title": "Vatican Museums, Sistine Chapel and St Peter's",
+       "query": "Vatican Museums, Sistine Chapel and St Peter's"
+      }
+     ],
+     "area": "it-rome",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ancient"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vatican"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "borghese"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-siena",
+     "name": "Siena",
+     "country_code": "IT",
+     "lat": 43.32,
+     "lon": 11.33,
+     "elevation_m": 344,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Siena Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pienza",
+       "day": 2
+      },
+      {
+       "name": "Montepulciano",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza del Campo, the Duomo and the Torre del Mangia.",
+      "Val d'Orcia: Pienza, Montepulciano and the cypress roads."
+     ],
+     "do": [
+      "Sleep: Inside Siena's walls, or a farmhouse (agriturismo) in the Val d'Orcia with a car."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-siena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "campo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "orcia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-florence",
+     "name": "Florence",
+     "country_code": "IT",
+     "lat": 43.77,
+     "lon": 11.256,
+     "elevation_m": 67,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+       "day": 1
+      },
+      {
+       "name": "Florence Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Florence Baptistery",
+       "day": 2
+      },
+      {
+       "name": "The Uffizi",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ponte Vecchio, Oltrarno and Piazzale Michelangelo.",
+      "The Duomo, Brunelleschi's dome and the Baptistery.",
+      "The Uffizi."
+     ],
+     "do": [
+      "Sleep: Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Duomo, Brunelleschi's dome and the Baptistery",
+       "query": "Florence Cathedral"
+      },
+      {
+       "title": "The Uffizi",
+       "query": "The Uffizi"
+      }
+     ],
+     "area": "it-florence",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "oltrarno"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "uffizi"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-cinque-terre",
+     "name": "Cinque Terre",
+     "country_code": "IT",
+     "lat": 44.13,
+     "lon": 9.7,
+     "elevation_m": 20,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 210
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterosso al Mare",
+       "day": 2
+      },
+      {
+       "name": "Vernazza",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "The Blue Path: Monterosso to Vernazza to Corniglia."
+     ],
+     "do": [
+      "Sleep: In one of the villages (Monterosso has the beach) or in La Spezia, 10 minutes by train."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Blue Path: Monterosso to Vernazza to Corniglia",
+       "query": "Monterosso al Mare"
+      }
+     ],
+     "area": "it-cinque-terre",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "blue"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-varenna",
+     "name": "Varenna",
+     "country_code": "IT",
+     "lat": 46.01,
+     "lon": 9.28,
+     "elevation_m": 220,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Castello di Vezio above Varenna",
+       "day": 1
+      },
+      {
+       "name": "Lake Como",
+       "day": 2
+      },
+      {
+       "name": "Como",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Castello di Vezio above Varenna.",
+      "Bellagio, Varenna and Villa Carlotta by ferry."
+     ],
+     "do": [
+      "Sleep: Varenna or Bellagio in the middle of the lake, where the ferries cross."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-como",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "castle"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ferry"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      },
+      {
+       "name": "Palazzo Pisani",
+       "day": 2
+      },
+      {
+       "name": "Murano, Burano and Torcello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal.",
+      "Murano, Burano and Torcello."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "italy-classic-21-winter",
+   "title": "Italy's cities and their food, in three winter weeks",
+   "countries": [
+    "IT"
+   ],
+   "summary": "The winter route: Naples and Pompeii, Rome at leisure, Siena, Florence, Bologna, Verona and Venice.",
+   "destination": "Rome, Florence & Venice",
+   "region": "italy-classic",
+   "weeks": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [],
+   "season_note": "November to March. The coasts sleep; the cities, museums and restaurants don't. Expect rain some days in Rome and fog in the north; Christmas markets in Bolzano-style towns and Verona in December.",
+   "pace": "relaxed",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      },
+      {
+       "name": "National Archaeological Museum",
+       "day": 3
+      },
+      {
+       "name": "Royal Palace of Naples",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii.",
+      "National Archaeological Museum. Lungomare, Castel dell'Ovo and the Royal Palace."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mann",
+        "seafront"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-rome",
+     "name": "Rome",
+     "country_code": "IT",
+     "lat": 41.903,
+     "lon": 12.496,
+     "elevation_m": 58,
+     "days": 5,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "cycling"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Venezia",
+       "day": 1
+      },
+      {
+       "name": "Roman Forum",
+       "day": 2
+      },
+      {
+       "name": "Colosseum",
+       "day": 2
+      },
+      {
+       "name": "Vatican Museums, Sistine Chapel and St Peter's",
+       "day": 3
+      },
+      {
+       "name": "Galleria Borghese and the Villa Borghese park",
+       "day": 4
+      },
+      {
+       "name": "Catacombs of Rome",
+       "day": 5
+      }
+     ],
+     "plan": [
+      "Arrive. Pantheon, Piazza Navona and the Trevi Fountain.",
+      "Colosseum, Roman Forum and the Palatine.",
+      "Vatican Museums, Sistine Chapel and St Peter's.",
+      "Galleria Borghese and the Villa Borghese park.",
+      "Appian Way and the catacombs by bike."
+     ],
+     "do": [
+      "Sleep: Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Colosseum, Roman Forum and the Palatine",
+       "query": "Roman Forum"
+      },
+      {
+       "title": "Vatican Museums, Sistine Chapel and St Peter's",
+       "query": "Vatican Museums, Sistine Chapel and St Peter's"
+      }
+     ],
+     "area": "it-rome",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ancient"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vatican"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "borghese"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "appia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-siena",
+     "name": "Siena",
+     "country_code": "IT",
+     "lat": 43.32,
+     "lon": 11.33,
+     "elevation_m": 344,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Siena Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pienza",
+       "day": 2
+      },
+      {
+       "name": "Montepulciano",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza del Campo, the Duomo and the Torre del Mangia.",
+      "Val d'Orcia: Pienza, Montepulciano and the cypress roads."
+     ],
+     "do": [
+      "Sleep: Inside Siena's walls, or a farmhouse (agriturismo) in the Val d'Orcia with a car."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-siena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "campo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "orcia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-florence",
+     "name": "Florence",
+     "country_code": "IT",
+     "lat": 43.77,
+     "lon": 11.256,
+     "elevation_m": 67,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+       "day": 1
+      },
+      {
+       "name": "Florence Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Florence Baptistery",
+       "day": 2
+      },
+      {
+       "name": "The Uffizi",
+       "day": 3
+      },
+      {
+       "name": "Michelangelo's David at the Accademia",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. Ponte Vecchio, Oltrarno and Piazzale Michelangelo.",
+      "The Duomo, Brunelleschi's dome and the Baptistery.",
+      "The Uffizi.",
+      "Michelangelo's David at the Accademia."
+     ],
+     "do": [
+      "Sleep: Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Duomo, Brunelleschi's dome and the Baptistery",
+       "query": "Florence Cathedral"
+      },
+      {
+       "title": "The Uffizi",
+       "query": "The Uffizi"
+      }
+     ],
+     "area": "it-florence",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "oltrarno"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "uffizi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "accademia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-bologna",
+     "name": "Bologna",
+     "country_code": "IT",
+     "lat": 44.49,
+     "lon": 11.34,
+     "elevation_m": 54,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Bologna",
+       "day": 1
+      },
+      {
+       "name": "Modena and Parma food day",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza Maggiore, the towers and the arcades.",
+      "Modena and Parma food day."
+     ],
+     "do": [
+      "Sleep: Inside the ring, near Piazza Maggiore or the university quarter."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Modena and Parma food day",
+       "query": "Modena and Parma food day"
+      }
+     ],
+     "area": "it-bologna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "food"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-verona",
+     "name": "Verona",
+     "country_code": "IT",
+     "lat": 45.44,
+     "lon": 10.99,
+     "elevation_m": 59,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Verona Arena",
+       "day": 1
+      },
+      {
+       "name": "Valpolicella wineries",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Arena, Juliet's balcony and the old town.",
+      "Valpolicella wineries."
+     ],
+     "do": [
+      "Sleep: Inside the old town between the Arena and the Adige."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-verona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "valpolicella"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      },
+      {
+       "name": "Palazzo Pisani",
+       "day": 2
+      },
+      {
+       "name": "Murano, Burano and Torcello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal.",
+      "Murano, Burano and Torcello."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "italy-classic-28",
+   "title": "Italy in a month: the coast, the cities and the lakes",
+   "countries": [
+    "IT"
+   ],
+   "summary": "A month from south to north: Naples, the Amalfi Coast, Rome, the Val d'Orcia, Florence, the Cinque Terre, Lake Como, Verona and Venice.",
+   "destination": "Rome, Florence & Venice",
+   "region": "italy-classic",
+   "weeks": 4,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "April to October. May-June and September-October are best; July-August are hot inland and busy on the coast. Opera in the Verona Arena June to early September.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      },
+      {
+       "name": "National Archaeological Museum",
+       "day": 3
+      },
+      {
+       "name": "Royal Palace of Naples",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii.",
+      "National Archaeological Museum. Lungomare, Castel dell'Ovo and the Royal Palace."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mann",
+        "seafront"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-amalfi",
+     "name": "Amalfi",
+     "country_code": "IT",
+     "lat": 40.63,
+     "lon": 14.6,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 650
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Amalfi Cathedral",
+       "day": 1
+      },
+      {
+       "name": "The Path of the Gods",
+       "day": 2
+      },
+      {
+       "name": "The coast by boat",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ravello's villas and Amalfi town.",
+      "The Path of the Gods (Mar–Jun, Sep–Nov).",
+      "The coast by boat (May–Oct)."
+     ],
+     "do": [
+      "Sleep: Amalfi town or Positano: buses and boats from both. Ravello for quiet."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-amalfi",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ravello"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "gods"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "boat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-rome",
+     "name": "Rome",
+     "country_code": "IT",
+     "lat": 41.903,
+     "lon": 12.496,
+     "elevation_m": 58,
+     "days": 5,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "cycling"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Venezia",
+       "day": 1
+      },
+      {
+       "name": "Roman Forum",
+       "day": 2
+      },
+      {
+       "name": "Colosseum",
+       "day": 2
+      },
+      {
+       "name": "Vatican Museums, Sistine Chapel and St Peter's",
+       "day": 3
+      },
+      {
+       "name": "Galleria Borghese and the Villa Borghese park",
+       "day": 4
+      },
+      {
+       "name": "Catacombs of Rome",
+       "day": 5
+      }
+     ],
+     "plan": [
+      "Arrive. Pantheon, Piazza Navona and the Trevi Fountain.",
+      "Colosseum, Roman Forum and the Palatine.",
+      "Vatican Museums, Sistine Chapel and St Peter's.",
+      "Galleria Borghese and the Villa Borghese park.",
+      "Appian Way and the catacombs by bike."
+     ],
+     "do": [
+      "Sleep: Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Colosseum, Roman Forum and the Palatine",
+       "query": "Roman Forum"
+      },
+      {
+       "title": "Vatican Museums, Sistine Chapel and St Peter's",
+       "query": "Vatican Museums, Sistine Chapel and St Peter's"
+      }
+     ],
+     "area": "it-rome",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ancient"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vatican"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "borghese"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "appia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-siena",
+     "name": "Siena",
+     "country_code": "IT",
+     "lat": 43.32,
+     "lon": 11.33,
+     "elevation_m": 344,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Siena Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pienza",
+       "day": 2
+      },
+      {
+       "name": "Montepulciano",
+       "day": 2
+      },
+      {
+       "name": "San Gimignano and the Chianti",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza del Campo, the Duomo and the Torre del Mangia.",
+      "Val d'Orcia: Pienza, Montepulciano and the cypress roads.",
+      "San Gimignano and the Chianti."
+     ],
+     "do": [
+      "Sleep: Inside Siena's walls, or a farmhouse (agriturismo) in the Val d'Orcia with a car."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-siena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "campo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "orcia"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "gimignano"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-florence",
+     "name": "Florence",
+     "country_code": "IT",
+     "lat": 43.77,
+     "lon": 11.256,
+     "elevation_m": 67,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+       "day": 1
+      },
+      {
+       "name": "Florence Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Florence Baptistery",
+       "day": 2
+      },
+      {
+       "name": "The Uffizi",
+       "day": 3
+      },
+      {
+       "name": "Michelangelo's David at the Accademia",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. Ponte Vecchio, Oltrarno and Piazzale Michelangelo.",
+      "The Duomo, Brunelleschi's dome and the Baptistery.",
+      "The Uffizi.",
+      "Michelangelo's David at the Accademia."
+     ],
+     "do": [
+      "Sleep: Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Duomo, Brunelleschi's dome and the Baptistery",
+       "query": "Florence Cathedral"
+      },
+      {
+       "title": "The Uffizi",
+       "query": "The Uffizi"
+      }
+     ],
+     "area": "it-florence",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "oltrarno"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "uffizi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "accademia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-cinque-terre",
+     "name": "Cinque Terre",
+     "country_code": "IT",
+     "lat": 44.13,
+     "lon": 9.7,
+     "elevation_m": 20,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 210
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterosso al Mare",
+       "day": 2
+      },
+      {
+       "name": "Vernazza",
+       "day": 2
+      },
+      {
+       "name": "The five villages by train and boat",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "The Blue Path: Monterosso to Vernazza to Corniglia.",
+      "The five villages by train and boat."
+     ],
+     "do": [
+      "Sleep: In one of the villages (Monterosso has the beach) or in La Spezia, 10 minutes by train."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Blue Path: Monterosso to Vernazza to Corniglia",
+       "query": "Monterosso al Mare"
+      }
+     ],
+     "area": "it-cinque-terre",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "blue"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "villages"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-varenna",
+     "name": "Varenna",
+     "country_code": "IT",
+     "lat": 46.01,
+     "lon": 9.28,
+     "elevation_m": 220,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Castello di Vezio above Varenna",
+       "day": 1
+      },
+      {
+       "name": "Lake Como",
+       "day": 2
+      },
+      {
+       "name": "Como",
+       "day": 2
+      },
+      {
+       "name": "Greenway del Lago and Villa del Balbianello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Castello di Vezio above Varenna.",
+      "Bellagio, Varenna and Villa Carlotta by ferry.",
+      "Greenway del Lago and Villa del Balbianello."
+     ],
+     "do": [
+      "Sleep: Varenna or Bellagio in the middle of the lake, where the ferries cross."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lake-como",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "castle"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ferry"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "greenway"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-verona",
+     "name": "Verona",
+     "country_code": "IT",
+     "lat": 45.44,
+     "lon": 10.99,
+     "elevation_m": 59,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Verona Arena",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. The Arena, Juliet's balcony and the old town."
+     ],
+     "do": [
+      "Sleep: Inside the old town between the Arena and the Adige."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-verona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      },
+      {
+       "name": "Palazzo Pisani",
+       "day": 2
+      },
+      {
+       "name": "Murano, Burano and Torcello",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal.",
+      "Murano, Burano and Torcello."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "italy-classic-28-winter",
+   "title": "A slow month in Italy's cities in winter",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Naples, Rome, Siena, Florence, Bologna, Milan, Verona and Venice, slowly, in the months the coasts close.",
+   "destination": "Rome, Florence & Venice",
+   "region": "italy-classic",
+   "weeks": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [],
+   "season_note": "November to March: mild in the south, cold and foggy in the Po valley. The Last Supper and the Uffizi without queues.",
+   "pace": "relaxed",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-naples",
+     "name": "Naples",
+     "country_code": "IT",
+     "lat": 40.852,
+     "lon": 14.268,
+     "elevation_m": 19,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Spaccanapoli",
+       "day": 1
+      },
+      {
+       "name": "Naples Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pompeii",
+       "day": 2
+      },
+      {
+       "name": "National Archaeological Museum",
+       "day": 3
+      },
+      {
+       "name": "Royal Palace of Naples",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Spaccanapoli, the underground and pizza.",
+      "Pompeii.",
+      "National Archaeological Museum. Lungomare, Castel dell'Ovo and the Royal Palace."
+     ],
+     "do": [
+      "Sleep: In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pompeii",
+       "query": "Pompeii"
+      }
+     ],
+     "area": "it-naples",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pompeii"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mann",
+        "seafront"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-rome",
+     "name": "Rome",
+     "country_code": "IT",
+     "lat": 41.903,
+     "lon": 12.496,
+     "elevation_m": 58,
+     "days": 6,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "cycling"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Palazzo Venezia",
+       "day": 1
+      },
+      {
+       "name": "Roman Forum",
+       "day": 2
+      },
+      {
+       "name": "Colosseum",
+       "day": 2
+      },
+      {
+       "name": "Vatican Museums, Sistine Chapel and St Peter's",
+       "day": 3
+      },
+      {
+       "name": "Galleria Borghese and the Villa Borghese park",
+       "day": 4
+      },
+      {
+       "name": "Catacombs of Rome",
+       "day": 5
+      }
+     ],
+     "plan": [
+      "Arrive. Pantheon, Piazza Navona and the Trevi Fountain.",
+      "Colosseum, Roman Forum and the Palatine.",
+      "Vatican Museums, Sistine Chapel and St Peter's.",
+      "Galleria Borghese and the Villa Borghese park.",
+      "Appian Way and the catacombs by bike.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Colosseum, Roman Forum and the Palatine",
+       "query": "Roman Forum"
+      },
+      {
+       "title": "Vatican Museums, Sistine Chapel and St Peter's",
+       "query": "Vatican Museums, Sistine Chapel and St Peter's"
+      }
+     ],
+     "area": "it-rome",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centro"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ancient"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vatican"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "borghese"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "appia"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-siena",
+     "name": "Siena",
+     "country_code": "IT",
+     "lat": 43.32,
+     "lon": 11.33,
+     "elevation_m": 344,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Siena Cathedral",
+       "day": 1
+      },
+      {
+       "name": "Pienza",
+       "day": 2
+      },
+      {
+       "name": "Montepulciano",
+       "day": 2
+      },
+      {
+       "name": "San Gimignano and the Chianti",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza del Campo, the Duomo and the Torre del Mangia.",
+      "Val d'Orcia: Pienza, Montepulciano and the cypress roads.",
+      "San Gimignano and the Chianti."
+     ],
+     "do": [
+      "Sleep: Inside Siena's walls, or a farmhouse (agriturismo) in the Val d'Orcia with a car."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-siena",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "campo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "orcia"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "gimignano"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-florence",
+     "name": "Florence",
+     "country_code": "IT",
+     "lat": 43.77,
+     "lon": 11.256,
+     "elevation_m": 67,
+     "days": 5,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+       "day": 1
+      },
+      {
+       "name": "Florence Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Florence Baptistery",
+       "day": 2
+      },
+      {
+       "name": "The Uffizi",
+       "day": 3
+      },
+      {
+       "name": "Michelangelo's David at the Accademia",
+       "day": 4
+      },
+      {
+       "name": "Leaning Tower of Pisa",
+       "day": 5
+      },
+      {
+       "name": "Lucca",
+       "day": 5
+      },
+      {
+       "name": "Pisa",
+       "day": 5
+      }
+     ],
+     "plan": [
+      "Arrive. Ponte Vecchio, Oltrarno and Piazzale Michelangelo.",
+      "The Duomo, Brunelleschi's dome and the Baptistery.",
+      "The Uffizi.",
+      "Michelangelo's David at the Accademia.",
+      "Day out to Pisa and Lucca."
+     ],
+     "do": [
+      "Sleep: Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Duomo, Brunelleschi's dome and the Baptistery",
+       "query": "Florence Cathedral"
+      },
+      {
+       "title": "The Uffizi",
+       "query": "The Uffizi"
+      }
+     ],
+     "area": "it-florence",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "oltrarno"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "uffizi"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "accademia"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pisa"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-bologna",
+     "name": "Bologna",
+     "country_code": "IT",
+     "lat": 44.49,
+     "lon": 11.34,
+     "elevation_m": 54,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Bologna",
+       "day": 1
+      },
+      {
+       "name": "Modena and Parma food day",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Piazza Maggiore, the towers and the arcades.",
+      "Modena and Parma food day.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Inside the ring, near Piazza Maggiore or the university quarter."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Modena and Parma food day",
+       "query": "Modena and Parma food day"
+      }
+     ],
+     "area": "it-bologna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "food"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-milan",
+     "name": "Milan",
+     "country_code": "IT",
+     "lat": 45.464,
+     "lon": 9.19,
+     "elevation_m": 120,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "The Duomo roof and the Galleria",
+       "day": 1
+      },
+      {
+       "name": "Leonardo's Last Supper and Brera",
+       "day": 2
+      },
+      {
+       "name": "Navigli canals at aperitivo time",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Duomo roof and the Galleria.",
+      "Leonardo's Last Supper and Brera. Navigli canals at aperitivo time."
+     ],
+     "do": [
+      "Sleep: Near the Duomo or in Brera; Navigli for the evenings."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Leonardo's Last Supper and Brera",
+       "query": "Leonardo's Last Supper and Brera"
+      }
+     ],
+     "area": "it-milan",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "duomo"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "supper",
+        "navigli"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-verona",
+     "name": "Verona",
+     "country_code": "IT",
+     "lat": 45.44,
+     "lon": 10.99,
+     "elevation_m": 59,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Verona Arena",
+       "day": 1
+      },
+      {
+       "name": "Valpolicella wineries",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Arena, Juliet's balcony and the old town.",
+      "Valpolicella wineries."
+     ],
+     "do": [
+      "Sleep: Inside the old town between the Arena and the Adige."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-verona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "valpolicella"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-venice",
+     "name": "Venice",
+     "country_code": "IT",
+     "lat": 45.441,
+     "lon": 12.316,
+     "elevation_m": 3,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lost in Cannaregio and Castello",
+       "day": 1
+      },
+      {
+       "name": "Palazzo Pisani",
+       "day": 2
+      },
+      {
+       "name": "Murano, Burano and Torcello",
+       "day": 3
+      },
+      {
+       "name": "Gallerie dell'Accademia and the Guggenheim",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. Lost in Cannaregio and Castello.",
+      "St Mark's Basilica, the Doge's Palace and the Grand Canal.",
+      "Murano, Burano and Torcello.",
+      "Gallerie dell'Accademia and the Guggenheim."
+     ],
+     "do": [
+      "Sleep: In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-venice",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "lanes"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sanmarco"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "accademia"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "sicily-7",
+   "title": "Palermo and Etna in a week",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Two bases: Palermo for the Arab-Norman mosaics and the markets, Taormina for its Greek theatre and Mount Etna.",
+   "destination": "Sicily",
+   "region": "sicily",
+   "weeks": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "May to October, when the upper craters of Etna open with a guide. June and September are best; July-August are hot (31-33 °C) and the sea at its best.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-palermo",
+     "name": "Palermo",
+     "country_code": "IT",
+     "lat": 38.116,
+     "lon": 13.361,
+     "elevation_m": 31,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Street food walk at dusk",
+       "day": 1
+      },
+      {
+       "name": "Palermo Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Monreale cathedral",
+       "day": 3
+      },
+      {
+       "name": "Mondello beach",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Street food walk at dusk.",
+      "Norman Palace, the Cathedral and the markets.",
+      "Monreale cathedral. Mondello beach (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Around the Quattro Canti or Kalsa, on foot to everything."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-palermo",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "evening"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "monreale",
+        "mondello"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-taormina",
+     "name": "Taormina",
+     "country_code": "IT",
+     "lat": 37.85,
+     "lon": 15.29,
+     "elevation_m": 172,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2900
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 400
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ancient Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Greek Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Mount Etna",
+       "day": 2
+      },
+      {
+       "name": "Alcantara gorge",
+       "day": 3
+      },
+      {
+       "name": "Isola Bella and the coast below",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Taormina: the Greek theatre and Corso Umberto.",
+      "Mount Etna's craters.",
+      "Alcantara gorge. Isola Bella and the coast below (Jun–Sep).",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Taormina on its terrace; Giardini Naxos below for the beach."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Mount Etna's craters",
+       "query": "Mount Etna"
+      }
+     ],
+     "area": "it-taormina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "etna"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcantara",
+        "isolabella"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "sicily-7-winter",
+   "title": "Palermo and Etna in the snow, in a winter week",
+   "countries": [
+    "IT"
+   ],
+   "summary": "Palermo's mosaics and markets, then Taormina, with Etna white with snow above the sea.",
+   "destination": "Sicily",
+   "region": "sicily",
+   "weeks": 1,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best_months": [
+    4
+   ],
+   "season_note": "November to April: mild on the coast (14-18 °C by day), snow on Etna from about 1,800 m; the summit craters are off limits, the Silvestri craters are the winter visit. Almond blossom in February.",
+   "pace": "relaxed",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-palermo",
+     "name": "Palermo",
+     "country_code": "IT",
+     "lat": 38.116,
+     "lon": 13.361,
+     "elevation_m": 31,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Street food walk at dusk",
+       "day": 1
+      },
+      {
+       "name": "Palermo Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Monreale cathedral",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Street food walk at dusk.",
+      "Norman Palace, the Cathedral and the markets.",
+      "Monreale cathedral."
+     ],
+     "do": [
+      "Sleep: Around the Quattro Canti or Kalsa, on foot to everything."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-palermo",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "evening"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "monreale"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-taormina",
+     "name": "Taormina",
+     "country_code": "IT",
+     "lat": 37.85,
+     "lon": 15.29,
+     "elevation_m": 172,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1950
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ancient Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Greek Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Mount Etna",
+       "day": 2
+      },
+      {
+       "name": "Alcantara gorge",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Taormina: the Greek theatre and Corso Umberto.",
+      "Mount Etna in the snow.",
+      "Alcantara gorge.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Taormina on its terrace; Giardini Naxos below for the beach."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-taormina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "etna-winter"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcantara"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "sicily-14",
+   "title": "Round Sicily in two weeks",
+   "countries": [
+    "IT"
+   ],
+   "summary": "The full loop: Palermo, Trapani and Erice, the Valley of the Temples, Baroque Syracuse, Taormina and Etna, Cefalù.",
+   "destination": "Sicily",
+   "region": "sicily",
+   "weeks": 2,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "May to October, best May-June and September-October. July-August hot, with the beaches and Favignana at their best.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-palermo",
+     "name": "Palermo",
+     "country_code": "IT",
+     "lat": 38.116,
+     "lon": 13.361,
+     "elevation_m": 31,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Street food walk at dusk",
+       "day": 1
+      },
+      {
+       "name": "Palermo Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Monreale cathedral",
+       "day": 3
+      },
+      {
+       "name": "Mondello beach",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Street food walk at dusk.",
+      "Norman Palace, the Cathedral and the markets.",
+      "Monreale cathedral. Mondello beach (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Around the Quattro Canti or Kalsa, on foot to everything."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-palermo",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "evening"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "monreale",
+        "mondello"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-trapani",
+     "name": "Trapani",
+     "country_code": "IT",
+     "lat": 38.02,
+     "lon": 12.51,
+     "elevation_m": 3,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Erice",
+       "day": 1
+      },
+      {
+       "name": "Favignana",
+       "day": 2
+      },
+      {
+       "name": "Cala Pisana",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Erice and the salt pans at sunset.",
+      "Favignana by bike."
+     ],
+     "do": [
+      "Sleep: Trapani's old town on its spit of land."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-trapani",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "erice"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "favignana"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-agrigento",
+     "name": "Agrigento",
+     "country_code": "IT",
+     "lat": 37.31,
+     "lon": 13.58,
+     "elevation_m": 239,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Agrigento",
+       "day": 1
+      },
+      {
+       "name": "Villa Romana del Casale",
+       "day": 2
+      },
+      {
+       "name": "Scala dei Turchi",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Valley of the Temples.",
+      "Villa Romana del Casale. Scala dei Turchi."
+     ],
+     "do": [
+      "Sleep: Agrigento's old town or a farmhouse near the Valley."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-agrigento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "casale",
+        "scala"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-syracuse",
+     "name": "Syracuse",
+     "country_code": "IT",
+     "lat": 37.08,
+     "lon": 15.29,
+     "elevation_m": 17,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Modica",
+       "day": 1
+      },
+      {
+       "name": "Syracuse",
+       "day": 1
+      },
+      {
+       "name": "Neapolis: the Greek theatre and the Ear of Dionysius",
+       "day": 2
+      },
+      {
+       "name": "A Greek tragedy in the Greek theatre",
+       "day": 2
+      },
+      {
+       "name": "Boat round Ortigia and swim",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ortigia: the Duomo and the market.",
+      "Neapolis: the Greek theatre and the Ear of Dionysius. A Greek tragedy in the Greek theatre (May–Jul).",
+      "Boat round Ortigia and swim (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Ortigia, the island old town."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "A Greek tragedy in the Greek theatre",
+       "query": "A Greek tragedy in the Greek theatre"
+      }
+     ],
+     "area": "it-syracuse",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortigia"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "neapolis",
+        "theatre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "boat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-taormina",
+     "name": "Taormina",
+     "country_code": "IT",
+     "lat": 37.85,
+     "lon": 15.29,
+     "elevation_m": 172,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2900
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 400
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ancient Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Greek Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Mount Etna",
+       "day": 2
+      },
+      {
+       "name": "Alcantara gorge",
+       "day": 3
+      },
+      {
+       "name": "Isola Bella and the coast below",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Taormina: the Greek theatre and Corso Umberto.",
+      "Mount Etna's craters.",
+      "Alcantara gorge. Isola Bella and the coast below (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Taormina on its terrace; Giardini Naxos below for the beach."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Mount Etna's craters",
+       "query": "Mount Etna"
+      }
+     ],
+     "area": "it-taormina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "etna"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcantara",
+        "isolabella"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-cefalu",
+     "name": "Cefalù",
+     "country_code": "IT",
+     "lat": 38.04,
+     "lon": 14.02,
+     "elevation_m": 16,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Cefalù Cathedral",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. The Norman cathedral and the old town."
+     ],
+     "do": [
+      "Sleep: Old town under the rock."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-cefalu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "sicily-14-winter",
+   "title": "Round Sicily in two winter weeks",
+   "countries": [
+    "IT"
+   ],
+   "summary": "The loop out of season: Palermo, Erice, the Valley of the Temples, Syracuse, Taormina under snowy Etna, Cefalù.",
+   "destination": "Sicily",
+   "region": "sicily",
+   "weeks": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best_months": [
+    4
+   ],
+   "season_note": "November to April: mild and green, few visitors, almond blossom at Agrigento in February. Rain comes in short bursts; the sea is too cold for most until May.",
+   "pace": "normal",
+   "level": 2,
+   "stops": [
+    {
+     "place": "it-palermo",
+     "name": "Palermo",
+     "country_code": "IT",
+     "lat": 38.116,
+     "lon": 13.361,
+     "elevation_m": 31,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Street food walk at dusk",
+       "day": 1
+      },
+      {
+       "name": "Palermo Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Monreale cathedral",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Street food walk at dusk.",
+      "Norman Palace, the Cathedral and the markets.",
+      "Monreale cathedral."
+     ],
+     "do": [
+      "Sleep: Around the Quattro Canti or Kalsa, on foot to everything."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-palermo",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "evening"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "monreale"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-trapani",
+     "name": "Trapani",
+     "country_code": "IT",
+     "lat": 38.02,
+     "lon": 12.51,
+     "elevation_m": 3,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Erice",
+       "day": 1
+      },
+      {
+       "name": "Segesta temple and theatre",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Erice and the salt pans at sunset.",
+      "Segesta temple and theatre."
+     ],
+     "do": [
+      "Sleep: Trapani's old town on its spit of land."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-trapani",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "erice"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "segesta"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-agrigento",
+     "name": "Agrigento",
+     "country_code": "IT",
+     "lat": 37.31,
+     "lon": 13.58,
+     "elevation_m": 239,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Agrigento",
+       "day": 1
+      },
+      {
+       "name": "Villa Romana del Casale",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Valley of the Temples.",
+      "Villa Romana del Casale."
+     ],
+     "do": [
+      "Sleep: Agrigento's old town or a farmhouse near the Valley."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-agrigento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "casale"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-syracuse",
+     "name": "Syracuse",
+     "country_code": "IT",
+     "lat": 37.08,
+     "lon": 15.29,
+     "elevation_m": 17,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Modica",
+       "day": 1
+      },
+      {
+       "name": "Syracuse",
+       "day": 1
+      },
+      {
+       "name": "Neapolis: the Greek theatre and the Ear of Dionysius",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Ortigia: the Duomo and the market.",
+      "Neapolis: the Greek theatre and the Ear of Dionysius.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Ortigia, the island old town."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-syracuse",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortigia"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "neapolis"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-taormina",
+     "name": "Taormina",
+     "country_code": "IT",
+     "lat": 37.85,
+     "lon": 15.29,
+     "elevation_m": 172,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1950
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ancient Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Greek Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Mount Etna",
+       "day": 2
+      },
+      {
+       "name": "Alcantara gorge",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Taormina: the Greek theatre and Corso Umberto.",
+      "Mount Etna in the snow.",
+      "Alcantara gorge."
+     ],
+     "do": [
+      "Sleep: Taormina on its terrace; Giardini Naxos below for the beach."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-taormina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "etna-winter"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcantara"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-cefalu",
+     "name": "Cefalù",
+     "country_code": "IT",
+     "lat": 38.04,
+     "lon": 14.02,
+     "elevation_m": 16,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Cefalù Cathedral",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. The Norman cathedral and the old town."
+     ],
+     "do": [
+      "Sleep: Old town under the rock."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-cefalu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "sicily-21",
+   "title": "Sicily and the Aeolian Islands in three weeks",
+   "countries": [
+    "IT"
+   ],
+   "summary": "The round of Sicily with the Baroque towns of the south-east, then the volcanic islands: Vulcano's crater and Stromboli at night.",
+   "destination": "Sicily",
+   "region": "sicily",
+   "weeks": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    5,
+    6,
+    9,
+    10
+   ],
+   "season_note": "May to October, when the Aeolian boats run every day. June and September are best; August is the Italians' holiday month, book early.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-palermo",
+     "name": "Palermo",
+     "country_code": "IT",
+     "lat": 38.116,
+     "lon": 13.361,
+     "elevation_m": 31,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Street food walk at dusk",
+       "day": 1
+      },
+      {
+       "name": "Palermo Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Monreale cathedral",
+       "day": 3
+      },
+      {
+       "name": "Mondello beach",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Street food walk at dusk.",
+      "Norman Palace, the Cathedral and the markets.",
+      "Monreale cathedral. Mondello beach (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Around the Quattro Canti or Kalsa, on foot to everything."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-palermo",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "evening"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "monreale",
+        "mondello"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-trapani",
+     "name": "Trapani",
+     "country_code": "IT",
+     "lat": 38.02,
+     "lon": 12.51,
+     "elevation_m": 3,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Erice",
+       "day": 1
+      },
+      {
+       "name": "Favignana",
+       "day": 2
+      },
+      {
+       "name": "Cala Pisana",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Erice and the salt pans at sunset.",
+      "Favignana by bike."
+     ],
+     "do": [
+      "Sleep: Trapani's old town on its spit of land."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-trapani",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "erice"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "favignana"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-agrigento",
+     "name": "Agrigento",
+     "country_code": "IT",
+     "lat": 37.31,
+     "lon": 13.58,
+     "elevation_m": 239,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Agrigento",
+       "day": 1
+      },
+      {
+       "name": "Villa Romana del Casale",
+       "day": 2
+      },
+      {
+       "name": "Scala dei Turchi",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Valley of the Temples.",
+      "Villa Romana del Casale. Scala dei Turchi."
+     ],
+     "do": [
+      "Sleep: Agrigento's old town or a farmhouse near the Valley."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-agrigento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "casale",
+        "scala"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-ragusa",
+     "name": "Ragusa",
+     "country_code": "IT",
+     "lat": 36.93,
+     "lon": 14.73,
+     "elevation_m": 450,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ragusa",
+       "day": 1
+      },
+      {
+       "name": "Marina di Ragusa",
+       "day": 2
+      },
+      {
+       "name": "Noto",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Ragusa Ibla and Modica's chocolate.",
+      "Marina di Ragusa and the Vendicari reserve. Noto, the stone garden."
+     ],
+     "do": [
+      "Sleep: Ragusa Ibla, the lower old town."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-ragusa",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ibla"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "beach",
+        "noto"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-syracuse",
+     "name": "Syracuse",
+     "country_code": "IT",
+     "lat": 37.08,
+     "lon": 15.29,
+     "elevation_m": 17,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Syracuse",
+       "day": 1
+      },
+      {
+       "name": "Neapolis: the Greek theatre and the Ear of Dionysius",
+       "day": 2
+      },
+      {
+       "name": "A Greek tragedy in the Greek theatre",
+       "day": 2
+      },
+      {
+       "name": "Boat round Ortigia and swim",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Ortigia: the Duomo and the market.",
+      "Neapolis: the Greek theatre and the Ear of Dionysius. A Greek tragedy in the Greek theatre (May–Jul).",
+      "Boat round Ortigia and swim (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Ortigia, the island old town."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "A Greek tragedy in the Greek theatre",
+       "query": "A Greek tragedy in the Greek theatre"
+      }
+     ],
+     "area": "it-syracuse",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortigia"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "neapolis",
+        "theatre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "boat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-taormina",
+     "name": "Taormina",
+     "country_code": "IT",
+     "lat": 37.85,
+     "lon": 15.29,
+     "elevation_m": 172,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2900
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 400
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ancient Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Greek Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Mount Etna",
+       "day": 2
+      },
+      {
+       "name": "Alcantara gorge",
+       "day": 3
+      },
+      {
+       "name": "Isola Bella and the coast below",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Taormina: the Greek theatre and Corso Umberto.",
+      "Mount Etna's craters.",
+      "Alcantara gorge. Isola Bella and the coast below (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Taormina on its terrace; Giardini Naxos below for the beach."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Mount Etna's craters",
+       "query": "Mount Etna"
+      }
+     ],
+     "area": "it-taormina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "etna"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcantara",
+        "isolabella"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-lipari",
+     "name": "Lipari",
+     "country_code": "IT",
+     "lat": 38.47,
+     "lon": 14.95,
+     "elevation_m": 10,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 400
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lipari",
+       "day": 1
+      },
+      {
+       "name": "Vulcano",
+       "day": 2
+      },
+      {
+       "name": "Monte Vulcano",
+       "day": 2
+      },
+      {
+       "name": "Stromboli",
+       "day": 2
+      },
+      {
+       "name": "Salina and Lipari by boat",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Lipari castle and town.",
+      "Vulcano's crater. Stromboli at night.",
+      "Salina and Lipari by boat.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Lipari town: every boat to the other islands leaves from there."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-lipari",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "vulcano",
+        "stromboli"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "salina"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-cefalu",
+     "name": "Cefalù",
+     "country_code": "IT",
+     "lat": 38.04,
+     "lon": 14.02,
+     "elevation_m": 16,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 270
+      }
+     ],
+     "visits": [
+      {
+       "name": "Cefalù Cathedral",
+       "day": 1
+      },
+      {
+       "name": "La Rocca",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Norman cathedral and the old town.",
+      "La Rocca."
+     ],
+     "do": [
+      "Sleep: Old town under the rock."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-cefalu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "rocca"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "sicily-21-winter",
+   "title": "Sicily slowly, in three weeks out of season",
+   "countries": [
+    "IT"
+   ],
+   "summary": "All of Sicily without the islands: more time in Palermo, the Baroque south-east and Etna.",
+   "destination": "Sicily",
+   "region": "sicily",
+   "weeks": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best_months": [
+    4
+   ],
+   "season_note": "November to April: mild, green, almond blossom in February. The Aeolian Islands are mostly shut and their boats few, so this route stays on the main island. Snow on Etna.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "it-palermo",
+     "name": "Palermo",
+     "country_code": "IT",
+     "lat": 38.116,
+     "lon": 13.361,
+     "elevation_m": 31,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Street food walk at dusk",
+       "day": 1
+      },
+      {
+       "name": "Palermo Cathedral",
+       "day": 2
+      },
+      {
+       "name": "Monreale cathedral",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Street food walk at dusk.",
+      "Norman Palace, the Cathedral and the markets.",
+      "Monreale cathedral.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Around the Quattro Canti or Kalsa, on foot to everything."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-palermo",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "evening"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "centre"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "monreale"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-trapani",
+     "name": "Trapani",
+     "country_code": "IT",
+     "lat": 38.02,
+     "lon": 12.51,
+     "elevation_m": 3,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Erice",
+       "day": 1
+      },
+      {
+       "name": "Segesta temple and theatre",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Erice and the salt pans at sunset.",
+      "Segesta temple and theatre."
+     ],
+     "do": [
+      "Sleep: Trapani's old town on its spit of land."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-trapani",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "erice"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "segesta"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-agrigento",
+     "name": "Agrigento",
+     "country_code": "IT",
+     "lat": 37.31,
+     "lon": 13.58,
+     "elevation_m": 239,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Agrigento",
+       "day": 1
+      },
+      {
+       "name": "Villa Romana del Casale",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Valley of the Temples.",
+      "Villa Romana del Casale."
+     ],
+     "do": [
+      "Sleep: Agrigento's old town or a farmhouse near the Valley."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-agrigento",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "casale"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "it-ragusa",
+     "name": "Ragusa",
+     "country_code": "IT",
+     "lat": 36.93,
+     "lon": 14.73,
+     "elevation_m": 450,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ragusa",
+       "day": 1
+      },
+      {
+       "name": "Noto",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Ragusa Ibla and Modica's chocolate.",
+      "Noto, the stone garden.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Ragusa Ibla, the lower old town."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-ragusa",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ibla"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "noto"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-syracuse",
+     "name": "Syracuse",
+     "country_code": "IT",
+     "lat": 37.08,
+     "lon": 15.29,
+     "elevation_m": 17,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Syracuse",
+       "day": 1
+      },
+      {
+       "name": "Neapolis: the Greek theatre and the Ear of Dionysius",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Ortigia: the Duomo and the market.",
+      "Neapolis: the Greek theatre and the Ear of Dionysius.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Ortigia, the island old town."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-syracuse",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "ortigia"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "neapolis"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-taormina",
+     "name": "Taormina",
+     "country_code": "IT",
+     "lat": 37.85,
+     "lon": 15.29,
+     "elevation_m": 172,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1950
+      }
+     ],
+     "visits": [
+      {
+       "name": "Ancient Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Greek Theatre of Taormina",
+       "day": 1
+      },
+      {
+       "name": "Mount Etna",
+       "day": 2
+      },
+      {
+       "name": "Alcantara gorge",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Taormina: the Greek theatre and Corso Umberto.",
+      "Mount Etna in the snow.",
+      "Alcantara gorge.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Taormina on its terrace; Giardini Naxos below for the beach."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-taormina",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "etna-winter"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcantara"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "it-cefalu",
+     "name": "Cefalù",
+     "country_code": "IT",
+     "lat": 38.04,
+     "lon": 14.02,
+     "elevation_m": 16,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 270
+      }
+     ],
+     "visits": [
+      {
+       "name": "Cefalù Cathedral",
+       "day": 1
+      },
+      {
+       "name": "La Rocca",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The Norman cathedral and the old town.",
+      "La Rocca."
+     ],
+     "do": [
+      "Sleep: Old town under the rock."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "it-cefalu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "town"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "rocca"
        ]
       }
      ]

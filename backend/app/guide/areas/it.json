@@ -1,0 +1,5693 @@
+{
+ "_doc": "Italy, written by hand for the recommended trips (Manu, 2026-11-16: 'come se potessero andare già in production'). Zones as tour operators sleep in them; seasons from the sources (lifts and huts of the Dolomites, the boats of the Aeolian and Amalfi coasts). Scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "it-rome",
+   "names": [
+    "Rome",
+    "Roma"
+   ],
+   "country": "IT",
+   "lat": 41.9,
+   "lon": 12.49,
+   "radius_km": 20,
+   "season": "Best April to early June and late September to October. July and August are 33-35 °C in the afternoon; winter is mild (12-14 °C by day) with rain in November and December.",
+   "sleep": "Centro Storico or Monti, on foot to the Forum and the Pantheon; Trastevere for the evenings; Prati near the Vatican for quiet.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Rome",
+    "https://en.wikivoyage.org/wiki/Rome/Vatican",
+    "https://colosseo.it/en/",
+    "https://www.museivaticani.va/"
+   ],
+   "nights": [
+    2,
+    4,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ancient",
+     "name": "Colosseum, Roman Forum and the Palatine",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "First slot of the day",
+     "book": "Colosseum timed tickets sell out weeks ahead in spring",
+     "why": "The arena of 50,000, then the Forum where Rome was run and the hill of the emperors' palaces above it.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Colosseum at opening, timed ticket",
+       "note": "the ticket covers Forum and Palatine for 24 hours"
+      },
+      {
+       "at": "10:00",
+       "what": "Palatine Hill and its gardens",
+       "note": "shade under the umbrella pines"
+      },
+      {
+       "at": "11:30",
+       "what": "Down into the Roman Forum: Via Sacra, the Curia, the Arch of Titus"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Monti"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 4,
+      "relax": 1,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Roman Forum",
+      "Colosseum"
+     ]
+    },
+    {
+     "id": "vatican",
+     "name": "Vatican Museums, Sistine Chapel and St Peter's",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Vatican Museums online, a week or more ahead",
+     "why": "Michelangelo's ceiling, Raphael's rooms and the biggest church in the world; shoulders and knees covered.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Vatican Museums, booked entry",
+       "note": "closed Sundays except the last of the month"
+      },
+      {
+       "at": "10:30",
+       "what": "Sistine Chapel"
+      },
+      {
+       "at": "11:30",
+       "what": "St Peter's Basilica and, for the fit, the 551 steps of the dome"
+      },
+      {
+       "at": "13:30",
+       "what": "Lunch in Prati"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "weekdays": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "id": "centro",
+     "name": "Pantheon, Piazza Navona and the Trevi Fountain",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 2,000-year-old dome, the Baroque square and the fountain, linked by the lanes of the old centre.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Pantheon",
+       "note": "small ticket, booking on weekends"
+      },
+      {
+       "at": "17:00",
+       "what": "Piazza Navona and Campo de' Fiori"
+      },
+      {
+       "at": "18:30",
+       "what": "Trevi Fountain and the Spanish Steps at golden hour"
+      },
+      {
+       "at": "20:00",
+       "what": "Dinner in Trastevere"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Palazzo Venezia"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "borghese",
+     "name": "Galleria Borghese and the Villa Borghese park",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Compulsory timed booking",
+     "why": "Bernini's marble that looks like skin, in a villa in Rome's central park.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Galleria Borghese, two-hour timed slot"
+      },
+      {
+       "at": "11:15",
+       "what": "Pincio terrace over Piazza del Popolo"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "appia",
+     "name": "Appian Way and the catacombs by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The Roman road paved 2,300 years ago, between tombs and pines, and the underground cemeteries of the first Christians.",
+     "act": {
+      "type": "cycling"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Rent a bike at the Appia Antica park office"
+      },
+      {
+       "at": "10:30",
+       "what": "Catacombs of San Callisto"
+      },
+      {
+       "at": "12:00",
+       "what": "Ride the old paving to the tomb of Cecilia Metella"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Catacombs of Rome"
+     ]
+    }
+   ],
+   "rain": {
+    "name": "Museums: Capitoline and Vatican",
+    "hours": "",
+    "why": "The Capitoline Museums and the Vatican are both indoors, with the Forum seen from the windows."
+   },
+   "extras": [
+    "Fountains (nasoni) give free drinking water all over the city.",
+    "Churches want shoulders and knees covered: a light scarf does it."
+   ]
+  },
+  {
+   "id": "it-florence",
+   "names": [
+    "Florence",
+    "Firenze"
+   ],
+   "country": "IT",
+   "lat": 43.77,
+   "lon": 11.26,
+   "radius_km": 15,
+   "season": "April-June and September-October. July and August are among Italy's hottest (35 °C in the basin). Winter is cool, 10 °C by day, few crowds.",
+   "sleep": "Inside the centre, between the Duomo and Santa Croce; Oltrarno across the river for a quieter stay.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Florence",
+    "https://www.uffizi.it/en",
+    "https://duomo.firenze.it/en/"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "duomo",
+     "name": "The Duomo, Brunelleschi's dome and the Baptistery",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Dome climb on a fixed slot, book ahead",
+     "why": "463 steps up inside the biggest brick dome ever built, past the Last Judgement painted under it.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:15",
+       "what": "Climb of the dome, booked slot"
+      },
+      {
+       "at": "09:30",
+       "what": "Baptistery's golden mosaics"
+      },
+      {
+       "at": "10:30",
+       "what": "Giotto's bell tower for the view of the dome"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at the Mercato Centrale"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Florence Cathedral",
+      "Florence Baptistery"
+     ]
+    },
+    {
+     "id": "uffizi",
+     "name": "The Uffizi",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed entry online",
+     "why": "Botticelli's Venus and Spring, Leonardo, Raphael, Caravaggio: the Renaissance in one corridor.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:15",
+       "what": "Uffizi at opening",
+       "note": "closed Mondays"
+      },
+      {
+       "at": "11:00",
+       "what": "Piazza della Signoria and the Palazzo Vecchio"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "id": "oltrarno",
+     "name": "Ponte Vecchio, Oltrarno and Piazzale Michelangelo",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Across the goldsmiths' bridge to the artisans' side, then up to the terrace for sunset over the domes.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Ponte Vecchio"
+      },
+      {
+       "at": "16:30",
+       "what": "Santo Spirito and the workshops of Oltrarno"
+      },
+      {
+       "at": "18:30",
+       "what": "Up the steps to San Miniato and Piazzale Michelangelo for sunset"
+      },
+      {
+       "at": "20:30",
+       "what": "Dinner in San Frediano"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "arrive": true
+    },
+    {
+     "id": "accademia",
+     "name": "Michelangelo's David at the Accademia",
+     "hours": "1.5 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed entry online",
+     "why": "Five metres of marble, the most famous statue in the world, seen from all sides.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Accademia, booked entry",
+       "note": "closed Mondays"
+      }
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 1,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "id": "pisa",
+     "name": "Day out to Pisa and Lucca",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The leaning tower and its white square, then a ride on Lucca's walls, a ring of trees around a whole town.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Train to Pisa (1 h)"
+      },
+      {
+       "at": "09:45",
+       "what": "Piazza dei Miracoli: tower, cathedral, baptistery"
+      },
+      {
+       "at": "13:00",
+       "what": "Train to Lucca, lunch"
+      },
+      {
+       "at": "15:00",
+       "what": "Bike the 4 km of walls"
+      },
+      {
+       "at": "18:00",
+       "what": "Train back to Florence"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Leaning Tower of Pisa",
+      "Lucca",
+      "Pisa"
+     ]
+    }
+   ],
+   "rain": {
+    "name": "Palazzo Pitti and the Bargello",
+    "hours": "",
+    "why": "Two indoor collections for a wet day: the Medici palace and Florence's sculpture museum."
+   },
+   "extras": [
+    "Many museums close on Mondays: plan the walks for that day."
+   ]
+  },
+  {
+   "id": "it-venice",
+   "names": [
+    "Venice",
+    "Venezia"
+   ],
+   "country": "IT",
+   "lat": 45.44,
+   "lon": 12.33,
+   "radius_km": 12,
+   "season": "April-June and September-October. July-August hot and crowded; November-January brings acqua alta (high water) on some mornings and fog, but empty lanes.",
+   "sleep": "In Venice itself, not in Mestre: Cannaregio or Castello for the quiet, near a vaporetto stop.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Venice",
+    "https://www.actv.it/en",
+    "https://www.basilicasanmarco.it/?lang=en"
+   ],
+   "nights": [
+    1,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "sanmarco",
+     "name": "St Mark's Basilica, the Doge's Palace and the Grand Canal",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The golden mosaics of the basilica, the palace of the doges and its prisons, then the Grand Canal on vaporetto line 1.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "St Mark's Basilica, booked slot",
+       "note": "shoulders and knees covered"
+      },
+      {
+       "at": "10:30",
+       "what": "Doge's Palace and the Bridge of Sighs"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch of cicchetti at a bacaro near Rialto"
+      },
+      {
+       "at": "15:00",
+       "what": "Rialto market and bridge"
+      },
+      {
+       "at": "17:30",
+       "what": "Vaporetto line 1 down the Grand Canal at sunset"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Palazzo Pisani"
+     ]
+    },
+    {
+     "id": "lanes",
+     "name": "Lost in Cannaregio and Castello",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Venice of washing lines and quiet canals, the old Jewish Ghetto and the Arsenale's shipyard walls.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "The Ghetto, the first in the world"
+      },
+      {
+       "at": "17:30",
+       "what": "Fondamenta della Misericordia for a spritz"
+      },
+      {
+       "at": "19:30",
+       "what": "Dinner in Castello"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "arrive": true
+    },
+    {
+     "id": "islands",
+     "name": "Murano, Burano and Torcello",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Glass furnaces on Murano, the coloured houses of Burano and the 7th-century mosaics of Torcello in the lagoon.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Vaporetto from Fondamente Nove to Murano"
+      },
+      {
+       "at": "10:30",
+       "what": "Boat to Burano"
+      },
+      {
+       "at": "12:30",
+       "what": "Fish lunch on Burano"
+      },
+      {
+       "at": "14:30",
+       "what": "Torcello's cathedral"
+      },
+      {
+       "at": "17:00",
+       "what": "Back to Venice"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "accademia",
+     "name": "Gallerie dell'Accademia and the Guggenheim",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Titian and Tintoretto, then Peggy Guggenheim's modern art on the Grand Canal.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Gallerie dell'Accademia"
+      },
+      {
+       "at": "12:00",
+       "what": "Peggy Guggenheim Collection",
+       "note": "closed Tuesdays"
+      }
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ],
+   "rain": {
+    "name": "Scuola Grande di San Rocco",
+    "hours": "",
+    "why": "Tintoretto covered every wall and ceiling of it; the best indoor hour in Venice."
+   },
+   "extras": [
+    "A day pass for the vaporetto pays for itself after three rides.",
+    "On certain spring and summer days a day-tripper access fee applies: check before you go."
+   ]
+  },
+  {
+   "id": "it-siena",
+   "names": [
+    "Siena",
+    "Val d'Orcia",
+    "Montepulciano",
+    "Pienza"
+   ],
+   "country": "IT",
+   "lat": 43.32,
+   "lon": 11.33,
+   "radius_km": 45,
+   "season": "April-June and September-October; the Palio horse race fills the Campo on 2 July and 16 August. Winter is quiet and grey, 10 °C.",
+   "sleep": "Inside Siena's walls, or a farmhouse (agriturismo) in the Val d'Orcia with a car.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Siena",
+    "https://en.wikivoyage.org/wiki/Val_d'Orcia",
+    "https://en.wikivoyage.org/wiki/San_Gimignano"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "campo",
+     "name": "Piazza del Campo, the Duomo and the Torre del Mangia",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The shell-shaped square, the striped cathedral with its marble floor, and 400 steps up the tower.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Siena Cathedral and its Piccolomini Library"
+      },
+      {
+       "at": "11:30",
+       "what": "Torre del Mangia, 400 steps"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch off the Campo"
+      },
+      {
+       "at": "15:00",
+       "what": "The contrade lanes"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Siena Cathedral"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "orcia",
+     "name": "Val d'Orcia: Pienza, Montepulciano and the cypress roads",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The rolling hills and lines of cypresses of every Tuscany poster, with pecorino in Pienza and Vino Nobile in Montepulciano.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Drive south on the SR2"
+      },
+      {
+       "at": "10:00",
+       "what": "Pienza, the ideal Renaissance town"
+      },
+      {
+       "at": "12:30",
+       "what": "Wine tasting and lunch in Montepulciano"
+      },
+      {
+       "at": "16:00",
+       "what": "The cypresses of San Quirico and the chapel of Vitaleta"
+      },
+      {
+       "at": "18:30",
+       "what": "Back to Siena"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Pienza",
+      "Montepulciano"
+     ],
+     "needs": "car"
+    },
+    {
+     "id": "gimignano",
+     "name": "San Gimignano and the Chianti",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The medieval town of towers, then the vineyard roads between Florence and Siena.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Drive to San Gimignano (1 h)"
+      },
+      {
+       "at": "10:00",
+       "what": "Towers and the Collegiata's frescoes"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch and tasting in a Chianti winery"
+      },
+      {
+       "at": "16:00",
+       "what": "Castellina or Radda in Chianti"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ],
+   "rain": {
+    "name": "Santa Maria della Scala",
+    "hours": "",
+    "why": "The old hospital across from the Duomo, frescoed wards and the city museum."
+   },
+   "extras": [
+    "The Val d'Orcia needs a car; buses exist but are rare."
+   ]
+  },
+  {
+   "id": "it-cinque-terre",
+   "names": [
+    "Cinque Terre",
+    "Monterosso al Mare",
+    "Vernazza",
+    "Manarola",
+    "Riomaggiore",
+    "Corniglia"
+   ],
+   "country": "IT",
+   "lat": 44.12,
+   "lon": 9.71,
+   "radius_km": 12,
+   "season": "May-June and September-October. July-August hot and very busy. November-March the boats stop, some paths close after storms, many restaurants shut.",
+   "sleep": "In one of the villages (Monterosso has the beach) or in La Spezia, 10 minutes by train.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Cinque_Terre",
+    "https://www.parconazionale5terre.it/",
+    "https://www.cinqueterre.eu.com/en/"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "blue",
+     "name": "The Blue Path: Monterosso to Vernazza to Corniglia",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Early morning",
+     "book": "Cinque Terre Card (trail fee); check path status after rain",
+     "why": "The cliff path between the colourful villages, with vineyards above and the sea below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 210
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Start in Monterosso before the heat and the crowds",
+       "note": "Cinque Terre Card for the path"
+      },
+      {
+       "at": "10:00",
+       "what": "Vernazza, swim or coffee in the harbour"
+      },
+      {
+       "at": "11:00",
+       "what": "On to Corniglia (1.5 h)"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Corniglia, train back"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 2,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Monterosso al Mare",
+      "Vernazza"
+     ]
+    },
+    {
+     "id": "villages",
+     "name": "The five villages by train and boat",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Riomaggiore and Manarola by train, then the boat along the coast to see them from the sea.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Train to Riomaggiore"
+      },
+      {
+       "at": "11:00",
+       "what": "Manarola's harbour and the vineyard viewpoint"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch, then the boat from Manarola to Monterosso",
+       "note": "boats run Easter to October"
+      },
+      {
+       "at": "16:00",
+       "what": "Swim at Monterosso's beach"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "beach"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "id": "winter",
+     "name": "Train hops and the sanctuaries above the villages",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "In winter the boats stop and the coast path may be shut: the villages are empty and the high paths to the sanctuaries open.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 400
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Train to Vernazza"
+      },
+      {
+       "at": "10:30",
+       "what": "Path up to the sanctuary of Reggio"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Monterosso"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "rain": {
+    "name": "La Spezia's naval museum and old town",
+    "hours": "",
+    "why": "La Spezia is 10 minutes away by train."
+   },
+   "extras": [
+    "The Cinque Terre Express train runs every 15-30 minutes: no car needed, parking is near impossible."
+   ]
+  },
+  {
+   "id": "it-naples",
+   "names": [
+    "Naples",
+    "Napoli"
+   ],
+   "country": "IT",
+   "lat": 40.85,
+   "lon": 14.27,
+   "radius_km": 15,
+   "season": "Pleasant from March to November; July-August 32 °C. Winter mild and rainy, 13 °C, the best time for the museums.",
+   "sleep": "In the centro storico near Spaccanapoli, or Chiaia by the sea for a calmer stay.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Naples",
+    "https://en.wikivoyage.org/wiki/Pompeii",
+    "https://pompeiisites.org/en/",
+    "https://www.museoarcheologiconapoli.it/en/"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "pompeii",
+     "name": "Pompeii",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Tickets online, timed in high season",
+     "why": "A whole Roman city buried by Vesuvius in 79 AD: streets, bakeries, frescoed houses and the plaster casts of its people.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Circumvesuviana train to Pompei Scavi (40 min)"
+      },
+      {
+       "at": "09:00",
+       "what": "Gates open, start at the Forum"
+      },
+      {
+       "at": "11:30",
+       "what": "House of the Vettii and the Lupanar"
+      },
+      {
+       "at": "13:30",
+       "what": "Packed lunch: few bars inside"
+      },
+      {
+       "at": "15:00",
+       "what": "Amphitheatre and the Garden of the Fugitives"
+      },
+      {
+       "at": "17:00",
+       "what": "Train back"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 4,
+      "relax": 1,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Pompeii"
+     ]
+    },
+    {
+     "id": "centro",
+     "name": "Spaccanapoli, the underground and pizza",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The street that splits the old town, the veiled Christ of San Severo, Greek-Roman tunnels under the city and pizza where it was born.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Sansevero Chapel and the Veiled Christ",
+       "note": "book the slot"
+      },
+      {
+       "at": "11:30",
+       "what": "Via San Gregorio Armeno, the crib-makers' street"
+      },
+      {
+       "at": "12:30",
+       "what": "Napoli Sotterranea tour"
+      },
+      {
+       "at": "14:00",
+       "what": "Pizza at a historic pizzeria"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Spaccanapoli",
+      "Naples Cathedral"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "mann",
+     "name": "National Archaeological Museum",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The treasures taken from Pompeii and Herculaneum: mosaics, frescoes and the Farnese marbles.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Museum at opening",
+       "note": "closed Tuesdays"
+      }
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "weekdays": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "id": "vesuvius",
+     "name": "Vesuvius crater and Herculaneum",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "Vesuvius ticket online, timed; in winter the crater path often shuts for wind and ice",
+     "why": "The walk to the rim of the volcano that buried both towns, then Herculaneum, smaller and better kept than Pompeii.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1170
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Bus to the Vesuvius car park"
+      },
+      {
+       "at": "09:30",
+       "what": "30 min up the path to the crater",
+       "note": "timed ticket online"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch in Ercolano"
+      },
+      {
+       "at": "14:00",
+       "what": "Herculaneum ruins"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 3,
+      "relax": 1,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "id": "seafront",
+     "name": "Lungomare, Castel dell'Ovo and the Royal Palace",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The bay and Vesuvius from the seafront, the egg castle on its rock and the square of the kings.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "17:00",
+       "what": "Piazza del Plebiscito and the Royal Palace"
+      },
+      {
+       "at": "18:00",
+       "what": "Castel dell'Ovo at sunset"
+      },
+      {
+       "at": "19:30",
+       "what": "Dinner in Borgo Marinari"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Royal Palace of Naples"
+     ]
+    }
+   ],
+   "rain": {
+    "name": "Archaeological Museum and Capodimonte",
+    "hours": "",
+    "why": "Two of Italy's great museums, a day of art under one roof each."
+   },
+   "extras": [
+    "Watch your phone on the Circumvesuviana and in crowded lanes."
+   ]
+  },
+  {
+   "id": "it-sorrento",
+   "names": [
+    "Sorrento",
+    "Capri",
+    "Anacapri"
+   ],
+   "country": "IT",
+   "lat": 40.63,
+   "lon": 14.38,
+   "radius_km": 12,
+   "season": "April to October; July-August hot and full. Sorrento stays open all winter, with fewer boats to Capri and the Amalfi Coast.",
+   "sleep": "Sorrento centre near Piazza Tasso: buses and ferries leave from there.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Sorrento",
+    "https://en.wikivoyage.org/wiki/Capri",
+    "https://en.wikivoyage.org/wiki/Amalfi_Coast"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "capri",
+     "name": "Capri by boat",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Round the island by boat to the grottoes and the Faraglioni rocks, then the piazzetta and the chairlift up Monte Solaro.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Ferry to Capri (25 min)"
+      },
+      {
+       "at": "09:30",
+       "what": "Boat round the island",
+       "note": "Blue Grotto only in calm sea"
+      },
+      {
+       "at": "12:00",
+       "what": "Bus to Anacapri, chairlift to Monte Solaro"
+      },
+      {
+       "at": "14:00",
+       "what": "Lunch in Capri town"
+      },
+      {
+       "at": "16:00",
+       "what": "Gardens of Augustus and Via Krupp viewpoint"
+      },
+      {
+       "at": "18:00",
+       "what": "Ferry back"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Capri",
+      "Anacapri"
+     ]
+    },
+    {
+     "id": "drive",
+     "name": "The Amalfi Coast road by bus",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The cliff road from Sorrento to Positano and Amalfi, with the lemon terraces below.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "SITA bus to Positano (sit on the right)"
+      },
+      {
+       "at": "10:00",
+       "what": "Positano's lanes and beach"
+      },
+      {
+       "at": "13:00",
+       "what": "Bus or boat on to Amalfi, lunch"
+      },
+      {
+       "at": "15:30",
+       "what": "Amalfi Cathedral"
+      },
+      {
+       "at": "17:30",
+       "what": "Bus back"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Positano",
+      "Amalfi Coast"
+     ]
+    },
+    {
+     "id": "town",
+     "name": "Sorrento's old town and the Marina Grande",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Limoncello shops, the cloister of San Francesco and the fishermen's harbour for dinner.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "17:00",
+       "what": "Old town lanes"
+      },
+      {
+       "at": "18:00",
+       "what": "Villa Comunale terrace over the bay"
+      },
+      {
+       "at": "19:30",
+       "what": "Dinner at Marina Grande"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "arrive": true
+    },
+    {
+     "id": "bagni",
+     "name": "Swim at the Bagni della Regina Giovanna",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A pool of clear sea inside the ruins of a Roman villa, 30 minutes' walk from town.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Walk out along Capo di Sorrento"
+      },
+      {
+       "at": "10:30",
+       "what": "Swim and rest"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 5,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "rain": {
+    "name": "Herculaneum or Pompeii from Sorrento",
+    "hours": "",
+    "why": "The Circumvesuviana train reaches both from Sorrento."
+   },
+   "extras": [
+    "Positano and Amalfi close many hotels from November to March; Sorrento does not."
+   ]
+  },
+  {
+   "id": "it-amalfi",
+   "names": [
+    "Amalfi",
+    "Positano",
+    "Ravello",
+    "Amalfi Coast"
+   ],
+   "country": "IT",
+   "lat": 40.63,
+   "lon": 14.58,
+   "radius_km": 12,
+   "season": "May-June and September-October. July-August crowded and hot; many hotels and boats close November to March.",
+   "sleep": "Amalfi town or Positano: buses and boats from both. Ravello for quiet.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Amalfi_Coast",
+    "https://en.wikivoyage.org/wiki/Positano",
+    "https://en.wikivoyage.org/wiki/Ravello"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "gods",
+     "name": "The Path of the Gods",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The path high above the coast from Bomerano to Nocelle, with Positano and Capri below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 650
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Bus to Bomerano (Agerola)"
+      },
+      {
+       "at": "09:00",
+       "what": "Path of the Gods, 3 h",
+       "note": "little shade"
+      },
+      {
+       "at": "12:00",
+       "what": "Nocelle, then 1,700 steps down to Positano"
+      },
+      {
+       "at": "13:30",
+       "what": "Lunch and swim in Positano"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11
+     ]
+    },
+    {
+     "id": "ravello",
+     "name": "Ravello's villas and Amalfi town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The gardens of Villa Rufolo and Villa Cimbrone hanging 350 m above the sea, then Amalfi's cathedral.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Bus up to Ravello"
+      },
+      {
+       "at": "10:00",
+       "what": "Villa Rufolo"
+      },
+      {
+       "at": "11:00",
+       "what": "Villa Cimbrone's Terrace of Infinity"
+      },
+      {
+       "at": "13:00",
+       "what": "Back down to Amalfi for lunch"
+      },
+      {
+       "at": "15:00",
+       "what": "Amalfi Cathedral"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 4,
+      "relax": 4,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Amalfi Cathedral"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "boat",
+     "name": "The coast by boat",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Coves, grottoes and swims you only reach from the sea, between Amalfi and Positano.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Small-boat tour from Amalfi"
+      },
+      {
+       "at": "12:00",
+       "what": "Swim in a cove"
+      },
+      {
+       "at": "14:00",
+       "what": "Positano by boat"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "beach"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   ],
+   "rain": {
+    "name": "The Paper Museum in Amalfi",
+    "hours": "",
+    "why": "Amalfi's medieval paper mills, still working."
+   },
+   "extras": [
+    "The coast road has one lane each way and buses fill up: leave early."
+   ]
+  },
+  {
+   "id": "it-bologna",
+   "names": [
+    "Bologna"
+   ],
+   "country": "IT",
+   "lat": 44.49,
+   "lon": 11.34,
+   "radius_km": 15,
+   "season": "All year for food; spring and autumn best. Foggy in winter, hot in summer, with 40 km of arcades for shade and rain.",
+   "sleep": "Inside the ring, near Piazza Maggiore or the university quarter.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bologna",
+    "https://en.wikivoyage.org/wiki/Modena",
+    "https://en.wikivoyage.org/wiki/Parma"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "centre",
+     "name": "Piazza Maggiore, the towers and the arcades",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The red city of arcades, the leaning towers and the market lanes of the Quadrilatero.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Piazza Maggiore and San Petronio"
+      },
+      {
+       "at": "11:00",
+       "what": "Quadrilatero market lanes, mortadella tasting"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch: tagliatelle al ragù"
+      },
+      {
+       "at": "15:00",
+       "what": "Walk the arcades up to San Luca",
+       "note": "3.8 km of portico uphill"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Bologna"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "food",
+     "name": "Modena and Parma food day",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Dairy and acetaia visits by booking",
+     "why": "Balsamic vinegar in Modena's attics, then Parmigiano and Parma ham where they are made.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Parmigiano dairy visit at dawn",
+       "note": "book ahead"
+      },
+      {
+       "at": "11:00",
+       "what": "Balsamic vinegar acetaia near Modena"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Modena"
+      },
+      {
+       "at": "16:00",
+       "what": "Parma's cathedral and baptistery"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    }
+   ],
+   "rain": {
+    "name": "The arcades themselves",
+    "hours": "",
+    "why": "Bologna's porticoes keep you dry across the whole centre."
+   }
+  },
+  {
+   "id": "it-verona",
+   "names": [
+    "Verona"
+   ],
+   "country": "IT",
+   "lat": 45.44,
+   "lon": 10.99,
+   "radius_km": 12,
+   "season": "April-October; opera in the Arena from June to early September. Winter cold and foggy, Christmas market in December.",
+   "sleep": "Inside the old town between the Arena and the Adige.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Verona",
+    "https://www.arena.it/en/"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "town",
+     "name": "The Arena, Juliet's balcony and the old town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A Roman amphitheatre still used for opera, the market square and the hill of Castel San Pietro over the river.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Verona Arena"
+      },
+      {
+       "at": "17:00",
+       "what": "Piazza delle Erbe and Juliet's house"
+      },
+      {
+       "at": "18:30",
+       "what": "Funicular or steps to Castel San Pietro for sunset"
+      },
+      {
+       "at": "20:00",
+       "what": "Dinner, risotto all'Amarone"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Verona Arena"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "opera",
+     "name": "An opera night in the Arena",
+     "hours": "4 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "Seats sell out; stone steps are cheapest",
+     "why": "Aida under the stars with 15,000 people, in a theatre built in the year 30.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "20:30",
+       "what": "Doors and candles"
+      },
+      {
+       "at": "21:00",
+       "what": "Opera, until after midnight"
+      }
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "id": "valpolicella",
+     "name": "Valpolicella wineries",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Amarone made from dried grapes, in the hills 20 minutes away.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Winery visit and tasting"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in the hills"
+      }
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "it-milan",
+   "names": [
+    "Milan",
+    "Milano"
+   ],
+   "country": "IT",
+   "lat": 45.46,
+   "lon": 9.19,
+   "radius_km": 15,
+   "season": "Spring and autumn best; humid and hot in July, many shops shut in mid-August; cold and foggy winter.",
+   "sleep": "Near the Duomo or in Brera; Navigli for the evenings.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Milan",
+    "https://cenacolovinciano.org/en/",
+    "https://www.duomomilano.it/en/"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "duomo",
+     "name": "The Duomo roof and the Galleria",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A forest of marble spires you can walk among, then the glass arcade of the Galleria Vittorio Emanuele.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Duomo rooftop by lift"
+      },
+      {
+       "at": "10:30",
+       "what": "Inside the cathedral"
+      },
+      {
+       "at": "11:30",
+       "what": "Galleria and La Scala"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "arrive": true
+    },
+    {
+     "id": "supper",
+     "name": "Leonardo's Last Supper and Brera",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Last Supper tickets open months ahead and sell out",
+     "why": "Fifteen minutes before the most famous wall in the world, then the Brera gallery and its quarter.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:15",
+       "what": "Last Supper, 15-minute slot",
+       "note": "closed Mondays"
+      },
+      {
+       "at": "10:30",
+       "what": "Sforza Castle"
+      },
+      {
+       "at": "12:00",
+       "what": "Brera quarter and Pinacoteca"
+      }
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "id": "navigli",
+     "name": "Navigli canals at aperitivo time",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The old canals of Milan, where the city goes for the evening spritz.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "18:30",
+       "what": "Walk the Naviglio Grande"
+      },
+      {
+       "at": "19:00",
+       "what": "Aperitivo"
+      },
+      {
+       "at": "21:00",
+       "what": "Dinner"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 2,
+      "relax": 5,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "it-lake-como",
+   "names": [
+    "Lake Como",
+    "Varenna",
+    "Bellagio",
+    "Menaggio",
+    "Como"
+   ],
+   "country": "IT",
+   "lat": 45.99,
+   "lon": 9.26,
+   "radius_km": 20,
+   "season": "April-October; gardens bloom in April-May. Many boats and villas close November to March, and the lake is often grey.",
+   "sleep": "Varenna or Bellagio in the middle of the lake, where the ferries cross.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lake_Como",
+    "https://en.wikivoyage.org/wiki/Bellagio",
+    "https://en.wikivoyage.org/wiki/Varenna",
+    "https://www.navigazionelaghi.it/en/"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ferry",
+     "name": "Bellagio, Varenna and Villa Carlotta by ferry",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The triangle of villages in the middle of the lake and the gardens of Villa Carlotta, all linked by ferry.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Varenna and Villa Monastero's garden"
+      },
+      {
+       "at": "11:00",
+       "what": "Ferry to Bellagio, its stepped lanes"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch by the water"
+      },
+      {
+       "at": "15:00",
+       "what": "Ferry to Tremezzo, Villa Carlotta"
+      },
+      {
+       "at": "18:00",
+       "what": "Back to Varenna"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 5,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Lake Como",
+      "Como"
+     ]
+    },
+    {
+     "id": "greenway",
+     "name": "Greenway del Lago and Villa del Balbianello",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A lakeside path between old villages to the villa on its peninsula from Star Wars and Casino Royale.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Greenway from Colonno"
+      },
+      {
+       "at": "11:30",
+       "what": "Villa del Balbianello",
+       "note": "closed Mondays and Wednesdays; winter shut"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ]
+    },
+    {
+     "id": "castle",
+     "name": "Castello di Vezio above Varenna",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A short climb through olive trees to the tower over the lake, then the waterfront walk at dusk.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Path up from Varenna"
+      },
+      {
+       "at": "17:00",
+       "what": "Castle and view"
+      },
+      {
+       "at": "18:30",
+       "what": "Passeggiata degli Innamorati"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "arrive": true
+    }
+   ]
+  },
+  {
+   "id": "it-lake-garda",
+   "names": [
+    "Lake Garda",
+    "Sirmione",
+    "Riva del Garda",
+    "Malcesine",
+    "Peschiera del Garda"
+   ],
+   "country": "IT",
+   "lat": 45.55,
+   "lon": 10.65,
+   "radius_km": 35,
+   "season": "April-October; windsurf wind in the north every afternoon; mild for the Alps' foot even in March and November.",
+   "sleep": "Sirmione or Malcesine; Riva del Garda for hikes and bikes.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lake_Garda",
+    "https://en.wikivoyage.org/wiki/Sirmione",
+    "https://en.wikivoyage.org/wiki/Malcesine"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "sirmione",
+     "name": "Sirmione's castle and the Grottoes of Catullus",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A moated castle on the water and a Roman villa at the tip of the peninsula.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Scaliger Castle"
+      },
+      {
+       "at": "11:30",
+       "what": "Grottoes of Catullus"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch, then the lakeside walk"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Sirmione"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "boat",
+     "name": "Across the lake by ferry",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Limone's lemon houses and the northern shore between mountains.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Ferry north"
+      },
+      {
+       "at": "12:00",
+       "what": "Limone sul Garda"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "baldo",
+     "name": "Monte Baldo cable car from Malcesine",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A rotating cable car to 1,760 m, with the whole lake below and walks on the ridge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1760
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Cable car up"
+      },
+      {
+       "at": "10:30",
+       "what": "Ridge walk"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Malcesine"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "id": "it-bolzano",
+   "names": [
+    "Bolzano",
+    "Bozen"
+   ],
+   "country": "IT",
+   "lat": 46.5,
+   "lon": 11.35,
+   "radius_km": 12,
+   "season": "All year: a base for the Dolomites, a famous Christmas market (late November to early January), 30 °C in July.",
+   "sleep": "Old town near Piazza Walther.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bolzano",
+    "https://www.iceman.it/en/"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "otzi",
+     "name": "Ötzi the Iceman and the old town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 5,300-year-old man found in the ice, then the arcades and Tyrolean taverns of the old town.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "South Tyrol Museum of Archaeology",
+       "note": "closed Mondays except July-August and December"
+      },
+      {
+       "at": "12:00",
+       "what": "Lauben arcades and the fruit market"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch: canederli"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "arrive": true
+    },
+    {
+     "id": "ritten",
+     "name": "Renon plateau and the earth pyramids",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Cable car and narrow-gauge tram to the plateau, then a walk to the earth pillars with the Dolomites behind.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1300
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Renon cable car"
+      },
+      {
+       "at": "09:30",
+       "what": "Tram to Klobenstein"
+      },
+      {
+       "at": "10:00",
+       "what": "Walk to the earth pyramids"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "it-val-gardena",
+   "names": [
+    "Val Gardena",
+    "Ortisei",
+    "St. Ulrich",
+    "Selva di Val Gardena",
+    "Santa Cristina",
+    "Dolomites"
+   ],
+   "country": "IT",
+   "lat": 46.57,
+   "lon": 11.72,
+   "radius_km": 15,
+   "season": "Summer hiking mid-June to late September, when the lifts and huts open. Skiing December to March (Dolomiti Superski). April-May and October-November most lifts are shut.",
+   "sleep": "Ortisei for the village life, Selva for the lifts.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Val_Gardena",
+    "https://www.valgardena.it/en/",
+    "https://www.dolomitisuperski.com/en",
+    "https://www.seceda.it/en/"
+   ],
+   "nights": [
+    3,
+    4,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "seceda",
+     "name": "Seceda ridge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The saw-tooth ridge of the Odle seen from the top of the Seceda lift, then down through alpine meadows and huts.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2500
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Cable car from Ortisei to Seceda"
+      },
+      {
+       "at": "09:30",
+       "what": "The ridge viewpoint"
+      },
+      {
+       "at": "10:00",
+       "what": "Down past the Pieralongia huts"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at a hut"
+      },
+      {
+       "at": "14:30",
+       "what": "Col Raiser lift down"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "id": "alpe",
+     "name": "Alpe di Siusi",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Europe's biggest high meadow under the Sassolungo and the Sciliar, flat enough for everyone.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Cable car from Ortisei to Alpe di Siusi"
+      },
+      {
+       "at": "10:00",
+       "what": "Meadow walk towards Saltria"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch at a hut"
+      },
+      {
+       "at": "16:00",
+       "what": "Back by lift"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "id": "sassolungo",
+     "name": "Round the Sassolungo",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The full loop around the great tooth of the valley from Passo Sella, 17 km among scree and huts.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 2680
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Bus to Passo Sella"
+      },
+      {
+       "at": "08:30",
+       "what": "Loop, 6-7 h"
+      },
+      {
+       "at": "12:00",
+       "what": "Lunch at the Rifugio Vicenza"
+      },
+      {
+       "at": "15:30",
+       "what": "Back at the pass"
+      }
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Gardena Pass"
+     ]
+    },
+    {
+     "id": "sella",
+     "name": "Ski the Sella Ronda",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "Dolomiti Superski pass; ski hire in Selva",
+     "why": "A day on skis round the Sella massif through four valleys, without skiing the same run twice.",
+     "act": {
+      "type": "ski"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "First lift from Selva"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at a hut on the way"
+      },
+      {
+       "at": "16:00",
+       "what": "Back before the lifts close"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "id": "winter",
+     "name": "Winter walks and sledging on Alpe di Siusi",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Groomed snow paths and toboggan runs on the high meadow, for those not on skis.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2000
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Cable car up"
+      },
+      {
+       "at": "10:30",
+       "what": "Winter path"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch at a hut, sledge down"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "id": "ortisei",
+     "name": "Ortisei and its woodcarvers",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The village of the Ladin woodcarvers, its pedestrian street and the museum of the valley.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "17:00",
+       "what": "Village walk and carving shops"
+      },
+      {
+       "at": "18:30",
+       "what": "Dinner, Ladin dishes"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Ortisei",
+      "Selva di Val Gardena",
+      "Val Gardena"
+     ],
+     "arrive": true
+    }
+   ],
+   "rain": {
+    "name": "Museum Gherdëina in Ortisei",
+    "hours": "",
+    "why": "The valley's woodcarving, the Ladin language and the first climbers."
+   },
+   "extras": [
+    "The Val Gardena Mobil Card (with some stays) covers buses and trains in South Tyrol."
+   ]
+  },
+  {
+   "id": "it-cortina",
+   "names": [
+    "Cortina d'Ampezzo",
+    "Cortina",
+    "Tre Cime di Lavaredo",
+    "Lago di Braies"
+   ],
+   "country": "IT",
+   "lat": 46.54,
+   "lon": 12.14,
+   "radius_km": 30,
+   "season": "Summer hiking mid-June to September; skiing December to March. In October-November and April-May many lifts and huts shut.",
+   "sleep": "Cortina itself, or Dobbiaco for the Tre Cime and Braies.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Cortina_d'Ampezzo",
+    "https://www.dolomiti.org/en/cortina/",
+    "https://www.tre-cime.info/en/"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "trecime",
+     "name": "Round the Tre Cime di Lavaredo",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "Auronzo road toll by booking in summer",
+     "why": "The three great rock towers of the Dolomites, round on a 10 km path from the Auronzo hut.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2450
+     },
+     "steps": [
+      {
+       "at": "07:30",
+       "what": "Drive or bus to the Auronzo hut",
+       "note": "toll road, book the parking"
+      },
+      {
+       "at": "08:30",
+       "what": "Path to Rifugio Lavaredo and the Forcella"
+      },
+      {
+       "at": "11:00",
+       "what": "Rifugio Locatelli, the classic view"
+      },
+      {
+       "at": "12:00",
+       "what": "Lunch at the hut"
+      },
+      {
+       "at": "15:00",
+       "what": "Back to Auronzo"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "id": "braies",
+     "name": "Lago di Braies",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Summer access by booked parking or shuttle",
+     "why": "The emerald lake under the cliffs of the Croda del Becco, walked round in an hour.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1500
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Arrive early: the road is limited in summer"
+      },
+      {
+       "at": "08:30",
+       "what": "Loop of the lake, 1 h"
+      },
+      {
+       "at": "10:00",
+       "what": "Rowing boat"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Lago di Braies"
+     ]
+    },
+    {
+     "id": "cinquetorri",
+     "name": "Cinque Torri and the open-air WWI museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Five rock towers with the trenches of the First World War between them, reached by chairlift.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2250
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Chairlift to the Cinque Torri"
+      },
+      {
+       "at": "10:00",
+       "what": "Trench paths"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at Rifugio Scoiattoli"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Cinque Torri"
+     ]
+    },
+    {
+     "id": "ski",
+     "name": "Ski Cortina and the Lagazuoi",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "Dolomiti Superski pass",
+     "why": "Cortina's Olympic slopes and the long run from the Lagazuoi to Armentarola, pulled by horses at the end.",
+     "act": {
+      "type": "ski"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Lifts from Cortina"
+      },
+      {
+       "at": "11:00",
+       "what": "Lagazuoi cable car"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at the top hut"
+      },
+      {
+       "at": "14:00",
+       "what": "The Hidden Valley run"
+      },
+      {
+       "at": "16:00",
+       "what": "Back to Cortina"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "id": "town",
+     "name": "Corso Italia and the Olympic town",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The pedestrian street of the queen of the Dolomites, its bell tower and the 1956 Olympic ice stadium.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "17:00",
+       "what": "Corso Italia"
+      },
+      {
+       "at": "18:30",
+       "what": "Aperitivo"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "arrive": true
+    }
+   ],
+   "extras": [
+    "Some huts and lifts close for a few weeks between seasons: check opening dates."
+   ]
+  },
+  {
+   "id": "it-palermo",
+   "names": [
+    "Palermo"
+   ],
+   "country": "IT",
+   "lat": 38.12,
+   "lon": 13.36,
+   "radius_km": 15,
+   "season": "Mild all year: 15 °C by day in winter, 31 °C in July-August. Best April-June and September-October.",
+   "sleep": "Around the Quattro Canti or Kalsa, on foot to everything.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Palermo",
+    "https://en.wikivoyage.org/wiki/Monreale",
+    "https://en.wikivoyage.org/wiki/Cefalù"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "centre",
+     "name": "Norman Palace, the Cathedral and the markets",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Golden Arab-Norman mosaics in the Palatine Chapel, the cathedral, and street food at the Ballarò market.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Norman Palace and Palatine Chapel"
+      },
+      {
+       "at": "10:30",
+       "what": "Palermo Cathedral and its roof"
+      },
+      {
+       "at": "12:00",
+       "what": "Ballarò market: arancine, panelle, sfincione"
+      },
+      {
+       "at": "15:00",
+       "what": "Quattro Canti and Piazza Pretoria"
+      },
+      {
+       "at": "17:00",
+       "what": "Kalsa quarter and the sea front"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Palermo Cathedral"
+     ]
+    },
+    {
+     "id": "monreale",
+     "name": "Monreale cathedral",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "6,400 square metres of gold mosaic in a cathedral above the city, and its cloister of 228 columns.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Bus 389 to Monreale"
+      },
+      {
+       "at": "09:30",
+       "what": "Cathedral and cloister"
+      },
+      {
+       "at": "11:30",
+       "what": "Terrace over the Conca d'Oro"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mondello",
+     "name": "Mondello beach",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Palermo's white-sand bay under Monte Pellegrino.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "14:00",
+       "what": "Bus to Mondello"
+      },
+      {
+       "at": "14:30",
+       "what": "Swim and Art Nouveau seafront"
+      },
+      {
+       "at": "19:00",
+       "what": "Fish dinner"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "id": "evening",
+     "name": "Street food walk at dusk",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Vucciria and the old harbour when Palermo comes out for the evening.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "18:30",
+       "what": "Vucciria"
+      },
+      {
+       "at": "19:30",
+       "what": "La Cala harbour"
+      },
+      {
+       "at": "20:30",
+       "what": "Dinner"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "arrive": true
+    }
+   ],
+   "rain": {
+    "name": "Palazzo Abatellis and the Salinas museum",
+    "hours": "",
+    "why": "Medieval Sicily's art and its archaeology, indoors."
+   },
+   "extras": [
+    "Shops and some sites shut 13:00-16:00: plan the markets for the morning."
+   ]
+  },
+  {
+   "id": "it-trapani",
+   "names": [
+    "Trapani",
+    "Erice",
+    "Favignana",
+    "Marsala"
+   ],
+   "country": "IT",
+   "lat": 38.02,
+   "lon": 12.51,
+   "radius_km": 25,
+   "season": "April-October for the islands; mild winters (14 °C). The Egadi boats run all year, fewer in winter.",
+   "sleep": "Trapani's old town on its spit of land.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Trapani",
+    "https://en.wikivoyage.org/wiki/Erice",
+    "https://en.wikivoyage.org/wiki/Favignana",
+    "https://en.wikivoyage.org/wiki/Segesta"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "erice",
+     "name": "Erice and the salt pans at sunset",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The medieval town on its mountain by cable car, then the windmills of the salt pans in the evening light.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "15:00",
+       "what": "Cable car to Erice"
+      },
+      {
+       "at": "15:30",
+       "what": "Castle of Venus and the stone lanes"
+      },
+      {
+       "at": "17:00",
+       "what": "Almond pastries"
+      },
+      {
+       "at": "18:30",
+       "what": "Salt pans of Nubia at sunset"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Erice"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "favignana",
+     "name": "Favignana by bike",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Hydrofoil to the butterfly island, then bike to Cala Rossa and Bue Marino for the clearest sea of Sicily.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Hydrofoil (30 min)"
+      },
+      {
+       "at": "09:30",
+       "what": "Hire a bike"
+      },
+      {
+       "at": "10:30",
+       "what": "Cala Rossa swim"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in town"
+      },
+      {
+       "at": "15:00",
+       "what": "Bue Marino and the tuna factory"
+      },
+      {
+       "at": "18:00",
+       "what": "Back"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 5,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Favignana",
+      "Cala Pisana"
+     ]
+    },
+    {
+     "id": "segesta",
+     "name": "Segesta temple and theatre",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A Greek temple standing alone in the hills since the 5th century BC.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Drive or bus (40 min)"
+      },
+      {
+       "at": "09:45",
+       "what": "Temple, then up to the theatre"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "it-agrigento",
+   "names": [
+    "Agrigento",
+    "Valley of the Temples",
+    "Scala dei Turchi"
+   ],
+   "country": "IT",
+   "lat": 37.29,
+   "lon": 13.58,
+   "radius_km": 20,
+   "season": "All year; hot in summer, so the temples at opening or sunset.",
+   "sleep": "Agrigento's old town or a farmhouse near the Valley.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Agrigento",
+    "https://www.parcovalledeitempli.it/en/",
+    "https://en.wikivoyage.org/wiki/Piazza_Armerina"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "valley",
+     "name": "Valley of the Temples",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Opening or the evening opening in summer",
+     "book": "",
+     "why": "Seven Doric temples on a ridge over the sea, the Temple of Concordia as whole as in 430 BC.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Gates open, start at the Temple of Juno"
+      },
+      {
+       "at": "09:30",
+       "what": "Temple of Concordia"
+      },
+      {
+       "at": "11:00",
+       "what": "Kolymbethra garden"
+      },
+      {
+       "at": "12:30",
+       "what": "Archaeological museum"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Agrigento"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "scala",
+     "name": "Scala dei Turchi",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A white marl cliff stepped like a staircase into the sea.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "17:00",
+       "what": "Viewpoint and the beach below"
+      },
+      {
+       "at": "19:00",
+       "what": "Sunset"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "id": "casale",
+     "name": "Villa Romana del Casale",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The richest Roman mosaics in the world, the girls in bikinis among them, on the way to the east coast.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Drive to Piazza Armerina (1.5 h)"
+      },
+      {
+       "at": "10:30",
+       "what": "The villa"
+      },
+      {
+       "at": "13:00",
+       "what": "On to Ragusa or Syracuse"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Villa Romana del Casale"
+     ],
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "it-ragusa",
+   "names": [
+    "Ragusa",
+    "Ragusa Ibla",
+    "Modica",
+    "Noto",
+    "Val di Noto",
+    "Marina di Ragusa"
+   ],
+   "country": "IT",
+   "lat": 36.9,
+   "lon": 14.85,
+   "radius_km": 30,
+   "season": "All year; the Baroque towns are at their best in the low sun of spring and autumn.",
+   "sleep": "Ragusa Ibla, the lower old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ragusa",
+    "https://en.wikivoyage.org/wiki/Modica",
+    "https://en.wikivoyage.org/wiki/Noto"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ibla",
+     "name": "Ragusa Ibla and Modica's chocolate",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Two Baroque towns rebuilt after the 1693 earthquake on gorges, and chocolate made the Aztec way.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:30",
+       "what": "Steps down from Ragusa Superiore to Ibla"
+      },
+      {
+       "at": "10:30",
+       "what": "Duomo of San Giorgio"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Ibla"
+      },
+      {
+       "at": "15:00",
+       "what": "Modica, cathedral of San Giorgio"
+      },
+      {
+       "at": "17:00",
+       "what": "Chocolate tasting"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Ragusa"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "noto",
+     "name": "Noto, the stone garden",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A whole town of golden Baroque churches and palaces, and its almond granita.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Corso Vittorio Emanuele"
+      },
+      {
+       "at": "17:00",
+       "what": "Cathedral and the balconies of Palazzo Nicolaci"
+      },
+      {
+       "at": "19:00",
+       "what": "Granita at a historic café"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Noto"
+     ]
+    },
+    {
+     "id": "beach",
+     "name": "Marina di Ragusa and the Vendicari reserve",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Sandy beaches and a coastal reserve with flamingos in winter.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Vendicari paths"
+      },
+      {
+       "at": "12:00",
+       "what": "Swim at Calamosche"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "beach",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Marina di Ragusa"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "it-syracuse",
+   "names": [
+    "Syracuse",
+    "Siracusa",
+    "Ortigia"
+   ],
+   "country": "IT",
+   "lat": 37.07,
+   "lon": 15.28,
+   "radius_km": 15,
+   "season": "Mild all year; swimming May to October. The Greek theatre stages classical plays May-July.",
+   "sleep": "Ortigia, the island old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Syracuse_(Italy)",
+    "https://en.wikivoyage.org/wiki/Noto"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "neapolis",
+     "name": "Neapolis: the Greek theatre and the Ear of Dionysius",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the biggest Greek theatres and the cave whose echo let a tyrant hear his prisoners.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Neapolis park at opening"
+      },
+      {
+       "at": "10:30",
+       "what": "Paolo Orsi archaeological museum",
+       "note": "closed Mondays"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ortigia",
+     "name": "Ortigia: the Duomo and the market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A cathedral built into a Greek temple, the morning market and the sea all around the old town.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Ortigia market"
+      },
+      {
+       "at": "10:30",
+       "what": "Piazza Duomo"
+      },
+      {
+       "at": "11:30",
+       "what": "Fountain of Arethusa"
+      },
+      {
+       "at": "18:00",
+       "what": "Sunset passeggiata on the sea walls"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Syracuse"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "boat",
+     "name": "Boat round Ortigia and swim",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Sea caves under the old town, then a swim off the rocks.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Boat from the marina"
+      },
+      {
+       "at": "12:00",
+       "what": "Swim at the Solarium"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "beach"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "id": "theatre",
+     "name": "A Greek tragedy in the Greek theatre",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "INDA season tickets",
+     "why": "The plays performed where they were written for, 2,500 years on.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "18:30",
+       "what": "Play at sunset"
+      }
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 5,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "id": "it-taormina",
+   "names": [
+    "Taormina",
+    "Mount Etna",
+    "Etna",
+    "Giardini Naxos"
+   ],
+   "country": "IT",
+   "lat": 37.85,
+   "lon": 15.28,
+   "radius_km": 30,
+   "season": "April-October; Etna's summit is snowy November-April and cold at the top all year.",
+   "sleep": "Taormina on its terrace; Giardini Naxos below for the beach.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Taormina",
+    "https://en.wikivoyage.org/wiki/Mount_Etna",
+    "https://www.parcoetna.it/"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "etna-winter",
+     "name": "Mount Etna in the snow",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Europe's highest active volcano under snow: the Silvestri craters at 1,900 m, black lava against white, the sea below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1950
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Drive or tour to Rifugio Sapienza (1.5 h)",
+       "note": "chains or a tour in snow"
+      },
+      {
+       "at": "10:30",
+       "what": "Walk round the Silvestri craters"
+      },
+      {
+       "at": "12:30",
+       "what": "Lunch at Sapienza"
+      },
+      {
+       "at": "14:30",
+       "what": "Etna winery on the way down"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "sights": [
+      "Mount Etna"
+     ]
+    },
+    {
+     "id": "etna",
+     "name": "Mount Etna's craters",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "Upper zone with an authorised guide",
+     "why": "Europe's highest active volcano: the Silvestri craters, the cable car to 2,500 m and lava fields still warm in places.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2900
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Drive or tour to Rifugio Sapienza (1.5 h)"
+      },
+      {
+       "at": "09:30",
+       "what": "Silvestri craters"
+      },
+      {
+       "at": "10:30",
+       "what": "Cable car to 2,500 m, 4x4 bus or guided walk to 2,900 m",
+       "note": "the summit only with an authorised guide"
+      },
+      {
+       "at": "13:30",
+       "what": "Lunch at Sapienza"
+      },
+      {
+       "at": "15:00",
+       "what": "Etna winery on the way down"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 1,
+      "relax": 1,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Mount Etna"
+     ]
+    },
+    {
+     "id": "town",
+     "name": "Taormina: the Greek theatre and Corso Umberto",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A Greek-Roman theatre with Etna and the sea as its stage set, and the town's balcony streets.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Ancient Theatre"
+      },
+      {
+       "at": "18:00",
+       "what": "Corso Umberto and Piazza IX Aprile at sunset"
+      },
+      {
+       "at": "20:00",
+       "what": "Dinner"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Ancient Theatre of Taormina",
+      "Greek Theatre of Taormina"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "isolabella",
+     "name": "Isola Bella and the coast below",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Cable car down to the pebble cove and the islet, then a boat to the Blue Grotto.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Cable car to Mazzarò"
+      },
+      {
+       "at": "10:30",
+       "what": "Isola Bella"
+      },
+      {
+       "at": "12:00",
+       "what": "Boat along the coast"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "id": "alcantara",
+     "name": "Alcantara gorge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Basalt columns of an old lava flow cut by an icy river.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 400
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Drive (40 min)"
+      },
+      {
+       "at": "10:00",
+       "what": "Gorge, waders to walk in the river in summer"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "it-lipari",
+   "names": [
+    "Lipari",
+    "Aeolian Islands",
+    "Vulcano",
+    "Stromboli",
+    "Salina"
+   ],
+   "country": "IT",
+   "lat": 38.47,
+   "lon": 14.95,
+   "radius_km": 40,
+   "season": "May-October; ferries and hydrofoils are few from November to March and the islands go to sleep.",
+   "sleep": "Lipari town: every boat to the other islands leaves from there.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Aeolian_Islands",
+    "https://en.wikivoyage.org/wiki/Stromboli",
+    "https://en.wikivoyage.org/wiki/Vulcano"
+   ],
+   "nights": [
+    3,
+    4,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "stromboli",
+     "name": "Stromboli at night",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The volcano that has erupted every few minutes for 2,000 years, seen at dusk from the sea or from 400 m on the authorised path.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 400
+     },
+     "steps": [
+      {
+       "at": "15:00",
+       "what": "Boat to Stromboli"
+      },
+      {
+       "at": "16:30",
+       "what": "Village and black beach"
+      },
+      {
+       "at": "18:00",
+       "what": "Guided walk to 400 m",
+       "note": "higher only with a guide when allowed"
+      },
+      {
+       "at": "20:30",
+       "what": "Boat by the Sciara del Fuoco to watch the eruptions"
+      },
+      {
+       "at": "22:30",
+       "what": "Back to Lipari"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure",
+      "boat"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Stromboli"
+     ]
+    },
+    {
+     "id": "vulcano",
+     "name": "Vulcano's crater",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up the Gran Cratere in an hour, sulphur fumaroles at the top and four islands in view.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 390
+     },
+     "steps": [
+      {
+       "at": "08:00",
+       "what": "Hydrofoil to Vulcano (10 min)"
+      },
+      {
+       "at": "08:30",
+       "what": "Climb the crater before the heat"
+      },
+      {
+       "at": "11:00",
+       "what": "Black sand beach with hot springs in the sea"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Vulcano",
+      "Monte Vulcano"
+     ]
+    },
+    {
+     "id": "salina",
+     "name": "Salina and Lipari by boat",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The green island of capers and Malvasia wine, Pollara's cliff beach, and swims in the coves of Lipari.",
+     "act": {
+      "type": "boat"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Boat tour from Lipari"
+      },
+      {
+       "at": "11:00",
+       "what": "Swim"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch in Salina"
+      },
+      {
+       "at": "16:00",
+       "what": "Pollara"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "beach"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ]
+    },
+    {
+     "id": "town",
+     "name": "Lipari castle and town",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The acropolis on its rock and the museum of the islands' 6,000 years.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "17:00",
+       "what": "Castle and archaeological museum"
+      },
+      {
+       "at": "19:00",
+       "what": "Marina Corta at dusk"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Lipari"
+     ],
+     "arrive": true
+    }
+   ]
+  },
+  {
+   "id": "it-cefalu",
+   "names": [
+    "Cefalù"
+   ],
+   "country": "IT",
+   "lat": 38.04,
+   "lon": 14.02,
+   "radius_km": 12,
+   "season": "All year; beach May-October.",
+   "sleep": "Old town under the rock.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Cefalù"
+   ],
+   "nights": [
+    1,
+    2,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "town",
+     "name": "The Norman cathedral and the old town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A Norman cathedral with a golden Christ Pantocrator, the old wash-house and the town's beach under the rock.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Cathedral"
+      },
+      {
+       "at": "17:00",
+       "what": "Lavatoio medievale and the lanes"
+      },
+      {
+       "at": "18:30",
+       "what": "Sunset on the beach"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Cefalù Cathedral"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "rocca",
+     "name": "La Rocca",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The rock over the town, with a temple of Diana and the coast below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 270
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Path up before the heat"
+      },
+      {
+       "at": "10:00",
+       "what": "Temple of Diana and castle ruins"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 1,
+      "relax": 2,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "it-matera",
+   "names": [
+    "Matera",
+    "Sassi di Matera"
+   ],
+   "country": "IT",
+   "lat": 40.67,
+   "lon": 16.6,
+   "radius_km": 15,
+   "season": "All year; spring and autumn best. Hot in July-August, cold winter evenings (3 °C).",
+   "sleep": "A cave hotel in the Sassi.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Matera",
+    "https://www.parcomurgia.it/"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "sassi",
+     "name": "The Sassi and the rock churches",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A town carved into a ravine and lived in for 9,000 years, its frescoed cave churches and a furnished cave house.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Sasso Caveoso"
+      },
+      {
+       "at": "10:00",
+       "what": "Santa Maria de Idris and San Pietro Barisano"
+      },
+      {
+       "at": "11:30",
+       "what": "Casa Grotta, a 1950s cave home"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch: cialledda and peperoni cruschi"
+      }
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "sights": [
+      "Sassi di Matera",
+      "Matera"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "murgia",
+     "name": "Across the ravine to the Murgia",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Down to the river on the rope bridge and up to the cave churches facing the town.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 400
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Path down from Sasso Caveoso"
+      },
+      {
+       "at": "17:00",
+       "what": "Murgia viewpoint"
+      },
+      {
+       "at": "19:00",
+       "what": "Back for the lit town at night"
+      }
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Murgia Materana Park"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "it-alberobello",
+   "names": [
+    "Alberobello",
+    "Valle d'Itria",
+    "Ostuni",
+    "Locorotondo",
+    "Martina Franca"
+   ],
+   "country": "IT",
+   "lat": 40.75,
+   "lon": 17.35,
+   "radius_km": 25,
+   "season": "April-October; mild winters. A car makes the valley.",
+   "sleep": "A trullo in Alberobello, or a masseria (farm) in the Valle d'Itria.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Alberobello",
+    "https://en.wikivoyage.org/wiki/Ostuni",
+    "https://en.wikivoyage.org/wiki/Locorotondo"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "trulli",
+     "name": "The trulli of Alberobello",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A town of white stone houses with cone roofs, painted with symbols.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "08:30",
+       "what": "Rione Monti before the tour buses"
+      },
+      {
+       "at": "10:00",
+       "what": "Trullo Sovrano"
+      },
+      {
+       "at": "11:00",
+       "what": "Aia Piccola"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Alberobello"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "itria",
+     "name": "Locorotondo, Cisternino and Ostuni",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "White towns on hilltops over a valley of trulli and olive trees, butcher-grills in Cisternino, and Ostuni, the white city.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Locorotondo's round old town"
+      },
+      {
+       "at": "12:30",
+       "what": "Cisternino: choose your meat, they grill it"
+      },
+      {
+       "at": "16:00",
+       "what": "Ostuni"
+      },
+      {
+       "at": "19:00",
+       "what": "Sunset over the olive groves"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "sights": [
+      "Ostuni"
+     ],
+     "needs": "car"
+    },
+    {
+     "id": "grotte",
+     "name": "Castellana caves",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "3 km of caverns ending in the white Grotta Bianca.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Guided visit"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "it-polignano",
+   "names": [
+    "Polignano a Mare",
+    "Monopoli"
+   ],
+   "country": "IT",
+   "lat": 40.99,
+   "lon": 17.22,
+   "radius_km": 15,
+   "season": "Swimming June-September; the towns are lively from Easter to October.",
+   "sleep": "Polignano's old town on the cliff.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Polignano_a_Mare",
+    "https://en.wikivoyage.org/wiki/Monopoli"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cliff",
+     "name": "Lama Monachile and the cliff town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A pebble cove between cliffs under the old town, balconies over the sea.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "16:00",
+       "what": "Lama Monachile"
+      },
+      {
+       "at": "17:30",
+       "what": "Terraces of the old town"
+      },
+      {
+       "at": "19:30",
+       "what": "Raw seafood dinner"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 5,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Polignano a Mare"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "monopoli",
+     "name": "Monopoli and the coves to the south",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A working harbour of blue boats and the little rocky coves below the town.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Old harbour"
+      },
+      {
+       "at": "11:00",
+       "what": "Cala Porta Vecchia swim"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 5,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Monopoli"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "it-lecce",
+   "names": [
+    "Lecce",
+    "Salento",
+    "Otranto",
+    "Gallipoli"
+   ],
+   "country": "IT",
+   "lat": 40.35,
+   "lon": 18.17,
+   "radius_km": 45,
+   "season": "Beaches June-September; Lecce's Baroque is lovely all year. August is crowded with Italian holidays.",
+   "sleep": "Lecce's old town; a masseria near the coast in summer.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lecce",
+    "https://en.wikivoyage.org/wiki/Salento",
+    "https://en.wikivoyage.org/wiki/Otranto"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "baroque",
+     "name": "Lecce's Baroque",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Florence of the South: honey-coloured stone carved like lace on Santa Croce and Piazza del Duomo.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "17:00",
+       "what": "Basilica di Santa Croce"
+      },
+      {
+       "at": "18:00",
+       "what": "Piazza del Duomo"
+      },
+      {
+       "at": "19:00",
+       "what": "Roman amphitheatre"
+      },
+      {
+       "at": "20:00",
+       "what": "Pasticciotto and dinner"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "sights": [
+      "Basilica of Santa Croce, Lecce",
+      "Lecce"
+     ],
+     "arrive": true
+    },
+    {
+     "id": "otranto",
+     "name": "Otranto and the coast road south",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Otranto's mosaic cathedral, the red cliffs and the Grotta della Poesia pool.",
+     "act": {
+      "type": "city"
+     },
+     "steps": [
+      {
+       "at": "09:00",
+       "what": "Grotta della Poesia"
+      },
+      {
+       "at": "11:00",
+       "what": "Otranto cathedral's tree-of-life mosaic"
+      },
+      {
+       "at": "13:00",
+       "what": "Lunch on the harbour"
+      },
+      {
+       "at": "15:00",
+       "what": "Coast road to Santa Cesarea's terraces"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "beach",
+     "name": "Salento's Caribbean beaches",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "White sand and shallow turquoise water at Punta Prosciutto or Pescoluse.",
+     "act": {
+      "type": "beach"
+     },
+     "steps": [
+      {
+       "at": "10:00",
+       "what": "Beach"
+      },
+      {
+       "at": "13:00",
+       "what": "Lido lunch"
+      },
+      {
+       "at": "18:00",
+       "what": "Gallipoli's old town at sunset"
+      }
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "needs": "car"
+    }
+   ]
+  }
+ ]
+}
