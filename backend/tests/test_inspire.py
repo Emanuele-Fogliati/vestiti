@@ -369,3 +369,13 @@ def test_italy_has_its_regions_and_etna_in_winter_is_the_snow_visit():
     # a ski week packs ski trousers and winter boots, not rain trousers and trail shoes
     names = {p["name"] for p in _wear("dolomites-7-ski", 1)["pieces"]}
     assert {"Ski trousers", "Insulated winter boots"} <= names
+
+
+def test_a_ski_week_packs_a_real_ski_jacket_and_no_expedition_layers():
+    """Manu 2026-11-16: "la giacca e i pantaloni da sci veri", as many layers as the cold asks.
+    Before, January in the Dolomites stacked a thick down jacket under a rain jacket and lined
+    trousers, leggings and rain trousers on the legs."""
+    names = {p["name"] for p in _wear("dolomites-7-ski", 1)["pieces"]}
+    assert {"Ski jacket", "Ski trousers"} <= names
+    assert not names & {"Rain jacket", "Thick down jacket", "Lined winter trousers", "Thick fleece",
+                        "Thick base layer", "Warm trousers"}
