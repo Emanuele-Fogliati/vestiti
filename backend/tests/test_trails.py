@@ -70,7 +70,8 @@ def test_activity_for_the_clothes():
     for t in trails.trails():
         a = trails.activity(t)
         ActivityIn.model_validate(a)
-        assert a["type"] == ("trek_multiday" if t.kind == "multiday" else "hiking")
+        want = "city" if t.style == "city" else "trek_multiday" if t.kind == "multiday" else "hiking"
+        assert a["type"] == want
 
 
 def test_trails_near_a_stop():

@@ -272,7 +272,7 @@ def wear(trail_id: str, month: int = Query(..., ge=1, le=12), db: Session = Depe
     days = WeatherService(db).days_for(s.lat, s.lon, base, start, end)
     stage = StageInput(index=0, stop_id=t.id, name=t.name, base_elevation_m=base, start=start,
                        end=end, activities=[trails.activity(t)], days=days, country_code=t.country)
-    conds = conditions_for_stage(stage)
+    conds = conditions_for_stage(stage, day_walk=t.kind == "day")
     reqs = requirements([stage], conds)
     cold = min(conds, key=lambda c: c.feels_like_c) if conds else None
     need = {k: r for k, r in reqs.items() if r.needed}
