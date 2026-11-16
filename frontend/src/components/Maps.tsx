@@ -11,7 +11,7 @@ const RouteMapImpl = lazy(() => import("./RouteMap"));
 const TrekMapImpl = lazy(() => import("./TrekMap"));
 const TripsMapImpl = lazy(() => import("./TripsMap"));
 
-export function HomeGlobe(props: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[] }) {
+export function HomeGlobe(props: { bare?: boolean; intro?: boolean; onReady?: () => void; mode?: "trip" | "trek"; focus?: GlobeFocus[]; glow?: number[][] }) {
   return <Suspense fallback={<section className="globe globe-loading" aria-hidden="true" />}><GlobeImpl {...props} /></Suspense>;
 }
 

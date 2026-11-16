@@ -34,6 +34,8 @@ def _card(it: inspire.Itinerary) -> dict:
     return {"slug": it.slug, "title": it.title, "countries": it.countries, "summary": it.summary,
             "days": it.total_days, "best_months": it.best_months, "highest_m": top,
             "places": [s.name for s in it.stops], "art": art.model_dump() if art else None,
+            # where its stops are: the home globe lights them up in the months the trip is good
+            "points": [[round(s.lat, 3), round(s.lon, 3)] for s in it.stops],
             # the recommended trips: where, how many weeks, and the months this route is the one for
             "destination": it.destination or None, "weeks": it.weeks, "months": it.months,
             "pace": it.pace, "level": it.level,
