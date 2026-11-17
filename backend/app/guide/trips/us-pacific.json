@@ -1,0 +1,796 @@
+{
+ "_doc": "Alaska and Hawaii (Manu, 2026-11-17): the recommended trips of the US Pacific states, written by hand like ../trips.json. Alaska has three season bands (summer May-September for the parks, December-March for skiing and the aurora, October-November and April for the aurora only); Hawaii one route per length all year. elevation/coords: where you sleep (Denali's entrance, Volcano village, Hāna town), not the park's middle.",
+ "journeys": [
+  {
+   "id": "usa-alaska",
+   "name": "Alaska",
+   "blurb": "Grizzlies and the mountain in Denali, glaciers falling into the fjords, Kennecott's mill town, the Inside Passage in summer and the northern lights in winter."
+  },
+  {
+   "id": "usa-hawaii",
+   "name": "Hawaii",
+   "blurb": "Pearl Harbor and Waikiki, sunrise on Haleakalā, the Nā Pali cliffs of Kauaʻi, manta rays off Kona and the craters of Kīlauea."
+  }
+ ],
+ "elevation": {
+  "us-anchorage": 30,
+  "us-girdwood": 40,
+  "us-seward": 10,
+  "us-homer": 15,
+  "us-talkeetna": 110,
+  "us-denali-national-park": 520,
+  "us-fairbanks": 136,
+  "us-valdez": 10,
+  "us-mccarthy": 430,
+  "us-juneau": 15,
+  "us-skagway": 10,
+  "us-honolulu": 5,
+  "x-us-kihei": 10,
+  "us-road-to-hana": 30,
+  "us-kailua-kona": 10,
+  "us-hawaii-volcanoes-national-park": 1130,
+  "us-hilo": 10,
+  "us-hanalei": 5,
+  "us-poipu-beach": 10
+ },
+ "coords": {
+  "us-denali-national-park": [
+   63.73,
+   -148.9
+  ],
+  "us-hawaii-volcanoes-national-park": [
+   19.43,
+   -155.235
+  ],
+  "us-road-to-hana": [
+   20.757,
+   -155.99
+  ]
+ },
+ "trips": [
+  {
+   "id": "usa-alaska-7",
+   "region": "alaska",
+   "title": "Alaska in a week: Denali and Kenai Fjords",
+   "pace": "intense",
+   "level": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    6,
+    7,
+    8
+   ],
+   "why": "Anchorage, the bus into Denali's tundra for grizzlies and the mountain, a flight from Talkeetna, then a glacier cruise in Kenai Fjords from Seward.",
+   "note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 1
+    },
+    {
+     "place": "us-denali-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 1
+    },
+    {
+     "place": "us-seward",
+     "nights": 2
+    },
+    {
+     "place": "us-anchorage",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-14",
+   "region": "alaska",
+   "title": "Two weeks of Alaska: Denali, Fairbanks, Valdez and Kenai Fjords",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    6,
+    7,
+    8
+   ],
+   "why": "Talkeetna and Denali, Fairbanks, the Richardson Highway past Thompson Pass to Valdez's Columbia Glacier, then Seward's fjords and back up Turnagain Arm.",
+   "note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 2
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 1
+    },
+    {
+     "place": "us-denali-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 1
+    },
+    {
+     "place": "us-valdez",
+     "nights": 2
+    },
+    {
+     "place": "us-seward",
+     "nights": 3
+    },
+    {
+     "place": "us-anchorage",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-21",
+   "region": "alaska",
+   "title": "Three weeks round Alaska: Denali, Kennecott and the Kenai",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    6,
+    7,
+    8
+   ],
+   "why": "The great loop: Talkeetna, Denali and Fairbanks, the gravel road to the Kennecott mill and Root Glacier, Valdez, Kenai Fjords, Homer's bears and Alyeska.",
+   "note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 2
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 2
+    },
+    {
+     "place": "us-denali-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 1
+    },
+    {
+     "place": "us-mccarthy",
+     "nights": 3
+    },
+    {
+     "place": "us-valdez",
+     "nights": 2
+    },
+    {
+     "place": "us-seward",
+     "nights": 3
+    },
+    {
+     "place": "us-homer",
+     "nights": 3
+    },
+    {
+     "place": "us-girdwood",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-28",
+   "region": "alaska",
+   "title": "Alaska in four weeks, from Denali to the Inside Passage",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    6,
+    7,
+    8
+   ],
+   "why": "The whole loop from Denali and Kennecott to Kenai Fjords and Homer, then a flight to Juneau's whales and glacier and the gold rush railway of Skagway.",
+   "note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 2
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 2
+    },
+    {
+     "place": "us-denali-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 2
+    },
+    {
+     "place": "us-mccarthy",
+     "nights": 3
+    },
+    {
+     "place": "us-valdez",
+     "nights": 2
+    },
+    {
+     "place": "us-seward",
+     "nights": 3
+    },
+    {
+     "place": "us-homer",
+     "nights": 3
+    },
+    {
+     "place": "us-girdwood",
+     "nights": 2
+    },
+    {
+     "place": "us-juneau",
+     "nights": 3
+    },
+    {
+     "place": "us-skagway",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-7-winter",
+   "region": "alaska",
+   "title": "Alaska's winter in a week: Alyeska and the Fairbanks aurora",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    2,
+    3
+   ],
+   "why": "Anchorage, two days of skiing at Alyeska above Turnagain Arm, then three nights in Fairbanks under the auroral oval, with Chena Hot Springs.",
+   "note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 2
+    },
+    {
+     "place": "us-girdwood",
+     "nights": 2
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-14-winter",
+   "region": "alaska",
+   "title": "Two winter weeks: ski, Talkeetna and the northern lights",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    2,
+    3
+   ],
+   "why": "Anchorage and its sled dog races, skiing at Alyeska, Talkeetna and a flight round Denali, then six Fairbanks nights for the aurora, dog sledding and hot springs.",
+   "note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 3
+    },
+    {
+     "place": "us-girdwood",
+     "nights": 3
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 2
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 6
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-21-winter",
+   "region": "alaska",
+   "title": "Three weeks of Alaskan winter",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    2,
+    3
+   ],
+   "why": "Anchorage, the eagles of Homer Spit, a long ski stay at Alyeska, Talkeetna under Denali, then eight nights in Fairbanks for many chances at the aurora.",
+   "note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 3
+    },
+    {
+     "place": "us-homer",
+     "nights": 3
+    },
+    {
+     "place": "us-girdwood",
+     "nights": 4
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 3
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 8
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-28-winter",
+   "region": "alaska",
+   "title": "Four slow weeks of Alaskan winter",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    2,
+    3
+   ],
+   "why": "A slow winter: Anchorage's festivals, Homer, a week of skiing and spa at Alyeska, Talkeetna, and nine Fairbanks nights for the aurora, dogs and ice art.",
+   "note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 5
+    },
+    {
+     "place": "us-homer",
+     "nights": 4
+    },
+    {
+     "place": "us-girdwood",
+     "nights": 6
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 4
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 9
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-7-aurora",
+   "region": "alaska",
+   "title": "Northern lights in a week: Anchorage, Talkeetna and Fairbanks",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best": [],
+   "why": "Anchorage's museums and Turnagain Arm, Talkeetna and a flight round Denali when it is clear, then Fairbanks for the aurora and Chena Hot Springs.",
+   "note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 2
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 2
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-14-aurora",
+   "region": "alaska",
+   "title": "Two weeks of Alaska out of season",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best": [],
+   "why": "Anchorage, Exit Glacier and the SeaLife Center at Seward, the quiet Homer Spit, Talkeetna, then Fairbanks for the northern lights.",
+   "note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 3
+    },
+    {
+     "place": "us-seward",
+     "nights": 2
+    },
+    {
+     "place": "us-homer",
+     "nights": 3
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 2
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-21-aurora",
+   "region": "alaska",
+   "title": "Three weeks of Alaska between the seasons",
+   "pace": "relaxed",
+   "level": 1,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best": [],
+   "why": "The Kenai peninsula without the crowds from Seward and Homer, Talkeetna, then a week in Fairbanks for the aurora, hot springs and the Museum of the North.",
+   "note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 4
+    },
+    {
+     "place": "us-seward",
+     "nights": 3
+    },
+    {
+     "place": "us-homer",
+     "nights": 4
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 3
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 7
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-alaska-28-aurora",
+   "region": "alaska",
+   "title": "Four quiet weeks of Alaska",
+   "pace": "relaxed",
+   "level": 1,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best": [],
+   "why": "A slow month: Anchorage, the spa and forest trails of Girdwood, Seward and Homer, Talkeetna, then eight Fairbanks nights for the northern lights.",
+   "note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "nights": 5
+    },
+    {
+     "place": "us-girdwood",
+     "nights": 3
+    },
+    {
+     "place": "us-seward",
+     "nights": 4
+    },
+    {
+     "place": "us-homer",
+     "nights": 5
+    },
+    {
+     "place": "us-talkeetna",
+     "nights": 3
+    },
+    {
+     "place": "us-fairbanks",
+     "nights": 8
+    }
+   ],
+   "journey": "usa-alaska"
+  },
+  {
+   "id": "usa-hawaii-7",
+   "region": "hawaii",
+   "title": "Hawaii in a week: Oahu and Maui",
+   "pace": "relaxed",
+   "level": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Pearl Harbor, Diamond Head and the North Shore on Oahu, then a flight to Maui for sunrise on Haleakalā, Molokini's reef and the south coast beaches.",
+   "note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "nights": 3
+    },
+    {
+     "place": "x-us-kihei",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-hawaii"
+  },
+  {
+   "id": "usa-hawaii-14",
+   "region": "hawaii",
+   "title": "Two weeks on three islands: Oahu, Maui and the Big Island",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Oahu, Maui with Haleakalā and a night in Hāna, then the Big Island: manta rays and Kealakekua Bay from Kona, and Kīlauea's craters from Volcano village.",
+   "note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "nights": 4
+    },
+    {
+     "place": "x-us-kihei",
+     "nights": 3
+    },
+    {
+     "place": "us-road-to-hana",
+     "nights": 1
+    },
+    {
+     "place": "us-kailua-kona",
+     "nights": 3
+    },
+    {
+     "place": "us-hawaii-volcanoes-national-park",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-hawaii"
+  },
+  {
+   "id": "usa-hawaii-21",
+   "region": "hawaii",
+   "title": "Three weeks of Hawaii: four islands",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Oahu, then Kauaʻi's Nā Pali cliffs and Waimea Canyon from Hanalei and Poʻipū, Maui and the Road to Hāna, and the Big Island's Kona coast and volcano.",
+   "note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "nights": 4
+    },
+    {
+     "place": "us-hanalei",
+     "nights": 3
+    },
+    {
+     "place": "us-poipu-beach",
+     "nights": 3
+    },
+    {
+     "place": "x-us-kihei",
+     "nights": 4
+    },
+    {
+     "place": "us-road-to-hana",
+     "nights": 1
+    },
+    {
+     "place": "us-kailua-kona",
+     "nights": 3
+    },
+    {
+     "place": "us-hawaii-volcanoes-national-park",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-hawaii"
+  },
+  {
+   "id": "usa-hawaii-28",
+   "region": "hawaii",
+   "title": "Hawaii in four weeks, island by island",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Four islands slowly: Oahu, Kauaʻi's north and south shores, Maui and Hāna, then the Big Island all round from Kona and Volcano to Hilo's waterfalls.",
+   "note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "nights": 5
+    },
+    {
+     "place": "us-hanalei",
+     "nights": 3
+    },
+    {
+     "place": "us-poipu-beach",
+     "nights": 4
+    },
+    {
+     "place": "x-us-kihei",
+     "nights": 5
+    },
+    {
+     "place": "us-road-to-hana",
+     "nights": 1
+    },
+    {
+     "place": "us-kailua-kona",
+     "nights": 4
+    },
+    {
+     "place": "us-hawaii-volcanoes-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-hilo",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-hawaii"
+  }
+ ]
+}
