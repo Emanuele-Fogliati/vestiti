@@ -1,0 +1,15 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="250" cy="28" r="11" fill="var(--il-sun)"/>
+<path d="M0 130V100Q60 96 120 98Q200 96 300 98V130Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-us-willamette-valley-hood"><path d="M50 102L68 90L82 78L92 68L98 58L102 50L105 46L108 48L112 56L118 66L128 78L142 90L160 102Z"/></clipPath><clipPath id="il-us-willamette-valley-a"><path d="M0 160V116Q110 92 300 128V160Z"/></clipPath><clipPath id="il-us-willamette-valley-b"><path d="M140 200V150Q214 116 300 130V200Z"/></clipPath><clipPath id="il-us-willamette-valley-c"><path d="M0 200V158Q140 140 300 164V200Z"/></clipPath></defs>
+<path d="M50 102L68 90L82 78L92 68L98 58L102 50L105 46L108 48L112 56L118 66L128 78L142 90L160 102Z" fill="var(--il-mid)"/>
+<path clip-path="url(#il-us-willamette-valley-hood)" d="M0 0H300V86L142 90L132 80L126 86L118 76L112 88L106 74L100 86L94 76L86 84L78 80L66 90L0 88Z" fill="var(--il-ice)"/>
+<path d="M180 140V104L186 100L190 92L194 98L198 88L202 96L208 86L212 94L218 84L222 92L228 80L232 90L238 82L242 88L248 76L252 86L258 78L262 84L268 74L272 82L278 72L284 80L290 70L296 78L300 74V140Z" fill="var(--il-obj)"/>
+<path d="M0 160V116Q110 92 300 128V160Z" fill="var(--il-leaf)"/>
+<path clip-path="url(#il-us-willamette-valley-a)" d="M0 120.5Q110 96.5 300 132.5M0 125Q110 101 300 137M0 129.5Q110 105.5 300 141.5M0 134Q110 110 300 146M0 138.5Q110 114.5 300 150.5M0 143Q110 119 300 155M0 147.5Q110 123.5 300 159.5" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M162 110L166 98L164 98L169 86L174 98L172 98L176 110ZM176 112L180 98L178 98L183 84L188 98L186 98L190 112ZM190 114L193 104L192 104L196 96L200 104L199 104L202 114Z" fill="var(--il-obj)"/>
+<path d="M0 162V136Q50 128 100 138Q130 144 150 156V162Z" fill="var(--il-acc)"/>
+<path d="M140 200V150Q214 116 300 130V200Z" fill="var(--il-leaf)"/>
+<path clip-path="url(#il-us-willamette-valley-b)" d="M140 155Q214 121 300 135M140 160Q214 126 300 140M140 165Q214 131 300 145M140 170Q214 136 300 150M140 175Q214 141 300 155M140 180Q214 146 300 160M140 185Q214 151 300 165M140 190Q214 156 300 170" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M0 200V158Q140 140 300 164V200Z" fill="var(--il-leaf)"/>
+<path clip-path="url(#il-us-willamette-valley-c)" d="M-10 164Q140 146 310 170M-10 170Q140 152 310 176M-10 176Q140 158 310 182M-10 182Q140 164 310 188M-10 188Q140 170 310 194M-10 194Q140 176 310 200M-10 200Q140 182 310 206M-10 206Q140 188 310 212" stroke="var(--il-near)" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.35"/>
