@@ -1,0 +1,26 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="116" cy="26" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-us-millennium-park-bean"><path d="M80 170C62 154 64 120 100 108C116 102 134 98 150 98C166 98 184 102 200 108C236 120 238 154 220 170C214 176 208 178 202 178H98C92 178 86 176 80 170Z"/></clipPath></defs>
+<path d="M18 178V60H26V52H58V60H64V178Z" fill="var(--il-obj)"/>
+<path d="M24 70H58M24 80H58M24 90H58M24 100H58M24 110H58M24 120H58M24 130H58M24 140H58M30 62V150M38 62V150M46 62V150M54 62V150" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.35"/>
+<path d="M66 178V46H72V36H100V46H106V178Z" fill="var(--il-far)"/>
+<path d="M74 44V120M82 44V120M90 44V120M98 44V120" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.4"/>
+<path d="M128 178V78L144 48L172 72V178Z" fill="var(--il-ice)"/>
+<path d="M128 78L144 48L172 72L152 88Z" fill="var(--il-far)"/>
+<path d="M144 48V86" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.4"/>
+<path d="M130 94H170M130 100H170M130 106H170" stroke="var(--il-near)" stroke-width="1.6" fill="none" opacity="0.5"/>
+<path d="M178 178V70H182V60H186V54H192V60H196V70H200V178Z" fill="var(--il-water)"/>
+<path d="M189 54V34" stroke="var(--il-near)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+<path d="M200 178V80H226V178Z" fill="var(--il-acc)"/>
+<path d="M234 178V44H284V178Z" fill="var(--il-acc)"/>
+<path d="M240 52H278M240 62H278M240 72H278M240 82H278M240 92H278M240 102H278M240 112H278M246 48V120M254 48V120M262 48V120M270 48V120" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.35"/>
+<path d="M0 178V156Q8 144 20 150Q30 140 42 148Q56 142 66 152Q74 158 74 178ZM226 178V154Q236 142 248 150Q258 140 270 148Q284 140 292 150Q300 152 300 158V178Z" fill="var(--il-leaf)"/>
+<path d="M80 170C62 154 64 120 100 108C116 102 134 98 150 98C166 98 184 102 200 108C236 120 238 154 220 170C214 176 208 178 202 178H98C92 178 86 176 80 170Z" fill="var(--il-mid)"/>
+<g clip-path="url(#il-us-millennium-park-bean)">
+<path d="M62 146H62V142H69H69V139H76H76V138H83H83V134H90H90V135H97H97V130H104H104V132H111H111V126H118H118V129H125H125V127H132H132V121H139H139V127H146H146V123H154H154V129H161H161V125H168H168V121H175H175V129H182H182V126H189H189V132H196H196V129H203H203V133H210H210V136H217H217V134H224H224V140H231H231V142H238V146Q150 136 62 146Z" fill="var(--il-far)"/>
+<path d="M60 148Q150 132 240 148V200H60Z" fill="var(--il-obj)"/>
+</g>
+<path d="M112 178C114 164 128 156 150 156C172 156 186 164 188 178Z" fill="var(--il-near)"/>
+<path d="M98 120Q114 108 142 106Q118 114 104 128Z" fill="var(--il-ice)"/>
+<path d="M0 200V176H300V200Z" fill="var(--il-obj)"/>
+<path d="M0 186H300" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.3"/>
