@@ -1,0 +1,3849 @@
+{
+ "_doc": "Alaska and Hawaii, written by hand for the recommended trips (Manu, 2026-11-17): the zones you sleep in, things in rank order with months for the seasonal ones. Sources per area (Wikivoyage, Wikipedia, NPS and Hawaii State Parks); scores on docs/RANKING.md.",
+ "areas": [
+  {
+   "id": "us-anchorage",
+   "names": [
+    "Anchorage"
+   ],
+   "country": "US",
+   "lat": 61.218,
+   "lon": -149.9,
+   "radius_km": 25,
+   "season": "Mid-May to mid-September: long days (about 19 hours of light in late June), 15-20 °C. December to February: 5-6 hours of light, -10 to -5 °C, snow on the ground; Fur Rendezvous in late February and the Iditarod start on the first Saturday of March.",
+   "sleep": "Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Anchorage",
+    "https://en.wikipedia.org/wiki/Tony_Knowles_Coastal_Trail",
+    "https://en.wikipedia.org/wiki/Alaska_Native_Heritage_Center",
+    "https://en.wikipedia.org/wiki/Anchorage_Museum",
+    "https://en.wikipedia.org/wiki/Flattop_Mountain_(Alaska)",
+    "https://en.wikipedia.org/wiki/Turnagain_Arm",
+    "https://en.wikipedia.org/wiki/Fur_Rendezvous_Festival"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "turnagain",
+     "name": "Turnagain Arm on the Seward Highway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The road south of Anchorage runs between the Chugach peaks and the tidal flats of Turnagain Arm: Beluga Point for the white whales (July-August), Dall sheep on the cliffs near Windy Point, and the bore tide on big tides.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Turnagain Arm"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "native-heritage",
+     "name": "Alaska Native Heritage Center",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The cultures of Alaska's eleven Native groups in one place: dancers and storytellers, and full-size village houses of each people around a lake.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "coastal-trail",
+     "name": "Tony Knowles Coastal Trail",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The paved trail along Cook Inlet from downtown to Kincaid Park, with Denali on the horizon on clear days and moose on the way; on foot or by rented bike, a groomed ski trail in winter.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "arrive": true,
+     "trail": "us-osm-16693695",
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "museum",
+     "name": "Anchorage Museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Alaska's largest museum: the Smithsonian's Arctic Studies Center with over 600 Native objects, and Alaska's history from the gold rush to the pipeline.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "flattop",
+     "name": "Flattop Mountain",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The most climbed peak in Alaska, 20 minutes from downtown: a steep last scramble to the flat top at 1,070 m, with Anchorage, Cook Inlet and on clear days Denali below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1070
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+",
+     "needs": "car"
+    },
+    {
+     "id": "fur-rondy",
+     "name": "Fur Rendezvous and the Iditarod start",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Late February: Anchorage's winter festival with sled dog races through downtown; the first Saturday of March the Iditarod mushers set off down 4th Avenue for Nome.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-girdwood",
+   "names": [
+    "Girdwood",
+    "Alyeska",
+    "Portage Glacier"
+   ],
+   "country": "US",
+   "lat": 60.961,
+   "lon": -149.137,
+   "radius_km": 20,
+   "season": "Ski season at Alyeska about December to mid-April, with deep coastal snow; summer June to September for the tram, the rainforest trails and the glaciers of Portage valley.",
+   "sleep": "The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Girdwood",
+    "https://en.wikipedia.org/wiki/Alyeska_Resort",
+    "https://en.wikipedia.org/wiki/Portage_Glacier",
+    "https://en.wikipedia.org/wiki/Alaska_Wildlife_Conservation_Center"
+   ],
+   "nights": [
+    1,
+    2,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ski",
+     "name": "Skiing at Alyeska",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Lift tickets and rentals online for a better price",
+     "why": "Alaska's largest ski area, on a mountain that drops straight to the sea: over 600 inches (15 m) of snow a year and views of Turnagain Arm from the lifts.",
+     "act": {
+      "type": "ski",
+      "max_altitude_m": 840
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "tram",
+     "name": "Alyeska Aerial Tram",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The cable car climbs to about 700 m in a few minutes: seven hanging glaciers, Turnagain Arm and the Chugach peaks from the top.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      12,
+      1,
+      2,
+      3
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "portage",
+     "name": "Portage Glacier and the wildlife center",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up Portage valley: bears, moose, musk oxen and wood bison in the big pens of the Alaska Wildlife Conservation Center, then the boat to the face of Portage Glacier (summer) or the short Byron Glacier trail.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Portage Glacier"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "winner-creek",
+     "name": "Winner Creek Trail",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A boardwalk and forest path through the coastal rainforest behind the hotel to the gorge of Winner Creek; snowshoes in winter.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 150
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "us-usfs-5109-008121",
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "spa",
+     "name": "Alyeska Nordic Spa",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book a time slot online",
+     "why": "Outdoor hot pools, saunas and cold plunges in the spruce forest at the foot of the mountain, under the snow in winter.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$$",
+     "kids": "no"
+    }
+   ]
+  },
+  {
+   "id": "us-seward",
+   "names": [
+    "Seward",
+    "Kenai Fjords National Park",
+    "Exit Glacier"
+   ],
+   "country": "US",
+   "lat": 60.104,
+   "lon": -149.442,
+   "radius_km": 25,
+   "season": "The fjord cruises to the tidewater glaciers run about mid-May to mid-September (shorter Resurrection Bay trips from March); the Harding Icefield Trail is under snow until about July. In winter the Exit Glacier road is closed to cars and the town is quiet.",
+   "sleep": "The small boat harbor, where the cruises leave, or downtown by the SeaLife Center.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Seward",
+    "https://en.wikivoyage.org/wiki/Kenai_Fjords_National_Park",
+    "https://en.wikipedia.org/wiki/Kenai_Fjords_National_Park",
+    "https://en.wikipedia.org/wiki/Exit_Glacier",
+    "https://en.wikipedia.org/wiki/Alaska_SeaLife_Center",
+    "https://en.wikipedia.org/wiki/Harding_Icefield"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "fjords-cruise",
+     "name": "Kenai Fjords cruise to a tidewater glacier",
+     "hours": "6-9 h",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book the full-day glacier cruise ahead in July",
+     "why": "The boats go out of Resurrection Bay to Aialik or Northwestern Glacier, where ice falls into the sea: humpbacks and orcas, sea lions, puffins and sea otters on the way.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Kenai Fjords National Park"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "exit-glacier",
+     "name": "Exit Glacier",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The only part of Kenai Fjords you can drive to: a short walk to the glacier's edge, past signs that mark where the ice stood in 1815, 1917 and 2010.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 150
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Exit Glacier"
+     ],
+     "arrive": true,
+     "trail": "us-nps-kefj-exit-glacier-paved-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "harding",
+     "name": "Harding Icefield Trail",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Exit Glacier up through forest and meadows to the edge of the Harding Icefield, 1,000 m of climb to a sea of ice 1,800 km² wide.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1160
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "trail": "us-nps-kefj-harding-icefield-trail",
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+",
+     "needs": "car"
+    },
+    {
+     "id": "sealife",
+     "name": "Alaska SeaLife Center",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The state's aquarium and marine rescue center: Steller sea lions, harbor seals, puffins and octopus behind glass, open all year.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kayak",
+     "name": "Sea kayak in Resurrection Bay",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "Book a guided trip",
+     "why": "Guided paddles along the cliffs and coves of the bay to see sea otters and seabirds close; the full day goes by water taxi to Aialik Bay's glaciers.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "us-homer",
+   "names": [
+    "Homer",
+    "Homer Spit"
+   ],
+   "country": "US",
+   "lat": 59.643,
+   "lon": -151.548,
+   "radius_km": 25,
+   "season": "Halibut charters, water taxis across Kachemak Bay and bear-viewing flights run about May to September; the bears of the Lake Clark coast are best June to August. Winter is mild for Alaska (-5 to 0 °C) and quiet, with bald eagles on the Spit.",
+   "sleep": "The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Homer",
+    "https://en.wikipedia.org/wiki/Homer_Spit",
+    "https://en.wikipedia.org/wiki/Kachemak_Bay_State_Park",
+    "https://en.wikipedia.org/wiki/Lake_Clark_National_Park_and_Preserve",
+    "https://en.wikipedia.org/wiki/Pratt_Museum"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "bears",
+     "name": "Bear-viewing flight to Lake Clark or Katmai",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book months ahead; flights wait for the weather",
+     "why": "Floatplanes and wheel planes fly across Cook Inlet to land on the beaches and meadows where brown bears dig clams and graze sedge, watched on foot with a guide.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "kachemak",
+     "name": "Water taxi to Kachemak Bay State Park",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "Book the water taxi",
+     "why": "Across the bay by boat to the trail to Grewingk Glacier's lake with icebergs, a few hours on foot through forest; seals and sea otters on the crossing.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 100
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "spit",
+     "name": "Homer Spit",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A 7 km gravel tongue into Kachemak Bay with the harbour, fish shacks and the Salty Dawg Saloon; bald eagles all year and the glaciers across the water.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "food",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "halibut",
+     "name": "Halibut fishing charter",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book a charter",
+     "why": "Homer calls itself the halibut fishing capital of the world: a day on a charter boat in Cook Inlet, the catch cleaned on the dock.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    },
+    {
+     "id": "islands-ocean",
+     "name": "Islands and Ocean Visitor Center and Pratt Museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The seabird cliffs of the Alaska Maritime National Wildlife Refuge explained, then the Pratt Museum on Kachemak Bay's people and nature.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-talkeetna",
+   "names": [
+    "Talkeetna"
+   ],
+   "country": "US",
+   "lat": 62.323,
+   "lon": -150.109,
+   "radius_km": 20,
+   "season": "Summer May to September is when the town is busy and Denali climbers fly from here. The flights around Denali run in winter too, on clear days; the Aurora Winter Train stops here on its weekend runs.",
+   "sleep": "The old town on Main Street, a few blocks of log cabins by the river.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Talkeetna",
+    "https://en.wikipedia.org/wiki/Talkeetna,_Alaska",
+    "https://en.wikipedia.org/wiki/Ruth_Glacier",
+    "https://en.wikipedia.org/wiki/Alaska_Railroad"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "flightseeing",
+     "name": "Flight around Denali with a glacier landing",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book ahead; flights go when the mountain is clear",
+     "why": "Small ski planes fly into the Great Gorge of the Ruth Glacier and around North America's highest peak; in good weather they land on the snow at about 1,800 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1800
+     },
+     "sights": [
+      "Denali National Park"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "main-street",
+     "name": "Main Street and the riverbank view",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The historic district of log buildings, roadhouse and climbers' memorial, then the path to the river where the Susitna, Chulitna and Talkeetna meet under Denali.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "jetboat",
+     "name": "Jet boat or float trip on the rivers",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book with a local outfitter",
+     "why": "Up the Talkeetna River canyon by jet boat, or down the braided Susitna on a raft, with moose and eagles on the gravel bars.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "aurora",
+     "name": "Northern lights out of town",
+     "hours": "2-3 h at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Away from the few lights of town, the dark sky over the river gets the aurora on clear nights from September to April.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-denali",
+   "names": [
+    "Denali National Park",
+    "Denali",
+    "Healy"
+   ],
+   "country": "US",
+   "lat": 63.73,
+   "lon": -148.9,
+   "radius_km": 30,
+   "season": "The park buses run about 20 May to mid-September. Since 2021 a landslide at Pretty Rocks (mile 45) closes the road beyond East Fork (mile 43) while a bridge is built, planned for 2026; check the NPS page. Snow can fall in any month above the valley.",
+   "sleep": "The hotels at the park entrance (Glitter Gulch) or in Healy, 15 km north.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Denali_National_Park",
+    "https://en.wikipedia.org/wiki/Denali_National_Park_and_Preserve",
+    "https://www.nps.gov/dena/index.htm",
+    "https://en.wikipedia.org/wiki/Nenana_River"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "bus",
+     "name": "Park bus into Denali",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book the bus seat ahead (reservedenali.com)",
+     "why": "Private cars stop at mile 15: the green transit buses and the tour buses go on into the tundra and the Alaska Range, stopping for grizzlies, caribou, Dall sheep and moose; Denali itself shows on about one day in three.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1100
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Denali National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "view",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "healy-overlook",
+     "name": "Mount Healy Overlook Trail",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From the visitor center up 520 m through spruce and tundra to a rock outcrop over the Nenana valley and the Alaska Range.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1000
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "us-goal-6416607257",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "kennels",
+     "name": "The park's sled dog kennels",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The only sled dogs in a US national park: the rangers' huskies, who patrol Denali in winter, and a demonstration of a dog team in summer.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "savage-river",
+     "name": "Savage River Loop and Horseshoe Lake",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Two easy walks: along the Savage River at mile 15, the end of the road for cars, and down to the beaver ponds of Horseshoe Lake by the entrance.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 820
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "arrive": true,
+     "trail": "us-nps-dena-horseshoe-lake-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "rafting",
+     "name": "Rafting the Nenana River canyon",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Book with an outfitter at the park entrance",
+     "why": "Whitewater through the canyon by the park entrance in dry suits, or a calmer float trip upstream for those who want less.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "boat"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "us-fairbanks",
+   "names": [
+    "Fairbanks",
+    "Chena Hot Springs",
+    "North Pole"
+   ],
+   "country": "US",
+   "lat": 64.838,
+   "lon": -147.716,
+   "radius_km": 30,
+   "season": "Aurora season about late August to mid-April; December and January are dark and very cold (-25 °C and lower), February and March are colder than Europe's winter but brighter, with the ice art championships. Summer is warm (20-25 °C) under the midnight sun.",
+   "sleep": "Downtown by the Chena River, or a lodge out of town with dark skies for the aurora.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Fairbanks",
+    "https://en.wikipedia.org/wiki/Fairbanks,_Alaska",
+    "https://en.wikipedia.org/wiki/Chena_Hot_Springs",
+    "https://en.wikipedia.org/wiki/University_of_Alaska_Museum_of_the_North",
+    "https://en.wikipedia.org/wiki/World_Ice_Art_Championships",
+    "https://en.wikipedia.org/wiki/Trans-Alaska_Pipeline_System"
+   ],
+   "nights": [
+    2,
+    3,
+    8
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "aurora",
+     "name": "Northern lights night",
+     "hours": "4-6 h at night",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book a guided aurora night or a lodge out of town",
+     "why": "Fairbanks sits under the auroral oval: on a clear night from late August to mid-April the lights are likely; a guided night out drives to a dark hill or a heated cabin.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      9,
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "chena",
+     "name": "Chena Hot Springs",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "100 km east of town: an outdoor rock pool of natural hot water, the Aurora Ice Museum carved from ice all year, and dark skies for the aurora at night.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "museum-north",
+     "name": "University of Alaska Museum of the North",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Alaska's natural and Native history under one wave-shaped roof: a mummified steppe bison, gold, Native art and a sound-and-light room that plays the aurora.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "dogs",
+     "name": "Dog sledding",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book with a kennel",
+     "why": "Mushing is Fairbanks' winter sport: kennels outside town take you on the sled or let you drive your own team on forest trails.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 2,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "culture"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ice-art",
+     "name": "World Ice Art Championships",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "From late February into March carvers from around the world cut sculptures from blocks of the local ice, lit in colour at night.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "riverboat",
+     "name": "Riverboat Discovery",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A sternwheeler down the Chena and Tanana rivers: a bush pilot's take-off, a sled dog kennel on the bank and an Athabascan village.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "pipeline",
+     "name": "Trans-Alaska Pipeline viewpoint",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "North of town the 1,300 km pipeline from Prudhoe Bay runs above ground on its heat-shedding legs, with signs on how it crosses the permafrost.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-valdez",
+   "names": [
+    "Valdez",
+    "Columbia Glacier",
+    "Prince William Sound"
+   ],
+   "country": "US",
+   "lat": 61.131,
+   "lon": -146.348,
+   "radius_km": 40,
+   "season": "Glacier cruises about mid-May to mid-September; salmon run up to the hatchery in July and August, and bears come for them. The town gets some of the heaviest snow of any in the US (about 7 m a year).",
+   "sleep": "The small boat harbour, where the cruises leave.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Valdez",
+    "https://en.wikipedia.org/wiki/Valdez,_Alaska",
+    "https://en.wikipedia.org/wiki/Columbia_Glacier_(Alaska)",
+    "https://en.wikipedia.org/wiki/Worthington_Glacier",
+    "https://en.wikipedia.org/wiki/Keystone_Canyon"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "columbia",
+     "name": "Columbia Glacier cruise",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book the cruise",
+     "why": "Through Prince William Sound to the ice floes in front of Columbia Glacier, one of the fastest-moving glaciers in the world; sea otters, Steller sea lions and often humpbacks.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Columbia Glacier",
+      "Prince William Sound"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "thompson",
+     "name": "Keystone Canyon, Thompson Pass and Worthington Glacier",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The Richardson Highway climbs past Bridal Veil and Horsetail Falls in Keystone Canyon to Thompson Pass, where a short trail reaches the ice of Worthington Glacier.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 820
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "hatchery",
+     "name": "Salmon at Solomon Gulch",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Across the bay, thousands of pink and silver salmon crowd the fish ladder of the hatchery; black bears, seals and eagles come to fish.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      7,
+      8
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "kayak",
+     "name": "Kayak on Valdez Glacier lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "Book a guided trip",
+     "why": "Guided paddles among icebergs on the lake in front of Valdez Glacier, a few minutes from town.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    },
+    {
+     "id": "museum",
+     "name": "Valdez Museum",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The gold rush trail over the glacier, the 1964 earthquake that destroyed the old town, the pipeline terminal and the Exxon Valdez spill.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-mccarthy",
+   "names": [
+    "McCarthy",
+    "Kennecott",
+    "Wrangell-St. Elias National Park"
+   ],
+   "country": "US",
+   "lat": 61.433,
+   "lon": -142.922,
+   "radius_km": 20,
+   "season": "Late May to mid-September, when the lodges, the shuttle from the footbridge and the guided trips run. The McCarthy Road is 95 km of gravel from Chitina; the town is reached on foot over a footbridge.",
+   "sleep": "McCarthy or the lodges at Kennecott, 7 km up the road by shuttle.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/McCarthy",
+    "https://en.wikivoyage.org/wiki/Wrangell-St._Elias_National_Park_and_Preserve",
+    "https://en.wikipedia.org/wiki/Kennecott,_Alaska",
+    "https://en.wikipedia.org/wiki/Root_Glacier",
+    "https://en.wikipedia.org/wiki/Wrangell%E2%80%93St._Elias_National_Park_and_Preserve"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "mill",
+     "name": "Kennecott mill town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book the mill tour",
+     "why": "The red wooden buildings of a copper mine abandoned in 1938, a National Historic Landmark in the largest US national park; the guided tour climbs inside the 14-storey concentration mill.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Kennecott"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "root-glacier",
+     "name": "Root Glacier walk",
+     "hours": "3-6 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "Guided ice walk with crampons",
+     "why": "From Kennecott a trail leads onto the ice of Root Glacier; with a guide and crampons you walk among blue pools, moulins and ice canyons.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 600,
+      "glacier": true
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Wrangell-St. Elias National Park"
+     ],
+     "trail": "us-nps-wrst-root-glacier-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "adventure",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "flight",
+     "name": "Flight over the Wrangell and St. Elias mountains",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book with the McCarthy air service",
+     "why": "Bush planes from McCarthy's strip fly over four mountain ranges and the Bagley icefield, the largest wilderness of US parks.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "bonanza",
+     "name": "Bonanza Mine Trail",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Steeply up an old mine road from Kennecott to the tramway terminal of the Bonanza mine at about 1,800 m, 1,100 m of climb, over the glaciers.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1830
+     },
+     "months": [
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "no"
+    }
+   ]
+  },
+  {
+   "id": "us-juneau",
+   "names": [
+    "Juneau",
+    "Mendenhall Glacier"
+   ],
+   "country": "US",
+   "lat": 58.302,
+   "lon": -134.42,
+   "radius_km": 30,
+   "season": "May to September: humpback whales feed in the channels, the tram and the fjord cruises run; it rains often in any month (Juneau gets over 1,500 mm a year). No road reaches Juneau: fly or take the ferry.",
+   "sleep": "Downtown, between the cruise docks and the Capitol.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Juneau",
+    "https://en.wikipedia.org/wiki/Mendenhall_Glacier",
+    "https://en.wikipedia.org/wiki/Tracy_Arm",
+    "https://en.wikipedia.org/wiki/Mount_Roberts_Tramway",
+    "https://en.wikipedia.org/wiki/Juneau,_Alaska"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "whales",
+     "name": "Whale watching from Auke Bay",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book a small boat",
+     "why": "Humpbacks feed in the channels around Juneau all summer, sometimes bubble-net fishing together; orcas and sea lions too.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "mendenhall",
+     "name": "Mendenhall Glacier and Nugget Falls",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A glacier 20 minutes from the capital: the visitor center, then the path along the lake to the falls beside the ice.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "arrive": true,
+     "trail": "us-usfs-509872010602",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "tracy-arm",
+     "name": "Tracy Arm fjord cruise",
+     "hours": "8 h",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book the day cruise",
+     "why": "A day boat up a narrow fjord of granite walls and waterfalls to the twin Sawyer Glaciers, with icebergs and harbor seals.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "tram",
+     "name": "Mount Roberts Tramway",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From the cruise dock up 550 m to the tree line: the Gastineau Channel below, trails on the alpine ridge, Tlingit carving in the nature center.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 550
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "capitol",
+     "name": "State Capitol and Alaska State Museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The capital no road reaches: the Capitol and the state museum on Alaska's Native peoples, the Russian era and the purchase.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum",
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-skagway",
+   "names": [
+    "Skagway"
+   ],
+   "country": "US",
+   "lat": 59.458,
+   "lon": -135.314,
+   "radius_km": 20,
+   "season": "May to September, when the railway runs and the cruise ships call; in winter the town has under a thousand people and most shops close.",
+   "sleep": "Broadway, the gold rush main street.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Skagway",
+    "https://en.wikipedia.org/wiki/White_Pass_and_Yukon_Route",
+    "https://en.wikipedia.org/wiki/Klondike_Gold_Rush_National_Historical_Park",
+    "https://en.wikipedia.org/wiki/Skagway,_Alaska"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "white-pass",
+     "name": "White Pass and Yukon Route railway",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book the train, especially on cruise ship days",
+     "why": "The narrow-gauge line built for the 1898 gold rush climbs 870 m in 32 km, over trestles and through tunnels, to the White Pass summit on the Canadian border.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "goldrush",
+     "name": "Klondike Gold Rush National Historical Park",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The wooden false fronts of Broadway kept as in 1898, when tens of thousands of stampeders landed here for the Klondike; free ranger walks in summer.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "dewey",
+     "name": "Lower and Upper Dewey Lakes",
+     "hours": "2-6 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "From the edge of town steeply up through forest to Lower Dewey Lake; strong walkers go on to the alpine Upper lake, 900 m above the fjord.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 950
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "us-goal-151351975",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "us-honolulu",
+   "names": [
+    "Honolulu",
+    "Waikiki",
+    "Oahu"
+   ],
+   "country": "US",
+   "lat": 21.281,
+   "lon": -157.833,
+   "radius_km": 25,
+   "season": "Warm all year: 26-27 °C by day in winter, 30-31 °C in summer, the sea 24-27 °C. November to March brings more rain on the windward side and the big waves to the North Shore; humpback whales December to April. Hurricane season is June to November, though direct hits are rare.",
+   "sleep": "Waikiki, between the beach and the Ala Wai canal, or quieter Kailua on the windward side.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Honolulu",
+    "https://en.wikivoyage.org/wiki/Oahu",
+    "https://en.wikivoyage.org/wiki/North_Shore_(Oahu)",
+    "https://en.wikipedia.org/wiki/Pearl_Harbor_National_Memorial",
+    "https://en.wikipedia.org/wiki/Diamond_Head,_Hawaii",
+    "https://en.wikipedia.org/wiki/Hanauma_Bay",
+    "https://en.wikipedia.org/wiki/%CA%BBIolani_Palace",
+    "https://www.nps.gov/valr/index.htm"
+   ],
+   "nights": [
+    2,
+    4,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "pearl-harbor",
+     "name": "Pearl Harbor and the USS Arizona Memorial",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Free timed tickets for the memorial on recreation.gov",
+     "why": "Where the Japanese attack of 7 December 1941 brought the United States into the Second World War: a Navy boat to the memorial over the sunken battleship, then the Missouri, where the war ended.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Pearl Harbor"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "diamond-head",
+     "name": "Diamond Head summit trail",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "Out-of-state visitors book an entry time online (Hawaii State Parks)",
+     "why": "Up the inside of the volcanic crater by switchbacks, stairs and an old army tunnel to the bunkers on the rim at 232 m, over Waikiki and the coast.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 232
+     },
+     "sights": [
+      "Diamond Head"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "hanauma",
+     "name": "Snorkelling at Hanauma Bay",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book online two days ahead; closed Monday and Tuesday",
+     "why": "A drowned crater with a reef protected since 1967: parrotfish, tangs and green sea turtles in shallow water; visitors watch a short film on the reef first.",
+     "act": {
+      "type": "beach"
+     },
+     "weekdays": [
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "sights": [
+      "Hanauma Bay"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "north-shore",
+     "name": "North Shore day",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Haleiwa's surf town and shave ice, sea turtles on the sand at Laniakea, and Waimea Bay: calm for swimming in summer, the famous big waves of Pipeline and Sunset Beach from November to February.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "Waimea Bay",
+      "Sunset Beach"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "drive",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "waikiki",
+     "name": "Waikiki beach and a surf lesson",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The beach where Duke Kahanamoku made modern surfing famous: the long gentle waves of Waikiki are where the surf schools teach beginners.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "Waikiki"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "iolani",
+     "name": "ʻIolani Palace",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book a tour; open Tuesday to Saturday",
+     "why": "The only royal palace in the United States, home of the last Hawaiian monarchs until the kingdom was overthrown in 1893; Queen Liliʻuokalani was later held prisoner in it.",
+     "act": {
+      "type": "city"
+     },
+     "weekdays": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "windward",
+     "name": "Windward coast: Kailua, Lanikai and the Byodo-In Temple",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Over the Pali to the green cliffs of the windward side: the pale sand of Kailua and Lanikai, the short climb to the Lanikai pillboxes, and a copy of Kyoto's Byōdō-in in the valley of the Temples.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "Byodo-In Temple"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "view",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-kihei",
+   "names": [
+    "Kihei",
+    "Wailea",
+    "Maui",
+    "Haleakala"
+   ],
+   "country": "US",
+   "lat": 20.764,
+   "lon": -156.446,
+   "radius_km": 30,
+   "season": "Sunny and dry on the south coast all year (27-30 °C). Humpback whales December to April, most January to March. At Haleakalā's summit (3,055 m) dawn is around 0-5 °C, below freezing on winter nights. Since the August 2023 fire Lahaina town is closed for rebuilding.",
+   "sleep": "Kihei or Wailea on the sunny south coast, with the beaches and the boats from Mā'alaea.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kihei",
+    "https://en.wikivoyage.org/wiki/Maui",
+    "https://en.wikivoyage.org/wiki/Haleakal%C4%81_National_Park",
+    "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
+    "https://en.wikipedia.org/wiki/Molokini",
+    "https://en.wikipedia.org/wiki/Hawaiian_Islands_Humpback_Whale_National_Marine_Sanctuary",
+    "https://en.wikipedia.org/wiki/%CA%BBIao_Valley",
+    "https://en.wikipedia.org/wiki/2023_Hawaii_wildfires"
+   ],
+   "nights": [
+    2,
+    4,
+    6
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "haleakala-sunrise",
+     "name": "Sunrise on Haleakalā",
+     "hours": "5-6 h, before dawn",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Sunrise reservation on recreation.gov (needed 3-7 am), up to 60 days ahead",
+     "why": "From the summit at 3,055 m the sun comes up over a sea of clouds and a crater 11 km wide; leave Kihei about 3 am, and dress for freezing.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3055
+     },
+     "sights": [
+      "Haleakala"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "sliding-sands",
+     "name": "Sliding Sands Trail into the crater",
+     "hours": "4-6 h",
+     "length": "half",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From the summit down the cinder slopes among red and black cones and silverswords; the climb back up is 450-600 m at nearly 3,000 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 3055
+     },
+     "trail": "us-nps-hale-sliding-sands-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "car"
+    },
+    {
+     "id": "molokini",
+     "name": "Snorkel trip to Molokini",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book the morning boat; the sea is calmer early",
+     "why": "Morning boats from Mā'alaea and Kihei to the half-sunk crater of Molokini, a marine reserve with clear water and reef fish, often with turtles at Turtle Town on the way back.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "beach",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "whales",
+     "name": "Whale watching",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book a boat from Mā'alaea or Kihei",
+     "why": "Maui's channels are the humpbacks' winter breeding ground and a national marine sanctuary: mothers with calves and breaching males, December to April.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "makena",
+     "name": "Wailea and Mākena beaches",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The long golden sand of Big Beach in Mākena State Park and the coves of Wailea, with snorkelling along the lava points.",
+     "act": {
+      "type": "beach"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "iao",
+     "name": "ʻĪao Valley",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Out-of-state visitors book entry online (Hawaii State Parks)",
+     "why": "The green spire of the ʻĪao Needle in a rainforest valley where Kamehameha's army defeated Maui's in 1790.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "sights": [
+      "Iao Valley"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-hana",
+   "names": [
+    "Hana",
+    "Road to Hana"
+   ],
+   "country": "US",
+   "lat": 20.757,
+   "lon": -155.99,
+   "radius_km": 20,
+   "season": "Wet and green all year on this windward side: rain showers most days, heavier November to March, which is when the waterfalls run best and the road can close for slides.",
+   "sleep": "Hāna town, one night, to drive the road slowly and see the Kīpahulu side before the day visitors.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hana",
+    "https://en.wikipedia.org/wiki/Hana_Highway",
+    "https://en.wikipedia.org/wiki/Wai%CA%BBanapanapa_State_Park",
+    "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
+    "https://en.wikivoyage.org/wiki/Haleakal%C4%81_National_Park"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "road",
+     "name": "The Road to Hāna",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "About 100 km of highway with some 600 bends and over 50 one-lane bridges through rainforest, past waterfalls, the taro fields of Keʻanae and lookouts over the sea.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "sights": [
+      "Road to Hana"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "pipiwai",
+     "name": "Pīpīwai Trail to Waimoku Falls",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "In the Kīpahulu district of Haleakalā, past Hāna: 6 km return and 200 m of climb past a huge banyan and through a bamboo forest to a 120 m waterfall.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 270
+     },
+     "trail": "us-nps-hale-pipiwai-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "waianapanapa",
+     "name": "Waiʻānapanapa black sand beach",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Out-of-state visitors book an entry and parking slot online (Hawaii State Parks)",
+     "why": "A black sand beach in a bay of lava, with sea caves and a coastal path on the old Hawaiian trail.",
+     "act": {
+      "type": "beach"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "hamoa",
+     "name": "Hamoa Beach",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A curve of grey sand below green cliffs south of Hāna; good for swimming and bodyboarding when the sea is calm.",
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-kailua-kona",
+   "names": [
+    "Kailua-Kona",
+    "Kona",
+    "Hawaii Island",
+    "Big Island"
+   ],
+   "country": "US",
+   "lat": 19.64,
+   "lon": -155.996,
+   "radius_km": 40,
+   "season": "The dry, sunny side of the Big Island all year (27-30 °C), with calm morning seas for snorkelling. On Mauna Kea's summit (4,207 m) the sunset is near freezing in any month.",
+   "sleep": "Kailua-Kona's seafront on Aliʻi Drive, or Keauhou a few km south.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kailua-Kona",
+    "https://en.wikivoyage.org/wiki/Big_Island",
+    "https://en.wikipedia.org/wiki/Pu%CA%BBuhonua_o_H%C5%8Dnaunau_National_Historical_Park",
+    "https://en.wikipedia.org/wiki/Kealakekua_Bay",
+    "https://en.wikipedia.org/wiki/Mauna_Kea",
+    "https://en.wikipedia.org/wiki/Pu%CA%BBukoholā_Heiau_National_Historic_Site",
+    "https://en.wikipedia.org/wiki/Kona_coffee"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "manta",
+     "name": "Night snorkel with manta rays",
+     "hours": "3 h at night",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book with a licensed operator",
+     "why": "Off the Kona coast, boats shine lights on the water after dark and giant manta rays, up to 5 m across, loop under the snorkellers to feed on the plankton.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "night"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kealakekua",
+     "name": "Kealakekua Bay and the Captain Cook Monument",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Go by boat tour or a permitted kayak outfitter",
+     "why": "The best reef snorkelling of the island, in the bay where Captain Cook landed in 1779 and was killed; spinner dolphins often rest here in the morning.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "beach",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "puuhonua",
+     "name": "Puʻuhonua o Hōnaunau",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A place of refuge where a Hawaiian who broke a sacred law could be spared: the great stone wall of about 1550, a rebuilt temple guarded by carved kiʻi, and turtles on the lava shore.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Puuhonua o Honaunau"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mauna-kea",
+     "name": "Mauna Kea summit sunset and stars",
+     "hours": "7-8 h",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Book a summit tour: the road above the visitor station needs a 4x4 and most rental contracts forbid it",
+     "why": "Tours drive 4x4 vans to the summit at 4,207 m among the world's great telescopes for sunset above the clouds, then stargaze lower down at about 2,800 m in the warm parkas the tours lend; not for young children or within 24 hours of diving.",
+     "act": {
+      "type": "city",
+      "max_altitude_m": 2800
+     },
+     "sights": [
+      "Mauna Kea"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 1,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "night"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "kohala",
+     "name": "Kohala coast: Puʻukoholā Heiau and Hāpuna Beach",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The great temple Kamehameha built in 1791 on his way to uniting the islands, then one of the island's finest white sand beaches.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "Puukohola Heiau"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "coffee",
+     "name": "Kona coffee farms",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "On the slopes above Kona, around Hōlualoa, small farms grow Kona coffee and show the trees, the drying and the roasting.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-volcano",
+   "names": [
+    "Hawaii Volcanoes National Park",
+    "Volcano",
+    "Kilauea"
+   ],
+   "country": "US",
+   "lat": 19.43,
+   "lon": -155.24,
+   "radius_km": 25,
+   "season": "Volcano village and the park's summit are at about 1,200 m: 22 °C by day, 10-13 °C at night, with rain and mist at any time of year. Whether lava is visible depends on Kīlauea's eruptions: check the park's eruption page.",
+   "sleep": "Volcano village, in the rainforest at the park gate.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hawaii_Volcanoes_National_Park",
+    "https://en.wikipedia.org/wiki/Hawai%CA%BBi_Volcanoes_National_Park",
+    "https://en.wikipedia.org/wiki/K%C4%ABlauea",
+    "https://en.wikipedia.org/wiki/Chain_of_Craters_Road",
+    "https://www.nps.gov/havo/index.htm"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "crater-rim",
+     "name": "Kīlauea summit and Halemaʻumaʻu crater",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the most active volcanoes on earth: the overlooks on the rim of the caldera, the steam vents and the lava tube of Nāhuku; when Kīlauea is erupting, its glow over Halemaʻumaʻu after dark.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1240
+     },
+     "sights": [
+      "Kilauea",
+      "Hawaii Volcanoes National Park"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kilauea-iki",
+     "name": "Kīlauea Iki Trail",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Down through rainforest and across the floor of a crater that was a lake of lava in 1959, still steaming in its cracks; 6 km and 120 m down and up.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1200
+     },
+     "trail": "us-nps-havo-kilauea-iki-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "chain-of-craters",
+     "name": "Chain of Craters Road to the sea",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "30 km down 1,100 m across lava flows of the last decades to the cliffs and the Hōlei sea arch, with the petroglyphs of Puʻu Loa on the way.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "punaluu",
+     "name": "Punaluʻu black sand beach",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "45 minutes south-west, a beach of black lava sand where green sea turtles come up to rest; the road goes on to Ka Lae, the southernmost point of the United States.",
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-hilo",
+   "names": [
+    "Hilo"
+   ],
+   "country": "US",
+   "lat": 19.721,
+   "lon": -155.085,
+   "radius_km": 20,
+   "season": "The wet, green side of the island: about 3,200 mm of rain a year, showers in every month and 26-28 °C. The rain is why the waterfalls and gardens are here.",
+   "sleep": "Downtown Hilo by the bay, or the B&Bs on the Hāmākua coast north of town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Hilo",
+    "https://en.wikipedia.org/wiki/Hilo,_Hawaii",
+    "https://en.wikipedia.org/wiki/%CA%BBAkaka_Falls_State_Park",
+    "https://en.wikipedia.org/wiki/Pacific_Tsunami_Museum",
+    "https://en.wikipedia.org/wiki/%CA%BBImiloa_Astronomy_Center"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "akaka",
+     "name": "ʻAkaka Falls",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A paved loop through bamboo and wild ginger to a 135 m waterfall dropping into a gorge, 20 minutes north of Hilo.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "sights": [
+      "Akaka Falls"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "botanical",
+     "name": "Hawaii Tropical Botanical Garden",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A valley of over 2,000 tropical plants running down to Onomea Bay, with streams and waterfalls along the paths.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "sights": [
+      "Hawaii Tropical Botanical Garden"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "downtown",
+     "name": "Downtown Hilo and the farmers market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The old wooden town on the bay: the farmers market (biggest on Wednesday and Saturday), the Pacific Tsunami Museum on the waves of 1946 and 1960, and the Japanese garden of Liliʻuokalani Park.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "imiloa",
+     "name": "ʻImiloa Astronomy Center",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Mauna Kea's science and the Polynesian navigators who found Hawaii by the stars, told together, with a planetarium.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "lava-tree",
+     "name": "Lava Tree State Monument",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "In the Puna forest, the moulds of trees a lava flow wrapped in 1790, standing like chimneys among the ferns.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "sights": [
+      "Lava Tree State Monument"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-hanalei",
+   "names": [
+    "Hanalei",
+    "Haena",
+    "Princeville"
+   ],
+   "country": "US",
+   "lat": 22.204,
+   "lon": -159.5,
+   "radius_km": 15,
+   "season": "Kauaʻi's north shore is green and wet: 27 °C by day, more rain and big surf from November to March (the reefs are for snorkelling only in summer, May to September). Heavy rain can close the one-lane bridges.",
+   "sleep": "Hanalei town on the bay, or Princeville on the bluff.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kauai",
+    "https://en.wikipedia.org/wiki/Hanalei,_Hawaii",
+    "https://en.wikipedia.org/wiki/Kalalau_Trail",
+    "https://en.wikipedia.org/wiki/H%C4%81%CA%BBena_State_Park",
+    "https://en.wikipedia.org/wiki/K%C4%ABlauea_Point_National_Wildlife_Refuge",
+    "https://gohaena.com/"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "kalalau",
+     "name": "Kalalau Trail to Hanakapiʻai",
+     "hours": "4-7 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "Book Hāʻena State Park entry and parking or the shuttle, up to 30 days ahead",
+     "why": "The only path along the Nā Pali cliffs: 3 km to Hanakapiʻai beach, then up the valley to a 90 m waterfall, 13 km return, muddy and steep; going beyond needs a camping permit.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 250
+     },
+     "sights": [
+      "Na Pali Coast"
+     ],
+     "trail": "us-osm-9146299",
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "hanalei-bay",
+     "name": "Hanalei Bay and the valley lookout",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A wide bay under waterfall-streaked mountains, with the old pier and a surf town; the lookout above shows the taro fields of the valley.",
+     "act": {
+      "type": "beach"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "tunnels",
+     "name": "Snorkelling at Tunnels (Makua) beach",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The reef of the north shore, with lava tubes and turtles; only on calm summer days, as the winter surf makes it dangerous.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "kilauea-point",
+     "name": "Kīlauea Point lighthouse",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed entry on recreation.gov",
+     "why": "A 1913 lighthouse on a cliff, now a seabird refuge: red-footed boobies, albatrosses (November to July) and nēnē geese; whales offshore in winter.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-poipu",
+   "names": [
+    "Poipu",
+    "Poipu Beach",
+    "Koloa",
+    "Kauai"
+   ],
+   "country": "US",
+   "lat": 21.876,
+   "lon": -159.458,
+   "radius_km": 35,
+   "season": "The sunny south shore of Kauaʻi, dry and 27-29 °C all year with swimming in every month. Nā Pali boats run all year, calmer in summer; whales December to April. Up at Kōkeʻe (1,200 m) it is cool and often misty.",
+   "sleep": "Poʻipū, by the beaches, with Waimea Canyon an hour's drive.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kauai",
+    "https://en.wikipedia.org/wiki/Waimea_Canyon_State_Park",
+    "https://en.wikipedia.org/wiki/Na_Pali_Coast_State_Wilderness_Park",
+    "https://en.wikipedia.org/wiki/Spouting_Horn",
+    "https://en.wikipedia.org/wiki/Allerton_Garden",
+    "https://en.wikipedia.org/wiki/Koke%CA%BBe_State_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 1,
+   "items": [
+    {
+     "id": "waimea-canyon",
+     "name": "Waimea Canyon and Kōkeʻe",
+     "hours": "Full day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The red canyon 16 km long and 900 m deep that Mark Twain is said to have called the Grand Canyon of the Pacific, then up the road to the Kalalau Lookout over the Nā Pali valleys at 1,200 m.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1220
+     },
+     "sights": [
+      "Waimea Canyon",
+      "Koke'e State Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "napali-boat",
+     "name": "Nā Pali coast by boat",
+     "hours": "5 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book a catamaran or raft trip",
+     "why": "From Port Allen along the cliffs no road reaches, with spinner dolphins, sea caves and a snorkel stop; humpbacks in winter.",
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Na Pali Coast"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "poipu-beach",
+     "name": "Poʻipū Beach",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A sheltered beach with a shallow pool for children and snorkelling at the reef; Hawaiian monk seals and green turtles often rest on the sand.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "Poipu Beach"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "spouting-horn",
+     "name": "Spouting Horn",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Waves force the sea up through a lava tube on the shore in a jet several metres high.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Spouting Horn"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "mahaulepu",
+     "name": "Mahaʻulepu Heritage Trail",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A coast path over sand dunes and lithified cliffs east of Poʻipū, with turtles and whales offshore and the Makauwahi sinkhole cave.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 40
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "wailua",
+     "name": "Wailua River and Wailua Falls",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Book a guided kayak; no river tours on Sunday",
+     "why": "On the east side, a kayak up the Wailua River and a walk to Uluwehi falls, then the twin Wailua Falls from the roadside lookout.",
+     "act": {
+      "type": "boat"
+     },
+     "weekdays": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "sights": [
+      "Wailua Falls"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  }
+ ]
+}

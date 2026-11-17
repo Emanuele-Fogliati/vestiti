@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="150" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-ca-sea-to-sky-highway-m"><path d="M110 126L134 104L150 96L162 100L176 86L190 92L204 80L216 88L232 82L250 92L268 84L284 94L300 90V126Z"/></clipPath></defs>
+<path d="M110 126L134 104L150 96L162 100L176 86L190 92L204 80L216 88L232 82L250 92L268 84L284 94L300 90V126Z" fill="var(--il-far)"/>
+<path d="M150 96L162 100L176 86L190 92L204 80L216 88L232 82L250 92L268 84L284 94L300 90V100L290 98L282 104L270 96L258 104L244 96L232 100L222 94L212 100L204 92L194 100L184 94L176 100L166 106Z" fill="var(--il-ice)" clip-path="url(#il-ca-sea-to-sky-highway-m)"/>
+<path d="M0 200V122H300V200Z" fill="var(--il-water)"/>
+<path d="M0 200V100Q14 86 30 90Q50 80 70 92L112 122L118 200Z" fill="var(--il-mid)"/>
+<path d="M150 126Q170 110 186 104Q192 94 200 94Q208 96 214 92Q226 86 236 74L244 64Q250 60 256 64L262 74Q272 88 290 98L300 104V126Z" fill="var(--il-mid)"/>
+<path d="M30 150V104L36 110L42 90L46 102L50 80L54 96L54 74L58 90L62 62L66 84L70 56L74 80L78 50L82 76L86 58L90 82L94 52L98 78L102 62L106 86L110 66L114 90L118 76L122 100L126 86L130 108L134 96L138 116L142 106L148 150Z" fill="var(--il-leaf)"/>
+<path d="M0 162V130L16 120L34 118L46 108L62 112L76 106L90 116L104 130L120 152H0Z" fill="var(--il-acc)"/>
+<path d="M18 124L28 150M46 112L54 148M76 110L86 148M94 122L104 148" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 200V170Q40 152 118 150L300 178V200Z" fill="var(--il-obj)"/>
+<path d="M0 170Q40 152 118 150L118 152Q50 154 0 174Z" fill="var(--il-leaf)"/>
+<path d="M118 146L300 162V172L118 151Z" fill="var(--il-acc)"/>
+<path d="M0 193Q66 168 116 154M0 197Q68 172 118 156" stroke="var(--il-sun)" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+<path d="M116 200Q132 176 136 156" stroke="var(--il-ice)" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-dasharray="8 8"/>
+<path d="M232 200Q190 178 124 153" stroke="var(--il-ice)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
