@@ -1,0 +1,462 @@
+{
+ "_doc": "Recommended trips of the western USA, 2026-11-17. Same fields as ../trips.json; elevation and coords = where you sleep (app.inspire.build).",
+ "journeys": [
+  {
+   "id": "usa-southwest",
+   "name": "USA: the Southwest",
+   "blurb": "Zion, Bryce, the arches of Moab, Monument Valley, Antelope Canyon and the Grand Canyon; Death Valley and Joshua Tree in winter."
+  }
+ ],
+ "elevation": {
+  "us-zion-national-park": 1200,
+  "us-bryce-canyon-national-park": 2420,
+  "us-grand-canyon-south-rim": 2100,
+  "us-capitol-reef-national-park": 2080,
+  "us-moab": 1230,
+  "us-sedona": 1330,
+  "us-death-valley": -58,
+  "us-joshua-tree-national-park": 600,
+  "us-monument-valley": 1600,
+  "us-page": 1300,
+  "us-las-vegas": 615
+ },
+ "coords": {
+  "us-zion-national-park": [
+   37.188,
+   -112.999
+  ],
+  "us-bryce-canyon-national-park": [
+   37.674,
+   -112.157
+  ],
+  "us-grand-canyon-south-rim": [
+   36.054,
+   -112.139
+  ],
+  "us-capitol-reef-national-park": [
+   38.299,
+   -111.419
+  ],
+  "us-death-valley": [
+   36.457,
+   -116.866
+  ],
+  "us-joshua-tree-national-park": [
+   34.136,
+   -116.054
+  ]
+ },
+ "trips": [
+  {
+   "id": "usa-southwest-7",
+   "region": "c-us",
+   "title": "The Southwest in a week: Zion, Page and the Grand Canyon",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "Zion's canyon, Antelope Canyon and Horseshoe Bend, two sunsets on the Grand Canyon, from Las Vegas and back.",
+   "note": "All year. Spring and autumn are best; 40 °C in Las Vegas and Page in July and August, snow on the Grand Canyon rim and ice on Zion's high trails some days from December to February.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-page",
+     "nights": 1
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 2
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-14",
+   "region": "c-us",
+   "title": "National parks of the Southwest",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "The classic circle: Zion, Bryce's hoodoos, Capitol Reef, the arches of Moab, Monument Valley, Page and the Grand Canyon.",
+   "note": "April-May and September-October are best. June-August is 35-40 °C in Moab, Page and Las Vegas (walk at dawn) with July-September storms that close the Narrows and slot canyons. Arches needs a timed entry April-October.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-bryce-canyon-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-capitol-reef-national-park",
+     "nights": 1
+    },
+    {
+     "place": "us-moab",
+     "nights": 3
+    },
+    {
+     "place": "us-monument-valley",
+     "nights": 1
+    },
+    {
+     "place": "us-page",
+     "nights": 1
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-14-winter",
+   "region": "c-us",
+   "title": "Desert parks in winter",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    11,
+    2,
+    3
+   ],
+   "why": "The low, warm half of the Southwest: Death Valley and Joshua Tree in their good season, Sedona's red rocks, the Grand Canyon, Page and Zion.",
+   "note": "November to March: Bryce and the high plateaus have snow and short days, so this route stays low and warm: Death Valley and Joshua Tree are at their best, Sedona mild, the Grand Canyon South Rim open with snow on the rim some days.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 2
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-sedona",
+     "nights": 3
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 2
+    },
+    {
+     "place": "us-page",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-21",
+   "region": "c-us",
+   "title": "The Southwest in three weeks",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Every great park of Utah and Arizona with time to hike: Zion, Bryce, Capitol Reef, Moab, Monument Valley, Page, the Grand Canyon and Sedona.",
+   "note": "April-May and September-October are best. June-August is 35-40 °C in Moab, Page and Las Vegas (walk at dawn) with July-September storms that close the Narrows and slot canyons. Arches needs a timed entry April-October.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-bryce-canyon-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-capitol-reef-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-moab",
+     "nights": 4
+    },
+    {
+     "place": "us-monument-valley",
+     "nights": 1
+    },
+    {
+     "place": "us-page",
+     "nights": 2
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-sedona",
+     "nights": 2
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-21-winter",
+   "region": "c-us",
+   "title": "Deserts and canyons in winter, three weeks",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    11,
+    2,
+    3
+   ],
+   "why": "A slow winter loop through the warm deserts, the red rocks of Sedona, the Grand Canyon and Zion.",
+   "note": "November to March: Bryce and the high plateaus have snow and short days, so this route stays low and warm: Death Valley and Joshua Tree are at their best, Sedona mild, the Grand Canyon South Rim open with snow on the rim some days.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 3
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-sedona",
+     "nights": 4
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-page",
+     "nights": 2
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-28",
+   "region": "c-us",
+   "title": "The Southwest at a slow pace",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Four weeks for the canyon country: long hikes in Zion and Moab, sunrises at Bryce and Monument Valley, days on Lake Powell and the Grand Canyon rim.",
+   "note": "April-May and September-October are best. June-August is 35-40 °C in Moab, Page and Las Vegas (walk at dawn) with July-September storms that close the Narrows and slot canyons. Arches needs a timed entry April-October.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-bryce-canyon-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-capitol-reef-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-moab",
+     "nights": 5
+    },
+    {
+     "place": "us-monument-valley",
+     "nights": 2
+    },
+    {
+     "place": "us-page",
+     "nights": 3
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-sedona",
+     "nights": 3
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-28-winter",
+   "region": "c-us",
+   "title": "A winter month in the desert Southwest",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    11,
+    2,
+    3
+   ],
+   "why": "A month of mild desert days: Death Valley, Joshua Tree, Sedona, the Grand Canyon in snow, Page and Zion.",
+   "note": "November to March: Bryce and the high plateaus have snow and short days, so this route stays low and warm: Death Valley and Joshua Tree are at their best, Sedona mild, the Grand Canyon South Rim open with snow on the rim some days.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 3
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 4
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-sedona",
+     "nights": 5
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-page",
+     "nights": 3
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-southwest"
+  }
+ ]
+}

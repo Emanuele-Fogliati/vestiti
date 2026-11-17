@@ -58,6 +58,19 @@ COORDS = {"cl-torres-del-paine-national-park": (-50.96, -72.87),
           "ch-aletsch-glacier": (46.381, 8.026), "tz-mount-kilimanjaro": (-3.09, 37.30)}
 
 
+def _from_trip_files() -> None:
+    """Heights and sleeping spots written next to the routes in guide/trips/*.json ("elevation":
+    {place id: metres}, "coords": {place id: [lat, lon]}), so each region's thread keeps its own
+    (2026-11-17, USA and Canada)."""
+    from app.guide import ready
+    for doc in ready._docs():
+        ELEVATION.update(doc.get("elevation", {}))
+        COORDS.update({k: tuple(v) for k, v in doc.get("coords", {}).items()})
+
+
+_from_trip_files()
+
+
 def height(p: dict, strict: bool = True) -> int:
     """strict (the built library): every stop's height written down; a stop the traveller added
     takes the place search's (globe.elevation)."""
