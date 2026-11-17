@@ -96,7 +96,7 @@ export default function TrailPage() {
 
   const body = (
     <>
-      <p className="mf-lede">{t.why}</p>
+      {t.why && <p className="mf-lede">{t.why}</p>}
       <p className="mf-k">{t.difficulty_text}.{t.published ? <> Distance and climb as <a href={t.published.source} target="_blank" rel="noopener noreferrer">published by the park</a>.</> : null}</p>
       {t.profile.length > 0 && <TrailProfile profile={t.profile} points={t.points} onFocus={setFocus} />}
       <div className="mf-acts">

@@ -436,9 +436,11 @@ def build(census: str, region: str, *box) -> None:
     box = tuple(float(x) for x in box)
     where = Where()
     light = []
+    from walk_text import tier_a_osm
+    hand = tier_a_osm()  # 2026-11-16: a trek written by hand in data/ never gets a generated copy
     for d in stream(census):
         w, cc = why_not(d, where)
-        if not w:
+        if not w and d["id"] not in hand:
             light.append((d["length"], d["id"], ot._norm(d["name"]), round(d["bbox"][0], 2), cc,
                           (d.get("tags") or {}).get("wikidata")))
     light.sort(key=lambda x: -x[0])
@@ -491,6 +493,7 @@ def build(census: str, region: str, *box) -> None:
                "geo": {**{k: v for k, v in old["geo"].items() if k not in new}, **{t["id"]: g for t, g in out}}}
         f.write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"{region}: {len(res)} treks in {len(per)} countries; dropped {dict(drops)}")
+    print("next: python tools/trails/walk_text.py apply (only walks with a real text), then dots")
 
 
 WORLD = ot.ROOT / "backend/app/trails/world"
