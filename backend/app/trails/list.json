@@ -7218,11 +7218,12 @@
    "slot": "US-A",
    "base": "Seward",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
-     "name": "Harding Icefield"
+     "name": "Harding Icefield",
+     "reuse": "us-harding-icefield"
     },
     {
      "point": "exit-glacier-view",
@@ -7238,15 +7239,17 @@
    "slot": "US-A",
    "base": "Healy",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
-     "name": "Mount Healy Overlook"
+     "name": "Mount Healy Overlook",
+     "reuse": "us-mount-healy-overlook"
     },
     {
      "point": "start",
-     "name": "Denali Visitor Center"
+     "name": "Denali Visitor Center",
+     "reuse": "us-denali-park-depot"
     }
    ]
   },
