@@ -6817,7 +6817,7 @@
    "slot": "US-A",
    "base": "Springdale",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6826,7 +6826,8 @@
     },
     {
      "point": "start",
-     "name": "East Mesa trailhead"
+     "name": "East Mesa trailhead",
+     "reuse": "us-east-mesa-zion"
     }
    ]
   },
@@ -6904,7 +6905,7 @@
    "slot": "US-A",
    "base": "Grand Canyon Village",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6913,7 +6914,8 @@
     },
     {
      "point": "three-mile",
-     "name": "Three Mile Resthouse"
+     "name": "Three Mile Resthouse",
+     "reuse": "us-three-mile-resthouse"
     }
    ]
   },
@@ -7266,7 +7268,7 @@
    "slot": "US-A",
    "base": "West Glacier",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7275,7 +7277,8 @@
     },
     {
      "point": "haystack-saddle",
-     "name": "Haystack Butte saddle"
+     "name": "Haystack Butte saddle",
+     "reuse": "us-haystack-butte-glacier"
     }
    ]
   },
@@ -7286,7 +7289,7 @@
    "slot": "US-A",
    "base": "Many Glacier",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7295,7 +7298,8 @@
     },
     {
      "point": "lake-josephine",
-     "name": "Lake Josephine"
+     "name": "Lake Josephine",
+     "reuse": "us-lake-josephine"
     }
    ]
   },
@@ -7306,7 +7310,7 @@
    "slot": "US-A",
    "base": "Jackson",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7315,7 +7319,8 @@
     },
     {
      "point": "hidden-falls",
-     "name": "Hidden Falls"
+     "name": "Hidden Falls",
+     "reuse": "us-hidden-falls-grand-teton"
     }
    ]
   },
