@@ -1713,7 +1713,7 @@
    "slot": "AR-C",
    "base": "El Chaltén",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -1733,7 +1733,7 @@
    "slot": "AR-C",
    "base": "El Chaltén",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -1885,7 +1885,7 @@
    "slot": "AR-D",
    "base": "Mendoza",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -2053,7 +2053,7 @@
    "slot": "CL-C",
    "base": "Puerto Varas",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -2449,7 +2449,7 @@
    "slot": "PE-D",
    "base": "Pisac",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -2469,7 +2469,7 @@
    "slot": "PE-D",
    "base": "Urubamba",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -2573,7 +2573,7 @@
    "slot": "PE-E",
    "base": "Ollantaytambo",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -2749,7 +2749,7 @@
    "slot": "IS-D",
    "base": "Reykjavík",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -2769,7 +2769,7 @@
    "slot": "IS-D",
    "base": "Snæfellsnes",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "tier": "A",
    "scenes": [
     {
@@ -4975,11 +4975,12 @@
    "slot": "NP-A",
    "base": "Kathmandu",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "larkya",
-     "name": "Larkya La"
+     "name": "Larkya La",
+     "reuse": "np-larkya-la"
     },
     {
      "point": "goal",
@@ -5944,16 +5945,17 @@
    "slot": "AT-A",
    "base": "Innsbruck",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
      "name": "Hafelekar",
-     "reuse": "at-innsbruck"
+     "reuse": "at-nordkette"
     },
     {
      "point": "goal",
-     "name": "Pfeishütte"
+     "name": "Pfeishütte",
+     "reuse": "at-pfeishutte"
     }
    ]
   },
@@ -5964,7 +5966,7 @@
    "slot": "AT-A",
    "base": "Zell am See",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -5988,7 +5990,8 @@
    "scenes": [
     {
      "point": "seebensee",
-     "name": "Seebensee"
+     "name": "Seebensee",
+     "reuse": "at-seebensee"
     },
     {
      "point": "goal",
@@ -6026,7 +6029,8 @@
    "scenes": [
     {
      "point": "goal",
-     "name": "Kahlenberg"
+     "name": "Kahlenberg",
+     "reuse": "at-kahlenberg"
     },
     {
      "point": "start",
@@ -6061,7 +6065,7 @@
    "slot": "AT-A",
    "base": "St. Wolfgang",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -6069,7 +6073,8 @@
     },
     {
      "point": "goal",
-     "name": "Schafberg"
+     "name": "Schafberg",
+     "reuse": "at-schafberg"
     }
    ]
   },
@@ -6140,7 +6145,7 @@
    "slot": "CH-A",
    "base": "Grindelwald",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6179,7 +6184,7 @@
    "slot": "CH-A",
    "base": "Riederalp",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -6188,7 +6193,8 @@
     },
     {
      "point": "goal",
-     "name": "Bettmerhorn"
+     "name": "Bettmerhorn",
+     "reuse": "ch-bettmerhorn"
     }
    ]
   },
@@ -6246,11 +6252,13 @@
    "scenes": [
     {
      "point": "seealpsee",
-     "name": "Seealpsee"
+     "name": "Seealpsee",
+     "reuse": "ch-seealpsee"
     },
     {
      "point": "aescher",
-     "name": "Aescher"
+     "name": "Aescher",
+     "reuse": "ch-aescher"
     },
     {
      "point": "goal",
@@ -6288,7 +6296,8 @@
    "scenes": [
     {
      "point": "goal",
-     "name": "Creux du Van"
+     "name": "Creux du Van",
+     "reuse": "ch-creux-du-van"
     },
     {
      "point": "start",
@@ -6388,7 +6397,7 @@
    "slot": "MA-A",
    "base": "Chefchaouen",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",

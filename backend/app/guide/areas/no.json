@@ -392,7 +392,9 @@
       "type": "boat"
      },
      "sights": [
-      "Nærøyfjord"
+      "Nærøyfjord",
+      "Gudvangen",
+      "Sognefjord"
      ],
      "scores": {
       "effort": 0,
@@ -424,7 +426,8 @@
       "type": "city"
      },
      "sights": [
-      "Flåm Railway"
+      "Flåm Railway",
+      "Myrdal"
      ],
      "arrive": true,
      "scores": {
@@ -469,7 +472,10 @@
       "view"
      ],
      "cost": "$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Aurlandsfjord"
+     ]
     },
     {
      "id": "aurlandsdalen",
@@ -506,7 +512,10 @@
       "trek"
      ],
      "cost": "$",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Aurlandsdalen"
+     ]
     },
     {
      "id": "kayak",
@@ -542,7 +551,10 @@
       "adventure"
      ],
      "cost": "$$",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Aurlandsfjord"
+     ]
     }
    ]
   },
@@ -612,7 +624,10 @@
       "view"
      ],
      "cost": "$",
-     "kids": "no"
+     "kids": "no",
+     "sights": [
+      "Trolltunga"
+     ]
     },
     {
      "id": "voringsfossen",
@@ -746,7 +761,11 @@
       "view"
      ],
      "cost": "$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Preikestolen",
+      "Lysefjord"
+     ]
     },
     {
      "id": "lysefjord",
@@ -762,7 +781,8 @@
       "type": "boat"
      },
      "sights": [
-      "Lysefjord"
+      "Lysefjord",
+      "Preikestolen"
      ],
      "scores": {
       "effort": 0,
@@ -845,7 +865,11 @@
      ],
      "cost": "$",
      "kids": "no",
-     "needs": "car"
+     "needs": "car",
+     "sights": [
+      "Kjeragbolten",
+      "Lysefjord"
+     ]
     }
    ]
   },
@@ -917,7 +941,10 @@
       "view"
      ],
      "cost": "free",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Jostedalsbreen"
+     ]
     },
     {
      "id": "skylift",
@@ -1024,7 +1051,8 @@
      },
      "sights": [
       "Geirangerfjord",
-      "Seven Sisters Waterfall"
+      "Seven Sisters Waterfall",
+      "Hellesylt"
      ],
      "arrive": true,
      "scores": {
@@ -1080,7 +1108,10 @@
       "view"
      ],
      "cost": "$",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Skageflå"
+     ]
     },
     {
      "id": "dalsnibba",
@@ -1225,7 +1256,10 @@
       "view"
      ],
      "cost": "$",
-     "kids": "no"
+     "kids": "no",
+     "sights": [
+      "Romsdalseggen"
+     ]
     },
     {
      "id": "rampestreken",
@@ -1313,7 +1347,8 @@
       "type": "city"
      },
      "sights": [
-      "Rauma Line"
+      "Rauma Line",
+      "Romsdalen"
      ],
      "scores": {
       "effort": 0,
@@ -1497,7 +1532,10 @@
       "view"
      ],
      "cost": "free",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Reinebringen"
+     ]
     },
     {
      "id": "kvalvika",
@@ -1537,7 +1575,10 @@
       "view"
      ],
      "cost": "free",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Kvalvika Beach"
+     ]
     },
     {
      "id": "villages",
@@ -1600,7 +1641,10 @@
       "culture"
      ],
      "cost": "$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Nusfjord"
+     ]
     },
     {
      "id": "aurora",
