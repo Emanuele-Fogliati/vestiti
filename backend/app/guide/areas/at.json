@@ -188,7 +188,10 @@
       "food"
      ],
      "cost": "$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Kahlenberg"
+     ]
     },
     {
      "id": "markets",
@@ -354,7 +357,10 @@
       "food"
      ],
      "cost": "$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Wachau"
+     ]
     }
    ]
   },
@@ -553,7 +559,10 @@
       "walk"
      ],
      "cost": "$$",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Schafberg"
+     ]
     },
     {
      "id": "lake",
@@ -644,7 +653,10 @@
       "view"
      ],
      "cost": "free",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Hallstatt"
+     ]
     },
     {
      "id": "salt",
@@ -723,7 +735,10 @@
       "view"
      ],
      "cost": "$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Dachstein"
+     ]
     }
    ]
   },
@@ -796,7 +811,11 @@
      ],
      "cost": "$$",
      "kids": "yes",
-     "needs": "car"
+     "needs": "car",
+     "sights": [
+      "Grossglockner",
+      "Kaiser-Franz-Josefs-Höhe"
+     ]
     },
     {
      "id": "krimml",
@@ -836,7 +855,10 @@
      ],
      "cost": "$",
      "kids": "yes",
-     "needs": "transfer"
+     "needs": "transfer",
+     "sights": [
+      "Krimml Waterfalls"
+     ]
     },
     {
      "id": "pinzgauer",
@@ -874,7 +896,10 @@
       "view"
      ],
      "cost": "$$",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Schmittenhöhe"
+     ]
     },
     {
      "id": "klamm",
@@ -914,7 +939,10 @@
      ],
      "cost": "$",
      "kids": "yes",
-     "needs": "transfer"
+     "needs": "transfer",
+     "sights": [
+      "Liechtensteinklamm"
+     ]
     },
     {
      "id": "ski",
@@ -949,7 +977,10 @@
       "adventure"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Kaprun"
+     ]
     },
     {
      "id": "lake",
@@ -1206,7 +1237,10 @@
       "walk"
      ],
      "cost": "$$",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Nordkette"
+     ]
     },
     {
      "id": "seebensee",
@@ -1245,7 +1279,11 @@
      ],
      "cost": "$",
      "kids": "12+",
-     "needs": "transfer"
+     "needs": "transfer",
+     "sights": [
+      "Seebensee",
+      "Zugspitze"
+     ]
     },
     {
      "id": "ski",
@@ -1279,7 +1317,10 @@
       "adventure"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Nordkette"
+     ]
     },
     {
      "id": "swarovski",
@@ -1308,7 +1349,10 @@
      ],
      "cost": "$$",
      "kids": "yes",
-     "needs": "transfer"
+     "needs": "transfer",
+     "sights": [
+      "Swarovski Crystal Worlds"
+     ]
     }
    ]
   }
