@@ -1,0 +1,86 @@
+{
+ "id": "us-bright-angel-plateau-point",
+ "country": "US",
+ "name": "Bright Angel Trail to Plateau Point",
+ "base": "Grand Canyon Village",
+ "region": "Grand Canyon National Park, Arizona",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  10,
+  11
+ ],
+ "hours": [
+  8,
+  12
+ ],
+ "start_by": "06:00",
+ "published": {
+  "km": 19.3,
+  "gain_m": 939,
+  "source": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm"
+ },
+ "why": "The old Havasupai path down through every layer of rock to the oasis of Havasupai Gardens and out to a point above the Colorado River.",
+ "book": "No permit for a day hike. Trailhead by the Bright Angel Lodge, Village shuttle (blue). The park advises against going past Havasupai Gardens in one day in summer.",
+ "water": "Seasonal drinking water at the 1.5 and 3 mile rest houses and Havasupai Gardens (often off because of pipeline breaks: carry 4 litres).",
+ "dangers": [
+  "Heat: rangers rescue hundreds of day hikers each year; the inner canyon passes 40°C.",
+  "The climb out is 939 m: plan twice the time of the way down.",
+  "Ice on the top switchbacks in winter: microspikes."
+ ],
+ "turnaround": "Leave Havasupai Gardens for the rim by 12:00.",
+ "sources": [
+  "https://www.nps.gov/grca/planyourvisit/day-hiking.htm",
+  "https://www.nps.gov/grca/planyourvisit/upload/BrightAngelTrail.pdf",
+  "https://en.wikipedia.org/wiki/Bright_Angel_Trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 4,
+  "culture": 2,
+  "relax": 1,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Bright Angel trailhead",
+   "lat": 36.0573,
+   "lon": -112.1436,
+   "role": "start",
+   "note": "Next to the Kolb Studio at the rim."
+  },
+  {
+   "id": "three-mile",
+   "name": "Three Mile Resthouse",
+   "lat": 36.0657,
+   "lon": -112.1362,
+   "role": "point",
+   "note": "A stone shelter, seasonal water."
+  },
+  {
+   "id": "havasupai-gardens",
+   "name": "Havasupai Gardens",
+   "lat": 36.0789,
+   "lon": -112.1266,
+   "role": "point",
+   "note": "Cottonwoods and a creek on the Tonto Plateau, with a campground and a ranger station."
+  },
+  {
+   "id": "goal",
+   "name": "Plateau Point",
+   "lat": 36.0933,
+   "lon": -112.1161,
+   "role": "goal",
+   "note": "A point on the Tonto Plateau 400 m above the Colorado River."
+  }
+ ]
+}

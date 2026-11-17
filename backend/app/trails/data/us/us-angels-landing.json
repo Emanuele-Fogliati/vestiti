@@ -1,0 +1,90 @@
+{
+ "id": "us-angels-landing",
+ "country": "US",
+ "name": "Angels Landing",
+ "base": "Springdale",
+ "region": "Zion National Park, Utah",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "months": [
+  3,
+  4,
+  5,
+  6,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 8.7,
+  "gain_m": 453,
+  "source": "https://www.nps.gov/zion/planyourvisit/angels-landing-hiking-permits.htm"
+ },
+ "why": "Up the 21 switchbacks of Walter's Wiggles, then along a narrow fin of sandstone on chains to a summit 450 m above the Virgin River.",
+ "book": "Permit by lottery for the chains past Scout Lookout (seasonal lottery months ahead, or the day-before lottery that closes at 3 pm MT; $6 to apply). Scout Lookout needs no permit. Park shuttle to stop 6, The Grotto.",
+ "water": "None on the trail: carry 2-3 litres, more in summer.",
+ "dangers": [
+  "Drops of 300 m on both sides of the chains section: deaths have happened.",
+  "Do not go up the chains when the rock is wet, icy or a storm is near.",
+  "Summer heat over 38°C on the switchbacks: start early."
+ ],
+ "turnaround": "Turn back at Scout Lookout without a permit, or if the rock is wet.",
+ "sources": [
+  "https://www.nps.gov/zion/planyourvisit/angels-landing-hiking-permits.htm",
+  "https://en.wikipedia.org/wiki/Angels_Landing"
+ ],
+ "replaces": [
+  "us-nps-zion-angels-landing-trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "The Grotto trailhead",
+   "lat": 37.2593,
+   "lon": -112.9509,
+   "role": "start",
+   "note": "Shuttle stop 6 and a footbridge over the Virgin River."
+  },
+  {
+   "id": "refrigerator-canyon",
+   "name": "Refrigerator Canyon",
+   "lat": 37.27,
+   "lon": -112.9542,
+   "role": "point",
+   "note": "A cool, shady slot before the switchbacks."
+  },
+  {
+   "id": "scout-lookout",
+   "name": "Scout Lookout",
+   "lat": 37.2748,
+   "lon": -112.9507,
+   "role": "point",
+   "note": "A saddle with toilets, the end of the trail without a permit."
+  },
+  {
+   "id": "goal",
+   "name": "Angels Landing",
+   "lat": 37.2693,
+   "lon": -112.9479,
+   "role": "goal",
+   "note": "A narrow summit of white sandstone with Zion Canyon below on three sides."
+  }
+ ]
+}

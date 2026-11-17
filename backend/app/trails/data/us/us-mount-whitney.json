@@ -1,0 +1,94 @@
+{
+ "id": "us-mount-whitney",
+ "country": "US",
+ "name": "Mount Whitney Trail",
+ "base": "Lone Pine",
+ "region": "Inyo National Forest and Sequoia National Park, California",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  12,
+  16
+ ],
+ "start_by": "03:00",
+ "published": {
+  "km": 35.4,
+  "gain_m": 1860,
+  "source": "https://www.fs.usda.gov/r05/inyo/recreation/trails/mt-whitney-trail"
+ },
+ "why": "The highest summit of the lower 48 states, 4,421 m, on a trail with no climbing: 97 switchbacks to Trail Crest and the stone hut on top.",
+ "book": "Permit by lottery on recreation.gov (apply February to March for May to October; leftover dates released in April). Day-hike and overnight permits. Wag bags are compulsory. Whitney Portal is 20 km above Lone Pine.",
+ "water": "Streams and lakes up to Trail Camp (filter); none above it: carry 3 litres from Trail Camp.",
+ "dangers": [
+  "Altitude sickness above 3,500 m: go down if headache and nausea get worse.",
+  "Afternoon lightning on the summit ridge in summer.",
+  "Snow and ice on the switchbacks until July: axe and crampons."
+ ],
+ "turnaround": "Be on the summit by 13:00, or turn back at Trail Crest.",
+ "sources": [
+  "https://www.fs.usda.gov/r05/inyo/recreation/trails/mt-whitney-trail",
+  "https://www.fs.usda.gov/r05/inyo/wilderness/mount-whitney",
+  "https://en.wikipedia.org/wiki/Mount_Whitney_Trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Whitney Portal",
+   "lat": 36.5869,
+   "lon": -118.24,
+   "role": "start",
+   "note": "A pine valley at 2,550 m with a store and campground."
+  },
+  {
+   "id": "outpost-camp",
+   "name": "Outpost Camp",
+   "lat": 36.5713,
+   "lon": -118.2588,
+   "role": "point",
+   "note": "A meadow with a waterfall, first camp."
+  },
+  {
+   "id": "trail-camp",
+   "name": "Trail Camp",
+   "lat": 36.5631,
+   "lon": -118.2785,
+   "role": "point",
+   "note": "The last water, by a tarn below the switchbacks."
+  },
+  {
+   "id": "trail-crest",
+   "name": "Trail Crest",
+   "lat": 36.5593,
+   "lon": -118.2916,
+   "role": "point",
+   "note": "A notch at 4,120 m where the trail crosses into Sequoia National Park."
+  },
+  {
+   "id": "goal",
+   "name": "Mount Whitney",
+   "lat": 36.5786,
+   "lon": -118.2921,
+   "role": "goal",
+   "note": "The flat granite summit with the 1909 Smithsonian stone hut.",
+   "scene": "us-sierra-nevada"
+  }
+ ],
+ "osm": 3289187
+}

@@ -1,0 +1,86 @@
+{
+ "id": "us-golden-canyon-gower-gulch",
+ "country": "US",
+ "name": "Golden Canyon and Gower Gulch",
+ "base": "Furnace Creek",
+ "region": "Death Valley National Park, California",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  11,
+  12,
+  1,
+  2,
+  3
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 7.4,
+  "gain_m": null,
+  "source": "https://www.nps.gov/deva/planyourvisit/golden-canyon.htm"
+ },
+ "why": "Up a canyon of golden badlands to the foot of Manly Beacon and back down the dry wash of Gower Gulch, the colours changing all the way.",
+ "book": "No permit. Park entrance fee. Rangers advise against hiking after 10:00 in summer.",
+ "water": "None: carry 2-3 litres even in winter.",
+ "dangers": [
+  "Deadly heat from May to September: people die here every year.",
+  "Flash floods in the canyons after rain.",
+  "A short drop over a dry fall at the bottom of Gower Gulch."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/deva/planyourvisit/golden-canyon.htm",
+  "https://en.wikivoyage.org/wiki/Death_Valley_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Golden Canyon trailhead",
+   "lat": 36.4205,
+   "lon": -116.8466,
+   "role": "start",
+   "note": "A parking area on Badwater Road, 3 km south of Furnace Creek."
+  },
+  {
+   "id": "red-cathedral-junction",
+   "name": "Red Cathedral junction",
+   "lat": 36.4246,
+   "lon": -116.8319,
+   "role": "point",
+   "note": "A side path climbs to the red walls of Red Cathedral."
+  },
+  {
+   "id": "goal",
+   "name": "Manly Beacon",
+   "lat": 36.4236,
+   "lon": -116.8262,
+   "role": "goal",
+   "note": "A golden pinnacle over the badlands, the view of Zabriskie Point from below.",
+   "scene": "us-death-valley-national-park"
+  },
+  {
+   "id": "gower-gulch",
+   "name": "Gower Gulch",
+   "lat": 36.4165,
+   "lon": -116.8358,
+   "role": "point",
+   "note": "A wide wash cut through yellow and green rock."
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "id": "us-diamond-head",
+ "country": "US",
+ "name": "Diamond Head Summit Trail",
+ "base": "Honolulu",
+ "region": "Diamond Head State Monument, Oahu, Hawaii",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  1.5,
+  2
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 2.6,
+  "gain_m": 170,
+  "source": "https://dlnr.hawaii.gov/dsp/hiking/oahu/diamond-head-summit-trail/"
+ },
+ "why": "Through a tunnel into the crater and up stairs and old army bunkers to the rim, with Waikiki and Honolulu spread below.",
+ "book": "Reservation required for visitors from outside Hawaii (entry and parking, gostateparks.hawaii.gov), up to 30 days ahead. Open 6:00-18:00.",
+ "water": "None on the trail: carry 1 litre, it is hot and exposed.",
+ "dangers": [
+  "Steep stairs and a narrow dark tunnel.",
+  "Heat and sun from mid-morning."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://dlnr.hawaii.gov/dsp/hiking/oahu/diamond-head-summit-trail/",
+  "https://en.wikipedia.org/wiki/Diamond_Head,_Hawaii"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 3,
+  "culture": 1,
+  "relax": 2,
+  "history": 4,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Diamond Head crater trailhead",
+   "lat": 21.2635,
+   "lon": -157.8053,
+   "role": "start",
+   "note": "The parking inside the crater, reached by a road tunnel."
+  },
+  {
+   "id": "goal",
+   "name": "Diamond Head summit",
+   "lat": 21.2598,
+   "lon": -157.8117,
+   "role": "goal",
+   "note": "Leahi, the crater's high point over Waikiki and the ocean.",
+   "scene": "us-waikiki"
+  }
+ ]
+}

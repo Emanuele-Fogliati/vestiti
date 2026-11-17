@@ -1,0 +1,84 @@
+{
+ "id": "ca-lake-ohara-alpine-circuit",
+ "country": "CA",
+ "name": "Lake O'Hara Alpine Circuit",
+ "base": "Field",
+ "region": "Yoho National Park, British Columbia",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  7
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 11.8,
+  "gain_m": null,
+  "source": "https://parks.canada.ca/pn-np/bc/yoho/activ/randonnee-hike/ohara"
+ },
+ "why": "A high route round the lakes of Lake O'Hara, over Wiwaxy Gap and the ledges above Lake Oesa and the Opabin Plateau, in one of the finest corners of the Rockies.",
+ "book": "The 11 km road is closed to cars: Parks Canada bus by random draw in March (then leftover seats until 3:30 pm the day before), mid-June to early October. Daily cap of visitors; the alternative is walking the road.",
+ "water": "Water at Le Relais shelter; streams on the way (filter).",
+ "dangers": [
+  "Exposed scrambling and drops on Wiwaxy Gap and Yukness Ledge: take the lower routes if unsure.",
+  "Snow on the high routes until July.",
+  "Grizzly bears: routes close for bear activity."
+ ],
+ "turnaround": "Skip the high routes in rain, snow or fog.",
+ "sources": [
+  "https://parks.canada.ca/pn-np/bc/yoho/activ/randonnee-hike/ohara",
+  "https://parks.canada.ca/pn-np/bc/yoho/activ/randonnee-hike/ohara/visit",
+  "https://en.wikipedia.org/wiki/Lake_O%27Hara"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lake O'Hara",
+   "lat": 51.3572,
+   "lon": -116.3393,
+   "role": "start",
+   "note": "Le Relais day shelter by the lake where the bus stops."
+  },
+  {
+   "id": "wiwaxy-gap",
+   "name": "Wiwaxy Gap",
+   "lat": 51.3654,
+   "lon": -116.3246,
+   "role": "point",
+   "note": "A steep saddle 500 m above Lake O'Hara."
+  },
+  {
+   "id": "goal",
+   "name": "Lake Oesa",
+   "lat": 51.354,
+   "lon": -116.308,
+   "role": "goal",
+   "note": "A blue lake in a cirque of cliffs and ice at 2,270 m."
+  },
+  {
+   "id": "opabin-plateau",
+   "name": "Opabin Plateau",
+   "lat": 51.3412,
+   "lon": -116.315,
+   "role": "point",
+   "note": "A hanging valley of larches and small lakes."
+  }
+ ]
+}

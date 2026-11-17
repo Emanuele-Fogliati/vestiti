@@ -1,0 +1,72 @@
+{
+ "id": "us-hanakapiai",
+ "country": "US",
+ "name": "Kalalau Trail to Hanakapiai Beach",
+ "base": "Hanalei",
+ "region": "Haena State Park, Kauai, Hawaii",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 6.4,
+  "gain_m": null,
+  "source": "https://dlnr.hawaii.gov/dsp/hiking/kauai/kalalau-trail/"
+ },
+ "why": "The first two miles of the Na Pali Coast's Kalalau Trail, high above the sea along green fluted cliffs, to a boulder beach in a jungle valley.",
+ "book": "Day-use reservation for Haena State Park (entry, parking or shuttle) on gohaena.com, up to 30 days ahead. Beyond Hanakapiai a camping permit for Kalalau is needed.",
+ "water": "Stream water at Hanakapiai must be treated (leptospirosis). Carry 2 litres.",
+ "dangers": [
+  "Never swim at Hanakapiai: rip currents have drowned many people.",
+  "Hanakapiai Stream rises fast in rain: do not cross high water.",
+  "Red mud is very slippery after rain."
+ ],
+ "turnaround": "Do not cross Hanakapiai Stream when it is high or brown.",
+ "sources": [
+  "https://dlnr.hawaii.gov/dsp/hiking/kauai/kalalau-trail/",
+  "https://en.wikipedia.org/wiki/Kalalau_Trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ke'e Beach",
+   "lat": 22.2205,
+   "lon": -159.5827,
+   "role": "start",
+   "note": "The end of the road on Kauai's north shore."
+  },
+  {
+   "id": "goal",
+   "name": "Hanakapiai Beach",
+   "lat": 22.2093,
+   "lon": -159.5978,
+   "role": "goal",
+   "note": "A boulder beach at the mouth of a jungle valley under the cliffs.",
+   "scene": "us-kauai"
+  }
+ ]
+}

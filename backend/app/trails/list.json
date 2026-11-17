@@ -6769,6 +6769,873 @@
      "name": "Río Eléctrico bridge"
     }
    ]
+  },
+  {
+   "id": "us-angels-landing",
+   "name": "Angels Landing",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Springdale",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Angels Landing"
+    },
+    {
+     "point": "refrigerator-canyon",
+     "name": "Refrigerator Canyon"
+    }
+   ]
+  },
+  {
+   "id": "us-zion-narrows",
+   "name": "The Narrows from the bottom up",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Springdale",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Wall Street",
+     "reuse": "us-the-narrows"
+    },
+    {
+     "point": "riverside-end",
+     "name": "End of the Riverside Walk"
+    }
+   ]
+  },
+  {
+   "id": "us-observation-point",
+   "name": "Observation Point via the East Mesa Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Springdale",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Observation Point"
+    },
+    {
+     "point": "start",
+     "name": "East Mesa trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-half-dome",
+   "name": "Half Dome via the Mist Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Yosemite Valley",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "vernal-fall",
+     "name": "Vernal Fall",
+     "reuse": "us-vernal-fall"
+    },
+    {
+     "point": "nevada-fall",
+     "name": "Nevada Fall",
+     "reuse": "us-nevada-fall"
+    },
+    {
+     "point": "goal",
+     "name": "Half Dome summit",
+     "reuse": "us-half-dome"
+    }
+   ]
+  },
+  {
+   "id": "us-mist-trail",
+   "name": "Mist Trail to Vernal and Nevada Falls",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Yosemite Valley",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "vernal-fall",
+     "name": "Top of Vernal Fall",
+     "reuse": "us-vernal-fall"
+    },
+    {
+     "point": "goal",
+     "name": "Top of Nevada Fall",
+     "reuse": "us-nevada-fall"
+    }
+   ]
+  },
+  {
+   "id": "us-south-kaibab-skeleton-point",
+   "name": "South Kaibab Trail to Skeleton Point",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Grand Canyon Village",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Skeleton Point",
+     "reuse": "us-grand-canyon"
+    },
+    {
+     "point": "ooh-aah",
+     "name": "Ooh Aah Point"
+    }
+   ]
+  },
+  {
+   "id": "us-bright-angel-plateau-point",
+   "name": "Bright Angel Trail to Plateau Point",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Grand Canyon Village",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Plateau Point"
+    },
+    {
+     "point": "three-mile",
+     "name": "Three Mile Resthouse"
+    }
+   ]
+  },
+  {
+   "id": "us-delicate-arch",
+   "name": "Delicate Arch",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Moab",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Delicate Arch",
+     "reuse": "us-arches-national-park"
+    },
+    {
+     "point": "start",
+     "name": "Wolfe Ranch"
+    }
+   ]
+  },
+  {
+   "id": "us-navajo-queens-garden",
+   "name": "Navajo Loop and Queen's Garden",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Bryce Canyon City",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "thors-hammer",
+     "name": "Thor's Hammer",
+     "reuse": "us-bryce-canyon-national-park"
+    },
+    {
+     "point": "queens-garden",
+     "name": "Queen's Garden"
+    }
+   ]
+  },
+  {
+   "id": "us-the-wave",
+   "name": "The Wave (Coyote Buttes North)",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Kanab",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "The Wave"
+    },
+    {
+     "point": "start",
+     "name": "Wire Pass trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-havasu-falls",
+   "name": "Havasu Falls",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Peach Springs",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Havasu Falls"
+    },
+    {
+     "point": "supai",
+     "name": "Supai"
+    }
+   ]
+  },
+  {
+   "id": "us-grand-canyon-rim-to-rim",
+   "name": "Grand Canyon Rim to Rim",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Grand Canyon North Rim",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Bright Angel trailhead",
+     "reuse": "us-grand-canyon"
+    },
+    {
+     "point": "cottonwood",
+     "name": "Cottonwood Campground"
+    }
+   ]
+  },
+  {
+   "id": "us-mount-whitney",
+   "name": "Mount Whitney Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Lone Pine",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount Whitney",
+     "reuse": "us-sierra-nevada"
+    },
+    {
+     "point": "outpost-camp",
+     "name": "Outpost Camp"
+    }
+   ]
+  },
+  {
+   "id": "us-skyline-trail-paradise",
+   "name": "Skyline Trail, Paradise",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Ashford",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Panorama Point",
+     "reuse": "us-mount-rainier-national-park"
+    },
+    {
+     "point": "myrtle-falls",
+     "name": "Myrtle Falls"
+    }
+   ]
+  },
+  {
+   "id": "us-hall-of-mosses",
+   "name": "Hall of Mosses",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Forks",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Hall of Mosses"
+    },
+    {
+     "point": "spruce-bottom",
+     "name": "Old-growth Sitka spruces"
+    }
+   ]
+  },
+  {
+   "id": "us-harrys-ridge",
+   "name": "Harry's Ridge",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Castle Rock",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Harry's Ridge"
+    },
+    {
+     "point": "start",
+     "name": "Johnston Ridge Observatory"
+    }
+   ]
+  },
+  {
+   "id": "us-golden-canyon-gower-gulch",
+   "name": "Golden Canyon and Gower Gulch",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Furnace Creek",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Manly Beacon",
+     "reuse": "us-death-valley-national-park"
+    },
+    {
+     "point": "red-cathedral-junction",
+     "name": "Red Cathedral junction"
+    }
+   ]
+  },
+  {
+   "id": "us-ryan-mountain",
+   "name": "Ryan Mountain",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Twentynine Palms",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ryan Mountain",
+     "reuse": "us-joshua-tree-national-park"
+    },
+    {
+     "point": "start",
+     "name": "Ryan Mountain trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-congress-trail",
+   "name": "Congress Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Three Rivers",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "General Sherman Tree",
+     "reuse": "us-general-sherman-tree"
+    },
+    {
+     "point": "president",
+     "name": "The President"
+    }
+   ]
+  },
+  {
+   "id": "us-hanakapiai",
+   "name": "Kalalau Trail to Hanakapiai Beach",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Hanalei",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Hanakapiai Beach",
+     "reuse": "us-kauai"
+    },
+    {
+     "point": "start",
+     "name": "Ke'e Beach"
+    }
+   ]
+  },
+  {
+   "id": "us-diamond-head",
+   "name": "Diamond Head Summit Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Honolulu",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Diamond Head summit",
+     "reuse": "us-waikiki"
+    },
+    {
+     "point": "start",
+     "name": "Diamond Head crater trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-sliding-sands",
+   "name": "Sliding Sands Trail (Keonehe'ehe'e)",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Kula",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ka Lu'u o ka O'o"
+    },
+    {
+     "point": "start",
+     "name": "Haleakala Visitor Center"
+    }
+   ]
+  },
+  {
+   "id": "us-harding-icefield",
+   "name": "Harding Icefield Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Seward",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Harding Icefield"
+    },
+    {
+     "point": "exit-glacier-view",
+     "name": "Exit Glacier view",
+     "reuse": "us-exit-glacier"
+    }
+   ]
+  },
+  {
+   "id": "us-mount-healy-overlook",
+   "name": "Mount Healy Overlook",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Healy",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount Healy Overlook"
+    },
+    {
+     "point": "start",
+     "name": "Denali Visitor Center"
+    }
+   ]
+  },
+  {
+   "id": "us-highline-trail",
+   "name": "Highline Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "West Glacier",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Granite Park Chalet"
+    },
+    {
+     "point": "haystack-saddle",
+     "name": "Haystack Butte saddle"
+    }
+   ]
+  },
+  {
+   "id": "us-grinnell-glacier",
+   "name": "Grinnell Glacier",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Many Glacier",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Upper Grinnell Lake"
+    },
+    {
+     "point": "lake-josephine",
+     "name": "Lake Josephine"
+    }
+   ]
+  },
+  {
+   "id": "us-cascade-canyon",
+   "name": "Cascade Canyon via Jenny Lake and Inspiration Point",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Jackson",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Inspiration Point"
+    },
+    {
+     "point": "hidden-falls",
+     "name": "Hidden Falls"
+    }
+   ]
+  },
+  {
+   "id": "us-fairy-falls-grand-prismatic",
+   "name": "Grand Prismatic Overlook and Fairy Falls",
+   "country": "US",
+   "slot": "US-A",
+   "base": "West Yellowstone",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Grand Prismatic Spring Overlook",
+     "reuse": "us-grand-prismatic-spring"
+    },
+    {
+     "point": "fairy-falls",
+     "name": "Fairy Falls"
+    }
+   ]
+  },
+  {
+   "id": "us-emerald-lake-rmnp",
+   "name": "Bear Lake to Emerald Lake",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Estes Park",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Emerald Lake"
+    },
+    {
+     "point": "dream-lake",
+     "name": "Dream Lake",
+     "reuse": "us-rocky-mountain-national-park"
+    }
+   ]
+  },
+  {
+   "id": "us-maroon-bells-crater-lake",
+   "name": "Maroon Bells to Crater Lake",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Aspen",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Crater Lake"
+    },
+    {
+     "point": "start",
+     "name": "Maroon Lake"
+    }
+   ]
+  },
+  {
+   "id": "us-high-dune",
+   "name": "High Dune",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Alamosa",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "High Dune"
+    },
+    {
+     "point": "start",
+     "name": "Dunes Parking Area"
+    }
+   ]
+  },
+  {
+   "id": "us-old-rag",
+   "name": "Old Rag Mountain circuit",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Sperryville",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Old Rag summit"
+    },
+    {
+     "point": "rock-scramble",
+     "name": "Ridge Trail rock scramble"
+    }
+   ]
+  },
+  {
+   "id": "us-alum-cave-leconte",
+   "name": "Alum Cave Trail to Mount LeConte",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Gatlinburg",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount LeConte"
+    },
+    {
+     "point": "arch-rock",
+     "name": "Arch Rock"
+    }
+   ]
+  },
+  {
+   "id": "us-mount-washington-tuckerman",
+   "name": "Mount Washington via Tuckerman Ravine",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Jackson",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount Washington summit",
+     "reuse": "us-mount-washington"
+    },
+    {
+     "point": "hermit-lake",
+     "name": "Hermit Lake"
+    }
+   ]
+  },
+  {
+   "id": "us-beehive-loop",
+   "name": "Beehive Loop",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Bar Harbor",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "The Beehive"
+    },
+    {
+     "point": "the-bowl",
+     "name": "The Bowl"
+    }
+   ]
+  },
+  {
+   "id": "us-katahdin-knife-edge",
+   "name": "Katahdin via the Knife Edge",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Millinocket",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Baxter Peak"
+    },
+    {
+     "point": "pamola",
+     "name": "Pamola Peak"
+    }
+   ]
+  },
+  {
+   "id": "ca-lake-agnes-big-beehive",
+   "name": "Lake Agnes Teahouse and Big Beehive",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Lake Louise",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Lake Agnes Teahouse"
+    },
+    {
+     "point": "start",
+     "name": "Lake Louise lakeshore",
+     "reuse": "ca-lake-louise"
+    }
+   ]
+  },
+  {
+   "id": "ca-plain-of-six-glaciers",
+   "name": "Plain of Six Glaciers",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Lake Louise",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Plain of Six Glaciers Teahouse"
+    },
+    {
+     "point": "start",
+     "name": "Lake Louise lakeshore",
+     "reuse": "ca-lake-louise"
+    }
+   ]
+  },
+  {
+   "id": "ca-larch-valley-sentinel-pass",
+   "name": "Larch Valley and Sentinel Pass",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Lake Louise",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Larch Valley"
+    },
+    {
+     "point": "start",
+     "name": "Moraine Lake",
+     "reuse": "ca-moraine-lake"
+    }
+   ]
+  },
+  {
+   "id": "ca-johnston-canyon-ink-pots",
+   "name": "Johnston Canyon to the Ink Pots",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Banff",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ink Pots"
+    },
+    {
+     "point": "lower-falls",
+     "name": "Lower Falls",
+     "reuse": "ca-johnston-canyon"
+    }
+   ]
+  },
+  {
+   "id": "ca-iceline",
+   "name": "Iceline Trail",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Field",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Iceline high point"
+    },
+    {
+     "point": "start",
+     "name": "Takakkaw Falls parking",
+     "reuse": "ca-takakkaw-falls"
+    }
+   ]
+  },
+  {
+   "id": "ca-lake-ohara-alpine-circuit",
+   "name": "Lake O'Hara Alpine Circuit",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Field",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Lake Oesa"
+    },
+    {
+     "point": "wiwaxy-gap",
+     "name": "Wiwaxy Gap"
+    }
+   ]
+  },
+  {
+   "id": "ca-wilcox-pass",
+   "name": "Wilcox Pass",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Jasper",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Wilcox Pass",
+     "reuse": "ca-athabasca-glacier"
+    },
+    {
+     "point": "start",
+     "name": "Wilcox Creek trailhead"
+    }
+   ]
+  },
+  {
+   "id": "ca-sulphur-skyline",
+   "name": "Sulphur Skyline",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Jasper",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Sulphur Skyline summit"
+    },
+    {
+     "point": "start",
+     "name": "Miette Hot Springs"
+    }
+   ]
   }
  ]
 }

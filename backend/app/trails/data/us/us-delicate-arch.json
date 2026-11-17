@@ -1,0 +1,71 @@
+{
+ "id": "us-delicate-arch",
+ "country": "US",
+ "name": "Delicate Arch",
+ "base": "Moab",
+ "region": "Arches National Park, Utah",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "16:00",
+ "published": {
+  "km": 4.8,
+  "gain_m": 146,
+  "source": "https://www.nps.gov/arch/planyourvisit/delicate-arch.htm"
+ },
+ "why": "Over bare slickrock and along a ledge to Utah's symbol, a free-standing arch on the rim of a sandstone bowl, red at sunset.",
+ "book": "Timed-entry reservation for the park in the high season (recreation.gov). Parking at Wolfe Ranch fills by mid-morning.",
+ "water": "None, no shade: carry 2 litres, more in summer.",
+ "dangers": [
+  "Heat over 38°C in summer on open slickrock.",
+  "Steep drop-offs on the last ledge and in the bowl.",
+  "Bring a headlamp for the walk back after sunset."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/arch/planyourvisit/delicate-arch.htm",
+  "https://en.wikipedia.org/wiki/Delicate_Arch"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 2,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Wolfe Ranch",
+   "lat": 38.7365,
+   "lon": -109.5197,
+   "role": "start",
+   "note": "An 1890s settler's cabin; Ute petroglyphs a short side path away."
+  },
+  {
+   "id": "goal",
+   "name": "Delicate Arch",
+   "lat": 38.7436,
+   "lon": -109.4993,
+   "role": "goal",
+   "note": "A 16 m arch on the edge of a slickrock bowl, the La Sal Mountains behind.",
+   "scene": "us-arches-national-park"
+  }
+ ]
+}

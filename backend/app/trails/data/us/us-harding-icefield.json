@@ -1,0 +1,80 @@
+{
+ "id": "us-harding-icefield",
+ "country": "US",
+ "name": "Harding Icefield Trail",
+ "base": "Seward",
+ "region": "Kenai Fjords National Park, Alaska",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 13.2,
+  "gain_m": 914,
+  "source": "https://www.nps.gov/kefj/planyourvisit/harding_icefield_trail.htm"
+ },
+ "why": "From the forest beside Exit Glacier up through meadows to the edge of the Harding Icefield, an ice plain of 1,800 km² with only nunataks sticking out.",
+ "book": "No permit, no fee. Exit Glacier road from Seward, 20 km.",
+ "water": "Streams on the way; filter. Carry 2 litres.",
+ "dangers": [
+  "Snow on the upper trail until July; avalanches in early summer.",
+  "Black and brown bears: carry bear spray and make noise.",
+  "Never walk on the icefield or under the glacier."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/kefj/planyourvisit/harding_icefield_trail.htm",
+  "https://www.nps.gov/kefj/learn/nature/the-harding-icefield.htm",
+  "https://en.wikipedia.org/wiki/Harding_Icefield"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Exit Glacier Nature Center",
+   "lat": 60.1883,
+   "lon": -149.6314,
+   "role": "start",
+   "note": "The trailhead at the end of Exit Glacier Road."
+  },
+  {
+   "id": "exit-glacier-view",
+   "name": "Exit Glacier view",
+   "lat": 60.184,
+   "lon": -149.6378,
+   "role": "point",
+   "note": "Where the trail leaves the valley floor, facing the blue tongue of Exit Glacier.",
+   "scene": "us-exit-glacier"
+  },
+  {
+   "id": "goal",
+   "name": "Harding Icefield",
+   "lat": 60.18,
+   "lon": -149.7062,
+   "role": "goal",
+   "note": "A stone shelter on the edge of an endless field of ice."
+  }
+ ],
+ "replaces": [
+  "us-nps-kefj-harding-icefield-trail"
+ ]
+}

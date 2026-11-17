@@ -1,0 +1,92 @@
+{
+ "id": "us-alum-cave-leconte",
+ "country": "US",
+ "name": "Alum Cave Trail to Mount LeConte",
+ "base": "Gatlinburg",
+ "region": "Great Smoky Mountains National Park, Tennessee",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 16.1,
+  "gain_m": null,
+  "source": "https://www.nps.gov/thingstodo/leconte-via-alum-cave-trail.htm"
+ },
+ "why": "Through a tunnel in Arch Rock and under the overhang of Alum Cave Bluffs to LeConte Lodge, the only place to sleep on a summit in the Smokies.",
+ "book": "Parking tag required in the park (any vehicle stopping over 15 minutes). LeConte Lodge cabins by lottery a year ahead. Alum Cave trailhead parking fills by 8:00.",
+ "water": "Streams low on the trail; drinking water and lunch at LeConte Lodge in season.",
+ "dangers": [
+  "Narrow ledges with cables above the bluffs, icy in winter.",
+  "Black bears: never feed them.",
+  "Fog and storms on the summit in summer afternoons."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/thingstodo/leconte-via-alum-cave-trail.htm",
+  "https://www.nps.gov/places/alumcave.htm",
+  "https://en.wikipedia.org/wiki/Mount_Le_Conte_(Tennessee)"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Alum Cave trailhead",
+   "lat": 35.629,
+   "lon": -83.451,
+   "role": "start",
+   "note": "On Newfound Gap Road, 14 km from Sugarlands."
+  },
+  {
+   "id": "arch-rock",
+   "name": "Arch Rock",
+   "lat": 35.6391,
+   "lon": -83.4383,
+   "role": "point",
+   "note": "Stone steps through a natural tunnel in the rock."
+  },
+  {
+   "id": "alum-cave-bluffs",
+   "name": "Alum Cave Bluffs",
+   "lat": 35.6405,
+   "lon": -83.434,
+   "role": "point",
+   "note": "A long overhang of dark rock, the turnaround for a short walk."
+  },
+  {
+   "id": "goal",
+   "name": "Mount LeConte",
+   "lat": 35.6545,
+   "lon": -83.4375,
+   "role": "goal",
+   "note": "LeConte Lodge and Cliff Tops at 2,010 m, the third-highest peak of the Smokies."
+  }
+ ],
+ "replaces": [
+  "us-osm-7552504"
+ ]
+}
