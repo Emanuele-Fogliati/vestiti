@@ -68,6 +68,7 @@ def test_replaced_walks_are_gone():
     for t in trails.trails():
         for r in t.replaces:
             assert r not in ids, f"{t.id} replaces {r}: run tools/trails/walk_text.py apply and world_tail.py dots"
+            assert trails.find(r).id == t.id, f"the old id {r} must open {t.id}"
 
 
 def test_geo_files_belong_to_trails():

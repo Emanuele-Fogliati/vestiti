@@ -1,0 +1,71 @@
+{
+ "id": "ca-sulphur-skyline",
+ "country": "CA",
+ "name": "Sulphur Skyline",
+ "base": "Jasper",
+ "region": "Jasper National Park, Alberta",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 8.0,
+  "gain_m": 700,
+  "source": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails"
+ },
+ "why": "Straight up from Miette Hot Springs to a bald summit with ranges of grey limestone peaks in every direction, then down to soak in the pools.",
+ "book": "No permit. Miette Road (17 km from the Yellowhead Highway) is closed in winter and at times for works: check Parks Canada before you go.",
+ "water": "None: carry 2 litres.",
+ "dangers": [
+  "Steep loose scree on the summit cone.",
+  "Lightning: the summit is bare.",
+  "Bighorn sheep and bears on the trail."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/miette",
+  "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 4,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Miette Hot Springs",
+   "lat": 53.1303,
+   "lon": -117.7698,
+   "role": "start",
+   "note": "The hot pools at the end of Miette Road."
+  },
+  {
+   "id": "goal",
+   "name": "Sulphur Skyline summit",
+   "lat": 53.1157,
+   "lon": -117.7449,
+   "role": "goal",
+   "note": "A bare summit at 2,070 m over the Fiddle River valley."
+  }
+ ],
+ "replaces": [
+  "ca-goal-6548652085"
+ ]
+}

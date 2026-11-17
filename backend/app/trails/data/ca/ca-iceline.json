@@ -1,0 +1,87 @@
+{
+ "id": "ca-iceline",
+ "country": "CA",
+ "name": "Iceline Trail",
+ "base": "Field",
+ "region": "Yoho National Park, British Columbia",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  7,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 20.3,
+  "gain_m": 1090,
+  "source": "https://parks.canada.ca/pn-np/bc/yoho/activ/randonnee-hike/jour-day"
+ },
+ "why": "Across a bench of bare rock and glacial lakes right under the Emerald Glacier, facing Takakkaw Falls, and down through the Little Yoho Valley.",
+ "book": "No permit for the day. Yoho Valley Road (tight switchbacks, no trailers) opens late June to mid-October.",
+ "water": "Streams and tarns on the bench; filter.",
+ "dangers": [
+  "Snow on the high bench until mid-July.",
+  "Exposed to storms and wind above the trees.",
+  "Grizzly bears in the Little Yoho Valley."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/bc/yoho/activ/randonnee-hike/jour-day",
+  "https://en.wikipedia.org/wiki/Takakkaw_Falls"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Takakkaw Falls parking",
+   "lat": 51.4986,
+   "lon": -116.4728,
+   "role": "start",
+   "note": "The end of Yoho Valley Road, facing the 373 m falls.",
+   "scene": "ca-takakkaw-falls"
+  },
+  {
+   "id": "goal",
+   "name": "Iceline high point",
+   "lat": 51.5075,
+   "lon": -116.524,
+   "role": "goal",
+   "note": "A bench of bare limestone at 2,200 m under the Emerald Glacier."
+  },
+  {
+   "id": "little-yoho",
+   "name": "Stanley Mitchell Hut",
+   "lat": 51.5257,
+   "lon": -116.5643,
+   "role": "point",
+   "note": "An Alpine Club of Canada hut in the meadows of the Little Yoho Valley."
+  },
+  {
+   "id": "laughing-falls",
+   "name": "Laughing Falls",
+   "lat": 51.5306,
+   "lon": -116.5081,
+   "role": "point",
+   "note": "A wide waterfall on the Little Yoho River."
+  }
+ ],
+ "replaces": [
+  "ca-pc-x-iceline"
+ ]
+}

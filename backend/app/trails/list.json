@@ -7478,6 +7478,164 @@
      "name": "Pamola Peak"
     }
    ]
+  },
+  {
+   "id": "ca-lake-agnes-big-beehive",
+   "name": "Lake Agnes Teahouse and Big Beehive",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Lake Louise",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Lake Agnes Teahouse"
+    },
+    {
+     "point": "start",
+     "name": "Lake Louise lakeshore",
+     "reuse": "ca-lake-louise"
+    }
+   ]
+  },
+  {
+   "id": "ca-plain-of-six-glaciers",
+   "name": "Plain of Six Glaciers",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Lake Louise",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Plain of Six Glaciers Teahouse"
+    },
+    {
+     "point": "start",
+     "name": "Lake Louise lakeshore",
+     "reuse": "ca-lake-louise"
+    }
+   ]
+  },
+  {
+   "id": "ca-larch-valley-sentinel-pass",
+   "name": "Larch Valley and Sentinel Pass",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Lake Louise",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Larch Valley"
+    },
+    {
+     "point": "start",
+     "name": "Moraine Lake",
+     "reuse": "ca-moraine-lake"
+    }
+   ]
+  },
+  {
+   "id": "ca-johnston-canyon-ink-pots",
+   "name": "Johnston Canyon to the Ink Pots",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Banff",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ink Pots"
+    },
+    {
+     "point": "lower-falls",
+     "name": "Lower Falls",
+     "reuse": "ca-johnston-canyon"
+    }
+   ]
+  },
+  {
+   "id": "ca-iceline",
+   "name": "Iceline Trail",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Field",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Iceline high point"
+    },
+    {
+     "point": "start",
+     "name": "Takakkaw Falls parking",
+     "reuse": "ca-takakkaw-falls"
+    }
+   ]
+  },
+  {
+   "id": "ca-lake-ohara-alpine-circuit",
+   "name": "Lake O'Hara Alpine Circuit",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Field",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Lake Oesa"
+    },
+    {
+     "point": "wiwaxy-gap",
+     "name": "Wiwaxy Gap"
+    }
+   ]
+  },
+  {
+   "id": "ca-wilcox-pass",
+   "name": "Wilcox Pass",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Jasper",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Wilcox Pass",
+     "reuse": "ca-athabasca-glacier"
+    },
+    {
+     "point": "start",
+     "name": "Wilcox Creek trailhead"
+    }
+   ]
+  },
+  {
+   "id": "ca-sulphur-skyline",
+   "name": "Sulphur Skyline",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Jasper",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Sulphur Skyline summit"
+    },
+    {
+     "point": "start",
+     "name": "Miette Hot Springs"
+    }
+   ]
   }
  ]
 }

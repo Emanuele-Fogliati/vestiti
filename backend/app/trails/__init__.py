@@ -168,9 +168,25 @@ def _worldly(trail_id: str) -> bool:
     return any(k in trail_id for k in ("-osm-", "-goal-")) or trail_id.startswith(("us-nps-", "us-usfs-", "ca-pc-"))
 
 
+@lru_cache
+def replaced() -> dict[str, str]:
+    """Generated walks dropped for a hand-written one (its `replaces`, or the same OSM relation) ->
+    the hand-written id, so old links (zone guides, saved walks) still open the walk (2026-11-17)."""
+    out: dict[str, str] = {}
+    for t in trails():
+        if t.tier != "A":
+            continue
+        for r in t.replaces:
+            out[r] = t.id
+        if t.osm:
+            out[f"{t.country.lower()}-osm-{t.osm}"] = t.id
+    return out
+
+
 def find(trail_id: str) -> Trail | None:
-    """A trek of the app (tiers A, B) or one of the world's (app.trails.world, read on demand)."""
-    t = by_id().get(trail_id)
+    """A trek of the app (tiers A, B) or one of the world's (app.trails.world, read on demand). The id
+    of a generated walk replaced by a hand-written one gives the hand-written one."""
+    t = by_id().get(trail_id) or by_id().get(replaced().get(trail_id, ""))
     if t is None and _worldly(trail_id):
         from app.trails import world
         r = world.row(trail_id)
