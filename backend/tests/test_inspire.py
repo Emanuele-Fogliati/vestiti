@@ -401,10 +401,22 @@ def test_a_thing_out_of_its_season_is_not_dressed_for():
 def test_month_kit_names_fit_summer_and_ski():
     """Banff in July gets T-shirts too; a ski week gets ski gloves and no shorts (2026-11-17)."""
     from app.inspire import wear
-    names = lambda acts, m: [p["name"] for p in wear.for_month(
+    month = lambda acts, m: wear.for_month(
         [{"name": "Banff", "lat": 51.18, "lon": -115.57, "elevation_m": 1380, "days": 5,
-          "activities": acts}], m)["pieces"]]
-    assert "T-shirts and long-sleeve tops" in names([{"type": "hiking"}], 7)
+          "activities": acts}], m)
+    names = lambda acts, m: [p["name"] for p in month(acts, m)["pieces"]]
+    july = month([{"type": "hiking"}], 7)
+    assert july["hot"] and any("T-shirt" in n for n in july["hot"]["pieces"])
     ski = names([{"type": "ski"}], 1)
     assert "Ski gloves" in ski and "Light gloves" not in ski
     assert not any("shorts" in n for n in ski)
+
+
+def test_one_cold_summit_or_camp_does_not_turn_the_bag_into_winter_kit():
+    """Manu 2026-11-17 ("i vestiti è la cosa più importante del tool"): Haleakala at dawn rides
+    in the pack, a 2,000 m summer viewpoint gets no puffer, a W Trek camp at 5 °C is no expedition."""
+    hi = {p["name"]: p for p in _wear("usa-hawaii-14", 7)["pieces"]}
+    assert hi["Light puffer"]["pack"] and hi["Beanie"]["pack"] and hi["Thermal leggings"]["pack"]
+    assert not any("puffer" in p["name"].lower() for p in _wear("usa-south-14", 7)["pieces"])
+    names = {p["name"] for p in _wear("patagonia-fitz-roy-torres-del-paine", 1)["pieces"]}
+    assert not names & {"Thick down jacket", "Thick fleece", "Thick base layer", "Lined winter trousers"}
