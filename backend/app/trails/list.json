@@ -6821,7 +6821,8 @@
    "scenes": [
     {
      "point": "goal",
-     "name": "Observation Point"
+     "name": "Observation Point",
+     "reuse": "us-observation-point"
     },
     {
      "point": "start",
@@ -6907,7 +6908,8 @@
    "scenes": [
     {
      "point": "goal",
-     "name": "Plateau Point"
+     "name": "Plateau Point",
+     "reuse": "us-plateau-point"
     },
     {
      "point": "three-mile",
@@ -7268,7 +7270,8 @@
    "scenes": [
     {
      "point": "goal",
-     "name": "Granite Park Chalet"
+     "name": "Granite Park Chalet",
+     "reuse": "us-granite-park-chalet"
     },
     {
      "point": "haystack-saddle",
@@ -7287,7 +7290,8 @@
    "scenes": [
     {
      "point": "goal",
-     "name": "Upper Grinnell Lake"
+     "name": "Upper Grinnell Lake",
+     "reuse": "us-upper-grinnell-lake"
     },
     {
      "point": "lake-josephine",
@@ -7306,7 +7310,8 @@
    "scenes": [
     {
      "point": "goal",
-     "name": "Inspiration Point"
+     "name": "Inspiration Point",
+     "reuse": "us-inspiration-point-jenny-lake"
     },
     {
      "point": "hidden-falls",
@@ -7341,11 +7346,12 @@
    "slot": "US-A",
    "base": "Estes Park",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
-     "name": "Emerald Lake"
+     "name": "Emerald Lake",
+     "reuse": "us-emerald-lake-rocky-mountain"
     },
     {
      "point": "dream-lake",
