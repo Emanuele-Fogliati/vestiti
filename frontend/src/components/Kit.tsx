@@ -214,7 +214,7 @@ export function Kit({ tripId, plans, tier, setTier, onChanged }: {
       </div>
       {hot && hotLines.length > 0 && (
         <>
-          <h3 className="x-h3">Plus, for the hot days <small>{hot.names.join(", ")}</small></h3>
+          <h3 className="x-h3">Plus, for the warm days <small>{hot.names.join(", ")}</small></h3>
           <p className="x-sub">Light pieces for the day out. Jackets, fleece and the rest of the bag stay the same.</p>
           <div className="x-items">
             {hotLines.map((l) => <Card key={l.slot} line={l} tripId={tripId} tier={tier} stops={stops} onSwap={() => setSwap(l)} onChanged={onChanged} />)}

@@ -30,6 +30,19 @@ COLD_ONLY = {"headwear", "gloves", "base_bottom", "shell_bottom"}  # never added
 # a warmer top does it (Manu, 2026-11-16)
 LEGS_ONLY_FREEZING = {"base_bottom", "shell_bottom"}
 HIGH_COLD_M = 4500  # from here warm gloves, beanie and down go, whatever the day
+# A summit far above the stop, reached for a few hours (Haleakala at dawn from a beach on
+# Maui, Mauna Kea, Pikes Peak): the jacket, fleece, beanie and gloves go on over the bag
+# of the trip, the T-shirts and legs of the whole bag stay as the trip needs (Manu,
+# 2026-11-17: Hawaii got long sleeves and thermal leggings for one cold dawn).
+EXCURSION_M = 1500
+EXCURSION_FIXED = ("base_top",)
+# the evening at the camp of a multi-day trek is cooking and moving about, then the tent and
+# the sleeping bag: the W Trek in January (5 °C) got a thick down jacket, thick fleece, thick
+# base layer and lined winter trousers, an expedition kit (Manu, 2026-11-17)
+CAMP_FACTOR = 0.8
+# the emergency warm layer above 2,000 m is for a mountain that can turn cold, not a summer
+# summit reached by car at 16 °C (Kuwohi in July got a puffer, Manu 2026-11-17)
+PRECAUTION_COLD_C = 10.0
 DRY_PROB = 15  # below this chance of rain on every day of the trip, a month is desert-dry
 # a walk to dinner and back is a slow walk (ASHRAE: 2.0 met at 3.2 km/h), not standing still:
 # at 1.8 Takayama in January got a thick down jacket and lined trousers (Opus check, 2026-11-16)
@@ -190,6 +203,8 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
                         short_stop=profile.short_stops or day_walk or evening,
                         personal_offset=personal_offset,
                     )
+                    if profile.key == "trek_multiday" and mode == "rest":
+                        req = round(req * CAMP_FACTOR, 2)
                     if profile.key == "ski" and mode == "rest":
                         # a chairlift is eight minutes between runs, and the body still holds the
                         # heat of the last one: more tolerance than a stop on a walk
@@ -202,6 +217,23 @@ def conditions_for_stage(stage: StageInput, personal_offset: float = 0.0,
                         precip_mm=day.precip_mm, precip_prob=day.precip_prob, wet=wet,
                         snow=snow, hot_sun=hot_sun and mode == "moving", altitude_m=alt_here,
                         required=req, source=day.source, where=where,
+                    ))
+                if profile.key == "ski":
+                    # the evening in the resort: a slow walk to dinner in town clothes under the
+                    # ski jacket. Without it a ski week at -13 °C had only light trousers for
+                    # town, as the slopes dress in ski trousers (Manu, 2026-11-17)
+                    town = resolve({"type": "city"})[0]
+                    t_eve = day.tmin + 0.25 * span
+                    w_eve = day.wind_kmh * TOWN_WIND
+                    req = thermal.required_clo(t_eve, w_eve, CITY_EVENING_MET, moving=False,
+                                               short_stop=True, personal_offset=personal_offset)
+                    out.append(Condition(
+                        stage_index=stage.index, date=day.date, activity=town,
+                        activity_label="Evening in town", mode="rest", temp_c=round(t_eve, 1),
+                        feels_like_c=thermal.feels_like_c(t_eve, w_eve), wind_kmh=round(w_eve),
+                        precip_mm=day.precip_mm, precip_prob=day.precip_prob, wet=wet,
+                        snow=wet and day.tmax <= 1.0, hot_sun=False, altitude_m=base,
+                        required=req, source=day.source, where="evening in town",
                     ))
     return out
 
@@ -329,9 +361,10 @@ def precaution(slot: str, conds: list[Condition]) -> str | None:
         cool = min((c.temp_c for c in conds if c.wet), default=99) < WARM_RAIN_C
         if max_prob >= 60 and max_mm >= 10 and cool:
             return f"heavy rain likely (up to {max_mm:.0f} mm a day)"
-    if slot == "insulation_top" and mountain and max_alt >= 2000:
+    cold_up = min((c.feels_like_c for c in mountain), default=99) < PRECAUTION_COLD_C
+    if slot == "insulation_top" and mountain and max_alt >= 2000 and cold_up:
         return f"above 2,000 m ({max_alt:.0f} m): an emergency warm layer"
-    if slot in ("headwear", "gloves") and mountain and max_alt >= 2500:
+    if slot in ("headwear", "gloves") and mountain and max_alt >= 2500 and cold_up:
         return f"above 2,500 m ({max_alt:.0f} m)"
     return None
 
@@ -453,12 +486,29 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
 
     by_key: dict[tuple, Dress] = {}
     ski_trip = any(c.activity.key == "ski" for c in conds)
-    for c in sorted(conds, key=lambda c: c.mode != "moving"):
+    base_of = {s.index: s.base_elevation_m or 0.0 for s in stages}
+
+    def excursion(c: Condition) -> bool:
+        return (c.activity.key not in ("trek_multiday", "ski") and not c.activity.glacier
+                and c.altitude_m - base_of.get(c.stage_index, 0.0) >= EXCURSION_M)
+
+    normal = [c for c in conds if not excursion(c)]
+    trips_up = [c for c in conds if excursion(c)] if normal else []
+    if not normal:
+        normal = conds
+
+    def dress_up(c: Condition, fixed: bool) -> None:
         chosen = None
         for i in range(len(PRESETS)):
             kit = _preset_kit(i, footwear_lv)
             if ski_trip:
                 kit = ski_kit(kit, c)
+            if fixed:  # the bag's own T-shirts and legs, the warm layers go on over them
+                for slot in EXCURSION_FIXED:
+                    if reqs[slot].needed:
+                        kit[slot] = reference_item(slot, reqs[slot].level)
+                    else:
+                        kit.pop(slot, None)
             start = None
             if c.mode == "rest":
                 mv = by_key.get((c.stage_index, c.date, c.activity.key, "moving"))
@@ -472,17 +522,36 @@ def requirements(stages: list[StageInput], conds: list[Condition]) -> dict[str, 
         for slot in d.worn:
             if c.activity.key == "ski" and slot == "trousers":
                 continue  # on the slopes the ski trousers take their place
+            if fixed and slot in EXCURSION_FIXED:
+                continue
             why = None
             if slot not in ESSENTIALS:
-                why = (f"{SLOT_BY_KEY[slot].name}: {d.reasons.get(slot, '')} "
+                # a piece only the summit asks for rides in the pack the rest of the trip
+                tag = " in the pack" if fixed else ""
+                why = (f"{SLOT_BY_KEY[slot].name}{tag}: {d.reasons.get(slot, '')} "
                        f"({c.date:%d %b}, {c.where})")
             bump(slot, kit[slot].level or "medium", c.stage_index, c.date, why)
+
+    for c in sorted(normal, key=lambda c: c.mode != "moving"):
+        dress_up(c, False)
+    for c in sorted(trips_up, key=lambda c: c.mode != "moving"):
+        dress_up(c, True)
 
     if any(c.activity.key == "ski" for c in conds):
         # a ski week: the shell jacket and trousers are padded ski ones (Manu, 2026-11-16)
         for slot in ("shell_top", "shell_bottom"):
             if reqs[slot].needed:
                 reqs[slot].insulated = True
+        # and the gloves are ski gloves, padded and waterproof, whatever the warmth sum says:
+        # hands hold poles in the snow and the wind of the run (Manu, 2026-11-17: a ski week at
+        # -13 °C got light gloves)
+        ski_day = next(c for c in conds if c.activity.key == "ski")
+        bump("gloves", "warm", ski_day.stage_index, ski_day.date,
+             f"{SLOT_BY_KEY['gloves'].name}: ski gloves for the slopes ({ski_day.date:%d %b})")
+        bump("headwear", reqs["headwear"].level if reqs["headwear"].needed else "medium",
+             ski_day.stage_index, ski_day.date,
+             f"{SLOT_BY_KEY['headwear'].name}: under the helmet and in town ({ski_day.date:%d %b})")
+        reqs["gloves"].waterproof = reqs["gloves"].insulated = True
 
     # very high (Rainbow Mountain, Laguna 69): the weather turns in minutes and sleet is
     # common even in the dry season, so warm gloves, a warm beanie and a real down jacket go
@@ -585,6 +654,10 @@ WARM = "warm"
 ZONE_SLOTS = ("base_top", "trousers", "footwear")
 WARM_DAY_C = 24.0  # a typical day's high from which shorts and a T-shirt are the norm
 WARM_MOVING_C = 16.0  # ...unless the day's activity climbs where it is cool
+# a T-shirt comes earlier than shorts: Banff in July (7-22 °C) had long sleeves only, for
+# the cool mornings, and no T-shirt for the afternoons on the trail (Manu, 2026-11-17)
+T_SHIRT_DAY_C = 20.0
+T_SHIRT_MOVING_C = 12.0
 
 
 def zone_key(slot: str, zone: str = WARM) -> str:
@@ -595,14 +668,15 @@ def base_slot(key: str) -> str:
     return key.split("@", 1)[0]
 
 
-def warm_stages(stages: list[StageInput], conds: list[Condition]) -> list[int]:
+def warm_stages(stages: list[StageInput], conds: list[Condition], day_c: float = WARM_DAY_C,
+                moving_c: float = WARM_MOVING_C) -> list[int]:
     out = []
     for st in stages:
         highs = sorted(d.tmax for d in st.days)
         moving = [c.temp_c for c in conds if c.stage_index == st.index and c.mode == "moving"]
         if not highs or not moving:
             continue
-        if highs[len(highs) // 2] >= WARM_DAY_C and min(moving) >= WARM_MOVING_C:
+        if highs[len(highs) // 2] >= day_c and min(moving) >= moving_c:
             out.append(st.index)
     return out
 
@@ -619,12 +693,16 @@ def warm_zone(stages: list[StageInput], conds: list[Condition],
               reqs: dict[str, SlotRequirement]) -> dict | None:
     """The hot places of a trip and the lighter pieces they need, or None when the main
     bag already suits them (nothing hot, or the bag is already T-shirts and shorts)."""
-    idx = warm_stages(stages, conds)
+    hot = warm_stages(stages, conds)
+    tee = warm_stages(stages, conds, T_SHIRT_DAY_C, T_SHIRT_MOVING_C)
+    idx = sorted(set(hot) | set(tee))
     # every place hot is not "the bag already suits them": cool evenings in Sapa or Sapporo
     # put long sleeves and trousers in the bag, and Tokyo and Hue in July then got no T-shirt
     # at all (Opus check, 2026-11-16). The pieces below go only when lighter than the bag.
     if not idx:
         return None
+    # the T-shirt from a 20 °C day, shorts and light shoes only from a hot one
+    slot_stages = {"base_top": idx, "trousers": hot, "footwear": hot}
     ws = [s for s in stages if s.index in idx]
     wc = [c for c in conds if c.stage_index in idx]
     wr = requirements(ws, wc)
@@ -634,7 +712,7 @@ def warm_zone(stages: list[StageInput], conds: list[Condition],
     slots = []
     for slot in ZONE_SLOTS:
         main, warm = reqs.get(slot), wr[slot]
-        if not main or not main.needed:
+        if not main or not main.needed or not slot_stages[slot]:
             continue
         if slot == "footwear":
             lighter = FOOTWEAR_TYPES.index(main.footwear_type or "sneaker") \
@@ -643,12 +721,15 @@ def warm_zone(stages: list[StageInput], conds: list[Condition],
         else:
             lighter = LEVELS.index(main.level) > LEVELS.index(warm.level)
         if lighter:
-            warm.reasons = [f"{s.name}: hot days" for s in ws][:3]
+            warm.reasons = [f"{s.name}: {'hot' if s.index in hot else 'warm'} days"
+                            for s in ws if s.index in slot_stages[slot]][:3]
             slots.append(slot)
     if not slots:
         return None
-    return {"key": WARM, "stages": idx, "names": [s.name for s in ws], "slots": slots,
-            "reqs": {s: wr[s] for s in slots}}
+    used = sorted({i for sl in slots for i in slot_stages[sl]})
+    return {"key": WARM, "stages": used, "names": [s.name for s in ws if s.index in used],
+            "slots": slots, "reqs": {s: wr[s] for s in slots},
+            "slot_stages": {sl: slot_stages[sl] for sl in slots}}
 
 
 # ---------------------------------------------------------------- evaluation (pass 2)
@@ -670,13 +751,17 @@ def evaluate(
     dresses: dict[tuple, Dress] = {}
     light = (zone or {}).get("kit") or {}
     hot = set((zone or {}).get("stages") or []) if light else set()
+    # a T-shirt place is not always a shorts place (strategy.warm_zone)
+    per = {s: set(v) for s, v in ((zone or {}).get("slot_stages") or {}).items()}
+
+    def in_zone(c: Condition, slot: str) -> bool:
+        return slot in light and c.mode == "moving" and c.stage_index in per.get(slot, hot)
 
     def kit_for(c: Condition) -> dict[str, KitItem]:
-        return {**kit, **light} if c.stage_index in hot and c.mode == "moving" else kit
+        return {**kit, **{s: v for s, v in light.items() if in_zone(c, s)}}
 
     def key_for(c: Condition, slot: str) -> str:
-        return zone_key(slot) if slot in light and c.stage_index in hot \
-            and c.mode == "moving" else slot
+        return zone_key(slot) if in_zone(c, slot) else slot
 
     for c in sorted(conds, key=lambda c: c.mode != "moving"):
         start = None

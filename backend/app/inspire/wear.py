@@ -24,7 +24,6 @@ from app.weather.service import estimate_day
 YEAR = 2027  # any year without a 29 February
 START_DAY = 8  # a trip "in July" leaves on 8 July
 
-T_SHIRT_HIGH_C = 20.0  # a trip's warmest high from which T-shirts go in the bag too
 SHORTS_LOW_C = 5.0  # a trip's coldest low under which "or shorts" is not offered
 
 ORDER = ["shell_top", "insulation_top", "mid_top", "base_top", "base_bottom", "trousers",
@@ -49,10 +48,6 @@ def label(slot: str, r, wet: bool = True, ski: bool = False, high: float | None 
         return {"light": "Light fleece", "medium": "Fleece", "warm": "Warm fleece",
                 "very_warm": "Thick fleece"}[lv]
     if slot == "base_top":
-        # Banff in July (7-22 °C): long sleeves for the cold mornings, but afternoons are
-        # T-shirt weather, and a summer bag without one reads wrong (Canada trips, 2026-11-17)
-        if lv == "medium" and not ski and high is not None and high >= T_SHIRT_HIGH_C:
-            return "T-shirts and long-sleeve tops"
         if ski and lv == "medium":
             return "Long-sleeve thermal tops"
         return {"light": "T-shirts", "medium": "Long-sleeve tops", "warm": "Warm base layer",
