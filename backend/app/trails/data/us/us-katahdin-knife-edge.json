@@ -1,0 +1,79 @@
+{
+ "id": "us-katahdin-knife-edge",
+ "country": "US",
+ "name": "Katahdin via the Knife Edge",
+ "base": "Millinocket",
+ "region": "Baxter State Park, Maine",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "technical",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  9,
+  12
+ ],
+ "start_by": "06:00",
+ "published": null,
+ "why": "Up Maine's highest mountain and across the Knife Edge, a granite arête a metre wide between Pamola Peak and Baxter Peak, the end of the Appalachian Trail.",
+ "book": "Katahdin Trailhead Pass (parking reservation) for Roaring Brook, on the Baxter State Park reservations site; gate closes when lots are full. Trails open only in the summer season and close in bad weather: check the park's trail status.",
+ "water": "Water at Roaring Brook and Chimney Pond (treat it); none above treeline.",
+ "dangers": [
+  "The Knife Edge is exposed with drops of 600 m on both sides: never in wind, rain or fog.",
+  "There is no easy way off the Knife Edge once you are on it.",
+  "Long day: rangers advise turning back by noon."
+ ],
+ "turnaround": "Be on Pamola Peak by 11:00 in good weather, or come down via the Saddle Trail from Chimney Pond.",
+ "sources": [
+  "https://baxterstatepark.org/general-info/",
+  "https://en.wikipedia.org/wiki/Mount_Katahdin"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Roaring Brook Campground",
+   "lat": 45.9191,
+   "lon": -68.8566,
+   "role": "start",
+   "note": "The trailhead on the east side of the mountain."
+  },
+  {
+   "id": "pamola",
+   "name": "Pamola Peak",
+   "lat": 45.9061,
+   "lon": -68.9061,
+   "role": "point",
+   "note": "The end of the Helon Taylor ridge and the start of the Knife Edge."
+  },
+  {
+   "id": "goal",
+   "name": "Baxter Peak",
+   "lat": 45.9044,
+   "lon": -68.9213,
+   "role": "goal",
+   "note": "The summit of Katahdin, 1,606 m, with the northern sign of the Appalachian Trail."
+  },
+  {
+   "id": "chimney-pond",
+   "name": "Chimney Pond",
+   "lat": 45.9144,
+   "lon": -68.9115,
+   "role": "point",
+   "note": "A pond in the great basin under the cliffs, with a ranger station."
+  }
+ ]
+}

@@ -7382,6 +7382,102 @@
      "name": "Dunes Parking Area"
     }
    ]
+  },
+  {
+   "id": "us-old-rag",
+   "name": "Old Rag Mountain circuit",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Sperryville",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Old Rag summit"
+    },
+    {
+     "point": "rock-scramble",
+     "name": "Ridge Trail rock scramble"
+    }
+   ]
+  },
+  {
+   "id": "us-alum-cave-leconte",
+   "name": "Alum Cave Trail to Mount LeConte",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Gatlinburg",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount LeConte"
+    },
+    {
+     "point": "arch-rock",
+     "name": "Arch Rock"
+    }
+   ]
+  },
+  {
+   "id": "us-mount-washington-tuckerman",
+   "name": "Mount Washington via Tuckerman Ravine",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Jackson",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount Washington summit",
+     "reuse": "us-mount-washington"
+    },
+    {
+     "point": "hermit-lake",
+     "name": "Hermit Lake"
+    }
+   ]
+  },
+  {
+   "id": "us-beehive-loop",
+   "name": "Beehive Loop",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Bar Harbor",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "The Beehive"
+    },
+    {
+     "point": "the-bowl",
+     "name": "The Bowl"
+    }
+   ]
+  },
+  {
+   "id": "us-katahdin-knife-edge",
+   "name": "Katahdin via the Knife Edge",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Millinocket",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Baxter Peak"
+    },
+    {
+     "point": "pamola",
+     "name": "Pamola Peak"
+    }
+   ]
   }
  ]
 }

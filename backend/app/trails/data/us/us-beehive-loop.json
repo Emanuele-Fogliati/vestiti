@@ -1,0 +1,81 @@
+{
+ "id": "us-beehive-loop",
+ "country": "US",
+ "name": "Beehive Loop",
+ "base": "Bar Harbor",
+ "region": "Acadia National Park, Maine",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "technical",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1,
+  3
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 2.3,
+  "gain_m": null,
+  "source": "https://www.nps.gov/thingstodo/hike-beehive-loop.htm"
+ },
+ "why": "Iron rungs and ladders straight up a granite cliff above Sand Beach, then down past the Bowl, a pond in the woods.",
+ "book": "Vehicle reservation for Cadillac Summit Road only; the Island Explorer bus stops at Sand Beach.",
+ "water": "None: carry 1 litre.",
+ "dangers": [
+  "Exposed iron rungs on a 140 m cliff: not for anyone afraid of heights or small children.",
+  "Very dangerous when wet.",
+  "Do not come down the rungs: take the Bowl Trail."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/thingstodo/hike-beehive-loop.htm",
+  "https://www.nps.gov/articles/000/geologic-story-of-the-beehive.htm"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Beehive trailhead",
+   "lat": 44.3307,
+   "lon": -68.1849,
+   "role": "start",
+   "note": "On Park Loop Road across from the Sand Beach parking."
+  },
+  {
+   "id": "goal",
+   "name": "The Beehive",
+   "lat": 44.3337,
+   "lon": -68.1881,
+   "role": "goal",
+   "note": "A dome of pink granite over Sand Beach and the Atlantic."
+  },
+  {
+   "id": "the-bowl",
+   "name": "The Bowl",
+   "lat": 44.3371,
+   "lon": -68.1933,
+   "role": "point",
+   "note": "A quiet pond in the woods behind the Beehive."
+  }
+ ],
+ "replaces": [
+  "us-nps-acad-beehive-trail"
+ ]
+}
