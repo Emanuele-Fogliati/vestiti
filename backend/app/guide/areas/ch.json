@@ -204,7 +204,10 @@
       "walk"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Rigi"
+     ]
     },
     {
      "id": "pilatus",
@@ -242,7 +245,10 @@
       "boat"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Pilatus"
+     ]
     }
    ]
   },
@@ -315,7 +321,11 @@
       "view"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "First",
+      "Bachalpsee"
+     ]
     },
     {
      "id": "eiger",
@@ -353,7 +363,11 @@
       "view"
      ],
      "cost": "$$$",
-     "kids": "12+"
+     "kids": "12+",
+     "sights": [
+      "Eiger",
+      "Alpiglen"
+     ]
     },
     {
      "id": "jungfraujoch",
@@ -381,7 +395,10 @@
       "view"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Jungfraujoch"
+     ]
     },
     {
      "id": "sled",
@@ -415,7 +432,8 @@
       "adventure"
      ],
      "cost": "$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": []
     },
     {
      "id": "oeschinensee",
@@ -455,7 +473,11 @@
      ],
      "cost": "$$",
      "kids": "yes",
-     "needs": "transfer"
+     "needs": "transfer",
+     "sights": [
+      "Oeschinensee",
+      "Kandersteg"
+     ]
     }
    ]
   },
@@ -520,7 +542,10 @@
       "view"
      ],
      "cost": "$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Trümmelbach Falls"
+     ]
     },
     {
      "id": "schilthorn",
@@ -536,7 +561,8 @@
       "type": "city"
      },
      "sights": [
-      "Mürren"
+      "Mürren",
+      "Schilthorn"
      ],
      "scores": {
       "effort": 1,
@@ -610,7 +636,11 @@
       "view"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Gornergrat",
+      "Matterhorn"
+     ]
     },
     {
      "id": "five-lakes",
@@ -647,7 +677,8 @@
       "view"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": []
     },
     {
      "id": "hornli",
@@ -684,7 +715,10 @@
       "view"
      ],
      "cost": "$$",
-     "kids": "no"
+     "kids": "no",
+     "sights": [
+      "Matterhorn"
+     ]
     },
     {
      "id": "glacier-paradise",
@@ -749,7 +783,8 @@
       "adventure"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": []
     }
    ]
   },
@@ -898,7 +933,8 @@
       "max_altitude_m": 600
      },
      "sights": [
-      "Lavaux"
+      "Lavaux",
+      "Lake Geneva"
      ],
      "trail": "ch-lavaux",
      "scores": {
@@ -945,7 +981,11 @@
       "city"
      ],
      "cost": "$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Château de Chillon",
+      "Montreux"
+     ]
     },
     {
      "id": "lausanne",
@@ -1214,7 +1254,11 @@
       "view"
      ],
      "cost": "$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Aescher",
+      "Seealpsee"
+     ]
     },
     {
      "id": "village",
@@ -1301,7 +1345,10 @@
       "view"
      ],
      "cost": "$$$",
-     "kids": "yes"
+     "kids": "yes",
+     "sights": [
+      "Bernina Pass"
+     ]
     },
     {
      "id": "muottas",
