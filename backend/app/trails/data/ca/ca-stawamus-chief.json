@@ -1,0 +1,76 @@
+{
+ "id": "ca-stawamus-chief",
+ "country": "CA",
+ "name": "Stawamus Chief",
+ "base": "Squamish",
+ "region": "Stawamus Chief Provincial Park, British Columbia",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  3,
+  5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Hundreds of wooden steps, then ladders and chains up the back of a 700 m granite monolith to summits over Howe Sound and the town of Squamish.",
+ "book": "No pass needed in most years; parking at the Chief campground and day-use lot fills on summer weekends.",
+ "water": "None above the creek near the start: carry 2 litres.",
+ "dangers": [
+  "Steep, exposed granite with chains and ladders near the peaks.",
+  "Unfenced cliff edges: people have fallen to their deaths.",
+  "Slippery when wet."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.exploresquamish.com/things-to-do/areas-lakes-parks/stawamus-chief-provincial-park/",
+  "https://en.wikipedia.org/wiki/Stawamus_Chief"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Stawamus Chief day-use area",
+   "lat": 49.6762,
+   "lon": -123.1543,
+   "role": "start",
+   "note": "The parking at the foot of the Chief, off the Sea-to-Sky Highway."
+  },
+  {
+   "id": "first-peak",
+   "name": "First Peak",
+   "lat": 49.681,
+   "lon": -123.1505,
+   "role": "point",
+   "note": "The lowest summit, straight above Squamish."
+  },
+  {
+   "id": "goal",
+   "name": "Second Peak",
+   "lat": 49.6845,
+   "lon": -123.1462,
+   "role": "goal",
+   "note": "The highest point most walkers reach, over Howe Sound.",
+   "scene": "ca-squamish"
+  }
+ ]
+}

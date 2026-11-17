@@ -1,0 +1,83 @@
+{
+ "id": "ca-skyline-cape-breton",
+ "country": "CA",
+ "name": "Skyline Trail, Cape Breton Highlands",
+ "base": "Chéticamp",
+ "region": "Cape Breton Highlands National Park, Nova Scotia",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "16:00",
+ "published": {
+  "km": 8.2,
+  "gain_m": null,
+  "source": "https://parks.canada.ca/pn-np/ns/cbreton/activ/randonnee-hiking/skyline"
+ },
+ "why": "Through boreal forest with moose to a boardwalk down a headland 400 m above the Gulf of St. Lawrence, where pilot whales pass below at sunset.",
+ "book": "Parking reservation for the Skyline trailhead in season (online or by phone, Parks Canada), plus the park pass.",
+ "water": "None: carry 1 litre.",
+ "dangers": [
+  "Moose on the trail: keep 30 m away.",
+  "Coyotes: walk in groups, keep children close.",
+  "Strong wind on the headland."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/ns/cbreton/activ/randonnee-hiking/skyline",
+  "https://parks.canada.ca/pn-np/ns/cbreton/activ/randonnee-hiking"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Skyline trailhead",
+   "lat": 46.7437,
+   "lon": -60.8805,
+   "role": "start",
+   "note": "A parking area on the Cabot Trail on top of French Mountain."
+  },
+  {
+   "id": "goal",
+   "name": "Skyline headland",
+   "lat": 46.7477,
+   "lon": -60.911,
+   "role": "goal",
+   "note": "A boardwalk stepping down a bare ridge above the sea and the Cabot Trail.",
+   "scene": "ca-cape-breton-highlands-national-park"
+  },
+  {
+   "id": "north-loop",
+   "name": "Northern loop",
+   "lat": 46.7561,
+   "lon": -60.8977,
+   "role": "point",
+   "note": "The return half of the loop, through low spruce and open barrens with the coast to the north."
+  }
+ ],
+ "osm": null,
+ "replaces": [
+  "ca-osm-15081831"
+ ]
+}

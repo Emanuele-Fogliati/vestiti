@@ -1,0 +1,76 @@
+{
+ "id": "ca-garibaldi-lake",
+ "country": "CA",
+ "name": "Garibaldi Lake",
+ "base": "Squamish",
+ "region": "Garibaldi Provincial Park, British Columbia",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 18.0,
+  "gain_m": 820,
+  "source": "https://nrs.objectstore.gov.bc.ca/kuwyyf/garibaldi_trail_information_c5f34740b5.pdf"
+ },
+ "why": "Switchbacks up through old forest to a glacial lake of milky turquoise water under the Sphinx Glacier and the dark pinnacle of the Black Tusk.",
+ "book": "Free BC Parks day-use pass for Rubble Creek in summer (bcparks.ca, from 7:00 two days before; children 12 and under free). No dogs in the park. Camping only with a reservation.",
+ "water": "Streams near the top and the lake (treat it).",
+ "dangers": [
+  "Snow on the upper trail until July.",
+  "Glacier-fed water is cold: hypothermia if you swim.",
+  "Do not go beyond the trail toward the Barrier: rockslide hazard."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://nrs.objectstore.gov.bc.ca/kuwyyf/garibaldi_trail_information_c5f34740b5.pdf",
+  "https://en.wikipedia.org/wiki/Garibaldi_Lake"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Rubble Creek trailhead",
+   "lat": 49.9578,
+   "lon": -123.1203,
+   "role": "start",
+   "note": "A parking lot off the Sea-to-Sky Highway, 37 km north of Squamish."
+  },
+  {
+   "id": "barrier-viewpoint",
+   "name": "The Barrier viewpoint",
+   "lat": 49.948,
+   "lon": -123.095,
+   "role": "point",
+   "note": "A side path to the lava wall that holds back the lake."
+  },
+  {
+   "id": "goal",
+   "name": "Garibaldi Lake",
+   "lat": 49.9411,
+   "lon": -123.0546,
+   "role": "goal",
+   "note": "A turquoise lake at 1,470 m with glaciers and peaks around it."
+  }
+ ]
+}

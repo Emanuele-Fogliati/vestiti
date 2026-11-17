@@ -1,0 +1,96 @@
+{
+ "id": "ca-gros-morne-mountain",
+ "country": "CA",
+ "name": "Gros Morne Mountain (James Callaghan Trail)",
+ "base": "Rocky Harbour",
+ "region": "Gros Morne National Park, Newfoundland",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 16.0,
+  "gain_m": 806,
+  "source": "https://parks.canada.ca/pn-np/nl/grosmorne/activ/randonnee-hiking"
+ },
+ "why": "Up a gully of loose rock to the bare plateau of Newfoundland's second-highest peak, with arctic hares and caribou and the fjord of Ten Mile Pond below.",
+ "book": "Park pass. The summit loop is closed from May to late June for caribou calving and when wet.",
+ "water": "Stream at the base of the gully; none on the plateau.",
+ "dangers": [
+  "Fog and cold wind on the plateau even in summer: the summit route is marked only by cairns.",
+  "Steep loose rock in the gully.",
+  "Long day: start the summit loop before 11:00."
+ ],
+ "turnaround": "Do not start up the gully after 13:00 or in fog.",
+ "sources": [
+  "https://parks.canada.ca/pn-np/nl/grosmorne/activ/randonnee-hiking",
+  "https://en.wikipedia.org/wiki/Gros_Morne_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Gros Morne Mountain trailhead",
+   "lat": 49.56578,
+   "lon": -57.83225,
+   "role": "start",
+   "note": "A parking area on Route 430 near Rocky Harbour."
+  },
+  {
+   "id": "gully",
+   "name": "Base of the gully",
+   "lat": 49.588,
+   "lon": -57.795,
+   "role": "point",
+   "note": "A small pond and campsite where the steep climb starts."
+  },
+  {
+   "id": "goal",
+   "name": "Gros Morne summit",
+   "lat": 49.5941,
+   "lon": -57.7842,
+   "role": "goal",
+   "note": "A flat stony plateau at 806 m, the summit cairn in the middle."
+  },
+  {
+   "id": "ten-mile-pond",
+   "name": "Ten Mile Pond lookout",
+   "lat": 49.6004,
+   "lon": -57.781,
+   "role": "point",
+   "note": "The cliff edge over the landlocked fjord of Ten Mile Pond."
+  },
+  {
+   "id": "back-trail",
+   "name": "Back of the plateau",
+   "lat": 49.5999,
+   "lon": -57.7666,
+   "role": "point",
+   "note": "The long way down: round the back of the mountain over the tundra plateau and down a valley to the approach trail."
+  }
+ ],
+ "osm": null,
+ "replaces": [
+  "ca-osm-15976460"
+ ]
+}

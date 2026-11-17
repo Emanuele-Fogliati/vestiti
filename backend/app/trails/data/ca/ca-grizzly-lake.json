@@ -1,0 +1,76 @@
+{
+ "id": "ca-grizzly-lake",
+ "country": "CA",
+ "name": "Grizzly Lake",
+ "base": "Dawson City",
+ "region": "Tombstone Territorial Park, Yukon",
+ "kind": "multiday",
+ "days": 2,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8
+ ],
+ "hours": [
+  9,
+  12
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 23.0,
+  "gain_m": null,
+  "source": "https://yukon.ca/en/hike-camp-tombstone"
+ },
+ "why": "Over a ridge of tundra and boulders to a lake under the black granite spires of the Tombstone Range, in the Yukon's 'Patagonia of the North'.",
+ "book": "Backcountry campsite reservation on the Yukon government site (Grizzly Lake can be the first night). The trailhead is at km 58.5 of the Dempster Highway, 1.5 h from Dawson City.",
+ "water": "Streams and the lake; treat it.",
+ "dangers": [
+  "Grizzly bears: bear spray and the food lockers at camp.",
+  "Snow and wind on the ridge in any month.",
+  "Rough boulder fields where the trail is hard to see in fog."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://yukon.ca/en/hike-camp-tombstone",
+  "https://en.wikipedia.org/wiki/Tombstone_Territorial_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Grizzly Lake trailhead",
+   "lat": 64.413,
+   "lon": -138.3044,
+   "role": "start",
+   "note": "At km 58.5 of the Dempster Highway."
+  },
+  {
+   "id": "ridge",
+   "name": "Grizzly Ridge",
+   "lat": 64.4426,
+   "lon": -138.3891,
+   "role": "point",
+   "note": "Open tundra with the first view of Mount Monolith."
+  },
+  {
+   "id": "goal",
+   "name": "Grizzly Lake",
+   "lat": 64.42643,
+   "lon": -138.46535,
+   "role": "goal",
+   "note": "A camp by a lake under Mount Monolith.",
+   "night": true
+  }
+ ],
+ "osm": 6381725
+}

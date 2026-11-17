@@ -7636,6 +7636,200 @@
      "name": "Miette Hot Springs"
     }
    ]
+  },
+  {
+   "id": "ca-garibaldi-lake",
+   "name": "Garibaldi Lake",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Squamish",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Garibaldi Lake"
+    },
+    {
+     "point": "barrier-viewpoint",
+     "name": "The Barrier viewpoint"
+    }
+   ]
+  },
+  {
+   "id": "ca-joffre-lakes",
+   "name": "Joffre Lakes",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Pemberton",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Upper Joffre Lake",
+     "reuse": "ca-joffre-lakes"
+    },
+    {
+     "point": "middle-lake",
+     "name": "Middle Joffre Lake"
+    }
+   ]
+  },
+  {
+   "id": "ca-stawamus-chief",
+   "name": "Stawamus Chief",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Squamish",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Second Peak",
+     "reuse": "ca-squamish"
+    },
+    {
+     "point": "first-peak",
+     "name": "First Peak"
+    }
+   ]
+  },
+  {
+   "id": "ca-skyline-cape-breton",
+   "name": "Skyline Trail, Cape Breton Highlands",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Chéticamp",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Skyline headland",
+     "reuse": "ca-cape-breton-highlands-national-park"
+    },
+    {
+     "point": "north-loop",
+     "name": "Northern loop"
+    }
+   ]
+  },
+  {
+   "id": "ca-gros-morne-mountain",
+   "name": "Gros Morne Mountain (James Callaghan Trail)",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Rocky Harbour",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Gros Morne summit"
+    },
+    {
+     "point": "gully",
+     "name": "Base of the gully"
+    }
+   ]
+  },
+  {
+   "id": "ca-signal-hill-north-head",
+   "name": "Signal Hill and the North Head Trail",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "St. John's",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Cabot Tower"
+    },
+    {
+     "point": "north-head",
+     "name": "North Head"
+    }
+   ]
+  },
+  {
+   "id": "ca-berg-lake",
+   "name": "Berg Lake Trail",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Valemount",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Berg Lake"
+    },
+    {
+     "point": "start",
+     "name": "Berg Lake trailhead",
+     "reuse": "ca-mount-robson"
+    }
+   ]
+  },
+  {
+   "id": "ca-west-coast-trail",
+   "name": "West Coast Trail",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Bamfield",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Gordon River trailhead"
+    },
+    {
+     "point": "tsusiat-falls",
+     "name": "Tsusiat Falls"
+    }
+   ]
+  },
+  {
+   "id": "ca-chilkoot-trail",
+   "name": "Chilkoot Trail",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Skagway",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Bennett"
+    },
+    {
+     "point": "sheep-camp",
+     "name": "Sheep Camp"
+    }
+   ]
+  },
+  {
+   "id": "ca-grizzly-lake",
+   "name": "Grizzly Lake",
+   "country": "CA",
+   "slot": "CA-A",
+   "base": "Dawson City",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Grizzly Lake"
+    },
+    {
+     "point": "ridge",
+     "name": "Grizzly Ridge"
+    }
+   ]
   }
  ]
 }
