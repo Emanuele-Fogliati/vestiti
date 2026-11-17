@@ -66,10 +66,16 @@ class ReadyTrip(BaseModel):
         return self
 
 
+def _docs() -> list[dict]:
+    """trips.json, then one file per travel area in trips/ (us-west.json, ca.json, ...), so that
+    threads writing different regions never edit the same file (2026-11-17)."""
+    files = [HERE / "trips.json", *sorted((HERE / "trips").glob("*.json"))]
+    return [json.loads(f.read_text(encoding="utf-8")) for f in files]
+
+
 @lru_cache
 def trips() -> tuple[ReadyTrip, ...]:
-    doc = json.loads((HERE / "trips.json").read_text(encoding="utf-8"))
-    out = tuple(ReadyTrip.model_validate(t) for t in doc["trips"])
+    out = tuple(ReadyTrip.model_validate(t) for doc in _docs() for t in doc.get("trips", []))
     ids = [t.id for t in out]
     if len(ids) != len(set(ids)):
         raise ValueError("ready trip written twice")
@@ -84,9 +90,10 @@ class Journey(BaseModel):
 
 @lru_cache
 def journeys() -> tuple[Journey, ...]:
-    doc = json.loads((HERE / "trips.json").read_text(encoding="utf-8"))
-    out = tuple(Journey.model_validate(j) for j in doc.get("journeys", []))
+    out = tuple(Journey.model_validate(j) for doc in _docs() for j in doc.get("journeys", []))
     known = {j.id for j in out}
+    if len(known) != len(out):
+        raise ValueError("journey written twice")
     for t in trips():
         if t.journey and t.journey not in known:
             raise ValueError(f"{t.id}: no journey {t.journey}")
