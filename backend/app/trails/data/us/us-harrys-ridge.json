@@ -1,0 +1,67 @@
+{
+ "id": "us-harrys-ridge",
+ "country": "US",
+ "name": "Harry's Ridge",
+ "base": "Castle Rock",
+ "region": "Mount St. Helens National Volcanic Monument, Washington",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 12.9,
+  "gain_m": null,
+  "source": "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-1e-harrys-ridge"
+ },
+ "why": "Along the blast zone of 1980 to a ridge above Spirit Lake, still covered with logs, looking straight into the open crater of Mount St. Helens.",
+ "book": "Road closed: Highway 504 has been shut below Johnston Ridge since the 2023 landslide; the bridge is being rebuilt and the observatory is expected to reopen in 2027. Check WSDOT before you go. Recreation pass at Johnston Ridge.",
+ "water": "None, no shade: carry 2-3 litres.",
+ "dangers": [
+  "Fully exposed to sun and wind.",
+  "Stay on the trail: the blast zone is a restricted research area."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.fs.usda.gov/r06/giffordpinchot/recreation/trails/trail-1e-harrys-ridge",
+  "https://en.wikipedia.org/wiki/Johnston_Ridge_Observatory"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 4,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Johnston Ridge Observatory",
+   "lat": 46.2754,
+   "lon": -122.2172,
+   "role": "start",
+   "note": "Named after the volcanologist killed here on 18 May 1980."
+  },
+  {
+   "id": "goal",
+   "name": "Harry's Ridge",
+   "lat": 46.2754,
+   "lon": -122.1739,
+   "role": "goal",
+   "note": "A ridge above Spirit Lake facing the crater, named after Harry R. Truman, the lodge owner who refused to leave."
+  }
+ ]
+}

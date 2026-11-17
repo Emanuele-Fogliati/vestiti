@@ -1,0 +1,73 @@
+{
+ "id": "us-sliding-sands",
+ "country": "US",
+ "name": "Sliding Sands Trail (Keonehe'ehe'e)",
+ "base": "Kula",
+ "region": "Haleakala National Park, Maui, Hawaii",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Down a path of red and black cinders into the summit crater of Haleakala, among cinder cones and silverswords, at 3,000 m.",
+ "book": "No permit for day hikes. Park entrance fee. A reservation is needed only to drive up for sunrise (recreation.gov).",
+ "water": "None: carry 3 litres.",
+ "dangers": [
+  "The way back is all uphill at 3,000 m: count twice the time.",
+  "Cold, wind and fog at the top; strong sun.",
+  "Altitude: go slowly if you came up from the beach the same day."
+ ],
+ "turnaround": "Turn back at Ka Lu'u o ka O'o or after half your time.",
+ "sources": [
+  "https://www.nps.gov/thingstodo/moderate-hike-into-into-haleakala-crater.htm",
+  "https://www.nps.gov/hale/planyourvisit/wilderness.htm",
+  "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 2,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Haleakala Visitor Center",
+   "lat": 20.7151,
+   "lon": -156.2498,
+   "role": "start",
+   "note": "The summit area at 2,970 m."
+  },
+  {
+   "id": "goal",
+   "name": "Ka Lu'u o ka O'o",
+   "lat": 20.713,
+   "lon": -156.228,
+   "role": "goal",
+   "note": "A red cinder cone on the crater floor; the trail goes round its rim."
+  }
+ ]
+}

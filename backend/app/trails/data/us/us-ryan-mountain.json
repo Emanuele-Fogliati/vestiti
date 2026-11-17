@@ -1,0 +1,75 @@
+{
+ "id": "us-ryan-mountain",
+ "country": "US",
+ "name": "Ryan Mountain",
+ "base": "Twentynine Palms",
+ "region": "Joshua Tree National Park, California",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  10,
+  11,
+  12,
+  1,
+  2,
+  3,
+  4
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 4.8,
+  "gain_m": 320,
+  "source": "https://www.nps.gov/jotr/planyourvisit/hiking.htm"
+ },
+ "why": "Steep stone steps to a summit in the middle of the park, with Joshua tree valleys and boulder piles all around.",
+ "book": "No permit. Park entrance fee.",
+ "water": "None, no shade: carry 2 litres.",
+ "dangers": [
+  "Heat over 38°C in summer: hike only at dawn.",
+  "Steep and rocky."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/jotr/planyourvisit/hiking.htm",
+  "https://en.wikipedia.org/wiki/Ryan_Mountain"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Ryan Mountain trailhead",
+   "lat": 34.0025,
+   "lon": -116.1359,
+   "role": "start",
+   "note": "A parking area on Park Boulevard among boulders."
+  },
+  {
+   "id": "goal",
+   "name": "Ryan Mountain",
+   "lat": 33.9861,
+   "lon": -116.1347,
+   "role": "goal",
+   "note": "A rocky summit at 1,664 m over Lost Horse and Queen Valleys.",
+   "scene": "us-joshua-tree-national-park"
+  }
+ ],
+ "replaces": [
+  "us-goal-358795804",
+  "us-nps-jotr-ryan-mountain"
+ ]
+}

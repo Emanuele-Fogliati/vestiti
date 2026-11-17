@@ -7011,6 +7011,242 @@
      "name": "Cottonwood Campground"
     }
    ]
+  },
+  {
+   "id": "us-mount-whitney",
+   "name": "Mount Whitney Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Lone Pine",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount Whitney",
+     "reuse": "us-sierra-nevada"
+    },
+    {
+     "point": "outpost-camp",
+     "name": "Outpost Camp"
+    }
+   ]
+  },
+  {
+   "id": "us-skyline-trail-paradise",
+   "name": "Skyline Trail, Paradise",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Ashford",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Panorama Point",
+     "reuse": "us-mount-rainier-national-park"
+    },
+    {
+     "point": "myrtle-falls",
+     "name": "Myrtle Falls"
+    }
+   ]
+  },
+  {
+   "id": "us-hall-of-mosses",
+   "name": "Hall of Mosses",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Forks",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Hall of Mosses"
+    },
+    {
+     "point": "spruce-bottom",
+     "name": "Old-growth Sitka spruces"
+    }
+   ]
+  },
+  {
+   "id": "us-harrys-ridge",
+   "name": "Harry's Ridge",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Castle Rock",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Harry's Ridge"
+    },
+    {
+     "point": "start",
+     "name": "Johnston Ridge Observatory"
+    }
+   ]
+  },
+  {
+   "id": "us-golden-canyon-gower-gulch",
+   "name": "Golden Canyon and Gower Gulch",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Furnace Creek",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Manly Beacon",
+     "reuse": "us-death-valley-national-park"
+    },
+    {
+     "point": "red-cathedral-junction",
+     "name": "Red Cathedral junction"
+    }
+   ]
+  },
+  {
+   "id": "us-ryan-mountain",
+   "name": "Ryan Mountain",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Twentynine Palms",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ryan Mountain",
+     "reuse": "us-joshua-tree-national-park"
+    },
+    {
+     "point": "start",
+     "name": "Ryan Mountain trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-congress-trail",
+   "name": "Congress Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Three Rivers",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "General Sherman Tree",
+     "reuse": "us-general-sherman-tree"
+    },
+    {
+     "point": "president",
+     "name": "The President"
+    }
+   ]
+  },
+  {
+   "id": "us-hanakapiai",
+   "name": "Kalalau Trail to Hanakapiai Beach",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Hanalei",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Hanakapiai Beach",
+     "reuse": "us-kauai"
+    },
+    {
+     "point": "start",
+     "name": "Ke'e Beach"
+    }
+   ]
+  },
+  {
+   "id": "us-diamond-head",
+   "name": "Diamond Head Summit Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Honolulu",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Diamond Head summit",
+     "reuse": "us-waikiki"
+    },
+    {
+     "point": "start",
+     "name": "Diamond Head crater trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-sliding-sands",
+   "name": "Sliding Sands Trail (Keonehe'ehe'e)",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Kula",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Ka Lu'u o ka O'o"
+    },
+    {
+     "point": "start",
+     "name": "Haleakala Visitor Center"
+    }
+   ]
+  },
+  {
+   "id": "us-harding-icefield",
+   "name": "Harding Icefield Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Seward",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Harding Icefield"
+    },
+    {
+     "point": "exit-glacier-view",
+     "name": "Exit Glacier view",
+     "reuse": "us-exit-glacier"
+    }
+   ]
+  },
+  {
+   "id": "us-mount-healy-overlook",
+   "name": "Mount Healy Overlook",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Healy",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Mount Healy Overlook"
+    },
+    {
+     "point": "start",
+     "name": "Denali Visitor Center"
+    }
+   ]
   }
  ]
 }

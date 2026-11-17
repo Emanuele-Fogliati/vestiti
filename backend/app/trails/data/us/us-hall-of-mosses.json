@@ -1,0 +1,86 @@
+{
+ "id": "us-hall-of-mosses",
+ "country": "US",
+ "name": "Hall of Mosses",
+ "base": "Forks",
+ "region": "Olympic National Park, Washington",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12
+ ],
+ "hours": [
+  0.5,
+  1
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 1.3,
+  "gain_m": 30,
+  "source": "https://www.nps.gov/olym/planyourvisit/visiting-the-hoh.htm"
+ },
+ "why": "A short loop through the Hoh Rain Forest, under maples and spruces hung with curtains of moss, in one of the wettest places in the country.",
+ "book": "No permit. Park entrance fee. The road to the Hoh visitor centre often has a long queue in summer: arrive before 10:00.",
+ "water": "Water at the visitor centre.",
+ "dangers": [
+  "Roots and wet boardwalk are slippery.",
+  "Elk in the forest: keep 25 m away."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/olym/planyourvisit/visiting-the-hoh.htm",
+  "https://en.wikipedia.org/wiki/Hoh_Rainforest"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hoh Rain Forest Visitor Center",
+   "lat": 47.8609,
+   "lon": -123.9348,
+   "role": "start",
+   "note": "The end of the Upper Hoh Road, 50 km from Forks."
+  },
+  {
+   "id": "goal",
+   "name": "Hall of Mosses",
+   "lat": 47.8646,
+   "lon": -123.9334,
+   "role": "goal",
+   "note": "Bigleaf maples draped in club moss, the heart of the rain forest."
+  },
+  {
+   "id": "spruce-bottom",
+   "name": "Old-growth Sitka spruces",
+   "lat": 47.8637,
+   "lon": -123.9315,
+   "role": "point",
+   "note": "The way back, under spruces 70 m tall that sprouted on fallen 'nurse logs'."
+  }
+ ],
+ "replaces": [
+  "us-nps-olym-hall-of-mosses-nature-trail"
+ ]
+}

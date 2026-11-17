@@ -1,0 +1,85 @@
+{
+ "id": "us-skyline-trail-paradise",
+ "country": "US",
+ "name": "Skyline Trail, Paradise",
+ "base": "Ashford",
+ "region": "Mount Rainier National Park, Washington",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 8.9,
+  "gain_m": 518,
+  "source": "https://www.nps.gov/mora/planyourvisit/day-hiking-at-mount-rainier.htm"
+ },
+ "why": "A loop through flowering meadows to Panorama Point, face to face with the glaciers of Mount Rainier and with St. Helens, Adams and Hood on the horizon.",
+ "book": "No permit. Timed-entry reservation for the Paradise corridor in summer (recreation.gov). Paradise parking fills by mid-morning.",
+ "water": "Water at the Paradise visitor centre; none on the loop.",
+ "dangers": [
+  "Snowfields above Panorama Point until late July: take the low route if unsure.",
+  "Fog hides the trail on the snow: people get lost every year.",
+  "Stay on the path: the meadows are fragile."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/mora/planyourvisit/day-hiking-at-mount-rainier.htm",
+  "https://en.wikipedia.org/wiki/Paradise,_Washington"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Paradise Inn",
+   "lat": 46.7869,
+   "lon": -121.7339,
+   "role": "start",
+   "note": "The 1916 lodge and the visitor centre at 1,650 m."
+  },
+  {
+   "id": "myrtle-falls",
+   "name": "Myrtle Falls",
+   "lat": 46.7914,
+   "lon": -121.7325,
+   "role": "point",
+   "note": "A small waterfall below the mountain, a few minutes from the start."
+  },
+  {
+   "id": "goal",
+   "name": "Panorama Point",
+   "lat": 46.8036,
+   "lon": -121.7297,
+   "role": "goal",
+   "note": "A rock terrace at 2,100 m under the Nisqually Glacier.",
+   "scene": "us-mount-rainier-national-park"
+  },
+  {
+   "id": "golden-gate",
+   "name": "Golden Gate",
+   "lat": 46.799,
+   "lon": -121.74,
+   "role": "point",
+   "note": "Where the loop drops back through meadows of lupine and paintbrush."
+  }
+ ],
+ "osm": 5199914
+}
