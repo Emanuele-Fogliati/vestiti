@@ -1,4 +1,4 @@
-region	country	name	lat	lon	match
+region	country	name	lat	lon	match	id
 Europe	FR	Tour du Mont Blanc	45.92	6.87	Tour du Mont Blanc
 Europe	FR	GR20 (Corsica)	42.15	9.05	GR 20|GR20
 Europe	ES	Camino de Santiago (Camino Francés)	42.88	-8.54	Camino Franc|Camino de Santiago
@@ -21,9 +21,9 @@ Europe	AT	Adlerweg (Eagle Walk)	47.3	11.4	Adlerweg
 Europe	DE	Malerweg (Saxon Switzerland)	50.95	14.1	Malerweg
 Europe	DE	Zugspitze via Reintal	47.42	10.98	Zugspitz
 Europe	NO	Trolltunga	60.124	6.740	Trolltunga
-Europe	NO	Preikestolen (Pulpit Rock)	58.986	6.190	Preikestolen
-Europe	NO	Kjeragbolten	59.03	6.58	Kjerag
-Europe	NO	Besseggen Ridge	61.50	8.73	Besseggen
+Europe	NO	Preikestolen (Pulpit Rock)	58.986	6.190	Preikestolen	no-preikestolen
+Europe	NO	Kjeragbolten	59.03	6.58	Kjerag	no-kjeragbolten
+Europe	NO	Besseggen Ridge	61.50	8.73	Besseggen	no-besseggen
 Europe	SE	Kungsleden	67.9	18.6	Kungsleden
 Europe	FI	Karhunkierros (Bear's Ring)	66.3	29.4	Karhunkierros
 Europe	GR	Samaria Gorge	35.29	23.96	Samaria|Σαμαριά
@@ -57,7 +57,7 @@ South America	AR	Aconcagua (Normal Route)	-32.65	-70.01	Aconcagua
 South America	CO	Ciudad Perdida (Lost City)	11.04	-73.92	Ciudad Perdida|Teyuna
 South America	VE	Mount Roraima	5.14	-60.76	Roraima
 South America	EC	Quilotoa Loop	-0.86	-78.9	Quilotoa
-South America	BO	Isla del Sol / Illampu circuit	-15.99	-69.17	Isla del Sol
+South America	BO	Isla del Sol / Illampu circuit	-15.99	-69.17	Isla del Sol	bo-isla-del-sol
 South America	BR	Chapada Diamantina: Vale do Pati	-12.85	-41.47	Pati
 North America	US	Appalachian Trail	37.5	-80.0	Appalachian Trail
 North America	US	Pacific Crest Trail	40.0	-121.0	Pacific Crest
@@ -78,7 +78,7 @@ North America	CA	Chilkoot Trail	59.7	-135.2	Chilkoot
 North America	CA	Lake Agnes / Plain of Six Glaciers	51.41	-116.24	Plain of Six|Lake Agnes
 North America	CA	Berg Lake Trail	53.10	-119.15	Berg Lake
 North America	MX	Copper Canyon	27.5	-107.8	Copper Canyon|Barranca del Cobre
-Asia	NP	Everest Base Camp	28.0	86.85	Everest Base Camp|Everest
+Asia	NP	Everest Base Camp	28.0	86.85	Everest Base Camp|Everest	np-everest-base-camp
 Asia	NP	Annapurna Circuit	28.7	84.0	Annapurna Circuit
 Asia	NP	Annapurna Base Camp	28.53	83.88	Annapurna Base Camp|Annapurna Sanctuary
 Asia	NP	Manaslu Circuit	28.55	84.56	Manaslu
@@ -106,8 +106,8 @@ Asia	IL	Israel National Trail	31.5	35.0	Israel National Trail|Shvil
 Asia	KR	Hallasan	33.36	126.53	Hallasan
 Asia	TW	Taroko: Zhuilu Old Trail	24.18	121.5	Zhuilu
 Asia	LK	Adam's Peak (Sri Pada)	6.81	80.50	Adam|Sri Pada
-Africa	TZ	Kilimanjaro (Machame / Marangu)	-3.07	37.35	Kilimanjaro|Machame|Marangu
-Africa	MA	Toubkal	31.06	-7.92	Toubkal
+Africa	TZ	Kilimanjaro (Machame / Marangu)	-3.07	37.35	Kilimanjaro|Machame|Marangu	tz-kilimanjaro-machame
+Africa	MA	Toubkal	31.06	-7.92	Toubkal	ma-toubkal
 Africa	NA	Fish River Canyon	-27.6	17.6	Fish River
 Africa	ZA	Drakensberg Amphitheatre (Tugela Falls)	-28.75	28.89	Amphitheatre|Tugela
 Africa	ZA	Otter Trail	-34.0	23.9	Otter
