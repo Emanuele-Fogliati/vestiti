@@ -31,6 +31,11 @@ TOLERANCE_DEG = 0.27  # ~30 km
 PART_OF = {"SJ": "NO", "RE": "FR", "GP": "FR", "MQ": "FR", "GF": "FR", "YT": "FR", "BQ": "NL"}
 
 
+# Read from one themed tour only, not places people travel to (Manu, 2026-11-17: the
+# basketball tour's arenas, courts and murals leave the globe, Madison Square Garden too).
+NOT_PLACES = {"us-crypto-com-arena", "us-chase-center", "us-kobe-bryant-murals", "us-kia-forum", "us-ucla-campus", "us-west-4th-street-courts-the-cage", "us-dyckman-park", "us-happy-warrior-playground", "us-madison-square-garden", "us-ucla-health-training-center", "us-barclays-center"}
+
+
 def _key(name: str) -> str:
     """Sacsayhuamán and Sacsayhuaman are the same place."""
     s = "".join(c for c in unicodedata.normalize("NFKD", name.lower()) if not unicodedata.combining(c))
@@ -75,7 +80,7 @@ def main() -> int:
 
     kept, dropped, fixed = [], [], 0
     for pid, p in places.items():
-        if p.get("trips", 0) < a.min_trips or p.get("lat") is None:
+        if p.get("trips", 0) < a.min_trips or p.get("lat") is None or pid in NOT_PLACES:
             continue
         cc = p["country"].upper()
         lat, lon = p["lat"], p["lon"]
