@@ -6777,7 +6777,7 @@
    "slot": "US-A",
    "base": "Springdale",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6786,7 +6786,8 @@
     },
     {
      "point": "refrigerator-canyon",
-     "name": "Refrigerator Canyon"
+     "name": "Refrigerator Canyon",
+     "reuse": "us-refrigerator-canyon"
     }
    ]
   },
@@ -6797,7 +6798,7 @@
    "slot": "US-A",
    "base": "Springdale",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6806,7 +6807,8 @@
     },
     {
      "point": "riverside-end",
-     "name": "End of the Riverside Walk"
+     "name": "End of the Riverside Walk",
+     "reuse": "us-riverside-walk-zion"
     }
    ]
   },
@@ -6885,7 +6887,7 @@
    "slot": "US-A",
    "base": "Grand Canyon Village",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6894,7 +6896,8 @@
     },
     {
      "point": "ooh-aah",
-     "name": "Ooh Aah Point"
+     "name": "Ooh Aah Point",
+     "reuse": "us-ooh-aah-point"
     }
    ]
   },
@@ -6926,7 +6929,7 @@
    "slot": "US-A",
    "base": "Moab",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6935,7 +6938,8 @@
     },
     {
      "point": "start",
-     "name": "Wolfe Ranch"
+     "name": "Wolfe Ranch",
+     "reuse": "us-wolfe-ranch"
     }
    ]
   },
@@ -6946,7 +6950,7 @@
    "slot": "US-A",
    "base": "Bryce Canyon City",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "thors-hammer",
@@ -6955,7 +6959,8 @@
     },
     {
      "point": "queens-garden",
-     "name": "Queen's Garden"
+     "name": "Queen's Garden",
+     "reuse": "us-queens-garden-bryce"
     }
    ]
   },
@@ -6966,7 +6971,7 @@
    "slot": "US-A",
    "base": "Kanab",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6975,7 +6980,8 @@
     },
     {
      "point": "start",
-     "name": "Wire Pass trailhead"
+     "name": "Wire Pass trailhead",
+     "reuse": "us-wire-pass"
     }
    ]
   },
@@ -6986,7 +6992,7 @@
    "slot": "US-A",
    "base": "Peach Springs",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -6995,7 +7001,8 @@
     },
     {
      "point": "supai",
-     "name": "Supai"
+     "name": "Supai",
+     "reuse": "us-supai-village"
     }
    ]
   },
@@ -7006,7 +7013,7 @@
    "slot": "US-A",
    "base": "Grand Canyon North Rim",
    "kind": "multiday",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7015,7 +7022,8 @@
     },
     {
      "point": "cottonwood",
-     "name": "Cottonwood Campground"
+     "name": "Cottonwood Campground",
+     "reuse": "us-cottonwood-campground"
     }
    ]
   },
@@ -7026,7 +7034,7 @@
    "slot": "US-A",
    "base": "Lone Pine",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7035,7 +7043,8 @@
     },
     {
      "point": "outpost-camp",
-     "name": "Outpost Camp"
+     "name": "Outpost Camp",
+     "reuse": "us-outpost-camp-whitney"
     }
    ]
   },
@@ -7046,7 +7055,7 @@
    "slot": "US-A",
    "base": "Ashford",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7055,7 +7064,8 @@
     },
     {
      "point": "myrtle-falls",
-     "name": "Myrtle Falls"
+     "name": "Myrtle Falls",
+     "reuse": "us-myrtle-falls"
     }
    ]
   },
@@ -7066,7 +7076,7 @@
    "slot": "US-A",
    "base": "Forks",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7075,7 +7085,8 @@
     },
     {
      "point": "spruce-bottom",
-     "name": "Old-growth Sitka spruces"
+     "name": "Old-growth Sitka spruces",
+     "reuse": "us-hoh-sitka-spruces"
     }
    ]
   },
@@ -7086,7 +7097,7 @@
    "slot": "US-A",
    "base": "Castle Rock",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7095,7 +7106,8 @@
     },
     {
      "point": "start",
-     "name": "Johnston Ridge Observatory"
+     "name": "Johnston Ridge Observatory",
+     "reuse": "us-johnston-ridge-observatory"
     }
    ]
   },
@@ -7331,7 +7343,7 @@
    "slot": "US-A",
    "base": "West Yellowstone",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7340,7 +7352,8 @@
     },
     {
      "point": "fairy-falls",
-     "name": "Fairy Falls"
+     "name": "Fairy Falls",
+     "reuse": "us-fairy-falls-yellowstone"
     }
    ]
   },
@@ -7372,16 +7385,17 @@
    "slot": "US-A",
    "base": "Aspen",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
      "name": "Crater Lake",
-     "reuse": "us-maroon-bells"
+     "reuse": "us-crater-lake-maroon-bells"
     },
     {
      "point": "start",
-     "name": "Maroon Lake"
+     "name": "Maroon Lake",
+     "reuse": "us-maroon-bells"
     }
    ]
   },
@@ -7392,7 +7406,7 @@
    "slot": "US-A",
    "base": "Alamosa",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7401,7 +7415,8 @@
     },
     {
      "point": "start",
-     "name": "Dunes Parking Area"
+     "name": "Dunes Parking Area",
+     "reuse": "us-medano-creek"
     }
    ]
   },
