@@ -202,7 +202,8 @@ class Planner:
         if not (c.zone and zch):
             return None
         light = {s: ch.kit_item(c.zone["reqs"][s]) for s, ch in zch.items()}
-        return {"stages": c.zone["stages"], "kit": {s: k for s, k in light.items() if k}}
+        return {"stages": c.zone["stages"], "kit": {s: k for s, k in light.items() if k},
+                "slot_stages": c.zone.get("slot_stages")}
 
     def _where(self, c: Computed, t: dict) -> None:
         """Each piece of the bag says where it is used: one status per stop, in trip

@@ -710,6 +710,8 @@ def add_zone_lines(t: dict, lines: list[dict]) -> None:
         elif ln["kind"] in ("owned", "have"):
             tot["items_owned"] += 1
     tot["total"] = round(tot["buy"] + tot["rent"], 2)
+    if t.get("brands"):  # the brand line counts the hot-day pieces too
+        t["brands"] = brand_summary(t["items"], t["brands"]["preferred"])
 
 
 def brand_summary(items: list[dict], prefer_names: list[str]) -> dict | None:
