@@ -1821,6 +1821,1714 @@
      "kids": "yes"
     }
    ]
+  },
+  {
+   "id": "us-san-francisco",
+   "names": [
+    "San Francisco",
+    "SF",
+    "Golden Gate"
+   ],
+   "country": "US",
+   "lat": 37.775,
+   "lon": -122.419,
+   "radius_km": 20,
+   "season": "Cool all year (14-22 °C), summer fog on the bay in June-August, the clearest days in September-October; rain November to March.",
+   "sleep": "Union Square, Nob Hill or North Beach, near the cable cars.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/San_Francisco",
+    "https://www.nps.gov/alca/index.htm",
+    "https://www.nps.gov/goga/index.htm",
+    "https://www.nps.gov/muwo/index.htm",
+    "https://en.wikipedia.org/wiki/San_Francisco_cable_car_system"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "golden-gate",
+     "name": "Golden Gate Bridge on foot",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Across the 2.7 km bridge on its east walkway from the Presidio to Vista Point, the city and Alcatraz behind you.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Golden Gate Bridge"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 1,
+      "relax": 2,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "alcatraz",
+     "name": "Alcatraz",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Sells out weeks ahead: only through Alcatraz City Cruises from Pier 33.",
+     "why": "The ferry to the island prison of 1934-1963, with the cellhouse audio tour told by former guards and inmates.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Alcatraz Island"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "cable-car",
+     "name": "Cable car, Chinatown and Lombard Street",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Powell-Hyde cable car over Nob Hill to the crooked block of Lombard Street, back through Chinatown and North Beach.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Lombard Street",
+      "Chinatown, San Francisco",
+      "Coit Tower"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "wharf",
+     "name": "Fisherman's Wharf and the sea lions of Pier 39",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Clam chowder in sourdough bread and the sea lions lying on the floats of Pier 39.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Fisherman's Wharf",
+      "Pier 39"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "muir-sausalito",
+     "name": "Muir Woods and Sausalito",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Parking or shuttle reservation for Muir Woods (gomuirwoods.com).",
+     "why": "Coast redwoods 70 m tall in a canyon over the bridge, then the ferry back from Sausalito's houseboats.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "sights": [
+      "Sausalito"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "boat"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-yosemite-valley",
+   "names": [
+    "Yosemite",
+    "Yosemite National Park",
+    "Yosemite Valley",
+    "El Portal",
+    "Mariposa"
+   ],
+   "country": "US",
+   "lat": 37.746,
+   "lon": -119.594,
+   "radius_km": 30,
+   "season": "Valley open all year: waterfalls fullest April-June, dry by August; snow in winter (chains may be required). Tioga Road and Glacier Point Road are closed about November to May.",
+   "sleep": "In the valley (lodges, Curry Village), or El Portal and Mariposa outside.",
+   "sources": [
+    "https://www.nps.gov/yose/index.htm",
+    "https://www.nps.gov/yose/planyourvisit/vernalnevadatrail.htm",
+    "https://www.nps.gov/yose/planyourvisit/halfdome.htm",
+    "https://en.wikivoyage.org/wiki/Yosemite_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mist-trail",
+     "name": "Mist Trail to Vernal Fall and Nevada Fall",
+     "hours": "5-6 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Granite steps beside two waterfalls, in their spray in spring, to the top of 181 m Nevada Fall.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1820
+     },
+     "sights": [
+      "Vernal Fall",
+      "Nevada Fall"
+     ],
+     "trail": "us-osm-6451906",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "valley-floor",
+     "name": "The valley floor: Yosemite Falls, El Capitan, Tunnel View",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The lower Yosemite Fall, the climbers on El Capitan from the meadow, and Tunnel View, the picture of the valley with Half Dome.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1220
+     },
+     "sights": [
+      "El Capitan",
+      "Bridalveil Fall",
+      "Yosemite Valley"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "glacier-point",
+     "name": "Glacier Point",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From 975 m above the valley, Half Dome face on and the Vernal and Nevada falls in one view.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2200
+     },
+     "sights": [
+      "Glacier Point"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "half-dome",
+     "name": "Half Dome",
+     "hours": "10-12 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "Cables permit by preseason lottery in March and daily lottery (recreation.gov). Cables up about late May to mid-October.",
+     "why": "The cables up the last 120 m of the granite dome, after 14 km of trail: the hike of Yosemite.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 2690
+     },
+     "sights": [
+      "Half Dome"
+     ],
+     "trail": "us-nps-yose-half-dome-trail",
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "trek",
+      "adventure"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "mariposa",
+     "name": "Mariposa Grove of giant sequoias",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "500 giant sequoias at the south entrance, the Grizzly Giant among them, about 2,000 years old.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1900
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-bishop",
+   "names": [
+    "Bishop",
+    "Eastern Sierra",
+    "Mono Lake",
+    "Lone Pine",
+    "Alabama Hills",
+    "Mammoth Lakes",
+    "Lee Vining"
+   ],
+   "country": "US",
+   "lat": 37.36,
+   "lon": -118.4,
+   "radius_km": 70,
+   "season": "Reached from Yosemite only over Tioga Pass (about June to October). Dry: hot summer days in the Owens Valley, cool at the lakes; snow and ski at Mammoth in winter.",
+   "sleep": "Bishop, or Lee Vining by Mono Lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Eastern_Sierra",
+    "https://en.wikipedia.org/wiki/Mono_Lake",
+    "https://en.wikipedia.org/wiki/Alabama_Hills",
+    "https://en.wikipedia.org/wiki/Ancient_Bristlecone_Pine_Forest",
+    "https://www.nps.gov/depo/index.htm"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mono-lake",
+     "name": "Mono Lake's tufa towers",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "Limestone towers that grew under a salt lake, left on the shore when Los Angeles took its water.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1950
+     },
+     "sights": [
+      "Mono Lake"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "bristlecone",
+     "name": "Ancient Bristlecone Pine Forest",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Gnarled pines at 3,000 m in the White Mountains, some over 4,000 years old; Methuselah grows here unmarked.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3100
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "alabama-hills",
+     "name": "Alabama Hills and Mount Whitney",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "Round orange boulders and Mobius Arch under the Sierra crest and Mount Whitney, the highest peak of the lower 48 (4,421 m).",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1400
+     },
+     "sights": [
+      "Sierra Nevada"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "devils-postpile",
+     "name": "Devils Postpile and Rainbow Falls",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Columns of basalt like organ pipes, then a 30 m waterfall, by shuttle from Mammoth.",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2300
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-us-lake-tahoe",
+   "names": [
+    "Lake Tahoe",
+    "South Lake Tahoe",
+    "Tahoe City",
+    "Emerald Bay",
+    "Heavenly"
+   ],
+   "country": "US",
+   "lat": 38.954,
+   "lon": -120.1,
+   "radius_km": 35,
+   "season": "Alpine lake at 1,900 m: summer 25 °C and cold water; ski December to April (Heavenly, Palisades); snow on the roads in winter.",
+   "sleep": "South Lake Tahoe, or Tahoe City on the north shore.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lake_Tahoe",
+    "https://en.wikipedia.org/wiki/Emerald_Bay_State_Park",
+    "https://en.wikipedia.org/wiki/Sand_Harbor"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "emerald-bay",
+     "name": "Emerald Bay and Vikingsholm",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Down to the 1929 Scandinavian castle on the bay, and along the Rubicon Trail above the clearest water of the lake.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1900
+     },
+     "sights": [
+      "Lake Tahoe"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "sand-harbor",
+     "name": "Sand Harbor",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Granite boulders in turquoise water on the Nevada shore; kayak or swim if you can take 18 °C.",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "boat"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing at Heavenly or Palisades",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Big Sierra resorts above the lake, Heavenly's runs crossing from California into Nevada.",
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "act": {
+      "type": "ski"
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-napa-valley",
+   "names": [
+    "Napa Valley",
+    "Napa",
+    "Sonoma",
+    "Calistoga",
+    "Yountville",
+    "Healdsburg"
+   ],
+   "country": "US",
+   "lat": 38.5,
+   "lon": -122.4,
+   "radius_km": 35,
+   "season": "Mild; harvest and crush in September-October, green hills in winter rain, hot dry summer days.",
+   "sleep": "Napa, Yountville or Healdsburg.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Napa_Valley",
+    "https://en.wikipedia.org/wiki/Napa_Valley_AVA",
+    "https://en.wikivoyage.org/wiki/Sonoma_County"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "wineries",
+     "name": "Wineries of Napa and Sonoma",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Most tastings by reservation.",
+     "why": "Cabernet in the valley that beat France at the 1976 Judgment of Paris, tasting room by tasting room.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Napa Valley",
+      "Sonoma"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "culture"
+     ],
+     "cost": "$$$",
+     "kids": "no"
+    },
+    {
+     "id": "calistoga",
+     "name": "Calistoga mud baths",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Volcanic ash and hot spring water at the top of the valley.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-monterey",
+   "names": [
+    "Monterey",
+    "Carmel",
+    "Carmel-by-the-Sea",
+    "Big Sur",
+    "Pebble Beach",
+    "Point Lobos"
+   ],
+   "country": "US",
+   "lat": 36.6,
+   "lon": -121.89,
+   "radius_km": 50,
+   "season": "Cool coast all year (15-20 °C), summer fog; Highway 1 through Big Sur is sometimes cut by landslides: check Caltrans.",
+   "sleep": "Monterey or Carmel.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Monterey",
+    "https://en.wikivoyage.org/wiki/Big_Sur",
+    "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+    "https://en.wikipedia.org/wiki/Point_Lobos",
+    "https://en.wikipedia.org/wiki/17-Mile_Drive"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "big-sur",
+     "name": "Big Sur by Highway 1",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "South along the cliffs to Bixby Bridge, Pfeiffer Beach and McWay Falls dropping onto a cove beach.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "sights": [
+      "Big Sur"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "aquarium",
+     "name": "Monterey Bay Aquarium and Cannery Row",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A kelp forest three floors high and sea otters, in the old sardine cannery of Steinbeck's novel.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "point-lobos",
+     "name": "Point Lobos",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Cypress headlands, sea otters and harbour seals in the coves, 'the greatest meeting of land and water in the world'.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 30
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "17-mile",
+     "name": "17-Mile Drive and Carmel",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Lone Cypress on its rock, Pebble Beach's links, then the cottages of Carmel-by-the-Sea.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "17-Mile Drive",
+      "Carmel-by-the-Sea"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-santa-barbara",
+   "names": [
+    "Santa Barbara",
+    "Ventura",
+    "Channel Islands",
+    "Solvang"
+   ],
+   "country": "US",
+   "lat": 34.42,
+   "lon": -119.7,
+   "radius_km": 40,
+   "season": "Mediterranean climate: 18-25 °C, sunny most of the year, rain in winter.",
+   "sleep": "Downtown or by the beach.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Santa_Barbara",
+    "https://en.wikipedia.org/wiki/Mission_Santa_Barbara",
+    "https://www.nps.gov/chis/index.htm"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mission",
+     "name": "Mission and old town",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 'Queen of the Missions' of 1786 and the white Spanish-revival town rebuilt after the 1925 earthquake, to Stearns Wharf.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Santa Barbara"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "channel-islands",
+     "name": "Channel Islands by boat",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Island Packers boats from Ventura, book ahead.",
+     "why": "The ferry from Ventura to Santa Cruz Island: sea caves by kayak, island foxes, dolphins on the crossing.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "funk-zone",
+     "name": "Funk Zone wine tasting",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Tasting rooms in old warehouses by the beach.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "no"
+    }
+   ]
+  },
+  {
+   "id": "us-los-angeles",
+   "names": [
+    "Los Angeles",
+    "LA",
+    "Hollywood",
+    "Santa Monica",
+    "Venice",
+    "Malibu"
+   ],
+   "country": "US",
+   "lat": 34.052,
+   "lon": -118.244,
+   "radius_km": 40,
+   "season": "Sunny all year: 20 °C in winter, 30 °C in summer inland, June gloom on the coast in June; rain only a few winter days.",
+   "sleep": "Santa Monica by the sea, or Hollywood.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Los_Angeles",
+    "https://en.wikipedia.org/wiki/Griffith_Observatory",
+    "https://en.wikipedia.org/wiki/Getty_Center",
+    "https://en.wikipedia.org/wiki/Santa_Monica_Pier"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "griffith",
+     "name": "Griffith Observatory and the Hollywood Sign",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "Up Mount Hollywood's paths to the art-deco observatory, the Hollywood Sign and the city to the sea.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "sights": [
+      "Griffith Observatory",
+      "Hollywood Sign",
+      "Los Angeles"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 2,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "santa-monica",
+     "name": "Santa Monica Pier and Venice",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The end of Route 66 on the pier, then the boardwalk to Venice's skaters and canals.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "Santa Monica Pier",
+      "Venice Beach",
+      "Venice Canals"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "hollywood",
+     "name": "Hollywood Boulevard",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The stars of the Walk of Fame and the hand prints of the Chinese Theatre.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Hollywood Walk of Fame",
+      "TCL Chinese Theatre"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "getty",
+     "name": "The Getty Center",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Free timed ticket; parking fee.",
+     "why": "A hilltop of white travertine with Van Gogh's Irises and gardens over the city; free entry.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "universal",
+     "name": "Universal Studios Hollywood",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Tickets online.",
+     "why": "The studio tour through the back lots, and the rides.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Universal Studios Hollywood"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 2,
+      "relax": 1,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-san-diego",
+   "names": [
+    "San Diego",
+    "La Jolla",
+    "Coronado"
+   ],
+   "country": "US",
+   "lat": 32.72,
+   "lon": -117.16,
+   "radius_km": 30,
+   "season": "The mildest climate of the US: 20 °C in winter, 25 °C in summer.",
+   "sleep": "Gaslamp Quarter, Little Italy or La Jolla.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/San_Diego",
+    "https://en.wikipedia.org/wiki/Balboa_Park_(San_Diego)",
+    "https://en.wikipedia.org/wiki/La_Jolla_Cove",
+    "https://en.wikipedia.org/wiki/USS_Midway_Museum",
+    "https://en.wikipedia.org/wiki/Torrey_Pines_State_Natural_Reserve"
+   ],
+   "nights": [
+    1,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "la-jolla",
+     "name": "La Jolla Cove and Torrey Pines",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Sea lions on the rocks of the cove, then the bluffs of Torrey Pines over the Pacific.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife",
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "balboa",
+     "name": "Balboa Park and the zoo",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Spanish-revival palaces of 1915 with museums, and the San Diego Zoo beside them.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "midway",
+     "name": "USS Midway and the harbour",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "An aircraft carrier of 1945 to walk through, by the tall ships of the Embarcadero.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "coronado",
+     "name": "Coronado Beach",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Wide white sand in front of the Hotel del Coronado of 1888.",
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-sequoia-national-park",
+   "names": [
+    "Sequoia National Park",
+    "Sequoia",
+    "Kings Canyon",
+    "Three Rivers",
+    "Giant Forest",
+    "Grant Grove"
+   ],
+   "country": "US",
+   "lat": 36.56,
+   "lon": -118.77,
+   "radius_km": 40,
+   "season": "The groves at 2,000 m: snow December to April (chains may be required, some roads closed), warm summer days; the foothills at Three Rivers are hot in summer.",
+   "sleep": "Three Rivers at the gate, or the lodges in the park.",
+   "sources": [
+    "https://www.nps.gov/seki/index.htm",
+    "https://www.nps.gov/seki/planyourvisit/moro-rock.htm",
+    "https://en.wikivoyage.org/wiki/Sequoia_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "sherman",
+     "name": "General Sherman and the Congress Trail",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The largest tree on earth by volume, then a loop through the groves of the Giant Forest.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "sights": [
+      "General Sherman Tree",
+      "Sequoia National Park"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "moro-rock",
+     "name": "Moro Rock",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "400 steps up a granite dome to the Great Western Divide.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2050
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "grant-grove",
+     "name": "General Grant Tree, Kings Canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The nation's Christmas tree in Grant Grove, then the road down into Kings Canyon in summer.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1950
+     },
+     "sights": [
+      "Grant Grove"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "drive"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-redwood-national-and-state-parks",
+   "names": [
+    "Redwood National Park",
+    "Redwood National and State Parks",
+    "Orick",
+    "Klamath",
+    "Crescent City",
+    "Avenue of the Giants"
+   ],
+   "country": "US",
+   "lat": 41.21,
+   "lon": -124.0,
+   "radius_km": 50,
+   "season": "Cool and damp all year (10-20 °C), fog in summer, heavy rain in winter.",
+   "sleep": "Orick, Klamath or Crescent City.",
+   "sources": [
+    "https://www.nps.gov/redw/index.htm",
+    "https://www.nps.gov/redw/planyourvisit/fern-canyon.htm",
+    "https://en.wikivoyage.org/wiki/Redwood_National_and_State_Parks"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "lady-bird",
+     "name": "Lady Bird Johnson Grove and Prairie Creek",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Coast redwoods over 100 m, the tallest trees on earth, and Roosevelt elk grazing at Elk Prairie.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "sights": [
+      "Redwood National and State Parks"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "fern-canyon",
+     "name": "Fern Canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Parking permit May 15 to September 15 (recreation.gov).",
+     "why": "A gully with walls of ferns 15 m high, reached over a gravel road on the beach.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 20
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "avenue",
+     "name": "Avenue of the Giants",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "50 km of old road through Humboldt Redwoods south of the park.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Avenue of the Giants"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
   }
  ]
 }
