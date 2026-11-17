@@ -1,8 +1,10 @@
-"""Only walks with a real text (Manu, 2026-11-16): "in tutto il mondo solo quelli con del testo".
+"""A real text for every generated walk that has one (Manu, 2026-11-16/17).
 
 The generated walks (tier B in backend/app/trails/tail/, the world in backend/app/trails/world/) came
-with a "why" made of numbers only (km, metres up). A walk stays only if a real text says why to go,
-and that text, in English, becomes its "why", with the page it comes from as its first source.
+with a "why" made of numbers only (km, metres up), which the walk card already shows. Where a real
+text says why to go, that text, in English, becomes the "why", with the page it comes from as the
+first source. Every other generated walk stays, with no text at all (Manu 2026-11-17: "tienili
+tutti, anche quelli senza testo, semplicemente non c'è testo").
 
 Where the texts come from (legal sources only; never AllTrails, Komoot, Wikiloc or Outdooractive):
   1. the OSM relation (route) or goal node/way: description:en, description, wikipedia, wikidata, website
@@ -14,13 +16,12 @@ Where the texts come from (legal sources only; never AllTrails, Komoot, Wikiloc 
 Non-English texts: the 16 priority countries (NO TZ BO AT CH MA NP IT PE CL AR IS VN JP NA NZ) were
 translated by hand, dropping stage lists, timetables and notices; the rest of the world by a free
 local model (NLLB-200) whose output must keep every rare proper name of the source, or the walk
-waits in "pending" for a better translation.
+waits in "pending" for a better translation (no text until then).
 
-Kept as they are: city walks (-city-), walks to drawn sights (-sight-), the iconic treks
-(world/_iconic.json) and the pending ones. Dropped: every other walk without a text, and world
-copies of treks written by hand in data/<cc>/ (same OSM relation).
+City walks (-city-) and walks to drawn sights (-sight-) keep the text they were built with. The
+only walks dropped are world copies of treks written by hand in data/<cc>/ (same OSM relation).
 
-  python tools/trails/walk_text.py apply     # after any rebuild of world/ or tail/
+  python tools/trails/walk_text.py apply     # after any rebuild of world/ or tail/ (idempotent)
   python tools/trails/world_tail.py dots     # then the globe dots
 """
 from __future__ import annotations
@@ -47,9 +48,7 @@ def tier_a_osm() -> set[int]:
 
 
 def apply() -> None:
-    doc = json.loads(TEXTS.read_text(encoding="utf-8"))
-    texts, pending = doc["texts"], set(doc["pending"])
-    iconic = {t["id"] for t in json.loads((TRAILS / "world/_iconic.json").read_text(encoding="utf-8"))["treks"]}
+    texts = json.loads(TEXTS.read_text(encoding="utf-8"))["texts"]
     dup = tier_a_osm()
     files = sorted(TRAILS.glob("world/[a-z][a-z].json")) + sorted(TRAILS.glob("tail/*.json"))
     total, per = Counter(), {}
@@ -66,20 +65,16 @@ def apply() -> None:
                 t["why"] = why
                 t["sources"] = list(dict.fromkeys([src] + [s for s in t.get("sources", []) if s != src]))[:8]
                 c["text"] += 1
-            elif "-city-" in i or "-sight-" in i or i in iconic or i in pending:
-                c["kept as is"] += 1
+            elif "-city-" in i or "-sight-" in i:
+                c["own text"] += 1
             else:
+                t["why"] = ""
                 c["no text"] += 1
-                continue
             keep.append(t)
-        if len(keep) != len(d["trails"]) or c["text"]:
-            ids = {t["id"] for t in keep}
-            d["trails"] = keep
-            d["geo"] = {k: v for k, v in d["geo"].items() if k in ids}
-            if keep:
-                f.write_text(json.dumps(d, ensure_ascii=False, separators=SEP), encoding="utf-8")
-            else:
-                f.unlink()
+        ids = {t["id"] for t in keep}
+        d["trails"] = keep
+        d["geo"] = {k: v for k, v in d["geo"].items() if k in ids}
+        f.write_text(json.dumps(d, ensure_ascii=False, separators=SEP), encoding="utf-8")
         total.update(c)
         per[f.name] = dict(c)
     print(json.dumps({"total": dict(total), "files": per}, indent=1))

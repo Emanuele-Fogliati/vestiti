@@ -38,7 +38,7 @@ lists its `sources`.
 | `hours` | walking time `[low, high]` as the park or a guide publishes it (total for multiday) |
 | `start_by` | when to leave, HH:MM |
 | `published` | `{km, gain_m, source}`: distance and TOTAL climb of the whole walk (there and back for `out_and_back`) as the park/hut publishes them. Many parks give only the one-way distance and the NET height difference (top minus start): double the distance for a there-and-back, and put `gain_m: null` rather than a net difference (the page then shows our computed climb) |
-| `why` | one sentence that makes you want to go. No hype words |
+| `why` | one sentence that makes you want to go. No hype words. Tier B: a real text with its source first in `sources`, or empty (no text, never a sentence of numbers) |
 | `book` | permits, tickets, compulsory guides, huts to book, how to reach the trailhead |
 | `water`, `dangers`, `turnaround` | short, concrete, true. `turnaround` = the rule to turn back (time or place) |
 | `osm` | OpenStreetMap hiking relation id of THIS trail, if one exists (find it at hiking.waymarkedtrails.org) |
@@ -101,9 +101,9 @@ drawings. Generated, never edited by hand:
     python tools/trails/world_tail.py dots
     python tools/trails/iconic.py                                                     # iconic.tsv -> rank 6
 
-Only walks with a real text (Manu 2026-11-16): after any build, `python tools/trails/walk_text.py apply`
-puts the English "why" from `tools/trails/walk_text.json` (OSM description, Wikipedia, official page,
-DOC NZ; source first in `sources`) and drops the generated walks without one, before `dots`.
+Real texts (Manu 2026-11-16/17): after any build, `python tools/trails/walk_text.py apply` puts the
+English "why" from `tools/trails/walk_text.json` (OSM description, Wikipedia, official page, DOC NZ;
+source first in `sources`) and leaves the other generated walks with no text, before `dots`.
 
 `world/<cc>.json` holds a country's treks (the Trail schema) and their geo with the line as an
 encoded polyline (`enc`); `world/_dots.json` one row per trek; `world/_iconic.json` the world's

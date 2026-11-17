@@ -78,7 +78,7 @@ class Trail(BaseModel):
     hours: tuple[float, float]  # walking time, published or guide's, low-high (total for multiday)
     start_by: str = Field(default="", pattern=r"^$|^([01][0-9]|2[0-3]):[0-5][0-9]$")
     published: Published | None = None
-    why: str = Field(min_length=10, max_length=300)
+    why: str = Field(default="", max_length=300)  # tier B may have none (Manu 2026-11-17)
     book: str = Field(default="", max_length=400)
     water: str = Field(default="", max_length=200)
     dangers: list[str] = Field(default_factory=list, max_length=6)
@@ -121,6 +121,8 @@ class Trail(BaseModel):
             raise ValueError("a day trail lasts 1 day")
         if not self.id.startswith(self.country.lower() + "-"):
             raise ValueError("the id starts with the country code")
+        if self.tier == "A" and len(self.why) < 10:
+            raise ValueError("a tier A trek says why to go")
         return self
 
 
