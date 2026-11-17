@@ -1,0 +1,1207 @@
+{
+ "_doc": "USA east: the East Coast and New England, the South, Florida (thread 'Build East US recommended trips', 2026-11-17). Zone guides in ../areas/us-east.json.",
+ "journeys": [
+  {
+   "id": "usa-east-coast",
+   "name": "USA: the East Coast and New England",
+   "blurb": "New York, Washington, Philadelphia and Boston, Cape Cod and Acadia, Niagara, and New England's maples in October."
+  },
+  {
+   "id": "usa-south",
+   "name": "USA: the South",
+   "blurb": "Nashville, Memphis and New Orleans on the music road, the Delta blues, the Smokies, and Charleston and Savannah under the live oaks."
+  },
+  {
+   "id": "usa-florida",
+   "name": "USA: Florida",
+   "blurb": "Miami's Art Deco, the Everglades' alligators, the Keys to Key West, rockets on the Space Coast and Orlando's parks."
+  }
+ ],
+ "elevation": {
+  "us-new-york-city": 10,
+  "us-boston": 10,
+  "us-philadelphia": 15,
+  "us-washington-d-c": 20,
+  "x-us-niagara-falls": 180,
+  "us-cape-cod": 15,
+  "us-newport": 10,
+  "x-us-bar-harbor": 10,
+  "x-us-mount-washington": 160,
+  "x-us-camden": 10,
+  "us-portland-maine": 15,
+  "x-us-finger-lakes": 140,
+  "x-us-shenandoah-national-park": 250,
+  "us-charleston": 5,
+  "x-us-beaufort": 5,
+  "us-savannah": 10,
+  "us-atlanta": 300,
+  "us-chattanooga": 210,
+  "x-us-great-smoky-mountains-national-park": 390,
+  "x-us-blue-ridge-parkway": 1090,
+  "us-nashville": 160,
+  "us-memphis": 80,
+  "x-us-clarksdale": 50,
+  "us-natchez": 60,
+  "us-new-orleans": 2,
+  "x-us-st-augustine": 5,
+  "us-cocoa-beach": 3,
+  "us-orlando": 30,
+  "us-anna-maria-island": 2,
+  "us-miami": 2,
+  "us-key-largo": 2,
+  "us-marathon": 2,
+  "us-key-west": 2
+ },
+ "coords": {
+  "x-us-mount-washington": [
+   44.054,
+   -71.128
+  ],
+  "x-us-shenandoah-national-park": [
+   38.665,
+   -78.459
+  ],
+  "x-us-great-smoky-mountains-national-park": [
+   35.714,
+   -83.51
+  ],
+  "x-us-blue-ridge-parkway": [
+   36.135,
+   -81.678
+  ],
+  "x-us-finger-lakes": [
+   42.381,
+   -76.873
+  ],
+  "us-cape-cod": [
+   41.789,
+   -69.99
+  ]
+ },
+ "trips": [
+  {
+   "id": "usa-east-coast-7",
+   "region": "c-us",
+   "title": "New York, Washington and Boston in a week",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    6,
+    9
+   ],
+   "why": "Three days of Manhattan, the memorials and free museums of Washington, the Freedom Trail in Boston; trains between them.",
+   "note": "All year but October (the foliage week instead). Best in spring and September; 30 °C and humid in July and August; 0 °C, wind and some snow from December to February, the Christmas lights from late November.",
+   "stops": [
+    {
+     "place": "us-boston",
+     "nights": 2
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 3
+    },
+    {
+     "place": "us-washington-d-c",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-7-foliage",
+   "region": "c-us",
+   "title": "New England in the autumn colours, a week",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    10
+   ],
+   "best": [
+    10
+   ],
+   "why": "Boston, then the maples of the White Mountains and the Kancamagus, and Acadia's granite coast in red and gold.",
+   "note": "October, the foliage month: the colours peak in the White Mountains about late September to mid-October, on the coast a little later. Inns fill early, book months ahead. Cold mornings (0-5 °C) up north.",
+   "stops": [
+    {
+     "place": "us-boston",
+     "nights": 2
+    },
+    {
+     "place": "x-us-mount-washington",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bar-harbor",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-14",
+   "region": "c-us",
+   "title": "Two weeks from Washington to Cape Cod",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    6,
+    9
+   ],
+   "why": "Washington, Philadelphia, five days of New York, the mansions of Newport, the dunes and whales of Cape Cod, and Boston.",
+   "note": "May to September: Cape Cod's beaches and whale boats run, the sea is swimmable in July and August (18-21 °C). July and August are hot and humid in the cities (30 °C) and the Cape is crowded; June and September are the sweet spot.",
+   "stops": [
+    {
+     "place": "us-washington-d-c",
+     "nights": 3
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 1
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 4
+    },
+    {
+     "place": "us-newport",
+     "nights": 1
+    },
+    {
+     "place": "us-cape-cod",
+     "nights": 2
+    },
+    {
+     "place": "us-boston",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-14-foliage",
+   "region": "c-us",
+   "title": "Two weeks of New York and New England in the fall",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    10
+   ],
+   "best": [
+    10
+   ],
+   "why": "New York, Boston, the White Mountains' maples, Acadia and the Maine coast at its most beautiful.",
+   "note": "October: the foliage peaks in the White Mountains about late September to mid-October and later on the coast. Mount Washington's road and railway close in late October; Acadia's roads stay open into November. Book the inns early.",
+   "stops": [
+    {
+     "place": "us-new-york-city",
+     "nights": 4
+    },
+    {
+     "place": "us-boston",
+     "nights": 3
+    },
+    {
+     "place": "x-us-mount-washington",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bar-harbor",
+     "nights": 3
+    },
+    {
+     "place": "us-portland-maine",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-14-winter",
+   "region": "c-us",
+   "title": "The East Coast cities in winter, two weeks",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    4,
+    11
+   ],
+   "why": "Washington, Philadelphia, New York and Boston at an unhurried pace: museums, shows, food and the Christmas lights.",
+   "note": "November to April: a city trip, the coast and the parks are asleep. Cold (-5 to 8 °C) from December to February with snow some days; the Christmas lights from late November to early January; cherry blossoms in Washington in late March or early April.",
+   "stops": [
+    {
+     "place": "us-washington-d-c",
+     "nights": 3
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 2
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 6
+    },
+    {
+     "place": "us-boston",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-21",
+   "region": "c-us",
+   "title": "Three weeks of the East Coast: cities, Cape Cod and Acadia",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    6,
+    9
+   ],
+   "why": "Shenandoah's Skyline Drive, Washington, Philadelphia, New York, Newport and Cape Cod, Boston, and Acadia's coast in Maine.",
+   "note": "May to September: every road and boat open. July and August are hot in the cities and busy on the Cape and in Acadia (book Cadillac's sunrise slot); June and September are calmer. Thunderstorms some summer afternoons.",
+   "stops": [
+    {
+     "place": "x-us-shenandoah-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-washington-d-c",
+     "nights": 3
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 2
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 4
+    },
+    {
+     "place": "us-newport",
+     "nights": 1
+    },
+    {
+     "place": "us-cape-cod",
+     "nights": 3
+    },
+    {
+     "place": "us-boston",
+     "nights": 3
+    },
+    {
+     "place": "x-us-bar-harbor",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-21-foliage",
+   "region": "c-us",
+   "title": "Three weeks of the East Coast in the autumn colours",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    10
+   ],
+   "best": [
+    10
+   ],
+   "why": "Washington and New York, then Boston, the White Mountains, the harbour of Camden and Acadia as the maples turn.",
+   "note": "October: the colours peak about late September to mid-October in the mountains, later on the coast. Cool days (10-18 °C), cold nights. Book New England's inns months ahead.",
+   "stops": [
+    {
+     "place": "us-washington-d-c",
+     "nights": 3
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 5
+    },
+    {
+     "place": "us-boston",
+     "nights": 3
+    },
+    {
+     "place": "x-us-mount-washington",
+     "nights": 3
+    },
+    {
+     "place": "x-us-camden",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bar-harbor",
+     "nights": 3
+    },
+    {
+     "place": "us-portland-maine",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-21-winter",
+   "region": "c-us",
+   "title": "Three winter weeks of the East Coast cities",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    4,
+    11
+   ],
+   "why": "Niagara's falls half frozen, then Boston, New York, Philadelphia and Washington, slowly.",
+   "note": "November to April: a city trip. Cold (-5 to 8 °C) from December to February, snow some days, Niagara's boats stop running in early November; Christmas lights late November to early January; cherry blossoms in Washington in late March or early April.",
+   "stops": [
+    {
+     "place": "x-us-niagara-falls",
+     "nights": 2
+    },
+    {
+     "place": "us-boston",
+     "nights": 4
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 7
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 3
+    },
+    {
+     "place": "us-washington-d-c",
+     "nights": 5
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-28",
+   "region": "c-us",
+   "title": "Four weeks of the East Coast, Washington to Niagara",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    6,
+    9
+   ],
+   "why": "Shenandoah, Washington, Philadelphia, New York, Newport, Cape Cod, Boston, Maine's coast and Acadia, the White Mountains, the Finger Lakes and Niagara.",
+   "note": "May to September: every road, trail and boat open. July and August are hot in the cities and busy everywhere; June and September are the best months.",
+   "stops": [
+    {
+     "place": "us-washington-d-c",
+     "nights": 4
+    },
+    {
+     "place": "x-us-shenandoah-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 2
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 4
+    },
+    {
+     "place": "us-newport",
+     "nights": 1
+    },
+    {
+     "place": "us-cape-cod",
+     "nights": 3
+    },
+    {
+     "place": "us-boston",
+     "nights": 3
+    },
+    {
+     "place": "us-portland-maine",
+     "nights": 1
+    },
+    {
+     "place": "x-us-bar-harbor",
+     "nights": 3
+    },
+    {
+     "place": "x-us-mount-washington",
+     "nights": 2
+    },
+    {
+     "place": "x-us-finger-lakes",
+     "nights": 1
+    },
+    {
+     "place": "x-us-niagara-falls",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-28-foliage",
+   "region": "c-us",
+   "title": "Four weeks of the East Coast in the autumn colours",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    10
+   ],
+   "best": [
+    10
+   ],
+   "why": "Shenandoah's ridge, Washington, Philadelphia, New York, then New England's maples from Boston to Acadia, the Finger Lakes and Niagara.",
+   "note": "October: the colours peak about late September to mid-October in New England and the Finger Lakes, mid to late October in Shenandoah. Cool days, cold nights. Book the inns early.",
+   "stops": [
+    {
+     "place": "x-us-shenandoah-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-washington-d-c",
+     "nights": 3
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 2
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 5
+    },
+    {
+     "place": "us-boston",
+     "nights": 3
+    },
+    {
+     "place": "us-portland-maine",
+     "nights": 1
+    },
+    {
+     "place": "x-us-camden",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bar-harbor",
+     "nights": 3
+    },
+    {
+     "place": "x-us-mount-washington",
+     "nights": 3
+    },
+    {
+     "place": "x-us-finger-lakes",
+     "nights": 2
+    },
+    {
+     "place": "x-us-niagara-falls",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-28-winter",
+   "region": "c-us",
+   "title": "Four winter weeks: the East Coast cities and skiing",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    12,
+    3
+   ],
+   "why": "Washington, Philadelphia, New York and Boston in the cold, five days of skiing under Mount Washington, and the frozen Niagara.",
+   "note": "December to March: a city trip with a ski week in the White Mountains (the season runs about December to March). -5 to 5 °C in the cities, much colder on the slopes; Christmas lights until early January.",
+   "stops": [
+    {
+     "place": "us-washington-d-c",
+     "nights": 5
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 3
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 8
+    },
+    {
+     "place": "us-boston",
+     "nights": 4
+    },
+    {
+     "place": "x-us-mount-washington",
+     "nights": 5
+    },
+    {
+     "place": "x-us-niagara-falls",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-east-coast-28-shoulder",
+   "region": "c-us",
+   "title": "Four weeks of the East Coast cities in spring or late autumn",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    4
+   ],
+   "best": [
+    4
+   ],
+   "why": "Shenandoah, Washington, Philadelphia, New York, Newport and Boston, ending at Niagara.",
+   "note": "April and November: cool (5-17 °C) and quiet. Cherry blossoms in Washington in early April; in November the last colours in Shenandoah and the Christmas lights at the end of the month. Skyline Drive can close for ice.",
+   "stops": [
+    {
+     "place": "x-us-shenandoah-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-washington-d-c",
+     "nights": 5
+    },
+    {
+     "place": "us-philadelphia",
+     "nights": 3
+    },
+    {
+     "place": "us-new-york-city",
+     "nights": 8
+    },
+    {
+     "place": "us-newport",
+     "nights": 1
+    },
+    {
+     "place": "us-boston",
+     "nights": 6
+    },
+    {
+     "place": "x-us-niagara-falls",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-east-coast"
+  },
+  {
+   "id": "usa-south-7",
+   "region": "c-us",
+   "title": "The music road in a week: Nashville, Memphis, New Orleans",
+   "pace": "intense",
+   "level": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    3,
+    4,
+    5,
+    10,
+    11
+   ],
+   "why": "Country in Nashville, Elvis and the blues in Memphis, a juke joint in Clarksdale, and jazz in New Orleans, down Highway 61.",
+   "note": "All year. Spring and autumn are best (20-27 °C); July and August are hot and humid (33 °C); winter is mild (5-15 °C). Mardi Gras in February or early March, Jazz Fest late April-early May. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "us-nashville",
+     "nights": 2
+    },
+    {
+     "place": "us-memphis",
+     "nights": 2
+    },
+    {
+     "place": "x-us-clarksdale",
+     "nights": 1
+    },
+    {
+     "place": "us-new-orleans",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-south"
+  },
+  {
+   "id": "usa-south-14",
+   "region": "c-us",
+   "title": "Two weeks of the Deep South, Atlanta to New Orleans",
+   "pace": "intense",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    10
+   ],
+   "why": "Martin Luther King's Atlanta, Lookout Mountain, the Smokies, Nashville and Memphis, the Delta blues, Natchez and New Orleans.",
+   "note": "All year. April-May and October are best, with the Smokies green or turning in late October; July and August are hot (33 °C, 29 °C in the mountains); winter is mild below and cold on the Smokies' tops, Kuwohi's road shut December to March. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "us-atlanta",
+     "nights": 1
+    },
+    {
+     "place": "us-chattanooga",
+     "nights": 1
+    },
+    {
+     "place": "x-us-great-smoky-mountains-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-nashville",
+     "nights": 3
+    },
+    {
+     "place": "us-memphis",
+     "nights": 2
+    },
+    {
+     "place": "x-us-clarksdale",
+     "nights": 1
+    },
+    {
+     "place": "us-natchez",
+     "nights": 1
+    },
+    {
+     "place": "us-new-orleans",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-south"
+  },
+  {
+   "id": "usa-south-21",
+   "region": "c-us",
+   "title": "Three weeks of the South: Charleston to New Orleans",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    10
+   ],
+   "why": "Charleston and Savannah under the live oaks, Atlanta, Chattanooga, the Smokies, Nashville, Memphis, the Delta and New Orleans.",
+   "note": "All year. Spring (azaleas in March-April) and October-November are best; July and August are hot and humid with afternoon storms; winter is mild on the coast (6-17 °C) and cold in the mountains. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "us-charleston",
+     "nights": 3
+    },
+    {
+     "place": "us-savannah",
+     "nights": 2
+    },
+    {
+     "place": "us-atlanta",
+     "nights": 2
+    },
+    {
+     "place": "us-chattanooga",
+     "nights": 1
+    },
+    {
+     "place": "x-us-great-smoky-mountains-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-nashville",
+     "nights": 3
+    },
+    {
+     "place": "us-memphis",
+     "nights": 2
+    },
+    {
+     "place": "x-us-clarksdale",
+     "nights": 1
+    },
+    {
+     "place": "us-natchez",
+     "nights": 1
+    },
+    {
+     "place": "us-new-orleans",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-south"
+  },
+  {
+   "id": "usa-south-28",
+   "region": "c-us",
+   "title": "Four weeks of the South and the Blue Ridge",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "best": [
+    4,
+    5,
+    10
+   ],
+   "why": "Charleston, Beaufort and Savannah, Atlanta, the Blue Ridge Parkway, the Smokies, Chattanooga, Nashville, Memphis, the Delta and New Orleans.",
+   "note": "March to November, while the Blue Ridge Parkway is open. October is the month of the colours on the Parkway and in the Smokies; spring is green and mild; July and August are hot and humid on the coast. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "us-charleston",
+     "nights": 3
+    },
+    {
+     "place": "x-us-beaufort",
+     "nights": 1
+    },
+    {
+     "place": "us-savannah",
+     "nights": 3
+    },
+    {
+     "place": "us-atlanta",
+     "nights": 2
+    },
+    {
+     "place": "x-us-blue-ridge-parkway",
+     "nights": 2
+    },
+    {
+     "place": "x-us-great-smoky-mountains-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-chattanooga",
+     "nights": 2
+    },
+    {
+     "place": "us-nashville",
+     "nights": 4
+    },
+    {
+     "place": "us-memphis",
+     "nights": 2
+    },
+    {
+     "place": "x-us-clarksdale",
+     "nights": 1
+    },
+    {
+     "place": "us-natchez",
+     "nights": 1
+    },
+    {
+     "place": "us-new-orleans",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-south"
+  },
+  {
+   "id": "usa-south-28-winter",
+   "region": "c-us",
+   "title": "Four winter weeks of the South",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    12,
+    1,
+    2
+   ],
+   "best": [
+    2
+   ],
+   "why": "The Lowcountry, Atlanta, Chattanooga, the Smokies in their quiet season, Nashville, Memphis, the Delta and a long stay in New Orleans.",
+   "note": "December to February: mild on the coast (6-17 °C), cold and sometimes snowy in the Smokies, where Kuwohi's road shuts; the Blue Ridge Parkway closes in sections for ice, so it is left out. Mardi Gras parades in February or early March.",
+   "stops": [
+    {
+     "place": "us-charleston",
+     "nights": 4
+    },
+    {
+     "place": "x-us-beaufort",
+     "nights": 1
+    },
+    {
+     "place": "us-savannah",
+     "nights": 3
+    },
+    {
+     "place": "us-atlanta",
+     "nights": 3
+    },
+    {
+     "place": "us-chattanooga",
+     "nights": 2
+    },
+    {
+     "place": "x-us-great-smoky-mountains-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-nashville",
+     "nights": 4
+    },
+    {
+     "place": "us-memphis",
+     "nights": 2
+    },
+    {
+     "place": "x-us-clarksdale",
+     "nights": 1
+    },
+    {
+     "place": "us-natchez",
+     "nights": 1
+    },
+    {
+     "place": "us-new-orleans",
+     "nights": 5
+    }
+   ],
+   "journey": "usa-south"
+  },
+  {
+   "id": "usa-florida-7",
+   "region": "c-us",
+   "title": "Miami and the Keys in a week",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "why": "South Beach and Little Havana, the Everglades' alligators, the reef at Key Largo, and the Overseas Highway to Key West.",
+   "note": "All year. December to April is the dry, sunny high season (22-27 °C); May to October is hot (32 °C) with a storm most afternoons and the Everglades full of mosquitoes. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "us-miami",
+     "nights": 3
+    },
+    {
+     "place": "us-key-largo",
+     "nights": 1
+    },
+    {
+     "place": "us-key-west",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-florida"
+  },
+  {
+   "id": "usa-florida-14",
+   "region": "c-us",
+   "title": "Florida in two weeks: Orlando, the Space Coast and the Keys",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "why": "Theme parks in Orlando, the oldest city at St. Augustine, rockets at Cape Canaveral, Miami, the Everglades and the Keys.",
+   "note": "All year. December to April is the high season, dry and warm (20-27 °C in the south, cooler in St. Augustine); summer is hot and humid with daily storms and the parks crowded. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "us-orlando",
+     "nights": 3
+    },
+    {
+     "place": "x-us-st-augustine",
+     "nights": 2
+    },
+    {
+     "place": "us-cocoa-beach",
+     "nights": 2
+    },
+    {
+     "place": "us-miami",
+     "nights": 3
+    },
+    {
+     "place": "us-key-largo",
+     "nights": 1
+    },
+    {
+     "place": "us-key-west",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-florida"
+  },
+  {
+   "id": "usa-florida-21",
+   "region": "c-us",
+   "title": "Three weeks round Florida, Atlantic to Gulf",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "why": "St. Augustine, the Space Coast, Orlando, the Gulf sunsets of Anna Maria, across the Everglades to Miami, and every Key.",
+   "note": "All year. December to April is dry and warm, the best for the Everglades' wildlife; the Gulf and Atlantic are too cool to swim in the north from December to March. Summer is hot with daily storms. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "x-us-st-augustine",
+     "nights": 2
+    },
+    {
+     "place": "us-cocoa-beach",
+     "nights": 2
+    },
+    {
+     "place": "us-orlando",
+     "nights": 4
+    },
+    {
+     "place": "us-anna-maria-island",
+     "nights": 2
+    },
+    {
+     "place": "us-miami",
+     "nights": 4
+    },
+    {
+     "place": "us-key-largo",
+     "nights": 2
+    },
+    {
+     "place": "us-marathon",
+     "nights": 2
+    },
+    {
+     "place": "us-key-west",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-florida"
+  },
+  {
+   "id": "usa-florida-28",
+   "region": "c-us",
+   "title": "Four weeks of Florida, slowly",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "why": "The whole state at a slow pace: St. Augustine, rockets and beaches, Orlando, the Gulf, Miami, the Everglades and four stops down the Keys to Dry Tortugas.",
+   "note": "All year. December to April is dry and warm, the best for the Everglades; summer is hot and humid with daily storms, the sea 30 °C. Hurricane season is June to November, the peak August to October: check the forecast and take insurance that covers it.",
+   "stops": [
+    {
+     "place": "x-us-st-augustine",
+     "nights": 3
+    },
+    {
+     "place": "us-cocoa-beach",
+     "nights": 3
+    },
+    {
+     "place": "us-orlando",
+     "nights": 5
+    },
+    {
+     "place": "us-anna-maria-island",
+     "nights": 3
+    },
+    {
+     "place": "us-miami",
+     "nights": 5
+    },
+    {
+     "place": "us-key-largo",
+     "nights": 2
+    },
+    {
+     "place": "us-marathon",
+     "nights": 3
+    },
+    {
+     "place": "us-key-west",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-florida"
+  }
+ ]
+}

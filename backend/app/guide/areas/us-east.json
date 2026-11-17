@@ -1,0 +1,6192 @@
+{
+ "areas": [
+  {
+   "id": "us-new-york",
+   "names": [
+    "New York City",
+    "New York",
+    "NYC",
+    "Manhattan"
+   ],
+   "country": "US",
+   "lat": 40.75,
+   "lon": -73.99,
+   "radius_km": 25,
+   "season": "Hot humid summers (29-30 °C), cold winters around 0 °C with some snow; spring and autumn the best; the Christmas lights from late November to early January.",
+   "sleep": "Midtown Manhattan for the first visit; Lower Manhattan or Brooklyn for quieter evenings.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/New_York_City",
+    "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+    "https://en.wikipedia.org/wiki/Central_Park",
+    "https://en.wikipedia.org/wiki/High_Line",
+    "https://en.wikipedia.org/wiki/Brooklyn_Bridge"
+   ],
+   "nights": [
+    2,
+    4,
+    8
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "liberty",
+     "name": "Statue of Liberty and Ellis Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Ferry tickets from Statue City Cruises (the only official ferry); pedestal and crown tickets sell out weeks ahead",
+     "why": "The ferry from Battery Park to the statue of 1886 and to Ellis Island, where 12 million immigrants entered America between 1892 and 1954.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Statue of Liberty",
+      "Liberty Island",
+      "Ellis Island",
+      "Battery Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "downtown",
+     "name": "9/11 Memorial, Wall Street and the Brooklyn Bridge on foot",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The two pools where the towers stood, the Financial District, then across the 1883 bridge to DUMBO for the skyline.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "9/11 Memorial",
+      "One World Trade Center",
+      "Wall Street",
+      "Charging Bull",
+      "Brooklyn Bridge",
+      "DUMBO",
+      "Brooklyn Bridge Park"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "central-park",
+     "name": "Central Park and the Met",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The 341-hectare park drawn by Olmsted and Vaux, then the Metropolitan Museum, one of the largest art museums in the world, on its edge.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Central Park",
+      "Metropolitan Museum of Art",
+      "Fifth Avenue",
+      "Upper East Side"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 5,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "midtown",
+     "name": "Times Square, Grand Central and the city from above",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Timed tickets for the observation decks; sunset slots sell first",
+     "why": "The lights of Times Square, the vault of Grand Central, the Public Library, and the skyline from the Empire State, Top of the Rock or Summit.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Times Square",
+      "Grand Central Terminal",
+      "New York Public Library",
+      "Bryant Park",
+      "Empire State Building",
+      "Top of the Rock",
+      "Summit One Vanderbilt",
+      "St. Patrick's Cathedral"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "high-line",
+     "name": "The High Line to Chelsea Market and Hudson Yards",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A freight railway 9 m above the street turned into a 2.3 km garden walk, from the Meatpacking District to the Vessel.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "High Line",
+      "Meatpacking District",
+      "Chelsea",
+      "Chelsea Market",
+      "Hudson Yards",
+      "The Vessel",
+      "Edge (Hudson Yards)"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "village",
+     "name": "Greenwich Village, SoHo and Chinatown",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Washington Square, the brownstones of the West Village, the cast-iron fronts of SoHo, dumplings in Chinatown.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Greenwich Village",
+      "Washington Square Park",
+      "West Village",
+      "SoHo",
+      "Little Italy",
+      "Chinatown",
+      "Katz's Delicatessen"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "broadway",
+     "name": "A Broadway show",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Forty theatres around Times Square; the TKTS booth sells same-day tickets at a discount.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Broadway"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "christmas",
+     "name": "Christmas in Midtown: the Rockefeller tree and the windows",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The tree and the skating rink at Rockefeller Center, the lit windows of Fifth Avenue's stores.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-boston",
+   "names": [
+    "Boston",
+    "Cambridge"
+   ],
+   "country": "US",
+   "lat": 42.36,
+   "lon": -71.06,
+   "radius_km": 20,
+   "season": "Cold snowy winters (-5 to 3 °C), warm summers (26-28 °C); the autumn colours in October.",
+   "sleep": "Back Bay or the North End; Cambridge near Harvard.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Boston",
+    "https://en.wikipedia.org/wiki/Freedom_Trail",
+    "https://en.wikipedia.org/wiki/Harvard_Yard",
+    "https://en.wikipedia.org/wiki/Fenway_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "freedom-trail",
+     "name": "The Freedom Trail",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A red-brick line through 4 km of the Revolution: Boston Common, the Old State House, Faneuil Hall, Paul Revere's house, Old North Church, to Bunker Hill.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Freedom Trail",
+      "Boston Common",
+      "Faneuil Hall"
+     ],
+     "arrive": true,
+     "trail": "us-osm-976514",
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "harvard",
+     "name": "Harvard and Cambridge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Harvard Yard, the oldest college in America (1636), and the bookshops and cafés of Harvard Square; MIT a short walk away.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "gardner",
+     "name": "The Isabella Stewart Gardner Museum",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A Venetian palazzo built around a garden court; the empty frames of the 1990 theft, still unsolved, hang where the paintings were.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "fenway",
+     "name": "A Red Sox game at Fenway Park",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The oldest ballpark of the major leagues, opened in 1912, and its 11 m Green Monster wall.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "whales",
+     "name": "Whale watching on Stellwagen Bank",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Humpbacks feeding on the marine sanctuary off Cape Ann, by boat from Long Wharf.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "salem",
+     "name": "Salem",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Half an hour by train: the town of the 1692 witch trials, its sea captains' houses and the Peabody Essex Museum; packed in October.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-philadelphia",
+   "names": [
+    "Philadelphia"
+   ],
+   "country": "US",
+   "lat": 39.95,
+   "lon": -75.17,
+   "radius_km": 15,
+   "season": "Hot humid summers (31 °C), cold winters around 0 °C.",
+   "sleep": "Old City or Center City, near Rittenhouse Square.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Philadelphia",
+    "https://en.wikipedia.org/wiki/Independence_Hall",
+    "https://en.wikipedia.org/wiki/Philadelphia_Museum_of_Art",
+    "https://en.wikipedia.org/wiki/Eastern_State_Penitentiary"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "independence",
+     "name": "Independence Hall and the Liberty Bell",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Free timed tickets for Independence Hall, booked online for a small fee in the busy months",
+     "why": "Where the Declaration of Independence (1776) and the Constitution (1787) were signed, and the cracked bell across the lawn.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "art-museum",
+     "name": "The Philadelphia Museum of Art and the Rocky Steps",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the great art museums of America, up the 72 steps Rocky Balboa ran in 1976.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Philadelphia Museum of Art"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "reading-terminal",
+     "name": "Reading Terminal Market and a cheesesteak",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 1893 market hall under the old railway terminal: Amish stalls, roast pork and cheesesteak sandwiches.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "old-city",
+     "name": "Elfreth's Alley and Old City",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The oldest lived-in residential street in America, from the 1700s, Betsy Ross's house and Christ Church.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "eastern-state",
+     "name": "Eastern State Penitentiary",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 1829 prison of solitary confinement, now a ruin you walk through; Al Capone's cell kept as it was.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 1,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "us-washington-dc",
+   "names": [
+    "Washington, D.C.",
+    "Washington DC",
+    "Washington D.C."
+   ],
+   "country": "US",
+   "lat": 38.9,
+   "lon": -77.03,
+   "radius_km": 20,
+   "season": "Hot humid summers (31-32 °C), cool winters (0-8 °C); the cherry blossoms in late March or early April.",
+   "sleep": "Downtown or Dupont Circle; Georgetown for the evenings.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Washington,_D.C.",
+    "https://en.wikipedia.org/wiki/National_Mall",
+    "https://en.wikipedia.org/wiki/Smithsonian_Institution",
+    "https://en.wikipedia.org/wiki/National_Cherry_Blossom_Festival",
+    "https://en.wikipedia.org/wiki/Arlington_National_Cemetery"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mall",
+     "name": "The National Mall and its memorials",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "From the Capitol to the Lincoln Memorial past the Washington Monument, the White House, the World War II and Vietnam memorials; best at dusk.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "National Mall",
+      "Washington Monument",
+      "Lincoln Memorial",
+      "White House"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "smithsonian",
+     "name": "The Smithsonian museums",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Some museums give free timed passes online, the African American History museum the most sought",
+     "why": "Free museums side by side on the Mall: Air and Space, Natural History with the Hope Diamond, and the National Museum of African American History and Culture.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "capitol",
+     "name": "The Capitol and the Library of Congress",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Free Capitol tours booked online",
+     "why": "A tour under the dome of Congress, then the painted reading room of the largest library in the world.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "United States Capitol"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "arlington",
+     "name": "Arlington National Cemetery",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The graves of 400,000 Americans across the Potomac, Kennedy's eternal flame and the changing of the guard at the Tomb of the Unknown Soldier.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Arlington National Cemetery"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "cherry-blossoms",
+     "name": "The cherry blossoms around the Tidal Basin",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "About 3,700 cherry trees, a gift from Tokyo in 1912, in bloom for a week or two in late March or early April.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "georgetown",
+     "name": "Georgetown",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Federal-style houses older than the capital, the C&O Canal towpath and dinner on the Potomac waterfront.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mount-vernon",
+     "name": "Mount Vernon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "George Washington's plantation house over the Potomac, 25 km south, with the quarters of the people he enslaved.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-niagara-falls",
+   "names": [
+    "Niagara Falls",
+    "Niagara"
+   ],
+   "country": "US",
+   "lat": 43.08,
+   "lon": -79.07,
+   "radius_km": 25,
+   "season": "Cold snowy winters (-7 to 0 °C) with the falls half frozen; warm summers (27 °C); the boats run about May to early November.",
+   "sleep": "Niagara Falls, New York, by the state park; the Canadian side has the view of the whole Horseshoe (passport).",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Niagara_Falls_(New_York)",
+    "https://en.wikipedia.org/wiki/Niagara_Falls",
+    "https://en.wikipedia.org/wiki/Maid_of_the_Mist",
+    "https://en.wikipedia.org/wiki/Cave_of_the_Winds",
+    "https://en.wikipedia.org/wiki/Niagara_Falls_State_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "state-park",
+     "name": "Niagara Falls State Park and Goat Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The oldest state park in America (1885): Prospect Point, Terrapin Point on the edge of the Horseshoe, the rapids from the Three Sisters islands; the falls lit every night.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Niagara Falls"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "maid-of-the-mist",
+     "name": "Maid of the Mist",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The boat into the spray at the foot of the Horseshoe Falls, running since 1846; a poncho is handed out.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 2,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "cave-of-the-winds",
+     "name": "Cave of the Winds",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Wooden decks at the foot of the Bridal Veil Falls, close enough to be soaked.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "canada-side",
+     "name": "The Canadian side and Journey Behind the Falls",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Passport for the border",
+     "why": "Across the Rainbow Bridge on foot for the full view of the Horseshoe from Table Rock and the tunnels behind the water.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "winter-lights",
+     "name": "The Winter Festival of Lights",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Light displays along the Canadian side and the falls lit in colour, from mid-November to early January.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12,
+      1
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-cape-cod",
+   "names": [
+    "Cape Cod",
+    "Hyannis",
+    "Chatham",
+    "Orleans"
+   ],
+   "country": "US",
+   "lat": 41.75,
+   "lon": -70.05,
+   "radius_km": 50,
+   "season": "Summer 24-27 °C with the sea at 18-21 °C in July and August; quiet and grey from November to April, many places shut.",
+   "sleep": "Chatham or Orleans in the middle of the Cape; Provincetown at its tip.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Cape_Cod",
+    "https://www.nps.gov/caco/index.htm",
+    "https://en.wikipedia.org/wiki/Cape_Cod_National_Seashore",
+    "https://en.wikipedia.org/wiki/Cape_Cod_Rail_Trail"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "seashore",
+     "name": "The beaches of the Cape Cod National Seashore",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Beach parking fee in summer",
+     "why": "Sixty kilometres of Atlantic dunes from Nauset to Race Point, Nauset Light and Marconi Beach; seals off the shore.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "provincetown",
+     "name": "Provincetown and a whale watch",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The artists' town where the Pilgrims first landed in 1620, and the boats to the humpbacks of Stellwagen Bank.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Provincetown"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "great-island",
+     "name": "Great Island trail",
+     "hours": "3-4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Soft sand and pine woods out to the end of a spit in Wellfleet Bay; check the tide for the last stretch.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 20
+     },
+     "trail": "us-nps-caco-great-island-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "rail-trail",
+     "name": "Cycling the Cape Cod Rail Trail",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A paved old railway line of 35 km from Dennis to Wellfleet, past ponds and cranberry bogs.",
+     "act": {
+      "type": "cycling"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "sandwich",
+     "name": "Sandwich, the oldest town on the Cape",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Founded in 1637: the glass museum, the grist mill and the boardwalk over the salt marsh.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Sandwich"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-newport",
+   "names": [
+    "Newport"
+   ],
+   "country": "US",
+   "lat": 41.49,
+   "lon": -71.31,
+   "radius_km": 15,
+   "season": "Summer 26 °C by the sea, cold winters around 0 °C; the mansions open all year.",
+   "sleep": "The harbour or Bellevue Avenue.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Newport_(Rhode_Island)",
+    "https://en.wikipedia.org/wiki/The_Breakers",
+    "https://en.wikipedia.org/wiki/Cliff_Walk_(Newport,_Rhode_Island)"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "breakers",
+     "name": "The Gilded Age mansions",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The summer 'cottages' of the Vanderbilts and the Astors; The Breakers of 1895 has 70 rooms over the Atlantic.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Newport"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "cliff-walk",
+     "name": "The Cliff Walk",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A public path of 5.6 km between the mansions' lawns and the rocks of the ocean.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 20
+     },
+     "trail": "us-osm-14738780",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ocean-drive",
+     "name": "Ocean Drive",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Sixteen kilometres along the rocky shore, past Brenton Point and the summer houses.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "sail",
+     "name": "A sail on Narragansett Bay",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The harbour of the America's Cup from a schooner, in the sailing season.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 5,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-acadia",
+   "names": [
+    "Bar Harbor",
+    "Acadia National Park",
+    "Acadia",
+    "Mount Desert Island"
+   ],
+   "country": "US",
+   "lat": 44.36,
+   "lon": -68.24,
+   "radius_km": 25,
+   "season": "Summer 24 °C and cool nights, the colours in early-mid October; the Park Loop Road and Cadillac's summit road shut from December to mid-April and Bar Harbor mostly closes for the winter.",
+   "sleep": "Bar Harbor; Southwest Harbor on the quiet side of the island.",
+   "sources": [
+    "https://www.nps.gov/acad/index.htm",
+    "https://en.wikivoyage.org/wiki/Acadia_National_Park",
+    "https://en.wikipedia.org/wiki/Cadillac_Mountain",
+    "https://en.wikipedia.org/wiki/Carriage_roads_of_Acadia_National_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cadillac",
+     "name": "Sunrise on Cadillac Mountain",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Vehicle reservation for the summit road from late May to late October, released online",
+     "why": "The highest point of the Atlantic coast of America (466 m), the first sunrise in the country from October to early March.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 466
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "sights": [
+      "Cadillac Mountain",
+      "Acadia National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "ocean-path",
+     "name": "The Park Loop Road and the Ocean Path",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Sand Beach, Thunder Hole booming at mid-tide and the pink granite of Otter Cliff along a 3 km path by the sea.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 40
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "trail": "us-nps-acad-ocean-path",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "jordan-pond",
+     "name": "Jordan Pond and its popovers",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A 5 km loop round the clear lake under the two Bubbles, then tea and popovers at the Jordan Pond House.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 90
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "us-nps-acad-jordan-pond-path",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "beehive",
+     "name": "The Beehive",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Iron rungs and ledges up a cliff over Sand Beach; not for those afraid of heights.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 158
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "us-nps-acad-beehive-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "carriage-roads",
+     "name": "The carriage roads by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "72 km of broken-stone roads closed to cars, built by John D. Rockefeller Jr., with seventeen stone bridges.",
+     "act": {
+      "type": "cycling"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "lobster",
+     "name": "Lobster on the Bar Harbor waterfront",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A lobster dinner or a lobster roll by the harbour, walking to Bar Island at low tide.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Bar Harbor"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-white-mountains",
+   "names": [
+    "Mount Washington",
+    "White Mountains",
+    "North Conway",
+    "Bretton Woods"
+   ],
+   "country": "US",
+   "lat": 44.15,
+   "lon": -71.3,
+   "radius_km": 45,
+   "season": "Summer 25 °C in the valleys but often freezing and windy on Mount Washington; the foliage from late September to mid-October; ski season about December to March.",
+   "sleep": "North Conway, or Bretton Woods under Mount Washington.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/White_Mountains_(New_Hampshire)",
+    "https://en.wikipedia.org/wiki/Mount_Washington",
+    "https://en.wikipedia.org/wiki/Kancamagus_Highway",
+    "https://en.wikipedia.org/wiki/Flume_Gorge",
+    "https://en.wikipedia.org/wiki/Bretton_Woods_Mountain_Resort"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mount-washington",
+     "name": "Up Mount Washington by the Cog Railway or the Auto Road",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Cog Railway seats online",
+     "why": "The highest peak of the Northeast (1,917 m), where a gust of 372 km/h was measured in 1934; the cog railway of 1869 climbs to the top.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1917
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Mount Washington"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 2,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "kancamagus",
+     "name": "The Kancamagus Highway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "56 km through the national forest from Conway to Lincoln, past the Swift River and covered bridges; one of the famous foliage drives in late September and early October.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "flume",
+     "name": "Flume Gorge in Franconia Notch",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed tickets online",
+     "why": "Boardwalks through a granite gorge 240 m long with walls 20-27 m high.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 500
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "franconia-ridge",
+     "name": "The Franconia Ridge loop",
+     "hours": "A day",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "One of the classic hikes of the East: 14 km and 1,100 m up over Little Haystack and Lafayette, above the trees on a narrow ridge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1600
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "us-osm-7729143",
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing at Bretton Woods or Wildcat",
+     "hours": "A day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "New Hampshire's largest ski area under Mount Washington, or Wildcat's steep runs across Pinkham Notch.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "covered-bridges",
+     "name": "Covered bridges and North Conway",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 19th-century wooden bridges of the Saco valley and the old station of the Conway Scenic Railroad.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-camden",
+   "names": [
+    "Camden",
+    "Rockport",
+    "Rockland"
+   ],
+   "country": "US",
+   "lat": 44.21,
+   "lon": -69.06,
+   "radius_km": 20,
+   "season": "Summer 24 °C, cold snowy winters; the schooners sail from late May to early October.",
+   "sleep": "Camden by the harbour.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Camden_(Maine)",
+    "https://en.wikipedia.org/wiki/Camden_Hills_State_Park",
+    "https://en.wikipedia.org/wiki/Maine_Windjammer_Association"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mount-battie",
+     "name": "Mount Battie over Camden harbour",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The view over the harbour and the islands of Penobscot Bay that Edna St. Vincent Millay wrote about, by a short climb or the summit road.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 240
+     },
+     "sights": [
+      "Camden"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "windjammer",
+     "name": "A day sail on a windjammer",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Camden is the home port of the fleet of old wooden schooners that still sail the bay.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 5,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "rockland",
+     "name": "Rockland: the breakwater and the Wyeths",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A walk of 1.3 km out on the granite breakwater to its lighthouse, and the Farnsworth museum of three generations of Wyeths.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "lobster-roll",
+     "name": "A lobster roll on the harbour",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Maine's sandwich, at a shack by the boats.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-portland-maine",
+   "names": [
+    "Portland, Maine"
+   ],
+   "country": "US",
+   "lat": 43.66,
+   "lon": -70.26,
+   "radius_km": 15,
+   "season": "Summer 26 °C, cold snowy winters (-8 to 0 °C).",
+   "sleep": "The Old Port.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Portland_(Maine)",
+    "https://en.wikipedia.org/wiki/Portland_Head_Light",
+    "https://en.wikipedia.org/wiki/Old_Port"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "head-light",
+     "name": "Portland Head Light",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The lighthouse on the rocks of Cape Elizabeth, first lit in 1791, in Fort Williams Park.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "old-port",
+     "name": "The Old Port",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Brick warehouses and cobbled streets on the working waterfront, with one of the best small food scenes in America.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "casco-bay",
+     "name": "The ferry to Peaks Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The island ferry across Casco Bay, then a walk or a bike ride round the island.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-finger-lakes",
+   "names": [
+    "Finger Lakes",
+    "Watkins Glen",
+    "Ithaca"
+   ],
+   "country": "US",
+   "lat": 42.4,
+   "lon": -76.8,
+   "radius_km": 50,
+   "season": "Summer 27 °C, cold snowy winters; the Gorge Trail is open about mid-May to early November.",
+   "sleep": "Watkins Glen at the foot of Seneca Lake, or Ithaca.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Finger_Lakes",
+    "https://en.wikipedia.org/wiki/Watkins_Glen_State_Park",
+    "https://en.wikipedia.org/wiki/Taughannock_Falls_State_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "watkins-glen",
+     "name": "The Gorge Trail of Watkins Glen",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Nineteen waterfalls in under 3 km of stone stairs and tunnels cut into the gorge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 330
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "wine",
+     "name": "Wineries along Seneca Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Riesling country: tastings on the slopes over the deepest of the lakes.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "no",
+     "needs": "car"
+    },
+    {
+     "id": "taughannock",
+     "name": "Taughannock Falls",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A single drop of 65 m, taller than Niagara's, at the end of a flat gorge walk near Ithaca.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-shenandoah",
+   "names": [
+    "Shenandoah National Park",
+    "Shenandoah",
+    "Luray",
+    "Skyline Drive"
+   ],
+   "country": "US",
+   "lat": 38.53,
+   "lon": -78.44,
+   "radius_km": 50,
+   "season": "Summer 27-30 °C in the valley, cooler on the ridge; the colours in mid-late October; Skyline Drive closes for snow and ice in winter and the lodges open about April to November.",
+   "sleep": "Luray in the valley, or Skyland and Big Meadows lodges on the ridge in season.",
+   "sources": [
+    "https://www.nps.gov/shen/index.htm",
+    "https://en.wikivoyage.org/wiki/Shenandoah_National_Park",
+    "https://en.wikipedia.org/wiki/Skyline_Drive",
+    "https://en.wikipedia.org/wiki/Old_Rag_Mountain",
+    "https://en.wikipedia.org/wiki/Luray_Caverns"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "skyline-drive",
+     "name": "Skyline Drive",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "169 km along the crest of the Blue Ridge with 75 overlooks over the Shenandoah valley, at 35 mph.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Shenandoah National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "dark-hollow",
+     "name": "Dark Hollow Falls",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The park's most visited waterfall, 2.2 km there and back, steep on the way up.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1080
+     },
+     "trail": "us-nps-shen-dark-hollow-falls-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "hawksbill",
+     "name": "Hawksbill, the highest summit",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The top of the park at 1,235 m, with its stone platform over the valley.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1235
+     },
+     "trail": "us-nps-shen-hawksbill-trail-upper",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "old-rag",
+     "name": "Old Rag",
+     "hours": "A day",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "Day-use ticket from March to November on recreation.gov",
+     "why": "The famous rock scramble of the East: a 15 km loop through granite boulders to a 1,001 m summit.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1001
+     },
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "whiteoak",
+     "name": "Whiteoak Canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A string of six waterfalls down a hemlock canyon, a steep climb back up.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1050
+     },
+     "trail": "us-nps-shen-whiteoak-canyon-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "luray-caverns",
+     "name": "Luray Caverns",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The largest caverns of the East, with a stone 'organ' that plays the stalactites.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-charleston",
+   "names": [
+    "Charleston"
+   ],
+   "country": "US",
+   "lat": 32.78,
+   "lon": -79.93,
+   "radius_km": 25,
+   "season": "Hot humid summers (32 °C) with afternoon storms, mild winters (6-16 °C); hurricane season June to November; spring the loveliest.",
+   "sleep": "The historic peninsula south of Calhoun Street.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Charleston_(South_Carolina)",
+    "https://en.wikipedia.org/wiki/Fort_Sumter",
+    "https://en.wikipedia.org/wiki/Rainbow_Row",
+    "https://en.wikipedia.org/wiki/Angel_Oak",
+    "https://en.wikipedia.org/wiki/Middleton_Place"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Rainbow Row, the Battery and the old city",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Pastel 18th-century houses, the single houses with their side porches, the gas lamps of the French Quarter and the sea wall of the Battery.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Charleston"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "fort-sumter",
+     "name": "Fort Sumter",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Ferry tickets online",
+     "why": "The ferry to the island fort where the first shots of the Civil War were fired on 12 April 1861.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "plantation",
+     "name": "A plantation on the Ashley River",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Middleton Place or McLeod: gardens and oaks, and the lives of the enslaved people who worked them told without varnish.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "angel-oak",
+     "name": "The Angel Oak",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A live oak on Johns Island several centuries old, its branches spreading over a third of a hectare.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Angel Oak"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "lowcountry-food",
+     "name": "Lowcountry food",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Shrimp and grits, she-crab soup and Gullah cooking in one of the best food towns of the South.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "beach",
+     "name": "Folly Beach or Sullivan's Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The beaches twenty minutes from town, with the sea warm from May to October.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-beaufort-sc",
+   "names": [
+    "Beaufort",
+    "Hunting Island",
+    "St. Helena Island"
+   ],
+   "country": "US",
+   "lat": 32.43,
+   "lon": -80.67,
+   "radius_km": 30,
+   "season": "Hot humid summers, mild winters; hurricane season June to November.",
+   "sleep": "The historic district on the Beaufort River.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Beaufort_(South_Carolina)",
+    "https://en.wikipedia.org/wiki/Hunting_Island_State_Park",
+    "https://en.wikipedia.org/wiki/Penn_Center"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Old Beaufort and the waterfront park",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Antebellum houses under live oaks and Spanish moss, where Forrest Gump and The Big Chill were filmed.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Beaufort"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "penn-center",
+     "name": "Penn Center on St. Helena Island",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the first schools for formerly enslaved people (1862), and the heart of Gullah culture.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "hunting-island",
+     "name": "Hunting Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The lighthouse you can climb, the boneyard beach of dead trees and the maritime forest.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-savannah",
+   "names": [
+    "Savannah"
+   ],
+   "country": "US",
+   "lat": 32.08,
+   "lon": -81.09,
+   "radius_km": 20,
+   "season": "Hot humid summers (33 °C), mild winters (5-17 °C); azaleas in March; hurricane season June to November.",
+   "sleep": "The historic district, between the squares.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Savannah",
+    "https://en.wikipedia.org/wiki/Savannah_Historic_District",
+    "https://en.wikipedia.org/wiki/Bonaventure_Cemetery",
+    "https://en.wikipedia.org/wiki/Wormsloe_Historic_Site"
+   ],
+   "nights": [
+    2,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "squares",
+     "name": "The squares and Forsyth Park",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Oglethorpe's town plan of 1733: 22 green squares under live oaks hung with Spanish moss, down to the fountain of Forsyth Park.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Savannah"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 4,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "bonaventure",
+     "name": "Bonaventure Cemetery",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Statues and oak avenues over the Wilmington River, made famous by Midnight in the Garden of Good and Evil.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "wormsloe",
+     "name": "The oak avenue of Wormsloe",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Two kilometres of live oaks leading to the ruins of a colonial estate.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "river-street",
+     "name": "River Street and a ghost tour",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Cotton warehouses on the river, then the town's ghost stories by night.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "tybee",
+     "name": "Tybee Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The town's beach and its lighthouse, half an hour away.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-atlanta",
+   "names": [
+    "Atlanta"
+   ],
+   "country": "US",
+   "lat": 33.75,
+   "lon": -84.39,
+   "radius_km": 25,
+   "season": "Hot humid summers (32 °C), mild winters (2-12 °C) with rare snow.",
+   "sleep": "Midtown, or Downtown near Centennial Olympic Park.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Atlanta",
+    "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr._National_Historical_Park",
+    "https://en.wikipedia.org/wiki/National_Center_for_Civil_and_Human_Rights",
+    "https://en.wikipedia.org/wiki/Georgia_Aquarium"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mlk",
+     "name": "Martin Luther King Jr.'s Sweet Auburn",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The house where he was born, Ebenezer Baptist Church where he preached, and his tomb, in a national historical park.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 2,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "civil-rights",
+     "name": "The National Center for Civil and Human Rights",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The civil rights movement, including a lunch-counter sit-in you live through with headphones.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "aquarium",
+     "name": "Georgia Aquarium and World of Coca-Cola",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the largest aquariums in the world, with whale sharks, next to the museum of the drink invented here in 1886.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "beltline",
+     "name": "The BeltLine Eastside Trail",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "An old rail corridor turned into a walk of murals and food halls, to Ponce City Market.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-chattanooga",
+   "names": [
+    "Chattanooga",
+    "Lookout Mountain"
+   ],
+   "country": "US",
+   "lat": 35.05,
+   "lon": -85.31,
+   "radius_km": 25,
+   "season": "Hot humid summers, mild winters; the colours in late October.",
+   "sleep": "Downtown by the river or the North Shore.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Chattanooga",
+    "https://en.wikipedia.org/wiki/Lookout_Mountain",
+    "https://en.wikipedia.org/wiki/Ruby_Falls",
+    "https://en.wikipedia.org/wiki/Lookout_Mountain_Incline_Railway",
+    "https://en.wikipedia.org/wiki/Tennessee_Aquarium"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "lookout",
+     "name": "Lookout Mountain: the Incline, Rock City and Ruby Falls",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the steepest passenger railways in the world, the rock gardens of 'See Rock City' with their view over seven states, and a waterfall inside the mountain.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 640
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "riverfront",
+     "name": "The Walnut Street Bridge and the riverfront",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A walking bridge of 1891 over the Tennessee River to the North Shore.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Chattanooga"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "aquarium",
+     "name": "The Tennessee Aquarium",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Freshwater life from the Appalachian streams to the Mississippi delta.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "chickamauga",
+     "name": "Chickamauga battlefield",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The oldest national military park (1890), on the field of one of the bloodiest battles of the Civil War.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-smokies",
+   "names": [
+    "Great Smoky Mountains National Park",
+    "Great Smoky Mountains",
+    "Smokies",
+    "Gatlinburg"
+   ],
+   "country": "US",
+   "lat": 35.65,
+   "lon": -83.5,
+   "radius_km": 50,
+   "season": "Warm humid summers (29 °C in the valleys, 18 °C on the tops), the colours from mid-October into November, cool winters with snow up high; Kuwohi's road shuts December to March.",
+   "sleep": "Gatlinburg at the park gate; Townsend on the quiet side for Cades Cove.",
+   "sources": [
+    "https://www.nps.gov/grsm/index.htm",
+    "https://en.wikivoyage.org/wiki/Great_Smoky_Mountains_National_Park",
+    "https://en.wikipedia.org/wiki/Cades_Cove",
+    "https://en.wikipedia.org/wiki/Kuwohi",
+    "https://en.wikipedia.org/wiki/Alum_Cave_Trail"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cades-cove",
+     "name": "Cades Cove",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "A parking tag for any stop longer than 15 minutes (daily or weekly, online or at the visitor centres)",
+     "why": "An 18 km one-way loop through a valley of 19th-century churches, cabins and mills, with deer and black bears in the meadows.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Great Smoky Mountains National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 2,
+      "relax": 4,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "kuwohi",
+     "name": "Kuwohi, the roof of the Smokies",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A steep paved path to the tower on the highest point of the park (2,025 m), formerly called Clingmans Dome.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2025
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "trail": "us-nps-grsm-kuwohi-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "alum-cave",
+     "name": "The Alum Cave Trail",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Through Arch Rock to the overhanging Alum Cave Bluffs, 7.4 km there and back; strong walkers go on to Mount LeConte.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1500
+     },
+     "trail": "us-osm-7552504",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "newfound-gap",
+     "name": "The Newfound Gap Road",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Across the park on US 441 to the gap at 1,538 m, where the Appalachian Trail crosses; closed after snow.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "chimney-tops",
+     "name": "Chimney Tops",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A steep 5.3 km there and back to a viewing point under the rock pinnacles burned in the 2016 fire.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1400
+     },
+     "trail": "us-nps-grsm-chimney-tops-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "fireflies",
+     "name": "The synchronous fireflies of Elkmont",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "Lottery on recreation.gov in late April",
+     "why": "For about two weeks between late May and mid-June, thousands of fireflies flash in time.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "night",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-blue-ridge",
+   "names": [
+    "Blue Ridge Parkway",
+    "Blowing Rock",
+    "Boone"
+   ],
+   "country": "US",
+   "lat": 36.1,
+   "lon": -81.75,
+   "radius_km": 60,
+   "season": "Summer 25 °C up on the ridge, the colours in early-mid October; sections of the Parkway close for ice and snow from December to March.",
+   "sleep": "Blowing Rock or Boone.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Blue_Ridge_Parkway",
+    "https://www.nps.gov/blri/index.htm",
+    "https://en.wikipedia.org/wiki/Linn_Cove_Viaduct",
+    "https://en.wikipedia.org/wiki/Grandfather_Mountain",
+    "https://en.wikipedia.org/wiki/Linville_Falls"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "viaduct",
+     "name": "The Linn Cove Viaduct and Grandfather Mountain",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The curving viaduct of 1987 hung on the flank of Grandfather Mountain, and the Mile High Swinging Bridge at the top.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1600
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "sights": [
+      "Blue Ridge Parkway"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "rough-ridge",
+     "name": "Rough Ridge",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A short climb on rock and boardwalk to the view over the viaduct, glowing red in October.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1450
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "trail": "us-nps-blri-rough-ridge-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "linville",
+     "name": "Linville Falls",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Paths to the overlooks of a two-step waterfall at the head of the deepest gorge of the East.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1000
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "trail": "us-nps-blri-linville-falls-national-recreation-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "moses-cone",
+     "name": "Moses Cone Manor",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A white manor of 1901 selling Appalachian crafts, with 40 km of carriage trails round it.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "blowing-rock",
+     "name": "Blowing Rock village",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A mountain resort town since the 1880s, with the cliff over the gorge where the wind blows light things back up.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-nashville",
+   "names": [
+    "Nashville"
+   ],
+   "country": "US",
+   "lat": 36.16,
+   "lon": -86.78,
+   "radius_km": 20,
+   "season": "Hot humid summers (32 °C), cool winters (0-10 °C).",
+   "sleep": "Downtown near Broadway, or The Gulch.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Nashville",
+    "https://en.wikipedia.org/wiki/Grand_Ole_Opry",
+    "https://en.wikipedia.org/wiki/Ryman_Auditorium",
+    "https://en.wikipedia.org/wiki/Country_Music_Hall_of_Fame_and_Museum",
+    "https://en.wikipedia.org/wiki/Bluebird_Cafe"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "broadway",
+     "name": "The honky-tonks of Broadway",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Live country music in every bar from late morning to the small hours, free, the band playing for the tip jar.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Nashville"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "opry",
+     "name": "The Grand Ole Opry",
+     "hours": "3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Tickets online",
+     "why": "The radio show running since 1925, live from the Opry House (some winter shows at the Ryman).",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "hall-of-fame",
+     "name": "The Country Music Hall of Fame",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Elvis's gold Cadillac, Johnny Cash's guitars and the history of the music.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ryman",
+     "name": "The Ryman Auditorium",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 'Mother Church of Country Music', a tabernacle of 1892 and the Opry's home for 31 years.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "bluebird",
+     "name": "A songwriters' night at the Bluebird Cafe",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Seats released online, they go in minutes",
+     "why": "Ninety seats where the writers of the hits play their own songs in the round.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "hot-chicken",
+     "name": "Nashville hot chicken",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The town's fried chicken in cayenne, from mild to unbearable.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 1,
+      "landscape": 0
+     },
+     "tier": "C",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-memphis",
+   "names": [
+    "Memphis"
+   ],
+   "country": "US",
+   "lat": 35.15,
+   "lon": -90.05,
+   "radius_km": 20,
+   "season": "Hot humid summers (33 °C), cool winters (1-11 °C).",
+   "sleep": "Downtown near Beale Street.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Memphis",
+    "https://en.wikipedia.org/wiki/Graceland",
+    "https://en.wikipedia.org/wiki/National_Civil_Rights_Museum",
+    "https://en.wikipedia.org/wiki/Sun_Studio",
+    "https://en.wikipedia.org/wiki/Beale_Street"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "graceland",
+     "name": "Graceland",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed tours online",
+     "why": "Elvis Presley's house as he left it in 1977, the Jungle Room, his cars and planes.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Graceland"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "civil-rights",
+     "name": "The National Civil Rights Museum",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Built into the Lorraine Motel, where Martin Luther King Jr. was shot on 4 April 1968.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 1,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "beale",
+     "name": "Beale Street at night",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The blues street of W. C. Handy and B.B. King, live music in its clubs every night.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Beale Street",
+      "Memphis"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "sun-studio",
+     "name": "Sun Studio",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The small studio where Elvis, Johnny Cash and Jerry Lee Lewis cut their first records.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Sun Studio"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "stax",
+     "name": "The Stax Museum of American Soul Music",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Otis Redding, Isaac Hayes and Booker T. on the site of the studio that made Memphis soul.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "peabody",
+     "name": "The Peabody ducks",
+     "hours": "30 min",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The ducks walking the red carpet to the hotel lobby fountain at 11:00 and back at 17:00.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-clarksdale",
+   "names": [
+    "Clarksdale"
+   ],
+   "country": "US",
+   "lat": 34.19,
+   "lon": -90.57,
+   "radius_km": 30,
+   "season": "Hot humid summers (33 °C), mild winters; the Juke Joint Festival in April.",
+   "sleep": "Downtown Clarksdale.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Clarksdale",
+    "https://en.wikipedia.org/wiki/Delta_Blues_Museum",
+    "https://en.wikipedia.org/wiki/Crossroads_(folklore)"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "juke-joint",
+     "name": "Live blues in a juke joint",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Delta's blues in the small bars where it was always played; music most nights from Thursday to Saturday.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Clarksdale"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 4,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "delta-blues-museum",
+     "name": "The Delta Blues Museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The blues of the cotton fields in the old freight depot, with the cabin where Muddy Waters grew up.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "crossroads",
+     "name": "The crossroads of Highways 61 and 49",
+     "hours": "30 min",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Where, legend says, Robert Johnson sold his soul to the devil for his guitar.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-natchez",
+   "names": [
+    "Natchez"
+   ],
+   "country": "US",
+   "lat": 31.56,
+   "lon": -91.4,
+   "radius_km": 25,
+   "season": "Hot humid summers (33 °C), mild winters (4-16 °C); the houses open for the spring and autumn pilgrimages.",
+   "sleep": "In one of the antebellum houses, or on the bluff.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Natchez",
+    "https://en.wikipedia.org/wiki/Natchez_National_Historical_Park",
+    "https://en.wikipedia.org/wiki/Longwood_(Natchez,_Mississippi)",
+    "https://en.wikipedia.org/wiki/Natchez_Trace_Parkway"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mansions",
+     "name": "The antebellum houses",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Longwood, the unfinished octagon of 1860, Stanton Hall and Melrose: the wealth of cotton, and at the Forks of the Road the slave market that made it.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Natchez"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "bluff",
+     "name": "The bluff over the Mississippi",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Sunset over the river from the park on the bluff, and Natchez Under-the-Hill below.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "trace",
+     "name": "The start of the Natchez Trace",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The parkway of 715 km to Nashville along an old path, with the Emerald Mound of the Mississippian people.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-new-orleans",
+   "names": [
+    "New Orleans"
+   ],
+   "country": "US",
+   "lat": 29.95,
+   "lon": -90.07,
+   "radius_km": 20,
+   "season": "Hot humid summers (33 °C) with daily storms, mild winters (8-18 °C); Mardi Gras in February or early March, Jazz Fest late April-early May; hurricane season June to November, the peak August to October.",
+   "sleep": "The French Quarter, or the Marigny for the music.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/New_Orleans",
+    "https://en.wikipedia.org/wiki/French_Quarter",
+    "https://en.wikipedia.org/wiki/St._Charles_Streetcar_Line",
+    "https://en.wikipedia.org/wiki/The_National_WWII_Museum",
+    "https://en.wikipedia.org/wiki/Whitney_Plantation_Historic_District"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "french-quarter",
+     "name": "The French Quarter",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Iron balconies, Jackson Square and St. Louis Cathedral, beignets at Café du Monde and Bourbon Street at night.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "French Quarter",
+      "Jackson Square",
+      "Bourbon Street",
+      "New Orleans"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "frenchmen",
+     "name": "Jazz on Frenchmen Street",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Brass bands and jazz clubs every night; Preservation Hall for traditional jazz in a tiny room.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 4,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "garden-district",
+     "name": "The St. Charles streetcar to the Garden District",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The oldest streetcar line still running in the world, to the mansions and the walled cemetery of the Garden District.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Garden District"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "ww2-museum",
+     "name": "The National WWII Museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "America's war museum, in the town where the D-Day landing boats were built.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 1,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "swamp",
+     "name": "A swamp tour in the bayou",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Alligators, herons and cypress in the swamps outside town, by flat boat.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "transfer"
+    },
+    {
+     "id": "whitney",
+     "name": "Whitney Plantation",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The one plantation museum told entirely through the lives of the enslaved.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 1,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "car"
+    },
+    {
+     "id": "mardi-gras",
+     "name": "Mardi Gras parades",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Weeks of parades and costumes ending on Fat Tuesday, in February or early March.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-st-augustine",
+   "names": [
+    "St. Augustine",
+    "Saint Augustine"
+   ],
+   "country": "US",
+   "lat": 29.9,
+   "lon": -81.31,
+   "radius_km": 20,
+   "season": "Mild winters (8-20 °C), hot humid summers (32 °C) with afternoon storms; hurricane season June to November, the peak August to October.",
+   "sleep": "The historic district, near St. George Street.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/St._Augustine",
+    "https://en.wikipedia.org/wiki/Castillo_de_San_Marcos",
+    "https://en.wikipedia.org/wiki/Flagler_College",
+    "https://en.wikipedia.org/wiki/St._Augustine_Light"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "castillo",
+     "name": "The Castillo de San Marcos",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The oldest stone fort in the continental United States (1672-1695), built of shell rock by Spain in the oldest European-founded city of the country (1565).",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "St. Augustine"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "old-town",
+     "name": "St. George Street and Flagler College",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Spanish colonial streets, and Flagler's Ponce de León Hotel of 1888 with its Tiffany windows, now a college.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "lighthouse",
+     "name": "The St. Augustine Lighthouse",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "219 steps to the top of the striped lighthouse on Anastasia Island.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 1,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "beach",
+     "name": "Anastasia State Park beach",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Wide dunes and a quiet beach across the bridge from town.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "nights-of-lights",
+     "name": "Nights of Lights",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Millions of white lights on the old town from mid-November to January.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12,
+      1
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-space-coast",
+   "names": [
+    "Cocoa Beach",
+    "Cape Canaveral",
+    "Titusville"
+   ],
+   "country": "US",
+   "lat": 28.4,
+   "lon": -80.65,
+   "radius_km": 35,
+   "season": "Mild winters (12-23 °C) with the sea around 20 °C, hot humid summers; hurricane season June to November, the peak August to October.",
+   "sleep": "Cocoa Beach, or Titusville for the launches.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Space_Coast",
+    "https://en.wikipedia.org/wiki/Kennedy_Space_Center_Visitor_Complex",
+    "https://en.wikipedia.org/wiki/Merritt_Island_National_Wildlife_Refuge",
+    "https://en.wikipedia.org/wiki/Cocoa_Beach,_Florida"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "kennedy",
+     "name": "The Kennedy Space Center",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Saturn V that went to the Moon, the Space Shuttle Atlantis and the bus out to the launch pads.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Kennedy Space Center"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 2,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "launch",
+     "name": "A rocket launch",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Check the launch schedule",
+     "book": "",
+     "why": "Launches from the Cape happen most weeks; the beaches and the Titusville riverfront are the free seats.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "cocoa-beach",
+     "name": "Cocoa Beach and its pier",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The surf town of the Space Coast, with the sea warm from April to November.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "merritt-island",
+     "name": "Merritt Island wildlife refuge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Black Point Wildlife Drive for herons, spoonbills and alligators; manatees at Haulover Canal; the most birds in winter.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife",
+      "drive"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-orlando",
+   "names": [
+    "Orlando"
+   ],
+   "country": "US",
+   "lat": 28.54,
+   "lon": -81.38,
+   "radius_km": 40,
+   "season": "Mild winters (10-22 °C), hot humid summers (33 °C) with a storm most afternoons; hurricane season June to November, the peak August to October.",
+   "sleep": "Near the parks on International Drive or Lake Buena Vista.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Orlando",
+    "https://en.wikipedia.org/wiki/Walt_Disney_World",
+    "https://en.wikipedia.org/wiki/Universal_Orlando",
+    "https://en.wikipedia.org/wiki/Blue_Spring_State_Park",
+    "https://en.wikipedia.org/wiki/Wekiwa_Springs_State_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "disney",
+     "name": "Walt Disney World",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Dated tickets online",
+     "why": "Four theme parks, Magic Kingdom first (1971); a day for each is the usual pace.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Walt Disney World"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "universal",
+     "name": "Universal Orlando",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Dated tickets online",
+     "why": "The Wizarding World of Harry Potter across two parks, and the newer Epic Universe.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Universal Studios Florida"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 0,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "manatees",
+     "name": "Manatees at Blue Spring",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hundreds of manatees shelter in the 22 °C spring run when the river is cold.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "wekiwa",
+     "name": "A swim at Wekiwa Springs",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Clear spring water at 22 °C all year, and canoes down the river.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "winter-park",
+     "name": "Winter Park",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The boat tour of its lakes and canals, and the Morse Museum's Tiffany glass.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "boat",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-anna-maria",
+   "names": [
+    "Anna Maria Island",
+    "Anna Maria",
+    "Holmes Beach"
+   ],
+   "country": "US",
+   "lat": 27.5,
+   "lon": -82.71,
+   "radius_km": 25,
+   "season": "Mild winters (13-23 °C) with the Gulf too cool to swim, hot summers with the sea at 30 °C; hurricane season June to November, the peak August to October.",
+   "sleep": "Anna Maria or Holmes Beach.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Anna_Maria_Island",
+    "https://en.wikipedia.org/wiki/Anna_Maria_Island",
+    "https://en.wikipedia.org/wiki/The_John_and_Mable_Ringling_Museum_of_Art"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "swim",
+     "name": "The Gulf beaches",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "White sand and calm water from Bean Point to Coquina Beach.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "sights": [
+      "Anna Maria Island"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "sunset",
+     "name": "Sunset on the beach",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The sun going down into the Gulf, a ritual every evening, with dolphins often passing.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "trolley",
+     "name": "The free trolley, Bridge Street and the pier",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The island's free trolley from end to end, the old piers and the shops of Bridge Street.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "kayak",
+     "name": "Kayaking in the mangroves",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Paddling through the mangrove tunnels, with manatees and rays.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ringling",
+     "name": "The Ringling in Sarasota",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The circus king's Venetian palace, his museum of Old Masters and the circus museum.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-miami",
+   "names": [
+    "Miami",
+    "Miami Beach"
+   ],
+   "country": "US",
+   "lat": 25.77,
+   "lon": -80.19,
+   "radius_km": 30,
+   "season": "Warm all year: winters 17-25 °C and dry (the high season), summers 25-33 °C with daily storms; hurricane season June to November, the peak August to October.",
+   "sleep": "South Beach, or Brickell and Downtown.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Miami",
+    "https://en.wikipedia.org/wiki/Miami_Beach_Architectural_District",
+    "https://en.wikipedia.org/wiki/Little_Havana",
+    "https://en.wikipedia.org/wiki/Shark_Valley",
+    "https://en.wikipedia.org/wiki/Vizcaya_Museum_and_Gardens"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "art-deco",
+     "name": "South Beach and the Art Deco district",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hundreds of pastel Art Deco hotels of the 1930s on Ocean Drive and Collins Avenue, facing the beach.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Miami Beach",
+      "South Beach",
+      "Ocean Drive"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "beach",
+     "name": "A beach day on Miami Beach",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Fifteen kilometres of sand with the sea warm all year.",
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "little-havana",
+     "name": "Little Havana",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Calle Ocho, the old men playing dominoes in Máximo Gómez Park and a Cuban coffee at a window.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Little Havana"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "everglades",
+     "name": "The Everglades at Shark Valley",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A tram or a bike along a 24 km loop through the sawgrass to an observation tower, with alligators beside the road; best in the dry season, December to April.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 5
+     },
+     "sights": [
+      "Everglades National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "wynwood",
+     "name": "The Wynwood Walls",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Warehouses covered in murals by street artists from all over the world.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Wynwood"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "vizcaya",
+     "name": "Vizcaya Museum and Gardens",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "An Italian Renaissance villa of 1916 and its gardens on Biscayne Bay.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-key-largo",
+   "names": [
+    "Key Largo"
+   ],
+   "country": "US",
+   "lat": 25.09,
+   "lon": -80.45,
+   "radius_km": 25,
+   "season": "Warm all year (winter 18-25 °C, summer 26-32 °C), the sea 24-30 °C; hurricane season June to November, the peak August to October.",
+   "sleep": "Key Largo, on the bay side for the sunsets.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Key_Largo",
+    "https://en.wikipedia.org/wiki/John_Pennekamp_Coral_Reef_State_Park",
+    "https://www.nps.gov/ever/index.htm",
+    "https://en.wikipedia.org/wiki/Anhinga_Trail"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "pennekamp",
+     "name": "John Pennekamp Coral Reef State Park",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The first undersea park of the United States (1963): snorkelling or a glass-bottom boat over the only living coral reef of the country, and the Christ of the Abyss statue.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "John Pennekamp Coral Reef State Park",
+      "Key Largo"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "anhinga",
+     "name": "The Everglades at the Anhinga Trail",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Boardwalks over a slough full of alligators, anhingas and herons at Royal Palm, an hour away; best in the dry season.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 5
+     },
+     "sights": [
+      "Everglades National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "mangrove-kayak",
+     "name": "A kayak in the mangroves",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Paddling the bay-side mangrove channels at sunset.",
+     "act": {
+      "type": "boat"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-marathon",
+   "names": [
+    "Marathon",
+    "Big Pine Key",
+    "Bahia Honda"
+   ],
+   "country": "US",
+   "lat": 24.71,
+   "lon": -81.09,
+   "radius_km": 25,
+   "season": "Warm all year (winter 19-25 °C, summer 26-32 °C), the sea 24-30 °C; hurricane season June to November, the peak August to October.",
+   "sleep": "Marathon, in the middle of the Keys.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Marathon_(Florida)",
+    "https://en.wikipedia.org/wiki/Seven_Mile_Bridge",
+    "https://en.wikipedia.org/wiki/Bahia_Honda_State_Park",
+    "https://en.wikipedia.org/wiki/Pigeon_Key"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "seven-mile",
+     "name": "The Seven Mile Bridge and the old bridge to Pigeon Key",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The road over the open sea of the Overseas Highway, and beside it the old railway bridge of 1912, reopened to walkers and bikes as far as Pigeon Key.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Seven Mile Bridge",
+      "Overseas Highway",
+      "Marathon"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 3,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "bahia-honda",
+     "name": "Bahia Honda",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "One of the best beaches of the Keys, under a broken span of Flagler's railway.",
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 5,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "turtle-hospital",
+     "name": "The Turtle Hospital",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Guided tours, booked ahead",
+     "why": "A rescue for injured sea turtles you visit with the vets.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "reef",
+     "name": "Snorkelling on Sombrero Reef",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A boat out to the reef under its old iron lighthouse.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-key-west",
+   "names": [
+    "Key West"
+   ],
+   "country": "US",
+   "lat": 24.56,
+   "lon": -81.78,
+   "radius_km": 20,
+   "season": "Warm all year (winter 20-25 °C, summer 26-32 °C), the sea 24-30 °C; hurricane season June to November, the peak August to October.",
+   "sleep": "Old Town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Key_West",
+    "https://en.wikipedia.org/wiki/Mallory_Square",
+    "https://en.wikipedia.org/wiki/Ernest_Hemingway_House",
+    "https://www.nps.gov/drto/index.htm",
+    "https://en.wikipedia.org/wiki/Southernmost_point_buoy"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mallory-sunset",
+     "name": "Sunset at Mallory Square",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The evening celebration on the pier, with jugglers and food stalls, as the sun goes into the sea.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Mallory Square",
+      "Key West"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 3,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "old-town",
+     "name": "Duval Street and Hemingway's house",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The wooden houses of Old Town and the house where Hemingway lived in the 1930s, with its six-toed cats.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Duval Street"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 4,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "dry-tortugas",
+     "name": "Dry Tortugas National Park",
+     "hours": "A day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Ferry or seaplane seats weeks ahead; the national park entrance fee is extra",
+     "why": "The ferry of 2 h 15 min each way to Fort Jefferson, a brick fort alone in the sea, with snorkelling off its walls.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "beach"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "southernmost",
+     "name": "The Southernmost Point",
+     "hours": "30 min",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The striped buoy 145 km from Cuba, the southern tip of the continental United States.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "bike",
+     "name": "Old Town by bike",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The flat lanes of conch houses and gardens, the way locals get around.",
+     "act": {
+      "type": "cycling"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  }
+ ]
+}
