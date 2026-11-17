@@ -6184,7 +6184,7 @@
    "slot": "CH-A",
    "base": "Riederalp",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -6193,7 +6193,8 @@
     },
     {
      "point": "goal",
-     "name": "Bettmerhorn"
+     "name": "Bettmerhorn",
+     "reuse": "ch-bettmerhorn"
     }
    ]
   },
