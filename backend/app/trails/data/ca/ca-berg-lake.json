@@ -1,0 +1,87 @@
+{
+ "id": "ca-berg-lake",
+ "country": "CA",
+ "name": "Berg Lake Trail",
+ "base": "Valemount",
+ "region": "Mount Robson Provincial Park, British Columbia",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  12,
+  16
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 42.0,
+  "gain_m": null,
+  "source": "https://news.gov.bc.ca/releases/2025ENV0037-001143"
+ },
+ "why": "Up the Valley of a Thousand Falls past Emperor Falls to a lake where icebergs break off the Berg Glacier under the north face of Mount Robson, the highest peak of the Canadian Rockies.",
+ "book": "Camping reservation on BC Parks for each night (opens in early December for the next summer). The trail fully reopened in June 2025 after the 2021 floods. Register at the Mount Robson visitor centre.",
+ "water": "Streams and campground water all along; treat it.",
+ "dangers": [
+  "Grizzly and black bears: food lockers at every campground.",
+  "Glacial rivers rise in the afternoon.",
+  "Snow at Berg Lake until late June."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://news.gov.bc.ca/releases/2025ENV0037-001143",
+  "https://en.wikipedia.org/wiki/Berg_Lake"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Berg Lake trailhead",
+   "lat": 53.0507,
+   "lon": -119.2142,
+   "role": "start",
+   "note": "The end of the road 2 km above the Mount Robson visitor centre.",
+   "scene": "ca-mount-robson"
+  },
+  {
+   "id": "kinney-lake",
+   "name": "Kinney Lake",
+   "lat": 53.088,
+   "lon": -119.2,
+   "role": "point",
+   "note": "A green lake in the forest, first campground."
+  },
+  {
+   "id": "emperor-falls",
+   "name": "Emperor Falls",
+   "lat": 53.1307,
+   "lon": -119.2046,
+   "role": "point",
+   "note": "A 60 m fall exploding out of a rock gap."
+  },
+  {
+   "id": "goal",
+   "name": "Berg Lake",
+   "lat": 53.1523,
+   "lon": -119.1598,
+   "role": "goal",
+   "note": "A lake with floating icebergs under the Berg Glacier and Mount Robson.",
+   "night": true
+  }
+ ],
+ "osm": 6035635
+}

@@ -1,0 +1,94 @@
+{
+ "id": "ca-chilkoot-trail",
+ "country": "CA",
+ "name": "Chilkoot Trail",
+ "base": "Skagway",
+ "region": "Chilkoot Trail National Historic Site, British Columbia and Alaska",
+ "kind": "multiday",
+ "days": 4,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8
+ ],
+ "hours": [
+  25,
+  32
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 53.0,
+  "gain_m": null,
+  "source": "https://parks.canada.ca/lhn-nhs/yt/chilkoot/activ/randonnee-cdn-hiking"
+ },
+ "why": "The route of the Klondike gold rush of 1898, from the Alaskan coast over the Chilkoot Pass to Lake Bennett, past the rusting gear left by the stampeders.",
+ "book": "Permit for the Canadian side from Parks Canada (1 June to mid-September), compulsory in-person orientation at the Skagway Trail Center. Back from Bennett by the White Pass and Yukon Route train or a float plane. Passport needed: the trail crosses the border.",
+ "water": "Rivers and lakes; treat all water.",
+ "dangers": [
+  "The Scales and the pass: boulder fields in fog and snow, even in July.",
+  "Black and grizzly bears: food lockers at camps.",
+  "Avalanche slopes above the trail until late June."
+ ],
+ "turnaround": "Cross the pass early in the morning: storms build up later.",
+ "sources": [
+  "https://parks.canada.ca/lhn-nhs/yt/chilkoot/activ/randonnee-cdn-hiking",
+  "https://parks.canada.ca/lhn-nhs/yt/chilkoot/visit/permis-permits",
+  "https://en.wikipedia.org/wiki/Chilkoot_Trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 1,
+  "history": 5,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Dyea",
+   "lat": 59.5281,
+   "lon": -135.3485,
+   "role": "start",
+   "note": "The ghost town at the trailhead, 15 km from Skagway."
+  },
+  {
+   "id": "sheep-camp",
+   "name": "Sheep Camp",
+   "lat": 59.6591,
+   "lon": -135.2675,
+   "role": "point",
+   "note": "The last camp before the pass, start at dawn from here.",
+   "night": true
+  },
+  {
+   "id": "chilkoot-pass",
+   "name": "Chilkoot Pass",
+   "lat": 59.6967,
+   "lon": -135.2382,
+   "role": "point",
+   "note": "The Golden Stairs to the border at 1,067 m."
+  },
+  {
+   "id": "lindeman-city",
+   "name": "Lindeman City",
+   "lat": 59.7851,
+   "lon": -135.0809,
+   "role": "point",
+   "note": "A tent city of 1898 by Lindeman Lake, with a small museum.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Bennett",
+   "lat": 59.8452,
+   "lon": -134.9954,
+   "role": "goal",
+   "note": "St. Andrew's Church of 1899 and the railway station by Bennett Lake."
+  }
+ ],
+ "osm": 1225005
+}

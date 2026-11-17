@@ -1,0 +1,74 @@
+{
+ "id": "ca-joffre-lakes",
+ "country": "CA",
+ "name": "Joffre Lakes",
+ "base": "Pemberton",
+ "region": "Pipi7íyekw / Joffre Lakes Park, British Columbia",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  10
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "Three turquoise lakes one above the other, the last at the foot of the Matier Glacier, in a park co-managed with the Lil'wat and N'Quatqua Nations.",
+ "book": "Free trail pass for each person from mid-May to late October (BC Parks, from 7:00 two days before). The park closes some weeks for Lil'wat and N'Quatqua cultural use (in 2026: 20-27 June and 8-30 September): check before you go.",
+ "water": "Creeks between the lakes; treat it.",
+ "dangers": [
+  "Do not walk on the fallen log over the lake or swim under the glacier.",
+  "Icy trail in spring and late autumn.",
+  "Busy trail: the parking lot fills early."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://news.gov.bc.ca/releases/2026ENV0022-000507",
+  "https://en.wikipedia.org/wiki/Joffre_Lakes_Provincial_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 2,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lower Joffre Lake",
+   "lat": 50.3664,
+   "lon": -122.4971,
+   "role": "start",
+   "note": "The trailhead and the first lake by the road."
+  },
+  {
+   "id": "middle-lake",
+   "name": "Middle Joffre Lake",
+   "lat": 50.3515,
+   "lon": -122.4829,
+   "role": "point",
+   "note": "A lake with a waterfall and the famous fallen log."
+  },
+  {
+   "id": "goal",
+   "name": "Upper Joffre Lake",
+   "lat": 50.3471,
+   "lon": -122.4766,
+   "role": "goal",
+   "note": "A turquoise lake under the Matier Glacier.",
+   "scene": "ca-joffre-lakes"
+  }
+ ],
+ "osm": 6035636
+}

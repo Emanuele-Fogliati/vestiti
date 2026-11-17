@@ -1,0 +1,87 @@
+{
+ "id": "ca-signal-hill-north-head",
+ "country": "CA",
+ "name": "Signal Hill and the North Head Trail",
+ "base": "St. John's",
+ "region": "Signal Hill National Historic Site, Newfoundland",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1,
+  1.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 1.7,
+  "gain_m": null,
+  "source": "https://parks.canada.ca/lhn-nhs/nl/signalhill/activ/activ1"
+ },
+ "why": "From the coloured houses of the Battery along cliffs and stairs over the Narrows, the entrance of St. John's harbour, up to Cabot Tower, where Marconi got the first transatlantic radio signal.",
+ "book": "No permit. Free to walk; the Cabot Tower and visitor centre have opening hours.",
+ "water": "Water at the visitor centre and Cabot Tower.",
+ "dangers": [
+  "Narrow ledges with chains and steep drops to the sea.",
+  "Strong wind and fog can come in fast."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/lhn-nhs/nl/signalhill/activ/activ1",
+  "https://en.wikipedia.org/wiki/Signal_Hill,_St._John%27s"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 3,
+  "relax": 3,
+  "history": 5,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "The Battery",
+   "lat": 47.5699,
+   "lon": -52.6926,
+   "role": "start",
+   "note": "A fishing hamlet of coloured houses clinging to the rock under Signal Hill."
+  },
+  {
+   "id": "north-head",
+   "name": "North Head",
+   "lat": 47.5682,
+   "lon": -52.679,
+   "role": "point",
+   "note": "Cliffs over the Narrows, the gate of St. John's harbour."
+  },
+  {
+   "id": "goal",
+   "name": "Cabot Tower",
+   "lat": 47.5701,
+   "lon": -52.6821,
+   "role": "goal",
+   "note": "A stone tower of 1900 on top of Signal Hill."
+  }
+ ],
+ "via": [
+  [
+   47.5678,
+   -52.6862
+  ],
+  [
+   47.5681,
+   -52.682
+  ]
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "id": "ca-west-coast-trail",
+ "country": "CA",
+ "name": "West Coast Trail",
+ "base": "Bamfield",
+ "region": "Pacific Rim National Park Reserve, British Columbia",
+ "kind": "multiday",
+ "days": 6,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  35,
+  45
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 75.0,
+  "gain_m": null,
+  "source": "https://parks.canada.ca/pn-np/bc/pacificrim/activ/sco-wct"
+ },
+ "why": "Seventy-five kilometres of rainforest, beaches, ladders and cable cars along the 'Graveyard of the Pacific', through Huu-ay-aht, Ditidaht and Pacheedaht lands.",
+ "book": "Reservation required from Parks Canada for a start date (season 1 May to 30 September; bookings open in early winter), compulsory orientation at the trailhead, ferries at Nitinat Narrows and Gordon River. Bus or float plane between the ends.",
+ "water": "Rivers and creeks; treat all water.",
+ "dangers": [
+  "Tides: some beach stretches and headlands pass only at low tide; carry the tide table.",
+  "Ladders, cable cars and slippery logs: injuries and evacuations every season.",
+  "Rain and cold for days; surge channels on the shelf."
+ ],
+ "turnaround": "Evacuation points only at set places: plan with the park map.",
+ "sources": [
+  "https://parks.canada.ca/pn-np/bc/pacificrim/activ/sco-wct",
+  "https://en.wikipedia.org/wiki/West_Coast_Trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 2,
+  "history": 4,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Pachena Bay trailhead",
+   "lat": 48.7896,
+   "lon": -125.1157,
+   "role": "start",
+   "note": "The northern end of the trail near Bamfield."
+  },
+  {
+   "id": "tsusiat-falls",
+   "name": "Tsusiat Falls",
+   "lat": 48.6908,
+   "lon": -124.9266,
+   "role": "point",
+   "note": "A waterfall straight onto the beach, a famous camp.",
+   "night": true
+  },
+  {
+   "id": "carmanah-point",
+   "name": "Carmanah Point",
+   "lat": 48.6109,
+   "lon": -124.7515,
+   "role": "point",
+   "note": "A lighthouse of 1891 on the rocks.",
+   "night": true
+  },
+  {
+   "id": "thrasher-cove",
+   "name": "Thrasher Cove",
+   "lat": 48.5837,
+   "lon": -124.4624,
+   "role": "point",
+   "note": "A beach camp before the last day of ladders.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Gordon River trailhead",
+   "lat": 48.5712,
+   "lon": -124.4129,
+   "role": "goal",
+   "note": "The southern end by Port Renfrew, reached by a short ferry."
+  }
+ ],
+ "osm": 6955341
+}
