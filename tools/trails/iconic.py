@@ -5,7 +5,8 @@ matched here to the app's treks by name near the place:
   python tools/trails/iconic.py     # -> backend/app/trails/world/_iconic.json
 
 A name matches when one of its `match` words is in the trek's name and the trek ends within 300 km
-of the listed point; the nearest of the best-known wins. No match: listed with id null (the trek is
+of the listed point; the nearest of the best-known wins, unless the `id` column pins one (Manu 2026-11-17: the famous
+Norwegian, Nepali, Tanzanian and Moroccan treks are the app's own curated ones, with their drawing). No match: listed with id null (the trek is
 not in OpenStreetMap as a route, or its continent is not built yet).
 """
 from __future__ import annotations
@@ -35,7 +36,7 @@ def candidates() -> list[tuple[str, str, float, float, int, bool]]:
     out = []
     for t in trails.trails():
         g = next((p for p in reversed(t.points) if p.role == "goal"), t.points[-1])
-        out.append((t.id, t.name, g.lat, g.lon, 5 if t.tier == "A" else 3, any(p.scene for p in t.points)))
+        out.append((t.id, t.name, g.lat, g.lon, 5 if t.tier == "A" else 3, bool(t.cover) or any(p.scene for p in t.points)))
     out += [(r[0], r[1], r[2], r[3], r[6], False) for r in world.dots()]
     return out
 
@@ -50,6 +51,8 @@ def main() -> None:
         hits = [(c, km(at, (c[2], c[3]))) for c in cands if pat.search(c[1])]
         hits = [h for h in hits if h[1] <= 300]
         best = min(hits, key=lambda h: (-h[0][4], h[1]))[0] if hits else None
+        if r.get("id"):  # pinned by hand: the app's own trek (the match ranks the old iconic pick 6, so it sticks)
+            best = next((c for c in cands if c[0] == r["id"]), best)
         res.append({"region": r["region"], "country": r["country"], "name": r["name"],
                     "id": best[0] if best else None, "trek": best[1] if best else None,
                     "drawn": bool(best and best[5])})

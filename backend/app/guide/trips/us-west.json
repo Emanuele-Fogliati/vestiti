@@ -1,0 +1,900 @@
+{
+ "_doc": "Recommended trips of the western USA, 2026-11-17. Same fields as ../trips.json; elevation and coords = where you sleep (app.inspire.build).",
+ "journeys": [
+  {
+   "id": "usa-southwest",
+   "name": "USA: the Southwest",
+   "blurb": "Zion, Bryce, the arches of Moab, Monument Valley, Antelope Canyon and the Grand Canyon; Death Valley and Joshua Tree in winter."
+  },
+  {
+   "id": "usa-california",
+   "name": "USA: California",
+   "blurb": "San Francisco, Yosemite and the giant sequoias, Lake Tahoe, Big Sur and the coast to Los Angeles and San Diego."
+  }
+ ],
+ "elevation": {
+  "us-zion-national-park": 1200,
+  "us-bryce-canyon-national-park": 2420,
+  "us-grand-canyon-south-rim": 2100,
+  "us-capitol-reef-national-park": 2080,
+  "us-moab": 1230,
+  "us-sedona": 1330,
+  "us-death-valley": -58,
+  "us-joshua-tree-national-park": 600,
+  "us-monument-valley": 1600,
+  "us-page": 1300,
+  "us-las-vegas": 615,
+  "us-yosemite-valley": 1220,
+  "us-bishop": 1260,
+  "x-us-lake-tahoe": 1900,
+  "us-napa-valley": 20,
+  "us-monterey": 10,
+  "us-santa-barbara": 15,
+  "us-sequoia-national-park": 260,
+  "us-redwood-national-and-state-parks": 10,
+  "us-san-francisco": 24,
+  "us-los-angeles": 91,
+  "us-san-diego": 32
+ },
+ "coords": {
+  "us-zion-national-park": [
+   37.188,
+   -112.999
+  ],
+  "us-bryce-canyon-national-park": [
+   37.674,
+   -112.157
+  ],
+  "us-grand-canyon-south-rim": [
+   36.054,
+   -112.139
+  ],
+  "us-capitol-reef-national-park": [
+   38.299,
+   -111.419
+  ],
+  "us-death-valley": [
+   36.457,
+   -116.866
+  ],
+  "us-joshua-tree-national-park": [
+   34.136,
+   -116.054
+  ],
+  "x-us-lake-tahoe": [
+   38.94,
+   -119.98
+  ],
+  "us-napa-valley": [
+   38.4,
+   -122.36
+  ],
+  "us-sequoia-national-park": [
+   36.44,
+   -118.9
+  ],
+  "us-redwood-national-and-state-parks": [
+   41.29,
+   -124.06
+  ]
+ },
+ "trips": [
+  {
+   "id": "usa-southwest-7",
+   "region": "c-us",
+   "title": "The Southwest in a week: Zion, Page and the Grand Canyon",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+   ],
+   "why": "Zion's canyon, Antelope Canyon and Horseshoe Bend, two sunsets on the Grand Canyon, from Las Vegas and back.",
+   "note": "All year. Spring and autumn are best; 40 °C in Las Vegas and Page in July and August, snow on the Grand Canyon rim and ice on Zion's high trails some days from December to February.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-page",
+     "nights": 1
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 2
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-14",
+   "region": "c-us",
+   "title": "National parks of the Southwest",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "The classic circle: Zion, Bryce's hoodoos, Capitol Reef, the arches of Moab, Monument Valley, Page and the Grand Canyon.",
+   "note": "April-May and September-October are best. June-August is 35-40 °C in Moab, Page and Las Vegas (walk at dawn) with July-September storms that close the Narrows and slot canyons. Arches needs a timed entry April-October.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-bryce-canyon-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-capitol-reef-national-park",
+     "nights": 1
+    },
+    {
+     "place": "us-moab",
+     "nights": 3
+    },
+    {
+     "place": "us-monument-valley",
+     "nights": 1
+    },
+    {
+     "place": "us-page",
+     "nights": 1
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-14-winter",
+   "region": "c-us",
+   "title": "Desert parks in winter",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    11,
+    2,
+    3
+   ],
+   "why": "The low, warm half of the Southwest: Death Valley and Joshua Tree in their good season, Sedona's red rocks, the Grand Canyon, Page and Zion.",
+   "note": "November to March: Bryce and the high plateaus have snow and short days, so this route stays low and warm: Death Valley and Joshua Tree are at their best, Sedona mild, the Grand Canyon South Rim open with snow on the rim some days.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 2
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-sedona",
+     "nights": 3
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 2
+    },
+    {
+     "place": "us-page",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-21",
+   "region": "c-us",
+   "title": "The Southwest in three weeks",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Every great park of Utah and Arizona with time to hike: Zion, Bryce, Capitol Reef, Moab, Monument Valley, Page, the Grand Canyon and Sedona.",
+   "note": "April-May and September-October are best. June-August is 35-40 °C in Moab, Page and Las Vegas (walk at dawn) with July-September storms that close the Narrows and slot canyons. Arches needs a timed entry April-October.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-bryce-canyon-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-capitol-reef-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-moab",
+     "nights": 4
+    },
+    {
+     "place": "us-monument-valley",
+     "nights": 1
+    },
+    {
+     "place": "us-page",
+     "nights": 2
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-sedona",
+     "nights": 2
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-21-winter",
+   "region": "c-us",
+   "title": "Deserts and canyons in winter, three weeks",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    11,
+    2,
+    3
+   ],
+   "why": "A slow winter loop through the warm deserts, the red rocks of Sedona, the Grand Canyon and Zion.",
+   "note": "November to March: Bryce and the high plateaus have snow and short days, so this route stays low and warm: Death Valley and Joshua Tree are at their best, Sedona mild, the Grand Canyon South Rim open with snow on the rim some days.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 3
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-sedona",
+     "nights": 4
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-page",
+     "nights": 2
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-28",
+   "region": "c-us",
+   "title": "The Southwest at a slow pace",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "Four weeks for the canyon country: long hikes in Zion and Moab, sunrises at Bryce and Monument Valley, days on Lake Powell and the Grand Canyon rim.",
+   "note": "April-May and September-October are best. June-August is 35-40 °C in Moab, Page and Las Vegas (walk at dawn) with July-September storms that close the Narrows and slot canyons. Arches needs a timed entry April-October.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-bryce-canyon-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-capitol-reef-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-moab",
+     "nights": 5
+    },
+    {
+     "place": "us-monument-valley",
+     "nights": 2
+    },
+    {
+     "place": "us-page",
+     "nights": 3
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-sedona",
+     "nights": 3
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-southwest-28-winter",
+   "region": "c-us",
+   "title": "A winter month in the desert Southwest",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3
+   ],
+   "best": [
+    11,
+    2,
+    3
+   ],
+   "why": "A month of mild desert days: Death Valley, Joshua Tree, Sedona, the Grand Canyon in snow, Page and Zion.",
+   "note": "November to March: Bryce and the high plateaus have snow and short days, so this route stays low and warm: Death Valley and Joshua Tree are at their best, Sedona mild, the Grand Canyon South Rim open with snow on the rim some days.",
+   "stops": [
+    {
+     "place": "us-las-vegas",
+     "nights": 3
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 4
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-sedona",
+     "nights": 5
+    },
+    {
+     "place": "us-grand-canyon-south-rim",
+     "nights": 3
+    },
+    {
+     "place": "us-page",
+     "nights": 3
+    },
+    {
+     "place": "us-zion-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-las-vegas",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-southwest"
+  },
+  {
+   "id": "usa-california-7",
+   "region": "c-us",
+   "title": "California coast in a week",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "why": "San Francisco, the Big Sur cliffs, Santa Barbara and Los Angeles along Highway 1.",
+   "note": "All year: 14-22 °C on the coast, summer fog in San Francisco (June-August), rain on a few winter days; Highway 1 through Big Sur is sometimes closed by landslides.",
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "nights": 3
+    },
+    {
+     "place": "us-monterey",
+     "nights": 1
+    },
+    {
+     "place": "us-santa-barbara",
+     "nights": 1
+    },
+    {
+     "place": "us-los-angeles",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-california"
+  },
+  {
+   "id": "usa-california-14",
+   "region": "c-us",
+   "title": "California: Yosemite, the Eastern Sierra and the coast",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    9,
+    10
+   ],
+   "why": "San Francisco, Lake Tahoe, Mono Lake and Mount Whitney, Yosemite over Tioga Pass, then down the coast by Big Sur.",
+   "note": "June to October: Tioga Pass is open, so you cross Yosemite to the Eastern Sierra. The coast has summer fog (June-August); September and October are the clearest months; inland 35 °C in the valleys.",
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "nights": 3
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "nights": 2
+    },
+    {
+     "place": "us-bishop",
+     "nights": 2
+    },
+    {
+     "place": "us-yosemite-valley",
+     "nights": 3
+    },
+    {
+     "place": "us-monterey",
+     "nights": 2
+    },
+    {
+     "place": "us-santa-barbara",
+     "nights": 1
+    },
+    {
+     "place": "us-los-angeles",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-california"
+  },
+  {
+   "id": "usa-california-14-coast",
+   "region": "c-us",
+   "title": "California: Yosemite and the coast to San Diego",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [
+    4,
+    5
+   ],
+   "why": "San Francisco, Yosemite Valley, Big Sur, Santa Barbara, Los Angeles and San Diego.",
+   "note": "November to May: Tioga Pass and Glacier Point Road are closed, so the route stays west of the Sierra and on the coast. Yosemite Valley is open with snow (carry chains), waterfalls fullest April-June; rain on the coast December-March, sun in the south.",
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "nights": 3
+    },
+    {
+     "place": "us-yosemite-valley",
+     "nights": 2
+    },
+    {
+     "place": "us-monterey",
+     "nights": 2
+    },
+    {
+     "place": "us-santa-barbara",
+     "nights": 1
+    },
+    {
+     "place": "us-los-angeles",
+     "nights": 3
+    },
+    {
+     "place": "us-san-diego",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-california"
+  },
+  {
+   "id": "usa-california-21",
+   "region": "c-us",
+   "title": "California in three weeks",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    9,
+    10
+   ],
+   "why": "Wine country, Tahoe, the Eastern Sierra, Yosemite and the giant sequoias, then the whole coast to San Diego.",
+   "note": "June to October: Tioga Pass is open, so you cross Yosemite to the Eastern Sierra. The coast has summer fog (June-August); September and October are the clearest months; inland 35 °C in the valleys.",
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "nights": 3
+    },
+    {
+     "place": "us-napa-valley",
+     "nights": 1
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "nights": 2
+    },
+    {
+     "place": "us-bishop",
+     "nights": 2
+    },
+    {
+     "place": "us-yosemite-valley",
+     "nights": 3
+    },
+    {
+     "place": "us-sequoia-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-monterey",
+     "nights": 2
+    },
+    {
+     "place": "us-santa-barbara",
+     "nights": 1
+    },
+    {
+     "place": "us-los-angeles",
+     "nights": 2
+    },
+    {
+     "place": "us-san-diego",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-california"
+  },
+  {
+   "id": "usa-california-21-winter",
+   "region": "c-us",
+   "title": "California and its deserts, three weeks",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [
+    3,
+    4,
+    5
+   ],
+   "why": "San Francisco, Napa, Yosemite in snow, the coast to San Diego, then Joshua Tree and Death Valley in their good season.",
+   "note": "November to May: Tioga Pass and Glacier Point Road are closed, so the route stays west of the Sierra and on the coast. Yosemite Valley is open with snow (carry chains), waterfalls fullest April-June; rain on the coast December-March, sun in the south.",
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "nights": 3
+    },
+    {
+     "place": "us-napa-valley",
+     "nights": 1
+    },
+    {
+     "place": "us-yosemite-valley",
+     "nights": 2
+    },
+    {
+     "place": "us-monterey",
+     "nights": 2
+    },
+    {
+     "place": "us-santa-barbara",
+     "nights": 2
+    },
+    {
+     "place": "us-los-angeles",
+     "nights": 3
+    },
+    {
+     "place": "us-san-diego",
+     "nights": 3
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-california"
+  },
+  {
+   "id": "usa-california-28",
+   "region": "c-us",
+   "title": "All of California",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    9,
+    10
+   ],
+   "why": "From the redwoods to San Diego: wine country, Tahoe, the Eastern Sierra, Yosemite, the sequoias and the coast.",
+   "note": "June to October: Tioga Pass is open, so you cross Yosemite to the Eastern Sierra. The coast has summer fog (June-August); September and October are the clearest months; inland 35 °C in the valleys.",
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "nights": 4
+    },
+    {
+     "place": "us-redwood-national-and-state-parks",
+     "nights": 2
+    },
+    {
+     "place": "us-napa-valley",
+     "nights": 2
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "nights": 3
+    },
+    {
+     "place": "us-bishop",
+     "nights": 2
+    },
+    {
+     "place": "us-yosemite-valley",
+     "nights": 4
+    },
+    {
+     "place": "us-sequoia-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-monterey",
+     "nights": 2
+    },
+    {
+     "place": "us-santa-barbara",
+     "nights": 2
+    },
+    {
+     "place": "us-los-angeles",
+     "nights": 2
+    },
+    {
+     "place": "us-san-diego",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-california"
+  },
+  {
+   "id": "usa-california-28-winter",
+   "region": "c-us",
+   "title": "California in winter, a month",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [
+    3,
+    4,
+    5
+   ],
+   "why": "Snow at Lake Tahoe, wine country, Yosemite, the coast and its cities, and the deserts of Joshua Tree and Death Valley.",
+   "note": "November to May: Tioga Pass and Glacier Point Road are closed, so the route stays west of the Sierra and on the coast. Yosemite Valley is open with snow (carry chains), waterfalls fullest April-June; rain on the coast December-March, sun in the south.",
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "nights": 4
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "nights": 2
+    },
+    {
+     "place": "us-napa-valley",
+     "nights": 2
+    },
+    {
+     "place": "us-yosemite-valley",
+     "nights": 3
+    },
+    {
+     "place": "us-monterey",
+     "nights": 3
+    },
+    {
+     "place": "us-santa-barbara",
+     "nights": 2
+    },
+    {
+     "place": "us-los-angeles",
+     "nights": 4
+    },
+    {
+     "place": "us-san-diego",
+     "nights": 3
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-death-valley",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-california"
+  }
+ ]
+}

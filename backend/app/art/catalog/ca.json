@@ -1600,7 +1600,8 @@
    "names": [
     "ottawa",
     "ottawa city",
-    "ottawa ontario"
+    "ottawa ontario",
+    "parliament hill canada"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -1958,7 +1959,10 @@
     "leaf": "#2D4A33",
     "acc": "#D0602C",
     "obj": "#A79D8E"
-   }
+   },
+   "names": [
+    "glacier national park canada"
+   ]
   },
   {
    "slug": "saguenay-fjord",
@@ -2460,7 +2464,8 @@
    ],
    "names": [
     "victoria bc",
-    "victoria british columbia"
+    "victoria british columbia",
+    "victoria canada"
    ],
    "palette": {
     "sky": "#AFCFF0",
@@ -2713,6 +2718,330 @@
     "leaf": "#2F5236",
     "acc": "#E2B47C",
     "obj": "#2F7F5C"
+   }
+  },
+  {
+   "slug": "confederation-bridge",
+   "label": "The Confederation Bridge running over the Northumberland Strait from the red shore of Prince Edward Island",
+   "lat": 46.2216,
+   "lon": -63.7395,
+   "radius_km": 8,
+   "aliases": [
+    "confederation bridge",
+    "pont de la confederation",
+    "ponte della confederazione"
+   ],
+   "names": [
+    "borden carleton"
+   ],
+   "palette": {
+    "sky": "#A8CCEE",
+    "far": "#9EB4C4",
+    "mid": "#9EA2A4",
+    "ice": "#D8D8D2",
+    "water": "#3F7EA8",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#5E8E3E",
+    "acc": "#B5583E",
+    "obj": "#8C6E5E"
+   }
+  },
+  {
+   "slug": "halifax",
+   "label": "The Old Town Clock on Citadel Hill above Halifax Harbour",
+   "lat": 44.6473,
+   "lon": -63.5777,
+   "radius_km": 15,
+   "aliases": [
+    "halifax town clock",
+    "old town clock halifax",
+    "halifax citadel",
+    "citadel hill halifax",
+    "halifax waterfront"
+   ],
+   "names": [
+    "halifax",
+    "halifax ns",
+    "halifax nova scotia",
+    "halifax city",
+    "downtown halifax"
+   ],
+   "palette": {
+    "sky": "#9CC4EE",
+    "far": "#7FAE58",
+    "mid": "#D2CEC4",
+    "ice": "#F6F5F0",
+    "water": "#3E6E92",
+    "near": "#222628",
+    "sun": "#F2C14E",
+    "leaf": "#5E9A3A",
+    "acc": "#8DB8A2",
+    "obj": "#3E62A8"
+   }
+  },
+  {
+   "slug": "qikiqtarjuaq",
+   "label": "An iceberg in the bay before the hamlet of Qikiqtarjuaq, with a polar bear on the shore rocks",
+   "lat": 67.5536,
+   "lon": -64.0254,
+   "radius_km": 25,
+   "aliases": [
+    "broughton island nunavut"
+   ],
+   "names": [
+    "qikiqtarjuaq",
+    "broughton island",
+    "qikiqtarjuaq nunavut"
+   ],
+   "palette": {
+    "sky": "#B6D4EE",
+    "far": "#7C7068",
+    "mid": "#A8402F",
+    "ice": "#F6FAFC",
+    "water": "#3E6E92",
+    "near": "#22262A",
+    "sun": "#F2C14E",
+    "leaf": "#A89878",
+    "acc": "#A9D2E6",
+    "obj": "#9A9488"
+   }
+  },
+  {
+   "slug": "whitehorse",
+   "label": "The SS Klondike sternwheeler on the bank of the Yukon River, Whitehorse",
+   "lat": 60.7136,
+   "lon": -135.0496,
+   "radius_km": 20,
+   "aliases": [
+    "ss klondike",
+    "s s klondike",
+    "klondike sternwheeler",
+    "sternwheeler klondike"
+   ],
+   "names": [
+    "whitehorse",
+    "whitehorse yukon",
+    "whitehorse yt",
+    "whitehorse city"
+   ],
+   "palette": {
+    "sky": "#B8D4EC",
+    "far": "#C9C4B6",
+    "mid": "#7E8A7C",
+    "ice": "#F4F2EC",
+    "water": "#5E8EA8",
+    "near": "#222426",
+    "sun": "#F2C14E",
+    "leaf": "#4A6A3E",
+    "acc": "#B5402F",
+    "obj": "#D6996A"
+   }
+  },
+  {
+   "slug": "charlottetown",
+   "label": "St. Dunstan's Basilica with its twin spires, Charlottetown",
+   "lat": 46.2335,
+   "lon": -63.1265,
+   "radius_km": 15,
+   "aliases": [
+    "st dunstans basilica",
+    "st dunstan s basilica",
+    "st dunstan basilica",
+    "basilica di st dunstan",
+    "saint dunstans basilica",
+    "saint dunstan s basilica"
+   ],
+   "names": [
+    "charlottetown",
+    "charlottetown pei",
+    "charlottetown prince edward island"
+   ],
+   "palette": {
+    "sky": "#A9CFF0",
+    "far": "#CDBB98",
+    "mid": "#A28C6A",
+    "ice": "#7FB7A3",
+    "water": "#3E5F7E",
+    "near": "#2B2A2E",
+    "sun": "#F4C542",
+    "leaf": "#7DA453",
+    "acc": "#A4513F",
+    "obj": "#5E5D68"
+   }
+  },
+  {
+   "slug": "plains-of-abraham",
+   "label": "A Martello tower on the Plains of Abraham above the St. Lawrence, Quebec City",
+   "lat": 46.8017,
+   "lon": -71.2216,
+   "radius_km": 3,
+   "aliases": [
+    "plains of abraham",
+    "plaines d abraham",
+    "battlefields park",
+    "parc des champs de bataille",
+    "piana di abramo",
+    "piane di abramo",
+    "martello tower quebec",
+    "tour martello quebec"
+   ],
+   "palette": {
+    "sky": "#A8CFF0",
+    "far": "#6F8C6E",
+    "mid": "#8C887E",
+    "ice": "#D8D2C2",
+    "water": "#8AA6B8",
+    "near": "#29251F",
+    "sun": "#F4C542",
+    "leaf": "#7DAE3F",
+    "acc": "#3F7432",
+    "obj": "#5A4232"
+   }
+  },
+  {
+   "slug": "rideau-canal",
+   "label": "The Rideau Canal's Ottawa Locks below the Chateau Laurier",
+   "lat": 45.4255,
+   "lon": -75.6976,
+   "radius_km": 3,
+   "aliases": [
+    "rideau canal",
+    "canal rideau",
+    "canale rideau",
+    "ottawa locks",
+    "rideau canal skateway",
+    "rideau skateway",
+    "chateau laurier",
+    "fairmont chateau laurier"
+   ],
+   "palette": {
+    "sky": "#A9CDEB",
+    "far": "#A79F8F",
+    "mid": "#E0D4B8",
+    "ice": "#D6D1C5",
+    "water": "#3E5A64",
+    "near": "#24221F",
+    "sun": "#F4C542",
+    "leaf": "#5C8C3A",
+    "acc": "#5E5246",
+    "obj": "#5A463D"
+   }
+  },
+  {
+   "slug": "sea-to-sky-highway",
+   "label": "The Sea to Sky Highway curving along Howe Sound, with Anvil Island",
+   "lat": 49.6,
+   "lon": -123.2,
+   "radius_km": 20,
+   "aliases": [
+    "sea to sky highway",
+    "sea to sky hwy",
+    "sea to sky route",
+    "sea to sky road",
+    "strada sea to sky",
+    "howe sound",
+    "anvil island",
+    "porteau cove"
+   ],
+   "names": [
+    "sea to sky",
+    "sea to sky drive",
+    "highway 99 sea to sky"
+   ],
+   "palette": {
+    "sky": "#8EC3EE",
+    "far": "#8DA3B6",
+    "mid": "#3E6346",
+    "ice": "#F3F5F7",
+    "water": "#3E7FA8",
+    "near": "#1E2622",
+    "sun": "#F2C230",
+    "leaf": "#2C5634",
+    "acc": "#B4B1A7",
+    "obj": "#8D9196"
+   }
+  },
+  {
+   "slug": "spiral-tunnels",
+   "label": "A freight train passing over itself at the Spiral Tunnels on Mount Ogden, Yoho",
+   "lat": 51.429,
+   "lon": -116.367,
+   "radius_km": 4,
+   "aliases": [
+    "spiral tunnels",
+    "spiral tunnel",
+    "tunnels en spirale",
+    "tunnel elicoidali",
+    "tunnel a spirale",
+    "spiral tunnels viewpoint"
+   ],
+   "palette": {
+    "sky": "#A8CCEC",
+    "far": "#B8B1A5",
+    "mid": "#3B6241",
+    "ice": "#F2F2F0",
+    "water": "#5D8FA8",
+    "near": "#1F2420",
+    "sun": "#F4C542",
+    "leaf": "#2A4E31",
+    "acc": "#A39278",
+    "obj": "#B7412F"
+   }
+  },
+  {
+   "slug": "st-lawrence-market",
+   "label": "St. Lawrence Market's red-brick hall, Toronto",
+   "lat": 43.6487,
+   "lon": -79.3716,
+   "radius_km": 2,
+   "aliases": [
+    "st lawrence market",
+    "saint lawrence market",
+    "mercato st lawrence",
+    "mercato di st lawrence",
+    "marche st lawrence"
+   ],
+   "palette": {
+    "sky": "#A7CBEE",
+    "far": "#D9C8A2",
+    "mid": "#A0503A",
+    "ice": "#CFCBC3",
+    "water": "#76797F",
+    "near": "#26201D",
+    "sun": "#F4C542",
+    "leaf": "#9FB3C2",
+    "acc": "#C23B32",
+    "obj": "#2F6652"
+   }
+  },
+  {
+   "slug": "sun-peaks",
+   "label": "Sun Peaks village and its clock tower below Tod Mountain",
+   "lat": 50.8838,
+   "lon": -119.8885,
+   "radius_km": 10,
+   "aliases": [
+    "sun peaks resort",
+    "sun peaks village",
+    "sun peaks ski",
+    "tod mountain"
+   ],
+   "names": [
+    "sun peaks",
+    "sun peaks bc"
+   ],
+   "palette": {
+    "sky": "#A9CCEE",
+    "far": "#D9B862",
+    "mid": "#EADCC0",
+    "ice": "#D8B9B0",
+    "water": "#6E907C",
+    "near": "#262220",
+    "sun": "#F4C542",
+    "leaf": "#2F5636",
+    "acc": "#93B455",
+    "obj": "#8C5A44"
    }
   }
  ]
