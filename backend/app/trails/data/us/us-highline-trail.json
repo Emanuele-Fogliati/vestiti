@@ -1,0 +1,94 @@
+{
+ "id": "us-highline-trail",
+ "country": "US",
+ "name": "Highline Trail",
+ "base": "West Glacier",
+ "region": "Glacier National Park, Montana",
+ "kind": "day",
+ "days": 1,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "07:30",
+ "published": {
+  "km": 19.0,
+  "gain_m": null,
+  "source": "https://www.nps.gov/places/highline-trailhead.htm"
+ },
+ "why": "Along a ledge cut into the Garden Wall above the Going-to-the-Sun Road, through wildflowers and mountain goats, to the 1914 Granite Park Chalet.",
+ "book": "A park shuttle ticket is needed for long hikes that start at Logan Pass, Highline included (recreation.gov); the shuttle also brings you back from The Loop. Going-to-the-Sun Road vehicle reservation in summer. Granite Park Chalet beds by lottery.",
+ "water": "None until Granite Park Chalet (buy or filter): carry 3 litres.",
+ "dangers": [
+  "The first stretch is a narrow ledge above a 30 m drop with a hand cable.",
+  "Grizzly bears: carry bear spray.",
+  "Snow on the ledge until mid-July: the trail opens late."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/places/highline-trailhead.htm",
+  "https://www.nps.gov/thingstodo/glacier-full-day-hike.htm",
+  "https://www.nps.gov/places/granite-park-chalet.htm"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 2,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Logan Pass Visitor Center",
+   "lat": 48.6953,
+   "lon": -113.718,
+   "role": "start",
+   "note": "The top of the Going-to-the-Sun Road, 2,026 m."
+  },
+  {
+   "id": "haystack-saddle",
+   "name": "Haystack Butte saddle",
+   "lat": 48.7402,
+   "lon": -113.7284,
+   "role": "point",
+   "note": "The high point of the trail, a grassy pass under the Garden Wall."
+  },
+  {
+   "id": "goal",
+   "name": "Granite Park Chalet",
+   "lat": 48.7708,
+   "lon": -113.7724,
+   "role": "goal",
+   "note": "A stone and timber chalet of 1914 on a knoll above McDonald Valley."
+  },
+  {
+   "id": "the-loop",
+   "name": "The Loop",
+   "lat": 48.7543,
+   "lon": -113.7995,
+   "role": "point",
+   "note": "A hairpin of the road, with the shuttle stop."
+  }
+ ],
+ "via": [
+  [
+   48.7458,
+   -113.7447
+  ],
+  [
+   48.7629,
+   -113.7514
+  ]
+ ]
+}

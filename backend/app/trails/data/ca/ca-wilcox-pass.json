@@ -1,0 +1,70 @@
+{
+ "id": "ca-wilcox-pass",
+ "country": "CA",
+ "name": "Wilcox Pass",
+ "base": "Jasper",
+ "region": "Jasper National Park, Alberta",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 8.0,
+  "gain_m": 390,
+  "source": "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails"
+ },
+ "why": "A short climb out of the forest to open meadows and bighorn sheep, facing the Athabasca Glacier and the peaks of the Columbia Icefield.",
+ "book": "No permit. Trailhead at Wilcox Creek campground, 3 km south of the Columbia Icefield Centre on the Icefields Parkway.",
+ "water": "None: carry 1-2 litres.",
+ "dangers": [
+  "Cold wind off the icefield even in summer.",
+  "Snow until late June and from late September."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails",
+  "https://parks.canada.ca/pn-np/ab/jasper/activ/experience/sentiers-trails/glaciers-icefields"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Wilcox Creek trailhead",
+   "lat": 52.2155,
+   "lon": -117.1846,
+   "role": "start",
+   "note": "At the campground entrance on the Icefields Parkway."
+  },
+  {
+   "id": "goal",
+   "name": "Wilcox Pass",
+   "lat": 52.2362,
+   "lon": -117.2135,
+   "role": "goal",
+   "note": "A wide meadow pass at 2,370 m above the Columbia Icefield.",
+   "scene": "ca-athabasca-glacier"
+  }
+ ],
+ "replaces": [
+  "ca-goal-3005596914"
+ ]
+}

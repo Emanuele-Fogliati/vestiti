@@ -1,0 +1,88 @@
+{
+ "id": "us-navajo-queens-garden",
+ "country": "US",
+ "name": "Navajo Loop and Queen's Garden",
+ "base": "Bryce Canyon City",
+ "region": "Bryce Canyon National Park, Utah",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 4.6,
+  "gain_m": 191,
+  "source": "https://www.nps.gov/brca/planyourvisit/day-hikes.htm"
+ },
+ "why": "Down among the orange hoodoos past Queen Victoria's rock to the forest floor of the amphitheatre, and up the Navajo switchbacks beside Thor's Hammer.",
+ "book": "No permit. Free park shuttle in summer to Sunrise and Sunset Points. The park advises going clockwise, down Queen's Garden and up Navajo. In winter the Wall Street side of the Navajo Loop is closed: take Two Bridges.",
+ "water": "Water at Sunset Point; none below the rim.",
+ "dangers": [
+  "At 2,400 m: the climb out is harder than it looks.",
+  "Ice on the switchbacks from October to May: microspikes.",
+  "Thunderstorms in July and August."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/brca/planyourvisit/day-hikes.htm",
+  "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Sunrise Point",
+   "lat": 37.6284,
+   "lon": -112.1632,
+   "role": "start",
+   "note": "The rim of the Bryce Amphitheater, shuttle stop."
+  },
+  {
+   "id": "queens-garden",
+   "name": "Queen's Garden",
+   "lat": 37.6254,
+   "lon": -112.1611,
+   "role": "point",
+   "note": "Pale hoodoos around a rock that looks like Queen Victoria."
+  },
+  {
+   "id": "thors-hammer",
+   "name": "Thor's Hammer",
+   "lat": 37.6228,
+   "lon": -112.1649,
+   "role": "goal",
+   "note": "A hoodoo with a balanced cap beside the switchbacks, the symbol of Bryce.",
+   "scene": "us-bryce-canyon-national-park"
+  },
+  {
+   "id": "sunset-point",
+   "name": "Sunset Point",
+   "lat": 37.6229,
+   "lon": -112.1662,
+   "role": "point",
+   "note": "Back on the rim, 800 m from Sunrise Point along the Rim Trail."
+  }
+ ]
+}

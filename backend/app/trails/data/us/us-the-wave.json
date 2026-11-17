@@ -1,0 +1,70 @@
+{
+ "id": "us-the-wave",
+ "country": "US",
+ "name": "The Wave (Coyote Buttes North)",
+ "base": "Kanab",
+ "region": "Vermilion Cliffs National Monument, Arizona",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 10.3,
+  "gain_m": null,
+  "source": "https://www.blm.gov/programs/recreation/permits-and-passes/lotteries-and-permit-systems/arizona/coyote-buttes-north"
+ },
+ "why": "Across open sand and slickrock with no marked path to a swirl of striped sandstone, one of the most photographed rocks in America.",
+ "book": "Permit only, by lottery on recreation.gov: advance lottery four months ahead, or the daily mobile lottery two days before (only near Kanab or Page). 64 people a day. Wire Pass trailhead on House Rock Valley Road (dirt, impassable when wet).",
+ "water": "None: carry 3-4 litres.",
+ "dangers": [
+  "No trail: carry the BLM route photos and a GPS; people get lost.",
+  "Deadly heat in summer: hikers have died on the way back.",
+  "House Rock Valley Road floods after rain."
+ ],
+ "turnaround": "Start back from The Wave by 13:00 in the warm months.",
+ "sources": [
+  "https://www.blm.gov/programs/recreation/permits-and-passes/lotteries-and-permit-systems/arizona/coyote-buttes-north",
+  "https://en.wikipedia.org/wiki/The_Wave,_Arizona"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Wire Pass trailhead",
+   "lat": 37.0193,
+   "lon": -112.025,
+   "role": "start",
+   "note": "Parking on House Rock Valley Road with the permit register."
+  },
+  {
+   "id": "goal",
+   "name": "The Wave",
+   "lat": 36.9959,
+   "lon": -112.0063,
+   "role": "goal",
+   "note": "Bands of red and white sandstone curving like a frozen wave."
+  }
+ ]
+}

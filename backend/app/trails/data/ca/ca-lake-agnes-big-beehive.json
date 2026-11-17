@@ -1,0 +1,90 @@
+{
+ "id": "ca-lake-agnes-big-beehive",
+ "country": "CA",
+ "name": "Lake Agnes Teahouse and Big Beehive",
+ "base": "Lake Louise",
+ "region": "Banff National Park, Alberta",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 10.8,
+  "gain_m": 645,
+  "source": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/lakelouise"
+ },
+ "why": "Up through the forest from Lake Louise to a teahouse of 1901 on a hanging lake, then along the ridge to the Big Beehive, with Lake Louise far below.",
+ "book": "Parks Canada Lake Louise shuttle reservation (reservation.pc.gc.ca), or arrive before 7:00 for the paid Lake Louise parking. The teahouse takes cash only and is open from June to early October.",
+ "water": "Tea and water at the Lake Agnes Teahouse in season; none above it.",
+ "dangers": [
+  "Avalanche terrain from November to mid-May: do not go.",
+  "Steep drop at the Big Beehive lookout.",
+  "Grizzly bears: carry bear spray."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/lakelouise",
+  "https://en.wikipedia.org/wiki/Lake_Agnes_(Alberta)"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 2,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lake Louise lakeshore",
+   "lat": 51.4164,
+   "lon": -116.2141,
+   "role": "start",
+   "note": "The shore in front of the Chateau, under the Victoria Glacier.",
+   "scene": "ca-lake-louise"
+  },
+  {
+   "id": "mirror-lake",
+   "name": "Mirror Lake",
+   "lat": 51.416,
+   "lon": -116.2402,
+   "role": "point",
+   "note": "A small round lake under the Big Beehive."
+  },
+  {
+   "id": "goal",
+   "name": "Lake Agnes Teahouse",
+   "lat": 51.4164,
+   "lon": -116.2442,
+   "role": "goal",
+   "note": "A log teahouse of 1901 beside a waterfall at the outlet of Lake Agnes."
+  },
+  {
+   "id": "big-beehive",
+   "name": "Big Beehive",
+   "lat": 51.4146,
+   "lon": -116.2434,
+   "role": "point",
+   "note": "A gazebo on a cliff top 500 m above Lake Louise."
+  }
+ ],
+ "replaces": [
+  "ca-goal-2689315687",
+  "ca-pc-x-lake-agnes"
+ ]
+}

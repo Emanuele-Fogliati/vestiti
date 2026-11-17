@@ -1,0 +1,69 @@
+{
+ "id": "us-high-dune",
+ "country": "US",
+ "name": "High Dune",
+ "base": "Alamosa",
+ "region": "Great Sand Dunes National Park, Colorado",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "07:30",
+ "published": {
+  "km": 4.0,
+  "gain_m": 210,
+  "source": "https://www.nps.gov/places/high-dune-on-first-ridge.htm"
+ },
+ "why": "No trail, just sand: across Medano Creek and up the ridges to the top of the first line of the tallest dunes in North America.",
+ "book": "No permit. Park entrance fee. Medano Creek flows across the start in May and June.",
+ "water": "None: carry 2 litres.",
+ "dangers": [
+  "The sand reaches 65°C on summer afternoons: go early or late.",
+  "Lightning on the ridges: leave the dunes at the first thunder."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/places/high-dune-on-first-ridge.htm",
+  "https://www.nps.gov/grsa/planyourvisit/hiking.htm"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Dunes Parking Area",
+   "lat": 37.74,
+   "lon": -105.5155,
+   "role": "start",
+   "note": "The picnic area by Medano Creek."
+  },
+  {
+   "id": "goal",
+   "name": "High Dune",
+   "lat": 37.7495,
+   "lon": -105.5341,
+   "role": "goal",
+   "note": "A dune top 200 m above the valley, with the Sangre de Cristo Mountains behind."
+  }
+ ]
+}

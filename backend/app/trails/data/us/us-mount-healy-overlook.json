@@ -1,0 +1,71 @@
+{
+ "id": "us-mount-healy-overlook",
+ "country": "US",
+ "name": "Mount Healy Overlook",
+ "base": "Healy",
+ "region": "Denali National Park, Alaska",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  3,
+  5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 8.7,
+  "gain_m": 518,
+  "source": "https://www.nps.gov/dena/planyourvisit/overlook.htm"
+ },
+ "why": "Up through spruce and tundra from the park entrance to a rock outcrop over the Nenana River valley, the Alaska Range beyond.",
+ "book": "No permit. Park entrance fee. Start at the Denali Visitor Center; free shuttles in the entrance area.",
+ "water": "Water at the visitor centre; none on the trail.",
+ "dangers": [
+  "Moose and grizzly bears: bear spray, make noise.",
+  "Snow and wind above the trees out of summer.",
+  "Past the overlook the ridge to the true summit is exposed: people have died in falls."
+ ],
+ "turnaround": "The trail ends at the overlook: go further only with mountain experience.",
+ "sources": [
+  "https://www.nps.gov/dena/planyourvisit/overlook.htm",
+  "https://en.wikipedia.org/wiki/Denali_National_Park_and_Preserve"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 4,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Denali Visitor Center",
+   "lat": 63.7309,
+   "lon": -148.9172,
+   "role": "start",
+   "note": "The park entrance by the railway depot."
+  },
+  {
+   "id": "goal",
+   "name": "Mount Healy Overlook",
+   "lat": 63.7426,
+   "lon": -148.9523,
+   "role": "goal",
+   "note": "A rocky knob on the slope of Mount Healy above the Nenana valley."
+  }
+ ],
+ "replaces": [
+  "us-goal-6416607257"
+ ]
+}

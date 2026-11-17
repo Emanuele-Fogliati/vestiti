@@ -1,0 +1,88 @@
+{
+ "id": "us-mount-washington-tuckerman",
+ "country": "US",
+ "name": "Mount Washington via Tuckerman Ravine",
+ "base": "Jackson",
+ "region": "White Mountain National Forest, New Hampshire",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  7,
+  9
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 13.5,
+  "gain_m": 1295,
+  "source": "https://www.fs.usda.gov/r09/whitemountain/recreation/trails/tuckerman-ravine-trail"
+ },
+ "why": "Up the bowl of Tuckerman Ravine and its headwall to the top of New England, the summit with the worst recorded weather on Earth.",
+ "book": "No permit. Pinkham Notch Visitor Center (AMC) at the trailhead. The summit has a state park building, food and the Cog Railway and Auto Road down if needed.",
+ "water": "Water at Hermit Lake; drinking water at the summit building in summer.",
+ "dangers": [
+  "Weather turns in minutes: fog, hurricane-force wind and snow even in summer. More than 160 people have died on the mountain.",
+  "The headwall is steep with loose rock; closed when there is snow and ice.",
+  "Spring avalanches in the ravine until June."
+ ],
+ "turnaround": "Turn at Lunch Rocks or Hermit Lake if the summit is in cloud and wind is rising.",
+ "sources": [
+  "https://www.fs.usda.gov/r09/whitemountain/recreation/trails/tuckerman-ravine-trail",
+  "https://en.wikipedia.org/wiki/Tuckerman_Ravine"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Pinkham Notch Visitor Center",
+   "lat": 44.2575,
+   "lon": -71.2531,
+   "role": "start",
+   "note": "The AMC base on Route 16."
+  },
+  {
+   "id": "hermit-lake",
+   "name": "Hermit Lake",
+   "lat": 44.2608,
+   "lon": -71.2857,
+   "role": "point",
+   "note": "Shelters and a caretaker's cabin below the ravine."
+  },
+  {
+   "id": "lunch-rocks",
+   "name": "Tuckerman Ravine floor",
+   "lat": 44.2595,
+   "lon": -71.295,
+   "role": "point",
+   "note": "A glacial bowl under the headwall, with the waterfall of the snow arch."
+  },
+  {
+   "id": "goal",
+   "name": "Mount Washington summit",
+   "lat": 44.2701,
+   "lon": -71.303,
+   "role": "goal",
+   "note": "The top of New England, 1,917 m, with the weather observatory.",
+   "scene": "us-mount-washington"
+  }
+ ],
+ "replaces": [
+  "us-osm-3075304"
+ ]
+}

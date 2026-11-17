@@ -1,0 +1,92 @@
+{
+ "id": "us-mist-trail",
+ "country": "US",
+ "name": "Mist Trail to Vernal and Nevada Falls",
+ "base": "Yosemite Valley",
+ "region": "Yosemite National Park, California",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 8.7,
+  "gain_m": 610,
+  "source": "https://www.nps.gov/yose/planyourvisit/vernalnevadatrail.htm"
+ },
+ "why": "Granite steps through the spray of Vernal Fall, then up beside Nevada Fall to stand where the Merced River drops 181 m.",
+ "book": "No permit. Free valley shuttle to Happy Isles. Peak-season reservation for driving into the park on some days: check nps.gov/yose.",
+ "water": "Drinking water at the Vernal Fall footbridge (summer only).",
+ "dangers": [
+  "Wet, slippery steps in the mist: a rain jacket in spring.",
+  "People have died swimming above the falls: never enter the river.",
+  "The Mist Trail closes in winter: take the John Muir Trail."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/yose/planyourvisit/vernalnevadatrail.htm",
+  "https://en.wikipedia.org/wiki/Mist_Trail"
+ ],
+ "replaces": [
+  "us-osm-6451906"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Happy Isles trailhead",
+   "lat": 37.7328,
+   "lon": -119.5578,
+   "role": "start",
+   "note": "Shuttle stop 16 by the Merced River."
+  },
+  {
+   "id": "footbridge",
+   "name": "Vernal Fall footbridge",
+   "lat": 37.7266,
+   "lon": -119.5517,
+   "role": "point",
+   "note": "First view of Vernal Fall, with water and toilets."
+  },
+  {
+   "id": "vernal-fall",
+   "name": "Top of Vernal Fall",
+   "lat": 37.7276,
+   "lon": -119.5437,
+   "role": "point",
+   "note": "A granite ledge with a railing beside the falls and the Emerald Pool above.",
+   "scene": "us-vernal-fall"
+  },
+  {
+   "id": "goal",
+   "name": "Top of Nevada Fall",
+   "lat": 37.7249,
+   "lon": -119.5334,
+   "role": "goal",
+   "note": "A footbridge over the river at the lip of the falls, Liberty Cap above.",
+   "scene": "us-nevada-fall"
+  }
+ ]
+}

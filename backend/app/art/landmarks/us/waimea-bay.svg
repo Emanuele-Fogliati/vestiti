@@ -1,0 +1,21 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="56" cy="30" r="12" fill="var(--il-sun)"/>
+<path d="M0 200V94H300V200Z" fill="var(--il-water)"/>
+<path d="M112 98V72H120V98Z" fill="var(--il-ice)"/>
+<path d="M111 72L116 66L121 72Z" fill="var(--il-ice)"/>
+<path d="M113 76H119" stroke="var(--il-near)" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+<path d="M28 98Q30 92 38 92Q42 86 50 88Q56 82 64 86Q72 82 80 86Q90 82 98 88Q108 86 126 90Q140 92 150 100L148 102H30Z" fill="var(--il-far)"/>
+<path d="M136 104Q150 98 162 88Q178 76 196 70Q214 62 232 60Q248 56 264 54Q284 52 300 54V112Q220 104 136 106Z" fill="var(--il-mid)"/>
+<path d="M176 84Q182 96 180 108M214 68Q222 86 218 108M252 60Q258 80 254 106M284 58Q290 80 288 104" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M132 104Q200 104 300 108V200H196Q222 176 222 156Q220 128 132 104Z" fill="var(--il-acc)"/>
+<path d="M262 112Q266 106 274 108Q280 104 288 108Q296 106 300 110V118H262Z" fill="var(--il-leaf)"/>
+<path d="M74 160L78 151L85 147L87 139L96 135L104 136L110 131L120 133L128 130L138 132L146 129L156 132L164 131L172 136L180 136L186 142L194 144L200 152L208 160Z" fill="var(--il-obj)"/>
+<path d="M96 136L100 146L96 158M128 131L124 144L130 158M164 132L160 146L166 158M186 143L184 152" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.4"/>
+<path d="M0 200V184Q12 176 24 180Q34 172 46 178Q58 174 66 182Q78 182 86 192Q92 196 94 200Z" fill="var(--il-leaf)"/>
+<path d="M228 200Q232 186 246 186Q254 178 266 182Q276 174 288 178Q296 176 300 180V200Z" fill="var(--il-leaf)"/>
+<g transform="translate(242 160) scale(0.8)">
+<path d="M-12 2L-18 8L-8 6ZM12 4L20 10L16 2Z" fill="var(--il-mid)"/>
+<path d="M-14 4Q-12 -10 1 -11Q14 -10 16 4Z" fill="var(--il-mid)"/>
+<path d="M-8 -4Q1 -8 10 -4M-10 0H14" stroke="var(--il-near)" stroke-width="0.8" fill="none" stroke-linecap="round" opacity="0.4" vector-effect="non-scaling-stroke"/>
+<path d="M15 1Q18 -6 24 -4Q27 0 22 3Z" fill="var(--il-mid)"/>
+</g>

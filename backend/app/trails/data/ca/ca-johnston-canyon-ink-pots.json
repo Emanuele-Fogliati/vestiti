@@ -1,0 +1,89 @@
+{
+ "id": "ca-johnston-canyon-ink-pots",
+ "country": "CA",
+ "name": "Johnston Canyon to the Ink Pots",
+ "base": "Banff",
+ "region": "Banff National Park, Alberta",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 11.0,
+  "gain_m": 425,
+  "source": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/banff"
+ },
+ "why": "On catwalks bolted to the walls of a limestone canyon past the Lower and Upper Falls, then into a meadow of blue-green springs.",
+ "book": "Paid parking at Johnston Canyon in summer, or Roam Transit route 9 from Banff. Off-trail is forbidden in the canyon.",
+ "water": "None: carry 1-2 litres.",
+ "dangers": [
+  "Icy catwalks from October to May: microspikes.",
+  "Do not leave the trail or climb the barriers: people have fallen."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/banff",
+  "https://en.wikipedia.org/wiki/Johnston_Canyon"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Johnston Canyon trailhead",
+   "lat": 51.2429,
+   "lon": -115.839,
+   "role": "start",
+   "note": "On the Bow Valley Parkway, 25 km west of Banff."
+  },
+  {
+   "id": "lower-falls",
+   "name": "Lower Falls",
+   "lat": 51.2549,
+   "lon": -115.8373,
+   "role": "point",
+   "note": "A fall seen through a short tunnel in the rock.",
+   "scene": "ca-johnston-canyon"
+  },
+  {
+   "id": "upper-falls",
+   "name": "Upper Falls",
+   "lat": 51.2619,
+   "lon": -115.8313,
+   "role": "point",
+   "note": "A 30 m fall over a cliff, with a platform at its foot."
+  },
+  {
+   "id": "goal",
+   "name": "Ink Pots",
+   "lat": 51.2786,
+   "lon": -115.8236,
+   "role": "goal",
+   "note": "Seven pools of blue-green spring water in a meadow by Johnston Creek."
+  }
+ ],
+ "replaces": [
+  "ca-pc-x-ink-pots"
+ ]
+}

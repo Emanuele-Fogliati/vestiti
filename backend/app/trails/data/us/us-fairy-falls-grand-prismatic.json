@@ -1,0 +1,82 @@
+{
+ "id": "us-fairy-falls-grand-prismatic",
+ "country": "US",
+ "name": "Grand Prismatic Overlook and Fairy Falls",
+ "base": "West Yellowstone",
+ "region": "Yellowstone National Park, Wyoming",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2.5,
+  3.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 7.2,
+  "gain_m": null,
+  "source": "https://www.nps.gov/tripideas/day-hikes-in-the-old-faithful-area.htm"
+ },
+ "why": "Up a short trail to look down on Grand Prismatic Spring's rings of blue, green and orange, then on through young lodgepoles to a 60 m waterfall.",
+ "book": "No permit. Park entrance fee. Fairy Falls trailhead parking is small: arrive early.",
+ "water": "None on the trail: carry 1-2 litres.",
+ "dangers": [
+  "Stay on the trail: the ground around hot springs is thin and the water scalding.",
+  "Bison and grizzly bears: keep 25 m from bison and 90 m from bears."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/thingstodo/yell-trail-grand-prismatic-overlook.htm",
+  "https://www.nps.gov/tripideas/day-hikes-in-the-old-faithful-area.htm",
+  "https://en.wikipedia.org/wiki/Grand_Prismatic_Spring"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Fairy Falls trailhead",
+   "lat": 44.5155,
+   "lon": -110.8325,
+   "role": "start",
+   "note": "A bridge over the Firehole River south of Midway Geyser Basin."
+  },
+  {
+   "id": "goal",
+   "name": "Grand Prismatic Spring Overlook",
+   "lat": 44.5153,
+   "lon": -110.838,
+   "role": "goal",
+   "note": "A platform on the hill above the largest hot spring in the United States.",
+   "scene": "us-grand-prismatic-spring"
+  },
+  {
+   "id": "fairy-falls",
+   "name": "Fairy Falls",
+   "lat": 44.5247,
+   "lon": -110.8698,
+   "role": "point",
+   "note": "A thin fall of 60 m over a cliff in the forest."
+  }
+ ],
+ "replaces": [
+  "us-goal-256587335"
+ ]
+}

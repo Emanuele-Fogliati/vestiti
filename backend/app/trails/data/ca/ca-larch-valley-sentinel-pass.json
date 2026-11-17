@@ -1,0 +1,88 @@
+{
+ "id": "ca-larch-valley-sentinel-pass",
+ "country": "CA",
+ "name": "Larch Valley and Sentinel Pass",
+ "base": "Lake Louise",
+ "region": "Banff National Park, Alberta",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  4.5,
+  5.5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 11.2,
+  "gain_m": 750,
+  "source": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/lakelouise"
+ },
+ "why": "From Moraine Lake up to a valley of larches that turn gold in mid-September under the Ten Peaks, and on to a pass at 2,611 m.",
+ "book": "No cars on Moraine Lake Road: Parks Canada shuttle (reserve on reservation.pc.gc.ca) or a commercial bus. Group-of-four rule when bears are about: check the trail bulletins.",
+ "water": "Streams in Larch Valley; filter.",
+ "dangers": [
+  "Grizzly bears: Parks Canada may require groups of four.",
+  "Snow and ice on Sentinel Pass until July and again from late September.",
+  "Loose scree on the last switchbacks."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/lakelouise",
+  "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/meleze-larch"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Moraine Lake",
+   "lat": 51.3284,
+   "lon": -116.1819,
+   "role": "start",
+   "note": "The lake under the Ten Peaks, by the lodge.",
+   "scene": "ca-moraine-lake"
+  },
+  {
+   "id": "goal",
+   "name": "Larch Valley",
+   "lat": 51.335,
+   "lon": -116.215,
+   "role": "goal",
+   "note": "Meadows and larches with the Ten Peaks across the valley."
+  },
+  {
+   "id": "minnestimma",
+   "name": "Minnestimma Lakes",
+   "lat": 51.3385,
+   "lon": -116.219,
+   "role": "point",
+   "note": "Small tarns at the head of the valley."
+  },
+  {
+   "id": "sentinel-pass",
+   "name": "Sentinel Pass",
+   "lat": 51.3405,
+   "lon": -116.2219,
+   "role": "point",
+   "note": "A notch at 2,611 m between Mount Temple and Pinnacle Mountain."
+  }
+ ],
+ "replaces": [
+  "ca-goal-2706106443",
+  "ca-pc-x-larch-valley"
+ ]
+}

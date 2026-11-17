@@ -1,0 +1,88 @@
+{
+ "id": "us-cascade-canyon",
+ "country": "US",
+ "name": "Cascade Canyon via Jenny Lake and Inspiration Point",
+ "base": "Jackson",
+ "region": "Grand Teton National Park, Wyoming",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  5,
+  6
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 15.1,
+  "gain_m": 451,
+  "source": "https://www.nps.gov/thingstodo/cascadecanyon.htm"
+ },
+ "why": "Across Jenny Lake by boat, up past Hidden Falls to Inspiration Point, and into a canyon of meadows and moose between the Grand Teton and Mount Owen.",
+ "book": "No permit. The Jenny Lake shuttle boat (fee) saves 3 km each way; without it walk round the lake on the Jenny Lake Trail.",
+ "water": "Cascade Creek all along the canyon; filter.",
+ "dangers": [
+  "Black and grizzly bears and moose in the canyon: bear spray.",
+  "Inspiration Point is crowded and the rock ledge is unfenced."
+ ],
+ "turnaround": "Turn at the Forks of Cascade Canyon.",
+ "sources": [
+  "https://www.nps.gov/thingstodo/cascadecanyon.htm",
+  "https://www.nps.gov/thingstodo/inspirationpoint.htm",
+  "https://www.nps.gov/tripideas/jennylake-hikes.htm"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Jenny Lake west boat dock",
+   "lat": 43.7633,
+   "lon": -110.74,
+   "role": "start",
+   "note": "Where the shuttle boat lands under the Tetons."
+  },
+  {
+   "id": "hidden-falls",
+   "name": "Hidden Falls",
+   "lat": 43.7663,
+   "lon": -110.7512,
+   "role": "point",
+   "note": "A 30 m cascade in the forest."
+  },
+  {
+   "id": "goal",
+   "name": "Inspiration Point",
+   "lat": 43.7671,
+   "lon": -110.7543,
+   "role": "goal",
+   "note": "A rock ledge 120 m above Jenny Lake with the valley of Jackson Hole beyond."
+  },
+  {
+   "id": "forks",
+   "name": "Forks of Cascade Canyon",
+   "lat": 43.7645,
+   "lon": -110.8169,
+   "role": "point",
+   "note": "Where the canyon splits toward Lake Solitude and Hurricane Pass."
+  }
+ ],
+ "replaces": [
+  "us-nps-grte-cascade-canyon",
+  "us-nps-grte-inspiration-point"
+ ]
+}

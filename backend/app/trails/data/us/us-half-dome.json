@@ -1,0 +1,100 @@
+{
+ "id": "us-half-dome",
+ "country": "US",
+ "name": "Half Dome via the Mist Trail",
+ "base": "Yosemite Valley",
+ "region": "Yosemite National Park, California",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "technical",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  10,
+  12
+ ],
+ "start_by": "06:00",
+ "published": {
+  "km": 24.0,
+  "gain_m": 1460,
+  "source": "https://www.nps.gov/yose/planyourvisit/halfdome.htm"
+ },
+ "why": "Past Vernal and Nevada Falls and up the last 120 m of bare granite on two steel cables to the top of Yosemite's symbol.",
+ "book": "Permit needed when the cables are up (about Friday before Memorial Day to the day after the second Monday in October): preseason lottery in March, daily lottery two days before on recreation.gov. Free valley shuttle to Happy Isles.",
+ "water": "Water at Vernal Fall footbridge; filter from the Merced River in Little Yosemite Valley. None above it: carry 4 litres.",
+ "dangers": [
+  "Never climb the cables when the rock is wet or a storm is near: almost all fatal falls happened on wet rock.",
+  "Afternoon thunderstorms in summer: the summit is the highest point around.",
+  "A long day: many hikers run out of water."
+ ],
+ "turnaround": "Be at the base of the cables by 13:30, or turn back.",
+ "sources": [
+  "https://www.nps.gov/yose/planyourvisit/halfdome.htm",
+  "https://en.wikipedia.org/wiki/Half_Dome"
+ ],
+ "replaces": [
+  "us-goal-4338669222",
+  "us-nps-yose-half-dome-trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Happy Isles trailhead",
+   "lat": 37.7328,
+   "lon": -119.5578,
+   "role": "start",
+   "note": "Shuttle stop 16, where the Mist Trail and the John Muir Trail start."
+  },
+  {
+   "id": "vernal-fall",
+   "name": "Vernal Fall",
+   "lat": 37.7277,
+   "lon": -119.5442,
+   "role": "point",
+   "note": "A 97 m waterfall; the Mist Trail climbs 600 granite steps beside it.",
+   "scene": "us-vernal-fall"
+  },
+  {
+   "id": "nevada-fall",
+   "name": "Nevada Fall",
+   "lat": 37.7247,
+   "lon": -119.5338,
+   "role": "point",
+   "note": "A 181 m fall below Liberty Cap; the trail crosses its top.",
+   "scene": "us-nevada-fall"
+  },
+  {
+   "id": "subdome",
+   "name": "Sub Dome",
+   "lat": 37.7462,
+   "lon": -119.53,
+   "role": "point",
+   "note": "Granite steps cut into the shoulder below the cables, with the ranger permit check."
+  },
+  {
+   "id": "goal",
+   "name": "Half Dome summit",
+   "lat": 37.7459,
+   "lon": -119.5332,
+   "role": "goal",
+   "note": "A flat granite top 1,450 m above Yosemite Valley.",
+   "scene": "us-half-dome"
+  }
+ ]
+}

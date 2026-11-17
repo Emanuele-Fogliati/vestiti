@@ -1,0 +1,96 @@
+{
+ "id": "us-grand-canyon-rim-to-rim",
+ "country": "US",
+ "name": "Grand Canyon Rim to Rim",
+ "base": "Grand Canyon North Rim",
+ "region": "Grand Canyon National Park, Arizona",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "one_way",
+ "difficulty": "hard",
+ "months": [
+  5,
+  6,
+  9,
+  10
+ ],
+ "hours": [
+  14,
+  18
+ ],
+ "start_by": "05:00",
+ "published": {
+  "km": 38.5,
+  "gain_m": null,
+  "source": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm"
+ },
+ "why": "From the forests of the North Rim down Bright Angel Canyon to Phantom Ranch by the Colorado River and up the other side to the South Rim.",
+ "book": "Backcountry permit for nights below the rim (Cottonwood, Bright Angel campground; apply on the first of the month four months ahead) or a Phantom Ranch lottery cabin. North Kaibab road open mid-May to mid-October; services on the North Rim are limited since the 2025 fire. Shuttle between rims about 4.5 h by road.",
+ "water": "Seasonal water at Supai Tunnel, Manzanita, Cottonwood, Phantom Ranch and the Bright Angel rest houses; pipeline breaks happen: check before you go.",
+ "dangers": [
+  "Heat in the inner canyon over 40°C from May to September: walk at dawn.",
+  "Rangers do not advise rim to rim in one day.",
+  "Rockfall on the North Kaibab after storms."
+ ],
+ "turnaround": "Do not leave Phantom Ranch after 10:00 in summer: wait for the evening.",
+ "sources": [
+  "https://www.nps.gov/grca/planyourvisit/backcountry-permit.htm",
+  "https://www.nps.gov/grca/planyourvisit/trail-distances.htm",
+  "https://en.wikipedia.org/wiki/North_Kaibab_Trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 1,
+  "relax": 1,
+  "history": 3,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "North Kaibab trailhead",
+   "lat": 36.2171,
+   "lon": -112.0566,
+   "role": "start",
+   "note": "In the pines of the North Rim, 2,512 m."
+  },
+  {
+   "id": "cottonwood",
+   "name": "Cottonwood Campground",
+   "lat": 36.17,
+   "lon": -112.041,
+   "role": "point",
+   "note": "A campground by Bright Angel Creek, halfway down.",
+   "night": true
+  },
+  {
+   "id": "ribbon-falls",
+   "name": "Ribbon Falls",
+   "lat": 36.1595,
+   "lon": -112.0556,
+   "role": "point",
+   "note": "A side path to a waterfall over a mossy cone."
+  },
+  {
+   "id": "phantom-ranch",
+   "name": "Phantom Ranch",
+   "lat": 36.1044,
+   "lon": -112.0953,
+   "role": "point",
+   "note": "Stone cabins of 1922 and a canteen at the bottom of the canyon.",
+   "night": true
+  },
+  {
+   "id": "goal",
+   "name": "Bright Angel trailhead",
+   "lat": 36.0573,
+   "lon": -112.1436,
+   "role": "goal",
+   "note": "The South Rim at Grand Canyon Village.",
+   "scene": "us-grand-canyon"
+  }
+ ]
+}

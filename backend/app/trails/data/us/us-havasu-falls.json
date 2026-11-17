@@ -1,0 +1,98 @@
+{
+ "id": "us-havasu-falls",
+ "country": "US",
+ "name": "Havasu Falls",
+ "base": "Peach Springs",
+ "region": "Havasupai Reservation, Grand Canyon, Arizona",
+ "kind": "multiday",
+ "days": 3,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  8,
+  11
+ ],
+ "start_by": "05:00",
+ "published": {
+  "km": 32.0,
+  "gain_m": null,
+  "source": "https://en.wikipedia.org/wiki/Havasu_Falls"
+ },
+ "why": "Down a side canyon of the Grand Canyon to Supai, the most remote village in the country, and to waterfalls of blue-green water over red rock.",
+ "book": "Reservation only, sold by the Havasupai Tribe each February for the whole year (3 nights at the campground or lodge); no day hikes. Check in at Grand Canyon Caverns or Peach Springs the day before. The trailhead is Hualapai Hilltop, 100 km from Peach Springs.",
+ "water": "Spring water at the campground; none on the 13 km from Hualapai Hilltop to Supai: carry 3 litres.",
+ "dangers": [
+  "Flash floods in the canyon (2008 and 2018 evacuations): leave at any warning.",
+  "Heat in the bottom of the canyon; the climb out is 600 m with no shade.",
+  "The ladders and chains down to Mooney Falls are wet and steep."
+ ],
+ "turnaround": "Climb out of the canyon early in the morning.",
+ "sources": [
+  "https://en.wikipedia.org/wiki/Havasu_Falls",
+  "https://en.wikipedia.org/wiki/Supai,_Arizona"
+ ],
+ "replaces": [
+  "us-osm-8264386"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 5,
+  "nature": 5,
+  "culture": 3,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Hualapai Hilltop",
+   "lat": 36.1599,
+   "lon": -112.7095,
+   "role": "start",
+   "note": "A parking lot on the rim at the end of Indian Route 18."
+  },
+  {
+   "id": "supai",
+   "name": "Supai",
+   "lat": 36.2367,
+   "lon": -112.6893,
+   "role": "point",
+   "note": "The Havasupai village: tourist office, store, lodge, no cars."
+  },
+  {
+   "id": "goal",
+   "name": "Havasu Falls",
+   "lat": 36.2552,
+   "lon": -112.6979,
+   "role": "goal",
+   "note": "A 30 m fall into turquoise pools below red walls."
+  },
+  {
+   "id": "campground",
+   "name": "Havasupai campground",
+   "lat": 36.2567,
+   "lon": -112.701,
+   "role": "point",
+   "note": "Along the creek between Havasu and Mooney Falls.",
+   "night": true
+  },
+  {
+   "id": "mooney-falls",
+   "name": "Mooney Falls",
+   "lat": 36.2632,
+   "lon": -112.7086,
+   "role": "point",
+   "note": "A 60 m fall reached by tunnels, chains and ladders."
+  }
+ ]
+}

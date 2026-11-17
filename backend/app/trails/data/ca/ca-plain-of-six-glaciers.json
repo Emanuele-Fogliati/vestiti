@@ -1,0 +1,81 @@
+{
+ "id": "ca-plain-of-six-glaciers",
+ "country": "CA",
+ "name": "Plain of Six Glaciers",
+ "base": "Lake Louise",
+ "region": "Banff National Park, Alberta",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  4,
+  5
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 11.8,
+  "gain_m": null,
+  "source": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/lakelouise"
+ },
+ "why": "Along Lake Louise and up the moraines toward the Victoria Glacier to a teahouse built by Swiss guides in 1927, with ice falls all around.",
+ "book": "Parks Canada Lake Louise shuttle reservation (reservation.pc.gc.ca), or arrive before 7:00 for the paid Lake Louise parking. The teahouse takes cash only and is open from June to early October.",
+ "water": "Tea and water at the teahouse in season.",
+ "dangers": [
+  "Avalanche terrain from November to mid-May.",
+  "Rockfall and ice avalanches past the teahouse toward Abbot Pass: stay on the trail.",
+  "Grizzly bears."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/lakelouise",
+  "https://en.wikipedia.org/wiki/Lake_Louise_(Alberta)"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 2,
+  "relax": 3,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Lake Louise lakeshore",
+   "lat": 51.4164,
+   "lon": -116.2141,
+   "role": "start",
+   "note": "The shore in front of the Chateau.",
+   "scene": "ca-lake-louise"
+  },
+  {
+   "id": "lake-end",
+   "name": "End of Lake Louise",
+   "lat": 51.4081,
+   "lon": -116.2398,
+   "role": "point",
+   "note": "The flat delta where the glacier river enters the lake."
+  },
+  {
+   "id": "goal",
+   "name": "Plain of Six Glaciers Teahouse",
+   "lat": 51.3935,
+   "lon": -116.2729,
+   "role": "goal",
+   "note": "A two-storey stone and log teahouse of 1927 under the Victoria Glacier."
+  }
+ ],
+ "replaces": [
+  "ca-pc-x-plain-of-six-glaciers"
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "id": "us-congress-trail",
+ "country": "US",
+ "name": "Congress Trail",
+ "base": "Three Rivers",
+ "region": "Sequoia National Park, California",
+ "kind": "day",
+ "days": 1,
+ "shape": "loop",
+ "difficulty": "easy",
+ "months": [
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  1.5,
+  2.5
+ ],
+ "start_by": "09:00",
+ "published": {
+  "km": 4.3,
+  "gain_m": null,
+  "source": "https://www.nps.gov/seki/planyourvisit/gfdayhikesum.htm"
+ },
+ "why": "A paved loop in the Giant Forest from General Sherman, the largest tree on Earth, to the giant sequoias of the Senate and House groups.",
+ "book": "No permit. Park entrance fee. Summer shuttle from the Giant Forest Museum; the upper Sherman Tree parking is off Wolverton Road. In 2026 a section is being rebuilt: the short inner loop is walked there and back.",
+ "water": "Water at the Sherman Tree parking.",
+ "dangers": [
+  "Snow and ice in winter: chains on the road.",
+  "Black bears: never leave food in the car."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/seki/planyourvisit/gfdayhikesum.htm",
+  "https://www.nps.gov/places/000/congress-trailhead.htm",
+  "https://en.wikipedia.org/wiki/General_Sherman_(tree)"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 1,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 2,
+  "landscape": 4
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Sherman Tree trailhead",
+   "lat": 36.5846,
+   "lon": -118.7499,
+   "role": "start",
+   "note": "The upper parking off Wolverton Road."
+  },
+  {
+   "id": "goal",
+   "name": "General Sherman Tree",
+   "lat": 36.5816,
+   "lon": -118.7514,
+   "role": "goal",
+   "note": "The largest living tree by volume, about 2,200 years old.",
+   "scene": "us-general-sherman-tree"
+  },
+  {
+   "id": "president",
+   "name": "The President",
+   "lat": 36.5734,
+   "lon": -118.75,
+   "role": "point",
+   "note": "A giant sequoia of 3,200 years."
+  },
+  {
+   "id": "senate-group",
+   "name": "Senate Group",
+   "lat": 36.577,
+   "lon": -118.747,
+   "role": "point",
+   "note": "A cluster of giant sequoias in a meadow."
+  }
+ ]
+}

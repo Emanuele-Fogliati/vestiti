@@ -1,0 +1,86 @@
+{
+ "id": "us-zion-narrows",
+ "country": "US",
+ "name": "The Narrows from the bottom up",
+ "base": "Springdale",
+ "region": "Zion National Park, Utah",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  5,
+  8
+ ],
+ "start_by": "07:30",
+ "published": null,
+ "why": "Wading up the Virgin River between walls 300 m high and in places only 6 m apart, to the dark slot of Wall Street.",
+ "book": "No permit as far as Big Spring. Park shuttle to stop 9, Temple of Sinawava. Closed when the river runs over 150 cfs (often in spring) and on a flash flood warning. Outfitters in Springdale rent canyoneering boots and a stick.",
+ "water": "Carry 2 litres: river water must be filtered and can carry toxic cyanobacteria.",
+ "dangers": [
+  "Flash floods: check the flash flood potential at the visitor centre, leave at any rise or muddy water.",
+  "Cold water and slippery round stones: closed-toe shoes and a stick.",
+  "Hypothermia in spring and autumn."
+ ],
+ "turnaround": "Turn at Big Spring at the latest, or when the water rises or turns muddy.",
+ "sources": [
+  "https://www.nps.gov/zion/planyourvisit/thenarrows.htm",
+  "https://www.nps.gov/zion/planyourvisit/narrowsbottomup.htm",
+  "https://en.wikipedia.org/wiki/Zion_Narrows"
+ ],
+ "replaces": [
+  "us-osm-13331650"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 3,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Temple of Sinawava",
+   "lat": 37.2853,
+   "lon": -112.9478,
+   "role": "start",
+   "note": "Shuttle stop 9, start of the paved Riverside Walk."
+  },
+  {
+   "id": "riverside-end",
+   "name": "End of the Riverside Walk",
+   "lat": 37.2966,
+   "lon": -112.9482,
+   "role": "point",
+   "note": "Where the path ends and you step into the river."
+  },
+  {
+   "id": "orderville",
+   "name": "Orderville Canyon junction",
+   "lat": 37.3082,
+   "lon": -112.947,
+   "role": "point",
+   "note": "A side canyon joins from the right."
+  },
+  {
+   "id": "goal",
+   "name": "Wall Street",
+   "lat": 37.3123,
+   "lon": -112.9503,
+   "role": "goal",
+   "note": "The narrowest stretch: walls straight up for 300 m, the river from wall to wall.",
+   "scene": "us-the-narrows"
+  }
+ ]
+}
