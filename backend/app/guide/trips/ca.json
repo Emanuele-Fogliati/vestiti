@@ -1,0 +1,1832 @@
+{
+ "_doc": "Recommended trips of Canada, 2026-11-17. Same fields as ../trips.json; elevation and coords = where you sleep (app.inspire.build).",
+ "journeys": [
+  {
+   "id": "canada-rockies",
+   "name": "Canada: the Rockies",
+   "blurb": "Banff, Lake Louise and Moraine Lake, the Icefields Parkway to Jasper, Yoho's waterfalls; skiing and frozen lakes in winter."
+  },
+  {
+   "id": "canada-west-coast",
+   "name": "Canada: the West Coast",
+   "blurb": "Vancouver, Whistler, Victoria and the surf and rainforest of Tofino; whales and grizzlies by boat, skiing in winter."
+  },
+  {
+   "id": "canada-east",
+   "name": "Canada: Ontario and Quebec",
+   "blurb": "Toronto and Niagara, Ottawa, Montreal and old Quebec, whales at Tadoussac, red maples in autumn and winter carnivals."
+  },
+  {
+   "id": "canada-maritimes",
+   "name": "Canada: the Maritimes and Newfoundland",
+   "blurb": "Halifax and Peggy's Cove, the Cabot Trail, the Fundy tides, Prince Edward Island, Gros Morne's fjords and St. John's."
+  }
+ ],
+ "elevation": {
+  "ca-calgary": 1045,
+  "ca-canmore": 1310,
+  "ca-banff": 1383,
+  "ca-lake-louise": 1540,
+  "ca-yoho-national-park": 1240,
+  "ca-golden": 790,
+  "ca-mount-revelstoke-national-park": 450,
+  "ca-jasper": 1060,
+  "ca-wells-gray-provincial-park": 410,
+  "ca-waterton-lakes-national-park": 1280,
+  "x-ca-kelowna": 344,
+  "ca-vancouver": 40,
+  "ca-whistler": 670,
+  "ca-victoria": 15,
+  "ca-tofino": 20,
+  "x-ca-campbell-river": 20,
+  "x-ca-gibsons": 10,
+  "ca-toronto": 80,
+  "ca-niagara-falls": 180,
+  "x-ca-algonquin-provincial-park": 420,
+  "ca-ottawa": 70,
+  "x-ca-parc-omega": 60,
+  "ca-thousand-islands": 80,
+  "ca-montreal": 40,
+  "ca-quebec-city": 70,
+  "ca-charlevoix": 20,
+  "ca-tadoussac": 40,
+  "ca-perce": 20,
+  "ca-halifax": 20,
+  "ca-lunenburg": 10,
+  "x-ca-annapolis-royal": 10,
+  "x-ca-fundy-national-park": 10,
+  "ca-charlottetown": 10,
+  "x-ca-ingonish": 10,
+  "ca-baddeck": 10,
+  "x-ca-rocky-harbour": 10,
+  "ca-st-johns": 30
+ },
+ "coords": {
+  "ca-lake-louise": [
+   51.425,
+   -116.18
+  ],
+  "ca-yoho-national-park": [
+   51.396,
+   -116.489
+  ],
+  "ca-mount-revelstoke-national-park": [
+   50.998,
+   -118.196
+  ],
+  "ca-wells-gray-provincial-park": [
+   51.65,
+   -120.04
+  ],
+  "x-ca-algonquin-provincial-park": [
+   45.58,
+   -78.4
+  ],
+  "x-ca-fundy-national-park": [
+   45.6,
+   -64.95
+  ],
+  "ca-charlevoix": [
+   47.44,
+   -70.5
+  ],
+  "ca-thousand-islands": [
+   44.33,
+   -76.16
+  ],
+  "x-ca-parc-omega": [
+   45.65,
+   -74.94
+  ]
+ },
+ "trips": [
+  {
+   "id": "canada-rockies-7",
+   "region": "c-ca",
+   "title": "The Rockies in a week: Banff, Lake Louise and Jasper",
+   "pace": "intense",
+   "level": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Banff's gondola and Johnston Canyon, Lake Louise and Moraine Lake, then the Icefields Parkway past Peyto Lake to Jasper and Maligne Lake.",
+   "note": "June to September: every road and lake open, the trails free of snow from about July; 25 °C in the valleys, near freezing at night up high. Moraine Lake only by shuttle or bus. Book rooms in Banff, Lake Louise and Jasper months ahead.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-banff",
+     "nights": 2
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 2
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-7-shoulder",
+   "region": "c-ca",
+   "title": "A quiet week in the Rockies, May or October",
+   "pace": "intense",
+   "level": 3,
+   "months": [
+    5,
+    10
+   ],
+   "best": [],
+   "why": "Banff and Lake Louise with few crowds, the Icefields Parkway to the Athabasca Glacier and Jasper's canyon.",
+   "note": "May and October are the quiet ends of summer: the lakes thaw in late May and freeze in late October, the high trails are under snow and Moraine Lake's road is closed in May; the Icefields Parkway and the valley walks are open. Early October has the last gold larches.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-banff",
+     "nights": 3
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 1
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-7-winter",
+   "region": "c-ca",
+   "title": "A ski and snow week in Banff and Lake Louise",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Ski Sunshine, Norquay and Lake Louise, walk Johnston Canyon's frozen falls and skate on Lake Louise.",
+   "note": "November to April is ski season (Lake Louise and Sunshine open in November, the hills close from April to May). -10 to -20 °C on cold days. The Icefields Parkway stays open but has no services: winter tyres are required from 1 November to 1 April and it closes for avalanche control.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-banff",
+     "nights": 4
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-14",
+   "region": "c-ca",
+   "title": "Two weeks round the Rockies, from Banff to Wells Gray",
+   "pace": "intense",
+   "level": 4,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Banff, Lake Louise, the Icefields Parkway, Jasper, the waterfalls of Wells Gray, Revelstoke's meadows and Golden, back to Calgary.",
+   "note": "June to September: every road and lake open, the trails free of snow from about July; 25 °C in the valleys, near freezing at night up high. Moraine Lake only by shuttle or bus. Book rooms in Banff, Lake Louise and Jasper months ahead.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-banff",
+     "nights": 3
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 2
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 3
+    },
+    {
+     "place": "ca-wells-gray-provincial-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-mount-revelstoke-national-park",
+     "nights": 1
+    },
+    {
+     "place": "ca-golden",
+     "nights": 1
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 1
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-14-shoulder",
+   "region": "c-ca",
+   "title": "Two quiet weeks in the Rockies, May or October",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    10
+   ],
+   "best": [],
+   "why": "Canmore and Banff, Yoho's Emerald Lake, Lake Louise and the Icefields Parkway to Jasper, out of season.",
+   "note": "May and October are the quiet ends of summer: the lakes thaw in late May and freeze in late October, the high trails are under snow and Moraine Lake's road is closed in May; the Icefields Parkway and the valley walks are open. Early October has the last gold larches.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 2
+    },
+    {
+     "place": "ca-banff",
+     "nights": 4
+    },
+    {
+     "place": "ca-yoho-national-park",
+     "nights": 1
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 2
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-14-winter",
+   "region": "c-ca",
+   "title": "Two winter weeks in the Rockies: Banff, Lake Louise and Jasper",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Ski the three Banff areas and Marmot Basin, ice walks in Grotto and Maligne canyons, skating on Lake Louise.",
+   "note": "November to April is ski season (Lake Louise and Sunshine open in November, the hills close from April to May). -10 to -20 °C on cold days. The Icefields Parkway stays open but has no services: winter tyres are required from 1 November to 1 April and it closes for avalanche control.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 2
+    },
+    {
+     "place": "ca-banff",
+     "nights": 5
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 3
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 3
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-21",
+   "region": "c-ca",
+   "title": "Three weeks in the Canadian Rockies",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Kananaskis, Banff, Lake Louise and Yoho, four days in Jasper, then Wells Gray, Revelstoke and Golden, back to Calgary.",
+   "note": "June to September: every road and lake open, the trails free of snow from about July; 25 °C in the valleys, near freezing at night up high. Moraine Lake only by shuttle or bus. Book rooms in Banff, Lake Louise and Jasper months ahead.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 2
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 2
+    },
+    {
+     "place": "ca-banff",
+     "nights": 3
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 3
+    },
+    {
+     "place": "ca-yoho-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 4
+    },
+    {
+     "place": "ca-wells-gray-provincial-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-mount-revelstoke-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-golden",
+     "nights": 1
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-21-shoulder",
+   "region": "c-ca",
+   "title": "Three quiet weeks from the Rockies to the Okanagan",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    10
+   ],
+   "best": [],
+   "why": "The parks out of season, Wells Gray's falls at their fullest in May, and the Okanagan's wineries at harvest in October.",
+   "note": "May and October are the quiet ends of summer: the lakes thaw in late May and freeze in late October, the high trails are under snow and Moraine Lake's road is closed in May; the Icefields Parkway and the valley walks are open. Early October has the last gold larches.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 2
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 2
+    },
+    {
+     "place": "ca-banff",
+     "nights": 4
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 2
+    },
+    {
+     "place": "ca-yoho-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 4
+    },
+    {
+     "place": "ca-wells-gray-provincial-park",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-kelowna",
+     "nights": 3
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-21-winter",
+   "region": "c-ca",
+   "title": "Three ski weeks: Banff, Lake Louise, Kicking Horse and Revelstoke",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Banff's three ski areas, then west over the passes to the steep slopes of Kicking Horse and Revelstoke's deep powder.",
+   "note": "November to April is ski season (Lake Louise and Sunshine open in November, the hills close from April to May). -10 to -20 °C on cold days. The Icefields Parkway stays open but has no services: winter tyres are required from 1 November to 1 April and it closes for avalanche control.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 2
+    },
+    {
+     "place": "ca-banff",
+     "nights": 6
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 4
+    },
+    {
+     "place": "ca-golden",
+     "nights": 4
+    },
+    {
+     "place": "ca-mount-revelstoke-national-park",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-28",
+   "region": "c-ca",
+   "title": "Four weeks in the Rockies, from Waterton to the Okanagan",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Waterton's lakes, Kananaskis, Banff, Lake Louise, Yoho and Jasper, Wells Gray, a lake in the Okanagan, Revelstoke and Golden.",
+   "note": "June to September: every road and lake open, the trails free of snow from about July; 25 °C in the valleys, near freezing at night up high. Moraine Lake only by shuttle or bus. Book rooms in Banff, Lake Louise and Jasper months ahead.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 2
+    },
+    {
+     "place": "ca-waterton-lakes-national-park",
+     "nights": 3
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 2
+    },
+    {
+     "place": "ca-banff",
+     "nights": 4
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 3
+    },
+    {
+     "place": "ca-yoho-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 4
+    },
+    {
+     "place": "ca-wells-gray-provincial-park",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-kelowna",
+     "nights": 2
+    },
+    {
+     "place": "ca-mount-revelstoke-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-golden",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-28-shoulder",
+   "region": "c-ca",
+   "title": "Four quiet weeks in the Rockies and the Okanagan",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    5,
+    10
+   ],
+   "best": [],
+   "why": "A slow loop in the empty season: the national parks, Wells Gray, the Okanagan, Revelstoke and Golden.",
+   "note": "May and October are the quiet ends of summer: the lakes thaw in late May and freeze in late October, the high trails are under snow and Moraine Lake's road is closed in May; the Icefields Parkway and the valley walks are open. Early October has the last gold larches.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 2
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 3
+    },
+    {
+     "place": "ca-banff",
+     "nights": 5
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 2
+    },
+    {
+     "place": "ca-yoho-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 4
+    },
+    {
+     "place": "ca-wells-gray-provincial-park",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-kelowna",
+     "nights": 3
+    },
+    {
+     "place": "ca-mount-revelstoke-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-golden",
+     "nights": 3
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-rockies-28-winter",
+   "region": "c-ca",
+   "title": "A month of skiing from Banff to Big White",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Banff, Lake Louise and Jasper, then Kicking Horse, Revelstoke and Big White above the Okanagan.",
+   "note": "November to April is ski season (Lake Louise and Sunshine open in November, the hills close from April to May). -10 to -20 °C on cold days. The Icefields Parkway stays open but has no services: winter tyres are required from 1 November to 1 April and it closes for avalanche control.",
+   "stops": [
+    {
+     "place": "ca-calgary",
+     "nights": 1
+    },
+    {
+     "place": "ca-canmore",
+     "nights": 3
+    },
+    {
+     "place": "ca-banff",
+     "nights": 6
+    },
+    {
+     "place": "ca-jasper",
+     "nights": 4
+    },
+    {
+     "place": "ca-lake-louise",
+     "nights": 4
+    },
+    {
+     "place": "ca-golden",
+     "nights": 3
+    },
+    {
+     "place": "ca-mount-revelstoke-national-park",
+     "nights": 4
+    },
+    {
+     "place": "x-ca-kelowna",
+     "nights": 3
+    }
+   ],
+   "journey": "canada-rockies"
+  },
+  {
+   "id": "canada-west-coast-7",
+   "region": "c-ca",
+   "title": "A week on the BC coast: Vancouver, Tofino and Victoria",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Stanley Park and Granville Island, the ferry to Vancouver Island, Tofino's beaches and rainforest, whales from Victoria.",
+   "note": "May to October: dry and sunny from July to September (22-25 °C), cool mornings and fog on the outer coast. Whales from April to October, grizzlies in the inlets late August to mid-October. Book the BC Ferries crossings in summer.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 2
+    },
+    {
+     "place": "ca-tofino",
+     "nights": 3
+    },
+    {
+     "place": "ca-victoria",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-west-coast-7-winter",
+   "region": "c-ca",
+   "title": "Vancouver and a ski week at Whistler",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Two days in Vancouver, then Whistler Blackcomb, the largest ski area in North America.",
+   "note": "November to April is mild and wet on the coast (5-8 °C, rain most days) and snowy in the mountains: Whistler's season runs from about late November to April. Pacific storms hit Tofino from November to February. Snow tyres or chains are required on the Sea to Sky Highway from 1 October to 31 March.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 3
+    },
+    {
+     "place": "ca-whistler",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-west-coast-14",
+   "region": "c-ca",
+   "title": "Two weeks on the West Coast",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Vancouver and Whistler's lakes, Tofino's surf, whales and bears from Campbell River, and Victoria.",
+   "note": "May to October: dry and sunny from July to September (22-25 °C), cool mornings and fog on the outer coast. Whales from April to October, grizzlies in the inlets late August to mid-October. Book the BC Ferries crossings in summer.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 3
+    },
+    {
+     "place": "ca-whistler",
+     "nights": 3
+    },
+    {
+     "place": "ca-tofino",
+     "nights": 4
+    },
+    {
+     "place": "x-ca-campbell-river",
+     "nights": 2
+    },
+    {
+     "place": "ca-victoria",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-west-coast-14-winter",
+   "region": "c-ca",
+   "title": "Two winter weeks: Whistler's snow and Tofino's storms",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Vancouver, five days at Whistler, Victoria's gardens and the winter storms on Tofino's beaches.",
+   "note": "November to April is mild and wet on the coast (5-8 °C, rain most days) and snowy in the mountains: Whistler's season runs from about late November to April. Pacific storms hit Tofino from November to February. Snow tyres or chains are required on the Sea to Sky Highway from 1 October to 31 March.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 3
+    },
+    {
+     "place": "ca-whistler",
+     "nights": 5
+    },
+    {
+     "place": "ca-victoria",
+     "nights": 2
+    },
+    {
+     "place": "ca-tofino",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-west-coast-21",
+   "region": "c-ca",
+   "title": "Three weeks round the Salish Sea",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Vancouver, Whistler, the Sunshine Coast by ferry, grizzlies from Campbell River, Tofino and Victoria.",
+   "note": "May to October: dry and sunny from July to September (22-25 °C), cool mornings and fog on the outer coast. Whales from April to October, grizzlies in the inlets late August to mid-October. Book the BC Ferries crossings in summer.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 4
+    },
+    {
+     "place": "ca-whistler",
+     "nights": 4
+    },
+    {
+     "place": "x-ca-gibsons",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-campbell-river",
+     "nights": 3
+    },
+    {
+     "place": "ca-tofino",
+     "nights": 4
+    },
+    {
+     "place": "ca-victoria",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-west-coast-21-winter",
+   "region": "c-ca",
+   "title": "Three winter weeks: Big White, Whistler and the storm coast",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Vancouver, the dry snow of Big White above the Okanagan, Whistler, Tofino's storms and Victoria.",
+   "note": "November to April is mild and wet on the coast (5-8 °C, rain most days) and snowy in the mountains: Whistler's season runs from about late November to April. Pacific storms hit Tofino from November to February. Snow tyres or chains are required on the Sea to Sky Highway from 1 October to 31 March.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-kelowna",
+     "nights": 4
+    },
+    {
+     "place": "ca-whistler",
+     "nights": 5
+    },
+    {
+     "place": "ca-tofino",
+     "nights": 5
+    },
+    {
+     "place": "ca-victoria",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-west-coast-28",
+   "region": "c-ca",
+   "title": "A month in British Columbia",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Vancouver, the Okanagan's lake and wineries, Whistler, the Sunshine Coast, Campbell River, Tofino and Victoria.",
+   "note": "May to October: dry and sunny from July to September (22-25 °C), cool mornings and fog on the outer coast. Whales from April to October, grizzlies in the inlets late August to mid-October. Book the BC Ferries crossings in summer.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 4
+    },
+    {
+     "place": "x-ca-kelowna",
+     "nights": 3
+    },
+    {
+     "place": "ca-whistler",
+     "nights": 4
+    },
+    {
+     "place": "x-ca-gibsons",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-campbell-river",
+     "nights": 4
+    },
+    {
+     "place": "ca-tofino",
+     "nights": 5
+    },
+    {
+     "place": "ca-victoria",
+     "nights": 5
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-west-coast-28-winter",
+   "region": "c-ca",
+   "title": "A winter month in British Columbia",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "A slow winter: Vancouver, Big White, a week at Whistler, storms in Tofino and Victoria's mild streets.",
+   "note": "November to April is mild and wet on the coast (5-8 °C, rain most days) and snowy in the mountains: Whistler's season runs from about late November to April. Pacific storms hit Tofino from November to February. Snow tyres or chains are required on the Sea to Sky Highway from 1 October to 31 March.",
+   "stops": [
+    {
+     "place": "ca-vancouver",
+     "nights": 5
+    },
+    {
+     "place": "x-ca-kelowna",
+     "nights": 5
+    },
+    {
+     "place": "ca-whistler",
+     "nights": 7
+    },
+    {
+     "place": "ca-tofino",
+     "nights": 6
+    },
+    {
+     "place": "ca-victoria",
+     "nights": 5
+    }
+   ],
+   "journey": "canada-west-coast"
+  },
+  {
+   "id": "canada-east-7",
+   "region": "c-ca",
+   "title": "A week from Toronto to Quebec City",
+   "pace": "intense",
+   "level": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "why": "Toronto's tower and market, Niagara Falls by boat, then the train to Montreal and old Quebec.",
+   "note": "May to October: hot humid summers (27 °C) in the cities, festivals in June and July, whales at Tadoussac from June to October, and the maples red from late September to mid-October. Blackflies in the forests in May and June.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 2
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 1
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 2
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-east-7-winter",
+   "region": "c-ca",
+   "title": "A winter week from Toronto to Quebec City",
+   "pace": "intense",
+   "level": 1,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2
+   ],
+   "why": "Toronto and a hockey game, Niagara in ice, Montreal's underground city and Quebec's snowy old town.",
+   "note": "November to April is long and cold: -10 °C in Montreal and Quebec in January, -20 °C on the coldest days, lots of snow. The best of it is January and February: skating on the Rideau Canal, Igloofest, Quebec's Winter Carnival and the ice hotel. November and April are grey and slushy.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 2
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 1
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 2
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-east-14",
+   "region": "c-ca",
+   "title": "Two weeks in Ontario and Quebec, with whales",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "why": "Toronto, Niagara, Ottawa, Montreal and Quebec City, then Charlevoix and the whales at Tadoussac.",
+   "note": "May to October: hot humid summers (27 °C) in the cities, festivals in June and July, whales at Tadoussac from June to October, and the maples red from late September to mid-October. Blackflies in the forests in May and June.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 2
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 1
+    },
+    {
+     "place": "ca-ottawa",
+     "nights": 2
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 3
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 3
+    },
+    {
+     "place": "ca-charlevoix",
+     "nights": 1
+    },
+    {
+     "place": "ca-tadoussac",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-east-14-winter",
+   "region": "c-ca",
+   "title": "Two winter weeks: Ottawa's canal, Montreal and Quebec's carnival",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2
+   ],
+   "why": "Toronto and Niagara, skating on the Rideau Canal, Montreal's festivals and Quebec City in snow.",
+   "note": "November to April is long and cold: -10 °C in Montreal and Quebec in January, -20 °C on the coldest days, lots of snow. The best of it is January and February: skating on the Rideau Canal, Igloofest, Quebec's Winter Carnival and the ice hotel. November and April are grey and slushy.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 3
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 1
+    },
+    {
+     "place": "ca-ottawa",
+     "nights": 3
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 3
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-east-21",
+   "region": "c-ca",
+   "title": "Three weeks from Niagara to the Saguenay",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "why": "The cities, Algonquin's lakes by canoe, Charlevoix's gorges and the whales of Tadoussac.",
+   "note": "May to October: hot humid summers (27 °C) in the cities, festivals in June and July, whales at Tadoussac from June to October, and the maples red from late September to mid-October. Blackflies in the forests in May and June.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 3
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-algonquin-provincial-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-ottawa",
+     "nights": 2
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 3
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 3
+    },
+    {
+     "place": "ca-charlevoix",
+     "nights": 3
+    },
+    {
+     "place": "ca-tadoussac",
+     "nights": 3
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-east-21-winter",
+   "region": "c-ca",
+   "title": "Three winter weeks in Ontario and Quebec",
+   "pace": "relaxed",
+   "level": 1,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2
+   ],
+   "why": "Toronto, Niagara, Ottawa, Montreal and Quebec, and skiing over the frozen St. Lawrence in Charlevoix.",
+   "note": "November to April is long and cold: -10 °C in Montreal and Quebec in January, -20 °C on the coldest days, lots of snow. The best of it is January and February: skating on the Rideau Canal, Igloofest, Quebec's Winter Carnival and the ice hotel. November and April are grey and slushy.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 4
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 1
+    },
+    {
+     "place": "ca-ottawa",
+     "nights": 3
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 4
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 5
+    },
+    {
+     "place": "ca-charlevoix",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-east-28",
+   "region": "c-ca",
+   "title": "A month from Toronto to the Gaspé",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "why": "The cities, Algonquin, the Thousand Islands, Charlevoix and Tadoussac, then round the Gaspé to Percé's rock and gannets.",
+   "note": "May to October: hot humid summers (27 °C) in the cities, festivals in June and July, whales at Tadoussac from June to October, and the maples red from late September to mid-October. Blackflies in the forests in May and June.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 3
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-algonquin-provincial-park",
+     "nights": 3
+    },
+    {
+     "place": "ca-ottawa",
+     "nights": 3
+    },
+    {
+     "place": "ca-thousand-islands",
+     "nights": 2
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 3
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 3
+    },
+    {
+     "place": "ca-charlevoix",
+     "nights": 3
+    },
+    {
+     "place": "ca-tadoussac",
+     "nights": 2
+    },
+    {
+     "place": "ca-perce",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-east-28-winter",
+   "region": "c-ca",
+   "title": "A winter month in Ontario and Quebec",
+   "pace": "relaxed",
+   "level": 1,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2
+   ],
+   "why": "A slow winter of cities, the wildlife park at Montebello, the carnival and Charlevoix's slopes.",
+   "note": "November to April is long and cold: -10 °C in Montreal and Quebec in January, -20 °C on the coldest days, lots of snow. The best of it is January and February: skating on the Rideau Canal, Igloofest, Quebec's Winter Carnival and the ice hotel. November and April are grey and slushy.",
+   "stops": [
+    {
+     "place": "ca-toronto",
+     "nights": 5
+    },
+    {
+     "place": "ca-niagara-falls",
+     "nights": 2
+    },
+    {
+     "place": "ca-ottawa",
+     "nights": 4
+    },
+    {
+     "place": "x-ca-parc-omega",
+     "nights": 2
+    },
+    {
+     "place": "ca-montreal",
+     "nights": 5
+    },
+    {
+     "place": "ca-quebec-city",
+     "nights": 5
+    },
+    {
+     "place": "ca-charlevoix",
+     "nights": 5
+    }
+   ],
+   "journey": "canada-east"
+  },
+  {
+   "id": "canada-maritimes-7",
+   "region": "c-ca",
+   "title": "A week in Nova Scotia and Prince Edward Island",
+   "pace": "intense",
+   "level": 1,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Halifax and Peggy's Cove, Lunenburg, the Cabot Trail from Ingonish, and the ferry to Prince Edward Island.",
+   "note": "June to October: 20-24 °C, fog on the coasts, the sea warm enough on Prince Edward Island in July and August. Whales June to October, puffins to August, the Cabot Trail red and gold in early October. Hurricane remnants can bring a stormy day from August to October. The Newfoundland ferry and the Wood Islands ferry: book ahead in summer.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 2
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 1
+    },
+    {
+     "place": "x-ca-ingonish",
+     "nights": 2
+    },
+    {
+     "place": "ca-charlottetown",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-maritimes"
+  },
+  {
+   "id": "canada-maritimes-7-winter",
+   "region": "c-ca",
+   "title": "A winter week in Halifax and Lunenburg",
+   "pace": "relaxed",
+   "level": 1,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [],
+   "why": "Halifax's museums and pubs, Peggy's Cove in the winter sea, and Lunenburg's old town.",
+   "note": "November to May is the off season: -5 °C and wet snow, short days, and many inns, museums and boat trips closed. We keep to the towns that live all year. In May the icebergs drift past Newfoundland and the first puffins arrive.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 4
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 3
+    }
+   ],
+   "journey": "canada-maritimes"
+  },
+  {
+   "id": "canada-maritimes-14",
+   "region": "c-ca",
+   "title": "Two weeks round the Maritimes",
+   "pace": "normal",
+   "level": 1,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Halifax, Lunenburg, Annapolis Royal, the Fundy tides, Prince Edward Island and the Cabot Trail.",
+   "note": "June to October: 20-24 °C, fog on the coasts, the sea warm enough on Prince Edward Island in July and August. Whales June to October, puffins to August, the Cabot Trail red and gold in early October. Hurricane remnants can bring a stormy day from August to October. The Newfoundland ferry and the Wood Islands ferry: book ahead in summer.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 2
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-annapolis-royal",
+     "nights": 1
+    },
+    {
+     "place": "x-ca-fundy-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-charlottetown",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-ingonish",
+     "nights": 2
+    },
+    {
+     "place": "ca-baddeck",
+     "nights": 2
+    }
+   ],
+   "journey": "canada-maritimes"
+  },
+  {
+   "id": "canada-maritimes-14-winter",
+   "region": "c-ca",
+   "title": "Two winter weeks: Nova Scotia and St. John's",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [],
+   "why": "Halifax, Lunenburg and Annapolis Royal, then a flight to St. John's for Signal Hill and Cape Spear.",
+   "note": "November to May is the off season: -5 °C and wet snow, short days, and many inns, museums and boat trips closed. We keep to the towns that live all year. In May the icebergs drift past Newfoundland and the first puffins arrive.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 5
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-annapolis-royal",
+     "nights": 2
+    },
+    {
+     "place": "ca-st-johns",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-maritimes"
+  },
+  {
+   "id": "canada-maritimes-21",
+   "region": "c-ca",
+   "title": "Three weeks: the Maritimes and Newfoundland",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Nova Scotia, the Fundy tides and Prince Edward Island, Cape Breton, the ferry to Newfoundland, Gros Morne and St. John's.",
+   "note": "June to October: 20-24 °C, fog on the coasts, the sea warm enough on Prince Edward Island in July and August. Whales June to October, puffins to August, the Cabot Trail red and gold in early October. Hurricane remnants can bring a stormy day from August to October. The Newfoundland ferry and the Wood Islands ferry: book ahead in summer.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 2
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-annapolis-royal",
+     "nights": 1
+    },
+    {
+     "place": "x-ca-fundy-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-charlottetown",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-ingonish",
+     "nights": 2
+    },
+    {
+     "place": "ca-baddeck",
+     "nights": 1
+    },
+    {
+     "place": "x-ca-rocky-harbour",
+     "nights": 4
+    },
+    {
+     "place": "ca-st-johns",
+     "nights": 4
+    }
+   ],
+   "journey": "canada-maritimes"
+  },
+  {
+   "id": "canada-maritimes-21-winter",
+   "region": "c-ca",
+   "title": "Three winter weeks in Atlantic Canada",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [],
+   "why": "The towns that live all year: Halifax, Lunenburg, Annapolis Royal, Charlottetown, Cape Breton in snow and St. John's.",
+   "note": "November to May is the off season: -5 °C and wet snow, short days, and many inns, museums and boat trips closed. We keep to the towns that live all year. In May the icebergs drift past Newfoundland and the first puffins arrive.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 5
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-annapolis-royal",
+     "nights": 2
+    },
+    {
+     "place": "ca-charlottetown",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-ingonish",
+     "nights": 3
+    },
+    {
+     "place": "ca-st-johns",
+     "nights": 5
+    }
+   ],
+   "journey": "canada-maritimes"
+  },
+  {
+   "id": "canada-maritimes-28",
+   "region": "c-ca",
+   "title": "A month in Atlantic Canada",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "The whole of it, slowly: Nova Scotia, the Fundy tides, Prince Edward Island, Cape Breton, Gros Morne and a week in St. John's.",
+   "note": "June to October: 20-24 °C, fog on the coasts, the sea warm enough on Prince Edward Island in July and August. Whales June to October, puffins to August, the Cabot Trail red and gold in early October. Hurricane remnants can bring a stormy day from August to October. The Newfoundland ferry and the Wood Islands ferry: book ahead in summer.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 3
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-annapolis-royal",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-fundy-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-charlottetown",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-ingonish",
+     "nights": 3
+    },
+    {
+     "place": "ca-baddeck",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-rocky-harbour",
+     "nights": 4
+    },
+    {
+     "place": "ca-st-johns",
+     "nights": 6
+    }
+   ],
+   "journey": "canada-maritimes"
+  },
+  {
+   "id": "canada-maritimes-28-winter",
+   "region": "c-ca",
+   "title": "A winter month in Atlantic Canada",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [],
+   "why": "A slow off-season month in the towns, with snowshoes in Fundy and Gros Morne and skiing at Cape Smokey.",
+   "note": "November to May is the off season: -5 °C and wet snow, short days, and many inns, museums and boat trips closed. We keep to the towns that live all year. In May the icebergs drift past Newfoundland and the first puffins arrive.",
+   "stops": [
+    {
+     "place": "ca-halifax",
+     "nights": 6
+    },
+    {
+     "place": "ca-lunenburg",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-annapolis-royal",
+     "nights": 2
+    },
+    {
+     "place": "x-ca-fundy-national-park",
+     "nights": 2
+    },
+    {
+     "place": "ca-charlottetown",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-ingonish",
+     "nights": 3
+    },
+    {
+     "place": "x-ca-rocky-harbour",
+     "nights": 3
+    },
+    {
+     "place": "ca-st-johns",
+     "nights": 6
+    }
+   ],
+   "journey": "canada-maritimes"
+  }
+ ]
+}

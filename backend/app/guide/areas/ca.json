@@ -1,0 +1,7809 @@
+{
+ "_doc": "Canada zone guides (2026-11-17): Rockies, West Coast, East, Maritimes and Newfoundland. Every thing from Parks Canada, provincial parks, Wikivoyage and Wikipedia (the sources of each zone).",
+ "areas": [
+  {
+   "id": "ca-calgary",
+   "names": [
+    "Calgary"
+   ],
+   "country": "CA",
+   "lat": 51.05,
+   "lon": -114.07,
+   "radius_km": 30,
+   "season": "Dry and sunny, warm summers (24 °C), cold winters broken by warm chinook winds; the Stampede in the first half of July.",
+   "sleep": "Downtown or Kensington, by the Bow River.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Calgary",
+    "https://en.wikipedia.org/wiki/Calgary_Stampede",
+    "https://en.wikipedia.org/wiki/Royal_Tyrrell_Museum",
+    "https://en.wikipedia.org/wiki/Heritage_Park_Historical_Village"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "downtown",
+     "name": "Calgary Tower, Stephen Avenue and the Bow River",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The tower's glass floor over the city and the Rockies on the horizon, the pedestrian Stephen Avenue and the river path to Prince's Island.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Calgary Tower"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "stampede",
+     "name": "The Calgary Stampede",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Rodeo and grandstand seats sell out: buy early",
+     "why": "Ten days of rodeo, chuckwagon races and a fair in early July, the city's great party since 1912.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      7
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "tyrrell",
+     "name": "Dinosaurs and badlands at Drumheller",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The Royal Tyrrell Museum's dinosaur skeletons, then the hoodoos of the Red Deer badlands, 1.5 h north-east.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 750
+     },
+     "sights": [
+      "Drumheller"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 3,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "heritage",
+     "name": "Heritage Park Historical Village",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Canada's largest living history museum: a steam train, a paddlewheeler on the reservoir and a frontier town.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-canmore",
+   "names": [
+    "Canmore",
+    "Kananaskis",
+    "Kananaskis Country"
+   ],
+   "country": "CA",
+   "lat": 51.09,
+   "lon": -115.36,
+   "radius_km": 45,
+   "season": "Summer days of 22 °C at 1,300 m, snow from November to April; Highway 40 over Highwood Pass is closed 1 December to 15 June.",
+   "sleep": "Canmore town, 20 minutes from Banff, cheaper and quieter.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Canmore",
+    "https://en.wikipedia.org/wiki/Kananaskis_Country",
+    "https://en.wikipedia.org/wiki/Ha_Ling_Peak",
+    "https://en.wikipedia.org/wiki/Highwood_Pass"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "grassi",
+     "name": "Grassi Lakes",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A short climb past a waterfall to two small turquoise lakes under climbing walls, with old pictographs nearby.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1500
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ha-ling",
+     "name": "Ha Ling Peak",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A steep 800 m climb to a summit hanging over Canmore and the Bow Valley.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 2407
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "ptarmigan",
+     "name": "Ptarmigan Cirque from Highwood Pass",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From the highest paved pass in Canada (2,206 m) into an alpine bowl with marmots and pikas.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2450
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Ptarmigan Cirque"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "rawson",
+     "name": "Rawson Lake above Upper Kananaskis Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Along Upper Kananaskis Lake and up through the forest to a quiet lake under Mount Sarrail's cliffs.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2050
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "trail": "ca-osm-15402536",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "nordic-spa",
+     "name": "Kananaskis Nordic Spa",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Outdoor hot pools and saunas in the mountains, open all year, best with snow around.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$$",
+     "kids": "no"
+    },
+    {
+     "id": "grotto-ice",
+     "name": "Ice walk in Grotto Canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Guided ice walks from Canmore and Banff",
+     "why": "A frozen creek in a narrow canyon, with ice falls and old pictographs, in ice cleats.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1500
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "nordic",
+     "name": "Cross-country skiing at the Canmore Nordic Centre",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The trails of the 1988 Olympic races, lit at night, with ski rentals on site.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-banff",
+   "names": [
+    "Banff",
+    "Banff National Park"
+   ],
+   "country": "CA",
+   "lat": 51.178,
+   "lon": -115.571,
+   "radius_km": 30,
+   "season": "Summer 22 °C by day and 7 °C at night at 1,380 m; snow from November to April, -15 °C on cold winter days. The ski season runs from November to May.",
+   "sleep": "Banff town; the Banff Springs for the splurge.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/ab/banff",
+    "https://en.wikivoyage.org/wiki/Banff_National_Park",
+    "https://en.wikipedia.org/wiki/Sulphur_Mountain",
+    "https://en.wikipedia.org/wiki/Johnston_Canyon"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "gondola",
+     "name": "The Banff Gondola up Sulphur Mountain",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Tickets online; sunset slots go first",
+     "why": "Eight minutes up to 2,281 m and a boardwalk along the ridge over six mountain ranges and the Bow Valley.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2281
+     },
+     "sights": [
+      "Sulphur Mountain"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "johnston",
+     "name": "Johnston Canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Catwalks bolted to the canyon wall to the Lower and Upper Falls; in winter the falls freeze and it becomes an ice walk.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1550
+     },
+     "sights": [
+      "Johnston Canyon"
+     ],
+     "trail": "ca-pc-banff-johnston-canyon",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "town",
+     "name": "Banff Avenue, Bow Falls and the Banff Springs",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The mountain town's main street, the river falls where Marilyn Monroe filmed, and the castle-hotel of 1888.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bow Falls"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Sunshine Village",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Lift tickets online are cheaper",
+     "why": "One of Banff's 'Big 3' ski areas, high on the Continental Divide, often open until late May.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "minnewanka",
+     "name": "A cruise on Lake Minnewanka",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "The largest lake of the park, a drowned village under the water and bighorn sheep on the road.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Lake Minnewanka"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "norquay",
+     "name": "Skiing Mount Norquay",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The small steep ski hill five minutes above the town, the oldest of the 'Big 3'.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "hot-springs",
+     "name": "Banff Upper Hot Springs",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A hot pool at 1,585 m facing Mount Rundle, open all year, at its best in the snow.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 5,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "tunnel",
+     "name": "Tunnel Mountain Summit",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The small mountain inside the town, a switchback trail to views down both sides of the Bow Valley.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1692
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Tunnel Mountain"
+     ],
+     "trail": "ca-pc-banff-tunnel-mountain-summit",
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-lake-louise",
+   "names": [
+    "Lake Louise",
+    "Moraine Lake"
+   ],
+   "country": "CA",
+   "lat": 51.425,
+   "lon": -116.18,
+   "radius_km": 40,
+   "season": "Cool even in summer at 1,540-1,750 m (20 °C by day, near 0 at night); the lakes thaw in June and freeze in November. Moraine Lake Road is open about June to mid-October, to shuttles and buses only.",
+   "sleep": "Lake Louise village, or the Château on the lake.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/ab/banff",
+    "https://en.wikivoyage.org/wiki/Lake_Louise",
+    "https://en.wikipedia.org/wiki/Moraine_Lake",
+    "https://en.wikipedia.org/wiki/Lake_Agnes_Tea_House"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "agnes",
+     "name": "Lake Louise and the Lake Agnes Tea House",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "The lake's parking fills at dawn: Parks Canada shuttle from the Park and Ride (reserve)",
+     "why": "Along the turquoise lake, then up 400 m past Mirror Lake to a log tea house of 1905 on a hanging lake.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2135
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Lake Louise",
+      "Lake Agnes"
+     ],
+     "trail": "ca-pc-x-lake-agnes",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "moraine",
+     "name": "Moraine Lake and the Valley of the Ten Peaks",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Parks Canada shuttle or a licensed bus, reserved ahead",
+     "why": "The blue lake under ten peaks, seen from the Rockpile; the road is closed to private cars.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1900
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Moraine Lake"
+     ],
+     "trail": "ca-pc-x-moraine-lakeshore",
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "larch",
+     "name": "Larch Valley and Sentinel Pass",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "Mid to late September, when the larches turn gold",
+     "book": "Moraine Lake shuttle reserved ahead",
+     "why": "Up from Moraine Lake through larch meadows to a 2,611 m pass; mid to late September the larches turn gold.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 2611
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "trail": "ca-pc-x-larch-valley",
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "peyto",
+     "name": "Peyto Lake and Bow Lake on the Icefields Parkway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "North on the parkway to Bow Lake and the wolf-head lake seen from Bow Summit, the parkway's highest point.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Peyto Lake",
+      "Bow Lake",
+      "Icefields Parkway"
+     ],
+     "trail": "ca-pc-x-peyto-lake-viewpoint",
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "lakeshore",
+     "name": "The lakeshore and the Château at dusk",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The flat path along the turquoise lake under the Victoria Glacier, quiet once the day visitors have gone.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1750
+     },
+     "trail": "ca-pc-x-lake-louise-lakeshore",
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing the Lake Louise ski resort",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the largest ski areas in Canada, facing the Victoria Glacier, open from November to early May.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "skate",
+     "name": "Skating on frozen Lake Louise",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A rink cleared on the lake in front of the Château, with ice sculptures in January.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "paint-pots",
+     "name": "Marble Canyon and the Paint Pots in Kootenay",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Over the Divide into British Columbia: a narrow limestone gorge and the ochre beds the Ktunaxa used for paint.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1500
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Marble Canyon",
+      "Kootenay National Park"
+     ],
+     "trail": "ca-pc-x-paint-pots-to-marble-canyon",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "ca-yoho-national-park",
+   "names": [
+    "Yoho National Park",
+    "Yoho",
+    "Field",
+    "Emerald Lake"
+   ],
+   "country": "CA",
+   "lat": 51.396,
+   "lon": -116.489,
+   "radius_km": 25,
+   "season": "The British Columbia side of the Divide, a little wetter; the Yoho Valley road to Takakkaw Falls opens about late June to early October, Lake O'Hara's bus mid-June to early October.",
+   "sleep": "Field village or the Emerald Lake Lodge.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/bc/yoho",
+    "https://en.wikivoyage.org/wiki/Yoho_National_Park",
+    "https://en.wikipedia.org/wiki/Takakkaw_Falls",
+    "https://en.wikipedia.org/wiki/Lake_O%27Hara"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "emerald",
+     "name": "Emerald Lake",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A green lake under the President Range, a 5 km path around it and red canoes for hire in summer.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1310
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Emerald Lake"
+     ],
+     "trail": "ca-pc-x-emerald-lakeshore",
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "boat"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "takakkaw",
+     "name": "Takakkaw Falls",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the highest waterfalls in Canada, 373 m, fed by the Daly Glacier, up a road of tight switchbacks.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1520
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Takakkaw Falls"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "ohara",
+     "name": "Lake O'Hara",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "Bus seat by Parks Canada's spring lottery, or a last-minute release online",
+     "why": "Alpine lakes and ledges walked by few: the park lets only its bus in, seats by lottery.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2300
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "iceline",
+     "name": "The Iceline",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A high path along the moraines under the Emerald Glacier, looking across at Takakkaw Falls.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 2230
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "trail": "ca-pc-x-iceline",
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "bridge",
+     "name": "Natural Bridge and the Spiral Tunnels",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Kicking Horse River cutting through rock, and the railway looping inside the mountain to climb the pass.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Spiral Tunnels"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "snowshoe",
+     "name": "Snowshoeing around frozen Emerald Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The lake path under snow, on snowshoes or cross-country skis, with a fire in the lodge after.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1310
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-golden",
+   "names": [
+    "Golden",
+    "Kicking Horse"
+   ],
+   "country": "CA",
+   "lat": 51.3,
+   "lon": -116.97,
+   "radius_km": 25,
+   "season": "A valley town at 790 m, warmer than the parks in summer (26 °C); snowy winters, the ski hill from December to April.",
+   "sleep": "Golden town, or at the foot of the ski hill.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Golden_(British_Columbia)",
+    "https://en.wikipedia.org/wiki/Kicking_Horse_Mountain_Resort",
+    "https://en.wikipedia.org/wiki/Kicking_Horse_River"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ski",
+     "name": "Skiing Kicking Horse",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the biggest vertical drops in Canada, 1,260 m, much of it steep chutes and bowls.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    },
+    {
+     "id": "gondola",
+     "name": "Kicking Horse gondola and the grizzly refuge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The gondola to 2,350 m for the view over the Purcells, and the resort's large grizzly refuge on the way.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2350
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "rafting",
+     "name": "Rafting the Kicking Horse River",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Glacier-fed white water through the canyon, one of the best rafting rivers in Canada.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Kicking Horse River"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "skybridge",
+     "name": "Golden Skybridge",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Two suspension bridges 130 m above a canyon and its waterfall.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "nordic",
+     "name": "Cross-country skiing at Dawn Mountain",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Groomed Nordic trails in the forest at the foot of Kicking Horse.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "town",
+     "name": "The timber bridge and the river town",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A railway town on the Columbia and the Kicking Horse, with a timber-frame footbridge built by volunteers.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-mount-revelstoke-national-park",
+   "names": [
+    "Revelstoke",
+    "Mount Revelstoke National Park",
+    "Mount Revelstoke",
+    "Rogers Pass",
+    "Glacier National Park"
+   ],
+   "country": "CA",
+   "lat": 50.998,
+   "lon": -118.196,
+   "radius_km": 70,
+   "season": "Deep snow in winter (the ski hill gets 10-18 m a year), warm summers in the valley at 450 m; the Meadows in the Sky road to the summit opens about July to September.",
+   "sleep": "Revelstoke town, on the Columbia River.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/bc/revelstoke",
+    "https://en.wikivoyage.org/wiki/Revelstoke",
+    "https://en.wikipedia.org/wiki/Revelstoke_Mountain_Resort",
+    "https://en.wikipedia.org/wiki/Rogers_Pass_(British_Columbia)"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ski",
+     "name": "Skiing Revelstoke Mountain Resort",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The longest lift-served vertical in North America, 1,713 m, and deep powder.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+"
+    },
+    {
+     "id": "cat-ski",
+     "name": "Cat-skiing in the Selkirks",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "any",
+     "best": "",
+     "book": "Book months ahead",
+     "why": "A snowcat into untracked powder in the mountains around Revelstoke, with a guide.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "no",
+     "needs": "guide"
+    },
+    {
+     "id": "meadows",
+     "name": "Meadows in the Sky",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A road up to the summit of Mount Revelstoke and short walks through alpine flowers, best late July and August.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1938
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "cedars",
+     "name": "Giant Cedars Boardwalk",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A boardwalk in an inland rainforest of 500-year-old western red cedars.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 550
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "rogers",
+     "name": "Rogers Pass and Glacier National Park",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The pass where the railway crossed the Selkirks in 1885, glaciers above and walks along the abandoned rails.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1330
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Rogers Pass"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 2,
+      "history": 4,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "railway",
+     "name": "Revelstoke Railway Museum",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The story of the railway over the Rockies and the Selkirks, with a steam locomotive and a business car.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-jasper",
+   "names": [
+    "Jasper",
+    "Jasper National Park",
+    "Columbia Icefield",
+    "Athabasca Glacier",
+    "Maligne Lake"
+   ],
+   "country": "CA",
+   "lat": 52.877,
+   "lon": -118.08,
+   "radius_km": 110,
+   "season": "Summer 22 °C in town at 1,060 m, near freezing at the Icefield; winters long and cold. The Maligne Lake cruise runs about June to early October, Edith Cavell road mid-June to mid-October. Part of the town and forest burned in the July 2024 wildfire; check Parks Canada for closed trails.",
+   "sleep": "Jasper town; cabins along the Athabasca river.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/ab/jasper",
+    "https://en.wikivoyage.org/wiki/Jasper_National_Park",
+    "https://en.wikipedia.org/wiki/Columbia_Icefield",
+    "https://en.wikipedia.org/wiki/Maligne_Lake",
+    "https://en.wikipedia.org/wiki/2024_Jasper_wildfire"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "maligne",
+     "name": "Maligne Lake and the boat to Spirit Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Cruise tickets online in summer",
+     "why": "The largest lake of the Rockies, its boat to the islet under the peaks, and moose and bears on the road.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Maligne Lake",
+      "Spirit Island"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "icefield",
+     "name": "The Columbia Icefield and the Athabasca Glacier",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Ice Explorer and Skywalk tickets",
+     "why": "Down the Icefields Parkway to the glacier's toe, a ride onto the ice and the glass Skywalk over the Sunwapta valley.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Athabasca Glacier",
+      "Columbia Icefield",
+      "Athabasca Falls",
+      "Sunwapta Falls"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "cavell",
+     "name": "Mount Edith Cavell and Cavell Meadows",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Under the north face and its Angel Glacier, then up to alpine meadows in flower in July and August.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2300
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Mount Edith Cavell"
+     ],
+     "trail": "ca-osm-16463023",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "canyon",
+     "name": "Maligne Canyon",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Bridges over a slot canyon 50 m deep; in winter guided walks go down onto the frozen creek between ice falls.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1150
+     },
+     "sights": [
+      "Maligne Canyon"
+     ],
+     "trail": "ca-osm-16336048",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "robson",
+     "name": "Mount Robson and Kinney Lake",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "An hour west to the highest peak of the Canadian Rockies (3,954 m) and the forest trail to Kinney Lake.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1000
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Mount Robson"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "miette",
+     "name": "Miette Hot Springs",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The hottest springs of the Canadian Rockies, in pools at the end of a mountain road.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Miette Hot Springs"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Marmot Basin",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Jasper's ski hill, quiet and uncrowded, from about late November to early May.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "pyramid",
+     "name": "Pyramid Lake at dusk",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A lake and its little island 7 km above the town, under Pyramid Mountain, with elk on the road at dusk.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1180
+     },
+     "sights": [
+      "Pyramid Lake"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-wells-gray-provincial-park",
+   "names": [
+    "Wells Gray Provincial Park",
+    "Wells Gray",
+    "Clearwater"
+   ],
+   "country": "CA",
+   "lat": 51.65,
+   "lon": -120.04,
+   "radius_km": 70,
+   "season": "Hot summers in the North Thompson valley; the falls are fullest in May and June. The park road is paved to Helmcken Falls; Clearwater Lake road is gravel beyond.",
+   "sleep": "Clearwater, at the park's gate.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Wells_Gray_Provincial_Park",
+    "https://en.wikipedia.org/wiki/Wells_Gray_Provincial_Park",
+    "https://en.wikipedia.org/wiki/Helmcken_Falls"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "helmcken",
+     "name": "Helmcken Falls",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The fourth highest waterfall in Canada, 141 m into a bowl of lava rock; in winter a cone of ice grows below it.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 700
+     },
+     "sights": [
+      "Helmcken Falls"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "falls",
+     "name": "Dawson, Moul and Spahats falls",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A day of waterfalls on old lava flows; at Moul Falls the path goes behind the curtain of water.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 900
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "trophy",
+     "name": "Trophy Meadows",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Subalpine meadows that are one of BC's great wildflower shows, late July to mid-August.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2000
+     },
+     "months": [
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "canoe",
+     "name": "Canoe on Clearwater Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A long wild lake at the end of the road, with canoes for hire.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "ca-waterton-lakes-national-park",
+   "names": [
+    "Waterton Lakes National Park",
+    "Waterton",
+    "Waterton Park"
+   ],
+   "country": "CA",
+   "lat": 49.05,
+   "lon": -113.91,
+   "radius_km": 30,
+   "season": "Where the prairie meets the mountains, windy; the village is open from May to October and mostly closed in winter. The 2017 Kenow fire burned much of the park; the trails have reopened.",
+   "sleep": "Waterton Park village on the lake.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/ab/waterton",
+    "https://en.wikivoyage.org/wiki/Waterton_Lakes_National_Park",
+    "https://en.wikipedia.org/wiki/Waterton_Lakes_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cruise",
+     "name": "The boat down Upper Waterton Lake",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A cruise into Montana between mountain walls, past the Prince of Wales hotel on its bluff.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "crypt",
+     "name": "Crypt Lake",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "The water taxi to the trailhead",
+     "why": "A boat across the lake, then a climb past waterfalls, a ladder and a tunnel to a hanging lake on the border.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1950
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "bears-hump",
+     "name": "Bear's Hump",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A short steep climb to the view over the village and the lakes.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1520
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "red-rock",
+     "name": "Red Rock Canyon",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A small canyon of red and green rock, and bears and elk on the road in.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1500
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Red Rock Canyon, Waterton"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-kelowna",
+   "names": [
+    "Kelowna",
+    "Okanagan",
+    "Okanagan Valley"
+   ],
+   "country": "CA",
+   "lat": 49.888,
+   "lon": -119.496,
+   "radius_km": 40,
+   "season": "Canada's hot dry valley, 29 °C in July, warm lake water in July and August; mild winters by the lake, snow at Big White from late November to April.",
+   "sleep": "Kelowna downtown by the lake, or West Kelowna among the vineyards.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Kelowna",
+    "https://en.wikipedia.org/wiki/Okanagan",
+    "https://en.wikipedia.org/wiki/Kettle_Valley_Railway",
+    "https://en.wikipedia.org/wiki/Big_White_Ski_Resort"
+   ],
+   "nights": [
+    1,
+    2,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "wine",
+     "name": "Okanagan wineries",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Dozens of wineries on the benches over Okanagan Lake, with tastings and lunch among the vines.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "no",
+     "needs": "transfer"
+    },
+    {
+     "id": "myra",
+     "name": "Myra Canyon trestles by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The Kettle Valley Railway's 18 wooden trestles and two tunnels on a cliff above the city.",
+     "act": {
+      "type": "cycling",
+      "difficulty": "easy"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "lake",
+     "name": "Beaches on Okanagan Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "City beaches and paddleboards on the warmest big lake in BC.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      7,
+      8
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Big White",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Dry 'champagne powder' and a ski-in village, an hour from Kelowna.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "ca-vancouver",
+   "names": [
+    "Vancouver",
+    "North Vancouver"
+   ],
+   "country": "CA",
+   "lat": 49.283,
+   "lon": -123.121,
+   "radius_km": 25,
+   "season": "Mild and wet: dry sunny summers (22 °C), grey rainy winters around 5 °C with snow on the North Shore mountains.",
+   "sleep": "Downtown, the West End by Stanley Park, or Gastown.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Vancouver",
+    "https://en.wikipedia.org/wiki/Stanley_Park",
+    "https://en.wikipedia.org/wiki/Museum_of_Anthropology_at_UBC",
+    "https://en.wikipedia.org/wiki/Grouse_Grind"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "seawall",
+     "name": "Stanley Park by the seawall",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Around the park on foot or by bike, past the totem poles of Brockton Point, under the Lions Gate Bridge to the beaches.",
+     "act": {
+      "type": "cycling",
+      "difficulty": "easy"
+     },
+     "sights": [
+      "Stanley Park"
+     ],
+     "trail": "ca-city-vancouver-2",
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "granville",
+     "name": "Granville Island and Gastown",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The public market under the bridge, a little ferry across False Creek, and the old town's steam clock.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Granville Island",
+      "Gastown",
+      "Gastown Steam Clock"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "moa",
+     "name": "Museum of Anthropology at UBC",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Haida poles and the art of the Northwest Coast nations in Arthur Erickson's glass hall.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 5,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "museum",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "capilano",
+     "name": "Capilano Suspension Bridge",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A bridge 70 m over a canyon of rainforest, treetop walkways, and lights in winter.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Capilano Suspension Bridge"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "grouse",
+     "name": "The Grouse Grind",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "'Mother Nature's Stairmaster': 853 m straight up the forest to the chalet; the Skyride takes you back down.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1128
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 3,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing the North Shore mountains",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Cypress, Grouse and Seymour, twenty minutes from downtown, with night skiing over the city lights.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-whistler",
+   "names": [
+    "Whistler",
+    "Whistler Blackcomb",
+    "Squamish",
+    "Pemberton"
+   ],
+   "country": "CA",
+   "lat": 50.12,
+   "lon": -122.95,
+   "radius_km": 50,
+   "season": "Snow from late November to April in the village (670 m); summers warm, 25 °C, cool on the peaks. The ski season runs about late November to April.",
+   "sleep": "Whistler Village; Squamish for less.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Whistler",
+    "https://en.wikipedia.org/wiki/Whistler_Blackcomb",
+    "https://en.wikipedia.org/wiki/Peak_2_Peak_Gondola",
+    "https://en.wikipedia.org/wiki/Joffre_Lakes_Provincial_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    7
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "ski",
+     "name": "Skiing Whistler Mountain",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Lift tickets online, cheaper ahead",
+     "why": "Half of the largest ski area in North America: the alpine bowls of Whistler, from the village gondola.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "blackcomb",
+     "name": "Skiing Blackcomb by the Peak 2 Peak",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Across the Peak 2 Peak gondola to Blackcomb, its glaciers and the long run down the Blackcomb Glacier.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "peak2peak",
+     "name": "The Peak 2 Peak gondola and the alpine trails",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up Whistler, across 4.4 km to Blackcomb 436 m above the valley floor, and walks among alpine lakes.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2180
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "joffre",
+     "name": "Joffre Lakes",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "Free BC Parks day-use pass; closed on some days for the Líl̓wat and N'Quatqua",
+     "why": "Three glacier-blue lakes stepping up under the Matier Glacier, north of Pemberton.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1600
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Joffre Lakes"
+     ],
+     "trail": "ca-osm-6035636",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "garibaldi",
+     "name": "Garibaldi Lake",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "Free BC Parks day-use pass",
+     "why": "Nine kilometres up through the forest to a turquoise lake under glaciers and the Black Tusk.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1500
+     },
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+",
+     "needs": "car"
+    },
+    {
+     "id": "sea-to-sky",
+     "name": "Sea to Sky Gondola at Squamish",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up from Howe Sound to 885 m, a suspension bridge and walks over the fjord, with Shannon Falls at the bottom.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 885
+     },
+     "sights": [
+      "Sea to Sky Highway"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "spa",
+     "name": "Scandinave Spa",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Hot pools, saunas and cold plunges in the forest, in silence.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$$",
+     "kids": "no"
+    },
+    {
+     "id": "audain",
+     "name": "Audain Art Museum",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "BC art from Emily Carr to Haida masks, in a building on stilts in the forest.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-victoria",
+   "names": [
+    "Victoria",
+    "Victoria BC"
+   ],
+   "country": "CA",
+   "lat": 48.43,
+   "lon": -123.37,
+   "radius_km": 30,
+   "season": "The mildest city in Canada, dry summers (22 °C) and wet winters near 6 °C; orcas and humpbacks from April to October.",
+   "sleep": "Around the Inner Harbour or James Bay.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Victoria_(British_Columbia)",
+    "https://en.wikipedia.org/wiki/Butchart_Gardens",
+    "https://en.wikipedia.org/wiki/Royal_BC_Museum"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "harbour",
+     "name": "Inner Harbour, the Parliament and the Royal BC Museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Seaplanes and water taxis in front of the Empress and the lit-up Parliament, and the museum of BC's nations and nature.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 4,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "whales",
+     "name": "Whale watching in the Salish Sea",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book a day or two ahead in summer",
+     "why": "Orcas, humpbacks and sea lions among the islands, from April to October.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "butchart",
+     "name": "Butchart Gardens",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A sunken garden in an old quarry, roses in summer, lights in December.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Butchart Gardens"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "coast",
+     "name": "Dallas Road and Fisherman's Wharf",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The cliff path over the strait with the Olympic Mountains across, ending with fish and chips among the floating homes.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 30
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-tofino",
+   "names": [
+    "Tofino",
+    "Ucluelet",
+    "Pacific Rim National Park Reserve",
+    "Long Beach"
+   ],
+   "country": "CA",
+   "lat": 49.15,
+   "lon": -125.9,
+   "radius_km": 45,
+   "season": "Rainforest coast: cool summers (18 °C) with morning fog, very wet winters with Pacific storms from November to February; surf all year in a wetsuit.",
+   "sleep": "Tofino, or Ucluelet for less.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/bc/pacificrim",
+    "https://en.wikivoyage.org/wiki/Tofino",
+    "https://en.wikipedia.org/wiki/Pacific_Rim_National_Park_Reserve",
+    "https://en.wikipedia.org/wiki/Maquinna_Marine_Provincial_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "long-beach",
+     "name": "Long Beach and the Rainforest Trail",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Sixteen kilometres of surf beach and boardwalks among cedars a thousand years old.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "sights": [
+      "Pacific Rim National Park Reserve"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "hot-springs",
+     "name": "Hot Springs Cove",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Boat or floatplane tour",
+     "why": "A boat or floatplane up the coast, a boardwalk through the forest, and hot pools in the rocks by the surf.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "thermal"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "whales",
+     "name": "Whales and bears by boat",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Grey whales feeding in the sounds from March to October, and black bears turning stones on the shore at low tide.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "surf",
+     "name": "A surf lesson at Chesterman or Cox Bay",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Canada's surf town, with schools and wetsuits for hire.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    },
+    {
+     "id": "wild-pacific",
+     "name": "The Wild Pacific Trail at Ucluelet",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A cliff path past the Amphitrite lighthouse, with storm waves in winter.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "sights": [
+      "Ucluelet"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "storms",
+     "name": "Storm watching",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The winter swells breaking on the rocks, from a beach or the window of a lodge.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 30
+     },
+     "months": [
+      11,
+      12,
+      1,
+      2
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-campbell-river",
+   "names": [
+    "Campbell River",
+    "Quadra Island",
+    "Strathcona Provincial Park"
+   ],
+   "country": "CA",
+   "lat": 50.039,
+   "lon": -125.317,
+   "radius_km": 60,
+   "season": "Mild, wetter in winter; salmon run in late summer and autumn, bear tours from late August to October.",
+   "sleep": "Campbell River on the strait, or Quadra Island across.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Campbell_River",
+    "https://en.wikipedia.org/wiki/Campbell_River,_British_Columbia",
+    "https://en.wikipedia.org/wiki/Strathcona_Provincial_Park",
+    "https://en.wikipedia.org/wiki/Elk_Falls_Provincial_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "grizzlies",
+     "name": "Grizzly bears in the coastal inlets",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Book weeks ahead: few seats each day",
+     "why": "A boat up the mainland inlets to watch grizzlies catching salmon, late August to mid-October.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "whales",
+     "name": "Whales of Discovery Passage",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Humpbacks, orcas and dolphins in the narrow passages between the islands.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "elk-falls",
+     "name": "Elk Falls suspension bridge",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A bridge 60 m over the canyon in front of the falls.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 150
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "strathcona",
+     "name": "Strathcona Provincial Park",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "BC's oldest park, lakes and waterfalls inland and the subalpine Paradise Meadows.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1100
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-gibsons",
+   "names": [
+    "Gibsons",
+    "Sunshine Coast",
+    "Sechelt",
+    "Egmont"
+   ],
+   "country": "CA",
+   "lat": 49.3998,
+   "lon": -123.5068,
+   "radius_km": 70,
+   "season": "A sheltered coast reached only by ferry, sunny summers, mild wet winters.",
+   "sleep": "Gibsons or Sechelt.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Sunshine_Coast_(British_Columbia)",
+    "https://en.wikipedia.org/wiki/Skookumchuck_Narrows_Provincial_Park",
+    "https://en.wikipedia.org/wiki/Princess_Louisa_Inlet"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "skookumchuck",
+     "name": "The Skookumchuck tidal rapids",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A forest walk to narrows where the tide runs at up to 30 km/h in standing waves; go at the peak of the tide table.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "princess-louisa",
+     "name": "Princess Louisa Inlet and Chatterbox Falls",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Boat tours from Egmont",
+     "why": "A boat through Jervis Inlet into a fjord of granite walls and waterfalls.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "harbour",
+     "name": "Gibsons harbour",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A fishing harbour with Molly's Reach of the TV series 'The Beachcombers' and the floating homes.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "kayak",
+     "name": "Kayaking Sechelt Inlet",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Sheltered water and small marine parks, with kayaks for hire in Porpoise Bay.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "ca-toronto",
+   "names": [
+    "Toronto"
+   ],
+   "country": "CA",
+   "lat": 43.65,
+   "lon": -79.38,
+   "radius_km": 25,
+   "season": "Hot humid summers (27 °C), cold snowy winters around -5 °C; the hockey season runs October to April.",
+   "sleep": "Downtown, King West or near the Distillery District.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Toronto",
+    "https://en.wikipedia.org/wiki/CN_Tower",
+    "https://en.wikipedia.org/wiki/Royal_Ontario_Museum",
+    "https://en.wikipedia.org/wiki/Toronto_Islands"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cn-tower",
+     "name": "The CN Tower",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Timed tickets online",
+     "why": "The 553 m tower, its glass floor and the lake from above; the EdgeWalk on the outside for the brave.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "CN Tower"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "market",
+     "name": "St. Lawrence Market and the Distillery District",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A peameal bacon sandwich in the old market, then Victorian distillery buildings turned into cafés and galleries.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "St. Lawrence Market"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "rom",
+     "name": "Royal Ontario Museum",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Dinosaurs, totem poles and world cultures under Libeskind's crystal.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "islands",
+     "name": "The Toronto Islands by ferry",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A ten-minute ferry to car-free islands, beaches and the skyline from the water.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 80
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 5,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "hockey",
+     "name": "A Maple Leafs game",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Tickets well ahead",
+     "why": "Ice hockey in the city of the Hockey Hall of Fame, October to April.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-niagara-falls",
+   "names": [
+    "Niagara Falls",
+    "Niagara-on-the-Lake",
+    "Niagara"
+   ],
+   "country": "CA",
+   "lat": 43.08,
+   "lon": -79.08,
+   "radius_km": 30,
+   "season": "Hot summers, mist and ice in winter; the boats run from about April to November, the Winter Festival of Lights from November to January.",
+   "sleep": "Niagara-on-the-Lake for the town, Niagara Falls for the view.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Niagara_Falls_(Ontario)",
+    "https://en.wikipedia.org/wiki/Niagara_Falls",
+    "https://en.wikipedia.org/wiki/Niagara-on-the-Lake"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "boat",
+     "name": "The boat into the Horseshoe Falls",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Into the mist at the foot of the falls in a poncho.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "sights": [
+      "Niagara Falls"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "behind",
+     "name": "Journey Behind the Falls",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Tunnels through the rock to portals behind the Horseshoe Falls, open all year.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "notl",
+     "name": "Niagara-on-the-Lake and the icewine wineries",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A 19th-century town on the lake, the Shaw Festival theatre and the vineyards that make icewine.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Niagara-on-the-Lake"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 5,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "no",
+     "needs": "car"
+    },
+    {
+     "id": "glen",
+     "name": "Niagara Glen",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Trails down into the gorge among boulders and old forest, to the river's rapids.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 180
+     },
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "lights",
+     "name": "Winter Festival of Lights",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The falls lit in colour and light displays along the river, November to January.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      11,
+      12,
+      1
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-algonquin-provincial-park",
+   "names": [
+    "Algonquin Provincial Park",
+    "Algonquin",
+    "Algonquin Park"
+   ],
+   "country": "CA",
+   "lat": 45.58,
+   "lon": -78.38,
+   "radius_km": 50,
+   "season": "Lakes and maple forest; blackflies in May and June, the maples turn red from late September to early October; snowy winters.",
+   "sleep": "Lodges and cabins on Highway 60, or Huntsville.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Algonquin_Provincial_Park",
+    "https://en.wikipedia.org/wiki/Algonquin_Provincial_Park",
+    "https://www.algonquinpark.on.ca/"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "canoe",
+     "name": "A canoe day on the lakes",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Paddle and portage between lakes from Canoe Lake, where Tom Thomson painted, looking for loons and moose.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "colours",
+     "name": "The Lookout and Track and Tower trails",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "Late September to early October",
+     "book": "",
+     "why": "Short trails to lookouts over an ocean of maples, red and gold from late September.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 500
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ca-osm-19744559",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "moose",
+     "name": "Moose along Highway 60",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Moose come to the roadside pools at dawn and dusk, most in May and June.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "wolf-howl",
+     "name": "The public wolf howl",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "In August, when a pack is near the road, park staff lead the crowd in howling for the wolves to answer.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      8
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "night",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Cross-country skiing and snowshoeing",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Groomed ski trails at Fen Lake and Leaf Lake in the snowy winter forest.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-ottawa",
+   "names": [
+    "Ottawa",
+    "Gatineau"
+   ],
+   "country": "CA",
+   "lat": 45.42,
+   "lon": -75.7,
+   "radius_km": 25,
+   "season": "Hot summers, among the coldest capitals in the world in winter; the Rideau Canal Skateway opens when the ice allows, usually January and February; Winterlude is in February.",
+   "sleep": "Downtown or the ByWard Market.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Ottawa",
+    "https://en.wikipedia.org/wiki/Rideau_Canal_Skateway",
+    "https://en.wikipedia.org/wiki/Canadian_Museum_of_History",
+    "https://en.wikipedia.org/wiki/Gatineau_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "parliament",
+     "name": "Parliament Hill and the ByWard Market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The Gothic parliament over the river (the Centre Block is closed for works), the Changing of the Guard in summer, then the market.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Parliament Hill"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "museums",
+     "name": "The Museum of History and the National Gallery",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "First Nations poles in the Grand Hall across the river, and the gallery under the giant spider Maman.",
+     "act": {
+      "type": "city"
+     },
+     "trail": "ca-city-ottawa-1",
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "skateway",
+     "name": "Skating the Rideau Canal",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Kilometres of frozen canal through the city, with BeaverTails pastry at the huts, when the ice is thick enough.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      1,
+      2
+     ],
+     "sights": [
+      "Rideau Canal"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure",
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "gatineau",
+     "name": "Gatineau Park",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Fifteen minutes from Parliament: lakes, the Champlain Lookout and maple forest red in October.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 350
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ca-osm-9423919",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "winterlude",
+     "name": "Winterlude",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Ice sculptures and snow playgrounds on the first three weekends of February.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      2
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-parc-omega",
+   "names": [
+    "Parc Omega",
+    "Montebello"
+   ],
+   "country": "CA",
+   "lat": 45.661,
+   "lon": -74.983,
+   "radius_km": 20,
+   "season": "Ottawa valley weather: hot summers, deep snow from December to March.",
+   "sleep": "Montebello: the log Château or the village.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Parc_Omega",
+    "https://en.wikipedia.org/wiki/Ch%C3%A2teau_Montebello",
+    "https://en.wikipedia.org/wiki/Louis-Joseph_Papineau"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "drive",
+     "name": "The Parc Omega wildlife drive",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A road through the forest where elk, bison and deer come to the car window, and wolves behind a fence.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "chateau",
+     "name": "Château Montebello",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Said to be the largest log building in the world (1930), with snowshoeing and skating around it in winter.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "papineau",
+     "name": "Manoir-Papineau",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The manor of Louis-Joseph Papineau, leader of the 1837 rebellion, on the river.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-thousand-islands",
+   "names": [
+    "Thousand Islands",
+    "Gananoque",
+    "Kingston"
+   ],
+   "country": "CA",
+   "lat": 44.33,
+   "lon": -76.16,
+   "radius_km": 40,
+   "season": "Lake Ontario's outflow, warm summers; the boats run from about May to October.",
+   "sleep": "Gananoque on the river, or Kingston.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Thousand_Islands",
+    "https://en.wikipedia.org/wiki/Thousand_Islands",
+    "https://en.wikipedia.org/wiki/Fort_Henry,_Ontario"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cruise",
+     "name": "A cruise through the islands",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Summer houses on rocks just big enough for them, and Boldt Castle on the US side (passport to land).",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "fort-henry",
+     "name": "Kingston and Fort Henry",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Canada's first capital in limestone, and the fort's sunset ceremony on summer evenings.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "city"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "bike",
+     "name": "The Thousand Islands Parkway path",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A flat bike path along the river from Gananoque, past the islands.",
+     "act": {
+      "type": "cycling",
+      "difficulty": "easy"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-montreal",
+   "names": [
+    "Montreal",
+    "Montréal"
+   ],
+   "country": "CA",
+   "lat": 45.5,
+   "lon": -73.57,
+   "radius_km": 25,
+   "season": "Hot summers full of festivals (Jazz Festival late June to early July), very cold snowy winters with Igloofest in January and February.",
+   "sleep": "Old Montreal or the Plateau.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Montreal",
+    "https://en.wikipedia.org/wiki/Notre-Dame_Basilica_(Montreal)",
+    "https://en.wikipedia.org/wiki/Mount_Royal",
+    "https://en.wikipedia.org/wiki/Montreal_International_Jazz_Festival"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old",
+     "name": "Old Montreal and Notre-Dame Basilica",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Cobbled streets of New France, the blue and gold basilica and the Old Port on the river.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Old Montreal",
+      "Notre-Dame Basilica, Montreal",
+      "Old Port of Montreal"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mount-royal",
+     "name": "Mount Royal",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up Olmsted's park to the Kondiaronk lookout over downtown; skating on Beaver Lake in winter.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 233
+     },
+     "sights": [
+      "Mount Royal"
+     ],
+     "trail": "ca-city-montreal-1",
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "food",
+     "name": "Bagels, smoked meat and Jean-Talon Market",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Wood-fired bagels in Mile End, a smoked meat sandwich, and the farmers' market of Little Italy.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "city"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mbam",
+     "name": "Montreal Museum of Fine Arts and the underground city",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Canadian and Quebec painting, then the 30 km of tunnels and malls that keep the city warm in winter.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "jazz",
+     "name": "The Jazz Festival",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Free outdoor concerts across the Quartier des Spectacles, late June to early July.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "igloofest",
+     "name": "Igloofest",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Electronic music outdoors in the Old Port at -20 °C, in snowsuits, January and February.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      1,
+      2
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 0,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "no"
+    }
+   ]
+  },
+  {
+   "id": "ca-quebec-city",
+   "names": [
+    "Quebec City",
+    "Québec",
+    "Old Quebec"
+   ],
+   "country": "CA",
+   "lat": 46.81,
+   "lon": -71.21,
+   "radius_km": 30,
+   "season": "Warm summers, long snowy winters (-12 °C in January); the Winter Carnival runs late January to mid-February, the ice hotel January to March.",
+   "sleep": "Inside the walls of Old Quebec.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Quebec_City",
+    "https://en.wikipedia.org/wiki/Old_Quebec",
+    "https://en.wikipedia.org/wiki/Montmorency_Falls",
+    "https://en.wikipedia.org/wiki/Quebec_Winter_Carnival"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old",
+     "name": "Old Quebec: Château Frontenac and Petit-Champlain",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The only walled city north of Mexico, the castle-hotel over Dufferin Terrace and the funicular down to the old lower town.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Citadelle of Quebec"
+     ],
+     "trail": "ca-city-quebec-city-1",
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 5,
+      "relax": 3,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "plains",
+     "name": "The Plains of Abraham and the Citadelle",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 1759 battlefield turned park, and the star fort where the Royal 22e Régiment changes the guard in summer.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Plains of Abraham",
+      "Citadelle of Quebec"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "montmorency",
+     "name": "Montmorency Falls",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A waterfall 83 m high, 30 m higher than Niagara, a bridge over it and a cone of ice at its foot in winter.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "sights": [
+      "Montmorency Falls"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "orleans",
+     "name": "Île d'Orléans",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "An island of farms across the bridge: strawberries, cider, cheese and old stone churches.",
+     "act": {
+      "type": "cycling",
+      "difficulty": "easy"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Île d'Orléans"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 3,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "carnival",
+     "name": "The Winter Carnival",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Bonhomme's ice palace, night parades, canoe races across the frozen river and snow baths.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      2
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 5,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "ice-hotel",
+     "name": "The ice hotel",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Rooms, a chapel and a bar carved from snow and ice, rebuilt every winter, January to March.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Mont-Sainte-Anne",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Slopes over the St. Lawrence 40 minutes from the city.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "ca-charlevoix",
+   "names": [
+    "Charlevoix",
+    "Baie-Saint-Paul",
+    "La Malbaie"
+   ],
+   "country": "CA",
+   "lat": 47.44,
+   "lon": -70.5,
+   "radius_km": 50,
+   "season": "Mountains on the St. Lawrence; warm summers, colours in late September and early October, snowy winters with skiing over the river.",
+   "sleep": "Baie-Saint-Paul, or La Malbaie.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Charlevoix",
+    "https://en.wikipedia.org/wiki/Hautes-Gorges-de-la-Rivi%C3%A8re-Malbaie_National_Park",
+    "https://en.wikipedia.org/wiki/Le_Massif"
+   ],
+   "nights": [
+    1,
+    2,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "gorges",
+     "name": "Hautes-Gorges-de-la-Rivière-Malbaie",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A river between some of the highest rock walls in eastern Canada, by riverboat or canoe.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "acropole",
+     "name": "L'Acropole-des-Draveurs",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A steep 800 m climb to the summit over the gorges.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1050
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 5,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+",
+     "needs": "car"
+    },
+    {
+     "id": "bsp",
+     "name": "Baie-Saint-Paul and the flavour route",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A village of painters' galleries, then cheese, lamb and cider farms along the river.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "food",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "coudres",
+     "name": "Isle-aux-Coudres by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A free ferry to an island of mills and farms, ridden in a 23 km loop.",
+     "act": {
+      "type": "cycling",
+      "difficulty": "easy"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "dogsled",
+     "name": "Dog sledding in the Charlevoix forest",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Driving your own team of huskies through snowy forest, with a guide.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "12+",
+     "needs": "guide"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Le Massif",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The biggest vertical east of the Rockies, with slopes that seem to end in the frozen St. Lawrence.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-tadoussac",
+   "names": [
+    "Tadoussac",
+    "Saguenay Fjord",
+    "Saguenay"
+   ],
+   "country": "CA",
+   "lat": 48.14,
+   "lon": -69.72,
+   "radius_km": 40,
+   "season": "Cool even in summer on the water (5 °C in the boats' wind); whale cruises from about June to October; the village sleeps in winter.",
+   "sleep": "Tadoussac village on the bay.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Tadoussac",
+    "https://en.wikipedia.org/wiki/Saguenay%E2%80%93St._Lawrence_Marine_Park",
+    "https://en.wikipedia.org/wiki/Saguenay_Fjord_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "whales",
+     "name": "Whale cruise at the mouth of the Saguenay",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Big boats or Zodiacs; book a day ahead in summer",
+     "why": "Minke, fin and humpback whales, sometimes the blue whale, and the white belugas of the St. Lawrence.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Saguenay Fjord"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "islet",
+     "name": "Pointe-de-l'Islet and the dunes",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A short path round the point, where belugas and minkes feed close to the rocks, and the sand dunes beyond.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "fjord",
+     "name": "The Saguenay fjord and Sainte-Rose-du-Nord",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Up the fjord between cliffs to one of Quebec's prettiest villages.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "sights": [
+      "Sainte-Rose-du-Nord"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-perce",
+   "names": [
+    "Percé",
+    "Gaspé",
+    "Gaspésie",
+    "Forillon"
+   ],
+   "country": "CA",
+   "lat": 48.52,
+   "lon": -64.21,
+   "radius_km": 70,
+   "season": "The end of the Gaspé peninsula: cool summers (21 °C), the island's gannets from June to October; little opens from November to May.",
+   "sleep": "Percé village, facing the rock.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Perc%C3%A9",
+    "https://en.wikipedia.org/wiki/Bonaventure_Island",
+    "https://en.wikipedia.org/wiki/Forillon_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "bonaventure",
+     "name": "Bonaventure Island and its gannets",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A boat round Percé Rock to the island, then a walk to one of the largest colonies of northern gannets in the world.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 120
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Bonaventure Island"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "rock",
+     "name": "Percé Rock and the glass platform",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The arched rock in the sea, walked to at low tide, and a glass platform on the cliffs of the geopark.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Percé"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "forillon",
+     "name": "Forillon and Land's End",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The tip of the peninsula: seals, whales offshore and a trail to the Cap-Gaspé lighthouse.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 150
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Forillon National Park"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "ca-halifax",
+   "names": [
+    "Halifax",
+    "Peggy's Cove"
+   ],
+   "country": "CA",
+   "lat": 44.65,
+   "lon": -63.57,
+   "radius_km": 45,
+   "season": "Mild sea summers (23 °C) and fog, snowy wet winters around -4 °C; hurricane remnants possible from August to October.",
+   "sleep": "Downtown by the waterfront.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Halifax",
+    "https://en.wikipedia.org/wiki/Halifax_Citadel_National_Historic_Site",
+    "https://en.wikipedia.org/wiki/Peggy%27s_Cove",
+    "https://en.wikipedia.org/wiki/Canadian_Museum_of_Immigration_at_Pier_21"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "peggys",
+     "name": "Peggy's Cove",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A fishing village and its lighthouse on bare granite over the Atlantic; keep off the dark wet rocks.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 30
+     },
+     "sights": [
+      "Peggy's Cove"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "waterfront",
+     "name": "The waterfront, the Citadel and Pier 21",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The boardwalk, the star fort over the harbour and its noon gun, and the pier where a million immigrants landed.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "maritime",
+     "name": "Maritime Museum of the Atlantic",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Titanic's wreckage and the 1917 Halifax Explosion, in the city that buried Titanic's dead.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "lobster",
+     "name": "Lobster and the Keith's brewery",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Lobster on the waterfront and a pint in Alexander Keith's brewery of 1820.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "night"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "gardens",
+     "name": "Halifax Public Gardens",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "A Victorian garden of 1867 with its bandstand and ponds, May to November.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-lunenburg",
+   "names": [
+    "Lunenburg",
+    "Mahone Bay",
+    "Blue Rocks"
+   ],
+   "country": "CA",
+   "lat": 44.38,
+   "lon": -64.32,
+   "radius_km": 25,
+   "season": "The South Shore: mild summers, quiet winters when the museum and many inns close.",
+   "sleep": "In the old town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Lunenburg",
+    "https://en.wikipedia.org/wiki/Old_Town_Lunenburg",
+    "https://en.wikipedia.org/wiki/Fisheries_Museum_of_the_Atlantic",
+    "https://en.wikipedia.org/wiki/Bluenose_II"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-town",
+     "name": "Old Town Lunenburg",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A UNESCO town of painted wooden houses laid out in 1753, the home port of the schooner Bluenose II.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 4,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "culture"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "fisheries",
+     "name": "Fisheries Museum of the Atlantic",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The fishing schooners on the wharf and the story of the Grand Banks.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "blue-rocks",
+     "name": "Blue Rocks",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A hamlet of fishing sheds on slate ledges, the best seen by kayak in summer.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 20
+     },
+     "sights": [
+      "Blue Rocks"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "boat"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "mahone",
+     "name": "Mahone Bay's three churches",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Three churches side by side on the water, and cafés along the bay.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-annapolis-royal",
+   "names": [
+    "Annapolis Royal",
+    "Kejimkujik",
+    "Digby"
+   ],
+   "country": "CA",
+   "lat": 44.7413,
+   "lon": -65.5181,
+   "radius_km": 60,
+   "season": "The Fundy side of Nova Scotia; the historic sites and gardens open from about May to October.",
+   "sleep": "Annapolis Royal's old inns.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Annapolis_Royal",
+    "https://en.wikipedia.org/wiki/Fort_Anne",
+    "https://en.wikipedia.org/wiki/Port-Royal_National_Historic_Site",
+    "https://en.wikipedia.org/wiki/Kejimkujik_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "fort-anne",
+     "name": "Fort Anne and the town",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Canada's first national historic site, earthworks over the river, and one of the oldest towns in North America.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "port-royal",
+     "name": "Port-Royal Habitation",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A rebuilt French settlement of 1605, among the first in North America.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 5,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "keji",
+     "name": "Kejimkujik",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Canoe routes of the Mi'kmaq, petroglyphs on the lake shore and a dark sky preserve.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 3,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "whales",
+     "name": "Whales off Digby Neck",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Humpbacks and finbacks in the Bay of Fundy from Brier Island, June to October.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "gardens",
+     "name": "Annapolis Royal Historic Gardens",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Gardens through four centuries of the town's history.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 2
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-fundy-national-park",
+   "names": [
+    "Fundy National Park",
+    "Alma",
+    "Hopewell Rocks",
+    "Bay of Fundy"
+   ],
+   "country": "CA",
+   "lat": 45.6,
+   "lon": -64.95,
+   "radius_km": 50,
+   "season": "The highest tides in the world, up to 16 m; cool foggy summers. Hopewell Rocks is open from about mid-May to mid-October.",
+   "sleep": "Alma village at the park's gate.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/nb/fundy",
+    "https://en.wikivoyage.org/wiki/Fundy_National_Park",
+    "https://en.wikipedia.org/wiki/Hopewell_Rocks",
+    "https://en.wikipedia.org/wiki/Bay_of_Fundy"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "hopewell",
+     "name": "Hopewell Rocks at low and high tide",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Check the tide table",
+     "why": "Walk on the sea floor between the flowerpot rocks at low tide, then see them islands six hours later.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 30
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Hopewell Rocks"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "dickson",
+     "name": "Dickson Falls and the coastal trails",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Boardwalks through a mossy gorge to a waterfall, and cliffs over the bay.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "alma",
+     "name": "Alma's lobster and the tidal flats",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Boats sitting on the mud at low tide and lobster straight off them.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "food",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "cape-enrage",
+     "name": "Cape Enrage",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A lighthouse on cliffs over the bay, fossils on the beach at low tide.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 50
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "ca-charlottetown",
+   "names": [
+    "Charlottetown",
+    "Prince Edward Island",
+    "Cavendish"
+   ],
+   "country": "CA",
+   "lat": 46.24,
+   "lon": -63.13,
+   "radius_km": 50,
+   "season": "Gentle summers (23 °C) and the warmest sea in Atlantic Canada in August; the Wood Islands ferry runs May to December, the Confederation Bridge all year.",
+   "sleep": "Charlottetown, or a cottage near Cavendish in summer.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Prince_Edward_Island",
+    "https://en.wikipedia.org/wiki/Green_Gables",
+    "https://en.wikipedia.org/wiki/Prince_Edward_Island_National_Park",
+    "https://en.wikipedia.org/wiki/Charlottetown_Conference"
+   ],
+   "nights": [
+    2,
+    3,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "beaches",
+     "name": "The red beaches of the national park",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Red cliffs, dunes and warm shallow water at Cavendish and Brackley.",
+     "act": {
+      "type": "beach"
+     },
+     "months": [
+      7,
+      8
+     ],
+     "sights": [
+      "Prince Edward Island"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 5,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "green-gables",
+     "name": "Green Gables",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The farmhouse that inspired Anne of Green Gables, and the Haunted Wood path.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 3,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "town",
+     "name": "Charlottetown, birthplace of Confederation",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Where the 1864 conference planned Canada; red-brick streets, the harbour and Cows ice cream.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 3,
+      "relax": 4,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "lobster",
+     "name": "A lobster supper and PEI oysters",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Lobster suppers in church halls and community kitchens, and Malpeque oysters.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 4,
+      "history": 2,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "food"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "trail",
+     "name": "The Confederation Trail by bike",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The old railway across the island, flat among potato fields and harbours.",
+     "act": {
+      "type": "cycling",
+      "difficulty": "easy"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "C",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-ingonish",
+   "names": [
+    "Ingonish",
+    "Cape Breton Highlands",
+    "Cabot Trail",
+    "Cheticamp",
+    "Pleasant Bay"
+   ],
+   "country": "CA",
+   "lat": 46.64,
+   "lon": -60.39,
+   "radius_km": 70,
+   "season": "The Highlands: cool summers, fog on the coast, colours in early to mid October; snowy winters with a small ski hill.",
+   "sleep": "Ingonish, or Cheticamp on the other side.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/ns/cbreton",
+    "https://en.wikivoyage.org/wiki/Cape_Breton_Highlands_National_Park",
+    "https://en.wikipedia.org/wiki/Cabot_Trail",
+    "https://en.wikipedia.org/wiki/Celtic_Colours"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cabot",
+     "name": "Driving the Cabot Trail",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The road around the Highlands, up from the sea onto the plateau and down again; red and gold in early October.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 450
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Cabot Trail",
+      "Cape Breton Highlands National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "skyline",
+     "name": "The Skyline Trail",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A boardwalk to the headland over the Gulf, moose on the way and pilot whales below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 400
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "whales",
+     "name": "Whale watching from Pleasant Bay or Cheticamp",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "Pilot whales, minkes and dolphins close to the cliffs.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "franey",
+     "name": "Franey",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A steep climb to a lookout over Ingonish Bay and the gorge of the Clyburn.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 430
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ca-osm-8780563",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "middle-head",
+     "name": "Middle Head and Ingonish Beach",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A path out along the narrow headland past the Keltic Lodge, between the beach and the open sea.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 40
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Cape Smokey",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A small ski hill falling to the sea, when the snow is in.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "ca-baddeck",
+   "names": [
+    "Baddeck",
+    "Bras d'Or Lake",
+    "Louisbourg"
+   ],
+   "country": "CA",
+   "lat": 46.1,
+   "lon": -60.75,
+   "radius_km": 80,
+   "season": "Cape Breton's lake country, mild summers; the Celtic Colours festival in October; Louisbourg's full program in summer.",
+   "sleep": "Baddeck on the lake.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Baddeck",
+    "https://en.wikipedia.org/wiki/Alexander_Graham_Bell_National_Historic_Site",
+    "https://en.wikipedia.org/wiki/Fortress_of_Louisbourg"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "louisbourg",
+     "name": "The Fortress of Louisbourg",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A French fortress town of 1744 rebuilt in full, with soldiers, bakers and fishermen in costume.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 4,
+      "relax": 3,
+      "history": 5,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "bell",
+     "name": "Alexander Graham Bell's Baddeck",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The museum of the telephone's inventor, who summered here and built hydrofoils and kites.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "lake",
+     "name": "Sailing the Bras d'Or Lake",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "An inland sea of salt water, with bald eagles over the boat.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ceilidh",
+     "name": "A ceilidh and Gaelic music",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Fiddles and step dancing in parish halls, the Gaelic culture brought from Scotland.",
+     "act": {
+      "type": "city"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 5,
+      "relax": 4,
+      "history": 3,
+      "landscape": 1
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "night"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-ca-rocky-harbour",
+   "names": [
+    "Rocky Harbour",
+    "Gros Morne National Park",
+    "Gros Morne",
+    "Norris Point"
+   ],
+   "country": "CA",
+   "lat": 49.6,
+   "lon": -57.95,
+   "radius_km": 50,
+   "season": "Cool short summers (20 °C), fog and wind; the Western Brook Pond boat runs about June to October, Gros Morne Mountain is closed until late June. Snowy winters for skiing and snowshoes.",
+   "sleep": "Rocky Harbour or Norris Point.",
+   "sources": [
+    "https://parks.canada.ca/pn-np/nl/grosmorne",
+    "https://en.wikivoyage.org/wiki/Gros_Morne_National_Park",
+    "https://en.wikipedia.org/wiki/Western_Brook_Pond",
+    "https://en.wikipedia.org/wiki/Gros_Morne_National_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "western-brook",
+     "name": "Western Brook Pond",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "Boat tickets ahead in summer",
+     "why": "A 3 km walk over the bog, then a boat into a landlocked fjord between cliffs 600 m high.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "sights": [
+      "Gros Morne National Park"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "tablelands",
+     "name": "The Tablelands",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Bare orange rock of the Earth's mantle pushed up from the deep, the reason for the UNESCO listing.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 300
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 2,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "gros-morne",
+     "name": "Gros Morne Mountain",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "hard",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A scree gully to the 806 m plateau with caribou and ptarmigan, and the fjords below.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 806
+     },
+     "months": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "trail": "ca-osm-15976460",
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "lobster-cove",
+     "name": "Lobster Cove Head at sunset",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The lighthouse over the Gulf at the edge of Rocky Harbour.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 40
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Backcountry skiing and snowshoeing",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The park's ski trails and the Long Range in snow; Marble Mountain's ski hill is near Corner Brook.",
+     "act": {
+      "type": "ski"
+     },
+     "months": [
+      1,
+      2,
+      3
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "ca-st-johns",
+   "names": [
+    "St. John's",
+    "St Johns",
+    "Cape Spear",
+    "Witless Bay",
+    "Bay Bulls"
+   ],
+   "country": "CA",
+   "lat": 47.56,
+   "lon": -52.71,
+   "radius_km": 40,
+   "season": "Foggy, windy and cool: 20 °C in summer, wet snowy winters; icebergs mostly May and June, puffins May to August, humpbacks June to August.",
+   "sleep": "Downtown, near Water Street.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/St._John%27s",
+    "https://en.wikipedia.org/wiki/Signal_Hill,_St._John%27s",
+    "https://en.wikipedia.org/wiki/Cape_Spear",
+    "https://en.wikipedia.org/wiki/Witless_Bay_Ecological_Reserve"
+   ],
+   "nights": [
+    2,
+    4,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "signal-hill",
+     "name": "Signal Hill and the North Head trail",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Cabot Tower, where Marconi received the first transatlantic radio signal in 1901, and a cliff path down to the Battery.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 160
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 5,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "witless",
+     "name": "Puffins and whales at Witless Bay",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A boat from Bay Bulls to the largest puffin colony in North America, with humpbacks and icebergs in season.",
+     "act": {
+      "type": "boat"
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "boat",
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "cape-spear",
+     "name": "Cape Spear",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The easternmost point of North America, its 1836 lighthouse and whales offshore in summer.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 75
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "downtown",
+     "name": "Jellybean Row, George Street and a screech-in",
+     "hours": "An evening",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Painted row houses, the street with the most pubs in Canada, and kissing a cod to become an honorary Newfoundlander.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 4,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "no"
+    },
+    {
+     "id": "rooms",
+     "name": "The Rooms and Quidi Vidi",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The island's museum and gallery over the harbour, then the fishing village and brewery of Quidi Vidi.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "museum",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "east-coast-trail",
+     "name": "A day on the East Coast Trail",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Cliffs, sea stacks and the Spout, a wave-driven geyser, on a coastal path of 336 km.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 150
+     },
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    }
+   ]
+  }
+ ]
+}
