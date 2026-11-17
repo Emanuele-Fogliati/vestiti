@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="236" cy="22" r="11" fill="var(--il-sun)"/>
+<path d="M176 124L184 86L190 80L196 74L202 70L208 74L214 66L220 70L228 62L236 58L242 54L248 58L254 54L262 60L270 58L280 62L290 60L300 64V124Z" fill="var(--il-mid)"/>
+<path d="M242 54L248 58L254 54L262 60L270 58L280 62L290 60L300 64V124H258Q262 90 242 54Z" fill="var(--il-near)" opacity="0.3"/>
+<defs><clipPath id="il-ca-grizzly-ridge-m"><path d="M45 124L66 84L83 52L93 44L100 36L107 41L115 41L122 44L129 41L135 34L140 27L145 21L151 19L156 23L161 32L169 46L180 64L192 82L204 94L215 107L227 124Z"/></clipPath></defs>
+<path d="M45 124L66 84L83 52L93 44L100 36L107 41L115 41L122 44L129 41L135 34L140 27L145 21L151 19L156 23L161 32L169 46L180 64L192 82L204 94L215 107L227 124Z" fill="var(--il-mid)"/>
+<path d="M151 19L156 23L161 32L169 46L180 64L192 82L204 94L215 107L227 124H164Q165 69 151 19Z" fill="var(--il-near)" opacity="0.3" clip-path="url(#il-ca-grizzly-ridge-m)"/>
+<path d="M145 24L142 69L139 109M135 36L128 82M116 44L109 89M100 39L93 82M155 27L158 77" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35" clip-path="url(#il-ca-grizzly-ridge-m)"/>
+<path d="M70 124L92 108L120 104L150 106L178 104L200 110L214 124Z" fill="var(--il-far)"/>
+<path d="M0 126V70L16 74L31 78L48 84L62 90L74 98L86 106L94 116L98 126Z" fill="var(--il-far)"/>
+<path d="M10 90Q30 96 50 108M20 82Q40 88 60 100" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M0 160V122Q100 116 212 118Q220 122 206 128Q150 140 80 148Q30 154 0 160Z" fill="var(--il-water)"/>
+<path d="M0 200V152Q70 144 140 138Q200 132 240 124Q270 118 300 112V200Z" fill="var(--il-acc)"/>
+<path d="M60 190Q120 176 180 178Q240 180 300 170V200H60Z" fill="var(--il-obj)"/>
+<path d="M150 150Q170 144 190 146M220 138Q240 134 260 134M110 160Q130 156 150 158" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.3"/>
+<path d="M96 170Q104 160 114 166Q122 158 132 166Q140 162 146 170ZM186 160Q194 150 204 156Q212 148 222 156Q230 152 236 160ZM250 146Q258 138 266 144Q274 136 282 144Q290 140 296 148Z" fill="var(--il-leaf)"/>
+<path d="M0 200V170L12 164L26 166L38 160L52 164L62 172L70 184L74 200Z" fill="var(--il-far)"/>
+<path d="M14 172L20 184M40 168L46 182" stroke="var(--il-near)" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.35"/>
