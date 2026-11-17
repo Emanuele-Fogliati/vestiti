@@ -19,7 +19,8 @@ local model (NLLB-200) whose output must keep every rare proper name of the sour
 waits in "pending" for a better translation (no text until then).
 
 City walks (-city-) and walks to drawn sights (-sight-) keep the text they were built with. The
-only walks dropped are world copies of treks written by hand in data/<cc>/ (same OSM relation).
+only walks dropped are world copies of treks written by hand in data/<cc>/ (same OSM relation, or listed in
+the trek's `replaces`).
 
   python tools/trails/walk_text.py apply     # after any rebuild of world/ or tail/ (idempotent)
   python tools/trails/world_tail.py dots     # then the globe dots
@@ -47,9 +48,18 @@ def tier_a_osm() -> set[int]:
     return out
 
 
+def tier_a_replaces() -> set[str]:
+    """Generated walks a hand-written trek names in `replaces` (the same walk, e.g. an NPS line)."""
+    out = set()
+    for f in TRAILS.glob("data/*/*.json"):
+        out |= set(json.loads(f.read_text(encoding="utf-8")).get("replaces") or [])
+    return out
+
+
 def apply() -> None:
     texts = json.loads(TEXTS.read_text(encoding="utf-8"))["texts"]
     dup = tier_a_osm()
+    same = tier_a_replaces()
     files = sorted(TRAILS.glob("world/[a-z][a-z].json")) + sorted(TRAILS.glob("tail/*.json"))
     total, per = Counter(), {}
     for f in files:
@@ -57,7 +67,7 @@ def apply() -> None:
         keep, c = [], Counter()
         for t in d["trails"]:
             i = t["id"]
-            if "-osm-" in i and t.get("osm") in dup:
+            if ("-osm-" in i and t.get("osm") in dup) or i in same:
                 c["copy of tier A"] += 1
                 continue
             if i in texts:

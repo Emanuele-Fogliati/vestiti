@@ -6769,6 +6769,248 @@
      "name": "Río Eléctrico bridge"
     }
    ]
+  },
+  {
+   "id": "us-angels-landing",
+   "name": "Angels Landing",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Springdale",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Angels Landing"
+    },
+    {
+     "point": "refrigerator-canyon",
+     "name": "Refrigerator Canyon"
+    }
+   ]
+  },
+  {
+   "id": "us-zion-narrows",
+   "name": "The Narrows from the bottom up",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Springdale",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Wall Street",
+     "reuse": "us-the-narrows"
+    },
+    {
+     "point": "riverside-end",
+     "name": "End of the Riverside Walk"
+    }
+   ]
+  },
+  {
+   "id": "us-observation-point",
+   "name": "Observation Point via the East Mesa Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Springdale",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Observation Point"
+    },
+    {
+     "point": "start",
+     "name": "East Mesa trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-half-dome",
+   "name": "Half Dome via the Mist Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Yosemite Valley",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "vernal-fall",
+     "name": "Vernal Fall",
+     "reuse": "us-vernal-fall"
+    },
+    {
+     "point": "nevada-fall",
+     "name": "Nevada Fall",
+     "reuse": "us-nevada-fall"
+    },
+    {
+     "point": "goal",
+     "name": "Half Dome summit",
+     "reuse": "us-half-dome"
+    }
+   ]
+  },
+  {
+   "id": "us-mist-trail",
+   "name": "Mist Trail to Vernal and Nevada Falls",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Yosemite Valley",
+   "kind": "day",
+   "status": "drawn",
+   "scenes": [
+    {
+     "point": "vernal-fall",
+     "name": "Top of Vernal Fall",
+     "reuse": "us-vernal-fall"
+    },
+    {
+     "point": "goal",
+     "name": "Top of Nevada Fall",
+     "reuse": "us-nevada-fall"
+    }
+   ]
+  },
+  {
+   "id": "us-south-kaibab-skeleton-point",
+   "name": "South Kaibab Trail to Skeleton Point",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Grand Canyon Village",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Skeleton Point",
+     "reuse": "us-grand-canyon"
+    },
+    {
+     "point": "ooh-aah",
+     "name": "Ooh Aah Point"
+    }
+   ]
+  },
+  {
+   "id": "us-bright-angel-plateau-point",
+   "name": "Bright Angel Trail to Plateau Point",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Grand Canyon Village",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Plateau Point"
+    },
+    {
+     "point": "three-mile",
+     "name": "Three Mile Resthouse"
+    }
+   ]
+  },
+  {
+   "id": "us-delicate-arch",
+   "name": "Delicate Arch",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Moab",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Delicate Arch",
+     "reuse": "us-arches-national-park"
+    },
+    {
+     "point": "start",
+     "name": "Wolfe Ranch"
+    }
+   ]
+  },
+  {
+   "id": "us-navajo-queens-garden",
+   "name": "Navajo Loop and Queen's Garden",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Bryce Canyon City",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "thors-hammer",
+     "name": "Thor's Hammer",
+     "reuse": "us-bryce-canyon-national-park"
+    },
+    {
+     "point": "queens-garden",
+     "name": "Queen's Garden"
+    }
+   ]
+  },
+  {
+   "id": "us-the-wave",
+   "name": "The Wave (Coyote Buttes North)",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Kanab",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "The Wave"
+    },
+    {
+     "point": "start",
+     "name": "Wire Pass trailhead"
+    }
+   ]
+  },
+  {
+   "id": "us-havasu-falls",
+   "name": "Havasu Falls",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Peach Springs",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Havasu Falls"
+    },
+    {
+     "point": "supai",
+     "name": "Supai"
+    }
+   ]
+  },
+  {
+   "id": "us-grand-canyon-rim-to-rim",
+   "name": "Grand Canyon Rim to Rim",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Grand Canyon North Rim",
+   "kind": "multiday",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Bright Angel trailhead",
+     "reuse": "us-grand-canyon"
+    },
+    {
+     "point": "cottonwood",
+     "name": "Cottonwood Campground"
+    }
+   ]
   }
  ]
 }

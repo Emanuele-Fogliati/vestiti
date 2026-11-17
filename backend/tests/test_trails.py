@@ -61,6 +61,15 @@ def test_geo_matches_the_trail(t):
                 f"{t.id}: +{g['gain_m']} m computed vs +{t.published.gain_m} published"
 
 
+def test_replaced_walks_are_gone():
+    """A walk written by hand drops the generated copies it names in `replaces` (walk_text.py apply)."""
+    from app.trails import world
+    ids = {row[0] for row in world.dots()} | {t.id for t in trails.trails() if t.tier == "B"}
+    for t in trails.trails():
+        for r in t.replaces:
+            assert r not in ids, f"{t.id} replaces {r}: run tools/trails/walk_text.py apply and world_tail.py dots"
+
+
 def test_geo_files_belong_to_trails():
     for f in GEO.glob("*.json") if GEO.exists() else []:
         assert f.stem in trails.by_id(), f"{f.name} has no trail"

@@ -1,0 +1,88 @@
+{
+ "id": "us-south-kaibab-skeleton-point",
+ "country": "US",
+ "name": "South Kaibab Trail to Skeleton Point",
+ "base": "Grand Canyon Village",
+ "region": "Grand Canyon National Park, Arizona",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  3,
+  4,
+  5,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  4,
+  6
+ ],
+ "start_by": "06:00",
+ "published": {
+  "km": 9.7,
+  "gain_m": 622,
+  "source": "https://www.nps.gov/grca/planyourvisit/trail-distances.htm"
+ },
+ "why": "Down an open ridge into the canyon, past Ooh Aah Point and Cedar Ridge, to the first view of the Colorado River.",
+ "book": "No permit for a day hike. No parking at the trailhead: take the free Kaibab Rim (orange) shuttle. Going to the river and back in one day is strongly advised against by the park.",
+ "water": "No water on the trail: carry 3-4 litres. Fill up at the trailhead.",
+ "dangers": [
+  "The climb out takes twice as long as the way down.",
+  "Heat over 38°C in summer: no shade at all.",
+  "Mule trains have the right of way."
+ ],
+ "turnaround": "Turn at Skeleton Point; in summer hike before 10:00 or after 16:00.",
+ "sources": [
+  "https://www.nps.gov/grca/planyourvisit/day-hiking.htm",
+  "https://www.nps.gov/grca/planyourvisit/upload/SouthKaibabTrail.pdf",
+  "https://en.wikipedia.org/wiki/South_Kaibab_Trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 4,
+  "culture": 1,
+  "relax": 1,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "South Kaibab trailhead",
+   "lat": 36.053,
+   "lon": -112.0838,
+   "role": "start",
+   "note": "Yaki Point road, reached by shuttle only."
+  },
+  {
+   "id": "ooh-aah",
+   "name": "Ooh Aah Point",
+   "lat": 36.0615,
+   "lon": -112.087,
+   "role": "point",
+   "note": "The first wide view east along the canyon."
+  },
+  {
+   "id": "cedar-ridge",
+   "name": "Cedar Ridge",
+   "lat": 36.0642,
+   "lon": -112.0896,
+   "role": "point",
+   "note": "A flat ridge with toilets, a good place to turn for a short walk."
+  },
+  {
+   "id": "goal",
+   "name": "Skeleton Point",
+   "lat": 36.0817,
+   "lon": -112.0904,
+   "role": "goal",
+   "note": "The edge of the Redwall: first sight of the Colorado River far below.",
+   "scene": "us-grand-canyon"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "id": "us-observation-point",
+ "country": "US",
+ "name": "Observation Point via the East Mesa Trail",
+ "base": "Springdale",
+ "region": "Zion National Park, Utah",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  4,
+  5,
+  6,
+  9,
+  10,
+  11
+ ],
+ "hours": [
+  3,
+  4
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "An easy walk through ponderosa pines on the mesa to the edge where all of Zion Canyon, Angels Landing included, lies 650 m below.",
+ "book": "No permit. The East Mesa trailhead is outside the canyon, reached by car from the East Entrance via North Fork Road (dirt, rough after rain; shuttles from private outfitters). The old route from Weeping Rock is closed by a rockfall.",
+ "water": "None: carry 2 litres.",
+ "dangers": [
+  "Unfenced cliff edge at the point.",
+  "The dirt road is slick after rain."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://en.wikivoyage.org/wiki/Zion_National_Park"
+ ],
+ "replaces": [
+  "us-osm-6019768",
+  "us-nps-zion-observation-point-trail"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 4,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "East Mesa trailhead",
+   "lat": 37.2964,
+   "lon": -112.9014,
+   "role": "start",
+   "note": "A small parking area in the pines on the mesa."
+  },
+  {
+   "id": "goal",
+   "name": "Observation Point",
+   "lat": 37.2809,
+   "lon": -112.9393,
+   "role": "goal",
+   "note": "A sandstone point at 1,980 m looking straight down Zion Canyon."
+  }
+ ]
+}
