@@ -1,0 +1,1826 @@
+{
+ "_doc": "Zone guides of the western USA (Southwest, California, Northwest, Wild West, Colorado), written by hand with sources, 2026-11-17. Same rules as todo.json.",
+ "areas": [
+  {
+   "id": "us-las-vegas",
+   "names": [
+    "Las Vegas",
+    "The Strip",
+    "Las Vegas Strip"
+   ],
+   "country": "US",
+   "lat": 36.1147,
+   "lon": -115.1728,
+   "radius_km": 30,
+   "season": "Desert city: 40 °C in July and August, mild 15-25 °C from November to March, cool nights in winter.",
+   "sleep": "On the Strip, or downtown near Fremont Street for less.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Las_Vegas",
+    "https://en.wikipedia.org/wiki/Las_Vegas_Strip",
+    "https://en.wikipedia.org/wiki/Red_Rock_Canyon_National_Conservation_Area",
+    "https://en.wikipedia.org/wiki/Hoover_Dam",
+    "https://en.wikipedia.org/wiki/Valley_of_Fire_State_Park"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "strip",
+     "name": "The Strip at night",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "After dark",
+     "book": "",
+     "why": "The Bellagio fountains every 15-30 minutes after dark, the Eiffel Tower of Paris Las Vegas and the neon of the old casinos on Fremont Street.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bellagio Fountains",
+      "Fremont Street Experience",
+      "Las Vegas"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 2,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "red-rock",
+     "name": "Red Rock Canyon scenic drive",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "Timed-entry reservation for the scenic drive from October to May (recreation.gov).",
+     "why": "A 21 km one-way loop under red and cream sandstone cliffs 30 minutes from the Strip, with short walks to rock art and Calico Hills.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1500
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "valley-of-fire",
+     "name": "Valley of Fire",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Nevada's oldest state park: red Aztec sandstone, the Fire Wave and 2,000-year-old petroglyphs on Atlatl Rock, an hour from town.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 800
+     },
+     "sights": [
+      "Valley of Fire State Park"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "hoover-dam",
+     "name": "Hoover Dam",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 221 m concrete arch of 1936 across Black Canyon, from the top and from the bridge walkway beside it.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 0,
+      "relax": 2,
+      "history": 4,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "view",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-zion-national-park",
+   "names": [
+    "Zion National Park",
+    "Zion",
+    "Springdale",
+    "Zion Canyon"
+   ],
+   "country": "US",
+   "lat": 37.198,
+   "lon": -112.988,
+   "radius_km": 25,
+   "season": "Open all year. Spring and autumn are best; summer is hot (35 °C) with afternoon storms and flash floods in July-September; winter is quiet, with ice on the high trails.",
+   "sleep": "Springdale, at the park gate, on the shuttle line.",
+   "sources": [
+    "https://www.nps.gov/zion/index.htm",
+    "https://www.nps.gov/zion/planyourvisit/angels-landing-hiking-permits.htm",
+    "https://www.nps.gov/zion/planyourvisit/thenarrows.htm",
+    "https://en.wikivoyage.org/wiki/Zion_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "angels-landing",
+     "name": "Angels Landing",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "hard",
+     "need": "dry",
+     "best": "Start early: the shuttle from 6-7 am.",
+     "book": "Permit by lottery, seasonal and day-before (recreation.gov). Without it, Scout Lookout below the chains is open to all.",
+     "why": "A narrow fin of sandstone 450 m above the canyon floor, the last stretch along chains with drops on both sides.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1765
+     },
+     "sights": [
+      "Angels Landing"
+     ],
+     "trail": "us-nps-zion-angels-landing-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 0,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "narrows",
+     "name": "The Narrows from the bottom",
+     "hours": "4-8 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "No permit to Big Spring. Closed when the river flows over 150 cubic feet per second (often in spring melt) and on flash-flood warnings: check at the visitor centre.",
+     "why": "Walking up the Virgin River between walls 300 m high and 6 m apart in places, in the water most of the way.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1400
+     },
+     "sights": [
+      "The Narrows"
+     ],
+     "trail": "us-nps-zion-riverside-walk",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "adventure"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "emerald-pools",
+     "name": "Emerald Pools",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Pools and a thin waterfall under the cliffs of Zion Lodge, an easy first walk from the shuttle.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1400
+     },
+     "arrive": true,
+     "trail": "us-nps-zion-lower-emerald-pools-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "alt_of": "angels-landing"
+    },
+    {
+     "id": "canyon-overlook",
+     "name": "Canyon Overlook Trail",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A short ledge path on the east side above the switchbacks, ending on a view down the whole of Zion Canyon; bighorn sheep around.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1600
+     },
+     "trail": "us-nps-zion-canyon-overlook-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "riverside",
+     "name": "Riverside Walk and the canyon by shuttle",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The flat paved walk to the mouth of the Narrows, after the shuttle ride under the Great White Throne.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1360
+     },
+     "arrive": true,
+     "trail": "us-nps-zion-riverside-walk",
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-bryce-canyon-national-park",
+   "names": [
+    "Bryce Canyon",
+    "Bryce Canyon National Park",
+    "Bryce",
+    "Bryce Canyon City"
+   ],
+   "country": "US",
+   "lat": 37.6283,
+   "lon": -112.1677,
+   "radius_km": 15,
+   "season": "At 2,400-2,700 m: snow on the hoodoos December to March (rim open, some trails icy), cool summer nights, storms in July and August.",
+   "sleep": "Bryce Canyon City by the park gate, or the lodge inside.",
+   "sources": [
+    "https://www.nps.gov/brca/index.htm",
+    "https://www.nps.gov/brca/planyourvisit/navajoqueensgarden.htm",
+    "https://en.wikivoyage.org/wiki/Bryce_Canyon_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "navajo-queens",
+     "name": "Navajo Loop and Queens Garden",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Early morning light",
+     "book": "",
+     "why": "Down among the orange hoodoos through Wall Street's slot to Thor's Hammer and Queen Victoria's rock, back up to the rim.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2470
+     },
+     "sights": [
+      "Bryce Canyon"
+     ],
+     "trail": "us-nps-brca-navajo-loop-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "rim",
+     "name": "Sunrise and the rim between Sunrise and Inspiration Point",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Sunrise",
+     "book": "",
+     "why": "The flat rim path above the whole amphitheatre of hoodoos, at its best at sunrise.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2480
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "alt_of": "navajo-queens"
+    },
+    {
+     "id": "fairyland",
+     "name": "Fairyland Loop",
+     "hours": "4-5 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The quieter north of the park: 13 km round hoodoos, Tower Bridge and the China Wall.",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 2430
+     },
+     "trail": "us-nps-brca-fairyland-loop-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "stars",
+     "name": "Night sky",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Moonless nights",
+     "book": "",
+     "why": "One of the darkest skies in the country: the Milky Way over the rim, with ranger astronomy talks in summer.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-page",
+   "names": [
+    "Page",
+    "Antelope Canyon",
+    "Horseshoe Bend",
+    "Lake Powell"
+   ],
+   "country": "US",
+   "lat": 36.9147,
+   "lon": -111.4558,
+   "radius_km": 25,
+   "season": "Hot summers (36 °C), cold clear winters; Antelope Canyon light beams are a summer midday thing (late March to early October).",
+   "sleep": "Page town.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Antelope_Canyon",
+    "https://en.wikipedia.org/wiki/Horseshoe_Bend_(Arizona)",
+    "https://en.wikivoyage.org/wiki/Page",
+    "https://en.wikipedia.org/wiki/Lake_Powell"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "antelope",
+     "name": "Antelope Canyon",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Late morning to early afternoon",
+     "book": "Navajo guided tours only (Upper or Lower), book ahead.",
+     "why": "A slot canyon of wave-shaped red sandstone on Navajo land, lit by beams of sun at midday in summer.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1200
+     },
+     "sights": [
+      "Antelope Canyon"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "horseshoe",
+     "name": "Horseshoe Bend",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "A loop of the Colorado River 300 m below a sandstone rim, a short walk from the road.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1300
+     },
+     "sights": [
+      "Horseshoe Bend"
+     ],
+     "arrive": true,
+     "trail": "us-nps-glca-horseshoe-bend-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "lake-powell",
+     "name": "Lake Powell by boat or kayak",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "calm",
+     "best": "",
+     "book": "",
+     "why": "A reservoir of 300 km in red canyons; kayak from Lone Rock or the Antelope Point marina into Antelope Canyon from the water.",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "boat"
+     },
+     "sights": [
+      "Lake Powell"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-grand-canyon-south-rim",
+   "names": [
+    "Grand Canyon",
+    "Grand Canyon South Rim",
+    "Grand Canyon National Park",
+    "Grand Canyon Village",
+    "Tusayan"
+   ],
+   "country": "US",
+   "lat": 36.0579,
+   "lon": -112.143,
+   "radius_km": 30,
+   "season": "South Rim open all year at 2,100 m: snow and -5 °C nights in winter, 30 °C in summer; down in the canyon it is 15 °C hotter. North Rim only mid-May to mid-October.",
+   "sleep": "Grand Canyon Village lodges, or Tusayan outside the gate.",
+   "sources": [
+    "https://www.nps.gov/grca/index.htm",
+    "https://www.nps.gov/grca/planyourvisit/south-kaibab-trail.htm",
+    "https://www.nps.gov/grca/planyourvisit/hermit-road.htm",
+    "https://en.wikivoyage.org/wiki/Grand_Canyon_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "rim-sunset",
+     "name": "The Rim Trail and sunset at Hopi Point",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "The paved path along the edge from Mather Point, then the Hermit Road shuttle to Hopi Point for the sunset over a mile-deep canyon.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2170
+     },
+     "sights": [
+      "Grand Canyon",
+      "Grand Canyon South Rim"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "south-kaibab",
+     "name": "South Kaibab to Ooh Aah Point or Cedar Ridge",
+     "hours": "2-4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Start at dawn in summer",
+     "book": "",
+     "why": "Down a ridge into the canyon instead of looking at it: Cedar Ridge is 460 m below the rim; the climb back takes twice as long.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2200
+     },
+     "trail": "us-nps-grca-south-kaibab",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "desert-view",
+     "name": "Desert View Drive and Watchtower",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "40 km east along the rim to the 1932 watchtower of Mary Colter, where the Colorado bends below the Painted Desert.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Desert View Watchtower"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "bright-angel",
+     "name": "Bright Angel Trail to the 1.5-Mile Resthouse",
+     "hours": "2-4 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The old mule path in switchbacks below the village, with water at the resthouses in season.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2100
+     },
+     "trail": "us-nps-grca-bright-angel",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "alt_of": "south-kaibab"
+    }
+   ]
+  },
+  {
+   "id": "us-monument-valley",
+   "names": [
+    "Monument Valley",
+    "Oljato-Monument Valley",
+    "Goulding"
+   ],
+   "country": "US",
+   "lat": 36.998,
+   "lon": -110.098,
+   "radius_km": 25,
+   "season": "High desert at 1,700 m: hot summer days, cold winter nights, the valley open all year.",
+   "sleep": "The View Hotel or Goulding's Lodge, the only beds for 40 km.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Monument_Valley",
+    "https://navajonationparks.org/navajo-tribal-parks/monument-valley-navajo-tribal-park/",
+    "https://en.wikivoyage.org/wiki/Monument_Valley"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "valley-drive",
+     "name": "Valley Drive and a Navajo guide",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Park fee; guided tours at the visitor centre.",
+     "why": "The 27 km dirt loop between the Mittens and Merrick Butte, then with a Navajo guide into the parts closed to cars.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Monument Valley"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 4,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "culture",
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    },
+    {
+     "id": "wildcat",
+     "name": "Wildcat Trail round the West Mitten",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The only walk you may do without a guide: 5 km round the base of the West Mitten.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1700
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "gump",
+     "name": "Forrest Gump Point at sunrise",
+     "hours": "30 min",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "The straight road of US-163 running into the buttes, where the film's run ended.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Forrest Gump Point"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 2,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-moab",
+   "names": [
+    "Moab",
+    "Arches National Park",
+    "Canyonlands",
+    "Dead Horse Point",
+    "Island in the Sky"
+   ],
+   "country": "US",
+   "lat": 38.5733,
+   "lon": -109.5498,
+   "radius_km": 35,
+   "season": "Best March-May and September-October; 38 °C in July, snow on the arches some winter days. Arches needs a timed entry from April to October.",
+   "sleep": "Moab town, 10 minutes from Arches.",
+   "sources": [
+    "https://www.nps.gov/arch/index.htm",
+    "https://www.nps.gov/arch/planyourvisit/timed-entry-reservations-2025.htm",
+    "https://www.nps.gov/cany/index.htm",
+    "https://en.wikivoyage.org/wiki/Moab"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "delicate-arch",
+     "name": "Delicate Arch",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Sunset",
+     "book": "Arches timed-entry reservation April-October, 7 am-4 pm (recreation.gov).",
+     "why": "Up bare slickrock to the free-standing arch on Utah's licence plates, the La Sal Mountains behind it.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1480
+     },
+     "sights": [
+      "Arches National Park"
+     ],
+     "trail": "us-nps-arch-delicate-arch-viewpoint",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mesa-arch",
+     "name": "Mesa Arch and Grand View Point",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "Canyonlands' Island in the Sky: the sun rising under Mesa Arch, then the view from Grand View Point over two rivers' canyons.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1850
+     },
+     "sights": [
+      "Canyonlands National Park"
+     ],
+     "trail": "us-nps-cany-mesa-arch",
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "windows",
+     "name": "The Windows and Double Arch",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Three great arches a short walk from one car park, the easiest of Arches.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1560
+     },
+     "arrive": true,
+     "trail": "us-nps-arch-windows-sand-loop",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "alt_of": "delicate-arch"
+    },
+    {
+     "id": "dead-horse",
+     "name": "Dead Horse Point at sunset",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "A mesa-top state park above a gooseneck of the Colorado 600 m below.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Dead Horse Point State Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "fiery-furnace",
+     "name": "Fiery Furnace with a ranger",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "Ranger tour or self-guided permit (recreation.gov), sells out.",
+     "why": "A maze of sandstone fins where you scramble and squeeze, on a ranger walk or with a permit.",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1550
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "C",
+     "kinds": [
+      "adventure",
+      "trek"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "us-capitol-reef-national-park",
+   "names": [
+    "Capitol Reef",
+    "Capitol Reef National Park",
+    "Torrey",
+    "Fruita"
+   ],
+   "country": "US",
+   "lat": 38.2898,
+   "lon": -111.2615,
+   "radius_km": 25,
+   "season": "Quieter than the other Utah parks; spring and autumn best, orchards ripe June to October, snow some winter days.",
+   "sleep": "Torrey, 15 minutes west.",
+   "sources": [
+    "https://www.nps.gov/care/index.htm",
+    "https://www.nps.gov/care/planyourvisit/fruita.htm",
+    "https://en.wikivoyage.org/wiki/Capitol_Reef_National_Park"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "hickman",
+     "name": "Hickman Bridge",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A natural bridge of 40 m above a dry wash, reached on a short climb from the Fremont River.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1700
+     },
+     "arrive": true,
+     "trail": "us-nps-care-hickman-bridge",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "scenic-drive",
+     "name": "Scenic Drive and Capitol Gorge",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The road along the Waterpocket Fold's cliffs into a narrow gorge where pioneers carved their names in 1871.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1700
+     },
+     "sights": [
+      "Capitol Reef National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "fruita",
+     "name": "Fruita orchards and petroglyphs",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Mormon orchards where you pick fruit in season, a pie at the Gifford Homestead, and Fremont petroglyphs on the cliff.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "culture",
+      "food"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "cassidy",
+     "name": "Cassidy Arch",
+     "hours": "3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Up the side of Grand Wash to the arch named after Butch Cassidy, who hid nearby.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1900
+     },
+     "trail": "us-nps-care-cassidy-arch",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "us-sedona",
+   "names": [
+    "Sedona",
+    "Oak Creek Canyon",
+    "Red Rock Country"
+   ],
+   "country": "US",
+   "lat": 34.8697,
+   "lon": -111.761,
+   "radius_km": 25,
+   "season": "Mild winters (14 °C, cold nights), hot summers (35 °C) with July-August storms; the red rocks at their best in spring and autumn.",
+   "sleep": "Sedona or the Village of Oak Creek.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Sedona",
+    "https://en.wikipedia.org/wiki/Sedona,_Arizona",
+    "https://en.wikipedia.org/wiki/Chapel_of_the_Holy_Cross_(Sedona,_Arizona)",
+    "https://en.wikipedia.org/wiki/Slide_Rock_State_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cathedral-rock",
+     "name": "Cathedral Rock",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "Sunset",
+     "book": "",
+     "why": "A short steep scramble up red slickrock to the saddle between Cathedral Rock's spires.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1400
+     },
+     "trail": "us-usfs-3532010519",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "12+"
+    },
+    {
+     "id": "chapel",
+     "name": "Chapel of the Holy Cross and Bell Rock",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A chapel of 1956 built into the red rock, and the bell-shaped butte by the road south.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "oak-creek",
+     "name": "Oak Creek Canyon and Slide Rock",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Up the green canyon north of town to swim and slide down a natural chute of sandstone.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "beach"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 0,
+      "relax": 5,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "beach"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "jeep",
+     "name": "Red rocks by jeep",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Off-road tracks onto the rocks around town, where cars can't go.",
+     "act": {
+      "type": "desert"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "adventure",
+      "drive"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "us-death-valley",
+   "names": [
+    "Death Valley",
+    "Death Valley National Park",
+    "Furnace Creek",
+    "Stovepipe Wells",
+    "Badwater"
+   ],
+   "country": "US",
+   "lat": 36.4606,
+   "lon": -116.8668,
+   "radius_km": 60,
+   "season": "The hottest place on earth: 47 °C in July, walks only before 10 am from May to September. November to March is mild (20 °C) and best.",
+   "sleep": "Furnace Creek or Stovepipe Wells.",
+   "sources": [
+    "https://www.nps.gov/deva/index.htm",
+    "https://www.nps.gov/deva/planyourvisit/hot-weather.htm",
+    "https://en.wikivoyage.org/wiki/Death_Valley_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "badwater-zabriskie",
+     "name": "Zabriskie Point, Badwater and Artists Palette",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "Sunrise on the gold badlands of Zabriskie Point, then the salt flats of Badwater 86 m below the sea and the coloured hills of Artists Drive.",
+     "act": {
+      "type": "desert"
+     },
+     "sights": [
+      "Zabriskie Point",
+      "Badwater Basin"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "golden-canyon",
+     "name": "Golden Canyon",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A walk up a yellow canyon to the Red Cathedral, the easiest way into the badlands.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 100
+     },
+     "arrive": true,
+     "trail": "us-nps-deva-golden-canyon",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "dunes",
+     "name": "Mesquite Flat Sand Dunes",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "Dunes of 30 m by Stovepipe Wells, at sunset or under the stars.",
+     "act": {
+      "type": "desert"
+     },
+     "trail": "us-nps-deva-mesquite-flat-dunes",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "dantes",
+     "name": "Dante's View",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "1,669 m above Badwater: the whole valley white below and Telescope Peak opposite.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Dante's View"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-joshua-tree-national-park",
+   "names": [
+    "Joshua Tree",
+    "Joshua Tree National Park",
+    "Twentynine Palms",
+    "Yucca Valley"
+   ],
+   "country": "US",
+   "lat": 33.8734,
+   "lon": -115.901,
+   "radius_km": 40,
+   "season": "Best October to April (20-25 °C days, cold nights); 40 °C in summer, when walks are only for early morning.",
+   "sleep": "Twentynine Palms or Joshua Tree town, by the north gates.",
+   "sources": [
+    "https://www.nps.gov/jotr/index.htm",
+    "https://en.wikivoyage.org/wiki/Joshua_Tree_National_Park",
+    "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "hidden-valley",
+     "name": "Hidden Valley and the boulder piles",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A loop through a valley ringed by granite boulders where cattle rustlers hid, among the Joshua trees.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1270
+     },
+     "sights": [
+      "Joshua Tree National Park"
+     ],
+     "arrive": true,
+     "trail": "us-nps-jotr-hidden-valley-nature",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "ryan-mountain",
+     "name": "Ryan Mountain",
+     "hours": "2-3 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The park's best view for the effort: 320 m up to a summit over the boulder fields and the Joshua tree forest.",
+     "months": [
+      10,
+      11,
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1660
+     },
+     "trail": "us-nps-jotr-ryan-mountain",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "cholla",
+     "name": "Cholla Cactus Garden and Keys View",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "A field of silver teddy-bear cholla at sunrise, and Keys View over the Coachella Valley to the San Andreas Fault.",
+     "act": {
+      "type": "desert"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "stars",
+     "name": "Night sky",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A dark-sky park: the Milky Way over the Joshua trees on moonless nights.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "night"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  }
+ ]
+}
