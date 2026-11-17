@@ -62550,6 +62550,4027 @@
    "group_trips": []
   },
   {
+   "slug": "usa-california-7",
+   "title": "California coast in a week",
+   "countries": [
+    "US"
+   ],
+   "summary": "San Francisco, the Big Sur cliffs, Santa Barbara and Los Angeles along Highway 1.",
+   "destination": "USA: California",
+   "region": "usa-california",
+   "weeks": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "season_note": "All year: 14-22 °C on the coast, summer fog in San Francisco (June-August), rain on a few winter days; Highway 1 through Big Sur is sometimes closed by landslides.",
+   "pace": "normal",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "name": "San Francisco",
+     "country_code": "US",
+     "lat": 37.775,
+     "lon": -122.419,
+     "elevation_m": 24,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Gate Bridge",
+       "day": 1
+      },
+      {
+       "name": "Alcatraz Island",
+       "day": 2
+      },
+      {
+       "name": "Lombard Street",
+       "day": 2
+      },
+      {
+       "name": "Chinatown, San Francisco",
+       "day": 2
+      },
+      {
+       "name": "Coit Tower",
+       "day": 2
+      },
+      {
+       "name": "Fisherman's Wharf",
+       "day": 3
+      },
+      {
+       "name": "Pier 39",
+       "day": 3
+      },
+      {
+       "name": "Sausalito",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Golden Gate Bridge on foot.",
+      "Alcatraz. Cable car, Chinatown and Lombard Street.",
+      "Fisherman's Wharf and the sea lions of Pier 39. Muir Woods and Sausalito."
+     ],
+     "do": [
+      "Sleep: Union Square, Nob Hill or North Beach, near the cable cars."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alcatraz",
+       "query": "Alcatraz Island"
+      },
+      {
+       "title": "Muir Woods and Sausalito",
+       "query": "Sausalito"
+      }
+     ],
+     "area": "us-san-francisco",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-gate"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcatraz",
+        "cable-car"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wharf",
+        "muir-sausalito"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-monterey",
+     "name": "Monterey",
+     "country_code": "US",
+     "lat": 36.6,
+     "lon": -121.89,
+     "elevation_m": 10,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterey Bay Aquarium and Cannery Row",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Monterey Bay Aquarium and Cannery Row."
+     ],
+     "do": [
+      "Sleep: Monterey or Carmel."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-monterey",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "aquarium"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-santa-barbara",
+     "name": "Santa Barbara",
+     "country_code": "US",
+     "lat": 34.42,
+     "lon": -119.7,
+     "elevation_m": 15,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Barbara",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Mission and old town."
+     ],
+     "do": [
+      "Sleep: Downtown or by the beach."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-santa-barbara",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mission"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-los-angeles",
+     "name": "Los Angeles",
+     "country_code": "US",
+     "lat": 34.052,
+     "lon": -118.244,
+     "elevation_m": 91,
+     "days": 2,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Monica Pier",
+       "day": 1
+      },
+      {
+       "name": "Venice Beach",
+       "day": 1
+      },
+      {
+       "name": "Venice Canals",
+       "day": 1
+      },
+      {
+       "name": "Griffith Observatory",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Sign",
+       "day": 2
+      },
+      {
+       "name": "Los Angeles",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Walk of Fame",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Santa Monica Pier and Venice.",
+      "Griffith Observatory and the Hollywood Sign. Hollywood Boulevard."
+     ],
+     "do": [
+      "Sleep: Santa Monica by the sea, or Hollywood."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-los-angeles",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "santa-monica"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "griffith",
+        "hollywood"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-california-14",
+   "title": "California: Yosemite, the Eastern Sierra and the coast",
+   "countries": [
+    "US"
+   ],
+   "summary": "San Francisco, Lake Tahoe, Mono Lake and Mount Whitney, Yosemite over Tioga Pass, then down the coast by Big Sur.",
+   "destination": "USA: California",
+   "region": "usa-california",
+   "weeks": 2,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    9,
+    10
+   ],
+   "season_note": "June to October: Tioga Pass is open, so you cross Yosemite to the Eastern Sierra. The coast has summer fog (June-August); September and October are the clearest months; inland 35 °C in the valleys.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "name": "San Francisco",
+     "country_code": "US",
+     "lat": 37.775,
+     "lon": -122.419,
+     "elevation_m": 24,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Gate Bridge",
+       "day": 1
+      },
+      {
+       "name": "Alcatraz Island",
+       "day": 2
+      },
+      {
+       "name": "Lombard Street",
+       "day": 2
+      },
+      {
+       "name": "Chinatown, San Francisco",
+       "day": 2
+      },
+      {
+       "name": "Coit Tower",
+       "day": 2
+      },
+      {
+       "name": "Fisherman's Wharf",
+       "day": 3
+      },
+      {
+       "name": "Pier 39",
+       "day": 3
+      },
+      {
+       "name": "Sausalito",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Golden Gate Bridge on foot.",
+      "Alcatraz. Cable car, Chinatown and Lombard Street.",
+      "Fisherman's Wharf and the sea lions of Pier 39. Muir Woods and Sausalito."
+     ],
+     "do": [
+      "Sleep: Union Square, Nob Hill or North Beach, near the cable cars."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alcatraz",
+       "query": "Alcatraz Island"
+      },
+      {
+       "title": "Muir Woods and Sausalito",
+       "query": "Sausalito"
+      }
+     ],
+     "area": "us-san-francisco",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-gate"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcatraz",
+        "cable-car"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wharf",
+        "muir-sausalito"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "name": "Lake Tahoe",
+     "country_code": "US",
+     "lat": 38.94,
+     "lon": -119.98,
+     "elevation_m": 1900,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1900
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lake Tahoe",
+       "day": 2
+      },
+      {
+       "name": "Sand Harbor",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Emerald Bay and Vikingsholm. Sand Harbor (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: South Lake Tahoe, or Tahoe City on the north shore."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "x-us-lake-tahoe",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "emerald-bay",
+        "sand-harbor"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-bishop",
+     "name": "Bishop",
+     "country_code": "US",
+     "lat": 37.36,
+     "lon": -118.4,
+     "elevation_m": 1260,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 3100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Mono Lake",
+       "day": 1
+      },
+      {
+       "name": "Ancient Bristlecone Pine Forest",
+       "day": 2
+      },
+      {
+       "name": "Sierra Nevada",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Mono Lake's tufa towers.",
+      "Ancient Bristlecone Pine Forest. Alabama Hills and Mount Whitney."
+     ],
+     "do": [
+      "Sleep: Bishop, or Lee Vining by Mono Lake."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-bishop",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mono-lake"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bristlecone",
+        "alabama-hills"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-yosemite-valley",
+     "name": "Yosemite Valley",
+     "country_code": "US",
+     "lat": 37.746,
+     "lon": -119.594,
+     "elevation_m": 1220,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2200
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1820
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 2690
+      }
+     ],
+     "visits": [
+      {
+       "name": "El Capitan",
+       "day": 1
+      },
+      {
+       "name": "Bridalveil Fall",
+       "day": 1
+      },
+      {
+       "name": "Yosemite Valley",
+       "day": 1
+      },
+      {
+       "name": "Vernal Fall",
+       "day": 2
+      },
+      {
+       "name": "Nevada Fall",
+       "day": 2
+      },
+      {
+       "name": "Glacier Point",
+       "day": 2
+      },
+      {
+       "name": "Half Dome",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. The valley floor: Yosemite Falls, El Capitan, Tunnel View.",
+      "Mist Trail to Vernal Fall and Nevada Fall. Glacier Point.",
+      "Half Dome."
+     ],
+     "do": [
+      "Sleep: In the valley (lodges, Curry Village), or El Portal and Mariposa outside."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Half Dome",
+       "query": "Half Dome"
+      }
+     ],
+     "area": "us-yosemite-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley-floor"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mist-trail",
+        "glacier-point"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "half-dome"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-monterey",
+     "name": "Monterey",
+     "country_code": "US",
+     "lat": 36.6,
+     "lon": -121.89,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 200
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterey Bay Aquarium and Cannery Row",
+       "day": 1
+      },
+      {
+       "name": "Big Sur",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Monterey Bay Aquarium and Cannery Row.",
+      "Big Sur by Highway 1."
+     ],
+     "do": [
+      "Sleep: Monterey or Carmel."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-monterey",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "aquarium"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "big-sur"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-santa-barbara",
+     "name": "Santa Barbara",
+     "country_code": "US",
+     "lat": 34.42,
+     "lon": -119.7,
+     "elevation_m": 15,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Barbara",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Mission and old town."
+     ],
+     "do": [
+      "Sleep: Downtown or by the beach."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-santa-barbara",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mission"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-los-angeles",
+     "name": "Los Angeles",
+     "country_code": "US",
+     "lat": 34.052,
+     "lon": -118.244,
+     "elevation_m": 91,
+     "days": 1,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      }
+     ],
+     "visits": [
+      {
+       "name": "Griffith Observatory",
+       "day": 1
+      },
+      {
+       "name": "Hollywood Sign",
+       "day": 1
+      },
+      {
+       "name": "Los Angeles",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Griffith Observatory and the Hollywood Sign."
+     ],
+     "do": [
+      "Sleep: Santa Monica by the sea, or Hollywood."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-los-angeles",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "griffith"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-california-14-coast",
+   "title": "California: Yosemite and the coast to San Diego",
+   "countries": [
+    "US"
+   ],
+   "summary": "San Francisco, Yosemite Valley, Big Sur, Santa Barbara, Los Angeles and San Diego.",
+   "destination": "USA: California",
+   "region": "usa-california",
+   "weeks": 2,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best_months": [
+    4,
+    5
+   ],
+   "season_note": "November to May: Tioga Pass and Glacier Point Road are closed, so the route stays west of the Sierra and on the coast. Yosemite Valley is open with snow (carry chains), waterfalls fullest April-June; rain on the coast December-March, sun in the south.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "name": "San Francisco",
+     "country_code": "US",
+     "lat": 37.775,
+     "lon": -122.419,
+     "elevation_m": 24,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Gate Bridge",
+       "day": 1
+      },
+      {
+       "name": "Alcatraz Island",
+       "day": 2
+      },
+      {
+       "name": "Lombard Street",
+       "day": 2
+      },
+      {
+       "name": "Chinatown, San Francisco",
+       "day": 2
+      },
+      {
+       "name": "Coit Tower",
+       "day": 2
+      },
+      {
+       "name": "Fisherman's Wharf",
+       "day": 3
+      },
+      {
+       "name": "Pier 39",
+       "day": 3
+      },
+      {
+       "name": "Sausalito",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Golden Gate Bridge on foot.",
+      "Alcatraz. Cable car, Chinatown and Lombard Street.",
+      "Fisherman's Wharf and the sea lions of Pier 39. Muir Woods and Sausalito."
+     ],
+     "do": [
+      "Sleep: Union Square, Nob Hill or North Beach, near the cable cars."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alcatraz",
+       "query": "Alcatraz Island"
+      },
+      {
+       "title": "Muir Woods and Sausalito",
+       "query": "Sausalito"
+      }
+     ],
+     "area": "us-san-francisco",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-gate"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcatraz",
+        "cable-car"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wharf",
+        "muir-sausalito"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-yosemite-valley",
+     "name": "Yosemite Valley",
+     "country_code": "US",
+     "lat": 37.746,
+     "lon": -119.594,
+     "elevation_m": 1220,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1900
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1820
+      }
+     ],
+     "visits": [
+      {
+       "name": "El Capitan",
+       "day": 1
+      },
+      {
+       "name": "Bridalveil Fall",
+       "day": 1
+      },
+      {
+       "name": "Yosemite Valley",
+       "day": 1
+      },
+      {
+       "name": "Vernal Fall",
+       "day": 2
+      },
+      {
+       "name": "Nevada Fall",
+       "day": 2
+      },
+      {
+       "name": "Mariposa Grove of giant sequoias",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The valley floor: Yosemite Falls, El Capitan, Tunnel View.",
+      "Mist Trail to Vernal Fall and Nevada Fall. Mariposa Grove of giant sequoias."
+     ],
+     "do": [
+      "Sleep: In the valley (lodges, Curry Village), or El Portal and Mariposa outside."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-yosemite-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley-floor"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mist-trail",
+        "mariposa"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-monterey",
+     "name": "Monterey",
+     "country_code": "US",
+     "lat": 36.6,
+     "lon": -121.89,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 200
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterey Bay Aquarium and Cannery Row",
+       "day": 1
+      },
+      {
+       "name": "Big Sur",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Monterey Bay Aquarium and Cannery Row.",
+      "Big Sur by Highway 1."
+     ],
+     "do": [
+      "Sleep: Monterey or Carmel."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-monterey",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "aquarium"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "big-sur"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-santa-barbara",
+     "name": "Santa Barbara",
+     "country_code": "US",
+     "lat": 34.42,
+     "lon": -119.7,
+     "elevation_m": 15,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Barbara",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Mission and old town."
+     ],
+     "do": [
+      "Sleep: Downtown or by the beach."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-santa-barbara",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mission"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-los-angeles",
+     "name": "Los Angeles",
+     "country_code": "US",
+     "lat": 34.052,
+     "lon": -118.244,
+     "elevation_m": 91,
+     "days": 3,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Monica Pier",
+       "day": 1
+      },
+      {
+       "name": "Venice Beach",
+       "day": 1
+      },
+      {
+       "name": "Venice Canals",
+       "day": 1
+      },
+      {
+       "name": "Griffith Observatory",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Sign",
+       "day": 2
+      },
+      {
+       "name": "Los Angeles",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Walk of Fame",
+       "day": 2
+      },
+      {
+       "name": "The Getty Center",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Santa Monica Pier and Venice.",
+      "Griffith Observatory and the Hollywood Sign. Hollywood Boulevard.",
+      "The Getty Center."
+     ],
+     "do": [
+      "Sleep: Santa Monica by the sea, or Hollywood."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Getty Center",
+       "query": "The Getty Center"
+      }
+     ],
+     "area": "us-los-angeles",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "santa-monica"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "griffith",
+        "hollywood"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "getty"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-san-diego",
+     "name": "San Diego",
+     "country_code": "US",
+     "lat": 32.72,
+     "lon": -117.16,
+     "elevation_m": 32,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "USS Midway and the harbour",
+       "day": 1
+      },
+      {
+       "name": "La Jolla Cove and Torrey Pines",
+       "day": 2
+      },
+      {
+       "name": "Coronado Beach",
+       "day": 2
+      },
+      {
+       "name": "Balboa Park and the zoo",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. USS Midway and the harbour.",
+      "La Jolla Cove and Torrey Pines. Coronado Beach.",
+      "Balboa Park and the zoo."
+     ],
+     "do": [
+      "Sleep: Gaslamp Quarter, Little Italy or La Jolla."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-san-diego",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "midway"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "la-jolla",
+        "coronado"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "balboa"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-california-21-winter",
+   "title": "California and its deserts, three weeks",
+   "countries": [
+    "US"
+   ],
+   "summary": "San Francisco, Napa, Yosemite in snow, the coast to San Diego, then Joshua Tree and Death Valley in their good season.",
+   "destination": "USA: California",
+   "region": "usa-california",
+   "weeks": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best_months": [
+    3,
+    4,
+    5
+   ],
+   "season_note": "November to May: Tioga Pass and Glacier Point Road are closed, so the route stays west of the Sierra and on the coast. Yosemite Valley is open with snow (carry chains), waterfalls fullest April-June; rain on the coast December-March, sun in the south.",
+   "pace": "normal",
+   "level": 2,
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "name": "San Francisco",
+     "country_code": "US",
+     "lat": 37.775,
+     "lon": -122.419,
+     "elevation_m": 24,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Gate Bridge",
+       "day": 1
+      },
+      {
+       "name": "Alcatraz Island",
+       "day": 2
+      },
+      {
+       "name": "Lombard Street",
+       "day": 2
+      },
+      {
+       "name": "Chinatown, San Francisco",
+       "day": 2
+      },
+      {
+       "name": "Coit Tower",
+       "day": 2
+      },
+      {
+       "name": "Fisherman's Wharf",
+       "day": 3
+      },
+      {
+       "name": "Pier 39",
+       "day": 3
+      },
+      {
+       "name": "Sausalito",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Golden Gate Bridge on foot.",
+      "Alcatraz. Cable car, Chinatown and Lombard Street.",
+      "Fisherman's Wharf and the sea lions of Pier 39. Muir Woods and Sausalito."
+     ],
+     "do": [
+      "Sleep: Union Square, Nob Hill or North Beach, near the cable cars."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alcatraz",
+       "query": "Alcatraz Island"
+      },
+      {
+       "title": "Muir Woods and Sausalito",
+       "query": "Sausalito"
+      }
+     ],
+     "area": "us-san-francisco",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-gate"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcatraz",
+        "cable-car"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wharf",
+        "muir-sausalito"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-napa-valley",
+     "name": "Napa Valley",
+     "country_code": "US",
+     "lat": 38.4,
+     "lon": -122.36,
+     "elevation_m": 20,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Calistoga mud baths",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Calistoga mud baths."
+     ],
+     "do": [
+      "Sleep: Napa, Yountville or Healdsburg."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-napa-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "calistoga"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-yosemite-valley",
+     "name": "Yosemite Valley",
+     "country_code": "US",
+     "lat": 37.746,
+     "lon": -119.594,
+     "elevation_m": 1220,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1900
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1820
+      }
+     ],
+     "visits": [
+      {
+       "name": "El Capitan",
+       "day": 1
+      },
+      {
+       "name": "Bridalveil Fall",
+       "day": 1
+      },
+      {
+       "name": "Yosemite Valley",
+       "day": 1
+      },
+      {
+       "name": "Vernal Fall",
+       "day": 2
+      },
+      {
+       "name": "Nevada Fall",
+       "day": 2
+      },
+      {
+       "name": "Mariposa Grove of giant sequoias",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The valley floor: Yosemite Falls, El Capitan, Tunnel View.",
+      "Mist Trail to Vernal Fall and Nevada Fall. Mariposa Grove of giant sequoias."
+     ],
+     "do": [
+      "Sleep: In the valley (lodges, Curry Village), or El Portal and Mariposa outside."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-yosemite-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley-floor"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mist-trail",
+        "mariposa"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-monterey",
+     "name": "Monterey",
+     "country_code": "US",
+     "lat": 36.6,
+     "lon": -121.89,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 200
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterey Bay Aquarium and Cannery Row",
+       "day": 1
+      },
+      {
+       "name": "Big Sur",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Monterey Bay Aquarium and Cannery Row.",
+      "Big Sur by Highway 1."
+     ],
+     "do": [
+      "Sleep: Monterey or Carmel."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-monterey",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "aquarium"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "big-sur"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-santa-barbara",
+     "name": "Santa Barbara",
+     "country_code": "US",
+     "lat": 34.42,
+     "lon": -119.7,
+     "elevation_m": 15,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Barbara",
+       "day": 1
+      },
+      {
+       "name": "Channel Islands by boat",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Mission and old town.",
+      "Channel Islands by boat."
+     ],
+     "do": [
+      "Sleep: Downtown or by the beach."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Channel Islands by boat",
+       "query": "Channel Islands by boat"
+      }
+     ],
+     "area": "us-santa-barbara",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mission"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "channel-islands"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-los-angeles",
+     "name": "Los Angeles",
+     "country_code": "US",
+     "lat": 34.052,
+     "lon": -118.244,
+     "elevation_m": 91,
+     "days": 3,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Monica Pier",
+       "day": 1
+      },
+      {
+       "name": "Venice Beach",
+       "day": 1
+      },
+      {
+       "name": "Venice Canals",
+       "day": 1
+      },
+      {
+       "name": "Griffith Observatory",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Sign",
+       "day": 2
+      },
+      {
+       "name": "Los Angeles",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Walk of Fame",
+       "day": 2
+      },
+      {
+       "name": "The Getty Center",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Santa Monica Pier and Venice.",
+      "Griffith Observatory and the Hollywood Sign. Hollywood Boulevard.",
+      "The Getty Center."
+     ],
+     "do": [
+      "Sleep: Santa Monica by the sea, or Hollywood."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Getty Center",
+       "query": "The Getty Center"
+      }
+     ],
+     "area": "us-los-angeles",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "santa-monica"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "griffith",
+        "hollywood"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "getty"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-san-diego",
+     "name": "San Diego",
+     "country_code": "US",
+     "lat": 32.72,
+     "lon": -117.16,
+     "elevation_m": 32,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "USS Midway and the harbour",
+       "day": 1
+      },
+      {
+       "name": "La Jolla Cove and Torrey Pines",
+       "day": 2
+      },
+      {
+       "name": "Coronado Beach",
+       "day": 2
+      },
+      {
+       "name": "Balboa Park and the zoo",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. USS Midway and the harbour.",
+      "La Jolla Cove and Torrey Pines. Coronado Beach.",
+      "Balboa Park and the zoo."
+     ],
+     "do": [
+      "Sleep: Gaslamp Quarter, Little Italy or La Jolla."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-san-diego",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "midway"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "la-jolla",
+        "coronado"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "balboa"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "name": "Joshua Tree National Park",
+     "country_code": "US",
+     "lat": 34.136,
+     "lon": -116.054,
+     "elevation_m": 600,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1270
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1660
+      },
+      {
+       "type": "desert"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Joshua Tree National Park",
+       "day": 1
+      },
+      {
+       "name": "Ryan Mountain",
+       "day": 2
+      },
+      {
+       "name": "Cholla Cactus Garden and Keys View",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Hidden Valley and the boulder piles.",
+      "Ryan Mountain (Oct–Apr). Cholla Cactus Garden and Keys View."
+     ],
+     "do": [
+      "Sleep: Twentynine Palms or Joshua Tree town, by the north gates."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-joshua-tree-national-park",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "hidden-valley"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ryan-mountain",
+        "cholla"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-death-valley",
+     "name": "Death Valley",
+     "country_code": "US",
+     "lat": 36.457,
+     "lon": -116.866,
+     "elevation_m": -58,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      },
+      {
+       "type": "desert"
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Canyon",
+       "day": 1
+      },
+      {
+       "name": "Zabriskie Point",
+       "day": 2
+      },
+      {
+       "name": "Badwater Basin",
+       "day": 2
+      },
+      {
+       "name": "Mesquite Flat Sand Dunes",
+       "day": 2
+      },
+      {
+       "name": "Dante's View",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Golden Canyon (Oct–Apr).",
+      "Zabriskie Point, Badwater and Artists Palette. Mesquite Flat Sand Dunes. Dante's View.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Furnace Creek or Stovepipe Wells."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-death-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-canyon"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "badwater-zabriskie",
+        "dunes",
+        "dantes"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-california-21",
+   "title": "California in three weeks",
+   "countries": [
+    "US"
+   ],
+   "summary": "Wine country, Tahoe, the Eastern Sierra, Yosemite and the giant sequoias, then the whole coast to San Diego.",
+   "destination": "USA: California",
+   "region": "usa-california",
+   "weeks": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    9,
+    10
+   ],
+   "season_note": "June to October: Tioga Pass is open, so you cross Yosemite to the Eastern Sierra. The coast has summer fog (June-August); September and October are the clearest months; inland 35 °C in the valleys.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "name": "San Francisco",
+     "country_code": "US",
+     "lat": 37.775,
+     "lon": -122.419,
+     "elevation_m": 24,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Gate Bridge",
+       "day": 1
+      },
+      {
+       "name": "Alcatraz Island",
+       "day": 2
+      },
+      {
+       "name": "Lombard Street",
+       "day": 2
+      },
+      {
+       "name": "Chinatown, San Francisco",
+       "day": 2
+      },
+      {
+       "name": "Coit Tower",
+       "day": 2
+      },
+      {
+       "name": "Fisherman's Wharf",
+       "day": 3
+      },
+      {
+       "name": "Pier 39",
+       "day": 3
+      },
+      {
+       "name": "Sausalito",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Golden Gate Bridge on foot.",
+      "Alcatraz. Cable car, Chinatown and Lombard Street.",
+      "Fisherman's Wharf and the sea lions of Pier 39. Muir Woods and Sausalito."
+     ],
+     "do": [
+      "Sleep: Union Square, Nob Hill or North Beach, near the cable cars."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alcatraz",
+       "query": "Alcatraz Island"
+      },
+      {
+       "title": "Muir Woods and Sausalito",
+       "query": "Sausalito"
+      }
+     ],
+     "area": "us-san-francisco",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-gate"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcatraz",
+        "cable-car"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wharf",
+        "muir-sausalito"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-napa-valley",
+     "name": "Napa Valley",
+     "country_code": "US",
+     "lat": 38.4,
+     "lon": -122.36,
+     "elevation_m": 20,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Calistoga mud baths",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Calistoga mud baths."
+     ],
+     "do": [
+      "Sleep: Napa, Yountville or Healdsburg."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-napa-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "calistoga"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "name": "Lake Tahoe",
+     "country_code": "US",
+     "lat": 38.94,
+     "lon": -119.98,
+     "elevation_m": 1900,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1900
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lake Tahoe",
+       "day": 2
+      },
+      {
+       "name": "Sand Harbor",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Emerald Bay and Vikingsholm. Sand Harbor (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: South Lake Tahoe, or Tahoe City on the north shore."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "x-us-lake-tahoe",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "emerald-bay",
+        "sand-harbor"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-bishop",
+     "name": "Bishop",
+     "country_code": "US",
+     "lat": 37.36,
+     "lon": -118.4,
+     "elevation_m": 1260,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 3100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Mono Lake",
+       "day": 1
+      },
+      {
+       "name": "Ancient Bristlecone Pine Forest",
+       "day": 2
+      },
+      {
+       "name": "Sierra Nevada",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Mono Lake's tufa towers.",
+      "Ancient Bristlecone Pine Forest. Alabama Hills and Mount Whitney."
+     ],
+     "do": [
+      "Sleep: Bishop, or Lee Vining by Mono Lake."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-bishop",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mono-lake"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bristlecone",
+        "alabama-hills"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-yosemite-valley",
+     "name": "Yosemite Valley",
+     "country_code": "US",
+     "lat": 37.746,
+     "lon": -119.594,
+     "elevation_m": 1220,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2200
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1820
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 2690
+      }
+     ],
+     "visits": [
+      {
+       "name": "El Capitan",
+       "day": 1
+      },
+      {
+       "name": "Bridalveil Fall",
+       "day": 1
+      },
+      {
+       "name": "Yosemite Valley",
+       "day": 1
+      },
+      {
+       "name": "Vernal Fall",
+       "day": 2
+      },
+      {
+       "name": "Nevada Fall",
+       "day": 2
+      },
+      {
+       "name": "Glacier Point",
+       "day": 2
+      },
+      {
+       "name": "Half Dome",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. The valley floor: Yosemite Falls, El Capitan, Tunnel View.",
+      "Mist Trail to Vernal Fall and Nevada Fall. Glacier Point.",
+      "Half Dome."
+     ],
+     "do": [
+      "Sleep: In the valley (lodges, Curry Village), or El Portal and Mariposa outside."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Half Dome",
+       "query": "Half Dome"
+      }
+     ],
+     "area": "us-yosemite-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley-floor"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mist-trail",
+        "glacier-point"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "half-dome"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-sequoia-national-park",
+     "name": "Sequoia National Park",
+     "country_code": "US",
+     "lat": 36.44,
+     "lon": -118.9,
+     "elevation_m": 260,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2100
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2050
+      }
+     ],
+     "visits": [
+      {
+       "name": "General Sherman Tree",
+       "day": 2
+      },
+      {
+       "name": "Sequoia National Park",
+       "day": 2
+      },
+      {
+       "name": "Moro Rock",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "General Sherman and the Congress Trail. Moro Rock."
+     ],
+     "do": [
+      "Sleep: Three Rivers at the gate, or the lodges in the park."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-sequoia-national-park",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sherman",
+        "moro-rock"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-monterey",
+     "name": "Monterey",
+     "country_code": "US",
+     "lat": 36.6,
+     "lon": -121.89,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 200
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterey Bay Aquarium and Cannery Row",
+       "day": 1
+      },
+      {
+       "name": "Big Sur",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Monterey Bay Aquarium and Cannery Row.",
+      "Big Sur by Highway 1."
+     ],
+     "do": [
+      "Sleep: Monterey or Carmel."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-monterey",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "aquarium"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "big-sur"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-santa-barbara",
+     "name": "Santa Barbara",
+     "country_code": "US",
+     "lat": 34.42,
+     "lon": -119.7,
+     "elevation_m": 15,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Barbara",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Mission and old town."
+     ],
+     "do": [
+      "Sleep: Downtown or by the beach."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-santa-barbara",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mission"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-los-angeles",
+     "name": "Los Angeles",
+     "country_code": "US",
+     "lat": 34.052,
+     "lon": -118.244,
+     "elevation_m": 91,
+     "days": 2,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Monica Pier",
+       "day": 1
+      },
+      {
+       "name": "Venice Beach",
+       "day": 1
+      },
+      {
+       "name": "Venice Canals",
+       "day": 1
+      },
+      {
+       "name": "Griffith Observatory",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Sign",
+       "day": 2
+      },
+      {
+       "name": "Los Angeles",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Walk of Fame",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Santa Monica Pier and Venice.",
+      "Griffith Observatory and the Hollywood Sign. Hollywood Boulevard."
+     ],
+     "do": [
+      "Sleep: Santa Monica by the sea, or Hollywood."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-los-angeles",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "santa-monica"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "griffith",
+        "hollywood"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-san-diego",
+     "name": "San Diego",
+     "country_code": "US",
+     "lat": 32.72,
+     "lon": -117.16,
+     "elevation_m": 32,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "USS Midway and the harbour",
+       "day": 1
+      },
+      {
+       "name": "La Jolla Cove and Torrey Pines",
+       "day": 2
+      },
+      {
+       "name": "Coronado Beach",
+       "day": 2
+      },
+      {
+       "name": "Balboa Park and the zoo",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. USS Midway and the harbour.",
+      "La Jolla Cove and Torrey Pines. Coronado Beach.",
+      "Balboa Park and the zoo."
+     ],
+     "do": [
+      "Sleep: Gaslamp Quarter, Little Italy or La Jolla."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-san-diego",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "midway"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "la-jolla",
+        "coronado"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "balboa"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-california-28-winter",
+   "title": "California in winter, a month",
+   "countries": [
+    "US"
+   ],
+   "summary": "Snow at Lake Tahoe, wine country, Yosemite, the coast and its cities, and the deserts of Joshua Tree and Death Valley.",
+   "destination": "USA: California",
+   "region": "usa-california",
+   "weeks": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best_months": [
+    3,
+    4,
+    5
+   ],
+   "season_note": "November to May: Tioga Pass and Glacier Point Road are closed, so the route stays west of the Sierra and on the coast. Yosemite Valley is open with snow (carry chains), waterfalls fullest April-June; rain on the coast December-March, sun in the south.",
+   "pace": "relaxed",
+   "level": 2,
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "name": "San Francisco",
+     "country_code": "US",
+     "lat": 37.775,
+     "lon": -122.419,
+     "elevation_m": 24,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Gate Bridge",
+       "day": 1
+      },
+      {
+       "name": "Alcatraz Island",
+       "day": 2
+      },
+      {
+       "name": "Lombard Street",
+       "day": 2
+      },
+      {
+       "name": "Chinatown, San Francisco",
+       "day": 2
+      },
+      {
+       "name": "Coit Tower",
+       "day": 2
+      },
+      {
+       "name": "Fisherman's Wharf",
+       "day": 3
+      },
+      {
+       "name": "Pier 39",
+       "day": 3
+      },
+      {
+       "name": "Sausalito",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Golden Gate Bridge on foot.",
+      "Alcatraz. Cable car, Chinatown and Lombard Street.",
+      "Fisherman's Wharf and the sea lions of Pier 39. Muir Woods and Sausalito.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Union Square, Nob Hill or North Beach, near the cable cars."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alcatraz",
+       "query": "Alcatraz Island"
+      },
+      {
+       "title": "Muir Woods and Sausalito",
+       "query": "Sausalito"
+      }
+     ],
+     "area": "us-san-francisco",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-gate"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcatraz",
+        "cable-car"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wharf",
+        "muir-sausalito"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "name": "Lake Tahoe",
+     "country_code": "US",
+     "lat": 38.94,
+     "lon": -119.98,
+     "elevation_m": 1900,
+     "days": 2,
+     "activities": [
+      {
+       "type": "ski"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Skiing at Heavenly or Palisades",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Skiing at Heavenly or Palisades (Dec–Apr)."
+     ],
+     "do": [
+      "Sleep: South Lake Tahoe, or Tahoe City on the north shore."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "x-us-lake-tahoe",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ski"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-napa-valley",
+     "name": "Napa Valley",
+     "country_code": "US",
+     "lat": 38.4,
+     "lon": -122.36,
+     "elevation_m": 20,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Napa Valley",
+       "day": 2
+      },
+      {
+       "name": "Sonoma",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Wineries of Napa and Sonoma."
+     ],
+     "do": [
+      "Sleep: Napa, Yountville or Healdsburg."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Wineries of Napa and Sonoma",
+       "query": "Napa Valley"
+      }
+     ],
+     "area": "us-napa-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wineries"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-yosemite-valley",
+     "name": "Yosemite Valley",
+     "country_code": "US",
+     "lat": 37.746,
+     "lon": -119.594,
+     "elevation_m": 1220,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1900
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1820
+      }
+     ],
+     "visits": [
+      {
+       "name": "El Capitan",
+       "day": 1
+      },
+      {
+       "name": "Bridalveil Fall",
+       "day": 1
+      },
+      {
+       "name": "Yosemite Valley",
+       "day": 1
+      },
+      {
+       "name": "Vernal Fall",
+       "day": 2
+      },
+      {
+       "name": "Nevada Fall",
+       "day": 2
+      },
+      {
+       "name": "Mariposa Grove of giant sequoias",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The valley floor: Yosemite Falls, El Capitan, Tunnel View.",
+      "Mist Trail to Vernal Fall and Nevada Fall. Mariposa Grove of giant sequoias.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: In the valley (lodges, Curry Village), or El Portal and Mariposa outside."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-yosemite-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley-floor"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mist-trail",
+        "mariposa"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-monterey",
+     "name": "Monterey",
+     "country_code": "US",
+     "lat": 36.6,
+     "lon": -121.89,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 200
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterey Bay Aquarium and Cannery Row",
+       "day": 1
+      },
+      {
+       "name": "Big Sur",
+       "day": 2
+      },
+      {
+       "name": "Point Lobos",
+       "day": 3
+      },
+      {
+       "name": "17-Mile Drive",
+       "day": 3
+      },
+      {
+       "name": "Carmel-by-the-Sea",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Monterey Bay Aquarium and Cannery Row.",
+      "Big Sur by Highway 1.",
+      "Point Lobos. 17-Mile Drive and Carmel."
+     ],
+     "do": [
+      "Sleep: Monterey or Carmel."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-monterey",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "aquarium"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "big-sur"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "point-lobos",
+        "17-mile"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-santa-barbara",
+     "name": "Santa Barbara",
+     "country_code": "US",
+     "lat": 34.42,
+     "lon": -119.7,
+     "elevation_m": 15,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Barbara",
+       "day": 1
+      },
+      {
+       "name": "Channel Islands by boat",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Mission and old town.",
+      "Channel Islands by boat."
+     ],
+     "do": [
+      "Sleep: Downtown or by the beach."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Channel Islands by boat",
+       "query": "Channel Islands by boat"
+      }
+     ],
+     "area": "us-santa-barbara",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mission"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "channel-islands"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-los-angeles",
+     "name": "Los Angeles",
+     "country_code": "US",
+     "lat": 34.052,
+     "lon": -118.244,
+     "elevation_m": 91,
+     "days": 4,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Monica Pier",
+       "day": 1
+      },
+      {
+       "name": "Venice Beach",
+       "day": 1
+      },
+      {
+       "name": "Venice Canals",
+       "day": 1
+      },
+      {
+       "name": "Griffith Observatory",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Sign",
+       "day": 2
+      },
+      {
+       "name": "Los Angeles",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Walk of Fame",
+       "day": 2
+      },
+      {
+       "name": "The Getty Center",
+       "day": 3
+      },
+      {
+       "name": "Universal Studios Hollywood",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. Santa Monica Pier and Venice.",
+      "Griffith Observatory and the Hollywood Sign. Hollywood Boulevard.",
+      "The Getty Center.",
+      "Universal Studios Hollywood."
+     ],
+     "do": [
+      "Sleep: Santa Monica by the sea, or Hollywood."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "The Getty Center",
+       "query": "The Getty Center"
+      },
+      {
+       "title": "Universal Studios Hollywood",
+       "query": "Universal Studios Hollywood"
+      }
+     ],
+     "area": "us-los-angeles",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "santa-monica"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "griffith",
+        "hollywood"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "getty"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "universal"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-san-diego",
+     "name": "San Diego",
+     "country_code": "US",
+     "lat": 32.72,
+     "lon": -117.16,
+     "elevation_m": 32,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "USS Midway and the harbour",
+       "day": 1
+      },
+      {
+       "name": "La Jolla Cove and Torrey Pines",
+       "day": 2
+      },
+      {
+       "name": "Coronado Beach",
+       "day": 2
+      },
+      {
+       "name": "Balboa Park and the zoo",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. USS Midway and the harbour.",
+      "La Jolla Cove and Torrey Pines. Coronado Beach.",
+      "Balboa Park and the zoo."
+     ],
+     "do": [
+      "Sleep: Gaslamp Quarter, Little Italy or La Jolla."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-san-diego",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "midway"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "la-jolla",
+        "coronado"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "balboa"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-joshua-tree-national-park",
+     "name": "Joshua Tree National Park",
+     "country_code": "US",
+     "lat": 34.136,
+     "lon": -116.054,
+     "elevation_m": 600,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1270
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1660
+      },
+      {
+       "type": "desert"
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Joshua Tree National Park",
+       "day": 1
+      },
+      {
+       "name": "Ryan Mountain",
+       "day": 2
+      },
+      {
+       "name": "Cholla Cactus Garden and Keys View",
+       "day": 2
+      },
+      {
+       "name": "Night sky",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Hidden Valley and the boulder piles.",
+      "Ryan Mountain (Oct–Apr). Cholla Cactus Garden and Keys View.",
+      "Night sky."
+     ],
+     "do": [
+      "Sleep: Twentynine Palms or Joshua Tree town, by the north gates."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-joshua-tree-national-park",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "hidden-valley"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ryan-mountain",
+        "cholla"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "stars"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-death-valley",
+     "name": "Death Valley",
+     "country_code": "US",
+     "lat": 36.457,
+     "lon": -116.866,
+     "elevation_m": -58,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      },
+      {
+       "type": "desert"
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Canyon",
+       "day": 1
+      },
+      {
+       "name": "Zabriskie Point",
+       "day": 2
+      },
+      {
+       "name": "Badwater Basin",
+       "day": 2
+      },
+      {
+       "name": "Mesquite Flat Sand Dunes",
+       "day": 2
+      },
+      {
+       "name": "Dante's View",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Golden Canyon (Oct–Apr).",
+      "Zabriskie Point, Badwater and Artists Palette. Mesquite Flat Sand Dunes. Dante's View."
+     ],
+     "do": [
+      "Sleep: Furnace Creek or Stovepipe Wells."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-death-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-canyon"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "badwater-zabriskie",
+        "dunes",
+        "dantes"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-california-28",
+   "title": "All of California",
+   "countries": [
+    "US"
+   ],
+   "summary": "From the redwoods to San Diego: wine country, Tahoe, the Eastern Sierra, Yosemite, the sequoias and the coast.",
+   "destination": "USA: California",
+   "region": "usa-california",
+   "weeks": 4,
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best_months": [
+    9,
+    10
+   ],
+   "season_note": "June to October: Tioga Pass is open, so you cross Yosemite to the Eastern Sierra. The coast has summer fog (June-August); September and October are the clearest months; inland 35 °C in the valleys.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-san-francisco",
+     "name": "San Francisco",
+     "country_code": "US",
+     "lat": 37.775,
+     "lon": -122.419,
+     "elevation_m": 24,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Golden Gate Bridge",
+       "day": 1
+      },
+      {
+       "name": "Alcatraz Island",
+       "day": 2
+      },
+      {
+       "name": "Lombard Street",
+       "day": 2
+      },
+      {
+       "name": "Chinatown, San Francisco",
+       "day": 2
+      },
+      {
+       "name": "Coit Tower",
+       "day": 2
+      },
+      {
+       "name": "Fisherman's Wharf",
+       "day": 3
+      },
+      {
+       "name": "Pier 39",
+       "day": 3
+      },
+      {
+       "name": "Sausalito",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Golden Gate Bridge on foot.",
+      "Alcatraz. Cable car, Chinatown and Lombard Street.",
+      "Fisherman's Wharf and the sea lions of Pier 39. Muir Woods and Sausalito.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Union Square, Nob Hill or North Beach, near the cable cars."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alcatraz",
+       "query": "Alcatraz Island"
+      },
+      {
+       "title": "Muir Woods and Sausalito",
+       "query": "Sausalito"
+      }
+     ],
+     "area": "us-san-francisco",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "golden-gate"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "alcatraz",
+        "cable-car"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wharf",
+        "muir-sausalito"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-redwood-national-and-state-parks",
+     "name": "Redwood National and State Parks",
+     "country_code": "US",
+     "lat": 41.29,
+     "lon": -124.06,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      }
+     ],
+     "visits": [
+      {
+       "name": "Redwood National and State Parks",
+       "day": 2
+      },
+      {
+       "name": "Fern Canyon",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Lady Bird Johnson Grove and Prairie Creek. Fern Canyon."
+     ],
+     "do": [
+      "Sleep: Orick, Klamath or Crescent City."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Fern Canyon",
+       "query": "Fern Canyon"
+      }
+     ],
+     "area": "us-redwood-national-and-state-parks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "lady-bird",
+        "fern-canyon"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-napa-valley",
+     "name": "Napa Valley",
+     "country_code": "US",
+     "lat": 38.4,
+     "lon": -122.36,
+     "elevation_m": 20,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Napa Valley",
+       "day": 2
+      },
+      {
+       "name": "Sonoma",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Wineries of Napa and Sonoma."
+     ],
+     "do": [
+      "Sleep: Napa, Yountville or Healdsburg."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Wineries of Napa and Sonoma",
+       "query": "Napa Valley"
+      }
+     ],
+     "area": "us-napa-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "wineries"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "x-us-lake-tahoe",
+     "name": "Lake Tahoe",
+     "country_code": "US",
+     "lat": 38.94,
+     "lon": -119.98,
+     "elevation_m": 1900,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1900
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Lake Tahoe",
+       "day": 2
+      },
+      {
+       "name": "Sand Harbor",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Emerald Bay and Vikingsholm. Sand Harbor (Jun–Sep).",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: South Lake Tahoe, or Tahoe City on the north shore."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "x-us-lake-tahoe",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "emerald-bay",
+        "sand-harbor"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-bishop",
+     "name": "Bishop",
+     "country_code": "US",
+     "lat": 37.36,
+     "lon": -118.4,
+     "elevation_m": 1260,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 3100
+      }
+     ],
+     "visits": [
+      {
+       "name": "Mono Lake",
+       "day": 1
+      },
+      {
+       "name": "Ancient Bristlecone Pine Forest",
+       "day": 2
+      },
+      {
+       "name": "Sierra Nevada",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Mono Lake's tufa towers.",
+      "Ancient Bristlecone Pine Forest. Alabama Hills and Mount Whitney."
+     ],
+     "do": [
+      "Sleep: Bishop, or Lee Vining by Mono Lake."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-bishop",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mono-lake"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bristlecone",
+        "alabama-hills"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-yosemite-valley",
+     "name": "Yosemite Valley",
+     "country_code": "US",
+     "lat": 37.746,
+     "lon": -119.594,
+     "elevation_m": 1220,
+     "days": 4,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2200
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1820
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 2690
+      }
+     ],
+     "visits": [
+      {
+       "name": "El Capitan",
+       "day": 1
+      },
+      {
+       "name": "Bridalveil Fall",
+       "day": 1
+      },
+      {
+       "name": "Yosemite Valley",
+       "day": 1
+      },
+      {
+       "name": "Vernal Fall",
+       "day": 2
+      },
+      {
+       "name": "Nevada Fall",
+       "day": 2
+      },
+      {
+       "name": "Glacier Point",
+       "day": 2
+      },
+      {
+       "name": "Half Dome",
+       "day": 3
+      },
+      {
+       "name": "Mariposa Grove of giant sequoias",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. The valley floor: Yosemite Falls, El Capitan, Tunnel View.",
+      "Mist Trail to Vernal Fall and Nevada Fall. Glacier Point.",
+      "Half Dome.",
+      "Mariposa Grove of giant sequoias."
+     ],
+     "do": [
+      "Sleep: In the valley (lodges, Curry Village), or El Portal and Mariposa outside."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Half Dome",
+       "query": "Half Dome"
+      }
+     ],
+     "area": "us-yosemite-valley",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "valley-floor"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mist-trail",
+        "glacier-point"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "half-dome"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mariposa"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-sequoia-national-park",
+     "name": "Sequoia National Park",
+     "country_code": "US",
+     "lat": 36.44,
+     "lon": -118.9,
+     "elevation_m": 260,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 2100
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 2050
+      }
+     ],
+     "visits": [
+      {
+       "name": "General Sherman Tree",
+       "day": 2
+      },
+      {
+       "name": "Sequoia National Park",
+       "day": 2
+      },
+      {
+       "name": "Moro Rock",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "General Sherman and the Congress Trail. Moro Rock."
+     ],
+     "do": [
+      "Sleep: Three Rivers at the gate, or the lodges in the park."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-sequoia-national-park",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "sherman",
+        "moro-rock"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-monterey",
+     "name": "Monterey",
+     "country_code": "US",
+     "lat": 36.6,
+     "lon": -121.89,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 200
+      }
+     ],
+     "visits": [
+      {
+       "name": "Monterey Bay Aquarium and Cannery Row",
+       "day": 1
+      },
+      {
+       "name": "Big Sur",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Monterey Bay Aquarium and Cannery Row.",
+      "Big Sur by Highway 1."
+     ],
+     "do": [
+      "Sleep: Monterey or Carmel."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-monterey",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "aquarium"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "big-sur"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-santa-barbara",
+     "name": "Santa Barbara",
+     "country_code": "US",
+     "lat": 34.42,
+     "lon": -119.7,
+     "elevation_m": 15,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Barbara",
+       "day": 1
+      },
+      {
+       "name": "Channel Islands by boat",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Mission and old town.",
+      "Channel Islands by boat."
+     ],
+     "do": [
+      "Sleep: Downtown or by the beach."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Channel Islands by boat",
+       "query": "Channel Islands by boat"
+      }
+     ],
+     "area": "us-santa-barbara",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mission"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "channel-islands"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-los-angeles",
+     "name": "Los Angeles",
+     "country_code": "US",
+     "lat": 34.052,
+     "lon": -118.244,
+     "elevation_m": 91,
+     "days": 2,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Santa Monica Pier",
+       "day": 1
+      },
+      {
+       "name": "Venice Beach",
+       "day": 1
+      },
+      {
+       "name": "Venice Canals",
+       "day": 1
+      },
+      {
+       "name": "Griffith Observatory",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Sign",
+       "day": 2
+      },
+      {
+       "name": "Los Angeles",
+       "day": 2
+      },
+      {
+       "name": "Hollywood Walk of Fame",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Santa Monica Pier and Venice.",
+      "Griffith Observatory and the Hollywood Sign. Hollywood Boulevard."
+     ],
+     "do": [
+      "Sleep: Santa Monica by the sea, or Hollywood."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-los-angeles",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "santa-monica"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "griffith",
+        "hollywood"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-san-diego",
+     "name": "San Diego",
+     "country_code": "US",
+     "lat": 32.72,
+     "lon": -117.16,
+     "elevation_m": 32,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 100
+      },
+      {
+       "type": "beach"
+      }
+     ],
+     "visits": [
+      {
+       "name": "USS Midway and the harbour",
+       "day": 1
+      },
+      {
+       "name": "La Jolla Cove and Torrey Pines",
+       "day": 2
+      },
+      {
+       "name": "Coronado Beach",
+       "day": 2
+      },
+      {
+       "name": "Balboa Park and the zoo",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. USS Midway and the harbour.",
+      "La Jolla Cove and Torrey Pines. Coronado Beach.",
+      "Balboa Park and the zoo."
+     ],
+     "do": [
+      "Sleep: Gaslamp Quarter, Little Italy or La Jolla."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-san-diego",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "midway"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "la-jolla",
+        "coronado"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "balboa"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
    "slug": "usa-southwest-7",
    "title": "The Southwest in a week: Zion, Page and the Grand Canyon",
    "countries": [
