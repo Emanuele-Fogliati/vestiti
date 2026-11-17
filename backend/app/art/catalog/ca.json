@@ -2087,7 +2087,6 @@
    "radius_km": 15,
    "aliases": [
     "jellybean row",
-    "cabot tower",
     "st john s newfoundland",
     "st johns newfoundland",
     "saint john s newfoundland"
@@ -3148,8 +3147,7 @@
     "combers beach",
     "schooner cove",
     "incinerator rock",
-    "long beach pacific rim",
-    "west coast trail"
+    "long beach pacific rim"
    ],
    "names": [
     "pacific rim",
@@ -4060,6 +4058,138 @@
     "leaf": "#36603C",
     "acc": "#CFE0EA",
     "obj": "#6B4A30"
+   }
+  },
+  {
+   "slug": "berg-lake",
+   "label": "Berg Lake: the Berg Glacier spilling into the milky turquoise lake below Mount Robson's snow-covered north face",
+   "lat": 53.149,
+   "lon": -119.15,
+   "radius_km": 4,
+   "aliases": [
+    "berg lake",
+    "berg glacier",
+    "lago berg"
+   ],
+   "palette": {
+    "sky": "#9FCBEF",
+    "far": "#C8B9A6",
+    "mid": "#7D7167",
+    "ice": "#F4F8FA",
+    "water": "#6CC3BE",
+    "near": "#22262A",
+    "sun": "#F2C230",
+    "leaf": "#2E5236",
+    "acc": "#AFCFE2",
+    "obj": "#A38D78"
+   }
+  },
+  {
+   "slug": "larch-valley",
+   "label": "Larch Valley: golden autumn larches in the meadow below Pinnacle Mountain's banded pyramid and the notch of Sentinel Pass",
+   "lat": 51.3185,
+   "lon": -116.2005,
+   "radius_km": 4,
+   "aliases": [
+    "larch valley",
+    "sentinel pass",
+    "minnestimma lakes",
+    "minnestimma lake",
+    "valle dei larici"
+   ],
+   "palette": {
+    "sky": "#C9E0F3",
+    "far": "#B8B3AA",
+    "mid": "#8C7C68",
+    "ice": "#F4F4F0",
+    "water": "#4F9DB0",
+    "near": "#26231F",
+    "sun": "#F2C230",
+    "leaf": "#7E8A48",
+    "acc": "#E2A62A",
+    "obj": "#CFC5B2"
+   }
+  },
+  {
+   "slug": "magdalen-islands",
+   "label": "Magdalen Islands: colourful wooden houses scattered on green rolling hills above red sandstone cliffs and a sandy cove",
+   "lat": 47.39,
+   "lon": -61.86,
+   "radius_km": 40,
+   "aliases": [
+    "magdalen islands",
+    "magdalen island",
+    "iles de la madeleine",
+    "ile de la madeleine",
+    "isole magdalen",
+    "cap aux meules",
+    "havre aux maisons",
+    "havre aubert",
+    "etang du nord"
+   ],
+   "palette": {
+    "sky": "#CFE3F2",
+    "far": "#E8D6AE",
+    "mid": "#B9502F",
+    "ice": "#F3F1EA",
+    "water": "#4C8FAE",
+    "near": "#26292B",
+    "sun": "#F2C230",
+    "leaf": "#82A84E",
+    "acc": "#C4362C",
+    "obj": "#3E78B4"
+   }
+  },
+  {
+   "slug": "signal-hill",
+   "label": "Cabot Tower, the grey stone signal tower with its corner turret and masts, on the rocky top of Signal Hill above the Atlantic, St. John's",
+   "lat": 47.5701,
+   "lon": -52.6818,
+   "radius_km": 3,
+   "aliases": [
+    "cabot tower",
+    "signal hill st john",
+    "signal hill national historic site",
+    "signal hill newfoundland",
+    "signal hill canada",
+    "torre cabot"
+   ],
+   "palette": {
+    "sky": "#92C2EF",
+    "far": "#BCA683",
+    "mid": "#82807A",
+    "ice": "#F2F2EE",
+    "water": "#2E5D86",
+    "near": "#24262A",
+    "sun": "#F2C230",
+    "leaf": "#8C8E52",
+    "acc": "#93685E",
+    "obj": "#A99390"
+   }
+  },
+  {
+   "slug": "west-coast-trail",
+   "label": "West Coast Trail: Tsusiat Falls pouring off a sandstone cliff onto the beach, rainforest above and the Pacific beside",
+   "lat": 48.674,
+   "lon": -124.857,
+   "radius_km": 35,
+   "aliases": [
+    "west coast trail",
+    "tsusiat falls",
+    "tsusiat",
+    "west coast trail vancouver island"
+   ],
+   "palette": {
+    "sky": "#A9D3F2",
+    "far": "#CDBE9E",
+    "mid": "#4F4841",
+    "ice": "#F5F8F8",
+    "water": "#4C8DA6",
+    "near": "#23251F",
+    "sun": "#F2C230",
+    "leaf": "#25472F",
+    "acc": "#C9DEE8",
+    "obj": "#A3A19A"
    }
   }
  ]
