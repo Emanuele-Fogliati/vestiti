@@ -1,0 +1,68 @@
+{
+ "id": "us-maroon-bells-crater-lake",
+ "country": "US",
+ "name": "Maroon Bells to Crater Lake",
+ "base": "Aspen",
+ "region": "White River National Forest, Colorado",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "08:00",
+ "published": null,
+ "why": "From the most photographed mountains in Colorado, the twin Maroon Bells over Maroon Lake, through aspens and a rock field to a lake right under their walls.",
+ "book": "Reservation for the RFTA bus from Aspen Highlands or for parking at Maroon Lake (aspenchamber.org) from late May to October; the road is closed to cars by day.",
+ "water": "None: carry 1-2 litres.",
+ "dangers": [
+  "The Bells are 'the Deadly Bells': never climb them without mountaineering skills.",
+  "Thunderstorms in summer afternoons.",
+  "Moose by the lakes: keep your distance."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.fs.usda.gov/r02/whiteriver/recreation/maroon-snowmass-crater-lake-th-1975",
+  "https://en.wikipedia.org/wiki/Maroon_Bells"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 3,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Maroon Lake",
+   "lat": 39.0968,
+   "lon": -106.9455,
+   "role": "start",
+   "note": "The bus stop and the lake with the famous view of the Bells."
+  },
+  {
+   "id": "goal",
+   "name": "Crater Lake",
+   "lat": 39.0848,
+   "lon": -106.9675,
+   "role": "goal",
+   "note": "A shallow lake at the foot of Maroon Peak and North Maroon Peak."
+  }
+ ],
+ "replaces": [
+  "us-goal-40061724"
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "id": "us-grinnell-glacier",
+ "country": "US",
+ "name": "Grinnell Glacier",
+ "base": "Many Glacier",
+ "region": "Glacier National Park, Montana",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "hard",
+ "months": [
+  7,
+  8,
+  9
+ ],
+ "hours": [
+  6,
+  8
+ ],
+ "start_by": "08:00",
+ "published": {
+  "km": 17.1,
+  "gain_m": 488,
+  "source": "https://www.nps.gov/glac/planyourvisit/hikingmanyglacier.htm"
+ },
+ "why": "Above Swiftcurrent and Josephine lakes and under waterfalls to the moraine of Grinnell Glacier, where icebergs float on a milky blue lake.",
+ "book": "Vehicle reservation for Many Glacier in summer (recreation.gov). The Glacier Park Boat Company boats across Swiftcurrent Lake and Lake Josephine cut 6 km. The upper trail opens only when snow and bears allow, often mid-July.",
+ "water": "Streams and a toilet at the picnic area below the glacier; filter.",
+ "dangers": [
+  "Grizzly bears are common: carry bear spray and make noise.",
+  "Snow on the upper switchbacks; the trail closes for bear activity.",
+  "Do not walk on the glacier or the ice in the lake."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/glac/planyourvisit/hikingmanyglacier.htm",
+  "https://www.nps.gov/places/grinnell-glacier-trailhead.htm",
+  "https://en.wikipedia.org/wiki/Grinnell_Glacier"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 4,
+  "nature": 5,
+  "culture": 1,
+  "relax": 2,
+  "history": 2,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Grinnell Glacier trailhead",
+   "lat": 48.7955,
+   "lon": -113.6575,
+   "role": "start",
+   "note": "The picnic area at the west end of Swiftcurrent Lake."
+  },
+  {
+   "id": "lake-josephine",
+   "name": "Lake Josephine",
+   "lat": 48.784,
+   "lon": -113.68,
+   "role": "point",
+   "note": "A long lake under Mount Gould, with the boat landing."
+  },
+  {
+   "id": "goal",
+   "name": "Upper Grinnell Lake",
+   "lat": 48.7608,
+   "lon": -113.7287,
+   "role": "goal",
+   "note": "A lake of meltwater at the foot of Grinnell Glacier and the Salamander."
+  }
+ ],
+ "replaces": [
+  "us-goal-82798391"
+ ]
+}

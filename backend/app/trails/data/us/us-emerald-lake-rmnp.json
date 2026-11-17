@@ -1,0 +1,85 @@
+{
+ "id": "us-emerald-lake-rmnp",
+ "country": "US",
+ "name": "Bear Lake to Emerald Lake",
+ "base": "Estes Park",
+ "region": "Rocky Mountain National Park, Colorado",
+ "kind": "day",
+ "days": 1,
+ "shape": "out_and_back",
+ "difficulty": "moderate",
+ "months": [
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "hours": [
+  2,
+  3
+ ],
+ "start_by": "07:00",
+ "published": {
+  "km": 5.8,
+  "gain_m": 184,
+  "source": "https://www.nps.gov/romo/planyourvisit/list_hiking_trails.htm"
+ },
+ "why": "A string of three alpine lakes in an hour, Nymph, Dream and Emerald, each closer under the cliffs of Hallett Peak and Flattop Mountain.",
+ "book": "Timed-entry reservation with the Bear Lake Road in summer (recreation.gov), or the free park shuttle from the Park and Ride.",
+ "water": "None: carry 1 litre.",
+ "dangers": [
+  "Ice on the path from October to June: microspikes.",
+  "Afternoon thunderstorms in July and August."
+ ],
+ "turnaround": "",
+ "sources": [
+  "https://www.nps.gov/romo/planyourvisit/list_hiking_trails.htm",
+  "https://www.nps.gov/romo/planyourvisit/exploring-the-bear-lake-road-corridor.htm"
+ ],
+ "tier": "A",
+ "area": null,
+ "scores": {
+  "effort": 2,
+  "nature": 5,
+  "culture": 1,
+  "relax": 4,
+  "history": 1,
+  "landscape": 5
+ },
+ "points": [
+  {
+   "id": "start",
+   "name": "Bear Lake",
+   "lat": 40.3123,
+   "lon": -105.6457,
+   "role": "start",
+   "note": "A trailhead lake at 2,880 m at the end of Bear Lake Road."
+  },
+  {
+   "id": "nymph-lake",
+   "name": "Nymph Lake",
+   "lat": 40.3097,
+   "lon": -105.6527,
+   "role": "point",
+   "note": "A small lake covered in yellow pond lilies in summer."
+  },
+  {
+   "id": "dream-lake",
+   "name": "Dream Lake",
+   "lat": 40.3093,
+   "lon": -105.6591,
+   "role": "point",
+   "note": "A long lake with Hallett Peak at its head.",
+   "scene": "us-rocky-mountain-national-park"
+  },
+  {
+   "id": "goal",
+   "name": "Emerald Lake",
+   "lat": 40.3097,
+   "lon": -105.6682,
+   "role": "goal",
+   "note": "A green lake in a cirque right under Hallett Peak."
+  }
+ ]
+}

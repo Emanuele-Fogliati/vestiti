@@ -7247,6 +7247,141 @@
      "name": "Denali Visitor Center"
     }
    ]
+  },
+  {
+   "id": "us-highline-trail",
+   "name": "Highline Trail",
+   "country": "US",
+   "slot": "US-A",
+   "base": "West Glacier",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Granite Park Chalet"
+    },
+    {
+     "point": "haystack-saddle",
+     "name": "Haystack Butte saddle"
+    }
+   ]
+  },
+  {
+   "id": "us-grinnell-glacier",
+   "name": "Grinnell Glacier",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Many Glacier",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Upper Grinnell Lake"
+    },
+    {
+     "point": "lake-josephine",
+     "name": "Lake Josephine"
+    }
+   ]
+  },
+  {
+   "id": "us-cascade-canyon",
+   "name": "Cascade Canyon via Jenny Lake and Inspiration Point",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Jackson",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Inspiration Point"
+    },
+    {
+     "point": "hidden-falls",
+     "name": "Hidden Falls"
+    }
+   ]
+  },
+  {
+   "id": "us-fairy-falls-grand-prismatic",
+   "name": "Grand Prismatic Overlook and Fairy Falls",
+   "country": "US",
+   "slot": "US-A",
+   "base": "West Yellowstone",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Grand Prismatic Spring Overlook",
+     "reuse": "us-grand-prismatic-spring"
+    },
+    {
+     "point": "fairy-falls",
+     "name": "Fairy Falls"
+    }
+   ]
+  },
+  {
+   "id": "us-emerald-lake-rmnp",
+   "name": "Bear Lake to Emerald Lake",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Estes Park",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Emerald Lake"
+    },
+    {
+     "point": "dream-lake",
+     "name": "Dream Lake",
+     "reuse": "us-rocky-mountain-national-park"
+    }
+   ]
+  },
+  {
+   "id": "us-maroon-bells-crater-lake",
+   "name": "Maroon Bells to Crater Lake",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Aspen",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "Crater Lake"
+    },
+    {
+     "point": "start",
+     "name": "Maroon Lake"
+    }
+   ]
+  },
+  {
+   "id": "us-high-dune",
+   "name": "High Dune",
+   "country": "US",
+   "slot": "US-A",
+   "base": "Alamosa",
+   "kind": "day",
+   "status": "checked",
+   "scenes": [
+    {
+     "point": "goal",
+     "name": "High Dune"
+    },
+    {
+     "point": "start",
+     "name": "Dunes Parking Area"
+    }
+   ]
   }
  ]
 }
