@@ -5945,7 +5945,7 @@
    "slot": "AT-A",
    "base": "Innsbruck",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "start",
@@ -5954,7 +5954,8 @@
     },
     {
      "point": "goal",
-     "name": "Pfeishütte"
+     "name": "Pfeishütte",
+     "reuse": "at-pfeishutte"
     }
    ]
   },
