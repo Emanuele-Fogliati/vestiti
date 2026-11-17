@@ -2,6 +2,4719 @@
  "_doc": "Recommended trips built by tools/guide/build_recommended.py from app/guide/trips.json and the hand-written zone guides. Do not edit by hand: change the routes or the guides and run the tool.",
  "itineraries": [
   {
+   "slug": "usa-alaska-7",
+   "title": "Alaska in a week: Denali and Kenai Fjords",
+   "countries": [
+    "US"
+   ],
+   "summary": "Anchorage, the bus into Denali's tundra for grizzlies and the mountain, a flight from Talkeetna, then a glacier cruise in Kenai Fjords from Seward.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 1,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "season_note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "pace": "intense",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      }
+     ],
+     "visits": [
+      {
+       "name": "Turnagain Arm",
+       "day": 1
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 1
+      },
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Tony Knowles Coastal Trail."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "coastal-trail"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-denali-national-park",
+     "name": "Denali National Park",
+     "country_code": "US",
+     "lat": 63.73,
+     "lon": -148.9,
+     "elevation_m": 520,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1100
+      }
+     ],
+     "visits": [
+      {
+       "name": "The park's sled dog kennels",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The park's sled dog kennels.",
+      "Park bus into Denali."
+     ],
+     "do": [
+      "Sleep: The hotels at the park entrance (Glitter Gulch) or in Healy, 15 km north."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Park bus into Denali",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-denali",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "kennels"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bus"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-seward",
+     "name": "Seward",
+     "country_code": "US",
+     "lat": 60.1,
+     "lon": -149.44,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 150
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Exit Glacier",
+       "day": 1
+      },
+      {
+       "name": "Kenai Fjords National Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Exit Glacier.",
+      "Kenai Fjords cruise to a tidewater glacier."
+     ],
+     "do": [
+      "Sleep: The small boat harbor, where the cruises leave, or downtown by the SeaLife Center."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kenai Fjords cruise to a tidewater glacier",
+       "query": "Kenai Fjords National Park"
+      }
+     ],
+     "area": "us-seward",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "exit-glacier"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "fjords-cruise"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Anchorage Museum",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Anchorage Museum."
+     ],
+     "do": [
+      "Alaska's largest museum: the Smithsonian's Arctic Studies Center with over 600 Native objects, and Alaska's history from the gold rush to the pipeline."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-7-winter",
+   "title": "Alaska's winter in a week: Alyeska and the Fairbanks aurora",
+   "countries": [
+    "US"
+   ],
+   "summary": "Anchorage, two days of skiing at Alyeska above Turnagain Arm, then three nights in Fairbanks under the auroral oval, with Chena Hot Springs.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 1,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [
+    2,
+    3
+   ],
+   "season_note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "pace": "normal",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-girdwood",
+     "name": "Girdwood",
+     "country_code": "US",
+     "lat": 60.94,
+     "lon": -149.17,
+     "elevation_m": 40,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "ski",
+       "max_altitude_m": 840
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alyeska Aerial Tram",
+       "day": 1
+      },
+      {
+       "name": "Skiing at Alyeska",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Alyeska Aerial Tram.",
+      "Skiing at Alyeska."
+     ],
+     "do": [
+      "Sleep: The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Skiing at Alyeska",
+       "query": "Skiing at Alyeska"
+      }
+     ],
+     "area": "us-girdwood",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "tram"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ski"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Dog sledding",
+       "day": 2
+      },
+      {
+       "name": "World Ice Art Championships",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Dog sledding. World Ice Art Championships (Feb–Mar).",
+      "A spare day for the weather, or: Chena Hot Springs."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      },
+      {
+       "title": "Dog sledding",
+       "query": "Dog sledding"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "dogs",
+        "ice-art"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "chena"
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-7-aurora",
+   "title": "Northern lights in a week: Anchorage, Talkeetna and Fairbanks",
+   "countries": [
+    "US"
+   ],
+   "summary": "Anchorage's museums and Turnagain Arm, Talkeetna and a flight round Denali when it is clear, then Fairbanks for the aurora and Chena Hot Springs.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 1,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best_months": [],
+   "season_note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "pace": "normal",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1800
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Northern lights out of town",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Flight around Denali with a glacier landing. Northern lights out of town."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Flight around Denali with a glacier landing",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flightseeing",
+        "aurora"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Trans-Alaska Pipeline viewpoint",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Trans-Alaska Pipeline viewpoint.",
+      "A spare day for the weather, or: Chena Hot Springs."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "pipeline"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "chena"
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-14",
+   "title": "Two weeks of Alaska: Denali, Fairbanks, Valdez and Kenai Fjords",
+   "countries": [
+    "US"
+   ],
+   "summary": "Talkeetna and Denali, Fairbanks, the Richardson Highway past Thompson Pass to Valdez's Columbia Glacier, then Seward's fjords and back up Turnagain Arm.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 2,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "season_note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "pace": "normal",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-denali-national-park",
+     "name": "Denali National Park",
+     "country_code": "US",
+     "lat": 63.73,
+     "lon": -148.9,
+     "elevation_m": 520,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1100
+      }
+     ],
+     "visits": [
+      {
+       "name": "The park's sled dog kennels",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The park's sled dog kennels.",
+      "Park bus into Denali.",
+      "A spare day for the weather, or: Mount Healy Overlook Trail."
+     ],
+     "do": [
+      "Sleep: The hotels at the park entrance (Glitter Gulch) or in Healy, 15 km north."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Park bus into Denali",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-denali",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "kennels"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bus"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "healy-overlook"
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-valdez",
+     "name": "Valdez",
+     "country_code": "US",
+     "lat": 61.13,
+     "lon": -146.35,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Valdez Museum",
+       "day": 1
+      },
+      {
+       "name": "Columbia Glacier",
+       "day": 2
+      },
+      {
+       "name": "Prince William Sound",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Valdez Museum.",
+      "Columbia Glacier cruise."
+     ],
+     "do": [
+      "Sleep: The small boat harbour, where the cruises leave."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Columbia Glacier cruise",
+       "query": "Columbia Glacier"
+      }
+     ],
+     "area": "us-valdez",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "columbia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-seward",
+     "name": "Seward",
+     "country_code": "US",
+     "lat": 60.1,
+     "lon": -149.44,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 150
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Exit Glacier",
+       "day": 1
+      },
+      {
+       "name": "Kenai Fjords National Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Exit Glacier.",
+      "Kenai Fjords cruise to a tidewater glacier.",
+      "A spare day for the weather, or: Harding Icefield Trail."
+     ],
+     "do": [
+      "Sleep: The small boat harbor, where the cruises leave, or downtown by the SeaLife Center."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kenai Fjords cruise to a tidewater glacier",
+       "query": "Kenai Fjords National Park"
+      }
+     ],
+     "area": "us-seward",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "exit-glacier"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "fjords-cruise"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "harding"
+      }
+     ]
+    },
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1070
+      }
+     ],
+     "visits": [
+      {
+       "name": "Flattop Mountain",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Flattop Mountain (Jun–Sep)."
+     ],
+     "do": [
+      "The most climbed peak in Alaska, 20 minutes from downtown: a steep last scramble to the flat top at 1,070 m, with Anchorage, Cook Inlet and on clear days Denali below."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flattop"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-14-winter",
+   "title": "Two winter weeks: ski, Talkeetna and the northern lights",
+   "countries": [
+    "US"
+   ],
+   "summary": "Anchorage and its sled dog races, skiing at Alyeska, Talkeetna and a flight round Denali, then six Fairbanks nights for the aurora, dog sledding and hot springs.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 2,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [
+    2,
+    3
+   ],
+   "season_note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      },
+      {
+       "name": "Fur Rendezvous and the Iditarod start",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum.",
+      "Fur Rendezvous and the Iditarod start (Feb–Mar)."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "fur-rondy"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-girdwood",
+     "name": "Girdwood",
+     "country_code": "US",
+     "lat": 60.94,
+     "lon": -149.17,
+     "elevation_m": 40,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "ski",
+       "max_altitude_m": 840
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alyeska Aerial Tram",
+       "day": 1
+      },
+      {
+       "name": "Skiing at Alyeska",
+       "day": 2
+      },
+      {
+       "name": "Alyeska Nordic Spa",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Alyeska Aerial Tram.",
+      "Skiing at Alyeska.",
+      "Alyeska Nordic Spa."
+     ],
+     "do": [
+      "Sleep: The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Skiing at Alyeska",
+       "query": "Skiing at Alyeska"
+      },
+      {
+       "title": "Alyeska Nordic Spa",
+       "query": "Alyeska Nordic Spa"
+      }
+     ],
+     "area": "us-girdwood",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "tram"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ski"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "spa"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1800
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Northern lights out of town",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Flight around Denali with a glacier landing. Northern lights out of town."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Flight around Denali with a glacier landing",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flightseeing",
+        "aurora"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 6,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Dog sledding",
+       "day": 2
+      },
+      {
+       "name": "World Ice Art Championships",
+       "day": 2
+      },
+      {
+       "name": "Chena Hot Springs",
+       "day": 3
+      },
+      {
+       "name": "Trans-Alaska Pipeline viewpoint",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Dog sledding. World Ice Art Championships (Feb–Mar).",
+      "Chena Hot Springs.",
+      "Trans-Alaska Pipeline viewpoint.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      },
+      {
+       "title": "Dog sledding",
+       "query": "Dog sledding"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "dogs",
+        "ice-art"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "chena"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pipeline"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-14-aurora",
+   "title": "Two weeks of Alaska out of season",
+   "countries": [
+    "US"
+   ],
+   "summary": "Anchorage, Exit Glacier and the SeaLife Center at Seward, the quiet Homer Spit, Talkeetna, then Fairbanks for the northern lights.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 2,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best_months": [],
+   "season_note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "pace": "normal",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-seward",
+     "name": "Seward",
+     "country_code": "US",
+     "lat": 60.1,
+     "lon": -149.44,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alaska SeaLife Center",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Alaska SeaLife Center.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The small boat harbor, where the cruises leave, or downtown by the SeaLife Center."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-seward",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sealife"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-homer",
+     "name": "Homer",
+     "country_code": "US",
+     "lat": 59.64,
+     "lon": -151.54,
+     "elevation_m": 15,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Homer Spit",
+       "day": 1
+      },
+      {
+       "name": "Islands and Ocean Visitor Center and Pratt Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Homer Spit.",
+      "Islands and Ocean Visitor Center and Pratt Museum.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-homer",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "spit"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands-ocean"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1800
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Northern lights out of town",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Flight around Denali with a glacier landing. Northern lights out of town."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Flight around Denali with a glacier landing",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flightseeing",
+        "aurora"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Trans-Alaska Pipeline viewpoint",
+       "day": 2
+      },
+      {
+       "name": "Chena Hot Springs",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Trans-Alaska Pipeline viewpoint.",
+      "Chena Hot Springs.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "pipeline"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "chena"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-21",
+   "title": "Three weeks round Alaska: Denali, Kennecott and the Kenai",
+   "countries": [
+    "US"
+   ],
+   "summary": "The great loop: Talkeetna, Denali and Fairbanks, the gravel road to the Kennecott mill and Root Glacier, Valdez, Kenai Fjords, Homer's bears and Alyeska.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "season_note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "pace": "normal",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Jet boat or float trip on the rivers",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Jet boat or float trip on the rivers."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Jet boat or float trip on the rivers",
+       "query": "Jet boat or float trip on the rivers"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "jetboat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-denali-national-park",
+     "name": "Denali National Park",
+     "country_code": "US",
+     "lat": 63.73,
+     "lon": -148.9,
+     "elevation_m": 520,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1100
+      }
+     ],
+     "visits": [
+      {
+       "name": "The park's sled dog kennels",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. The park's sled dog kennels.",
+      "Park bus into Denali.",
+      "A spare day for the weather, or: Mount Healy Overlook Trail."
+     ],
+     "do": [
+      "Sleep: The hotels at the park entrance (Glitter Gulch) or in Healy, 15 km north."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Park bus into Denali",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-denali",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "kennels"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bus"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "healy-overlook"
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 1,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-mccarthy",
+     "name": "McCarthy",
+     "country_code": "US",
+     "lat": 61.43,
+     "lon": -142.92,
+     "elevation_m": 430,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 600,
+       "glacier": true
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kennecott",
+       "day": 1
+      },
+      {
+       "name": "Wrangell-St. Elias National Park",
+       "day": 2
+      },
+      {
+       "name": "Flight over the Wrangell and St. Elias mountains",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Kennecott mill town (Jun–Sep).",
+      "Root Glacier walk (Jun–Sep). Flight over the Wrangell and St. Elias mountains.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: McCarthy or the lodges at Kennecott, 7 km up the road by shuttle."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kennecott mill town",
+       "query": "Kennecott"
+      },
+      {
+       "title": "Root Glacier walk",
+       "query": "Wrangell-St. Elias National Park"
+      }
+     ],
+     "area": "us-mccarthy",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mill"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "root-glacier",
+        "flight"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-valdez",
+     "name": "Valdez",
+     "country_code": "US",
+     "lat": 61.13,
+     "lon": -146.35,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Valdez Museum",
+       "day": 1
+      },
+      {
+       "name": "Columbia Glacier",
+       "day": 2
+      },
+      {
+       "name": "Prince William Sound",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Valdez Museum.",
+      "Columbia Glacier cruise."
+     ],
+     "do": [
+      "Sleep: The small boat harbour, where the cruises leave."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Columbia Glacier cruise",
+       "query": "Columbia Glacier"
+      }
+     ],
+     "area": "us-valdez",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "columbia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-seward",
+     "name": "Seward",
+     "country_code": "US",
+     "lat": 60.1,
+     "lon": -149.44,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 150
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Exit Glacier",
+       "day": 1
+      },
+      {
+       "name": "Kenai Fjords National Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Exit Glacier.",
+      "Kenai Fjords cruise to a tidewater glacier.",
+      "A spare day for the weather, or: Harding Icefield Trail."
+     ],
+     "do": [
+      "Sleep: The small boat harbor, where the cruises leave, or downtown by the SeaLife Center."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kenai Fjords cruise to a tidewater glacier",
+       "query": "Kenai Fjords National Park"
+      }
+     ],
+     "area": "us-seward",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "exit-glacier"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "fjords-cruise"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "harding"
+      }
+     ]
+    },
+    {
+     "place": "us-homer",
+     "name": "Homer",
+     "country_code": "US",
+     "lat": 59.64,
+     "lon": -151.54,
+     "elevation_m": 15,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      }
+     ],
+     "visits": [
+      {
+       "name": "Homer Spit",
+       "day": 1
+      },
+      {
+       "name": "Bear-viewing flight to Lake Clark or Katmai",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Homer Spit.",
+      "Bear-viewing flight to Lake Clark or Katmai (Jun–Sep).",
+      "A spare day for the weather, or: Water taxi to Kachemak Bay State Park."
+     ],
+     "do": [
+      "Sleep: The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Bear-viewing flight to Lake Clark or Katmai",
+       "query": "Bear-viewing flight to Lake Clark or Katmai"
+      }
+     ],
+     "area": "us-homer",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "spit"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bears"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "kachemak"
+      }
+     ]
+    },
+    {
+     "place": "us-girdwood",
+     "name": "Girdwood",
+     "country_code": "US",
+     "lat": 60.94,
+     "lon": -149.17,
+     "elevation_m": 40,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 150
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alyeska Aerial Tram",
+       "day": 1
+      },
+      {
+       "name": "Portage Glacier",
+       "day": 2
+      },
+      {
+       "name": "Winner Creek Trail",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Alyeska Aerial Tram (Jun–Sep, Dec–Mar).",
+      "Portage Glacier and the wildlife center. Winner Creek Trail."
+     ],
+     "do": [
+      "Sleep: The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-girdwood",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "tram"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "portage",
+        "winner-creek"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-21-winter",
+   "title": "Three weeks of Alaskan winter",
+   "countries": [
+    "US"
+   ],
+   "summary": "Anchorage, the eagles of Homer Spit, a long ski stay at Alyeska, Talkeetna under Denali, then eight nights in Fairbanks for many chances at the aurora.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 3,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [
+    2,
+    3
+   ],
+   "season_note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      },
+      {
+       "name": "Fur Rendezvous and the Iditarod start",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum.",
+      "Fur Rendezvous and the Iditarod start (Feb–Mar)."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "fur-rondy"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-homer",
+     "name": "Homer",
+     "country_code": "US",
+     "lat": 59.64,
+     "lon": -151.54,
+     "elevation_m": 15,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Homer Spit",
+       "day": 1
+      },
+      {
+       "name": "Islands and Ocean Visitor Center and Pratt Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Homer Spit.",
+      "Islands and Ocean Visitor Center and Pratt Museum.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-homer",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "spit"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands-ocean"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-girdwood",
+     "name": "Girdwood",
+     "country_code": "US",
+     "lat": 60.94,
+     "lon": -149.17,
+     "elevation_m": 40,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "ski",
+       "max_altitude_m": 840
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alyeska Aerial Tram",
+       "day": 1
+      },
+      {
+       "name": "Skiing at Alyeska",
+       "day": 2
+      },
+      {
+       "name": "Alyeska Nordic Spa",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Alyeska Aerial Tram.",
+      "Skiing at Alyeska.",
+      "Alyeska Nordic Spa.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Skiing at Alyeska",
+       "query": "Skiing at Alyeska"
+      },
+      {
+       "title": "Alyeska Nordic Spa",
+       "query": "Alyeska Nordic Spa"
+      }
+     ],
+     "area": "us-girdwood",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "tram"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ski"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "spa"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1800
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Northern lights out of town",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Flight around Denali with a glacier landing. Northern lights out of town.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Flight around Denali with a glacier landing",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flightseeing",
+        "aurora"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 8,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Dog sledding",
+       "day": 2
+      },
+      {
+       "name": "World Ice Art Championships",
+       "day": 2
+      },
+      {
+       "name": "Chena Hot Springs",
+       "day": 3
+      },
+      {
+       "name": "Trans-Alaska Pipeline viewpoint",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Dog sledding. World Ice Art Championships (Feb–Mar).",
+      "Chena Hot Springs.",
+      "Trans-Alaska Pipeline viewpoint.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      },
+      {
+       "title": "Dog sledding",
+       "query": "Dog sledding"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "dogs",
+        "ice-art"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "chena"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pipeline"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-21-aurora",
+   "title": "Three weeks of Alaska between the seasons",
+   "countries": [
+    "US"
+   ],
+   "summary": "The Kenai peninsula without the crowds from Seward and Homer, Talkeetna, then a week in Fairbanks for the aurora, hot springs and the Museum of the North.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 3,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best_months": [],
+   "season_note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "pace": "relaxed",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 4,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-seward",
+     "name": "Seward",
+     "country_code": "US",
+     "lat": 60.1,
+     "lon": -149.44,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alaska SeaLife Center",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Alaska SeaLife Center.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The small boat harbor, where the cruises leave, or downtown by the SeaLife Center."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-seward",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sealife"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-homer",
+     "name": "Homer",
+     "country_code": "US",
+     "lat": 59.64,
+     "lon": -151.54,
+     "elevation_m": 15,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Homer Spit",
+       "day": 1
+      },
+      {
+       "name": "Islands and Ocean Visitor Center and Pratt Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Homer Spit.",
+      "Islands and Ocean Visitor Center and Pratt Museum.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-homer",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "spit"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands-ocean"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1800
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Northern lights out of town",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Flight around Denali with a glacier landing. Northern lights out of town.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Flight around Denali with a glacier landing",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flightseeing",
+        "aurora"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 7,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Trans-Alaska Pipeline viewpoint",
+       "day": 2
+      },
+      {
+       "name": "Chena Hot Springs",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Trans-Alaska Pipeline viewpoint.",
+      "Chena Hot Springs.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "pipeline"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "chena"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-28",
+   "title": "Alaska in four weeks, from Denali to the Inside Passage",
+   "countries": [
+    "US"
+   ],
+   "summary": "The whole loop from Denali and Kennecott to Kenai Fjords and Homer, then a flight to Juneau's whales and glacier and the gold rush railway of Skagway.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 4,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "best_months": [
+    6,
+    7,
+    8
+   ],
+   "season_note": "Mid-May to mid-September: long days (about 19 hours of light in June), 12-22 °C, rain likely on the coast. The Denali buses, the glacier cruises and the McCarthy lodges run only now; June to August is the peak, September brings autumn colours, the first aurora and snow on the passes.",
+   "pace": "normal",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 2,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Jet boat or float trip on the rivers",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Jet boat or float trip on the rivers."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Jet boat or float trip on the rivers",
+       "query": "Jet boat or float trip on the rivers"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "jetboat"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-denali-national-park",
+     "name": "Denali National Park",
+     "country_code": "US",
+     "lat": 63.73,
+     "lon": -148.9,
+     "elevation_m": 520,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1100
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 1000
+      }
+     ],
+     "visits": [
+      {
+       "name": "The park's sled dog kennels",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Mount Healy Overlook Trail",
+       "day": 3
+      },
+      {
+       "name": "Savage River Loop and Horseshoe Lake",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. The park's sled dog kennels.",
+      "Park bus into Denali.",
+      "Mount Healy Overlook Trail (Jun–Sep). Savage River Loop and Horseshoe Lake.",
+      "A spare day for the weather, or: Rafting the Nenana River canyon."
+     ],
+     "do": [
+      "Sleep: The hotels at the park entrance (Glitter Gulch) or in Healy, 15 km north."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Park bus into Denali",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-denali",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "kennels"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bus"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "healy-overlook",
+        "savage-river"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "rafting"
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Chena Hot Springs",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Chena Hot Springs."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "chena"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-mccarthy",
+     "name": "McCarthy",
+     "country_code": "US",
+     "lat": 61.43,
+     "lon": -142.92,
+     "elevation_m": 430,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 600,
+       "glacier": true
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kennecott",
+       "day": 1
+      },
+      {
+       "name": "Wrangell-St. Elias National Park",
+       "day": 2
+      },
+      {
+       "name": "Flight over the Wrangell and St. Elias mountains",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Kennecott mill town (Jun–Sep).",
+      "Root Glacier walk (Jun–Sep). Flight over the Wrangell and St. Elias mountains.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: McCarthy or the lodges at Kennecott, 7 km up the road by shuttle."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kennecott mill town",
+       "query": "Kennecott"
+      },
+      {
+       "title": "Root Glacier walk",
+       "query": "Wrangell-St. Elias National Park"
+      }
+     ],
+     "area": "us-mccarthy",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mill"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "root-glacier",
+        "flight"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-valdez",
+     "name": "Valdez",
+     "country_code": "US",
+     "lat": 61.13,
+     "lon": -146.35,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Valdez Museum",
+       "day": 1
+      },
+      {
+       "name": "Columbia Glacier",
+       "day": 2
+      },
+      {
+       "name": "Prince William Sound",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Valdez Museum.",
+      "Columbia Glacier cruise."
+     ],
+     "do": [
+      "Sleep: The small boat harbour, where the cruises leave."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Columbia Glacier cruise",
+       "query": "Columbia Glacier"
+      }
+     ],
+     "area": "us-valdez",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "columbia"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-seward",
+     "name": "Seward",
+     "country_code": "US",
+     "lat": 60.1,
+     "lon": -149.44,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 150
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Exit Glacier",
+       "day": 1
+      },
+      {
+       "name": "Kenai Fjords National Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Exit Glacier.",
+      "Kenai Fjords cruise to a tidewater glacier.",
+      "A spare day for the weather, or: Harding Icefield Trail."
+     ],
+     "do": [
+      "Sleep: The small boat harbor, where the cruises leave, or downtown by the SeaLife Center."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kenai Fjords cruise to a tidewater glacier",
+       "query": "Kenai Fjords National Park"
+      }
+     ],
+     "area": "us-seward",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "exit-glacier"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "fjords-cruise"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "harding"
+      }
+     ]
+    },
+    {
+     "place": "us-homer",
+     "name": "Homer",
+     "country_code": "US",
+     "lat": 59.64,
+     "lon": -151.54,
+     "elevation_m": 15,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      }
+     ],
+     "visits": [
+      {
+       "name": "Homer Spit",
+       "day": 1
+      },
+      {
+       "name": "Bear-viewing flight to Lake Clark or Katmai",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Homer Spit.",
+      "Bear-viewing flight to Lake Clark or Katmai (Jun–Sep).",
+      "A spare day for the weather, or: Water taxi to Kachemak Bay State Park."
+     ],
+     "do": [
+      "Sleep: The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Bear-viewing flight to Lake Clark or Katmai",
+       "query": "Bear-viewing flight to Lake Clark or Katmai"
+      }
+     ],
+     "area": "us-homer",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "spit"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "bears"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "kachemak"
+      }
+     ]
+    },
+    {
+     "place": "us-girdwood",
+     "name": "Girdwood",
+     "country_code": "US",
+     "lat": 60.94,
+     "lon": -149.17,
+     "elevation_m": 40,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 150
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alyeska Aerial Tram",
+       "day": 1
+      },
+      {
+       "name": "Portage Glacier",
+       "day": 2
+      },
+      {
+       "name": "Winner Creek Trail",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Alyeska Aerial Tram (Jun–Sep, Dec–Mar).",
+      "Portage Glacier and the wildlife center. Winner Creek Trail."
+     ],
+     "do": [
+      "Sleep: The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-girdwood",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "tram"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "portage",
+        "winner-creek"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-juneau",
+     "name": "Juneau",
+     "country_code": "US",
+     "lat": 58.3,
+     "lon": -134.42,
+     "elevation_m": 15,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 550
+      },
+      {
+       "type": "boat"
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Mendenhall Glacier and Nugget Falls",
+       "day": 1
+      },
+      {
+       "name": "Whale watching from Auke Bay",
+       "day": 2
+      },
+      {
+       "name": "Mount Roberts Tramway",
+       "day": 2
+      },
+      {
+       "name": "State Capitol and Alaska State Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Mendenhall Glacier and Nugget Falls.",
+      "Whale watching from Auke Bay. Mount Roberts Tramway. State Capitol and Alaska State Museum.",
+      "A spare day for the weather, or: Tracy Arm fjord cruise."
+     ],
+     "do": [
+      "Sleep: Downtown, between the cruise docks and the Capitol."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Whale watching from Auke Bay",
+       "query": "Whale watching from Auke Bay"
+      }
+     ],
+     "area": "us-juneau",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "mendenhall"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "whales",
+        "tram",
+        "capitol"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "tracy-arm"
+      }
+     ]
+    },
+    {
+     "place": "us-skagway",
+     "name": "Skagway",
+     "country_code": "US",
+     "lat": 59.46,
+     "lon": -135.31,
+     "elevation_m": 10,
+     "days": 2,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 950
+      }
+     ],
+     "visits": [
+      {
+       "name": "Klondike Gold Rush National Historical Park",
+       "day": 1
+      },
+      {
+       "name": "White Pass and Yukon Route railway",
+       "day": 2
+      },
+      {
+       "name": "Lower and Upper Dewey Lakes",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Klondike Gold Rush National Historical Park.",
+      "White Pass and Yukon Route railway. Lower and Upper Dewey Lakes (Jun–Sep)."
+     ],
+     "do": [
+      "Sleep: Broadway, the gold rush main street."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "White Pass and Yukon Route railway",
+       "query": "White Pass and Yukon Route railway"
+      }
+     ],
+     "area": "us-skagway",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "goldrush"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "white-pass",
+        "dewey"
+       ]
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-28-winter",
+   "title": "Four slow weeks of Alaskan winter",
+   "countries": [
+    "US"
+   ],
+   "summary": "A slow winter: Anchorage's festivals, Homer, a week of skiing and spa at Alyeska, Talkeetna, and nine Fairbanks nights for the aurora, dogs and ice art.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 4,
+   "months": [
+    12,
+    1,
+    2,
+    3
+   ],
+   "best_months": [
+    2,
+    3
+   ],
+   "season_note": "December to March: aurora season. -25 to -10 °C in Fairbanks, -10 to -5 °C around Anchorage; 4-6 hours of light in December, 12 by March. Skiing at Alyeska. The Aurora Winter Train links Anchorage, Talkeetna and Fairbanks on weekends; drive only with winter experience. Denali buses and cruises stop.",
+   "pace": "relaxed",
+   "level": 3,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 5,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      },
+      {
+       "name": "Fur Rendezvous and the Iditarod start",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum.",
+      "Fur Rendezvous and the Iditarod start (Feb–Mar).",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "fur-rondy"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-homer",
+     "name": "Homer",
+     "country_code": "US",
+     "lat": 59.64,
+     "lon": -151.54,
+     "elevation_m": 15,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Homer Spit",
+       "day": 1
+      },
+      {
+       "name": "Islands and Ocean Visitor Center and Pratt Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Homer Spit.",
+      "Islands and Ocean Visitor Center and Pratt Museum.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-homer",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "spit"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands-ocean"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-girdwood",
+     "name": "Girdwood",
+     "country_code": "US",
+     "lat": 60.94,
+     "lon": -149.17,
+     "elevation_m": 40,
+     "days": 6,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "ski",
+       "max_altitude_m": 840
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alyeska Aerial Tram",
+       "day": 1
+      },
+      {
+       "name": "Skiing at Alyeska",
+       "day": 2
+      },
+      {
+       "name": "Alyeska Nordic Spa",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Alyeska Aerial Tram.",
+      "Skiing at Alyeska.",
+      "Alyeska Nordic Spa.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Skiing at Alyeska",
+       "query": "Skiing at Alyeska"
+      },
+      {
+       "title": "Alyeska Nordic Spa",
+       "query": "Alyeska Nordic Spa"
+      }
+     ],
+     "area": "us-girdwood",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "tram"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "ski"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "spa"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1800
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Northern lights out of town",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Flight around Denali with a glacier landing. Northern lights out of town.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Flight around Denali with a glacier landing",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flightseeing",
+        "aurora"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 9,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Dog sledding",
+       "day": 2
+      },
+      {
+       "name": "World Ice Art Championships",
+       "day": 2
+      },
+      {
+       "name": "Chena Hot Springs",
+       "day": 3
+      },
+      {
+       "name": "Trans-Alaska Pipeline viewpoint",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Dog sledding. World Ice Art Championships (Feb–Mar).",
+      "Chena Hot Springs.",
+      "Trans-Alaska Pipeline viewpoint.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      },
+      {
+       "title": "Dog sledding",
+       "query": "Dog sledding"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "dogs",
+        "ice-art"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "chena"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pipeline"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-alaska-28-aurora",
+   "title": "Four quiet weeks of Alaska",
+   "countries": [
+    "US"
+   ],
+   "summary": "A slow month: Anchorage, the spa and forest trails of Girdwood, Seward and Homer, Talkeetna, then eight Fairbanks nights for the northern lights.",
+   "destination": "Alaska",
+   "region": "usa-alaska",
+   "weeks": 4,
+   "months": [
+    10,
+    11,
+    4
+   ],
+   "best_months": [],
+   "season_note": "October, November and April, between the seasons: aurora nights in Fairbanks, first or last snow, 0 to -15 °C. The glacier cruises, the Denali buses and many lodges are closed, Seward and Homer are quiet; Alyeska's skiing runs about December to mid-April. A trip for the northern lights, not the parks.",
+   "pace": "relaxed",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-anchorage",
+     "name": "Anchorage",
+     "country_code": "US",
+     "lat": 61.22,
+     "lon": -149.9,
+     "elevation_m": 30,
+     "days": 5,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 50
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Tony Knowles Coastal Trail",
+       "day": 1
+      },
+      {
+       "name": "Turnagain Arm",
+       "day": 2
+      },
+      {
+       "name": "Alaska Native Heritage Center",
+       "day": 2
+      },
+      {
+       "name": "Anchorage Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Tony Knowles Coastal Trail.",
+      "Turnagain Arm on the Seward Highway. Alaska Native Heritage Center. Anchorage Museum.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown between 4th Avenue and the Delaney Park Strip, close to the Coastal Trail and the museum."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-anchorage",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coastal-trail"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "turnagain",
+        "native-heritage",
+        "museum"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-girdwood",
+     "name": "Girdwood",
+     "country_code": "US",
+     "lat": 60.94,
+     "lon": -149.17,
+     "elevation_m": 40,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alyeska Nordic Spa",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. An easy evening.",
+      "Alyeska Nordic Spa.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Alyeska Resort hotel at the foot of the lifts, or a cabin in Girdwood valley."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Alyeska Nordic Spa",
+       "query": "Alyeska Nordic Spa"
+      }
+     ],
+     "area": "us-girdwood",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": []
+      },
+      {
+       "kind": "day",
+       "things": [
+        "spa"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-seward",
+     "name": "Seward",
+     "country_code": "US",
+     "lat": 60.1,
+     "lon": -149.44,
+     "elevation_m": 10,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Alaska SeaLife Center",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Alaska SeaLife Center.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The small boat harbor, where the cruises leave, or downtown by the SeaLife Center."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-seward",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "sealife"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-homer",
+     "name": "Homer",
+     "country_code": "US",
+     "lat": 59.64,
+     "lon": -151.54,
+     "elevation_m": 15,
+     "days": 5,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Homer Spit",
+       "day": 1
+      },
+      {
+       "name": "Islands and Ocean Visitor Center and Pratt Museum",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Homer Spit.",
+      "Islands and Ocean Visitor Center and Pratt Museum.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The Spit, with the harbour and the boats, or the town on the bluff for the views over the bay."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-homer",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "spit"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "islands-ocean"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-talkeetna",
+     "name": "Talkeetna",
+     "country_code": "US",
+     "lat": 62.32,
+     "lon": -150.11,
+     "elevation_m": 110,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1800
+      }
+     ],
+     "visits": [
+      {
+       "name": "Main Street and the riverbank view",
+       "day": 1
+      },
+      {
+       "name": "Denali National Park",
+       "day": 2
+      },
+      {
+       "name": "Northern lights out of town",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Main Street and the riverbank view.",
+      "Flight around Denali with a glacier landing. Northern lights out of town.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: The old town on Main Street, a few blocks of log cabins by the river."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Flight around Denali with a glacier landing",
+       "query": "Denali National Park"
+      }
+     ],
+     "area": "us-talkeetna",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "main-street"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "flightseeing",
+        "aurora"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-fairbanks",
+     "name": "Fairbanks",
+     "country_code": "US",
+     "lat": 64.84,
+     "lon": -147.72,
+     "elevation_m": 136,
+     "days": 8,
+     "activities": [
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "University of Alaska Museum of the North",
+       "day": 1
+      },
+      {
+       "name": "Northern lights night",
+       "day": 2
+      },
+      {
+       "name": "Trans-Alaska Pipeline viewpoint",
+       "day": 2
+      },
+      {
+       "name": "Chena Hot Springs",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. University of Alaska Museum of the North.",
+      "Northern lights night. Trans-Alaska Pipeline viewpoint.",
+      "Chena Hot Springs.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Downtown by the Chena River, or a lodge out of town with dark skies for the aurora."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Northern lights night",
+       "query": "Northern lights night"
+      }
+     ],
+     "area": "us-fairbanks",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "museum-north"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "aurora",
+        "pipeline"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "chena"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
    "slug": "andes-7",
    "title": "Atacama to Uyuni in a week",
    "countries": [
@@ -7957,6 +12670,1856 @@
       {
        "kind": "free",
        "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-hawaii-7",
+   "title": "Hawaii in a week: Oahu and Maui",
+   "countries": [
+    "US"
+   ],
+   "summary": "Pearl Harbor, Diamond Head and the North Shore on Oahu, then a flight to Maui for sunrise on Haleakalā, Molokini's reef and the south coast beaches.",
+   "destination": "Hawaii",
+   "region": "usa-hawaii",
+   "weeks": 1,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "season_note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "pace": "relaxed",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "name": "Honolulu",
+     "country_code": "US",
+     "lat": 21.31,
+     "lon": -157.86,
+     "elevation_m": 5,
+     "days": 3,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 232
+      }
+     ],
+     "visits": [
+      {
+       "name": "Waikiki",
+       "day": 1
+      },
+      {
+       "name": "Pearl Harbor",
+       "day": 2
+      },
+      {
+       "name": "Diamond Head",
+       "day": 2
+      },
+      {
+       "name": "ʻIolani Palace",
+       "day": 2
+      },
+      {
+       "name": "Hanauma Bay",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Waikiki beach and a surf lesson.",
+      "Pearl Harbor and the USS Arizona Memorial. Diamond Head summit trail. ʻIolani Palace.",
+      "Snorkelling at Hanauma Bay."
+     ],
+     "do": [
+      "Sleep: Waikiki, between the beach and the Ala Wai canal, or quieter Kailua on the windward side."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pearl Harbor and the USS Arizona Memorial",
+       "query": "Pearl Harbor"
+      },
+      {
+       "title": "Diamond Head summit trail",
+       "query": "Diamond Head"
+      }
+     ],
+     "area": "us-honolulu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "waikiki"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pearl-harbor",
+        "diamond-head",
+        "iolani"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "hanauma"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "x-us-kihei",
+     "name": "Kihei",
+     "country_code": "US",
+     "lat": 20.718,
+     "lon": -156.447,
+     "elevation_m": 10,
+     "days": 4,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 3055
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 3055
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Wailea and Mākena beaches",
+       "day": 1
+      },
+      {
+       "name": "Haleakala",
+       "day": 2
+      },
+      {
+       "name": "Sliding Sands Trail into the crater",
+       "day": 2
+      },
+      {
+       "name": "Snorkel trip to Molokini",
+       "day": 3
+      },
+      {
+       "name": "Iao Valley",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Wailea and Mākena beaches.",
+      "Sunrise on Haleakalā. Sliding Sands Trail into the crater.",
+      "Snorkel trip to Molokini. ʻĪao Valley.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Kihei or Wailea on the sunny south coast, with the beaches and the boats from Mā'alaea."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Sunrise on Haleakalā",
+       "query": "Haleakala"
+      },
+      {
+       "title": "Snorkel trip to Molokini",
+       "query": "Snorkel trip to Molokini"
+      }
+     ],
+     "area": "us-kihei",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "makena"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "haleakala-sunrise",
+        "sliding-sands"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "molokini",
+        "iao"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-hawaii-14",
+   "title": "Two weeks on three islands: Oahu, Maui and the Big Island",
+   "countries": [
+    "US"
+   ],
+   "summary": "Oahu, Maui with Haleakalā and a night in Hāna, then the Big Island: manta rays and Kealakekua Bay from Kona, and Kīlauea's craters from Volcano village.",
+   "destination": "Hawaii",
+   "region": "usa-hawaii",
+   "weeks": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "season_note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "pace": "normal",
+   "level": 1,
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "name": "Honolulu",
+     "country_code": "US",
+     "lat": 21.31,
+     "lon": -157.86,
+     "elevation_m": 5,
+     "days": 4,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 232
+      }
+     ],
+     "visits": [
+      {
+       "name": "Waikiki",
+       "day": 1
+      },
+      {
+       "name": "Pearl Harbor",
+       "day": 2
+      },
+      {
+       "name": "Diamond Head",
+       "day": 2
+      },
+      {
+       "name": "ʻIolani Palace",
+       "day": 2
+      },
+      {
+       "name": "Hanauma Bay",
+       "day": 3
+      },
+      {
+       "name": "Waimea Bay",
+       "day": 4
+      },
+      {
+       "name": "Sunset Beach",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Waikiki beach and a surf lesson.",
+      "Pearl Harbor and the USS Arizona Memorial. Diamond Head summit trail. ʻIolani Palace.",
+      "Snorkelling at Hanauma Bay.",
+      "North Shore day."
+     ],
+     "do": [
+      "Sleep: Waikiki, between the beach and the Ala Wai canal, or quieter Kailua on the windward side."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pearl Harbor and the USS Arizona Memorial",
+       "query": "Pearl Harbor"
+      },
+      {
+       "title": "Diamond Head summit trail",
+       "query": "Diamond Head"
+      }
+     ],
+     "area": "us-honolulu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "waikiki"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pearl-harbor",
+        "diamond-head",
+        "iolani"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "hanauma"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "north-shore"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "x-us-kihei",
+     "name": "Kihei",
+     "country_code": "US",
+     "lat": 20.718,
+     "lon": -156.447,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 3055
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 3055
+      }
+     ],
+     "visits": [
+      {
+       "name": "Wailea and Mākena beaches",
+       "day": 1
+      },
+      {
+       "name": "Haleakala",
+       "day": 2
+      },
+      {
+       "name": "Sliding Sands Trail into the crater",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Wailea and Mākena beaches.",
+      "Sunrise on Haleakalā. Sliding Sands Trail into the crater.",
+      "A spare day for the weather, or: Snorkel trip to Molokini."
+     ],
+     "do": [
+      "Sleep: Kihei or Wailea on the sunny south coast, with the beaches and the boats from Mā'alaea."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Sunrise on Haleakalā",
+       "query": "Haleakala"
+      }
+     ],
+     "area": "us-kihei",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "makena"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "haleakala-sunrise",
+        "sliding-sands"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "molokini"
+      }
+     ]
+    },
+    {
+     "place": "us-road-to-hana",
+     "name": "Road to Hana",
+     "country_code": "US",
+     "lat": 20.757,
+     "lon": -155.99,
+     "elevation_m": 30,
+     "days": 1,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 270
+      }
+     ],
+     "visits": [
+      {
+       "name": "Pīpīwai Trail to Waimoku Falls",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Pīpīwai Trail to Waimoku Falls."
+     ],
+     "do": [
+      "Sleep: Hāna town, one night, to drive the road slowly and see the Kīpahulu side before the day visitors."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-hana",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "pipiwai"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-kailua-kona",
+     "name": "Kailua-Kona",
+     "country_code": "US",
+     "lat": 19.64,
+     "lon": -155.99,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kona coffee farms",
+       "day": 1
+      },
+      {
+       "name": "Night snorkel with manta rays",
+       "day": 2
+      },
+      {
+       "name": "Kealakekua Bay and the Captain Cook Monument",
+       "day": 2
+      },
+      {
+       "name": "Puuhonua o Honaunau",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Kona coffee farms.",
+      "Night snorkel with manta rays. Kealakekua Bay and the Captain Cook Monument. Puʻuhonua o Hōnaunau.",
+      "A spare day for the weather, or: Mauna Kea summit sunset and stars."
+     ],
+     "do": [
+      "Sleep: Kailua-Kona's seafront on Aliʻi Drive, or Keauhou a few km south."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Night snorkel with manta rays",
+       "query": "Night snorkel with manta rays"
+      },
+      {
+       "title": "Kealakekua Bay and the Captain Cook Monument",
+       "query": "Kealakekua Bay and the Captain Cook Monument"
+      }
+     ],
+     "area": "us-kailua-kona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coffee"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "manta",
+        "kealakekua",
+        "puuhonua"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "mauna-kea"
+      }
+     ]
+    },
+    {
+     "place": "us-hawaii-volcanoes-national-park",
+     "name": "Hawaii Volcanoes National Park",
+     "country_code": "US",
+     "lat": 19.43,
+     "lon": -155.235,
+     "elevation_m": 1130,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1240
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1200
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kilauea",
+       "day": 1
+      },
+      {
+       "name": "Hawaii Volcanoes National Park",
+       "day": 1
+      },
+      {
+       "name": "Kīlauea Iki Trail",
+       "day": 2
+      },
+      {
+       "name": "Chain of Craters Road to the sea",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Kīlauea summit and Halemaʻumaʻu crater.",
+      "Kīlauea Iki Trail. Chain of Craters Road to the sea.",
+      "A spare day for the weather, or: Punaluʻu black sand beach."
+     ],
+     "do": [
+      "Sleep: Volcano village, in the rainforest at the park gate."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-volcano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "crater-rim"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "kilauea-iki",
+        "chain-of-craters"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "punaluu"
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-hawaii-21",
+   "title": "Three weeks of Hawaii: four islands",
+   "countries": [
+    "US"
+   ],
+   "summary": "Oahu, then Kauaʻi's Nā Pali cliffs and Waimea Canyon from Hanalei and Poʻipū, Maui and the Road to Hāna, and the Big Island's Kona coast and volcano.",
+   "destination": "Hawaii",
+   "region": "usa-hawaii",
+   "weeks": 3,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "season_note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "pace": "relaxed",
+   "level": 4,
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "name": "Honolulu",
+     "country_code": "US",
+     "lat": 21.31,
+     "lon": -157.86,
+     "elevation_m": 5,
+     "days": 4,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 232
+      }
+     ],
+     "visits": [
+      {
+       "name": "Waikiki",
+       "day": 1
+      },
+      {
+       "name": "Pearl Harbor",
+       "day": 2
+      },
+      {
+       "name": "Diamond Head",
+       "day": 2
+      },
+      {
+       "name": "ʻIolani Palace",
+       "day": 2
+      },
+      {
+       "name": "Hanauma Bay",
+       "day": 3
+      },
+      {
+       "name": "Waimea Bay",
+       "day": 4
+      },
+      {
+       "name": "Sunset Beach",
+       "day": 4
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Waikiki beach and a surf lesson.",
+      "Pearl Harbor and the USS Arizona Memorial. Diamond Head summit trail. ʻIolani Palace.",
+      "Snorkelling at Hanauma Bay.",
+      "North Shore day."
+     ],
+     "do": [
+      "Sleep: Waikiki, between the beach and the Ala Wai canal, or quieter Kailua on the windward side."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pearl Harbor and the USS Arizona Memorial",
+       "query": "Pearl Harbor"
+      },
+      {
+       "title": "Diamond Head summit trail",
+       "query": "Diamond Head"
+      }
+     ],
+     "area": "us-honolulu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "waikiki"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pearl-harbor",
+        "diamond-head",
+        "iolani"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "hanauma"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "north-shore"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-hanalei",
+     "name": "Hanalei",
+     "country_code": "US",
+     "lat": 22.2,
+     "lon": -159.5,
+     "elevation_m": 5,
+     "days": 3,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 250
+      }
+     ],
+     "visits": [
+      {
+       "name": "Hanalei Bay and the valley lookout",
+       "day": 1
+      },
+      {
+       "name": "Na Pali Coast",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Hanalei Bay and the valley lookout.",
+      "Kalalau Trail to Hanakapiʻai.",
+      "A spare day for the weather, or: Kīlauea Point lighthouse."
+     ],
+     "do": [
+      "Sleep: Hanalei town on the bay, or Princeville on the bluff."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kalalau Trail to Hanakapiʻai",
+       "query": "Na Pali Coast"
+      }
+     ],
+     "area": "us-hanalei",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "hanalei-bay"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "kalalau"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "kilauea-point"
+      }
+     ]
+    },
+    {
+     "place": "us-poipu-beach",
+     "name": "Poipu Beach",
+     "country_code": "US",
+     "lat": 21.87,
+     "lon": -159.45,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1220
+      }
+     ],
+     "visits": [
+      {
+       "name": "Poipu Beach",
+       "day": 1
+      },
+      {
+       "name": "Waimea Canyon",
+       "day": 2
+      },
+      {
+       "name": "Koke'e State Park",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Poʻipū Beach.",
+      "Waimea Canyon and Kōkeʻe.",
+      "A spare day for the weather, or: Spouting Horn."
+     ],
+     "do": [
+      "Sleep: Poʻipū, by the beaches, with Waimea Canyon an hour's drive."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-poipu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "poipu-beach"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "waimea-canyon"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "spouting-horn"
+      }
+     ]
+    },
+    {
+     "place": "x-us-kihei",
+     "name": "Kihei",
+     "country_code": "US",
+     "lat": 20.718,
+     "lon": -156.447,
+     "elevation_m": 10,
+     "days": 4,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 3055
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 3055
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Wailea and Mākena beaches",
+       "day": 1
+      },
+      {
+       "name": "Haleakala",
+       "day": 2
+      },
+      {
+       "name": "Sliding Sands Trail into the crater",
+       "day": 2
+      },
+      {
+       "name": "Snorkel trip to Molokini",
+       "day": 3
+      },
+      {
+       "name": "Iao Valley",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Wailea and Mākena beaches.",
+      "Sunrise on Haleakalā. Sliding Sands Trail into the crater.",
+      "Snorkel trip to Molokini. ʻĪao Valley.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Kihei or Wailea on the sunny south coast, with the beaches and the boats from Mā'alaea."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Sunrise on Haleakalā",
+       "query": "Haleakala"
+      },
+      {
+       "title": "Snorkel trip to Molokini",
+       "query": "Snorkel trip to Molokini"
+      }
+     ],
+     "area": "us-kihei",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "makena"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "haleakala-sunrise",
+        "sliding-sands"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "molokini",
+        "iao"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-road-to-hana",
+     "name": "Road to Hana",
+     "country_code": "US",
+     "lat": 20.757,
+     "lon": -155.99,
+     "elevation_m": 30,
+     "days": 1,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 270
+      }
+     ],
+     "visits": [
+      {
+       "name": "Pīpīwai Trail to Waimoku Falls",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Pīpīwai Trail to Waimoku Falls."
+     ],
+     "do": [
+      "Sleep: Hāna town, one night, to drive the road slowly and see the Kīpahulu side before the day visitors."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-hana",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "pipiwai"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-kailua-kona",
+     "name": "Kailua-Kona",
+     "country_code": "US",
+     "lat": 19.64,
+     "lon": -155.99,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kona coffee farms",
+       "day": 1
+      },
+      {
+       "name": "Night snorkel with manta rays",
+       "day": 2
+      },
+      {
+       "name": "Kealakekua Bay and the Captain Cook Monument",
+       "day": 2
+      },
+      {
+       "name": "Puuhonua o Honaunau",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Kona coffee farms.",
+      "Night snorkel with manta rays. Kealakekua Bay and the Captain Cook Monument. Puʻuhonua o Hōnaunau.",
+      "A spare day for the weather, or: Mauna Kea summit sunset and stars."
+     ],
+     "do": [
+      "Sleep: Kailua-Kona's seafront on Aliʻi Drive, or Keauhou a few km south."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Night snorkel with manta rays",
+       "query": "Night snorkel with manta rays"
+      },
+      {
+       "title": "Kealakekua Bay and the Captain Cook Monument",
+       "query": "Kealakekua Bay and the Captain Cook Monument"
+      }
+     ],
+     "area": "us-kailua-kona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coffee"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "manta",
+        "kealakekua",
+        "puuhonua"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "mauna-kea"
+      }
+     ]
+    },
+    {
+     "place": "us-hawaii-volcanoes-national-park",
+     "name": "Hawaii Volcanoes National Park",
+     "country_code": "US",
+     "lat": 19.43,
+     "lon": -155.235,
+     "elevation_m": 1130,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1240
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1200
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kilauea",
+       "day": 1
+      },
+      {
+       "name": "Hawaii Volcanoes National Park",
+       "day": 1
+      },
+      {
+       "name": "Kīlauea Iki Trail",
+       "day": 2
+      },
+      {
+       "name": "Chain of Craters Road to the sea",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Kīlauea summit and Halemaʻumaʻu crater.",
+      "Kīlauea Iki Trail. Chain of Craters Road to the sea.",
+      "A spare day for the weather, or: Punaluʻu black sand beach."
+     ],
+     "do": [
+      "Sleep: Volcano village, in the rainforest at the park gate."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-volcano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "crater-rim"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "kilauea-iki",
+        "chain-of-craters"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "punaluu"
+      }
+     ]
+    }
+   ],
+   "group_trips": []
+  },
+  {
+   "slug": "usa-hawaii-28",
+   "title": "Hawaii in four weeks, island by island",
+   "countries": [
+    "US"
+   ],
+   "summary": "Four islands slowly: Oahu, Kauaʻi's north and south shores, Maui and Hāna, then the Big Island all round from Kona and Volcano to Hilo's waterfalls.",
+   "destination": "Hawaii",
+   "region": "usa-hawaii",
+   "weeks": 4,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best_months": [
+    4,
+    5,
+    9,
+    10
+   ],
+   "season_note": "All year: 26-31 °C by the sea, the water 24-27 °C. April-May and September-October are the driest and quietest; December to April brings the humpbacks and the big north shore waves, with more rain on the windward sides. Hurricane season June-November, direct hits rare. Book Haleakalā sunrise and Hāʻena ahead.",
+   "pace": "relaxed",
+   "level": 4,
+   "stops": [
+    {
+     "place": "us-honolulu",
+     "name": "Honolulu",
+     "country_code": "US",
+     "lat": 21.31,
+     "lon": -157.86,
+     "elevation_m": 5,
+     "days": 5,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "city"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 232
+      }
+     ],
+     "visits": [
+      {
+       "name": "Waikiki",
+       "day": 1
+      },
+      {
+       "name": "Pearl Harbor",
+       "day": 2
+      },
+      {
+       "name": "Diamond Head",
+       "day": 2
+      },
+      {
+       "name": "ʻIolani Palace",
+       "day": 2
+      },
+      {
+       "name": "Hanauma Bay",
+       "day": 3
+      },
+      {
+       "name": "Waimea Bay",
+       "day": 4
+      },
+      {
+       "name": "Sunset Beach",
+       "day": 4
+      },
+      {
+       "name": "Byodo-In Temple",
+       "day": 5
+      }
+     ],
+     "plan": [
+      "Arrive and settle in. Waikiki beach and a surf lesson.",
+      "Pearl Harbor and the USS Arizona Memorial. Diamond Head summit trail. ʻIolani Palace.",
+      "Snorkelling at Hanauma Bay.",
+      "North Shore day.",
+      "Windward coast: Kailua, Lanikai and the Byodo-In Temple."
+     ],
+     "do": [
+      "Sleep: Waikiki, between the beach and the Ala Wai canal, or quieter Kailua on the windward side."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Pearl Harbor and the USS Arizona Memorial",
+       "query": "Pearl Harbor"
+      },
+      {
+       "title": "Diamond Head summit trail",
+       "query": "Diamond Head"
+      }
+     ],
+     "area": "us-honolulu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "waikiki"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "pearl-harbor",
+        "diamond-head",
+        "iolani"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "hanauma"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "north-shore"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "windward"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-hanalei",
+     "name": "Hanalei",
+     "country_code": "US",
+     "lat": 22.2,
+     "lon": -159.5,
+     "elevation_m": 5,
+     "days": 3,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 250
+      }
+     ],
+     "visits": [
+      {
+       "name": "Hanalei Bay and the valley lookout",
+       "day": 1
+      },
+      {
+       "name": "Na Pali Coast",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Hanalei Bay and the valley lookout.",
+      "Kalalau Trail to Hanakapiʻai.",
+      "A spare day for the weather, or: Kīlauea Point lighthouse."
+     ],
+     "do": [
+      "Sleep: Hanalei town on the bay, or Princeville on the bluff."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Kalalau Trail to Hanakapiʻai",
+       "query": "Na Pali Coast"
+      }
+     ],
+     "area": "us-hanalei",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "hanalei-bay"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "kalalau"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "kilauea-point"
+      }
+     ]
+    },
+    {
+     "place": "us-poipu-beach",
+     "name": "Poipu Beach",
+     "country_code": "US",
+     "lat": 21.87,
+     "lon": -159.45,
+     "elevation_m": 10,
+     "days": 4,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1220
+      },
+      {
+       "type": "city"
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Poipu Beach",
+       "day": 1
+      },
+      {
+       "name": "Waimea Canyon",
+       "day": 2
+      },
+      {
+       "name": "Koke'e State Park",
+       "day": 2
+      },
+      {
+       "name": "Spouting Horn",
+       "day": 3
+      },
+      {
+       "name": "Mahaʻulepu Heritage Trail",
+       "day": 3
+      },
+      {
+       "name": "Wailua Falls",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Poʻipū Beach.",
+      "Waimea Canyon and Kōkeʻe.",
+      "Spouting Horn. Mahaʻulepu Heritage Trail. Wailua River and Wailua Falls.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Poʻipū, by the beaches, with Waimea Canyon an hour's drive."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Wailua River and Wailua Falls",
+       "query": "Wailua Falls"
+      }
+     ],
+     "area": "us-poipu",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "poipu-beach"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "waimea-canyon"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "spouting-horn",
+        "mahaulepu",
+        "wailua"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "x-us-kihei",
+     "name": "Kihei",
+     "country_code": "US",
+     "lat": 20.718,
+     "lon": -156.447,
+     "elevation_m": 10,
+     "days": 5,
+     "activities": [
+      {
+       "type": "beach"
+      },
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 3055
+      },
+      {
+       "type": "hiking",
+       "difficulty": "hard",
+       "max_altitude_m": 3055
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Wailea and Mākena beaches",
+       "day": 1
+      },
+      {
+       "name": "Haleakala",
+       "day": 2
+      },
+      {
+       "name": "Sliding Sands Trail into the crater",
+       "day": 2
+      },
+      {
+       "name": "Snorkel trip to Molokini",
+       "day": 3
+      },
+      {
+       "name": "Iao Valley",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Wailea and Mākena beaches.",
+      "Sunrise on Haleakalā. Sliding Sands Trail into the crater.",
+      "Snorkel trip to Molokini. ʻĪao Valley.",
+      "A spare day for the weather.",
+      "A spare day for the weather."
+     ],
+     "do": [
+      "Sleep: Kihei or Wailea on the sunny south coast, with the beaches and the boats from Mā'alaea."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Sunrise on Haleakalā",
+       "query": "Haleakala"
+      },
+      {
+       "title": "Snorkel trip to Molokini",
+       "query": "Snorkel trip to Molokini"
+      }
+     ],
+     "area": "us-kihei",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "makena"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "haleakala-sunrise",
+        "sliding-sands"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "molokini",
+        "iao"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": []
+      },
+      {
+       "kind": "free",
+       "things": []
+      }
+     ]
+    },
+    {
+     "place": "us-road-to-hana",
+     "name": "Road to Hana",
+     "country_code": "US",
+     "lat": 20.757,
+     "lon": -155.99,
+     "elevation_m": 30,
+     "days": 1,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 270
+      }
+     ],
+     "visits": [
+      {
+       "name": "Pīpīwai Trail to Waimoku Falls",
+       "day": 1
+      }
+     ],
+     "plan": [
+      "Arrive. Pīpīwai Trail to Waimoku Falls."
+     ],
+     "do": [
+      "Sleep: Hāna town, one night, to drive the road slowly and see the Kīpahulu side before the day visitors."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-hana",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "pipiwai"
+       ]
+      }
+     ]
+    },
+    {
+     "place": "us-kailua-kona",
+     "name": "Kailua-Kona",
+     "country_code": "US",
+     "lat": 19.64,
+     "lon": -155.99,
+     "elevation_m": 10,
+     "days": 4,
+     "activities": [
+      {
+       "type": "city",
+       "max_altitude_m": 2800
+      },
+      {
+       "type": "boat"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kona coffee farms",
+       "day": 1
+      },
+      {
+       "name": "Night snorkel with manta rays",
+       "day": 2
+      },
+      {
+       "name": "Kealakekua Bay and the Captain Cook Monument",
+       "day": 2
+      },
+      {
+       "name": "Puuhonua o Honaunau",
+       "day": 2
+      },
+      {
+       "name": "Mauna Kea",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. Kona coffee farms.",
+      "Night snorkel with manta rays. Kealakekua Bay and the Captain Cook Monument. Puʻuhonua o Hōnaunau.",
+      "Mauna Kea summit sunset and stars.",
+      "A spare day for the weather, or: Kohala coast: Puʻukoholā Heiau and Hāpuna Beach."
+     ],
+     "do": [
+      "Sleep: Kailua-Kona's seafront on Aliʻi Drive, or Keauhou a few km south."
+     ],
+     "skip": [],
+     "excursions": [
+      {
+       "title": "Night snorkel with manta rays",
+       "query": "Night snorkel with manta rays"
+      },
+      {
+       "title": "Kealakekua Bay and the Captain Cook Monument",
+       "query": "Kealakekua Bay and the Captain Cook Monument"
+      }
+     ],
+     "area": "us-kailua-kona",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "coffee"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "manta",
+        "kealakekua",
+        "puuhonua"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "mauna-kea"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "kohala"
+      }
+     ]
+    },
+    {
+     "place": "us-hawaii-volcanoes-national-park",
+     "name": "Hawaii Volcanoes National Park",
+     "country_code": "US",
+     "lat": 19.43,
+     "lon": -155.235,
+     "elevation_m": 1130,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 1240
+      },
+      {
+       "type": "hiking",
+       "difficulty": "moderate",
+       "max_altitude_m": 1200
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Kilauea",
+       "day": 1
+      },
+      {
+       "name": "Hawaii Volcanoes National Park",
+       "day": 1
+      },
+      {
+       "name": "Kīlauea Iki Trail",
+       "day": 2
+      },
+      {
+       "name": "Chain of Craters Road to the sea",
+       "day": 2
+      }
+     ],
+     "plan": [
+      "Arrive. Kīlauea summit and Halemaʻumaʻu crater.",
+      "Kīlauea Iki Trail. Chain of Craters Road to the sea.",
+      "A spare day for the weather, or: Punaluʻu black sand beach."
+     ],
+     "do": [
+      "Sleep: Volcano village, in the rainforest at the park gate."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-volcano",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "crater-rim"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "kilauea-iki",
+        "chain-of-craters"
+       ]
+      },
+      {
+       "kind": "free",
+       "things": [],
+       "spare": "punaluu"
+      }
+     ]
+    },
+    {
+     "place": "us-hilo",
+     "name": "Hilo",
+     "country_code": "US",
+     "lat": 19.72,
+     "lon": -155.09,
+     "elevation_m": 10,
+     "days": 3,
+     "activities": [
+      {
+       "type": "hiking",
+       "difficulty": "easy",
+       "max_altitude_m": 350
+      },
+      {
+       "type": "city"
+      }
+     ],
+     "visits": [
+      {
+       "name": "Akaka Falls",
+       "day": 1
+      },
+      {
+       "name": "Hawaii Tropical Botanical Garden",
+       "day": 2
+      },
+      {
+       "name": "Downtown Hilo and the farmers market",
+       "day": 2
+      },
+      {
+       "name": "ʻImiloa Astronomy Center",
+       "day": 2
+      },
+      {
+       "name": "Lava Tree State Monument",
+       "day": 3
+      }
+     ],
+     "plan": [
+      "Arrive. ʻAkaka Falls.",
+      "Hawaii Tropical Botanical Garden. Downtown Hilo and the farmers market. ʻImiloa Astronomy Center.",
+      "Lava Tree State Monument."
+     ],
+     "do": [
+      "Sleep: Downtown Hilo by the bay, or the B&Bs on the Hāmākua coast north of town."
+     ],
+     "skip": [],
+     "excursions": [],
+     "area": "us-hilo",
+     "day_plans": [
+      {
+       "kind": "arrive",
+       "things": [
+        "akaka"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "botanical",
+        "downtown",
+        "imiloa"
+       ]
+      },
+      {
+       "kind": "day",
+       "things": [
+        "lava-tree"
+       ]
       }
      ]
     }
