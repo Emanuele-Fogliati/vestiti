@@ -1,0 +1,17 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="262" cy="30" r="12" fill="var(--il-sun)"/>
+<defs><clipPath id="il-us-edge-hudson-yards-clip"><path d="M116 200L124 30L192 64L208 72L212 200Z"/></clipPath></defs>
+<path d="M116 200L124 30L192 64V200Z" fill="var(--il-mid)"/>
+<path d="M192 200V64L208 72L212 200Z" fill="var(--il-obj)"/>
+<g clip-path="url(#il-us-edge-hudson-yards-clip)"><path d="M110 44H220M110 52H220M110 60H220M110 68H220M110 76H220M110 92H220M110 100H220M110 108H220M110 116H220M110 124H220M110 132H220M110 140H220M110 148H220M110 156H220M110 164H220M110 172H220M110 180H220M110 188H220M110 196H220" stroke="var(--il-near)" stroke-width="1" fill="none" opacity="0.3"/></g>
+<path d="M124 30L192 64L208 72" stroke="var(--il-ice)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52 82H126V86L125 112Z" fill="var(--il-far)"/>
+<path d="M52 82L118 98M74 84L122 100M96 84L124 96" stroke="var(--il-near)" stroke-width="0.6" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M50 77H127V82H50Z" fill="var(--il-ice)"/>
+<path d="M50 79H127" stroke="var(--il-water)" stroke-width="0.8" fill="none" opacity="0.5"/>
+<path d="M22 200V122H30V112H38V104H76V112H84V122H92V200Z" fill="var(--il-far)"/>
+<path d="M44 108V200M52 108V200M60 108V200M68 108V200M30 126V200M84 126V200" stroke="var(--il-near)" stroke-width="0.7" fill="none" opacity="0.3"/>
+<path d="M226 200V118L282 102V200Z" fill="var(--il-water)"/>
+<path d="M226 128L282 112M226 140L282 124M226 152L282 136M226 164L282 148M226 176L282 160M226 188L282 172" stroke="var(--il-near)" stroke-width="0.7" fill="none" opacity="0.3"/>
+<path d="M0 200V176H300V200Z" fill="var(--il-far)"/>
+<path d="M0 182H300" stroke="var(--il-near)" stroke-width="0.8" fill="none" opacity="0.3"/>
