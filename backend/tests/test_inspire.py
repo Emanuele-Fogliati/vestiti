@@ -396,3 +396,15 @@ def test_a_thing_out_of_its_season_is_not_dressed_for():
     i = next(k for k, s in enumerate(it.stops) if s.name == "St. Moritz")
     ski = next(d for d in days.for_stop(it, i, 0, 5) if "Skiing" in d["title"])
     assert "(Dec–Mar)" in ski["title"] and not {"Ski jacket", "Ski trousers"} & set(ski["wear"] + ski["pack"])
+
+
+def test_month_kit_names_fit_summer_and_ski():
+    """Banff in July gets T-shirts too; a ski week gets ski gloves and no shorts (2026-11-17)."""
+    from app.inspire import wear
+    names = lambda acts, m: [p["name"] for p in wear.for_month(
+        [{"name": "Banff", "lat": 51.18, "lon": -115.57, "elevation_m": 1380, "days": 5,
+          "activities": acts}], m)["pieces"]]
+    assert "T-shirts and long-sleeve tops" in names([{"type": "hiking"}], 7)
+    ski = names([{"type": "ski"}], 1)
+    assert "Ski gloves" in ski and "Light gloves" not in ski
+    assert not any("shorts" in n for n in ski)

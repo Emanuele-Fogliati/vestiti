@@ -24,12 +24,18 @@ from app.weather.service import estimate_day
 YEAR = 2027  # any year without a 29 February
 START_DAY = 8  # a trip "in July" leaves on 8 July
 
+T_SHIRT_HIGH_C = 20.0  # a trip's warmest high from which T-shirts go in the bag too
+SHORTS_LOW_C = 5.0  # a trip's coldest low under which "or shorts" is not offered
+
 ORDER = ["shell_top", "insulation_top", "mid_top", "base_top", "base_bottom", "trousers",
          "shell_bottom", "headwear", "gloves", "sun_hat", "socks", "footwear"]
 
 
-def label(slot: str, r, wet: bool = True, ski: bool = False) -> str:
-    """The piece in plain words: "Rain jacket", "Warm down jacket", "Hiking boots"."""
+def label(slot: str, r, wet: bool = True, ski: bool = False, high: float | None = None,
+          low: float | None = None) -> str:
+    """The piece in plain words: "Rain jacket", "Warm down jacket", "Hiking boots".
+    high, low: the trip's warmest high and coldest low (°C), for the pieces worn on warm
+    afternoons or cold evenings that one layer level alone does not tell."""
     lv = r.level
     if slot == "shell_top":
         if ski and r.insulated:
@@ -43,11 +49,21 @@ def label(slot: str, r, wet: bool = True, ski: bool = False) -> str:
         return {"light": "Light fleece", "medium": "Fleece", "warm": "Warm fleece",
                 "very_warm": "Thick fleece"}[lv]
     if slot == "base_top":
+        # Banff in July (7-22 °C): long sleeves for the cold mornings, but afternoons are
+        # T-shirt weather, and a summer bag without one reads wrong (Canada trips, 2026-11-17)
+        if lv == "medium" and not ski and high is not None and high >= T_SHIRT_HIGH_C:
+            return "T-shirts and long-sleeve tops"
+        if ski and lv == "medium":
+            return "Long-sleeve thermal tops"
         return {"light": "T-shirts", "medium": "Long-sleeve tops", "warm": "Warm base layer",
                 "very_warm": "Thick base layer"}[lv]
     if slot == "base_bottom":
         return "Thermal leggings"
     if slot == "trousers":
+        # under ski trousers the engine asks only light trousers: the pair for town, where a
+        # January evening at -13 °C is no time for shorts
+        if lv == "light" and low is not None and low < SHORTS_LOW_C:
+            return "Light trousers"
         return {"light": "Light trousers or shorts", "medium": "Trousers", "warm": "Warm trousers",
                 "very_warm": "Lined winter trousers"}[lv]
     if slot == "shell_bottom":
@@ -59,6 +75,8 @@ def label(slot: str, r, wet: bool = True, ski: bool = False) -> str:
     if slot == "headwear":
         return "Beanie"
     if slot == "gloves":
+        if ski:  # a ski day needs ski gloves, whatever the layer level says
+            return "Ski gloves"
         return "Light gloves" if lv in ("light", "medium") else "Warm gloves"
     if slot == "sun_hat":
         return "Sun hat"
@@ -121,7 +139,8 @@ def kit(st: list[StageInput]) -> dict:
         if not r.needed:
             continue
         why = next((w.split(": ", 1)[1] for w in r.reasons if ": " in w), "")
-        pieces.append({"slot": slot, "name": label(slot, r, wet, ski), "level": r.level,
+        pieces.append({"slot": slot, "name": label(slot, r, wet, ski, max(d.tmax for d in days),
+                                                    min(d.tmin for d in days)), "level": r.level,
                        "pack": bool(r.reasons) and all("in the pack" in w for w in r.reasons), "why": why})
     hot = None
     if zone:
