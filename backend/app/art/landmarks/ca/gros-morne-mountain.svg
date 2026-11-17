@@ -1,0 +1,18 @@
+<rect width="300" height="200" fill="var(--il-sky)"/>
+<circle cx="44" cy="26" r="11" fill="var(--il-sun)"/>
+<path d="M0 140V86L16 82L30 84L40 90L46 100V140ZM250 140V86L258 80L274 78L290 78L300 80V140Z" fill="var(--il-far)"/>
+<defs><clipPath id="il-ca-gros-morne-mountain-m"><path d="M5 117L22 99L28 89L37 77L45 62L53 51L64 42L72 37L93 35L127 36L160 37L194 38L211 42L224 50L236 65L249 77L261 87L278 98L295 110L250 140H40Z"/></clipPath></defs>
+<path d="M5 117L22 99L28 89L37 77L45 62L53 51L64 42L72 37L93 35L127 36L160 37L194 38L211 42L224 50L236 65L249 77L261 87L278 98L295 110L250 140H40Z" fill="var(--il-mid)"/>
+<path d="M0 0H76L68 50L60 76L54 120H0Z" fill="var(--il-near)" opacity="0.3" clip-path="url(#il-ca-gros-morne-mountain-m)"/>
+<path d="M186 42L189 44L193 54L199 66L204 80L210 94L216 108L208 112L203 100L197 86L192 72L188 56Z" fill="var(--il-obj)"/>
+<path d="M96 54Q126 64 146 88M126 46Q150 62 168 90M226 64L244 90" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35" clip-path="url(#il-ca-gros-morne-mountain-m)"/>
+<path d="M0 160V114Q30 110 60 112Q100 110 140 112Q190 110 230 108Q270 104 300 106V160Z" fill="var(--il-leaf)"/>
+<path d="M0 130Q80 124 160 126Q230 124 300 120M20 144Q100 138 180 142Q240 140 300 136" stroke="var(--il-near)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.35"/>
+<path d="M40 200V156Q120 152 200 156Q250 154 300 156V200Z" fill="var(--il-water)"/>
+<path d="M200 168Q220 160 246 160L280 162L300 160V170Q260 172 230 172Q210 172 200 168Z" fill="var(--il-leaf)"/>
+<path d="M0 200V146Q30 150 60 160Q100 174 130 190L150 200Z" fill="var(--il-acc)"/>
+<path d="M30 160Q30 152 38 151L64 150Q72 150 73 158L72 163Q70 167 64 167H38Q31 167 30 164ZM34 158L28 148Q26 143 21 144L16 148Q15 151 18 152L25 154L30 162Z" fill="var(--il-mid)"/>
+<path d="M27 149Q27 158 34 163L37 156Z" fill="var(--il-ice)"/>
+<path d="M36 165V183M42 166V183M60 166V183M66 165V183" stroke="var(--il-mid)" stroke-width="3" fill="none" stroke-linecap="butt"/>
+<path d="M24 144Q21 134 27 126Q31 121 37 121M26 133L20 130M28 127L31 121M22 144Q16 140 17 134M22 143Q26 136 33 133L36 128" stroke="var(--il-obj)" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+<path d="M0 200V182Q30 178 60 180Q90 186 110 194L120 200Z" fill="var(--il-acc)"/>
