@@ -7239,7 +7239,7 @@
    "slot": "US-A",
    "base": "Healy",
    "kind": "day",
-   "status": "checked",
+   "status": "drawn",
    "scenes": [
     {
      "point": "goal",
@@ -7248,7 +7248,8 @@
     },
     {
      "point": "start",
-     "name": "Denali Visitor Center"
+     "name": "Denali Visitor Center",
+     "reuse": "us-denali-park-depot"
     }
    ]
   },
