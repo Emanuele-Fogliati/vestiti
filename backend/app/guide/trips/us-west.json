@@ -10,6 +10,21 @@
    "id": "usa-california",
    "name": "USA: California",
    "blurb": "San Francisco, Yosemite and the giant sequoias, Lake Tahoe, Big Sur and the coast to Los Angeles and San Diego."
+  },
+  {
+   "id": "usa-northwest",
+   "name": "USA: the Pacific Northwest",
+   "blurb": "Seattle, the rainforest and wild coast of the Olympic Peninsula, Mount Rainier, Portland, the Columbia Gorge and Crater Lake."
+  },
+  {
+   "id": "usa-wild-west",
+   "name": "USA: the Wild West",
+   "blurb": "Yellowstone's geysers and wildlife, the Grand Teton, Glacier National Park, Mount Rushmore and the Badlands; ski and wolves in winter."
+  },
+  {
+   "id": "usa-colorado",
+   "name": "USA: Colorado",
+   "blurb": "Rocky Mountain National Park, the Maroon Bells, Mesa Verde's cliff villages and the Silverton train; Aspen and Vail in winter."
   }
  ],
  "elevation": {
@@ -34,7 +49,27 @@
   "us-redwood-national-and-state-parks": 10,
   "us-san-francisco": 24,
   "us-los-angeles": 91,
-  "us-san-diego": 32
+  "us-san-diego": 32,
+  "us-seattle": 72,
+  "x-us-mount-rainier-national-park": 540,
+  "us-olympic-national-park": 30,
+  "us-hoh-rainforest": 100,
+  "us-portland": 31,
+  "us-columbia-river-gorge": 150,
+  "us-crater-lake-national-park": 1980,
+  "x-us-bend": 1100,
+  "us-jackson": 1900,
+  "us-yellowstone-national-park": 2240,
+  "us-gardiner": 1620,
+  "us-cody": 1520,
+  "us-glacier-national-park": 970,
+  "us-bozeman": 1460,
+  "us-rapid-city": 1000,
+  "us-denver": 1610,
+  "us-rocky-mountain-national-park": 2290,
+  "x-us-glenwood-springs": 1750,
+  "us-durango": 1990,
+  "us-colorado-springs": 1840
  },
  "coords": {
   "us-zion-national-park": [
@@ -76,6 +111,42 @@
   "us-redwood-national-and-state-parks": [
    41.29,
    -124.06
+  ],
+  "x-us-mount-rainier-national-park": [
+   46.759,
+   -121.976
+  ],
+  "us-olympic-national-park": [
+   48.118,
+   -123.43
+  ],
+  "us-hoh-rainforest": [
+   47.95,
+   -124.385
+  ],
+  "us-columbia-river-gorge": [
+   45.708,
+   -121.521
+  ],
+  "us-crater-lake-national-park": [
+   42.866,
+   -122.167
+  ],
+  "us-yellowstone-national-park": [
+   44.457,
+   -110.829
+  ],
+  "us-glacier-national-park": [
+   48.497,
+   -113.99
+  ],
+  "us-rocky-mountain-national-park": [
+   40.377,
+   -105.52
+  ],
+  "us-rapid-city": [
+   44.08,
+   -103.23
   ]
  },
  "trips": [
@@ -895,6 +966,1212 @@
     }
    ],
    "journey": "usa-california"
+  },
+  {
+   "id": "usa-northwest-7",
+   "region": "c-us",
+   "title": "Seattle, Olympic and Mount Rainier in a week",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Seattle, the rainforest and wild coast of the Olympic Peninsula, and the volcano of Mount Rainier.",
+   "note": "All year. July-September is dry and the mountain meadows are open; October-May is rainy on the coast and snowy at Paradise (snowshoes), still mild in the city.",
+   "stops": [
+    {
+     "place": "us-seattle",
+     "nights": 2
+    },
+    {
+     "place": "us-olympic-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-hoh-rainforest",
+     "nights": 1
+    },
+    {
+     "place": "x-us-mount-rainier-national-park",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-northwest"
+  },
+  {
+   "id": "usa-northwest-14",
+   "region": "c-us",
+   "title": "The Pacific Northwest",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Seattle, the Olympic Peninsula, Mount Rainier, Portland, the Columbia Gorge waterfalls and Crater Lake.",
+   "note": "June to September is the dry season: Rainier's meadows flower in late July and August, Crater Lake's rim road is open from July. Smoke from forest fires can hide the mountains some days in August.",
+   "stops": [
+    {
+     "place": "us-seattle",
+     "nights": 3
+    },
+    {
+     "place": "us-olympic-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-hoh-rainforest",
+     "nights": 2
+    },
+    {
+     "place": "x-us-mount-rainier-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-portland",
+     "nights": 2
+    },
+    {
+     "place": "us-columbia-river-gorge",
+     "nights": 1
+    },
+    {
+     "place": "us-crater-lake-national-park",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-northwest"
+  },
+  {
+   "id": "usa-northwest-14-wet",
+   "region": "c-us",
+   "title": "The Pacific Northwest in the green season",
+   "pace": "normal",
+   "level": 2,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [
+    5,
+    10
+   ],
+   "why": "Seattle, the rainforest at its greenest, Rainier in snow, Portland, the gorge's waterfalls full, and sunny Bend.",
+   "note": "October to May is the rainy season on the coast (the rainforest at its greenest) with snow in the mountains: Paradise on snowshoes, Crater Lake's rim closed, skiing at Mount Bachelor.",
+   "stops": [
+    {
+     "place": "us-seattle",
+     "nights": 3
+    },
+    {
+     "place": "us-olympic-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-hoh-rainforest",
+     "nights": 1
+    },
+    {
+     "place": "x-us-mount-rainier-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-portland",
+     "nights": 3
+    },
+    {
+     "place": "us-columbia-river-gorge",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bend",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-northwest"
+  },
+  {
+   "id": "usa-northwest-21",
+   "region": "c-us",
+   "title": "The Northwest to the redwoods",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Washington's peninsula and volcano, Oregon's gorge, high desert and Crater Lake, down to the California redwoods.",
+   "note": "June to September is the dry season: Rainier's meadows flower in late July and August, Crater Lake's rim road is open from July. Smoke from forest fires can hide the mountains some days in August.",
+   "stops": [
+    {
+     "place": "us-seattle",
+     "nights": 3
+    },
+    {
+     "place": "us-olympic-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-hoh-rainforest",
+     "nights": 2
+    },
+    {
+     "place": "x-us-mount-rainier-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-portland",
+     "nights": 2
+    },
+    {
+     "place": "us-columbia-river-gorge",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bend",
+     "nights": 2
+    },
+    {
+     "place": "us-crater-lake-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-redwood-national-and-state-parks",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-northwest"
+  },
+  {
+   "id": "usa-northwest-21-wet",
+   "region": "c-us",
+   "title": "The Northwest in the green season, three weeks",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [
+    5,
+    10
+   ],
+   "why": "Rainforest, waterfalls, Rainier in snow, Portland and Bend, then the redwoods in the rain.",
+   "note": "October to May is the rainy season on the coast (the rainforest at its greenest) with snow in the mountains: Paradise on snowshoes, Crater Lake's rim closed, skiing at Mount Bachelor.",
+   "stops": [
+    {
+     "place": "us-seattle",
+     "nights": 4
+    },
+    {
+     "place": "us-olympic-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-hoh-rainforest",
+     "nights": 2
+    },
+    {
+     "place": "x-us-mount-rainier-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-portland",
+     "nights": 3
+    },
+    {
+     "place": "us-columbia-river-gorge",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bend",
+     "nights": 2
+    },
+    {
+     "place": "us-redwood-national-and-state-parks",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-northwest"
+  },
+  {
+   "id": "usa-northwest-28",
+   "region": "c-us",
+   "title": "Seattle to San Francisco",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "A month down the coast and the volcanoes from Seattle to San Francisco, by Rainier, Crater Lake and the redwoods.",
+   "note": "June to September is the dry season: Rainier's meadows flower in late July and August, Crater Lake's rim road is open from July. Smoke from forest fires can hide the mountains some days in August.",
+   "stops": [
+    {
+     "place": "us-seattle",
+     "nights": 4
+    },
+    {
+     "place": "us-olympic-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-hoh-rainforest",
+     "nights": 2
+    },
+    {
+     "place": "x-us-mount-rainier-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-portland",
+     "nights": 3
+    },
+    {
+     "place": "us-columbia-river-gorge",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bend",
+     "nights": 3
+    },
+    {
+     "place": "us-crater-lake-national-park",
+     "nights": 2
+    },
+    {
+     "place": "us-redwood-national-and-state-parks",
+     "nights": 2
+    },
+    {
+     "place": "us-san-francisco",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-northwest"
+  },
+  {
+   "id": "usa-northwest-28-wet",
+   "region": "c-us",
+   "title": "Seattle to San Francisco in the green season",
+   "pace": "relaxed",
+   "level": 2,
+   "months": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "best": [
+    5,
+    10
+   ],
+   "why": "The rainy months' month: rainforest, Rainier on snowshoes, Portland, Bend's sun and skiing, the redwoods and San Francisco.",
+   "note": "October to May is the rainy season on the coast (the rainforest at its greenest) with snow in the mountains: Paradise on snowshoes, Crater Lake's rim closed, skiing at Mount Bachelor.",
+   "stops": [
+    {
+     "place": "us-seattle",
+     "nights": 4
+    },
+    {
+     "place": "us-olympic-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-hoh-rainforest",
+     "nights": 2
+    },
+    {
+     "place": "x-us-mount-rainier-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-portland",
+     "nights": 4
+    },
+    {
+     "place": "us-columbia-river-gorge",
+     "nights": 2
+    },
+    {
+     "place": "x-us-bend",
+     "nights": 3
+    },
+    {
+     "place": "us-redwood-national-and-state-parks",
+     "nights": 3
+    },
+    {
+     "place": "us-san-francisco",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-northwest"
+  },
+  {
+   "id": "usa-wild-west-7",
+   "region": "c-us",
+   "title": "Yellowstone and the Tetons in a week",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "The Grand Teton from Jenny Lake, the geysers and hot springs of Yellowstone, and wolves in Lamar Valley.",
+   "note": "May to October, when Yellowstone's roads are open; June to September is warmest. Snow possible in May and October.",
+   "stops": [
+    {
+     "place": "us-jackson",
+     "nights": 2
+    },
+    {
+     "place": "us-yellowstone-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-7-winter",
+   "region": "c-us",
+   "title": "Winter in Jackson Hole and Yellowstone's north",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Powder at Jackson Hole, sleighs among the elk, then wolves in the snow of Lamar Valley and the geysers by snowcoach.",
+   "note": "November to April: only Yellowstone's north road is open to cars (Lamar Valley wolves, Mammoth), the geysers by snowcoach mid-December to mid-March; skiing at Jackson Hole and Big Sky; -15 °C nights. November and April are between seasons, with few services.",
+   "stops": [
+    {
+     "place": "us-jackson",
+     "nights": 4
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-14",
+   "region": "c-us",
+   "title": "Yellowstone, the Tetons and Glacier",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Two great parks of the Rockies and the Grand Teton, with the Highline Trail and Going-to-the-Sun Road to end.",
+   "note": "Late June to September: Glacier's Going-to-the-Sun Road is open from about July, Yellowstone and the Tetons are green, grizzlies and bison everywhere; frost on some nights, storms in the afternoon.",
+   "stops": [
+    {
+     "place": "us-jackson",
+     "nights": 3
+    },
+    {
+     "place": "us-yellowstone-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 2
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 1
+    },
+    {
+     "place": "us-glacier-national-park",
+     "nights": 5
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-14-shoulder",
+   "region": "c-us",
+   "title": "Black Hills, Yellowstone and the Tetons",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    10
+   ],
+   "best": [],
+   "why": "Mount Rushmore and the Badlands, Cody's West, then Yellowstone and the Tetons without the summer crowds.",
+   "note": "May and October: Yellowstone and the Tetons are open but Glacier's high road is closed, so the route stays in Wyoming and South Dakota; snow possible, cold nights, few crowds; elk rut in late September and October.",
+   "stops": [
+    {
+     "place": "us-rapid-city",
+     "nights": 3
+    },
+    {
+     "place": "us-cody",
+     "nights": 2
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 2
+    },
+    {
+     "place": "us-yellowstone-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-jackson",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-14-winter",
+   "region": "c-us",
+   "title": "The Rockies in winter: Jackson Hole, Yellowstone, Big Sky",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Two ski resorts and Yellowstone's winter: wolves, frosted bison, geysers by snowcoach.",
+   "note": "November to April: only Yellowstone's north road is open to cars (Lamar Valley wolves, Mammoth), the geysers by snowcoach mid-December to mid-March; skiing at Jackson Hole and Big Sky; -15 °C nights. November and April are between seasons, with few services.",
+   "stops": [
+    {
+     "place": "us-jackson",
+     "nights": 5
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 4
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 5
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-21",
+   "region": "c-us",
+   "title": "The Wild West in three weeks",
+   "pace": "normal",
+   "level": 4,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "Rushmore and the Badlands, Cody, the Tetons, Yellowstone and Glacier: the great parks of the northern Rockies.",
+   "note": "Late June to September: Glacier's Going-to-the-Sun Road is open from about July, Yellowstone and the Tetons are green, grizzlies and bison everywhere; frost on some nights, storms in the afternoon.",
+   "stops": [
+    {
+     "place": "us-rapid-city",
+     "nights": 3
+    },
+    {
+     "place": "us-cody",
+     "nights": 2
+    },
+    {
+     "place": "us-jackson",
+     "nights": 4
+    },
+    {
+     "place": "us-yellowstone-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 2
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 1
+    },
+    {
+     "place": "us-glacier-national-park",
+     "nights": 5
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-21-shoulder",
+   "region": "c-us",
+   "title": "The Wild West out of season, three weeks",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    5,
+    10
+   ],
+   "best": [],
+   "why": "The Black Hills, Cody, Yellowstone and the Tetons at a slow pace in May or October.",
+   "note": "May and October: Yellowstone and the Tetons are open but Glacier's high road is closed, so the route stays in Wyoming and South Dakota; snow possible, cold nights, few crowds; elk rut in late September and October.",
+   "stops": [
+    {
+     "place": "us-rapid-city",
+     "nights": 4
+    },
+    {
+     "place": "us-cody",
+     "nights": 3
+    },
+    {
+     "place": "us-yellowstone-national-park",
+     "nights": 5
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 3
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 2
+    },
+    {
+     "place": "us-jackson",
+     "nights": 4
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-21-winter",
+   "region": "c-us",
+   "title": "Three weeks of Rockies winter",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Ski weeks at Jackson Hole and Big Sky, with Yellowstone's winter wildlife in between.",
+   "note": "November to April: only Yellowstone's north road is open to cars (Lamar Valley wolves, Mammoth), the geysers by snowcoach mid-December to mid-March; skiing at Jackson Hole and Big Sky; -15 °C nights. November and April are between seasons, with few services.",
+   "stops": [
+    {
+     "place": "us-jackson",
+     "nights": 7
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 6
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 8
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-28",
+   "region": "c-us",
+   "title": "The northern Rockies in a month",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "best": [
+    7,
+    8,
+    9
+   ],
+   "why": "A month for the Black Hills, the Tetons, Yellowstone and a week in Glacier.",
+   "note": "Late June to September: Glacier's Going-to-the-Sun Road is open from about July, Yellowstone and the Tetons are green, grizzlies and bison everywhere; frost on some nights, storms in the afternoon.",
+   "stops": [
+    {
+     "place": "us-rapid-city",
+     "nights": 4
+    },
+    {
+     "place": "us-cody",
+     "nights": 2
+    },
+    {
+     "place": "us-jackson",
+     "nights": 5
+    },
+    {
+     "place": "us-yellowstone-national-park",
+     "nights": 5
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 2
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 3
+    },
+    {
+     "place": "us-glacier-national-park",
+     "nights": 7
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-28-shoulder",
+   "region": "c-us",
+   "title": "The Wild West in May or October, a month",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    5,
+    10
+   ],
+   "best": [],
+   "why": "Slow weeks in the Black Hills, Cody, Yellowstone and Jackson Hole, with the elk rut in October.",
+   "note": "May and October: Yellowstone and the Tetons are open but Glacier's high road is closed, so the route stays in Wyoming and South Dakota; snow possible, cold nights, few crowds; elk rut in late September and October.",
+   "stops": [
+    {
+     "place": "us-rapid-city",
+     "nights": 5
+    },
+    {
+     "place": "us-cody",
+     "nights": 3
+    },
+    {
+     "place": "us-yellowstone-national-park",
+     "nights": 6
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 3
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 4
+    },
+    {
+     "place": "us-jackson",
+     "nights": 7
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-wild-west-28-winter",
+   "region": "c-us",
+   "title": "A winter month in the Rockies",
+   "pace": "relaxed",
+   "level": 4,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "The Badlands and Rushmore under snow, then Jackson Hole, Yellowstone's north and Big Sky.",
+   "note": "November to April: only Yellowstone's north road is open to cars (Lamar Valley wolves, Mammoth), the geysers by snowcoach mid-December to mid-March; skiing at Jackson Hole and Big Sky; -15 °C nights. November and April are between seasons, with few services.",
+   "stops": [
+    {
+     "place": "us-rapid-city",
+     "nights": 4
+    },
+    {
+     "place": "us-jackson",
+     "nights": 9
+    },
+    {
+     "place": "us-gardiner",
+     "nights": 6
+    },
+    {
+     "place": "us-bozeman",
+     "nights": 9
+    }
+   ],
+   "journey": "usa-wild-west"
+  },
+  {
+   "id": "usa-colorado-7",
+   "region": "c-us",
+   "title": "Colorado in a week",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Denver, Rocky Mountain National Park's lakes and tundra road, and the Maroon Bells.",
+   "note": "May to October: Trail Ridge Road (late May-October), the Maroon Bells and Mesa Verde's tours are open; afternoon storms in July and August above the trees; aspens turn gold mid-September to early October.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 2
+    },
+    {
+     "place": "us-rocky-mountain-national-park",
+     "nights": 3
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-colorado"
+  },
+  {
+   "id": "usa-colorado-7-winter",
+   "region": "c-us",
+   "title": "Colorado ski week",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "A night in Denver, then Aspen or Vail with the hot springs pool of Glenwood after skiing.",
+   "note": "November to April: ski season at Aspen, Vail and Purgatory; Rocky Mountain National Park on snowshoes; Mesa Verde's cliff tours and Trail Ridge Road closed; sunny days, -10 °C nights in the mountains.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 1
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 6
+    }
+   ],
+   "journey": "usa-colorado"
+  },
+  {
+   "id": "usa-colorado-14",
+   "region": "c-us",
+   "title": "Colorado: Rockies, mesas and the old West",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "Garden of the Gods and Pikes Peak, Mesa Verde and the Silverton train, the Maroon Bells and Rocky Mountain National Park.",
+   "note": "May to October: Trail Ridge Road (late May-October), the Maroon Bells and Mesa Verde's tours are open; afternoon storms in July and August above the trees; aspens turn gold mid-September to early October.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 2
+    },
+    {
+     "place": "us-colorado-springs",
+     "nights": 2
+    },
+    {
+     "place": "us-durango",
+     "nights": 3
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 3
+    },
+    {
+     "place": "us-rocky-mountain-national-park",
+     "nights": 3
+    },
+    {
+     "place": "us-denver",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-colorado"
+  },
+  {
+   "id": "usa-colorado-14-winter",
+   "region": "c-us",
+   "title": "Colorado in winter, two weeks",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Snowshoes in Rocky Mountain National Park, a week skiing Aspen or Vail, Durango's train and Purgatory.",
+   "note": "November to April: ski season at Aspen, Vail and Purgatory; Rocky Mountain National Park on snowshoes; Mesa Verde's cliff tours and Trail Ridge Road closed; sunny days, -10 °C nights in the mountains.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 2
+    },
+    {
+     "place": "us-rocky-mountain-national-park",
+     "nights": 2
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 5
+    },
+    {
+     "place": "us-durango",
+     "nights": 4
+    },
+    {
+     "place": "us-colorado-springs",
+     "nights": 1
+    }
+   ],
+   "journey": "usa-colorado"
+  },
+  {
+   "id": "usa-colorado-21",
+   "region": "c-us",
+   "title": "Colorado in three weeks",
+   "pace": "normal",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    7,
+    8,
+    9
+   ],
+   "why": "All of Colorado's mountains at an easy pace, with time for the high trails.",
+   "note": "May to October: Trail Ridge Road (late May-October), the Maroon Bells and Mesa Verde's tours are open; afternoon storms in July and August above the trees; aspens turn gold mid-September to early October.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 3
+    },
+    {
+     "place": "us-colorado-springs",
+     "nights": 3
+    },
+    {
+     "place": "us-durango",
+     "nights": 5
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 4
+    },
+    {
+     "place": "us-rocky-mountain-national-park",
+     "nights": 4
+    },
+    {
+     "place": "us-denver",
+     "nights": 2
+    }
+   ],
+   "journey": "usa-colorado"
+  },
+  {
+   "id": "usa-colorado-21-winter",
+   "region": "c-us",
+   "title": "Three weeks of Colorado snow",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "Rocky Mountain National Park in snow, Aspen and Vail, Durango and Purgatory, the red rocks of Colorado Springs.",
+   "note": "November to April: ski season at Aspen, Vail and Purgatory; Rocky Mountain National Park on snowshoes; Mesa Verde's cliff tours and Trail Ridge Road closed; sunny days, -10 °C nights in the mountains.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 2
+    },
+    {
+     "place": "us-rocky-mountain-national-park",
+     "nights": 3
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 7
+    },
+    {
+     "place": "us-durango",
+     "nights": 6
+    },
+    {
+     "place": "us-colorado-springs",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-colorado"
+  },
+  {
+   "id": "usa-colorado-28",
+   "region": "c-us",
+   "title": "Colorado and the arches of Moab",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "best": [
+    6,
+    9
+   ],
+   "why": "A month in the Rockies with a detour to Utah's arches between Durango and the Maroon Bells.",
+   "note": "May to October: Trail Ridge Road (late May-October), the Maroon Bells and Mesa Verde's tours are open; afternoon storms in July and August above the trees; aspens turn gold mid-September to early October.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 3
+    },
+    {
+     "place": "us-colorado-springs",
+     "nights": 3
+    },
+    {
+     "place": "us-durango",
+     "nights": 5
+    },
+    {
+     "place": "us-moab",
+     "nights": 3
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 5
+    },
+    {
+     "place": "us-rocky-mountain-national-park",
+     "nights": 6
+    },
+    {
+     "place": "us-denver",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-colorado"
+  },
+  {
+   "id": "usa-colorado-28-winter",
+   "region": "c-us",
+   "title": "A winter month in Colorado",
+   "pace": "relaxed",
+   "level": 3,
+   "months": [
+    11,
+    12,
+    1,
+    2,
+    3,
+    4
+   ],
+   "best": [
+    1,
+    2,
+    3
+   ],
+   "why": "A month of skiing and snowshoeing from Denver to Durango.",
+   "note": "November to April: ski season at Aspen, Vail and Purgatory; Rocky Mountain National Park on snowshoes; Mesa Verde's cliff tours and Trail Ridge Road closed; sunny days, -10 °C nights in the mountains.",
+   "stops": [
+    {
+     "place": "us-denver",
+     "nights": 3
+    },
+    {
+     "place": "us-rocky-mountain-national-park",
+     "nights": 4
+    },
+    {
+     "place": "x-us-glenwood-springs",
+     "nights": 8
+    },
+    {
+     "place": "us-durango",
+     "nights": 7
+    },
+    {
+     "place": "us-colorado-springs",
+     "nights": 3
+    },
+    {
+     "place": "us-denver",
+     "nights": 3
+    }
+   ],
+   "journey": "usa-colorado"
   }
  ]
 }

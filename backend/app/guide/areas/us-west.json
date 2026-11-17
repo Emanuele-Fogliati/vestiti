@@ -3529,6 +3529,2990 @@
      "needs": "car"
     }
    ]
+  },
+  {
+   "id": "us-seattle",
+   "names": [
+    "Seattle",
+    "Pike Place",
+    "Space Needle"
+   ],
+   "country": "US",
+   "lat": 47.61,
+   "lon": -122.33,
+   "radius_km": 25,
+   "season": "Dry sunny summers (July-September, 25 °C), grey and drizzly October to May but rarely cold.",
+   "sleep": "Downtown or Belltown, near Pike Place.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Seattle",
+    "https://en.wikipedia.org/wiki/Pike_Place_Market",
+    "https://en.wikipedia.org/wiki/Space_Needle",
+    "https://en.wikipedia.org/wiki/Washington_State_Ferries"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "pike-place",
+     "name": "Pike Place Market and the waterfront",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The 1907 market over Elliott Bay: fish stalls, the gum wall in Post Alley, then down to the piers.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Pike Place Market",
+      "Seattle"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "space-needle",
+     "name": "Space Needle and Kerry Park",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "Sunset",
+     "book": "",
+     "why": "The 1962 World's Fair tower, then Kerry Park for the skyline with Mount Rainier behind it on a clear day.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Space Needle"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 1,
+      "culture": 1,
+      "relax": 2,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ferry",
+     "name": "Ferry to Bainbridge Island",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "35 minutes across Puget Sound on the state ferry, the city skyline and the Olympics on either side.",
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 1,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "boat"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-us-mount-rainier-national-park",
+   "names": [
+    "Mount Rainier",
+    "Mount Rainier National Park",
+    "Paradise",
+    "Ashford",
+    "Sunrise"
+   ],
+   "country": "US",
+   "lat": 46.786,
+   "lon": -121.736,
+   "radius_km": 35,
+   "season": "Paradise has snow from November to June (one of the snowiest measured places on earth); wildflower meadows late July to August; the Sunrise road only July to September.",
+   "sleep": "Ashford by the Nisqually entrance, or the Paradise Inn (May-October).",
+   "sources": [
+    "https://www.nps.gov/mora/index.htm",
+    "https://www.nps.gov/mora/planyourvisit/paradise.htm",
+    "https://en.wikivoyage.org/wiki/Mount_Rainier_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "skyline",
+     "name": "Skyline Trail at Paradise",
+     "hours": "4-5 h",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "Up through wildflower meadows to Panorama Point under the Nisqually Glacier, 4,392 m of volcano in front of you.",
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2100
+     },
+     "sights": [
+      "Mount Rainier National Park"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "paradise-snow",
+     "name": "Snowshoeing at Paradise",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Carry chains; the road to Paradise closes at night in winter.",
+     "why": "Ranger snowshoe walks from the Paradise visitor centre in winter, when the meadows lie under metres of snow.",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1650
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "reflection",
+     "name": "Reflection Lakes and Narada Falls",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The mountain upside down in the water, and a 50 m fall by the road.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1490
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "grove",
+     "name": "Grove of the Patriarchs and old-growth forest",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Douglas firs and red cedars about 1,000 years old on an island in the Ohanapecosh River.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 670
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-olympic-national-park",
+   "names": [
+    "Olympic National Park",
+    "Port Angeles",
+    "Hurricane Ridge",
+    "Lake Crescent",
+    "Sol Duc"
+   ],
+   "country": "US",
+   "lat": 48.06,
+   "lon": -123.6,
+   "radius_km": 45,
+   "season": "Dry summers, very wet winters; Hurricane Ridge road has snow and limited winter access.",
+   "sleep": "Port Angeles, or the lodges at Lake Crescent and Sol Duc (spring to autumn).",
+   "sources": [
+    "https://www.nps.gov/olym/index.htm",
+    "https://en.wikivoyage.org/wiki/Olympic_National_Park",
+    "https://en.wikipedia.org/wiki/Lake_Crescent"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "hurricane-ridge",
+     "name": "Hurricane Ridge and Hurricane Hill",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A road to 1,600 m, then the walk up Hurricane Hill over the snowfields of Mount Olympus and the Strait to Canada.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1750
+     },
+     "trail": "us-nps-olym-hurricane-hill-nature-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "lake-crescent",
+     "name": "Lake Crescent and Marymere Falls",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A deep glacial lake of blue water under forested mountains, and a forest path to a 27 m waterfall.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "sights": [
+      "Lake Crescent"
+     ],
+     "arrive": true,
+     "trail": "us-nps-olym-marymere-falls-nature-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "boat"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "sol-duc",
+     "name": "Sol Duc Falls and hot springs",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A walk through old-growth forest to the fall splitting into three, then the hot pools.",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 500
+     },
+     "sights": [
+      "Sol Duc Falls"
+     ],
+     "trail": "us-nps-olym-sol-duc-falls-nature-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "thermal"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-hoh-rainforest",
+   "names": [
+    "Hoh Rainforest",
+    "Forks",
+    "Rialto Beach",
+    "Ruby Beach",
+    "Kalaloch",
+    "La Push"
+   ],
+   "country": "US",
+   "lat": 47.95,
+   "lon": -124.38,
+   "radius_km": 45,
+   "season": "Over 3.5 m of rain a year, most from October to April; mild all year.",
+   "sleep": "Forks, or the Kalaloch Lodge on the coast.",
+   "sources": [
+    "https://www.nps.gov/olym/planyourvisit/visiting-the-hoh.htm",
+    "https://en.wikivoyage.org/wiki/Olympic_National_Park",
+    "https://en.wikipedia.org/wiki/Hoh_Rainforest"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "hoh",
+     "name": "Hall of Mosses",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Maples and spruces hung with moss in one of the few temperate rainforests of the world.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 180
+     },
+     "sights": [
+      "Hoh Rainforest"
+     ],
+     "trail": "us-nps-olym-hall-of-mosses-nature-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "rialto",
+     "name": "Rialto Beach and Hole-in-the-Wall",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "Check the tide table: Hole-in-the-Wall only at low tide.",
+     "why": "Driftwood logs and sea stacks on the wild Pacific coast, walking at low tide to a rock arch.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 10
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "ruby",
+     "name": "Ruby Beach and Kalaloch",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "Sea stacks off a beach of red-tinged pebbles, and the Tree of Life clinging over a void at Kalaloch.",
+     "act": {
+      "type": "beach"
+     },
+     "sights": [
+      "Kalaloch Beach"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "beach",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-portland",
+   "names": [
+    "Portland",
+    "Portland, Oregon"
+   ],
+   "country": "US",
+   "lat": 45.52,
+   "lon": -122.68,
+   "radius_km": 20,
+   "season": "Mild: dry warm summers, grey drizzly winters.",
+   "sleep": "Downtown or the Pearl District.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Portland_(Oregon)",
+    "https://en.wikipedia.org/wiki/Powell%27s_Books",
+    "https://en.wikipedia.org/wiki/Portland_Japanese_Garden"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "downtown",
+     "name": "Downtown, Powell's and food carts",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Powell's City of Books, a whole city block of books, and lunch at the food-cart pods.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Portland"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 1,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "japanese-garden",
+     "name": "Japanese Garden and Washington Park",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Maples, ponds and Mount Hood beyond the city from the hills of Washington Park.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 3,
+      "relax": 4,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-columbia-river-gorge",
+   "names": [
+    "Columbia River Gorge",
+    "Hood River",
+    "Multnomah Falls",
+    "Cascade Locks"
+   ],
+   "country": "US",
+   "lat": 45.65,
+   "lon": -121.7,
+   "radius_km": 40,
+   "season": "Windy (kitesurfing in summer at Hood River); the falls fullest in winter and spring; ice storms some winter days.",
+   "sleep": "Hood River.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Columbia_River_Gorge",
+    "https://en.wikipedia.org/wiki/Multnomah_Falls",
+    "https://en.wikivoyage.org/wiki/Columbia_River_Gorge"
+   ],
+   "nights": [
+    1,
+    1,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "multnomah",
+     "name": "Multnomah Falls and the waterfall corridor",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed-use permit for the Historic Columbia River Highway corridor in summer (recreation.gov).",
+     "why": "Oregon's 189 m waterfall in two drops under a stone bridge, then Latourell and Horsetail falls on the old highway.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 200
+     },
+     "sights": [
+      "Multnomah Falls",
+      "Columbia River Gorge"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "vista",
+     "name": "Vista House and Crown Point",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "A 1918 stone rotunda 230 m above the river, looking up the whole gorge.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "hood-river",
+     "name": "Hood River fruit loop and Mount Hood",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Orchards and cider below Mount Hood's snow cone; windsurfers on the river.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 3,
+      "culture": 2,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-crater-lake-national-park",
+   "names": [
+    "Crater Lake",
+    "Crater Lake National Park",
+    "Rim Village"
+   ],
+   "country": "US",
+   "lat": 42.94,
+   "lon": -122.11,
+   "radius_km": 30,
+   "season": "At 2,100 m with about 11 m of snow a year: the Rim Drive and north entrance open only about July to October; in winter only Rim Village, on snowshoes.",
+   "sleep": "Crater Lake Lodge or Mazama Village (summer), or outside the park.",
+   "sources": [
+    "https://www.nps.gov/crla/index.htm",
+    "https://en.wikivoyage.org/wiki/Crater_Lake_National_Park"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "rim-drive",
+     "name": "Rim Drive",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "53 km round the deepest lake of the US (594 m), blue from the caldera's clean water, with Wizard Island in it.",
+     "months": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2200
+     },
+     "sights": [
+      "Crater Lake National Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "cleetwood",
+     "name": "Cleetwood Cove down to the water",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The only path to the shore, 210 m down; swim if you can take 15 °C.",
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2100
+     },
+     "trail": "us-nps-crla-cleetwood-cove-trail",
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "watchman",
+     "name": "Watchman Peak at sunset",
+     "hours": "1 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunset",
+     "book": "",
+     "why": "A short climb to a fire lookout over Wizard Island.",
+     "months": [
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2440
+     },
+     "trail": "us-nps-crla-watchman-peak-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-us-bend",
+   "names": [
+    "Bend",
+    "Smith Rock",
+    "Mount Bachelor",
+    "Newberry"
+   ],
+   "country": "US",
+   "lat": 44.047,
+   "lon": -121.315,
+   "radius_km": 40,
+   "season": "High desert, 300 sunny days a year: hot dry summers, snow and ski at Mount Bachelor November to May.",
+   "sleep": "Bend, on the Deschutes River.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bend",
+    "https://en.wikipedia.org/wiki/Smith_Rock_State_Park",
+    "https://en.wikipedia.org/wiki/Newberry_National_Volcanic_Monument"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "smith-rock",
+     "name": "Smith Rock",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Volcanic tuff walls over a river bend, the birthplace of American sport climbing; the Misery Ridge trail climbs over it.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 1000
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "newberry",
+     "name": "Newberry Volcano and the lava tubes",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The obsidian flow and Lava River Cave, a 1.6 km lava tube, south of town.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1700
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "adventure"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "bachelor",
+     "name": "Skiing at Mount Bachelor",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A volcano skied from its summit in all directions, dry snow, a long season.",
+     "months": [
+      11,
+      12,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "act": {
+      "type": "ski"
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "river",
+     "name": "Deschutes River and the Old Mill",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Float or walk the river through town past the old mill smokestacks.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bend"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 1,
+      "relax": 4,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-jackson",
+   "names": [
+    "Jackson",
+    "Jackson Hole",
+    "Grand Teton",
+    "Grand Teton National Park",
+    "Teton Village",
+    "Moose"
+   ],
+   "country": "US",
+   "lat": 43.48,
+   "lon": -110.76,
+   "radius_km": 40,
+   "season": "Summer days 25 °C, frost at night; the park roads open May to October (Moose-Wilson and Jenny Lake area); winter -15 °C with deep powder at Jackson Hole Mountain Resort.",
+   "sleep": "Jackson town, or Teton Village under the ski area.",
+   "sources": [
+    "https://www.nps.gov/grte/index.htm",
+    "https://en.wikivoyage.org/wiki/Grand_Teton_National_Park",
+    "https://en.wikipedia.org/wiki/National_Elk_Refuge",
+    "https://en.wikipedia.org/wiki/Jackson_Hole_Mountain_Resort"
+   ],
+   "nights": [
+    2,
+    3,
+    8
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "cascade-canyon",
+     "name": "Jenny Lake, Inspiration Point and Cascade Canyon",
+     "hours": "5-7 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "The shuttle boat across Jenny Lake, up past Hidden Falls to Inspiration Point and into Cascade Canyon under the Grand Teton; moose in the willows.",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2200
+     },
+     "sights": [
+      "Jenny Lake",
+      "Grand Teton National Park"
+     ],
+     "trail": "us-nps-grte-cascade-canyon",
+     "scores": {
+      "effort": 3,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek",
+      "boat"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "mormon-row",
+     "name": "Mormon Row and Oxbow Bend at sunrise",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "The pioneer barns of 1910 under the Tetons, then the Snake River's Oxbow Bend with the mountain in the water.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "drive"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "taggart",
+     "name": "Taggart Lake",
+     "hours": "2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "An easy loop to a lake right under the Grand Teton, through a forest that burned in 1985.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "trail": "us-nps-grte-taggart-lake-loop-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "alt_of": "cascade-canyon"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Jackson Hole",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Steep powder and the aerial tram to the top of Rendezvous Mountain.",
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "act": {
+      "type": "ski"
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 3,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "elk-refuge",
+     "name": "Sleigh ride among the elk",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Horse-drawn sleighs through some 7,000 elk wintering on the National Elk Refuge by the town.",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "town",
+     "name": "Jackson town square",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The arches of elk antlers on the square, cowboy bars and galleries.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Jackson"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 1,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-yellowstone-national-park",
+   "names": [
+    "Yellowstone",
+    "Yellowstone National Park",
+    "Old Faithful",
+    "West Yellowstone",
+    "Canyon Village",
+    "Grand Prismatic"
+   ],
+   "country": "US",
+   "lat": 44.46,
+   "lon": -110.83,
+   "radius_km": 60,
+   "season": "Roads open to cars about late April to early November; at 2,300 m, frost possible any night; in winter only snowcoaches and snowmobiles reach Old Faithful (mid-December to mid-March).",
+   "sleep": "Old Faithful Inn or Canyon Lodge inside (book a year ahead), or West Yellowstone.",
+   "sources": [
+    "https://www.nps.gov/yell/index.htm",
+    "https://www.nps.gov/yell/planyourvisit/winteropen.htm",
+    "https://en.wikivoyage.org/wiki/Yellowstone_National_Park"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "old-faithful",
+     "name": "Old Faithful and the Upper Geyser Basin",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Old Faithful erupting about every 90 minutes, then the boardwalks past hundreds of geysers to Morning Glory Pool.",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2240
+     },
+     "sights": [
+      "Old Faithful"
+     ],
+     "trail": "us-nps-yell-upper-geyser-basin-trail",
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "prismatic",
+     "name": "Grand Prismatic from the Fairy Falls overlook",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The largest hot spring of the US seen from above, rings of orange and blue, then on to 61 m Fairy Falls.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2250
+     },
+     "sights": [
+      "Grand Prismatic Spring"
+     ],
+     "trail": "us-osm-17840970",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "canyon",
+     "name": "Grand Canyon of the Yellowstone",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Yellow walls and the 94 m Lower Falls from Artist Point and the brink of the falls.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2400
+     },
+     "sights": [
+      "Grand Canyon of the Yellowstone"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "hayden",
+     "name": "Hayden Valley wildlife",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Dawn or dusk",
+     "book": "",
+     "why": "Bison herds by the road, elk, and with luck a grizzly, at dawn or dusk.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Yellowstone National Park"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife",
+      "drive"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "snowcoach",
+     "name": "Snowcoach to Old Faithful in winter",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Snowcoach tours from West Yellowstone or Mammoth, mid-December to mid-March.",
+     "why": "Over the snow-covered roads to the geysers steaming in -20 °C, bison frosted white.",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife",
+      "view"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "guide"
+    }
+   ]
+  },
+  {
+   "id": "us-gardiner",
+   "names": [
+    "Gardiner",
+    "Mammoth Hot Springs",
+    "Lamar Valley",
+    "Mammoth"
+   ],
+   "country": "US",
+   "lat": 45.03,
+   "lon": -110.71,
+   "radius_km": 45,
+   "season": "The North Entrance road to Mammoth and Lamar Valley is the only Yellowstone road open to cars all year; cold, snowy winters at 1,600-2,000 m.",
+   "sleep": "Gardiner, at the Roosevelt Arch.",
+   "sources": [
+    "https://www.nps.gov/yell/planyourvisit/mammoth.htm",
+    "https://www.nps.gov/yell/learn/nature/wolves.htm",
+    "https://en.wikivoyage.org/wiki/Gardiner"
+   ],
+   "nights": [
+    1,
+    2,
+    4
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mammoth",
+     "name": "Mammoth Hot Springs terraces",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "White travertine terraces built by hot water, on boardwalks over them.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1900
+     },
+     "sights": [
+      "Mammoth Hot Springs"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "lamar",
+     "name": "Wolves in Lamar Valley",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Dawn",
+     "book": "",
+     "why": "Before dawn in the 'Serengeti of North America', with the spotting scopes of wolf watchers along the road; bison and pronghorn all day.",
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "boiling",
+     "name": "Boiling River and Gardiner",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Rafting the Yellowstone River in summer through Gardiner's canyon.",
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "act": {
+      "type": "boat"
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "boat",
+      "adventure"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-cody",
+   "names": [
+    "Cody",
+    "Buffalo Bill",
+    "Wapiti"
+   ],
+   "country": "US",
+   "lat": 44.53,
+   "lon": -109.06,
+   "radius_km": 30,
+   "season": "Dry, sunny; summer rodeo every night June to August; the East Entrance road to Yellowstone open May to early November.",
+   "sleep": "Cody town.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Cody",
+    "https://en.wikipedia.org/wiki/Buffalo_Bill_Center_of_the_West",
+    "https://en.wikipedia.org/wiki/Cody_Nite_Rodeo"
+   ],
+   "nights": [
+    1,
+    1,
+    2
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "center",
+     "name": "Buffalo Bill Center of the West",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Five museums in one: the West's art, Plains Indians, firearms and Yellowstone's natural history.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Cody"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "rodeo",
+     "name": "Cody Nite Rodeo",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Bronc and bull riding every summer night in the 'Rodeo Capital of the World'.",
+     "months": [
+      6,
+      7,
+      8
+     ],
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 4,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "night",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-glacier-national-park",
+   "names": [
+    "Glacier National Park",
+    "West Glacier",
+    "Kalispell",
+    "Whitefish",
+    "Many Glacier",
+    "St. Mary",
+    "Apgar"
+   ],
+   "country": "US",
+   "lat": 48.6,
+   "lon": -113.8,
+   "radius_km": 60,
+   "season": "Going-to-the-Sun Road is fully open only about July to mid-October; snow on the passes into June; grizzly country (carry bear spray).",
+   "sleep": "West Glacier, Apgar or Whitefish; Many Glacier and St. Mary on the east side in summer.",
+   "sources": [
+    "https://www.nps.gov/glac/index.htm",
+    "https://www.nps.gov/glac/planyourvisit/vehicle-reservations.htm",
+    "https://en.wikivoyage.org/wiki/Glacier_National_Park_(US)"
+   ],
+   "nights": [
+    2,
+    3,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "sun-road",
+     "name": "Going-to-the-Sun Road and Logan Pass",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "Vehicle reservation for the road in summer (recreation.gov), or the park shuttle.",
+     "why": "80 km over the Continental Divide past waterfalls on the cliffs, with mountain goats at Logan Pass and the Hidden Lake overlook.",
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2030
+     },
+     "sights": [
+      "Going-to-the-Sun Road"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "highline",
+     "name": "Highline Trail",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "moderate",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "From Logan Pass along a ledge on the Garden Wall to Granite Park Chalet, 18 km of the park's best views; out by the Loop.",
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2200
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "lake-mcdonald",
+     "name": "Lake McDonald and Avalanche Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Coloured stones under clear water at Apgar, then the Trail of the Cedars to a lake under waterfalls.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1100
+     },
+     "arrive": true,
+     "trail": "us-nps-glac-trail-of-the-cedars",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 4,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "beach"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "many-glacier",
+     "name": "Grinnell Glacier from Many Glacier",
+     "hours": "6-8 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Past turquoise lakes to the glacier and its iceberg lake under the Garden Wall; grizzlies often seen on the slopes.",
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 1950
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 5,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek",
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    }
+   ]
+  },
+  {
+   "id": "us-bozeman",
+   "names": [
+    "Bozeman",
+    "Big Sky"
+   ],
+   "country": "US",
+   "lat": 45.68,
+   "lon": -111.04,
+   "radius_km": 60,
+   "season": "University town at 1,460 m: warm dry summers, snowy winters with skiing at Big Sky December to April.",
+   "sleep": "Downtown Bozeman, or Big Sky for skiing.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Bozeman",
+    "https://en.wikipedia.org/wiki/Museum_of_the_Rockies",
+    "https://en.wikipedia.org/wiki/Big_Sky_Resort"
+   ],
+   "nights": [
+    1,
+    1,
+    7
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "museum",
+     "name": "Museum of the Rockies",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "One of the largest dinosaur collections in the world, with a full T. rex found in Montana.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Bozeman"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 1,
+      "relax": 3,
+      "history": 4,
+      "landscape": 1
+     },
+     "tier": "A",
+     "kinds": [
+      "museum"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing at Big Sky",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Lone Peak's tram to 3,403 m and one of the largest ski areas of the US.",
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "act": {
+      "type": "ski"
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 3,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "hyalite",
+     "name": "Hyalite Canyon",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Lakes and waterfalls in a canyon south of town; ice climbing in winter.",
+     "months": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2000
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "B",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-rapid-city",
+   "names": [
+    "Rapid City",
+    "Black Hills",
+    "Mount Rushmore",
+    "Keystone",
+    "Custer",
+    "Badlands",
+    "Deadwood"
+   ],
+   "country": "US",
+   "lat": 44.0,
+   "lon": -103.4,
+   "radius_km": 80,
+   "season": "Hot summers, cold winters with snow; Needles Highway closed in winter; Badlands and Rushmore open all year.",
+   "sleep": "Rapid City, Keystone or Custer.",
+   "sources": [
+    "https://www.nps.gov/moru/index.htm",
+    "https://www.nps.gov/badl/index.htm",
+    "https://en.wikipedia.org/wiki/Custer_State_Park",
+    "https://en.wikipedia.org/wiki/Crazy_Horse_Memorial",
+    "https://en.wikivoyage.org/wiki/Black_Hills"
+   ],
+   "nights": [
+    2,
+    3,
+    5
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "rushmore",
+     "name": "Mount Rushmore and Crazy Horse",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The four presidents carved into granite, and the unfinished mountain carving of Crazy Horse nearby.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Mount Rushmore",
+      "Crazy Horse Memorial"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 2,
+      "culture": 2,
+      "relax": 2,
+      "history": 4,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "view",
+      "culture"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "badlands",
+     "name": "Badlands National Park",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Striped buttes and pinnacles of eroded clay on the prairie, the Door and Notch trails into them, bighorn and bison.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 800
+     },
+     "sights": [
+      "Badlands National Park"
+     ],
+     "trail": "us-nps-badl-door-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "custer",
+     "name": "Custer State Park and Needles Highway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Granite needles and a tunnel road, Sylvan Lake, and bison herds on the Wildlife Loop.",
+     "months": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Custer State Park"
+     ],
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "wildlife"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "deadwood",
+     "name": "Deadwood",
+     "hours": "2-3 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The gold-rush town where Wild Bill Hickok was shot at the poker table in 1876.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Deadwood"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 4,
+      "landscape": 2
+     },
+     "tier": "B",
+     "kinds": [
+      "city"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-denver",
+   "names": [
+    "Denver",
+    "Red Rocks",
+    "Boulder"
+   ],
+   "country": "US",
+   "lat": 39.739,
+   "lon": -104.99,
+   "radius_km": 35,
+   "season": "The Mile High City: 300 sunny days, warm summers, short snowfalls in winter that melt in days.",
+   "sleep": "LoDo, near Union Station.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Denver",
+    "https://en.wikipedia.org/wiki/Red_Rocks_Amphitheatre",
+    "https://en.wikipedia.org/wiki/Colorado_State_Capitol"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "red-rocks",
+     "name": "Red Rocks Amphitheatre",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A concert venue between two 90 m sandstone monoliths, and the trails round it in the foothills.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1950
+     },
+     "sights": [
+      "Denver"
+     ],
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 3,
+      "history": 2,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "lodo",
+     "name": "Union Station, LoDo and the Capitol",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "The restored 1914 station, brewpubs of Lower Downtown, and the gold-domed Capitol's step exactly a mile high.",
+     "act": {
+      "type": "city"
+     },
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 0,
+      "culture": 3,
+      "relax": 3,
+      "history": 2,
+      "landscape": 2
+     },
+     "tier": "A",
+     "kinds": [
+      "city",
+      "food"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "us-rocky-mountain-national-park",
+   "names": [
+    "Rocky Mountain National Park",
+    "Estes Park",
+    "Bear Lake",
+    "Trail Ridge Road"
+   ],
+   "country": "US",
+   "lat": 40.377,
+   "lon": -105.52,
+   "radius_km": 35,
+   "season": "Trail Ridge Road (to 3,713 m) open about late May to mid-October; timed entry May to October; snowshoes at Bear Lake in winter.",
+   "sleep": "Estes Park.",
+   "sources": [
+    "https://www.nps.gov/romo/index.htm",
+    "https://www.nps.gov/romo/planyourvisit/timed-entry-permit-system.htm",
+    "https://en.wikivoyage.org/wiki/Rocky_Mountain_National_Park"
+   ],
+   "nights": [
+    1,
+    2,
+    6
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "emerald-lake",
+     "name": "Bear Lake to Dream and Emerald Lakes",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Timed-entry reservation May-October (Bear Lake Road corridor), recreation.gov.",
+     "why": "Three lakes in a row under Hallett Peak, 5 km from Bear Lake; snowshoes in winter.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3080
+     },
+     "sights": [
+      "Rocky Mountain National Park"
+     ],
+     "trail": "us-nps-romo-dream-lake-lake-haiyaha-trail",
+     "scores": {
+      "effort": 2,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "trail-ridge",
+     "name": "Trail Ridge Road",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "clear",
+     "best": "",
+     "book": "",
+     "why": "The highest paved through-road of the US over the tundra at 3,700 m, elk and marmots by the road.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3710
+     },
+     "scores": {
+      "effort": 1,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "sky-pond",
+     "name": "Sky Pond",
+     "hours": "5-7 h",
+     "length": "full",
+     "effort": "hard",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Past Alberta Falls and The Loch, a scramble up beside Timberline Falls to a lake under the spires.",
+     "months": [
+      7,
+      8,
+      9
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "hard",
+      "max_altitude_m": 3320
+     },
+     "trail": "us-nps-romo-sky-pond",
+     "scores": {
+      "effort": 4,
+      "nature": 4,
+      "culture": 0,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "trek"
+     ],
+     "cost": "free",
+     "kids": "12+"
+    },
+    {
+     "id": "elk-rut",
+     "name": "The elk rut in Moraine Park",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "Dusk",
+     "book": "",
+     "why": "Bull elk bugling and fighting in the meadows at dusk, mid-September to mid-October.",
+     "months": [
+      9,
+      10
+     ],
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 5,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "B",
+     "kinds": [
+      "wildlife"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    }
+   ]
+  },
+  {
+   "id": "x-us-glenwood-springs",
+   "names": [
+    "Glenwood Springs",
+    "Aspen",
+    "Vail",
+    "Maroon Bells",
+    "Hanging Lake",
+    "Snowmass"
+   ],
+   "country": "US",
+   "lat": 39.5505,
+   "lon": -107.3222,
+   "radius_km": 70,
+   "season": "Hot springs all year; Maroon Bells road to the lake mid-May to October (shuttle); skiing at Aspen and Vail December to April.",
+   "sleep": "Glenwood Springs, or Aspen (pricier).",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Glenwood_Springs",
+    "https://en.wikipedia.org/wiki/Hanging_Lake",
+    "https://en.wikipedia.org/wiki/Maroon_Bells",
+    "https://en.wikipedia.org/wiki/Glenwood_Hot_Springs_Pool"
+   ],
+   "nights": [
+    1,
+    2,
+    8
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "maroon-bells",
+     "name": "Maroon Bells and Crater Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Shuttle or parking reservation from Aspen (aspenchamber.org).",
+     "why": "The most photographed peaks of Colorado over Maroon Lake, then 3 km up to Crater Lake under their walls.",
+     "months": [
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 3080
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 5,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "hanging-lake",
+     "name": "Hanging Lake",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "moderate",
+     "need": "any",
+     "best": "",
+     "book": "Permit required all year (visitglenwood.com).",
+     "why": "A steep climb up a side canyon to a turquoise lake fed by thin waterfalls over a travertine rim.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "moderate",
+      "max_altitude_m": 2200
+     },
+     "sights": [
+      "Hanging Lake"
+     ],
+     "scores": {
+      "effort": 3,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "walk"
+     ],
+     "cost": "$",
+     "kids": "yes"
+    },
+    {
+     "id": "hot-springs",
+     "name": "Glenwood Hot Springs Pool",
+     "hours": "1-2 h",
+     "length": "short",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "A two-block pool of spring water at 32-40 °C under red cliffs, open since 1888.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Glenwood Springs"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 0,
+      "nature": 1,
+      "culture": 1,
+      "relax": 5,
+      "history": 2,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "thermal"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Aspen or Vail",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Aspen's four mountains or Vail's back bowls, an hour from the springs.",
+     "months": [
+      12,
+      1,
+      2,
+      3,
+      4
+     ],
+     "act": {
+      "type": "ski"
+     },
+     "scores": {
+      "effort": 4,
+      "nature": 3,
+      "culture": 1,
+      "relax": 1,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-durango",
+   "names": [
+    "Durango",
+    "Silverton",
+    "Mesa Verde",
+    "Ouray"
+   ],
+   "country": "US",
+   "lat": 37.28,
+   "lon": -107.88,
+   "radius_km": 70,
+   "season": "Warm dry summers; Mesa Verde cliff dwelling tours about May to October; the Silverton train runs to Silverton May to October, to Cascade Canyon in winter.",
+   "sleep": "Durango.",
+   "sources": [
+    "https://www.nps.gov/meve/index.htm",
+    "https://en.wikivoyage.org/wiki/Durango",
+    "https://en.wikipedia.org/wiki/Durango_and_Silverton_Narrow_Gauge_Railroad"
+   ],
+   "nights": [
+    2,
+    3,
+    7
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "mesa-verde",
+     "name": "Mesa Verde cliff dwellings",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Ranger tour tickets (recreation.gov).",
+     "why": "Ancestral Puebloan villages of the 1200s built into cliff alcoves; ladders and tunnels on the ranger tours of Cliff Palace and Balcony House.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 2100
+     },
+     "scores": {
+      "effort": 2,
+      "nature": 3,
+      "culture": 2,
+      "relax": 2,
+      "history": 5,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "culture",
+      "walk"
+     ],
+     "cost": "$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "train",
+     "name": "Durango & Silverton narrow-gauge railroad",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book ahead.",
+     "why": "A coal steam train of 1882 along the Animas River gorge to the mining town of Silverton.",
+     "act": {
+      "type": "city"
+     },
+     "sights": [
+      "Silverton"
+     ],
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 2,
+      "relax": 4,
+      "history": 3,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "drive",
+      "culture"
+     ],
+     "cost": "$$$",
+     "kids": "yes"
+    },
+    {
+     "id": "ski",
+     "name": "Skiing Purgatory",
+     "hours": "A whole day",
+     "length": "full",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "",
+     "why": "Family ski area 40 km north of town.",
+     "months": [
+      12,
+      1,
+      2,
+      3
+     ],
+     "act": {
+      "type": "ski"
+     },
+     "scores": {
+      "effort": 3,
+      "nature": 3,
+      "culture": 0,
+      "relax": 2,
+      "history": 0,
+      "landscape": 3
+     },
+     "tier": "A",
+     "kinds": [
+      "adventure"
+     ],
+     "cost": "$$$",
+     "kids": "yes",
+     "needs": "car"
+    },
+    {
+     "id": "ouray",
+     "name": "Million Dollar Highway to Ouray",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "dry",
+     "best": "",
+     "book": "",
+     "why": "Over Red Mountain Pass on a road without guardrails, to Ouray's hot springs.",
+     "months": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "act": {
+      "type": "city"
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 1,
+      "relax": 3,
+      "history": 1,
+      "landscape": 5
+     },
+     "tier": "B",
+     "kinds": [
+      "drive",
+      "thermal"
+     ],
+     "cost": "free",
+     "kids": "yes",
+     "needs": "car"
+    }
+   ]
+  },
+  {
+   "id": "us-colorado-springs",
+   "names": [
+    "Colorado Springs",
+    "Garden of the Gods",
+    "Pikes Peak",
+    "Manitou Springs"
+   ],
+   "country": "US",
+   "lat": 38.83,
+   "lon": -104.82,
+   "radius_km": 30,
+   "season": "Sunny, dry; Pikes Peak summit (4,302 m) cold and windy, snow possible any month.",
+   "sleep": "Colorado Springs or Manitou Springs.",
+   "sources": [
+    "https://en.wikivoyage.org/wiki/Colorado_Springs",
+    "https://en.wikipedia.org/wiki/Garden_of_the_Gods",
+    "https://en.wikipedia.org/wiki/Pikes_Peak_Cog_Railway"
+   ],
+   "nights": [
+    1,
+    2,
+    3
+   ],
+   "buffer": 0,
+   "items": [
+    {
+     "id": "garden",
+     "name": "Garden of the Gods",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "Sunrise",
+     "book": "",
+     "why": "Red sandstone fins tilted upright against Pikes Peak, free paths among them.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 1950
+     },
+     "sights": [
+      "Garden of the Gods"
+     ],
+     "arrive": true,
+     "scores": {
+      "effort": 1,
+      "nature": 4,
+      "culture": 0,
+      "relax": 3,
+      "history": 0,
+      "landscape": 4
+     },
+     "tier": "A",
+     "kinds": [
+      "walk",
+      "view"
+     ],
+     "cost": "free",
+     "kids": "yes"
+    },
+    {
+     "id": "pikes-peak",
+     "name": "Pikes Peak by cog railway",
+     "hours": "Half a day",
+     "length": "half",
+     "effort": "easy",
+     "need": "any",
+     "best": "",
+     "book": "Book the cog railway or the summit-road timed entry.",
+     "why": "The highest cog railway in the world to 4,302 m, where 'America the Beautiful' was written.",
+     "act": {
+      "type": "hiking",
+      "difficulty": "easy",
+      "max_altitude_m": 4302
+     },
+     "scores": {
+      "effort": 0,
+      "nature": 4,
+      "culture": 0,
+      "relax": 2,
+      "history": 2,
+      "landscape": 5
+     },
+     "tier": "A",
+     "kinds": [
+      "view"
+     ],
+     "cost": "$$",
+     "kids": "yes"
+    }
+   ]
   }
  ]
 }
