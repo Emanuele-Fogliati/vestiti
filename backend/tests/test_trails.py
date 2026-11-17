@@ -38,6 +38,7 @@ def test_scenes_exist_and_differ(t):
     assert len(scenes) == len(set(scenes)), f"{t.id}: two points share a drawing"
     for s in scenes:
         assert s in art.by_id(), f"{t.id}: scene {s} is not in the art catalog"
+    assert t.cover is None or t.cover in art.by_id(), f"{t.id}: cover {t.cover} is not in the art catalog"
 
 
 @pytest.mark.parametrize("t", trails.trails(), ids=lambda t: t.id)

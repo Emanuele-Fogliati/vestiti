@@ -52,7 +52,7 @@ def _scene(sid: str | None) -> dict | None:
 
 
 def _cover(t: trails.Trail) -> dict | None:
-    """The trail's picture: its goal's drawing, else the last point that has one."""
+    """The trail's picture: its cover, else its goal's drawing, else the last point that has one."""
     c = _cover_at(t)
     return c[0] if c else None
 
@@ -67,6 +67,8 @@ def _cover_at_id(tid: str) -> tuple[dict, float, float] | None:
     map the drawing sits where the thing is, the goal, not at the trailhead)."""
     t = trails.find(tid)
     goal = [p for p in t.points if p.role == "goal"]
+    if (lm := art.by_id().get(t.cover or "")):  # the drawing the trek is known for, when set
+        return _scene(lm.id), lm.lat, lm.lon
     # the drawing sits on the place itself (its own coordinates), never on a point of the route,
     # so the same place is in one spot whichever walk shows it (Manu 2026-11-16)
     for p in goal + list(reversed(t.points)):

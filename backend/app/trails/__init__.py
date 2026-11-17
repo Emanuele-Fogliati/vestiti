@@ -95,6 +95,10 @@ class Trail(BaseModel):
     # Manu, 2026-11-14: city walks too, so a traveller can plan the whole trip on foot
     style: Literal["trek", "city"] = "trek"
     area: str | None = Field(default=None, pattern=r"^[a-z]{2}-[a-z0-9-]+$")  # guide area id
+    # the trek's picture when its goal is not what the trek is known for (Manu 2026-11-17: the famous
+    # ones show their symbol, reusing the drawing of Trips): Salkantay ends in Aguas Calientes but
+    # is the walk under Nevado Salkantay. A scene of the art catalog; the goal's drawing otherwise.
+    cover: str | None = Field(default=None, pattern=r"^[a-z]{2}-[a-z0-9-]+$")
     scores: Scores | None = None
 
     @field_validator("months")
